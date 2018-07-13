@@ -7,8 +7,9 @@ The tool listens via webhooks on all mozilla's Git/HG infra repositories and cre
 * A [changelog.json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.json) file containg the same data changelog.md contains.
 
 # Can I contribute?
-Yes! We have a couple of [Issues Open](https://github.com/Akhliskun/taskcluster-worker-checker/issues). 
+Yes! We have a couple of [Issues Open](https://github.com/Akhliskun/firefox-infra-changelog/issues). 
 Pick whichever you find fancy and make a PullRequest.
+
 **PLEASE** don't forget to select "`Allow edits from maintainers`" so we can have quicker merges!
 
 ## I have a issue I like, now what?
