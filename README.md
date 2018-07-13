@@ -13,7 +13,7 @@ Pick whichever you find fancy and make a PullRequest.
 **PLEASE** don't forget to select "`Allow edits from maintainers`" so we can have quicker merges!
 
 ## I have an issue I like, now what?
-Fork the project (always make sure to be up-to-date) and start implementing, once done simply make a pull requests and @Akhliskun for review. 
+Fork the project (always make sure to be up-to-date) and start implementing, once done simply make a pull requests and add @Akhliskun for review. 
 
 # Contributors
 * [Danut Labici](https://github.com/Akhliskun)
