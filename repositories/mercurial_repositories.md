@@ -1,7 +1,6 @@
 ## Mercurial Repositories:
 * Version Control Tools - https://hg.mozilla.org/hgcustom/version-control-tools/
 * Mozilla Build - https://hg.mozilla.org/mozilla-build/
-* Tooltool - https://hg.mozilla.org/build/tooltool/
 * Mozilla Central - https://hg.mozilla.org/mozilla-central/
 * Try - https://hg.mozilla.org/try/
 * Autoland - https://hg.mozilla.org/integration/autoland/
