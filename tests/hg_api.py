@@ -1,6 +1,7 @@
 import requests
 import json
 import datetime
+import re
 
 hgREPO = { 'Version-Control-Tools' : 'https://hg.mozilla.org/hgcustom/version-control-tools/json-log',
            'Mozilla-Build' : 'https://hg.mozilla.org/mozilla-build/json-log',
@@ -23,18 +24,23 @@ for hgREPO_key in hgREPO:     # for loop to scroll through the hgREPO
     for keys in p['changesets']:
         commit = {}
         timestamp = keys['date'][0]
-        #print(type(timestamp), timestamp)
         value = datetime.datetime.fromtimestamp(timestamp)
-        commit.update({ 'Name: ' : keys['user'],
-                        'Date: ' : value.strftime('%Y-%m-%d %H:%M:%S'),
-                        'Message: ' : keys['desc'],
-                        'Node: ' : keys['node'] })
+        commiter_name = keys['user']
+        commiter_name = re.sub('[îă]', ' ', commiter_name)
+        commit_date = value.strftime('%Y-%m-%d %H:%M:%S')
+        commit_message = keys['desc']
+        message = re.sub('[*\n\r]', ' ', commit_message)
+        commit_node = keys['node']
+        commit.update({ 'Name: ' : commiter_name,
+                        'Date: ' : commit_date,
+                        'Message: ' : message,
+                        'Node: ' : commit_node })
         changelog.update({ commit_number : commit })
         commit_number += 1
     hgREPO.update({ hgREPO_key : changelog})
 with open('./hg_changelog.json', 'w') as fp:     # open .json file with write permission
     json.dump(hgREPO, fp)
-    
+
 ''' Using this Json viewer " http://www.jsonviewer.com/ ", 
         you can copy the content from github_changelog.json into RAW json data: 
             and see all the commits Radu Iman'''

@@ -17,7 +17,7 @@ for key in git_data:
         git_repo.update( { keys : [git_data[key][keys]['Name: '],
                                    git_data[key][keys]['Email: '],
                                    git_data[key][keys]['Date: '],
-                                   git_data[key][keys]['URL: '],
+                                   git_data[key][keys]['Url: '],
                                    git_data[key][keys]['Message: ']] } )
     changelogs_git.update({ key : git_repo })
 
