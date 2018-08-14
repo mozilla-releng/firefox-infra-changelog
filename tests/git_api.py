@@ -1,5 +1,6 @@
 import requests
 import json
+import re
 
 reposLIST = {'shipit': 'https://api.github.com/repos/mozilla-releng/ship-it/commits',
             'services': 'https://api.github.com/repos/mozilla/release-services/commits',
@@ -29,12 +30,18 @@ for reposLIST_key in reposLIST:     # for loop to scroll through the reposLIST
     commit_number = 0    # dictionary with key = SHA and values=name, email, date, URL and message
     for keys in p:    # loop to scroll through json content
         author = {}    # dictionary with personal infor about commiter and commit
-        author.update({ 'Name: ' : keys['commit']['author']['name'], 
-                        'Email: ' : keys['commit']['author']['email'], 
-                        'Date: ' : keys['commit']['author']['date'], 
-                        'URL: ' : keys['commit']['url'], 
-                        'Message: ' : keys['commit']['message'] })     # add info in author dictionary
-        #commit.update({ keys['sha'] : author })     # add info in commit dictionary
+        commiter_name = keys['commit']['author']['name']
+        commiter_name = re.sub('[îă]', ' ', commiter_name)
+        commiter_email = keys['commit']['author']['email'] 
+        commit_date = keys['commit']['author']['date'] 
+        commit_url = keys['commit']['url'] 
+        commit_message = keys['commit']['message']
+        message = re.sub('[*\n\r]', ' ', commit_message)
+        author.update({ 'Name: ' : commiter_name,
+                        'Email: ' : commiter_email,
+                        'Date: ' : commit_date,
+                        'Url: ' : commit_url,
+                        'Message: ' : message })
         commit.update({ commit_number : author })
         commit_number += 1
     reposLIST.update({reposLIST_key : commit})     # add all the info into the main dictionary
@@ -46,3 +53,10 @@ with open('./github_changelog.json', 'w') as fp:     # open .json file with writ
 ''' Using this Json viewer " http://www.jsonviewer.com/ ", 
         you can copy the content from github_changelog.json into RAW json data: 
             and see all the commits '''
+
+            #author.update({ 'Name: ' : keys['commit']['author']['name'], 
+         #               'Email: ' : keys['commit']['author']['email'], 
+          #              'Date: ' : keys['commit']['author']['date'], 
+           #             'URL: ' : keys['commit']['url'], 
+            #            'Message: ' : keys['commit']['message'] })     # add info in author dictionary
+        #commit.update({ keys['sha'] : author })     # add info in commit dictionary

@@ -1,5 +1,7 @@
 import requests
 import json
+import datetime
+import re
 
 hgREPO = { 'Version-Control-Tools' : 'https://hg.mozilla.org/hgcustom/version-control-tools/json-log',
            'Mozilla-Build' : 'https://hg.mozilla.org/mozilla-build/json-log',
@@ -21,10 +23,18 @@ for hgREPO_key in hgREPO:     # for loop to scroll through the hgREPO
     commit_number = 0
     for keys in p['changesets']:
         commit = {}
-        commit.update({ 'Name: ' : keys['user'],
-                        'Date: ' : keys['date'],
-                        'Message: ' : keys['desc'],
-                        'Node: ' : keys['node'] })
+        timestamp = keys['date'][0]
+        value = datetime.datetime.fromtimestamp(timestamp)
+        commiter_name = keys['user']
+        commiter_name = re.sub('[îă]', ' ', commiter_name)
+        commit_date = value.strftime('%Y-%m-%d %H:%M:%S')
+        commit_message = keys['desc']
+        message = re.sub('[*\n\r]', ' ', commit_message)
+        commit_node = keys['node']
+        commit.update({ 'Name: ' : commiter_name,
+                        'Date: ' : commit_date,
+                        'Message: ' : message,
+                        'Node: ' : commit_node })
         changelog.update({ commit_number : commit })
         commit_number += 1
     hgREPO.update({ hgREPO_key : changelog})
