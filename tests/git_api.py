@@ -26,24 +26,24 @@ reposLIST = {'shipit': 'https://api.github.com/repos/mozilla-releng/ship-it/comm
 for reposLIST_key in reposLIST:     # for loop to scroll through the reposLIST
     r = requests.get(reposLIST.get(reposLIST_key))     # get infos from gitAPI page
     p = r.json()     # turn into JSON content 
-    commit = {} 
-    commit_number = 0    # dictionary with key = SHA and values=name, email, date, URL and message
+    commit = {}     # dictionary with key = commit_number and values = name, email, date, URL, message
+    commit_number = 0    # commit number initialization
     for keys in p:    # loop to scroll through json content
-        author = {}    # dictionary with personal infor about commiter and commit
-        commiter_name = keys['commit']['author']['name']
-        commiter_name = re.sub('[îă]', ' ', commiter_name)
+        author = {}    # dictionary with personal infos about commiter and commit
+        commiter_name = keys['commit']['author']['name'] 
+        commiter_name = re.sub('[îă]', ' ', commiter_name)   #remove the unrecognized characters from commiter name
         commiter_email = keys['commit']['author']['email'] 
         commit_date = keys['commit']['author']['date'] 
         commit_url = keys['commit']['url'] 
         commit_message = keys['commit']['message']
-        message = re.sub('[*\n\r]', ' ', commit_message)
-        author.update({ 'Name: ' : commiter_name,
+        message = re.sub('[*\n\r]', ' ', commit_message)  #remove the unrecognized characters from commit message
+        author.update({ 'Name: ' : commiter_name,           #add the information about commit and commiter into author dictionary
                         'Email: ' : commiter_email,
                         'Date: ' : commit_date,
                         'Url: ' : commit_url,
                         'Message: ' : message })
-        commit.update({ commit_number : author })
-        commit_number += 1
+        commit.update({ commit_number : author })  #add all the infos from author dictionary into commit dictionary
+        commit_number += 1  #increase the commit number
     reposLIST.update({reposLIST_key : commit})     # add all the info into the main dictionary
 with open('./github_changelog.json', 'w') as fp:     # open .json file with write permission
     json.dump(reposLIST, fp)     # write in the .json file as a string
@@ -54,9 +54,4 @@ with open('./github_changelog.json', 'w') as fp:     # open .json file with writ
         you can copy the content from github_changelog.json into RAW json data: 
             and see all the commits '''
 
-            #author.update({ 'Name: ' : keys['commit']['author']['name'], 
-         #               'Email: ' : keys['commit']['author']['email'], 
-          #              'Date: ' : keys['commit']['author']['date'], 
-           #             'URL: ' : keys['commit']['url'], 
-            #            'Message: ' : keys['commit']['message'] })     # add info in author dictionary
-        #commit.update({ keys['sha'] : author })     # add info in commit dictionary
+   

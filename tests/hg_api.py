@@ -19,27 +19,27 @@ hgREPO = { 'Version-Control-Tools' : 'https://hg.mozilla.org/hgcustom/version-co
 for hgREPO_key in hgREPO:     # for loop to scroll through the hgREPO
     r = requests.get(hgREPO.get(hgREPO_key))     # get infos from hgAPI page
     p = r.json()     # turn into JSON content 
-    changelog = {}
-    commit_number = 0
-    for keys in p['changesets']:
-        commit = {}
-        timestamp = keys['date'][0]
-        value = datetime.datetime.fromtimestamp(timestamp)
+    changelog = {} #dictionary with key= commit number and value= information about commit and commiter
+    commit_number = 0 #initialized the commit number with 0 
+    for keys in p['changesets']:  #for loop to scroll through json content
+        commit = {}  #dictionary to store each  name, date, message and node from each commit
+        timestamp = keys['date'][0] 
+        value = datetime.datetime.fromtimestamp(timestamp) 
+        commit_date = value.strftime('%Y-%m-%d %H:%M:%S') #convert date-time from UNIX to readable format
         commiter_name = keys['user']
-        commiter_name = re.sub('[îă]', ' ', commiter_name)
-        commit_date = value.strftime('%Y-%m-%d %H:%M:%S')
+        commiter_name = re.sub('[îă]', ' ', commiter_name) #remove the unrecognized characters from commiter name
         commit_message = keys['desc']
-        message = re.sub('[*\n\r]', ' ', commit_message)
+        message = re.sub('[*\n\r]', ' ', commit_message)  #remove the unrecognized characters from commit message
         commit_node = keys['node']
-        commit.update({ 'Name: ' : commiter_name,
+        commit.update({ 'Name: ' : commiter_name,   #add the name, date , message and node into commit dictionary
                         'Date: ' : commit_date,
                         'Message: ' : message,
                         'Node: ' : commit_node })
-        changelog.update({ commit_number : commit })
-        commit_number += 1
-    hgREPO.update({ hgREPO_key : changelog})
+        changelog.update({ commit_number : commit })   #add each info abotu each commit into changelog dictionary
+        commit_number += 1 #increase the commit number
+    hgREPO.update({ hgREPO_key : changelog}) #add all infos into the main dictionary
 with open('./hg_changelog.json', 'w') as fp:     # open .json file with write permission
-    json.dump(hgREPO, fp)
+    json.dump(hgREPO, fp)  #write into JSON file as a string
 
 ''' Using this Json viewer " http://www.jsonviewer.com/ ", 
         you can copy the content from github_changelog.json into RAW json data: 
