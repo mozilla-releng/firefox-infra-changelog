@@ -684,6 +684,8 @@
 |Mozilla-Central|Cosmin Sabou <csabou@mozilla.com>|2018-10-12 22:59:22|c55cc49537553ce267068a89e7046c3f90cc3c81|Backed out 3 changesets (bug 1497446) for SM build bustages. CLOSED TREE  Backed out changeset 0c4f6cc4fccf (bug 1497446) Backed out changeset 006cd7f96ea3 (bug 1497446) Backed out changeset 8f5207ccd12f (bug 1497446)|
 |Mozilla-Central|David Teller <dteller@mozilla.com>|2018-10-10 17:50:30|0c4f6cc4fccf38369baf6dcce5aea235ad55aa96|Bug 1497446 - mach rust vendor. r=ted  Summary: The previous two changesets bump up a few dependencies. This is the companion mach rust vendor.  Test Plan: It builds.  Reviewers: ted  Tags: #secure-revision  Bug #: 1497446|
 |Mozilla-Central|David Teller <dteller@mozilla.com>|2018-10-10 17:30:08|006cd7f96ea3669361b1b61e759b374f27095466|Bug 1497446 - Implementing read[Maybe]{IdentifierName, PropertyKey} in BinTokenReader . r=efaust|
+|Try|Thomas Wisniewski <twisniewski@mozilla.com>|2018-10-13 19:28:08|89fe5fcf8557321d39c5ad2b5be4d5666eba69d9|try: -b do -p linux64 -u all -t none --no-retry  Pushed via `mach try syntax`|
+|Try|Thomas Wisniewski <twisniewski@mozilla.com>|2018-10-13 19:22:17|b820e7b5f2d2ddfa147b4103c0b63600b11f1bab|Bug 1498808 - set pinned=false on the page action for the webcompat reporter webextension; r?mixedpuppy|
 |Try|Tom Schuster <evilpies@gmail.com>|2018-10-13 19:17:00|625f77c6238409bdb79807a4170e7c6affa76aa1|try: -b do -p all -u all -t none  Pushed via `mach try syntax`|
 |Try|Tom Schuster <evilpies@gmail.com>|2018-10-13 19:16:47|de91c450049a061d7be9746dc9fc6ac6d1e99f5b|Ignore zero length|
 |Try|Jeff Muizelaar <jmuizelaar@mozilla.com>|2018-10-13 19:15:25|52621c6600176107fc03905eb056f46d8116f385|try: -b do -p macosx64,win64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t none  Pushed via `mach try syntax`|
@@ -702,8 +704,6 @@
 |Try|Kannan Vijayan <kvijayan@mozilla.com>|2018-10-13 17:45:47|77377ce9ef4ef5eda73f951bee2807bf02526050|try: -b do -p all -u all -t all|
 |Try|Kannan Vijayan <kvijayan@mozilla.com>|2018-10-13 05:00:37|19943275b8e1eb71e14b9408c577d3a512366ab0|Bug 1494537: Add CacheIR stub for out-of-capacity-bounds assignments to arrays. r=tcampbell!|
 |Try|Mark Striemer <mstriemer@mozilla.com>|2018-10-13 17:40:51|c3b7f66a18bef362dc69a9928a316a292af98729|try: -b o -p win64,linux64,macosx64 -u mochitest-bc,mochitest-e10s-bc,xpcshell -t none --artifact  Pushed via `mach try syntax`|
-|Try|Mark Striemer <mstriemer@mozilla.com>|2018-10-02 15:47:08|89ae86bd131ac970132423afd6ac348f25e707ca|Bug 1495713 - Include theme previews in add-ons manager  Differential Revision: https://phabricator.services.mozilla.com/D8106|
-|Try|Mark Striemer <mstriemer@mozilla.com>|2018-10-02 17:41:26|52fc6f56ea1fb562f52c13ca6477699ca73d2d9d|Bug 1495708 - Remove theme info bar and update plugin notice r?aswan  Differential Revision: https://phabricator.services.mozilla.com/D8105|
 |Autoland|Ciure Andrei <aciure@mozilla.com>|2018-10-13 12:36:04|94a62c1aad526dc24dc9186a6ccebb0db276ee87|Merge inbound to mozilla-central. a=merge|
 |Autoland|Timothy Nikkel <tnikkel@gmail.com>|2018-10-13 08:31:03|2cc5b3f51ec4fa0501af01e4ece67be0eed814c4|Bug 1256603. Fix comment in ImageLoader. r=aosmond|
 |Autoland|Timothy Nikkel <tnikkel@gmail.com>|2018-10-13 08:31:03|d8bb90ade0d68eaf309127cb51840c722e4008b5|Bug 1256603. Fix comment for imgIContainer::RequestDecodeForSize to match reality. r=aosmond|
