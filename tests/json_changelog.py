@@ -4,9 +4,9 @@ import pprint
 
 '''This file gather all the information from each json file (Hg and GIt) and store them into the main json file (changelog.json) '''
 
-git_logs=open('./github_changelog.json').read()  #open .json file to read the dates
+git_logs=open('../tests/github_changelog.json').read()  #open .json file to read the dates
 git_data = json.loads(git_logs)  #add the infos into git_date 
-hg_logs=open('./hg_changelog.json').read() #--||--HG
+hg_logs=open('../tests/hg_changelog.json').read() #--||--HG
 hg_data = json.loads(hg_logs) #--||--HG
 
 changelogs_hg = {}  #GIT: dictionary with key = repository name and value = all the commit infos
@@ -35,5 +35,5 @@ for key1 in hg_data:    #for loop to scroll through HG data json
 changelogs = { 'Git: ' : changelogs_git,   #add all the commit dates from GIT and HG into changelogs dictionary
                'Mercurial: ' : changelogs_hg }
 
-with open('./changelog.json', 'w') as fp:   #open the main json file and add into it the changelogs dictionary
+with open('../tests/changelog.json', 'w') as fp:   #open the main json file and add into it the changelogs dictionary
     json.dump(changelogs, fp)

@@ -38,7 +38,7 @@ for hgREPO_key in hgREPO:     # for loop to scroll through the hgREPO
         changelog.update({ commit_number : commit })   #add each info abotu each commit into changelog dictionary
         commit_number += 1 #increase the commit number
     hgREPO.update({ hgREPO_key : changelog}) #add all infos into the main dictionary
-with open('./hg_changelog.json', 'w') as fp:     # open .json file with write permission
+with open('../tests/hg_changelog.json', 'w') as fp:     # open .json file with write permission
     json.dump(hgREPO, fp)  #write into JSON file as a string
 
 ''' Using this Json viewer " http://www.jsonviewer.com/ ", 

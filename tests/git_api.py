@@ -45,7 +45,7 @@ for reposLIST_key in reposLIST:     # for loop to scroll through the reposLIST
         commit.update({ commit_number : author })  #add all the infos from author dictionary into commit dictionary
         commit_number += 1  #increase the commit number
     reposLIST.update({reposLIST_key : commit})     # add all the info into the main dictionary
-with open('./github_changelog.json', 'w') as fp:     # open .json file with write permission
+with open('../tests/github_changelog.json', 'w') as fp:     # open .json file with write permission
     json.dump(reposLIST, fp)     # write in the .json file as a string
 
 
