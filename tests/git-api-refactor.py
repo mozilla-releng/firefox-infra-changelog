@@ -6,7 +6,7 @@ import datetime
 repoList = {'shipit': 'https://api.github.com/repos/mozilla-releng/ship-it/commits',
              'funsize': 'https://api.github.com/repos/mozilla-releng/funsize/commits'
              }
-linkParameters = "?per_page=5&page={}"
+linkParameters = "?per_page=100&page={}"
 debugNumber = 0
 
 try:
@@ -22,14 +22,10 @@ try:
             for commit in page:
                 debugNumber += 1
                 totalCommits += 1
-            pageNumber += 200
-
-            if r.text == "b[]":
-                print("Nothing in page.")
+            print(totalCommits)
+            pageNumber += 1
+            if totalCommits % 100 != 0:
                 commitsInPage = False
-
-        print(totalCommits)
-
-
+                totalCommits = 0
 except Exception as err:
     print("Limit reached \n", err)
