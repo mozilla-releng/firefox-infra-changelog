@@ -1,6 +1,6 @@
 import subprocess
 
-#subprocess.call(['python', '../git-login.py'])
+subprocess.call(['python', '../git-login.py'])
 try:
 	subprocess.call(['python', '../tests/git_api.py'])
 	print("Git JSON is ready.")
@@ -11,5 +11,7 @@ try:
 	subprocess.call(['python', '../tests/md_changelog.py'])
 	print("MD changelog is ready.")
 	print("\nYour changelog is Up to Date")
+	subprocess.call(['python', 'auto-push.py'])
+	print('\nThe changes are pushed.')
 except KeyboardInterrupt:
 	exit(0)
