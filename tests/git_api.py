@@ -23,3 +23,21 @@ repos = {'shipit': 'https://api.github.com/repos/mozilla-releng/ship-it/commits'
             'funsize': 'https://api.github.com/repos/mozilla-releng/funsize/commits',
             'signtool': 'https://api.github.com/repos/mozilla-releng/signtool/commits'
 } 
+for reposLIST_key in reposLIST:     # for loop to scroll through the reposLIST
+    r = requests.get(reposLIST.get(reposLIST_key))     # get infos from gitAPI page
+    p = r.json()     # turn into JSON content
+    commit = {}
+    commit_number = 0    # dictionary with key = name, email, date, URL and message
+    for keys in p:    # loop to scroll through json content
+        author = {}    # dictionary with personal info about commiter and his commit
+        author.update({ 'Name: ' : keys['commit']['author']['name'],
+                        'Email: ' : keys['commit']['author']['email'],
+                        'Date: ' : keys['commit']['author']['date'],
+                        'URL: ' : keys['commit']['url'],
+                        'Message: ' : keys['commit']['message'] })     # add info into author dictionary
+        #commit.update({ keys['sha'] : author })     # add info in commit dictionary
+        commit.update({ commit_number : author })
+        commit_number += 1
+    reposLIST.update({reposLIST_key : commit})     # add all the info into the main dictionary
+with open('./github_changelog.json', 'w') as fp:     # open .json file with write permission
+json.dump(reposLIST, fp) # write in the .json file as a string
