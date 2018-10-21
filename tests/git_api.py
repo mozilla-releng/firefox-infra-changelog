@@ -34,8 +34,7 @@ for reposLIST_key in reposLIST:     # for loop to scroll through the reposLIST
                         'Email: ' : keys['commit']['author']['email'],
                         'Date: ' : keys['commit']['author']['date'],
                         'URL: ' : keys['commit']['url'],
-                        'Message: ' : keys['commit']['message'] })     # add info into author dictionary
-        #commit.update({ keys['sha'] : author })     # add info in commit dictionary
+                        'Message: ' : keys['commit']['message'] })     # add info into author dictionary        
         commit.update({ commit_number : author })
         commit_number += 1
     reposLIST.update({reposLIST_key : commit})     # add all the info into the main dictionary
