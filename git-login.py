@@ -1,6 +1,8 @@
 import github3
 
 second_stage_code = input
+username = str(input("Enter your GitHub username:  \n"))
+password = str(input('Enter yourGitHub password:  \n'))
 
 def github_login():
     code = ''
@@ -8,11 +10,13 @@ def github_login():
         code = second_stage_code('Enter 2FA code: ')
     return code
 
-g = github3.login('raduiman', 'Zo9o6i994qwe', two_factor_callback=github_login)
+g = github3.login(username, password, two_factor_callback=github_login)
 
-riman = g.me()
+username = g.me()
 
-print(riman.name)
-print(riman.login)
-print(riman.url)
+print(username.name)
+print(username.login)
+print(username.url)
+
+
 
