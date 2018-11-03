@@ -1,5 +1,5 @@
 ## Active repositories that affect Firefox-CI:
-* Ship it - https://github.com/mozilla-releng/ship-it
+* Ship-it - https://github.com/mozilla-releng/ship-it
 * services - https://github.com/mozilla/release-services
 * beetmoverscript - https://github.com/mozilla-releng/beetmoverscript
 * addonscript - https://github.com/mozilla-releng/addonscript
