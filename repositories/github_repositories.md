@@ -19,7 +19,7 @@
 * balrogscript - https://github.com/mozilla-releng/balrogscript
 * funsize - https://github.com/mozilla-releng/funsize
 * signtool - https://github.com/mozilla-releng/signtool
-
+* Tooltool - https://github.com/mozilla/build-tooltool
 ## Repositories that are under a maybe (need a sanity check):
 * pulse-notify - https://github.com/mozilla-releng/pulse-notify
 * mozilla-version - https://github.com/mozilla-releng/mozilla-version
