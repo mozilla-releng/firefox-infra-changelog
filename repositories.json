@@ -1,0 +1,56 @@
+{
+  "Github": {
+    "ship-it": {
+      "name": "Ship-It",
+      "url": "https://github.com/mozilla-releng/ship-it",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+    "services": {
+      "name": "Release-Services",
+      "url": "https://github.com/mozilla/release-services",
+      "team": "mozilla/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    }
+  },
+  "Mercurial": {
+    "version-control-tools": {
+      "name": "Version-Control-Tools",
+      "url": "https://hg.mozilla.org/hgcustom/version-control-tools/",
+      "team": "hgcustom/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " ",
+        "push_type": "json-log"
+      }
+    },
+    "mozilla-build": {
+      "name": "Mozilla-Build",
+      "url": "https://hg.mozilla.org/mozilla-build/",
+      "team": "",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " ",
+        "push_type": "json-log"
+      }
+    }
+  }
+}

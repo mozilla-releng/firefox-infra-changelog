@@ -3,10 +3,12 @@ from github import Github  # pip3 install PyGitHub
 from datetime import datetime, timedelta
 import requests
 import json
+import re
 
 # Create a Github instance:
 TOKEN = os.environ.get("GIT_TOKEN")
 git = Github(TOKEN)
+
 
 def create_md_table(project):
     """
@@ -94,7 +96,7 @@ def get_hg_changes(repository_name, push_type):
     return hg_changes_result
 
 
-def create_git_link(project):
+def create_git_link(team, project):
     """
     Expects the name of a project as a parameter and creates the api link for the json.
     We know 'services' is the only project in the mozilla repo while the rest are in mozilla-releng
@@ -103,10 +105,7 @@ def create_git_link(project):
     """
     beginning_url = "https://api.github.com/repos/"
     end_url = "/commits"
-    if project == "release-services":
-        git_url = beginning_url + "mozilla/" + project + end_url
-    else:
-        git_url = beginning_url + "mozilla-releng/" + project + end_url
+    git_url = beginning_url + team + project + end_url
     return git_url
 
 
@@ -135,18 +134,21 @@ def write_commits(commit_content, file_name):
 def filter_commit_data(commit):
     """
     Filters out only the data that we need from a commit
+    Substitute the special characters from commit message using 'sub' function from 're' library
     :param commit:
     :return: filtered json data
     """
     repo_dict = {}
-    number = 1
+    number = 0
     for item in commit:
         each_commit = {}
         author_info = {}
+        commit_message = item['commit']['message']
+        message = re.sub('[*\n\r]', ' ', commit_message)
         author_info.update({'sha': item['sha'],
                             'url': item['url'],
                             'author_info': item['commit']['author'],
-                            'commit_message': item['commit']['message']})
+                            'commit_message': message})
         each_commit.update({number: author_info})
         number += 1
         repo_dict.update(each_commit)
@@ -154,10 +156,29 @@ def filter_commit_data(commit):
 
 
 if __name__ == "__main__":
-    user = git.get_user()  # Get Name of user.
-    print(user.name + " is asking: ")
-    project = input("What to search? : ")
-    commit_data = get_commits(create_git_link(str(project)))
-    useful_data = filter_commit_data(commit_data)
-    write_commits(useful_data, "changelog.json")
-    create_md_table(project)
+    repositories_data = open('./repositories.json').read()
+    repositories = json.loads(repositories_data)
+
+    # Github
+    """
+    Goes through every repo under github and creates a separate MD file for each one
+    """
+    for repo in repositories["Github"]:
+        repository_name = repositories["Github"][repo]["name"]
+        repository_team = repositories["Github"][repo]["team"]
+        git_link = create_git_link(repository_team, repository_name)
+        commit_data = get_commits(git_link)
+        useful_data = filter_commit_data(commit_data)
+        write_commits(useful_data, "changelog.json")
+        create_md_table(repository_name)
+    # Mercurial
+    """
+    Goes through every repo under mercurial and creates a separate MD file for each one
+    """
+    for repo in repositories["Mercurial"]:
+        repository_url = repositories["Mercurial"][repo]["url"]
+        repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
+        repository_name = repositories["Mercurial"][repo]["name"]
+        hg_changes = get_hg_changes(repository_url, repository_push_type)
+        hg_json_name = "./repositories/" + "{}.json".format(repository_name)
+        write_commits(hg_changes, hg_json_name)
