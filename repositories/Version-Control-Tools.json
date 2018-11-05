@@ -1,0 +1,430 @@
+{
+  "node": "e44c2edea27ed2af96ed796b31db5bc23f195ced",
+  "changeset_count": 6683,
+  "changesets": [
+    {
+      "node": "e44c2edea27ed2af96ed796b31db5bc23f195ced",
+      "date": [
+        1541190523.0,
+        25200
+      ],
+      "desc": "testing: install Mercurial 4.8 final\n\nIt was released a few hours ago.",
+      "branch": "default",
+      "bookmarks": [
+        "@"
+      ],
+      "tags": [
+        "tip"
+      ],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d3d184961f09c625f180de631be848347be7881a"
+      ],
+      "pushid": 3308,
+      "pushdate": [
+        1541190530,
+        0
+      ]
+    },
+    {
+      "node": "d3d184961f09c625f180de631be848347be7881a",
+      "date": [
+        1541190437.0,
+        25200
+      ],
+      "desc": "ansible: use ansible_become instead of ansible_sudo\n\nThis is needed in order for Ansible to run tasks as root.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a3d756fd35b082c16af6841924f03d0457a3f764"
+      ],
+      "pushid": 3307,
+      "pushdate": [
+        1541190447,
+        0
+      ]
+    },
+    {
+      "node": "a3d756fd35b082c16af6841924f03d0457a3f764",
+      "date": [
+        1541173111.0,
+        0
+      ],
+      "desc": "ansible: upgrade to Ansible 2.5; r=sheehan\n\nPorting notes are available at\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.5.html.\n\nThere are a ton of changes in this release.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10662",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "e586b1e2a0ab70cc5114014d3964c4a6ba4071e3"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "e586b1e2a0ab70cc5114014d3964c4a6ba4071e3",
+      "date": [
+        1541172951.0,
+        0
+      ],
+      "desc": "ansible: upgrade to Ansible 2.4; r=sheehan\n\nPorting notes are available at\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.4.html.\n\nWe see some new deprecation warnings regarding the use of \"include:\".\nBut reading release notes, the \"include_tasks\" and \"import_tasks\"\nreplacements were kind of half-baked in 2.4. So I'm going to hold off\nporting things.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10661",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "811de1502626e0b4730497dfb5e3907907beb11a"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "811de1502626e0b4730497dfb5e3907907beb11a",
+      "date": [
+        1541172906.0,
+        0
+      ],
+      "desc": "ansible: avoid jinja template syntax in when: statements; r=sheehan\n\nAnsible 2.3 added a warning when \"{{ }}\" syntax is used in when:\nconditionals. There were a few of these in our repo.\n\nThis commit removes them.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10660",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "88fa0246970b6eee18512b7f6a2a8a6fbe43b585"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "88fa0246970b6eee18512b7f6a2a8a6fbe43b585",
+      "date": [
+        1541172876.0,
+        0
+      ],
+      "desc": "ansible: upgrade to Ansible 2.3; r=sheehan\n\nAnsible 2.3 has a porting guide:\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.3.html.\n\nThis upgrade introduces some legitimate new warnings. So we touch the\nclobber files to force a Docker image rebuild with the newer Ansible\nso we can port to new mechanisms.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10659",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "8b53aa730300fb304426b6b91b0ad9d1d7d81b73"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "8b53aa730300fb304426b6b91b0ad9d1d7d81b73",
+      "date": [
+        1541172551.0,
+        0
+      ],
+      "desc": "ansible: upgrade to Ansible 2.2; r=sheehan\n\nIt appears Ansible 2.1 and 2.2 are quite boring when it comes to\nporting. We can go straight to 2.2 and we still don't appear to have\nany new warnings or deprecation notices.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10658",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "31164c8572c12ad3d2c08c25a7efed7a451c86ce"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "31164c8572c12ad3d2c08c25a7efed7a451c86ce",
+      "date": [
+        1541172507.0,
+        0
+      ],
+      "desc": "ansible: upgrade to Ansible 2.0; r=sheehan\n\nWe are running Ansible 1.9, which is relatively old and has known\nsecurity vulnerabilities. I initially held off upgrading because Ansible\n2 was much slower. Enough time has passed that we are too far out of\ndate on Ansible and we can no longer live with the security issues.\nLet's upgrade to a newer Ansible.\n\nAnsible 2.7 is the latest Ansible. But there are a number of\nbackwards incompatible changes to it that make the jump straight to\nit pretty difficult. Our approach to the upgrade will be to make\nsmaller jumps so we can understand them easier.\n\nOur first step is Ansible 2.0.\n\nThe porting guide to 2.0 can be found at\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.0.html.\n\nWhile it lists a number of changes, I couldn't find any obvious\nviolations in our Ansible code! However, I did not verify every\nsingle Ansible playbook. So there may be legacy Ansible code lingering.\nThis caveat applies to all future patches as well.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10657",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "256ea8e6e0fc66ea3c8d30fb2f308a5a11a6fb60"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "256ea8e6e0fc66ea3c8d30fb2f308a5a11a6fb60",
+      "date": [
+        1541172438.0,
+        0
+      ],
+      "desc": "env: upgrade to latest boto packages; r=sheehan\n\nA new package was released. Let's upgrade to it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10656",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "ba44b26a765fcd64af10e924e747527af1ca2aae"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "ba44b26a765fcd64af10e924e747527af1ca2aae",
+      "date": [
+        1541172412.0,
+        0
+      ],
+      "desc": "ansible: rename requirements file to not have \"1.9\" in it; r=sheehan\n\nIn preparation for upgrading past Ansible 1.9.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10655",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "ce44fbac066d3e4560677a5989215c0b2767d047"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "ce44fbac066d3e4560677a5989215c0b2767d047",
+      "date": [
+        1541171030.0,
+        0
+      ],
+      "desc": "testing: stream raw chunks into BytesIO(); r=sheehan\n\nWith the recent upgrade to the docker package, this get_archive()'s\nfirst returned element is a generator of chunks, not a file object.\n\nWith this change, we are now able to start various Docker clusters\nagain.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10649",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "bb10838d737de7be2972397675d0f5fcf04501a9"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "bb10838d737de7be2972397675d0f5fcf04501a9",
+      "date": [
+        1541170942.0,
+        0
+      ],
+      "desc": "github-webhooks: upgrade kombu; r=sheehan\n\nWe run this version of kombu elsewhere.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10641",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "09d48e68d1b627399bacab278086597cfa1f3e11"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "09d48e68d1b627399bacab278086597cfa1f3e11",
+      "date": [
+        1541170912.0,
+        0
+      ],
+      "desc": "github-webhooks: unpin dependencies and upgrade packages; r=sheehan\n\nIt should be safe to run the latest version of packages.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10640",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d5e3b21d269a90d3082afa5bf2dfa6bc5f29e6fa"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "d5e3b21d269a90d3082afa5bf2dfa6bc5f29e6fa",
+      "date": [
+        1541170890.0,
+        0
+      ],
+      "desc": "github-webhooks: manage lambda-requirements.txt with pip-compile; r=sheehan\n\nThe march continues.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10639",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7a57b87620e2dff7b5ce45ada0a9e4fa9e6e0c64"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "7a57b87620e2dff7b5ce45ada0a9e4fa9e6e0c64",
+      "date": [
+        1541116870.0,
+        0
+      ],
+      "desc": "env: copy --find-links to generated requirements.txt files; r=sheehan\n\npip-compile dropped these lines.\n\nLet's teach upgrade-python-packages to preserve them.\n\nThis should unbreak the building of the hgweb image due to missing\nbloxtool package.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10636",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "44e4d6d60a67c2d87e988e342104c43de71be662"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "44e4d6d60a67c2d87e988e342104c43de71be662",
+      "date": [
+        1541116367.0,
+        0
+      ],
+      "desc": "env: define CUSTOM_COMPILE_COMMAND; r=sheehan\n\nThis will annotate the requirements.txt with the proper script to use.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10635",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "20d34355be82519c8602361bbab3dd12cb73a460"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "20d34355be82519c8602361bbab3dd12cb73a460",
+      "date": [
+        1541116183.0,
+        0
+      ],
+      "desc": "testing: re-attach to container after timeout; r=sheehan\n\nNew behavior after the docker-py or requests upgrade has resulted in\nattach() returning prematurely after 60s of no output. This behavior\nis a bit wonky and I filed\nhttps://github.com/docker/docker-py/issues/2166 to track it.\n\nThis commit works around the new behavior.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10634",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "e4b99b6399701f7dfab7e899a702772e40a19716"
+      ],
+      "pushid": 3306,
+      "pushdate": [
+        1541173483,
+        0
+      ]
+    },
+    {
+      "node": "e4b99b6399701f7dfab7e899a702772e40a19716",
+      "date": [
+        1541110008.0,
+        25200
+      ],
+      "desc": "testing: refresh base CentOS 7 Docker image\n\nApparently I did this on November 1 last year too. Must be something\nabout November 1 making me want to update the v-c-t environment.\n\nThis change results in the elimination of ~159 package updates when\nrunning `yum update`, making fresh image builds substantially faster.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "fc79f0995d919fb9c06849b141197419fbc10274"
+      ],
+      "pushid": 3305,
+      "pushdate": [
+        1541110447,
+        0
+      ]
+    },
+    {
+      "node": "fc79f0995d919fb9c06849b141197419fbc10274",
+      "date": [
+        1541107894.0,
+        0
+      ],
+      "desc": "env: upgrade to latest ansible 1.9 release; r=sheehan\n\nWe should always use the latest available version to pull in\nbug fixes, etc.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10618",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a6fb12f21d7c9b42547fd8f2f5a2dbc722d17d91"
+      ],
+      "pushid": 3304,
+      "pushdate": [
+        1541108173,
+        0
+      ]
+    },
+    {
+      "node": "a6fb12f21d7c9b42547fd8f2f5a2dbc722d17d91",
+      "date": [
+        1541107880.0,
+        0
+      ],
+      "desc": "env: reference requirements-ansible-1.9.in in deploy-requirements.in; r=sheehan\n\nThe side effect is we now use a consistent Ansible version for\ndeploys and in Docker images. And that consistent version is newer\nthan what we were using for deploys. I'm not sure why we didn't\nhave the deploy version upgraded. Probably an oversight.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10617",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gregory Szorc <gps@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "1a5daa6f0342b7b04960f48d341aa2cd9801740d"
+      ],
+      "pushid": 3304,
+      "pushdate": [
+        1541108173,
+        0
+      ]
+    }
+  ]
+}
