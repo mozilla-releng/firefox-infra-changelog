@@ -13,10 +13,10 @@ git = Github(TOKEN)
 def create_md_table(project):
     """
     Uses 'project' parameter to generate markdown table.
-    :param project: 
-    :return: 
+    :param project: Project name
+    :return: MD table in a file.
     """
-    
+
     current_dir = os.path.dirname(os.path.realpath(__file__))
     json_data = open('./changelog.json').read()
     data = json.loads(json_data)
@@ -38,7 +38,7 @@ def create_md_table(project):
               "|" + commiter + \
               "|" + message + \
               "|" + date + '\n'
-        
+
         del commit_number_list[-1]
         for repo in tables.keys():
             tables[repo] = tables[repo] + row
@@ -87,7 +87,7 @@ def get_hg_changes(repository_name, push_type):
 
     :param repository_name: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
     :param push_type: would probably be "json-log" most of the time.
-    :return:
+    :return: returns a json that contains the commits in the provided hg_repository_name
     """
     if push_type == "json-log":
         request_url = repository_name + push_type
@@ -102,7 +102,8 @@ def create_git_link(team, project):
     """
     Expects the name of a project as a parameter and creates the api link for the json.
     We know 'services' is the only project in the mozilla repo while the rest are in mozilla-releng
-    :param project:
+    :param team: github account of the project
+    :param project: name of the project
     :return: GitHub Api link
     """
     beginning_url = "https://api.github.com/repos/"
@@ -111,13 +112,13 @@ def create_git_link(team, project):
     return git_url
 
 
-def get_commits(link):
+def get_git_commits(github_repository_link):
     """
     Makes the json request and return the request result as a list.
-    :param link:
+    :param: github_repository_link: link of the github project
     :return: json list
     """
-    commits_response = requests.get(link)
+    commits_response = requests.get(github_repository_link)
     commits_result = commits_response.json()
     return commits_result
 
@@ -137,12 +138,12 @@ def filter_commit_data(commit):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
-    :param commit:
+    :param commit: json style content required to be filtered
     :return: filtered json data
     """
     repo_dict = {}
     number = 1
-        for item in commit:
+    for item in commit:
         each_commit = {}
         author_info = {}
         commit_message = item['commit']['message']
@@ -152,7 +153,7 @@ def filter_commit_data(commit):
         commiter_name = item['commit']['author']['name']
         commiter_email = item['commit']['author']['email']
         message = re.sub('[*\n\r]', ' ', commit_message)
-        date = re.sub('[*T Z]',' ', commit_date)
+        date = re.sub('[*T Z]', ' ', commit_date)
         author_info.update({'sha': commit_sha,
                             'url': commit_url,
                             'commiter_name': commiter_name,
@@ -177,7 +178,7 @@ if __name__ == "__main__":
         repository_name = repositories["Github"][repo]["name"]
         repository_team = repositories["Github"][repo]["team"]
         git_link = create_git_link(repository_team, repository_name)
-        commit_data = get_commits(git_link)
+        commit_data = get_git_commits(git_link)
         useful_data = filter_commit_data(commit_data)
         write_commits(useful_data, "changelog.json")
         create_md_table(repository_name)
