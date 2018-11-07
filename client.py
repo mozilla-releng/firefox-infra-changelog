@@ -20,34 +20,36 @@ def create_md_table(project):
     current_dir = os.path.dirname(os.path.realpath(__file__))
     json_data = open('./changelog.json').read()
     data = json.loads(json_data)
-    base_table = "| Commit Number | Commiter | Commit Message | Date | \n" + \
-                 "|:---:|:----:|:----------------------------------:|:----:| \n"
+    base_table = '| Commit Number | Commiter | Commit Message | Date | \n' + \
+                 '|:---:|:----:|:----------------------------------:|:----:| \n'
     tables = {}
     md_title = ['{} markdown table'.format(project)]
+    commit_number_list = [key for key in data]
     for repo in md_title:
         tables[repo] = base_table
 
     for key in data:
-        commit_number = key
-        commiter = data[key]["author_info"]["name"]
-        date = data[key]["author_info"]["date"]
-        message = data[key]["commit_message"]
+        commit_number = commit_number_list[-1]
+        commiter = data[key]['commiter_name']
+        date = data[key]['commit_date']
+        message = data[key]['commit_message']
 
         row = "|" + commit_number + \
               "|" + commiter + \
               "|" + message + \
               "|" + date + '\n'
-
+        
+        del commit_number_list[-1]
         for repo in tables.keys():
             tables[repo] = tables[repo] + row
 
-    md_file_name = "{}.md".format(project)
-    md_file = open(current_dir + "/repositories/" + md_file_name, 'w')
+    md_file_name = '{}.md'.format(project)
+    md_file = open(current_dir + '/repositories/' + md_file_name, 'w')
 
     for key, value in tables.items():
         if value != base_table:
-            md_file.write("## " + key.upper() + "\n\n")
-            md_file.write(value + "\n\n")
+            md_file.write('## ' + key.upper() + '\n\n')
+            md_file.write(value + '\n\n')
 
     md_file.close()
 
@@ -139,16 +141,24 @@ def filter_commit_data(commit):
     :return: filtered json data
     """
     repo_dict = {}
-    number = 0
-    for item in commit:
+    number = 1
+        for item in commit:
         each_commit = {}
         author_info = {}
         commit_message = item['commit']['message']
+        commit_date = item['commit']['author']['date']
+        commit_sha = item['sha']
+        commit_url = item['url']
+        commiter_name = item['commit']['author']['name']
+        commiter_email = item['commit']['author']['email']
         message = re.sub('[*\n\r]', ' ', commit_message)
-        author_info.update({'sha': item['sha'],
-                            'url': item['url'],
-                            'author_info': item['commit']['author'],
-                            'commit_message': message})
+        date = re.sub('[*T Z]',' ', commit_date)
+        author_info.update({'sha': commit_sha,
+                            'url': commit_url,
+                            'commiter_name': commiter_name,
+                            'commiter_email': commiter_email,
+                            'commit_message': message,
+                            'commit_date': date})
         each_commit.update({number: author_info})
         number += 1
         repo_dict.update(each_commit)
