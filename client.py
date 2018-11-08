@@ -20,8 +20,8 @@ def create_md_table(project):
     current_dir = os.path.dirname(os.path.realpath(__file__))
     json_data = open('./changelog.json').read()
     data = json.loads(json_data)
-    base_table = '| Commit Number | Commiter | Commit Message | Date | \n' + \
-                 '|:---:|:----:|:----------------------------------:|:----:| \n'
+    base_table = '| Commit Number | Commiter | Commit Message | Commit Url | Date | \n' + \
+                 '|:---:|:----:|:----------------------------------:|:------:|:----:| \n'
     tables = {}
     md_title = ['{} markdown table'.format(project)]
     commit_number_list = [key for key in data]
@@ -37,6 +37,7 @@ def create_md_table(project):
         row = "|" + commit_number + \
               "|" + commiter + \
               "|" + message + \
+              "|" + "[URL]({})".format(url) + \
               "|" + date + '\n'
 
         del commit_number_list[-1]
@@ -149,17 +150,19 @@ def filter_commit_data(commit):
         commit_message = item['commit']['message']
         commit_date = item['commit']['author']['date']
         commit_sha = item['sha']
-        commit_url = item['url']
+        commit_apiurl = item['url']
         commiter_name = item['commit']['author']['name']
         commiter_email = item['commit']['author']['email']
+        commit_url = item['html_url']
         message = re.sub('[*\n\r]', ' ', commit_message)
         date = re.sub('[*T Z]', ' ', commit_date)
         author_info.update({'sha': commit_sha,
-                            'url': commit_url,
+                            'url': commit_apiurl,
                             'commiter_name': commiter_name,
                             'commiter_email': commiter_email,
                             'commit_message': message,
-                            'commit_date': date})
+                            'commit_date': date,
+                            'commit_url': commit_url})
         each_commit.update({number: author_info})
         number += 1
         repo_dict.update(each_commit)
