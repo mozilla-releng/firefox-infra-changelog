@@ -1,14 +1,14 @@
 {
-  "node": "e44c2edea27ed2af96ed796b31db5bc23f195ced",
-  "changeset_count": 6683,
+  "node": "d78e5c52a0228c3dc8ed03fe43bf749c8e68bd20",
+  "changeset_count": 6721,
   "changesets": [
     {
-      "node": "e44c2edea27ed2af96ed796b31db5bc23f195ced",
+      "node": "d78e5c52a0228c3dc8ed03fe43bf749c8e68bd20",
       "date": [
-        1541190523.0,
-        25200
+        1541616544.0,
+        0
       ],
-      "desc": "testing: install Mercurial 4.8 final\n\nIt was released a few hours ago.",
+      "desc": "robustcheckout: reference `testedwith` in `supported_hg` assertion r=gps\n\nNow we only need to update the supported Mercurial versions in a\nsingle location.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11197",
       "branch": "default",
       "bookmarks": [
         "@"
@@ -16,413 +16,413 @@
       "tags": [
         "tip"
       ],
-      "user": "Gregory Szorc <gps@mozilla.com>",
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
       "phase": "public",
       "parents": [
-        "d3d184961f09c625f180de631be848347be7881a"
+        "ae0f7e28498d6ef35f701b20b749b82012ae9e38"
       ],
-      "pushid": 3308,
+      "pushid": 3325,
       "pushdate": [
-        1541190530,
+        1541616556,
         0
       ]
     },
     {
-      "node": "d3d184961f09c625f180de631be848347be7881a",
+      "node": "ae0f7e28498d6ef35f701b20b749b82012ae9e38",
       "date": [
-        1541190437.0,
-        25200
+        1541552839.0,
+        28800
       ],
-      "desc": "ansible: use ansible_become instead of ansible_sudo\n\nThis is needed in order for Ansible to run tasks as root.",
+      "desc": "ansible/hg-web: use /static/ in script-src CSP policy (bug 1341344); r=sheehan\n\nThis is a security fix to prevent agents respecting CSP policies from\nloading scripts that come from content under version control (e.g. from\nhgweb's /raw-file/ URLs).\n\nI really wish CSP had a way to limit to paths via \"self\" so we didn't\nhave to include the full URL for the server in the CSP policy. But what\ncan you do.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10963",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "a3d756fd35b082c16af6841924f03d0457a3f764"
+        "f656bafd289e7051479caf324ff16b75eace054f"
       ],
-      "pushid": 3307,
+      "pushid": 3324,
       "pushdate": [
-        1541190447,
+        1541552873,
         0
       ]
     },
     {
-      "node": "a3d756fd35b082c16af6841924f03d0457a3f764",
+      "node": "f656bafd289e7051479caf324ff16b75eace054f",
       "date": [
-        1541173111.0,
-        0
+        1541550017.0,
+        28800
       ],
-      "desc": "ansible: upgrade to Ansible 2.5; r=sheehan\n\nPorting notes are available at\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.5.html.\n\nThere are a ton of changes in this release.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10662",
+      "desc": "hgmo: handle missing fastannotate module",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "e586b1e2a0ab70cc5114014d3964c4a6ba4071e3"
+        "c007048836b36f541c97dc803628dd380d064344"
       ],
-      "pushid": 3306,
+      "pushid": 3323,
       "pushdate": [
-        1541173483,
+        1541550022,
         0
       ]
     },
     {
-      "node": "e586b1e2a0ab70cc5114014d3964c4a6ba4071e3",
+      "node": "c007048836b36f541c97dc803628dd380d064344",
       "date": [
-        1541172951.0,
-        0
+        1541549826.0,
+        28800
       ],
-      "desc": "ansible: upgrade to Ansible 2.4; r=sheehan\n\nPorting notes are available at\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.4.html.\n\nWe see some new deprecation warnings regarding the use of \"include:\".\nBut reading release notes, the \"include_tasks\" and \"import_tasks\"\nreplacements were kind of half-baked in 2.4. So I'm going to hold off\nporting things.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10661",
+      "desc": "hgmo: attempt alternate monkeypatching of fastannotate (bug 1504794)\n\nI think this will be more resilient than the previous code...",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "811de1502626e0b4730497dfb5e3907907beb11a"
+        "5e70155571cec373d95eb79c8a22d45690281a50"
       ],
-      "pushid": 3306,
+      "pushid": 3322,
       "pushdate": [
-        1541173483,
+        1541549836,
         0
       ]
     },
     {
-      "node": "811de1502626e0b4730497dfb5e3907907beb11a",
+      "node": "5e70155571cec373d95eb79c8a22d45690281a50",
       "date": [
-        1541172906.0,
+        1541547750.0,
         0
       ],
-      "desc": "ansible: avoid jinja template syntax in when: statements; r=sheehan\n\nAnsible 2.3 added a warning when \"{{ }}\" syntax is used in when:\nconditionals. There were a few of these in our repo.\n\nThis commit removes them.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10660",
+      "desc": "hgserver: add test for fastannotate (bug 1504794); r=sheehan\n\nfastannotate has broken before. Let's add test coverage to ensure\nit continues to work.\n\nWe already have a helper script in the test environment to set hgrc\noptions. However, it doesn't work with %include, which is a special\ndirective. Rather than complicate that script with %include\nfunctionality, I wrote a simple, non-generic script to accomplish\nwhat we need.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11131",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "88fa0246970b6eee18512b7f6a2a8a6fbe43b585"
+        "1a79e8a661af88bbcdd46c6fa7dce6cf2e82f734"
       ],
-      "pushid": 3306,
+      "pushid": 3321,
       "pushdate": [
-        1541173483,
+        1541547819,
         0
       ]
     },
     {
-      "node": "88fa0246970b6eee18512b7f6a2a8a6fbe43b585",
+      "node": "1a79e8a661af88bbcdd46c6fa7dce6cf2e82f734",
       "date": [
-        1541172876.0,
+        1541547743.0,
         0
       ],
-      "desc": "ansible: upgrade to Ansible 2.3; r=sheehan\n\nAnsible 2.3 has a porting guide:\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.3.html.\n\nThis upgrade introduces some legitimate new warnings. So we touch the\nclobber files to force a Docker image rebuild with the newer Ansible\nso we can port to new mechanisms.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10659",
+      "desc": "hgmo: hack fastannotate to work with 4.8 (bug 1504794); r=sheehan\n\nfastannotate's hgweb monkeypatch is broken in Mercurial 4.8. This\ncommit replaces the fastannotate hgweb monkeypatch with our own\nversion that works.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11130",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "8b53aa730300fb304426b6b91b0ad9d1d7d81b73"
+        "2725b127690efdb69ff34ab26a38e5cb0bbaf447"
       ],
-      "pushid": 3306,
+      "pushid": 3321,
       "pushdate": [
-        1541173483,
+        1541547819,
         0
       ]
     },
     {
-      "node": "8b53aa730300fb304426b6b91b0ad9d1d7d81b73",
+      "node": "2725b127690efdb69ff34ab26a38e5cb0bbaf447",
       "date": [
-        1541172551.0,
+        1541543676.0,
         0
       ],
-      "desc": "ansible: upgrade to Ansible 2.2; r=sheehan\n\nIt appears Ansible 2.1 and 2.2 are quite boring when it comes to\nporting. We can go straight to 2.2 and we still don't appear to have\nany new warnings or deprecation notices.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10658",
+      "desc": "hgweb: use fastannotate from core Mercurial (Bug 1504794) r=gps\n\n`fastannotate` is now shipped with core Mercurial. We no longer\nneed to pull down and build the hg-experimental repo as part\nof our deploy process. This commit purges hg-experimental from\nvct (with the exception of a few extensions recommended in the\ndocs).\n\nWe also flip the `server = True` flag to serve the annotate cache\nover the wire protocol.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11124",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a604d7375ed71457c10f76a25c76cb78f69b4a4c"
+      ],
+      "pushid": 3320,
+      "pushdate": [
+        1541543690,
+        0
+      ]
+    },
+    {
+      "node": "a604d7375ed71457c10f76a25c76cb78f69b4a4c",
+      "date": [
+        1541474773.0,
+        0
+      ],
+      "desc": "testing: upgrade Python packages and Mercurial to 4.8 (Bug 1501686) r=gps\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10975",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "517d07ca95c860981e698d3ef862fed2c6118a72"
+      ],
+      "pushid": 3319,
+      "pushdate": [
+        1541541357,
+        0
+      ]
+    },
+    {
+      "node": "517d07ca95c860981e698d3ef862fed2c6118a72",
+      "date": [
+        1541474735.0,
+        0
+      ],
+      "desc": "hgssh: upgrade to Mercurial 4.8 in virtualenvs (Bug 1501686) r=gps\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10974",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d495609b21ef2a8f805cb26ac9f8728d7d4714a3"
+      ],
+      "pushid": 3319,
+      "pushdate": [
+        1541541357,
+        0
+      ]
+    },
+    {
+      "node": "d495609b21ef2a8f805cb26ac9f8728d7d4714a3",
+      "date": [
+        1541474671.0,
+        0
+      ],
+      "desc": "hgweb: upgrade to Mercurial 4.8 in virtualenvs (Bug 1501686) r=gps\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10973",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "084a352be3be5bb9e23fc994efd80ca282ff46bf"
+      ],
+      "pushid": 3319,
+      "pushdate": [
+        1541541357,
+        0
+      ]
+    },
+    {
+      "node": "084a352be3be5bb9e23fc994efd80ca282ff46bf",
+      "date": [
+        1541474643.0,
+        0
+      ],
+      "desc": "templates: upgrade templates for Mercurial 4.8 compatibility (Bug 1501686) r=gps\n\nFollowing the process at `docs/hgmo/upgrading.rst`, this commit\nupgrades `gitweb_mozilla` for use with Mercurial 4.8.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10972",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "44468bade5404c4bef6fb574b452f6479d5dcd49"
+      ],
+      "pushid": 3319,
+      "pushdate": [
+        1541541357,
+        0
+      ]
+    },
+    {
+      "node": "44468bade5404c4bef6fb574b452f6479d5dcd49",
+      "date": [
+        1541537852.0,
+        18000
+      ],
+      "desc": "firefoxtree: use kwargs instead of args for pre 4.6 function signature (Bug 1505162)\n\nTemplate keywords in Mercurial 4.6+ have a new signature and API.\nWhen upgrading the signature backwards compatibility was required\nwith versions 4.4 and 4.5, so the arguments were collected in\n`*args` and expanded after determining which API version is\nrequired. It appears that the arguments were actually keyword\narguments, so `*args` is actually empty and we need to get\nthe arguments from `kwargs`. The behaviour in question can\nbe demonstrated with the following example:\n\n  Python 2.7.13 (default, Nov  6 2018, 15:52:08)\n  [GCC 7.3.0] on linux2\n  Type \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n  >>> def a(test):\n  ...     print test\n  ...\n  >>> r = {'test': 'hello'}\n  >>> a(**r)\n  hello\n\nDespite `test` being a positional argument in `a`, we can pass a\ndict with a \"test\" key and the function call will execute correctly.\n\nThis commit changes the function to resolve it's arguments from\n`kwargs` instead of `args` on Mercurial less than 4.6.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "1ca1ab84d8277ea22d8f3bf33e836f4ccea01b11"
+      ],
+      "pushid": 3318,
+      "pushdate": [
+        1541537874,
+        0
+      ]
+    },
+    {
+      "node": "1ca1ab84d8277ea22d8f3bf33e836f4ccea01b11",
+      "date": [
+        1541534013.0,
+        18000
+      ],
+      "desc": "testing: do not install Mercurial 4.3 in test suite\n\nNo longer supported with the release of 4.8.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "3f850cc85162d426f0da2cc3c3dbaf986166098c"
+      ],
+      "pushid": 3317,
+      "pushdate": [
+        1541534056,
+        0
+      ]
+    },
+    {
+      "node": "3f850cc85162d426f0da2cc3c3dbaf986166098c",
+      "date": [
+        1541474586.0,
+        0
+      ],
+      "desc": "serverlog: update number of served bytes in test (Bug 1501686) r=gps\n\nI believe this is a side effect of some of the other\nchanges landed today.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10971",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a93dc26bace63af59e93e583d98eecbdb3da9f0d"
+      ],
+      "pushid": 3316,
+      "pushdate": [
+        1541474789,
+        0
+      ]
+    },
+    {
+      "node": "a93dc26bace63af59e93e583d98eecbdb3da9f0d",
+      "date": [
+        1541474572.0,
+        0
+      ],
+      "desc": "vcsreplicator: update output in `test-served-heads.t` (Bug 1501686) r=gps\n\nErroring via `raise ErrorResponse` now returns a JSON\nobject instead of a raw string.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10970",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Connor Sheehan <sheehan@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "8d871fdd67d5b9c0f9f9c5add3de44273af78302"
+      ],
+      "pushid": 3316,
+      "pushdate": [
+        1541474789,
+        0
+      ]
+    },
+    {
+      "node": "8d871fdd67d5b9c0f9f9c5add3de44273af78302",
+      "date": [
+        1541452366.0,
+        28800
+      ],
+      "desc": "hgserver: update test to reflect static files move",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "31164c8572c12ad3d2c08c25a7efed7a451c86ce"
+        "ff5e66697be9bc15ed0b2afe673454be22c24a1d"
       ],
-      "pushid": 3306,
+      "pushid": 3315,
       "pushdate": [
-        1541173483,
+        1541452414,
         0
       ]
     },
     {
-      "node": "31164c8572c12ad3d2c08c25a7efed7a451c86ce",
+      "node": "ff5e66697be9bc15ed0b2afe673454be22c24a1d",
       "date": [
-        1541172507.0,
+        1541450403.0,
         0
       ],
-      "desc": "ansible: upgrade to Ansible 2.0; r=sheehan\n\nWe are running Ansible 1.9, which is relatively old and has known\nsecurity vulnerabilities. I initially held off upgrading because Ansible\n2 was much slower. Enough time has passed that we are too far out of\ndate on Ansible and we can no longer live with the security issues.\nLet's upgrade to a newer Ansible.\n\nAnsible 2.7 is the latest Ansible. But there are a number of\nbackwards incompatible changes to it that make the jump straight to\nit pretty difficult. Our approach to the upgrade will be to make\nsmaller jumps so we can understand them easier.\n\nOur first step is Ansible 2.0.\n\nThe porting guide to 2.0 can be found at\nhttps://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.0.html.\n\nWhile it lists a number of changes, I couldn't find any obvious\nviolations in our Ansible code! However, I did not verify every\nsingle Ansible playbook. So there may be legacy Ansible code lingering.\nThis caveat applies to all future patches as well.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10657",
+      "desc": "ansible/hg-web: serve static files as immutable content; r=sheehan\n\nThe commit message of the previous commit documented a problem with\nnaive static file serving using httpd. In summary, Last-Modified\nand ETag values vary depending on the filesystem and across N servers\nthis can result in different header values and caching state. This can\nresult in lower cache hit rates.\n\nWe can do better.\n\nSince the static files are checked into v-c-t, any particular revision\nof v-c-t has immutable state of those files. In addition, the HTTP\nCache-Control header can be used to tell clients to always use a\ncached result without lookup (max-age) and that content is immutable\n(immutable).\n\nPutting these two properties together, it means that we can serve up\nstatic files from URLs with the v-c-t revision in them with very\naggressive caching headers. This should result in very high cache\nhit rates coupled with the removal of conditional HTTP requests. What\nthis means is that most hgweb page loads will require 1 roundtrip to\nthe server (to fetch the main HTML) and static assets will load\nimmediately.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10786",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "256ea8e6e0fc66ea3c8d30fb2f308a5a11a6fb60"
+        "5545fedd9bd8f760ac67b9d97b18c88ef4e4da5c"
       ],
-      "pushid": 3306,
+      "pushid": 3314,
       "pushdate": [
-        1541173483,
+        1541450474,
         0
       ]
     },
     {
-      "node": "256ea8e6e0fc66ea3c8d30fb2f308a5a11a6fb60",
+      "node": "5545fedd9bd8f760ac67b9d97b18c88ef4e4da5c",
       "date": [
-        1541172438.0,
+        1541449797.0,
         0
       ],
-      "desc": "env: upgrade to latest boto packages; r=sheehan\n\nA new package was released. Let's upgrade to it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10656",
+      "desc": "ansible/hg-web: synchronize templates earlier; r=sheehan\n\nWe will need to do this before hgrc modification once a subsequent\ncommit lands.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10785",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "ba44b26a765fcd64af10e924e747527af1ca2aae"
+        "1bde25a5751ba97e560c1bcdefcefe558e3c18c9"
       ],
-      "pushid": 3306,
+      "pushid": 3314,
       "pushdate": [
-        1541173483,
+        1541450474,
         0
       ]
     },
     {
-      "node": "ba44b26a765fcd64af10e924e747527af1ca2aae",
+      "node": "1bde25a5751ba97e560c1bcdefcefe558e3c18c9",
       "date": [
-        1541172412.0,
+        1541449738.0,
         0
       ],
-      "desc": "ansible: rename requirements file to not have \"1.9\" in it; r=sheehan\n\nIn preparation for upgrading past Ansible 1.9.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10655",
+      "desc": "ansible/hg-web: convert hgrc to a template; r=sheehan\n\nThis will be needed for some upcoming magic around static file\nserving.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10784",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "ce44fbac066d3e4560677a5989215c0b2767d047"
+        "da1f0340faca261387c2e2f0eae08acb04a01c55"
       ],
-      "pushid": 3306,
+      "pushid": 3314,
       "pushdate": [
-        1541173483,
+        1541450474,
         0
       ]
     },
     {
-      "node": "ce44fbac066d3e4560677a5989215c0b2767d047",
+      "node": "da1f0340faca261387c2e2f0eae08acb04a01c55",
       "date": [
-        1541171030.0,
+        1541449635.0,
         0
       ],
-      "desc": "testing: stream raw chunks into BytesIO(); r=sheehan\n\nWith the recent upgrade to the docker package, this get_archive()'s\nfirst returned element is a generator of chunks, not a file object.\n\nWith this change, we are now able to start various Docker clusters\nagain.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10649",
+      "desc": "ansible/hg-web: serve static files from /static/; r=sheehan\n\nNow that the httpd server can serve static files, let's point hgweb\nat it.\n\nThis change will have some subtle behavior changes to how static\nassets are served.\n\nCurrently, hgweb doesn't send Last-Modified or ETag response headers.\nThis means that clients can't cache resources and that subsequent\nrequests will always fetch the new resources.\n\nhttpd will set both of these headers. This means clients will issue\nconditional If-Modified-Since and/or If-None-Match HTTP requests and\nthe server can issue a 304 Not Modified response and not have to\ntransfer the file contents, allowing clients to render content\nsooner.\n\nHowever, because Last-Modified and ETag rely on local filesystem\nstate (e.g. Last-Modified is driven by the local filesystem's\nmtime), the caching state could vary from one hgweb machine to\nanother. This could result in a low HTTP 304 rate. But in the worst\ncase, behavior should be no worse than what hgweb is doing today,\nsince hgweb is sending every static file with an HTTP 200 100% of\nthe time.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10783",
       "branch": "default",
       "bookmarks": [],
       "tags": [],
       "user": "Gregory Szorc <gps@mozilla.com>",
       "phase": "public",
       "parents": [
-        "bb10838d737de7be2972397675d0f5fcf04501a9"
+        "54d9ff524959cdf71727253a297f356a5e03ae39"
       ],
-      "pushid": 3306,
+      "pushid": 3314,
       "pushdate": [
-        1541173483,
-        0
-      ]
-    },
-    {
-      "node": "bb10838d737de7be2972397675d0f5fcf04501a9",
-      "date": [
-        1541170942.0,
-        0
-      ],
-      "desc": "github-webhooks: upgrade kombu; r=sheehan\n\nWe run this version of kombu elsewhere.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10641",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "09d48e68d1b627399bacab278086597cfa1f3e11"
-      ],
-      "pushid": 3306,
-      "pushdate": [
-        1541173483,
-        0
-      ]
-    },
-    {
-      "node": "09d48e68d1b627399bacab278086597cfa1f3e11",
-      "date": [
-        1541170912.0,
-        0
-      ],
-      "desc": "github-webhooks: unpin dependencies and upgrade packages; r=sheehan\n\nIt should be safe to run the latest version of packages.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10640",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "d5e3b21d269a90d3082afa5bf2dfa6bc5f29e6fa"
-      ],
-      "pushid": 3306,
-      "pushdate": [
-        1541173483,
-        0
-      ]
-    },
-    {
-      "node": "d5e3b21d269a90d3082afa5bf2dfa6bc5f29e6fa",
-      "date": [
-        1541170890.0,
-        0
-      ],
-      "desc": "github-webhooks: manage lambda-requirements.txt with pip-compile; r=sheehan\n\nThe march continues.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10639",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "7a57b87620e2dff7b5ce45ada0a9e4fa9e6e0c64"
-      ],
-      "pushid": 3306,
-      "pushdate": [
-        1541173483,
-        0
-      ]
-    },
-    {
-      "node": "7a57b87620e2dff7b5ce45ada0a9e4fa9e6e0c64",
-      "date": [
-        1541116870.0,
-        0
-      ],
-      "desc": "env: copy --find-links to generated requirements.txt files; r=sheehan\n\npip-compile dropped these lines.\n\nLet's teach upgrade-python-packages to preserve them.\n\nThis should unbreak the building of the hgweb image due to missing\nbloxtool package.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10636",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "44e4d6d60a67c2d87e988e342104c43de71be662"
-      ],
-      "pushid": 3306,
-      "pushdate": [
-        1541173483,
-        0
-      ]
-    },
-    {
-      "node": "44e4d6d60a67c2d87e988e342104c43de71be662",
-      "date": [
-        1541116367.0,
-        0
-      ],
-      "desc": "env: define CUSTOM_COMPILE_COMMAND; r=sheehan\n\nThis will annotate the requirements.txt with the proper script to use.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10635",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "20d34355be82519c8602361bbab3dd12cb73a460"
-      ],
-      "pushid": 3306,
-      "pushdate": [
-        1541173483,
-        0
-      ]
-    },
-    {
-      "node": "20d34355be82519c8602361bbab3dd12cb73a460",
-      "date": [
-        1541116183.0,
-        0
-      ],
-      "desc": "testing: re-attach to container after timeout; r=sheehan\n\nNew behavior after the docker-py or requests upgrade has resulted in\nattach() returning prematurely after 60s of no output. This behavior\nis a bit wonky and I filed\nhttps://github.com/docker/docker-py/issues/2166 to track it.\n\nThis commit works around the new behavior.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10634",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "e4b99b6399701f7dfab7e899a702772e40a19716"
-      ],
-      "pushid": 3306,
-      "pushdate": [
-        1541173483,
-        0
-      ]
-    },
-    {
-      "node": "e4b99b6399701f7dfab7e899a702772e40a19716",
-      "date": [
-        1541110008.0,
-        25200
-      ],
-      "desc": "testing: refresh base CentOS 7 Docker image\n\nApparently I did this on November 1 last year too. Must be something\nabout November 1 making me want to update the v-c-t environment.\n\nThis change results in the elimination of ~159 package updates when\nrunning `yum update`, making fresh image builds substantially faster.",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "fc79f0995d919fb9c06849b141197419fbc10274"
-      ],
-      "pushid": 3305,
-      "pushdate": [
-        1541110447,
-        0
-      ]
-    },
-    {
-      "node": "fc79f0995d919fb9c06849b141197419fbc10274",
-      "date": [
-        1541107894.0,
-        0
-      ],
-      "desc": "env: upgrade to latest ansible 1.9 release; r=sheehan\n\nWe should always use the latest available version to pull in\nbug fixes, etc.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10618",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "a6fb12f21d7c9b42547fd8f2f5a2dbc722d17d91"
-      ],
-      "pushid": 3304,
-      "pushdate": [
-        1541108173,
-        0
-      ]
-    },
-    {
-      "node": "a6fb12f21d7c9b42547fd8f2f5a2dbc722d17d91",
-      "date": [
-        1541107880.0,
-        0
-      ],
-      "desc": "env: reference requirements-ansible-1.9.in in deploy-requirements.in; r=sheehan\n\nThe side effect is we now use a consistent Ansible version for\ndeploys and in Docker images. And that consistent version is newer\nthan what we were using for deploys. I'm not sure why we didn't\nhave the deploy version upgraded. Probably an oversight.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10617",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gregory Szorc <gps@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "1a5daa6f0342b7b04960f48d341aa2cd9801740d"
-      ],
-      "pushid": 3304,
-      "pushdate": [
-        1541108173,
+        1541450474,
         0
       ]
     }

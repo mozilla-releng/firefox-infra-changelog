@@ -1,0 +1,429 @@
+{
+  "node": "c37288746a56105d8b875b1795d382c0d593403f",
+  "changeset_count": 445079,
+  "changesets": [
+    {
+      "node": "c37288746a56105d8b875b1795d382c0d593403f",
+      "date": [
+        1541652723.0,
+        -7200
+      ],
+      "desc": "Merge inbound to mozilla-central a=merge",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "arthur.iakab <aiakab@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "18ea6c93e85821f421257668f6edd632f3005398",
+        "9dfe0f1937e98bc9534c21e7700480efe4a74ff8"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "9dfe0f1937e98bc9534c21e7700480efe4a74ff8",
+      "date": [
+        1541641624.0,
+        -32400
+      ],
+      "desc": "Backout changesets 2e0ed8c61e24, b569742fbbf2 and 6f8c933b7938 (bug 1504906) to give time to docker images to build without blocking other landings.\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mike Hommey <mh+mozilla@glandium.org>",
+      "phase": "public",
+      "parents": [
+        "6f8c933b7938e254d7719788126b902da7e42fda"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "6f8c933b7938e254d7719788126b902da7e42fda",
+      "date": [
+        1541550050.0,
+        -32400
+      ],
+      "desc": "Bug 1504906 - Build 32-bits Gtk+ 3.10 packages for Debian Wheezy. r=gps\n\nThis creates 32-bits variants of the same packages that were added for\n64-bits builds, with a few additions:\n- python-defaults, so that the python package can be installed as a\n  dependency of the libglib2.0-dev package,\n- xkeyboard-config, so that the xkb-data package can be installed as a\n  dependency of the libxkbcommon0 package.\n\nAdditionally, because the 32-bits and 64-bits packages are built\nseparately (the 32-bits packages can't, on Wheezy, be built on a 64-bits\nhost), they don't end up with the same\nchangelog.Debian/changelog.Debian.gz file because of a timestamp within\nit. One way to address this would be to make the taskgraph more complex,\nby adding a task creating the source package, and then two tasks\nbuilding the 32-bits and 64-bits binary packages from that source, but\nthat's not worth the overhead, when a simple hack works around the\nproblem: We make dpkg skip installing the changelog.Debian* files.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11140\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mike Hommey <mh+mozilla@glandium.org>",
+      "phase": "public",
+      "parents": [
+        "1f63f3761bc031e6373183f5b8836f80e707dc20"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "1f63f3761bc031e6373183f5b8836f80e707dc20",
+      "date": [
+        1541548700.0,
+        -32400
+      ],
+      "desc": "Bug 1504906 - Add support for building non-amd64 Debian packages. r=gps\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11139\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mike Hommey <mh+mozilla@glandium.org>",
+      "phase": "public",
+      "parents": [
+        "b569742fbbf2482a71dd3ef553554a46d547335c"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "b569742fbbf2482a71dd3ef553554a46d547335c",
+      "date": [
+        1541548545.0,
+        -32400
+      ],
+      "desc": "Bug 1504906 - Build 64-bits Gtk+ 3.10 packages for Debian Wheezy. r=gps\n\nAlong with all the updated dependencies that are necessary to achieve\nthis.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11138\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mike Hommey <mh+mozilla@glandium.org>",
+      "phase": "public",
+      "parents": [
+        "2e0ed8c61e24d7eebf906b63a9b0f4523ac8bf96"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "2e0ed8c61e24d7eebf906b63a9b0f4523ac8bf96",
+      "date": [
+        1541548371.0,
+        -32400
+      ],
+      "desc": "Bug 1504906 - Use a separate docker image for base toolchain builds. r=gps\n\nWe're going to bump our shipped builds to build against Gtk+ 3.10, but\nstill want to ensure we can still build against Gtk+ 3.4. As we're using\nGtk+ packages installed in the build docker image, we need to have a\nseparate image where the Gtk+ packages are kept at version 3.4.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11137\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mike Hommey <mh+mozilla@glandium.org>",
+      "phase": "public",
+      "parents": [
+        "218da4526e22db6d81ab827c7f5ec9e44a8fc92f"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "218da4526e22db6d81ab827c7f5ec9e44a8fc92f",
+      "date": [
+        1541531208.0,
+        36000
+      ],
+      "desc": "Bug 1505139 - Tolerate getenv races in JPEG library initialization, r=lsmyth.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brian Hackett <bhackett1024@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "aec161975269ee213b2ddc2e3090b26aabe48e25"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "aec161975269ee213b2ddc2e3090b26aabe48e25",
+      "date": [
+        1541525861.0,
+        36000
+      ],
+      "desc": "Bug 1504909 Part 4 - Always store progress counter in execution points, r=lsmyth.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brian Hackett <bhackett1024@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "8f33aed589e1a600b125a3e9ef95967ced9e4f31"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "8f33aed589e1a600b125a3e9ef95967ced9e4f31",
+      "date": [
+        1541525842.0,
+        36000
+      ],
+      "desc": "Bug 1504909 Part 3 - Get the current point and recording endpoint from navigation state, r=lsmyth.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brian Hackett <bhackett1024@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "669dca3ed43c8f01851d2c1bb317931668891243"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "669dca3ed43c8f01851d2c1bb317931668891243",
+      "date": [
+        1541525814.0,
+        36000
+      ],
+      "desc": "Bug 1504909 Part 2 - Remove unused recordingPosition interface, r=lsmyth.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brian Hackett <bhackett1024@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "42475558ccac3688e2798d13e326e9fc093a1bbe"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "42475558ccac3688e2798d13e326e9fc093a1bbe",
+      "date": [
+        1541525780.0,
+        36000
+      ],
+      "desc": "Bug 1504909 Part 1 - Include current point and endpoint in paused packets, r=lsmyth.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brian Hackett <bhackett1024@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "e3c1bdec432c62d2d290efff009f7df76f25e256"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "e3c1bdec432c62d2d290efff009f7df76f25e256",
+      "date": [
+        1539291281.0,
+        25200
+      ],
+      "desc": "Bug 1494752.  r=jonco",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jeff Walden <jwalden@mit.edu>",
+      "phase": "public",
+      "parents": [
+        "eee64821abeff905d91426c7a519b6c0fe625171"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "eee64821abeff905d91426c7a519b6c0fe625171",
+      "date": [
+        1539730872.0,
+        25200
+      ],
+      "desc": "Bug 1499192 - Don't null-terminate ScriptSource source-code chunks.  r=tcampbell",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jeff Walden <jwalden@mit.edu>",
+      "phase": "public",
+      "parents": [
+        "5e3b2151392cbfeecc4e8ff8bcf87cfa0741ddbb"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "5e3b2151392cbfeecc4e8ff8bcf87cfa0741ddbb",
+      "date": [
+        1541636607.0,
+        -7200
+      ],
+      "desc": "Bug 1489914 - Fix UA override for rakuten.co.jp. r=karlcow",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mike Taylor <miket@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "969b0caedb4d659c8b6e2c296cf04cf2d9f49c9a"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "969b0caedb4d659c8b6e2c296cf04cf2d9f49c9a",
+      "date": [
+        1541636042.0,
+        36000
+      ],
+      "desc": "Bug 1505121 - Disable media decoders when recording/replaying, r=bryce.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brian Hackett <bhackett1024@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "24d352cb618a997bd229c93f88ae50bbe5697aa2"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "24d352cb618a997bd229c93f88ae50bbe5697aa2",
+      "date": [
+        1541635425.0,
+        -3600
+      ],
+      "desc": "Bug 1505618 - Some minor follow-up formatting nits.\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "public",
+      "parents": [
+        "a86fa4d83651a8df6dd65a3cbbc0b56eb0cb24ad"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "a86fa4d83651a8df6dd65a3cbbc0b56eb0cb24ad",
+      "date": [
+        1541634139.0,
+        -3600
+      ],
+      "desc": "Bug 1505618 - Add Servo's rustfmt.toml to the servo/ directory. r=heycam\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "public",
+      "parents": [
+        "be17ec6855facf691a8f31430a3e3d187d32b3ed"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "be17ec6855facf691a8f31430a3e3d187d32b3ed",
+      "date": [
+        1541632525.0,
+        -3600
+      ],
+      "desc": "Bug 1505618 - Import formatting changes from servo/servo#22126.\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "public",
+      "parents": [
+        "1500576f87ec43316030370cbc48974451e7b0d5"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "1500576f87ec43316030370cbc48974451e7b0d5",
+      "date": [
+        1541629651.0,
+        -3600
+      ],
+      "desc": "Bug 1505618 - Fix code style of a recent commit.\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "public",
+      "parents": [
+        "4858cc391c4db59e77751bc1b6b74e49f0fc063b"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    },
+    {
+      "node": "4858cc391c4db59e77751bc1b6b74e49f0fc063b",
+      "date": [
+        1541554078.0,
+        36000
+      ],
+      "desc": "Bug 1505229 - Never wait for replaying child processes while recording, r=mccr8.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brian Hackett <bhackett1024@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "43772d7ccfc4e32ad25283c5e3224995016e7367"
+      ],
+      "pushid": 35008,
+      "pushdate": [
+        1541652746,
+        0
+      ]
+    }
+  ]
+}

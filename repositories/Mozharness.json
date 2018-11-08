@@ -1,0 +1,438 @@
+{
+  "node": "30dee04464b664782c2b437235df841e375a0f67",
+  "changeset_count": 4484,
+  "changesets": [
+    {
+      "node": "30dee04464b664782c2b437235df841e375a0f67",
+      "date": [
+        1537831770.0,
+        21600
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "244bb75b76363cc45e5efff5c19b2732d1eafab5",
+        "28e41a10ce4f010e7721476b4aa6874bdcd82c5b"
+      ],
+      "pushid": 3587,
+      "pushdate": [
+        1537831957,
+        0
+      ]
+    },
+    {
+      "node": "28e41a10ce4f010e7721476b4aa6874bdcd82c5b",
+      "date": [
+        1537831698.0,
+        21600
+      ],
+      "desc": "Bug 1493256 - remove conduit sync. r=bhearsum,fubar",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "8b108879ec1b6fd7f8b24b697470219bc34d206a"
+      ],
+      "pushid": 3586,
+      "pushdate": [
+        1537831705,
+        0
+      ]
+    },
+    {
+      "node": "244bb75b76363cc45e5efff5c19b2732d1eafab5",
+      "date": [
+        1530910050.0,
+        21600
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "221f8f97bd5e405cc790baf6a4d14655f315c7ef",
+        "8b108879ec1b6fd7f8b24b697470219bc34d206a"
+      ],
+      "pushid": 3585,
+      "pushdate": [
+        1530910069,
+        0
+      ]
+    },
+    {
+      "node": "8b108879ec1b6fd7f8b24b697470219bc34d206a",
+      "date": [
+        1530904765.0,
+        21600
+      ],
+      "desc": "Bug 1128685 - remove unused user refs for vcssync. r=aki",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "69305388ece57fdd5a6e674fe1a5f7d7368ee436"
+      ],
+      "pushid": 3584,
+      "pushdate": [
+        1530904799,
+        0
+      ]
+    },
+    {
+      "node": "69305388ece57fdd5a6e674fe1a5f7d7368ee436",
+      "date": [
+        1530392680.0,
+        25200
+      ],
+      "desc": "Bug 1467026 - move travis-ci notifications to #releng-bots, r=testing",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jordan Lund <jlund@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "37921510e646e421e265c0ed430e9ba1f6b0d71f"
+      ],
+      "pushid": 3583,
+      "pushdate": [
+        1530392778,
+        0
+      ]
+    },
+    {
+      "node": "221f8f97bd5e405cc790baf6a4d14655f315c7ef",
+      "date": [
+        1530118806.0,
+        25200
+      ],
+      "desc": "merges default -> production",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jordan Lund <jlund@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "193ed39b88f85b4de68898d1949d047a16c5dba4",
+        "37921510e646e421e265c0ed430e9ba1f6b0d71f"
+      ],
+      "pushid": 3582,
+      "pushdate": [
+        1530121785,
+        0
+      ]
+    },
+    {
+      "node": "37921510e646e421e265c0ed430e9ba1f6b0d71f",
+      "date": [
+        1530116170.0,
+        -7200
+      ],
+      "desc": "Bug 1471541 - replace relengapi with mozilla-releng URL, r=jlund",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Rok Garbas <rok@garbas.si>",
+      "phase": "public",
+      "parents": [
+        "429a2b127b2d56dbbea230e7812b598b37817012"
+      ],
+      "pushid": 3581,
+      "pushdate": [
+        1530118645,
+        0
+      ]
+    },
+    {
+      "node": "193ed39b88f85b4de68898d1949d047a16c5dba4",
+      "date": [
+        1528138068.0,
+        21600
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "20b02deaf60ab824fac729ead22be76527627719",
+        "429a2b127b2d56dbbea230e7812b598b37817012"
+      ],
+      "pushid": 3580,
+      "pushdate": [
+        1528138097,
+        0
+      ]
+    },
+    {
+      "node": "429a2b127b2d56dbbea230e7812b598b37817012",
+      "date": [
+        1528135825.0,
+        14400
+      ],
+      "desc": "bug 1458329: stop syncing build/puppet to github. r=aki",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ben Hearsum <bhearsum@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d07385992b9589085064c3e60acd45ec8d6472e5"
+      ],
+      "pushid": 3579,
+      "pushdate": [
+        1528135838,
+        0
+      ]
+    },
+    {
+      "node": "20b02deaf60ab824fac729ead22be76527627719",
+      "date": [
+        1526401626.0,
+        25200
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "38893e6100c17f64f1991f63e1cd78d1bd46545d",
+        "d07385992b9589085064c3e60acd45ec8d6472e5"
+      ],
+      "pushid": 3578,
+      "pushdate": [
+        1526401643,
+        0
+      ]
+    },
+    {
+      "node": "d07385992b9589085064c3e60acd45ec8d6472e5",
+      "date": [
+        1526398776.0,
+        25200
+      ],
+      "desc": "Bug 1460199 - add esr60 to vcssync. r=aki,gps",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "bac9d342dedf9bd210a11d3e33489866aa037535"
+      ],
+      "pushid": 3577,
+      "pushdate": [
+        1526398976,
+        0
+      ]
+    },
+    {
+      "node": "38893e6100c17f64f1991f63e1cd78d1bd46545d",
+      "date": [
+        1497264640.0,
+        -10800
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andrei Obreja <aobreja@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "9a1328ff060acb388ad9dc084d60877ce7382a28",
+        "bac9d342dedf9bd210a11d3e33489866aa037535"
+      ],
+      "pushid": 3576,
+      "pushdate": [
+        1497264660,
+        0
+      ]
+    },
+    {
+      "node": "bac9d342dedf9bd210a11d3e33489866aa037535",
+      "date": [
+        1497261446.0,
+        -10800
+      ],
+      "desc": "Bug 1371357 - Clean up remaining references to influxdb , f=catlee",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andrei Obreja <aobreja@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "9c16ca8b427c644b06de08fa34fa3bc208b24a77"
+      ],
+      "pushid": 3575,
+      "pushdate": [
+        1497261498,
+        0
+      ]
+    },
+    {
+      "node": "9a1328ff060acb388ad9dc084d60877ce7382a28",
+      "date": [
+        1494951850.0,
+        21600
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "f363fe059fb8808e5452c802e3b7948fbbf2430c",
+        "9c16ca8b427c644b06de08fa34fa3bc208b24a77"
+      ],
+      "pushid": 3574,
+      "pushdate": [
+        1494951860,
+        0
+      ]
+    },
+    {
+      "node": "9c16ca8b427c644b06de08fa34fa3bc208b24a77",
+      "date": [
+        1494951678.0,
+        21600
+      ],
+      "desc": "bug 1364514 - increase vcssync export/push timeouts. r=hwine",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "952191623b5720c5d0cc7eddf1376c706a5974f4"
+      ],
+      "pushid": 3573,
+      "pushdate": [
+        1494951719,
+        0
+      ]
+    },
+    {
+      "node": "f363fe059fb8808e5452c802e3b7948fbbf2430c",
+      "date": [
+        1493999183.0,
+        21600
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "6303d8c7aa90ae0f490377f8403544875a2239e0",
+        "952191623b5720c5d0cc7eddf1376c706a5974f4"
+      ],
+      "pushid": 3572,
+      "pushdate": [
+        1493999348,
+        0
+      ]
+    },
+    {
+      "node": "952191623b5720c5d0cc7eddf1376c706a5974f4",
+      "date": [
+        1493998823.0,
+        21600
+      ],
+      "desc": "reapply changeset 4464 - bug 1352478 - removing unused b2g*, esr <45, gitmo.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "82f0150fea028bf564e903163385f9836486dee1"
+      ],
+      "pushid": 3571,
+      "pushdate": [
+        1493998887,
+        0
+      ]
+    },
+    {
+      "node": "82f0150fea028bf564e903163385f9836486dee1",
+      "date": [
+        1493997834.0,
+        21600
+      ],
+      "desc": "merge production->default; re-sync for https changes only in production",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "e04c7c18185c6b84000bdce04fcbd5cf45988f1d",
+        "6303d8c7aa90ae0f490377f8403544875a2239e0"
+      ],
+      "pushid": 3571,
+      "pushdate": [
+        1493998887,
+        0
+      ]
+    },
+    {
+      "node": "6303d8c7aa90ae0f490377f8403544875a2239e0",
+      "date": [
+        1491256039.0,
+        21600
+      ],
+      "desc": "merge default->production; tests passing",
+      "branch": "production",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "52296fcce4c7831a6cad7f8455b783d1fbaad710",
+        "e04c7c18185c6b84000bdce04fcbd5cf45988f1d"
+      ],
+      "pushid": 3570,
+      "pushdate": [
+        1491256077,
+        0
+      ]
+    },
+    {
+      "node": "e04c7c18185c6b84000bdce04fcbd5cf45988f1d",
+      "date": [
+        1491251972.0,
+        21600
+      ],
+      "desc": "bug 1352478 - removing unused b2g*, esr <45, gitmo. r=hwine",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dave House <dhouse@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "4d075eaa238c423b45b9d640dc0b5aee1b9d4356"
+      ],
+      "pushid": 3569,
+      "pushdate": [
+        1491251981,
+        0
+      ]
+    }
+  ]
+}

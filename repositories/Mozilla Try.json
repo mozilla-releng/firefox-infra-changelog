@@ -1,0 +1,428 @@
+{
+  "node": "3d9655ef109e29f6d53f27b178f17e1328fe1790",
+  "changeset_count": 1752178,
+  "changesets": [
+    {
+      "node": "3d9655ef109e29f6d53f27b178f17e1328fe1790",
+      "date": [
+        1541667189.0,
+        -3600
+      ],
+      "desc": "Fuzzy query=!pgo !qr !sw linux64/debug-mochi-media-2\n\nPushed via `mach try fuzzy`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Andreas Pehrson <apehrson@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "c549fa2db74e6f11fbec736e4b15a606758d6586"
+      ],
+      "pushid": 313432,
+      "pushdate": [
+        1541667229,
+        0
+      ]
+    },
+    {
+      "node": "aee29998a8513b6d6524bc460ea522aa046a9317",
+      "date": [
+        1541666911.0,
+        -3600
+      ],
+      "desc": "try: -b o -p win64 -u mochitest-a11y\n\nPushed via `mach try syntax`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Marco Zehe <mzehe@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "89d1669c0d526b6a90455e89c9f5633e224f5ee6"
+      ],
+      "pushid": 313431,
+      "pushdate": [
+        1541666935,
+        0
+      ]
+    },
+    {
+      "node": "89d1669c0d526b6a90455e89c9f5633e224f5ee6",
+      "date": [
+        1541148641.0,
+        -3600
+      ],
+      "desc": "Bug 1503964 - Prevent crashes when dealing with crazy table row and column role constructs, r=jamie\n\nMade IsTableCell() only check the generic type, not the ARIA map entry that gets checked in HasGenericType. This prevents the crash and also fixes IsTableCell() and AsTableCell() not being in sync.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10713",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Marco Zehe <mzehe@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "b8222faf7d06e64be9af80a60b87f8d2bab30f97"
+      ],
+      "pushid": 313431,
+      "pushdate": [
+        1541666935,
+        0
+      ]
+    },
+    {
+      "node": "fbc0498e72ed2a4b9dcb9ad06bd11c192f52aed4",
+      "date": [
+        1541662430.0,
+        -3600
+      ],
+      "desc": "try: -b d -p win64 -u reftest-e10s[windows10-64-qr] -t none --setenv RUST_LOG=debug\n\nPushed via `mach try syntax`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gyula Zakor <gyula.zakor@h-lab.eu>",
+      "phase": "draft",
+      "parents": [
+        "510f2e971a6e46d5ba5706470f9ad1d44d94cc7b"
+      ],
+      "pushid": 313430,
+      "pushdate": [
+        1541666056,
+        0
+      ]
+    },
+    {
+      "node": "f3baad32734a15c4f5c54baffcbe2a8576eb6fdd",
+      "date": [
+        1541666001.0,
+        -7200
+      ],
+      "desc": "Fuzzy query='test-windows10-64/opt-raptor-motionmark-animometer-firefox-e10s\n\nPushed via `mach try fuzzy`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "42abf3a75d2113cca10d3e250be26cd3b0b69a3b"
+      ],
+      "pushid": 313429,
+      "pushdate": [
+        1541666043,
+        0
+      ]
+    },
+    {
+      "node": "42abf3a75d2113cca10d3e250be26cd3b0b69a3b",
+      "date": [
+        1541665975.0,
+        -7200
+      ],
+      "desc": "try bisect, for alert 13785, by removing bug 1504574",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "981aa569f6de7c3b367acd92a8b2cfd64adda6fa"
+      ],
+      "pushid": 313429,
+      "pushdate": [
+        1541666043,
+        0
+      ]
+    },
+    {
+      "node": "d9146d19456ec72730c70d359db0692daf33b39b",
+      "date": [
+        1541665664.0,
+        -7200
+      ],
+      "desc": "Fuzzy query='test-windows10-64/opt-raptor-motionmark-animometer-firefox-e10s\n\nPushed via `mach try fuzzy`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "abc007558bff4ad23067328ae27bede9d1bf4f33"
+      ],
+      "pushid": 313428,
+      "pushdate": [
+        1541665715,
+        0
+      ]
+    },
+    {
+      "node": "abc007558bff4ad23067328ae27bede9d1bf4f33",
+      "date": [
+        1541665636.0,
+        -7200
+      ],
+      "desc": "try bisect, for alert 17385, by removing bug 1494942",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "981aa569f6de7c3b367acd92a8b2cfd64adda6fa"
+      ],
+      "pushid": 313428,
+      "pushdate": [
+        1541665715,
+        0
+      ]
+    },
+    {
+      "node": "d14ccaeee06f2cc3b132170bc0cfe0b1d2c2c4b5",
+      "date": [
+        1541662038.0,
+        -3600
+      ],
+      "desc": "try: -b d -p win64 -u reftest-e10s[Windows 10] -t none --setenv RUST_LOG=debug --setenv MOZ_ACCELERATED=1 --setenv MOZ_WEBRENDER=1\n\nPushed via `mach try syntax`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gyula Zakor <gyula.zakor@h-lab.eu>",
+      "phase": "draft",
+      "parents": [
+        "510f2e971a6e46d5ba5706470f9ad1d44d94cc7b"
+      ],
+      "pushid": 313427,
+      "pushdate": [
+        1541665706,
+        0
+      ]
+    },
+    {
+      "node": "5f5bffdadd79493060e1ab7cab5eabddf46522fb",
+      "date": [
+        1541665471.0,
+        -32400
+      ],
+      "desc": "try: -b do -p linux64,android-api-16 -u all -t none\n\nPushed via `mach try syntax`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "5458a1d452b3929c3cd3c132471a1374030cf576"
+      ],
+      "pushid": 313426,
+      "pushdate": [
+        1541665494,
+        0
+      ]
+    },
+    {
+      "node": "5458a1d452b3929c3cd3c132471a1374030cf576",
+      "date": [
+        1541664538.0,
+        -32400
+      ],
+      "desc": "[mq]: first-paint",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "1385d55e54133eec0e6ef9317819e18b3702aa34"
+      ],
+      "pushid": 313426,
+      "pushdate": [
+        1541665494,
+        0
+      ]
+    },
+    {
+      "node": "8bd233436914b948f466e2db265628ee271c106d",
+      "date": [
+        1541665427.0,
+        -7200
+      ],
+      "desc": "Fuzzy query='test-windows10-64/opt-raptor-motionmark-animometer-firefox-e10s\n\nPushed via `mach try fuzzy`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "1e0d6f6a095b34626d72e1c10b0659b6c1d62538"
+      ],
+      "pushid": 313425,
+      "pushdate": [
+        1541665478,
+        0
+      ]
+    },
+    {
+      "node": "1e0d6f6a095b34626d72e1c10b0659b6c1d62538",
+      "date": [
+        1541665404.0,
+        -7200
+      ],
+      "desc": "try bisect, for alert 17385, by removing bug 1502761",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "981aa569f6de7c3b367acd92a8b2cfd64adda6fa"
+      ],
+      "pushid": 313425,
+      "pushdate": [
+        1541665478,
+        0
+      ]
+    },
+    {
+      "node": "a398a60471bdaae80d78a0d94e86cdccadc78bc5",
+      "date": [
+        1541665431.0,
+        0
+      ],
+      "desc": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/layout-animations-disabled-violation-report-tentative.html",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "moz-wptsync-bot <wptsync@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "4627ba4584231fd930670b2a4872aeef26fa0f3e"
+      ],
+      "pushid": 313424,
+      "pushdate": [
+        1541665453,
+        0
+      ]
+    },
+    {
+      "node": "4627ba4584231fd930670b2a4872aeef26fa0f3e",
+      "date": [
+        1541665371.0,
+        0
+      ],
+      "desc": "Bug 1505638 [wpt PR 13972] - Update wpt metadata, a=testonly\n\nwpt-pr: 13972\nwpt-type: metadata\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "moz-wptsync-bot <wptsync@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "ce62e4cbd9cee99acfe4ef6e59d82a079ffd40b5"
+      ],
+      "pushid": 313424,
+      "pushdate": [
+        1541665453,
+        0
+      ]
+    },
+    {
+      "node": "ce62e4cbd9cee99acfe4ef6e59d82a079ffd40b5",
+      "date": [
+        1541665377.0,
+        0
+      ],
+      "desc": "Bug 1505638 [wpt PR 13972] - Violation reports for 'layout-animations', a=testonly\n\nThis CL adds support for generating violation reports for 'layout-animations'\nfeature policy. The new implementation triggers a report when:\n  1- CSS Parser finds usage of @keyframes for one of the banned styles.\n  2- element.animate() changes a banned style.\nFor CSS, the style sheet's URI (if any) isused as report.body.sourceFile.\n\nBug: 902836,867471\nChange-Id: I79900603eb0166514d7986dc189ec914bd95f899\n\nwpt-commit: a5db8ae18fbc431d327347d7878fc32b04afdaf4\nwpt-pr: 13972\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ehsan Karamad <ekaramad@chromium.org>",
+      "phase": "draft",
+      "parents": [
+        "c37288746a56105d8b875b1795d382c0d593403f"
+      ],
+      "pushid": 313424,
+      "pushdate": [
+        1541665453,
+        0
+      ]
+    },
+    {
+      "node": "ee54825cb6e663744e2f623e14e574f26b3fcb50",
+      "date": [
+        1541665160.0,
+        -7200
+      ],
+      "desc": "Fuzzy query='test-windows10-64/opt-raptor-motionmark-animometer-firefox-e10s\n\nPushed via `mach try fuzzy`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "12a65630b031f73f0508f0c71193b70ba632969f"
+      ],
+      "pushid": 313423,
+      "pushdate": [
+        1541665196,
+        0
+      ]
+    },
+    {
+      "node": "12a65630b031f73f0508f0c71193b70ba632969f",
+      "date": [
+        1541665126.0,
+        -7200
+      ],
+      "desc": "try bisect, for alert 17385, by removing bug 1504708",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ionut Goldan <igoldan@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "981aa569f6de7c3b367acd92a8b2cfd64adda6fa"
+      ],
+      "pushid": 313423,
+      "pushdate": [
+        1541665196,
+        0
+      ]
+    },
+    {
+      "node": "95635740bef151c69c9f55f069ac5b44ca0d5f01",
+      "date": [
+        1541661411.0,
+        -3600
+      ],
+      "desc": "try: -b o -p win64 -u reftest-e10s[Windows 10] -t none --setenv RUST_LOG=webreder=debug --setenv MOZ_ACCELERATED=1 --setenv MOZ_WEBRENDER=1\n\nPushed via `mach try syntax`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gyula Zakor <gyula.zakor@h-lab.eu>",
+      "phase": "draft",
+      "parents": [
+        "510f2e971a6e46d5ba5706470f9ad1d44d94cc7b"
+      ],
+      "pushid": 313422,
+      "pushdate": [
+        1541665034,
+        0
+      ]
+    },
+    {
+      "node": "347c5d172a6f1bfe3dd162ef4ed36f04e889809f",
+      "date": [
+        1541661232.0,
+        -3600
+      ],
+      "desc": "try: -b o -p win64 -u windows10-64-qr -t none --setenv RUST_LOG=webrender=debug\n\nPushed via `mach try syntax`",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gyula Zakor <gyula.zakor@h-lab.eu>",
+      "phase": "draft",
+      "parents": [
+        "510f2e971a6e46d5ba5706470f9ad1d44d94cc7b"
+      ],
+      "pushid": 313421,
+      "pushdate": [
+        1541664871,
+        0
+      ]
+    }
+  ]
+}

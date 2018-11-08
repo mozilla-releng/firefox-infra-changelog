@@ -1,0 +1,429 @@
+{
+  "node": "9491263a845f2bab77ce68f0ff27b871874aaf6b",
+  "changeset_count": 450280,
+  "changesets": [
+    {
+      "node": "9491263a845f2bab77ce68f0ff27b871874aaf6b",
+      "date": [
+        1540237543.0,
+        0
+      ],
+      "desc": "Bug 1459891 - Routinely update in-tree TLD list. r=RyanVM,jlorenzo, a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9385",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Simon Fraser <sfraser@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "6b64af95c34fbad1ad4e9917186ec1890ee944ff"
+      ],
+      "pushid": 227,
+      "pushdate": [
+        1541617556,
+        0
+      ]
+    },
+    {
+      "node": "6b64af95c34fbad1ad4e9917186ec1890ee944ff",
+      "date": [
+        1541531456.0,
+        25200
+      ],
+      "desc": "Bug 1453895 - Avoid reftest startup hang waiting for focus. r=jmaher, a=test-only\n\nIntermittently, at least on Windows, reftest.jsm finds that the reftest.xul\nwindow is not focused on startup; focus seems to be on the dummy about:blank\nwindow. This patch tries to detect that condition and correct it by bringing\nreftest.xul (g.containingWindow) into focus before specifically focusing\nthe browser element (g.browser).",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Geoff Brown <gbrown@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "5d185d5837ec10f5f9ff80fe17043acd53a4a20b"
+      ],
+      "pushid": 227,
+      "pushdate": [
+        1541617556,
+        0
+      ]
+    },
+    {
+      "node": "5d185d5837ec10f5f9ff80fe17043acd53a4a20b",
+      "date": [
+        1541543627.0,
+        25200
+      ],
+      "desc": "Bug 1503687 - Avoid python attribute errors for some infrequent xpcshell timeouts. r=jmaher, a=test-only",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Geoff Brown <gbrown@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "4faeb696dd0609448e0a4b4d9add05519c6e4117"
+      ],
+      "pushid": 227,
+      "pushdate": [
+        1541617556,
+        0
+      ]
+    },
+    {
+      "node": "c2e7cb0fa26db19e618c71c33e66b463ef8bf739",
+      "date": [
+        1541475083.0,
+        -32400
+      ],
+      "desc": "Bug 1501663 - Make HTMLEditor::GetSelectedElement() return nullptr when it finds different element or 2 or more elements in selected range. r=m_kato a=jorgk DONTBUILD\n\nThis back-ports:\n- https://hg.mozilla.org/integration/autoland/diff/eb94ff3abeca/editor/libeditor/HTMLEditor.cpp\n- https://hg.mozilla.org/integration/autoland/diff/d0cbbc6d2371/editor/libeditor/HTMLEditor.cpp\n- https://hg.mozilla.org/integration/autoland/diff/a7c1286bce7f/editor/libeditor/HTMLEditor.cpp\n- and the automated tests\n\nThis makes:\n- HTMLEditor::GetSelectedElement() return nullptr without error when it finds\n  different element from what the caller is looking for.\n- HTMLEditor::GetSelectedElement() return nullptr without error when it finds\n  second element node in the selected range.\n- HTMLEditor::GetElementOrParentByTagName() return only <a> element whose\n  href attribute value is not empty when the caller is looking for \"href\".\n- HTMLEditor::GetElementOrParentByTagName() return only <a> element whose\n  name attribute value is not empty when the caller is looking for \"anchor\" or\n  \"namedanchor\".",
+      "branch": "THUNDERBIRD_60_VERBRANCH",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Masayuki Nakano <masayuki@d-toybox.com>",
+      "phase": "public",
+      "parents": [
+        "ab014151d4c338562949c28aa140786b548856ca"
+      ],
+      "pushid": 226,
+      "pushdate": [
+        1541500392,
+        0
+      ]
+    },
+    {
+      "node": "4faeb696dd0609448e0a4b4d9add05519c6e4117",
+      "date": [
+        1540557416.0,
+        18000
+      ],
+      "desc": "Bug 1479853 - Prevent more than one VideoConduit having the same remote SSRC. r=ng, a=RyanVM",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Byron Campen [:bwc] <docfaraday@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "385f37ec0602a737173aff1308d1dfb2fcb6c7d9"
+      ],
+      "pushid": 225,
+      "pushdate": [
+        1541426259,
+        0
+      ]
+    },
+    {
+      "node": "385f37ec0602a737173aff1308d1dfb2fcb6c7d9",
+      "date": [
+        1541419799.0,
+        0
+      ],
+      "desc": "No Bug, mozilla-esr60 repo-update HSTS HPKP - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10880",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "ffxbld <ffxbld@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "4f6fe28ef42be4fb88ab65dac814b56e2863ef18"
+      ],
+      "pushid": 225,
+      "pushdate": [
+        1541426259,
+        0
+      ]
+    },
+    {
+      "node": "4f6fe28ef42be4fb88ab65dac814b56e2863ef18",
+      "date": [
+        1541074486.0,
+        0
+      ],
+      "desc": "No Bug, mozilla-esr60 repo-update HSTS HPKP - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10543",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "ffxbld <ffxbld@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d28761dbff18007122528330db5102769bd60c79"
+      ],
+      "pushid": 224,
+      "pushdate": [
+        1541080269,
+        0
+      ]
+    },
+    {
+      "node": "d28761dbff18007122528330db5102769bd60c79",
+      "date": [
+        1527258000.0,
+        14400
+      ],
+      "desc": "Bug 1464061 - Return error immediately when plugin frame is destroyed. r=masayuki, a=RyanVM",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Makoto Kato <m_kato@ga2.so-net.ne.jp>",
+      "phase": "public",
+      "parents": [
+        "a2a92672233556b0caff27920b51286b601513b7"
+      ],
+      "pushid": 223,
+      "pushdate": [
+        1540828306,
+        0
+      ]
+    },
+    {
+      "node": "a2a92672233556b0caff27920b51286b601513b7",
+      "date": [
+        1539890496.0,
+        21600
+      ],
+      "desc": "Bug 1492639: Only run cron bouncer checks on mozilla-beta; r=sfraser,mtabara, a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9137",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Tom Prince <mozilla@hocat.ca>",
+      "phase": "public",
+      "parents": [
+        "be2281823d9007a314e175fedb7eac71a1034af3"
+      ],
+      "pushid": 223,
+      "pushdate": [
+        1540828306,
+        0
+      ]
+    },
+    {
+      "node": "be2281823d9007a314e175fedb7eac71a1034af3",
+      "date": [
+        1540814995.0,
+        0
+      ],
+      "desc": "No Bug, mozilla-esr60 repo-update HSTS HPKP - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10050",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "ffxbld <ffxbld@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "6f1a76d107dc99e88ae7b1e031b858b7f8482c79"
+      ],
+      "pushid": 223,
+      "pushdate": [
+        1540828306,
+        0
+      ]
+    },
+    {
+      "node": "ab014151d4c338562949c28aa140786b548856ca",
+      "date": [
+        1539837773.0,
+        0
+      ],
+      "desc": "Bug 1482425 - PresShell::PageMove() should use different rules to look for a container element for aExtend value. r=smaug a=jorgk DONTBUILD\n\nPresShell::PageMove() climbs up to parent document when there is no scrollable\nparent in current document.  However, if aExtend is true, it should expand\nSelection in the document itself.  Therefore, it needs different rules to\nlook for container of expanding Selection from scrollable element to scroll.\n\nAdditionally, old rules (i.e., before the fix of bug 1369072 which caused\nthis regression) were also buggy.  It used parent scrollable element or\nroot scrollable element simply.  Therefore, if found scrollable element is\nancestor of selection limiter, it didn't work as expected.\n\nThis patch creates nsFrameSelection::GetFrameToPageSelect() to retrieve\nper-page selection container element with the following rules:\n- look for a scrollable element in selection limiter.\n- if there is no scrollable element, use selection limiter.\n- if there is no selection limiter, use the root frame.\n\nSo, nsFrameSelection::CommonPageMove() should take nsIFrame rather than\nnsIScrollableFrame since container of per-page selection may be used in\nnon-scrollable contenteditable element.  If it's called with non-scrollable\nframe, it needs to compute the expanding range with the frame size.\n\nNote that this includes the fix of bug 1499996 (fixing random orange of the\nnew test).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8954",
+      "branch": "THUNDERBIRD_60_VERBRANCH",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Masayuki Nakano <masayuki@d-toybox.com>",
+      "phase": "public",
+      "parents": [
+        "a3f82738156799bf9bf3948f54f40a1b0a1fb4f2"
+      ],
+      "pushid": 222,
+      "pushdate": [
+        1540498066,
+        0
+      ]
+    },
+    {
+      "node": "a3f82738156799bf9bf3948f54f40a1b0a1fb4f2",
+      "date": [
+        1518097349.0,
+        -32400
+      ],
+      "desc": "Bug 1434837 - Make autocomplete and satchel listen to keypress event at the system event group. r=mak (was c0b4ca69376c, backed out in 92515b2d8a74) a=jorgk\n\nThe autocomplete module listens to keypress event for both printable keys and\nnon-printable keys a lot.  However, we'll stop dispatching keypress event for\nnon-printable keys in the default event group of web content.  So, autocomplete\nshould listen to keypress events at the system event group.\n\nNote that it's difficult to change keypress event listeners to keydown event\nlisteners because if we stop keypress events at preceding keydown event in\nautocomplete or satchel module, some other modules fail to handle keydown or\nkeypress event before autocomplete and it's not easy to investigate which\nmodule's which keypress event listener should be changed to keydown event\nlistener.  Therefore, this patch doesn't do it at least for now.\n\nMozReview-Commit-ID: 7e3aklmKrXu",
+      "branch": "THUNDERBIRD_60_VERBRANCH",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Masayuki Nakano <masayuki@d-toybox.com>",
+      "phase": "public",
+      "parents": [
+        "92515b2d8a74ec96119209101319a8b21e06c44d"
+      ],
+      "pushid": 222,
+      "pushdate": [
+        1540498066,
+        0
+      ]
+    },
+    {
+      "node": "6f1a76d107dc99e88ae7b1e031b858b7f8482c79",
+      "date": [
+        1539958920.0,
+        14400
+      ],
+      "desc": "Bug 1500484 - Unbreak Wayland build on FreeBSD after bug 1417890. r=stransky, a=RyanVM",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jan Beich <jbeich@FreeBSD.org>",
+      "phase": "public",
+      "parents": [
+        "950b36fcf538c12c95744fd0803c8b60d00401d7"
+      ],
+      "pushid": 221,
+      "pushdate": [
+        1540478954,
+        0
+      ]
+    },
+    {
+      "node": "950b36fcf538c12c95744fd0803c8b60d00401d7",
+      "date": [
+        1540469277.0,
+        0
+      ],
+      "desc": "No Bug, mozilla-esr60 repo-update HSTS HPKP - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9773",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "ffxbld <ffxbld@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "98138b0822fbb8a082fb55ed36292128335be038"
+      ],
+      "pushid": 221,
+      "pushdate": [
+        1540478954,
+        0
+      ]
+    },
+    {
+      "node": "98138b0822fbb8a082fb55ed36292128335be038",
+      "date": [
+        1540301568.0,
+        0
+      ],
+      "desc": "Automatic version bump CLOSED TREE NO BUG a=release",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "c1f694959a11767924178e189fb5707f3f494fb6"
+      ],
+      "pushid": 220,
+      "pushdate": [
+        1540301578,
+        0
+      ]
+    },
+    {
+      "node": "c1f694959a11767924178e189fb5707f3f494fb6",
+      "date": [
+        1540301565.0,
+        0
+      ],
+      "desc": "No bug - Tagging ea9412b18ca812f8a480aa28d508298db5fdc531 with FIREFOX_60_3_0esr_RELEASE a=release CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "048288040aac925a88fcd2882418cebc2a45bb97"
+      ],
+      "pushid": 220,
+      "pushdate": [
+        1540301578,
+        0
+      ]
+    },
+    {
+      "node": "92515b2d8a74ec96119209101319a8b21e06c44d",
+      "date": [
+        1540111766.0,
+        -7200
+      ],
+      "desc": "Backed out changeset c0b4ca69376c (bug 1434837 for causing bug 1499410) to build Thunderbird 60.3. a=jorgk DONTBUILD",
+      "branch": "THUNDERBIRD_60_VERBRANCH",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "95d94b65a679e4f71ae2b131326822700e23c41d"
+      ],
+      "pushid": 219,
+      "pushdate": [
+        1540111867,
+        0
+      ]
+    },
+    {
+      "node": "95d94b65a679e4f71ae2b131326822700e23c41d",
+      "date": [
+        1540111421.0,
+        -7200
+      ],
+      "desc": "merge ea9412b18ca8 (FIREFOX_60_3_0esr_BUILD1) to THUNDERBIRD_60_VERBRANCH. a=jorgk",
+      "branch": "THUNDERBIRD_60_VERBRANCH",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "8d71faee5dcdd0773b7e0830b8fad96a6bda559b",
+        "ea9412b18ca812f8a480aa28d508298db5fdc531"
+      ],
+      "pushid": 219,
+      "pushdate": [
+        1540111867,
+        0
+      ]
+    },
+    {
+      "node": "048288040aac925a88fcd2882418cebc2a45bb97",
+      "date": [
+        1539853513.0,
+        0
+      ],
+      "desc": "Bug 1496270 - Upgrade cc crate to 1.0.25. r=ted, a=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9077",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Henrik Skupin <mail@hskupin.info>",
+      "phase": "public",
+      "parents": [
+        "9fb8aee79ca611175ad4321eabeed1c78ef37152"
+      ],
+      "pushid": 218,
+      "pushdate": [
+        1540055350,
+        0
+      ]
+    },
+    {
+      "node": "9fb8aee79ca611175ad4321eabeed1c78ef37152",
+      "date": [
+        1539808660.0,
+        0
+      ],
+      "desc": "No bug - Tagging ea9412b18ca812f8a480aa28d508298db5fdc531 with FIREFOX_60_3_0esr_BUILD1 a=release CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "ea9412b18ca812f8a480aa28d508298db5fdc531"
+      ],
+      "pushid": 217,
+      "pushdate": [
+        1539808667,
+        0
+      ]
+    }
+  ]
+}

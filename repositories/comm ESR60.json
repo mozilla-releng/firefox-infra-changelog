@@ -1,0 +1,431 @@
+{
+  "node": "b2f33d7130a04ce2b6a257251fdc421c48902d38",
+  "changeset_count": 31910,
+  "changesets": [
+    {
+      "node": "b2f33d7130a04ce2b6a257251fdc421c48902d38",
+      "date": [
+        1534368964.0,
+        -7200
+      ],
+      "desc": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "248f7f0eadcd375de3c50c6d24235c64e3c1a985"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "248f7f0eadcd375de3c50c6d24235c64e3c1a985",
+      "date": [
+        1537950463.0,
+        -7200
+      ],
+      "desc": "Bug 1360803 - switch nsMsgSearchValue to using nsCString and fix CTOR of nsMsgSearchValueImpl. r=mkmelin a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "01854d573bd968f2fa1e88092c893e725a8bda7a"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "01854d573bd968f2fa1e88092c893e725a8bda7a",
+      "date": [
+        1537802481.0,
+        -10800
+      ],
+      "desc": "Bug 1360803 - Add error checking to getting nsIMimeConverter service to avoid crash. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Magnus Melin <mkmelin+mozilla@iki.fi>",
+      "phase": "public",
+      "parents": [
+        "8e4b25a12f2c5a59270761eb7fa4cf671e9cba24"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "8e4b25a12f2c5a59270761eb7fa4cf671e9cba24",
+      "date": [
+        1541332240.0,
+        -3600
+      ],
+      "desc": "Bug 1504088 - Stop overflowing the toolbars in main window. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Richard Marti <richard.marti@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "4b99d949218b66a77390df088ac5afd21ebb8acf"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "4b99d949218b66a77390df088ac5afd21ebb8acf",
+      "date": [
+        1541436811.0,
+        -3600
+      ],
+      "desc": "Bug 1500772 - Revert POP3 USER/PASS and SMTP LOGIN auth back to ASCII/Latin1. r=AlfredPeters a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "3298b86a53768581b7cea561cccd9f2ffc7d7b2b"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "3298b86a53768581b7cea561cccd9f2ffc7d7b2b",
+      "date": [
+        1541105413.0,
+        -3600
+      ],
+      "desc": "Bug 1503395 - Bug 1482720 follow-up: Don't skip ParseUrl() completely, call at least ParseSearchPart(). r=aceman a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "c9dd6a36ae6244864117ed63f48bbb6331a0d6bc"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "c9dd6a36ae6244864117ed63f48bbb6331a0d6bc",
+      "date": [
+        1540981920.0,
+        -3600
+      ],
+      "desc": "Bug 1503654 - Correct comparision (from bug 1245184) and parameter order (from bug 1259169) for cookie removal. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "bacd54f014d2183bffbcd84ba2aadde8f77a6cde"
+      ],
+      "pushid": 95,
+      "pushdate": [
+        1541081370,
+        0
+      ]
+    },
+    {
+      "node": "bacd54f014d2183bffbcd84ba2aadde8f77a6cde",
+      "date": [
+        1541027314.0,
+        0
+      ],
+      "desc": "Automatic version bump CLOSED TREE NO BUG a=release",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "519e4f6b7f252dde999687035022bb3849be217f"
+      ],
+      "pushid": 94,
+      "pushdate": [
+        1541027319,
+        0
+      ]
+    },
+    {
+      "node": "519e4f6b7f252dde999687035022bb3849be217f",
+      "date": [
+        1541027313.0,
+        0
+      ],
+      "desc": "No bug - Tagging dd958ef605d132d08a063f29606737ffb3453e68 with THUNDERBIRD_60_3_0_BUILD2, THUNDERBIRD_60_3_0_RELEASE a=release CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "6e551bbe21e8d20071592c708b653da658670a7c"
+      ],
+      "pushid": 94,
+      "pushdate": [
+        1541027319,
+        0
+      ]
+    },
+    {
+      "node": "6e551bbe21e8d20071592c708b653da658670a7c",
+      "date": [
+        1536818659.0,
+        -7200
+      ],
+      "desc": "Bug 1463266 - fix another white-space issue in nsAddrDatabase.cpp. rs=white-space-only a=jorgk DONTBUILD\n[skip-blame]",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "e307f54e3a2e6dc7e9b28acf213650180ce2a4f5"
+      ],
+      "pushid": 93,
+      "pushdate": [
+        1541002513,
+        0
+      ]
+    },
+    {
+      "node": "e307f54e3a2e6dc7e9b28acf213650180ce2a4f5",
+      "date": [
+        1536792971.0,
+        -7200
+      ],
+      "desc": "Bug 1463266 - fix some white-space issues in nsAddrDatabase.cpp. rs=white-space-only a=jorgk\n[skip-blame]",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "dd958ef605d132d08a063f29606737ffb3453e68"
+      ],
+      "pushid": 93,
+      "pushdate": [
+        1541002513,
+        0
+      ]
+    },
+    {
+      "node": "dd958ef605d132d08a063f29606737ffb3453e68",
+      "date": [
+        1540837746.0,
+        0
+      ],
+      "desc": "Bug 1502969 - Set last-watershed version to 60.0 for win64. r+a=jorgk\n\nThere were no win64 builds prior to 60.0, looking for one earlier than that\ncauses errors during release-update-verify-config essentially halting the\nrelease process.\n\nA similar fix was committed to c-c in rev ec9dbe9537af. The other changes\nin that revision to not apply to c-esr60 as by-release-type is not available\nin 60.xESR.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10098",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "THUNDERBIRD_60_3_0_BUILD2",
+        "THUNDERBIRD_60_3_0_RELEASE"
+      ],
+      "user": "Rob Lemley <rob@thunderbird.net>",
+      "phase": "public",
+      "parents": [
+        "5d579df31f08d740f8372723a8b9252af3ed76e3"
+      ],
+      "pushid": 92,
+      "pushdate": [
+        1540888531,
+        0
+      ]
+    },
+    {
+      "node": "5d579df31f08d740f8372723a8b9252af3ed76e3",
+      "date": [
+        1540578592.0,
+        0
+      ],
+      "desc": "Bug 1481198 - update bouncer-aliases for comm-esr60 to correct mapping. r=darktrojan a=jorgk\n\ncomm-esr60 is really a regular release branch, so it should be referring to\nthunderbird-latest and thunderbird-latest-ssl.\n\nNote that the comm-beta configuration in this file does work as expected.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9938",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Rob Lemley <rob@thunderbird.net>",
+      "phase": "public",
+      "parents": [
+        "990d1ee9a99102e321de8307b81fa39ebd5960eb"
+      ],
+      "pushid": 92,
+      "pushdate": [
+        1540888531,
+        0
+      ]
+    },
+    {
+      "node": "990d1ee9a99102e321de8307b81fa39ebd5960eb",
+      "date": [
+        1540673779.0,
+        -7200
+      ],
+      "desc": "Bug 1502616 - Make the nav-button hover of the Add-on Manager better visible. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Richard Marti <richard.marti@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "fc7fe71c58a477271891afacb7a027ee2372023e"
+      ],
+      "pushid": 92,
+      "pushdate": [
+        1540888531,
+        0
+      ]
+    },
+    {
+      "node": "fc7fe71c58a477271891afacb7a027ee2372023e",
+      "date": [
+        1540676460.0,
+        -7200
+      ],
+      "desc": "Bug 1499654 - Remove uk locale from SeaMonkey. r=ewong a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "307328b798db41e6d2f7258e0db0909baec969f6"
+      ],
+      "pushid": 91,
+      "pushdate": [
+        1540676508,
+        0
+      ]
+    },
+    {
+      "node": "307328b798db41e6d2f7258e0db0909baec969f6",
+      "date": [
+        1540676460.0,
+        -7200
+      ],
+      "desc": "Bug 1492154 - Allow for invalid origin in principal and fix misspelled principal uri and url in sessionstore. r=IanN a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "88e3444fc0c334019e1fb25863edccb34dc9ef4a"
+      ],
+      "pushid": 91,
+      "pushdate": [
+        1540676508,
+        0
+      ]
+    },
+    {
+      "node": "88e3444fc0c334019e1fb25863edccb34dc9ef4a",
+      "date": [
+        1540676460.0,
+        -7200
+      ],
+      "desc": "Bug 1496047 - Remove obsolete mangle/shlibsign copy steps and cvs references from SeaMonkey macOS make section. r=IanN a=IanN\nSee Bug 704576 [Remove CVS cruft from browser/app/Makefile.in].\nSee Bug 726975 [Tidy up browser/app/Makefile.in and skip a shell execution] item 5.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "a1decd010504688ea645d8cb07814c935ba796d6"
+      ],
+      "pushid": 91,
+      "pushdate": [
+        1540676508,
+        0
+      ]
+    },
+    {
+      "node": "a1decd010504688ea645d8cb07814c935ba796d6",
+      "date": [
+        1540676460.0,
+        -7200
+      ],
+      "desc": "Bug 522023 - Replace globe with the one from the modern theme in help statusbar image. r=IanN a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "25aecee82461e70ca33ec28aa8982658b57cc002"
+      ],
+      "pushid": 91,
+      "pushdate": [
+        1540676508,
+        0
+      ]
+    },
+    {
+      "node": "25aecee82461e70ca33ec28aa8982658b57cc002",
+      "date": [
+        1540676460.0,
+        -7200
+      ],
+      "desc": "Bug 522023 - Replace globe taskbar and menu icon in classic theme. r=IanN a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Peter Weilbacher <mozilla@Weilbacher.org>",
+      "phase": "public",
+      "parents": [
+        "342a301ded26733882b7887343fd7f83d29093c4"
+      ],
+      "pushid": 91,
+      "pushdate": [
+        1540676508,
+        0
+      ]
+    },
+    {
+      "node": "342a301ded26733882b7887343fd7f83d29093c4",
+      "date": [
+        1534368964.0,
+        -7200
+      ],
+      "desc": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "714bb7e59c7fda450782ac8fd7fd0161d37b872d"
+      ],
+      "pushid": 90,
+      "pushdate": [
+        1540499114,
+        0
+      ]
+    }
+  ]
+}
