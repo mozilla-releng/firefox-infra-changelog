@@ -1,0 +1,428 @@
+{
+  "node": "5f5ccfe856314f31191c1d15e2636daa89d17b17",
+  "changeset_count": 498384,
+  "changesets": [
+    {
+      "node": "5f5ccfe856314f31191c1d15e2636daa89d17b17",
+      "date": [
+        1541530460.0,
+        0
+      ],
+      "desc": "Bug 1492128: [mozrelease] Tweak buglist email to be nicely formated and not use URL shortener; r=mtabara a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11096",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Tom Prince <mozilla@hocat.ca>",
+      "phase": "public",
+      "parents": [
+        "5f7fd2e8f39f1f24ccf722e3e5bbce7401017e2e"
+      ],
+      "pushid": 10132,
+      "pushdate": [
+        1541650269,
+        0
+      ]
+    },
+    {
+      "node": "5f7fd2e8f39f1f24ccf722e3e5bbce7401017e2e",
+      "date": [
+        1541515934.0,
+        0
+      ],
+      "desc": "Bug 1503855 - Use December as previous month for credit card validity check if it's January r=MattN a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11020",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+      "phase": "public",
+      "parents": [
+        "438c1b303119f55a93f537780329f2a03e354ecd"
+      ],
+      "pushid": 10131,
+      "pushdate": [
+        1541624510,
+        0
+      ]
+    },
+    {
+      "node": "438c1b303119f55a93f537780329f2a03e354ecd",
+      "date": [
+        1541457545.0,
+        0
+      ],
+      "desc": "Bug 1496377 - Fix and add test_mediarecorder_state_transition.html in tests. r=jya a=test-only\n\nThis resolves two problems:\n\n1. test_mediarecorder_state_transition.html was not in mochitest.ini.\n2. The test set in the file has some wrong test cases, especially after D7910.\n\nTo verify the state transition cases is trivial as the state error policy in the W3C spec is very simple:\n\n1. start() can be called only when it is \"inactive\" state.\n2. All other functions, pause(), resume(), stop(), and requestData() must not be called when it's \"inactive\" state. Otherwise it will be okay, regardless of the order and how many they are called.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8190",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Bumsik Kim <k.bumsik@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "50bb4e6c8ab511f9103f8ddc8d0044ef49c31318"
+      ],
+      "pushid": 10131,
+      "pushdate": [
+        1541624510,
+        0
+      ]
+    },
+    {
+      "node": "50bb4e6c8ab511f9103f8ddc8d0044ef49c31318",
+      "date": [
+        1541597922.0,
+        18000
+      ],
+      "desc": "Bug 1499861 - Make HTMLOptionsCollection::mSelect into a strong reference. r=qDot, a=RyanVM\n\nThe cycle collector makes weak references like this obsolete.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andrew McCreight <continuation@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "12500028fe79390ae7d2d4128acf92d2c0d18733"
+      ],
+      "pushid": 10130,
+      "pushdate": [
+        1541621010,
+        0
+      ]
+    },
+    {
+      "node": "12500028fe79390ae7d2d4128acf92d2c0d18733",
+      "date": [
+        1540904845.0,
+        -3600
+      ],
+      "desc": "Bug 1502886 - Test. r=jonco, a=RyanVM",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Benjamin Bouvier <benj@benj.me>",
+      "phase": "public",
+      "parents": [
+        "f65ddbf6c00545fcf8f56df06ee2a7e3811e5faf"
+      ],
+      "pushid": 10130,
+      "pushdate": [
+        1541621010,
+        0
+      ]
+    },
+    {
+      "node": "f65ddbf6c00545fcf8f56df06ee2a7e3811e5faf",
+      "date": [
+        1540835717.0,
+        -3600
+      ],
+      "desc": "Bug 1502886 - Delete wasm breakpoints when the wasm instance's Zone is swept. r=jonco, a=RyanVM",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Benjamin Bouvier <benj@benj.me>",
+      "phase": "public",
+      "parents": [
+        "522a5434e0a42890c5292c0228eea366e7dabafd"
+      ],
+      "pushid": 10130,
+      "pushdate": [
+        1541621010,
+        0
+      ]
+    },
+    {
+      "node": "522a5434e0a42890c5292c0228eea366e7dabafd",
+      "date": [
+        1541471744.0,
+        18000
+      ],
+      "desc": "Bug 1503082 - Clear CanvasShutdownObserver::mCanvas when the canvas goes away. r=nical, a=RyanVM\n\nIt is possible for the CanvasRenderingContext2D to be destroyed while\nwe're in the middle of the call to nsObserverService::NotifyObservers()\nfor shutdown. This leaves the shutdown observer with a dangling pointer\nto the canvas, so this patch explicitly clears the pointer when the\ncontext goes away.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10777",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andrew McCreight <continuation@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "74833aee1389ae0174a08831d53b0dc851e06bd7"
+      ],
+      "pushid": 10130,
+      "pushdate": [
+        1541621010,
+        0
+      ]
+    },
+    {
+      "node": "74833aee1389ae0174a08831d53b0dc851e06bd7",
+      "date": [
+        1541176818.0,
+        0
+      ],
+      "desc": "Bug 1502169 - about:studies: wait for more elements before interacting with them in tests. r=Gijs, a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10630",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Michael Cooper <mcooper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a7b21829921c219dda2aa58a243b5ba2232c588d"
+      ],
+      "pushid": 10129,
+      "pushdate": [
+        1541607730,
+        0
+      ]
+    },
+    {
+      "node": "a7b21829921c219dda2aa58a243b5ba2232c588d",
+      "date": [
+        1540813702.0,
+        14400
+      ],
+      "desc": "Bug 1502454 - Ensure we are consistent in how we define and use scroll IDs with WebRender. r=kats a=jcristau\n\nIn ClipManager::DefineScrollLayers, we don't always create a scroll ID\nfor each ASR. We may fail to get the scroll metadata, or it may not be\nscrollable, in which case we should use the scroll ID of its ancestor\n(or the root scroll ID if there is no ancestor). This should fix a crash\nwhere we simply assumed the leaf of an ASR tree will always have a valid\nscroll ID.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10708",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andrew Osmond <aosmond@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d29760cf44dd39a8716e5557329df863d0ccd91c"
+      ],
+      "pushid": 10128,
+      "pushdate": [
+        1541603029,
+        0
+      ]
+    },
+    {
+      "node": "d29760cf44dd39a8716e5557329df863d0ccd91c",
+      "date": [
+        1540403139.0,
+        14400
+      ],
+      "desc": "Bug 1471671 - Avoid crash with WebRender when the scroll metadata is unavailable. r=kats a=jcristau\n\nWe are seeing crash reports in the wild where there is no scroll\nmetadata available for an ASR for a display item and its clip. It\nappears that in the non-WR path, it skips such items, so we should\nprobably do the same thing with WebRender. If the scrolling ends up\nbeing wrong, hopefully a reproducible use case will make its way to use\nto further debug, as the crash reports have not yielded anything to date.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9699",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andrew Osmond <aosmond@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "f9e1cbdcab70d1dd4b4441bec785b07e12485e09"
+      ],
+      "pushid": 10128,
+      "pushdate": [
+        1541603029,
+        0
+      ]
+    },
+    {
+      "node": "f9e1cbdcab70d1dd4b4441bec785b07e12485e09",
+      "date": [
+        1541533044.0,
+        0
+      ],
+      "desc": "Bug 1505069 - Stop abusing --lwt-text-color in the Contextual Feature Recommendation popup-notification. r=Mardak a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11055",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "D\u00e3o Gottwald <dao@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "2b9ec060ca1aac2f6992607b2b4f4df683802faf"
+      ],
+      "pushid": 10128,
+      "pushdate": [
+        1541603029,
+        0
+      ]
+    },
+    {
+      "node": "2b9ec060ca1aac2f6992607b2b4f4df683802faf",
+      "date": [
+        1541443747.0,
+        0
+      ],
+      "desc": "Bug 1504725 - Explicitly pass event to language change handler r=jaws a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10924",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mark Striemer <mstriemer@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "17c2c58a532880c11105c6f75df5c07eafe5c589"
+      ],
+      "pushid": 10128,
+      "pushdate": [
+        1541603029,
+        0
+      ]
+    },
+    {
+      "node": "17c2c58a532880c11105c6f75df5c07eafe5c589",
+      "date": [
+        1541076020.0,
+        0
+      ],
+      "desc": "Bug 1503306 - Properly set accentcolor and textcolor properties for Light and Dark themes. r=ntim a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10542",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "D\u00e3o Gottwald <dao@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "663b37581fef75a2e7f0ee66218062c45ebf5944"
+      ],
+      "pushid": 10128,
+      "pushdate": [
+        1541603029,
+        0
+      ]
+    },
+    {
+      "node": "663b37581fef75a2e7f0ee66218062c45ebf5944",
+      "date": [
+        1541517582.0,
+        0
+      ],
+      "desc": "Bug 1501699 - Don't consume the Ctrl+Shift+Tab event when not actually handling it. r=jaws a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11024",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "D\u00e3o Gottwald <dao@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "1370c2a23ff7a681191c40ca9bd744b7597a3a75"
+      ],
+      "pushid": 10127,
+      "pushdate": [
+        1541600639,
+        0
+      ]
+    },
+    {
+      "node": "1370c2a23ff7a681191c40ca9bd744b7597a3a75",
+      "date": [
+        1540237930.0,
+        0
+      ],
+      "desc": "bug 1496736 - check if we actually have a new key DB before removing the old one r=jcj a=jcristau\n\nIn bug 1475775, we added code to remove the old NSS key DB if the user has set a\npassword on the grounds that the old DB could potentially be unencrypted and\ncontain secrets. However, we did so with the assumption that we were using the\nnew DB, which is not necessarily true when the system has been configured to\nalways use the old DB, as with some RedHat products. This patch checks for the\nexistence of the new DB before proceeding with deleting the old DB. Technically\nthis isn't sufficient, because the new DB could be present even if we're not\nusing it. However, we've already gone far into \"this configuration isn't\nsupported\" territory.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9318",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Dana Keeler <dkeeler@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "0bf8a52ad207c50853d48a1ba11999f5f67b2a54"
+      ],
+      "pushid": 10127,
+      "pushdate": [
+        1541600639,
+        0
+      ]
+    },
+    {
+      "node": "0bf8a52ad207c50853d48a1ba11999f5f67b2a54",
+      "date": [
+        1541186406.0,
+        0
+      ],
+      "desc": "Bug 1493192: Flip order of sent/unsent crashes on about:crashes r=mconley a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10526",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Errolyn <sam@fishy.ninja>",
+      "phase": "public",
+      "parents": [
+        "063b9e4ccceb439d3ec795da08924c6a70f9cd6f"
+      ],
+      "pushid": 10127,
+      "pushdate": [
+        1541600639,
+        0
+      ]
+    },
+    {
+      "node": "063b9e4ccceb439d3ec795da08924c6a70f9cd6f",
+      "date": [
+        1541181309.0,
+        0
+      ],
+      "desc": "Bug 1502638 - If the velocity tracker can't compute a velocity, zero out the axis velocity. r=kats a=jcristau\n\nThe previous value of the axis velocity could be stale, e.g. in the opposite\ndirection.\n\nDepends on D10449\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10450",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Botond Ballo <botond@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "035ea5732599008612558e023ba5e84d43e43fd9"
+      ],
+      "pushid": 10127,
+      "pushdate": [
+        1541600639,
+        0
+      ]
+    },
+    {
+      "node": "035ea5732599008612558e023ba5e84d43e43fd9",
+      "date": [
+        1541184796.0,
+        0
+      ],
+      "desc": "Bug 1502638 - Guard against two samples with the same timestamp in AndroidVelocityTracker. r=kats a=jcristau\n\nDepends on D10448\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10449",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Botond Ballo <botond@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "ab7f1db24dde0647fbe476237b6684a5201f07cb"
+      ],
+      "pushid": 10127,
+      "pushdate": [
+        1541600639,
+        0
+      ]
+    },
+    {
+      "node": "ab7f1db24dde0647fbe476237b6684a5201f07cb",
+      "date": [
+        1541181287.0,
+        0
+      ],
+      "desc": "Bug 1502638 - Make use of the position passed in to AndroidVelocityTracker::StartTracking(). r=kats a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10448",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Botond Ballo <botond@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "02f3ab06c2eb5abc97b49c12d3702d50c439526f"
+      ],
+      "pushid": 10127,
+      "pushdate": [
+        1541600639,
+        0
+      ]
+    },
+    {
+      "node": "02f3ab06c2eb5abc97b49c12d3702d50c439526f",
+      "date": [
+        1541009451.0,
+        -3600
+      ],
+      "desc": "Bug 1502437 - Hide system add-ons in about:performance when browser internals are hidden, r=felipe a=jcristau",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Florian Qu\u00e8ze <florian@queze.net>",
+      "phase": "public",
+      "parents": [
+        "61362de96df954b728a8a9787e1839bc8b15dbc1"
+      ],
+      "pushid": 10126,
+      "pushdate": [
+        1541600096,
+        0
+      ]
+    }
+  ]
+}

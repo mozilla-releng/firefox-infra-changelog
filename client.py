@@ -33,11 +33,12 @@ def create_md_table(project):
         commiter = data[key]['commiter_name']
         date = data[key]['commit_date']
         message = data[key]['commit_message']
+        url = data[key]['commit_url']
 
         row = "|" + commit_number + \
               "|" + commiter + \
               "|" + message + \
-              "|" + "[URL]({})".format(url) + \
+              "|" + "[URL](" + url + ")" + \
               "|" + date + '\n'
 
         del commit_number_list[-1]
