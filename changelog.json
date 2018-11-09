@@ -1,272 +1,2412 @@
-{
-  "1": {
-    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
-    "commiter_name": "Rok Garbas",
-    "commiter_email": "rok@garbas.si",
-    "commit_message": "setup: bumping to v51 (#1672)",
-    "commit_date": "2018-11-07 22:14:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b"
+[
+  {
+    "sha": "5710c473fc04ff0a7b7b850ba237b9c5df3d1e83",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NTcxMGM0NzNmYzA0ZmYwYTdiN2I4NTBiYTIzN2I5YzVkZjNkMWU4Mw==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@mozilla.com",
+        "date": "2018-08-27T17:31:58Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-08-27T17:31:58Z"
+      },
+      "message": "Merge pull request #12 from escapewindow/retry-connectionerror\n\nRetry for ConnectionError during upload.",
+      "tree": {
+        "sha": "5341cddaaaba3b3040d47785fba384caf97cb4b6",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/5341cddaaaba3b3040d47785fba384caf97cb4b6"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/5710c473fc04ff0a7b7b850ba237b9c5df3d1e83",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJbhDWOCRBK7hj4Ov3rIwAAdHIIAI2kteNXhNBbplB2Rl/CUdTh\n84jlognQcOJB7pPwAajJbjKfOvkm+GI6QGL+Hsal+ETjIauvN432FpUCkE/xvCLW\nAb15yArX8//n6+ETYcCWco7fv9PzMPtvJG0H7KnryfL3o5NUDyxaaZCW+BJbBZUP\n2ThLPeNrxhov+y20lL5QP8cufK5Pzv7ICAN2SUam7XiTY4Mmm0c8Lj0nUqf+hUgB\nTieb+dRwqcbdrpSDDsJ6AWnY0C2AToDcZvH3tJ/llNNhg/66oYGgj15T1Vphd2yt\neRrbDGGJa3cRjScK0sl1nmBNI+ShC8ntKZUjSUSOMfucDWGUmzIj8XRdBPyxkm4=\n=sF9R\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 5341cddaaaba3b3040d47785fba384caf97cb4b6\nparent 8d9f095fbba19d11a22447c84cf99edd1f26f2fa\nparent 62debcab19529af096cb7298c9557e8914cae589\nauthor Aki Sasaki <aki@mozilla.com> 1535391118 -0700\ncommitter GitHub <noreply@github.com> 1535391118 -0700\n\nMerge pull request #12 from escapewindow/retry-connectionerror\n\nRetry for ConnectionError during upload."
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/5710c473fc04ff0a7b7b850ba237b9c5df3d1e83",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/5710c473fc04ff0a7b7b850ba237b9c5df3d1e83",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/5710c473fc04ff0a7b7b850ba237b9c5df3d1e83/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/8d9f095fbba19d11a22447c84cf99edd1f26f2fa"
+      },
+      {
+        "sha": "62debcab19529af096cb7298c9557e8914cae589",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/62debcab19529af096cb7298c9557e8914cae589",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/62debcab19529af096cb7298c9557e8914cae589"
+      }
+    ]
   },
-  "2": {
-    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/b9843defb782381398b0c486d6cc87e9fbc33599",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "docs: Remove IRC notification (#1646)",
-    "commit_date": "2018-11-02 15:15:35 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599"
+  {
+    "sha": "62debcab19529af096cb7298c9557e8914cae589",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NjJkZWJjYWIxOTUyOWFmMDk2Y2I3Mjk4Yzk1NTdlODkxNGNhZTU4OQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-08-27T17:17:03Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-08-27T17:17:03Z"
+      },
+      "message": "3.2.1",
+      "tree": {
+        "sha": "5341cddaaaba3b3040d47785fba384caf97cb4b6",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/5341cddaaaba3b3040d47785fba384caf97cb4b6"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/62debcab19529af096cb7298c9557e8914cae589",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/62debcab19529af096cb7298c9557e8914cae589",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/62debcab19529af096cb7298c9557e8914cae589",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/62debcab19529af096cb7298c9557e8914cae589/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece"
+      }
+    ]
   },
-  "3": {
-    "sha": "a8b878937771d1cc49413b9a463e98ff2ca3da2c",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/a8b878937771d1cc49413b9a463e98ff2ca3da2c",
-    "commiter_name": "Rok Garbas",
-    "commiter_email": "rok@garbas.si",
-    "commit_message": "tooltool/api: upload does not work (#1667)    backend_common: wrong relengapi token serializer used      tooltool/api: wrong flask subcommand used      releng_frontend: sha of node module changed      releng_frontend: pass correct variables to body      releng_frontend: serve static folder when development",
-    "commit_date": "2018-11-02 14:23:59 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/a8b878937771d1cc49413b9a463e98ff2ca3da2c"
+  {
+    "sha": "85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6ODVkNGQ4ZmY2YzJlYzkxYTRiM2Y3YTAwZDc1NGQzMDIyOGIxMmVjZQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-08-25T01:41:10Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-08-25T01:41:10Z"
+      },
+      "message": "switch to python 3.7 release; try to fix coveralls",
+      "tree": {
+        "sha": "5d387dab7ccb59cb9bb69d8a0328b665cc651193",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/5d387dab7ccb59cb9bb69d8a0328b665cc651193"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "18c2cf87aaea71208ece3fe575bd466b674b3981",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/18c2cf87aaea71208ece3fe575bd466b674b3981",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/18c2cf87aaea71208ece3fe575bd466b674b3981"
+      }
+    ]
   },
-  "4": {
-    "sha": "62b6769893e1f277009316dd026a30eb42524546",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/62b6769893e1f277009316dd026a30eb42524546",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/frontend: Add release ETA (#1658)    Add release ETA      Add better validation      Remove margins",
-    "commit_date": "2018-11-02 14:23:02 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/62b6769893e1f277009316dd026a30eb42524546"
+  {
+    "sha": "18c2cf87aaea71208ece3fe575bd466b674b3981",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6MThjMmNmODdhYWVhNzEyMDhlY2UzZmU1NzViZDQ2NmI2NzRiMzk4MQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-08-25T00:50:23Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-08-25T00:50:23Z"
+      },
+      "message": "Retry for ConnectionError during upload.\n\nThe remote_signfile function is pretty ugly and should be rewritten.\nHowever, I believe we were failing to retry because we're in the except\nblock of the outer try/except, and the inner try/except didn't catch\nConnectionError. RequestException should catch both HTTPError and\nConnecitonError.\n\nFixes https://github.com/mozilla-releng/signingscript/issues/66 .",
+      "tree": {
+        "sha": "8dadcb1e831f848345a9c835c179973282a2e886",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/8dadcb1e831f848345a9c835c179973282a2e886"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/18c2cf87aaea71208ece3fe575bd466b674b3981",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/18c2cf87aaea71208ece3fe575bd466b674b3981",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/18c2cf87aaea71208ece3fe575bd466b674b3981",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/18c2cf87aaea71208ece3fe575bd466b674b3981/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/8d9f095fbba19d11a22447c84cf99edd1f26f2fa"
+      }
+    ]
   },
-  "5": {
-    "sha": "a34281bd1ce00a66662c479d4ea53b364ec3a685",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/a34281bd1ce00a66662c479d4ea53b364ec3a685",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/api: add /sync API (#1665)    shipit/api: add /sync API    This is a reland of #1517. It was tested in staging and worked fine  without any issues so far.      Remove temp hack",
-    "commit_date": "2018-11-02 14:22:49 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/a34281bd1ce00a66662c479d4ea53b364ec3a685"
+  {
+    "sha": "8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6OGQ5ZjA5NWZiYmExOWQxMWEyMjQ0N2M4NGNmOTllZGQxZjI2ZjJmYQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@mozilla.com",
+        "date": "2018-05-10T22:50:07Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-05-10T22:50:07Z"
+      },
+      "message": "Merge pull request #11 from escapewindow/py36\n\npy36 support",
+      "tree": {
+        "sha": "f92f89af6be7afc33704cee9af9eaed33fdc7993",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/f92f89af6be7afc33704cee9af9eaed33fdc7993"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJa9MyfCRBK7hj4Ov3rIwAAdHIIADouXj0tjG9rYgEXzTt4PKrb\nCGJllGQLZYPceQXPb+6jFrkp2Gu4t3jSj3PDKVFOjLNlmTPNy8wek9dXNDdsdx6X\ngySptoItNvivxavpM/bB+kk3nlLIpB2NqrImWYwnpt/1X4mhuHwqIy9+LLYhlncP\nmEI6EbFFVw7hoU3RTXIlW49ovTxQUPk5FZYV7dRyTM7EIcLNxd2TMZ4V/JCjI3Jl\nnPsrGQbWCAEedksmGYzhXoEl4gYu0OfCyOS+s1P0WdxOPccdIcbdJE07sWJCidgg\n1qgKpwxTqGKS7/U8jFDPFG0FmtT5qguFpWsBMrdpvMIlylM09NbrYenqgl1pJug=\n=zpTU\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree f92f89af6be7afc33704cee9af9eaed33fdc7993\nparent 6960bc8bfa92ff7af467888591fd6fd7347716ff\nparent d8db4153968d052a39793b302f85f9f02f3322a4\nauthor Aki Sasaki <aki@mozilla.com> 1525992607 -0700\ncommitter GitHub <noreply@github.com> 1525992607 -0700\n\nMerge pull request #11 from escapewindow/py36\n\npy36 support"
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/8d9f095fbba19d11a22447c84cf99edd1f26f2fa",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/8d9f095fbba19d11a22447c84cf99edd1f26f2fa/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6960bc8bfa92ff7af467888591fd6fd7347716ff",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6960bc8bfa92ff7af467888591fd6fd7347716ff",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/6960bc8bfa92ff7af467888591fd6fd7347716ff"
+      },
+      {
+        "sha": "d8db4153968d052a39793b302f85f9f02f3322a4",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/d8db4153968d052a39793b302f85f9f02f3322a4",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/d8db4153968d052a39793b302f85f9f02f3322a4"
+      }
+    ]
   },
-  "6": {
-    "sha": "654810cdc036230b5a5722a06dcc55e10ecca36b",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/654810cdc036230b5a5722a06dcc55e10ecca36b",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "shipit/frontend: Generate partial suggestions when selecting a revision manually. (#1666)",
-    "commit_date": "2018-11-02 00:31:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/654810cdc036230b5a5722a06dcc55e10ecca36b"
+  {
+    "sha": "d8db4153968d052a39793b302f85f9f02f3322a4",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6ZDhkYjQxNTM5NjhkMDUyYTM5NzkzYjMwMmY4NWY5ZjAyZjMzMjJhNA==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-05-10T22:37:21Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2018-05-10T22:40:56Z"
+      },
+      "message": "py36 support",
+      "tree": {
+        "sha": "f92f89af6be7afc33704cee9af9eaed33fdc7993",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/f92f89af6be7afc33704cee9af9eaed33fdc7993"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/d8db4153968d052a39793b302f85f9f02f3322a4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/d8db4153968d052a39793b302f85f9f02f3322a4",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/d8db4153968d052a39793b302f85f9f02f3322a4",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/d8db4153968d052a39793b302f85f9f02f3322a4/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6960bc8bfa92ff7af467888591fd6fd7347716ff",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6960bc8bfa92ff7af467888591fd6fd7347716ff",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/6960bc8bfa92ff7af467888591fd6fd7347716ff"
+      }
+    ]
   },
-  "7": {
-    "sha": "2ca1463b97a98d56424d4b6360e113e68b96c4e3",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/2ca1463b97a98d56424d4b6360e113e68b96c4e3",
-    "commiter_name": "ANdi",
-    "commiter_email": "abpostelnicu@users.noreply.github.com",
-    "commit_message": "staticanalysis/bot: Update cbindgen to 0.6.7 (#1663)",
-    "commit_date": "2018-10-31 12:03:11 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/2ca1463b97a98d56424d4b6360e113e68b96c4e3"
+  {
+    "sha": "6960bc8bfa92ff7af467888591fd6fd7347716ff",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6Njk2MGJjOGJmYTkyZmY3YWY0Njc4ODg1OTFmZDZmZDczNDc3MTZmZg==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:22:15Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:26:28Z"
+      },
+      "message": "Use .gitignore file from other releng repos\n\nThis allows to ignore .pytest_cache/",
+      "tree": {
+        "sha": "58c6467bdfb9a501f74909855e7ae08e592a6a82",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/58c6467bdfb9a501f74909855e7ae08e592a6a82"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/6960bc8bfa92ff7af467888591fd6fd7347716ff",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6960bc8bfa92ff7af467888591fd6fd7347716ff",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/6960bc8bfa92ff7af467888591fd6fd7347716ff",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6960bc8bfa92ff7af467888591fd6fd7347716ff/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ad068f50e547931fd74f7149d184aafd41653d25",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ad068f50e547931fd74f7149d184aafd41653d25",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/ad068f50e547931fd74f7149d184aafd41653d25"
+      }
+    ]
   },
-  "8": {
-    "sha": "d500a1adc76e7a330bcee5559dad848b7ac7fd3e",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/d500a1adc76e7a330bcee5559dad848b7ac7fd3e",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "Fix IRC env var (#1660)",
-    "commit_date": "2018-10-30 16:35:56 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/d500a1adc76e7a330bcee5559dad848b7ac7fd3e"
+  {
+    "sha": "ad068f50e547931fd74f7149d184aafd41653d25",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6YWQwNjhmNTBlNTQ3OTMxZmQ3NGY3MTQ5ZDE4NGFhZmQ0MTY1M2QyNQ==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:20:34Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:26:28Z"
+      },
+      "message": "Add tox tests against python 3.6 + split travis jobs per python version",
+      "tree": {
+        "sha": "45b601a4b4b7ee603039afef247972d5162c1483",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/45b601a4b4b7ee603039afef247972d5162c1483"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/ad068f50e547931fd74f7149d184aafd41653d25",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ad068f50e547931fd74f7149d184aafd41653d25",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/ad068f50e547931fd74f7149d184aafd41653d25",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ad068f50e547931fd74f7149d184aafd41653d25/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6479506341029c2cdd9ba0f374d1d8ad7fffcbc1",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6479506341029c2cdd9ba0f374d1d8ad7fffcbc1",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/6479506341029c2cdd9ba0f374d1d8ad7fffcbc1"
+      }
+    ]
   },
-  "9": {
-    "sha": "ef49454d8884fb8e0cf6c83d48b5d979461a73f6",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/ef49454d8884fb8e0cf6c83d48b5d979461a73f6",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/api: Use env vars for TC IRC notifications (#1659)    Use env vars for TC IRC notifications      Fallback to secrets",
-    "commit_date": "2018-10-30 16:17:39 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/ef49454d8884fb8e0cf6c83d48b5d979461a73f6"
+  {
+    "sha": "6479506341029c2cdd9ba0f374d1d8ad7fffcbc1",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NjQ3OTUwNjM0MTAyOWMyY2RkOWJhMGYzNzRkMWQ4YWQ3ZmZmY2JjMQ==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:17:27Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:26:28Z"
+      },
+      "message": "Fix errors reported by flake8 new rules",
+      "tree": {
+        "sha": "5479ed9a76a322585737de2897a54ac68ce5ebf0",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/5479ed9a76a322585737de2897a54ac68ce5ebf0"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/6479506341029c2cdd9ba0f374d1d8ad7fffcbc1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6479506341029c2cdd9ba0f374d1d8ad7fffcbc1",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/6479506341029c2cdd9ba0f374d1d8ad7fffcbc1",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6479506341029c2cdd9ba0f374d1d8ad7fffcbc1/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc"
+      }
+    ]
   },
-  "10": {
-    "sha": "f6e18607663b8db905c07bc17b0fabe4dd4f38e5",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/f6e18607663b8db905c07bc17b0fabe4dd4f38e5",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/frontend: Use BACKEND_URL (renamed to SHIPIT_API_URL) from data-shipit-api-url for accessing backend (#1656)",
-    "commit_date": "2018-10-30 08:18:30 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/f6e18607663b8db905c07bc17b0fabe4dd4f38e5"
+  {
+    "sha": "ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6YWI1Y2I4MzQ0NmQ4ZWIzZTVjY2FkN2Q2OWQzMzZmMGYyMzhhNzhkYw==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-24T12:31:29Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:26:28Z"
+      },
+      "message": "3.2.0",
+      "tree": {
+        "sha": "aca6b6044d5444ea2bc5fb09e9e69602e6b493a5",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/aca6b6044d5444ea2bc5fb09e9e69602e6b493a5"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ab5cb83446d8eb3e5ccad7d69d336f0f238a78dc/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6398634cdb432e0cc1d43106aeb7d74a366409f1",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6398634cdb432e0cc1d43106aeb7d74a366409f1",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/6398634cdb432e0cc1d43106aeb7d74a366409f1"
+      }
+    ]
   },
-  "11": {
-    "sha": "f2d082a8dcfff3a7c92bb9ab7f22f67fed90abe9",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/f2d082a8dcfff3a7c92bb9ab7f22f67fed90abe9",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/bot: Update rust-cbindgen to 0.6.6 (#1654)",
-    "commit_date": "2018-10-29 09:37:54 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/f2d082a8dcfff3a7c92bb9ab7f22f67fed90abe9"
+  {
+    "sha": "6398634cdb432e0cc1d43106aeb7d74a366409f1",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NjM5ODYzNGNkYjQzMmUwY2MxZDQzMTA2YWViN2Q3NGEzNjY0MDlmMQ==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-24T10:24:14Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2018-04-27T16:26:28Z"
+      },
+      "message": "Bug 1409091 - Add focus-jar support",
+      "tree": {
+        "sha": "cd4c42ec327506a6262bcc45ead4ad18377dc4c6",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/cd4c42ec327506a6262bcc45ead4ad18377dc4c6"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/6398634cdb432e0cc1d43106aeb7d74a366409f1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6398634cdb432e0cc1d43106aeb7d74a366409f1",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/6398634cdb432e0cc1d43106aeb7d74a366409f1",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/6398634cdb432e0cc1d43106aeb7d74a366409f1/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "530ee27052e6459c93004de3bcdfbd844bf49bf0",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/530ee27052e6459c93004de3bcdfbd844bf49bf0",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/530ee27052e6459c93004de3bcdfbd844bf49bf0"
+      }
+    ]
   },
-  "12": {
-    "sha": "548dc131d79a2785a0987b5992d89291d9992b1d",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/548dc131d79a2785a0987b5992d89291d9992b1d",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/frontend: Load all tasks & support http errors (#1651)",
-    "commit_date": "2018-10-26 09:44:46 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/548dc131d79a2785a0987b5992d89291d9992b1d"
+  {
+    "sha": "530ee27052e6459c93004de3bcdfbd844bf49bf0",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NTMwZWUyNzA1MmU2NDU5YzkzMDA0ZGUzYmNkZmJkODQ0YmY0OWJmMA==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@mozilla.com",
+        "date": "2017-08-16T03:27:35Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2017-08-16T03:27:35Z"
+      },
+      "message": "Merge pull request #9 from escapewindow/fix-sig\n\nstop munging dest now that `output_file` is working",
+      "tree": {
+        "sha": "06c0e01794a22ab21ef2945b2075239d4215188c",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/06c0e01794a22ab21ef2945b2075239d4215188c"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/530ee27052e6459c93004de3bcdfbd844bf49bf0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/530ee27052e6459c93004de3bcdfbd844bf49bf0",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/530ee27052e6459c93004de3bcdfbd844bf49bf0",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/530ee27052e6459c93004de3bcdfbd844bf49bf0/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/93c000fd34f7d96a46b9cda01e4a86ab9e531794"
+      },
+      {
+        "sha": "73788cf63acb877b42f69e27af6929e663c1b4a9",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/73788cf63acb877b42f69e27af6929e663c1b4a9",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/73788cf63acb877b42f69e27af6929e663c1b4a9"
+      }
+    ]
   },
-  "13": {
-    "sha": "ea7a20f9a77a8ab377e038b2188cff0e5a0191c7",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/ea7a20f9a77a8ab377e038b2188cff0e5a0191c7",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "uplift/frontend: Display issue level & type for infer issues. (#1652)",
-    "commit_date": "2018-10-25 20:06:50 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/ea7a20f9a77a8ab377e038b2188cff0e5a0191c7"
+  {
+    "sha": "73788cf63acb877b42f69e27af6929e663c1b4a9",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NzM3ODhjZjYzYWNiODc3YjQyZjY5ZTI3YWY2OTI5ZTY2M2MxYjRhOQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T03:15:19Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T03:25:44Z"
+      },
+      "message": "3.1.6",
+      "tree": {
+        "sha": "06c0e01794a22ab21ef2945b2075239d4215188c",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/06c0e01794a22ab21ef2945b2075239d4215188c"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/73788cf63acb877b42f69e27af6929e663c1b4a9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/73788cf63acb877b42f69e27af6929e663c1b4a9",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/73788cf63acb877b42f69e27af6929e663c1b4a9",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/73788cf63acb877b42f69e27af6929e663c1b4a9/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e64dde73e76983536859bea273d0424d1df84112",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/e64dde73e76983536859bea273d0424d1df84112",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/e64dde73e76983536859bea273d0424d1df84112"
+      }
+    ]
   },
-  "14": {
-    "sha": "3b53407210704488fab2abd4e0bd35a68c518a09",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/3b53407210704488fab2abd4e0bd35a68c518a09",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "setup: bumping to v50 (#1639)",
-    "commit_date": "2018-10-25 19:58:05 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/3b53407210704488fab2abd4e0bd35a68c518a09"
+  {
+    "sha": "e64dde73e76983536859bea273d0424d1df84112",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6ZTY0ZGRlNzNlNzY5ODM1MzY4NTliZWEyNzNkMDQyNGQxZGY4NDExMg==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T03:25:34Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T03:25:44Z"
+      },
+      "message": "moar coverage",
+      "tree": {
+        "sha": "652a990b51f516fc08e08c7aa060c29e29922b26",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/652a990b51f516fc08e08c7aa060c29e29922b26"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/e64dde73e76983536859bea273d0424d1df84112",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/e64dde73e76983536859bea273d0424d1df84112",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/e64dde73e76983536859bea273d0424d1df84112",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/e64dde73e76983536859bea273d0424d1df84112/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1611142bce2f38e780e65f099a412903855651e4",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/1611142bce2f38e780e65f099a412903855651e4",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/1611142bce2f38e780e65f099a412903855651e4"
+      }
+    ]
   },
-  "15": {
-    "sha": "c301a08836d9f18a1e7dcdd8e706600942b8094d",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/c301a08836d9f18a1e7dcdd8e706600942b8094d",
-    "commiter_name": "ANdi",
-    "commiter_email": "abpostelnicu@users.noreply.github.com",
-    "commit_message": "Add to logger if we don't have clang nor infer files into the revision. (#1648)",
-    "commit_date": "2018-10-25 19:23:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/c301a08836d9f18a1e7dcdd8e706600942b8094d"
+  {
+    "sha": "1611142bce2f38e780e65f099a412903855651e4",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6MTYxMTE0MmJjZTJmMzhlNzgwZTY1ZjA5OWE0MTI5MDM4NTU2NTFlNA==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T03:14:30Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T03:14:45Z"
+      },
+      "message": "stop munging path since we have output_file working",
+      "tree": {
+        "sha": "4ef42357ef8bbd2b3ca3512b31cd91a9032bb02d",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/4ef42357ef8bbd2b3ca3512b31cd91a9032bb02d"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/1611142bce2f38e780e65f099a412903855651e4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/1611142bce2f38e780e65f099a412903855651e4",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/1611142bce2f38e780e65f099a412903855651e4",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/1611142bce2f38e780e65f099a412903855651e4/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/93c000fd34f7d96a46b9cda01e4a86ab9e531794"
+      }
+    ]
   },
-  "16": {
-    "sha": "f8066c3096e8c9880b4c21a37be887d2441fcc31",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/f8066c3096e8c9880b4c21a37be887d2441fcc31",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/frontend: Revert \"Use BACKEND_URL from data-shipit-api-url for accessing backend.\" (#1653)",
-    "commit_date": "2018-10-25 17:34:31 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/f8066c3096e8c9880b4c21a37be887d2441fcc31"
+  {
+    "sha": "93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6OTNjMDAwZmQzNGY3ZDk2YTQ2YjljZGEwMWU0YTg2YWI5ZTUzMTc5NA==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@mozilla.com",
+        "date": "2017-08-16T01:05:31Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2017-08-16T01:05:31Z"
+      },
+      "message": "Merge pull request #8 from escapewindow/fix-output-file\n\nactually use options.output_file",
+      "tree": {
+        "sha": "8275c37d693ba9e8c03f31dcb25b838e6ab58c20",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/8275c37d693ba9e8c03f31dcb25b838e6ab58c20"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/93c000fd34f7d96a46b9cda01e4a86ab9e531794",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/93c000fd34f7d96a46b9cda01e4a86ab9e531794/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a9d12fed1809343c507761631cbce11539d0021a",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/a9d12fed1809343c507761631cbce11539d0021a",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/a9d12fed1809343c507761631cbce11539d0021a"
+      },
+      {
+        "sha": "83d33550f9fa373b0bd0cc1ec68632ec0bd43543",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/83d33550f9fa373b0bd0cc1ec68632ec0bd43543",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/83d33550f9fa373b0bd0cc1ec68632ec0bd43543"
+      }
+    ]
   },
-  "17": {
-    "sha": "c1721b62984da89dbb5c44047ad0593d086750dd",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/c1721b62984da89dbb5c44047ad0593d086750dd",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": "codecoverage/bot: Update ActiveData query URL (#1644)",
-    "commit_date": "2018-10-24 20:11:57 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/c1721b62984da89dbb5c44047ad0593d086750dd"
+  {
+    "sha": "83d33550f9fa373b0bd0cc1ec68632ec0bd43543",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6ODNkMzM1NTBmOWZhMzczYjBiZDBjYzFlYzY4NjMyZWMwYmQ0MzU0Mw==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T00:53:09Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T01:01:47Z"
+      },
+      "message": "3.1.5",
+      "tree": {
+        "sha": "8275c37d693ba9e8c03f31dcb25b838e6ab58c20",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/8275c37d693ba9e8c03f31dcb25b838e6ab58c20"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/83d33550f9fa373b0bd0cc1ec68632ec0bd43543",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/83d33550f9fa373b0bd0cc1ec68632ec0bd43543",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/83d33550f9fa373b0bd0cc1ec68632ec0bd43543",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/83d33550f9fa373b0bd0cc1ec68632ec0bd43543/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b99660a8b65a123d14af53bb8392f8689d3d23db",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b99660a8b65a123d14af53bb8392f8689d3d23db",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/b99660a8b65a123d14af53bb8392f8689d3d23db"
+      }
+    ]
   },
-  "18": {
-    "sha": "7fe5f92b5a5c8f0f277845c0f5e8b2df4a5cbabd",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/7fe5f92b5a5c8f0f277845c0f5e8b2df4a5cbabd",
-    "commiter_name": "ANdi",
-    "commiter_email": "abpostelnicu@users.noreply.github.com",
-    "commit_message": "staticanalysis/bot: Create gradle properties file that prevents gradle from running in daemon mode (#1643)",
-    "commit_date": "2018-10-24 18:13:17 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/7fe5f92b5a5c8f0f277845c0f5e8b2df4a5cbabd"
+  {
+    "sha": "b99660a8b65a123d14af53bb8392f8689d3d23db",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6Yjk5NjYwYThiNjVhMTIzZDE0YWY1M2JiODM5MmY4Njg5ZDNkMjNkYg==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T00:40:05Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-16T01:01:47Z"
+      },
+      "message": "actually use options.output_file",
+      "tree": {
+        "sha": "acb498ef4671efe648f8d8bbbd270ec24045f097",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/acb498ef4671efe648f8d8bbbd270ec24045f097"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/b99660a8b65a123d14af53bb8392f8689d3d23db",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b99660a8b65a123d14af53bb8392f8689d3d23db",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/b99660a8b65a123d14af53bb8392f8689d3d23db",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b99660a8b65a123d14af53bb8392f8689d3d23db/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a9d12fed1809343c507761631cbce11539d0021a",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/a9d12fed1809343c507761631cbce11539d0021a",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/a9d12fed1809343c507761631cbce11539d0021a"
+      }
+    ]
   },
-  "19": {
-    "sha": "1afa68a59e22e32de6ee26db267e021fe9b7d7bd",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/1afa68a59e22e32de6ee26db267e021fe9b7d7bd",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": "codecoverage/bot: Fix detection of Windows platforms (#1642)",
-    "commit_date": "2018-10-24 16:21:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/1afa68a59e22e32de6ee26db267e021fe9b7d7bd"
+  {
+    "sha": "a9d12fed1809343c507761631cbce11539d0021a",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6YTlkMTJmZWQxODA5MzQzYzUwNzc2MTYzMWNiY2UxMTUzOWQwMDIxYQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@mozilla.com",
+        "date": "2017-08-04T21:47:12Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2017-08-04T21:47:12Z"
+      },
+      "message": "Merge pull request #7 from escapewindow/cdm\n\nbug 1383769 - support widevine in signtool py3",
+      "tree": {
+        "sha": "b5c05608d83361c15031a893b8bf3846ea0affb9",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/b5c05608d83361c15031a893b8bf3846ea0affb9"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/a9d12fed1809343c507761631cbce11539d0021a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/a9d12fed1809343c507761631cbce11539d0021a",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/a9d12fed1809343c507761631cbce11539d0021a",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/a9d12fed1809343c507761631cbce11539d0021a/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b59a62f7ceae4f6216405302ef38a9a79994966d",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b59a62f7ceae4f6216405302ef38a9a79994966d",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/b59a62f7ceae4f6216405302ef38a9a79994966d"
+      },
+      {
+        "sha": "b8fdcc3da82eaaa432214f0dee56a693ea232432",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b8fdcc3da82eaaa432214f0dee56a693ea232432",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/b8fdcc3da82eaaa432214f0dee56a693ea232432"
+      }
+    ]
   },
-  "20": {
-    "sha": "c5f3f6599c80120f33605f7f59d8f24bc9da472c",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/c5f3f6599c80120f33605f7f59d8f24bc9da472c",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": " codecoverage/bot: Consider build machines as test platforms as they could contain coverage artifacts (#1637)",
-    "commit_date": "2018-10-24 10:50:06 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/c5f3f6599c80120f33605f7f59d8f24bc9da472c"
+  {
+    "sha": "b8fdcc3da82eaaa432214f0dee56a693ea232432",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6YjhmZGNjM2RhODJlYWFhNDMyMjE0ZjBkZWU1NmE2OTNlYTIzMjQzMg==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-04T18:56:24Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-04T18:56:24Z"
+      },
+      "message": "3.1.4",
+      "tree": {
+        "sha": "b5c05608d83361c15031a893b8bf3846ea0affb9",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/b5c05608d83361c15031a893b8bf3846ea0affb9"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/b8fdcc3da82eaaa432214f0dee56a693ea232432",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b8fdcc3da82eaaa432214f0dee56a693ea232432",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/b8fdcc3da82eaaa432214f0dee56a693ea232432",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b8fdcc3da82eaaa432214f0dee56a693ea232432/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "32da51fa7a07a813fd68731185548dac79ace2d9",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/32da51fa7a07a813fd68731185548dac79ace2d9",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/32da51fa7a07a813fd68731185548dac79ace2d9"
+      }
+    ]
   },
-  "21": {
-    "sha": "5216954426786b8f369e04878c3224db01082c1f",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/5216954426786b8f369e04878c3224db01082c1f",
-    "commiter_name": "Rahul Verma",
-    "commiter_email": "rv404674@gmail.com",
-    "commit_message": "please_cli: Notify '#ci' and '#moc' IRC channels that deployment to production is about to start.(#1568) (#1634)",
-    "commit_date": "2018-10-23 16:47:24 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/5216954426786b8f369e04878c3224db01082c1f"
+  {
+    "sha": "32da51fa7a07a813fd68731185548dac79ace2d9",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6MzJkYTUxZmE3YTA3YTgxM2ZkNjg3MzExODU1NDhkYWM3OWFjZTJkOQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-03T00:26:18Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-03T00:26:18Z"
+      },
+      "message": "kill py33 support",
+      "tree": {
+        "sha": "f40674dd0eaa65826b17e164bef84a6bde4557ff",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/f40674dd0eaa65826b17e164bef84a6bde4557ff"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/32da51fa7a07a813fd68731185548dac79ace2d9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/32da51fa7a07a813fd68731185548dac79ace2d9",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/32da51fa7a07a813fd68731185548dac79ace2d9",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/32da51fa7a07a813fd68731185548dac79ace2d9/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9d026978da6be8137d58b9de0f661ba41ab14bbd",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/9d026978da6be8137d58b9de0f661ba41ab14bbd",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/9d026978da6be8137d58b9de0f661ba41ab14bbd"
+      }
+    ]
   },
-  "22": {
-    "sha": "58e752dd7a5c558fc585b70b12eb4d3f5a2c57a9",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/58e752dd7a5c558fc585b70b12eb4d3f5a2c57a9",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "shipit/frontend: Use URL from data-shipit-api-url for accessing backend. (#1636)",
-    "commit_date": "2018-10-23 16:19:37 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/58e752dd7a5c558fc585b70b12eb4d3f5a2c57a9"
+  {
+    "sha": "9d026978da6be8137d58b9de0f661ba41ab14bbd",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6OWQwMjY5NzhkYTZiZTgxMzdkNThiOWRlMGY2NjFiYTQxYWIxNGJiZA==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-03T00:23:11Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-03T00:23:11Z"
+      },
+      "message": "get an initial noop test of remote_signfile, for coverage",
+      "tree": {
+        "sha": "cab028710871fbb35cb93cd65af29ded8a6c6090",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/cab028710871fbb35cb93cd65af29ded8a6c6090"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/9d026978da6be8137d58b9de0f661ba41ab14bbd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/9d026978da6be8137d58b9de0f661ba41ab14bbd",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/9d026978da6be8137d58b9de0f661ba41ab14bbd",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/9d026978da6be8137d58b9de0f661ba41ab14bbd/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ed07ee82153e65021f9d5ac1259ce09651f45ceb",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ed07ee82153e65021f9d5ac1259ce09651f45ceb",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/ed07ee82153e65021f9d5ac1259ce09651f45ceb"
+      }
+    ]
   },
-  "23": {
-    "sha": "b0cc3616918877ebf5d7ce48e1320daf4b08859a",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/b0cc3616918877ebf5d7ce48e1320daf4b08859a",
-    "commiter_name": "Rahul Verma",
-    "commiter_email": "rv404674@gmail.com",
-    "commit_message": " staticanalysis/bot: Allow justifying clang-tidy checkers with a 'reason' text field #1556, fixes #1481",
-    "commit_date": "2018-10-23 14:36:46 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/b0cc3616918877ebf5d7ce48e1320daf4b08859a"
+  {
+    "sha": "ed07ee82153e65021f9d5ac1259ce09651f45ceb",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6ZWQwN2VlODIxNTNlNjUwMjFmOWQ1YWMxMjU5Y2UwOTY1MWY0NWNlYg==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-07-31T21:01:00Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-08-02T23:40:14Z"
+      },
+      "message": "support widevine",
+      "tree": {
+        "sha": "e69e529c6d8bab8a157a71b8f1fc293c70b86c1e",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/e69e529c6d8bab8a157a71b8f1fc293c70b86c1e"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/ed07ee82153e65021f9d5ac1259ce09651f45ceb",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ed07ee82153e65021f9d5ac1259ce09651f45ceb",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/ed07ee82153e65021f9d5ac1259ce09651f45ceb",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/ed07ee82153e65021f9d5ac1259ce09651f45ceb/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b59a62f7ceae4f6216405302ef38a9a79994966d",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b59a62f7ceae4f6216405302ef38a9a79994966d",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/b59a62f7ceae4f6216405302ef38a9a79994966d"
+      }
+    ]
   },
-  "24": {
-    "sha": "7cd5f1b68e984d52a3d3f00c9ab045ee97eec6fb",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/7cd5f1b68e984d52a3d3f00c9ab045ee97eec6fb",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "uplift/frontend: Remove project #1638, fixes #1617",
-    "commit_date": "2018-10-23 14:15:54 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/7cd5f1b68e984d52a3d3f00c9ab045ee97eec6fb"
+  {
+    "sha": "b59a62f7ceae4f6216405302ef38a9a79994966d",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6YjU5YTYyZjdjZWFlNGY2MjE2NDA1MzAyZWYzOGE5YTc5OTk0OTY2ZA==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-07-13T20:48:29Z"
+      },
+      "committer": {
+        "name": "Aki Sasaki",
+        "email": "aki@escapewindow.com",
+        "date": "2017-07-13T20:48:29Z"
+      },
+      "message": "update changelog for 3.1.3",
+      "tree": {
+        "sha": "ca86daa9bdeec01054745a5318a1ccdaee0ecded",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/ca86daa9bdeec01054745a5318a1ccdaee0ecded"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/b59a62f7ceae4f6216405302ef38a9a79994966d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b59a62f7ceae4f6216405302ef38a9a79994966d",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/b59a62f7ceae4f6216405302ef38a9a79994966d",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/b59a62f7ceae4f6216405302ef38a9a79994966d/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "44c59472964752eecae73f50aaf2201458989bc5",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/44c59472964752eecae73f50aaf2201458989bc5",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/44c59472964752eecae73f50aaf2201458989bc5"
+      }
+    ]
   },
-  "25": {
-    "sha": "1f47de56e6aa1552c3f88719e18bc9dd6faaad66",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/1f47de56e6aa1552c3f88719e18bc9dd6faaad66",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/bot: Add localtime and zoneinfo for infer  (#1632)",
-    "commit_date": "2018-10-23 12:52:07 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/1f47de56e6aa1552c3f88719e18bc9dd6faaad66"
+  {
+    "sha": "44c59472964752eecae73f50aaf2201458989bc5",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NDRjNTk0NzI5NjQ3NTJlZWNhZTczZjUwYWFmMjIwMTQ1ODk4OWJjNQ==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@mozilla.com",
+        "date": "2017-07-13T20:07:34Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2017-07-13T20:07:34Z"
+      },
+      "message": "Merge pull request #4 from catlee/master\n\nReimplement signature check without pefile",
+      "tree": {
+        "sha": "e4feb81e51762c34d41aaffdf329ffde7d09a88b",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/e4feb81e51762c34d41aaffdf329ffde7d09a88b"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/44c59472964752eecae73f50aaf2201458989bc5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/44c59472964752eecae73f50aaf2201458989bc5",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/44c59472964752eecae73f50aaf2201458989bc5",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/44c59472964752eecae73f50aaf2201458989bc5/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "99c8f406ed2f3c930495da6194102b827fdec024",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/99c8f406ed2f3c930495da6194102b827fdec024",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/99c8f406ed2f3c930495da6194102b827fdec024"
+      },
+      {
+        "sha": "bd4bd50c765b385fb637a3b29581e6e7568ea7e7",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/bd4bd50c765b385fb637a3b29581e6e7568ea7e7",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/bd4bd50c765b385fb637a3b29581e6e7568ea7e7"
+      }
+    ]
   },
-  "26": {
-    "sha": "971a2e881f79ea9317baa8539babf3c8929e820f",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/971a2e881f79ea9317baa8539babf3c8929e820f",
-    "commiter_name": "Andi-Bogdan Postelnicu",
-    "commiter_email": "abpostelnicu@me.com",
-    "commit_message": "staticanalysis/bot: Pass _JAVA_OPTIONS envrionment variable to set a hard-coded home directory for Java (#1635)",
-    "commit_date": "2018-10-18 16:22:09 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/971a2e881f79ea9317baa8539babf3c8929e820f"
+  {
+    "sha": "bd4bd50c765b385fb637a3b29581e6e7568ea7e7",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6YmQ0YmQ1MGM3NjViMzg1ZmI2MzdhM2IyOTU4MWU2ZTc1NjhlYTdlNw==",
+    "commit": {
+      "author": {
+        "name": "Chris AtLee",
+        "email": "catlee@mozilla.com",
+        "date": "2017-07-13T19:35:22Z"
+      },
+      "committer": {
+        "name": "Chris AtLee",
+        "email": "catlee@mozilla.com",
+        "date": "2017-07-13T19:35:22Z"
+      },
+      "message": "Merge branch 'master' of https://github.com/mozilla-releng/signtool",
+      "tree": {
+        "sha": "e4feb81e51762c34d41aaffdf329ffde7d09a88b",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/e4feb81e51762c34d41aaffdf329ffde7d09a88b"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/bd4bd50c765b385fb637a3b29581e6e7568ea7e7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "bad_email",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQGTBAABCgB9FiEEeYNfg1ICSRYUuBKUJ+9IVUQo2wwFAllny3xfFIAAAAAALgAo\naXNzdWVyLWZwckBub3RhdGlvbnMub3BlbnBncC5maWZ0aGhvcnNlbWFuLm5ldDc5\nODM1RjgzNTIwMjQ5MTYxNEI4MTI5NDI3RUY0ODU1NDQyOERCMEMACgkQJ+9IVUQo\n2wxYzwgAty04/tqoQRfB9WCtTXQ1utgumHDs3dWXM6o7CG0Fn033TFKpxhdSrctR\nBQQcttQjJdFtGEVvwRcAX//znIS9ELeHSnaviG+hicj3xRhypqgdctO++/NN9H4C\nO2ry/3g0Fh695KSxZ4Ya3KsOTFnCPZ18OJZpbqZPAVzqduYu85t1M6dmyoMSkapd\nLQosS3RnVpxKJPlVMRmC3XVvHRAXGbYmLT3EEbMCwuWA5HdvC68UD00qH+gQ70xl\n/UMCHjd7gfU5S39vj3yO9CGm01oyOMEGjAL/QykrGL7zQkT1hZUHq4bnjpt7Z5ti\na5GPk2jE6UpCG0LH2tI4Bljd2TdOaw==\n=OJgt\n-----END PGP SIGNATURE-----",
+        "payload": "tree e4feb81e51762c34d41aaffdf329ffde7d09a88b\nparent 37fb213b29501cf2a4484edb2ec69b4658015b37\nparent 99c8f406ed2f3c930495da6194102b827fdec024\nauthor Chris AtLee <catlee@mozilla.com> 1499974522 -0400\ncommitter Chris AtLee <catlee@mozilla.com> 1499974522 -0400\n\nMerge branch 'master' of https://github.com/mozilla-releng/signtool\n"
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/bd4bd50c765b385fb637a3b29581e6e7568ea7e7",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/bd4bd50c765b385fb637a3b29581e6e7568ea7e7",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/bd4bd50c765b385fb637a3b29581e6e7568ea7e7/comments",
+    "author": {
+      "login": "catlee",
+      "id": 54458,
+      "node_id": "MDQ6VXNlcjU0NDU4",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/54458?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/catlee",
+      "html_url": "https://github.com/catlee",
+      "followers_url": "https://api.github.com/users/catlee/followers",
+      "following_url": "https://api.github.com/users/catlee/following{/other_user}",
+      "gists_url": "https://api.github.com/users/catlee/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/catlee/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/catlee/subscriptions",
+      "organizations_url": "https://api.github.com/users/catlee/orgs",
+      "repos_url": "https://api.github.com/users/catlee/repos",
+      "events_url": "https://api.github.com/users/catlee/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/catlee/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "catlee",
+      "id": 54458,
+      "node_id": "MDQ6VXNlcjU0NDU4",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/54458?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/catlee",
+      "html_url": "https://github.com/catlee",
+      "followers_url": "https://api.github.com/users/catlee/followers",
+      "following_url": "https://api.github.com/users/catlee/following{/other_user}",
+      "gists_url": "https://api.github.com/users/catlee/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/catlee/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/catlee/subscriptions",
+      "organizations_url": "https://api.github.com/users/catlee/orgs",
+      "repos_url": "https://api.github.com/users/catlee/repos",
+      "events_url": "https://api.github.com/users/catlee/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/catlee/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "37fb213b29501cf2a4484edb2ec69b4658015b37",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/37fb213b29501cf2a4484edb2ec69b4658015b37",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/37fb213b29501cf2a4484edb2ec69b4658015b37"
+      },
+      {
+        "sha": "99c8f406ed2f3c930495da6194102b827fdec024",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/99c8f406ed2f3c930495da6194102b827fdec024",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/99c8f406ed2f3c930495da6194102b827fdec024"
+      }
+    ]
   },
-  "27": {
-    "sha": "41b3d541b69d8a128beabf5c6d43a49a36019de3",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/41b3d541b69d8a128beabf5c6d43a49a36019de3",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": "codecoverage/bot: Don't fail when a file is removed by a commit and then the commit is backed out in the same push (#1619)",
-    "commit_date": "2018-10-19 13:57:33 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/41b3d541b69d8a128beabf5c6d43a49a36019de3"
+  {
+    "sha": "99c8f406ed2f3c930495da6194102b827fdec024",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6OTljOGY0MDZlZDJmM2M5MzA0OTVkYTYxOTQxMDJiODI3ZmRlYzAyNA==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2017-07-13T16:19:49Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2017-07-13T16:19:49Z"
+      },
+      "message": "3.1.2",
+      "tree": {
+        "sha": "b41e59370209a7e0c343cc333bf8a92123070559",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/b41e59370209a7e0c343cc333bf8a92123070559"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/99c8f406ed2f3c930495da6194102b827fdec024",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/99c8f406ed2f3c930495da6194102b827fdec024",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/99c8f406ed2f3c930495da6194102b827fdec024",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/99c8f406ed2f3c930495da6194102b827fdec024/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e822a17c677ffcb6ff302ff0d18b0a29ab41045d",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/e822a17c677ffcb6ff302ff0d18b0a29ab41045d",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/e822a17c677ffcb6ff302ff0d18b0a29ab41045d"
+      }
+    ]
   },
-  "28": {
-    "sha": "c2c06df4b90367d643aff09c4b9c1362376da1e1",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/c2c06df4b90367d643aff09c4b9c1362376da1e1",
-    "commiter_name": "Rahul Verma",
-    "commiter_email": "rv404674@gmail.com",
-    "commit_message": "setup: Notify via IRC when deployment happens (#1623)",
-    "commit_date": "2018-10-19 10:56:26 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/c2c06df4b90367d643aff09c4b9c1362376da1e1"
+  {
+    "sha": "e822a17c677ffcb6ff302ff0d18b0a29ab41045d",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6ZTgyMmExN2M2NzdmZmNiNmZmMzAyZmYwZDE4YjBhMjlhYjQxMDQ1ZA==",
+    "commit": {
+      "author": {
+        "name": "Aki Sasaki",
+        "email": "aki@mozilla.com",
+        "date": "2017-07-13T16:13:29Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2017-07-13T16:13:29Z"
+      },
+      "message": "Merge pull request #5 from JohanLorenzo/add-more-formats\n\nBug 1380536 - update py3 signtool with sha384 mar + sha2signcodestub",
+      "tree": {
+        "sha": "4a3782cea6c968f6913e511edf0c1e6fe8a519f6",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/4a3782cea6c968f6913e511edf0c1e6fe8a519f6"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/e822a17c677ffcb6ff302ff0d18b0a29ab41045d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/e822a17c677ffcb6ff302ff0d18b0a29ab41045d",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/e822a17c677ffcb6ff302ff0d18b0a29ab41045d",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/e822a17c677ffcb6ff302ff0d18b0a29ab41045d/comments",
+    "author": {
+      "login": "escapewindow",
+      "id": 826343,
+      "node_id": "MDQ6VXNlcjgyNjM0Mw==",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826343?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/escapewindow",
+      "html_url": "https://github.com/escapewindow",
+      "followers_url": "https://api.github.com/users/escapewindow/followers",
+      "following_url": "https://api.github.com/users/escapewindow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/escapewindow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/escapewindow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/escapewindow/subscriptions",
+      "organizations_url": "https://api.github.com/users/escapewindow/orgs",
+      "repos_url": "https://api.github.com/users/escapewindow/repos",
+      "events_url": "https://api.github.com/users/escapewindow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/escapewindow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c3fd69f690484080389bcdf8880a175f9db66a2c",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/c3fd69f690484080389bcdf8880a175f9db66a2c",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/c3fd69f690484080389bcdf8880a175f9db66a2c"
+      },
+      {
+        "sha": "4a98b04ffec0aa597111b2967e33f277be18569c",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/4a98b04ffec0aa597111b2967e33f277be18569c",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/4a98b04ffec0aa597111b2967e33f277be18569c"
+      }
+    ]
   },
-  "29": {
-    "sha": "6ca34034dd37c8edb4a4341132448519ce6ab162",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/6ca34034dd37c8edb4a4341132448519ce6ab162",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/bot: Fix dummy leftover bug (#1631)",
-    "commit_date": "2018-10-19 10:15:57 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/6ca34034dd37c8edb4a4341132448519ce6ab162"
+  {
+    "sha": "c3fd69f690484080389bcdf8880a175f9db66a2c",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6YzNmZDY5ZjY5MDQ4NDA4MDM4OWJjZGY4ODgwYTE3NWY5ZGI2NmEyYw==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2017-07-13T16:01:30Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2017-07-13T16:06:54Z"
+      },
+      "message": "3.1.1",
+      "tree": {
+        "sha": "8317a1d827cd9e5d8364de7536164007bf4faad2",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/8317a1d827cd9e5d8364de7536164007bf4faad2"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/c3fd69f690484080389bcdf8880a175f9db66a2c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/c3fd69f690484080389bcdf8880a175f9db66a2c",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/c3fd69f690484080389bcdf8880a175f9db66a2c",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/c3fd69f690484080389bcdf8880a175f9db66a2c/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "34a81bb2ab4ca8772cf6b404fc9aa2b2c4099765",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/34a81bb2ab4ca8772cf6b404fc9aa2b2c4099765",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/34a81bb2ab4ca8772cf6b404fc9aa2b2c4099765"
+      }
+    ]
   },
-  "30": {
-    "sha": "b975ab38c8dcad840cb5b7c68ced9796f9d8c624",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/b975ab38c8dcad840cb5b7c68ced9796f9d8c624",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/bot: Filter Phabricator analyzers to publish (#1626)",
-    "commit_date": "2018-10-18 13:54:58 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/b975ab38c8dcad840cb5b7c68ced9796f9d8c624"
+  {
+    "sha": "4a98b04ffec0aa597111b2967e33f277be18569c",
+    "node_id": "MDY6Q29tbWl0NjEyODk2NjM6NGE5OGIwNGZmZWMwYWE1OTcxMTFiMjk2N2UzM2YyNzdiZTE4NTY5Yw==",
+    "commit": {
+      "author": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2017-07-13T13:13:21Z"
+      },
+      "committer": {
+        "name": "Johan Lorenzo",
+        "email": "jlorenzo@mozilla.com",
+        "date": "2017-07-13T13:13:21Z"
+      },
+      "message": "Bug 1380536 - update py3 signtool with sha384 mar + sha2signcodestub",
+      "tree": {
+        "sha": "1c541974529926dc094492c1f91e99db2a926a4f",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/git/trees/1c541974529926dc094492c1f91e99db2a926a4f"
+      },
+      "url": "https://api.github.com/repos/mozilla-releng/signtool/git/commits/4a98b04ffec0aa597111b2967e33f277be18569c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/4a98b04ffec0aa597111b2967e33f277be18569c",
+    "html_url": "https://github.com/mozilla-releng/signtool/commit/4a98b04ffec0aa597111b2967e33f277be18569c",
+    "comments_url": "https://api.github.com/repos/mozilla-releng/signtool/commits/4a98b04ffec0aa597111b2967e33f277be18569c/comments",
+    "author": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "JohanLorenzo",
+      "id": 5907366,
+      "node_id": "MDQ6VXNlcjU5MDczNjY=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5907366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JohanLorenzo",
+      "html_url": "https://github.com/JohanLorenzo",
+      "followers_url": "https://api.github.com/users/JohanLorenzo/followers",
+      "following_url": "https://api.github.com/users/JohanLorenzo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JohanLorenzo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JohanLorenzo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JohanLorenzo/subscriptions",
+      "organizations_url": "https://api.github.com/users/JohanLorenzo/orgs",
+      "repos_url": "https://api.github.com/users/JohanLorenzo/repos",
+      "events_url": "https://api.github.com/users/JohanLorenzo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JohanLorenzo/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "34a81bb2ab4ca8772cf6b404fc9aa2b2c4099765",
+        "url": "https://api.github.com/repos/mozilla-releng/signtool/commits/34a81bb2ab4ca8772cf6b404fc9aa2b2c4099765",
+        "html_url": "https://github.com/mozilla-releng/signtool/commit/34a81bb2ab4ca8772cf6b404fc9aa2b2c4099765"
+      }
+    ]
   }
-}
+]
