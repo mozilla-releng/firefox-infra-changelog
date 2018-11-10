@@ -180,18 +180,6 @@
         "release-path": " "
       }
     },
-    "cot-gpg-keys": {
-      "name": "COT GPG Keys",
-      "url": "https://github.com/mozilla-releng/cot-gpg-keys",
-      "team": "mozilla-releng/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": " ",
-        "folders-to-ignore": [" ", " ", " "],
-        "files-to-ignore": [" ", " ", " "],
-        "release-path": " "
-      }
-    },
     "pushapkscript": {
       "name": "PushAPK Script",
       "url": "https://github.com/mozilla-releng/pushapkscript",
@@ -254,19 +242,6 @@
     }
   },
   "Mercurial": {
-    "version-control-tools": {
-      "name": "Version-Control-Tools",
-      "url": "https://hg.mozilla.org/hgcustom/version-control-tools/",
-      "team": "hgcustom/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": " ",
-        "folders-to-ignore": [" ", " ", " "],
-        "files-to-ignore": [" ", " ", " "],
-        "release-path": " ",
-        "push_type": "json-log"
-      }
-    },
     "mozilla-build": {
       "name": "Mozilla-Build",
       "url": "https://hg.mozilla.org/mozilla-build/",
