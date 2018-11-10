@@ -14,15 +14,11 @@
 * scriptworker - https://github.com/mozilla-releng/scriptworker
 * pushsnapscript - https://github.com/mozilla-releng/pushsnapscript
 * signingscript - https://github.com/mozilla-releng/signingscript
-* cot-gpg-keys - https://github.com/mozilla-releng/cot-gpg-keys
 * pushapkscript - https://github.com/mozilla-releng/pushapkscript
 * balrogscript - https://github.com/mozilla-releng/balrogscript
 * funsize - https://github.com/mozilla-releng/funsize
 * signtool - https://github.com/mozilla-releng/signtool
 * Tooltool - https://github.com/mozilla/build-tooltool
 ## Repositories that are under a maybe (need a sanity check):
-* pulse-notify - https://github.com/mozilla-releng/pulse-notify
-* mozilla-version - https://github.com/mozilla-releng/mozilla-version
 * shipitapi - https://github.com/mozilla-releng/shipitapi
 * ami-builder - https://github.com/mozilla-releng/ami-builder
-* binary-transparency - https://github.com/mozilla-releng/binary-transparency
