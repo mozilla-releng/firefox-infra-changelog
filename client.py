@@ -180,7 +180,7 @@ if __name__ == "__main__":
     Goes through every repo under github and creates a separate MD file for each one
     """
     for repo in repositories["Github"]:
-        repository_name = repositories["Github"][repo]["name"]
+        repository_name = repo
         repository_team = repositories["Github"][repo]["team"]
         git_link = create_git_link(repository_team, repository_name)
         commit_data = get_git_commits(git_link)
