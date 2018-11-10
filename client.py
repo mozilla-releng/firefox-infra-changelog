@@ -82,11 +82,9 @@ def get_hg_changes(repository_name, push_type):
     This function takes a repository and push type and returns a json object that contains changes in that specific
     repository.
     The HG API also supports xml and rss.
-
     Example:
     example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
     This will be later used to get the commits from https://hg.mozilla.org/
-
     :param repository_name: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
     :param push_type: would probably be "json-log" most of the time.
     :return: returns a json that contains the commits in the provided hg_repository_name
