@@ -82,11 +82,9 @@ def get_hg_changes(repository_name, push_type):
     This function takes a repository and push type and returns a json object that contains changes in that specific
     repository.
     The HG API also supports xml and rss.
-
     Example:
     example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
     This will be later used to get the commits from https://hg.mozilla.org/
-
     :param repository_name: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
     :param push_type: would probably be "json-log" most of the time.
     :return: returns a json that contains the commits in the provided hg_repository_name
@@ -147,34 +145,34 @@ def filter_commit_data(commit):
     repo_dict = {}
     number = 1
     for item in commit:
-        print(item['sha'])
-        # each_commit = {}
-        # author_info = {}
-        # commit_sha = item['sha']
-        # commit_apiurl = item['url']
-        # commit_date = item['commit']['author']['date']
-        # commiter_name = item['commit']['author']['name']
-        # commiter_email = item['commit']['author']['email']
-        # commit_url = item['html_url']
-        # commit_message = item['commit']['message']
-        # message = re.sub('[*\n\r]', ' ', commit_message)
-        # date = re.sub('[*T Z]', ' ', commit_date)
-        # author_info.update({'sha': commit_sha,
-        #                     'url': commit_apiurl,
-        #                     'commiter_name': commiter_name,
-        #                     'commiter_email': commiter_email,
-        #                     'commit_message': message,
-        #                     'commit_date': date,
-        #                     'commit_url': commit_url})
-        # each_commit.update({number: author_info})
-        # number += 1
-        # repo_dict.update(each_commit)
+        each_commit = {}
+        author_info = {}
+        commit_message = item['commit']['message']
+        commit_date = item['commit']['author']['date']
+        commit_sha = item['sha']
+        commit_apiurl = item['url']
+        commiter_name = item['commit']['author']['name']
+        commiter_email = item['commit']['author']['email']
+        commit_url = item['html_url']
+        message = re.sub('[*\n\r]', ' ', commit_message)
+        date = re.sub('[*T Z]', ' ', commit_date)
+        author_info.update({'sha': commit_sha,
+                            'url': commit_apiurl,
+                            'commiter_name': commiter_name,
+                            'commiter_email': commiter_email,
+                            'commit_message': message,
+                            'commit_date': date,
+                            'commit_url': commit_url})
+        each_commit.update({number: author_info})
+        number += 1
+        repo_dict.update(each_commit)
     return repo_dict
 
 
 if __name__ == "__main__":
     repositories_data = open('./repositories.json').read()
     repositories = json.loads(repositories_data)
+
     # Github
     """
     Goes through every repo under github and creates a separate MD file for each one
@@ -185,17 +183,16 @@ if __name__ == "__main__":
         git_link = create_git_link(repository_team, repository_name)
         commit_data = get_git_commits(git_link)
         useful_data = filter_commit_data(commit_data)
-        # write_commits(commit_data, "changelog.json")
-        # create_md_table(repository_name)
-
+        write_commits(useful_data, "changelog.json")
+        create_md_table(repository_name)
     # Mercurial
     """
     Goes through every repo under mercurial and creates a separate MD file for each one
     """
-    # for repo in repositories["Mercurial"]:
-    #     repository_url = repositories["Mercurial"][repo]["url"]
-    #     repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
-    #     repository_name = repositories["Mercurial"][repo]["name"]
-    #     hg_changes = get_hg_changes(repository_url, repository_push_type)
-    #     hg_json_name = "./repositories/" + "{}.json".format(repository_name)
-    #     write_commits(hg_changes, hg_json_name)
+    for repo in repositories["Mercurial"]:
+        repository_url = repositories["Mercurial"][repo]["url"]
+        repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
+        repository_name = repositories["Mercurial"][repo]["name"]
+        hg_changes = get_hg_changes(repository_url, repository_push_type)
+        hg_json_name = "./repositories/" + "{}.json".format(repository_name)
+        write_commits(hg_changes, hg_json_name)
