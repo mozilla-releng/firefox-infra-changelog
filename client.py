@@ -82,11 +82,9 @@ def get_hg_changes(repository_name, push_type):
     This function takes a repository and push type and returns a json object that contains changes in that specific
     repository.
     The HG API also supports xml and rss.
-
     Example:
     example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
     This will be later used to get the commits from https://hg.mozilla.org/
-
     :param repository_name: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
     :param push_type: would probably be "json-log" most of the time.
     :return: returns a json that contains the commits in the provided hg_repository_name
@@ -134,6 +132,7 @@ def write_commits(commit_content, file_name):
     """
     with open(file_name, "w") as json_file:
         json.dump(commit_content, json_file, indent=2)
+    json_file.close()
 
 
 def filter_commit_data(commit):
@@ -179,7 +178,7 @@ if __name__ == "__main__":
     Goes through every repo under github and creates a separate MD file for each one
     """
     for repo in repositories["Github"]:
-        repository_name = repositories["Github"][repo]["name"]
+        repository_name = repo
         repository_team = repositories["Github"][repo]["team"]
         git_link = create_git_link(repository_team, repository_name)
         commit_data = get_git_commits(git_link)
