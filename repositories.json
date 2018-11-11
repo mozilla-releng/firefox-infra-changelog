@@ -239,6 +239,234 @@
         "files-to-ignore": [" ", " ", " "],
         "release-path": " "
       }
+    },
+    	"taskcluster-hooks": {
+      "name": "taskcluster-hooks",
+      "url": "https://github.com/taskcluster/taskcluster-hooks",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"generic-worker": {
+      "name": "generic-worker",
+      "url": "https://github.com/taskcluster/generic-worker",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-tools": {
+      "name": "taskcluster-tools",
+      "url": "https://github.com/taskcluster/taskcluster-tools",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-queue": {
+      "name": "taskcluster-queue",
+      "url": "https://github.com/taskcluster/taskcluster-queue",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"releng-hardware": {
+      "name": "releng-hardware",
+      "url": "https://github.com/taskcluster/releng-hardware",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"docker-worker": {
+      "name": "docker-worker",
+      "url": "https://github.com/taskcluster/docker-worker",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-treeherder": {
+      "name": "taskcluster-treeherder",
+      "url": "https://github.com/taskcluster/taskcluster-treeherder",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-cli": {
+      "name": "taskcluster-cli",
+      "url": "https://github.com/taskcluster/taskcluster-cli",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"mozilla-taskcluster": {
+      "name": "mozilla-taskcluster",
+      "url": "https://github.com/taskcluster/mozilla-taskcluster",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-builder": {
+      "name": "taskcluster-builder",
+      "url": "https://github.com/taskcluster/taskcluster-builder",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"aws-provisioner": {
+      "name": "aws-provisioner",
+      "url": "https://github.com/taskcluster/aws-provisioner/",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-notify": {
+      "name": "taskcluster-notify",
+      "url": "https://github.com/taskcluster/taskcluster-notify",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-client": {
+      "name": "taskcluster-client",
+      "url": "https://github.com/taskcluster/taskcluster-client",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-retrospectives": {
+      "name": "taskcluster-retrospectives",
+      "url": "https://github.com/taskcluster/taskcluster-retrospectives",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-vpn-proxy": {
+      "name": "taskcluster-vpn-proxy",
+      "url": "https://github.com/taskcluster/taskcluster-vpn-proxy",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-mercurial": {
+      "name": "taskcluster-mercurial",
+      "url": "https://github.com/taskcluster/taskcluster-mercurial",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"taskcluster-lib-artifact": {
+      "name": "taskcluster-lib-artifact",
+      "url": "https://github.com/taskcluster/taskcluster-lib-artifact",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"relengapi-proxy": {
+      "name": "relengapi-proxy",
+      "url": "https://github.com/taskcluster/taskcluster-proxy",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
+    },
+	"pulse-go": {
+      "name": "pulse-go",
+      "url": "https://github.com/taskcluster/pulse-go",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": " ",
+        "folders-to-ignore": [" ", " ", " "],
+        "files-to-ignore": [" ", " ", " "],
+        "release-path": " "
+      }
     }
   },
   "Mercurial": {
