@@ -1,0 +1,428 @@
+{
+  "node": "f207024cf5d9b4c7b293b5c1db6608f949eab6ef",
+  "changeset_count": 31923,
+  "changesets": [
+    {
+      "node": "f207024cf5d9b4c7b293b5c1db6608f949eab6ef",
+      "date": [
+        1541450668.0,
+        -3600
+      ],
+      "desc": "Bug 1257058 - Distinguish 'empty password' from no password received to avoid shutdown crash. r=mkmelin a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "c673cbee0e706eb5cdf1b6173f0557bf2f5804e2"
+      ],
+      "pushid": 100,
+      "pushdate": [
+        1542023526,
+        0
+      ]
+    },
+    {
+      "node": "c673cbee0e706eb5cdf1b6173f0557bf2f5804e2",
+      "date": [
+        1541956507.0,
+        -3600
+      ],
+      "desc": "Bug 1504543 - Port Bug 1320475 [Fix broken controllers for cmd_printcard and cmd_printcardpreview] to SeaMonkey. r=IanN a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "12d0494de6aa21983a00c5db3938ed753dc0433c"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "12d0494de6aa21983a00c5db3938ed753dc0433c",
+      "date": [
+        1541956504.0,
+        -3600
+      ],
+      "desc": "Bug 1365170 - Drop \"Legacy\" Hint in SeaMonkey Add-ons Manager Extensions List. r=IanN a=IanN\nPort Bug 1360904 [Our in-tree built extensions have a legacy warning in Add-on manager].",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "bd36350d005d7826db90acbb211884485f2e00b6"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "bd36350d005d7826db90acbb211884485f2e00b6",
+      "date": [
+        1539812879.0,
+        14400
+      ],
+      "desc": "Bug 1500747 - Allow overriding extension building defaults in SeaMonkey via mozconfig. r=ewong a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Bill Gianopoulos <wgianopoulos@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "f8590325e3150df1458a0827c701da86b839b807"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "f8590325e3150df1458a0827c701da86b839b807",
+      "date": [
+        1541956496.0,
+        -3600
+      ],
+      "desc": "Bug 670476 - Follow-up. Fix NITs found after pushing the original patch. r=me a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "e3fb99a54a4c8bf0166a1f16f3a55af4ca0c013c"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "e3fb99a54a4c8bf0166a1f16f3a55af4ca0c013c",
+      "date": [
+        1539499415.0,
+        -7200
+      ],
+      "desc": "Bug 670476 - Add preference zoom status panel and tooltips for it. r=frg,IanN a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Felix Haernstroem <filleeeh@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "2839a305d3e62e97613ed50a58c2939733193cc8"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "2839a305d3e62e97613ed50a58c2939733193cc8",
+      "date": [
+        1539419998.0,
+        -7200
+      ],
+      "desc": "Bug 670476 - Add zoom controls to status bar. r=frg a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Felix Haernstroem <filleeeh@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "666e0d74cd66309caaaf6e651c71195f5bdf5160"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "666e0d74cd66309caaaf6e651c71195f5bdf5160",
+      "date": [
+        1541956445.0,
+        -3600
+      ],
+      "desc": "Bug 1475865 - Port Bug 1119088 [Set As Desktop Background does not work on OS X] to SeaMonkey. r=stefanh a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ian Neal <iann_cvs@blueyonder.co.uk>",
+      "phase": "public",
+      "parents": [
+        "241764e35357d4a51cee09849f72910e72d18d7c"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "241764e35357d4a51cee09849f72910e72d18d7c",
+      "date": [
+        1541795388.0,
+        -3600
+      ],
+      "desc": "Bug 1505435 - Follow-up: Import Services.jsm. rs=bustage-fix a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "c0ae895b8809f4ba4eea9a50e2f4af2fee00cfde"
+      ],
+      "pushid": 98,
+      "pushdate": [
+        1541936485,
+        0
+      ]
+    },
+    {
+      "node": "c0ae895b8809f4ba4eea9a50e2f4af2fee00cfde",
+      "date": [
+        1541696880.0,
+        -3600
+      ],
+      "desc": "Bug 1505435 - Switch date-picker from Intl.DateTimeFormat to mozIMozIntl. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jonathan Kamens <jik@kamens.us>",
+      "phase": "public",
+      "parents": [
+        "f6c33d233f590257c64c7a83eaf5311bb53c275f"
+      ],
+      "pushid": 97,
+      "pushdate": [
+        1541933087,
+        0
+      ]
+    },
+    {
+      "node": "f6c33d233f590257c64c7a83eaf5311bb53c275f",
+      "date": [
+        1541534255.0,
+        -3600
+      ],
+      "desc": "Bug 1505153 - Use !important in compacttheme.css to override the quickFilterBar.css rule when the window is inactive. r=arshad a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Richard Marti <richard.marti@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "489911791e8398d65602a30e4844a4a2f3f063a4"
+      ],
+      "pushid": 97,
+      "pushdate": [
+        1541933087,
+        0
+      ]
+    },
+    {
+      "node": "489911791e8398d65602a30e4844a4a2f3f063a4",
+      "date": [
+        1541930274.0,
+        -3600
+      ],
+      "desc": "Bug 1505315 - Use NS_CopyNativeToUnicode() in MAPI to respect Windows code page. r=emk a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "37051da6d8fd250f2ddbe45e600d75c301436b47"
+      ],
+      "pushid": 97,
+      "pushdate": [
+        1541933087,
+        0
+      ]
+    },
+    {
+      "node": "37051da6d8fd250f2ddbe45e600d75c301436b47",
+      "date": [
+        1541675520.0,
+        -3600
+      ],
+      "desc": "Bug 1503837 - Bug 1503654 follow-up: Adapt to inverted logic of ChromeUtils.isOriginAttributesEqual in cookies dialog. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "aceman <acelists@atlas.sk>",
+      "phase": "public",
+      "parents": [
+        "b2f33d7130a04ce2b6a257251fdc421c48902d38"
+      ],
+      "pushid": 97,
+      "pushdate": [
+        1541933087,
+        0
+      ]
+    },
+    {
+      "node": "b2f33d7130a04ce2b6a257251fdc421c48902d38",
+      "date": [
+        1534368964.0,
+        -7200
+      ],
+      "desc": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "248f7f0eadcd375de3c50c6d24235c64e3c1a985"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "248f7f0eadcd375de3c50c6d24235c64e3c1a985",
+      "date": [
+        1537950463.0,
+        -7200
+      ],
+      "desc": "Bug 1360803 - switch nsMsgSearchValue to using nsCString and fix CTOR of nsMsgSearchValueImpl. r=mkmelin a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "01854d573bd968f2fa1e88092c893e725a8bda7a"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "01854d573bd968f2fa1e88092c893e725a8bda7a",
+      "date": [
+        1537802481.0,
+        -10800
+      ],
+      "desc": "Bug 1360803 - Add error checking to getting nsIMimeConverter service to avoid crash. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Magnus Melin <mkmelin+mozilla@iki.fi>",
+      "phase": "public",
+      "parents": [
+        "8e4b25a12f2c5a59270761eb7fa4cf671e9cba24"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "8e4b25a12f2c5a59270761eb7fa4cf671e9cba24",
+      "date": [
+        1541332240.0,
+        -3600
+      ],
+      "desc": "Bug 1504088 - Stop overflowing the toolbars in main window. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Richard Marti <richard.marti@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "4b99d949218b66a77390df088ac5afd21ebb8acf"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "4b99d949218b66a77390df088ac5afd21ebb8acf",
+      "date": [
+        1541436811.0,
+        -3600
+      ],
+      "desc": "Bug 1500772 - Revert POP3 USER/PASS and SMTP LOGIN auth back to ASCII/Latin1. r=AlfredPeters a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "3298b86a53768581b7cea561cccd9f2ffc7d7b2b"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "3298b86a53768581b7cea561cccd9f2ffc7d7b2b",
+      "date": [
+        1541105413.0,
+        -3600
+      ],
+      "desc": "Bug 1503395 - Bug 1482720 follow-up: Don't skip ParseUrl() completely, call at least ParseSearchPart(). r=aceman a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "c9dd6a36ae6244864117ed63f48bbb6331a0d6bc"
+      ],
+      "pushid": 96,
+      "pushdate": [
+        1541502254,
+        0
+      ]
+    },
+    {
+      "node": "c9dd6a36ae6244864117ed63f48bbb6331a0d6bc",
+      "date": [
+        1540981920.0,
+        -3600
+      ],
+      "desc": "Bug 1503654 - Correct comparision (from bug 1245184) and parameter order (from bug 1259169) for cookie removal. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "bacd54f014d2183bffbcd84ba2aadde8f77a6cde"
+      ],
+      "pushid": 95,
+      "pushdate": [
+        1541081370,
+        0
+      ]
+    }
+  ]
+}

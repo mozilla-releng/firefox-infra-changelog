@@ -1,0 +1,432 @@
+{
+  "node": "acff7819c694bc9350247ca4ad3864dd583cf310",
+  "changeset_count": 498464,
+  "changesets": [
+    {
+      "node": "acff7819c694bc9350247ca4ad3864dd583cf310",
+      "date": [
+        1541443237.0,
+        0
+      ],
+      "desc": "bug 1504478: marionette: update tests to use non-deprecated commands; r=whimboo a=test-only\n\nDepends on D10835\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10836",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "public",
+      "parents": [
+        "d6cb1ff3b59fe0e98d997dcacf77f7734dcbc9a8"
+      ],
+      "pushid": 10174,
+      "pushdate": [
+        1542066475,
+        0
+      ]
+    },
+    {
+      "node": "d6cb1ff3b59fe0e98d997dcacf77f7734dcbc9a8",
+      "date": [
+        1541520704.0,
+        0
+      ],
+      "desc": "Bug 1504940 - [marionette] Remove deprecated \"acceptConnections\" and \"singleTap\" commands. r=ato a=RyanVM\n\nDepends on D11001\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11002",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Henrik Skupin <mail@hskupin.info>",
+      "phase": "public",
+      "parents": [
+        "212a43d021c80d52c5133acd910d191fc4921992"
+      ],
+      "pushid": 10173,
+      "pushdate": [
+        1542062606,
+        0
+      ]
+    },
+    {
+      "node": "212a43d021c80d52c5133acd910d191fc4921992",
+      "date": [
+        1541848208.0,
+        28800
+      ],
+      "desc": "Bug 1504843 - [raptor] Disable access to push.services.mozilla.com to prevent non-local network access, r=rwood a=test-only",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Bob Clary <bclary@bclary.com>",
+      "phase": "public",
+      "parents": [
+        "bceb46bc1891fd9635661eb5f11a3ca79848c87d"
+      ],
+      "pushid": 10172,
+      "pushdate": [
+        1542054708,
+        0
+      ]
+    },
+    {
+      "node": "bceb46bc1891fd9635661eb5f11a3ca79848c87d",
+      "date": [
+        1542048225.0,
+        0
+      ],
+      "desc": "No bug - Tagging 6226ce7f4038d566fe750b1d13f107146d137463 with FIREFOX_64_0b9_BUILD1 a=release CLOSED TREE DONTBUILD",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "e4526385ffed1b0d9ffc1456861950f7b0aa5f09"
+      ],
+      "pushid": 10171,
+      "pushdate": [
+        1542048234,
+        0
+      ]
+    },
+    {
+      "node": "e4526385ffed1b0d9ffc1456861950f7b0aa5f09",
+      "date": [
+        1542047957.0,
+        0
+      ],
+      "desc": "No bug - Tagging 6226ce7f4038d566fe750b1d13f107146d137463 with DEVEDITION_64_0b9_BUILD1 a=release CLOSED TREE DONTBUILD",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "36804d86a9c09f60785cdbd8ccbedd496692ed02"
+      ],
+      "pushid": 10170,
+      "pushdate": [
+        1542047969,
+        0
+      ]
+    },
+    {
+      "node": "36804d86a9c09f60785cdbd8ccbedd496692ed02",
+      "date": [
+        1542047743.0,
+        0
+      ],
+      "desc": "No bug - Tagging 6226ce7f4038d566fe750b1d13f107146d137463 with FENNEC_64_0b9_BUILD1 a=release CLOSED TREE DONTBUILD",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "6226ce7f4038d566fe750b1d13f107146d137463"
+      ],
+      "pushid": 10169,
+      "pushdate": [
+        1542047752,
+        0
+      ]
+    },
+    {
+      "node": "6226ce7f4038d566fe750b1d13f107146d137463",
+      "date": [
+        1542041078.0,
+        -7200
+      ],
+      "desc": "Backed out 2 changesets (bug 1499193, bug 1504370) for failing bc at browser/modules/test/browser/browser_UsageTelemetry_urlbar.js a=backout\n\nBacked out changeset a106808198a6 (bug 1504370)\nBacked out changeset f7221b7dad3f (bug 1499193)",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "DEVEDITION_64_0b9_BUILD1",
+        "FENNEC_64_0b9_BUILD1",
+        "FIREFOX_64_0b9_BUILD1"
+      ],
+      "user": "Razvan Maries <rmaries@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d74a918ff930da31a1ef3ad019ae27fdc75b0d44"
+      ],
+      "pushid": 10168,
+      "pushdate": [
+        1542041119,
+        0
+      ]
+    },
+    {
+      "node": "d74a918ff930da31a1ef3ad019ae27fdc75b0d44",
+      "date": [
+        1542039827.0,
+        -7200
+      ],
+      "desc": "Backed out changeset a691b474af0c (bug 1501804) for failing Android at org.mozilla.geckoview.test.crash.CrashTest.crashParent a=backout",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Razvan Maries <rmaries@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a4175191b29b274d59ed117567ec03df9d6b8cf5"
+      ],
+      "pushid": 10167,
+      "pushdate": [
+        1542039863,
+        0
+      ]
+    },
+    {
+      "node": "a4175191b29b274d59ed117567ec03df9d6b8cf5",
+      "date": [
+        1542035223.0,
+        -7200
+      ],
+      "desc": "Bug 1504165 - Two Sponsored cards are wrongly displayed after increasing the number of Pocket recommendations r=k88hudson a=jcristau",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Razvan Maries <rmaries@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "4e6ab55cc0bee5450aca0a8c780657c9acc6e020"
+      ],
+      "pushid": 10166,
+      "pushdate": [
+        1542036157,
+        0
+      ]
+    },
+    {
+      "node": "4e6ab55cc0bee5450aca0a8c780657c9acc6e020",
+      "date": [
+        1541697059.0,
+        0
+      ],
+      "desc": "Bug 1501138 - Make sure that timeout iterator advances. r=peterv a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11327",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Farre <farre@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a691b474af0cac5d467179f06a9f07c37a3eba44"
+      ],
+      "pushid": 10166,
+      "pushdate": [
+        1542036157,
+        0
+      ]
+    },
+    {
+      "node": "a691b474af0cac5d467179f06a9f07c37a3eba44",
+      "date": [
+        1541433866.0,
+        0
+      ],
+      "desc": "Bug 1501804 - browser.display.use_document_fonts is integer, not boolean. r=snorp a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10873",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Makoto Kato <m_kato@ga2.so-net.ne.jp>",
+      "phase": "public",
+      "parents": [
+        "42b57103a046eea029cf9f8b6d80f694ce84c469"
+      ],
+      "pushid": 10166,
+      "pushdate": [
+        1542036157,
+        0
+      ]
+    },
+    {
+      "node": "42b57103a046eea029cf9f8b6d80f694ce84c469",
+      "date": [
+        1541420704.0,
+        0
+      ],
+      "desc": "Bug 1503950 insert new timeline events after existing events at the same time even when of the same type r=padenot a=jcristau\n\nDepends on D10861\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10862",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Karl Tomlinson <karlt+@karlt.net>",
+      "phase": "public",
+      "parents": [
+        "a106808198a6b0eac935d7bf9cecc3fb9d5a975a"
+      ],
+      "pushid": 10166,
+      "pushdate": [
+        1542036157,
+        0
+      ]
+    },
+    {
+      "node": "a106808198a6b0eac935d7bf9cecc3fb9d5a975a",
+      "date": [
+        1541527087.0,
+        0
+      ],
+      "desc": "Bug 1504370 - Update SEARCH_COUNTS telemetry for private browsing mode r=mkaply a=jcristau\n\n* If a search is performed in a private window and the new pref `browser.engagement.search_counts.pbm` is true, then do not record `SEARCH_COUNTS` telemetry. Note that the the pref must be true. If it's false or doesn't exist, then we record telemetry even in pbm like we normally do currently. (We record `SEARCH_COUNTS` telemetry in two places: (1) In BrowserUsageTelemetry.jsm, and (2) \"in-content\" telemetry directly in the search service. So skip both of those places.)\n* Also skip the other ancillary telemetry recorded by `BrowserUsageTelemetry._recordSearch`: a keyed scalar and a telemetry event.\n* I made some modifications to the search service to let me test the \"in-content\" telemetry keys\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10851",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Drew Willcoxon <adw@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "f7221b7dad3fac285b301f3b43275c76854f79a7"
+      ],
+      "pushid": 10166,
+      "pushdate": [
+        1542036157,
+        0
+      ]
+    },
+    {
+      "node": "f7221b7dad3fac285b301f3b43275c76854f79a7",
+      "date": [
+        1541263636.0,
+        0
+      ],
+      "desc": "Bug 1499193 - Add new SEARCH_COUNTS telemetry for internal search engine alias usage. r=mkaply a=jcristau\n\nModify `BrowserUsageTelemetry.recordSearch` to take an alias instead of the bool `isAlias`. If an alias is given and it's an internal alias of the given engine, then increment a new `\"engineName.@engine.source\"` key under the `SEARCH_COUNTS` histogram -- in addition to incrementing the usual `\"engineName.source\"` key under that same histogram.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10633\n* * *\nBug 1499193 - Follow-up: Update metadata for the SEARCH_COUNTS keyed histogram. r=mkaply\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11382",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Drew Willcoxon <adw@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "4fe80a60a6a04458add149d68b2dd2f7224f65f9"
+      ],
+      "pushid": 10166,
+      "pushdate": [
+        1542036157,
+        0
+      ]
+    },
+    {
+      "node": "4fe80a60a6a04458add149d68b2dd2f7224f65f9",
+      "date": [
+        1542034020.0,
+        -7200
+      ],
+      "desc": "Backed out changeset ec9a256c6703 (bug 1505514) for failing gradle toolchains a=backout",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Razvan Maries <rmaries@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "bc53b14823111dc83c79092fba260fa0b436da78"
+      ],
+      "pushid": 10166,
+      "pushdate": [
+        1542036157,
+        0
+      ]
+    },
+    {
+      "node": "bc53b14823111dc83c79092fba260fa0b436da78",
+      "date": [
+        1542034821.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nbr -> 489a7aef9d90\nnb-NO -> 6351d8294a64\nnl -> c240855f1f59\npl -> 2ec3f9b8baa8\npt-BR -> 9dd8602eb0d2",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "f25f7cb626d2f93b2652ceabb32e7e797cc6db75"
+      ],
+      "pushid": 10165,
+      "pushdate": [
+        1542034827,
+        0
+      ]
+    },
+    {
+      "node": "f25f7cb626d2f93b2652ceabb32e7e797cc6db75",
+      "date": [
+        1542034816.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nbr -> 489a7aef9d90\nnb-NO -> 2822f2aa00fd\npt-BR -> 9dd8602eb0d2",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "ffb714651e11e24e3c3e7f5ee5ecec48f29bf51a"
+      ],
+      "pushid": 10165,
+      "pushdate": [
+        1542034827,
+        0
+      ]
+    },
+    {
+      "node": "ffb714651e11e24e3c3e7f5ee5ecec48f29bf51a",
+      "date": [
+        1542024467.0,
+        0
+      ],
+      "desc": "No Bug, mozilla-beta repo-update HSTS HPKP remote-settings tld-suffixes - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11628",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "ffxbld <ffxbld@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "0501846e98cbcdacfc662e50764401cb802fd8ba"
+      ],
+      "pushid": 10164,
+      "pushdate": [
+        1542032022,
+        0
+      ]
+    },
+    {
+      "node": "0501846e98cbcdacfc662e50764401cb802fd8ba",
+      "date": [
+        1541790690.0,
+        0
+      ],
+      "desc": "Bug 1371509 - fix issues with comparing window URIs in browser_auto_close_window.js, r=Felipe, a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11456",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gijs Kruitbosch <gijskruitbosch@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "a2ea2d92a10b09dedffb11e75a030fb5646936a6"
+      ],
+      "pushid": 10164,
+      "pushdate": [
+        1542032022,
+        0
+      ]
+    },
+    {
+      "node": "a2ea2d92a10b09dedffb11e75a030fb5646936a6",
+      "date": [
+        1540904407.0,
+        0
+      ],
+      "desc": "Bug 1503050 - ensure we fully open the new window we intend to close before doing so, r=Felipe, a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10134",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gijs Kruitbosch <gijskruitbosch@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "9a5723abbaf07e35ce0eb394db045249d4a54b8b"
+      ],
+      "pushid": 10164,
+      "pushdate": [
+        1542032022,
+        0
+      ]
+    }
+  ]
+}

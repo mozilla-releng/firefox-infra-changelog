@@ -1,0 +1,428 @@
+{
+  "node": "2f1b5cddb5f6387c5c47f888387c480de18f7c35",
+  "changeset_count": 706,
+  "changesets": [
+    {
+      "node": "2f1b5cddb5f6387c5c47f888387c480de18f7c35",
+      "date": [
+        1542050382.0,
+        28800
+      ],
+      "desc": "add params-required-signoffs for bug 1501878",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "0d4a4254960b4cf1e330daba33e3dfdf254ea9d7"
+      ],
+      "pushid": 672,
+      "pushdate": [
+        1542050387,
+        0
+      ]
+    },
+    {
+      "node": "0d4a4254960b4cf1e330daba33e3dfdf254ea9d7",
+      "date": [
+        1541189881.0,
+        25200
+      ],
+      "desc": "quote mr versions to avoid being treated as floats",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "56f54e63a30d5210d499fb914614b1ec05c1c310"
+      ],
+      "pushid": 671,
+      "pushdate": [
+        1541189885,
+        0
+      ]
+    },
+    {
+      "node": "56f54e63a30d5210d499fb914614b1ec05c1c310",
+      "date": [
+        1540305960.0,
+        -7200
+      ],
+      "desc": "Bug 1500897 - taskgraph-diff: Add \"hg_branch\" data",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Johan Lorenzo <jlorenzo@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "b5f69b20179dd2bd37e84710aaa5c37fdcf0569c"
+      ],
+      "pushid": 670,
+      "pushdate": [
+        1540806937,
+        0
+      ]
+    },
+    {
+      "node": "b5f69b20179dd2bd37e84710aaa5c37fdcf0569c",
+      "date": [
+        1540559224.0,
+        -7200
+      ],
+      "desc": "No bug - Remove check_servo filter r=tomprince\n\nDeleted in https://hg.mozilla.org/mozilla-central/rev/6c2ca1a524e6",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Johan Lorenzo <jlorenzo@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "e65c587c6b63a8795e16cab386bef075eeabf0e5"
+      ],
+      "pushid": 669,
+      "pushdate": [
+        1540571878,
+        0
+      ]
+    },
+    {
+      "node": "e65c587c6b63a8795e16cab386bef075eeabf0e5",
+      "date": [
+        1540430961.0,
+        25200
+      ],
+      "desc": "fix -partials params",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "5387038ff1e9c59dc1279c9dc0df5f48b81d0a28"
+      ],
+      "pushid": 668,
+      "pushdate": [
+        1540430966,
+        0
+      ]
+    },
+    {
+      "node": "5387038ff1e9c59dc1279c9dc0df5f48b81d0a28",
+      "date": [
+        1540414159.0,
+        21600
+      ],
+      "desc": "Bug 1501759: Remove `include_nightly` parameter.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Tom Prince <mozilla@hocat.ca>",
+      "phase": "public",
+      "parents": [
+        "4e4fcc1dbbd024cce22bbb085c0d6c316ad7b91e"
+      ],
+      "pushid": 667,
+      "pushdate": [
+        1540414269,
+        0
+      ]
+    },
+    {
+      "node": "4e4fcc1dbbd024cce22bbb085c0d6c316ad7b91e",
+      "date": [
+        1539777797.0,
+        -7200
+      ],
+      "desc": "Bug 1499632 - Remove outdated wnp scripts r=garbas",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Johan Lorenzo <jlorenzo@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7ad715ba5d5311ac8fe29058a260c518df8b2fc9"
+      ],
+      "pushid": 666,
+      "pushdate": [
+        1539864566,
+        0
+      ]
+    },
+    {
+      "node": "7ad715ba5d5311ac8fe29058a260c518df8b2fc9",
+      "date": [
+        1539650633.0,
+        25200
+      ],
+      "desc": "moar partials params",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "fd45f4b8973eb6024c74af0a7139f5f2f149e18f"
+      ],
+      "pushid": 665,
+      "pushdate": [
+        1539650724,
+        0
+      ]
+    },
+    {
+      "node": "fd45f4b8973eb6024c74af0a7139f5f2f149e18f",
+      "date": [
+        1539375889.0,
+        25200
+      ],
+      "desc": "add at least one params file with partials/partners",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "46531bc805c17efacf3ffa0bf6fd401c4e101162"
+      ],
+      "pushid": 664,
+      "pushdate": [
+        1539375895,
+        0
+      ]
+    },
+    {
+      "node": "46531bc805c17efacf3ffa0bf6fd401c4e101162",
+      "date": [
+        1539216887.0,
+        25200
+      ],
+      "desc": "add TASKCLUSTER_ROOT_URL to tc-filter and graph-progress",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "c8a8a6a4e8b6aa4b41698530e7c1dcb2361c6922"
+      ],
+      "pushid": 663,
+      "pushdate": [
+        1539216919,
+        0
+      ]
+    },
+    {
+      "node": "c8a8a6a4e8b6aa4b41698530e7c1dcb2361c6922",
+      "date": [
+        1538584364.0,
+        21600
+      ],
+      "desc": "Update parameters for Bug 1490094.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Tom Prince <mozilla@hocat.ca>",
+      "phase": "public",
+      "parents": [
+        "8111e1c87cc01c7765c4a5a7a8fbf3d3ee77696d"
+      ],
+      "pushid": 662,
+      "pushdate": [
+        1538584462,
+        0
+      ]
+    },
+    {
+      "node": "8111e1c87cc01c7765c4a5a7a8fbf3d3ee77696d",
+      "date": [
+        1537497222.0,
+        25200
+      ],
+      "desc": "add --substr option to tc-filter.py",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "18082a7673dbdf3c2c84333c7e215bc648242567"
+      ],
+      "pushid": 661,
+      "pushdate": [
+        1537497227,
+        0
+      ]
+    },
+    {
+      "node": "18082a7673dbdf3c2c84333c7e215bc648242567",
+      "date": [
+        1535497260.0,
+        21600
+      ],
+      "desc": "Add script for getting all dependencies of a bunch of task graphs.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Tom Prince <mozilla@hocat.ca>",
+      "phase": "public",
+      "parents": [
+        "7ba9a6a098957fca5159a05ddd1e50476681237b"
+      ],
+      "pushid": 660,
+      "pushdate": [
+        1535497382,
+        0
+      ]
+    },
+    {
+      "node": "7ba9a6a098957fca5159a05ddd1e50476681237b",
+      "date": [
+        1534377504.0,
+        -43200
+      ],
+      "desc": "Bug 1476741 - update pypi publish script for move to mdc1, r=nthomas",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Eric Ziegenhorn <eziegenhorn@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "80063b433863c674330d90f919c62eb5b2611da0"
+      ],
+      "pushid": 659,
+      "pushdate": [
+        1534377651,
+        0
+      ]
+    },
+    {
+      "node": "80063b433863c674330d90f919c62eb5b2611da0",
+      "date": [
+        1527723423.0,
+        -43200
+      ],
+      "desc": "Remove taskgraph-gen params for partner repack work",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nick Thomas <nthomas@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "b643cacb00ec80f19a2a522633a561f8a6d3f7be"
+      ],
+      "pushid": 658,
+      "pushdate": [
+        1527723457,
+        0
+      ]
+    },
+    {
+      "node": "b643cacb00ec80f19a2a522633a561f8a6d3f7be",
+      "date": [
+        1527616750.0,
+        14400
+      ],
+      "desc": "Try more package version bumps to get allthethings working.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ben Hearsum <bhearsum@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "f4e2990b704f646476e88a5fb388fe3146593f71"
+      ],
+      "pushid": 657,
+      "pushdate": [
+        1527616810,
+        0
+      ]
+    },
+    {
+      "node": "f4e2990b704f646476e88a5fb388fe3146593f71",
+      "date": [
+        1527615910.0,
+        14400
+      ],
+      "desc": "Fix the last couple of errors preventing allthethings from setting up correctly.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ben Hearsum <bhearsum@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "9e0f349c01a9c6414a625bf2e5ab08fc9090d9e2"
+      ],
+      "pushid": 656,
+      "pushdate": [
+        1527615917,
+        0
+      ]
+    },
+    {
+      "node": "9e0f349c01a9c6414a625bf2e5ab08fc9090d9e2",
+      "date": [
+        1527615566.0,
+        14400
+      ],
+      "desc": "add debug statement.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ben Hearsum <bhearsum@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "33a8336c1b3f3c0765845420c50ede68b2469197"
+      ],
+      "pushid": 655,
+      "pushdate": [
+        1527615571,
+        0
+      ]
+    },
+    {
+      "node": "33a8336c1b3f3c0765845420c50ede68b2469197",
+      "date": [
+        1527615103.0,
+        14400
+      ],
+      "desc": "try allowing external files",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ben Hearsum <bhearsum@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "2d74b71c4bb62d70c5421514e63367bee9545392"
+      ],
+      "pushid": 654,
+      "pushdate": [
+        1527615106,
+        0
+      ]
+    },
+    {
+      "node": "2d74b71c4bb62d70c5421514e63367bee9545392",
+      "date": [
+        1527614218.0,
+        14400
+      ],
+      "desc": "Try using releng-puppet as python mirrors to fix issues.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ben Hearsum <bhearsum@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "8775d32035e38dcc2a96dff393475b68debab3c3"
+      ],
+      "pushid": 653,
+      "pushdate": [
+        1527614222,
+        0
+      ]
+    }
+  ]
+}
