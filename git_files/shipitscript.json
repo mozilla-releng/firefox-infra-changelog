@@ -1,0 +1,272 @@
+{
+  "1": {
+    "sha": "7edf12f6d68375ea9d0d847ee784a197490665a4",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/7edf12f6d68375ea9d0d847ee784a197490665a4",
+    "commiter_name": "Aki Sasaki",
+    "commiter_email": "aki@mozilla.com",
+    "commit_message": "Merge pull request #13 from escapewindow/py37  require py37 to be green",
+    "commit_date": "2018-07-27 23:05:59 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4"
+  },
+  "2": {
+    "sha": "603525b424c44e87f3958578f4b20ac12b62d33c",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/603525b424c44e87f3958578f4b20ac12b62d33c",
+    "commiter_name": "Aki Sasaki",
+    "commiter_email": "aki@escapewindow.com",
+    "commit_message": "require py37 to be green",
+    "commit_date": "2018-07-27 22:47:35 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c"
+  },
+  "3": {
+    "sha": "8522dd18645e6809ecf4a1802b6e383ac4bfded5",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/8522dd18645e6809ecf4a1802b6e383ac4bfded5",
+    "commiter_name": "Mihai Tabara",
+    "commiter_email": "mtabara@mozilla.com",
+    "commit_message": "Add SCOPES.md (#12)",
+    "commit_date": "2018-07-12 15:28:23 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5"
+  },
+  "4": {
+    "sha": "e2051ad7d5e30cbabbfdd953894abfc5518e4e37",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/e2051ad7d5e30cbabbfdd953894abfc5518e4e37",
+    "commiter_name": "Mihai Tabara",
+    "commiter_email": "mtabara@mozilla.com",
+    "commit_message": "2.1.1",
+    "commit_date": "2018-07-02 18:52:51 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37"
+  },
+  "5": {
+    "sha": "baefe18bdd070d3f7d6eafb08be0f1b25528be57",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/baefe18bdd070d3f7d6eafb08be0f1b25528be57",
+    "commiter_name": "Mihai Tabara",
+    "commiter_email": "mtabara@mozilla.com",
+    "commit_message": "Fix timings comparison in shipitscript (#11)",
+    "commit_date": "2018-07-02 18:49:00 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57"
+  },
+  "6": {
+    "sha": "890bb8af933befe2c7daad69a2074c066b6d031a",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/890bb8af933befe2c7daad69a2074c066b6d031a",
+    "commiter_name": "Mihai Tabara",
+    "commiter_email": "mtabara@mozilla.com",
+    "commit_message": "2.1.0",
+    "commit_date": "2018-07-02 15:03:27 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a"
+  },
+  "7": {
+    "sha": "5161e253582e43402420d51727e21faf116defad",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/5161e253582e43402420d51727e21faf116defad",
+    "commiter_name": "Mihai Tabara",
+    "commiter_email": "mtabara@mozilla.com",
+    "commit_message": "Add validations to check that operations to Ship-it are successful (#10)    Add logging to find out more about release      Add code + main code coverage.      Fix the rest of unit tests.      Fix integration tests      Refactoring upon review.",
+    "commit_date": "2018-07-02 14:59:51 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/5161e253582e43402420d51727e21faf116defad"
+  },
+  "8": {
+    "sha": "ebf86e9a55865e2e5c8e473bc94e13e659809999",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/ebf86e9a55865e2e5c8e473bc94e13e659809999",
+    "commiter_name": "Mihai Tabara",
+    "commiter_email": "mtabara@mozilla.com",
+    "commit_message": "2.0.0",
+    "commit_date": "2018-06-28 18:29:56 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/ebf86e9a55865e2e5c8e473bc94e13e659809999"
+  },
+  "9": {
+    "sha": "f6355dc3ac8591f31b80c57f6371fcbc63404460",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/f6355dc3ac8591f31b80c57f6371fcbc63404460",
+    "commiter_name": "Mihai Tabara",
+    "commiter_email": "mtabara@mozilla.com",
+    "commit_message": "Enrich shipitscript with new behavior to talk to Ship-it v1 (#8)    Split shipitscript per behaviors and redo the whole tests.      Revert py37 support as it was removed accidentally.      Add mark-as-v1started behavior, no tests yet.      Fix tests. Code coverage 100%      Add integration tests for mark-as-v1started behavior      s/v1started/started/      Support schema multiple types for l10n_changestes. Fix lint      Update config.json example to reflect up-to-date values.      Update schema to reflect l10nchangest solely for basestring.      Refactoring. 100% coverage back      Add badge for coveralls/Travis in README      Add coveragerc file",
+    "commit_date": "2018-06-28 18:25:12 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/f6355dc3ac8591f31b80c57f6371fcbc63404460"
+  },
+  "10": {
+    "sha": "d480987528e74f232a3252290f65906f86f506f7",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/d480987528e74f232a3252290f65906f86f506f7",
+    "commiter_name": "Aki Sasaki",
+    "commiter_email": "aki@mozilla.com",
+    "commit_message": "Merge pull request #6 from escapewindow/aiohttp3  py36, py37",
+    "commit_date": "2018-05-15 19:51:10 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/d480987528e74f232a3252290f65906f86f506f7"
+  },
+  "11": {
+    "sha": "f610dda2eda08fb3f01d52bd82a085577ff52d0b",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/f610dda2eda08fb3f01d52bd82a085577ff52d0b",
+    "commiter_name": "Aki Sasaki",
+    "commiter_email": "aki@escapewindow.com",
+    "commit_message": "py36, py37",
+    "commit_date": "2018-05-15 19:18:06 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/f610dda2eda08fb3f01d52bd82a085577ff52d0b"
+  },
+  "12": {
+    "sha": "b1a1b64d06fef59a5231bc316caabb105b837198",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/b1a1b64d06fef59a5231bc316caabb105b837198",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "1.0.0",
+    "commit_date": "2018-03-15 10:34:03 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/b1a1b64d06fef59a5231bc316caabb105b837198"
+  },
+  "13": {
+    "sha": "2e457750ee251196762085a4192b764b9e14c3d4",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/2e457750ee251196762085a4192b764b9e14c3d4",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Exclude .pytest_cache",
+    "commit_date": "2018-03-15 10:30:47 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/2e457750ee251196762085a4192b764b9e14c3d4"
+  },
+  "14": {
+    "sha": "bae06a4c4e8b53828f7e780bbfd0370997028612",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/bae06a4c4e8b53828f7e780bbfd0370997028612",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Use scriptworker 10.2.0",
+    "commit_date": "2018-03-15 10:29:08 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/bae06a4c4e8b53828f7e780bbfd0370997028612"
+  },
+  "15": {
+    "sha": "1b70d48fd0e73d5062031359bee33038fbc41510",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/1b70d48fd0e73d5062031359bee33038fbc41510",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Bubble task.validate_task_schema() up",
+    "commit_date": "2018-03-06 15:55:07 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/1b70d48fd0e73d5062031359bee33038fbc41510"
+  },
+  "16": {
+    "sha": "3ba0891f2ca6486f7c0a8935d390a6cedce7a383",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/3ba0891f2ca6486f7c0a8935d390a6cedce7a383",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Bubble TaskVerificationError up",
+    "commit_date": "2018-03-06 14:26:13 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/3ba0891f2ca6486f7c0a8935d390a6cedce7a383"
+  },
+  "17": {
+    "sha": "ca1e62f715cfe05e3ccc5b53a468e62991010833",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/ca1e62f715cfe05e3ccc5b53a468e62991010833",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Bubble up some functions in script.py to scriptworker",
+    "commit_date": "2018-03-06 14:24:17 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/ca1e62f715cfe05e3ccc5b53a468e62991010833"
+  },
+  "18": {
+    "sha": "c9837c3e060bfbb4c8f17937ce1f5c7a29162f4e",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/c9837c3e060bfbb4c8f17937ce1f5c7a29162f4e",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Remove utils.get_single_item_from_sequence in favor of the one in taskcluster",
+    "commit_date": "2018-03-05 17:59:59 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/c9837c3e060bfbb4c8f17937ce1f5c7a29162f4e"
+  },
+  "19": {
+    "sha": "145e2a801e6644794b2b57b32bfde06d4075b12d",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/145e2a801e6644794b2b57b32bfde06d4075b12d",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Remove utils.load_json in favor of load_json_or_yaml",
+    "commit_date": "2018-03-05 17:43:42 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/145e2a801e6644794b2b57b32bfde06d4075b12d"
+  },
+  "20": {
+    "sha": "8f6ccd88dcd6c688302abdda148609ec60fccbd8",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/8f6ccd88dcd6c688302abdda148609ec60fccbd8",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Release 0.1.0",
+    "commit_date": "2018-01-31 17:34:11 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/8f6ccd88dcd6c688302abdda148609ec60fccbd8"
+  },
+  "21": {
+    "sha": "d5070877aeb526a1cbf29e85abfd407355a6f2db",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/d5070877aeb526a1cbf29e85abfd407355a6f2db",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Add task example",
+    "commit_date": "2018-01-31 17:38:40 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/d5070877aeb526a1cbf29e85abfd407355a6f2db"
+  },
+  "22": {
+    "sha": "94b8cb1c374df75992a0217cbec588bb405316a5",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/94b8cb1c374df75992a0217cbec588bb405316a5",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Make \"timeout_in_seconds\" optional",
+    "commit_date": "2018-01-30 18:07:42 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/94b8cb1c374df75992a0217cbec588bb405316a5"
+  },
+  "23": {
+    "sha": "d81a10fd60ec97378c7f6b2a5f84226a78f2408f",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/d81a10fd60ec97378c7f6b2a5f84226a78f2408f",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Make sure timeout is an integer",
+    "commit_date": "2018-01-30 13:25:07 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/d81a10fd60ec97378c7f6b2a5f84226a78f2408f"
+  },
+  "24": {
+    "sha": "5ee2ffcf35dacd1ccc2aac1cee1cb1277d5f62f9",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/5ee2ffcf35dacd1ccc2aac1cee1cb1277d5f62f9",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Remove hardcoded check on scopes",
+    "commit_date": "2018-01-30 10:54:22 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/5ee2ffcf35dacd1ccc2aac1cee1cb1277d5f62f9"
+  },
+  "25": {
+    "sha": "6ead11c05ef1b2dc779353b358793d5737412d85",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/6ead11c05ef1b2dc779353b358793d5737412d85",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Document and rename get_single_item_from_list signature",
+    "commit_date": "2018-01-29 15:53:55 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/6ead11c05ef1b2dc779353b358793d5737412d85"
+  },
+  "26": {
+    "sha": "04bbea93fd2b9f94399de3f70c99574ea0ceeadd",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/04bbea93fd2b9f94399de3f70c99574ea0ceeadd",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Prevent password leaks in exception messages",
+    "commit_date": "2018-01-29 15:39:27 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/04bbea93fd2b9f94399de3f70c99574ea0ceeadd"
+  },
+  "27": {
+    "sha": "3203454f6a8ac783349d5a38bb172344c7676844",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/3203454f6a8ac783349d5a38bb172344c7676844",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Allow a single instance to talk to multiple ship-it roots",
+    "commit_date": "2018-01-29 13:39:15 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/3203454f6a8ac783349d5a38bb172344c7676844"
+  },
+  "28": {
+    "sha": "30e4d56329f9d4da623a399a2875d877e860d6eb",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/30e4d56329f9d4da623a399a2875d877e860d6eb",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Rename restricted scopes",
+    "commit_date": "2018-01-25 14:23:02 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/30e4d56329f9d4da623a399a2875d877e860d6eb"
+  },
+  "29": {
+    "sha": "7db368f0e4e6e6107e58a0872439684e23c1e85d",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/7db368f0e4e6e6107e58a0872439684e23c1e85d",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Prevent dev scopes from talking to the {stage,prod} instance",
+    "commit_date": "2018-01-25 14:09:33 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/7db368f0e4e6e6107e58a0872439684e23c1e85d"
+  },
+  "30": {
+    "sha": "abbb2bfefe8bacb237383d25db5420412f4a5a68",
+    "url": "https://api.github.com/repos/mozilla-releng/shipitscript/commits/abbb2bfefe8bacb237383d25db5420412f4a5a68",
+    "commiter_name": "Johan Lorenzo",
+    "commiter_email": "jlorenzo@mozilla.com",
+    "commit_message": "Enforce presence of known scopes",
+    "commit_date": "2018-01-22 17:49:36 ",
+    "commit_url": "https://github.com/mozilla-releng/shipitscript/commit/abbb2bfefe8bacb237383d25db5420412f4a5a68"
+  }
+}

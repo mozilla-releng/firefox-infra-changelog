@@ -1,7 +1,72 @@
 {
-  "node": "d5749c65389e116c2cb6892337556f629908a9ca",
-  "changeset_count": 492979,
+  "node": "99db2272d28e5feb66fd05bef4852e38bba6868f",
+  "changeset_count": 492982,
   "changesets": [
+    {
+      "node": "99db2272d28e5feb66fd05bef4852e38bba6868f",
+      "date": [
+        1541792693.0,
+        18000
+      ],
+      "desc": "Backed out changeset 7e6f51f7fca4 (bug 1470786) for causing bug 1505161; a=backout",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Jim Chen <nchen@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7c2b7d3a4665face65cdfa41c2cd516c955e1851"
+      ],
+      "pushid": 1849,
+      "pushdate": [
+        1541795927,
+        0
+      ]
+    },
+    {
+      "node": "b054ab8cb4da2d2970135b0b8066a0c0a51ed79f",
+      "date": [
+        1541734218.0,
+        -46800
+      ],
+      "desc": "Bug 1493597 - Funnelcake 138 / 139 Pinning to Win10 taskbar A/B testing, installer patch, r=agashlin a=release",
+      "branch": "FUNNELCAKE_138_139_BRANCH",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nick Thomas <nthomas@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7c2b7d3a4665face65cdfa41c2cd516c955e1851"
+      ],
+      "pushid": 1848,
+      "pushdate": [
+        1541734354,
+        0
+      ]
+    },
+    {
+      "node": "7c2b7d3a4665face65cdfa41c2cd516c955e1851",
+      "date": [
+        1541671792.0,
+        0
+      ],
+      "desc": "No Bug, mozilla-release repo-update blocklist remote-settings - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11298",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "ffxbld <ffxbld@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "d5749c65389e116c2cb6892337556f629908a9ca"
+      ],
+      "pushid": 1847,
+      "pushdate": [
+        1541685948,
+        0
+      ]
+    },
     {
       "node": "d5749c65389e116c2cb6892337556f629908a9ca",
       "date": [
@@ -11,9 +76,7 @@
       "desc": "Automatic version bump CLOSED TREE NO BUG a=release",
       "branch": "default",
       "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
+      "tags": [],
       "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
       "phase": "public",
       "parents": [
@@ -361,73 +424,6 @@
       "pushid": 1841,
       "pushdate": [
         1541024794,
-        0
-      ]
-    },
-    {
-      "node": "b24e03d62e3a2d69a30999e4cd25b8fc986fcc3e",
-      "date": [
-        1540944437.0,
-        0
-      ],
-      "desc": "No bug - Tagging 6d5e52718c0092c7cc8c5d07b01803debc1cb2f2 with FIREFOX_63_0_1_BUILD4 a=release CLOSED TREE DONTBUILD",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "713992e8e2ae2c19e0a5373a9c359795d6b9cfa6"
-      ],
-      "pushid": 1840,
-      "pushdate": [
-        1540944446,
-        0
-      ]
-    },
-    {
-      "node": "713992e8e2ae2c19e0a5373a9c359795d6b9cfa6",
-      "date": [
-        1540942071.0,
-        0
-      ],
-      "desc": "No bug - Tagging 6d5e52718c0092c7cc8c5d07b01803debc1cb2f2 with FIREFOX_63_0_1_BUILD3 a=release CLOSED TREE DONTBUILD",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "6d5e52718c0092c7cc8c5d07b01803debc1cb2f2"
-      ],
-      "pushid": 1839,
-      "pushdate": [
-        1540942081,
-        0
-      ]
-    },
-    {
-      "node": "6d5e52718c0092c7cc8c5d07b01803debc1cb2f2",
-      "date": [
-        1540842475.0,
-        0
-      ],
-      "desc": "Bug 1501656 - Prevent CFR impression pings being sent twice because of redirect events. r=ursula, a=pascalc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10115",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "FIREFOX_63_0_1_BUILD3",
-        "FIREFOX_63_0_1_BUILD4",
-        "FIREFOX_63_0_1_RELEASE"
-      ],
-      "user": "k88hudson <k88hudson@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "57ecd86334a5be4ada8f24d8bdb82880f5172264"
-      ],
-      "pushid": 1838,
-      "pushdate": [
-        1540918603,
         0
       ]
     }

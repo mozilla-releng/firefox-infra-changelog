@@ -1,7 +1,30 @@
 {
-  "node": "0d4a4254960b4cf1e330daba33e3dfdf254ea9d7",
-  "changeset_count": 705,
+  "node": "2f1b5cddb5f6387c5c47f888387c480de18f7c35",
+  "changeset_count": 706,
   "changesets": [
+    {
+      "node": "2f1b5cddb5f6387c5c47f888387c480de18f7c35",
+      "date": [
+        1542050382.0,
+        28800
+      ],
+      "desc": "add params-required-signoffs for bug 1501878",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Aki Sasaki <asasaki@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "0d4a4254960b4cf1e330daba33e3dfdf254ea9d7"
+      ],
+      "pushid": 672,
+      "pushdate": [
+        1542050387,
+        0
+      ]
+    },
     {
       "node": "0d4a4254960b4cf1e330daba33e3dfdf254ea9d7",
       "date": [
@@ -11,9 +34,7 @@
       "desc": "quote mr versions to avoid being treated as floats",
       "branch": "default",
       "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
+      "tags": [],
       "user": "Aki Sasaki <asasaki@mozilla.com>",
       "phase": "public",
       "parents": [
@@ -400,27 +421,6 @@
       "pushid": 653,
       "pushdate": [
         1527614222,
-        0
-      ]
-    },
-    {
-      "node": "8775d32035e38dcc2a96dff393475b68debab3c3",
-      "date": [
-        1527613924.0,
-        14400
-      ],
-      "desc": "Try using releng-puppet as python mirrors to fix issues.",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Ben Hearsum <bhearsum@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "8b50193d9dd89ea8eda033caeb13d079e15b0680"
-      ],
-      "pushid": 652,
-      "pushdate": [
-        1527613930,
         0
       ]
     }

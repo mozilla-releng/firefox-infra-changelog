@@ -1,0 +1,428 @@
+{
+  "node": "8105dec7146e2fdba5c88ba65721c2ff51574fef",
+  "changeset_count": 445947,
+  "changesets": [
+    {
+      "node": "8105dec7146e2fdba5c88ba65721c2ff51574fef",
+      "date": [
+        1542078951.0,
+        0
+      ],
+      "desc": "Bug 1506492 - Report WebRender swap-chain memory usage. r=bholley\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11594",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Matt Woodrow <mwoodrow@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "c007a3321fe075a21c64b56d82f2cd2346039bcf"
+      ],
+      "pushid": 72840,
+      "pushdate": [
+        1542080053,
+        0
+      ]
+    },
+    {
+      "node": "c007a3321fe075a21c64b56d82f2cd2346039bcf",
+      "date": [
+        1542075821.0,
+        0
+      ],
+      "desc": "Bug 1506676. blob-inval: handle the parent item being removed. r=mattwoodrow\n\nIf the parent item is removed our assertions will be wrong because\nthe parent item's bounds will not be added to the invalid rect until\nafter we've traversed all of the items. Further, the new unbounded rect\nfor the child item won't be added to the invalid rect unless we do it\nourselves. This makes sure we add the old and new rects to the invalid\nrect.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11724",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jeff Muizelaar <jrmuizel@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "d056f0ff51c05e69ab26e690a42238b53a52d1a8"
+      ],
+      "pushid": 72839,
+      "pushdate": [
+        1542076154,
+        0
+      ]
+    },
+    {
+      "node": "d056f0ff51c05e69ab26e690a42238b53a52d1a8",
+      "date": [
+        1542068820.0,
+        0
+      ],
+      "desc": "Bug 1506572 - Update webrender to commit fbf65161bef7fbbe07dfd2c9b5b9833784422e9e (WR PR #3300). r=kats\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11710",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+      "phase": "draft",
+      "parents": [
+        "36e5bf9afd5087412f58db25698f9fdb68bfa6c8"
+      ],
+      "pushid": 72838,
+      "pushdate": [
+        1542068861,
+        0
+      ]
+    },
+    {
+      "node": "36e5bf9afd5087412f58db25698f9fdb68bfa6c8",
+      "date": [
+        1542050492.0,
+        0
+      ],
+      "desc": "Bug 1505200 - Part 3: Parse any order of number and angle for Rotate. r=emilio\n\nRotate accepts rotate axis and angle in any order\n(i.e. <number>{3} <angle> or <angle> <number>{3}), so we rewrite the\nparser.\n\nDepends on D11401\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11417",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Boris Chiou <boris.chiou@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "3bd1f4cc8f9e0e6276faa1e21cb20b6d870e04dc"
+      ],
+      "pushid": 72837,
+      "pushdate": [
+        1542064702,
+        0
+      ]
+    },
+    {
+      "node": "3bd1f4cc8f9e0e6276faa1e21cb20b6d870e04dc",
+      "date": [
+        1542050482.0,
+        0
+      ],
+      "desc": "Bug 1505200 - Part 2: Serialize Rotate by servo. r=emilio\n\nSo we can drop a lot of code.\n\nDepends on D11247\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11401",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Boris Chiou <boris.chiou@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "f94bba680dc272425f9e5045bb1a13ae24e62e15"
+      ],
+      "pushid": 72837,
+      "pushdate": [
+        1542064702,
+        0
+      ]
+    },
+    {
+      "node": "f94bba680dc272425f9e5045bb1a13ae24e62e15",
+      "date": [
+        1542064639.0,
+        0
+      ],
+      "desc": "Bug 1505200 - Part 1: Rewrite the interpolation of Rotate to return correct type. r=birtles\n\nThe original implementation always returns Rotate::Rotate3D, but it is\nnot correct, so we have to rewrite it:\n1. If both from value and to value are none, we don't have to convert it\n   into identity value, so just return None.\n2. If one of the value is none, we replace it with an identity value based on\n   the other one's rotate axis.\n3. If we only have 2D rotation, we just animate the <angle>.\n4. Otherwise, we do interpolation by 3D rotation.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11247",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Boris Chiou <boris.chiou@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "40399d94b5dad6b35379e5e6099b2f8bb2819026"
+      ],
+      "pushid": 72837,
+      "pushdate": [
+        1542064702,
+        0
+      ]
+    },
+    {
+      "node": "40399d94b5dad6b35379e5e6099b2f8bb2819026",
+      "date": [
+        1541994930.0,
+        0
+      ],
+      "desc": "Bug 1506380 - Rename opcode.py to avoid conflict with builtin Python module. r=arai\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11568",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Philip Chimento <philip.chimento@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "673121bbb18d4a8737007dd4db2f21a055a02e1b"
+      ],
+      "pushid": 72836,
+      "pushdate": [
+        1542064006,
+        0
+      ]
+    },
+    {
+      "node": "673121bbb18d4a8737007dd4db2f21a055a02e1b",
+      "date": [
+        1542048116.0,
+        0
+      ],
+      "desc": "Bug 1503463 - Part 3: Move component alpha handling to SetupComponentAlpha(), and make it work with items inside flattened transforms. r=mattwoodrow\n\nDepends on D11252\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11253",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Miko Mynttinen <mikokm@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "de143a4bdcc0aede056851d10477a50dd81c7946"
+      ],
+      "pushid": 72835,
+      "pushdate": [
+        1542062296,
+        0
+      ]
+    },
+    {
+      "node": "de143a4bdcc0aede056851d10477a50dd81c7946",
+      "date": [
+        1541703221.0,
+        0
+      ],
+      "desc": "Bug 1503463 - Part 2: Remove obsolete layer flattening code r=mattwoodrow\n\nDepends on D11251\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11252",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Miko Mynttinen <mikokm@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "61bf7dbab25ec5e64b8258818a8087ad4abf7f5e"
+      ],
+      "pushid": 72835,
+      "pushdate": [
+        1542062296,
+        0
+      ]
+    },
+    {
+      "node": "61bf7dbab25ec5e64b8258818a8087ad4abf7f5e",
+      "date": [
+        1541703128.0,
+        0
+      ],
+      "desc": "Bug 1503463 - Part 1: Make TransformClipNode::TransformRect() methods const r=mattwoodrow\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11251",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Miko Mynttinen <mikokm@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "f50639806f7fb5692e9c7e2ca7c0b59c1c92da7b"
+      ],
+      "pushid": 72835,
+      "pushdate": [
+        1542062296,
+        0
+      ]
+    },
+    {
+      "node": "f50639806f7fb5692e9c7e2ca7c0b59c1c92da7b",
+      "date": [
+        1541986619.0,
+        0
+      ],
+      "desc": "Bug 1504233 - Clip hit test info items properly r=mattwoodrow\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11038",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Miko Mynttinen <mikokm@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "8bb9edd7ca13ba1d4eceb5c72a182830e7209cbc"
+      ],
+      "pushid": 72834,
+      "pushdate": [
+        1542061314,
+        0
+      ]
+    },
+    {
+      "node": "8bb9edd7ca13ba1d4eceb5c72a182830e7209cbc",
+      "date": [
+        1542058581.0,
+        -7200
+      ],
+      "desc": "Backed out changeset 6ad8b10cc0d6 (bug 1264177) for wpt failures on fetch-destination-no-load-event.https.html . CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "7566a8c23a4a96a2698b4c5af9fd776b5457f4e8"
+      ],
+      "pushid": 72833,
+      "pushdate": [
+        1542058616,
+        0
+      ]
+    },
+    {
+      "node": "7566a8c23a4a96a2698b4c5af9fd776b5457f4e8",
+      "date": [
+        1542050759.0,
+        0
+      ],
+      "desc": "Bug 1498793: Accept msid without track id r=mjf,jib\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10925",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Byron Campen [:bwc] <docfaraday@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "6ad8b10cc0d6951618ca814d87a28ac651f1f333"
+      ],
+      "pushid": 72832,
+      "pushdate": [
+        1542054146,
+        0
+      ]
+    },
+    {
+      "node": "6ad8b10cc0d6951618ca814d87a28ac651f1f333",
+      "date": [
+        1542053441.0,
+        0
+      ],
+      "desc": "Bug 1264177 - Implement FetchEvent.resultingClientId r=edenchuang,mrbkap\n\n- Expose FetchEvent.resultingClientId on non-subresource, non-\"report\"-destination requests.\n- Delay Clients.get(FetchEvent.resultingClientId) resolution until the resulting client is execution ready.\n- Add WPTs to test for existence of resultingClientId and Clients.get promise resolution values.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5333",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Perry Jiang <proxy@perryjiang.com>",
+      "phase": "draft",
+      "parents": [
+        "8e4063938d4ba12e1c2c888b902c159534a83202"
+      ],
+      "pushid": 72831,
+      "pushdate": [
+        1542053703,
+        0
+      ]
+    },
+    {
+      "node": "8e4063938d4ba12e1c2c888b902c159534a83202",
+      "date": [
+        1541862028.0,
+        0
+      ],
+      "desc": "Bug 1505859 - Implement a mach wrapper for rusttests. r=firefox-build-system-reviewers,ted\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11515",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Chris Manchester <cmanchester@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "de5d9f1a6e4ab3345720fe0840295100d953423a"
+      ],
+      "pushid": 72830,
+      "pushdate": [
+        1542053493,
+        0
+      ]
+    },
+    {
+      "node": "de5d9f1a6e4ab3345720fe0840295100d953423a",
+      "date": [
+        1541861979.0,
+        0
+      ],
+      "desc": "Bug 1505859 - Allow rusttests to run when requested without --enable-rust-tests. r=firefox-build-system-reviewers,ted\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11514",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Chris Manchester <cmanchester@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "88fb9e85339cb0de54bae6da11cfd8ec390eec46"
+      ],
+      "pushid": 72830,
+      "pushdate": [
+        1542053493,
+        0
+      ]
+    },
+    {
+      "node": "88fb9e85339cb0de54bae6da11cfd8ec390eec46",
+      "date": [
+        1542052785.0,
+        0
+      ],
+      "desc": "Bug 1506643 - [marionette] Disable \"about:newtab\" page, and always load \"about:blank\". r=ato\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11691",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Henrik Skupin <mail@hskupin.info>",
+      "phase": "draft",
+      "parents": [
+        "22834ab21180ef200695b0264c3027c2d5301ea9"
+      ],
+      "pushid": 72829,
+      "pushdate": [
+        1542052881,
+        0
+      ]
+    },
+    {
+      "node": "22834ab21180ef200695b0264c3027c2d5301ea9",
+      "date": [
+        1542037360.0,
+        0
+      ],
+      "desc": "Bug 1390768 - Use new SmartTrace component in webconsole; r=Honza.\n\nDepends on D11603\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11604",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nicolas Chevobbe <nchevobbe@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "c22c5074ba48159f64425b73730070750d50a065"
+      ],
+      "pushid": 72828,
+      "pushdate": [
+        1542051281,
+        0
+      ]
+    },
+    {
+      "node": "c22c5074ba48159f64425b73730070750d50a065",
+      "date": [
+        1542037326.0,
+        0
+      ],
+      "desc": "Bug 1390768 - Create a new React component to render stacktraces; r=Honza.\n\nThe component is wrapping the `Frames` component from the debugger\nin order to have access to frames grouping.\nIt also handles sourcemaps, since the debugger component\ndoes not by itself.\nTests are added to ensure the component behaves as expected.\n\nDepends on D11602\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11603",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nicolas Chevobbe <nchevobbe@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "677553f9d910752a3de92994745b1a54f1c0caf6"
+      ],
+      "pushid": 72828,
+      "pushdate": [
+        1542051281,
+        0
+      ]
+    },
+    {
+      "node": "677553f9d910752a3de92994745b1a54f1c0caf6",
+      "date": [
+        1542037292.0,
+        0
+      ],
+      "desc": "Bug 1390768 - Insert tab and new line chars in Frame component; r=Honza.\n\nThis will allow the \"copy message\" context menu\nentry to work as expected for console messages\nwith a stacktrace (exception, error message, console.trace, \u2026)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11602",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nicolas Chevobbe <nchevobbe@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "234f5f3db94f034242a525783c0f2776a425b0e5"
+      ],
+      "pushid": 72828,
+      "pushdate": [
+        1542051281,
+        0
+      ]
+    }
+  ]
+}

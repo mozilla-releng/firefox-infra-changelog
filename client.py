@@ -10,20 +10,21 @@ TOKEN = os.environ.get("GIT_TOKEN")
 git = Github(TOKEN)
 
 
-def create_md_table(project):
+def create_git_md_table(project, project_name):
     """
-    Uses 'project' parameter to generate markdown table.
+    Uses 'project' and 'project_name' parameters to generate markdown tables for every json file inside 'git_files'.
     :param project: Project name
-    :return: MD table in a file.
+    :param project_name: used to display the repo name in the title row of the MD table
+    :return: MD tables for every json file inside the git_files dir.
     """
 
     current_dir = os.path.dirname(os.path.realpath(__file__))
-    json_data = open('./changelog.json').read()
+    json_data = open("./git_files/" + "{}.json".format(project)).read()
     data = json.loads(json_data)
     base_table = '| Commit Number | Commiter | Commit Message | Commit Url | Date | \n' + \
                  '|:---:|:----:|:----------------------------------:|:------:|:----:| \n'
     tables = {}
-    md_title = ['{} markdown table'.format(project)]
+    md_title = ['{} markdown table'.format(project_name)]
     commit_number_list = [key for key in data]
     for repo in md_title:
         tables[repo] = base_table
@@ -46,13 +47,12 @@ def create_md_table(project):
             tables[repo] = tables[repo] + row
 
     md_file_name = '{}.md'.format(project)
-    md_file = open(current_dir + '/repositories/' + md_file_name, 'w')
+    md_file = open(current_dir + "/git_files/" + md_file_name, 'w')
 
     for key, value in tables.items():
         if value != base_table:
             md_file.write('## ' + key.upper() + '\n\n')
             md_file.write(value + '\n\n')
-
     md_file.close()
 
 
@@ -169,30 +169,43 @@ def filter_commit_data(commit):
     return repo_dict
 
 
-if __name__ == "__main__":
-    repositories_data = open('./repositories.json').read()
-    repositories = json.loads(repositories_data)
-
-    # Github
+def create_files_for_git():
     """
-    Goes through every repo under github and creates a separate MD file for each one
+    Main GIT function. Takes every Git repo from repositories.json and writes all the commit data of each repo in a
+    separate json file and generates a MD file for each repo as well.
+    :return: the end result is a .json and a .md file for every git repository. can be found inside git_files/
     """
     for repo in repositories["Github"]:
         repository_name = repo
         repository_team = repositories["Github"][repo]["team"]
+        pretty_name = repositories["Github"][repo]["name"]
         git_link = create_git_link(repository_team, repository_name)
         commit_data = get_git_commits(git_link)
         useful_data = filter_commit_data(commit_data)
-        write_commits(useful_data, "changelog.json")
-        create_md_table(repository_name)
-    # Mercurial
+        git_json_filename = "./git_files/" + "{}.json".format(repository_name)
+        write_commits(useful_data, git_json_filename)
+        create_git_md_table(repository_name, pretty_name)
+
+
+def create_files_for_hg():
     """
-    Goes through every repo under mercurial and creates a separate MD file for each one
+    Main HG function. takes every Mercurial repo from repositories.json and writes all the commit data of each repo in a
+    separate json file
+    :return: the end result is a .json file for every HG repository. can be found inside hg_files/
     """
     for repo in repositories["Mercurial"]:
         repository_url = repositories["Mercurial"][repo]["url"]
         repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
         repository_name = repositories["Mercurial"][repo]["name"]
         hg_changes = get_hg_changes(repository_url, repository_push_type)
-        hg_json_name = "./repositories/" + "{}.json".format(repository_name)
+        hg_json_name = "./hg_files/" + "{}.json".format(repository_name)
         write_commits(hg_changes, hg_json_name)
+
+
+if __name__ == "__main__":
+    repositories_data = open('./repositories.json').read()
+    repositories = json.loads(repositories_data)
+    create_files_for_git()
+    create_files_for_hg()
+
+
