@@ -3,6 +3,7 @@ from github import Github  # pip3 install PyGitHub
 from datetime import datetime, timedelta
 import json
 import re
+import requests
 # Create a Github instance:
 TOKEN = os.environ.get("GIT_TOKEN")
 git = Github(TOKEN)
@@ -98,6 +99,64 @@ def filter_commit_data(repository_name, repository_team):
         json_file.close()
 
 
+def hg_timestamps_handler(timestamp, timezone):
+    """
+    This function handles the mercurial timestamps so that all of the modifications to be traceable in time, in
+    concordance to one
+    another and returns the date-time format.
+    Part of Mercurial Wrapper
+    Example :
+        print(handle_timestamps("1499225169.0", "-43200"))
+    Output:
+        07-05-2017 15:26:09
+    :param timestamp: Timestamp in unix systems (an unique time represented in how many seconds past a certain event)
+    :param timezone: Timezone of the timestamp
+    :return: Returns "YYYY-MM-DD HH:MM:SS"
+    """
+    if "-" in timezone:
+        ts = int(timestamp[:-2]) - int(timezone)
+    else:
+        ts = int(timestamp[:-2]) + int(timezone)
+    return datetime.utcfromtimestamp(ts).strftime("%m-%d-%Y %H:%M:%S")
+
+
+def get_hg_changes(repository_name, push_type):
+    """
+    This function takes a repository and push type and returns a json object that contains changes in that specific
+    repository.
+    The HG API also supports xml and rss.
+    Example:
+    example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
+    This will be later used to get the commits from https://hg.mozilla.org/
+    :param repository_name: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
+    :param push_type: would probably be "json-log" most of the time.
+    :return: returns a json that contains the commits in the provided hg_repository_name
+    """
+    if push_type == "json-log":
+        request_url = repository_name + push_type
+        push_response = requests.get(request_url)
+        hg_changes_result = push_response.json()
+    else:
+        print("Feature not implemented. Please use \"json-log\".")
+    return hg_changes_result
+
+
+def create_files_for_hg():
+    """
+    Main HG function. takes every Mercurial repo from repositories.json and writes all the commit data of each repo in a
+    separate json file
+    :return: the end result is a .json file for every HG repository. can be found inside hg_files/
+    """
+    for repo in repositories["Mercurial"]:
+        repository_url = repositories["Mercurial"][repo]["url"]
+        repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
+        repository_name = repositories["Mercurial"][repo]["name"]
+        hg_changes = get_hg_changes(repository_url, repository_push_type)
+        hg_json_name = "./hg_files/" + "{}.json".format(repository_name)
+        with open(hg_json_name, "w") as json_file:
+            json.dump(hg_changes, json_file, indent=2)
+        json_file.close()
+
 def create_files_for_git():
     """
     Main GIT function. Takes every Git repo from repositories.json and writes all the commit data of each repo in a
@@ -117,5 +176,5 @@ if __name__ == "__main__":
     repositories_data = open('./repositories.json').read()
     repositories = json.loads(repositories_data)
     create_files_for_git()
-
+    create_files_for_hg()
 
