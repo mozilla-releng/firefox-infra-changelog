@@ -5,8 +5,6 @@ import json
 import re
 import requests
 # Create a Github instance:
-TOKEN = os.environ.get("GIT_TOKEN")
-git = Github(TOKEN)
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
