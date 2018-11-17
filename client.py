@@ -148,7 +148,7 @@ def create_files_for_hg():
     for repo in repositories["Mercurial"]:
         repository_url = repositories["Mercurial"][repo]["url"]
         repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
-        repository_name = repositories["Mercurial"][repo]["name"]
+        repository_name = repo
         hg_changes = get_hg_changes(repository_url, repository_push_type)
         hg_json_name = "./hg_files/" + "{}.json".format(repository_name)
         with open(hg_json_name, "w") as json_file:

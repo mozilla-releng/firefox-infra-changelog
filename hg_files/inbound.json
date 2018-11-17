@@ -1,0 +1,429 @@
+{
+  "node": "600d7689bd5316f12bee1c030f93bdb2af5eab8d",
+  "changeset_count": 446796,
+  "changesets": [
+    {
+      "node": "600d7689bd5316f12bee1c030f93bdb2af5eab8d",
+      "date": [
+        1542445063.0,
+        -3600
+      ],
+      "desc": "Bug 1508026 - Cherry-pick some changes to malloc_size_of's Cargo.toml.\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "public",
+      "parents": [
+        "c23d6003a3c3a37f523437afedc7e2914c9e194a"
+      ],
+      "pushid": 109931,
+      "pushdate": [
+        1542445362,
+        0
+      ]
+    },
+    {
+      "node": "c23d6003a3c3a37f523437afedc7e2914c9e194a",
+      "date": [
+        1541917566.0,
+        -28800
+      ],
+      "desc": "Bug 1508026 - Fix wrong spec link. r=emilio\n\nThis cherry-picks servo/servo#22172.\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "CYBAI <cyb.ai.815@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "8abb8992a558885e973d5c308c11fd7a9e6ed7bb"
+      ],
+      "pushid": 109931,
+      "pushdate": [
+        1542445362,
+        0
+      ]
+    },
+    {
+      "node": "8abb8992a558885e973d5c308c11fd7a9e6ed7bb",
+      "date": [
+        1542444481.0,
+        -3600
+      ],
+      "desc": "Bug 1508026 - Fix formatting.\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "public",
+      "parents": [
+        "896d672ed0abaece6317543d2d14783044c2709a"
+      ],
+      "pushid": 109931,
+      "pushdate": [
+        1542445362,
+        0
+      ]
+    },
+    {
+      "node": "896d672ed0abaece6317543d2d14783044c2709a",
+      "date": [
+        1542425274.0,
+        -32400
+      ],
+      "desc": "Bug 1506767 - Remove redundant iteration in CompositorBridgeParent::NotifyPipelineRendered() r=mattwoodrow",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "sotaro <sotaro.ikeda.g@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "241738774bb1b1f998770af0e0dd82c6ba8de36d"
+      ],
+      "pushid": 109930,
+      "pushdate": [
+        1542425288,
+        0
+      ]
+    },
+    {
+      "node": "241738774bb1b1f998770af0e0dd82c6ba8de36d",
+      "date": [
+        1540350961.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 11: Update CustomElementRegistry to not use nsIJSID, r=smaug\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9733\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "29c30b62c301eacd5fefd9a78f19cf63fafd889a"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "29c30b62c301eacd5fefd9a78f19cf63fafd889a",
+      "date": [
+        1540350844.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 10: Stop using nsIJSID in nsIArray for optional IID parameters, r=kmag\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9732\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "3439b17bdc2a1bf5626355d529c9a3decf3843be"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "3439b17bdc2a1bf5626355d529c9a3decf3843be",
+      "date": [
+        1532127220.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 9: Switch to using plain JS objects for nsIJS[IC]ID, r=mccr8\n\nThis is a complete rewrite of the interface while maintaining the same APIs.\nEach ID is fully-contained within a single object, does not require a finalizer,\nand is cheap to create.\n\nBeyond using reserved slots, this code avoids using custom ClassOps, instead\npreferring Symbol.hasInstance and eager constants.\n\nOne major change which occurred in this patch was the move from storing a nsCID\nto storing the ContractID for JSCID objects. This eliminates the need for the\n'refreshCID' method, and hopefully shouldn't have performance implications.\n\nIf we discover that there are performance problems there, we can look into\nstashing the CID, and re-introduce 'refreshCID', despite its surprising\nbehaviour.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2286\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "1ddcdfc06526ffa9a997987ae7a2cfff320c00e9"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "1ddcdfc06526ffa9a997987ae7a2cfff320c00e9",
+      "date": [
+        1531966004.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 8: Remove test-only Components.classesById and Components.interfacesById, r=mccr8\n\nThese two interfaces are effectively never used, so to avoid needing to support\nClassID2JSValue with the new implementation, I remove them entirely.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2285\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "a68bee9d2168c514ea485deba6c2624934a1c79f"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "a68bee9d2168c514ea485deba6c2624934a1c79f",
+      "date": [
+        1531888423.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 7: Stop using nsIJSID in xpconnect outside of XPCJSID.cpp, r=mccr8\n\nThis mostly consists of changes to the XPCComponents objects to avoid using the\nimplementation details, and instead use the API defined in part 1.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2284\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "ab47ae5672ac00f6525f0d109af570a771d97add"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "ab47ae5672ac00f6525f0d109af570a771d97add",
+      "date": [
+        1531888238.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 6: Stop using nsIJSID inside of WebIDL bindings, r=mccr8\n\nRather than adding a native type for nsID objects in WebIDL, this patch just\ntakes the approach of switching consumers over to using 'any' and calling the\nAPIs defined in Part 1.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2283\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "c019316fcfd49d74775c9b458b3d611f8081ee7e"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "c019316fcfd49d74775c9b458b3d611f8081ee7e",
+      "date": [
+        1531887638.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 5: Add a refreshCID method to JSCID objects, r=mccr8\n\nThis lets us get rid of the method 'initalize', which currently needs the\ninternal representation of JSCID.\n\nThis particular method is removed entirely in Part 9, and only exists to keep\nintermediate states building & running.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2282\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "e3b4c9cdfbd7e118ada704337d1bffa5cae93676"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "e3b4c9cdfbd7e118ada704337d1bffa5cae93676",
+      "date": [
+        1531887177.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 4: Remove the nsJSID XPCOM constructor, r=mccr8\n\nNobody was using it, so it's pretty easy to remove.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2281\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "ecbe615201fab977a6d753230b146bd04a83b156"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "ecbe615201fab977a6d753230b146bd04a83b156",
+      "date": [
+        1531886898.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 3: Avoid using nsIJSID in Components.Constructor, r=mccr8\n\nThis should be mostly compatible with the original implementation. I tried to\nsimplify things here to just directly wrap and use JS objects, calling methods\non them. This eliminates the nsXPCConstructor type completely, replacing it with\na JSNative constructor with predefined READONLY | PERMANENT properties.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2280\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "404c4d583acdf448fe77a514e90de26dd5d5893f"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "404c4d583acdf448fe77a514e90de26dd5d5893f",
+      "date": [
+        1531886548.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 2: Avoid using nsIJSID in GenerateQI, and produce better diagnostics, r=kmag\n\nThis is the first part of hiding the implementation of nsIJSID behind the\ninterface added in Part 1, such that we can substitute that implementation out.\n\nI had to make a couple of changes to fix the errors caused by the new behaviour\nin GenerateQI.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2279\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "2e250aa206d11319cfaab13e9d57c1095940668c"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "2e250aa206d11319cfaab13e9d57c1095940668c",
+      "date": [
+        1531610994.0,
+        14400
+      ],
+      "desc": "Bug 1477432 - Part 1: Move xpc_ nsJSID methods to a future-proof API, r=mccr8\n\nThe new API tries to be more generic, taking and producing JS::Values. It also\nsupports creating the more specialized IID and CID types.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2278\n",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nika Layzell <nika@thelayzells.com>",
+      "phase": "public",
+      "parents": [
+        "8ab318a0ae56110d72fac3dd73ba2ce617943049"
+      ],
+      "pushid": 109929,
+      "pushdate": [
+        1542407369,
+        0
+      ]
+    },
+    {
+      "node": "8ab318a0ae56110d72fac3dd73ba2ce617943049",
+      "date": [
+        1541358195.0,
+        -3600
+      ],
+      "desc": "Bug 1370224 - Fallback to extension icon for browser/page action r=mstriemer,mixedpuppy",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nicklas Boman <smurfd@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "c7a9ceb9becbccaf75f65eec47a98f0a72fafb02"
+      ],
+      "pushid": 109928,
+      "pushdate": [
+        1542404406,
+        0
+      ]
+    },
+    {
+      "node": "c7a9ceb9becbccaf75f65eec47a98f0a72fafb02",
+      "date": [
+        1542349191.0,
+        -3600
+      ],
+      "desc": "Bug 1503827 - Migrate the treebody binding into a custom element. r=bgrins",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Victor Porof <vporof@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "3a4a3b9133e99f3a2c86baedd6fc25564aeb4898"
+      ],
+      "pushid": 109927,
+      "pushdate": [
+        1542397107,
+        0
+      ]
+    },
+    {
+      "node": "3a4a3b9133e99f3a2c86baedd6fc25564aeb4898",
+      "date": [
+        1542392667.0,
+        0
+      ],
+      "desc": "Bug 1501587 - land NSS 59ef418bf925 UPGRADE_NSS_RELEASE, r=me",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "J.C. Jones <jc@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7154eb3601f3b89ef5b8e559c9f2bae57f6d59f3"
+      ],
+      "pushid": 109926,
+      "pushdate": [
+        1542393084,
+        0
+      ]
+    },
+    {
+      "node": "7154eb3601f3b89ef5b8e559c9f2bae57f6d59f3",
+      "date": [
+        1542391431.0,
+        21600
+      ],
+      "desc": "Bug 1507314 - Baldr: correctly propagate shell flags to nested testig process on Windows (r=bbouvier)",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Luke Wagner <luke@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "9dbfa9bdcd0b393a1a396513c8e08e42e4a3da8a"
+      ],
+      "pushid": 109925,
+      "pushdate": [
+        1542391455,
+        0
+      ]
+    },
+    {
+      "node": "9dbfa9bdcd0b393a1a396513c8e08e42e4a3da8a",
+      "date": [
+        1542390939.0,
+        -7200
+      ],
+      "desc": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Gurzau Raul <rgurzau@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "a7812eefff9559ee40e9f0a8e6c812ea9d36f06d",
+        "71ba7cfafa54a4b458abd2b1962a0bee4011173b"
+      ],
+      "pushid": 109924,
+      "pushdate": [
+        1542390966,
+        0
+      ]
+    }
+  ]
+}

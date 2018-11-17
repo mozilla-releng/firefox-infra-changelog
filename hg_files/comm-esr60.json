@@ -1,0 +1,431 @@
+{
+  "node": "134d931f570884992722fc42f07e55da020f9c73",
+  "changeset_count": 31932,
+  "changesets": [
+    {
+      "node": "134d931f570884992722fc42f07e55da020f9c73",
+      "date": [
+        1540282249.0,
+        -7200
+      ],
+      "desc": "Bug 1230815 - remove unused SetStripHtml() and accumulate HTML part to correct tag stripping, test. r=aceman a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "75d43dc40224380d1c07ffa4f3db3408c1a7ba75"
+      ],
+      "pushid": 103,
+      "pushdate": [
+        1542293990,
+        0
+      ]
+    },
+    {
+      "node": "75d43dc40224380d1c07ffa4f3db3408c1a7ba75",
+      "date": [
+        1540281596.0,
+        -7200
+      ],
+      "desc": "Bug 1230815 - remove unused SetStripHtml() and accumulate HTML part to correct tag stripping. r=aceman a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "b02fba3200f5c14b88dcb672fc9fd4aa8c3b8083"
+      ],
+      "pushid": 103,
+      "pushdate": [
+        1542293990,
+        0
+      ]
+    },
+    {
+      "node": "b02fba3200f5c14b88dcb672fc9fd4aa8c3b8083",
+      "date": [
+        1540029000.0,
+        -7200
+      ],
+      "desc": "Bug 32216 - If the 'Date' header is invalid, use date from 'Received' header instead. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Alfred Peters <infofrommozilla@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "35f977f9404bf89931e548d707f83ae0ed95bcfc"
+      ],
+      "pushid": 103,
+      "pushdate": [
+        1542293990,
+        0
+      ]
+    },
+    {
+      "node": "35f977f9404bf89931e548d707f83ae0ed95bcfc",
+      "date": [
+        1541332240.0,
+        -3600
+      ],
+      "desc": "Bug 1504088 - Stop overflowing the toolbars in main window. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Richard Marti <richard.marti@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "5ce5e6f8fc5132ee53f0c2bbe24e6eeb8f832590"
+      ],
+      "pushid": 103,
+      "pushdate": [
+        1542293990,
+        0
+      ]
+    },
+    {
+      "node": "5ce5e6f8fc5132ee53f0c2bbe24e6eeb8f832590",
+      "date": [
+        1542254280.0,
+        -3600
+      ],
+      "desc": "Bug 1506800 - Don't sent AppleDouble for files with extension unless whitelisted. r=mkmelin a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "2a4a4a1fad3064ca32eb9343d2e278092d9d86a7"
+      ],
+      "pushid": 103,
+      "pushdate": [
+        1542293990,
+        0
+      ]
+    },
+    {
+      "node": "2a4a4a1fad3064ca32eb9343d2e278092d9d86a7",
+      "date": [
+        1541871300.0,
+        -3600
+      ],
+      "desc": "Bug 1506422 - Replace use of nsMsgI18NFileSystemCharset() with NS_CopyUnicodeToNative/NS_CopyNativeToUnicode(). r=emk a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "5b876cd01e092325f0f51f0f7d9ff942be32ee2d"
+      ],
+      "pushid": 103,
+      "pushdate": [
+        1542293990,
+        0
+      ]
+    },
+    {
+      "node": "5b876cd01e092325f0f51f0f7d9ff942be32ee2d",
+      "date": [
+        1542249897.0,
+        0
+      ],
+      "desc": "Automatic version bump CLOSED TREE NO BUG a=release",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "9c2f6e3d65214e7879ad913570e1eb72c6e9578e"
+      ],
+      "pushid": 102,
+      "pushdate": [
+        1542249902,
+        0
+      ]
+    },
+    {
+      "node": "9c2f6e3d65214e7879ad913570e1eb72c6e9578e",
+      "date": [
+        1542249895.0,
+        0
+      ],
+      "desc": "No bug - Tagging c19a3e3679974a7251cd7a0626a3ff38b98b27db with THUNDERBIRD_60_3_1_BUILD2, THUNDERBIRD_60_3_1_RELEASE a=release CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+      "phase": "public",
+      "parents": [
+        "c19a3e3679974a7251cd7a0626a3ff38b98b27db"
+      ],
+      "pushid": 102,
+      "pushdate": [
+        1542249902,
+        0
+      ]
+    },
+    {
+      "node": "c19a3e3679974a7251cd7a0626a3ff38b98b27db",
+      "date": [
+        1542150860.0,
+        -3600
+      ],
+      "desc": "Bug 1504088 - Backed out changeset 8e4b25a12f2c for (most likely) causing an options window which is too small (bug 1506946). a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "THUNDERBIRD_60_3_1_BUILD2",
+        "THUNDERBIRD_60_3_1_RELEASE"
+      ],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "f207024cf5d9b4c7b293b5c1db6608f949eab6ef"
+      ],
+      "pushid": 101,
+      "pushdate": [
+        1542150917,
+        0
+      ]
+    },
+    {
+      "node": "f207024cf5d9b4c7b293b5c1db6608f949eab6ef",
+      "date": [
+        1541450668.0,
+        -3600
+      ],
+      "desc": "Bug 1257058 - Distinguish 'empty password' from no password received to avoid shutdown crash. r=mkmelin a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "c673cbee0e706eb5cdf1b6173f0557bf2f5804e2"
+      ],
+      "pushid": 100,
+      "pushdate": [
+        1542023526,
+        0
+      ]
+    },
+    {
+      "node": "c673cbee0e706eb5cdf1b6173f0557bf2f5804e2",
+      "date": [
+        1541956507.0,
+        -3600
+      ],
+      "desc": "Bug 1504543 - Port Bug 1320475 [Fix broken controllers for cmd_printcard and cmd_printcardpreview] to SeaMonkey. r=IanN a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "12d0494de6aa21983a00c5db3938ed753dc0433c"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "12d0494de6aa21983a00c5db3938ed753dc0433c",
+      "date": [
+        1541956504.0,
+        -3600
+      ],
+      "desc": "Bug 1365170 - Drop \"Legacy\" Hint in SeaMonkey Add-ons Manager Extensions List. r=IanN a=IanN\nPort Bug 1360904 [Our in-tree built extensions have a legacy warning in Add-on manager].",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "bd36350d005d7826db90acbb211884485f2e00b6"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "bd36350d005d7826db90acbb211884485f2e00b6",
+      "date": [
+        1539812879.0,
+        14400
+      ],
+      "desc": "Bug 1500747 - Allow overriding extension building defaults in SeaMonkey via mozconfig. r=ewong a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Bill Gianopoulos <wgianopoulos@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "f8590325e3150df1458a0827c701da86b839b807"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "f8590325e3150df1458a0827c701da86b839b807",
+      "date": [
+        1541956496.0,
+        -3600
+      ],
+      "desc": "Bug 670476 - Follow-up. Fix NITs found after pushing the original patch. r=me a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+      "phase": "public",
+      "parents": [
+        "e3fb99a54a4c8bf0166a1f16f3a55af4ca0c013c"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "e3fb99a54a4c8bf0166a1f16f3a55af4ca0c013c",
+      "date": [
+        1539499415.0,
+        -7200
+      ],
+      "desc": "Bug 670476 - Add preference zoom status panel and tooltips for it. r=frg,IanN a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Felix Haernstroem <filleeeh@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "2839a305d3e62e97613ed50a58c2939733193cc8"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "2839a305d3e62e97613ed50a58c2939733193cc8",
+      "date": [
+        1539419998.0,
+        -7200
+      ],
+      "desc": "Bug 670476 - Add zoom controls to status bar. r=frg a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Felix Haernstroem <filleeeh@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "666e0d74cd66309caaaf6e651c71195f5bdf5160"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "666e0d74cd66309caaaf6e651c71195f5bdf5160",
+      "date": [
+        1541956445.0,
+        -3600
+      ],
+      "desc": "Bug 1475865 - Port Bug 1119088 [Set As Desktop Background does not work on OS X] to SeaMonkey. r=stefanh a=IanN",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ian Neal <iann_cvs@blueyonder.co.uk>",
+      "phase": "public",
+      "parents": [
+        "241764e35357d4a51cee09849f72910e72d18d7c"
+      ],
+      "pushid": 99,
+      "pushdate": [
+        1541959808,
+        0
+      ]
+    },
+    {
+      "node": "241764e35357d4a51cee09849f72910e72d18d7c",
+      "date": [
+        1541795388.0,
+        -3600
+      ],
+      "desc": "Bug 1505435 - Follow-up: Import Services.jsm. rs=bustage-fix a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jorg K <jorgk@jorgk.com>",
+      "phase": "public",
+      "parents": [
+        "c0ae895b8809f4ba4eea9a50e2f4af2fee00cfde"
+      ],
+      "pushid": 98,
+      "pushdate": [
+        1541936485,
+        0
+      ]
+    },
+    {
+      "node": "c0ae895b8809f4ba4eea9a50e2f4af2fee00cfde",
+      "date": [
+        1541696880.0,
+        -3600
+      ],
+      "desc": "Bug 1505435 - Switch date-picker from Intl.DateTimeFormat to mozIMozIntl. r+a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Jonathan Kamens <jik@kamens.us>",
+      "phase": "public",
+      "parents": [
+        "f6c33d233f590257c64c7a83eaf5311bb53c275f"
+      ],
+      "pushid": 97,
+      "pushdate": [
+        1541933087,
+        0
+      ]
+    },
+    {
+      "node": "f6c33d233f590257c64c7a83eaf5311bb53c275f",
+      "date": [
+        1541534255.0,
+        -3600
+      ],
+      "desc": "Bug 1505153 - Use !important in compacttheme.css to override the quickFilterBar.css rule when the window is inactive. r=arshad a=jorgk",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Richard Marti <richard.marti@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "489911791e8398d65602a30e4844a4a2f3f063a4"
+      ],
+      "pushid": 97,
+      "pushdate": [
+        1541933087,
+        0
+      ]
+    }
+  ]
+}

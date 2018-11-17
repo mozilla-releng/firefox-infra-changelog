@@ -1,0 +1,428 @@
+{
+  "node": "1106b713fd95481862967b3612a33b3e1dc99efb",
+  "changeset_count": 446911,
+  "changesets": [
+    {
+      "node": "1106b713fd95481862967b3612a33b3e1dc99efb",
+      "date": [
+        1542444395.0,
+        0
+      ],
+      "desc": "Bug 1506261 - Convert search-one-offs from a custom element to a plain JS class and initialize it lazily. r=bgrins\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11889",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "D\u00e3o Gottwald <dao@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "efc1da42132b231dbdbfe8b06d19bfee1028dbd7"
+      ],
+      "pushid": 73239,
+      "pushdate": [
+        1542447314,
+        0
+      ]
+    },
+    {
+      "node": "efc1da42132b231dbdbfe8b06d19bfee1028dbd7",
+      "date": [
+        1542444194.0,
+        -7200
+      ],
+      "desc": "Backed out changeset 85963f594697 (bug 1504343) for HTMLMarqueeElement.cpp build bustages CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ciure Andrei <aciure@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "85963f594697920ec6503c63deb45eb41e2b5ec0"
+      ],
+      "pushid": 73238,
+      "pushdate": [
+        1542444244,
+        0
+      ]
+    },
+    {
+      "node": "85963f594697920ec6503c63deb45eb41e2b5ec0",
+      "date": [
+        1542436181.0,
+        0
+      ],
+      "desc": "Bug 1504343 - Convert xbl-marquee to UA Widget r=bgrins,bzbarsky\n\nThis patch moves the marquee bindings from xbl-marquee.xml to marquee.js and converts them to a UA Widget.\n\nThe contenteditable bindings are dropped, replaced with a styling rule that will fix the position of the scrolling text.\n\nInline styles have been moved to the stylesheet so usage of display: -moz-box can continue to be parsed.\n\ntest_bug840098.html is deleted because it is only valid under the context of in-content XBL bindings.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10385",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Timothy Guan-tin Chien <timdream@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "fc6057313da6c8c9f87ed4eb2e86c96f21d18657"
+      ],
+      "pushid": 73237,
+      "pushdate": [
+        1542443145,
+        0
+      ]
+    },
+    {
+      "node": "fc6057313da6c8c9f87ed4eb2e86c96f21d18657",
+      "date": [
+        1542416306.0,
+        0
+      ],
+      "desc": "Bug 1506687 Part 2: Add a test of FlexItemValues frameRect property. r=dholbert\n\nDepends on D12182\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12183",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brad Werth <bwerth@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "04f110532f4974387e48a3272fe219188299b205"
+      ],
+      "pushid": 73236,
+      "pushdate": [
+        1542440288,
+        0
+      ]
+    },
+    {
+      "node": "04f110532f4974387e48a3272fe219188299b205",
+      "date": [
+        1542416211.0,
+        0
+      ],
+      "desc": "Bug 1506687 Part 1: Make FlexItemValues also provide the item's frame rect. r=dholbert\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12182",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brad Werth <bwerth@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "cbc3383c8831ef6723d76dba67f6d3b325119517"
+      ],
+      "pushid": 73236,
+      "pushdate": [
+        1542440288,
+        0
+      ]
+    },
+    {
+      "node": "cbc3383c8831ef6723d76dba67f6d3b325119517",
+      "date": [
+        1542438957.0,
+        0
+      ],
+      "desc": "Bug 1507468 - Add 'trs' to Firefox Nightly build r=Pike\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12208",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Francesco Lodolo (:flod) <flod@lodolo.net>",
+      "phase": "draft",
+      "parents": [
+        "59eef38dd5eb6e3fec883a60b790e9ac1a71c675"
+      ],
+      "pushid": 73235,
+      "pushdate": [
+        1542439134,
+        0
+      ]
+    },
+    {
+      "node": "59eef38dd5eb6e3fec883a60b790e9ac1a71c675",
+      "date": [
+        1542437003.0,
+        -7200
+      ],
+      "desc": "Backed out changeset d98cb4a0498c so it's erased from the repo CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Ciure Andrei <aciure@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "d98cb4a0498c0cdd8b7bcd1b2d62b75b797b0758"
+      ],
+      "pushid": 73234,
+      "pushdate": [
+        1542437026,
+        0
+      ]
+    },
+    {
+      "node": "d98cb4a0498c0cdd8b7bcd1b2d62b75b797b0758",
+      "date": [
+        1542434747.0,
+        -7200
+      ],
+      "desc": "No bug - Dummy push the see if the docker images will rerun. CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Cosmin Sabou <csabou@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "e3f7bc3a94a158807643cdc0b3253e469e529f0f"
+      ],
+      "pushid": 73233,
+      "pushdate": [
+        1542434853,
+        0
+      ]
+    },
+    {
+      "node": "e3f7bc3a94a158807643cdc0b3253e469e529f0f",
+      "date": [
+        1542424803.0,
+        -7200
+      ],
+      "desc": "Backed out changeset b3412b91afe2 (bug 1501796) for causing Valgrind build bustage. CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Cosmin Sabou <csabou@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "b3ca607f2595dba7b94124868581c62a9fce668d"
+      ],
+      "pushid": 73232,
+      "pushdate": [
+        1542424837,
+        0
+      ]
+    },
+    {
+      "node": "b3ca607f2595dba7b94124868581c62a9fce668d",
+      "date": [
+        1542423953.0,
+        -7200
+      ],
+      "desc": "Backed out 2 changesets (bug 1506687) for causing mochitest mass failures. CLOSED TREE\n\nBacked out changeset f93f179fb3b4 (bug 1506687)\nBacked out changeset d8230f3fdd2c (bug 1506687)",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Cosmin Sabou <csabou@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "22e8321b69f180a1d74975fd8f162326a49d0efe"
+      ],
+      "pushid": 73231,
+      "pushdate": [
+        1542424007,
+        0
+      ]
+    },
+    {
+      "node": "22e8321b69f180a1d74975fd8f162326a49d0efe",
+      "date": [
+        1542422389.0,
+        -7200
+      ],
+      "desc": "Backed out changeset 26933ef9fa13 (bug 1506323) for landing the wrong patch.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Cosmin Sabou <csabou@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "38844846c6ae6773afb8b9254bf3dbfec437d1ec"
+      ],
+      "pushid": 73230,
+      "pushdate": [
+        1542422514,
+        0
+      ]
+    },
+    {
+      "node": "38844846c6ae6773afb8b9254bf3dbfec437d1ec",
+      "date": [
+        1542422307.0,
+        0
+      ],
+      "desc": "Bug 1506787: Support tabindex attribute (including value -1) on non-control XUL elements. r=smaug\n\nPreviously, the tabindex attribute wasn't supported on non-control XUL elements at all.\nThe only way to make those focusable was to use -moz-user-focus: normal.\nHowever, that caused the element to be included in the tab order; there was no way to make it focusable but not tabbable.\nThis can now be achieved using tabindex=\"-1\".\nThis will primarily be useful for buttons on toolbars, which will be grouped under a single tab stop for efficiency.\n\nFor consistency, this also changes the behaviour of tabindex=\"-1\" with -moz-user-focus: ignore on XUL controls.\nPreviously, -moz-user-focus: ignore would override tabindex=\"-1\", making the element unfocusable.\nNow, the tabindex attribute always overrides if explicitly specified.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12000",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "James Teh <jteh@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "7be95c95a3a7254bcff022190ab2be27ca27ac50"
+      ],
+      "pushid": 73229,
+      "pushdate": [
+        1542422417,
+        0
+      ]
+    },
+    {
+      "node": "7be95c95a3a7254bcff022190ab2be27ca27ac50",
+      "date": [
+        1542382228.0,
+        0
+      ],
+      "desc": "Bug 1506324 - Add JS::DefaultGlobalClassOps to JSAPI. r=jorendorff\n\nThis also adds a js::ClassOps variant, js::DefaultGlobalClassOps which can\nbe used in js::Class.\n\nDepends on D11569\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11570",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Philip Chimento <philip.chimento@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "26933ef9fa13275dd7005d1db78f5268008c25b0"
+      ],
+      "pushid": 73228,
+      "pushdate": [
+        1542421634,
+        0
+      ]
+    },
+    {
+      "node": "26933ef9fa13275dd7005d1db78f5268008c25b0",
+      "date": [
+        1542299283.0,
+        0
+      ],
+      "desc": "Bug 1506323 - Add JS::PrintError to public API. r=tcampbell\n\nDepends on D11568\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11569",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Philip Chimento <philip.chimento@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "b3412b91afe2f6fabaf3a9b13c65e8ee45d9c1b4"
+      ],
+      "pushid": 73228,
+      "pushdate": [
+        1542421634,
+        0
+      ]
+    },
+    {
+      "node": "b3412b91afe2f6fabaf3a9b13c65e8ee45d9c1b4",
+      "date": [
+        1542415130.0,
+        0
+      ],
+      "desc": "Bug 1501796 - Add nasm to debian7-build dockerfile. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9747",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Thomas Daede <tdaede@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "f93f179fb3b46ea0b3612c21db6cf0a044c03ec0"
+      ],
+      "pushid": 73227,
+      "pushdate": [
+        1542420874,
+        0
+      ]
+    },
+    {
+      "node": "f93f179fb3b46ea0b3612c21db6cf0a044c03ec0",
+      "date": [
+        1542416306.0,
+        0
+      ],
+      "desc": "Bug 1506687 Part 2: Add a test of FlexItemValues frameRect property. r=dholbert\n\nDepends on D12182\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12183",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brad Werth <bwerth@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "d8230f3fdd2c3ecea4771ebe98c83be6e3ebcbfc"
+      ],
+      "pushid": 73226,
+      "pushdate": [
+        1542420824,
+        0
+      ]
+    },
+    {
+      "node": "d8230f3fdd2c3ecea4771ebe98c83be6e3ebcbfc",
+      "date": [
+        1542416211.0,
+        0
+      ],
+      "desc": "Bug 1506687 Part 1: Make FlexItemValues also provide the item's frame rect. r=dholbert\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12182",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Brad Werth <bwerth@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "2b51cc7acba5fdac3642d3972e489d297bc608c2"
+      ],
+      "pushid": 73226,
+      "pushdate": [
+        1542420824,
+        0
+      ]
+    },
+    {
+      "node": "2b51cc7acba5fdac3642d3972e489d297bc608c2",
+      "date": [
+        1542413883.0,
+        -7200
+      ],
+      "desc": "Backed out changeset eb21007e7da0 (bug 1501991) for geckoview failures on several tests.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Cosmin Sabou <csabou@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "cd0bb0a35c3d4d8de65e504e11095b3f306b6815"
+      ],
+      "pushid": 73225,
+      "pushdate": [
+        1542413902,
+        0
+      ]
+    },
+    {
+      "node": "cd0bb0a35c3d4d8de65e504e11095b3f306b6815",
+      "date": [
+        1542411701.0,
+        0
+      ],
+      "desc": "Bug 1507885 - Screenshots policy test should check for the correct PageAction. r=_6a68\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12160",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Felipe Gomes <felipc@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "9a2cf737f3e3d623ad99857070f4646e4be45388"
+      ],
+      "pushid": 73224,
+      "pushdate": [
+        1542412865,
+        0
+      ]
+    },
+    {
+      "node": "9a2cf737f3e3d623ad99857070f4646e4be45388",
+      "date": [
+        1542406051.0,
+        0
+      ],
+      "desc": "Bug 1503402 - Replace Report Site Issue in Fennec with a webextension version; r=aswan\n\nReplace Report Site Issue in Fennec with a webextension version\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10447",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Thomas Wisniewski <twisniewski@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "c21bf3a5e752044715f0026f8407eed642c794c6"
+      ],
+      "pushid": 73223,
+      "pushdate": [
+        1542411705,
+        0
+      ]
+    }
+  ]
+}
