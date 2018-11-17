@@ -1,0 +1,122 @@
+{
+  "0": {
+    "commiter_name": "Lee Salzman <lsalzman@mozilla.com>",
+    "commit_date": "2018-11-14 18:16:01",
+    "commit_message": "Bug 1493080 - remove reference cycle between BufferTextureData and DrawTargets. r=jrmuizel a=lizzard",
+    "node": "6cc73e9b53355582682a77b5b0153b608d8389b1"
+  },
+  "1": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-17 09:00:20",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  de -> 09cf923b32f7 fi -> e26a52ac870e id -> 31479a125b55 km -> 503a4b335467 my -> 8d08852ef6cf pl -> 31511263dc14 pt-PT -> 62b578fc1847 sk -> 7aaacbaab65b th -> b103ee130156 vi -> 187f46d439f0",
+    "node": "9620faa7670b44b26d38832c86d609d1726ed21c"
+  },
+  "2": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-17 09:00:14",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  de -> 09cf923b32f7 fi -> e26a52ac870e id -> 31479a125b55 lo -> 0fbbf77ef020 my -> 8d08852ef6cf pl -> 31511263dc14 pt-PT -> 62b578fc1847 sk -> 7aaacbaab65b sl -> 0dce3089477e th -> b103ee130156",
+    "node": "fe399e72bec9495fcf75b5e6458d851824700884"
+  },
+  "3": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 21:00:18",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  da -> f0e537ceadfc fr -> 46d2cea5aad8 it -> 9432671d8ada kab -> c1295ddb5a38 nl -> f56da9278e07 pl -> 0f8e1a6f0bb1",
+    "node": "7e922b600b6a5930e2044be32cd05b058315ee67"
+  },
+  "4": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 21:00:13",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  da -> f0e537ceadfc fr -> 46d2cea5aad8 it -> 9432671d8ada kab -> c1295ddb5a38 nl -> f56da9278e07 pl -> 0f8e1a6f0bb1",
+    "node": "7c1bda74a6953a4545588f6bdceadc6afc35ae65"
+  },
+  "5": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 20:00:17",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  fa -> 3892bd9645e1 ro -> df1b37bd8610",
+    "node": "0eeac5a78de629b2e67a101ce1f78b3109d431fa"
+  },
+  "6": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 20:00:12",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  fa -> 173ee81a4fd2 gn -> 13ec93e72d45 th -> 4a54b716a34d",
+    "node": "089ee02f019d2e06af1a443248425cf5a792265d"
+  },
+  "7": {
+    "commiter_name": "Edgar Chen <echen@mozilla.com>",
+    "commit_date": "2018-11-14 14:38:46",
+    "commit_message": "Bug 1504179 - Trigger first spell-checking by moving focus to contenteditable element. r=smaug, a=test-only  The current test has an incorrect expectation for the first full spell-checking, it actually happens when first-time focus moves to contenteditable element (which trigger dictionary updating), not right after document loaded.  Differential Revision: https://phabricator.services.mozilla.com/D11463",
+    "node": "3bf260797a3209d498dec6d5125ce3297bf1ab73"
+  },
+  "8": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 18:08:03",
+    "commit_message": "No bug - Tagging 7473fdd1c21c00299314892ad74b10aa5af67179 with DEVEDITION_64_0b10_RELEASE a=release CLOSED TREE DONTBUILD",
+    "node": "d2cc42af8c92d25849ebcc61b83f983dcc12fad5"
+  },
+  "9": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 18:05:16",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
+    "node": "42402947ae18fbfa2de6da5a68ddff72f8492bd3"
+  },
+  "10": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 18:05:12",
+    "commit_message": "No bug - Tagging 7473fdd1c21c00299314892ad74b10aa5af67179 with FIREFOX_64_0b10_RELEASE a=release CLOSED TREE DONTBUILD",
+    "node": "f7da5f0188e1cdb842cef460b4e8bfd9af67f2fd"
+  },
+  "11": {
+    "commiter_name": "Dale Harvey <dale@arandomurl.com>",
+    "commit_date": "2018-11-12 12:49:52",
+    "commit_message": "Bug 1506128 - Add share icon rule for url bar. r=Gijs a=jcristau  MozReview-Commit-ID: IrlcPL93wrF  Differential Revision: https://phabricator.services.mozilla.com/D11551",
+    "node": "8d14223f8f7589d6c812bb20bbd849611f51d197"
+  },
+  "12": {
+    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
+    "commit_date": "2018-11-11 15:21:18",
+    "commit_message": "Bug 1503342 - Rename richlistbox.children to richlistbox.itemChildren so .children will refer to the normal DOM API;r=paolo a=jcristau  In Bug 1479125 we put calls to .children that were intended to access child elements into the custom method, which is a slower path. We may eventually want to remove itemChildren altogether and just assume that all children are items, but that's out of scope for a perf fix like this.  Differential Revision: https://phabricator.services.mozilla.com/D10751",
+    "node": "a867939dde09193fec742fa5db528993b4d1e5b3"
+  },
+  "13": {
+    "commiter_name": "Martin Stransky <stransky@redhat.com>",
+    "commit_date": "2018-11-06 22:47:47",
+    "commit_message": "Bug 1501161 - Set transparent titlebar background for normal sizemode only, r=dao a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D11103",
+    "node": "13e3f37faf8c7a013d463e8e4240220a78d6899a"
+  },
+  "14": {
+    "commiter_name": "Martin Stransky <stransky@redhat.com>",
+    "commit_date": "2018-11-16 00:03:00",
+    "commit_message": "Bug 1442755 - Disable titlebar theming based on main window focus due to regression at Bug 1497534, r=jhorak a=jcristau",
+    "node": "d810f485f1aa9f2a318c6eb0ee02e730aad573e2"
+  },
+  "15": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 17:00:18",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  az -> e9d8abddecfa ff -> ed9e95ffc4d6 te -> 25f9353169ca",
+    "node": "c18fd289892de2269be0d55ba91a5514f8c76d1f"
+  },
+  "16": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 17:00:12",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  az -> 242f7d8a24b8 ff -> ed9e95ffc4d6 te -> 25f9353169ca",
+    "node": "837888e368171acb3411f92e5dfd65c1eeb681fe"
+  },
+  "17": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 15:00:19",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  cy -> 72ac0a781658 fr -> 2b1b1678e7a2 it -> f0d7a6d1925a kab -> ef154d7acfe2 nl -> eeb193cf6dab",
+    "node": "702adea7dec0d8b2759bada59d4cb978561b59ed"
+  },
+  "18": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 15:00:13",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  cy -> 72ac0a781658 fr -> 28086753f27d hu -> ddb521826b52 it -> f0d7a6d1925a kab -> ef154d7acfe2",
+    "node": "04bd249ba9455b08efa55525411d01a5db742a78"
+  },
+  "19": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 09:00:16",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  cy -> 681ca0ffa9f0 it -> f375d99b09e4 kab -> 481446e542f3",
+    "node": "dbe424affe6dedacf3f5de65a83ef37f71c65148"
+  }
+}
