@@ -1,429 +1,122 @@
 {
-  "node": "600d7689bd5316f12bee1c030f93bdb2af5eab8d",
-  "changeset_count": 446796,
-  "changesets": [
-    {
-      "node": "600d7689bd5316f12bee1c030f93bdb2af5eab8d",
-      "date": [
-        1542445063.0,
-        -3600
-      ],
-      "desc": "Bug 1508026 - Cherry-pick some changes to malloc_size_of's Cargo.toml.\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "public",
-      "parents": [
-        "c23d6003a3c3a37f523437afedc7e2914c9e194a"
-      ],
-      "pushid": 109931,
-      "pushdate": [
-        1542445362,
-        0
-      ]
-    },
-    {
-      "node": "c23d6003a3c3a37f523437afedc7e2914c9e194a",
-      "date": [
-        1541917566.0,
-        -28800
-      ],
-      "desc": "Bug 1508026 - Fix wrong spec link. r=emilio\n\nThis cherry-picks servo/servo#22172.\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "CYBAI <cyb.ai.815@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "8abb8992a558885e973d5c308c11fd7a9e6ed7bb"
-      ],
-      "pushid": 109931,
-      "pushdate": [
-        1542445362,
-        0
-      ]
-    },
-    {
-      "node": "8abb8992a558885e973d5c308c11fd7a9e6ed7bb",
-      "date": [
-        1542444481.0,
-        -3600
-      ],
-      "desc": "Bug 1508026 - Fix formatting.\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "public",
-      "parents": [
-        "896d672ed0abaece6317543d2d14783044c2709a"
-      ],
-      "pushid": 109931,
-      "pushdate": [
-        1542445362,
-        0
-      ]
-    },
-    {
-      "node": "896d672ed0abaece6317543d2d14783044c2709a",
-      "date": [
-        1542425274.0,
-        -32400
-      ],
-      "desc": "Bug 1506767 - Remove redundant iteration in CompositorBridgeParent::NotifyPipelineRendered() r=mattwoodrow",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "sotaro <sotaro.ikeda.g@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "241738774bb1b1f998770af0e0dd82c6ba8de36d"
-      ],
-      "pushid": 109930,
-      "pushdate": [
-        1542425288,
-        0
-      ]
-    },
-    {
-      "node": "241738774bb1b1f998770af0e0dd82c6ba8de36d",
-      "date": [
-        1540350961.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 11: Update CustomElementRegistry to not use nsIJSID, r=smaug\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9733\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "29c30b62c301eacd5fefd9a78f19cf63fafd889a"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "29c30b62c301eacd5fefd9a78f19cf63fafd889a",
-      "date": [
-        1540350844.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 10: Stop using nsIJSID in nsIArray for optional IID parameters, r=kmag\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9732\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "3439b17bdc2a1bf5626355d529c9a3decf3843be"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "3439b17bdc2a1bf5626355d529c9a3decf3843be",
-      "date": [
-        1532127220.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 9: Switch to using plain JS objects for nsIJS[IC]ID, r=mccr8\n\nThis is a complete rewrite of the interface while maintaining the same APIs.\nEach ID is fully-contained within a single object, does not require a finalizer,\nand is cheap to create.\n\nBeyond using reserved slots, this code avoids using custom ClassOps, instead\npreferring Symbol.hasInstance and eager constants.\n\nOne major change which occurred in this patch was the move from storing a nsCID\nto storing the ContractID for JSCID objects. This eliminates the need for the\n'refreshCID' method, and hopefully shouldn't have performance implications.\n\nIf we discover that there are performance problems there, we can look into\nstashing the CID, and re-introduce 'refreshCID', despite its surprising\nbehaviour.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2286\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "1ddcdfc06526ffa9a997987ae7a2cfff320c00e9"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "1ddcdfc06526ffa9a997987ae7a2cfff320c00e9",
-      "date": [
-        1531966004.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 8: Remove test-only Components.classesById and Components.interfacesById, r=mccr8\n\nThese two interfaces are effectively never used, so to avoid needing to support\nClassID2JSValue with the new implementation, I remove them entirely.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2285\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "a68bee9d2168c514ea485deba6c2624934a1c79f"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "a68bee9d2168c514ea485deba6c2624934a1c79f",
-      "date": [
-        1531888423.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 7: Stop using nsIJSID in xpconnect outside of XPCJSID.cpp, r=mccr8\n\nThis mostly consists of changes to the XPCComponents objects to avoid using the\nimplementation details, and instead use the API defined in part 1.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2284\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "ab47ae5672ac00f6525f0d109af570a771d97add"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "ab47ae5672ac00f6525f0d109af570a771d97add",
-      "date": [
-        1531888238.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 6: Stop using nsIJSID inside of WebIDL bindings, r=mccr8\n\nRather than adding a native type for nsID objects in WebIDL, this patch just\ntakes the approach of switching consumers over to using 'any' and calling the\nAPIs defined in Part 1.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2283\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "c019316fcfd49d74775c9b458b3d611f8081ee7e"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "c019316fcfd49d74775c9b458b3d611f8081ee7e",
-      "date": [
-        1531887638.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 5: Add a refreshCID method to JSCID objects, r=mccr8\n\nThis lets us get rid of the method 'initalize', which currently needs the\ninternal representation of JSCID.\n\nThis particular method is removed entirely in Part 9, and only exists to keep\nintermediate states building & running.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2282\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "e3b4c9cdfbd7e118ada704337d1bffa5cae93676"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "e3b4c9cdfbd7e118ada704337d1bffa5cae93676",
-      "date": [
-        1531887177.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 4: Remove the nsJSID XPCOM constructor, r=mccr8\n\nNobody was using it, so it's pretty easy to remove.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2281\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "ecbe615201fab977a6d753230b146bd04a83b156"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "ecbe615201fab977a6d753230b146bd04a83b156",
-      "date": [
-        1531886898.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 3: Avoid using nsIJSID in Components.Constructor, r=mccr8\n\nThis should be mostly compatible with the original implementation. I tried to\nsimplify things here to just directly wrap and use JS objects, calling methods\non them. This eliminates the nsXPCConstructor type completely, replacing it with\na JSNative constructor with predefined READONLY | PERMANENT properties.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2280\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "404c4d583acdf448fe77a514e90de26dd5d5893f"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "404c4d583acdf448fe77a514e90de26dd5d5893f",
-      "date": [
-        1531886548.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 2: Avoid using nsIJSID in GenerateQI, and produce better diagnostics, r=kmag\n\nThis is the first part of hiding the implementation of nsIJSID behind the\ninterface added in Part 1, such that we can substitute that implementation out.\n\nI had to make a couple of changes to fix the errors caused by the new behaviour\nin GenerateQI.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2279\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "2e250aa206d11319cfaab13e9d57c1095940668c"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "2e250aa206d11319cfaab13e9d57c1095940668c",
-      "date": [
-        1531610994.0,
-        14400
-      ],
-      "desc": "Bug 1477432 - Part 1: Move xpc_ nsJSID methods to a future-proof API, r=mccr8\n\nThe new API tries to be more generic, taking and producing JS::Values. It also\nsupports creating the more specialized IID and CID types.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2278\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nika Layzell <nika@thelayzells.com>",
-      "phase": "public",
-      "parents": [
-        "8ab318a0ae56110d72fac3dd73ba2ce617943049"
-      ],
-      "pushid": 109929,
-      "pushdate": [
-        1542407369,
-        0
-      ]
-    },
-    {
-      "node": "8ab318a0ae56110d72fac3dd73ba2ce617943049",
-      "date": [
-        1541358195.0,
-        -3600
-      ],
-      "desc": "Bug 1370224 - Fallback to extension icon for browser/page action r=mstriemer,mixedpuppy",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Nicklas Boman <smurfd@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "c7a9ceb9becbccaf75f65eec47a98f0a72fafb02"
-      ],
-      "pushid": 109928,
-      "pushdate": [
-        1542404406,
-        0
-      ]
-    },
-    {
-      "node": "c7a9ceb9becbccaf75f65eec47a98f0a72fafb02",
-      "date": [
-        1542349191.0,
-        -3600
-      ],
-      "desc": "Bug 1503827 - Migrate the treebody binding into a custom element. r=bgrins",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Victor Porof <vporof@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "3a4a3b9133e99f3a2c86baedd6fc25564aeb4898"
-      ],
-      "pushid": 109927,
-      "pushdate": [
-        1542397107,
-        0
-      ]
-    },
-    {
-      "node": "3a4a3b9133e99f3a2c86baedd6fc25564aeb4898",
-      "date": [
-        1542392667.0,
-        0
-      ],
-      "desc": "Bug 1501587 - land NSS 59ef418bf925 UPGRADE_NSS_RELEASE, r=me",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "J.C. Jones <jc@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "7154eb3601f3b89ef5b8e559c9f2bae57f6d59f3"
-      ],
-      "pushid": 109926,
-      "pushdate": [
-        1542393084,
-        0
-      ]
-    },
-    {
-      "node": "7154eb3601f3b89ef5b8e559c9f2bae57f6d59f3",
-      "date": [
-        1542391431.0,
-        21600
-      ],
-      "desc": "Bug 1507314 - Baldr: correctly propagate shell flags to nested testig process on Windows (r=bbouvier)",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Luke Wagner <luke@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "9dbfa9bdcd0b393a1a396513c8e08e42e4a3da8a"
-      ],
-      "pushid": 109925,
-      "pushdate": [
-        1542391455,
-        0
-      ]
-    },
-    {
-      "node": "9dbfa9bdcd0b393a1a396513c8e08e42e4a3da8a",
-      "date": [
-        1542390939.0,
-        -7200
-      ],
-      "desc": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Gurzau Raul <rgurzau@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "a7812eefff9559ee40e9f0a8e6c812ea9d36f06d",
-        "71ba7cfafa54a4b458abd2b1962a0bee4011173b"
-      ],
-      "pushid": 109924,
-      "pushdate": [
-        1542390966,
-        0
-      ]
-    }
-  ]
+  "0": {
+    "commiter_name": "Johann Hofmann <jhofmann@mozilla.com>",
+    "commit_date": "2018-11-06 21:29:10",
+    "commit_message": "Bug 1501991 - Add a sub-panel for Trackers in the control center. r=Ehsan,Jamie  Differential Revision: https://phabricator.services.mozilla.com/D11611",
+    "node": "8b5f41cdab35e46c086655a05a11d76220eaddfb"
+  },
+  "1": {
+    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
+    "commit_date": "2018-11-17 15:48:18",
+    "commit_message": "Bug 1506798 - Fix possible data race updating scope object during compacting GC r=pbone",
+    "node": "764c5b94a3950791427e782e59e3e826921cffac"
+  },
+  "2": {
+    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
+    "commit_date": "2018-11-17 15:48:18",
+    "commit_message": "Bug 1506954 - Don't attempt to protect relocated pages on systems that don't support this r=pbone",
+    "node": "7211db666d5981232551d291392238de37726f23"
+  },
+  "3": {
+    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+    "commit_date": "2018-11-17 13:27:24",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "node": "e4deec61fc8c80ecc94d4493df37a399b5a56235"
+  },
+  "4": {
+    "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+    "commit_date": "2018-11-17 10:43:14",
+    "commit_message": "Backed out changeset 85963f594697 (bug 1504343) for HTMLMarqueeElement.cpp build bustages CLOSED TREE",
+    "node": "efc1da42132b231dbdbfe8b06d19bfee1028dbd7"
+  },
+  "5": {
+    "commiter_name": "Timothy Guan-tin Chien <timdream@gmail.com>",
+    "commit_date": "2018-11-17 08:29:41",
+    "commit_message": "Bug 1504343 - Convert xbl-marquee to UA Widget r=bgrins,bzbarsky  This patch moves the marquee bindings from xbl-marquee.xml to marquee.js and converts them to a UA Widget.  The contenteditable bindings are dropped, replaced with a styling rule that will fix the position of the scrolling text.  Inline styles have been moved to the stylesheet so usage of display: -moz-box can continue to be parsed.  test_bug840098.html is deleted because it is only valid under the context of in-content XBL bindings.  Differential Revision: https://phabricator.services.mozilla.com/D10385",
+    "node": "85963f594697920ec6503c63deb45eb41e2b5ec0"
+  },
+  "6": {
+    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
+    "commit_date": "2018-11-17 02:58:26",
+    "commit_message": "Bug 1506687 Part 2: Add a test of FlexItemValues frameRect property. r=dholbert  Depends on D12182  Differential Revision: https://phabricator.services.mozilla.com/D12183",
+    "node": "fc6057313da6c8c9f87ed4eb2e86c96f21d18657"
+  },
+  "7": {
+    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
+    "commit_date": "2018-11-17 02:56:51",
+    "commit_message": "Bug 1506687 Part 1: Make FlexItemValues also provide the item's frame rect. r=dholbert  Differential Revision: https://phabricator.services.mozilla.com/D12182",
+    "node": "04f110532f4974387e48a3272fe219188299b205"
+  },
+  "8": {
+    "commiter_name": "Francesco Lodolo (:flod) <flod@lodolo.net>",
+    "commit_date": "2018-11-17 09:15:57",
+    "commit_message": "Bug 1507468 - Add 'trs' to Firefox Nightly build r=Pike  Differential Revision: https://phabricator.services.mozilla.com/D12208",
+    "node": "cbc3383c8831ef6723d76dba67f6d3b325119517"
+  },
+  "9": {
+    "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+    "commit_date": "2018-11-17 08:43:23",
+    "commit_message": "Backed out changeset d98cb4a0498c so it's erased from the repo CLOSED TREE",
+    "node": "59eef38dd5eb6e3fec883a60b790e9ac1a71c675"
+  },
+  "10": {
+    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+    "commit_date": "2018-11-17 08:05:47",
+    "commit_message": "No bug - Dummy push the see if the docker images will rerun. CLOSED TREE",
+    "node": "d98cb4a0498c0cdd8b7bcd1b2d62b75b797b0758"
+  },
+  "11": {
+    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+    "commit_date": "2018-11-17 05:20:03",
+    "commit_message": "Backed out changeset b3412b91afe2 (bug 1501796) for causing Valgrind build bustage. CLOSED TREE",
+    "node": "e3f7bc3a94a158807643cdc0b3253e469e529f0f"
+  },
+  "12": {
+    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+    "commit_date": "2018-11-17 05:05:53",
+    "commit_message": "Backed out 2 changesets (bug 1506687) for causing mochitest mass failures. CLOSED TREE  Backed out changeset f93f179fb3b4 (bug 1506687) Backed out changeset d8230f3fdd2c (bug 1506687)",
+    "node": "b3ca607f2595dba7b94124868581c62a9fce668d"
+  },
+  "13": {
+    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+    "commit_date": "2018-11-17 04:39:49",
+    "commit_message": "Backed out changeset 26933ef9fa13 (bug 1506323) for landing the wrong patch.",
+    "node": "22e8321b69f180a1d74975fd8f162326a49d0efe"
+  },
+  "14": {
+    "commiter_name": "James Teh <jteh@mozilla.com>",
+    "commit_date": "2018-11-17 04:38:27",
+    "commit_message": "Bug 1506787: Support tabindex attribute (including value -1) on non-control XUL elements. r=smaug  Previously, the tabindex attribute wasn't supported on non-control XUL elements at all. The only way to make those focusable was to use -moz-user-focus: normal. However, that caused the element to be included in the tab order; there was no way to make it focusable but not tabbable. This can now be achieved using tabindex=\"-1\". This will primarily be useful for buttons on toolbars, which will be grouped under a single tab stop for efficiency.  For consistency, this also changes the behaviour of tabindex=\"-1\" with -moz-user-focus: ignore on XUL controls. Previously, -moz-user-focus: ignore would override tabindex=\"-1\", making the element unfocusable. Now, the tabindex attribute always overrides if explicitly specified.  Differential Revision: https://phabricator.services.mozilla.com/D12000",
+    "node": "38844846c6ae6773afb8b9254bf3dbfec437d1ec"
+  },
+  "15": {
+    "commiter_name": "Philip Chimento <philip.chimento@gmail.com>",
+    "commit_date": "2018-11-16 17:30:28",
+    "commit_message": "Bug 1506324 - Add JS::DefaultGlobalClassOps to JSAPI. r=jorendorff  This also adds a js::ClassOps variant, js::DefaultGlobalClassOps which can be used in js::Class.  Depends on D11569  Differential Revision: https://phabricator.services.mozilla.com/D11570",
+    "node": "7be95c95a3a7254bcff022190ab2be27ca27ac50"
+  },
+  "16": {
+    "commiter_name": "Philip Chimento <philip.chimento@gmail.com>",
+    "commit_date": "2018-11-15 18:28:03",
+    "commit_message": "Bug 1506323 - Add JS::PrintError to public API. r=tcampbell  Depends on D11568  Differential Revision: https://phabricator.services.mozilla.com/D11569",
+    "node": "26933ef9fa13275dd7005d1db78f5268008c25b0"
+  },
+  "17": {
+    "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+    "commit_date": "2018-11-17 02:38:50",
+    "commit_message": "Bug 1501796 - Add nasm to debian7-build dockerfile. r=glandium  Differential Revision: https://phabricator.services.mozilla.com/D9747",
+    "node": "b3412b91afe2f6fabaf3a9b13c65e8ee45d9c1b4"
+  },
+  "18": {
+    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
+    "commit_date": "2018-11-17 02:58:26",
+    "commit_message": "Bug 1506687 Part 2: Add a test of FlexItemValues frameRect property. r=dholbert  Depends on D12182  Differential Revision: https://phabricator.services.mozilla.com/D12183",
+    "node": "f93f179fb3b46ea0b3612c21db6cf0a044c03ec0"
+  },
+  "19": {
+    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
+    "commit_date": "2018-11-17 02:56:51",
+    "commit_message": "Bug 1506687 Part 1: Make FlexItemValues also provide the item's frame rect. r=dholbert  Differential Revision: https://phabricator.services.mozilla.com/D12182",
+    "node": "d8230f3fdd2c3ecea4771ebe98c83be6e3ebcbfc"
+  }
 }

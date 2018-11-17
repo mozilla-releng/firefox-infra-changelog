@@ -1,428 +1,122 @@
 {
-  "node": "9620faa7670b44b26d38832c86d609d1726ed21c",
-  "changeset_count": 498563,
-  "changesets": [
-    {
-      "node": "9620faa7670b44b26d38832c86d609d1726ed21c",
-      "date": [
-        1542438020.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nde -> 09cf923b32f7\nfi -> e26a52ac870e\nid -> 31479a125b55\nkm -> 503a4b335467\nmy -> 8d08852ef6cf\npl -> 31511263dc14\npt-PT -> 62b578fc1847\nsk -> 7aaacbaab65b\nth -> b103ee130156\nvi -> 187f46d439f0",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "fe399e72bec9495fcf75b5e6458d851824700884"
-      ],
-      "pushid": 10222,
-      "pushdate": [
-        1542438027,
-        0
-      ]
-    },
-    {
-      "node": "fe399e72bec9495fcf75b5e6458d851824700884",
-      "date": [
-        1542438014.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nde -> 09cf923b32f7\nfi -> e26a52ac870e\nid -> 31479a125b55\nlo -> 0fbbf77ef020\nmy -> 8d08852ef6cf\npl -> 31511263dc14\npt-PT -> 62b578fc1847\nsk -> 7aaacbaab65b\nsl -> 0dce3089477e\nth -> b103ee130156",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "7e922b600b6a5930e2044be32cd05b058315ee67"
-      ],
-      "pushid": 10222,
-      "pushdate": [
-        1542438027,
-        0
-      ]
-    },
-    {
-      "node": "7e922b600b6a5930e2044be32cd05b058315ee67",
-      "date": [
-        1542394818.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nda -> f0e537ceadfc\nfr -> 46d2cea5aad8\nit -> 9432671d8ada\nkab -> c1295ddb5a38\nnl -> f56da9278e07\npl -> 0f8e1a6f0bb1",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "7c1bda74a6953a4545588f6bdceadc6afc35ae65"
-      ],
-      "pushid": 10221,
-      "pushdate": [
-        1542394824,
-        0
-      ]
-    },
-    {
-      "node": "7c1bda74a6953a4545588f6bdceadc6afc35ae65",
-      "date": [
-        1542394813.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nda -> f0e537ceadfc\nfr -> 46d2cea5aad8\nit -> 9432671d8ada\nkab -> c1295ddb5a38\nnl -> f56da9278e07\npl -> 0f8e1a6f0bb1",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "0eeac5a78de629b2e67a101ce1f78b3109d431fa"
-      ],
-      "pushid": 10221,
-      "pushdate": [
-        1542394824,
-        0
-      ]
-    },
-    {
-      "node": "0eeac5a78de629b2e67a101ce1f78b3109d431fa",
-      "date": [
-        1542391217.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nfa -> 3892bd9645e1\nro -> df1b37bd8610",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "089ee02f019d2e06af1a443248425cf5a792265d"
-      ],
-      "pushid": 10220,
-      "pushdate": [
-        1542391223,
-        0
-      ]
-    },
-    {
-      "node": "089ee02f019d2e06af1a443248425cf5a792265d",
-      "date": [
-        1542391212.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nfa -> 173ee81a4fd2\ngn -> 13ec93e72d45\nth -> 4a54b716a34d",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "3bf260797a3209d498dec6d5125ce3297bf1ab73"
-      ],
-      "pushid": 10220,
-      "pushdate": [
-        1542391223,
-        0
-      ]
-    },
-    {
-      "node": "3bf260797a3209d498dec6d5125ce3297bf1ab73",
-      "date": [
-        1542199126.0,
-        0
-      ],
-      "desc": "Bug 1504179 - Trigger first spell-checking by moving focus to contenteditable element. r=smaug, a=test-only\n\nThe current test has an incorrect expectation for the first full spell-checking,\nit actually happens when first-time focus moves to contenteditable element\n(which trigger dictionary updating), not right after document loaded.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11463",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Edgar Chen <echen@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "d2cc42af8c92d25849ebcc61b83f983dcc12fad5"
-      ],
-      "pushid": 10219,
-      "pushdate": [
-        1542387039,
-        0
-      ]
-    },
-    {
-      "node": "d2cc42af8c92d25849ebcc61b83f983dcc12fad5",
-      "date": [
-        1542384483.0,
-        0
-      ],
-      "desc": "No bug - Tagging 7473fdd1c21c00299314892ad74b10aa5af67179 with DEVEDITION_64_0b10_RELEASE a=release CLOSED TREE DONTBUILD",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "42402947ae18fbfa2de6da5a68ddff72f8492bd3"
-      ],
-      "pushid": 10218,
-      "pushdate": [
-        1542384495,
-        0
-      ]
-    },
-    {
-      "node": "42402947ae18fbfa2de6da5a68ddff72f8492bd3",
-      "date": [
-        1542384316.0,
-        0
-      ],
-      "desc": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "f7da5f0188e1cdb842cef460b4e8bfd9af67f2fd"
-      ],
-      "pushid": 10217,
-      "pushdate": [
-        1542384327,
-        0
-      ]
-    },
-    {
-      "node": "f7da5f0188e1cdb842cef460b4e8bfd9af67f2fd",
-      "date": [
-        1542384312.0,
-        0
-      ],
-      "desc": "No bug - Tagging 7473fdd1c21c00299314892ad74b10aa5af67179 with FIREFOX_64_0b10_RELEASE a=release CLOSED TREE DONTBUILD",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "8d14223f8f7589d6c812bb20bbd849611f51d197"
-      ],
-      "pushid": 10217,
-      "pushdate": [
-        1542384327,
-        0
-      ]
-    },
-    {
-      "node": "8d14223f8f7589d6c812bb20bbd849611f51d197",
-      "date": [
-        1542019792.0,
-        0
-      ],
-      "desc": "Bug 1506128 - Add share icon rule for url bar. r=Gijs a=jcristau\n\nMozReview-Commit-ID: IrlcPL93wrF\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11551",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dale Harvey <dale@arandomurl.com>",
-      "phase": "public",
-      "parents": [
-        "a867939dde09193fec742fa5db528993b4d1e5b3"
-      ],
-      "pushid": 10216,
-      "pushdate": [
-        1542382500,
-        0
-      ]
-    },
-    {
-      "node": "a867939dde09193fec742fa5db528993b4d1e5b3",
-      "date": [
-        1541942478.0,
-        0
-      ],
-      "desc": "Bug 1503342 - Rename richlistbox.children to richlistbox.itemChildren so .children will refer to the normal DOM API;r=paolo a=jcristau\n\nIn Bug 1479125 we put calls to .children that were intended to access child elements into the custom\nmethod, which is a slower path. We may eventually want to remove itemChildren altogether and just assume\nthat all children are items, but that's out of scope for a perf fix like this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10751",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Brian Grinstead <bgrinstead@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "13e3f37faf8c7a013d463e8e4240220a78d6899a"
-      ],
-      "pushid": 10216,
-      "pushdate": [
-        1542382500,
-        0
-      ]
-    },
-    {
-      "node": "13e3f37faf8c7a013d463e8e4240220a78d6899a",
-      "date": [
-        1541537267.0,
-        0
-      ],
-      "desc": "Bug 1501161 - Set transparent titlebar background for normal sizemode only, r=dao a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11103",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Martin Stransky <stransky@redhat.com>",
-      "phase": "public",
-      "parents": [
-        "d810f485f1aa9f2a318c6eb0ee02e730aad573e2"
-      ],
-      "pushid": 10216,
-      "pushdate": [
-        1542382500,
-        0
-      ]
-    },
-    {
-      "node": "d810f485f1aa9f2a318c6eb0ee02e730aad573e2",
-      "date": [
-        1542319380.0,
-        -7200
-      ],
-      "desc": "Bug 1442755 - Disable titlebar theming based on main window focus due to regression at Bug 1497534, r=jhorak a=jcristau",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Martin Stransky <stransky@redhat.com>",
-      "phase": "public",
-      "parents": [
-        "c18fd289892de2269be0d55ba91a5514f8c76d1f"
-      ],
-      "pushid": 10216,
-      "pushdate": [
-        1542382500,
-        0
-      ]
-    },
-    {
-      "node": "c18fd289892de2269be0d55ba91a5514f8c76d1f",
-      "date": [
-        1542380418.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\naz -> e9d8abddecfa\nff -> ed9e95ffc4d6\nte -> 25f9353169ca",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "837888e368171acb3411f92e5dfd65c1eeb681fe"
-      ],
-      "pushid": 10215,
-      "pushdate": [
-        1542380424,
-        0
-      ]
-    },
-    {
-      "node": "837888e368171acb3411f92e5dfd65c1eeb681fe",
-      "date": [
-        1542380412.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\naz -> 242f7d8a24b8\nff -> ed9e95ffc4d6\nte -> 25f9353169ca",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "702adea7dec0d8b2759bada59d4cb978561b59ed"
-      ],
-      "pushid": 10215,
-      "pushdate": [
-        1542380424,
-        0
-      ]
-    },
-    {
-      "node": "702adea7dec0d8b2759bada59d4cb978561b59ed",
-      "date": [
-        1542373219.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\ncy -> 72ac0a781658\nfr -> 2b1b1678e7a2\nit -> f0d7a6d1925a\nkab -> ef154d7acfe2\nnl -> eeb193cf6dab",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "04bd249ba9455b08efa55525411d01a5db742a78"
-      ],
-      "pushid": 10214,
-      "pushdate": [
-        1542373225,
-        0
-      ]
-    },
-    {
-      "node": "04bd249ba9455b08efa55525411d01a5db742a78",
-      "date": [
-        1542373213.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\ncy -> 72ac0a781658\nfr -> 28086753f27d\nhu -> ddb521826b52\nit -> f0d7a6d1925a\nkab -> ef154d7acfe2",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "dbe424affe6dedacf3f5de65a83ef37f71c65148"
-      ],
-      "pushid": 10214,
-      "pushdate": [
-        1542373225,
-        0
-      ]
-    },
-    {
-      "node": "dbe424affe6dedacf3f5de65a83ef37f71c65148",
-      "date": [
-        1542351616.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\ncy -> 681ca0ffa9f0\nit -> f375d99b09e4\nkab -> 481446e542f3",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "96d873a2e84335586fee0e06b6005925db3d0751"
-      ],
-      "pushid": 10213,
-      "pushdate": [
-        1542351622,
-        0
-      ]
-    },
-    {
-      "node": "96d873a2e84335586fee0e06b6005925db3d0751",
-      "date": [
-        1542348025.0,
-        28800
-      ],
-      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nbe -> 0f215c322314\ndsb -> 8faee200c2a0\nel -> 54f82ecb0225\nes-AR -> 0b3a7f643c33\nes-CL -> 3bcc17a90c9e\nes-MX -> a8cc56aa593a\nfr -> da3da3c78f5a\nhsb -> b4b72692dcdf\nit -> bbe8a789cde2\nkab -> a379af784cf0\nmk -> eeb50e814a76\nml -> 784d8114910e\nmr -> 386497be18b0\nms -> b9bdf2fe4ea0\nmy -> 6d6e0b9e9d40\nnb-NO -> abb24413d57d\nne-NP -> d79a5c1c3373\nnl -> ce97d8bfe813\nnn-NO -> 516618e3d092\noc -> 605bef59ab71\nor -> 3a962d72374b\npa-IN -> 2f7ade6df230\npl -> 8eb1b53b95b9\npt-BR -> eae1b31ab416\npt-PT -> 287302eb63c3\nrm -> df5e7611b416\nro -> a8b8fbf0327c\nru -> a81bdd9c201e\nsi -> fa22540af4e1\nsk -> ed81ef4e3d33\nsl -> d8ee4c2076b1\nson -> 56db7babe3d6\nsq -> 08d5825435d7\nsr -> fefa6ff20b49\nsv-SE -> e90b7b921507\nta -> 5361ca5e8ecb\nte -> eea62e3b3fb7\nth -> c9f51e9d602d\ntr -> a055491bf57e\nuk -> 534d26a0682d\nur -> 64afe2dcf52d\nuz -> 5a257b1ad585\nvi -> e37c0bcfbe42\nxh -> 08fa12b4252e\nzh-CN -> 0397204e46d0\nzh-TW -> 2e937e5ad2f5",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "527b1ecd13395b720f05c0bc21bbe9afce6d3567"
-      ],
-      "pushid": 10212,
-      "pushdate": [
-        1542348085,
-        0
-      ]
-    }
-  ]
+  "0": {
+    "commiter_name": "Lee Salzman <lsalzman@mozilla.com>",
+    "commit_date": "2018-11-14 18:16:01",
+    "commit_message": "Bug 1493080 - remove reference cycle between BufferTextureData and DrawTargets. r=jrmuizel a=lizzard",
+    "node": "6cc73e9b53355582682a77b5b0153b608d8389b1"
+  },
+  "1": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-17 09:00:20",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  de -> 09cf923b32f7 fi -> e26a52ac870e id -> 31479a125b55 km -> 503a4b335467 my -> 8d08852ef6cf pl -> 31511263dc14 pt-PT -> 62b578fc1847 sk -> 7aaacbaab65b th -> b103ee130156 vi -> 187f46d439f0",
+    "node": "9620faa7670b44b26d38832c86d609d1726ed21c"
+  },
+  "2": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-17 09:00:14",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  de -> 09cf923b32f7 fi -> e26a52ac870e id -> 31479a125b55 lo -> 0fbbf77ef020 my -> 8d08852ef6cf pl -> 31511263dc14 pt-PT -> 62b578fc1847 sk -> 7aaacbaab65b sl -> 0dce3089477e th -> b103ee130156",
+    "node": "fe399e72bec9495fcf75b5e6458d851824700884"
+  },
+  "3": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 21:00:18",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  da -> f0e537ceadfc fr -> 46d2cea5aad8 it -> 9432671d8ada kab -> c1295ddb5a38 nl -> f56da9278e07 pl -> 0f8e1a6f0bb1",
+    "node": "7e922b600b6a5930e2044be32cd05b058315ee67"
+  },
+  "4": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 21:00:13",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  da -> f0e537ceadfc fr -> 46d2cea5aad8 it -> 9432671d8ada kab -> c1295ddb5a38 nl -> f56da9278e07 pl -> 0f8e1a6f0bb1",
+    "node": "7c1bda74a6953a4545588f6bdceadc6afc35ae65"
+  },
+  "5": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 20:00:17",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  fa -> 3892bd9645e1 ro -> df1b37bd8610",
+    "node": "0eeac5a78de629b2e67a101ce1f78b3109d431fa"
+  },
+  "6": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 20:00:12",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  fa -> 173ee81a4fd2 gn -> 13ec93e72d45 th -> 4a54b716a34d",
+    "node": "089ee02f019d2e06af1a443248425cf5a792265d"
+  },
+  "7": {
+    "commiter_name": "Edgar Chen <echen@mozilla.com>",
+    "commit_date": "2018-11-14 14:38:46",
+    "commit_message": "Bug 1504179 - Trigger first spell-checking by moving focus to contenteditable element. r=smaug, a=test-only  The current test has an incorrect expectation for the first full spell-checking, it actually happens when first-time focus moves to contenteditable element (which trigger dictionary updating), not right after document loaded.  Differential Revision: https://phabricator.services.mozilla.com/D11463",
+    "node": "3bf260797a3209d498dec6d5125ce3297bf1ab73"
+  },
+  "8": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 18:08:03",
+    "commit_message": "No bug - Tagging 7473fdd1c21c00299314892ad74b10aa5af67179 with DEVEDITION_64_0b10_RELEASE a=release CLOSED TREE DONTBUILD",
+    "node": "d2cc42af8c92d25849ebcc61b83f983dcc12fad5"
+  },
+  "9": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 18:05:16",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
+    "node": "42402947ae18fbfa2de6da5a68ddff72f8492bd3"
+  },
+  "10": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 18:05:12",
+    "commit_message": "No bug - Tagging 7473fdd1c21c00299314892ad74b10aa5af67179 with FIREFOX_64_0b10_RELEASE a=release CLOSED TREE DONTBUILD",
+    "node": "f7da5f0188e1cdb842cef460b4e8bfd9af67f2fd"
+  },
+  "11": {
+    "commiter_name": "Dale Harvey <dale@arandomurl.com>",
+    "commit_date": "2018-11-12 12:49:52",
+    "commit_message": "Bug 1506128 - Add share icon rule for url bar. r=Gijs a=jcristau  MozReview-Commit-ID: IrlcPL93wrF  Differential Revision: https://phabricator.services.mozilla.com/D11551",
+    "node": "8d14223f8f7589d6c812bb20bbd849611f51d197"
+  },
+  "12": {
+    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
+    "commit_date": "2018-11-11 15:21:18",
+    "commit_message": "Bug 1503342 - Rename richlistbox.children to richlistbox.itemChildren so .children will refer to the normal DOM API;r=paolo a=jcristau  In Bug 1479125 we put calls to .children that were intended to access child elements into the custom method, which is a slower path. We may eventually want to remove itemChildren altogether and just assume that all children are items, but that's out of scope for a perf fix like this.  Differential Revision: https://phabricator.services.mozilla.com/D10751",
+    "node": "a867939dde09193fec742fa5db528993b4d1e5b3"
+  },
+  "13": {
+    "commiter_name": "Martin Stransky <stransky@redhat.com>",
+    "commit_date": "2018-11-06 22:47:47",
+    "commit_message": "Bug 1501161 - Set transparent titlebar background for normal sizemode only, r=dao a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D11103",
+    "node": "13e3f37faf8c7a013d463e8e4240220a78d6899a"
+  },
+  "14": {
+    "commiter_name": "Martin Stransky <stransky@redhat.com>",
+    "commit_date": "2018-11-16 00:03:00",
+    "commit_message": "Bug 1442755 - Disable titlebar theming based on main window focus due to regression at Bug 1497534, r=jhorak a=jcristau",
+    "node": "d810f485f1aa9f2a318c6eb0ee02e730aad573e2"
+  },
+  "15": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 17:00:18",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  az -> e9d8abddecfa ff -> ed9e95ffc4d6 te -> 25f9353169ca",
+    "node": "c18fd289892de2269be0d55ba91a5514f8c76d1f"
+  },
+  "16": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 17:00:12",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  az -> 242f7d8a24b8 ff -> ed9e95ffc4d6 te -> 25f9353169ca",
+    "node": "837888e368171acb3411f92e5dfd65c1eeb681fe"
+  },
+  "17": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 15:00:19",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  cy -> 72ac0a781658 fr -> 2b1b1678e7a2 it -> f0d7a6d1925a kab -> ef154d7acfe2 nl -> eeb193cf6dab",
+    "node": "702adea7dec0d8b2759bada59d4cb978561b59ed"
+  },
+  "18": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 15:00:13",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  cy -> 72ac0a781658 fr -> 28086753f27d hu -> ddb521826b52 it -> f0d7a6d1925a kab -> ef154d7acfe2",
+    "node": "04bd249ba9455b08efa55525411d01a5db742a78"
+  },
+  "19": {
+    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+    "commit_date": "2018-11-16 09:00:16",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  cy -> 681ca0ffa9f0 it -> f375d99b09e4 kab -> 481446e542f3",
+    "node": "dbe424affe6dedacf3f5de65a83ef37f71c65148"
+  }
 }

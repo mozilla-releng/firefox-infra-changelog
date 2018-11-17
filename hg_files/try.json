@@ -1,428 +1,122 @@
 {
-  "node": "da2f633935dfeb7c734e5193fd43791c6a8822e6",
-  "changeset_count": 1763089,
-  "changesets": [
-    {
-      "node": "da2f633935dfeb7c734e5193fd43791c6a8822e6",
-      "date": [
-        1542447154.0,
-        -3600
-      ],
-      "desc": "CLOSED TREE\n\n--rebuild 4\n--no-retry # Do not retrigger failed tests\n\n-u mochitests,reftest,crashtest\n\n-p linux,linux64,linux64-asan,linux64-st-an,linux64-valgrind,macosx64,win32,win64,android-api-15,android-x86\n\ntry: -b do -p macosx64 -u all -t none",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
-      "user": "Mats Palmgren <mats@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "96396f50977e886b4ab75543096ef67fcd9ccd62"
-      ],
-      "pushid": 316009,
-      "pushdate": [
-        1542447187,
-        0
-      ]
-    },
-    {
-      "node": "befefb37c1e3ebdd4896d012b7448aba7e2566ce",
-      "date": [
-        1542447097.0,
-        -3600
-      ],
-      "desc": "CLOSED TREE\n\n--rebuild 4\n--no-retry # Do not retrigger failed tests\n\n-u mochitests,reftest,crashtest\n\n-p linux,linux64,linux64-asan,linux64-st-an,linux64-valgrind,macosx64,win32,win64,android-api-15,android-x86\n\ntry: -b do -p linux64 -u all -t none",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mats Palmgren <mats@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "96396f50977e886b4ab75543096ef67fcd9ccd62"
-      ],
-      "pushid": 316008,
-      "pushdate": [
-        1542447122,
-        0
-      ]
-    },
-    {
-      "node": "96396f50977e886b4ab75543096ef67fcd9ccd62",
-      "date": [
-        1542447046.0,
-        -3600
-      ],
-      "desc": "[mq]: appearance-button-comment",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mats Palmgren <mats@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "0b9515a920b2ae40812cb797516d2696ccf780c9"
-      ],
-      "pushid": 316008,
-      "pushdate": [
-        1542447122,
-        0
-      ]
-    },
-    {
-      "node": "0b9515a920b2ae40812cb797516d2696ccf780c9",
-      "date": [
-        1542439700.0,
-        -3600
-      ],
-      "desc": "Bug 1508018 - Use 'initial' instead of literal initial values in <textarea> rule.  r=dholbert",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mats Palmgren <mats@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "d182749c903eda9387bb06388a22586daa7ed041"
-      ],
-      "pushid": 316008,
-      "pushdate": [
-        1542447122,
-        0
-      ]
-    },
-    {
-      "node": "de0ea31f933901388280d466f9c145a8ed90423b",
-      "date": [
-        1542445776.0,
-        0
-      ],
-      "desc": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-reftests[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-reftests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests-reftests:testing/web-platform/tests/css/css-backgrounds/box-shadow-body.html",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "moz-wptsync-bot <wptsync@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "1d2e67380af6b2d9e227304b36835df77c02bc81"
-      ],
-      "pushid": 316007,
-      "pushdate": [
-        1542445796,
-        0
-      ]
-    },
-    {
-      "node": "1d2e67380af6b2d9e227304b36835df77c02bc81",
-      "date": [
-        1542442900.0,
-        0
-      ],
-      "desc": "Bug 1507421 [wpt PR 14067] - Fix box-shadow clipping for opaque-background <body>, a=testonly\n\nIn the presence of an opaque background,\nBoxPainterBase::PaintNormalBoxShadow() insets the shadow clip by one\nunit (in order to mitigate seaming artifacs), effectively expanding the\nshadow inwards, and relies on the opaque background overdrawing this\ninset.\n\nBut <body> doesn't paint its own background -- it gets transferred to\nthe view and painted in a different context => the shadow inset remains\nvisible.\n\nTo address this, pass background-skip information to\nPaintNormalBoxShadow(), and disable the inset logic when the background\nis not being drawn.\n\nBug: 899342\nChange-Id: I5e04a1c17c2be324bf4c6767d2159372f546cc24\nReviewed-on: https://chromium-review.googlesource.com/c/1336495\nCommit-Queue: Florin Malita <fmalita@chromium.org>\nReviewed-by: Fredrik S\u00f6derquist <fs@opera.com>\nCr-Commit-Position: refs/heads/master@{#609014}\n\nwpt-commit: dbd07e27ec970e0cb22bdc091e88c2087fb92dd7\nwpt-pr: 14067\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Florin Malita <fmalita@chromium.org>",
-      "phase": "draft",
-      "parents": [
-        "7154eb3601f3b89ef5b8e559c9f2bae57f6d59f3"
-      ],
-      "pushid": 316007,
-      "pushdate": [
-        1542445796,
-        0
-      ]
-    },
-    {
-      "node": "d9f36ed41e29b2fbc4a2d701debf79cb28b7179f",
-      "date": [
-        1542444021.0,
-        -3600
-      ],
-      "desc": "try: -b do -p linux64,macosx64,win64 -u mochitest-e10s-bc -t none",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "D\u00e3o Gottwald <dao@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "a7812eefff9559ee40e9f0a8e6c812ea9d36f06d"
-      ],
-      "pushid": 316006,
-      "pushdate": [
-        1542444070,
-        0
-      ]
-    },
-    {
-      "node": "4bc3653e0d3f11d54bb341209064d1873dd697c7",
-      "date": [
-        1542443813.0,
-        -3600
-      ],
-      "desc": "try: -b do -p linux64 -u all -t none\n\nPushed via `mach try syntax`\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "draft",
-      "parents": [
-        "c417d81e81a8fde47eb756d19c3b6db100ddeb7d"
-      ],
-      "pushid": 316005,
-      "pushdate": [
-        1542443865,
-        0
-      ]
-    },
-    {
-      "node": "c417d81e81a8fde47eb756d19c3b6db100ddeb7d",
-      "date": [
-        1542389112.0,
-        -3600
-      ],
-      "desc": "Bug 1450219 - followup: Fix the XBL implementation as well.\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "draft",
-      "parents": [
-        "7582a86cb7d6f3c254c3f3162478b58e53d31908"
-      ],
-      "pushid": 316005,
-      "pushdate": [
-        1542443865,
-        0
-      ]
-    },
-    {
-      "node": "7582a86cb7d6f3c254c3f3162478b58e53d31908",
-      "date": [
-        1542388108.0,
-        -3600
-      ],
-      "desc": "Use StyleChildrenIterator instead of custom frame tree walking code to handle NAC inside shadow dom.\n\nSummary:\nThere are lots of frames which create anonymous content (like scrollframes,\nwhich generate scrollbars) but for which this code was wrong.\n\nUse StyleChildrenIterator which has a defined order between NAC and flattened\ntree. I've verified this doesn't break tabbing through input type=\"date\" with\nUA widget disabled, fwiw.\n\nReviewers: smaug\n\nTags: #secure-revision\n\nBug #: 1507101\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12152\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "draft",
-      "parents": [
-        "9a00ce8ff5bd53a650a81630f5f98acdc931441b"
-      ],
-      "pushid": 316005,
-      "pushdate": [
-        1542443865,
-        0
-      ]
-    },
-    {
-      "node": "9a00ce8ff5bd53a650a81630f5f98acdc931441b",
-      "date": [
-        1542317336.0,
-        -3600
-      ],
-      "desc": "Fix FindChromeAccessOnlySubtreeOwner so that we handle UA widget being ChromeOnlyAccess root.\n\nA single video controls test crashed without this, while dereferencing\na null anonOwnerRelated in:\n\n  https://searchfox.org/mozilla-central/rev/c0b26c40769a1e5607a1ae8be37fe64df64fc55e/dom/base/FragmentOrElement.cpp#964\n\nI think this is the right fix for it, but the code that uses this is kind of\ncomplex, so worth double-checking... :)\n\nI can also just add a null-check there or something.\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "draft",
-      "parents": [
-        "c0443908745eb0afd9a8b1981b843134b120284e"
-      ],
-      "pushid": 316005,
-      "pushdate": [
-        1542443865,
-        0
-      ]
-    },
-    {
-      "node": "c0443908745eb0afd9a8b1981b843134b120284e",
-      "date": [
-        1542311168.0,
-        -3600
-      ],
-      "desc": "Properly work around bug 1450219.\n\nI'll fix that too.\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "draft",
-      "parents": [
-        "89718d368a50f24f5a75a1719ee0d3193fb1c28b"
-      ],
-      "pushid": 316005,
-      "pushdate": [
-        1542443865,
-        0
-      ]
-    },
-    {
-      "node": "89718d368a50f24f5a75a1719ee0d3193fb1c28b",
-      "date": [
-        1542364854.0,
-        -3600
-      ],
-      "desc": "Bug 1450219 - Make sure not to lose track of focus when we rebuild the inner fields.\n\nSummary:\nRemoving the inner field while focused nulls out the active element, without a\nblur event of course, so this means that we left the :focus state in the input\nset incorrectly, plus that we actually lost focus.\n\nReviewers: Gijs\n\nTags: #secure-revision\n\nBug #: 1450219\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12106\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "draft",
-      "parents": [
-        "f645f771ceab84aa804f03e18dcf08f5a3319801"
-      ],
-      "pushid": 316005,
-      "pushdate": [
-        1542443865,
-        0
-      ]
-    },
-    {
-      "node": "f645f771ceab84aa804f03e18dcf08f5a3319801",
-      "date": [
-        1542361773.0,
-        -3600
-      ],
-      "desc": "Bug 1507674 - Flush the overflow changed tracker earlier.\n\nSummary:\nSo we do it while we're still handling re-entrant changes for SVG, since SVG can\npost change hints from UpdateOverflow().\n\nReviewers: #firefox-style-system-reviewers\n\nTags: #secure-revision\n\nBug #: 1507674\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12102\n",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "draft",
-      "parents": [
-        "414541fdb8713cc30194e25391830a89e9877b4f"
-      ],
-      "pushid": 316005,
-      "pushdate": [
-        1542443865,
-        0
-      ]
-    },
-    {
-      "node": "35c58a28b71913257ddf8b29714f44f9bc091cff",
-      "date": [
-        1542442913.0,
-        28800
-      ],
-      "desc": "Fuzzy query=android web-pl\n\nPushed via `mach try fuzzy`",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Wes Kocher <wkocher@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "9cbb84a51d8ff62a64aa6e82894a08db2917587c"
-      ],
-      "pushid": 316004,
-      "pushdate": [
-        1542442930,
-        0
-      ]
-    },
-    {
-      "node": "1c2c1c0130b80df0c68eca0149159f0796cb7175",
-      "date": [
-        1542442072.0,
-        28800
-      ],
-      "desc": "No try selector specified, use \"Add New Jobs\" to select tasks.\n\nPushed via `mach try empty`",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Wes Kocher <wkocher@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "9cbb84a51d8ff62a64aa6e82894a08db2917587c"
-      ],
-      "pushid": 316003,
-      "pushdate": [
-        1542442089,
-        0
-      ]
-    },
-    {
-      "node": "9cbb84a51d8ff62a64aa6e82894a08db2917587c",
-      "date": [
-        1542442010.0,
-        28800
-      ],
-      "desc": "Chunk 01 of 36 again",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Wes Kocher <wkocher@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "740d07c489245809fff09aaaddeb22947709107b"
-      ],
-      "pushid": 316003,
-      "pushdate": [
-        1542442089,
-        0
-      ]
-    },
-    {
-      "node": "740d07c489245809fff09aaaddeb22947709107b",
-      "date": [
-        1542414890.0,
-        28800
-      ],
-      "desc": "Chunk 01 of 36 again",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Wes Kocher <wkocher@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "b6990e246fe15b4c07712f6faf92c9fcd512f7da"
-      ],
-      "pushid": 316003,
-      "pushdate": [
-        1542442089,
-        0
-      ]
-    },
-    {
-      "node": "e93a7fa5dff8d20a3572094ae89a080555abc6c4",
-      "date": [
-        1542441792.0,
-        -3600
-      ],
-      "desc": "try: -b do -p linux64,macosx64,win64 -u mochitest-e10s-bc -t none",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "D\u00e3o Gottwald <dao@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "a7812eefff9559ee40e9f0a8e6c812ea9d36f06d"
-      ],
-      "pushid": 316002,
-      "pushdate": [
-        1542441837,
-        0
-      ]
-    },
-    {
-      "node": "a08ca9bcd3b74e2186bda31832879507c50baa8f",
-      "date": [
-        1542440119.0,
-        0
-      ],
-      "desc": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/document-write.tentative.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/layout-animations-disabled-violation-report-js-tentative.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/layout-animations-disabled-violation-report-keyframes-tentative.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/lazyload/lazyload-disabled-image-tentative.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/lazyload/lazyload-disabled-tentative.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/lazyload/lazyload-enabled-image-tentative.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/lazyload/lazyload-enabled-tentative.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/lazyload/lazyload-image-attribute-on-sanity-check-tentative.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/experimental-features/vertical-scroll-scrollintoview.tentative.html",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "moz-wptsync-bot <wptsync@mozilla.com>",
-      "phase": "draft",
-      "parents": [
-        "b3eb7ab1f2be43da5136a181e82d8121b3c9b194"
-      ],
-      "pushid": 316001,
-      "pushdate": [
-        1542440140,
-        0
-      ]
-    }
-  ]
+  "0": {
+    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
+    "commit_date": "2018-11-17 18:22:58",
+    "commit_message": "Fuzzy  Pushed via `mach try fuzzy` ",
+    "node": "9ea15ed972fed6f4c8e1f8df6df0ccce4703bba0"
+  },
+  "1": {
+    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
+    "commit_date": "2018-11-16 21:47:23",
+    "commit_message": "Bug 1438939 - WIP ",
+    "node": "f1805bfa3acf0be7befe9fd1426f7795342ab9bb"
+  },
+  "2": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 18:20:36",
+    "commit_message": "try: -b d -p win32 -u mochitest-e10s-bc -t none  Pushed via `mach try syntax`",
+    "node": "1cd3eab38200e4f321172af4af6ab4f074f4289a"
+  },
+  "3": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 18:20:22",
+    "commit_message": "Load Dll in minidump-analyzer after DllServices",
+    "node": "40f7e80b581ab6260c973be0430f938bf6d2cc7f"
+  },
+  "4": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 18:15:18",
+    "commit_message": "try: -b d -p win32 -u mochitest-e10s-bc -t none  Pushed via `mach try syntax`",
+    "node": "3eb68aa76b9410d976df822692b487aa2a497f57"
+  },
+  "5": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 18:15:11",
+    "commit_message": "Load Dll in minidump-analyzer before DllServices",
+    "node": "44cff7a98cea8ad8c191408927beb32c08dd656a"
+  },
+  "6": {
+    "commiter_name": "Rob Thijssen <rthijssen@mozilla.com>",
+    "commit_date": "2018-11-17 17:59:25",
+    "commit_message": "Bug 1372172 - gpu retests; try: -b do -p win64,win64-ccov -u awsy-e10s[Windows 10,windows10-64-qr],crashtest[Windows 10,windows10-64-qr],mochitests[Windows 10,windows10-64-qr],mochitest-gl[Windows 10,windows10-64-qr],mochitest-gpu[Windows 10,windows10-64-qr],reftest[Windows 10,windows10-64-qr] -t none --rebuild 5",
+    "node": "1ba3700ed6a08efa5bc31bc5177efa7f8cd671ea"
+  },
+  "7": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 18:04:22",
+    "commit_message": "try: -b d -p win32 -u mochitest-e10s-bc -t none  Pushed via `mach try syntax`",
+    "node": "008bfb70971897faa18e85e2fc46be36dd4fcd92"
+  },
+  "8": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 18:04:04",
+    "commit_message": "Load Dll from UntrustedDllsHandlerImpl::GetInstance",
+    "node": "70ed7ff59ad2ea0d33819a36aef9337f59b5de9d"
+  },
+  "9": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 17:55:22",
+    "commit_message": "try: -b d -p win32 -u mochitest-e10s-bc -t none  Pushed via `mach try syntax`",
+    "node": "3c52e23f7af1c2ea5115472af4f3f27039c39378"
+  },
+  "10": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 17:55:00",
+    "commit_message": "Load Dll in DllBlockList_SetDllServices",
+    "node": "d039b2d709ca8801861e4c20cf37e4f6219f85c9"
+  },
+  "11": {
+    "commiter_name": "Qinghao_Jack_Song <songqing@msu.edu>",
+    "commit_date": "2018-11-17 17:44:12",
+    "commit_message": "try: -b do -p all -u crashtest,firefox-ui-functional,geckoview,geckoview-junit,jsreftest,marionette,marionette-e10s,mochitests,reftest,robocop,web-platform-tests,xpcshell -t none --artifact  Pushed via `mach try syntax`",
+    "node": "c2c89969b5afd37b2acc4a0a0ce0f9a9547334b2"
+  },
+  "12": {
+    "commiter_name": "Qinghao_Jack_Song <songqing@msu.edu>",
+    "commit_date": "2018-10-12 05:11:26",
+    "commit_message": "Bug 1498448 - Migrate Certificate Manager Dialog to use fluent for localization  Differential Revision: https://phabricator.services.mozilla.com/D8499",
+    "node": "0b0c83dfd7c4752e85379bab95a8a3c51d3580a0"
+  },
+  "13": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 17:40:59",
+    "commit_message": "try: -b d -p win32 -u mochitest-e10s-bc -t none  Pushed via `mach try syntax`",
+    "node": "d77e6d9affe11834315af14d4f771f76a9293711"
+  },
+  "14": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-17 17:40:41",
+    "commit_message": "Load dll in BasicDllServices",
+    "node": "a597048b8307c54964321398b8b25e13bbd63d31"
+  },
+  "15": {
+    "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+    "commit_date": "2018-11-17 17:17:59",
+    "commit_message": "staging release: 65.0b12  Pushed via `mach try release`",
+    "node": "9feaa3381a7855018bcb28f37e1d57d6793031de"
+  },
+  "16": {
+    "commiter_name": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+    "commit_date": "2018-10-25 14:40:42",
+    "commit_message": "set late beta",
+    "node": "9ff5c514e95f4ca151386ca016bc73d0a9b47ca2"
+  },
+  "17": {
+    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
+    "commit_date": "2018-11-17 17:16:16",
+    "commit_message": "Fuzzy  Pushed via `mach try fuzzy` ",
+    "node": "307b4fee91a0f39fc1ebc183ad5ecc16fec628c5"
+  },
+  "18": {
+    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
+    "commit_date": "2018-11-16 21:47:23",
+    "commit_message": "Bug 1438939 - WIP ",
+    "node": "3a7416a69d36dc856a283536d634d75a1de908af"
+  },
+  "19": {
+    "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+    "commit_date": "2018-11-17 17:13:46",
+    "commit_message": "staging release: 65.0b1  Pushed via `mach try release`",
+    "node": "d6e8f6fbe3271c80f2affdb121f7f8a2b5d42922"
+  }
 }

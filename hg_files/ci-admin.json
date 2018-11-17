@@ -1,428 +1,122 @@
 {
-  "node": "99d859a7a6551c356bee6b28ab7b1dd83375e4df",
-  "changeset_count": 40,
-  "changesets": [
-    {
-      "node": "99d859a7a6551c356bee6b28ab7b1dd83375e4df",
-      "date": [
-        1540230734.0,
-        0
-      ],
-      "desc": "Bug 1492665 - add modify_resources support r=Callek,bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6933",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "241f75b5d808eb696498a9779e959bcf5ea6ed8b"
-      ],
-      "pushid": 29,
-      "pushdate": [
-        1540230792,
-        0
-      ]
-    },
-    {
-      "node": "241f75b5d808eb696498a9779e959bcf5ea6ed8b",
-      "date": [
-        1540230733.0,
-        0
-      ],
-      "desc": "Bug 1492665 - add support for environments.yml r=Callek,bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6932",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "d1796b61fbd0779e30b9a2226db7152c00772870"
-      ],
-      "pushid": 29,
-      "pushdate": [
-        1540230792,
-        0
-      ]
-    },
-    {
-      "node": "d1796b61fbd0779e30b9a2226db7152c00772870",
-      "date": [
-        1539918128.0,
-        0
-      ],
-      "desc": "Bug 1494320 - remove unnecessary resources.manage r=tomprince\n\nThese were in place in order to delete some old, now-unused roles.  They're\ngone, so no need to continue to manage those namespaces.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9166",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "9d35e153d813a1a68238d8af2e19a13957c2a3be"
-      ],
-      "pushid": 28,
-      "pushdate": [
-        1540230628,
-        0
-      ]
-    },
-    {
-      "node": "9d35e153d813a1a68238d8af2e19a13957c2a3be",
-      "date": [
-        1537930124.0,
-        0
-      ],
-      "desc": "Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6858",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Tom Prince <mozilla@hocat.ca>",
-      "phase": "public",
-      "parents": [
-        "c88ca415a1c6259a6b3cea1a40523426bad9690e"
-      ],
-      "pushid": 27,
-      "pushdate": [
-        1537930140,
-        0
-      ]
-    },
-    {
-      "node": "c88ca415a1c6259a6b3cea1a40523426bad9690e",
-      "date": [
-        1536775673.0,
-        0
-      ],
-      "desc": "Bug 1489181: handle input_schema in actions.yml r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5683",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "edad9f8f78d42bc547c1f684b0f9dc116ccbd00a"
-      ],
-      "pushid": 26,
-      "pushdate": [
-        1536782690,
-        0
-      ]
-    },
-    {
-      "node": "edad9f8f78d42bc547c1f684b0f9dc116ccbd00a",
-      "date": [
-        1536688029.0,
-        0
-      ],
-      "desc": "Bug 1490066: fix unit tests and add a few r=tomprince\n\nI broke the unit tests in bug 1488766 and also introduced a bug (no longer\nallowing granting to a single group); this fixes that up and even adds some\ntests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5464",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "5b8819a7b072b15f545cc1025efff61bb4ea98b5"
-      ],
-      "pushid": 25,
-      "pushdate": [
-        1536688843,
-        0
-      ]
-    },
-    {
-      "node": "5b8819a7b072b15f545cc1025efff61bb4ea98b5",
-      "date": [
-        1536589882.0,
-        0
-      ],
-      "desc": "Bug 1489983: fix markdown link in descriptions r=janx\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5430",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "135f264d65d29a2916d27b3947d78b16dd261af5"
-      ],
-      "pushid": 24,
-      "pushdate": [
-        1536591290,
-        0
-      ]
-    },
-    {
-      "node": "135f264d65d29a2916d27b3947d78b16dd261af5",
-      "date": [
-        1536349200.0,
-        0
-      ],
-      "desc": "Bug 1488766: improve error handling for malformed grants.yml r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5158",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "95397719f02d073284645ee8613189efd811694a"
-      ],
-      "pushid": 23,
-      "pushdate": [
-        1536349344,
-        0
-      ]
-    },
-    {
-      "node": "95397719f02d073284645ee8613189efd811694a",
-      "date": [
-        1536349192.0,
-        0
-      ],
-      "desc": "Bug 1488766: also substitute {hgmo_path} r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5155",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "559c3f6fd3291e3061771741b4f2a82ee50ef7d7"
-      ],
-      "pushid": 22,
-      "pushdate": [
-        1536349331,
-        0
-      ]
-    },
-    {
-      "node": "559c3f6fd3291e3061771741b4f2a82ee50ef7d7",
-      "date": [
-        1536185643.0,
-        0
-      ],
-      "desc": "(hotfix) add created and expires to .taskcluster.yml",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "a7d020a0ad133bdf9c49029f914178650dcd730e"
-      ],
-      "pushid": 21,
-      "pushdate": [
-        1536185648,
-        0
-      ]
-    },
-    {
-      "node": "a7d020a0ad133bdf9c49029f914178650dcd730e",
-      "date": [
-        1536185545.0,
-        0
-      ],
-      "desc": "(hotfix) add taskId and taskGroupid to .taskcluster.yml",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "6e5f123d07c9df63748baa5fb7c5fbb41926cf8a"
-      ],
-      "pushid": 20,
-      "pushdate": [
-        1536185549,
-        0
-      ]
-    },
-    {
-      "node": "6e5f123d07c9df63748baa5fb7c5fbb41926cf8a",
-      "date": [
-        1536185103.0,
-        0
-      ],
-      "desc": "(hotfix) add empty scopes to .taskcluster.yml",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "f15c251a51bf42407ae4274b18a4e7a2780a6865"
-      ],
-      "pushid": 19,
-      "pushdate": [
-        1536185128,
-        0
-      ]
-    },
-    {
-      "node": "f15c251a51bf42407ae4274b18a4e7a2780a6865",
-      "date": [
-        1536181840.0,
-        0
-      ],
-      "desc": "Bug 1486431: add .taskcluster.yml, running unit tests and ci-admin check r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5063",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "2a84daadfd6e6cacd84d1a8759946729ab61016c"
-      ],
-      "pushid": 18,
-      "pushdate": [
-        1536184466,
-        0
-      ]
-    },
-    {
-      "node": "2a84daadfd6e6cacd84d1a8759946729ab61016c",
-      "date": [
-        1536176243.0,
-        0
-      ],
-      "desc": "Bug 1479103: upgrade to the latest taskcluster client r=tomprince\n\nDepends on D4244\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4246",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "e917ceff76e4e73d611f93ab409ac7baf3c4536e"
-      ],
-      "pushid": 17,
-      "pushdate": [
-        1536176250,
-        0
-      ]
-    },
-    {
-      "node": "e917ceff76e4e73d611f93ab409ac7baf3c4536e",
-      "date": [
-        1536175746.0,
-        0
-      ],
-      "desc": "Bug 1479103: upgrade everything to the latest compatible version\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4244",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "871ead5583b0090825f91c210e22e43122037b3b"
-      ],
-      "pushid": 16,
-      "pushdate": [
-        1536176094,
-        0
-      ]
-    },
-    {
-      "node": "871ead5583b0090825f91c210e22e43122037b3b",
-      "date": [
-        1536176003.0,
-        0
-      ],
-      "desc": "Bug 1479103: pin to major versions in setup.py r=tomprince\n\nThis also adjusts `pipupdate.sh` so that it correctly reads `requirements.txt`\nbefore writing it back out, avoiding the issue where it upgrades everything.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4243",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "e8c729ab1b1584b0212c52795c8ae14cf5a87c8d"
-      ],
-      "pushid": 15,
-      "pushdate": [
-        1536176037,
-        0
-      ]
-    },
-    {
-      "node": "e8c729ab1b1584b0212c52795c8ae14cf5a87c8d",
-      "date": [
-        1532469571.0,
-        0
-      ],
-      "desc": "Bug 1465842: implement grants.yml; r=bstack,tomprince,pmoore\n\nIn the same commit, this removes all other code that sets repo roles or user\nroles, as otherwise they try to generate the same resources.  Checks in place\nduring development (but not to land) ensure that actual scopes do not change.",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "ee3a60eba89f4822473f2911690e62c07ced6ef0"
-      ],
-      "pushid": 14,
-      "pushdate": [
-        1535641142,
-        0
-      ]
-    },
-    {
-      "node": "ee3a60eba89f4822473f2911690e62c07ced6ef0",
-      "date": [
-        1535632069.0,
-        0
-      ],
-      "desc": "Bug 1465842: move ciconfig into sub-modules r=bstack,pmoore,tomprince\n\nIf only because this avoids naming conflicts between modules defining the data\nstructure and modules generating resources based on those data structures..\n\nDepends on D2442\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2443",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "172a91b213c3ce8af44e0141213a9c8fa7f74593"
-      ],
-      "pushid": 13,
-      "pushdate": [
-        1535636279,
-        0
-      ]
-    },
-    {
-      "node": "172a91b213c3ce8af44e0141213a9c8fa7f74593",
-      "date": [
-        1535567360.0,
-        0
-      ],
-      "desc": "Bug 1465842: test for signing scopes r=bstack,pmoore,tomprince\n\nThis is never going to be a super-secure check, but will help make sure we\ndon't do anything boneheaded.\n\nDepends on D2439\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2440",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "db811713c8927f729779d3d00271fbf66cd2c006"
-      ],
-      "pushid": 12,
-      "pushdate": [
-        1535636244,
-        0
-      ]
-    },
-    {
-      "node": "db811713c8927f729779d3d00271fbf66cd2c006",
-      "date": [
-        1535396594.0,
-        0
-      ],
-      "desc": "Bug 1465842: add 'ci-admin check', upgrade requirements r=bstack,pmoore\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2439",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dustin J. Mitchell <dustin@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "0c68bb31217c95e9708812cf9aba055c734f0932"
-      ],
-      "pushid": 11,
-      "pushdate": [
-        1535636183,
-        0
-      ]
-    }
-  ]
+  "0": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-10-22 20:52:14",
+    "commit_message": "Bug 1492665 - add modify_resources support r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6933",
+    "node": "99d859a7a6551c356bee6b28ab7b1dd83375e4df"
+  },
+  "1": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-10-22 20:52:13",
+    "commit_message": "Bug 1492665 - add support for environments.yml r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6932",
+    "node": "241f75b5d808eb696498a9779e959bcf5ea6ed8b"
+  },
+  "2": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-10-19 06:02:08",
+    "commit_message": "Bug 1494320 - remove unnecessary resources.manage r=tomprince  These were in place in order to delete some old, now-unused roles.  They're gone, so no need to continue to manage those namespaces.  Differential Revision: https://phabricator.services.mozilla.com/D9166",
+    "node": "d1796b61fbd0779e30b9a2226db7152c00772870"
+  },
+  "3": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-09-26 05:48:44",
+    "commit_message": "Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D6858",
+    "node": "9d35e153d813a1a68238d8af2e19a13957c2a3be"
+  },
+  "4": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-12 21:07:53",
+    "commit_message": "Bug 1489181: handle input_schema in actions.yml r=aki  Differential Revision: https://phabricator.services.mozilla.com/D5683",
+    "node": "c88ca415a1c6259a6b3cea1a40523426bad9690e"
+  },
+  "5": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-11 20:47:09",
+    "commit_message": "Bug 1490066: fix unit tests and add a few r=tomprince  I broke the unit tests in bug 1488766 and also introduced a bug (no longer allowing granting to a single group); this fixes that up and even adds some tests.  Differential Revision: https://phabricator.services.mozilla.com/D5464",
+    "node": "edad9f8f78d42bc547c1f684b0f9dc116ccbd00a"
+  },
+  "6": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-10 17:31:22",
+    "commit_message": "Bug 1489983: fix markdown link in descriptions r=janx  Differential Revision: https://phabricator.services.mozilla.com/D5430",
+    "node": "5b8819a7b072b15f545cc1025efff61bb4ea98b5"
+  },
+  "7": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-07 22:40:00",
+    "commit_message": "Bug 1488766: improve error handling for malformed grants.yml r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5158",
+    "node": "135f264d65d29a2916d27b3947d78b16dd261af5"
+  },
+  "8": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-07 22:39:52",
+    "commit_message": "Bug 1488766: also substitute {hgmo_path} r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5155",
+    "node": "95397719f02d073284645ee8613189efd811694a"
+  },
+  "9": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-06 01:14:03",
+    "commit_message": "(hotfix) add created and expires to .taskcluster.yml",
+    "node": "559c3f6fd3291e3061771741b4f2a82ee50ef7d7"
+  },
+  "10": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-06 01:12:25",
+    "commit_message": "(hotfix) add taskId and taskGroupid to .taskcluster.yml",
+    "node": "a7d020a0ad133bdf9c49029f914178650dcd730e"
+  },
+  "11": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-06 01:05:03",
+    "commit_message": "(hotfix) add empty scopes to .taskcluster.yml",
+    "node": "6e5f123d07c9df63748baa5fb7c5fbb41926cf8a"
+  },
+  "12": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-06 00:10:40",
+    "commit_message": "Bug 1486431: add .taskcluster.yml, running unit tests and ci-admin check r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5063",
+    "node": "f15c251a51bf42407ae4274b18a4e7a2780a6865"
+  },
+  "13": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-05 22:37:23",
+    "commit_message": "Bug 1479103: upgrade to the latest taskcluster client r=tomprince  Depends on D4244  Differential Revision: https://phabricator.services.mozilla.com/D4246",
+    "node": "2a84daadfd6e6cacd84d1a8759946729ab61016c"
+  },
+  "14": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-05 22:29:06",
+    "commit_message": "Bug 1479103: upgrade everything to the latest compatible version  Differential Revision: https://phabricator.services.mozilla.com/D4244",
+    "node": "e917ceff76e4e73d611f93ab409ac7baf3c4536e"
+  },
+  "15": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-09-05 22:33:23",
+    "commit_message": "Bug 1479103: pin to major versions in setup.py r=tomprince  This also adjusts `pipupdate.sh` so that it correctly reads `requirements.txt` before writing it back out, avoiding the issue where it upgrades everything.  Differential Revision: https://phabricator.services.mozilla.com/D4243",
+    "node": "871ead5583b0090825f91c210e22e43122037b3b"
+  },
+  "16": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-07-25 00:59:31",
+    "commit_message": "Bug 1465842: implement grants.yml; r=bstack,tomprince,pmoore  In the same commit, this removes all other code that sets repo roles or user roles, as otherwise they try to generate the same resources.  Checks in place during development (but not to land) ensure that actual scopes do not change.",
+    "node": "e8c729ab1b1584b0212c52795c8ae14cf5a87c8d"
+  },
+  "17": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-08-30 15:27:49",
+    "commit_message": "Bug 1465842: move ciconfig into sub-modules r=bstack,pmoore,tomprince  If only because this avoids naming conflicts between modules defining the data structure and modules generating resources based on those data structures..  Depends on D2442  Differential Revision: https://phabricator.services.mozilla.com/D2443",
+    "node": "ee3a60eba89f4822473f2911690e62c07ced6ef0"
+  },
+  "18": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-08-29 21:29:20",
+    "commit_message": "Bug 1465842: test for signing scopes r=bstack,pmoore,tomprince  This is never going to be a super-secure check, but will help make sure we don't do anything boneheaded.  Depends on D2439  Differential Revision: https://phabricator.services.mozilla.com/D2440",
+    "node": "172a91b213c3ce8af44e0141213a9c8fa7f74593"
+  },
+  "19": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_date": "2018-08-27 22:03:14",
+    "commit_message": "Bug 1465842: add 'ci-admin check', upgrade requirements r=bstack,pmoore  Differential Revision: https://phabricator.services.mozilla.com/D2439",
+    "node": "db811713c8927f729779d3d00271fbf66cd2c006"
+  }
 }

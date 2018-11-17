@@ -1,428 +1,122 @@
 {
-  "node": "b3a439a26186572b556bfc5f35f6ea044a2dd170",
-  "changeset_count": 450472,
-  "changesets": [
-    {
-      "node": "b3a439a26186572b556bfc5f35f6ea044a2dd170",
-      "date": [
-        1542023946.0,
-        -3600
-      ],
-      "desc": "Bug 1500310 - Better scoping for code in IDBObjectStore::GetAddInfo. r=asuth, a=RyanVM",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
-      "user": "Jan Varga <jan.varga@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "282c6bb81562f0ec20f2c1ce56653a5fe7154010"
-      ],
-      "pushid": 240,
-      "pushdate": [
-        1542387167,
-        0
-      ]
-    },
-    {
-      "node": "282c6bb81562f0ec20f2c1ce56653a5fe7154010",
-      "date": [
-        1541098151.0,
-        0
-      ],
-      "desc": "Bug 1501680 - Don't send credentials in ssl error reports. r=Gijs, a=lizzard\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10594",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Johann Hofmann <jhofmann@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "3423f7f2a5af2508f9ac1ece9557bfc22f4aa20c"
-      ],
-      "pushid": 240,
-      "pushdate": [
-        1542387167,
-        0
-      ]
-    },
-    {
-      "node": "3423f7f2a5af2508f9ac1ece9557bfc22f4aa20c",
-      "date": [
-        1542283796.0,
-        0
-      ],
-      "desc": "No Bug, mozilla-esr60 repo-update HSTS HPKP blocklist - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D12005",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "ffxbld <ffxbld@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "cec8b58ab3fe4c3426826a6be33c873076ead09b"
-      ],
-      "pushid": 239,
-      "pushdate": [
-        1542289430,
-        0
-      ]
-    },
-    {
-      "node": "cec8b58ab3fe4c3426826a6be33c873076ead09b",
-      "date": [
-        1542178733.0,
-        0
-      ],
-      "desc": "Bug 1507035 - Fix run sizes for size classes >= 16KB on systems with large pages. r=njn, a=lizzard\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11836",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mike Hommey <mh+mozilla@glandium.org>",
-      "phase": "public",
-      "parents": [
-        "6939caf7210e29ce6eeb6e83a74dd7fff99a3962"
-      ],
-      "pushid": 238,
-      "pushdate": [
-        1542225329,
-        0
-      ]
-    },
-    {
-      "node": "6939caf7210e29ce6eeb6e83a74dd7fff99a3962",
-      "date": [
-        1541804354.0,
-        21600
-      ],
-      "desc": "Bug 1469951 - Update homepage policy to include startpage. r=Felipe, a=lizzard",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Michael Kaply <mozilla@kaply.com>",
-      "phase": "public",
-      "parents": [
-        "1cab3104b7a66866c907d41438ab45532fcdc8ef"
-      ],
-      "pushid": 238,
-      "pushdate": [
-        1542225329,
-        0
-      ]
-    },
-    {
-      "node": "1cab3104b7a66866c907d41438ab45532fcdc8ef",
-      "date": [
-        1541184141.0,
-        18000
-      ],
-      "desc": "Bug 1491848 - Patch libyuv to fix the x86 mingw-clang build. r=jesup, a=lizzard\n\nThis patch combines the following upstream patches to fix the mingw build\n\nhttps://chromium.googlesource.com/libyuv/libyuv/+/8fa02df3c%5E%21/\nhttps://chromium.googlesource.com/libyuv/libyuv/+/d8680893ecfcffd952c7a5d0dc1878d1c486a4e4%5E%21/\nhttps://chromium.googlesource.com/libyuv/libyuv/+/6e498475c749063485a046dfb24e1fa1a81cbedf%5E%21/",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Tom Ritter <tom@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "ee204e26690e07dd6afe445ed30c7a026c2c29c0"
-      ],
-      "pushid": 238,
-      "pushdate": [
-        1542225329,
-        0
-      ]
-    },
-    {
-      "node": "ee204e26690e07dd6afe445ed30c7a026c2c29c0",
-      "date": [
-        1542114891.0,
-        -3600
-      ],
-      "desc": "Bug 1505181 - Use canonical function in TypeNewScript::rollbackPartiallyInitializedObjects. r=bhackett, a=RyanVM",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Jan de Mooij <jdemooij@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "a08c8493ba193add59c6236d6a1b4af4a64358d8"
-      ],
-      "pushid": 237,
-      "pushdate": [
-        1542131267,
-        0
-      ]
-    },
-    {
-      "node": "a08c8493ba193add59c6236d6a1b4af4a64358d8",
-      "date": [
-        1542131223.0,
-        18000
-      ],
-      "desc": "Bug 1498765 - Clean up ContentParent::KillHard handling. r=mccr8, a=RyanVM\n\nMessageChannel shouldn't need to care about PContent-specific details.",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Jed Davis <jld@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "580a7ea06a11a09406447adc1be0b4d016c23cdb"
-      ],
-      "pushid": 237,
-      "pushdate": [
-        1542131267,
-        0
-      ]
-    },
-    {
-      "node": "580a7ea06a11a09406447adc1be0b4d016c23cdb",
-      "date": [
-        1542052785.0,
-        0
-      ],
-      "desc": "Bug 1506643 - [marionette] Disable \"about:newtab\" page, and always load \"about:blank\". r=ato a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11691",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Henrik Skupin <mail@hskupin.info>",
-      "phase": "public",
-      "parents": [
-        "ad2e4899a821f14b0eb6abb9a582f1d3172ac002"
-      ],
-      "pushid": 237,
-      "pushdate": [
-        1542131267,
-        0
-      ]
-    },
-    {
-      "node": "ad2e4899a821f14b0eb6abb9a582f1d3172ac002",
-      "date": [
-        1535980588.0,
-        -7200
-      ],
-      "desc": "Bug 1486415 - Ensure the SourceSurface stays alive for the duration of MarkIndependent. r=jrmuizel, a=lizzard\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4856",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Bas Schouten <bschouten@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "3bed863ee656e34c7f1ec2c35765e0cdebca8545"
-      ],
-      "pushid": 236,
-      "pushdate": [
-        1542069783,
-        0
-      ]
-    },
-    {
-      "node": "3bed863ee656e34c7f1ec2c35765e0cdebca8545",
-      "date": [
-        1540237930.0,
-        0
-      ],
-      "desc": "Bug 1496736 - Check if we actually have a new key DB before removing the old one. r=jcj, a=lizzard\n\nIn bug 1475775, we added code to remove the old NSS key DB if the user has set a\npassword on the grounds that the old DB could potentially be unencrypted and\ncontain secrets. However, we did so with the assumption that we were using the\nnew DB, which is not necessarily true when the system has been configured to\nalways use the old DB, as with some RedHat products. This patch checks for the\nexistence of the new DB before proceeding with deleting the old DB. Technically\nthis isn't sufficient, because the new DB could be present even if we're not\nusing it. However, we've already gone far into \"this configuration isn't\nsupported\" territory.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9318",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Dana Keeler <dkeeler@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "2b140842f76221400d0291f5e1230aa6d156bd5f"
-      ],
-      "pushid": 236,
-      "pushdate": [
-        1542069783,
-        0
-      ]
-    },
-    {
-      "node": "2b140842f76221400d0291f5e1230aa6d156bd5f",
-      "date": [
-        1541697838.0,
-        21600
-      ],
-      "desc": "Bug 1493973 - Don't block devtools when block chrome URLs. r=felipe, a=lizzard",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Michael Kaply <mozilla@kaply.com>",
-      "phase": "public",
-      "parents": [
-        "f27badd7938f81b636e922692abdf013543b1887"
-      ],
-      "pushid": 236,
-      "pushdate": [
-        1542069783,
-        0
-      ]
-    },
-    {
-      "node": "f27badd7938f81b636e922692abdf013543b1887",
-      "date": [
-        1539211092.0,
-        0
-      ],
-      "desc": "Bug 1463684 - Specify UTF-8 charset for policy search engines. r=Felipe, a=lizzard\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8144",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Michael Kaply <mozilla@kaply.com>",
-      "phase": "public",
-      "parents": [
-        "4983ed48535aeea7058c838fa81633faabab9661"
-      ],
-      "pushid": 236,
-      "pushdate": [
-        1542069783,
-        0
-      ]
-    },
-    {
-      "node": "4983ed48535aeea7058c838fa81633faabab9661",
-      "date": [
-        1541802356.0,
-        21600
-      ],
-      "desc": "Bug 1497549 - Add support for setting locale via policy. r=Felipe,zbraniecki, a=lizzard",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Michael Kaply <mozilla@kaply.com>",
-      "phase": "public",
-      "parents": [
-        "b9c34e2086c23f68fcf76a1e8d969ac3e1832dc3"
-      ],
-      "pushid": 236,
-      "pushdate": [
-        1542069783,
-        0
-      ]
-    },
-    {
-      "node": "b9c34e2086c23f68fcf76a1e8d969ac3e1832dc3",
-      "date": [
-        1541801422.0,
-        21600
-      ],
-      "desc": "Bug 1493249 - Add policy for security devices. r=Felipe, a=lizzard",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Michael Kaply <mozilla@kaply.com>",
-      "phase": "public",
-      "parents": [
-        "d1c9b0924148c651f61c8305e71d21670876a472"
-      ],
-      "pushid": 236,
-      "pushdate": [
-        1542069783,
-        0
-      ]
-    },
-    {
-      "node": "d1c9b0924148c651f61c8305e71d21670876a472",
-      "date": [
-        1541183751.0,
-        18000
-      ],
-      "desc": "Bug 1475566 - Disable #pragma comments for MinGW Builds. r=glandium, a=lizzard\n\nIn the MinGW browser build job, we're going to use -fms-extensions, which will tell\nclang to start processing these comments. Clang cannot process them correctly\n(it's an upstream bug) but it doesn't need to, because we include the libs we need\nin moz.build files.\n\nSo we exclude them for MinGW builds. mingw-clang gets them wrong and mingw-gcc\n(which doesn't even work anymore on -central) ignored them.\n\nIn the future, with a llvm fix, we could clean up the moz.build files and re-enable\nthese comments.",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Tom Ritter <tom@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "6398541ec3020e85f19dea412c5f4f7ceab33f65"
-      ],
-      "pushid": 236,
-      "pushdate": [
-        1542069783,
-        0
-      ]
-    },
-    {
-      "node": "6398541ec3020e85f19dea412c5f4f7ceab33f65",
-      "date": [
-        1541432322.0,
-        -3600
-      ],
-      "desc": "Bug 1503326. r=sunfish, r=nbp, a=RyanVM",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Benjamin Bouvier <benj@benj.me>",
-      "phase": "public",
-      "parents": [
-        "a5c1a73b5999be5959609e871f5e60660c332b40"
-      ],
-      "pushid": 235,
-      "pushdate": [
-        1542036581,
-        0
-      ]
-    },
-    {
-      "node": "a5c1a73b5999be5959609e871f5e60660c332b40",
-      "date": [
-        1542025862.0,
-        0
-      ],
-      "desc": "No Bug, mozilla-esr60 repo-update HSTS HPKP tld-suffixes - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11630",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "ffxbld <ffxbld@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "f2569ad7bd92f6830db24e97ca40878579d62cf6"
-      ],
-      "pushid": 235,
-      "pushdate": [
-        1542036581,
-        0
-      ]
-    },
-    {
-      "node": "f2569ad7bd92f6830db24e97ca40878579d62cf6",
-      "date": [
-        1539817078.0,
-        0
-      ],
-      "desc": "Bug 1499265 - Intermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container. r=aki a=tomprince\n\nIntermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8925",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Jordan Lund <jlund@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "ecc55f87f965c935ad2eabc6da681779722d60e3"
-      ],
-      "pushid": 234,
-      "pushdate": [
-        1541808485,
-        0
-      ]
-    },
-    {
-      "node": "ecc55f87f965c935ad2eabc6da681779722d60e3",
-      "date": [
-        1539963887.0,
-        0
-      ],
-      "desc": "Bug 1498626 - Fix google-play-string docker image build r=dustin\n\nFix google-play-string docker image build\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9265",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Johan Lorenzo <jlorenzo@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "4f8fb48c0f7d1158bc1401c01c6319179e05fe1d"
-      ],
-      "pushid": 234,
-      "pushdate": [
-        1541808485,
-        0
-      ]
-    }
-  ]
+  "0": {
+    "commiter_name": "Jan Varga <jan.varga@gmail.com>",
+    "commit_date": "2018-11-12 13:59:06",
+    "commit_message": "Bug 1500310 - Better scoping for code in IDBObjectStore::GetAddInfo. r=asuth, a=RyanVM",
+    "node": "b3a439a26186572b556bfc5f35f6ea044a2dd170"
+  },
+  "1": {
+    "commiter_name": "Johann Hofmann <jhofmann@mozilla.com>",
+    "commit_date": "2018-11-01 20:49:11",
+    "commit_message": "Bug 1501680 - Don't send credentials in ssl error reports. r=Gijs, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D10594",
+    "node": "282c6bb81562f0ec20f2c1ce56653a5fe7154010"
+  },
+  "2": {
+    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+    "commit_date": "2018-11-15 14:09:56",
+    "commit_message": "No Bug, mozilla-esr60 repo-update HSTS HPKP blocklist - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12005",
+    "node": "3423f7f2a5af2508f9ac1ece9557bfc22f4aa20c"
+  },
+  "3": {
+    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+    "commit_date": "2018-11-14 08:58:53",
+    "commit_message": "Bug 1507035 - Fix run sizes for size classes >= 16KB on systems with large pages. r=njn, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D11836",
+    "node": "cec8b58ab3fe4c3426826a6be33c873076ead09b"
+  },
+  "4": {
+    "commiter_name": "Michael Kaply <mozilla@kaply.com>",
+    "commit_date": "2018-11-10 00:59:14",
+    "commit_message": "Bug 1469951 - Update homepage policy to include startpage. r=Felipe, a=lizzard",
+    "node": "6939caf7210e29ce6eeb6e83a74dd7fff99a3962"
+  },
+  "5": {
+    "commiter_name": "Tom Ritter <tom@mozilla.com>",
+    "commit_date": "2018-11-02 20:42:21",
+    "commit_message": "Bug 1491848 - Patch libyuv to fix the x86 mingw-clang build. r=jesup, a=lizzard  This patch combines the following upstream patches to fix the mingw build  https://chromium.googlesource.com/libyuv/libyuv/+/8fa02df3c%5E%21/ https://chromium.googlesource.com/libyuv/libyuv/+/d8680893ecfcffd952c7a5d0dc1878d1c486a4e4%5E%21/ https://chromium.googlesource.com/libyuv/libyuv/+/6e498475c749063485a046dfb24e1fa1a81cbedf%5E%21/",
+    "node": "1cab3104b7a66866c907d41438ab45532fcdc8ef"
+  },
+  "6": {
+    "commiter_name": "Jan de Mooij <jdemooij@mozilla.com>",
+    "commit_date": "2018-11-13 15:14:51",
+    "commit_message": "Bug 1505181 - Use canonical function in TypeNewScript::rollbackPartiallyInitializedObjects. r=bhackett, a=RyanVM",
+    "node": "ee204e26690e07dd6afe445ed30c7a026c2c29c0"
+  },
+  "7": {
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-13 19:47:03",
+    "commit_message": "Bug 1498765 - Clean up ContentParent::KillHard handling. r=mccr8, a=RyanVM  MessageChannel shouldn't need to care about PContent-specific details.",
+    "node": "a08c8493ba193add59c6236d6a1b4af4a64358d8"
+  },
+  "8": {
+    "commiter_name": "Henrik Skupin <mail@hskupin.info>",
+    "commit_date": "2018-11-12 21:59:45",
+    "commit_message": "Bug 1506643 - [marionette] Disable \"about:newtab\" page, and always load \"about:blank\". r=ato a=test-only  Differential Revision: https://phabricator.services.mozilla.com/D11691",
+    "node": "580a7ea06a11a09406447adc1be0b4d016c23cdb"
+  },
+  "9": {
+    "commiter_name": "Bas Schouten <bschouten@mozilla.com>",
+    "commit_date": "2018-09-03 16:16:28",
+    "commit_message": "Bug 1486415 - Ensure the SourceSurface stays alive for the duration of MarkIndependent. r=jrmuizel, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D4856",
+    "node": "ad2e4899a821f14b0eb6abb9a582f1d3172ac002"
+  },
+  "10": {
+    "commiter_name": "Dana Keeler <dkeeler@mozilla.com>",
+    "commit_date": "2018-10-22 22:52:10",
+    "commit_message": "Bug 1496736 - Check if we actually have a new key DB before removing the old one. r=jcj, a=lizzard  In bug 1475775, we added code to remove the old NSS key DB if the user has set a password on the grounds that the old DB could potentially be unencrypted and contain secrets. However, we did so with the assumption that we were using the new DB, which is not necessarily true when the system has been configured to always use the old DB, as with some RedHat products. This patch checks for the existence of the new DB before proceeding with deleting the old DB. Technically this isn't sufficient, because the new DB could be present even if we're not using it. However, we've already gone far into \"this configuration isn't supported\" territory.  Differential Revision: https://phabricator.services.mozilla.com/D9318",
+    "node": "3bed863ee656e34c7f1ec2c35765e0cdebca8545"
+  },
+  "11": {
+    "commiter_name": "Michael Kaply <mozilla@kaply.com>",
+    "commit_date": "2018-11-08 19:23:58",
+    "commit_message": "Bug 1493973 - Don't block devtools when block chrome URLs. r=felipe, a=lizzard",
+    "node": "2b140842f76221400d0291f5e1230aa6d156bd5f"
+  },
+  "12": {
+    "commiter_name": "Michael Kaply <mozilla@kaply.com>",
+    "commit_date": "2018-10-11 01:38:12",
+    "commit_message": "Bug 1463684 - Specify UTF-8 charset for policy search engines. r=Felipe, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D8144",
+    "node": "f27badd7938f81b636e922692abdf013543b1887"
+  },
+  "13": {
+    "commiter_name": "Michael Kaply <mozilla@kaply.com>",
+    "commit_date": "2018-11-10 00:25:56",
+    "commit_message": "Bug 1497549 - Add support for setting locale via policy. r=Felipe,zbraniecki, a=lizzard",
+    "node": "4983ed48535aeea7058c838fa81633faabab9661"
+  },
+  "14": {
+    "commiter_name": "Michael Kaply <mozilla@kaply.com>",
+    "commit_date": "2018-11-10 00:10:22",
+    "commit_message": "Bug 1493249 - Add policy for security devices. r=Felipe, a=lizzard",
+    "node": "b9c34e2086c23f68fcf76a1e8d969ac3e1832dc3"
+  },
+  "15": {
+    "commiter_name": "Tom Ritter <tom@mozilla.com>",
+    "commit_date": "2018-11-02 20:35:51",
+    "commit_message": "Bug 1475566 - Disable #pragma comments for MinGW Builds. r=glandium, a=lizzard  In the MinGW browser build job, we're going to use -fms-extensions, which will tell clang to start processing these comments. Clang cannot process them correctly (it's an upstream bug) but it doesn't need to, because we include the libs we need in moz.build files.  So we exclude them for MinGW builds. mingw-clang gets them wrong and mingw-gcc (which doesn't even work anymore on -central) ignored them.  In the future, with a llvm fix, we could clean up the moz.build files and re-enable these comments.",
+    "node": "d1c9b0924148c651f61c8305e71d21670876a472"
+  },
+  "16": {
+    "commiter_name": "Benjamin Bouvier <benj@benj.me>",
+    "commit_date": "2018-11-05 17:38:42",
+    "commit_message": "Bug 1503326. r=sunfish, r=nbp, a=RyanVM",
+    "node": "6398541ec3020e85f19dea412c5f4f7ceab33f65"
+  },
+  "17": {
+    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+    "commit_date": "2018-11-12 14:31:02",
+    "commit_message": "No Bug, mozilla-esr60 repo-update HSTS HPKP tld-suffixes - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D11630",
+    "node": "a5c1a73b5999be5959609e871f5e60660c332b40"
+  },
+  "18": {
+    "commiter_name": "Jordan Lund <jlund@mozilla.com>",
+    "commit_date": "2018-10-18 01:57:58",
+    "commit_message": "Bug 1499265 - Intermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container. r=aki a=tomprince  Intermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container  Differential Revision: https://phabricator.services.mozilla.com/D8925",
+    "node": "f2569ad7bd92f6830db24e97ca40878579d62cf6"
+  },
+  "19": {
+    "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+    "commit_date": "2018-10-19 18:44:47",
+    "commit_message": "Bug 1498626 - Fix google-play-string docker image build r=dustin  Fix google-play-string docker image build  Differential Revision: https://phabricator.services.mozilla.com/D9265",
+    "node": "ecc55f87f965c935ad2eabc6da681779722d60e3"
+  }
 }

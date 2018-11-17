@@ -1,431 +1,122 @@
 {
-  "node": "4666a1c322d8c9aa6128f6b8949074803116db83",
-  "changeset_count": 493003,
-  "changesets": [
-    {
-      "node": "4666a1c322d8c9aa6128f6b8949074803116db83",
-      "date": [
-        1542320652.0,
-        0
-      ],
-      "desc": "Automatic version bump CLOSED TREE NO BUG a=release",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "tip"
-      ],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "d0ee6cc33f6b47020556c1886b23094fdbbbb101"
-      ],
-      "pushid": 1860,
-      "pushdate": [
-        1542320663,
-        0
-      ]
-    },
-    {
-      "node": "d0ee6cc33f6b47020556c1886b23094fdbbbb101",
-      "date": [
-        1542320648.0,
-        0
-      ],
-      "desc": "No bug - Tagging 2085f7f22a53096e032c9c0a4931d282ed3f0d43 with FIREFOX_63_0_3_RELEASE a=release CLOSED TREE",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "fcf7ccebcc660e1a9da7dc554ec62d65a99dd3b4"
-      ],
-      "pushid": 1860,
-      "pushdate": [
-        1542320663,
-        0
-      ]
-    },
-    {
-      "node": "fcf7ccebcc660e1a9da7dc554ec62d65a99dd3b4",
-      "date": [
-        1542276477.0,
-        0
-      ],
-      "desc": "No Bug, mozilla-release repo-update blocklist remote-settings - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11998",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "ffxbld <ffxbld@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "d8336bc2c1e54e77285720606178e673be19f276"
-      ],
-      "pushid": 1859,
-      "pushdate": [
-        1542289308,
-        0
-      ]
-    },
-    {
-      "node": "d8336bc2c1e54e77285720606178e673be19f276",
-      "date": [
-        1542241228.0,
-        0
-      ],
-      "desc": "No bug - Tagging 2085f7f22a53096e032c9c0a4931d282ed3f0d43 with FIREFOX_63_0_3_BUILD1 a=release CLOSED TREE DONTBUILD",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-      "phase": "public",
-      "parents": [
-        "2085f7f22a53096e032c9c0a4931d282ed3f0d43"
-      ],
-      "pushid": 1858,
-      "pushdate": [
-        1542241237,
-        0
-      ]
-    },
-    {
-      "node": "2085f7f22a53096e032c9c0a4931d282ed3f0d43",
-      "date": [
-        1542214034.0,
-        0
-      ],
-      "desc": "Bug 1502410 - Don't use deleteBranch in Normandy. r=Gijs,adw, a=ritu\n\nnsIPrefBranch.deleteBranch doesn't work as documented when the preference's\ndefault value was set very early after Firefox has started, such as when\nNormandy sets startup branches. This is filed as bug 1505941. In order to work\naround this problem, this patch makes Normandy never use deleteBranch, except\nin tests where it is safe to do so.\n\nWith this patch, an experiment that is run on the default branch for a\npreference that does not have a default value in the tree cannot be promptly\nunenrolled, instead we must wait until the preference is naturally cleared when\nFirefox restarts. This is better than never unenrolling though.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11383",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [
-        "FIREFOX_63_0_3_BUILD1",
-        "FIREFOX_63_0_3_RELEASE"
-      ],
-      "user": "Michael Cooper <mcooper@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "056066d28f8a685510d25af9a2236f42e2f53fcd"
-      ],
-      "pushid": 1857,
-      "pushdate": [
-        1542231995,
-        0
-      ]
-    },
-    {
-      "node": "056066d28f8a685510d25af9a2236f42e2f53fcd",
-      "date": [
-        1541527087.0,
-        0
-      ],
-      "desc": "Bug 1504370 - Update SEARCH_COUNTS telemetry for private browsing mode. r=mkaply, a=pascalc\n\n* If a search is performed in a private window and the new pref `browser.engagement.search_counts.pbm` is true, then do not record `SEARCH_COUNTS` telemetry. Note that the the pref must be true. If it's false or doesn't exist, then we record telemetry even in pbm like we normally do currently. (We record `SEARCH_COUNTS` telemetry in two places: (1) In BrowserUsageTelemetry.jsm, and (2) \"in-content\" telemetry directly in the search service. So skip both of those places.)\n* Also skip the other ancillary telemetry recorded by `BrowserUsageTelemetry._recordSearch`: a keyed scalar and a telemetry event.\n* I made some modifications to the search service to let me test the \"in-content\" telemetry keys\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10851",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Drew Willcoxon <adw@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "7dc20948e0ff163e5a9825500544a467b920323e"
-      ],
-      "pushid": 1857,
-      "pushdate": [
-        1542231995,
-        0
-      ]
-    },
-    {
-      "node": "7dc20948e0ff163e5a9825500544a467b920323e",
-      "date": [
-        1542113733.0,
-        -3600
-      ],
-      "desc": "Bug 1505514 - geckoview artifacts don't specify branch when mozilla-release. r=snorp, a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11447",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Johan Lorenzo <jlorenzo@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "c7d6ec9d4a1c7312f60974b7a05755a08d0fa96f"
-      ],
-      "pushid": 1856,
-      "pushdate": [
-        1542227508,
-        0
-      ]
-    },
-    {
-      "node": "c7d6ec9d4a1c7312f60974b7a05755a08d0fa96f",
-      "date": [
-        1540315674.0,
-        0
-      ],
-      "desc": "Bug 1501351 - Gradle fails to download some artifacts even though bintray advertises it has them. r=nalexander, a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9553",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "3e36063212e3f68ea6be99f943fd89eb3db64983"
-      ],
-      "pushid": 1856,
-      "pushdate": [
-        1542227508,
-        0
-      ]
-    },
-    {
-      "node": "3e36063212e3f68ea6be99f943fd89eb3db64983",
-      "date": [
-        1542205766.0,
-        0
-      ],
-      "desc": "Bug 1506920 - [taskgraph] Track parent images in docker image digests. r=dustin, a=release\n\nThe digest for a docker image task did not include the digest for the parent\nimage in it, and so in particular did not depend on the versions of packages\nincluded in a parent image.\n\nIf two branches have a docker image with identical docker files, but different\nparents, this would lead to them both getting the same digest, leading to\nunexpected interference between the branches.\n\nThis fixes things by including the digest of the parent image as input into the\ndigest of child images.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11807",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Tom Prince <mozilla@hocat.ca>",
-      "phase": "public",
-      "parents": [
-        "1b78230f1e90aaec18928b98a3b555ccbfa25410"
-      ],
-      "pushid": 1855,
-      "pushdate": [
-        1542224108,
-        0
-      ]
-    },
-    {
-      "node": "1b78230f1e90aaec18928b98a3b555ccbfa25410",
-      "date": [
-        1542201151.0,
-        -7200
-      ],
-      "desc": "Bug 1498510 - Move nsICSPEventListener out of CSP object, r=ckerschb a=pascalc",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Andrea Marchesini <amarchesini@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "9ff7289af005bc97da4ce8ff49cd899f3898494e"
-      ],
-      "pushid": 1854,
-      "pushdate": [
-        1542201272,
-        0
-      ]
-    },
-    {
-      "node": "9ff7289af005bc97da4ce8ff49cd899f3898494e",
-      "date": [
-        1542126951.0,
-        -7200
-      ],
-      "desc": "Bug 1502748 - Back out of code which shouldn't have landed in bug 1308436. a=pascalc",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Paul Adenot <paul@paul.cx>",
-      "phase": "public",
-      "parents": [
-        "527b9e310603f6bd71d00caa757a30f2769f6895"
-      ],
-      "pushid": 1853,
-      "pushdate": [
-        1542127041,
-        0
-      ]
-    },
-    {
-      "node": "527b9e310603f6bd71d00caa757a30f2769f6895",
-      "date": [
-        1541624598.0,
-        0
-      ],
-      "desc": "Bug 1505520 - Back out bug 1478455. r=xidorn, a=pascalc\n\nIt breaks websites.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11232",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "public",
-      "parents": [
-        "5783aac8a1de4ea1b5667ea4df68b673f30ea9d3"
-      ],
-      "pushid": 1852,
-      "pushdate": [
-        1542123001,
-        0
-      ]
-    },
-    {
-      "node": "5783aac8a1de4ea1b5667ea4df68b673f30ea9d3",
-      "date": [
-        1541626701.0,
-        0
-      ],
-      "desc": "Bug 1503424 - Null-check NSWorkspaceAccessibilityDisplayOptionsDidChangeNotification before using it in order to fix a startup crash on 10.10. r=hiro, a=pascalc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11239",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Markus Stange <mstange@themasta.com>",
-      "phase": "public",
-      "parents": [
-        "62d17dbe09ab40325dc1fa8f35299ebfa4f05f4e"
-      ],
-      "pushid": 1852,
-      "pushdate": [
-        1542123001,
-        0
-      ]
-    },
-    {
-      "node": "62d17dbe09ab40325dc1fa8f35299ebfa4f05f4e",
-      "date": [
-        1541715318.0,
-        0
-      ],
-      "desc": "Bug 1504165 - Two Sponsored cards are wrongly displayed after increasing the number of Pocket recommendations. r=k88hudson, a=pascalc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11385",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "ScottDowne <scott.downe@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "b667a0520fe8fefd2befae05c94c3c54d7ca4845"
-      ],
-      "pushid": 1852,
-      "pushdate": [
-        1542123001,
-        0
-      ]
-    },
-    {
-      "node": "b667a0520fe8fefd2befae05c94c3c54d7ca4845",
-      "date": [
-        1540966380.0,
-        14400
-      ],
-      "desc": "Bug 1503354 - Disable background HTTP response throttling for causing visible regressions. r=dragana, a=pascalc",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Honza Bambas <honzab.moz@firemni.cz>",
-      "phase": "public",
-      "parents": [
-        "22273af49058a386f369d21f546321108290cb6a"
-      ],
-      "pushid": 1851,
-      "pushdate": [
-        1542121507,
-        0
-      ]
-    },
-    {
-      "node": "22273af49058a386f369d21f546321108290cb6a",
-      "date": [
-        1541009340.0,
-        14400
-      ],
-      "desc": "Bug 1503401 - Keep Firefox 63 building with newer cbindgen versions. r=boris, a=pascalc",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-      "phase": "public",
-      "parents": [
-        "810f1fec3cd0079f75d1e745a537f3fc9f53108c"
-      ],
-      "pushid": 1851,
-      "pushdate": [
-        1542121507,
-        0
-      ]
-    },
-    {
-      "node": "810f1fec3cd0079f75d1e745a537f3fc9f53108c",
-      "date": [
-        1542121398.0,
-        18000
-      ],
-      "desc": "Backed out changeset 67f5be8d6bbe (bug 1498510) for bustage.",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Ryan VanderMeulen <ryanvm@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "89d88d0951c3a86eef72ba6bef4264a861294eb2"
-      ],
-      "pushid": 1851,
-      "pushdate": [
-        1542121507,
-        0
-      ]
-    },
-    {
-      "node": "89d88d0951c3a86eef72ba6bef4264a861294eb2",
-      "date": [
-        1540929303.0,
-        0
-      ],
-      "desc": "Bug 1499896 - Clean up listeners to an empty array instead of null. r=mconley, a=pascalc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9047",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Felipe Gomes <felipc@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "bb7395925fabf7c36bec07bf6e297a2a95ba9701"
-      ],
-      "pushid": 1850,
-      "pushdate": [
-        1542117897,
-        0
-      ]
-    },
-    {
-      "node": "bb7395925fabf7c36bec07bf6e297a2a95ba9701",
-      "date": [
-        1540397426.0,
-        25200
-      ],
-      "desc": "Bug 1498934 - Fix handler app enumeration issue. r=Gijs, a=pascalc\n\nSince gioApps here is a plain nsIArray, it doesn't have any intrinsic type\ninformation, and we only get the correct interfaces if they've already been\nqueried. Adding an interface parameter to the enumerate() call fixes the\nissue.\n\nThis code is apparently untested, or incompletely tested.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9672",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Kris Maglione <maglione.k@gmail.com>",
-      "phase": "public",
-      "parents": [
-        "67f5be8d6bbe9d941f64f508120b7a6dca8f8bb7"
-      ],
-      "pushid": 1850,
-      "pushdate": [
-        1542117897,
-        0
-      ]
-    },
-    {
-      "node": "67f5be8d6bbe9d941f64f508120b7a6dca8f8bb7",
-      "date": [
-        1540275433.0,
-        -7200
-      ],
-      "desc": "Bug 1498510 - Move nsICSPEventListener out of CSP object. r=ckerschb, a=pascalc",
-      "branch": "default",
-      "bookmarks": [],
-      "tags": [],
-      "user": "Andrea Marchesini <amarchesini@mozilla.com>",
-      "phase": "public",
-      "parents": [
-        "967443c5bc7d9527659e63b5eda4ebf0290b507a"
-      ],
-      "pushid": 1850,
-      "pushdate": [
-        1542117897,
-        0
-      ]
-    }
-  ]
+  "0": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 00:24:12",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release",
+    "node": "4666a1c322d8c9aa6128f6b8949074803116db83"
+  },
+  "1": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-16 00:24:08",
+    "commit_message": "No bug - Tagging 2085f7f22a53096e032c9c0a4931d282ed3f0d43 with FIREFOX_63_0_3_RELEASE a=release CLOSED TREE",
+    "node": "d0ee6cc33f6b47020556c1886b23094fdbbbb101"
+  },
+  "2": {
+    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+    "commit_date": "2018-11-15 12:07:57",
+    "commit_message": "No Bug, mozilla-release repo-update blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D11998",
+    "node": "fcf7ccebcc660e1a9da7dc554ec62d65a99dd3b4"
+  },
+  "3": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-15 02:20:28",
+    "commit_message": "No bug - Tagging 2085f7f22a53096e032c9c0a4931d282ed3f0d43 with FIREFOX_63_0_3_BUILD1 a=release CLOSED TREE DONTBUILD",
+    "node": "d8336bc2c1e54e77285720606178e673be19f276"
+  },
+  "4": {
+    "commiter_name": "Michael Cooper <mcooper@mozilla.com>",
+    "commit_date": "2018-11-14 18:47:14",
+    "commit_message": "Bug 1502410 - Don't use deleteBranch in Normandy. r=Gijs,adw, a=ritu  nsIPrefBranch.deleteBranch doesn't work as documented when the preference's default value was set very early after Firefox has started, such as when Normandy sets startup branches. This is filed as bug 1505941. In order to work around this problem, this patch makes Normandy never use deleteBranch, except in tests where it is safe to do so.  With this patch, an experiment that is run on the default branch for a preference that does not have a default value in the tree cannot be promptly unenrolled, instead we must wait until the preference is naturally cleared when Firefox restarts. This is better than never unenrolling though.  Differential Revision: https://phabricator.services.mozilla.com/D11383",
+    "node": "2085f7f22a53096e032c9c0a4931d282ed3f0d43"
+  },
+  "5": {
+    "commiter_name": "Drew Willcoxon <adw@mozilla.com>",
+    "commit_date": "2018-11-06 19:58:07",
+    "commit_message": "Bug 1504370 - Update SEARCH_COUNTS telemetry for private browsing mode. r=mkaply, a=pascalc    If a search is performed in a private window and the new pref `browser.engagement.search_counts.pbm` is true, then do not record `SEARCH_COUNTS` telemetry. Note that the the pref must be true. If it's false or doesn't exist, then we record telemetry even in pbm like we normally do currently. (We record `SEARCH_COUNTS` telemetry in two places: (1) In BrowserUsageTelemetry.jsm, and (2) \"in-content\" telemetry directly in the search service. So skip both of those places.)   Also skip the other ancillary telemetry recorded by `BrowserUsageTelemetry._recordSearch`: a keyed scalar and a telemetry event.   I made some modifications to the search service to let me test the \"in-content\" telemetry keys  Differential Revision: https://phabricator.services.mozilla.com/D10851",
+    "node": "056066d28f8a685510d25af9a2236f42e2f53fcd"
+  },
+  "6": {
+    "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+    "commit_date": "2018-11-13 14:55:33",
+    "commit_message": "Bug 1505514 - geckoview artifacts don't specify branch when mozilla-release. r=snorp, a=release  Differential Revision: https://phabricator.services.mozilla.com/D11447",
+    "node": "7dc20948e0ff163e5a9825500544a467b920323e"
+  },
+  "7": {
+    "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+    "commit_date": "2018-10-23 20:27:54",
+    "commit_message": "Bug 1501351 - Gradle fails to download some artifacts even though bintray advertises it has them. r=nalexander, a=release  Differential Revision: https://phabricator.services.mozilla.com/D9553",
+    "node": "c7d6ec9d4a1c7312f60974b7a05755a08d0fa96f"
+  },
+  "8": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-11-14 16:29:26",
+    "commit_message": "Bug 1506920 - [taskgraph] Track parent images in docker image digests. r=dustin, a=release  The digest for a docker image task did not include the digest for the parent image in it, and so in particular did not depend on the versions of packages included in a parent image.  If two branches have a docker image with identical docker files, but different parents, this would lead to them both getting the same digest, leading to unexpected interference between the branches.  This fixes things by including the digest of the parent image as input into the digest of child images.  Differential Revision: https://phabricator.services.mozilla.com/D11807",
+    "node": "3e36063212e3f68ea6be99f943fd89eb3db64983"
+  },
+  "9": {
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-11-14 15:12:31",
+    "commit_message": "Bug 1498510 - Move nsICSPEventListener out of CSP object, r=ckerschb a=pascalc",
+    "node": "1b78230f1e90aaec18928b98a3b555ccbfa25410"
+  },
+  "10": {
+    "commiter_name": "Paul Adenot <paul@paul.cx>",
+    "commit_date": "2018-11-13 18:35:51",
+    "commit_message": "Bug 1502748 - Back out of code which shouldn't have landed in bug 1308436. a=pascalc",
+    "node": "9ff7289af005bc97da4ce8ff49cd899f3898494e"
+  },
+  "11": {
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-11-07 23:03:18",
+    "commit_message": "Bug 1505520 - Back out bug 1478455. r=xidorn, a=pascalc  It breaks websites.  Differential Revision: https://phabricator.services.mozilla.com/D11232",
+    "node": "527b9e310603f6bd71d00caa757a30f2769f6895"
+  },
+  "12": {
+    "commiter_name": "Markus Stange <mstange@themasta.com>",
+    "commit_date": "2018-11-07 23:38:21",
+    "commit_message": "Bug 1503424 - Null-check NSWorkspaceAccessibilityDisplayOptionsDidChangeNotification before using it in order to fix a startup crash on 10.10. r=hiro, a=pascalc  Differential Revision: https://phabricator.services.mozilla.com/D11239",
+    "node": "5783aac8a1de4ea1b5667ea4df68b673f30ea9d3"
+  },
+  "13": {
+    "commiter_name": "ScottDowne <scott.downe@gmail.com>",
+    "commit_date": "2018-11-09 00:15:18",
+    "commit_message": "Bug 1504165 - Two Sponsored cards are wrongly displayed after increasing the number of Pocket recommendations. r=k88hudson, a=pascalc  Differential Revision: https://phabricator.services.mozilla.com/D11385",
+    "node": "62d17dbe09ab40325dc1fa8f35299ebfa4f05f4e"
+  },
+  "14": {
+    "commiter_name": "Honza Bambas <honzab.moz@firemni.cz>",
+    "commit_date": "2018-10-31 08:13:00",
+    "commit_message": "Bug 1503354 - Disable background HTTP response throttling for causing visible regressions. r=dragana, a=pascalc",
+    "node": "b667a0520fe8fefd2befae05c94c3c54d7ca4845"
+  },
+  "15": {
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-10-31 20:09:00",
+    "commit_message": "Bug 1503401 - Keep Firefox 63 building with newer cbindgen versions. r=boris, a=pascalc",
+    "node": "22273af49058a386f369d21f546321108290cb6a"
+  },
+  "16": {
+    "commiter_name": "Ryan VanderMeulen <ryanvm@gmail.com>",
+    "commit_date": "2018-11-13 17:03:18",
+    "commit_message": "Backed out changeset 67f5be8d6bbe (bug 1498510) for bustage.",
+    "node": "810f1fec3cd0079f75d1e745a537f3fc9f53108c"
+  },
+  "17": {
+    "commiter_name": "Felipe Gomes <felipc@gmail.com>",
+    "commit_date": "2018-10-30 21:55:03",
+    "commit_message": "Bug 1499896 - Clean up listeners to an empty array instead of null. r=mconley, a=pascalc  Differential Revision: https://phabricator.services.mozilla.com/D9047",
+    "node": "89d88d0951c3a86eef72ba6bef4264a861294eb2"
+  },
+  "18": {
+    "commiter_name": "Kris Maglione <maglione.k@gmail.com>",
+    "commit_date": "2018-10-24 19:10:26",
+    "commit_message": "Bug 1498934 - Fix handler app enumeration issue. r=Gijs, a=pascalc  Since gioApps here is a plain nsIArray, it doesn't have any intrinsic type information, and we only get the correct interfaces if they've already been queried. Adding an interface parameter to the enumerate() call fixes the issue.  This code is apparently untested, or incompletely tested.  Differential Revision: https://phabricator.services.mozilla.com/D9672",
+    "node": "bb7395925fabf7c36bec07bf6e297a2a95ba9701"
+  },
+  "19": {
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-10-23 09:17:13",
+    "commit_message": "Bug 1498510 - Move nsICSPEventListener out of CSP object. r=ckerschb, a=pascalc",
+    "node": "67f5be8d6bbe9d941f64f508120b7a6dca8f8bb7"
+  }
 }

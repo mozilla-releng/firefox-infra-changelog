@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import json
 import re
 import requests
+
 # Create a Github instance:
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -11,16 +12,16 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 
 def create_git_md_table(repository_name):
     """
-    Uses 'project' and 'project_name' parameters to generate markdown tables for every json file inside 'git_files'.
-    :param project: Project name
-    :param project_name: used to display the repo name in the title row of the MD table
+    Uses 'repository_name' parameter to generate markdown tables for every json file inside 'git_files'.
+    :param project: repository_name
+    :param repository_name: used to display the repo name in the title row of the MD table
     :return: MD tables for every json file inside the git_files dir.
     """
 
     try:
         json_data = open(current_dir + "/git_files/" + "{}.json".format(repository_name)).read()
         data = json.loads(json_data)
-        base_table = '| Commit Number | Comiter | Commit Message | Commit Url | Date | \n' + \
+        base_table = '| Commit Number | Commiter | Commit Message | Commit Url | Date | \n' + \
                      '|:---:|:----:|:----------------------------------:|:------:|:----:| \n'
         tables = {}
         md_title = ['{} commit markdown table since {}'.format(repository_name, lastWeek)]
@@ -57,8 +58,56 @@ def create_git_md_table(repository_name):
     except FileNotFoundError:
         print("Json for {} is empty! Skipping!". format(repository_name))
 
+def create_hg_md_table(repository_name):
+    """
+    Uses 'repository_name' parameter to generate markdown tables for every json file inside 'hg_files'.
+    :param project: repository_name
+    :param repository_name: used to display the repo name in the title row of the MD table
+    :return: MD tables for every json file inside the hg_files dir.
+    """
 
-def filter_commit_data(repository_name, repository_team):
+    try:
+        json_data = open(current_dir + "/hg_files/" + "{}.json".format(repository_name)).read()
+        data = json.loads(json_data)
+        base_table = '| Commit Number | Commiter | Commit Message | Node | Date | \n' + \
+                     '|:---:|:----:|:----------------------------------:|:------:|:----:| \n'
+        tables = {}
+        md_title = ['{} commit markdown table since {}'.format(repository_name, lastWeek)]
+        commit_number_list = [key for key in data]
+
+        for repo in md_title:
+            tables[repo] = base_table
+
+        for key in data:
+            commit_number = commit_number_list[-1]
+            commiter = data[key]['commiter_name']
+            date = data[key]['commit_date']
+            message = data[key]['commit_message']
+            node = data[key]['node']
+
+            row = "|" + commit_number + \
+                    "|" + commiter + \
+                    "|" + message + \
+                    "|" + node + \
+                    "|" + date + '\n'
+
+            del commit_number_list[-1]
+            for repo in tables.keys():
+                tables[repo] = tables[repo] + row
+
+        md_file_name = '{}.md'.format(repository_name)
+        md_file = open(current_dir + "/hg_files/" + md_file_name, 'w')
+
+        for key, value in tables.items():
+            if value != base_table:
+                md_file.write('## ' + key.upper() + '\n\n')
+                md_file.write(value + '\n\n')
+        md_file.close()
+    except FileNotFoundError:
+        print("Json for {} is empty! Skipping!".format(repository_name))
+
+
+def filter_git_commit_data(repository_name, repository_team):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
@@ -96,6 +145,42 @@ def filter_commit_data(repository_name, repository_team):
         json.dump(repo_dict, json_file, indent=2)
         json_file.close()
 
+def filter_hg_commit_data(repository_url, push_type):
+    """
+    This function takes a repository url and push type and returns a dictionary that contains changes in that specific
+    repository.
+    The HG API also supports xml and rss.
+    Example:
+    example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
+    This will be later used to get the commits from https://hg.mozilla.org/
+    :param repository_url: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
+    :param push_type: would probably be "json-log" most of the time.
+    :return: returns a dictionary that contains the commits in the provided hg_repository_name
+    """
+    if push_type == "json-log":
+        request_url = repository_url + push_type
+    else:
+        print("Feature not implemented. Please use \"json-log\".")
+    r = requests.get(request_url)
+    p = r.json()
+    changelog = {}
+    commit_number = 0
+    for keys in p['changesets']:
+        commit = {}
+        timestamp = keys['date'][0]
+        value = datetime.fromtimestamp(timestamp)
+        commit_date = value.strftime('%Y-%m-%d %H:%M:%S')
+        commiter_name = (keys['user'])
+        commit_message = keys['desc']
+        message = re.sub('[*\n\r]', ' ', commit_message)
+        commit_node = keys['node']
+        commit.update({'commiter_name': commiter_name,
+                        'commit_date': commit_date,
+                        'commit_message': message,
+                        'node': commit_node})
+        changelog.update({commit_number: commit})
+        commit_number += 1
+    return changelog
 
 def hg_timestamps_handler(timestamp, timezone):
     """
@@ -117,43 +202,22 @@ def hg_timestamps_handler(timestamp, timezone):
         ts = int(timestamp[:-2]) + int(timezone)
     return datetime.utcfromtimestamp(ts).strftime("%m-%d-%Y %H:%M:%S")
 
-
-def get_hg_changes(repository_name, push_type):
-    """
-    This function takes a repository and push type and returns a json object that contains changes in that specific
-    repository.
-    The HG API also supports xml and rss.
-    Example:
-    example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
-    This will be later used to get the commits from https://hg.mozilla.org/
-    :param repository_name: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
-    :param push_type: would probably be "json-log" most of the time.
-    :return: returns a json that contains the commits in the provided hg_repository_name
-    """
-    if push_type == "json-log":
-        request_url = repository_name + push_type
-        push_response = requests.get(request_url)
-        hg_changes_result = push_response.json()
-    else:
-        print("Feature not implemented. Please use \"json-log\".")
-    return hg_changes_result
-
-
 def create_files_for_hg():
     """
-    Main HG function. takes every Mercurial repo from repositories.json and writes all the commit data of each repo in a
-    separate json file
-    :return: the end result is a .json file for every HG repository. can be found inside hg_files/
+    Main HG function. Takes every Mercurial repo from repositories.json and writes all the commit data of each repo in a
+    separate json file and generates a MD file for each repo as well.
+    :return: the end result is a .json and a .md file for every git repository. can be found inside hg_files/
     """
     for repo in repositories["Mercurial"]:
         repository_url = repositories["Mercurial"][repo]["url"]
         repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
         repository_name = repo
-        hg_changes = get_hg_changes(repository_url, repository_push_type)
+        hg_changes = filter_hg_commit_data(repository_url, repository_push_type)
         hg_json_name = "./hg_files/" + "{}.json".format(repository_name)
         with open(hg_json_name, "w") as json_file:
             json.dump(hg_changes, json_file, indent=2)
         json_file.close()
+        create_hg_md_table(repository_name)
 
 def create_files_for_git():
     """
@@ -164,7 +228,7 @@ def create_files_for_git():
     for repo in repositories["Github"]:
         repository_name = repo
         repository_team = repositories["Github"][repo]["team"]
-        filter_commit_data(repository_name, repository_team)
+        filter_git_commit_data(repository_name, repository_team)
         create_git_md_table(repository_name)
 
 
