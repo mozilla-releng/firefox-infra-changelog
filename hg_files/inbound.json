@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Johann Hofmann <jhofmann@mozilla.com>",
-    "commit_date": "2018-11-06 21:29:10",
-    "commit_message": "Bug 1501991 - Add a sub-panel for Trackers in the control center. r=Ehsan,Jamie  Differential Revision: https://phabricator.services.mozilla.com/D11611",
-    "node": "8b5f41cdab35e46c086655a05a11d76220eaddfb"
+    "commiter_name": "Robert Strong <robert.bugzilla@gmail.com>",
+    "commit_date": "2018-11-19 17:33:33",
+    "commit_message": "Bug 1506917 - Don't attempt to check for updates from Firefox's nsBrowserGlue.js when running tests. r=ted This adds the app.update.checkInstallTime pref with a value of false in all tests that have the app.update.disabledForTesting pref except for geckodriver which is covered by bug 1508283.",
+    "node": "b1c306693151539e0772bf462cea6ac9f22194d2"
   },
   "1": {
-    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
-    "commit_date": "2018-11-17 15:48:18",
-    "commit_message": "Bug 1506798 - Fix possible data race updating scope object during compacting GC r=pbone",
-    "node": "764c5b94a3950791427e782e59e3e826921cffac"
+    "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+    "commit_date": "2018-11-19 17:28:15",
+    "commit_message": "Bug 1507502 - Check for correct installed package when running mach wpt --package; r=kwierso",
+    "node": "db64bea68bf3b21691d7643215f03834cb924240"
   },
   "2": {
-    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
-    "commit_date": "2018-11-17 15:48:18",
-    "commit_message": "Bug 1506954 - Don't attempt to protect relocated pages on systems that don't support this r=pbone",
-    "node": "7211db666d5981232551d291392238de37726f23"
+    "commiter_name": "Ryan VanderMeulen <ryanvm@gmail.com>",
+    "commit_date": "2018-11-19 17:08:36",
+    "commit_message": "Bug 1508275 - Update pdf.js to version 2.1.70. r=bdahl",
+    "node": "01f5b38c0cb71cc9c31fc2c372cf68c1c3c750e6"
   },
   "3": {
-    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-    "commit_date": "2018-11-17 13:27:24",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "node": "e4deec61fc8c80ecc94d4493df37a399b5a56235"
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-11-19 17:02:23",
+    "commit_message": "Bug 1507171 - Cleanup data on shutdown just for http, https and file URLs, r=johannh",
+    "node": "3b2da7e798ead163fc55d463bee46682d65d64ec"
   },
   "4": {
-    "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
-    "commit_date": "2018-11-17 10:43:14",
-    "commit_message": "Backed out changeset 85963f594697 (bug 1504343) for HTMLMarqueeElement.cpp build bustages CLOSED TREE",
-    "node": "efc1da42132b231dbdbfe8b06d19bfee1028dbd7"
+    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+    "commit_date": "2018-11-19 16:54:04",
+    "commit_message": "Bug 1506730 - remove PLDHashTable::Iterator::mStart; r=njn  We only use its value in one place, and said value is easily computable from readily available information.  This change makes iterators slightly smaller.",
+    "node": "640b09ec036ea40e164b2193172bf247475d9930"
   },
   "5": {
-    "commiter_name": "Timothy Guan-tin Chien <timdream@gmail.com>",
-    "commit_date": "2018-11-17 08:29:41",
-    "commit_message": "Bug 1504343 - Convert xbl-marquee to UA Widget r=bgrins,bzbarsky  This patch moves the marquee bindings from xbl-marquee.xml to marquee.js and converts them to a UA Widget.  The contenteditable bindings are dropped, replaced with a styling rule that will fix the position of the scrolling text.  Inline styles have been moved to the stylesheet so usage of display: -moz-box can continue to be parsed.  test_bug840098.html is deleted because it is only valid under the context of in-content XBL bindings.  Differential Revision: https://phabricator.services.mozilla.com/D10385",
-    "node": "85963f594697920ec6503c63deb45eb41e2b5ec0"
+    "commiter_name": "Luke Schwalfenberg <lschwalfenberg@gmail.com>",
+    "commit_date": "2018-11-19 15:52:08",
+    "commit_message": "Bug 1497725 - Add a search field to the new \"about:config\" page. r=paolo  Differential Revision: https://phabricator.services.mozilla.com/D11843",
+    "node": "4ef55dde9b9310f0f1060943700a76955b94d688"
   },
   "6": {
-    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
-    "commit_date": "2018-11-17 02:58:26",
-    "commit_message": "Bug 1506687 Part 2: Add a test of FlexItemValues frameRect property. r=dholbert  Depends on D12182  Differential Revision: https://phabricator.services.mozilla.com/D12183",
-    "node": "fc6057313da6c8c9f87ed4eb2e86c96f21d18657"
+    "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+    "commit_date": "2018-11-19 15:08:03",
+    "commit_message": "Bug 1508253 - Fix wpt metadata update, r=gsnedders ",
+    "node": "58d0df7129383a0984e87ea333d6b6ea198a8b55"
   },
   "7": {
-    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
-    "commit_date": "2018-11-17 02:56:51",
-    "commit_message": "Bug 1506687 Part 1: Make FlexItemValues also provide the item's frame rect. r=dholbert  Differential Revision: https://phabricator.services.mozilla.com/D12182",
-    "node": "04f110532f4974387e48a3272fe219188299b205"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-15 12:15:36",
+    "commit_message": "Bug 1507401 - [wpt-sync] Update web-platform-tests to f082fd63300fec7b6201cf5e0eaf0944ee7ccb6e, a=testonly  wpt-head: f082fd63300fec7b6201cf5e0eaf0944ee7ccb6e wpt-type: landing ",
+    "node": "f3c83031b453d733501d8db59ebd17e78e191f35"
   },
   "8": {
-    "commiter_name": "Francesco Lodolo (:flod) <flod@lodolo.net>",
-    "commit_date": "2018-11-17 09:15:57",
-    "commit_message": "Bug 1507468 - Add 'trs' to Firefox Nightly build r=Pike  Differential Revision: https://phabricator.services.mozilla.com/D12208",
-    "node": "cbc3383c8831ef6723d76dba67f6d3b325119517"
+    "commiter_name": "Anders Hartvoll Ruud <andruud@chromium.org>",
+    "commit_date": "2018-11-15 12:15:22",
+    "commit_message": "Bug 1506956 [wpt PR 14039] - [css-properties-values-api] Support fallbacks., a=testonly  Automatic update from web-platform-tests[css-properties-values-api] Support fallbacks.  According to css-variables-1, any custom property that participates in a cycle is invalid. This also applies to registered custom properties. In the current implementation, however, registered custom properties with an initial value can not become invalid; they compute to their initial value instead, as provided by registerProperty. A consequence of this, is that fallbacks (specified by var()-references) are never triggered if the referenced property is a registered property with an initial value defined.  The value for any unregistered custom property, if no other value is specified, is the invalid initial value described by css-variables-1. This means we can just avoid storing the variable on ComputedStyle, to signify the invalid initial value.  However, the value for any registered custom property, if no other value is specified, can be the initial value specified by registerProperty. When there is no value explicitly stored on ComputedStyle, we check StyleInitialData and fetch the initial value from there. Hence, we can not use the absence of a value to signify an invalid registered variable, as we already use this state to mean \"initial value from registerProperty\". This means that we must explicitly store a value for registered properties that participate in a cycle. This CL adds CSSInvalidVariableValue to do this.     When resolving a registered custom property, if a cycle is detected, set    the registered value to CSSInvalidVariableValue.    When looking up a registered custom property, if we already have the    value CSSInvalidVariableValue, return nullptr instead of initial data.    This triggers fallbacks.    The code that set the cycle_detected flag was weird; a cycle could be    marked as detected, even though ResolveTokenRange succeeded. This meant    that any custom property which referenced a property in a cycle would    also be treated as part of the cycle, which is wrong. Fixed by only    setting the cycle_detected flag when we have cycle start points.    CSSInterpolationType did not initialize its cycle_detected variable,    which led to undefined behavior.  R=futhark@chromium.org  Bug: 641877 Change-Id: I2c518b176de26f7b2f05b36b568041a228fcb0ea Reviewed-on: https://chromium-review.googlesource.com/c/1333758 Commit-Queue: Anders Ruud <andruud@chromium.org> Reviewed-by: Rune Lillesveen <futhark@chromium.org> Cr-Commit-Position: refs/heads/master@{#608014}  --  wpt-commits: f082fd63300fec7b6201cf5e0eaf0944ee7ccb6e wpt-pr: 14039 ",
+    "node": "499050dcc920fd05ded045c1d837fc181e024215"
   },
   "9": {
-    "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
-    "commit_date": "2018-11-17 08:43:23",
-    "commit_message": "Backed out changeset d98cb4a0498c so it's erased from the repo CLOSED TREE",
-    "node": "59eef38dd5eb6e3fec883a60b790e9ac1a71c675"
+    "commiter_name": "Youenn Fablet <youennf@gmail.com>",
+    "commit_date": "2018-11-15 12:15:11",
+    "commit_message": "Bug 1503287 [wpt PR 13784] - Move getDisplayMedia to MediaDevices, a=testonly  Automatic update from web-platform-testsMove getDisplayMedia to MediaDevices  -- Merge pull request #13784 from youennf/move-getDisplayMedia-to-MediaDevices  Move getDisplayMedia to MediaDevices --  wpt-commits: 08eff2d0b1ba1deec04f6eb154036bb7f86acfe5, 0e1c7257baef0329be409632de2e13bf001bc95c wpt-pr: 13784 ",
+    "node": "e27d257fa11474bb5ce26458da2538838f36dfad"
   },
   "10": {
-    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
-    "commit_date": "2018-11-17 08:05:47",
-    "commit_message": "No bug - Dummy push the see if the docker images will rerun. CLOSED TREE",
-    "node": "d98cb4a0498c0cdd8b7bcd1b2d62b75b797b0758"
+    "commiter_name": "Stephen Chenney <schenney@chromium.org>",
+    "commit_date": "2018-11-15 12:15:08",
+    "commit_message": "Bug 1507028 [wpt PR 14042] - Fix background image painting of very small images, a=testonly  Automatic update from web-platform-testsFix background image painting of very small images  The background image fast path painting rounds the image src rect to integer sizes assuming sprite maps and/or reasonably large images. When a very small image is used scaled up to a large size (such as constant color images scaled up to form progress bars by animating background size) the src rect may be 1 x [small number] which gets rounded to zero size.  This patch changes the code to detect this situation and not round in such cases.  It's worth recording that an alternate approach is to detect when the rounding results in a significant change in src rect and always switch to unrounded in that case. But it would be more expensive for a relatively uncommon case.  R=fmalita BUG=904042  Change-Id: I24657a5d087c0dda0fd8a5e3c3d08e1e4eb02473 Reviewed-on: https://chromium-review.googlesource.com/c/1334291 Reviewed-by: Florin Malita <fmalita@chromium.org> Commit-Queue: Stephen Chenney <schenney@chromium.org> Cr-Commit-Position: refs/heads/master@{#607901}  --  wpt-commits: e1a59fb1af26d892ffee739205d1ab536d0d2819 wpt-pr: 14042 ",
+    "node": "2cf0908137dffa2af5418437f6326a788904529e"
   },
   "11": {
-    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
-    "commit_date": "2018-11-17 05:20:03",
-    "commit_message": "Backed out changeset b3412b91afe2 (bug 1501796) for causing Valgrind build bustage. CLOSED TREE",
-    "node": "e3f7bc3a94a158807643cdc0b3253e469e529f0f"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-09 22:59:00",
+    "commit_message": "Bug 1506155 [wpt PR 14005] - Update wpt metadata, a=testonly  wpt-pr: 14005 wpt-type: metadata ",
+    "node": "3c52e2cd8b4878b4485ff69c5a8522faff5b889f"
   },
   "12": {
-    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
-    "commit_date": "2018-11-17 05:05:53",
-    "commit_message": "Backed out 2 changesets (bug 1506687) for causing mochitest mass failures. CLOSED TREE  Backed out changeset f93f179fb3b4 (bug 1506687) Backed out changeset d8230f3fdd2c (bug 1506687)",
-    "node": "b3ca607f2595dba7b94124868581c62a9fce668d"
+    "commiter_name": "Fran\u00e7ois Beaufort <beaufort.francois@gmail.com>",
+    "commit_date": "2018-11-15 12:15:04",
+    "commit_message": "Bug 1506155 [wpt PR 14005] - [Picture-in-Picture] Move mediastream test to wpt., a=testonly  Automatic update from web-platform-tests[Picture-in-Picture] Move mediastream test to wpt.  Change-Id: I6edc955ecd0d7f821d642bab0f66a6f25882c098 Reviewed-on: https://chromium-review.googlesource.com/c/1329141 Reviewed-by: Mounir Lamouri <mlamouri@chromium.org> Commit-Queue: Fran\u00e7ois Beaufort <beaufort.francois@gmail.com> Cr-Commit-Position: refs/heads/master@{#607837}  --  wpt-commits: 53ef64dc2983dce0efe37016cdaee3b3ad279305 wpt-pr: 14005 ",
+    "node": "3a19e3b216540bee96046d51972ccefbf914fc59"
   },
   "13": {
-    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
-    "commit_date": "2018-11-17 04:39:49",
-    "commit_message": "Backed out changeset 26933ef9fa13 (bug 1506323) for landing the wrong patch.",
-    "node": "22e8321b69f180a1d74975fd8f162326a49d0efe"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-06 03:51:56",
+    "commit_message": "Bug 1504855 [wpt PR 13931] - Update wpt metadata, a=testonly  wpt-pr: 13931 wpt-type: metadata ",
+    "node": "83659439ad427fc9de071023c21c2788730ed1e2"
   },
   "14": {
-    "commiter_name": "James Teh <jteh@mozilla.com>",
-    "commit_date": "2018-11-17 04:38:27",
-    "commit_message": "Bug 1506787: Support tabindex attribute (including value -1) on non-control XUL elements. r=smaug  Previously, the tabindex attribute wasn't supported on non-control XUL elements at all. The only way to make those focusable was to use -moz-user-focus: normal. However, that caused the element to be included in the tab order; there was no way to make it focusable but not tabbable. This can now be achieved using tabindex=\"-1\". This will primarily be useful for buttons on toolbars, which will be grouped under a single tab stop for efficiency.  For consistency, this also changes the behaviour of tabindex=\"-1\" with -moz-user-focus: ignore on XUL controls. Previously, -moz-user-focus: ignore would override tabindex=\"-1\", making the element unfocusable. Now, the tabindex attribute always overrides if explicitly specified.  Differential Revision: https://phabricator.services.mozilla.com/D12000",
-    "node": "38844846c6ae6773afb8b9254bf3dbfec437d1ec"
+    "commiter_name": "Steve Anton <steveanton@chromium.org>",
+    "commit_date": "2018-11-15 12:14:59",
+    "commit_message": "Bug 1504855 [wpt PR 13931] - Implement RTCQuicStream.write(), a=testonly  Automatic update from web-platform-testsImplement RTCQuicStream.write()  Bug: 874296 Change-Id: I1786acb3b64fa0450e76fe27300c178081d1e191 Reviewed-on: https://chromium-review.googlesource.com/c/1285528 Commit-Queue: Steve Anton <steveanton@chromium.org> Reviewed-by: Henrik Bostr\u00f6m <hbos@chromium.org> Cr-Commit-Position: refs/heads/master@{#607708}  --  wpt-commits: 7201104211385809c4c53914834f7fe5c7a8b425 wpt-pr: 13931 ",
+    "node": "094c1fb83a5b4200880306b856858306702ec057"
   },
   "15": {
-    "commiter_name": "Philip Chimento <philip.chimento@gmail.com>",
-    "commit_date": "2018-11-16 17:30:28",
-    "commit_message": "Bug 1506324 - Add JS::DefaultGlobalClassOps to JSAPI. r=jorendorff  This also adds a js::ClassOps variant, js::DefaultGlobalClassOps which can be used in js::Class.  Depends on D11569  Differential Revision: https://phabricator.services.mozilla.com/D11570",
-    "node": "7be95c95a3a7254bcff022190ab2be27ca27ac50"
+    "commiter_name": "Fran\u00e7ois Beaufort <beaufort.francois@gmail.com>",
+    "commit_date": "2018-11-15 12:14:57",
+    "commit_message": "Bug 1506897 [wpt PR 14035] - [Picture-in-Picture] Fix shadow dom crash when exiting PiP., a=testonly  Automatic update from web-platform-tests[Picture-in-Picture] Fix shadow dom crash when exiting PiP.  This CL fixes a tab crash that occurs when calling document.exitPictureInPicture() if a video in a shadow DOM is already in Picture-in-Picture.  Bug: 904828  Change-Id: I6aed0fa43dd0af1406d4349509101d423f622d96 Reviewed-on: https://chromium-review.googlesource.com/c/1333769 Reviewed-by: Mounir Lamouri <mlamouri@chromium.org> Commit-Queue: Fran\u00e7ois Beaufort <beaufort.francois@gmail.com> Cr-Commit-Position: refs/heads/master@{#607658}  --  wpt-commits: ef5a7d3d1423bcd7a009c7b1b804b928d284289d wpt-pr: 14035 ",
+    "node": "bd21964c53be33cc50ff8762416fe623aa0829f6"
   },
   "16": {
-    "commiter_name": "Philip Chimento <philip.chimento@gmail.com>",
-    "commit_date": "2018-11-15 18:28:03",
-    "commit_message": "Bug 1506323 - Add JS::PrintError to public API. r=tcampbell  Depends on D11568  Differential Revision: https://phabricator.services.mozilla.com/D11569",
-    "node": "26933ef9fa13275dd7005d1db78f5268008c25b0"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-14 02:47:08",
+    "commit_message": "Bug 1506940 [wpt PR 14038] - Update wpt metadata, a=testonly  wpt-pr: 14038 wpt-type: metadata ",
+    "node": "9c60d16c8fb338e68718394796205a6a4e16ad5f"
   },
   "17": {
-    "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
-    "commit_date": "2018-11-17 02:38:50",
-    "commit_message": "Bug 1501796 - Add nasm to debian7-build dockerfile. r=glandium  Differential Revision: https://phabricator.services.mozilla.com/D9747",
-    "node": "b3412b91afe2f6fabaf3a9b13c65e8ee45d9c1b4"
+    "commiter_name": "Fredrik S\u00f6derquist <fs@opera.com>",
+    "commit_date": "2018-11-15 12:14:53",
+    "commit_message": "Bug 1506940 [wpt PR 14038] - Fixes and tweaks to wpt/css/filter-effects/, a=testonly  Automatic update from web-platform-testsFixes and tweaks to wpt/css/filter-effects/  filter-contrast-003.html    Adjust the color from #400000 to #3f0000, since (0x40 / 255) is just   over 0.25 and can after filtering and rounding end up above 0.   (0x3f / 255) on the other hand is just below 0.25 and the result will   be clamped to zero.  filter-external-001-test.html filter-external-002-test.html    Change the hue-rotate parameter in the external file from 120 to 150.   Move the file to support/ and remove lint entry.   Make both filters operate in sRGB to make computing the reference   easier. Use rgb(...) notation with percentage values in reference.  fecolormatrix-type.html    Add color-interpolation-filters=sRGB to the filter to make it easier   to reason about what the result should be. Use rgba(...) notation in   the ref using percentage notation.  filters-test-brightness-003.html    Add 'filter: brightness(0)' before 'filter: brightness()' to properly   test if the \"no argument\" notation is considered valid by the parser.  filter-grayscale-001.html filter-grayscale-002.html filter-grayscale-003.html filter-grayscale-004.html filter-grayscale-005.html    Remove the \" (and not blue)\" text from the reference and update the   001,004 and 005 tests accordingly.  css-filters-animation-saturate.html    Interpolate the argument from 4900% rather than 5000% to end at the   ref's 2500% (25).  css-filters-animation-hue-rotate.html    Sample the animation at .5 to match the expectation.  css-filters-animation-drop-shadow.html    Use explicit rgba(...) in the ref rather than the keyword 'gray'.   We're interpolating the color of the drop-shadow from 'black'   (rgba(0, 0, 0, 1)) to 'transparent' (rgba(0, 0, 0, 0)) here, so it's   better and more accurate to describe the color as \"semi-transparent   black\" (rgba(0, 0, 0, 0.5)).  css-filters-animation-combined-001.html    Initial value for animation for 'opacity(...)' is '1' - not zero.   Change test to interpolate from 0 -> 1 (rather than 1 -> 1)  Bug: 903383 Change-Id: I4d0113989414616494b98c22fbac817f007cd762 Reviewed-on: https://chromium-review.googlesource.com/c/1333816 Reviewed-by: Stephen Chenney <schenney@chromium.org> Commit-Queue: Fredrik S\u00f6derquist <fs@opera.com> Cr-Commit-Position: refs/heads/master@{#607628}  --  wpt-commits: 4cf6f845d427b856b1d7557aeaf02c199e6e1d81 wpt-pr: 14038 ",
+    "node": "d16af01833d24047cb3853e1e0d7214111c9a572"
   },
   "18": {
-    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
-    "commit_date": "2018-11-17 02:58:26",
-    "commit_message": "Bug 1506687 Part 2: Add a test of FlexItemValues frameRect property. r=dholbert  Depends on D12182  Differential Revision: https://phabricator.services.mozilla.com/D12183",
-    "node": "f93f179fb3b46ea0b3612c21db6cf0a044c03ec0"
+    "commiter_name": "Anne van Kesteren <annevk@annevk.nl>",
+    "commit_date": "2018-11-15 12:14:51",
+    "commit_message": "Bug 1504103 [wpt PR 13849] - Fetch: Access-Control-Expose-Headers parsing, a=testonly  Automatic update from web-platform-testsFetch: Access-Control-Expose-Headers parsing  See https://github.com/whatwg/fetch/issues/814 for context. --  wpt-commits: 645c0e8a5c028a613e7ad1732834100dbe946fc7 wpt-pr: 13849 ",
+    "node": "b12ab8efbefe006789483f40036d4b1fe8eab05f"
   },
   "19": {
-    "commiter_name": "Brad Werth <bwerth@mozilla.com>",
-    "commit_date": "2018-11-17 02:56:51",
-    "commit_message": "Bug 1506687 Part 1: Make FlexItemValues also provide the item's frame rect. r=dholbert  Differential Revision: https://phabricator.services.mozilla.com/D12182",
-    "node": "d8230f3fdd2c3ecea4771ebe98c83be6e3ebcbfc"
+    "commiter_name": "Ms2ger <Ms2ger@gmail.com>",
+    "commit_date": "2018-11-15 12:14:48",
+    "commit_message": "Bug 1500491 [wpt PR 13623] - Python 3: Fix test_set_cookie., a=testonly  Automatic update from web-platform-testsPython 3: Fix test_set_cookie. (#13623)  --  wpt-commits: 43b98d280dc40e98d6414b266ec3fcc87156d5fe wpt-pr: 13623 ",
+    "node": "623c8426e847a513088ec0c9908488774b58f7ba"
   }
 }

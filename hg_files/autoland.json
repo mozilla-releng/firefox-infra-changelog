@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-    "commit_date": "2018-11-16 22:31:50",
-    "commit_message": "Bug 1507101 - Use StyleChildrenIterator instead of custom frame tree walking code to handle NAC inside shadow dom. r=smaug  There are lots of frames which create anonymous content (like scrollframes, which generate scrollbars) but for which this code was wrong.  Use StyleChildrenIterator which has a defined order between NAC and flattened tree. I've verified this doesn't break tabbing through input type=\"date\" with UA widget disabled, fwiw.  Differential Revision: https://phabricator.services.mozilla.com/D12152",
-    "node": "5322e59f933edee69fa4a848e1709d7c21a4552b"
+    "commiter_name": "Andreas Farre <farre@mozilla.com>",
+    "commit_date": "2018-11-19 17:57:27",
+    "commit_message": "Bug 1506852 - Make sure to also clear opener in BrowsingContext. r=peterv  When calling nsGlobalWindowOuter::SetOpenerWindow with null we should make sure to also clear BrowsingContext::mOpener.  Differential Revision: https://phabricator.services.mozilla.com/D11769",
+    "node": "87037e14247bbd23e32dd9084262b5aabe9bbf8d"
   },
   "1": {
-    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-    "commit_date": "2018-11-17 13:30:31",
-    "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
-    "node": "7e6b465b73dc86606661742771441bceea83e310"
+    "commiter_name": "Andreas Farre <farre@mozilla.com>",
+    "commit_date": "2018-11-19 17:59:04",
+    "commit_message": "Bug 1507168 - Only assert if window isn't being torn down. r=peterv  Differential Revision: https://phabricator.services.mozilla.com/D12258",
+    "node": "17edafa646aef9ba5f1bb13d5dbff7cba3145700"
   },
   "2": {
-    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-    "commit_date": "2018-11-17 13:27:24",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "node": "e4deec61fc8c80ecc94d4493df37a399b5a56235"
+    "commiter_name": "Agi Sferro <agi@mozilla.com>",
+    "commit_date": "2018-11-19 18:03:55",
+    "commit_message": "Bug 1506267 - Add android-api-lint to automation; r=nalexander  Depends on D11821  Differential Revision: https://phabricator.services.mozilla.com/D12166",
+    "node": "655a4ddc4212cfcbc835dca5d643af7309573c39"
   },
   "3": {
-    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-    "commit_date": "2018-11-17 10:57:43",
-    "commit_message": "Bug 1508026 - Cherry-pick some changes to malloc_size_of's Cargo.toml. ",
-    "node": "600d7689bd5316f12bee1c030f93bdb2af5eab8d"
+    "commiter_name": "Agi Sferro <agi@mozilla.com>",
+    "commit_date": "2018-11-19 18:03:43",
+    "commit_message": "Bug 1506267 - Use apilint to track API changes in api.txt. r=snorp,nalexander.  Depends on D12047  Differential Revision: https://phabricator.services.mozilla.com/D11821",
+    "node": "04afa20040846c14349b9015cd0089ec0b0aad85"
   },
   "4": {
-    "commiter_name": "CYBAI <cyb.ai.815@gmail.com>",
-    "commit_date": "2018-11-11 08:26:06",
-    "commit_message": "Bug 1508026 - Fix wrong spec link. r=emilio  This cherry-picks servo/servo#22172. ",
-    "node": "c23d6003a3c3a37f523437afedc7e2914c9e194a"
+    "commiter_name": "Agi Sferro <agi@mozilla.com>",
+    "commit_date": "2018-11-19 18:03:33",
+    "commit_message": "Bug 1506267 - Add plugins.gradle.com to Nexus. r=nalexander.  Differential Revision: https://phabricator.services.mozilla.com/D12047",
+    "node": "c08a99b4dd84516a9163f256e52e25cc9b8a273b"
   },
   "5": {
-    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-    "commit_date": "2018-11-17 10:48:01",
-    "commit_message": "Bug 1508026 - Fix formatting. ",
-    "node": "8abb8992a558885e973d5c308c11fd7a9e6ed7bb"
+    "commiter_name": "Matthew Gaudet <mgaudet@mozilla.com>",
+    "commit_date": "2018-11-19 17:38:17",
+    "commit_message": "Bug 1508280: Remove no longer used invalidity bits in ICs r=jandem  Differential Revision: https://phabricator.services.mozilla.com/D12300",
+    "node": "6b61884fd13dc5ad46cf05461e7145f3e0337e43"
   },
   "6": {
-    "commiter_name": "sotaro <sotaro.ikeda.g@gmail.com>",
-    "commit_date": "2018-11-17 05:27:54",
-    "commit_message": "Bug 1506767 - Remove redundant iteration in CompositorBridgeParent::NotifyPipelineRendered() r=mattwoodrow",
-    "node": "896d672ed0abaece6317543d2d14783044c2709a"
+    "commiter_name": "Emily Toop <etoop@mozilla.com>",
+    "commit_date": "2018-11-19 16:34:42",
+    "commit_message": "Bug 1500566 - Change the default URL loaded in `geckoview_example` on startup to `about:blank`. r=geckoview-reviewers,snorp  This is to prevent the load of the Mozilla homepage on startup.  Differential Revision: https://phabricator.services.mozilla.com/D12262",
+    "node": "f4c51b6f89cbf940b0f5f65fcbec258c42c1064e"
   },
   "7": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-10-24 06:16:01",
-    "commit_message": "Bug 1477432 - Part 11: Update CustomElementRegistry to not use nsIJSID, r=smaug  Differential Revision: https://phabricator.services.mozilla.com/D9733 ",
-    "node": "241738774bb1b1f998770af0e0dd82c6ba8de36d"
+    "commiter_name": "Dragana Damjanovic <dd.mozilla@gmail.com>",
+    "commit_date": "2018-11-19 17:23:39",
+    "commit_message": "Bug 1502641 - Change ref-counting for nsHostRecord, change nsCOMPtr< HostRecord> into RefPtr< HostRecord>, remove pure virtual functions from nsHostRecord. r=valentin  Differential Revision: https://phabricator.services.mozilla.com/D12121",
+    "node": "b0863b729ae965aed746510ef756b0727cc12916"
   },
   "8": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-10-24 06:14:04",
-    "commit_message": "Bug 1477432 - Part 10: Stop using nsIJSID in nsIArray for optional IID parameters, r=kmag  Differential Revision: https://phabricator.services.mozilla.com/D9732 ",
-    "node": "29c30b62c301eacd5fefd9a78f19cf63fafd889a"
+    "commiter_name": "Valentin Gosu <valentin.gosu@gmail.com>",
+    "commit_date": "2018-11-19 17:41:57",
+    "commit_message": "Bug 1507157 - Set network.disable.ipc.security to true r=kershaw  This pref is left over from B2G days. It is currently disabled for firefox desktop, but not for Android. This didn't affect us until now because we always ran Android tests in non-e10s mode.  The pref ought to be removed in bug 1306801.  Differential Revision: https://phabricator.services.mozilla.com/D12293",
+    "node": "335fa26ef0c43bd0304d7c9fe36edee070f97717"
   },
   "9": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-21 01:53:40",
-    "commit_message": "Bug 1477432 - Part 9: Switch to using plain JS objects for nsIJS[IC]ID, r=mccr8  This is a complete rewrite of the interface while maintaining the same APIs. Each ID is fully-contained within a single object, does not require a finalizer, and is cheap to create.  Beyond using reserved slots, this code avoids using custom ClassOps, instead preferring Symbol.hasInstance and eager constants.  One major change which occurred in this patch was the move from storing a nsCID to storing the ContractID for JSCID objects. This eliminates the need for the 'refreshCID' method, and hopefully shouldn't have performance implications.  If we discover that there are performance problems there, we can look into stashing the CID, and re-introduce 'refreshCID', despite its surprising behaviour.  Differential Revision: https://phabricator.services.mozilla.com/D2286 ",
-    "node": "3439b17bdc2a1bf5626355d529c9a3decf3843be"
+    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
+    "commit_date": "2018-11-19 17:25:33",
+    "commit_message": "Bug 1504728 - Part 1: Add a content blocking notification for indicating when a top-level page is using cookies or site data r=baku,valentin,johannh  Differential Revision: https://phabricator.services.mozilla.com/D11122",
+    "node": "dfc775a144ad2294fb2bb1f82b24ca136819d39b"
   },
   "10": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-19 05:06:44",
-    "commit_message": "Bug 1477432 - Part 8: Remove test-only Components.classesById and Components.interfacesById, r=mccr8  These two interfaces are effectively never used, so to avoid needing to support ClassID2JSValue with the new implementation, I remove them entirely.  Differential Revision: https://phabricator.services.mozilla.com/D2285 ",
-    "node": "1ddcdfc06526ffa9a997987ae7a2cfff320c00e9"
+    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
+    "commit_date": "2018-11-19 17:22:09",
+    "commit_message": "Bug 1508114 - Ignore the initial about:blank in browser_alltabslistener.js r=johannh  Differential Revision: https://phabricator.services.mozilla.com/D12220",
+    "node": "a1f1a5b1ba9ee5c5034f0769529989421115d3a4"
   },
   "11": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-18 07:33:43",
-    "commit_message": "Bug 1477432 - Part 7: Stop using nsIJSID in xpconnect outside of XPCJSID.cpp, r=mccr8  This mostly consists of changes to the XPCComponents objects to avoid using the implementation details, and instead use the API defined in part 1.  Differential Revision: https://phabricator.services.mozilla.com/D2284 ",
-    "node": "a68bee9d2168c514ea485deba6c2624934a1c79f"
+    "commiter_name": "Julian Descottes <jdescottes@mozilla.com>",
+    "commit_date": "2018-11-19 15:27:51",
+    "commit_message": "Bug 1498143 - Pass nodeActorID to screenshot actor to enable feature in iframes and shadowroots;r=pbro,yulia  Differential Revision: https://phabricator.services.mozilla.com/D12124",
+    "node": "9ee66620694fe51d3713d28f689f88e6866b96eb"
   },
   "12": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-18 07:30:38",
-    "commit_message": "Bug 1477432 - Part 6: Stop using nsIJSID inside of WebIDL bindings, r=mccr8  Rather than adding a native type for nsID objects in WebIDL, this patch just takes the approach of switching consumers over to using 'any' and calling the APIs defined in Part 1.  Differential Revision: https://phabricator.services.mozilla.com/D2283 ",
-    "node": "ab47ae5672ac00f6525f0d109af570a771d97add"
+    "commiter_name": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+    "commit_date": "2018-11-19 15:35:14",
+    "commit_message": "Bug 1508248 - Update in-tree bugzilla metadata to use 'Firefox Build System :: Mach Core' for mach files r=froydnj  Differential Revision: https://phabricator.services.mozilla.com/D12278",
+    "node": "6904ca9f5d8f4623ab85deb8747337de01b2ddb3"
   },
   "13": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-18 07:20:38",
-    "commit_message": "Bug 1477432 - Part 5: Add a refreshCID method to JSCID objects, r=mccr8  This lets us get rid of the method 'initalize', which currently needs the internal representation of JSCID.  This particular method is removed entirely in Part 9, and only exists to keep intermediate states building & running.  Differential Revision: https://phabricator.services.mozilla.com/D2282 ",
-    "node": "c019316fcfd49d74775c9b458b3d611f8081ee7e"
+    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
+    "commit_date": "2018-11-19 15:05:09",
+    "commit_message": "Bug 1508180 - Use uppercase names for high-order macros in js/ r=jandem  This pleases clang-format and makes many of these behave better when auto formatted. Special cases may still be marked |clang-format off| in later commits.  Differential Revision: https://phabricator.services.mozilla.com/D12231",
+    "node": "c8dd8f4166c9287abf6964e55f3b86754d6cf806"
   },
   "14": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-18 07:12:57",
-    "commit_message": "Bug 1477432 - Part 4: Remove the nsJSID XPCOM constructor, r=mccr8  Nobody was using it, so it's pretty easy to remove.  Differential Revision: https://phabricator.services.mozilla.com/D2281 ",
-    "node": "e3b4c9cdfbd7e118ada704337d1bffa5cae93676"
+    "commiter_name": "Sylvestre Ledru <sledru@mozilla.com>",
+    "commit_date": "2018-11-19 15:25:37",
+    "commit_message": "Bug 1204606 - Reformat of dom/media r=jya  # skip-blame  Differential Revision: https://phabricator.services.mozilla.com/D12251",
+    "node": "0ceae9db9ec0be18daa1a279511ad305723185d4"
   },
   "15": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-18 07:08:18",
-    "commit_message": "Bug 1477432 - Part 3: Avoid using nsIJSID in Components.Constructor, r=mccr8  This should be mostly compatible with the original implementation. I tried to simplify things here to just directly wrap and use JS objects, calling methods on them. This eliminates the nsXPCConstructor type completely, replacing it with a JSNative constructor with predefined READONLY | PERMANENT properties.  Differential Revision: https://phabricator.services.mozilla.com/D2280 ",
-    "node": "ecbe615201fab977a6d753230b146bd04a83b156"
+    "commiter_name": "Patrick Brosset <pbrosset@mozilla.com>",
+    "commit_date": "2018-11-19 12:55:45",
+    "commit_message": "Bug 1506792 - Bail out when trying to get getComputedStyle for a non attached node; r=jdescottes  Differential Revision: https://phabricator.services.mozilla.com/D12117",
+    "node": "aed811658fae595beec6344b597ab8bca2ac9c83"
   },
   "16": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-18 07:02:28",
-    "commit_message": "Bug 1477432 - Part 2: Avoid using nsIJSID in GenerateQI, and produce better diagnostics, r=kmag  This is the first part of hiding the implementation of nsIJSID behind the interface added in Part 1, such that we can substitute that implementation out.  I had to make a couple of changes to fix the errors caused by the new behaviour in GenerateQI.  Differential Revision: https://phabricator.services.mozilla.com/D2279 ",
-    "node": "404c4d583acdf448fe77a514e90de26dd5d5893f"
+    "commiter_name": "Thomas Nguyen <tnguyen@mozilla.com>",
+    "commit_date": "2018-11-15 21:19:16",
+    "commit_message": "Bug 1460920 - part 3: Update web-platform-tests r=hsivonen  Differential Revision: https://phabricator.services.mozilla.com/D11638",
+    "node": "209069890e62b4c402c64be007f9cc992b9ec363"
   },
   "17": {
-    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
-    "commit_date": "2018-07-15 02:29:54",
-    "commit_message": "Bug 1477432 - Part 1: Move xpc_ nsJSID methods to a future-proof API, r=mccr8  The new API tries to be more generic, taking and producing JS::Values. It also supports creating the more specialized IID and CID types.  Differential Revision: https://phabricator.services.mozilla.com/D2278 ",
-    "node": "2e250aa206d11319cfaab13e9d57c1095940668c"
+    "commiter_name": "Thomas Nguyen <tnguyen@mozilla.com>",
+    "commit_date": "2018-11-13 16:33:02",
+    "commit_message": "Bug 1460920 - Part 2 : Support referrerpolicy attribute in script HTMLScriptElement r=hsivonen  The patch adds the support of referrerpolicy attribute in script element and take the attribute into account when loading script.  Differential Revision: https://phabricator.services.mozilla.com/D11637",
+    "node": "3309aa6d27ee8c2079b12e6904dc07af8d4951db"
   },
   "18": {
-    "commiter_name": "Nicklas Boman <smurfd@gmail.com>",
-    "commit_date": "2018-11-04 21:03:15",
-    "commit_message": "Bug 1370224 - Fallback to extension icon for browser/page action r=mstriemer,mixedpuppy",
-    "node": "8ab318a0ae56110d72fac3dd73ba2ce617943049"
+    "commiter_name": "Thomas Nguyen <tnguyen@mozilla.com>",
+    "commit_date": "2018-11-19 11:39:16",
+    "commit_message": "Bug 1460920 - Part 1 - Speculative loading script should take referrerpolicy attribute in script element into account r=hsivonen  Referrerpolicy attribute should be taken with high priority order than mSpeculationReferrerPolicy  Differential Revision: https://phabricator.services.mozilla.com/D11636",
+    "node": "045f98957a596060173fc102aaf33ce4c20d9c39"
   },
   "19": {
-    "commiter_name": "Victor Porof <vporof@mozilla.com>",
-    "commit_date": "2018-11-16 08:19:51",
-    "commit_message": "Bug 1503827 - Migrate the treebody binding into a custom element. r=bgrins",
-    "node": "c7a9ceb9becbccaf75f65eec47a98f0a72fafb02"
+    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+    "commit_date": "2018-11-19 14:59:38",
+    "commit_message": "No Bug, mozilla-central repo-update HSTS HPKP remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12260",
+    "node": "0aa2cbe139c38c0b61066d96a53da6fde3d253ae"
   }
 }

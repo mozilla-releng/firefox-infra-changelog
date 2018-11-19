@@ -266,7 +266,7 @@ def extract_hg_json(json_files):
             # pprint(data)
             github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/"
             repository_name = "[" + file.rstrip().replace(".json", "") + "]" + "(" + github_base_link + \
-                              file.rstrip().replace(" ", "%20") + ")"
+                              file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md") + ")"
 
             for test in data:
                 commit_description = data.get(test)["commit_message"]
