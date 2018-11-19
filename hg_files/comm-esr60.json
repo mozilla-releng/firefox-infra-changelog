@@ -1,0 +1,122 @@
+{
+  "0": {
+    "commiter_name": "Jorg K <jorgk@jorgk.com>",
+    "commit_date": "2018-10-23 11:10:49",
+    "commit_message": "Bug 1230815 - remove unused SetStripHtml() and accumulate HTML part to correct tag stripping, test. r=aceman a=jorgk",
+    "node": "134d931f570884992722fc42f07e55da020f9c73"
+  },
+  "1": {
+    "commiter_name": "Jorg K <jorgk@jorgk.com>",
+    "commit_date": "2018-10-23 10:59:56",
+    "commit_message": "Bug 1230815 - remove unused SetStripHtml() and accumulate HTML part to correct tag stripping. r=aceman a=jorgk",
+    "node": "75d43dc40224380d1c07ffa4f3db3408c1a7ba75"
+  },
+  "2": {
+    "commiter_name": "Alfred Peters <infofrommozilla@gmail.com>",
+    "commit_date": "2018-10-20 12:50:00",
+    "commit_message": "Bug 32216 - If the 'Date' header is invalid, use date from 'Received' header instead. r+a=jorgk",
+    "node": "b02fba3200f5c14b88dcb672fc9fd4aa8c3b8083"
+  },
+  "3": {
+    "commiter_name": "Richard Marti <richard.marti@gmail.com>",
+    "commit_date": "2018-11-04 13:50:40",
+    "commit_message": "Bug 1504088 - Stop overflowing the toolbars in main window. r+a=jorgk",
+    "node": "35f977f9404bf89931e548d707f83ae0ed95bcfc"
+  },
+  "4": {
+    "commiter_name": "Jorg K <jorgk@jorgk.com>",
+    "commit_date": "2018-11-15 05:58:00",
+    "commit_message": "Bug 1506800 - Don't sent AppleDouble for files with extension unless whitelisted. r=mkmelin a=jorgk",
+    "node": "5ce5e6f8fc5132ee53f0c2bbe24e6eeb8f832590"
+  },
+  "5": {
+    "commiter_name": "Jorg K <jorgk@jorgk.com>",
+    "commit_date": "2018-11-10 19:35:00",
+    "commit_message": "Bug 1506422 - Replace use of nsMsgI18NFileSystemCharset() with NS_CopyUnicodeToNative/NS_CopyNativeToUnicode(). r=emk a=jorgk",
+    "node": "2a4a4a1fad3064ca32eb9343d2e278092d9d86a7"
+  },
+  "6": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-15 04:44:57",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release",
+    "node": "5b876cd01e092325f0f51f0f7d9ff942be32ee2d"
+  },
+  "7": {
+    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
+    "commit_date": "2018-11-15 04:44:55",
+    "commit_message": "No bug - Tagging c19a3e3679974a7251cd7a0626a3ff38b98b27db with THUNDERBIRD_60_3_1_BUILD2, THUNDERBIRD_60_3_1_RELEASE a=release CLOSED TREE",
+    "node": "9c2f6e3d65214e7879ad913570e1eb72c6e9578e"
+  },
+  "8": {
+    "commiter_name": "Jorg K <jorgk@jorgk.com>",
+    "commit_date": "2018-11-14 01:14:20",
+    "commit_message": "Bug 1504088 - Backed out changeset 8e4b25a12f2c for (most likely) causing an options window which is too small (bug 1506946). a=jorgk",
+    "node": "c19a3e3679974a7251cd7a0626a3ff38b98b27db"
+  },
+  "9": {
+    "commiter_name": "Jorg K <jorgk@jorgk.com>",
+    "commit_date": "2018-11-05 22:44:28",
+    "commit_message": "Bug 1257058 - Distinguish 'empty password' from no password received to avoid shutdown crash. r=mkmelin a=jorgk",
+    "node": "f207024cf5d9b4c7b293b5c1db6608f949eab6ef"
+  },
+  "10": {
+    "commiter_name": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+    "commit_date": "2018-11-11 19:15:07",
+    "commit_message": "Bug 1504543 - Port Bug 1320475 [Fix broken controllers for cmd_printcard and cmd_printcardpreview] to SeaMonkey. r=IanN a=IanN",
+    "node": "c673cbee0e706eb5cdf1b6173f0557bf2f5804e2"
+  },
+  "11": {
+    "commiter_name": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+    "commit_date": "2018-11-11 19:15:04",
+    "commit_message": "Bug 1365170 - Drop \"Legacy\" Hint in SeaMonkey Add-ons Manager Extensions List. r=IanN a=IanN Port Bug 1360904 [Our in-tree built extensions have a legacy warning in Add-on manager].",
+    "node": "12d0494de6aa21983a00c5db3938ed753dc0433c"
+  },
+  "12": {
+    "commiter_name": "Bill Gianopoulos <wgianopoulos@gmail.com>",
+    "commit_date": "2018-10-18 00:47:59",
+    "commit_message": "Bug 1500747 - Allow overriding extension building defaults in SeaMonkey via mozconfig. r=ewong a=IanN",
+    "node": "bd36350d005d7826db90acbb211884485f2e00b6"
+  },
+  "13": {
+    "commiter_name": "Frank-Rainer Grahl <frgrahl@gmx.net>",
+    "commit_date": "2018-11-11 19:14:56",
+    "commit_message": "Bug 670476 - Follow-up. Fix NITs found after pushing the original patch. r=me a=IanN",
+    "node": "f8590325e3150df1458a0827c701da86b839b807"
+  },
+  "14": {
+    "commiter_name": "Felix Haernstroem <filleeeh@gmail.com>",
+    "commit_date": "2018-10-14 09:43:35",
+    "commit_message": "Bug 670476 - Add preference zoom status panel and tooltips for it. r=frg,IanN a=IanN",
+    "node": "e3fb99a54a4c8bf0166a1f16f3a55af4ca0c013c"
+  },
+  "15": {
+    "commiter_name": "Felix Haernstroem <filleeeh@gmail.com>",
+    "commit_date": "2018-10-13 11:39:58",
+    "commit_message": "Bug 670476 - Add zoom controls to status bar. r=frg a=IanN",
+    "node": "2839a305d3e62e97613ed50a58c2939733193cc8"
+  },
+  "16": {
+    "commiter_name": "Ian Neal <iann_cvs@blueyonder.co.uk>",
+    "commit_date": "2018-11-11 19:14:05",
+    "commit_message": "Bug 1475865 - Port Bug 1119088 [Set As Desktop Background does not work on OS X] to SeaMonkey. r=stefanh a=IanN",
+    "node": "666e0d74cd66309caaaf6e651c71195f5bdf5160"
+  },
+  "17": {
+    "commiter_name": "Jorg K <jorgk@jorgk.com>",
+    "commit_date": "2018-11-09 22:29:48",
+    "commit_message": "Bug 1505435 - Follow-up: Import Services.jsm. rs=bustage-fix a=jorgk",
+    "node": "241764e35357d4a51cee09849f72910e72d18d7c"
+  },
+  "18": {
+    "commiter_name": "Jonathan Kamens <jik@kamens.us>",
+    "commit_date": "2018-11-08 19:08:00",
+    "commit_message": "Bug 1505435 - Switch date-picker from Intl.DateTimeFormat to mozIMozIntl. r+a=jorgk",
+    "node": "c0ae895b8809f4ba4eea9a50e2f4af2fee00cfde"
+  },
+  "19": {
+    "commiter_name": "Richard Marti <richard.marti@gmail.com>",
+    "commit_date": "2018-11-06 21:57:35",
+    "commit_message": "Bug 1505153 - Use !important in compacttheme.css to override the quickFilterBar.css rule when the window is inactive. r=arshad a=jorgk",
+    "node": "f6c33d233f590257c64c7a83eaf5311bb53c275f"
+  }
+}

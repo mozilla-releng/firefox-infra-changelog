@@ -1,0 +1,36 @@
+## OPEN CLOUD CONFIG MARKDOWN TABLE
+
+| Commit Number | Commiter | Commit Message | Commit Url | Date | 
+|:---:|:----:|:----------------------------------:|:------:|:----:| 
+|30|Rob Thijssen|nobug - stop logging non-terminations|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/a98e890db00fa4195241d0536001de5a6cfac4db)|2018-11-08 09:55:22 
+|29|Rob Thijssen|Bug 1505057 - beta test: add python3 to path on win 7  deploy: gecko-t-win7-32-beta gecko-t-win7-32-gpu-b|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/2f2e9f2debbbaab151d24ecd4385366dd6e8d55d)|2018-11-08 08:36:57 
+|28|Rob Thijssen|Bug 1505455 - retry service start on failure  deploy: gecko-t-win7-32 gecko-t-win7-32-beta gecko-t-win7-32-gpu gecko-t-win7-32-gpu-b|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/a260579306e7a4ae50ee64e9cf33863d94d56d74)|2018-11-07 18:42:13 
+|27|Rob Thijssen|Bug 1505057 - beta test: add python3 to path  deploy: gecko-t-win10-64-beta gecko-t-win10-64-gpu-b gecko-1-b-win2012-beta|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/74bc034c2e56f5f909ff6fe3ead37d54e01ee6bf)|2018-11-07 16:35:07 
+|26|Rob Thijssen|Bug 1501609 - refresh amis  deploy: all|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/d6e218b7334cacd99193430e55f6446ea95cd19d)|2018-11-07 15:08:40 
+|25|Rob Thijssen|Bug 1501609 - handle multiline in generic-worker-service logs  on win10 hw, gw is logging to generic-worker-service.log instead of generic-worker.log. this is unusual so i'm handling it in papertrail with this change|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/a0f93999e02b7476e88c774083001548c3693b50)|2018-11-07 15:04:09 
+|24|Rob Thijssen|Bug 1501609 - match newlines in multiline regex  https://nxlog.co/docs/nxlog-ce/nxlog-reference-manual.html  "The dot (.) normally matches any character except newline. The /s modifier causes the dot to match all characters including line terminator characters (LF and CRLF)."|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/8c8c988a7ebb132543b2f3bd6141688f719ed027)|2018-11-07 13:48:12 
+|23|Rob Thijssen|Bug 1501609 - parse dates from nxlog log lines|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/e59be8245fcb302e138f6a62447e54fbc63d3228)|2018-11-07 13:19:59 
+|22|Rob Thijssen|Bug 1501609 - parse generic-worker logs as multiline events|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/a77d824f3b38e8d4ebbc48da0fdef6cf24e12cde)|2018-11-07 13:07:07 
+|21|Rob Thijssen|Bug 1501609 - use line timestamps for event time in ec2config logs|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/8ea25802a1db6a5a3f1e33a075d9a377356f5ab4)|2018-11-07 12:38:34 
+|20|Rob Thijssen|Bug 1501609 - forward ec2config service logs to papertrail|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/7ca24c287c46317605536998d1052e0fb690b9ab)|2018-11-07 12:20:50 
+|19|Rob Thijssen|Bug 1501609 - forward ec2config service logs to papertrail|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/71d0b3cc0b0fb4c52ba957b392dae28fa3bff22d)|2018-11-07 10:21:24 
+|18|Rob Thijssen|Bug 1504971 - remove beta test code post merge|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/e34483b19f9423e86234d35e30f52f9de3a16cec)|2018-11-07 09:43:06 
+|17|Rob Thijssen|Bug 1504971 - refactor rundsc into logged functions that include processing time metrics (#209)    Bug 1504971 - Set-ServiceState    Bug 1504971 - Set-DomainName    Bug 1504971 - Set-DynamicDnsRegistration    Bug 1504971 - Run-MaintainSystem    Bug 1504971 - Run-RemoteDesiredStateConfig    Bug 1504971 - Set-ComputerName    Bug 1504971 - Run-OpenCloudConfig    Bug 1504971 - test rundsc refactor on beta    Bug 1504971 - Set-ServiceState logging correction    Bug 1504971 - test rundsc refactor on beta    Bug 1504971 - Run-RemoteDesiredStateConfig: Get-PackageProvider param correction    Bug 1504971 - detect dsc failures due to wsman|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/fe8e96340ea05f3c1ddb5bddfb25f0d188a01382)|2018-11-07 09:32:41 
+|16|Rob Thijssen|Bug 1504971 - test rundsc refactor on beta  deploy: beta|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/5f838b800bef74cd4b11652735b3264ba9b7cd26)|2018-11-06 21:00:31 
+|15|Rob Thijssen|Bug 1504971 - test rundsc refactor on beta  deploy: beta|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/c8a065cb6e8e4311ab736bf88246842b2189dba2)|2018-11-06 20:22:29 
+|14|Rob Thijssen|Bug 1504971 - test rundsc refactor on beta|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/15259aba2d07a4e0377dd999f3025a92f37290ce)|2018-11-06 20:05:34 
+|13|Rob Thijssen|Bug 1504971 - test rundsc refactor on beta  deploy: beta|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/afc568dadee471e17b3534f74a9d4bf690a019d4)|2018-11-06 19:34:17 
+|12|Rob Thijssen|Bug 1504971 - test rundsc refactor on beta  deploy: beta|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/ca99d1c17bc4a411e0aa1f6f20aae0ebe0960db3)|2018-11-06 19:30:45 
+|11|Rob Thijssen|Bug 1504971 - test rundsc refactor on beta  deploy: beta|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/4a79221ca5a39d04eba4a72fe03257c065bf556f)|2018-11-06 19:07:44 
+|10|Rob Thijssen|Bug 1504971 - test rundsc refactor on beta  deploy: gecko-1-b-win2012-beta gecko-t-win7-32-beta gecko-t-win7-32-gpu-b gecko-t-win10-64-beta gecko-t-win10-64-gpu-b|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/90127602583ad3281815f6867e37ba94dfdc97ed)|2018-11-06 18:32:39 
+|9|Rob Thijssen|Bug 1406354 - use repository urls from current commit (#210)|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/ecec0eed5a32644c18d5ac7e5a6c378f77094ec9)|2018-11-06 18:17:08 
+|8|Rob Thijssen|Bug 1499801 - replace failing winrm config cmd with Set-Item|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/e80ed61d2e8eba2761392c2f01624723b81587cd)|2018-10-31 11:40:02 
+|7|Rob Thijssen|Bug 1495464 - update hg sha fingerprints (#208)|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/4fd026c184d6bbfa72ec74ca385d74f392236483)|2018-10-31 10:05:54 
+|6|Rob Thijssen|Bug 1499801 - catch execution errors|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/01af402fa3e03d14b99586c57b32200d3039f8ae)|2018-10-31 10:01:28 
+|5|Rob Thijssen|Bug 1499801 - try Wait-Process  https://stackoverflow.com/a/43728914/68115|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/2f288990e51fdaa624bd177303f3f22d017b25b6)|2018-10-31 07:13:17 
+|4|Rob Thijssen|Bug 1499801 - prefix command|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/c031b511ef0a89f2fa9749580ab259ce7ce66a1c)|2018-10-31 07:01:08 
+|3|Rob Thijssen|Bug 1499801 - workaround for missing exit codes  https://stackoverflow.com/a/23797762/68115|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/e990e7351b5797ba0da8cff99b9530008724ca6e)|2018-10-31 06:54:21 
+|2|Rob Thijssen|Bug 1499801 - only log error output|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/cc69b8e59551ad39a75ea3e59172ba0c2423fbc7)|2018-10-30 19:48:08 
+|1|Rob Thijssen|Bug 1499801 - wait for exit code|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/b17dfc20eb474a3df67043add012622f993a5526)|2018-10-30 19:16:19 
+
+

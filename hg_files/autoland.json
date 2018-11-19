@@ -1,0 +1,122 @@
+{
+  "0": {
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-11-16 22:31:50",
+    "commit_message": "Bug 1507101 - Use StyleChildrenIterator instead of custom frame tree walking code to handle NAC inside shadow dom. r=smaug  There are lots of frames which create anonymous content (like scrollframes, which generate scrollbars) but for which this code was wrong.  Use StyleChildrenIterator which has a defined order between NAC and flattened tree. I've verified this doesn't break tabbing through input type=\"date\" with UA widget disabled, fwiw.  Differential Revision: https://phabricator.services.mozilla.com/D12152",
+    "node": "5322e59f933edee69fa4a848e1709d7c21a4552b"
+  },
+  "1": {
+    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+    "commit_date": "2018-11-17 13:30:31",
+    "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+    "node": "7e6b465b73dc86606661742771441bceea83e310"
+  },
+  "2": {
+    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+    "commit_date": "2018-11-17 13:27:24",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "node": "e4deec61fc8c80ecc94d4493df37a399b5a56235"
+  },
+  "3": {
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-11-17 10:57:43",
+    "commit_message": "Bug 1508026 - Cherry-pick some changes to malloc_size_of's Cargo.toml. ",
+    "node": "600d7689bd5316f12bee1c030f93bdb2af5eab8d"
+  },
+  "4": {
+    "commiter_name": "CYBAI <cyb.ai.815@gmail.com>",
+    "commit_date": "2018-11-11 08:26:06",
+    "commit_message": "Bug 1508026 - Fix wrong spec link. r=emilio  This cherry-picks servo/servo#22172. ",
+    "node": "c23d6003a3c3a37f523437afedc7e2914c9e194a"
+  },
+  "5": {
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-11-17 10:48:01",
+    "commit_message": "Bug 1508026 - Fix formatting. ",
+    "node": "8abb8992a558885e973d5c308c11fd7a9e6ed7bb"
+  },
+  "6": {
+    "commiter_name": "sotaro <sotaro.ikeda.g@gmail.com>",
+    "commit_date": "2018-11-17 05:27:54",
+    "commit_message": "Bug 1506767 - Remove redundant iteration in CompositorBridgeParent::NotifyPipelineRendered() r=mattwoodrow",
+    "node": "896d672ed0abaece6317543d2d14783044c2709a"
+  },
+  "7": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-10-24 06:16:01",
+    "commit_message": "Bug 1477432 - Part 11: Update CustomElementRegistry to not use nsIJSID, r=smaug  Differential Revision: https://phabricator.services.mozilla.com/D9733 ",
+    "node": "241738774bb1b1f998770af0e0dd82c6ba8de36d"
+  },
+  "8": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-10-24 06:14:04",
+    "commit_message": "Bug 1477432 - Part 10: Stop using nsIJSID in nsIArray for optional IID parameters, r=kmag  Differential Revision: https://phabricator.services.mozilla.com/D9732 ",
+    "node": "29c30b62c301eacd5fefd9a78f19cf63fafd889a"
+  },
+  "9": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-21 01:53:40",
+    "commit_message": "Bug 1477432 - Part 9: Switch to using plain JS objects for nsIJS[IC]ID, r=mccr8  This is a complete rewrite of the interface while maintaining the same APIs. Each ID is fully-contained within a single object, does not require a finalizer, and is cheap to create.  Beyond using reserved slots, this code avoids using custom ClassOps, instead preferring Symbol.hasInstance and eager constants.  One major change which occurred in this patch was the move from storing a nsCID to storing the ContractID for JSCID objects. This eliminates the need for the 'refreshCID' method, and hopefully shouldn't have performance implications.  If we discover that there are performance problems there, we can look into stashing the CID, and re-introduce 'refreshCID', despite its surprising behaviour.  Differential Revision: https://phabricator.services.mozilla.com/D2286 ",
+    "node": "3439b17bdc2a1bf5626355d529c9a3decf3843be"
+  },
+  "10": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-19 05:06:44",
+    "commit_message": "Bug 1477432 - Part 8: Remove test-only Components.classesById and Components.interfacesById, r=mccr8  These two interfaces are effectively never used, so to avoid needing to support ClassID2JSValue with the new implementation, I remove them entirely.  Differential Revision: https://phabricator.services.mozilla.com/D2285 ",
+    "node": "1ddcdfc06526ffa9a997987ae7a2cfff320c00e9"
+  },
+  "11": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-18 07:33:43",
+    "commit_message": "Bug 1477432 - Part 7: Stop using nsIJSID in xpconnect outside of XPCJSID.cpp, r=mccr8  This mostly consists of changes to the XPCComponents objects to avoid using the implementation details, and instead use the API defined in part 1.  Differential Revision: https://phabricator.services.mozilla.com/D2284 ",
+    "node": "a68bee9d2168c514ea485deba6c2624934a1c79f"
+  },
+  "12": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-18 07:30:38",
+    "commit_message": "Bug 1477432 - Part 6: Stop using nsIJSID inside of WebIDL bindings, r=mccr8  Rather than adding a native type for nsID objects in WebIDL, this patch just takes the approach of switching consumers over to using 'any' and calling the APIs defined in Part 1.  Differential Revision: https://phabricator.services.mozilla.com/D2283 ",
+    "node": "ab47ae5672ac00f6525f0d109af570a771d97add"
+  },
+  "13": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-18 07:20:38",
+    "commit_message": "Bug 1477432 - Part 5: Add a refreshCID method to JSCID objects, r=mccr8  This lets us get rid of the method 'initalize', which currently needs the internal representation of JSCID.  This particular method is removed entirely in Part 9, and only exists to keep intermediate states building & running.  Differential Revision: https://phabricator.services.mozilla.com/D2282 ",
+    "node": "c019316fcfd49d74775c9b458b3d611f8081ee7e"
+  },
+  "14": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-18 07:12:57",
+    "commit_message": "Bug 1477432 - Part 4: Remove the nsJSID XPCOM constructor, r=mccr8  Nobody was using it, so it's pretty easy to remove.  Differential Revision: https://phabricator.services.mozilla.com/D2281 ",
+    "node": "e3b4c9cdfbd7e118ada704337d1bffa5cae93676"
+  },
+  "15": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-18 07:08:18",
+    "commit_message": "Bug 1477432 - Part 3: Avoid using nsIJSID in Components.Constructor, r=mccr8  This should be mostly compatible with the original implementation. I tried to simplify things here to just directly wrap and use JS objects, calling methods on them. This eliminates the nsXPCConstructor type completely, replacing it with a JSNative constructor with predefined READONLY | PERMANENT properties.  Differential Revision: https://phabricator.services.mozilla.com/D2280 ",
+    "node": "ecbe615201fab977a6d753230b146bd04a83b156"
+  },
+  "16": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-18 07:02:28",
+    "commit_message": "Bug 1477432 - Part 2: Avoid using nsIJSID in GenerateQI, and produce better diagnostics, r=kmag  This is the first part of hiding the implementation of nsIJSID behind the interface added in Part 1, such that we can substitute that implementation out.  I had to make a couple of changes to fix the errors caused by the new behaviour in GenerateQI.  Differential Revision: https://phabricator.services.mozilla.com/D2279 ",
+    "node": "404c4d583acdf448fe77a514e90de26dd5d5893f"
+  },
+  "17": {
+    "commiter_name": "Nika Layzell <nika@thelayzells.com>",
+    "commit_date": "2018-07-15 02:29:54",
+    "commit_message": "Bug 1477432 - Part 1: Move xpc_ nsJSID methods to a future-proof API, r=mccr8  The new API tries to be more generic, taking and producing JS::Values. It also supports creating the more specialized IID and CID types.  Differential Revision: https://phabricator.services.mozilla.com/D2278 ",
+    "node": "2e250aa206d11319cfaab13e9d57c1095940668c"
+  },
+  "18": {
+    "commiter_name": "Nicklas Boman <smurfd@gmail.com>",
+    "commit_date": "2018-11-04 21:03:15",
+    "commit_message": "Bug 1370224 - Fallback to extension icon for browser/page action r=mstriemer,mixedpuppy",
+    "node": "8ab318a0ae56110d72fac3dd73ba2ce617943049"
+  },
+  "19": {
+    "commiter_name": "Victor Porof <vporof@mozilla.com>",
+    "commit_date": "2018-11-16 08:19:51",
+    "commit_message": "Bug 1503827 - Migrate the treebody binding into a custom element. r=bgrins",
+    "node": "c7a9ceb9becbccaf75f65eec47a98f0a72fafb02"
+  }
+}

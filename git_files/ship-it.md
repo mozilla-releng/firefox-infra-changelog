@@ -1,4 +1,4 @@
-## SHIP-IT MARKDOWN TABLE
+## SHIP IT MARKDOWN TABLE
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
