@@ -58,6 +58,7 @@ def create_git_md_table(repository_name):
     except FileNotFoundError:
         print("Json for {} is empty! Skipping!". format(repository_name))
 
+
 def create_hg_md_table(repository_name):
     """
     Uses 'repository_name' parameter to generate markdown tables for every json file inside 'hg_files'.
@@ -145,6 +146,7 @@ def filter_git_commit_data(repository_name, repository_team):
         json.dump(repo_dict, json_file, indent=2)
         json_file.close()
 
+
 def filter_hg_commit_data(repository_url, push_type):
     """
     This function takes a repository url and push type and returns a dictionary that contains changes in that specific
@@ -182,25 +184,6 @@ def filter_hg_commit_data(repository_url, push_type):
         commit_number += 1
     return changelog
 
-def hg_timestamps_handler(timestamp, timezone):
-    """
-    This function handles the mercurial timestamps so that all of the modifications to be traceable in time, in
-    concordance to one
-    another and returns the date-time format.
-    Part of Mercurial Wrapper
-    Example :
-        print(handle_timestamps("1499225169.0", "-43200"))
-    Output:
-        07-05-2017 15:26:09
-    :param timestamp: Timestamp in unix systems (an unique time represented in how many seconds past a certain event)
-    :param timezone: Timezone of the timestamp
-    :return: Returns "YYYY-MM-DD HH:MM:SS"
-    """
-    if "-" in timezone:
-        ts = int(timestamp[:-2]) - int(timezone)
-    else:
-        ts = int(timestamp[:-2]) + int(timezone)
-    return datetime.utcfromtimestamp(ts).strftime("%m-%d-%Y %H:%M:%S")
 
 def create_files_for_hg():
     """
@@ -218,6 +201,7 @@ def create_files_for_hg():
             json.dump(hg_changes, json_file, indent=2)
         json_file.close()
         create_hg_md_table(repository_name)
+
 
 def create_files_for_git():
     """
