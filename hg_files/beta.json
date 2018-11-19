@@ -1,122 +1,122 @@
 {
   "0": {
+    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+    "commit_date": "2018-11-19 18:19:29",
+    "commit_message": "No Bug, mozilla-beta repo-update HSTS HPKP remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12308",
+    "node": "571a146f0732aeab505743a97ad176e5d7e673dc"
+  },
+  "1": {
+    "commiter_name": "Michael Kaply <mozilla@kaply.com>",
+    "commit_date": "2018-11-15 22:30:03",
+    "commit_message": "Bug 1507291 - Remove concept of machine_only policies. r=Felipe,flod, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D11942",
+    "node": "27727035c0de45862af6d6fd140c962f8bd5e483"
+  },
+  "2": {
+    "commiter_name": "Randall Barker <rbarker@mozilla.com>",
+    "commit_date": "2018-11-16 16:41:08",
+    "commit_message": "Bug 1507068 - Ensure mParent is not null in mozilla::layers::CompositorBridgeParent::GetAndroidDynamicToolbarAnimator. r=snorp,kats, a=jcristau  Speculative fix for Bug 1507068. Checks if mParent is not null before trying to get a pointer to the toolbar animator  Differential Revision: https://phabricator.services.mozilla.com/D11957",
+    "node": "88649b8165f06f85195acbac78619ab97ee3de33"
+  },
+  "3": {
     "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
     "commit_date": "2018-11-19 18:00:36",
     "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  my -> 0f05cb372f6a sl -> 6457a5eb064a",
     "node": "2da9de110c930390a4d2f269f5b2d562f5594fa9"
   },
-  "1": {
+  "4": {
     "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
     "commit_date": "2018-11-19 18:00:31",
     "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  sl -> 6457a5eb064a",
     "node": "6b1eaa3b93deb5f2e8a3f0715d317a827aaef4a1"
   },
-  "2": {
+  "5": {
     "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
     "commit_date": "2018-11-19 17:00:24",
     "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  cak -> 39f7108f96e5 es-ES -> 7fa26caac4bb fr -> 97403e761d06 fy-NL -> c67b74b43e30 kk -> b9a79c58337a ms -> 13282853db6f nb-NO -> 19857816064e nl -> a181305af5a2 ro -> ca7cd8042b40 ru -> 6e4916198ab3 tr -> c924b59afaf4",
     "node": "1dfbec456d150d7c6691abb939cefa5897fa2337"
   },
-  "3": {
+  "6": {
     "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
     "commit_date": "2018-11-19 17:00:18",
     "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  bg -> 9cd31b6aaf4e es-ES -> c57dacf71d5f fr -> b4eb727c4bc9 fy-NL -> 4a830404bd79 kk -> 1f3c9adfb061 ms -> 748fca25add3 nb-NO -> bc0dae3bc95a oc -> 8fc459a48fb8 ru -> 913c54421299 sl -> f822bcdd31b9 tr -> bea31caafee9",
     "node": "d5799b92498443ee3be7bfabe9e5a984355036f7"
   },
-  "4": {
+  "7": {
     "commiter_name": "James Willcox <snorp@snorp.net>",
     "commit_date": "2018-11-16 16:34:48",
     "commit_message": "Bug 1505897 - Initialize GeckoSystemStateListener in child process. r=agi, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D11517",
     "node": "28b294890d1ceb2b6be070f0472b05ea9d9a7f49"
   },
-  "5": {
+  "8": {
     "commiter_name": "Drew Willcoxon <adw@mozilla.com>",
     "commit_date": "2018-11-16 23:15:54",
     "commit_message": "Bug 1499193 - Follow-up 2: Update SEARCH_COUNTS key. r=mkaply, a=jcristau  Change the `<engine>.<alias>.urlbar` `SEARCH_COUNTS` keys to `<engine>.alias` as described in bug 1499193 comment 23 and later.  Differential Revision: https://phabricator.services.mozilla.com/D12038",
     "node": "32fc87f1af7c3af8f36fb6d8af72630441033231"
   },
-  "6": {
+  "9": {
     "commiter_name": "Benjamin Bouvier <benj@benj.me>",
     "commit_date": "2018-11-16 12:44:36",
     "commit_message": "Bug 1507730 - Generate a temporary for negative power-of-two constants in mul64 on 32 bits platforms. r=lth, a=jcristau  In the code generator function, we assume we have a temp if a known constant is a non-negative power of two. But lowering only checked for power of twos independently of their sign, so this was incorrect. This patch syncs them up on both ARM32 and x86.",
     "node": "3910d176d5c23498232c207e5fb5e844c62e0ec8"
   },
-  "7": {
+  "10": {
     "commiter_name": "Lars T Hansen <lhansen@mozilla.com>",
     "commit_date": "2018-11-16 10:39:26",
     "commit_message": "Bug 1507572 - Correctly implement unaligned stores of i64 sub-fields. r=bbouvier, a=jcristau  Fixes Rabaldr by adding code to the ARM assembler to deal with unaligned 16- and 32-bit stores from a 64-bit datum.  Fixes Baldr by dispatching on the value type (as we do everywhere else), not the access type, and then relying on the just-fixed assembler to do the right thing.",
     "node": "34b98cadb7881503cbffe67c4b6e8a88e31a77a8"
   },
-  "8": {
+  "11": {
     "commiter_name": "Lars T Hansen <lhansen@mozilla.com>",
     "commit_date": "2018-11-16 11:47:36",
     "commit_message": "Bug 1507572 - Generalize alignments for memory ops testing. r=bbouvier, a=jcristau  These test cases already had some infrastructure for parameterizing over alignment, it just wasn't being used.  Once enabled it stubles across the ARM bugs quickly.",
     "node": "04a44178fb99f2f7877eb9fde7bb25785b389a0f"
   },
-  "9": {
+  "12": {
     "commiter_name": "Dale Harvey <dale@arandomurl.com>",
     "commit_date": "2018-11-15 14:45:02",
     "commit_message": "Bug 1507444 - Add context fill opacity for windows share icon. r=Gijs, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12002",
     "node": "ec2a453085ce9a09884190065bd52ea1cb58f655"
   },
-  "10": {
+  "13": {
     "commiter_name": "Johann Hofmann <jhofmann@mozilla.com>",
     "commit_date": "2018-11-08 14:51:21",
     "commit_message": "Bug 1505310 - Enable certificate error page event telemetry on release. r=janerik, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D11302",
     "node": "467e62db7b1435dbcdb6b9033b2fc9484587c618"
   },
-  "11": {
+  "14": {
     "commiter_name": "Kershaw Chang <kershaw@mozilla.com>",
     "commit_date": "2018-11-09 02:53:00",
     "commit_message": "Bug 1504512 - Do not delete mTrailers explicitly. r=valentin, a=jcristau  Since mTrailers is nsAutoPtr, there is no need to delete it explicitly.",
     "node": "af979f77c8384b56c66ba142d7f50e1c2675dfaf"
   },
-  "12": {
+  "15": {
     "commiter_name": "Benjamin Bouvier <benj@benj.me>",
     "commit_date": "2018-11-15 23:25:52",
     "commit_message": "Bug 1507564 - Bind code labels when generating lazy table stubs. r=luke, a=jcristau  A lazy stub could generate CodeLabels on x86, because of a constant NaN generated for the entry's epilogue that ended up in a constant pool. We need to actually bind these code labels in general.  Differential Revision: https://phabricator.services.mozilla.com/D12052",
     "node": "f6a1e485be9a28e08d4eb1b22140a900d1676e8b"
   },
-  "13": {
+  "16": {
     "commiter_name": "Michael Kaply <mozilla@kaply.com>",
     "commit_date": "2018-11-09 13:24:59",
     "commit_message": "Bug 1504686 - Don't count search for same document changes. r=Standard8, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D11394",
     "node": "ceba8351e044c15a408e8302d41bafc21e70e528"
   },
-  "14": {
+  "17": {
     "commiter_name": "Gabriele Svelto <gsvelto@mozilla.com>",
     "commit_date": "2018-11-13 17:34:49",
     "commit_message": "Bug 1498942 - Don't attempt to take minidumps of hung content processes when shutting down. r=Ehsan, a=jcristau  This patch also takes the timeout for killing a content process back to its original value and removes a related but long unused field.  Differential Revision: https://phabricator.services.mozilla.com/D11739",
     "node": "be6c9c1f12a731ab06f4236848354e8190bb252e"
   },
-  "15": {
+  "18": {
     "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
     "commit_date": "2018-11-15 13:57:00",
     "commit_message": "Bug 1506640 - Trace wrappers rooters during sweep phase. r=pbone, a=RyanVM",
     "node": "d4ce8b3cdee86a47d1e201bde99f81756b45193a"
   },
-  "16": {
+  "19": {
     "commiter_name": "Magnus Melin <mkmelin+mozilla@iki.fi>",
     "commit_date": "2018-11-14 14:55:22",
     "commit_message": "Bug 1506390 - Ensure the default permissions do not intefer with the permission tests that assume no defaults. r=johannh, a=test-only",
     "node": "a96813612e0cee496e7d3e8e3b5d805233c0f74e"
-  },
-  "17": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-18 12:00:19",
-    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  id -> ab01590de26a km -> 6c3281c65ab3 lt -> a401093a2774 th -> ff3c08995145",
-    "node": "0e12912bc61b604fe805a4c0d6ec9bbc75ec00f6"
-  },
-  "18": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-18 12:00:13",
-    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  be -> 1200ed9d804d id -> ab01590de26a lo -> 6a04931f1936 lt -> 3a4ccf8ed137 th -> 3b7941834c3a",
-    "node": "372625e3716d118f824bd274971f670811679a75"
-  },
-  "19": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-18 09:00:20",
-    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  cak -> ac479407668f gd -> 2b323cd1cda2 hu -> ed7368785609 ia -> f062764434b5 id -> 5300b0371b81 it -> 0103a5f5539f my -> ed9955bea35e nl -> a721324dfc46 pl -> 1d6ba9bf0463 pt-BR -> 41748ea550f5 ro -> 7fa94a837073 th -> 2476bf465fc5 vi -> 484e9a2eb23d",
-    "node": "5ac8613d829e0fabe2724ab56c79a2a101c907ee"
   }
 }
