@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Dylan Roeh <droeh@mozilla.com>",
-    "commit_date": "2018-11-20 17:35:29",
-    "commit_message": "Bug 1494748 - Add a service to kill the Fennec process when the user swipes-to-kill Fennec. r=snorp  Leaving the Fennec process running after a swipe-to-kill puts Fennec in an unrecoverable state; this ensures we kill the process anytime a user swipes-to-kill Fennec and therefore lets us recover as usual.",
-    "node": "555521c70c0f186c1f6de86dd0513d7aaa10c58b"
+    "commiter_name": "shindli <shindli@mozilla.com>",
+    "commit_date": "2018-11-20 23:50:05",
+    "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+    "node": "7720051470685844a99bc96d95e1e86d21041f1d"
   },
   "1": {
-    "commiter_name": "Eugen Sawin <esawin@mozilla.com>",
-    "commit_date": "2018-11-20 16:54:20",
-    "commit_message": "Bug 1508638 - [1.0] Remove default progress value to avoid stuck progress bar for about: pages. r=droeh ",
-    "node": "78d26b6dce21a0bd8ce11a624a3bd26779d44937"
+    "commiter_name": "shindli <shindli@mozilla.com>",
+    "commit_date": "2018-11-20 23:44:09",
+    "commit_message": "Merge inbound to mozilla-central.  a=merge",
+    "node": "8991d660f20e3eea652e060c30e17670b45a9257"
   },
   "2": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-20 17:10:31",
-    "commit_message": "Bug 1507922 - make ownership of MetadataTags more clear in the ogg code; r=gerald,jya  Use UniquePtr for return types, so it's obvious who has ownership.",
-    "node": "ce4515855b43514b4ee6e5ef8d450ed2dbfb1a73"
+    "commiter_name": "Razvan Caliman <rcaliman@mozilla.com>",
+    "commit_date": "2018-11-20 19:19:06",
+    "commit_message": "Bug 1508691 - Ensure range inputs in Font Editor do not have a background color. r=gl  MozReview-Commit-ID: EmF55t1eQbN  Differential Revision: https://phabricator.services.mozilla.com/D12442",
+    "node": "117bb70216d301a004d6c565fc64fb7b6e138e65"
   },
   "3": {
-    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-    "commit_date": "2018-11-20 16:39:00",
-    "commit_message": "Bug 1508645 - Upstream the test for bug 1495791 to WPT. r=aosmond  Differential Revision: https://phabricator.services.mozilla.com/D12427 ",
-    "node": "2584f7a7f63adb79ce5acd99bbb91f6b64b87f0f"
+    "commiter_name": "D\u00e3o Gottwald <dao@mozilla.com>",
+    "commit_date": "2018-11-20 19:04:43",
+    "commit_message": "Bug 1508585 - Load search-one-offs.js lazily. r=bgrins  Differential Revision: https://phabricator.services.mozilla.com/D12405",
+    "node": "29f9fb8fd7ee6a8ff4758210fb5c18c1083f9322"
   },
   "4": {
-    "commiter_name": "Christoph Kerschbaumer <ckerschb@christophkerschbaumer.com>",
-    "commit_date": "2018-11-20 15:23:04",
-    "commit_message": "Bug 1508629: Remove unused forceCreateAboutBlankContentViewer from docshell. r=jkt",
-    "node": "a0d45e98912fc4135ac222e540907b90a4f22eeb"
+    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
+    "commit_date": "2018-11-20 19:01:46",
+    "commit_message": "Bug 1493292 - Remove len from nsIFormatConverter. r=smaug  Depends on D11204  Differential Revision: https://phabricator.services.mozilla.com/D11205",
+    "node": "bd64f10454cc0693bb9932d6203765d005cbd970"
   },
   "5": {
-    "commiter_name": "Florian Qu\u00e8ze <florian@queze.net>",
-    "commit_date": "2018-11-20 16:32:01",
-    "commit_message": "Bug 1506105 - Display the clickable icons using the content property instead of as a background image so that they are visible in high contrast mode, r=felipe.",
-    "node": "f9e9cf90de3d10a55a22f9db8efc600add0d0efe"
+    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
+    "commit_date": "2018-11-20 19:01:44",
+    "commit_message": "Bug 1493292 - Remove len from nsIFlavorDataProvider r=smaug  Depends on D11203  Differential Revision: https://phabricator.services.mozilla.com/D11204",
+    "node": "8c6a2b35442221490d60b2be9f50949c9fad585a"
   },
   "6": {
-    "commiter_name": "James Graham <james@hoppipolla.co.uk>",
-    "commit_date": "2018-11-20 12:49:13",
-    "commit_message": "Bug 1507550 - Fixup existing LSAN allowed rules to match new behaviour, a=testonly ",
-    "node": "4700d8714486d2982443ff7d703b7b16402ec76a"
+    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
+    "commit_date": "2018-11-20 19:01:42",
+    "commit_message": "Bug 1493292 - Remove len from nsTransferable. r=smaug  Depends on D11202  Differential Revision: https://phabricator.services.mozilla.com/D11203",
+    "node": "f02e1aba84a57e121894c2c7a25352ab7f210d9c"
   },
   "7": {
-    "commiter_name": "James Graham <james@hoppipolla.co.uk>",
-    "commit_date": "2018-11-19 17:29:46",
-    "commit_message": "Bug 1507550 - Scrub out junk from rust signatures when processing LSAN data, r=mccr8  Rust signatures aren't properly demangled, and contain some trailing data that seems to depend on the compiler version. This defeats the attempt to allow LSAN errors when importing tests, and we end up adding multiple variants of the same symbol to the allow list.  To avoid this, simply preprocess the symbols not to contain the trailing junk when reading LSAN output, whilst we await better demangling.  Differential Revision: https://phabricator.services.mozilla.com/D12303 ",
-    "node": "6beca6ad237ecb0d709350380c9b83003f5f577c"
+    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
+    "commit_date": "2018-11-20 19:00:09",
+    "commit_message": "Bug 1493292 - Remove aDataLen parameters from nsITransferable.setTransferData. r=smaug  Depends on D11201  Differential Revision: https://phabricator.services.mozilla.com/D11202",
+    "node": "7e2c0177115a4620627a9c15027e960116c0c394"
   },
   "8": {
-    "commiter_name": "Jeff Muizelaar <jrmuizel@gmail.com>",
-    "commit_date": "2018-11-14 02:17:03",
-    "commit_message": "Bug 1507021. Add a SnappedClip function to gfxContext. r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D11839 ",
-    "node": "7825009998ae5d5bebef3096a332918ed18defb6"
+    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
+    "commit_date": "2018-11-20 18:59:56",
+    "commit_message": "Bug 1493292 - Remove aDataLen parameters from nsITransferable.getTransferData. r=smaug  Depends on D11200  Differential Revision: https://phabricator.services.mozilla.com/D11201",
+    "node": "a58e50deefdc260cef3514c1552e4355ea5a6024"
   },
   "9": {
-    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
-    "commit_date": "2018-11-20 15:47:23",
-    "commit_message": "Bug 1507691 - Followup to fix broken test expecting accept header without image/webp. r=aosmond CLOSED TREE ",
-    "node": "3fee9c5dc2c258a40f542cf5040b46447d1cffa8"
+    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
+    "commit_date": "2018-11-20 18:59:39",
+    "commit_message": "Bug 1493292 - GetStringSize instead of aDataLen. r=mats  Differential Revision: https://phabricator.services.mozilla.com/D11200",
+    "node": "29b3f0dfc6bb418b73a9cd519241b4ec38d0efbc"
   },
   "10": {
-    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-    "commit_date": "2018-11-20 15:18:25",
-    "commit_message": "Bug 1495791 - Add a reftest.  Before https://github.com/servo/webrender/pull/3315 this rendered a red square under the green square on WR. ",
-    "node": "5df0edf84a229f28caf8de076344d499165a6ed3"
+    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
+    "commit_date": "2018-11-20 19:01:48",
+    "commit_message": "Bug 1507875 - Remove the customizable ui toolbarpaletteitem binding;r=Gijs  This removes the wrapping box inside the anonymous content, and replaces the anonymous label with an ::after CSS rule that sets text based on the [title] attribute.  Because it doesn't replicate the anonymous wrapping box with light DOM: - Calling JS don't need to be updated (the child added via appendChild   is still a direct descendant of the element). - Many CSS selectors don't need to be updated (if they were targeting the   slotted children as direct descendants. However, CSS selectors that were   targeting the anonymous content directly do need to be updated, since those   nodes are removed.  Differential Revision: https://phabricator.services.mozilla.com/D12172",
+    "node": "8f7476054232c929476c1a5112bb855f6ba7612f"
   },
   "11": {
-    "commiter_name": "Ms2ger <Ms2ger@igalia.com>",
-    "commit_date": "2018-11-20 15:19:32",
-    "commit_message": "Bug 1506352 - Followup: Add missing blank line to placate flake8.",
-    "node": "55d9c869610101ebe70367d525e87c44f75efdc0"
+    "commiter_name": "Drew Willcoxon <adw@mozilla.com>",
+    "commit_date": "2018-11-20 12:36:29",
+    "commit_message": "Bug 1507568 - Clicking a @shortcut in the urlbar popup should fill it in the input instead of visiting the site. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D12203",
+    "node": "efa49008bfc788e3354d6150eab71a7f105e3102"
   },
   "12": {
-    "commiter_name": "Ms2ger <Ms2ger@igalia.com>",
-    "commit_date": "2018-11-20 15:00:23",
-    "commit_message": "Bug 1506352 - Add a --log-wptreport option to jstests; r=bbouvier,jgraham",
-    "node": "5931ccb19e50e7e40e53173b8caa4403c9b35b8e"
+    "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+    "commit_date": "2018-11-20 18:48:30",
+    "commit_message": "Merge mozilla-central to autoland",
+    "node": "d6591e3f56bbe90561faeb01470cca02d9085e36"
   },
   "13": {
-    "commiter_name": "Christoph Kerschbaumer <ckerschb@christophkerschbaumer.com>",
-    "commit_date": "2018-11-20 13:12:01",
-    "commit_message": "Bug 1508596: Remove unused CreatePrincipalFromReferrer within nsDocshell. r=jkt",
-    "node": "f7cd1062ca6045ae2d8eb9c794818d3924f8a6d4"
+    "commiter_name": "Martin Stransky <stransky@redhat.com>",
+    "commit_date": "2018-11-20 17:51:18",
+    "commit_message": "Bug 1506050 - [Linux/Gtk] Use NS_DOCUMENT_STATE_WINDOW_INACTIVE to set titlebar state, r=jhorak  Differential Revision: https://phabricator.services.mozilla.com/D12104",
+    "node": "bf1a01ae1faa2960e09228ecff32d1d332244232"
   },
   "14": {
-    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
-    "commit_date": "2018-11-16 17:55:17",
-    "commit_message": "Bug 1507691 - Add image/webp to default HTTP Accept header. r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D12136",
-    "node": "243ce783ccfb0f05c85d1575d26e8e845cfd1eb2"
+    "commiter_name": "Martin Stransky <stransky@redhat.com>",
+    "commit_date": "2018-11-20 17:39:32",
+    "commit_message": "Bug 1505743 - [Wayland] Clear Wayland buffer when GtkWindow is mapped. r=jhorak  Differential Revision: https://phabricator.services.mozilla.com/D11999",
+    "node": "4d353fd7da6bf1910ceb2dd4af99392c995cbaa7"
   },
   "15": {
-    "commiter_name": "Tooru Fujisawa <arai_a@mac.com>",
-    "commit_date": "2018-11-20 13:21:32",
-    "commit_message": "Bug 1505511 - Part 3: Support WeakMap and WeakSet in Xray. r=bholley",
-    "node": "754cc91c9d3b50207679ef25861d662496811c64"
+    "commiter_name": "Robert Strong <robert.bugzilla@gmail.com>",
+    "commit_date": "2018-11-20 18:04:42",
+    "commit_message": "Bug 1508637 - Update comments in removed-files.in. r=mhowell  Removed comment about Firefox 27 and below since it is no longer relevant after the LZMA watershed Changed a couple of comments for clarity  Differential Revision: https://phabricator.services.mozilla.com/D12424",
+    "node": "24cd301f1e439e414c178fd6f404894d44270e34"
   },
   "16": {
-    "commiter_name": "Tooru Fujisawa <arai_a@mac.com>",
-    "commit_date": "2018-11-20 13:21:32",
-    "commit_message": "Bug 1505511 - Part 2: Use ClassSpec in WeakSetObject. r=evilpie",
-    "node": "32915637657a5e92dbdd8abec557c1f229b70cd1"
+    "commiter_name": "Patrick Brosset <pbrosset@mozilla.com>",
+    "commit_date": "2018-11-20 16:44:28",
+    "commit_message": "Bug 1508581 - Fix a few UI inconsistencies in the flex inspector in RTL; r=miker  Differential Revision: https://phabricator.services.mozilla.com/D12418",
+    "node": "e14fb4f0ce8268b4aee4ab20d791dded24379db8"
   },
   "17": {
-    "commiter_name": "Tooru Fujisawa <arai_a@mac.com>",
-    "commit_date": "2018-11-20 13:21:32",
-    "commit_message": "Bug 1505511 - Part 1: Use ClassSpec in WeakMapObject. r=evilpie",
-    "node": "a5d9fa8dc136d167e53b1ae4a7b494d2e691dd60"
+    "commiter_name": "Julian Descottes <jdescottes@mozilla.com>",
+    "commit_date": "2018-11-20 17:38:27",
+    "commit_message": "Bug 1493968 - Wait for requests to finish in aboutdebugging navigate test;r=ladybenko  Still not sure what is the root issue here, but none of the regular connect tests are failing so I think the issue occurs when we remove tabs in the second step.  Differential Revision: https://phabricator.services.mozilla.com/D12332",
+    "node": "e71f2bd051cf58c2fa805d8dce0032a6c5e77af8"
   },
   "18": {
-    "commiter_name": "Gabriele Svelto <gsvelto@mozilla.com>",
-    "commit_date": "2018-11-12 12:04:17",
-    "commit_message": "Bug 1502284 - Cleanup of the observer service code r=erahm  This refactors the observer service code to improve readability, uses MOZ_TRY and other checking macros wherever possible to simplify error handling and replaces the ObserverRef class with the more generic nsMaybeWeakPtr class. This cuts away some code and halves the amount of memory needed to store an event listener. The external behavior is almost unchanged save for some error codes which are now more specific.  Differential Revision: https://phabricator.services.mozilla.com/D11646",
-    "node": "c77a41fad0e6a6b22df9a077b536098adb42db86"
+    "commiter_name": "Iain Ireland <iireland@mozilla.com>",
+    "commit_date": "2018-11-19 14:54:06",
+    "commit_message": "Bug 1497107: Add ensureBallast call to freezePropertiesForCommonPrototype r=nbp  Differential Revision: https://phabricator.services.mozilla.com/D12184",
+    "node": "136188d4f9281e3cec98699de83accbb0ad79439"
   },
   "19": {
-    "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
-    "commit_date": "2018-11-20 11:46:12",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge on a CLOSED TREE",
-    "node": "8e08c23784f5f58d1f24bf1f783ad8b827ce688c"
+    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
+    "commit_date": "2018-11-20 14:42:30",
+    "commit_message": "Bug 1508255 - Merge js/src/.clang-format into top-level r=sylvestre  The style options now match, so remove js/src/.clang-format \\o/  Depends on D12391  Differential Revision: https://phabricator.services.mozilla.com/D12392",
+    "node": "2d8d64aff05a9af6af00a99c7922b86ad9d1bb55"
   }
 }

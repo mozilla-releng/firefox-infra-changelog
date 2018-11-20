@@ -1,7 +1,11 @@
-## ADDONSCRIPT COMMIT MARKDOWN TABLE SINCE 2018-11-13 19:10:38.458915
+## ADDONSCRIPT COMMIT MARKDOWN TABLE SINCE 2018-11-14 01:20:27.639344
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|69|Callek|Merge pull request #185 from Callek/pyup_schedule  Run pyup on a schedule|[URL](https://github.com/mozilla-releng/addonscript/commit/6a8235b19a8b5482cca8763e389c972de2cfb1a8)|2018-11-20 18:45:45
+|68|Callek|Run pyup on a schedule|[URL](https://github.com/mozilla-releng/addonscript/commit/6eaa33add7b67df13ba052b2aa10fc6b78e572e6)|2018-11-20 18:45:24
+|67|Callek|Merge pull request #184 from Callek/use_future_package  Work around pip-compile-multi bug manually,|[URL](https://github.com/mozilla-releng/addonscript/commit/c786de8a1c5cf349d1aa09ccb946bc16afb4404c)|2018-11-20 18:43:59
+|66|Callek|Work around pip-compile-multi bug manually, see https://github.com/peterdemin/pip-compile-multi/issues/76|[URL](https://github.com/mozilla-releng/addonscript/commit/0691825c2d6a59ef13a6d93c0aafd51d1bb8e67c)|2018-11-20 18:34:11
 |65|Callek|Merge pull request #183 from Callek/pip-compile-multi  Pip compile multi|[URL](https://github.com/mozilla-releng/addonscript/commit/a15118f1270a71b40ffe8acdb497a9916136927c)|2018-11-20 15:20:25
 |64|Callek|Merge branch 'master' into pip-compile-multi|[URL](https://github.com/mozilla-releng/addonscript/commit/176d6cc533865fe3eb6f71778cec08d4dfae4388)|2018-11-20 15:19:43
 |63|Callek|Run pip-compile-multi|[URL](https://github.com/mozilla-releng/addonscript/commit/50465e22e7917ca56563780ee7f66829b49c759f)|2018-11-20 15:17:49

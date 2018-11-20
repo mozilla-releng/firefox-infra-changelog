@@ -1,8 +1,52 @@
 {
   "0": {
-    "lastChecked": "2018-11-20 17:10:45.745322"
+    "lastChecked": "2018-11-20 23:20:34.514975"
   },
   "1": {
+    "sha": "6a8235b19a8b5482cca8763e389c972de2cfb1a8",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/6a8235b19a8b5482cca8763e389c972de2cfb1a8",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #185 from Callek/pyup_schedule  Run pyup on a schedule",
+    "commit_date": "2018-11-20 18:45:45",
+    "files_changed": [
+      ".pyup.yml"
+    ]
+  },
+  "2": {
+    "sha": "6eaa33add7b67df13ba052b2aa10fc6b78e572e6",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/6eaa33add7b67df13ba052b2aa10fc6b78e572e6",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Run pyup on a schedule",
+    "commit_date": "2018-11-20 18:45:24",
+    "files_changed": [
+      ".pyup.yml"
+    ]
+  },
+  "3": {
+    "sha": "c786de8a1c5cf349d1aa09ccb946bc16afb4404c",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/c786de8a1c5cf349d1aa09ccb946bc16afb4404c",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #184 from Callek/use_future_package  Work around pip-compile-multi bug manually,",
+    "commit_date": "2018-11-20 18:43:59",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "4": {
+    "sha": "0691825c2d6a59ef13a6d93c0aafd51d1bb8e67c",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/0691825c2d6a59ef13a6d93c0aafd51d1bb8e67c",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Work around pip-compile-multi bug manually, see https://github.com/peterdemin/pip-compile-multi/issues/76",
+    "commit_date": "2018-11-20 18:34:11",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "5": {
     "sha": "a15118f1270a71b40ffe8acdb497a9916136927c",
     "url": "https://github.com/mozilla-releng/addonscript/commit/a15118f1270a71b40ffe8acdb497a9916136927c",
     "commiter_name": "Callek",
@@ -20,7 +64,7 @@
       "tox.ini"
     ]
   },
-  "2": {
+  "6": {
     "sha": "176d6cc533865fe3eb6f71778cec08d4dfae4388",
     "url": "https://github.com/mozilla-releng/addonscript/commit/176d6cc533865fe3eb6f71778cec08d4dfae4388",
     "commiter_name": "Callek",
@@ -29,7 +73,7 @@
     "commit_date": "2018-11-20 15:19:43",
     "files_changed": []
   },
-  "3": {
+  "7": {
     "sha": "50465e22e7917ca56563780ee7f66829b49c759f",
     "url": "https://github.com/mozilla-releng/addonscript/commit/50465e22e7917ca56563780ee7f66829b49c759f",
     "commiter_name": "Callek",
@@ -42,7 +86,7 @@
       "requirements/test.txt"
     ]
   },
-  "4": {
+  "8": {
     "sha": "f36fdfe9ad1a8391a678d309acd418eb8617cee6",
     "url": "https://github.com/mozilla-releng/addonscript/commit/f36fdfe9ad1a8391a678d309acd418eb8617cee6",
     "commiter_name": "Callek",
@@ -53,7 +97,7 @@
       "requirements/test.in"
     ]
   },
-  "5": {
+  "9": {
     "sha": "95073f5cd484f5c3dffe919d13ae7e6bd8382ee0",
     "url": "https://github.com/mozilla-releng/addonscript/commit/95073f5cd484f5c3dffe919d13ae7e6bd8382ee0",
     "commiter_name": "Callek",
@@ -71,7 +115,7 @@
       "tox.ini"
     ]
   },
-  "6": {
+  "10": {
     "sha": "cbb2a45c45ccd0282e132ce8564fea3f089d966b",
     "url": "https://github.com/mozilla-releng/addonscript/commit/cbb2a45c45ccd0282e132ce8564fea3f089d966b",
     "commiter_name": "Callek",
@@ -83,7 +127,7 @@
       "requirements.txt"
     ]
   },
-  "7": {
+  "11": {
     "sha": "808a6fd4b3ddaa802dd03719818beb4437fe57f7",
     "url": "https://github.com/mozilla-releng/addonscript/commit/808a6fd4b3ddaa802dd03719818beb4437fe57f7",
     "commiter_name": "pyup-bot",
@@ -94,7 +138,7 @@
       "requirements.txt"
     ]
   },
-  "8": {
+  "12": {
     "sha": "564e5869ef4fa522ab10e969768e86190490bcd8",
     "url": "https://github.com/mozilla-releng/addonscript/commit/564e5869ef4fa522ab10e969768e86190490bcd8",
     "commiter_name": "pyup-bot",
@@ -105,7 +149,7 @@
       "requirements-test.txt"
     ]
   },
-  "9": {
+  "13": {
     "sha": "5b4a49b518797ded1a4a8ed547ad3c7a28f79a96",
     "url": "https://github.com/mozilla-releng/addonscript/commit/5b4a49b518797ded1a4a8ed547ad3c7a28f79a96",
     "commiter_name": "Callek",
@@ -117,7 +161,7 @@
       "requirements.txt"
     ]
   },
-  "10": {
+  "14": {
     "sha": "cf8ebb02e8625f44326ef44b0bfa05e67c599ee8",
     "url": "https://github.com/mozilla-releng/addonscript/commit/cf8ebb02e8625f44326ef44b0bfa05e67c599ee8",
     "commiter_name": "Callek",
@@ -129,7 +173,7 @@
       "requirements.txt"
     ]
   },
-  "11": {
+  "15": {
     "sha": "421cb5e8660870503560914db5ae7fa50dcb491e",
     "url": "https://github.com/mozilla-releng/addonscript/commit/421cb5e8660870503560914db5ae7fa50dcb491e",
     "commiter_name": "Callek",
@@ -140,7 +184,7 @@
       "requirements-test.txt"
     ]
   },
-  "12": {
+  "16": {
     "sha": "fe3224d71310568b5368246db3eff4b0919b7462",
     "url": "https://github.com/mozilla-releng/addonscript/commit/fe3224d71310568b5368246db3eff4b0919b7462",
     "commiter_name": "Callek",
@@ -153,7 +197,7 @@
       "requirements.txt"
     ]
   },
-  "13": {
+  "17": {
     "sha": "43be9eb870847fcf1fc88773086ddfd2f0947eef",
     "url": "https://github.com/mozilla-releng/addonscript/commit/43be9eb870847fcf1fc88773086ddfd2f0947eef",
     "commiter_name": "Callek",
@@ -164,7 +208,7 @@
       "requirements-test.txt"
     ]
   },
-  "14": {
+  "18": {
     "sha": "0b417b84f9afbe235e9219afc43461f0cbcdf278",
     "url": "https://github.com/mozilla-releng/addonscript/commit/0b417b84f9afbe235e9219afc43461f0cbcdf278",
     "commiter_name": "Callek",
@@ -175,7 +219,7 @@
       "requirements-test.txt"
     ]
   },
-  "15": {
+  "19": {
     "sha": "f28a004031912c6f63f6b63343468405dc2e7177",
     "url": "https://github.com/mozilla-releng/addonscript/commit/f28a004031912c6f63f6b63343468405dc2e7177",
     "commiter_name": "Callek",
@@ -188,7 +232,7 @@
       "requirements.txt"
     ]
   },
-  "16": {
+  "20": {
     "sha": "b4c31c03a2c907e893029bd9ed6ec9a7d620c3c0",
     "url": "https://github.com/mozilla-releng/addonscript/commit/b4c31c03a2c907e893029bd9ed6ec9a7d620c3c0",
     "commiter_name": "Callek",
@@ -200,7 +244,7 @@
       "requirements.txt"
     ]
   },
-  "17": {
+  "21": {
     "sha": "245d221f4af82d06432fb7dcbdd16213fa5eda51",
     "url": "https://github.com/mozilla-releng/addonscript/commit/245d221f4af82d06432fb7dcbdd16213fa5eda51",
     "commiter_name": "Callek",
@@ -211,7 +255,7 @@
       "requirements-test.txt"
     ]
   },
-  "18": {
+  "22": {
     "sha": "f4d2ec985a8925fbddf6f28699c11f48788f1027",
     "url": "https://github.com/mozilla-releng/addonscript/commit/f4d2ec985a8925fbddf6f28699c11f48788f1027",
     "commiter_name": "Callek",
@@ -223,7 +267,7 @@
       "requirements.txt"
     ]
   },
-  "19": {
+  "23": {
     "sha": "5c06891ccbcedad82dcccd6b315f81a60c3973c9",
     "url": "https://github.com/mozilla-releng/addonscript/commit/5c06891ccbcedad82dcccd6b315f81a60c3973c9",
     "commiter_name": "Callek",
@@ -237,7 +281,7 @@
       "requirements.txt"
     ]
   },
-  "20": {
+  "24": {
     "sha": "42e7412004eedd16133b245f1f27e2b10c6453b5",
     "url": "https://github.com/mozilla-releng/addonscript/commit/42e7412004eedd16133b245f1f27e2b10c6453b5",
     "commiter_name": "Callek",
@@ -249,7 +293,7 @@
       "requirements-test.txt"
     ]
   },
-  "21": {
+  "25": {
     "sha": "4a4b64f5e37836087814e7410aeb686ec8c8b943",
     "url": "https://github.com/mozilla-releng/addonscript/commit/4a4b64f5e37836087814e7410aeb686ec8c8b943",
     "commiter_name": "Callek",
@@ -260,7 +304,7 @@
       "requirements-test.txt"
     ]
   },
-  "22": {
+  "26": {
     "sha": "d87b22488090dae841a6de6c0424024832767eee",
     "url": "https://github.com/mozilla-releng/addonscript/commit/d87b22488090dae841a6de6c0424024832767eee",
     "commiter_name": "Callek",
@@ -274,7 +318,7 @@
       "requirements.txt"
     ]
   },
-  "23": {
+  "27": {
     "sha": "597e7bf77c356b68b99154fe61763600eb7aa4bd",
     "url": "https://github.com/mozilla-releng/addonscript/commit/597e7bf77c356b68b99154fe61763600eb7aa4bd",
     "commiter_name": "Callek",
@@ -288,7 +332,7 @@
       "requirements.txt"
     ]
   },
-  "24": {
+  "28": {
     "sha": "59e53195a3fc5480766e8d6af453106518656e58",
     "url": "https://github.com/mozilla-releng/addonscript/commit/59e53195a3fc5480766e8d6af453106518656e58",
     "commiter_name": "Callek",
@@ -302,7 +346,7 @@
       "requirements.txt"
     ]
   },
-  "25": {
+  "29": {
     "sha": "2cdc1cb8bb504b0164c769ae914b4171a96b7c7c",
     "url": "https://github.com/mozilla-releng/addonscript/commit/2cdc1cb8bb504b0164c769ae914b4171a96b7c7c",
     "commiter_name": "Callek",
@@ -316,7 +360,7 @@
       "requirements.txt"
     ]
   },
-  "26": {
+  "30": {
     "sha": "52743005c8d7333fd2b24d59948aa79691108979",
     "url": "https://github.com/mozilla-releng/addonscript/commit/52743005c8d7333fd2b24d59948aa79691108979",
     "commiter_name": "Callek",
@@ -330,7 +374,7 @@
       "requirements.txt"
     ]
   },
-  "27": {
+  "31": {
     "sha": "9f32875f997c064b830be22a632468ba0dfa938e",
     "url": "https://github.com/mozilla-releng/addonscript/commit/9f32875f997c064b830be22a632468ba0dfa938e",
     "commiter_name": "Callek",
@@ -342,7 +386,7 @@
       "requirements.txt"
     ]
   },
-  "28": {
+  "32": {
     "sha": "c19431ac063c761785f96b89eb1ef5c3b7814520",
     "url": "https://github.com/mozilla-releng/addonscript/commit/c19431ac063c761785f96b89eb1ef5c3b7814520",
     "commiter_name": "Callek",
@@ -353,7 +397,7 @@
       "requirements-test.txt"
     ]
   },
-  "29": {
+  "33": {
     "sha": "bc73bbd94d294eb2da9eed3119e905ce3f1b7cad",
     "url": "https://github.com/mozilla-releng/addonscript/commit/bc73bbd94d294eb2da9eed3119e905ce3f1b7cad",
     "commiter_name": "Callek",
@@ -367,7 +411,7 @@
       "requirements.txt"
     ]
   },
-  "30": {
+  "34": {
     "sha": "d237d2283ab8b8c36d9b0719fe1d11016e447b44",
     "url": "https://github.com/mozilla-releng/addonscript/commit/d237d2283ab8b8c36d9b0719fe1d11016e447b44",
     "commiter_name": "Callek",
@@ -378,7 +422,7 @@
       "requirements-test.txt"
     ]
   },
-  "31": {
+  "35": {
     "sha": "e0826519fbe397f71e575f8d8760120bf9a8d568",
     "url": "https://github.com/mozilla-releng/addonscript/commit/e0826519fbe397f71e575f8d8760120bf9a8d568",
     "commiter_name": "Callek",
@@ -390,7 +434,7 @@
       "requirements.txt"
     ]
   },
-  "32": {
+  "36": {
     "sha": "11b2558fd7e47e8d10ea401a98eb5fc4b542ed14",
     "url": "https://github.com/mozilla-releng/addonscript/commit/11b2558fd7e47e8d10ea401a98eb5fc4b542ed14",
     "commiter_name": "Callek",
@@ -404,7 +448,7 @@
       "requirements.txt"
     ]
   },
-  "33": {
+  "37": {
     "sha": "0a33397ef87b3df868937093ea55fc79112c26de",
     "url": "https://github.com/mozilla-releng/addonscript/commit/0a33397ef87b3df868937093ea55fc79112c26de",
     "commiter_name": "Callek",
@@ -418,7 +462,7 @@
       "requirements.txt"
     ]
   },
-  "34": {
+  "38": {
     "sha": "70bff71c132440b8f16b583df5db86d764e1aa7a",
     "url": "https://github.com/mozilla-releng/addonscript/commit/70bff71c132440b8f16b583df5db86d764e1aa7a",
     "commiter_name": "Callek",
@@ -429,7 +473,7 @@
       "requirements-test.txt"
     ]
   },
-  "35": {
+  "39": {
     "sha": "718c992959f872b06a95f3ccc5b7565d34bddc2d",
     "url": "https://github.com/mozilla-releng/addonscript/commit/718c992959f872b06a95f3ccc5b7565d34bddc2d",
     "commiter_name": "Callek",
@@ -440,7 +484,7 @@
       "requirements-test.txt"
     ]
   },
-  "36": {
+  "40": {
     "sha": "8eaab68858690b8ece07237ea5772c5872a6ecb2",
     "url": "https://github.com/mozilla-releng/addonscript/commit/8eaab68858690b8ece07237ea5772c5872a6ecb2",
     "commiter_name": "Callek",
@@ -454,7 +498,7 @@
       "requirements.txt"
     ]
   },
-  "37": {
+  "41": {
     "sha": "0a9f4c909d09f1c40b718a6faf178d6dc5fd3ae2",
     "url": "https://github.com/mozilla-releng/addonscript/commit/0a9f4c909d09f1c40b718a6faf178d6dc5fd3ae2",
     "commiter_name": "Callek",
@@ -465,7 +509,7 @@
       "requirements-test.txt"
     ]
   },
-  "38": {
+  "42": {
     "sha": "412f82754f4dd3324a3ab07347e57e5e1bd7e582",
     "url": "https://github.com/mozilla-releng/addonscript/commit/412f82754f4dd3324a3ab07347e57e5e1bd7e582",
     "commiter_name": "Callek",
@@ -498,7 +542,7 @@
       "version.txt"
     ]
   },
-  "39": {
+  "43": {
     "sha": "36a439c4a17f2d097b5af4707fc7c57e30876ca5",
     "url": "https://github.com/mozilla-releng/addonscript/commit/36a439c4a17f2d097b5af4707fc7c57e30876ca5",
     "commiter_name": "Callek",
@@ -511,7 +555,7 @@
       "requirements.txt"
     ]
   },
-  "40": {
+  "44": {
     "sha": "82562bcec85340618c9fcd4449ba4f9df277f4f0",
     "url": "https://github.com/mozilla-releng/addonscript/commit/82562bcec85340618c9fcd4449ba4f9df277f4f0",
     "commiter_name": "Callek",
@@ -525,7 +569,7 @@
       "requirements.txt"
     ]
   },
-  "41": {
+  "45": {
     "sha": "dc41c37d7288cfab9422fd402134cbb98ba046f7",
     "url": "https://github.com/mozilla-releng/addonscript/commit/dc41c37d7288cfab9422fd402134cbb98ba046f7",
     "commiter_name": "Callek",
@@ -537,7 +581,7 @@
       "requirements.txt"
     ]
   },
-  "42": {
+  "46": {
     "sha": "378f55dfce458bf25f9e3d7e30b89ae92852d75d",
     "url": "https://github.com/mozilla-releng/addonscript/commit/378f55dfce458bf25f9e3d7e30b89ae92852d75d",
     "commiter_name": "Callek",
@@ -548,7 +592,7 @@
       "requirements-test.txt"
     ]
   },
-  "43": {
+  "47": {
     "sha": "82d6151b9ae279bc601ccbf8f68dfad415dd7dca",
     "url": "https://github.com/mozilla-releng/addonscript/commit/82d6151b9ae279bc601ccbf8f68dfad415dd7dca",
     "commiter_name": "Callek",
@@ -562,7 +606,7 @@
       "requirements.txt"
     ]
   },
-  "44": {
+  "48": {
     "sha": "0f7dfe56045eed131aa6f7855761df97612abcf9",
     "url": "https://github.com/mozilla-releng/addonscript/commit/0f7dfe56045eed131aa6f7855761df97612abcf9",
     "commiter_name": "Callek",
@@ -574,7 +618,7 @@
       "requirements.txt"
     ]
   },
-  "45": {
+  "49": {
     "sha": "7418d05c795624aec126d4ec9047c2677038cf40",
     "url": "https://github.com/mozilla-releng/addonscript/commit/7418d05c795624aec126d4ec9047c2677038cf40",
     "commiter_name": "Callek",
@@ -585,7 +629,7 @@
       "requirements-test.txt"
     ]
   },
-  "46": {
+  "50": {
     "sha": "0c7acb375a4134773c7cc0c5ca6fd5c7386e23c5",
     "url": "https://github.com/mozilla-releng/addonscript/commit/0c7acb375a4134773c7cc0c5ca6fd5c7386e23c5",
     "commiter_name": "Callek",
@@ -599,7 +643,7 @@
       "requirements.txt"
     ]
   },
-  "47": {
+  "51": {
     "sha": "c3d754764e73439373c32d36291638e9379470fc",
     "url": "https://github.com/mozilla-releng/addonscript/commit/c3d754764e73439373c32d36291638e9379470fc",
     "commiter_name": "Callek",
@@ -610,7 +654,7 @@
       "requirements-test.txt"
     ]
   },
-  "48": {
+  "52": {
     "sha": "a8cedf0f391315d82940a7e7ec9739b0ed2c5df7",
     "url": "https://github.com/mozilla-releng/addonscript/commit/a8cedf0f391315d82940a7e7ec9739b0ed2c5df7",
     "commiter_name": "Callek",
@@ -621,7 +665,7 @@
       "requirements-test.txt"
     ]
   },
-  "49": {
+  "53": {
     "sha": "cc970154324bf2017513e8231b8c83978a2c4607",
     "url": "https://github.com/mozilla-releng/addonscript/commit/cc970154324bf2017513e8231b8c83978a2c4607",
     "commiter_name": "Callek",
@@ -635,7 +679,7 @@
       "requirements.txt"
     ]
   },
-  "50": {
+  "54": {
     "sha": "aefe15da223b2f2e3031af6eb20f564c845018c8",
     "url": "https://github.com/mozilla-releng/addonscript/commit/aefe15da223b2f2e3031af6eb20f564c845018c8",
     "commiter_name": "Callek",
@@ -647,7 +691,7 @@
       "requirements.txt"
     ]
   },
-  "51": {
+  "55": {
     "sha": "34f66903b532b7f4598eabe28d8f7ca6b34549c6",
     "url": "https://github.com/mozilla-releng/addonscript/commit/34f66903b532b7f4598eabe28d8f7ca6b34549c6",
     "commiter_name": "Callek",
@@ -658,7 +702,7 @@
       "requirements-test.txt"
     ]
   },
-  "52": {
+  "56": {
     "sha": "aefec46bbc64634f7b8ba317d1eadbb42a171b1e",
     "url": "https://github.com/mozilla-releng/addonscript/commit/aefec46bbc64634f7b8ba317d1eadbb42a171b1e",
     "commiter_name": "Callek",
@@ -670,7 +714,7 @@
       "requirements-test.txt"
     ]
   },
-  "53": {
+  "57": {
     "sha": "9a021af4d58df02d180a423b4662d4bb982fa39f",
     "url": "https://github.com/mozilla-releng/addonscript/commit/9a021af4d58df02d180a423b4662d4bb982fa39f",
     "commiter_name": "Callek",
@@ -682,7 +726,7 @@
       "requirements.txt"
     ]
   },
-  "54": {
+  "58": {
     "sha": "acac20efb78fb78ebc1c74e56976ce48b7e69471",
     "url": "https://github.com/mozilla-releng/addonscript/commit/acac20efb78fb78ebc1c74e56976ce48b7e69471",
     "commiter_name": "Callek",
@@ -694,7 +738,7 @@
       "requirements.txt"
     ]
   },
-  "55": {
+  "59": {
     "sha": "883801564650e442c8bab13c887cc02fe3a582b4",
     "url": "https://github.com/mozilla-releng/addonscript/commit/883801564650e442c8bab13c887cc02fe3a582b4",
     "commiter_name": "Callek",
@@ -707,7 +751,7 @@
       "requirements.txt"
     ]
   },
-  "56": {
+  "60": {
     "sha": "608adbaa4afe158a4f857d240dea7ddcb8b3856e",
     "url": "https://github.com/mozilla-releng/addonscript/commit/608adbaa4afe158a4f857d240dea7ddcb8b3856e",
     "commiter_name": "Callek",
@@ -718,7 +762,7 @@
       "requirements-test.txt"
     ]
   },
-  "57": {
+  "61": {
     "sha": "3033186341982984670943abf02c36119ff74e4f",
     "url": "https://github.com/mozilla-releng/addonscript/commit/3033186341982984670943abf02c36119ff74e4f",
     "commiter_name": "Callek",
@@ -729,7 +773,7 @@
       "requirements-test.txt"
     ]
   },
-  "58": {
+  "62": {
     "sha": "d0b7e7da33e34ada3f815cb3dad7fffc0dc058f4",
     "url": "https://github.com/mozilla-releng/addonscript/commit/d0b7e7da33e34ada3f815cb3dad7fffc0dc058f4",
     "commiter_name": "Callek",
@@ -740,7 +784,7 @@
       "requirements-test.txt"
     ]
   },
-  "59": {
+  "63": {
     "sha": "a8e311dc50259ab5fe573e7f50cc0c721e8b25ba",
     "url": "https://github.com/mozilla-releng/addonscript/commit/a8e311dc50259ab5fe573e7f50cc0c721e8b25ba",
     "commiter_name": "Callek",
@@ -752,7 +796,7 @@
       "requirements.txt"
     ]
   },
-  "60": {
+  "64": {
     "sha": "6eafd65616a2b4f008fdf5bcf8ad8ec03ae978f8",
     "url": "https://github.com/mozilla-releng/addonscript/commit/6eafd65616a2b4f008fdf5bcf8ad8ec03ae978f8",
     "commiter_name": "Callek",
@@ -764,7 +808,7 @@
       "requirements.txt"
     ]
   },
-  "61": {
+  "65": {
     "sha": "5ac47c160bf762e2b085d5510167911794433242",
     "url": "https://github.com/mozilla-releng/addonscript/commit/5ac47c160bf762e2b085d5510167911794433242",
     "commiter_name": "Callek",
@@ -775,7 +819,7 @@
       "requirements-test.txt"
     ]
   },
-  "62": {
+  "66": {
     "sha": "edeb0198a4358e1215234541abd820e60839fba0",
     "url": "https://github.com/mozilla-releng/addonscript/commit/edeb0198a4358e1215234541abd820e60839fba0",
     "commiter_name": "Callek",
@@ -787,7 +831,7 @@
       "requirements.txt"
     ]
   },
-  "63": {
+  "67": {
     "sha": "936af5f468b7231bfd3dd7ca140816bfedd92bcc",
     "url": "https://github.com/mozilla-releng/addonscript/commit/936af5f468b7231bfd3dd7ca140816bfedd92bcc",
     "commiter_name": "Callek",
@@ -799,7 +843,7 @@
       "requirements.txt"
     ]
   },
-  "64": {
+  "68": {
     "sha": "d5f178722ed44ea662e71709060bb457b1cf0819",
     "url": "https://github.com/mozilla-releng/addonscript/commit/d5f178722ed44ea662e71709060bb457b1cf0819",
     "commiter_name": "Callek",
@@ -811,7 +855,7 @@
       "requirements.txt"
     ]
   },
-  "65": {
+  "69": {
     "sha": "7d36d34619d4105be9f113f94dd8e33819d3c1e2",
     "url": "https://github.com/mozilla-releng/addonscript/commit/7d36d34619d4105be9f113f94dd8e33819d3c1e2",
     "commiter_name": "pyup-bot",

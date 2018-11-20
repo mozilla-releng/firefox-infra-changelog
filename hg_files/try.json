@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Gregory Mierzwinski <gmierz2@outlook.com>",
-    "commit_date": "2018-11-20 18:16:12",
-    "commit_message": "Fuzzy query='linux64-ccov 'test-coverage  Pushed via `mach try fuzzy`",
-    "node": "feeededfbc67ee5bd82bd704aeec813151a67fc9"
+    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
+    "commit_date": "2018-11-21 01:15:37",
+    "commit_message": "try: -b do -p win64,linux64,macosx64 -u mochitests,xpcshell -t none --artifact  Pushed via `mach try syntax`",
+    "node": "f140c7785f5fc8575a613f5de3d142b7fac92a46"
   },
   "1": {
-    "commiter_name": "Gregory Mierzwinski <gmierz2@outlook.com>",
-    "commit_date": "2018-09-23 15:44:40",
-    "commit_message": "tests_to_verify.json addition",
-    "node": "d0de20c41cadd12b9cffaad7c2ee4628030a2981"
+    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
+    "commit_date": "2018-11-20 01:13:38",
+    "commit_message": "Bug 1508446 - Require that [accesskey] gets set on <xul:label> to enable formatting;r=paolo  Previously, if the accesskey attribute was missing then the label would reach up to binding parent to find it's accesskey. In practice, bindings already do [xbl:inherits=accesskey] to send it down to the label anyway.  The problem with this is that for controls without accesskeys, the attribute doesn't get set, so the label will access the control from JS. This is fine for XBL, since typically the label XBL will construct at the same time as the control, but when migrating to Custom Elements, the label gets connected even when the control is hidden.  Differential Revision: https://phabricator.services.mozilla.com/D12355",
+    "node": "78b17ebbd4b223c57c549b34fa1ff22fea26d8bc"
   },
   "2": {
-    "commiter_name": "Joel Maher <jmaher@mozilla.com>",
-    "commit_date": "2018-09-14 14:46:55",
-    "commit_message": "imported patch run_many_files.patch",
-    "node": "e34fd3280759e80716349d572f9a2fd8695fdb08"
+    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+    "commit_date": "2018-11-21 01:14:35",
+    "commit_message": "Fuzzy query=web-platform-tests  Pushed via `mach try fuzzy`",
+    "node": "5ecf21069d41386935c48272b061e1fae92939ad"
   },
   "3": {
-    "commiter_name": "Gregory Mierzwinski <gmierz2@outlook.com>",
-    "commit_date": "2018-10-31 16:59:05",
-    "commit_message": "Check for JS files.",
-    "node": "7b4f02deda2df97606c871f1202deb0096320140"
+    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+    "commit_date": "2018-11-21 01:00:11",
+    "commit_message": "Update all jobs from try push",
+    "node": "7dc70d45d1e9277611592827b45610e614b87251"
   },
   "4": {
-    "commiter_name": "Ted Mielczarek <ted@mielczarek.org>",
-    "commit_date": "2018-11-20 18:15:50",
-    "commit_message": "Fuzzy query=rusttest  Pushed via `mach try again`",
-    "node": "14a523470bf9b5f05b2701b1feedbc7d4dbb85f5"
+    "commiter_name": "Blake Kaplan <mrbkap@gmail.com>",
+    "commit_date": "2018-11-21 01:13:50",
+    "commit_message": "Fuzzy query='linux 'debug '-sw | 'mochitest  Pushed via `mach try fuzzy`",
+    "node": "7311a3bd1a42b313f38e5d1f27e601bdc9a69c26"
   },
   "5": {
-    "commiter_name": "Ted Mielczarek <ted@mielczarek.org>",
-    "commit_date": "2018-11-20 17:29:33",
-    "commit_message": "bug 1507827 - start sccache server explicitly in rusttest builds. r?build",
-    "node": "b6bf963b3d70d41a36f6a3641073d1cc41d69c8e"
+    "commiter_name": "Blake Kaplan <mrbkap@gmail.com>",
+    "commit_date": "2018-11-21 01:12:53",
+    "commit_message": "Fuzzy query='linux64 'debug '-sw | 'mochitest  Pushed via `mach try fuzzy`",
+    "node": "c07174a9142377d52a0b1abf832081b0c0f666cf"
   },
   "6": {
-    "commiter_name": "Micah Tigley <mtigley@mozilla.com>",
-    "commit_date": "2018-11-20 18:15:24",
-    "commit_message": "try: -b do -p win64,linux64,macosx64 -u mochitest-dt,mochitest-e10s-devtools-chrome -t none  Pushed via `mach try syntax` ",
-    "node": "5b0c5b1754029eebe6fd073a81ec7d51cfd8aadd"
+    "commiter_name": "Blake Kaplan <mrbkap@gmail.com>",
+    "commit_date": "2018-11-21 01:10:40",
+    "commit_message": "Bug 1508595 - Only set an intercept controller when needed. r=asuth  We only need to expose an intercept controller in SharedWorkers if we're on the non-parent-intercept version of ServiceWorkers or if e10s is off. nsDocShell already does this dance and we have to mirror it.",
+    "node": "59dcebc7bdc2ff6118fc0a23fdc1a46cfc944c65"
   },
   "7": {
-    "commiter_name": "Micah Tigley <mtigley@mozilla.com>",
-    "commit_date": "2018-11-20 17:58:29",
-    "commit_message": "Flex item sizing property UI doesn't report the right CSS property values when !important is used ",
-    "node": "4b5695dcfd6ef99a485498b00570c566cc5c1c02"
+    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
+    "commit_date": "2018-11-21 01:10:23",
+    "commit_message": "try: -b o -p win64 -u mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax`",
+    "node": "2ae283bf44185fa1e611c7d6a0f65e263f177af8"
   },
   "8": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-20 18:14:38",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux,macosx64 -u mochitest-bc,mochitest-chrome,mochitest-clipboard,mochitest-dt,test-verify-e10s,xpcshell -t damp-e10s --rebuild-talos 4 --artifact  Pushed via `mach try syntax`",
-    "node": "08dd5e4b268db0582a57eb4b6baa0056ef6f95bd"
+    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
+    "commit_date": "2018-11-21 01:09:56",
+    "commit_message": "remove all logs",
+    "node": "998fe7ec61f2f92b7f027bf37183f9766e316869"
   },
   "9": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-14 16:49:32",
-    "commit_message": "bug 1507146 - make getting accessibility front async in inspector; r=ochameau",
-    "node": "b84df47bea8aa1fb899f1782faeaccd88a8212f6"
+    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
+    "commit_date": "2018-11-21 00:51:09",
+    "commit_message": "remove all logs",
+    "node": "89b91d0424976ce0649c74da0a9804e3d369b470"
   },
   "10": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-14 16:43:24",
-    "commit_message": "bug 1507146 - make getting reflow front async; r=ochameau",
-    "node": "ea2a4b7a2c7248ae74babef438434ba2098efff9"
+    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
+    "commit_date": "2018-11-20 02:42:28",
+    "commit_message": "WIP: Add logging for expected failure mode",
+    "node": "bd14a62eafefff90e27e0e14f91ec2ee0cea8bc9"
   },
   "11": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-14 16:42:08",
-    "commit_message": "bug 1507146 - make getting animation front async in animation panel; r=ochameau",
-    "node": "1e2c7748e0a59755c1d3c0d3760b10f2f9e51d55"
+    "commiter_name": "Steve Fink <sfink@mozilla.com>",
+    "commit_date": "2018-11-21 01:07:37",
+    "commit_message": "try: -b do -p linux64-shell-haz --upload-xdbs  Pushed via `mach try syntax`",
+    "node": "8f65796b1ce1c952cfca06a8d5d831bb5f3f94c8"
   },
   "12": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-20 18:12:21",
-    "commit_message": "bug 1507146 - make it possible for inspector panels to be destroyed asynchronously; r=ochameau",
-    "node": "bb313bc65f986b6e69064f55b76f9da6f5474703"
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-11-21 01:07:54",
+    "commit_message": "Fuzzy query=linux64/debug  Pushed via `mach try fuzzy`",
+    "node": "e21728ba93a0a8ca08fef341a167faafbed2d893"
   },
   "13": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-14 16:31:42",
-    "commit_message": "bug 1507146 - make changesView have an async init method; r=ochameau",
-    "node": "6f36ee15d95440c5319bc674ab2c85eadcf61f71"
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-11-21 01:05:55",
+    "commit_message": "Bug 1508836: Don't try to guess MOZ_UPDATE_CHANNEL in automation;  Differential Revision: https://phabricator.services.mozilla.com/D12487",
+    "node": "16491e62124228fa1d1597f578a090043f2730aa"
   },
   "14": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-14 16:27:55",
-    "commit_message": "bug 1507146 - add await to all target.getFront calls in async callsites; r=ochameau",
-    "node": "e9b0851c24835c6836d646a6f7f255d73f4e3343"
+    "commiter_name": "Jeff Muizelaar <jrmuizel@gmail.com>",
+    "commit_date": "2018-11-21 01:03:30",
+    "commit_message": "try: -b do -p macosx64,win64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t none  Pushed via `mach try syntax` ",
+    "node": "1d4bb870ef5631e50bd0c229766be68bb27c0b7b"
   },
   "15": {
-    "commiter_name": "yulia <ystartsev@mozilla.com>",
-    "commit_date": "2018-11-14 16:52:58",
-    "commit_message": "bug 1507146 - account for async fronts when we destroy; r=ochameau",
-    "node": "e8286c9a5a857654de08a14dedb5fe2e21e13be1"
+    "commiter_name": "Jeff Muizelaar <jrmuizel@gmail.com>",
+    "commit_date": "2018-11-21 01:01:22",
+    "commit_message": "remove mEventRegions ",
+    "node": "a9f5eb8439305a92740e73d0c63161a7ffdfd7e5"
   },
   "16": {
-    "commiter_name": "Mike Shal <mshal@mozilla.com>",
-    "commit_date": "2018-11-20 18:09:19",
-    "commit_message": "try: -b o -p linux64-rusttests -u none -t none  Pushed via `mach try syntax`  MozReview-Commit-ID: 7bjDJ1lay9X ",
-    "node": "2a6caf0baf90dc58728f5243a4824ea2bfdc6ca4"
+    "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+    "commit_date": "2018-11-21 01:01:03",
+    "commit_message": "try: -b do -p android-api-16,win64,macosx64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t all[linux64-qr,windows10-64-qr,macosx64-qr]  Pushed via `mach try syntax`",
+    "node": "d4394b7d135c7d0189f098fef245455a35c4f009"
   },
   "17": {
-    "commiter_name": "Mike Shal <mshal@mozilla.com>",
-    "commit_date": "2018-11-19 20:18:43",
-    "commit_message": "sccache 06d23bac183f20c731745b80fc51dc41c01e3ea1 -> a379ad996b6c28eb983dd0b95f315768d18d86cc  MozReview-Commit-ID: C2LWqVYfu0m ",
-    "node": "6cf75d6a25eab117f2fe616f24a63da9d4724314"
+    "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+    "commit_date": "2018-11-21 01:00:58",
+    "commit_message": "placeholder for try push  MozReview-Commit-ID: LKDk2deY2x7",
+    "node": "d33ce8ce9a459bd270403fd251a4ec9a31fc745c"
   },
   "18": {
-    "commiter_name": "Mike Shal <mshal@mozilla.com>",
-    "commit_date": "2018-10-22 22:08:04",
-    "commit_message": "sccache a3dcb66243d2f211bf2961b3bf34ff59e814daa2  MozReview-Commit-ID: IPUmEvAje5g ",
-    "node": "1acf3be1a62b9b9410eeff2d7f9bc58e18cbfd20"
+    "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+    "commit_date": "2018-11-21 01:00:29",
+    "commit_message": "Placeholder  MozReview-Commit-ID: LhRD1MOzjK",
+    "node": "dbf905ce85711be64a145b22fefa4e995464298a"
   },
   "19": {
-    "commiter_name": "Mike Shal <mshal@mozilla.com>",
-    "commit_date": "2018-10-22 22:07:07",
-    "commit_message": "use binutils toolchain  MozReview-Commit-ID: Bw6mYqTeoKl ",
-    "node": "840d487ddd3ecf8e64f8578f1a9b32e552791602"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-21 01:00:27",
+    "commit_message": "Bug 1508766 - Update webrender to commit 229436b578701fc74a009d6cedc6b2a3ae313f77 (WR PR #3331). r?kats",
+    "node": "887b23bb872f9058bf5a669eed0b043d22b38709"
   }
 }

@@ -1,26 +1,26 @@
-## TRY COMMIT MARKDOWN TABLE SINCE 2018-11-13 18:17:15.415335
+## TRY COMMIT MARKDOWN TABLE SINCE 2018-11-14 01:20:27.639344
 
 | Commit Number | Commiter | Commit Message | Node | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
-|19|Gregory Mierzwinski <gmierz2@outlook.com>|Fuzzy query='linux64-ccov 'test-coverage  Pushed via `mach try fuzzy`|feeededfbc67ee5bd82bd704aeec813151a67fc9|2018-11-20 18:16:12
-|18|Gregory Mierzwinski <gmierz2@outlook.com>|tests_to_verify.json addition|d0de20c41cadd12b9cffaad7c2ee4628030a2981|2018-09-23 15:44:40
-|17|Joel Maher <jmaher@mozilla.com>|imported patch run_many_files.patch|e34fd3280759e80716349d572f9a2fd8695fdb08|2018-09-14 14:46:55
-|16|Gregory Mierzwinski <gmierz2@outlook.com>|Check for JS files.|7b4f02deda2df97606c871f1202deb0096320140|2018-10-31 16:59:05
-|15|Ted Mielczarek <ted@mielczarek.org>|Fuzzy query=rusttest  Pushed via `mach try again`|14a523470bf9b5f05b2701b1feedbc7d4dbb85f5|2018-11-20 18:15:50
-|14|Ted Mielczarek <ted@mielczarek.org>|bug 1507827 - start sccache server explicitly in rusttest builds. r?build|b6bf963b3d70d41a36f6a3641073d1cc41d69c8e|2018-11-20 17:29:33
-|13|Micah Tigley <mtigley@mozilla.com>|try: -b do -p win64,linux64,macosx64 -u mochitest-dt,mochitest-e10s-devtools-chrome -t none  Pushed via `mach try syntax` |5b0c5b1754029eebe6fd073a81ec7d51cfd8aadd|2018-11-20 18:15:24
-|12|Micah Tigley <mtigley@mozilla.com>|Flex item sizing property UI doesn't report the right CSS property values when !important is used |4b5695dcfd6ef99a485498b00570c566cc5c1c02|2018-11-20 17:58:29
-|11|yulia <ystartsev@mozilla.com>|try: -b do -p win32,win64,linux64,linux,macosx64 -u mochitest-bc,mochitest-chrome,mochitest-clipboard,mochitest-dt,test-verify-e10s,xpcshell -t damp-e10s --rebuild-talos 4 --artifact  Pushed via `mach try syntax`|08dd5e4b268db0582a57eb4b6baa0056ef6f95bd|2018-11-20 18:14:38
-|10|yulia <ystartsev@mozilla.com>|bug 1507146 - make getting accessibility front async in inspector; r=ochameau|b84df47bea8aa1fb899f1782faeaccd88a8212f6|2018-11-14 16:49:32
-|9|yulia <ystartsev@mozilla.com>|bug 1507146 - make getting reflow front async; r=ochameau|ea2a4b7a2c7248ae74babef438434ba2098efff9|2018-11-14 16:43:24
-|8|yulia <ystartsev@mozilla.com>|bug 1507146 - make getting animation front async in animation panel; r=ochameau|1e2c7748e0a59755c1d3c0d3760b10f2f9e51d55|2018-11-14 16:42:08
-|7|yulia <ystartsev@mozilla.com>|bug 1507146 - make it possible for inspector panels to be destroyed asynchronously; r=ochameau|bb313bc65f986b6e69064f55b76f9da6f5474703|2018-11-20 18:12:21
-|6|yulia <ystartsev@mozilla.com>|bug 1507146 - make changesView have an async init method; r=ochameau|6f36ee15d95440c5319bc674ab2c85eadcf61f71|2018-11-14 16:31:42
-|5|yulia <ystartsev@mozilla.com>|bug 1507146 - add await to all target.getFront calls in async callsites; r=ochameau|e9b0851c24835c6836d646a6f7f255d73f4e3343|2018-11-14 16:27:55
-|4|yulia <ystartsev@mozilla.com>|bug 1507146 - account for async fronts when we destroy; r=ochameau|e8286c9a5a857654de08a14dedb5fe2e21e13be1|2018-11-14 16:52:58
-|3|Mike Shal <mshal@mozilla.com>|try: -b o -p linux64-rusttests -u none -t none  Pushed via `mach try syntax`  MozReview-Commit-ID: 7bjDJ1lay9X |2a6caf0baf90dc58728f5243a4824ea2bfdc6ca4|2018-11-20 18:09:19
-|2|Mike Shal <mshal@mozilla.com>|sccache 06d23bac183f20c731745b80fc51dc41c01e3ea1 -> a379ad996b6c28eb983dd0b95f315768d18d86cc  MozReview-Commit-ID: C2LWqVYfu0m |6cf75d6a25eab117f2fe616f24a63da9d4724314|2018-11-19 20:18:43
-|1|Mike Shal <mshal@mozilla.com>|sccache a3dcb66243d2f211bf2961b3bf34ff59e814daa2  MozReview-Commit-ID: IPUmEvAje5g |1acf3be1a62b9b9410eeff2d7f9bc58e18cbfd20|2018-10-22 22:08:04
-|0|Mike Shal <mshal@mozilla.com>|use binutils toolchain  MozReview-Commit-ID: Bw6mYqTeoKl |840d487ddd3ecf8e64f8578f1a9b32e552791602|2018-10-22 22:07:07
+|19|Brian Grinstead <bgrinstead@mozilla.com>|try: -b do -p win64,linux64,macosx64 -u mochitests,xpcshell -t none --artifact  Pushed via `mach try syntax`|f140c7785f5fc8575a613f5de3d142b7fac92a46|2018-11-21 01:15:37
+|18|Brian Grinstead <bgrinstead@mozilla.com>|Bug 1508446 - Require that [accesskey] gets set on <xul:label> to enable formatting;r=paolo  Previously, if the accesskey attribute was missing then the label would reach up to binding parent to find it's accesskey. In practice, bindings already do [xbl:inherits=accesskey] to send it down to the label anyway.  The problem with this is that for controls without accesskeys, the attribute doesn't get set, so the label will access the control from JS. This is fine for XBL, since typically the label XBL will construct at the same time as the control, but when migrating to Custom Elements, the label gets connected even when the control is hidden.  Differential Revision: https://phabricator.services.mozilla.com/D12355|78b17ebbd4b223c57c549b34fa1ff22fea26d8bc|2018-11-20 01:13:38
+|17|Wes Kocher <wkocher@mozilla.com>|Fuzzy query=web-platform-tests  Pushed via `mach try fuzzy`|5ecf21069d41386935c48272b061e1fae92939ad|2018-11-21 01:14:35
+|16|Wes Kocher <wkocher@mozilla.com>|Update all jobs from try push|7dc70d45d1e9277611592827b45610e614b87251|2018-11-21 01:00:11
+|15|Blake Kaplan <mrbkap@gmail.com>|Fuzzy query='linux 'debug '-sw | 'mochitest  Pushed via `mach try fuzzy`|7311a3bd1a42b313f38e5d1f27e601bdc9a69c26|2018-11-21 01:13:50
+|14|Blake Kaplan <mrbkap@gmail.com>|Fuzzy query='linux64 'debug '-sw | 'mochitest  Pushed via `mach try fuzzy`|c07174a9142377d52a0b1abf832081b0c0f666cf|2018-11-21 01:12:53
+|13|Blake Kaplan <mrbkap@gmail.com>|Bug 1508595 - Only set an intercept controller when needed. r=asuth  We only need to expose an intercept controller in SharedWorkers if we're on the non-parent-intercept version of ServiceWorkers or if e10s is off. nsDocShell already does this dance and we have to mirror it.|59dcebc7bdc2ff6118fc0a23fdc1a46cfc944c65|2018-11-21 01:10:40
+|12|Logan Smyth <loganfsmyth@gmail.com>|try: -b o -p win64 -u mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax`|2ae283bf44185fa1e611c7d6a0f65e263f177af8|2018-11-21 01:10:23
+|11|Logan Smyth <loganfsmyth@gmail.com>|remove all logs|998fe7ec61f2f92b7f027bf37183f9766e316869|2018-11-21 01:09:56
+|10|Logan Smyth <loganfsmyth@gmail.com>|remove all logs|89b91d0424976ce0649c74da0a9804e3d369b470|2018-11-21 00:51:09
+|9|Logan Smyth <loganfsmyth@gmail.com>|WIP: Add logging for expected failure mode|bd14a62eafefff90e27e0e14f91ec2ee0cea8bc9|2018-11-20 02:42:28
+|8|Steve Fink <sfink@mozilla.com>|try: -b do -p linux64-shell-haz --upload-xdbs  Pushed via `mach try syntax`|8f65796b1ce1c952cfca06a8d5d831bb5f3f94c8|2018-11-21 01:07:37
+|7|Tom Prince <mozilla@hocat.ca>|Fuzzy query=linux64/debug  Pushed via `mach try fuzzy`|e21728ba93a0a8ca08fef341a167faafbed2d893|2018-11-21 01:07:54
+|6|Tom Prince <mozilla@hocat.ca>|Bug 1508836: Don't try to guess MOZ_UPDATE_CHANNEL in automation;  Differential Revision: https://phabricator.services.mozilla.com/D12487|16491e62124228fa1d1597f578a090043f2730aa|2018-11-21 01:05:55
+|5|Jeff Muizelaar <jrmuizel@gmail.com>|try: -b do -p macosx64,win64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t none  Pushed via `mach try syntax` |1d4bb870ef5631e50bd0c229766be68bb27c0b7b|2018-11-21 01:03:30
+|4|Jeff Muizelaar <jrmuizel@gmail.com>|remove mEventRegions |a9f5eb8439305a92740e73d0c63161a7ffdfd7e5|2018-11-21 01:01:22
+|3|Kartikaya Gupta <kgupta@mozilla.com>|try: -b do -p android-api-16,win64,macosx64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t all[linux64-qr,windows10-64-qr,macosx64-qr]  Pushed via `mach try syntax`|d4394b7d135c7d0189f098fef245455a35c4f009|2018-11-21 01:01:03
+|2|Kartikaya Gupta <kgupta@mozilla.com>|placeholder for try push  MozReview-Commit-ID: LKDk2deY2x7|d33ce8ce9a459bd270403fd251a4ec9a31fc745c|2018-11-21 01:00:58
+|1|Kartikaya Gupta <kgupta@mozilla.com>|Placeholder  MozReview-Commit-ID: LhRD1MOzjK|dbf905ce85711be64a145b22fefa4e995464298a|2018-11-21 01:00:29
+|0|WR Updater Bot <graphics-team@mozilla.staktrace.com>|Bug 1508766 - Update webrender to commit 229436b578701fc74a009d6cedc6b2a3ae313f77 (WR PR #3331). r?kats|887b23bb872f9058bf5a669eed0b043d22b38709|2018-11-21 01:00:27
 
 

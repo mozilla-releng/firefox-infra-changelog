@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
-    "commit_date": "2018-11-20 11:34:11",
-    "commit_message": "Merge autoland to mozilla-central. a=merge",
-    "node": "eeddcefcdad847bf8a5737153079e9619ee5aa66"
+    "commiter_name": "shindli <shindli@mozilla.com>",
+    "commit_date": "2018-11-20 23:44:09",
+    "commit_message": "Merge inbound to mozilla-central.  a=merge",
+    "node": "8991d660f20e3eea652e060c30e17670b45a9257"
   },
   "1": {
-    "commiter_name": "Cameron McCormack <cam@mcc.id.au>",
-    "commit_date": "2018-11-20 09:01:49",
-    "commit_message": "Bug 1507961 - Check that an SVG DOM item wasn't removed from its list before scheduling its animation update r=longsonr  Differential Revision: https://phabricator.services.mozilla.com/D12361",
-    "node": "4b0deb3957f02c95d16af56590fc1a2e36318ffd"
+    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
+    "commit_date": "2018-11-16 04:13:56",
+    "commit_message": "Bug 1507680 - Record detailed statistics about slow WebRender frames in about:support. r=jrmuizel  MozReview-Commit-ID: 84SjN1RvvAA  Differential Revision: https://phabricator.services.mozilla.com/D12372",
+    "node": "52a798ad6583b97fb3faf68f1849e7098d9ce4ae"
   },
   "2": {
-    "commiter_name": "Qinghao_Jack_Song <songqing@msu.edu>",
-    "commit_date": "2018-11-20 00:01:58",
-    "commit_message": "Bug 1507301 - Migrate about:sessionrestore and about:welcomeback to use Fluent for localization r=Gijs,flod,zbraniecki  Differential Revision: https://phabricator.services.mozilla.com/D11994",
-    "node": "dd005e464db2485688c6016388bd00861d31778a"
+    "commiter_name": "Jeff Muizelaar <jmuizelaar@mozilla.com>",
+    "commit_date": "2018-11-19 09:55:28",
+    "commit_message": "Bug 1507686 - Record LayerManager URL for each paint so that we can correlate it with slow paints. r=mattwoodrow  MozReview-Commit-ID: 2RUWkboAOJz",
+    "node": "25d79223c2dedd0b06abd48dbfc815c750b6473c"
   },
   "3": {
-    "commiter_name": "Francesco Lodolo (:flod) <flod@lodolo.net>",
-    "commit_date": "2018-11-20 02:53:39",
-    "commit_message": "Bug 1507469 - [trs] Search engine setup for Firefox for Triqui r=delphine  Differential Revision: https://phabricator.services.mozilla.com/D12207",
-    "node": "a6969ea95a4a1d7efa02df583a4344ec71f968f1"
+    "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
+    "commit_date": "2018-11-20 20:37:05",
+    "commit_message": "Backed out 53 changesets (bug 1505878, bug 1507080, bug 1505638, bug 1507345, bug 1507122, bug 1507341, bug 1506769, bug 1497436, bug 1507796, bug 1506775, bug 1506697, bug 1507089, bug 1507908, bug 1504801, bug 1507063, bug 1507917, bug 1506089, bug 1506919, bug 1507805, bug 1507374, bug 1507421, bug 1507426, bug 1506886, bug 1488424, bug 1507558, bug 1507600, bug 1507977, bug 1507549, bug 1507526, bug 1507064, bug 1507586, bug 1508031, bug 1507472, bug 1507239, bug 1507250, bug 1507532, bug 1507519, bug 1508354, bug 1507660, bug 1506716, bug 1508014, bug 1506994) for wpt failures on grid-container-scrollbar-vertical-lr-001.html. CLOSED TREE  Backed out changeset 584f730e1865 (bug 1508354) Backed out changeset 3bdcf979b1a2 (bug 1507532) Backed out changeset f36221255331 (bug 1506769) Backed out changeset d8ba2f11effc (bug 1506769) Backed out changeset c4430fdd1d22 (bug 1508031) Backed out changeset b4d49ed8873e (bug 1507796) Backed out changeset f380f6a8f5c0 (bug 1508014) Backed out changeset d94695f27915 (bug 1507421) Backed out changeset 2b4e8d165519 (bug 1505638) Backed out changeset a96795d1de3f (bug 1505638) Backed out changeset 6e08180c8ba3 (bug 1507977) Backed out changeset e758e29e8a1a (bug 1507908) Backed out changeset 380cb8a671e9 (bug 1507917) Backed out changeset 77f172246b2d (bug 1507519) Backed out changeset 61abe5c39ab5 (bug 1504801) Backed out changeset c750807ac5c4 (bug 1504801) Backed out changeset b49e6067e4bc (bug 1507472) Backed out changeset bb03633ea79a (bug 1507472) Backed out changeset f73f87484839 (bug 1507805) Backed out changeset ab97e60ed777 (bug 1507586) Backed out changeset d4129dccff17 (bug 1506089) Backed out changeset bcb5a5eebc6c (bug 1488424) Backed out changeset d76dc6e3bbaa (bug 1507064) Backed out changeset 30d8f48aab99 (bug 1507080) Backed out changeset e6d88d9f73af (bug 1507080) Backed out changeset ee38ad38e9a1 (bug 1507549) Backed out changeset 0b2f80185614 (bug 1506919) Backed out changeset 0143d49ed65b (bug 1507660) Backed out changeset 2c739b93be1e (bug 1506716) Backed out changeset 0a4f3d45b0c5 (bug 1506716) Backed out changeset 81e2dcf84fb1 (bug 1506886) Backed out changeset 22f64d38d9c8 (bug 1505878) Backed out changeset 0475d6073c30 (bug 1505878) Backed out changeset 956ed95b791e (bug 1507374) Backed out changeset ac8170415338 (bug 1507600) Backed out changeset d7e0ada61934 (bug 1507345) Backed out changeset 6a730fb5a7e4 (bug 1507250) Backed out changeset 1e351d1c2022 (bug 1507250) Backed out changeset 031385cb5558 (bug 1507239) Backed out changeset 2fa696969cc2 (bug 1507239) Backed out changeset 9d55c7b68552 (bug 1507558) Backed out changeset 7385eaebb8e9 (bug 1507526) Backed out changeset d2ac36f03ef5 (bug 1506775) Backed out changeset b6ebdb6e8bf9 (bug 1507426) Backed out changeset 29ca75ba2433 (bug 1507341) Backed out changeset b5aa3737ca29 (bug 1497436) Backed out changeset f3cb0265f0c1 (bug 1497436) Backed out changeset f3f2d714b4eb (bug 1506994) Backed out changeset aa35cce4fb76 (bug 1507089) Backed out changeset 43cfc59879d2 (bug 1507089) Backed out changeset 8e13752959d6 (bug 1507122) Backed out changeset dfbc81d5e518 (bug 1507063) Backed out changeset 378d0c633eae (bug 1506697)",
+    "node": "46ad93280b0678c2bf9db3c3f8dcd3613b0ec9ab"
   },
   "4": {
-    "commiter_name": "Ed Lee <edilee@mozilla.com>",
-    "commit_date": "2018-11-20 00:05:29",
-    "commit_message": "Bug 1508407 - Add Return-to-AMO firstrun, Pocket-personalization attachment and bug fixes to Activity Stream r=ursula  Differential Revision: https://phabricator.services.mozilla.com/D12343",
-    "node": "945c7e99ee1f8f4157ee5e78a43c0b5776f494b4"
+    "commiter_name": "Luke Wagner <luke@mozilla.com>",
+    "commit_date": "2018-11-19 22:43:56",
+    "commit_message": "Bug 1507944 - Baldr: ensure signal handlers in asm.js instantiation (r=bbouvier)",
+    "node": "31a42178a876106cc4cce885b94afef0275d89c7"
   },
   "5": {
-    "commiter_name": "byron jones <glob@mozilla.com>",
-    "commit_date": "2018-11-20 03:33:40",
-    "commit_message": "Bug 1508256 - replace hunspell's README.mozilla with moz.yaml; r=masayuki  Differential Revision: https://phabricator.services.mozilla.com/D12298",
-    "node": "9beb9df486d76e40011e801de1c73be2bf38983b"
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-11-20 19:24:26",
+    "commit_message": "Bug 1478850 - FetchStreamReader must call HoldJSObject()/DropJSObjects, r=smaug",
+    "node": "6ce084069f3883f3c4d6e7d912f591891b2399e7"
   },
   "6": {
-    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-    "commit_date": "2018-11-20 07:12:30",
-    "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
-    "node": "7f54ae73fcee59e545d56374080d033b3d2e162c"
+    "commiter_name": "Gabriel Luong <gabriel.luong@gmail.com>",
+    "commit_date": "2018-11-20 19:16:10",
+    "commit_message": "Bug 1507844 - Push the devtools.inspector.flexboxHighlighter.enabled pref in browser_markup_display_node[01/02].js; r=pbro",
+    "node": "e25e40a58667cc86d17fa52aa3704e42c598243e"
   },
   "7": {
-    "commiter_name": "Cameron McCormack <cam@mcc.id.au>",
-    "commit_date": "2018-11-20 06:37:53",
-    "commit_message": "Bug 1508013 - Run rustfmt on servo/ports/geckolib/ r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D12206",
-    "node": "5224409d073fc69dab28b64679e442e5cd8982c9"
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-11-20 19:08:34",
+    "commit_message": "Bug 1507893 - Fetch() should consume DOM Files on the target thread only - test, r=twisniewski",
+    "node": "637291128b2e0f395d52b5c7565681e00d115976"
   },
   "8": {
-    "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-    "commit_date": "2018-11-20 06:09:41",
-    "commit_message": "Backed out changeset ed44376f7c7a (bug 1507961) for failing crashtests on a CLOSED TREE",
-    "node": "c77aba624d5406020d5a7e39f40d25183f7bdc3e"
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-11-20 19:08:34",
+    "commit_message": "Bug 1507893 - Fetch() should consume DOM Files on the target thread only, r=twisniewski",
+    "node": "d544aa6b069bd3d8bbf6549d43127d86b5afa693"
   },
   "9": {
-    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
-    "commit_date": "2018-11-20 03:24:58",
-    "commit_message": "Bug 1423709 - Reftests for auto initial zoom value calculation. r=botond  There are 7 test cases in this commit.   - no-viewport.html    A test case that wider contents should be scaled down even if no viewport    meta tag exists.   - viewport-width.html    A test case that wider contents should be scaled down (i.e. fit to the    device screen).   - minimum-scale.html    A test case that the initial zoom value is clamped by minimum-scale.   - initial-scale-0.html    A test case that specified initial-scale value is less than the default    minimum scale value (0.1), in such cases we shrink the content to fit    the display size.   - initial-scale-100.html    A test case that specified initial-scale value is greater than the default    maximum scale value (10), in such cases we shrink the content to fit    the display size.   - initial-scale-1.html    A test case that the auto initial zoom calculation doesn't apply to the    documents specifying initial-scale.   - box-shadow.html    A test case that box-shadow-ed area isn't incorporated into the initial zoom    value.  Depends on D10197  Differential Revision: https://phabricator.services.mozilla.com/D10198",
-    "node": "efb925fd7a3c4b47eef949767a6a52002c94e55d"
+    "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+    "commit_date": "2018-11-20 18:51:39",
+    "commit_message": "Bug 1506994 - Disable RTCPeerConnection-onnegotiationneeded.html for instability on import, a=testonly ",
+    "node": "da6b96f7f1210aa1e6d5aefe6a7b4db8fdd644fa"
   },
   "10": {
-    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
-    "commit_date": "2018-11-20 05:56:44",
-    "commit_message": "Bug 1423709 - Adapt initial zoom value to fit the wider contents to screen device width. r=botond  What we need to do here is to scale down the document as if the document was pinched in to fit the contents to screen width when all the following conditions are met.   - it's the first paint for the document  - no initial-scale is specified in meta viewport tags  - no mRestoreResolution hasn't set  - the content width is wider than the initial viewport width  Depends on D10196  Differential Revision: https://phabricator.services.mozilla.com/D10197",
-    "node": "9f9d8ca6b972f61f07a1c0ed1a44656b8ded1e58"
+    "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+    "commit_date": "2018-11-20 18:49:12",
+    "commit_message": "Merge mozilla-central to inbound",
+    "node": "89d78de871e77d052cfa10523f0d459cba524080"
   },
   "11": {
-    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
-    "commit_date": "2018-11-20 03:24:57",
-    "commit_message": "Bug 1423709 - Add initial-scale=1 for tests supposing the page is rendered 1:1 scale. r=botond  Depends on D10195  Differential Revision: https://phabricator.services.mozilla.com/D10196",
-    "node": "e41abff7fff927ba9c791a4f9a546b398ce194f0"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-19 21:22:29",
+    "commit_message": "Bug 1508354 - [wpt-sync] Update web-platform-tests to be998ebbfc08085f18c1f9ed8d22c52b03134167, a=testonly  wpt-head: be998ebbfc08085f18c1f9ed8d22c52b03134167 wpt-type: landing ",
+    "node": "584f730e1865b8dd3512ae68ac7350a9abdf07e2"
   },
   "12": {
-    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
-    "commit_date": "2018-11-20 05:55:56",
-    "commit_message": "Bug 1423709 - Set mDefaultZoomValid is false in the case of auto-scale. r=botond  Depends on D10194  Differential Revision: https://phabricator.services.mozilla.com/D10195",
-    "node": "e5485cbe65cd889b633e48405bd3525f198c477e"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-19 21:15:39",
+    "commit_message": "Bug 1507532 [wpt PR 14104] - [Gecko Bug 1507532] Add support for running reftests in fennec, a=testonly  Automatic update from web-platform-testsAdd support for running reftests in fennec  Add a ReftestExecutor implementation matching the one that we use for Desktop Firefox.  Differential Revision: https://phabricator.services.mozilla.com/D12034  bugzilla-url: https://bugzilla.mozilla.org/show_bug.cgi?id=1507532 gecko-commit: 9702f65efe224bcb14f64db9eeb99ca2ad5ef8f8 gecko-integration-branch: central gecko-reviewers: KWierso  -- Add support for copying Ahem to the installed Firefox profile  Following the lead of bug 1197716, put the Ahem font into the firefox profile where it is read by Fennec.  Depends on D12034  Differential Revision: https://phabricator.services.mozilla.com/D12035  bugzilla-url: https://bugzilla.mozilla.org/show_bug.cgi?id=1507532 gecko-commit: 32fdcb91c2a51fb572e364d94180631d76a6fb33 gecko-integration-branch: central gecko-reviewers: gbrown  -- Set up mach defaults to match working wpt android reftest settings  The fast internal reftest harness doesn't work yet, so in the meantime default to the functional but slower external harness. Also ensure that the Ahem font is installed by default.  Depends on D12035  Differential Revision: https://phabricator.services.mozilla.com/D12036  bugzilla-url: https://bugzilla.mozilla.org/show_bug.cgi?id=1507532 gecko-commit: 294c7b9011c0a5657ea384d1328805ff48e60f43 gecko-integration-branch: central gecko-reviewers: KWierso  -- Fixup formatting issue. --  wpt-commits: 18203d87aa75d4a23ba957ca01a7714e5ee5f238, dd4913a53bf8841dd03ef875bfb82e258d5dbb09, 30eea7feb3af10d91ca14e6735b35bf7e96a856a, be998ebbfc08085f18c1f9ed8d22c52b03134167 wpt-pr: 14104 ",
+    "node": "3bdcf979b1a2ca6277c8e12143130da8454715d0"
   },
   "13": {
-    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
-    "commit_date": "2018-11-20 03:24:57",
-    "commit_message": "Bug 1423709 - Change boolean arguments for nsViewportInfo to enum classes. r=botond  Differential Revision: https://phabricator.services.mozilla.com/D10194",
-    "node": "e00d7edbb963f9d88fd4c7f477c88a5ccb04344f"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-13 08:24:24",
+    "commit_message": "Bug 1506769 [wpt PR 14028] - Update wpt metadata, a=testonly  wpt-pr: 14028 wpt-type: metadata ",
+    "node": "f36221255331b7638e53ef0364b4fb646bdfecb3"
   },
   "14": {
-    "commiter_name": "Micah Tigley <mtigley@mozilla.com>",
-    "commit_date": "2018-11-20 03:55:29",
-    "commit_message": "Bug 1507746 - Shorten the flexbox container's selector in the accordion header if its too long. r=gl  Differential Revision: https://phabricator.services.mozilla.com/D12292",
-    "node": "408a5c502d131500a050ecfb929e6cf7f0e403b3"
+    "commiter_name": "youennf <youennf@users.noreply.github.com>",
+    "commit_date": "2018-11-19 20:46:46",
+    "commit_message": "Bug 1506769 [wpt PR 14028] - Move webrtc quic tests to webrtc-quic, a=testonly  Automatic update from web-platform-testsMove webrtc quic tests to webrtc-quic (#14028)  --  wpt-commits: 89ad54bd0d498c8209ec80407f5758566f91e82f wpt-pr: 14028 ",
+    "node": "d8ba2f11effc197b364abd0cd3e374c2c9619d68"
   },
   "15": {
-    "commiter_name": "Cameron McCormack <cam@mcc.id.au>",
-    "commit_date": "2018-11-20 02:54:23",
-    "commit_message": "Bug 1507961 - Check that an SVG DOM item wasn't removed from its list before scheduling its animation update r=longsonr  Differential Revision: https://phabricator.services.mozilla.com/D12361",
-    "node": "ed44376f7c7a3fc46cde381224f76c413c23a668"
+    "commiter_name": "Oriol Brufau <obrufau@igalia.com>",
+    "commit_date": "2018-11-19 20:46:44",
+    "commit_message": "Bug 1508031 [wpt PR 14108] - [css-logical] Fix animation-004.html, a=testonly  Automatic update from web-platform-tests[css-logical] Fix animation-004.html  Fixes #14107  -- Merge pull request #14108 from Loirooriol/fix-logical-transitions  [css-logical] Fix animation-004.html --  wpt-commits: f2853643f52e0f1c5cdb9b23b35e4c0e66fd296f, b603262eb6add91220b57cd0ad5e0d625f838584 wpt-pr: 14108 ",
+    "node": "c4430fdd1d225c1d3c35e24ba2eb775259b7d19a"
   },
   "16": {
-    "commiter_name": "Lina Cambridge <lina@yakshaving.ninja>",
-    "commit_date": "2018-11-20 04:21:08",
-    "commit_message": "Bug 1506287 - Check changed flags when merging child lists for local and remote nodes. r=tcsc  Differential Revision: https://phabricator.services.mozilla.com/D12079",
-    "node": "575c5e68b8f19caf629b59c6bce4e6eb7c8159d4"
+    "commiter_name": "Anne van Kesteren <annevk@annevk.nl>",
+    "commit_date": "2018-11-19 20:46:42",
+    "commit_message": "Bug 1507796 [wpt PR 14090] - Encoding/XMLHttpRequest: default is UTF-8, a=testonly  Automatic update from web-platform-testsEncoding/XMLHttpRequest: default is UTF-8  Fixes #14082.  --  wpt-commits: a65bfa9d0c9517103caeb19eb0724eab75e2cacb wpt-pr: 14090 ",
+    "node": "b4d49ed8873e9a4458c50da96e76fe62f067d4da"
   },
   "17": {
-    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
-    "commit_date": "2018-11-20 03:52:47",
-    "commit_message": "Bug 1507677 - Add nsIContentPermissionRequest.topLevelPrincipal r=baku  This is required for the storage access API permission prompt.  Differential Revision: https://phabricator.services.mozilla.com/D12089",
-    "node": "10bf548f81fa7bdbd94fa565c3d53bbb99c89a1c"
+    "commiter_name": "Fredrik S\u00f6derquist <fs@opera.com>",
+    "commit_date": "2018-11-19 20:46:40",
+    "commit_message": "Bug 1508014 [wpt PR 14105] - Fix parsing of negative values for 'r', 'rx', 'ry' and 'stroke-width', a=testonly  Automatic update from web-platform-testsFix parsing of negative values for 'r', 'rx', 'ry' and 'stroke-width'  For all of these properties[1][2][3][4], a negative value is considered illegal and should fail in the parser. (The value range is already corectly specified for instance for animation, and also for the corresponing presentation attributes.)  [1] https://svgwg.org/svg2-draft/geometry.html#R [2] https://svgwg.org/svg2-draft/geometry.html#RX [3] https://svgwg.org/svg2-draft/geometry.html#RY [4] https://svgwg.org/svg2-draft/painting.html#StrokeWidthProperty  Bug: 902346 Change-Id: I4b073288b97151d7a9df4b1c2ce99341dca9c8ee Reviewed-on: https://chromium-review.googlesource.com/c/1304561 Commit-Queue: Eric Willigers <ericwilligers@chromium.org> Reviewed-by: Eric Willigers <ericwilligers@chromium.org> Cr-Commit-Position: refs/heads/master@{#609077}  --  wpt-commits: 744325921ba52791bc8db1b45d2aed097577753a wpt-pr: 14105 ",
+    "node": "f380f6a8f5c0f0dff12df5aa4214040aed998067"
   },
   "18": {
-    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
-    "commit_date": "2018-11-20 01:28:44",
-    "commit_message": "Bug 1492549 - Enable blocking access to storage from tracking resources by default on all desktop platforms r=baku  Differential Revision: https://phabricator.services.mozilla.com/D12043",
-    "node": "0bab3d4bd3cc456f151ed490de77852b3f0aadaf"
+    "commiter_name": "Florin Malita <fmalita@chromium.org>",
+    "commit_date": "2018-11-19 20:46:37",
+    "commit_message": "Bug 1507421 [wpt PR 14067] - Fix box-shadow clipping for opaque-background <body>, a=testonly  Automatic update from web-platform-testsFix box-shadow clipping for opaque-background <body>  In the presence of an opaque background, BoxPainterBase::PaintNormalBoxShadow() insets the shadow clip by one unit (in order to mitigate seaming artifacs), effectively expanding the shadow inwards, and relies on the opaque background overdrawing this inset.  But <body> doesn't paint its own background -- it gets transferred to the view and painted in a different context => the shadow inset remains visible.  To address this, pass background-skip information to PaintNormalBoxShadow(), and disable the inset logic when the background is not being drawn.  Bug: 899342 Change-Id: I5e04a1c17c2be324bf4c6767d2159372f546cc24 Reviewed-on: https://chromium-review.googlesource.com/c/1336495 Commit-Queue: Florin Malita <fmalita@chromium.org> Reviewed-by: Fredrik S\u00f6derquist <fs@opera.com> Cr-Commit-Position: refs/heads/master@{#609014}  --  wpt-commits: 44a54b7ededf2dc68fe9b3d2d6f2dca4f1f8372d wpt-pr: 14067 ",
+    "node": "d94695f279159a02b853a95ab4ea2f10a9e65d81"
   },
   "19": {
-    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
-    "commit_date": "2018-11-19 23:48:21",
-    "commit_message": "Bug 1507580 - Remove AutoplayPermissionRequest::mMainThreadTarget since it is unused r=baku  Differential Revision: https://phabricator.services.mozilla.com/D12055",
-    "node": "fc843052b3fd6917e95000535c3b3f4a8e57a9d6"
+    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
+    "commit_date": "2018-11-08 10:22:51",
+    "commit_message": "Bug 1505638 [wpt PR 13972] - Update wpt metadata, a=testonly  wpt-pr: 13972 wpt-type: metadata ",
+    "node": "2b4e8d16551955833b71358bcf2f0ba617fcc3df"
   }
 }
