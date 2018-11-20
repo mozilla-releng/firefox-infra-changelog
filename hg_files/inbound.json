@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Daniel Varga <dvarga@mozilla.com>",
-    "commit_date": "2018-11-19 19:11:35",
-    "commit_message": "Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE",
-    "node": "f1b5651ca4544a45e5ab400bcfbdf63d46ca79d1"
+    "commiter_name": "Dylan Roeh <droeh@mozilla.com>",
+    "commit_date": "2018-11-20 17:35:29",
+    "commit_message": "Bug 1494748 - Add a service to kill the Fennec process when the user swipes-to-kill Fennec. r=snorp  Leaving the Fennec process running after a swipe-to-kill puts Fennec in an unrecoverable state; this ensures we kill the process anytime a user swipes-to-kill Fennec and therefore lets us recover as usual.",
+    "node": "555521c70c0f186c1f6de86dd0513d7aaa10c58b"
   },
   "1": {
-    "commiter_name": "Daniel Varga <dvarga@mozilla.com>",
-    "commit_date": "2018-11-19 19:01:21",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "node": "62c4741625fed62804f105d8d979f4b5b3d0f191"
+    "commiter_name": "Eugen Sawin <esawin@mozilla.com>",
+    "commit_date": "2018-11-20 16:54:20",
+    "commit_message": "Bug 1508638 - [1.0] Remove default progress value to avoid stuck progress bar for about: pages. r=droeh ",
+    "node": "78d26b6dce21a0bd8ce11a624a3bd26779d44937"
   },
   "2": {
-    "commiter_name": "Sylvestre Ledru <sledru@mozilla.com>",
-    "commit_date": "2018-11-19 15:25:37",
-    "commit_message": "Bug 1204606 - Reformat of dom/media r=jya  # skip-blame  Differential Revision: https://phabricator.services.mozilla.com/D12251",
-    "node": "0ceae9db9ec0be18daa1a279511ad305723185d4"
+    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+    "commit_date": "2018-11-20 17:10:31",
+    "commit_message": "Bug 1507922 - make ownership of MetadataTags more clear in the ogg code; r=gerald,jya  Use UniquePtr for return types, so it's obvious who has ownership.",
+    "node": "ce4515855b43514b4ee6e5ef8d450ed2dbfb1a73"
   },
   "3": {
-    "commiter_name": "Patrick Brosset <pbrosset@mozilla.com>",
-    "commit_date": "2018-11-19 12:55:45",
-    "commit_message": "Bug 1506792 - Bail out when trying to get getComputedStyle for a non attached node; r=jdescottes  Differential Revision: https://phabricator.services.mozilla.com/D12117",
-    "node": "aed811658fae595beec6344b597ab8bca2ac9c83"
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-11-20 16:39:00",
+    "commit_message": "Bug 1508645 - Upstream the test for bug 1495791 to WPT. r=aosmond  Differential Revision: https://phabricator.services.mozilla.com/D12427 ",
+    "node": "2584f7a7f63adb79ce5acd99bbb91f6b64b87f0f"
   },
   "4": {
-    "commiter_name": "Thomas Nguyen <tnguyen@mozilla.com>",
-    "commit_date": "2018-11-15 21:19:16",
-    "commit_message": "Bug 1460920 - part 3: Update web-platform-tests r=hsivonen  Differential Revision: https://phabricator.services.mozilla.com/D11638",
-    "node": "209069890e62b4c402c64be007f9cc992b9ec363"
+    "commiter_name": "Christoph Kerschbaumer <ckerschb@christophkerschbaumer.com>",
+    "commit_date": "2018-11-20 15:23:04",
+    "commit_message": "Bug 1508629: Remove unused forceCreateAboutBlankContentViewer from docshell. r=jkt",
+    "node": "a0d45e98912fc4135ac222e540907b90a4f22eeb"
   },
   "5": {
-    "commiter_name": "Thomas Nguyen <tnguyen@mozilla.com>",
-    "commit_date": "2018-11-13 16:33:02",
-    "commit_message": "Bug 1460920 - Part 2 : Support referrerpolicy attribute in script HTMLScriptElement r=hsivonen  The patch adds the support of referrerpolicy attribute in script element and take the attribute into account when loading script.  Differential Revision: https://phabricator.services.mozilla.com/D11637",
-    "node": "3309aa6d27ee8c2079b12e6904dc07af8d4951db"
+    "commiter_name": "Florian Qu\u00e8ze <florian@queze.net>",
+    "commit_date": "2018-11-20 16:32:01",
+    "commit_message": "Bug 1506105 - Display the clickable icons using the content property instead of as a background image so that they are visible in high contrast mode, r=felipe.",
+    "node": "f9e9cf90de3d10a55a22f9db8efc600add0d0efe"
   },
   "6": {
-    "commiter_name": "Thomas Nguyen <tnguyen@mozilla.com>",
-    "commit_date": "2018-11-19 11:39:16",
-    "commit_message": "Bug 1460920 - Part 1 - Speculative loading script should take referrerpolicy attribute in script element into account r=hsivonen  Referrerpolicy attribute should be taken with high priority order than mSpeculationReferrerPolicy  Differential Revision: https://phabricator.services.mozilla.com/D11636",
-    "node": "045f98957a596060173fc102aaf33ce4c20d9c39"
+    "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+    "commit_date": "2018-11-20 12:49:13",
+    "commit_message": "Bug 1507550 - Fixup existing LSAN allowed rules to match new behaviour, a=testonly ",
+    "node": "4700d8714486d2982443ff7d703b7b16402ec76a"
   },
   "7": {
-    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
-    "commit_date": "2018-11-19 14:59:38",
-    "commit_message": "No Bug, mozilla-central repo-update HSTS HPKP remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12260",
-    "node": "0aa2cbe139c38c0b61066d96a53da6fde3d253ae"
+    "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+    "commit_date": "2018-11-19 17:29:46",
+    "commit_message": "Bug 1507550 - Scrub out junk from rust signatures when processing LSAN data, r=mccr8  Rust signatures aren't properly demangled, and contain some trailing data that seems to depend on the compiler version. This defeats the attempt to allow LSAN errors when importing tests, and we end up adding multiple variants of the same symbol to the allow list.  To avoid this, simply preprocess the symbols not to contain the trailing junk when reading LSAN output, whilst we await better demangling.  Differential Revision: https://phabricator.services.mozilla.com/D12303 ",
+    "node": "6beca6ad237ecb0d709350380c9b83003f5f577c"
   },
   "8": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-19 11:53:36",
-    "commit_message": "Bug 1473224 - Use blob URL instead of data URL for image data in clipboard test. r=yulia  String.fromCharCode(...charCodes) is limited by the maximum number of arguments that SpiderMonkey can pass on the stack, if the screenshot gets to large this can easily fail.  Differential Revision: https://phabricator.services.mozilla.com/D12218",
-    "node": "df938148d900a6010c1a31471e7939d7282a53b5"
+    "commiter_name": "Jeff Muizelaar <jrmuizel@gmail.com>",
+    "commit_date": "2018-11-14 02:17:03",
+    "commit_message": "Bug 1507021. Add a SnappedClip function to gfxContext. r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D11839 ",
+    "node": "7825009998ae5d5bebef3096a332918ed18defb6"
   },
   "9": {
-    "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
-    "commit_date": "2018-11-19 13:31:28",
-    "commit_message": "Bug 1506319 Change log levels for bouncer check failures r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D12259",
-    "node": "3ebe77971c61f5d535272ebfde2616d8b01ac696"
+    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
+    "commit_date": "2018-11-20 15:47:23",
+    "commit_message": "Bug 1507691 - Followup to fix broken test expecting accept header without image/webp. r=aosmond CLOSED TREE ",
+    "node": "3fee9c5dc2c258a40f542cf5040b46447d1cffa8"
   },
   "10": {
-    "commiter_name": "Florens Verschelde <florens@fvsch.com>",
-    "commit_date": "2018-11-19 12:27:22",
-    "commit_message": "Bug 1507941 - Style CodeMirror folding buttons with the theme-twisty arrow; r=pbro  Differential Revision: https://phabricator.services.mozilla.com/D12185",
-    "node": "2666875fcf32354c20da8e00fab923f301879a14"
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-11-20 15:18:25",
+    "commit_message": "Bug 1495791 - Add a reftest.  Before https://github.com/servo/webrender/pull/3315 this rendered a red square under the green square on WR. ",
+    "node": "5df0edf84a229f28caf8de076344d499165a6ed3"
   },
   "11": {
-    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
-    "commit_date": "2018-11-19 12:20:28",
-    "commit_message": "Bug 1508173 - Update webrender to commit 9ab93fda1abe8a7ce5c9e83cdfd577946bfcd53c (WR PR #3323). r=kats  Differential Revision: https://phabricator.services.mozilla.com/D12253",
-    "node": "87de7318ad049959fe38070b3057bce3430dfa83"
+    "commiter_name": "Ms2ger <Ms2ger@igalia.com>",
+    "commit_date": "2018-11-20 15:19:32",
+    "commit_message": "Bug 1506352 - Followup: Add missing blank line to placate flake8.",
+    "node": "55d9c869610101ebe70367d525e87c44f75efdc0"
   },
   "12": {
-    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
-    "commit_date": "2018-11-19 11:35:56",
-    "commit_message": "Bug 1507993 - Fix up a typo in network-error-logging/support/lock.py r=jgraham  \"request_id\" is never defined in the file, and it looks like it should be using \"report_id\" like most other places in this file.  Differential Revision: https://phabricator.services.mozilla.com/D12195",
-    "node": "5f31d040aab4fc3cbbfcaa7fa6259afe5530d450"
+    "commiter_name": "Ms2ger <Ms2ger@igalia.com>",
+    "commit_date": "2018-11-20 15:00:23",
+    "commit_message": "Bug 1506352 - Add a --log-wptreport option to jstests; r=bbouvier,jgraham",
+    "node": "5931ccb19e50e7e40e53173b8caa4403c9b35b8e"
   },
   "13": {
-    "commiter_name": "Bobby Holley <bobbyholley@gmail.com>",
-    "commit_date": "2018-11-15 01:58:00",
-    "commit_message": "Bug 1507333 - Clear evicted cache entries when using the debug display. r=gw,jrmuizel  Differential Revision: https://phabricator.services.mozilla.com/D11959 ",
-    "node": "def3a4c1f23be5a622cf2ec132cc8c385ce4b60e"
+    "commiter_name": "Christoph Kerschbaumer <ckerschb@christophkerschbaumer.com>",
+    "commit_date": "2018-11-20 13:12:01",
+    "commit_message": "Bug 1508596: Remove unused CreatePrincipalFromReferrer within nsDocshell. r=jkt",
+    "node": "f7cd1062ca6045ae2d8eb9c794818d3924f8a6d4"
   },
   "14": {
-    "commiter_name": "Bobby Holley <bobbyholley@gmail.com>",
-    "commit_date": "2018-11-15 01:10:57",
-    "commit_message": "Bug 1507333 - Route WebRender pref changes through the RenderBackend. r=jrmuizel  The overlap between debug flags and debug commands is a bit of a mess, and this patch does not entirely clean it up. But this at least means that the RenderBackend can react to pref changes in Firefox.  Differential Revision: https://phabricator.services.mozilla.com/D11958",
-    "node": "73e025041c50a4ccc3078dd97971d119269f3e0e"
+    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
+    "commit_date": "2018-11-16 17:55:17",
+    "commit_message": "Bug 1507691 - Add image/webp to default HTTP Accept header. r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D12136",
+    "node": "243ce783ccfb0f05c85d1575d26e8e845cfd1eb2"
   },
   "15": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-19 18:21:09",
-    "commit_message": "Bug 1503961 - part 2 - do a single allocation for the linearized buffer; r=nbp  This change should eliminate the repeated copying we see on some testcases.",
-    "node": "f949c4870f0267c86506199a8bbcedda82129c54"
+    "commiter_name": "Tooru Fujisawa <arai_a@mac.com>",
+    "commit_date": "2018-11-20 13:21:32",
+    "commit_message": "Bug 1505511 - Part 3: Support WeakMap and WeakSet in Xray. r=bholley",
+    "node": "754cc91c9d3b50207679ef25861d662496811c64"
   },
   "16": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-19 18:21:09",
-    "commit_message": "Bug 1503961 - part 1 - factor out a slice iterator for XDRIncrementalEncoder; r=nbp  We're going to do two passes over the tree, so we might as well have some common code to do the iteration.",
-    "node": "9718b942ff558203eaea91981084e9329fbf52a7"
+    "commiter_name": "Tooru Fujisawa <arai_a@mac.com>",
+    "commit_date": "2018-11-20 13:21:32",
+    "commit_message": "Bug 1505511 - Part 2: Use ClassSpec in WeakSetObject. r=evilpie",
+    "node": "32915637657a5e92dbdd8abec557c1f229b70cd1"
   },
   "17": {
-    "commiter_name": "Robert Strong <robert.bugzilla@gmail.com>",
-    "commit_date": "2018-11-19 17:33:33",
-    "commit_message": "Bug 1506917 - Don't attempt to check for updates from Firefox's nsBrowserGlue.js when running tests. r=ted This adds the app.update.checkInstallTime pref with a value of false in all tests that have the app.update.disabledForTesting pref except for geckodriver which is covered by bug 1508283.",
-    "node": "b1c306693151539e0772bf462cea6ac9f22194d2"
+    "commiter_name": "Tooru Fujisawa <arai_a@mac.com>",
+    "commit_date": "2018-11-20 13:21:32",
+    "commit_message": "Bug 1505511 - Part 1: Use ClassSpec in WeakMapObject. r=evilpie",
+    "node": "a5d9fa8dc136d167e53b1ae4a7b494d2e691dd60"
   },
   "18": {
-    "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
-    "commit_date": "2018-11-19 17:28:15",
-    "commit_message": "Bug 1507502 - Check for correct installed package when running mach wpt --package; r=kwierso",
-    "node": "db64bea68bf3b21691d7643215f03834cb924240"
+    "commiter_name": "Gabriele Svelto <gsvelto@mozilla.com>",
+    "commit_date": "2018-11-12 12:04:17",
+    "commit_message": "Bug 1502284 - Cleanup of the observer service code r=erahm  This refactors the observer service code to improve readability, uses MOZ_TRY and other checking macros wherever possible to simplify error handling and replaces the ObserverRef class with the more generic nsMaybeWeakPtr class. This cuts away some code and halves the amount of memory needed to store an event listener. The external behavior is almost unchanged save for some error codes which are now more specific.  Differential Revision: https://phabricator.services.mozilla.com/D11646",
+    "node": "c77a41fad0e6a6b22df9a077b536098adb42db86"
   },
   "19": {
-    "commiter_name": "Ryan VanderMeulen <ryanvm@gmail.com>",
-    "commit_date": "2018-11-19 17:08:36",
-    "commit_message": "Bug 1508275 - Update pdf.js to version 2.1.70. r=bdahl",
-    "node": "01f5b38c0cb71cc9c31fc2c372cf68c1c3c750e6"
+    "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+    "commit_date": "2018-11-20 11:46:12",
+    "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge on a CLOSED TREE",
+    "node": "8e08c23784f5f58d1f24bf1f783ad8b827ce688c"
   }
 }

@@ -1,66 +1,149 @@
 {
+  "0": {
+    "lastChecked": "2018-11-20 17:10:40.804790"
+  },
   "1": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "2": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "3": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "4": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "5": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "6": {
     "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
     "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
     "commiter_name": "rail",
     "commiter_email": null,
     "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
-    "commit_date": "2018-11-19 15:19:47"
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
   },
-  "2": {
+  "7": {
     "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
     "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
     "commiter_name": "rail",
     "commiter_email": null,
     "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
-    "commit_date": "2018-11-19 15:01:56"
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
   },
-  "3": {
+  "8": {
     "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
     "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
     "commiter_name": "La0",
     "commiter_email": null,
     "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
-    "commit_date": "2018-11-19 11:15:41"
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
   },
-  "4": {
+  "9": {
     "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
     "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
     "commiter_name": "garbas",
     "commiter_email": null,
     "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
-    "commit_date": "2018-11-15 18:28:53"
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
   },
-  "5": {
+  "10": {
     "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
     "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
     "commiter_name": "marco-c",
     "commiter_email": null,
     "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
-    "commit_date": "2018-11-14 17:38:32"
-  },
-  "6": {
-    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
-    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
-    "commiter_name": "kevinluvian",
-    "commiter_email": "rok@garbas.si",
-    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
-    "commit_date": "2018-11-13 00:48:39"
-  },
-  "7": {
-    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
-    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
-    "commiter_name": "kevinluvian",
-    "commiter_email": "rok@garbas.si",
-    "commit_message": "please-cli: display in which project shell you are (#1676)",
-    "commit_date": "2018-11-13 00:16:42"
-  },
-  "8": {
-    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
-    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
-    "commiter_name": "garbas",
-    "commiter_email": null,
-    "commit_message": "setup: update dependencies (#1670)",
-    "commit_date": "2018-11-12 23:36:45"
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
   }
 }

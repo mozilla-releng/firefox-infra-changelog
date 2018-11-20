@@ -1,11 +1,18 @@
 {
+  "0": {
+    "lastChecked": "2018-11-20 17:10:38.459414"
+  },
   "1": {
     "sha": "6e63fa3ca7a575eb4b325d606f6652360fea20c7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6e63fa3ca7a575eb4b325d606f6652360fea20c7",
     "commiter_name": "flodolo",
     "commiter_email": "rail@mozilla.com",
     "commit_message": "Bug 1508140 - Add 'trs' to product-details (#243)",
-    "commit_date": "2018-11-19 02:14:35"
+    "commit_date": "2018-11-19 02:14:35",
+    "files_changed": [
+      "kickoff/config.py",
+      "scripts/sync-and-check-l10n.py"
+    ]
   },
   "2": {
     "sha": "04cbfefdf23e1cf9b21edd1aa6c0bb2eb2f893c0",
@@ -13,6 +20,13 @@
     "commiter_name": "flodolo",
     "commiter_email": "rail@mozilla.com",
     "commit_message": "Update l10n data for all locales (#244)",
-    "commit_date": "2018-11-19 02:11:53"
+    "commit_date": "2018-11-19 02:11:53",
+    "files_changed": [
+      "kickoff/static/regions/el.json",
+      "kickoff/static/regions/kab.json",
+      "kickoff/static/regions/sk.json",
+      "kickoff/static/regions/zh-CN.json",
+      "kickoff/static/regions/zh-TW.json"
+    ]
   }
 }

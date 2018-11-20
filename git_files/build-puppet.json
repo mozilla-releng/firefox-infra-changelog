@@ -1,11 +1,20 @@
 {
+  "0": {
+    "lastChecked": "2018-11-20 17:11:15.203959"
+  },
   "1": {
     "sha": "b7682969492b19cad0602439aab3bf14f0e4003d",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/b7682969492b19cad0602439aab3bf14f0e4003d",
     "commiter_name": "Callek",
     "commiter_email": null,
     "commit_message": "Merge pull request #298 from mozilla-releng/dlabici-backout  BUG: 1507497 - Downgrade Cryptography back to 2.3.1",
-    "commit_date": "2018-11-15 15:12:06"
+    "commit_date": "2018-11-15 15:12:06",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-27.txt",
+      "modules/buildduty_tools/files/requirements.txt",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
   },
   "2": {
     "sha": "a4afe238dae323f2978834c023c212f8901e0b81",
@@ -13,7 +22,10 @@
     "commiter_name": "Akhliskun",
     "commiter_email": null,
     "commit_message": "Rollback the downgrade at Callek's request.",
-    "commit_date": "2018-11-15 15:10:28"
+    "commit_date": "2018-11-15 15:10:28",
+    "files_changed": [
+      "modules/signingserver/files/linux_requirements.txt"
+    ]
   },
   "3": {
     "sha": "972b03ad8c808329a14538eb18acd390354a0241",
@@ -21,7 +33,14 @@
     "commiter_name": "Akhliskun",
     "commiter_email": null,
     "commit_message": "BUG: 1507497 - Downgrade Cryptography back to 2.3.1",
-    "commit_date": "2018-11-15 15:00:31"
+    "commit_date": "2018-11-15 15:00:31",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-27.txt",
+      "modules/buildduty_tools/files/requirements.txt",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt",
+      "modules/signingserver/files/linux_requirements.txt"
+    ]
   },
   "4": {
     "sha": "e54c82bee3112a152c382d27d4fa1667a2df428c",
@@ -29,7 +48,24 @@
     "commiter_name": "Callek",
     "commiter_email": null,
     "commit_message": "Merge pull request #297 from mozilla-releng/pyup-scheduled-update-2018-11-14  Scheduled weekly dependency update for week 45",
-    "commit_date": "2018-11-15 13:18:44"
+    "commit_date": "2018-11-15 13:18:44",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt",
+      "modules/balrog_scriptworker/files/requirements-27.txt",
+      "modules/balrog_scriptworker/files/requirements-3.txt",
+      "modules/beetmover_scriptworker/files/requirements.txt",
+      "modules/bouncer_scriptworker/files/requirements.txt",
+      "modules/buildduty_tools/files/requirements.txt",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/releaserunner3/files/requirements.txt",
+      "modules/selfserve_agent/files/requirements.txt",
+      "modules/shipit_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt",
+      "modules/signingserver/files/linux_requirements.txt",
+      "modules/signingserver/files/mac_requirements.txt",
+      "modules/transparency_scriptworker/files/requirements.txt",
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
   },
   "5": {
     "sha": "0073285ea40dc7c688157032b5578db1ea0b306d",
@@ -37,7 +73,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:46"
+    "commit_date": "2018-11-14 15:05:46",
+    "files_changed": [
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
   },
   "6": {
     "sha": "978cb6ece61e89f320a697affab9fa35142e7fb1",
@@ -45,7 +84,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:41"
+    "commit_date": "2018-11-14 15:05:41",
+    "files_changed": [
+      "modules/transparency_scriptworker/files/requirements.txt"
+    ]
   },
   "7": {
     "sha": "1591171354d3589c6488fedd220f325ae90ee6d9",
@@ -53,7 +95,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:37"
+    "commit_date": "2018-11-14 15:05:37",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt"
+    ]
   },
   "8": {
     "sha": "6e3c3b13c9a4238adf4e6697979f4e3e8b8ac485",
@@ -61,7 +106,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:32"
+    "commit_date": "2018-11-14 15:05:32",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-3.txt"
+    ]
   },
   "9": {
     "sha": "30cb66d445ec3ffa0c5a5a6135f53f59778a8ef3",
@@ -69,7 +117,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:28"
+    "commit_date": "2018-11-14 15:05:28",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
   },
   "10": {
     "sha": "f80166782de628b44293e9880b1baeb977c404e5",
@@ -77,7 +128,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:24"
+    "commit_date": "2018-11-14 15:05:24",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
   },
   "11": {
     "sha": "bdc28ed238a24da5087938f5afe9c68cba8a7c54",
@@ -85,7 +139,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:18"
+    "commit_date": "2018-11-14 15:05:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "12": {
     "sha": "0a70515f41be89bc619e2093e7e0622a65aa84f7",
@@ -93,7 +150,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:11"
+    "commit_date": "2018-11-14 15:05:11",
+    "files_changed": [
+      "modules/shipit_scriptworker/files/requirements.txt"
+    ]
   },
   "13": {
     "sha": "49e40c5480e3e5c77bcfcc38169d427ef1263e54",
@@ -101,7 +161,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:04"
+    "commit_date": "2018-11-14 15:05:04",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
   },
   "14": {
     "sha": "0d97de4155f9972e49844ddd9fceb5ef5dfd5e0c",
@@ -109,7 +172,10 @@
     "commiter_name": "popadrianc",
     "commiter_email": null,
     "commit_message": "revert setuptools from 40.6.2 to 40.5.0",
-    "commit_date": "2018-11-14 14:40:40"
+    "commit_date": "2018-11-14 14:40:40",
+    "files_changed": [
+      "modules/signingserver/files/linux_requirements.txt"
+    ]
   },
   "15": {
     "sha": "301df7b450d8f165fbe2766a9ecb807f222edc71",
@@ -117,7 +183,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update setuptools from 40.5.0 to 40.6.2",
-    "commit_date": "2018-11-14 13:05:13"
+    "commit_date": "2018-11-14 13:05:13",
+    "files_changed": [
+      "modules/signingserver/files/linux_requirements.txt"
+    ]
   },
   "16": {
     "sha": "a4f7dedbafe221d29d09157c79db76274c32e8d3",
@@ -125,7 +194,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update datadog from 0.23.0 to 0.24.0",
-    "commit_date": "2018-11-14 13:05:12"
+    "commit_date": "2018-11-14 13:05:12",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
   },
   "17": {
     "sha": "43dc5ac16112174d1d85c39a19ffe60729ff4b15",
@@ -133,7 +205,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update webob from 1.8.3 to 1.8.4",
-    "commit_date": "2018-11-14 13:05:10"
+    "commit_date": "2018-11-14 13:05:10",
+    "files_changed": [
+      "modules/signingserver/files/mac_requirements.txt"
+    ]
   },
   "18": {
     "sha": "0669eb5eb1dd7e9acef8d4c25eba8cca8e8fcb95",
@@ -141,7 +216,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update webob from 1.8.3 to 1.8.4",
-    "commit_date": "2018-11-14 13:05:09"
+    "commit_date": "2018-11-14 13:05:09",
+    "files_changed": [
+      "modules/signingserver/files/linux_requirements.txt"
+    ]
   },
   "19": {
     "sha": "251ce6e45995f43349f2634de8d93b1ed435d073",
@@ -149,7 +227,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update webob from 1.8.3 to 1.8.4",
-    "commit_date": "2018-11-14 13:05:07"
+    "commit_date": "2018-11-14 13:05:07",
+    "files_changed": [
+      "modules/selfserve_agent/files/requirements.txt"
+    ]
   },
   "20": {
     "sha": "394234d95ec0426f9dc2caa1d4ec094107997321",
@@ -157,7 +238,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update sqlalchemy from 1.2.13 to 1.2.14",
-    "commit_date": "2018-11-14 13:05:06"
+    "commit_date": "2018-11-14 13:05:06",
+    "files_changed": [
+      "modules/selfserve_agent/files/requirements.txt"
+    ]
   },
   "21": {
     "sha": "fd1ca43fab8903f13c29174a2792b153f29672f4",
@@ -165,7 +249,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update matplotlib from 3.0.1 to 3.0.2",
-    "commit_date": "2018-11-14 13:05:04"
+    "commit_date": "2018-11-14 13:05:04",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "22": {
     "sha": "f84dad71d0376ad6079ef606ea717edf1c6a5b68",
@@ -173,7 +260,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update httplib2 from 0.11.3 to 0.12.0",
-    "commit_date": "2018-11-14 13:05:01"
+    "commit_date": "2018-11-14 13:05:01",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "23": {
     "sha": "940a0643cc41d827b402a98e12fddef89f7b662a",
@@ -181,7 +271,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update google-auth from 1.5.1 to 1.6.1",
-    "commit_date": "2018-11-14 13:05:00"
+    "commit_date": "2018-11-14 13:05:00",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "24": {
     "sha": "976678f43ee6699564159d640e57eae388ca4298",
@@ -189,7 +282,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update mozilla-version from 0.3.0 to 0.3.1",
-    "commit_date": "2018-11-14 13:04:58"
+    "commit_date": "2018-11-14 13:04:58",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "25": {
     "sha": "8988c2830ea4191e4595330a5343daceab0110f1",
@@ -197,7 +293,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update mozilla-version from 0.3.0 to 0.3.1",
-    "commit_date": "2018-11-14 13:04:57"
+    "commit_date": "2018-11-14 13:04:57",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
   },
   "26": {
     "sha": "48484d1af727b1b33cb10c1f16b392e0406f2b33",
@@ -205,7 +304,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update mozilla-version from 0.3.0 to 0.3.1",
-    "commit_date": "2018-11-14 13:04:55"
+    "commit_date": "2018-11-14 13:04:55",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
   },
   "27": {
     "sha": "75b55febf9e83c6b014168f501ef0f4cd03ec19d",
@@ -213,7 +315,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update botocore from 1.12.39 to 1.12.44",
-    "commit_date": "2018-11-14 13:04:54"
+    "commit_date": "2018-11-14 13:04:54",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
   },
   "28": {
     "sha": "ffe16d9e63c4f2d2b5766e468a1423b6e2f33d10",
@@ -221,7 +326,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update boto3 from 1.9.39 to 1.9.44",
-    "commit_date": "2018-11-14 13:04:52"
+    "commit_date": "2018-11-14 13:04:52",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
   },
   "29": {
     "sha": "8d51ef84a87adadfca6da2de75e56cceb75443bf",
@@ -229,7 +337,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:51"
+    "commit_date": "2018-11-14 13:04:51",
+    "files_changed": [
+      "modules/signingserver/files/linux_requirements.txt"
+    ]
   },
   "30": {
     "sha": "022c4e1a0cf4c4cacd83fd3fe6d36a0fb85568af",
@@ -237,7 +348,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:49"
+    "commit_date": "2018-11-14 13:04:49",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
   },
   "31": {
     "sha": "7a6e1c42384d02e7398c587e06aaef6254596171",
@@ -245,7 +359,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:48"
+    "commit_date": "2018-11-14 13:04:48",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "32": {
     "sha": "55b4956e24a87e59915563359d1c03dcff9458f0",
@@ -253,7 +370,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:46"
+    "commit_date": "2018-11-14 13:04:46",
+    "files_changed": [
+      "modules/buildduty_tools/files/requirements.txt"
+    ]
   },
   "33": {
     "sha": "a76c9e5265593d74f4e9966f5c0d17a084e697f4",
@@ -261,7 +381,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:45"
+    "commit_date": "2018-11-14 13:04:45",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-27.txt"
+    ]
   },
   "34": {
     "sha": "b3a4914dcefa8d473297a33343fc4d9f364239a5",
@@ -269,7 +392,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:43"
+    "commit_date": "2018-11-14 13:04:43",
+    "files_changed": [
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
   },
   "35": {
     "sha": "7f404e1bae6e7b27be3e7d27df4617093ca43ba7",
@@ -277,7 +403,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:42"
+    "commit_date": "2018-11-14 13:04:42",
+    "files_changed": [
+      "modules/transparency_scriptworker/files/requirements.txt"
+    ]
   },
   "36": {
     "sha": "4eb1c176d86b0079d2b25a0ecfb826b5fa4a5365",
@@ -285,7 +414,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:41"
+    "commit_date": "2018-11-14 13:04:41",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
   },
   "37": {
     "sha": "2221c9aa761cf1baed10635e217aded67f8cf180",
@@ -293,7 +425,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:39"
+    "commit_date": "2018-11-14 13:04:39",
+    "files_changed": [
+      "modules/shipit_scriptworker/files/requirements.txt"
+    ]
   },
   "38": {
     "sha": "e168037180bda9eb92ac2069bb23e01ec3342fba",
@@ -301,7 +436,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:37"
+    "commit_date": "2018-11-14 13:04:37",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "39": {
     "sha": "f26289c3678b2a73f5b24893a765a520d58e3697",
@@ -309,7 +447,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:36"
+    "commit_date": "2018-11-14 13:04:36",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
   },
   "40": {
     "sha": "2a5419d924c500adcb9a159b072271f572ceaaa0",
@@ -317,7 +458,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:34"
+    "commit_date": "2018-11-14 13:04:34",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
   },
   "41": {
     "sha": "e553f8f2cae8827775d5f83d40c4a36485fcef68",
@@ -325,7 +469,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:33"
+    "commit_date": "2018-11-14 13:04:33",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-3.txt"
+    ]
   },
   "42": {
     "sha": "f455a268b654d273aa60af0660edd6c0a53620cd",
@@ -333,7 +480,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:31"
+    "commit_date": "2018-11-14 13:04:31",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt"
+    ]
   },
   "43": {
     "sha": "2c9ca48c0d2bc83506cfd98a3ab502d735176766",
@@ -341,7 +491,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:30"
+    "commit_date": "2018-11-14 13:04:30",
+    "files_changed": [
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
   },
   "44": {
     "sha": "b6ed370d770d5559a9775927635abe5f7646bcb7",
@@ -349,7 +502,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:28"
+    "commit_date": "2018-11-14 13:04:28",
+    "files_changed": [
+      "modules/transparency_scriptworker/files/requirements.txt"
+    ]
   },
   "45": {
     "sha": "adac4b661bed951ebabe28cadeeaa5eed7c822fa",
@@ -357,7 +513,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:27"
+    "commit_date": "2018-11-14 13:04:27",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
   },
   "46": {
     "sha": "b722735f1e7c8da5f4d4529d4b8c52b97d34e7b3",
@@ -365,7 +524,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:25"
+    "commit_date": "2018-11-14 13:04:25",
+    "files_changed": [
+      "modules/shipit_scriptworker/files/requirements.txt"
+    ]
   },
   "47": {
     "sha": "d279999046132aa59c3076d9ccb9f6649ce6a27b",
@@ -373,7 +535,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:24"
+    "commit_date": "2018-11-14 13:04:24",
+    "files_changed": [
+      "modules/releaserunner3/files/requirements.txt"
+    ]
   },
   "48": {
     "sha": "b3041a63b3f5a30b6361a142d7cc15c354b4c96a",
@@ -381,7 +546,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:23"
+    "commit_date": "2018-11-14 13:04:23",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
   },
   "49": {
     "sha": "6356e97142a696e0471f33748969badefef84b21",
@@ -389,7 +557,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:21"
+    "commit_date": "2018-11-14 13:04:21",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
   },
   "50": {
     "sha": "75cd280eae11bd252e346bc628097dfd02f2422e",
@@ -397,7 +568,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:20"
+    "commit_date": "2018-11-14 13:04:20",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
   },
   "51": {
     "sha": "ab0db5d22d1c6a867da9fd59d4a3e59c1805dccc",
@@ -405,7 +579,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:18"
+    "commit_date": "2018-11-14 13:04:18",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-3.txt"
+    ]
   },
   "52": {
     "sha": "a501885b6fc2610dd91220c1407ce85dbe213b60",
@@ -413,7 +590,10 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:17"
+    "commit_date": "2018-11-14 13:04:17",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-27.txt"
+    ]
   },
   "53": {
     "sha": "13e22b105d2d20cade96f233dca9eb73162542d8",
@@ -421,6 +601,9 @@
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:15"
+    "commit_date": "2018-11-14 13:04:15",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt"
+    ]
   }
 }
