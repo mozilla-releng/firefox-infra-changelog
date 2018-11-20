@@ -1,272 +1,669 @@
 {
+  "0": {
+    "lastChecked": "2018-11-20 17:11:41.431663"
+  },
   "1": {
-    "sha": "c76991e0a3d989cd5e56ac230795daa0ba462d0c",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/c76991e0a3d989cd5e56ac230795daa0ba462d0c",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Merge pull request #137 from tp-tc/fingerprint   Bug 1495464: Update hg.mozilla.org fingerprint.",
-    "commit_date": "2018-10-31 21:24:18 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/c76991e0a3d989cd5e56ac230795daa0ba462d0c"
+    "sha": "082143623997629bbd339594d754480c167b4681",
+    "url": "https://github.com/mozilla-releng/treescript/commit/082143623997629bbd339594d754480c167b4681",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #149 from Callek/pip-compile-multi  Pip compile multi",
+    "commit_date": "2018-11-20 13:42:22",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.in",
+      "requirements/test.txt",
+      "tox.ini"
+    ]
   },
   "2": {
-    "sha": "5513bb6bfd14c076aadbf275c2a9f3cffb3fb30a",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/5513bb6bfd14c076aadbf275c2a9f3cffb3fb30a",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Bump version.",
-    "commit_date": "2018-10-31 21:21:07 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/5513bb6bfd14c076aadbf275c2a9f3cffb3fb30a"
+    "sha": "7c8a1e1d86f6fbd87555a8b7798d360cdf9c5259",
+    "url": "https://github.com/mozilla-releng/treescript/commit/7c8a1e1d86f6fbd87555a8b7798d360cdf9c5259",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Run pip-compile-multi, fixes #114 while we're at it",
+    "commit_date": "2018-11-20 13:41:56",
+    "files_changed": [
+      "requirements/base.txt",
+      "requirements/test.txt"
+    ]
   },
   "3": {
-    "sha": "b34cbe8f210f55b9e29eb438f1cd34b6390250a7",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/b34cbe8f210f55b9e29eb438f1cd34b6390250a7",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Bug 1495464: Update hg.mozilla.org fingerprint.",
-    "commit_date": "2018-10-31 21:18:25 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/b34cbe8f210f55b9e29eb438f1cd34b6390250a7"
+    "sha": "b52a3c4a7e9d029dff2e7523f4ce9a18d6466246",
+    "url": "https://github.com/mozilla-releng/treescript/commit/b52a3c4a7e9d029dff2e7523f4ce9a18d6466246",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Remove packages defined in base.txt from test.txt and import base.txt",
+    "commit_date": "2018-11-20 13:37:29",
+    "files_changed": [
+      "requirements/test.txt"
+    ]
   },
   "4": {
-    "sha": "1f6dc4c8bd37e686c2e0e9e909c65091eb54a51c",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/1f6dc4c8bd37e686c2e0e9e909c65091eb54a51c",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Merge pull request #111 from tp-tc/bump-robustcheckout.py  Bump robustcheckout.py.",
-    "commit_date": "2018-10-02 16:43:57 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/1f6dc4c8bd37e686c2e0e9e909c65091eb54a51c"
+    "sha": "53762f2b07c6e8454a730138593158be7eb32a0e",
+    "url": "https://github.com/mozilla-releng/treescript/commit/53762f2b07c6e8454a730138593158be7eb32a0e",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "pip-compile-multi support",
+    "commit_date": "2018-11-20 13:23:58",
+    "files_changed": [
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.in",
+      "requirements/test.txt",
+      "tox.ini"
+    ]
   },
   "5": {
-    "sha": "8e0427732c08e617b4086456f04b0625eab9dbad",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/8e0427732c08e617b4086456f04b0625eab9dbad",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "1.1.2",
-    "commit_date": "2018-10-02 15:47:41 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/8e0427732c08e617b4086456f04b0625eab9dbad"
+    "sha": "ef429b5750b557ded4775cca7e4abf8f813856b9",
+    "url": "https://github.com/mozilla-releng/treescript/commit/ef429b5750b557ded4775cca7e4abf8f813856b9",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #148 from Callek/pyup-weekly  Bump versions weekly",
+    "commit_date": "2018-11-20 13:14:31",
+    "files_changed": [
+      ".pyup.yml"
+    ]
   },
   "6": {
-    "sha": "6dee55337062b8da623f1a50663754f283cdb99d",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/6dee55337062b8da623f1a50663754f283cdb99d",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Update robustcheckout for mercurial 4.7.1.",
-    "commit_date": "2018-10-02 15:43:59 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/6dee55337062b8da623f1a50663754f283cdb99d"
+    "sha": "cf3435bec9884df9b036d87aefb78902fde86ce7",
+    "url": "https://github.com/mozilla-releng/treescript/commit/cf3435bec9884df9b036d87aefb78902fde86ce7",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Bump versions weekly",
+    "commit_date": "2018-11-20 13:14:04",
+    "files_changed": [
+      ".pyup.yml"
+    ]
   },
   "7": {
-    "sha": "32f0c8f370cada3e726dfd0d17afbdf62f08e58b",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/32f0c8f370cada3e726dfd0d17afbdf62f08e58b",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #75 from mozilla-releng/pyup-update-taskcluster-4.0.0-to-4.0.1  Update taskcluster to 4.0.1",
-    "commit_date": "2018-08-04 18:10:34 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/32f0c8f370cada3e726dfd0d17afbdf62f08e58b"
+    "sha": "d0a744cb6dce0608dc56d8d1ebd4afc733042986",
+    "url": "https://github.com/mozilla-releng/treescript/commit/d0a744cb6dce0608dc56d8d1ebd4afc733042986",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #121 from mozilla-releng/pyup-update-certifi-2018.4.16-to-2018.10.15  Update certifi to 2018.10.15",
+    "commit_date": "2018-11-20 04:00:58",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "8": {
-    "sha": "4bde1bea3ea43484a823222a1289788bf01e8662",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/4bde1bea3ea43484a823222a1289788bf01e8662",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge branch 'master' into pyup-update-taskcluster-4.0.0-to-4.0.1",
-    "commit_date": "2018-08-04 18:10:09 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/4bde1bea3ea43484a823222a1289788bf01e8662"
+    "sha": "446d883d583995256ebcd1170a8e7e924cd4210a",
+    "url": "https://github.com/mozilla-releng/treescript/commit/446d883d583995256ebcd1170a8e7e924cd4210a",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-certifi-2018.4.16-to-2018.10.15",
+    "commit_date": "2018-11-20 04:00:49",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "requirements.txt",
+      "treescript/data/hgrc",
+      "version.txt"
+    ]
   },
   "9": {
-    "sha": "d449257757fc3a8e5b2a4e9ca82add7c910a910d",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/d449257757fc3a8e5b2a4e9ca82add7c910a910d",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #70 from mozilla-releng/pyup-update-pytest-asyncio-0.8.0-to-0.9.0  Update pytest-asyncio to 0.9.0",
-    "commit_date": "2018-08-04 18:06:08 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/d449257757fc3a8e5b2a4e9ca82add7c910a910d"
+    "sha": "57ac1f423ac0f9254376f2e22dae0fe43fff0a1d",
+    "url": "https://github.com/mozilla-releng/treescript/commit/57ac1f423ac0f9254376f2e22dae0fe43fff0a1d",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #130 from mozilla-releng/pyup-update-flake8-3.5.0-to-3.6.0  Update flake8 to 3.6.0",
+    "commit_date": "2018-11-20 03:59:56",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "10": {
-    "sha": "570d88779e05d933b83a1fa4947a47a3e166d43f",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/570d88779e05d933b83a1fa4947a47a3e166d43f",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge branch 'master' into pyup-update-pytest-asyncio-0.8.0-to-0.9.0",
-    "commit_date": "2018-08-04 18:05:59 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/570d88779e05d933b83a1fa4947a47a3e166d43f"
+    "sha": "81fd7746c9db14ce263e9fc0ac75939cb06800c2",
+    "url": "https://github.com/mozilla-releng/treescript/commit/81fd7746c9db14ce263e9fc0ac75939cb06800c2",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-flake8-3.5.0-to-3.6.0",
+    "commit_date": "2018-11-20 03:56:09",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "11": {
-    "sha": "5cdbd63b00c34171d77146c197108fe95c759d24",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/5cdbd63b00c34171d77146c197108fe95c759d24",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #76 from mozilla-releng/pyup-update-pytest-3.6.3-to-3.7.1  Update pytest to 3.7.1 and pluggy to 0.7.1",
-    "commit_date": "2018-08-04 18:01:14 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/5cdbd63b00c34171d77146c197108fe95c759d24"
+    "sha": "0227a9635fbb07a06bd5cfb395431376d57b932f",
+    "url": "https://github.com/mozilla-releng/treescript/commit/0227a9635fbb07a06bd5cfb395431376d57b932f",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #134 from mozilla-releng/pyup-update-tox-3.1.3-to-3.5.3  Update tox to 3.5.3",
+    "commit_date": "2018-11-20 03:55:14",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "12": {
-    "sha": "f91bb9158c2a466b753e7296e311ddd2da078a91",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/f91bb9158c2a466b753e7296e311ddd2da078a91",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #74 from mozilla-releng/pyup-update-more-itertools-4.2.0-to-4.3.0  Update more-itertools to 4.3.0",
-    "commit_date": "2018-08-04 18:00:51 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/f91bb9158c2a466b753e7296e311ddd2da078a91"
+    "sha": "f9f2e5518cf9c722465ca4a48d2d9ff98b5021c7",
+    "url": "https://github.com/mozilla-releng/treescript/commit/f9f2e5518cf9c722465ca4a48d2d9ff98b5021c7",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Merge branch 'pyup-update-pycodestyle-2.3.1-to-2.4.0' into pyup-update-flake8-3.5.0-to-3.6.0",
+    "commit_date": "2018-11-20 03:54:59",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "13": {
-    "sha": "f7707cfc8cbc5c472fcc778b19c89da2c586f035",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/f7707cfc8cbc5c472fcc778b19c89da2c586f035",
-    "commiter_name": "Justin Wood",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge branch 'pyup-update-pluggy-0.6.0-to-0.7.1' into pyup-update-pytest-3.6.3-to-3.7.1",
-    "commit_date": "2018-08-04 17:56:22 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/f7707cfc8cbc5c472fcc778b19c89da2c586f035"
+    "sha": "ff10a979ed10b2a7a8ad2e5d6d8fa75003a1d6a0",
+    "url": "https://github.com/mozilla-releng/treescript/commit/ff10a979ed10b2a7a8ad2e5d6d8fa75003a1d6a0",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Merge branch 'pyup-update-pyflakes-1.6.0-to-2.0.0' into pyup-update-flake8-3.5.0-to-3.6.0",
+    "commit_date": "2018-11-20 03:54:23",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "requirements.txt",
+      "treescript/data/hgrc",
+      "version.txt"
+    ]
   },
   "14": {
-    "sha": "60ae3a3a95210758942514289bbeb4f22789ec12",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/60ae3a3a95210758942514289bbeb4f22789ec12",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #77 from mozilla-releng/pyup-update-tox-3.1.2-to-3.1.3  Update tox to 3.1.3",
-    "commit_date": "2018-08-04 17:38:59 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/60ae3a3a95210758942514289bbeb4f22789ec12"
+    "sha": "1a8c7e32ed3af303bbfbd8f729a6374512f07ba9",
+    "url": "https://github.com/mozilla-releng/treescript/commit/1a8c7e32ed3af303bbfbd8f729a6374512f07ba9",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-pycodestyle-2.3.1-to-2.4.0",
+    "commit_date": "2018-11-20 03:53:06",
+    "files_changed": [
+      ".travis.yml",
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "requirements.txt",
+      "tox.ini",
+      "treescript/data/hgrc",
+      "treescript/data/treescript_task_schema.json",
+      "treescript/exceptions.py",
+      "treescript/mercurial.py",
+      "treescript/py2/robustcheckout.py",
+      "treescript/script.py",
+      "treescript/task.py",
+      "treescript/test/test_mercurial.py",
+      "treescript/test/test_robustcheckout.py",
+      "treescript/test/test_script.py",
+      "treescript/test/test_utils.py",
+      "treescript/test/test_versionmanip.py",
+      "treescript/utils.py",
+      "treescript/versionmanip.py",
+      "version.txt"
+    ]
   },
   "15": {
-    "sha": "eb19668ed68c1464936c48e0e9865b64c8abd1b7",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/eb19668ed68c1464936c48e0e9865b64c8abd1b7",
-    "commiter_name": "pyup-bot",
-    "commiter_email": "github-bot@pyup.io",
-    "commit_message": "Update tox from 3.1.2 to 3.1.3",
-    "commit_date": "2018-08-04 07:06:59 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/eb19668ed68c1464936c48e0e9865b64c8abd1b7"
+    "sha": "19c132a9109a6688b065d6ce454b68834a9513ea",
+    "url": "https://github.com/mozilla-releng/treescript/commit/19c132a9109a6688b065d6ce454b68834a9513ea",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-pyflakes-1.6.0-to-2.0.0",
+    "commit_date": "2018-11-20 03:48:06",
+    "files_changed": [
+      ".travis.yml",
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "requirements.txt",
+      "tox.ini",
+      "treescript/data/hgrc",
+      "treescript/data/treescript_task_schema.json",
+      "treescript/exceptions.py",
+      "treescript/mercurial.py",
+      "treescript/py2/robustcheckout.py",
+      "treescript/script.py",
+      "treescript/task.py",
+      "treescript/test/test_mercurial.py",
+      "treescript/test/test_robustcheckout.py",
+      "treescript/test/test_script.py",
+      "treescript/test/test_utils.py",
+      "treescript/test/test_versionmanip.py",
+      "treescript/utils.py",
+      "treescript/versionmanip.py",
+      "version.txt"
+    ]
   },
   "16": {
-    "sha": "358d64e6c749368f9604ac0ca395759ae8a338b9",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/358d64e6c749368f9604ac0ca395759ae8a338b9",
-    "commiter_name": "pyup-bot",
-    "commiter_email": "github-bot@pyup.io",
-    "commit_message": "Update pytest from 3.6.3 to 3.7.1",
-    "commit_date": "2018-08-03 06:16:56 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/358d64e6c749368f9604ac0ca395759ae8a338b9"
+    "sha": "d22749496bdae64d0b984ce0880237ca2fa1a2b2",
+    "url": "https://github.com/mozilla-releng/treescript/commit/d22749496bdae64d0b984ce0880237ca2fa1a2b2",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-tox-3.1.3-to-3.5.3",
+    "commit_date": "2018-11-20 03:45:28",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "requirements.txt",
+      "treescript/data/hgrc",
+      "version.txt"
+    ]
   },
   "17": {
-    "sha": "d5127d3fb9f97ab8433797ae1f12807546641762",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/d5127d3fb9f97ab8433797ae1f12807546641762",
-    "commiter_name": "pyup-bot",
-    "commiter_email": "github-bot@pyup.io",
-    "commit_message": "Update taskcluster from 4.0.0 to 4.0.1",
-    "commit_date": "2018-08-02 10:34:57 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/d5127d3fb9f97ab8433797ae1f12807546641762"
+    "sha": "fa11c602e556229aea95027e854b05d43a42f588",
+    "url": "https://github.com/mozilla-releng/treescript/commit/fa11c602e556229aea95027e854b05d43a42f588",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Add toml and filelock as needed by tox",
+    "commit_date": "2018-11-20 03:44:45",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "18": {
-    "sha": "1d57b2a4210a0bb16f1022cffc7276c6eb341758",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/1d57b2a4210a0bb16f1022cffc7276c6eb341758",
-    "commiter_name": "pyup-bot",
-    "commiter_email": "github-bot@pyup.io",
-    "commit_message": "Update taskcluster from 4.0.0 to 4.0.1",
-    "commit_date": "2018-08-02 10:34:55 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/1d57b2a4210a0bb16f1022cffc7276c6eb341758"
+    "sha": "390317dd68418ccf5bc0497d9582667610cdd85b",
+    "url": "https://github.com/mozilla-releng/treescript/commit/390317dd68418ccf5bc0497d9582667610cdd85b",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #139 from mozilla-releng/pyup-update-urllib3-1.23-to-1.24.1  Update urllib3 to 1.24.1",
+    "commit_date": "2018-11-20 03:42:07",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "19": {
-    "sha": "70b265da45afac41f950e52413123806f15940bf",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/70b265da45afac41f950e52413123806f15940bf",
-    "commiter_name": "pyup-bot",
-    "commiter_email": "github-bot@pyup.io",
-    "commit_message": "Update more-itertools from 4.2.0 to 4.3.0",
-    "commit_date": "2018-07-31 13:50:54 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/70b265da45afac41f950e52413123806f15940bf"
+    "sha": "e54ab908d68ceb11d9c4c1462ee4d72ed93b0e83",
+    "url": "https://github.com/mozilla-releng/treescript/commit/e54ab908d68ceb11d9c4c1462ee4d72ed93b0e83",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #138 from mozilla-releng/pyup-update-json-e-2.6.0-to-3.0.0  Update json-e to 3.0.0",
+    "commit_date": "2018-11-20 03:34:18",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "20": {
-    "sha": "b4177142a3a93605b1c3aac4325ccb2bf30d01a6",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/b4177142a3a93605b1c3aac4325ccb2bf30d01a6",
-    "commiter_name": "pyup-bot",
-    "commiter_email": "github-bot@pyup.io",
-    "commit_message": "Update pluggy from 0.6.0 to 0.7.1",
-    "commit_date": "2018-07-29 00:32:45 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/b4177142a3a93605b1c3aac4325ccb2bf30d01a6"
+    "sha": "14ca5685ab45357f5fb64455bb9ce334c5b344e3",
+    "url": "https://github.com/mozilla-releng/treescript/commit/14ca5685ab45357f5fb64455bb9ce334c5b344e3",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-urllib3-1.23-to-1.24.1",
+    "commit_date": "2018-11-20 03:34:03",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "21": {
-    "sha": "3de31f6bd6a9d8ad12ff51e035eee3ba6386ea2a",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/3de31f6bd6a9d8ad12ff51e035eee3ba6386ea2a",
-    "commiter_name": "pyup-bot",
-    "commiter_email": "github-bot@pyup.io",
-    "commit_message": "Update pytest-asyncio from 0.8.0 to 0.9.0",
-    "commit_date": "2018-07-28 15:27:44 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/3de31f6bd6a9d8ad12ff51e035eee3ba6386ea2a"
+    "sha": "327e6403a376844cb544068cd074467b2f319686",
+    "url": "https://github.com/mozilla-releng/treescript/commit/327e6403a376844cb544068cd074467b2f319686",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #141 from mozilla-releng/pyup-update-pbr-4.2.0-to-5.1.1  Update pbr to 5.1.1",
+    "commit_date": "2018-11-20 03:32:52",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "22": {
-    "sha": "dd654070929793d47e4e771e052b37a7fceb1213",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/dd654070929793d47e4e771e052b37a7fceb1213",
-    "commiter_name": "Justin Wood",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Bump version to 1.1.1",
-    "commit_date": "2018-07-28 01:53:45 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/dd654070929793d47e4e771e052b37a7fceb1213"
+    "sha": "0971baa1c4f95800dd346f4154f235f98a457502",
+    "url": "https://github.com/mozilla-releng/treescript/commit/0971baa1c4f95800dd346f4154f235f98a457502",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #144 from mozilla-releng/pyup-update-coverage-4.5.1-to-4.5.2  Update coverage to 4.5.2",
+    "commit_date": "2018-11-20 03:32:44",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "23": {
-    "sha": "595e6d0d3f1cf6c69190d3b9abc2f94fb2054fb5",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/595e6d0d3f1cf6c69190d3b9abc2f94fb2054fb5",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #68 from escapewindow/py37  require py37 tests to be green",
-    "commit_date": "2018-07-28 01:51:39 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/595e6d0d3f1cf6c69190d3b9abc2f94fb2054fb5"
+    "sha": "1b80e08b5fd23b4be2a7868f6d841aa9b232caaf",
+    "url": "https://github.com/mozilla-releng/treescript/commit/1b80e08b5fd23b4be2a7868f6d841aa9b232caaf",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #145 from mozilla-releng/pyup-update-pytest-3.7.1-to-4.0.0  Update pytest to 4.0.0",
+    "commit_date": "2018-11-20 03:32:15",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "24": {
-    "sha": "1a52704a2770f82b52afdcdf596d217897a54e1b",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/1a52704a2770f82b52afdcdf596d217897a54e1b",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #69 from Callek/revert_pr_54  Revert \"Merge pull request #54 from srfraser/verification2\"",
-    "commit_date": "2018-07-28 01:30:56 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/1a52704a2770f82b52afdcdf596d217897a54e1b"
+    "sha": "f5644a9ed78805faa63777367d7b762f59c86e1e",
+    "url": "https://github.com/mozilla-releng/treescript/commit/f5644a9ed78805faa63777367d7b762f59c86e1e",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-pytest-3.7.1-to-4.0.0",
+    "commit_date": "2018-11-20 03:30:12",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "25": {
-    "sha": "716628747b62a858d23b057f0724d0b14c79703f",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/716628747b62a858d23b057f0724d0b14c79703f",
-    "commiter_name": "Justin Wood",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Revert \"Merge pull request #54 from srfraser/verification2\"  This reverts commit 61fedcbaeae32abe417ce9824c638c34dae5b619, reversing changes made to f2f78cbc2d8dea5d29868972b44b7b384752a5a3.",
-    "commit_date": "2018-07-28 01:28:52 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/716628747b62a858d23b057f0724d0b14c79703f"
+    "sha": "81055e3ec3d6378f128393d57c57c628915f73d8",
+    "url": "https://github.com/mozilla-releng/treescript/commit/81055e3ec3d6378f128393d57c57c628915f73d8",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #146 from mozilla-releng/pyup-update-atomicwrites-1.2.0-to-1.2.1  Update atomicwrites to 1.2.1",
+    "commit_date": "2018-11-20 03:29:45",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   },
   "26": {
-    "sha": "4543f599d9ec75e03ed6391d85b63fcedbc15c13",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/4543f599d9ec75e03ed6391d85b63fcedbc15c13",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "require py37 tests to be green",
-    "commit_date": "2018-07-27 23:16:45 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/4543f599d9ec75e03ed6391d85b63fcedbc15c13"
+    "sha": "90a0e8ac5545ad3bb23d0dc119c81833d4d84c0c",
+    "url": "https://github.com/mozilla-releng/treescript/commit/90a0e8ac5545ad3bb23d0dc119c81833d4d84c0c",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-atomicwrites-1.2.0-to-1.2.1",
+    "commit_date": "2018-11-20 03:29:37",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "27": {
-    "sha": "1558a33c01e77449c240ee98d39aa9ba5653d565",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/1558a33c01e77449c240ee98d39aa9ba5653d565",
-    "commiter_name": "Justin Wood",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Bump to version 1.1.0",
-    "commit_date": "2018-07-25 18:15:32 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/1558a33c01e77449c240ee98d39aa9ba5653d565"
+    "sha": "fea8e81555d23fa166acd2ac60a18bea295bc578",
+    "url": "https://github.com/mozilla-releng/treescript/commit/fea8e81555d23fa166acd2ac60a18bea295bc578",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #147 from mozilla-releng/pyup-update-multidict-4.4.2-to-4.5.0  Update multidict to 4.5.0",
+    "commit_date": "2018-11-20 03:29:05",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "28": {
-    "sha": "2042c5c58cc781960b1a9437443d6a5321e19a78",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/2042c5c58cc781960b1a9437443d6a5321e19a78",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #59 from rahul-shiv/master  dontbuild feature added",
-    "commit_date": "2018-07-25 17:55:20 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/2042c5c58cc781960b1a9437443d6a5321e19a78"
+    "sha": "61cd09c51844d29cd542984fe054c2fe122364a7",
+    "url": "https://github.com/mozilla-releng/treescript/commit/61cd09c51844d29cd542984fe054c2fe122364a7",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-multidict-4.4.2-to-4.5.0",
+    "commit_date": "2018-11-20 03:25:39",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "29": {
-    "sha": "ca520ed66f421e724f2e88af1c7bd98295453ad8",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/ca520ed66f421e724f2e88af1c7bd98295453ad8",
-    "commiter_name": "rahul-shiv",
-    "commiter_email": "rahul.shivaprasad@gmail.com",
-    "commit_message": "tests for DONTBUILD added",
-    "commit_date": "2018-07-25 16:41:32 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/ca520ed66f421e724f2e88af1c7bd98295453ad8"
+    "sha": "827faee3a21e004c5ad017316bca5eec54fc2d1c",
+    "url": "https://github.com/mozilla-releng/treescript/commit/827faee3a21e004c5ad017316bca5eec54fc2d1c",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #133 from mozilla-releng/pyup-update-python-dateutil-2.7.3-to-2.7.5  Update python-dateutil to 2.7.5",
+    "commit_date": "2018-11-20 03:24:34",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
   },
   "30": {
-    "sha": "35dfe47bf62b1e61a6aaba233bddb7731d7e08e9",
-    "url": "https://api.github.com/repos/mozilla-releng/treescript/commits/35dfe47bf62b1e61a6aaba233bddb7731d7e08e9",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #63 from mozilla-releng/pyup-update-scriptworker-12.1.0-to-14.0.0  Update scriptworker to 14.0.0",
-    "commit_date": "2018-07-17 17:32:03 ",
-    "commit_url": "https://github.com/mozilla-releng/treescript/commit/35dfe47bf62b1e61a6aaba233bddb7731d7e08e9"
+    "sha": "84646816fc3a7aa3455ede7883b0ff87aadfecc5",
+    "url": "https://github.com/mozilla-releng/treescript/commit/84646816fc3a7aa3455ede7883b0ff87aadfecc5",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #135 from mozilla-releng/pyup-update-pyparsing-2.2.0-to-2.3.0  Update pyparsing to 2.3.0",
+    "commit_date": "2018-11-20 03:24:26",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "31": {
+    "sha": "a81852802d5f8eafa574308544faa665f93b6e34",
+    "url": "https://github.com/mozilla-releng/treescript/commit/a81852802d5f8eafa574308544faa665f93b6e34",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #136 from mozilla-releng/pyup-update-virtualenv-16.0.0-to-16.1.0  Update virtualenv to 16.1.0",
+    "commit_date": "2018-11-20 03:24:18",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "32": {
+    "sha": "f8df6b10c0a90085402c5b0f81ebac9795958ad8",
+    "url": "https://github.com/mozilla-releng/treescript/commit/f8df6b10c0a90085402c5b0f81ebac9795958ad8",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #142 from mozilla-releng/pyup-update-requests-2.19.1-to-2.20.1  Update requests to 2.20.1",
+    "commit_date": "2018-11-20 03:24:10",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "33": {
+    "sha": "b144abc2738a4a6eda08e921cb4c647515d0f4b1",
+    "url": "https://github.com/mozilla-releng/treescript/commit/b144abc2738a4a6eda08e921cb4c647515d0f4b1",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-requests-2.19.1-to-2.20.1",
+    "commit_date": "2018-11-20 03:24:02",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "34": {
+    "sha": "c68df4733377fa19e16cfb46bf318f40710713b0",
+    "url": "https://github.com/mozilla-releng/treescript/commit/c68df4733377fa19e16cfb46bf318f40710713b0",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #123 from mozilla-releng/pyup-update-scriptworker-15.0.0-to-16.2.1  Update scriptworker to 16.2.1",
+    "commit_date": "2018-11-20 03:23:11",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "35": {
+    "sha": "cb7a99dcdac18e86fc0c831fd7bd90c6fe2c4dbe",
+    "url": "https://github.com/mozilla-releng/treescript/commit/cb7a99dcdac18e86fc0c831fd7bd90c6fe2c4dbe",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #122 from mozilla-releng/pyup-update-pluggy-0.7.1-to-0.8.0  Update pluggy to 0.8.0",
+    "commit_date": "2018-11-20 03:23:02",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "36": {
+    "sha": "1963b79e83792015f0bc6d63c30def80245c363f",
+    "url": "https://github.com/mozilla-releng/treescript/commit/1963b79e83792015f0bc6d63c30def80245c363f",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #119 from mozilla-releng/pyup-update-pydocstyle-2.1.1-to-3.0.0  Update pydocstyle to 3.0.0",
+    "commit_date": "2018-11-20 03:22:54",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "37": {
+    "sha": "8f34cbac8bc37dd9b77213bf3d87e76a1bed5fc1",
+    "url": "https://github.com/mozilla-releng/treescript/commit/8f34cbac8bc37dd9b77213bf3d87e76a1bed5fc1",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #118 from mozilla-releng/pyup-update-py-1.5.4-to-1.7.0  Update py to 1.7.0",
+    "commit_date": "2018-11-20 03:22:46",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "38": {
+    "sha": "2c2dda7ac14439ae4c24fe7806e9d685b6f49fe6",
+    "url": "https://github.com/mozilla-releng/treescript/commit/2c2dda7ac14439ae4c24fe7806e9d685b6f49fe6",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #116 from mozilla-releng/pyup-update-async_timeout-3.0.0-to-3.0.1  Update async_timeout to 3.0.1",
+    "commit_date": "2018-11-20 03:22:36",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "39": {
+    "sha": "75d3bf16adb5cd83c5ce9eb16a463ccb4fbf0154",
+    "url": "https://github.com/mozilla-releng/treescript/commit/75d3bf16adb5cd83c5ce9eb16a463ccb4fbf0154",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-async_timeout-3.0.0-to-3.0.1",
+    "commit_date": "2018-11-20 03:22:07",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "requirements.txt",
+      "treescript/data/hgrc",
+      "version.txt"
+    ]
+  },
+  "40": {
+    "sha": "2144515199877d4a5f0c79ecc020f9aaf35bb54f",
+    "url": "https://github.com/mozilla-releng/treescript/commit/2144515199877d4a5f0c79ecc020f9aaf35bb54f",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #109 from mozilla-releng/pyup-update-packaging-17.1-to-18.0  Update packaging to 18.0",
+    "commit_date": "2018-11-20 03:19:05",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "41": {
+    "sha": "4bd5a7b35f8927684c5253ff20ce4daff6f55f87",
+    "url": "https://github.com/mozilla-releng/treescript/commit/4bd5a7b35f8927684c5253ff20ce4daff6f55f87",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-packaging-17.1-to-18.0",
+    "commit_date": "2018-11-20 03:16:41",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "requirements.txt",
+      "treescript/data/hgrc",
+      "treescript/py2/robustcheckout.py",
+      "treescript/test/test_robustcheckout.py",
+      "version.txt"
+    ]
+  },
+  "42": {
+    "sha": "80d7d7ace8b76748997115945ecee7f1f6569b1f",
+    "url": "https://github.com/mozilla-releng/treescript/commit/80d7d7ace8b76748997115945ecee7f1f6569b1f",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-20 03:14:55",
+    "files_changed": [
+      "requirements.txt"
+    ]
+  },
+  "43": {
+    "sha": "00689a8636907f53472686bbe855dff97d12137f",
+    "url": "https://github.com/mozilla-releng/treescript/commit/00689a8636907f53472686bbe855dff97d12137f",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-20 03:14:53",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "44": {
+    "sha": "a97f81307b96131a4f65b606392169c8caa8c279",
+    "url": "https://github.com/mozilla-releng/treescript/commit/a97f81307b96131a4f65b606392169c8caa8c279",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #105 from mozilla-releng/pyup-update-multidict-4.3.1-to-4.4.2  Update multidict to 4.4.2",
+    "commit_date": "2018-11-20 03:14:44",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "45": {
+    "sha": "64800cd40a7e49b87d4af6f3cb75071bfee59677",
+    "url": "https://github.com/mozilla-releng/treescript/commit/64800cd40a7e49b87d4af6f3cb75071bfee59677",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #97 from mozilla-releng/pyup-update-aiohttp-3.3.2-to-3.4.4  Update aiohttp to 3.4.4",
+    "commit_date": "2018-11-20 03:14:34",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "46": {
+    "sha": "9c00a60d988a1c0603584b39f77d48abab290f3a",
+    "url": "https://github.com/mozilla-releng/treescript/commit/9c00a60d988a1c0603584b39f77d48abab290f3a",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #95 from mozilla-releng/pyup-update-pytest-cov-2.5.1-to-2.6.0  Update pytest-cov to 2.6.0",
+    "commit_date": "2018-11-20 03:14:23",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "47": {
+    "sha": "3937743d7789b0bac3abf1088ec2a8221716243f",
+    "url": "https://github.com/mozilla-releng/treescript/commit/3937743d7789b0bac3abf1088ec2a8221716243f",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #93 from mozilla-releng/pyup-update-attrs-18.1.0-to-18.2.0  Update attrs to 18.2.0",
+    "commit_date": "2018-11-20 03:13:57",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "48": {
+    "sha": "6d113999eeebeb8a07a841f89a708a70b48532d4",
+    "url": "https://github.com/mozilla-releng/treescript/commit/6d113999eeebeb8a07a841f89a708a70b48532d4",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into pyup-update-attrs-18.1.0-to-18.2.0",
+    "commit_date": "2018-11-20 03:13:46",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements-test.txt",
+      "treescript/data/hgrc",
+      "treescript/py2/robustcheckout.py",
+      "treescript/test/test_robustcheckout.py",
+      "version.txt"
+    ]
+  },
+  "49": {
+    "sha": "a6f378bb41f9abeec9c3e5550e062dfd17b973c2",
+    "url": "https://github.com/mozilla-releng/treescript/commit/a6f378bb41f9abeec9c3e5550e062dfd17b973c2",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #88 from mozilla-releng/pyup-update-typing-3.6.4-to-3.6.6  Update typing to 3.6.6",
+    "commit_date": "2018-11-20 03:13:22",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "50": {
+    "sha": "849c1c7d05e89736e803486beabb634b687f01c4",
+    "url": "https://github.com/mozilla-releng/treescript/commit/849c1c7d05e89736e803486beabb634b687f01c4",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update atomicwrites from 1.2.0 to 1.2.1",
+    "commit_date": "2018-11-20 03:13:21",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "51": {
+    "sha": "5750fdd7e20a72f886945dace9f0a7e24ee20896",
+    "url": "https://github.com/mozilla-releng/treescript/commit/5750fdd7e20a72f886945dace9f0a7e24ee20896",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #86 from mozilla-releng/pyup-update-atomicwrites-1.1.5-to-1.2.0  Update atomicwrites to 1.2.0",
+    "commit_date": "2018-11-20 03:13:13",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
+  },
+  "52": {
+    "sha": "c7f03247a132a1f3195d043fbcc5bd23cf192787",
+    "url": "https://github.com/mozilla-releng/treescript/commit/c7f03247a132a1f3195d043fbcc5bd23cf192787",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update pytest from 3.7.1 to 4.0.0",
+    "commit_date": "2018-11-15 06:05:48",
+    "files_changed": [
+      "requirements-test.txt"
+    ]
   }
 }
