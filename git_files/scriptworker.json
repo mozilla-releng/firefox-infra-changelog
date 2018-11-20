@@ -1,272 +1,34 @@
 {
   "1": {
-    "sha": "7ecf1958e98b1822e596651a62c1581bde8b7436",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/7ecf1958e98b1822e596651a62c1581bde8b7436",
-    "commiter_name": "Mihai Tabara",
-    "commiter_email": "mtabara@mozilla.com",
-    "commit_message": "Merge pull request #270 from MihaiTabara/docs  Bug 1503549 - improve docs for ramping up scriptworkers after aws-man\u2026",
-    "commit_date": "2018-11-02 23:16:33 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/7ecf1958e98b1822e596651a62c1581bde8b7436"
+    "sha": "ae4cc4de36bd59a235c7a48e17d15c827caa3024",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/ae4cc4de36bd59a235c7a48e17d15c827caa3024",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #269 from escapewindow/pip-compile-multi  Pip compile multi",
+    "commit_date": "2018-11-13 21:32:49"
   },
   "2": {
-    "sha": "b722dc37d9187e791e13dd4c190880f74034250d",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/b722dc37d9187e791e13dd4c190880f74034250d",
-    "commiter_name": "Mihai Tabara",
-    "commiter_email": "mtabara@mozilla.com",
-    "commit_message": "Fix markdown syntax.",
-    "commit_date": "2018-11-02 23:03:24 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/b722dc37d9187e791e13dd4c190880f74034250d"
+    "sha": "48f9c9ca3c0d1eaae3c41d76f9166224a6eee45f",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/48f9c9ca3c0d1eaae3c41d76f9166224a6eee45f",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "update pinned requirements",
+    "commit_date": "2018-11-13 21:10:04"
   },
   "3": {
-    "sha": "c63ffda1e5131ea82c157f117f01098e53b9ebf4",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/c63ffda1e5131ea82c157f117f01098e53b9ebf4",
-    "commiter_name": "Mihai Tabara",
-    "commiter_email": "mtabara@mozilla.com",
-    "commit_message": "Fix flake8 issues.",
-    "commit_date": "2018-11-02 22:05:21 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/c63ffda1e5131ea82c157f117f01098e53b9ebf4"
+    "sha": "f760315f4f9f06e9492f4c87d8b79cfa0bde61c6",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/f760315f4f9f06e9492f4c87d8b79cfa0bde61c6",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "address review comments",
+    "commit_date": "2018-11-13 21:09:55"
   },
   "4": {
-    "sha": "34f792dc72185b3ea99c1c81a7d3337674779b84",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/34f792dc72185b3ea99c1c81a7d3337674779b84",
-    "commiter_name": "Mihai Tabara",
-    "commiter_email": "mtabara@mozilla.com",
-    "commit_message": "Bug 1503549 - improve docs for ramping up scriptworkers after aws-manager2 retirement.",
-    "commit_date": "2018-11-02 21:52:28 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/34f792dc72185b3ea99c1c81a7d3337674779b84"
-  },
-  "5": {
-    "sha": "2f38da7282620af08f08a1f63cd2cdcd4e72a4b9",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/2f38da7282620af08f08a1f63cd2cdcd4e72a4b9",
-    "commiter_name": "Justin Wood (Callek)",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Merge pull request #253 from Callek/1486970   Bug 1486970 - Need to pass push info to cron decision task validation",
-    "commit_date": "2018-10-19 19:51:57 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/2f38da7282620af08f08a1f63cd2cdcd4e72a4b9"
-  },
-  "6": {
-    "sha": "5646e094d8f0b932f2f53709f2b387981f0b661b",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/5646e094d8f0b932f2f53709f2b387981f0b661b",
-    "commiter_name": "Justin Wood",
-    "commiter_email": "callek@gmail.com",
-    "commit_message": "Bug 1486970 - Support actual push values for cron tasks, rather than stubs. r=aki",
-    "commit_date": "2018-09-06 19:45:53 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/5646e094d8f0b932f2f53709f2b387981f0b661b"
-  },
-  "7": {
-    "sha": "8dc1015249cb00b010a97633c194f5999102b434",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/8dc1015249cb00b010a97633c194f5999102b434",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@mozilla.com",
-    "commit_message": "use ARG to allow for a 3.6 and 3.7 docker image from the same Dockerfile (#266)    use ARG to allow for a 3.6 and 3.7 docker image from the same Dockerfile      address review comments",
-    "commit_date": "2018-10-19 19:13:55 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/8dc1015249cb00b010a97633c194f5999102b434"
-  },
-  "8": {
-    "sha": "e6257cd7db50c2c308221846f5eac7cc205a4ce1",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/e6257cd7db50c2c308221846f5eac7cc205a4ce1",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@mozilla.com",
-    "commit_message": "Merge pull request #267 from JohanLorenzo/bug-1486089-2  Bug 1486089 - part 2: Whitelist android-components and reference-browser repos",
-    "commit_date": "2018-10-15 16:06:45 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/e6257cd7db50c2c308221846f5eac7cc205a4ce1"
-  },
-  "9": {
-    "sha": "ffbf8c3d29d14ba1efc62ec53c81bd6adf3a963a",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/ffbf8c3d29d14ba1efc62ec53c81bd6adf3a963a",
-    "commiter_name": "Johan Lorenzo",
-    "commiter_email": "jlorenzo@mozilla.com",
-    "commit_message": "16.2.1",
-    "commit_date": "2018-10-15 14:20:41 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/ffbf8c3d29d14ba1efc62ec53c81bd6adf3a963a"
-  },
-  "10": {
-    "sha": "f45ea14a383b55987f3bfa6562ecfa038f1ee728",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/f45ea14a383b55987f3bfa6562ecfa038f1ee728",
-    "commiter_name": "Johan Lorenzo",
-    "commiter_email": "jlorenzo@mozilla.com",
-    "commit_message": "Bug 1486089 - part 2: Whitelist android-components and reference-browser repos",
-    "commit_date": "2018-10-15 14:17:26 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/f45ea14a383b55987f3bfa6562ecfa038f1ee728"
-  },
-  "11": {
-    "sha": "da3bfba2420bb2f523d78612319df097a16c0c2f",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/da3bfba2420bb2f523d78612319df097a16c0c2f",
-    "commiter_name": "Johan Lorenzo",
-    "commiter_email": "jlorenzo@mozilla.com",
-    "commit_message": "16.2.0",
-    "commit_date": "2018-10-15 08:21:03 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/da3bfba2420bb2f523d78612319df097a16c0c2f"
-  },
-  "12": {
-    "sha": "4834c85b4a614c8bc92794468b1708b58d21a480",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/4834c85b4a614c8bc92794468b1708b58d21a480",
-    "commiter_name": "Johan Lorenzo",
-    "commiter_email": "jlorenzo@mozilla.com",
-    "commit_message": "Bug 1486089 - Support \"github-release\" tasks_for and cron of mobile",
-    "commit_date": "2018-10-12 16:24:27 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/4834c85b4a614c8bc92794468b1708b58d21a480"
-  },
-  "13": {
-    "sha": "d94ce80deabcc331378a7780fda20240f3ae2976",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/d94ce80deabcc331378a7780fda20240f3ae2976",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@mozilla.com",
-    "commit_message": "Merge pull request #265 from escapewindow/fix-verify-cot  fix verify_cot for taskcluster>=5.0.0",
-    "commit_date": "2018-10-12 21:23:55 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/d94ce80deabcc331378a7780fda20240f3ae2976"
-  },
-  "14": {
-    "sha": "ea1589ad36d4da5be424e43f4ec6652320e3abf2",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/ea1589ad36d4da5be424e43f4ec6652320e3abf2",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "fix verify_cot for taskcluster>=5.0.0  By populating `context.config` before `context.credentials`, we have a `taskcluster_root_url` defined for `context.queue`.",
-    "commit_date": "2018-10-12 18:10:30 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/ea1589ad36d4da5be424e43f4ec6652320e3abf2"
-  },
-  "15": {
-    "sha": "f682fe067b7f0fff8d00ba0a4150eab4ade3691e",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/f682fe067b7f0fff8d00ba0a4150eab4ade3691e",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@mozilla.com",
-    "commit_message": "Merge pull request #263 from escapewindow/docker-fix  fix and refactor dockerfiles",
-    "commit_date": "2018-10-12 17:54:14 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/f682fe067b7f0fff8d00ba0a4150eab4ade3691e"
-  },
-  "16": {
-    "sha": "77d9261c64bc4bb876d131a68a648e9979714cbd",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/77d9261c64bc4bb876d131a68a648e9979714cbd",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "fix readme",
-    "commit_date": "2018-10-12 16:43:59 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/77d9261c64bc4bb876d131a68a648e9979714cbd"
-  },
-  "17": {
-    "sha": "f45ea983b3a0ea77fd24edafbc9cfc8120faa14e",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/f45ea983b3a0ea77fd24edafbc9cfc8120faa14e",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "fix and refactor dockerfiles  - update .dockerignore to avoid copying __pycache__ and  .pyc files - update README.rst - downgrade gnupg on the python docker images to 2.0.26-6+deb8u2 - rename /data to /builds - move scriptworker from /builds/. to /builds/scriptworker to keep   things cleaner and avoid lint/pytest warnings+errors for   non-scriptworker code (e.g. puppet) - consolidate the .test and .gnupg dockerfiles, get all tests passing in   the docker container - add a py37 version. This only differs from the py36 version in the   FROM line; we may want to either templatize these for less duplication   or allow for multiple versions of python on a single image.",
-    "commit_date": "2018-10-09 18:21:32 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/f45ea983b3a0ea77fd24edafbc9cfc8120faa14e"
-  },
-  "18": {
-    "sha": "b09074dcd114254505b8c77e767b6c850c9fce3b",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/b09074dcd114254505b8c77e767b6c850c9fce3b",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@mozilla.com",
-    "commit_message": "Merge pull request #262 from escapewindow/rootUrl  add rootUrl support for taskcluster>=5.0.0",
-    "commit_date": "2018-10-10 19:18:38 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/b09074dcd114254505b8c77e767b6c850c9fce3b"
-  },
-  "19": {
-    "sha": "e5931430922b72f3071abe40925a7dd21a34c0bf",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/e5931430922b72f3071abe40925a7dd21a34c0bf",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "16.1.0",
-    "commit_date": "2018-10-10 17:21:21 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/e5931430922b72f3071abe40925a7dd21a34c0bf"
-  },
-  "20": {
-    "sha": "88175945b11839ee1c0f7dc2a2ad92a05cfa23b2",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/88175945b11839ee1c0f7dc2a2ad92a05cfa23b2",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "raw strings to cut down on pytest warnings",
-    "commit_date": "2018-10-09 22:25:42 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/88175945b11839ee1c0f7dc2a2ad92a05cfa23b2"
-  },
-  "21": {
-    "sha": "0a22fa95cab915b27040bde9378a34c19ad29669",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/0a22fa95cab915b27040bde9378a34c19ad29669",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "log.warn -> log.warning",
-    "commit_date": "2018-10-09 22:13:17 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/0a22fa95cab915b27040bde9378a34c19ad29669"
-  },
-  "22": {
-    "sha": "52b0c50469b1dfec4bf14c7d0589fee59540d545",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/52b0c50469b1dfec4bf14c7d0589fee59540d545",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "pass rootUrl to taskcluster-client",
-    "commit_date": "2018-10-09 22:11:04 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/52b0c50469b1dfec4bf14c7d0589fee59540d545"
-  },
-  "23": {
-    "sha": "d7ac2ee55e7fb537b939090358692ebd2131b725",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/d7ac2ee55e7fb537b939090358692ebd2131b725",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Merge pull request #259 from tp-tc/rel-pro-action-cb  Handle hook and task actions via callback name.",
-    "commit_date": "2018-09-14 22:21:24 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/d7ac2ee55e7fb537b939090358692ebd2131b725"
-  },
-  "24": {
-    "sha": "9fb7424475b481e91196080f497d2c2421e38d58",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/9fb7424475b481e91196080f497d2c2421e38d58",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "mozilla@hocat.ca",
-    "commit_message": "16.0.1",
-    "commit_date": "2018-09-14 21:52:11 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/9fb7424475b481e91196080f497d2c2421e38d58"
-  },
-  "25": {
-    "sha": "5b7ef69265f95639582e737af6d138ed1e8e9029",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/5b7ef69265f95639582e737af6d138ed1e8e9029",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "mozilla@hocat.ca",
-    "commit_message": "Handle hook and task actions via callback name.",
-    "commit_date": "2018-09-13 17:16:58 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/5b7ef69265f95639582e737af6d138ed1e8e9029"
-  },
-  "26": {
-    "sha": "4089b88d763f75850ad4b9039de048c4e4c5a7c2",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/4089b88d763f75850ad4b9039de048c4e4c5a7c2",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@mozilla.com",
-    "commit_message": "Merge pull request #258 from escapewindow/multiple-retrigger  use `cb_name` instead of `name` to identify actions in actions.json",
-    "commit_date": "2018-09-12 19:20:39 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/4089b88d763f75850ad4b9039de048c4e4c5a7c2"
-  },
-  "27": {
-    "sha": "5329e3110e723096675a7317faabbef9f9a54d58",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/5329e3110e723096675a7317faabbef9f9a54d58",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "16.0.0",
-    "commit_date": "2018-09-12 18:54:54 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/5329e3110e723096675a7317faabbef9f9a54d58"
-  },
-  "28": {
-    "sha": "e97e358fc4fa50be47fbd9ce6a09911c7c5534d9",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/e97e358fc4fa50be47fbd9ce6a09911c7c5534d9",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "100 % coverage",
-    "commit_date": "2018-09-12 18:49:15 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/e97e358fc4fa50be47fbd9ce6a09911c7c5534d9"
-  },
-  "29": {
-    "sha": "9fff06dcb4ccbb1d9d29396a62c7888d5cc17345",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/9fff06dcb4ccbb1d9d29396a62c7888d5cc17345",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "address review comment: get_action_name -> get_action_callback_name  This is a breaking change.",
-    "commit_date": "2018-09-12 18:38:49 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/9fff06dcb4ccbb1d9d29396a62c7888d5cc17345"
-  },
-  "30": {
-    "sha": "d9edb100449871c6bc451c4288580730e9d60b45",
-    "url": "https://api.github.com/repos/mozilla-releng/scriptworker/commits/d9edb100449871c6bc451c4288580730e9d60b45",
-    "commiter_name": "Aki Sasaki",
-    "commiter_email": "aki@escapewindow.com",
-    "commit_message": "fix unit tests",
-    "commit_date": "2018-09-12 18:37:00 ",
-    "commit_url": "https://github.com/mozilla-releng/scriptworker/commit/d9edb100449871c6bc451c4288580730e9d60b45"
+    "sha": "648de55b994a2fb9f57bd6991e7a8a54ef3a4790",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/648de55b994a2fb9f57bd6991e7a8a54ef3a4790",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "pin hashes via pip-compile-multi in docker  I've been pinning mac-specific wheel hashes in dephash, which is wrong.",
+    "commit_date": "2018-10-30 23:37:30"
   }
 }

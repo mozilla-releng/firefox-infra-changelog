@@ -1,272 +1,66 @@
 {
   "1": {
-    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
-    "commiter_name": "Kevin Luvian",
-    "commiter_email": "kevinlsmak1@gmail.com",
-    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
-    "commit_date": "2018-11-13 00:48:39 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb"
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47"
   },
   "2": {
-    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/55795964c7b8af1f658ae4cf0437f90ac284f86f",
-    "commiter_name": "Kevin Luvian",
-    "commiter_email": "kevinlsmak1@gmail.com",
-    "commit_message": "please-cli: display in which project shell you are (#1676)",
-    "commit_date": "2018-11-13 00:16:42 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f"
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56"
   },
   "3": {
-    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/591e05867afb6a7dd5fb3917aac0511d323f9110",
-    "commiter_name": "Rok Garbas",
-    "commiter_email": "rok@garbas.si",
-    "commit_message": "setup: update dependencies (#1670)",
-    "commit_date": "2018-11-12 23:36:45 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110"
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41"
   },
   "4": {
-    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
-    "commit_date": "2018-11-12 16:40:20 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8"
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53"
   },
   "5": {
-    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
-    "commiter_name": "Jan Keromnes",
-    "commiter_email": "janx@linux.com",
-    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
-    "commit_date": "2018-11-08 13:47:00 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200"
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32"
   },
   "6": {
-    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
-    "commiter_name": "Rok Garbas",
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
     "commiter_email": "rok@garbas.si",
-    "commit_message": "setup: bumping to v51 (#1672)",
-    "commit_date": "2018-11-07 22:14:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b"
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39"
   },
   "7": {
-    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/b9843defb782381398b0c486d6cc87e9fbc33599",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "docs: Remove IRC notification (#1646)",
-    "commit_date": "2018-11-02 15:15:35 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599"
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42"
   },
   "8": {
-    "sha": "a8b878937771d1cc49413b9a463e98ff2ca3da2c",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/a8b878937771d1cc49413b9a463e98ff2ca3da2c",
-    "commiter_name": "Rok Garbas",
-    "commiter_email": "rok@garbas.si",
-    "commit_message": "tooltool/api: upload does not work (#1667)    backend_common: wrong relengapi token serializer used      tooltool/api: wrong flask subcommand used      releng_frontend: sha of node module changed      releng_frontend: pass correct variables to body      releng_frontend: serve static folder when development",
-    "commit_date": "2018-11-02 14:23:59 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/a8b878937771d1cc49413b9a463e98ff2ca3da2c"
-  },
-  "9": {
-    "sha": "62b6769893e1f277009316dd026a30eb42524546",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/62b6769893e1f277009316dd026a30eb42524546",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/frontend: Add release ETA (#1658)    Add release ETA      Add better validation      Remove margins",
-    "commit_date": "2018-11-02 14:23:02 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/62b6769893e1f277009316dd026a30eb42524546"
-  },
-  "10": {
-    "sha": "a34281bd1ce00a66662c479d4ea53b364ec3a685",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/a34281bd1ce00a66662c479d4ea53b364ec3a685",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/api: add /sync API (#1665)    shipit/api: add /sync API    This is a reland of #1517. It was tested in staging and worked fine  without any issues so far.      Remove temp hack",
-    "commit_date": "2018-11-02 14:22:49 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/a34281bd1ce00a66662c479d4ea53b364ec3a685"
-  },
-  "11": {
-    "sha": "654810cdc036230b5a5722a06dcc55e10ecca36b",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/654810cdc036230b5a5722a06dcc55e10ecca36b",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "shipit/frontend: Generate partial suggestions when selecting a revision manually. (#1666)",
-    "commit_date": "2018-11-02 00:31:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/654810cdc036230b5a5722a06dcc55e10ecca36b"
-  },
-  "12": {
-    "sha": "2ca1463b97a98d56424d4b6360e113e68b96c4e3",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/2ca1463b97a98d56424d4b6360e113e68b96c4e3",
-    "commiter_name": "ANdi",
-    "commiter_email": "abpostelnicu@users.noreply.github.com",
-    "commit_message": "staticanalysis/bot: Update cbindgen to 0.6.7 (#1663)",
-    "commit_date": "2018-10-31 12:03:11 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/2ca1463b97a98d56424d4b6360e113e68b96c4e3"
-  },
-  "13": {
-    "sha": "d500a1adc76e7a330bcee5559dad848b7ac7fd3e",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/d500a1adc76e7a330bcee5559dad848b7ac7fd3e",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "Fix IRC env var (#1660)",
-    "commit_date": "2018-10-30 16:35:56 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/d500a1adc76e7a330bcee5559dad848b7ac7fd3e"
-  },
-  "14": {
-    "sha": "ef49454d8884fb8e0cf6c83d48b5d979461a73f6",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/ef49454d8884fb8e0cf6c83d48b5d979461a73f6",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/api: Use env vars for TC IRC notifications (#1659)    Use env vars for TC IRC notifications      Fallback to secrets",
-    "commit_date": "2018-10-30 16:17:39 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/ef49454d8884fb8e0cf6c83d48b5d979461a73f6"
-  },
-  "15": {
-    "sha": "f6e18607663b8db905c07bc17b0fabe4dd4f38e5",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/f6e18607663b8db905c07bc17b0fabe4dd4f38e5",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/frontend: Use BACKEND_URL (renamed to SHIPIT_API_URL) from data-shipit-api-url for accessing backend (#1656)",
-    "commit_date": "2018-10-30 08:18:30 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/f6e18607663b8db905c07bc17b0fabe4dd4f38e5"
-  },
-  "16": {
-    "sha": "f2d082a8dcfff3a7c92bb9ab7f22f67fed90abe9",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/f2d082a8dcfff3a7c92bb9ab7f22f67fed90abe9",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/bot: Update rust-cbindgen to 0.6.6 (#1654)",
-    "commit_date": "2018-10-29 09:37:54 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/f2d082a8dcfff3a7c92bb9ab7f22f67fed90abe9"
-  },
-  "17": {
-    "sha": "548dc131d79a2785a0987b5992d89291d9992b1d",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/548dc131d79a2785a0987b5992d89291d9992b1d",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/frontend: Load all tasks & support http errors (#1651)",
-    "commit_date": "2018-10-26 09:44:46 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/548dc131d79a2785a0987b5992d89291d9992b1d"
-  },
-  "18": {
-    "sha": "ea7a20f9a77a8ab377e038b2188cff0e5a0191c7",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/ea7a20f9a77a8ab377e038b2188cff0e5a0191c7",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "uplift/frontend: Display issue level & type for infer issues. (#1652)",
-    "commit_date": "2018-10-25 20:06:50 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/ea7a20f9a77a8ab377e038b2188cff0e5a0191c7"
-  },
-  "19": {
-    "sha": "3b53407210704488fab2abd4e0bd35a68c518a09",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/3b53407210704488fab2abd4e0bd35a68c518a09",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "setup: bumping to v50 (#1639)",
-    "commit_date": "2018-10-25 19:58:05 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/3b53407210704488fab2abd4e0bd35a68c518a09"
-  },
-  "20": {
-    "sha": "c301a08836d9f18a1e7dcdd8e706600942b8094d",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/c301a08836d9f18a1e7dcdd8e706600942b8094d",
-    "commiter_name": "ANdi",
-    "commiter_email": "abpostelnicu@users.noreply.github.com",
-    "commit_message": "Add to logger if we don't have clang nor infer files into the revision. (#1648)",
-    "commit_date": "2018-10-25 19:23:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/c301a08836d9f18a1e7dcdd8e706600942b8094d"
-  },
-  "21": {
-    "sha": "f8066c3096e8c9880b4c21a37be887d2441fcc31",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/f8066c3096e8c9880b4c21a37be887d2441fcc31",
-    "commiter_name": "Rail Aliiev",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "shipit/frontend: Revert \"Use BACKEND_URL from data-shipit-api-url for accessing backend.\" (#1653)",
-    "commit_date": "2018-10-25 17:34:31 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/f8066c3096e8c9880b4c21a37be887d2441fcc31"
-  },
-  "22": {
-    "sha": "c1721b62984da89dbb5c44047ad0593d086750dd",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/c1721b62984da89dbb5c44047ad0593d086750dd",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": "codecoverage/bot: Update ActiveData query URL (#1644)",
-    "commit_date": "2018-10-24 20:11:57 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/c1721b62984da89dbb5c44047ad0593d086750dd"
-  },
-  "23": {
-    "sha": "7fe5f92b5a5c8f0f277845c0f5e8b2df4a5cbabd",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/7fe5f92b5a5c8f0f277845c0f5e8b2df4a5cbabd",
-    "commiter_name": "ANdi",
-    "commiter_email": "abpostelnicu@users.noreply.github.com",
-    "commit_message": "staticanalysis/bot: Create gradle properties file that prevents gradle from running in daemon mode (#1643)",
-    "commit_date": "2018-10-24 18:13:17 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/7fe5f92b5a5c8f0f277845c0f5e8b2df4a5cbabd"
-  },
-  "24": {
-    "sha": "1afa68a59e22e32de6ee26db267e021fe9b7d7bd",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/1afa68a59e22e32de6ee26db267e021fe9b7d7bd",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": "codecoverage/bot: Fix detection of Windows platforms (#1642)",
-    "commit_date": "2018-10-24 16:21:32 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/1afa68a59e22e32de6ee26db267e021fe9b7d7bd"
-  },
-  "25": {
-    "sha": "c5f3f6599c80120f33605f7f59d8f24bc9da472c",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/c5f3f6599c80120f33605f7f59d8f24bc9da472c",
-    "commiter_name": "Marco",
-    "commiter_email": "mcastelluccio@mozilla.com",
-    "commit_message": " codecoverage/bot: Consider build machines as test platforms as they could contain coverage artifacts (#1637)",
-    "commit_date": "2018-10-24 10:50:06 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/c5f3f6599c80120f33605f7f59d8f24bc9da472c"
-  },
-  "26": {
-    "sha": "5216954426786b8f369e04878c3224db01082c1f",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/5216954426786b8f369e04878c3224db01082c1f",
-    "commiter_name": "Rahul Verma",
-    "commiter_email": "rv404674@gmail.com",
-    "commit_message": "please_cli: Notify '#ci' and '#moc' IRC channels that deployment to production is about to start.(#1568) (#1634)",
-    "commit_date": "2018-10-23 16:47:24 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/5216954426786b8f369e04878c3224db01082c1f"
-  },
-  "27": {
-    "sha": "58e752dd7a5c558fc585b70b12eb4d3f5a2c57a9",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/58e752dd7a5c558fc585b70b12eb4d3f5a2c57a9",
-    "commiter_name": "Tom Prince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "shipit/frontend: Use URL from data-shipit-api-url for accessing backend. (#1636)",
-    "commit_date": "2018-10-23 16:19:37 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/58e752dd7a5c558fc585b70b12eb4d3f5a2c57a9"
-  },
-  "28": {
-    "sha": "b0cc3616918877ebf5d7ce48e1320daf4b08859a",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/b0cc3616918877ebf5d7ce48e1320daf4b08859a",
-    "commiter_name": "Rahul Verma",
-    "commiter_email": "rv404674@gmail.com",
-    "commit_message": " staticanalysis/bot: Allow justifying clang-tidy checkers with a 'reason' text field #1556, fixes #1481",
-    "commit_date": "2018-10-23 14:36:46 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/b0cc3616918877ebf5d7ce48e1320daf4b08859a"
-  },
-  "29": {
-    "sha": "7cd5f1b68e984d52a3d3f00c9ab045ee97eec6fb",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/7cd5f1b68e984d52a3d3f00c9ab045ee97eec6fb",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "uplift/frontend: Remove project #1638, fixes #1617",
-    "commit_date": "2018-10-23 14:15:54 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/7cd5f1b68e984d52a3d3f00c9ab045ee97eec6fb"
-  },
-  "30": {
-    "sha": "1f47de56e6aa1552c3f88719e18bc9dd6faaad66",
-    "url": "https://api.github.com/repos/mozilla/release-services/commits/1f47de56e6aa1552c3f88719e18bc9dd6faaad66",
-    "commiter_name": "Bastien Abadie",
-    "commiter_email": "bastien@nextcairn.com",
-    "commit_message": "staticanalysis/bot: Add localtime and zoneinfo for infer  (#1632)",
-    "commit_date": "2018-10-23 12:52:07 ",
-    "commit_url": "https://github.com/mozilla/release-services/commit/1f47de56e6aa1552c3f88719e18bc9dd6faaad66"
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45"
   }
 }
