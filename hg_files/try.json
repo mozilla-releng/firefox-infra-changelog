@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
-    "commit_date": "2018-11-21 01:15:37",
-    "commit_message": "try: -b do -p win64,linux64,macosx64 -u mochitests,xpcshell -t none --artifact  Pushed via `mach try syntax`",
-    "node": "f140c7785f5fc8575a613f5de3d142b7fac92a46"
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-21 04:01:41",
+    "commit_message": "try: -b do -p linux64 -u all -t none  Pushed via `mach try syntax`",
+    "node": "9b34e21696a8730b96f35d0d3609d285df1f28fa"
   },
   "1": {
-    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
-    "commit_date": "2018-11-20 01:13:38",
-    "commit_message": "Bug 1508446 - Require that [accesskey] gets set on <xul:label> to enable formatting;r=paolo  Previously, if the accesskey attribute was missing then the label would reach up to binding parent to find it's accesskey. In practice, bindings already do [xbl:inherits=accesskey] to send it down to the label anyway.  The problem with this is that for controls without accesskeys, the attribute doesn't get set, so the label will access the control from JS. This is fine for XBL, since typically the label XBL will construct at the same time as the control, but when migrating to Custom Elements, the label gets connected even when the control is hidden.  Differential Revision: https://phabricator.services.mozilla.com/D12355",
-    "node": "78b17ebbd4b223c57c549b34fa1ff22fea26d8bc"
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-21 04:01:05",
+    "commit_message": "[mq]: assertion",
+    "node": "c6c664f166756ca12e222cdf2d3f3cde0a4a1724"
   },
   "2": {
-    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
-    "commit_date": "2018-11-21 01:14:35",
-    "commit_message": "Fuzzy query=web-platform-tests  Pushed via `mach try fuzzy`",
-    "node": "5ecf21069d41386935c48272b061e1fae92939ad"
+    "commiter_name": "Dzmitry Malyshau <dmalyshau@mozilla.com>",
+    "commit_date": "2018-11-21 04:01:24",
+    "commit_message": "try: -b do -p linux64 -u all[linux64-qr] -t all[linux64-qr]  Pushed via `mach try syntax` ",
+    "node": "6e77db158e7c9734101b8ddf2fa3cfff7270c2f9"
   },
   "3": {
+    "commiter_name": "Dzmitry Malyshau <dmalyshau@mozilla.com>",
+    "commit_date": "2018-11-20 21:54:53",
+    "commit_message": "WR new clip/scroll API ",
+    "node": "a2d71646dbfd282e22a15b351be5d5ee55468886"
+  },
+  "4": {
+    "commiter_name": "Timothy Guan-tin Chien <timdream@gmail.com>",
+    "commit_date": "2018-11-21 04:00:36",
+    "commit_message": "try: -b do -p all -u all -t none --setenv MOZ_LOG=IPCPlugins:5  Pushed via `mach try syntax`",
+    "node": "2ba4787210805c256dfb2b47a10d60c706ec6d5f"
+  },
+  "5": {
+    "commiter_name": "Timothy Guan-tin Chien <timdream@gmail.com>",
+    "commit_date": "2018-11-21 01:22:11",
+    "commit_message": "SimpleTest.promiseWaitForCondition() and make sure test functions wait for the observer",
+    "node": "de148bb03373a04a1c4ae17b384a43aeede94b02"
+  },
+  "6": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-21 03:59:16",
+    "commit_message": "try: -b do -p linux64 -u all -t none  Pushed via `mach try syntax`",
+    "node": "5857e3d5de9f096e37770e2d94badb5beb730140"
+  },
+  "7": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-21 03:58:33",
+    "commit_message": "[mq]: assertion",
+    "node": "7bcafb9b531886828e96363b3b14da4eca3f9468"
+  },
+  "8": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-21 00:42:18",
+    "commit_message": "Bug 1508843 - Factor out common processes to send animations to the compositor for WebRender. r?birtles!  Differential Revision: https://phabricator.services.mozilla.com/D12484",
+    "node": "a1c3e5495e6fa1efaf4709938a231104dce42df9"
+  },
+  "9": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-21 00:42:18",
+    "commit_message": "Bug 1508843 - Make boolean arguments for AddAnimationsForProperty enums. r?birtles!  Differential Revision: https://phabricator.services.mozilla.com/D12483",
+    "node": "b54cc5639a17552db21326084f03af920ecabf52"
+  },
+  "10": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-20 02:26:50",
+    "commit_message": "Bug 1506988 - Don't incorpolate properties that are prevented from running on the compositor in GetPropertiesForCompositor. r?birtles!  Now we no longer update the corresponding display items for the animations that are prevented from running on the compositor if the animations themselves don't generate any change hints, e.g the same value is specified in both 'from' and 'to' keyframes.  So that we can enable the reftests that we had been suffering from continuous MozAfterPaint events.  Differential Revision: https://phabricator.services.mozilla.com/D12369",
+    "node": "bc5e7e7f6552612a9e0803b4c380793656fb9c6a"
+  },
+  "11": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-20 09:31:54",
+    "commit_message": "Bug 1506988 - Factor out IsMatchForCompositor. r?birtles!  Differential Revision: https://phabricator.services.mozilla.com/D12397",
+    "node": "a060159af77fd78882b28615a09a3a964c8c89d6"
+  },
+  "12": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-20 09:15:24",
+    "commit_message": "Bug 1506988 - Factor out EffectCompositor::AllowCompositorAnimationsOnFrame. r?birtles!  Now the function takes AnimationPerformanceWarning::Type  as an optional argument for the case where we don't need to output the warning.  Differential Revision: https://phabricator.services.mozilla.com/D12396",
+    "node": "23cf6cf9d86b1a80d090c60f989355929b296fe8"
+  },
+  "13": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-20 02:26:50",
+    "commit_message": "Bug 1506988 - Set the important rule change flag when a newly important rule is inserted. r?birtles!  Without this change an assertion checking IsInStyleRefresh() in EffectCompositor::PostRestyleForAnimation will be hit when we call FindAnimationsForCompositor from RestyleManager::DoProcessPendingRestyles that will be introduced in a subsequent commit in this series.  I wrote a crash test which causes an assertion in KeyframeEffect::CanThrottle() without the subsequent commit, but we need more work in display item stuff to make the assertion won't happen (bug 1508466).  Differential Revision: https://phabricator.services.mozilla.com/D12368",
+    "node": "f280c4c397a731a8ea78f83843698c605cc3f344"
+  },
+  "14": {
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-20 02:26:50",
+    "commit_message": "Bug 1506988 - Skip applying change hint if we already have it in AddLayerChangesForAnimation. r?birtles!  This is just an optimization regardless of the fix improper change hint generated by blocked animations.  Differential Revision: https://phabricator.services.mozilla.com/D12366",
+    "node": "ec8041633de9928e3da58c2b431069b1232aae9b"
+  },
+  "15": {
+    "commiter_name": "alwu <alwu@mozilla.com>",
+    "commit_date": "2018-11-21 03:47:59",
+    "commit_message": "try: -b do -p win32,linux,macosx64 -u mochitest-bc,mochitest-e10s-bc,mochitest-media,mochitest-media-e10s,web-platform-tests -t none  Pushed via `mach try syntax`",
+    "node": "aad5ae118cafc1166983449cc870e8bd90d1416e"
+  },
+  "16": {
+    "commiter_name": "alwu <alwu@mozilla.com>",
+    "commit_date": "2018-11-21 03:47:53",
+    "commit_message": "do dispatch first",
+    "node": "b965ded10046aaf5b1d5e38e43e5dec3c437d08d"
+  },
+  "17": {
+    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+    "commit_date": "2018-11-21 03:43:52",
+    "commit_message": "Fuzzy query=android web-pl  Pushed via `mach try fuzzy`",
+    "node": "2e161887c0afe2eb2a319d3520874a5389d3e365"
+  },
+  "18": {
     "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
     "commit_date": "2018-11-21 01:00:11",
     "commit_message": "Update all jobs from try push",
-    "node": "7dc70d45d1e9277611592827b45610e614b87251"
-  },
-  "4": {
-    "commiter_name": "Blake Kaplan <mrbkap@gmail.com>",
-    "commit_date": "2018-11-21 01:13:50",
-    "commit_message": "Fuzzy query='linux 'debug '-sw | 'mochitest  Pushed via `mach try fuzzy`",
-    "node": "7311a3bd1a42b313f38e5d1f27e601bdc9a69c26"
-  },
-  "5": {
-    "commiter_name": "Blake Kaplan <mrbkap@gmail.com>",
-    "commit_date": "2018-11-21 01:12:53",
-    "commit_message": "Fuzzy query='linux64 'debug '-sw | 'mochitest  Pushed via `mach try fuzzy`",
-    "node": "c07174a9142377d52a0b1abf832081b0c0f666cf"
-  },
-  "6": {
-    "commiter_name": "Blake Kaplan <mrbkap@gmail.com>",
-    "commit_date": "2018-11-21 01:10:40",
-    "commit_message": "Bug 1508595 - Only set an intercept controller when needed. r=asuth  We only need to expose an intercept controller in SharedWorkers if we're on the non-parent-intercept version of ServiceWorkers or if e10s is off. nsDocShell already does this dance and we have to mirror it.",
-    "node": "59dcebc7bdc2ff6118fc0a23fdc1a46cfc944c65"
-  },
-  "7": {
-    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
-    "commit_date": "2018-11-21 01:10:23",
-    "commit_message": "try: -b o -p win64 -u mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax`",
-    "node": "2ae283bf44185fa1e611c7d6a0f65e263f177af8"
-  },
-  "8": {
-    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
-    "commit_date": "2018-11-21 01:09:56",
-    "commit_message": "remove all logs",
-    "node": "998fe7ec61f2f92b7f027bf37183f9766e316869"
-  },
-  "9": {
-    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
-    "commit_date": "2018-11-21 00:51:09",
-    "commit_message": "remove all logs",
-    "node": "89b91d0424976ce0649c74da0a9804e3d369b470"
-  },
-  "10": {
-    "commiter_name": "Logan Smyth <loganfsmyth@gmail.com>",
-    "commit_date": "2018-11-20 02:42:28",
-    "commit_message": "WIP: Add logging for expected failure mode",
-    "node": "bd14a62eafefff90e27e0e14f91ec2ee0cea8bc9"
-  },
-  "11": {
-    "commiter_name": "Steve Fink <sfink@mozilla.com>",
-    "commit_date": "2018-11-21 01:07:37",
-    "commit_message": "try: -b do -p linux64-shell-haz --upload-xdbs  Pushed via `mach try syntax`",
-    "node": "8f65796b1ce1c952cfca06a8d5d831bb5f3f94c8"
-  },
-  "12": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-11-21 01:07:54",
-    "commit_message": "Fuzzy query=linux64/debug  Pushed via `mach try fuzzy`",
-    "node": "e21728ba93a0a8ca08fef341a167faafbed2d893"
-  },
-  "13": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-11-21 01:05:55",
-    "commit_message": "Bug 1508836: Don't try to guess MOZ_UPDATE_CHANNEL in automation;  Differential Revision: https://phabricator.services.mozilla.com/D12487",
-    "node": "16491e62124228fa1d1597f578a090043f2730aa"
-  },
-  "14": {
-    "commiter_name": "Jeff Muizelaar <jrmuizel@gmail.com>",
-    "commit_date": "2018-11-21 01:03:30",
-    "commit_message": "try: -b do -p macosx64,win64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t none  Pushed via `mach try syntax` ",
-    "node": "1d4bb870ef5631e50bd0c229766be68bb27c0b7b"
-  },
-  "15": {
-    "commiter_name": "Jeff Muizelaar <jrmuizel@gmail.com>",
-    "commit_date": "2018-11-21 01:01:22",
-    "commit_message": "remove mEventRegions ",
-    "node": "a9f5eb8439305a92740e73d0c63161a7ffdfd7e5"
-  },
-  "16": {
-    "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
-    "commit_date": "2018-11-21 01:01:03",
-    "commit_message": "try: -b do -p android-api-16,win64,macosx64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t all[linux64-qr,windows10-64-qr,macosx64-qr]  Pushed via `mach try syntax`",
-    "node": "d4394b7d135c7d0189f098fef245455a35c4f009"
-  },
-  "17": {
-    "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
-    "commit_date": "2018-11-21 01:00:58",
-    "commit_message": "placeholder for try push  MozReview-Commit-ID: LKDk2deY2x7",
-    "node": "d33ce8ce9a459bd270403fd251a4ec9a31fc745c"
-  },
-  "18": {
-    "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
-    "commit_date": "2018-11-21 01:00:29",
-    "commit_message": "Placeholder  MozReview-Commit-ID: LhRD1MOzjK",
-    "node": "dbf905ce85711be64a145b22fefa4e995464298a"
+    "node": "fc0faceef26b128204316747754feb04cd1ed34c"
   },
   "19": {
-    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
-    "commit_date": "2018-11-21 01:00:27",
-    "commit_message": "Bug 1508766 - Update webrender to commit 229436b578701fc74a009d6cedc6b2a3ae313f77 (WR PR #3331). r?kats",
-    "node": "887b23bb872f9058bf5a669eed0b043d22b38709"
+    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+    "commit_date": "2018-11-17 11:01:32",
+    "commit_message": "MANUAL ADJUSTMENTS",
+    "node": "f3fdc6d196c63c7fc73e59012dae9294416c2f38"
   }
 }

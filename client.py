@@ -22,10 +22,10 @@ def create_git_md_table(repository_name):
     try:
         json_data = open(current_dir + "/git_files/" + "{}.json".format(repository_name)).read()
         data = json.loads(json_data)
-        base_table = '| Commit Number | Commiter | Commit Message | Commit Url | Date | \n' + \
-                     '|:---:|:----:|:----------------------------------:|:------:|:----:| \n'
+        base_table = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
+                     "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
         tables = {}
-        md_title = ['{} commit markdown table since {}'.format(repository_name, lastWeek)]
+        md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
         commit_number_list = [key for key in data]
 
         for repo in md_title:
@@ -34,31 +34,31 @@ def create_git_md_table(repository_name):
         for key in data:
             commit_number = commit_number_list[-1]
             try:
-                commit_author = data[key]['commiter_name']
-                date = data[key]['commit_date']
-                message = data[key]['commit_message']
-                url = data[key]['url']
+                commit_author = data[key]["commiter_name"]
+                date = data[key]["commit_date"]
+                message = data[key]["commit_message"]
+                url = data[key]["url"]
 
                 row = "|" + commit_number + \
                       "|" + commit_author + \
                       "|" + message + \
                       "|" + "[URL](" + url + ")" + \
-                      "|" + date + '\n'
+                      "|" + date + "\n"
 
                 del commit_number_list[-1]
                 for repo in tables.keys():
                     tables[repo] = tables[repo] + row
             except KeyError:
-                last_checked = data[key]['lastChecked']
+                last_checked = data[key]["lastChecked"]
 
-        md_file_name = '{}.md'.format(repository_name)
-        md_file = open(current_dir + "/git_files/" + md_file_name, 'w')
+        md_file_name = "{}.md".format(repository_name)
+        md_file = open(current_dir + "/git_files/" + md_file_name, "w")
 
         try:
             for key, value in tables.items():
                 if value != base_table:
-                    md_file.write('## ' + key.upper() + '\n\n')
-                    md_file.write(value + '\n\n')
+                    md_file.write("## " + key.upper() + "\n\n")
+                    md_file.write(value + "\n\n")
         except KeyError:
             pass
 
@@ -97,14 +97,14 @@ def create_hg_md_table(repository_name):
                   "|" + commit_author + \
                   "|" + message + \
                   "|" + node + \
-                  "|" + date + '\n'
+                  "|" + date + "\n"
 
             del commit_number_list[-1]
             for repo in tables.keys():
                 tables[repo] = tables[repo] + row
 
         md_file_name = "{}.md".format(repository_name)
-        md_file = open(current_dir + "/hg_files/" + md_file_name, 'w')
+        md_file = open(current_dir + "/hg_files/" + md_file_name, "w")
 
         for key, value in tables.items():
             if value != base_table:
@@ -261,7 +261,7 @@ def write_main_md_table(file_name, repository, last_commit, deploy_time):
     row = "|" + repository + \
           "|" + last_commit + \
           "|" + deploy_time + \
-          "|" + '\n'
+          "|" + "\n"
     write_file = open(file_name, "a")
     write_file.write(row)
 
@@ -279,18 +279,18 @@ def extract_hg_json(json_files):
 
         with open(file_path) as json_files:
             data = json.load(json_files)
-            # pprint(data)
             github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/"
             repository_name = "[" + file.rstrip().replace(".json", "") + "]" + "(" + github_base_link + \
                               file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md") + ")"
 
-            for test in data:
-                commit_description = data.get(test)["commit_message"]
-                commit_date = data.get(test)["commit_date"]
-                # commit_url = data.get(test)["url"]  # TODO add link to mk table
+            try:
+                commit_number = "1"
+                commit_description = data[commit_number]["commit_message"]
+                commit_date = data[commit_number]["commit_date"]
                 write_main_md_table("main_md_table.md", repository_name, commit_description, commit_date)
-                # We are braking this for loop since we got the last commit.
-                break
+            except KeyError:
+                print("File " + file + " is empty. \n Please check:" + repository_name + " for more details.\n")
+                pass
 
 
 def extract_github_data(json_files):
@@ -345,7 +345,7 @@ def generate_main_md_table():
 if __name__ == "__main__":
     TOKEN = os.environ.get("GIT_TOKEN")
     git = Github(TOKEN)
-    repositories_data = open('./repositories.json').read()
+    repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
     create_files_for_git()
     create_files_for_hg()

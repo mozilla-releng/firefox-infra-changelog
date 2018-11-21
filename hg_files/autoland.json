@@ -1,122 +1,122 @@
 {
   "0": {
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-21 03:52:26",
+    "commit_message": "Bug 1402282 - Change jemalloc to use secure random private arena ids r=glandium  Previously the id for a new arena was just a counter that increased by one every time. For hardening purposes, we want to make private arenas use a secure random ID, so an attacker will have a more difficult time finding the memory they are looking for.  Differential Revision: https://phabricator.services.mozilla.com/D10158",
+    "node": "f425ff2bab2dcfd4a2db80822709244b5a35d8ed"
+  },
+  "1": {
+    "commiter_name": "Mike Conley <mconley@mozilla.com>",
+    "commit_date": "2018-11-20 23:34:36",
+    "commit_message": "Bug 1499465 - Don't collect KillHard crashes on Beta or Release. r=jld,gsvelto  Differential Revision: https://phabricator.services.mozilla.com/D10968",
+    "node": "b4754021fc2dbeb9a96fc85cacc52ec1c63d1453"
+  },
+  "2": {
+    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+    "commit_date": "2018-11-21 00:10:49",
+    "commit_message": "Bug 1508547 - Switch Android builds to clang 7 again. r=dmajor  Bug 1492663 upgraded those builds to clang 7, and bug 1503330 brought them back to clang 6 because of speedometer regressions.  With the previous change, the regression doesn't happen any more, allowing to upgrade again.  Depends on D12394  Differential Revision: https://phabricator.services.mozilla.com/D12395",
+    "node": "8540104bb0bd811f9fd45b160dbe38a67c9aa5cd"
+  },
+  "3": {
+    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+    "commit_date": "2018-11-21 03:13:07",
+    "commit_message": "Bug 1508547 - Disable the machine outliner on Android. r=dmajor  It's enabled by default as of clang 7 with -Oz on aarch64 (that is, afaict, the only platform where it's enabled), and regresses our performance on speedometer.  Differential Revision: https://phabricator.services.mozilla.com/D12394",
+    "node": "6f3303d415f7920900d800869ce901eed060c889"
+  },
+  "4": {
+    "commiter_name": "Michael Froman <mfroman@mozilla.com>",
+    "commit_date": "2018-11-21 02:11:20",
+    "commit_message": "Bug 1498624 - pt1 - Implement OSX sandbox for RDD process. r=haik  Differential Revision: https://phabricator.services.mozilla.com/D12376",
+    "node": "da37c7e24c90cd585bdf68dff8acc45aa4ba7c3c"
+  },
+  "5": {
+    "commiter_name": "Aaron Klotz <aklotz@mozilla.com>",
+    "commit_date": "2018-11-21 01:49:36",
+    "commit_message": "Bug 1508468: Convert launcher process to use mozilla::Result for error propagation; r=mhowell  This patch does a couple of things:    I added a new class, |WindowsError| to WinHeaderOnlyUtils. The idea here is   to encapsulate as much of the Windows error gamut as possible into one class.   Since Win32 errors and NTSTATUS codes may both be encoded as HRESULTs, I   used the latter type to store the error. It also contains functions for   converting between the various error code formats, as well as stringification   via FormatMessage.    I added |LauncherError| which also includes file and line number information,   which I believe will be important for launcher process failure diagnostics.   (Instantiation of LauncherErrors obviously must be done via macros to capture   __FILE__ and __LINE__).    I then converted all of the launcher process code (and its few depenencies) to   utilize this new functionality via the new |LauncherResult| type.    If we detect an error in one of the top-level launcher process functions, we   pass it to |HandleLauncherError| for processing. This function currently just   throws up a |MessageBox| like the previous code did, with the intention of   enhancing that further in the future.  Differential Revision: https://phabricator.services.mozilla.com/D12365",
+    "node": "fa0d05453365c26f404803117864654c59ff6d30"
+  },
+  "6": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-11-21 01:44:12",
+    "commit_message": "Bug 1507898: [taskgraph] Factor out schema validation in transformations; r=dustin  Most jobs include at least one transform that verifies the input of all the tasks against a schema. This code is duplicated in each transform. Refactor it, so that we only need one copy of the logic.  Differential Revision: https://phabricator.services.mozilla.com/D12165",
+    "node": "e27269b076334ddd520fcbab374b584942b886f2"
+  },
+  "7": {
+    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+    "commit_date": "2018-11-21 01:38:34",
+    "commit_message": "Backed out 3 changesets (bug 1503776) for xperf failures  Backed out changeset 596f70b5d5b0 (bug 1503776) Backed out changeset 2d2d1dfd04d4 (bug 1503776) Backed out changeset 3eb49d9e73bb (bug 1503776)",
+    "node": "af4aa01c64c52f2aa5c9eecd48b4a7cfc2bd1abd"
+  },
+  "8": {
+    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+    "commit_date": "2018-11-21 01:30:52",
+    "commit_message": "Backed out changeset be8383028bc0 (bug 1508468) for windows build bustage",
+    "node": "f5dfe72df46786a1683699c3d78208a28d739527"
+  },
+  "9": {
+    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+    "commit_date": "2018-11-21 01:29:32",
+    "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser  Differential Revision: https://phabricator.services.mozilla.com/D12252",
+    "node": "5d6aa2af32d34012e3e79d0e0b8153927f2303ea"
+  },
+  "10": {
     "commiter_name": "Cameron McCormack <cam@mcc.id.au>",
     "commit_date": "2018-11-21 01:16:10",
     "commit_message": "Bug 1508820 - fix \"warning: variant is never constructed: `Quit`\" r=ato  Differential Revision: https://phabricator.services.mozilla.com/D12489",
     "node": "38b7a780c50f568065d830971e092742744f103b"
   },
-  "1": {
+  "11": {
     "commiter_name": "Matt Brubeck <mbrubeck@mozilla.com>",
     "commit_date": "2018-11-21 00:38:11",
     "commit_message": "Bug 1508636 - Guard against setting requestedLocales to null. r=snorp,geckoview-reviewers  Differential Revision: https://phabricator.services.mozilla.com/D12481",
     "node": "2e3fcb9d7d27befc37f3d77d86dcf78553a67c3f"
   },
-  "2": {
+  "12": {
     "commiter_name": "Lina Cambridge <lina@yakshaving.ninja>",
     "commit_date": "2018-11-21 00:43:58",
     "commit_message": "Bug 1490724 - Define a stub `Callbacks.HistoryDelegate` instead of using default methods. r=snorp  Differential Revision: https://phabricator.services.mozilla.com/D12377",
     "node": "f21e2839396e3057ad8bf44bf473447196c5f9f0"
   },
-  "3": {
+  "13": {
     "commiter_name": "alwu <alwu@mozilla.com>",
     "commit_date": "2018-11-21 00:42:24",
     "commit_message": "Bug 1508484 - close audio queue if we already got the last audio frame when leaving 'loopingDecoding' state r=jya  When we're going to leave looping state and have got EOS before, we should mark audio queue as ended because we have got all data we need.  Differential Revision: https://phabricator.services.mozilla.com/D12373",
     "node": "50810256f2804f772899cfa1376e48124ab98eb6"
   },
-  "4": {
+  "14": {
     "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
     "commit_date": "2018-11-21 00:29:17",
     "commit_message": "Backed out changeset e947694d0ed7 (bug 1507898) for Linting failure. CLOSED TREE",
     "node": "3b818a926ee427b28b7898d24afec9cc864cda7f"
   },
-  "5": {
+  "15": {
     "commiter_name": "Micah Tigley <mtigley@mozilla.com>",
     "commit_date": "2018-11-21 00:19:58",
     "commit_message": "Bug 1503347 - Modify the Flex Item actor to consider CSS rules using the important keyword. r=pbro  Differential Revision: https://phabricator.services.mozilla.com/D11789",
     "node": "df86262bfccdd4c4f534ec45e0549cd29474c58c"
   },
-  "6": {
+  "16": {
     "commiter_name": "Aaron Klotz <aklotz@mozilla.com>",
     "commit_date": "2018-11-21 00:12:53",
     "commit_message": "Bug 1508468: Convert launcher process to use mozilla::Result for error propagation; r=mhowell  This patch does a couple of things:    I added a new class, |WindowsError| to WinHeaderOnlyUtils. The idea here is   to encapsulate as much of the Windows error gamut as possible into one class.   Since Win32 errors and NTSTATUS codes may both be encoded as HRESULTs, I   used the latter type to store the error. It also contains functions for   converting between the various error code formats, as well as stringification   via FormatMessage.    I added |LauncherError| which also includes file and line number information,   which I believe will be important for launcher process failure diagnostics.   (Instantiation of LauncherErrors obviously must be done via macros to capture   __FILE__ and __LINE__).    I then converted all of the launcher process code (and its few depenencies) to   utilize this new functionality via the new |LauncherResult| type.    If we detect an error in one of the top-level launcher process functions, we   pass it to |HandleLauncherError| for processing. This function currently just   throws up a |MessageBox| like the previous code did, with the intention of   enhancing that further in the future.  Differential Revision: https://phabricator.services.mozilla.com/D12365",
     "node": "be8383028bc02b2ab24a8102d0b1276f15af4764"
   },
-  "7": {
+  "17": {
     "commiter_name": "Haik Aftandilian <haftandilian@mozilla.com>",
     "commit_date": "2018-11-21 00:06:06",
     "commit_message": "Bug 1506776 - 17.78% Base Content Resident Unique Memory regression r=Alex_Gaynor  Until more analysis is done, add back access to com.apple.CoreServices.coreservicesd to avoid extra allocations that are triggered when the service is blocked.  Differential Revision: https://phabricator.services.mozilla.com/D12479",
     "node": "823acff9cd2fe0b5e15e456226dbadc81b3c4961"
   },
-  "8": {
+  "18": {
     "commiter_name": "Tom Prince <mozilla@hocat.ca>",
     "commit_date": "2018-11-21 00:09:34",
     "commit_message": "Bug 1507898: [taskgraph] Factor out schema validation in transformations; r=dustin  Most jobs include at least one transform that verifies the input of all the tasks against a schema. This code is duplicated in each transform. Refactor it, so that we only need one copy of the logic.  Differential Revision: https://phabricator.services.mozilla.com/D12165",
     "node": "e947694d0ed75030968484df36f08a222cdd79b5"
   },
-  "9": {
+  "19": {
     "commiter_name": "Tom Prince <mozilla@hocat.ca>",
     "commit_date": "2018-11-20 23:57:46",
     "commit_message": "Bug 1506310: Determine whether builds under test need signed extenions by release type; r=bc,ahal  Differential Revision: https://phabricator.services.mozilla.com/D12077",
     "node": "b1bec3572f1786325e87ad11a0a6390d606743f8"
-  },
-  "10": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-11-20 23:57:49",
-    "commit_message": "Bug 1506310: Remove unused branch_name passed from taskcluster to talos; r=jmaher  Differential Revision: https://phabricator.services.mozilla.com/D12076",
-    "node": "a1fc429db01a944e5c805a7c5dc363cb9b380a56"
-  },
-  "11": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-11-20 23:52:24",
-    "commit_message": "Bug 1507860: [taskgraph] Move most clases to use attrs; r=dustin  This moves most of the low-hanging fruit to use attrs.  Differential Revision: https://phabricator.services.mozilla.com/D1141",
-    "node": "d1d4e3bf394557881a9371b8b851175d5aaec117"
-  },
-  "12": {
-    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
-    "commit_date": "2018-11-20 23:19:36",
-    "commit_message": "Bug 1508773 - Add dom/media/platforms/ffmpeg/ffmpeg57 and dom/media/platforms/ffmpeg/ffmpeg58 to the list of third-party directories r=jya  Differential Revision: https://phabricator.services.mozilla.com/D12470",
-    "node": "48d5a633e54ac0c601528a6532e3c7ff4043bd8c"
-  },
-  "13": {
-    "commiter_name": "shindli <shindli@mozilla.com>",
-    "commit_date": "2018-11-20 23:48:34",
-    "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
-    "node": "ee4915caaa4ffe70c99d47f5d3761010a2a6acf5"
-  },
-  "14": {
-    "commiter_name": "shindli <shindli@mozilla.com>",
-    "commit_date": "2018-11-20 23:44:09",
-    "commit_message": "Merge inbound to mozilla-central.  a=merge",
-    "node": "8991d660f20e3eea652e060c30e17670b45a9257"
-  },
-  "15": {
-    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
-    "commit_date": "2018-11-16 04:13:56",
-    "commit_message": "Bug 1507680 - Record detailed statistics about slow WebRender frames in about:support. r=jrmuizel  MozReview-Commit-ID: 84SjN1RvvAA  Differential Revision: https://phabricator.services.mozilla.com/D12372",
-    "node": "52a798ad6583b97fb3faf68f1849e7098d9ce4ae"
-  },
-  "16": {
-    "commiter_name": "Jeff Muizelaar <jmuizelaar@mozilla.com>",
-    "commit_date": "2018-11-19 09:55:28",
-    "commit_message": "Bug 1507686 - Record LayerManager URL for each paint so that we can correlate it with slow paints. r=mattwoodrow  MozReview-Commit-ID: 2RUWkboAOJz",
-    "node": "25d79223c2dedd0b06abd48dbfc815c750b6473c"
-  },
-  "17": {
-    "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
-    "commit_date": "2018-11-20 20:37:05",
-    "commit_message": "Backed out 53 changesets (bug 1505878, bug 1507080, bug 1505638, bug 1507345, bug 1507122, bug 1507341, bug 1506769, bug 1497436, bug 1507796, bug 1506775, bug 1506697, bug 1507089, bug 1507908, bug 1504801, bug 1507063, bug 1507917, bug 1506089, bug 1506919, bug 1507805, bug 1507374, bug 1507421, bug 1507426, bug 1506886, bug 1488424, bug 1507558, bug 1507600, bug 1507977, bug 1507549, bug 1507526, bug 1507064, bug 1507586, bug 1508031, bug 1507472, bug 1507239, bug 1507250, bug 1507532, bug 1507519, bug 1508354, bug 1507660, bug 1506716, bug 1508014, bug 1506994) for wpt failures on grid-container-scrollbar-vertical-lr-001.html. CLOSED TREE  Backed out changeset 584f730e1865 (bug 1508354) Backed out changeset 3bdcf979b1a2 (bug 1507532) Backed out changeset f36221255331 (bug 1506769) Backed out changeset d8ba2f11effc (bug 1506769) Backed out changeset c4430fdd1d22 (bug 1508031) Backed out changeset b4d49ed8873e (bug 1507796) Backed out changeset f380f6a8f5c0 (bug 1508014) Backed out changeset d94695f27915 (bug 1507421) Backed out changeset 2b4e8d165519 (bug 1505638) Backed out changeset a96795d1de3f (bug 1505638) Backed out changeset 6e08180c8ba3 (bug 1507977) Backed out changeset e758e29e8a1a (bug 1507908) Backed out changeset 380cb8a671e9 (bug 1507917) Backed out changeset 77f172246b2d (bug 1507519) Backed out changeset 61abe5c39ab5 (bug 1504801) Backed out changeset c750807ac5c4 (bug 1504801) Backed out changeset b49e6067e4bc (bug 1507472) Backed out changeset bb03633ea79a (bug 1507472) Backed out changeset f73f87484839 (bug 1507805) Backed out changeset ab97e60ed777 (bug 1507586) Backed out changeset d4129dccff17 (bug 1506089) Backed out changeset bcb5a5eebc6c (bug 1488424) Backed out changeset d76dc6e3bbaa (bug 1507064) Backed out changeset 30d8f48aab99 (bug 1507080) Backed out changeset e6d88d9f73af (bug 1507080) Backed out changeset ee38ad38e9a1 (bug 1507549) Backed out changeset 0b2f80185614 (bug 1506919) Backed out changeset 0143d49ed65b (bug 1507660) Backed out changeset 2c739b93be1e (bug 1506716) Backed out changeset 0a4f3d45b0c5 (bug 1506716) Backed out changeset 81e2dcf84fb1 (bug 1506886) Backed out changeset 22f64d38d9c8 (bug 1505878) Backed out changeset 0475d6073c30 (bug 1505878) Backed out changeset 956ed95b791e (bug 1507374) Backed out changeset ac8170415338 (bug 1507600) Backed out changeset d7e0ada61934 (bug 1507345) Backed out changeset 6a730fb5a7e4 (bug 1507250) Backed out changeset 1e351d1c2022 (bug 1507250) Backed out changeset 031385cb5558 (bug 1507239) Backed out changeset 2fa696969cc2 (bug 1507239) Backed out changeset 9d55c7b68552 (bug 1507558) Backed out changeset 7385eaebb8e9 (bug 1507526) Backed out changeset d2ac36f03ef5 (bug 1506775) Backed out changeset b6ebdb6e8bf9 (bug 1507426) Backed out changeset 29ca75ba2433 (bug 1507341) Backed out changeset b5aa3737ca29 (bug 1497436) Backed out changeset f3cb0265f0c1 (bug 1497436) Backed out changeset f3f2d714b4eb (bug 1506994) Backed out changeset aa35cce4fb76 (bug 1507089) Backed out changeset 43cfc59879d2 (bug 1507089) Backed out changeset 8e13752959d6 (bug 1507122) Backed out changeset dfbc81d5e518 (bug 1507063) Backed out changeset 378d0c633eae (bug 1506697)",
-    "node": "46ad93280b0678c2bf9db3c3f8dcd3613b0ec9ab"
-  },
-  "18": {
-    "commiter_name": "Luke Wagner <luke@mozilla.com>",
-    "commit_date": "2018-11-19 22:43:56",
-    "commit_message": "Bug 1507944 - Baldr: ensure signal handlers in asm.js instantiation (r=bbouvier)",
-    "node": "31a42178a876106cc4cce885b94afef0275d89c7"
-  },
-  "19": {
-    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
-    "commit_date": "2018-11-20 19:24:26",
-    "commit_message": "Bug 1478850 - FetchStreamReader must call HoldJSObject()/DropJSObjects, r=smaug",
-    "node": "6ce084069f3883f3c4d6e7d912f591891b2399e7"
   }
 }
