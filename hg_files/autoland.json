@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Robert Strong <robert.bugzilla@gmail.com>",
-    "commit_date": "2018-11-20 18:04:42",
-    "commit_message": "Bug 1508637 - Update comments in removed-files.in. r=mhowell  Removed comment about Firefox 27 and below since it is no longer relevant after the LZMA watershed Changed a couple of comments for clarity  Differential Revision: https://phabricator.services.mozilla.com/D12424",
-    "node": "24cd301f1e439e414c178fd6f404894d44270e34"
+    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
+    "commit_date": "2018-11-21 03:52:26",
+    "commit_message": "Bug 1402282 - Change jemalloc to use secure random private arena ids r=glandium  Previously the id for a new arena was just a counter that increased by one every time. For hardening purposes, we want to make private arenas use a secure random ID, so an attacker will have a more difficult time finding the memory they are looking for.  Differential Revision: https://phabricator.services.mozilla.com/D10158",
+    "node": "f425ff2bab2dcfd4a2db80822709244b5a35d8ed"
   },
   "1": {
-    "commiter_name": "Patrick Brosset <pbrosset@mozilla.com>",
-    "commit_date": "2018-11-20 16:44:28",
-    "commit_message": "Bug 1508581 - Fix a few UI inconsistencies in the flex inspector in RTL; r=miker  Differential Revision: https://phabricator.services.mozilla.com/D12418",
-    "node": "e14fb4f0ce8268b4aee4ab20d791dded24379db8"
+    "commiter_name": "Mike Conley <mconley@mozilla.com>",
+    "commit_date": "2018-11-20 23:34:36",
+    "commit_message": "Bug 1499465 - Don't collect KillHard crashes on Beta or Release. r=jld,gsvelto  Differential Revision: https://phabricator.services.mozilla.com/D10968",
+    "node": "b4754021fc2dbeb9a96fc85cacc52ec1c63d1453"
   },
   "2": {
-    "commiter_name": "Julian Descottes <jdescottes@mozilla.com>",
-    "commit_date": "2018-11-20 17:38:27",
-    "commit_message": "Bug 1493968 - Wait for requests to finish in aboutdebugging navigate test;r=ladybenko  Still not sure what is the root issue here, but none of the regular connect tests are failing so I think the issue occurs when we remove tabs in the second step.  Differential Revision: https://phabricator.services.mozilla.com/D12332",
-    "node": "e71f2bd051cf58c2fa805d8dce0032a6c5e77af8"
+    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+    "commit_date": "2018-11-21 00:10:49",
+    "commit_message": "Bug 1508547 - Switch Android builds to clang 7 again. r=dmajor  Bug 1492663 upgraded those builds to clang 7, and bug 1503330 brought them back to clang 6 because of speedometer regressions.  With the previous change, the regression doesn't happen any more, allowing to upgrade again.  Depends on D12394  Differential Revision: https://phabricator.services.mozilla.com/D12395",
+    "node": "8540104bb0bd811f9fd45b160dbe38a67c9aa5cd"
   },
   "3": {
-    "commiter_name": "Iain Ireland <iireland@mozilla.com>",
-    "commit_date": "2018-11-19 14:54:06",
-    "commit_message": "Bug 1497107: Add ensureBallast call to freezePropertiesForCommonPrototype r=nbp  Differential Revision: https://phabricator.services.mozilla.com/D12184",
-    "node": "136188d4f9281e3cec98699de83accbb0ad79439"
+    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+    "commit_date": "2018-11-21 03:13:07",
+    "commit_message": "Bug 1508547 - Disable the machine outliner on Android. r=dmajor  It's enabled by default as of clang 7 with -Oz on aarch64 (that is, afaict, the only platform where it's enabled), and regresses our performance on speedometer.  Differential Revision: https://phabricator.services.mozilla.com/D12394",
+    "node": "6f3303d415f7920900d800869ce901eed060c889"
   },
   "4": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 14:42:30",
-    "commit_message": "Bug 1508255 - Merge js/src/.clang-format into top-level r=sylvestre  The style options now match, so remove js/src/.clang-format \\o/  Depends on D12391  Differential Revision: https://phabricator.services.mozilla.com/D12392",
-    "node": "2d8d64aff05a9af6af00a99c7922b86ad9d1bb55"
+    "commiter_name": "Michael Froman <mfroman@mozilla.com>",
+    "commit_date": "2018-11-21 02:11:20",
+    "commit_message": "Bug 1498624 - pt1 - Implement OSX sandbox for RDD process. r=haik  Differential Revision: https://phabricator.services.mozilla.com/D12376",
+    "node": "da37c7e24c90cd585bdf68dff8acc45aa4ba7c3c"
   },
   "5": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 13:43:42",
-    "commit_message": "Bug 1508255 - Allow clang-format to reflow comments in js/src r=jandem,arai  Previous patches on this bug fix sources of bad comment reflow. This patch changes the option in js/src/.clang-format. Doing this puts SpiderMonkey in-line with Gecko and generates better results from clang-format.  Depends on D12390  Differential Revision: https://phabricator.services.mozilla.com/D12391",
-    "node": "d437391bafa1ec497443aedac9500cbfa172ec26"
+    "commiter_name": "Aaron Klotz <aklotz@mozilla.com>",
+    "commit_date": "2018-11-21 01:49:36",
+    "commit_message": "Bug 1508468: Convert launcher process to use mozilla::Result for error propagation; r=mhowell  This patch does a couple of things:    I added a new class, |WindowsError| to WinHeaderOnlyUtils. The idea here is   to encapsulate as much of the Windows error gamut as possible into one class.   Since Win32 errors and NTSTATUS codes may both be encoded as HRESULTs, I   used the latter type to store the error. It also contains functions for   converting between the various error code formats, as well as stringification   via FormatMessage.    I added |LauncherError| which also includes file and line number information,   which I believe will be important for launcher process failure diagnostics.   (Instantiation of LauncherErrors obviously must be done via macros to capture   __FILE__ and __LINE__).    I then converted all of the launcher process code (and its few depenencies) to   utilize this new functionality via the new |LauncherResult| type.    If we detect an error in one of the top-level launcher process functions, we   pass it to |HandleLauncherError| for processing. This function currently just   throws up a |MessageBox| like the previous code did, with the intention of   enhancing that further in the future.  Differential Revision: https://phabricator.services.mozilla.com/D12365",
+    "node": "fa0d05453365c26f404803117864654c59ff6d30"
   },
   "6": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 12:53:32",
-    "commit_message": "Bug 1508255 - Wrap ES Spec reference comments r=jorendorff  Depends on D12389  Differential Revision: https://phabricator.services.mozilla.com/D12390",
-    "node": "fa3eaa0d2cde35eb9435f6f8455148f9eec5ff4f"
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-11-21 01:44:12",
+    "commit_message": "Bug 1507898: [taskgraph] Factor out schema validation in transformations; r=dustin  Most jobs include at least one transform that verifies the input of all the tasks against a schema. This code is duplicated in each transform. Refactor it, so that we only need one copy of the logic.  Differential Revision: https://phabricator.services.mozilla.com/D12165",
+    "node": "e27269b076334ddd520fcbab374b584942b886f2"
   },
   "7": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 17:21:06",
-    "commit_message": "Bug 1508255 - Reformat comments in js/src/Stream.cpp r=jorendorff  This generates much better results for clang-format.  Differential Revision: https://phabricator.services.mozilla.com/D12389",
-    "node": "5219139e6d0f9fb6c9effc4df73244b8f9dd418c"
+    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+    "commit_date": "2018-11-21 01:38:34",
+    "commit_message": "Backed out 3 changesets (bug 1503776) for xperf failures  Backed out changeset 596f70b5d5b0 (bug 1503776) Backed out changeset 2d2d1dfd04d4 (bug 1503776) Backed out changeset 3eb49d9e73bb (bug 1503776)",
+    "node": "af4aa01c64c52f2aa5c9eecd48b4a7cfc2bd1abd"
   },
   "8": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 12:23:38",
-    "commit_message": "Bug 1508255 - More formatting changes in js/src r=jandem  These also help the clang-format result but are more subjective.  Depends on D12387  Differential Revision: https://phabricator.services.mozilla.com/D12388",
-    "node": "32eadea53faa9aca578c11bf682fcbb9385f9ebf"
+    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+    "commit_date": "2018-11-21 01:30:52",
+    "commit_message": "Backed out changeset be8383028bc0 (bug 1508468) for windows build bustage",
+    "node": "f5dfe72df46786a1683699c3d78208a28d739527"
   },
   "9": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 12:15:12",
-    "commit_message": "Bug 1508255 - Minor formatting changes in js/src r=jandem  These cause clang-format to generate better results when reflowing comments.  Depends on D12386  Differential Revision: https://phabricator.services.mozilla.com/D12387",
-    "node": "ba2da67c9e7e7541e4be66e5841c3a115c31ba1e"
+    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+    "commit_date": "2018-11-21 01:29:32",
+    "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser  Differential Revision: https://phabricator.services.mozilla.com/D12252",
+    "node": "5d6aa2af32d34012e3e79d0e0b8153927f2303ea"
   },
   "10": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 12:07:16",
-    "commit_message": "Bug 1508255 - Truncate '   ' lines in js/src comments r=jandem  Depends on D12385  Differential Revision: https://phabricator.services.mozilla.com/D12386",
-    "node": "cf2b7ca307b68da20bfdd196e8dc1a4e99e62a2d"
+    "commiter_name": "Cameron McCormack <cam@mcc.id.au>",
+    "commit_date": "2018-11-21 01:16:10",
+    "commit_message": "Bug 1508820 - fix \"warning: variant is never constructed: `Quit`\" r=ato  Differential Revision: https://phabricator.services.mozilla.com/D12489",
+    "node": "38b7a780c50f568065d830971e092742744f103b"
   },
   "11": {
-    "commiter_name": "Ted Campbell <tcampbell@mozilla.com>",
-    "commit_date": "2018-11-20 12:06:02",
-    "commit_message": "Bug 1508255 - Use |clang-format off| for some js/src comments r=jandem  These comments get mangled by clang-format so use |clang-format off| around them for now. In the future they can be rewritten if desired.  Differential Revision: https://phabricator.services.mozilla.com/D12385",
-    "node": "c86b9e22b393d97c6d4e4dc0fc33bc6cd3c2172c"
+    "commiter_name": "Matt Brubeck <mbrubeck@mozilla.com>",
+    "commit_date": "2018-11-21 00:38:11",
+    "commit_message": "Bug 1508636 - Guard against setting requestedLocales to null. r=snorp,geckoview-reviewers  Differential Revision: https://phabricator.services.mozilla.com/D12481",
+    "node": "2e3fcb9d7d27befc37f3d77d86dcf78553a67c3f"
   },
   "12": {
-    "commiter_name": "Razvan Caliman <rcaliman@mozilla.com>",
-    "commit_date": "2018-11-20 17:19:47",
-    "commit_message": "Bug 1507749 - Account for changing TextProperty when editing inline styles. r=pbro  The patch for https://bugzilla.mozilla.org/show_bug.cgi?id=1467076 discards previous TextProperty instances for the element's inline style when the inline style is updated.  On start, the Shape Path Editor kept a reference to the original TextProperty instance. This outdated instance caused the update mechanism of the Shape Path Editor to fail.  This patch fixes the issue by keeping metadata (index and property name) about the TextProperty to re-identify the correct one when needed instead of relying on a potentially outdated reference.  Differential Revision: https://phabricator.services.mozilla.com/D12157",
-    "node": "4b78e1686da9ba317be1796cf241db3231f9cb75"
+    "commiter_name": "Lina Cambridge <lina@yakshaving.ninja>",
+    "commit_date": "2018-11-21 00:43:58",
+    "commit_message": "Bug 1490724 - Define a stub `Callbacks.HistoryDelegate` instead of using default methods. r=snorp  Differential Revision: https://phabricator.services.mozilla.com/D12377",
+    "node": "f21e2839396e3057ad8bf44bf473447196c5f9f0"
   },
   "13": {
-    "commiter_name": "Csoregi Natalia <ncsoregi@mozilla.com>",
-    "commit_date": "2018-11-20 17:13:18",
-    "commit_message": "Backed out 6 changesets (bug 1493292) for bustage on /nsTransferable.cpp. CLOSED TREE  Backed out changeset f198bf91320b (bug 1493292) Backed out changeset 6487aa307123 (bug 1493292) Backed out changeset f2cabd69c568 (bug 1493292) Backed out changeset 71430fceb4a3 (bug 1493292) Backed out changeset 3a9b6d65d8c7 (bug 1493292) Backed out changeset 55769869037c (bug 1493292)",
-    "node": "4b0554a10847e9a879ab193bf16a3bbdaa8e69d4"
+    "commiter_name": "alwu <alwu@mozilla.com>",
+    "commit_date": "2018-11-21 00:42:24",
+    "commit_message": "Bug 1508484 - close audio queue if we already got the last audio frame when leaving 'loopingDecoding' state r=jya  When we're going to leave looping state and have got EOS before, we should mark audio queue as ended because we have got all data we need.  Differential Revision: https://phabricator.services.mozilla.com/D12373",
+    "node": "50810256f2804f772899cfa1376e48124ab98eb6"
   },
   "14": {
-    "commiter_name": "Jan de Mooij <jdemooij@mozilla.com>",
-    "commit_date": "2018-11-20 16:47:07",
-    "commit_message": "Bug 1508605 - Change some comments from /   / to // to avoid clang-format issues. r=tcampbell  Differential Revision: https://phabricator.services.mozilla.com/D12416",
-    "node": "5bad4fe7108eda1ca69c5f5aac82b4042c874deb"
+    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+    "commit_date": "2018-11-21 00:29:17",
+    "commit_message": "Backed out changeset e947694d0ed7 (bug 1507898) for Linting failure. CLOSED TREE",
+    "node": "3b818a926ee427b28b7898d24afec9cc864cda7f"
   },
   "15": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 16:47:13",
-    "commit_message": "Bug 1493292 - Remove len from nsIFormatConverter. r=smaug  Depends on D11204  Differential Revision: https://phabricator.services.mozilla.com/D11205",
-    "node": "f198bf91320bf774f2c9f204c426ac0c2da95aa2"
+    "commiter_name": "Micah Tigley <mtigley@mozilla.com>",
+    "commit_date": "2018-11-21 00:19:58",
+    "commit_message": "Bug 1503347 - Modify the Flex Item actor to consider CSS rules using the important keyword. r=pbro  Differential Revision: https://phabricator.services.mozilla.com/D11789",
+    "node": "df86262bfccdd4c4f534ec45e0549cd29474c58c"
   },
   "16": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 16:47:11",
-    "commit_message": "Bug 1493292 - Remove len from nsIFlavorDataProvider r=smaug  Depends on D11203  Differential Revision: https://phabricator.services.mozilla.com/D11204",
-    "node": "6487aa307123e63554a714e0cece6273e57017b1"
+    "commiter_name": "Aaron Klotz <aklotz@mozilla.com>",
+    "commit_date": "2018-11-21 00:12:53",
+    "commit_message": "Bug 1508468: Convert launcher process to use mozilla::Result for error propagation; r=mhowell  This patch does a couple of things:    I added a new class, |WindowsError| to WinHeaderOnlyUtils. The idea here is   to encapsulate as much of the Windows error gamut as possible into one class.   Since Win32 errors and NTSTATUS codes may both be encoded as HRESULTs, I   used the latter type to store the error. It also contains functions for   converting between the various error code formats, as well as stringification   via FormatMessage.    I added |LauncherError| which also includes file and line number information,   which I believe will be important for launcher process failure diagnostics.   (Instantiation of LauncherErrors obviously must be done via macros to capture   __FILE__ and __LINE__).    I then converted all of the launcher process code (and its few depenencies) to   utilize this new functionality via the new |LauncherResult| type.    If we detect an error in one of the top-level launcher process functions, we   pass it to |HandleLauncherError| for processing. This function currently just   throws up a |MessageBox| like the previous code did, with the intention of   enhancing that further in the future.  Differential Revision: https://phabricator.services.mozilla.com/D12365",
+    "node": "be8383028bc02b2ab24a8102d0b1276f15af4764"
   },
   "17": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 16:47:09",
-    "commit_message": "Bug 1493292 - Remove len from nsTransferable. r=smaug  Depends on D11202  Differential Revision: https://phabricator.services.mozilla.com/D11203",
-    "node": "f2cabd69c568bd5e6f50f7f3f5d6f5d55c6b7222"
+    "commiter_name": "Haik Aftandilian <haftandilian@mozilla.com>",
+    "commit_date": "2018-11-21 00:06:06",
+    "commit_message": "Bug 1506776 - 17.78% Base Content Resident Unique Memory regression r=Alex_Gaynor  Until more analysis is done, add back access to com.apple.CoreServices.coreservicesd to avoid extra allocations that are triggered when the service is blocked.  Differential Revision: https://phabricator.services.mozilla.com/D12479",
+    "node": "823acff9cd2fe0b5e15e456226dbadc81b3c4961"
   },
   "18": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 16:47:04",
-    "commit_message": "Bug 1493292 - Remove aDataLen parameters from nsITransferable.setTransferData. r=smaug  Depends on D11201  Differential Revision: https://phabricator.services.mozilla.com/D11202",
-    "node": "71430fceb4a3f1641b2d786e4f66e83c87149946"
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-11-21 00:09:34",
+    "commit_message": "Bug 1507898: [taskgraph] Factor out schema validation in transformations; r=dustin  Most jobs include at least one transform that verifies the input of all the tasks against a schema. This code is duplicated in each transform. Refactor it, so that we only need one copy of the logic.  Differential Revision: https://phabricator.services.mozilla.com/D12165",
+    "node": "e947694d0ed75030968484df36f08a222cdd79b5"
   },
   "19": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 16:47:02",
-    "commit_message": "Bug 1493292 - Remove aDataLen parameters from nsITransferable.getTransferData. r=smaug  Depends on D11200  Differential Revision: https://phabricator.services.mozilla.com/D11201",
-    "node": "3a9b6d65d8c7afb9289b1eca8dbaf84e5da37c69"
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_date": "2018-11-20 23:57:46",
+    "commit_message": "Bug 1506310: Determine whether builds under test need signed extenions by release type; r=bc,ahal  Differential Revision: https://phabricator.services.mozilla.com/D12077",
+    "node": "b1bec3572f1786325e87ad11a0a6390d606743f8"
   }
 }
