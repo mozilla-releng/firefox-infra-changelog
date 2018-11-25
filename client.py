@@ -203,15 +203,17 @@ def filter_hg_commit_data(repository_url, push_type):
     return changelog
 
 
-def create_files_for_hg():
+def create_files_for_hg(repositories_holder):
     """
-    Main HG function. Takes every Mercurial repo from repositories.json and writes all the commit data of each repo in a
-    separate json file and generates a MD file for each repo as well.
+    Main HG function. Takes every Mercurial repo from a .json file which is populated with repositories and writes all
+     the commit data of each repo in a.
+    creates a json and MD file for each repo as well.
+    :param: repositories_holder: expects a .json file that contains a list of repositories
     :return: the end result is a .json and a .md file for every git repository. can be found inside hg_files/
     """
-    for repo in repositories["Mercurial"]:
-        repository_url = repositories["Mercurial"][repo]["url"]
-        repository_push_type = repositories["Mercurial"][repo]["configuration"]["push_type"]
+    for repo in repositories_holder["Mercurial"]:
+        repository_url = repositories_holder["Mercurial"][repo]["url"]
+        repository_push_type = repositories_holder["Mercurial"][repo]["configuration"]["push_type"]
         repository_name = repo
         hg_changes = filter_hg_commit_data(repository_url, repository_push_type)
         hg_json_name = "./hg_files/" + "{}.json".format(repository_name)
@@ -221,15 +223,17 @@ def create_files_for_hg():
         create_hg_md_table(repository_name)
 
 
-def create_files_for_git():
+def create_files_for_git(repositories_holder):
     """
-    Main GIT function. Takes every Git repo from repositories.json and writes all the commit data of each repo in a
-    separate json file and generates a MD file for each repo as well.
+    Main GIT function. Takes every Git repo from a .json file which is populated with repositories and writes all
+    the commit data of each repo in a.
+    creates a json and MD file for each repo as well.
+    :param: repositories_holder: expects a .json file that contains a list of repositories
     :return: the end result is a .json and a .md file for every git repository. can be found inside git_files/
     """
-    for repo in repositories["Github"]:
+    for repo in repositories_holder["Github"]:
         repository_name = repo
-        repository_team = repositories["Github"][repo]["team"]
+        repository_team = repositories_holder["Github"][repo]["team"]
         filter_git_commit_data(repository_name, repository_team)
         create_git_md_table(repository_name)
 
@@ -347,7 +351,7 @@ if __name__ == "__main__":
     git = Github(TOKEN)
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
-    create_files_for_git()
-    create_files_for_hg()
+    create_files_for_git(repositories)
+    create_files_for_hg(repositories)
     clear_file("main_md_table.md")
     generate_main_md_table()
