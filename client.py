@@ -89,6 +89,7 @@ def create_hg_md_table(repository_name):
         for key in data:
             commit_number = commit_number_list[-1]
             commit_author = data[key]["commiter_name"]
+            commit_author = re.sub("\u0131", "i", commit_author)
             date = data[key]["commit_date"]
             message = data[key]["commit_message"]
             node = data[key]["node"]

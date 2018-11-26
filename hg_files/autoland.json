@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Chris Martin <cmartin@mozilla.com>",
-    "commit_date": "2018-11-21 03:52:26",
-    "commit_message": "Bug 1402282 - Change jemalloc to use secure random private arena ids r=glandium  Previously the id for a new arena was just a counter that increased by one every time. For hardening purposes, we want to make private arenas use a secure random ID, so an attacker will have a more difficult time finding the memory they are looking for.  Differential Revision: https://phabricator.services.mozilla.com/D10158",
-    "node": "f425ff2bab2dcfd4a2db80822709244b5a35d8ed"
+    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
+    "commit_date": "2018-11-26 00:58:14",
+    "commit_message": "Bug 1509227 - Cache selection state with RDL. r=miko  MozReview-Commit-ID: CmMDBlYzHyN  Differential Revision: https://phabricator.services.mozilla.com/D12722",
+    "node": "c65a0f1862dd7cbd485b9ea44618155b85156486"
   },
   "1": {
-    "commiter_name": "Mike Conley <mconley@mozilla.com>",
-    "commit_date": "2018-11-20 23:34:36",
-    "commit_message": "Bug 1499465 - Don't collect KillHard crashes on Beta or Release. r=jld,gsvelto  Differential Revision: https://phabricator.services.mozilla.com/D10968",
-    "node": "b4754021fc2dbeb9a96fc85cacc52ec1c63d1453"
+    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
+    "commit_date": "2018-11-26 04:32:15",
+    "commit_message": "Bug 1509226 - Avoid allocations to serialize clips. r=jrmuizel  MozReview-Commit-ID: CetmS5cZCMP  Differential Revision: https://phabricator.services.mozilla.com/D12721",
+    "node": "d6509279d52e5c1a9b2951b88f23a989470ff195"
   },
   "2": {
-    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-    "commit_date": "2018-11-21 00:10:49",
-    "commit_message": "Bug 1508547 - Switch Android builds to clang 7 again. r=dmajor  Bug 1492663 upgraded those builds to clang 7, and bug 1503330 brought them back to clang 6 because of speedometer regressions.  With the previous change, the regression doesn't happen any more, allowing to upgrade again.  Depends on D12394  Differential Revision: https://phabricator.services.mozilla.com/D12395",
-    "node": "8540104bb0bd811f9fd45b160dbe38a67c9aa5cd"
+    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
+    "commit_date": "2018-11-26 00:57:04",
+    "commit_message": "Bug 1420628 - Avoid allocations for each text display item. r=jrmuizel  MozReview-Commit-ID: HoRHQVEdJeT  Differential Revision: https://phabricator.services.mozilla.com/D12720",
+    "node": "f5c8fe43b6ee1be0f100ff3777c8d99c4ce8af40"
   },
   "3": {
-    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-    "commit_date": "2018-11-21 03:13:07",
-    "commit_message": "Bug 1508547 - Disable the machine outliner on Android. r=dmajor  It's enabled by default as of clang 7 with -Oz on aarch64 (that is, afaict, the only platform where it's enabled), and regresses our performance on speedometer.  Differential Revision: https://phabricator.services.mozilla.com/D12394",
-    "node": "6f3303d415f7920900d800869ce901eed060c889"
+    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
+    "commit_date": "2018-11-26 03:35:10",
+    "commit_message": "Bug 1506860 - Revert the workaround that we did in bug 1504929. r=birtles  That's because the underlying issue which had caused intermittent failure has been fixed in 1506988.  Here is the link to the workaround commit; https://hg.mozilla.org/mozilla-central/rev/c84f0ad36ce9  Differential Revision: https://phabricator.services.mozilla.com/D12861",
+    "node": "995042d1cd8cdc7bd7ea8724017afde36cc69b7c"
   },
   "4": {
-    "commiter_name": "Michael Froman <mfroman@mozilla.com>",
-    "commit_date": "2018-11-21 02:11:20",
-    "commit_message": "Bug 1498624 - pt1 - Implement OSX sandbox for RDD process. r=haik  Differential Revision: https://phabricator.services.mozilla.com/D12376",
-    "node": "da37c7e24c90cd585bdf68dff8acc45aa4ba7c3c"
+    "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
+    "commit_date": "2018-11-26 03:03:14",
+    "commit_message": "Backed out changeset 1575904619b5 (bug 1506547) for mochitest failures on test_reftests_with_caret.html.",
+    "node": "14d532b8d89432c1a4b01d5007960295a13022da"
   },
   "5": {
-    "commiter_name": "Aaron Klotz <aklotz@mozilla.com>",
-    "commit_date": "2018-11-21 01:49:36",
-    "commit_message": "Bug 1508468: Convert launcher process to use mozilla::Result for error propagation; r=mhowell  This patch does a couple of things:    I added a new class, |WindowsError| to WinHeaderOnlyUtils. The idea here is   to encapsulate as much of the Windows error gamut as possible into one class.   Since Win32 errors and NTSTATUS codes may both be encoded as HRESULTs, I   used the latter type to store the error. It also contains functions for   converting between the various error code formats, as well as stringification   via FormatMessage.    I added |LauncherError| which also includes file and line number information,   which I believe will be important for launcher process failure diagnostics.   (Instantiation of LauncherErrors obviously must be done via macros to capture   __FILE__ and __LINE__).    I then converted all of the launcher process code (and its few depenencies) to   utilize this new functionality via the new |LauncherResult| type.    If we detect an error in one of the top-level launcher process functions, we   pass it to |HandleLauncherError| for processing. This function currently just   throws up a |MessageBox| like the previous code did, with the intention of   enhancing that further in the future.  Differential Revision: https://phabricator.services.mozilla.com/D12365",
-    "node": "fa0d05453365c26f404803117864654c59ff6d30"
+    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+    "commit_date": "2018-11-25 22:01:07",
+    "commit_message": "Bug 1506547 - Align user-select behavior more with other UAs. r=mats  There's a few subtle behavior changes here, which I'll try to break down in the commit message.  The biggest one is the EditableDescendantCount stuff going away. This was added in bug 1181130, to prevent clicking on the non-editable div from selecting the editable div inside. This is problematic for multiple reasons:     First, I don't think non-editable regions of an editable element should    be user-select: all.     Second, it just doesn't work in Shadow DOM (the editable descendant count is    not kept up-to-date when not in the uncomposed doc), so nested    contenteditables behave differently inside vs. outside a Shadow Tree.     Third, I think it's user hostile to just entirely disable selection if you    have a contenteditable descendant as a child of a user-select: all thing.     WebKit behaves like this patch in the following test-case (though not Blink):       https://crisal.io/tmp/user-select-all-contenteditable-descendant.html     Edge doesn't seem to support user-select: all at all (no pun intended).     But we don't allow to select anything at all which looks wrong.     Fourth, it's not tested at all (which explains how we broke it in Shadow DOM    and not even notice...).  In any case I've verified that this doesn't regress the editor from that bug. If this regresses anything we can fix it as outlined in the first bullet point above, which should also make us more compatible with other UAs in that test-case.  The other change is `all` not overriding everything else. So, something like:    <div style=\"-webkit-user-select: all\">All <div style=\"-webkit-user-select: none\">None</div></div>  Totally ignores the -webkit-user-select: none declaration in Firefox before this change. This doesn't match any other UA nor the spec, and this patch aligns us with WebKit / Blink.  This in turn makes us not need -moz-text anymore, whose only purpose was to avoid this.  This also fixes a variety of bugs uncovered by the previous changes, like the SetIgnoreUserModify(false) call in editor being completely useless, since presShell->SetCaretEnabled ended in nsCaret::SetVisible, which overrode it.  This in turn uncovered even more bugs, from bugs in the caret painting code, like not checking -moz-user-modify on the right frame if you're the last frame of a line, to even funnier bits where before this patch you show the caret but can't write at all...  In any case, the new setup I came up with is that when you're editing (the selection is focused on an editable node) moving the caret forces it to end up in an editable node, thus jumping over non-editable ones.  This has the nice effect of not completely disabling selection of -moz-user-select: all elements that have editable descendants (which was a very ad-hoc hack for bug 1181130, and somewhat broken per the above), and also not needing the -moz-user-select: all for non-editable bits in contenteditable.css at all.  This also fixes issues with br-skipping like not being able to insert content in the following test-case:    <div contenteditable=\"true\"><span contenteditable=\"false\">xyz </span><br>editable</div>  If you start moving to the left from the second line, for example.  I think this yields way better behavior in all the relevant test-cases from bug 1181130 / bug 1109968 / bug 1132768, shouldn't cause any regression, and the complexity is significantly reduced in some places.  There's still some other broken bits that this patch doesn't fix, but I'll file follow-ups for those.  Differential Revision: https://phabricator.services.mozilla.com/D12687",
+    "node": "1575904619b592d61f38ce67ef94faa313108a2e"
   },
   "6": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-11-21 01:44:12",
-    "commit_message": "Bug 1507898: [taskgraph] Factor out schema validation in transformations; r=dustin  Most jobs include at least one transform that verifies the input of all the tasks against a schema. This code is duplicated in each transform. Refactor it, so that we only need one copy of the logic.  Differential Revision: https://phabricator.services.mozilla.com/D12165",
-    "node": "e27269b076334ddd520fcbab374b584942b886f2"
+    "commiter_name": "ScottDowne <scott.downe@gmail.com>",
+    "commit_date": "2018-11-25 21:19:23",
+    "commit_message": "Bug 1509565 - Add Pocket bug fixes, Snippets Templates compat fixes to Activity Stream r=k88hudson  Differential Revision: https://phabricator.services.mozilla.com/D12805",
+    "node": "973e2824df9652776a27279ac1fcf579009c2642"
   },
   "7": {
-    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
-    "commit_date": "2018-11-21 01:38:34",
-    "commit_message": "Backed out 3 changesets (bug 1503776) for xperf failures  Backed out changeset 596f70b5d5b0 (bug 1503776) Backed out changeset 2d2d1dfd04d4 (bug 1503776) Backed out changeset 3eb49d9e73bb (bug 1503776)",
-    "node": "af4aa01c64c52f2aa5c9eecd48b4a7cfc2bd1abd"
+    "commiter_name": "Ed Lee <edilee@mozilla.com>",
+    "commit_date": "2018-11-20 21:35:08",
+    "commit_message": "Bug 1507610 - Allow running find-dupes without all of MOZ_AUTOMATION r=mshal  Differential Revision: https://phabricator.services.mozilla.com/D12065",
+    "node": "def0fd8429f955dcd8f29ae54cd2e2e5cd28032d"
   },
   "8": {
-    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
-    "commit_date": "2018-11-21 01:30:52",
-    "commit_message": "Backed out changeset be8383028bc0 (bug 1508468) for windows build bustage",
-    "node": "f5dfe72df46786a1683699c3d78208a28d739527"
+    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+    "commit_date": "2018-11-25 11:47:59",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "node": "c48931864919067283a60b9627690d356058161c"
   },
   "9": {
-    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
-    "commit_date": "2018-11-21 01:29:32",
-    "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser  Differential Revision: https://phabricator.services.mozilla.com/D12252",
-    "node": "5d6aa2af32d34012e3e79d0e0b8153927f2303ea"
+    "commiter_name": "Eric Rahm <erahm@mozilla.com>",
+    "commit_date": "2018-02-02 22:42:55",
+    "commit_message": "Bug 1435899 - Use nsStringStream for the data channel buffer. r=bz  A pipe is no longer used for the input stream, instead we use a string stream which in most cases will be able to share the string data buffer rather than copying it.",
+    "node": "c4029bc621f59edca2c3e0011ca50747be81b2c7"
   },
   "10": {
-    "commiter_name": "Cameron McCormack <cam@mcc.id.au>",
-    "commit_date": "2018-11-21 01:16:10",
-    "commit_message": "Bug 1508820 - fix \"warning: variant is never constructed: `Quit`\" r=ato  Differential Revision: https://phabricator.services.mozilla.com/D12489",
-    "node": "38b7a780c50f568065d830971e092742744f103b"
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-02-27 09:03:00",
+    "commit_message": "Bug 1435899 - Close underlying stream in NonBlockingAsyncInputStream sooner. r=froydnj",
+    "node": "5461b62599d722d0c78b8f212653817d2d718362"
   },
   "11": {
-    "commiter_name": "Matt Brubeck <mbrubeck@mozilla.com>",
-    "commit_date": "2018-11-21 00:38:11",
-    "commit_message": "Bug 1508636 - Guard against setting requestedLocales to null. r=snorp,geckoview-reviewers  Differential Revision: https://phabricator.services.mozilla.com/D12481",
-    "node": "2e3fcb9d7d27befc37f3d77d86dcf78553a67c3f"
+    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+    "commit_date": "2018-11-25 01:03:49",
+    "commit_message": "Bug 1509614 - Downgrade the loglevel for the `get_process_list()` messages in mozbase r=bc  `get_process_list()` makes multiple attempts at setting up adb, but errors setting up the connection get logged with a loglevel of ERROR. This patch makes these messages print with a loglevel of INFO unless this is the final attempt. This will cut down on superfluous error messages appearing in Treeherder's logviewer, while still providing all of the info fennec/tooling developers would need to fix the underlying problem here.  Differential Revision: https://phabricator.services.mozilla.com/D12813",
+    "node": "5120b8ce3de84ec0e94ed9ebe949f1245f4c9472"
   },
   "12": {
-    "commiter_name": "Lina Cambridge <lina@yakshaving.ninja>",
-    "commit_date": "2018-11-21 00:43:58",
-    "commit_message": "Bug 1490724 - Define a stub `Callbacks.HistoryDelegate` instead of using default methods. r=snorp  Differential Revision: https://phabricator.services.mozilla.com/D12377",
-    "node": "f21e2839396e3057ad8bf44bf473447196c5f9f0"
+    "commiter_name": "Tim Nguyen <ntim.bugs@gmail.com>",
+    "commit_date": "2018-11-24 15:07:23",
+    "commit_message": "Bug 1505582 - Update macOS arrowpanel background to match the specification. r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12820",
+    "node": "7d894090b1aaa917904f8f36caf6ef01a4949f45"
   },
   "13": {
-    "commiter_name": "alwu <alwu@mozilla.com>",
-    "commit_date": "2018-11-21 00:42:24",
-    "commit_message": "Bug 1508484 - close audio queue if we already got the last audio frame when leaving 'loopingDecoding' state r=jya  When we're going to leave looping state and have got EOS before, we should mark audio queue as ended because we have got all data we need.  Differential Revision: https://phabricator.services.mozilla.com/D12373",
-    "node": "50810256f2804f772899cfa1376e48124ab98eb6"
+    "commiter_name": "Ferenc Nagy <nagy.ferenc.jr@gmail.com>",
+    "commit_date": "2018-11-24 15:18:45",
+    "commit_message": "Bug 1508631 - Fixing indentation in multiple lines r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12826",
+    "node": "5edbd3619c978b1dc78709685a89536c61df1263"
   },
   "14": {
-    "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
-    "commit_date": "2018-11-21 00:29:17",
-    "commit_message": "Backed out changeset e947694d0ed7 (bug 1507898) for Linting failure. CLOSED TREE",
-    "node": "3b818a926ee427b28b7898d24afec9cc864cda7f"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-24 14:56:25",
+    "commit_message": "Bug 1509592 - Update webrender to commit 7051f18fdcfbe60ecdbaeaa8e53c4ba98f2037a1 (WR PR #3344). r=kats  https://github.com/servo/webrender/pull/3344  Differential Revision: https://phabricator.services.mozilla.com/D12822",
+    "node": "b599964cc3ee9182a50a4ed38996cef6fe87c13a"
   },
   "15": {
-    "commiter_name": "Micah Tigley <mtigley@mozilla.com>",
-    "commit_date": "2018-11-21 00:19:58",
-    "commit_message": "Bug 1503347 - Modify the Flex Item actor to consider CSS rules using the important keyword. r=pbro  Differential Revision: https://phabricator.services.mozilla.com/D11789",
-    "node": "df86262bfccdd4c4f534ec45e0549cd29474c58c"
+    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
+    "commit_date": "2018-11-23 18:10:08",
+    "commit_message": "Bug 1476775 - Part 2: Change the profiler usage in devtools after API change r=julienw,gregtatum  Depends on D6267  Differential Revision: https://phabricator.services.mozilla.com/D6268",
+    "node": "bed93ebb313b1fb65bfbce423c7c09ac277c26e9"
   },
   "16": {
-    "commiter_name": "Aaron Klotz <aklotz@mozilla.com>",
-    "commit_date": "2018-11-21 00:12:53",
-    "commit_message": "Bug 1508468: Convert launcher process to use mozilla::Result for error propagation; r=mhowell  This patch does a couple of things:    I added a new class, |WindowsError| to WinHeaderOnlyUtils. The idea here is   to encapsulate as much of the Windows error gamut as possible into one class.   Since Win32 errors and NTSTATUS codes may both be encoded as HRESULTs, I   used the latter type to store the error. It also contains functions for   converting between the various error code formats, as well as stringification   via FormatMessage.    I added |LauncherError| which also includes file and line number information,   which I believe will be important for launcher process failure diagnostics.   (Instantiation of LauncherErrors obviously must be done via macros to capture   __FILE__ and __LINE__).    I then converted all of the launcher process code (and its few depenencies) to   utilize this new functionality via the new |LauncherResult| type.    If we detect an error in one of the top-level launcher process functions, we   pass it to |HandleLauncherError| for processing. This function currently just   throws up a |MessageBox| like the previous code did, with the intention of   enhancing that further in the future.  Differential Revision: https://phabricator.services.mozilla.com/D12365",
-    "node": "be8383028bc02b2ab24a8102d0b1276f15af4764"
+    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
+    "commit_date": "2018-11-21 16:13:15",
+    "commit_message": "Bug 1476775 - Part 1: Discard samples that are older than given duration r=mstange  Differential Revision: https://phabricator.services.mozilla.com/D6267",
+    "node": "9f21792d4ae6515aa1e12503b530757e884d4ff0"
   },
   "17": {
-    "commiter_name": "Haik Aftandilian <haftandilian@mozilla.com>",
-    "commit_date": "2018-11-21 00:06:06",
-    "commit_message": "Bug 1506776 - 17.78% Base Content Resident Unique Memory regression r=Alex_Gaynor  Until more analysis is done, add back access to com.apple.CoreServices.coreservicesd to avoid extra allocations that are triggered when the service is blocked.  Differential Revision: https://phabricator.services.mozilla.com/D12479",
-    "node": "823acff9cd2fe0b5e15e456226dbadc81b3c4961"
+    "commiter_name": "Christian Holler <choller@mozilla.com>",
+    "commit_date": "2018-11-22 01:18:27",
+    "commit_message": "Bug 1506044 - Do not send cookies with ASan reporter submits. r=johannh  Differential Revision: https://phabricator.services.mozilla.com/D12317",
+    "node": "062aef718a607660023c7e818a3760e54b0575a8"
   },
   "18": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-11-21 00:09:34",
-    "commit_message": "Bug 1507898: [taskgraph] Factor out schema validation in transformations; r=dustin  Most jobs include at least one transform that verifies the input of all the tasks against a schema. This code is duplicated in each transform. Refactor it, so that we only need one copy of the logic.  Differential Revision: https://phabricator.services.mozilla.com/D12165",
-    "node": "e947694d0ed75030968484df36f08a222cdd79b5"
+    "commiter_name": "Dorel Luca <dluca@mozilla.com>",
+    "commit_date": "2018-11-24 11:46:32",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "node": "76c1898f6b021986beccc1461b1800ebe9f9e251"
   },
   "19": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-11-20 23:57:46",
-    "commit_message": "Bug 1506310: Determine whether builds under test need signed extenions by release type; r=bc,ahal  Differential Revision: https://phabricator.services.mozilla.com/D12077",
-    "node": "b1bec3572f1786325e87ad11a0a6390d606743f8"
+    "commiter_name": "Steve Fink <sfink@mozilla.com>",
+    "commit_date": "2018-11-21 22:07:12",
+    "commit_message": "Bug 1426574 - Use fallible bitmap ops for AtomizeAndCopyChars, r=jonco",
+    "node": "e8eb60450f8c25c2985316e2896aa0574ba658d5"
   }
 }

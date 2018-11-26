@@ -1,5 +1,69 @@
 {
   "0": {
-    "lastChecked": "2018-11-21 02:05:09.147240"
+    "lastChecked": "2018-11-26 03:17:05.617442"
+  },
+  "1": {
+    "sha": "af210e95451e950d9151e745ccc4d0f3965b91d7",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/af210e95451e950d9151e745ccc4d0f3965b91d7",
+    "commiter_name": "tomprince",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #42 from tp-tc/tools-tests  Import some tests.",
+    "commit_date": "2018-11-22 18:42:07",
+    "files_changed": [
+      "balrogscript/newsfragments/42.added",
+      "balrogscript/test/test_submitter_cli.py",
+      "balrogscript/test/test_submitter_updates.py"
+    ]
+  },
+  "2": {
+    "sha": "7428dd6ac5cbcf59f5446fb786b06170fb83de72",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/7428dd6ac5cbcf59f5446fb786b06170fb83de72",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Import some tests.",
+    "commit_date": "2018-11-22 17:54:16",
+    "files_changed": [
+      "balrogscript/newsfragments/42.added",
+      "balrogscript/test/test_submitter_cli.py",
+      "balrogscript/test/test_submitter_updates.py"
+    ]
+  },
+  "3": {
+    "sha": "bc93868fa200a26d1b20c59d5851803a8ce88941",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/bc93868fa200a26d1b20c59d5851803a8ce88941",
+    "commiter_name": "tomprince",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #40 from tp-tc/import-tools  Import code from build-tools.",
+    "commit_date": "2018-11-22 06:53:38",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py",
+      "balrogscript/script.py",
+      "balrogscript/submitter/__init__.py",
+      "balrogscript/submitter/cli.py",
+      "balrogscript/submitter/release.py",
+      "balrogscript/submitter/util.py",
+      "balrogscript/test/data/hardcoded_config.json",
+      "balrogscript/test/test_script.py",
+      "config_example.json",
+      "docker/Dockerfile",
+      "docker/tc_testbuild.sh",
+      "requirements-dev.txt",
+      "requirements-prod.txt",
+      "setup.py",
+      "tox.ini"
+    ]
+  },
+  "4": {
+    "sha": "7599005406e4244f72bcb0f4e8777ef1ab2deb59",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/7599005406e4244f72bcb0f4e8777ef1ab2deb59",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "3.2.1",
+    "commit_date": "2018-11-22 05:57:21",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py"
+    ]
   }
 }

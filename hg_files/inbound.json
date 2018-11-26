@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Kris Maglione <maglione.k@gmail.com>",
-    "commit_date": "2018-04-04 03:19:26",
-    "commit_message": "Bug 1451463: Make Quitter a WebExtension experiment. r=aswan  Differential Revision: https://phabricator.services.mozilla.com/D12478",
-    "node": "639212b42347d02e5e3c414d83657137b3affb53"
+    "commiter_name": "Ed Lee <edilee@mozilla.com>",
+    "commit_date": "2018-11-20 21:35:08",
+    "commit_message": "Bug 1507610 - Allow running find-dupes without all of MOZ_AUTOMATION r=mshal  Differential Revision: https://phabricator.services.mozilla.com/D12065",
+    "node": "def0fd8429f955dcd8f29ae54cd2e2e5cd28032d"
   },
   "1": {
-    "commiter_name": "Eric Rahm <erahm@mozilla.com>",
-    "commit_date": "2018-11-20 01:24:20",
-    "commit_message": "Bug 1508399 - Use dom.ipc.processCount to determine how many tabs to open. r=bc",
-    "node": "22ce80311bcfebe82ed7ed65a6831836a71313c7"
+    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+    "commit_date": "2018-11-25 11:47:59",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "node": "c48931864919067283a60b9627690d356058161c"
   },
   "2": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-21 02:32:47",
-    "commit_message": "Bug 1503366 - part 5 - taskcluster definitions for aarch64 windows builds; r=chmanchester",
-    "node": "92c3a891c4f2e674257de85556090d12b292aa35"
+    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+    "commit_date": "2018-11-25 01:03:49",
+    "commit_message": "Bug 1509614 - Downgrade the loglevel for the `get_process_list()` messages in mozbase r=bc  `get_process_list()` makes multiple attempts at setting up adb, but errors setting up the connection get logged with a loglevel of ERROR. This patch makes these messages print with a loglevel of INFO unless this is the final attempt. This will cut down on superfluous error messages appearing in Treeherder's logviewer, while still providing all of the info fennec/tooling developers would need to fix the underlying problem here.  Differential Revision: https://phabricator.services.mozilla.com/D12813",
+    "node": "5120b8ce3de84ec0e94ed9ebe949f1245f4c9472"
   },
   "3": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-21 02:32:47",
-    "commit_message": "Bug 1503366 - part 4 - add mozconfigs for aarch64 windows builds; r=chmanchester",
-    "node": "692342801503ee35337d19716615a15af010fe67"
+    "commiter_name": "Tim Nguyen <ntim.bugs@gmail.com>",
+    "commit_date": "2018-11-24 15:07:23",
+    "commit_message": "Bug 1505582 - Update macOS arrowpanel background to match the specification. r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12820",
+    "node": "7d894090b1aaa917904f8f36caf6ef01a4949f45"
   },
   "4": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-21 02:32:47",
-    "commit_message": "Bug 1503366 - part 3 - tooltool manifest for aarch64 windows builds; r=chmanchester",
-    "node": "2526f6735ef5ff8f575b80a56dc2505c4cfac9f0"
+    "commiter_name": "Ferenc Nagy <nagy.ferenc.jr@gmail.com>",
+    "commit_date": "2018-11-24 15:18:45",
+    "commit_message": "Bug 1508631 - Fixing indentation in multiple lines r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12826",
+    "node": "5edbd3619c978b1dc78709685a89536c61df1263"
   },
   "5": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-21 02:32:47",
-    "commit_message": "Bug 1503366 - part 2 - enable WIN64_  for cargo in aarch64 cross-compiles; r=chmanchester  We need these bits for generic cross-compiles, so make sure they are enabled on both x86 and aarch64.",
-    "node": "3ef1c065654f078be57d52911cf35fc5c6a7a088"
+    "commiter_name": "Eric Rahm <erahm@mozilla.com>",
+    "commit_date": "2018-02-02 22:42:55",
+    "commit_message": "Bug 1435899 - Use nsStringStream for the data channel buffer. r=bz  A pipe is no longer used for the input stream, instead we use a string stream which in most cases will be able to share the string data buffer rather than copying it.",
+    "node": "c4029bc621f59edca2c3e0011ca50747be81b2c7"
   },
   "6": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-21 02:32:47",
-    "commit_message": "Bug 1503366 - part 1 - add a windows rust toolchain with aarch64 support; r=chmanchester  We could have added another target to the current nightly toolchain, but I don't know what updating the date on that toolchain entails.",
-    "node": "5811255ebed472776307973f7accb779fbf00028"
+    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
+    "commit_date": "2018-02-27 09:03:00",
+    "commit_message": "Bug 1435899 - Close underlying stream in NonBlockingAsyncInputStream sooner. r=froydnj",
+    "node": "5461b62599d722d0c78b8f212653817d2d718362"
   },
   "7": {
-    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-    "commit_date": "2018-11-21 02:05:41",
-    "commit_message": "Backout changeset 88ba9f723934 (bug 1502457) for causing bug 1507838 and bug 1508836 ",
-    "node": "31766e8403ad17eb5b384c52750cbb49d1327e2e"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-24 14:56:25",
+    "commit_message": "Bug 1509592 - Update webrender to commit 7051f18fdcfbe60ecdbaeaa8e53c4ba98f2037a1 (WR PR #3344). r=kats  https://github.com/servo/webrender/pull/3344  Differential Revision: https://phabricator.services.mozilla.com/D12822",
+    "node": "b599964cc3ee9182a50a4ed38996cef6fe87c13a"
   },
   "8": {
-    "commiter_name": "shindli <shindli@mozilla.com>",
-    "commit_date": "2018-11-20 23:50:05",
-    "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
-    "node": "7720051470685844a99bc96d95e1e86d21041f1d"
+    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
+    "commit_date": "2018-11-23 18:10:08",
+    "commit_message": "Bug 1476775 - Part 2: Change the profiler usage in devtools after API change r=julienw,gregtatum  Depends on D6267  Differential Revision: https://phabricator.services.mozilla.com/D6268",
+    "node": "bed93ebb313b1fb65bfbce423c7c09ac277c26e9"
   },
   "9": {
-    "commiter_name": "shindli <shindli@mozilla.com>",
-    "commit_date": "2018-11-20 23:44:09",
-    "commit_message": "Merge inbound to mozilla-central.  a=merge",
-    "node": "8991d660f20e3eea652e060c30e17670b45a9257"
+    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
+    "commit_date": "2018-11-21 16:13:15",
+    "commit_message": "Bug 1476775 - Part 1: Discard samples that are older than given duration r=mstange  Differential Revision: https://phabricator.services.mozilla.com/D6267",
+    "node": "9f21792d4ae6515aa1e12503b530757e884d4ff0"
   },
   "10": {
-    "commiter_name": "Razvan Caliman <rcaliman@mozilla.com>",
-    "commit_date": "2018-11-20 19:19:06",
-    "commit_message": "Bug 1508691 - Ensure range inputs in Font Editor do not have a background color. r=gl  MozReview-Commit-ID: EmF55t1eQbN  Differential Revision: https://phabricator.services.mozilla.com/D12442",
-    "node": "117bb70216d301a004d6c565fc64fb7b6e138e65"
+    "commiter_name": "Christian Holler <choller@mozilla.com>",
+    "commit_date": "2018-11-22 01:18:27",
+    "commit_message": "Bug 1506044 - Do not send cookies with ASan reporter submits. r=johannh  Differential Revision: https://phabricator.services.mozilla.com/D12317",
+    "node": "062aef718a607660023c7e818a3760e54b0575a8"
   },
   "11": {
-    "commiter_name": "D\u00e3o Gottwald <dao@mozilla.com>",
-    "commit_date": "2018-11-20 19:04:43",
-    "commit_message": "Bug 1508585 - Load search-one-offs.js lazily. r=bgrins  Differential Revision: https://phabricator.services.mozilla.com/D12405",
-    "node": "29f9fb8fd7ee6a8ff4758210fb5c18c1083f9322"
+    "commiter_name": "Dorel Luca <dluca@mozilla.com>",
+    "commit_date": "2018-11-24 11:46:32",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "node": "76c1898f6b021986beccc1461b1800ebe9f9e251"
   },
   "12": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 19:01:46",
-    "commit_message": "Bug 1493292 - Remove len from nsIFormatConverter. r=smaug  Depends on D11204  Differential Revision: https://phabricator.services.mozilla.com/D11205",
-    "node": "bd64f10454cc0693bb9932d6203765d005cbd970"
+    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
+    "commit_date": "2018-11-24 02:49:03",
+    "commit_message": "Bug 1508044 - Check the return values of mozIThirdPartyUtil::IsThirdPartyFoo() in IsThirdParty() inside nsChannelClassifier.cpp r=francois  Differential Revision: https://phabricator.services.mozilla.com/D12784",
+    "node": "d4db66eb83f9bae1b88fa3a900ea8159f25b41be"
   },
   "13": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 19:01:44",
-    "commit_message": "Bug 1493292 - Remove len from nsIFlavorDataProvider r=smaug  Depends on D11203  Differential Revision: https://phabricator.services.mozilla.com/D11204",
-    "node": "8c6a2b35442221490d60b2be9f50949c9fad585a"
+    "commiter_name": "Nicolas Silva <nsilva@mozilla.com>",
+    "commit_date": "2018-11-24 01:33:49",
+    "commit_message": "Bug 1494403 - Separate the Blob related apis. r=jrmuizel  This commit contains the Gecko-side changes from WebRender PR#3277:  - Dedicated DirtyRect type.  - Separate the blob image APIs from regular image ones.  Differential Revision: https://phabricator.services.mozilla.com/D12463",
+    "node": "df30b0f614c904678b72d66616a65b989f9a87e9"
   },
   "14": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 19:01:42",
-    "commit_message": "Bug 1493292 - Remove len from nsTransferable. r=smaug  Depends on D11202  Differential Revision: https://phabricator.services.mozilla.com/D11203",
-    "node": "f02e1aba84a57e121894c2c7a25352ab7f210d9c"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-24 01:33:51",
+    "commit_message": "Bug 1509495 - Update reftest annotations for changes in WR PR #3277. r=kats  Depends on D12809  Differential Revision: https://phabricator.services.mozilla.com/D12810",
+    "node": "b75eb61d2048a0a0dabeb08ad390a0286358b55e"
   },
   "15": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 19:00:09",
-    "commit_message": "Bug 1493292 - Remove aDataLen parameters from nsITransferable.setTransferData. r=smaug  Depends on D11201  Differential Revision: https://phabricator.services.mozilla.com/D11202",
-    "node": "7e2c0177115a4620627a9c15027e960116c0c394"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-24 01:32:57",
+    "commit_message": "Bug 1509495 - Update webrender to commit af2b372624db589115511b4705849a33e6acd35d (WR PR #3277). r=kats  https://github.com/servo/webrender/pull/3277  Differential Revision: https://phabricator.services.mozilla.com/D12809",
+    "node": "6d9d2397f1153e5e9062f342015f28ca3576bfee"
   },
   "16": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 18:59:56",
-    "commit_message": "Bug 1493292 - Remove aDataLen parameters from nsITransferable.getTransferData. r=smaug  Depends on D11200  Differential Revision: https://phabricator.services.mozilla.com/D11201",
-    "node": "a58e50deefdc260cef3514c1552e4355ea5a6024"
+    "commiter_name": "Sylvestre Ledru <sledru@mozilla.com>",
+    "commit_date": "2018-11-23 23:57:50",
+    "commit_message": "Bug 1508069 - Add js/src/editline to the ignore list r=andi  Differential Revision: https://phabricator.services.mozilla.com/D12804",
+    "node": "3b50a5b394b9467ba99fa0e956b53c49b66f3238"
   },
   "17": {
-    "commiter_name": "Tom Schuster <evilpies@gmail.com>",
-    "commit_date": "2018-11-20 18:59:39",
-    "commit_message": "Bug 1493292 - GetStringSize instead of aDataLen. r=mats  Differential Revision: https://phabricator.services.mozilla.com/D11200",
-    "node": "29b3f0dfc6bb418b73a9cd519241b4ec38d0efbc"
+    "commiter_name": "Andrew McCreight <continuation@gmail.com>",
+    "commit_date": "2018-11-22 02:29:25",
+    "commit_message": "Bug 1508826 - Add mach_override.  and crc32c.c to ThirdPartyPaths.txt. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D12608",
+    "node": "b4a6bd0a9e002eee161b2b7a804f56a821e82590"
   },
   "18": {
-    "commiter_name": "Brian Grinstead <bgrinstead@mozilla.com>",
-    "commit_date": "2018-11-20 19:01:48",
-    "commit_message": "Bug 1507875 - Remove the customizable ui toolbarpaletteitem binding;r=Gijs  This removes the wrapping box inside the anonymous content, and replaces the anonymous label with an ::after CSS rule that sets text based on the [title] attribute.  Because it doesn't replicate the anonymous wrapping box with light DOM: - Calling JS don't need to be updated (the child added via appendChild   is still a direct descendant of the element). - Many CSS selectors don't need to be updated (if they were targeting the   slotted children as direct descendants. However, CSS selectors that were   targeting the anonymous content directly do need to be updated, since those   nodes are removed.  Differential Revision: https://phabricator.services.mozilla.com/D12172",
-    "node": "8f7476054232c929476c1a5112bb855f6ba7612f"
+    "commiter_name": "Bogdan Tara <btara@mozilla.com>",
+    "commit_date": "2018-11-23 23:40:33",
+    "commit_message": "Merge mozilla-central to autoland.  a=merge CLOSED TREE",
+    "node": "59536376337ed2a23ebd1794d3dd2eedc79107f2"
   },
   "19": {
-    "commiter_name": "Drew Willcoxon <adw@mozilla.com>",
-    "commit_date": "2018-11-20 12:36:29",
-    "commit_message": "Bug 1507568 - Clicking a @shortcut in the urlbar popup should fill it in the input instead of visiting the site. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D12203",
-    "node": "efa49008bfc788e3354d6150eab71a7f105e3102"
+    "commiter_name": "James Willcox <snorp@snorp.net>",
+    "commit_date": "2018-11-23 22:32:40",
+    "commit_message": "Bug 1485045 - Make Java parts of GeckoView independent from build ABI r=jchen  This allows us to use the same Java code for any native platform, enabling a \"fat\" AAR.  Differential Revision: https://phabricator.services.mozilla.com/D11497",
+    "node": "0bb898d00ed7b9d1bdaf3b4320cbc2ac5bca00fc"
   }
 }
