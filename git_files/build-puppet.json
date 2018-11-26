@@ -1,63 +1,91 @@
 {
   "0": {
-    "lastChecked": "2018-11-21 02:04:18.132379"
+    "lastChecked": "2018-11-26 03:16:14.745970"
   },
   "1": {
-    "sha": "b7682969492b19cad0602439aab3bf14f0e4003d",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/b7682969492b19cad0602439aab3bf14f0e4003d",
-    "commiter_name": "Callek",
+    "sha": "85d1b7f41ec671ce8462d34aa3ff1569cabc7a5e",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/85d1b7f41ec671ce8462d34aa3ff1569cabc7a5e",
+    "commiter_name": "JohanLorenzo",
     "commiter_email": null,
-    "commit_message": "Merge pull request #298 from mozilla-releng/dlabici-backout  BUG: 1507497 - Downgrade Cryptography back to 2.3.1",
-    "commit_date": "2018-11-15 15:12:06",
+    "commit_message": "Bug 1492245 - Bump pushapkscript to 0.9.0 (#308)",
+    "commit_date": "2018-11-23 17:06:17",
     "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-27.txt",
-      "modules/buildduty_tools/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/signing_scriptworker/files/requirements.txt"
+      "modules/pushapk_scriptworker/files/requirements.txt"
     ]
   },
   "2": {
-    "sha": "a4afe238dae323f2978834c023c212f8901e0b81",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a4afe238dae323f2978834c023c212f8901e0b81",
-    "commiter_name": "Akhliskun",
+    "sha": "275b1b8c5d8222308da716407067c2e1f8fdbc97",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/275b1b8c5d8222308da716407067c2e1f8fdbc97",
+    "commiter_name": "JohanLorenzo",
     "commiter_email": null,
-    "commit_message": "Rollback the downgrade at Callek's request.",
-    "commit_date": "2018-11-15 15:10:28",
+    "commit_message": "Bug 1492245 - Bump signingscript to 9.5.1 (#307)",
+    "commit_date": "2018-11-23 14:22:02",
     "files_changed": [
-      "modules/signingserver/files/linux_requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
   "3": {
-    "sha": "972b03ad8c808329a14538eb18acd390354a0241",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/972b03ad8c808329a14538eb18acd390354a0241",
-    "commiter_name": "Akhliskun",
+    "sha": "b820c2ace1a3eb608330188e54b5a6d4b294ef8d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/b820c2ace1a3eb608330188e54b5a6d4b294ef8d",
+    "commiter_name": "JohanLorenzo",
     "commiter_email": null,
-    "commit_message": "BUG: 1507497 - Downgrade Cryptography back to 2.3.1",
-    "commit_date": "2018-11-15 15:00:31",
+    "commit_message": "Bug 1492245 - signing_scriptworker: Expose Fennec on Autograph (#306)",
+    "commit_date": "2018-11-22 16:08:35",
     "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-27.txt",
-      "modules/buildduty_tools/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
       "modules/signing_scriptworker/files/requirements.txt",
-      "modules/signingserver/files/linux_requirements.txt"
+      "modules/signing_scriptworker/templates/dep-passwords.json.erb",
+      "modules/signing_scriptworker/templates/passwords.json.erb"
     ]
   },
   "4": {
-    "sha": "e54c82bee3112a152c382d27d4fa1667a2df428c",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/e54c82bee3112a152c382d27d4fa1667a2df428c",
-    "commiter_name": "Callek",
+    "sha": "b7ed8207631f1c0fd13e2365ac726bc5d494c50d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/b7ed8207631f1c0fd13e2365ac726bc5d494c50d",
+    "commiter_name": "MihaiTabara",
     "commiter_email": null,
-    "commit_message": "Merge pull request #297 from mozilla-releng/pyup-scheduled-update-2018-11-14  Scheduled weekly dependency update for week 45",
-    "commit_date": "2018-11-15 13:18:44",
+    "commit_message": "Merge pull request #304 from tp-tc/balrogscript-remove-tools    Update balrogscript: Get rid of tools in balrog.",
+    "commit_date": "2018-11-22 11:51:05",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-27.txt",
+      "modules/balrog_scriptworker/manifests/init.pp",
+      "modules/balrog_scriptworker/manifests/settings.pp",
+      "modules/balrog_scriptworker/templates/script_config.json.erb"
+    ]
+  },
+  "5": {
+    "sha": "bb5699e7a1157144ea606508aa3f4bf35a4cb8ab",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/bb5699e7a1157144ea606508aa3f4bf35a4cb8ab",
+    "commiter_name": "klibby",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #302 from mitchhentges/bug1509144  Bug 1509144 - grant mhentges access to jumphosts",
+    "commit_date": "2018-11-21 20:36:13",
+    "files_changed": [
+      "manifests/moco-config.pp"
+    ]
+  },
+  "6": {
+    "sha": "575bcac08344ded61015819bb455ac36c76258fb",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/575bcac08344ded61015819bb455ac36c76258fb",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Bug 1509144 - grant mhentges access to jumphosts",
+    "commit_date": "2018-11-21 19:40:24",
+    "files_changed": [
+      "manifests/moco-config.pp"
+    ]
+  },
+  "7": {
+    "sha": "ba74de2a0876165d35033252c83ce505f26cf103",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ba74de2a0876165d35033252c83ce505f26cf103",
+    "commiter_name": "mutterroland",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #300 from mozilla-releng/pyup-scheduled-update-2018-11-21  Scheduled weekly dependency update for week 46",
+    "commit_date": "2018-11-21 14:38:24",
     "files_changed": [
       "modules/addon_scriptworker/files/requirements.txt",
-      "modules/balrog_scriptworker/files/requirements-27.txt",
       "modules/balrog_scriptworker/files/requirements-3.txt",
       "modules/beetmover_scriptworker/files/requirements.txt",
       "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/buildduty_tools/files/requirements.txt",
       "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/releaserunner3/files/requirements.txt",
       "modules/selfserve_agent/files/requirements.txt",
       "modules/shipit_scriptworker/files/requirements.txt",
       "modules/signing_scriptworker/files/requirements.txt",
@@ -67,541 +95,376 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "5": {
-    "sha": "0073285ea40dc7c688157032b5578db1ea0b306d",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/0073285ea40dc7c688157032b5578db1ea0b306d",
-    "commiter_name": "popadrianc",
+  "8": {
+    "sha": "2fe522f36a4073029c178c22ea0e419cd87fe875",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2fe522f36a4073029c178c22ea0e419cd87fe875",
+    "commiter_name": "mutterroland",
     "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:46",
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:45:09",
     "files_changed": [
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "6": {
-    "sha": "978cb6ece61e89f320a697affab9fa35142e7fb1",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/978cb6ece61e89f320a697affab9fa35142e7fb1",
-    "commiter_name": "popadrianc",
+  "9": {
+    "sha": "77b9289c4b8e0dcc81cd488d7b018ffbadbb2cac",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/77b9289c4b8e0dcc81cd488d7b018ffbadbb2cac",
+    "commiter_name": "mutterroland",
     "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:41",
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:45:07",
     "files_changed": [
       "modules/transparency_scriptworker/files/requirements.txt"
     ]
   },
-  "7": {
-    "sha": "1591171354d3589c6488fedd220f325ae90ee6d9",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/1591171354d3589c6488fedd220f325ae90ee6d9",
-    "commiter_name": "popadrianc",
-    "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:37",
-    "files_changed": [
-      "modules/addon_scriptworker/files/requirements.txt"
-    ]
-  },
-  "8": {
-    "sha": "6e3c3b13c9a4238adf4e6697979f4e3e8b8ac485",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/6e3c3b13c9a4238adf4e6697979f4e3e8b8ac485",
-    "commiter_name": "popadrianc",
-    "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:32",
-    "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-3.txt"
-    ]
-  },
-  "9": {
-    "sha": "30cb66d445ec3ffa0c5a5a6135f53f59778a8ef3",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/30cb66d445ec3ffa0c5a5a6135f53f59778a8ef3",
-    "commiter_name": "popadrianc",
-    "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:28",
-    "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
   "10": {
-    "sha": "f80166782de628b44293e9880b1baeb977c404e5",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/f80166782de628b44293e9880b1baeb977c404e5",
-    "commiter_name": "popadrianc",
+    "sha": "77ae30b7491c34c68e4ad98a1a62df740e4e3066",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/77ae30b7491c34c68e4ad98a1a62df740e4e3066",
+    "commiter_name": "mutterroland",
     "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:24",
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:45:05",
     "files_changed": [
-      "modules/bouncer_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
   "11": {
-    "sha": "bdc28ed238a24da5087938f5afe9c68cba8a7c54",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/bdc28ed238a24da5087938f5afe9c68cba8a7c54",
-    "commiter_name": "popadrianc",
+    "sha": "a823ed03858a5cb8448e82a71d7f556cf4939e3e",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/a823ed03858a5cb8448e82a71d7f556cf4939e3e",
+    "commiter_name": "mutterroland",
     "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:18",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "12": {
-    "sha": "0a70515f41be89bc619e2093e7e0622a65aa84f7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/0a70515f41be89bc619e2093e7e0622a65aa84f7",
-    "commiter_name": "popadrianc",
-    "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:11",
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:45:03",
     "files_changed": [
       "modules/shipit_scriptworker/files/requirements.txt"
     ]
   },
-  "13": {
-    "sha": "49e40c5480e3e5c77bcfcc38169d427ef1263e54",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/49e40c5480e3e5c77bcfcc38169d427ef1263e54",
-    "commiter_name": "popadrianc",
+  "12": {
+    "sha": "bb73d0f535d07e002baaa70af9ac78f59f0ead8e",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/bb73d0f535d07e002baaa70af9ac78f59f0ead8e",
+    "commiter_name": "mutterroland",
     "commiter_email": null,
-    "commit_message": "revert taskcluster-urls from 11.0.0 to 10.1.0",
-    "commit_date": "2018-11-14 15:05:04",
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:45:02",
     "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
+  },
+  "13": {
+    "sha": "8705bc5e1dc658c8728c4bd0939672e08947bc2d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/8705bc5e1dc658c8728c4bd0939672e08947bc2d",
+    "commiter_name": "mutterroland",
+    "commiter_email": null,
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:45:00",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
   "14": {
-    "sha": "0d97de4155f9972e49844ddd9fceb5ef5dfd5e0c",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/0d97de4155f9972e49844ddd9fceb5ef5dfd5e0c",
-    "commiter_name": "popadrianc",
+    "sha": "38a8f9f0d54b62c90a723d55712a2b6d420ce3f0",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/38a8f9f0d54b62c90a723d55712a2b6d420ce3f0",
+    "commiter_name": "mutterroland",
     "commiter_email": null,
-    "commit_message": "revert setuptools from 40.6.2 to 40.5.0",
-    "commit_date": "2018-11-14 14:40:40",
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:44:58",
     "files_changed": [
-      "modules/signingserver/files/linux_requirements.txt"
+      "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
   "15": {
-    "sha": "301df7b450d8f165fbe2766a9ecb807f222edc71",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/301df7b450d8f165fbe2766a9ecb807f222edc71",
+    "sha": "ca61b2e86e5ff147a373bff00c31b6f6b5268b4e",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ca61b2e86e5ff147a373bff00c31b6f6b5268b4e",
+    "commiter_name": "mutterroland",
+    "commiter_email": null,
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:44:56",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-3.txt"
+    ]
+  },
+  "16": {
+    "sha": "aa038b920ec81a768fb3a43cd9107f970df9f223",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/aa038b920ec81a768fb3a43cd9107f970df9f223",
+    "commiter_name": "mutterroland",
+    "commiter_email": null,
+    "commit_message": "Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.",
+    "commit_date": "2018-11-21 13:44:54",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt"
+    ]
+  },
+  "17": {
+    "sha": "02b4c6d526433dde41f351541b66c2890769dd36",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/02b4c6d526433dde41f351541b66c2890769dd36",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update setuptools from 40.5.0 to 40.6.2",
-    "commit_date": "2018-11-14 13:05:13",
+    "commit_message": "Update cryptography from 2.4.1 to 2.4.2",
+    "commit_date": "2018-11-21 13:05:57",
     "files_changed": [
       "modules/signingserver/files/linux_requirements.txt"
     ]
   },
-  "16": {
-    "sha": "a4f7dedbafe221d29d09157c79db76274c32e8d3",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a4f7dedbafe221d29d09157c79db76274c32e8d3",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update datadog from 0.23.0 to 0.24.0",
-    "commit_date": "2018-11-14 13:05:12",
-    "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
-    ]
-  },
-  "17": {
-    "sha": "43dc5ac16112174d1d85c39a19ffe60729ff4b15",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/43dc5ac16112174d1d85c39a19ffe60729ff4b15",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update webob from 1.8.3 to 1.8.4",
-    "commit_date": "2018-11-14 13:05:10",
-    "files_changed": [
-      "modules/signingserver/files/mac_requirements.txt"
-    ]
-  },
   "18": {
-    "sha": "0669eb5eb1dd7e9acef8d4c25eba8cca8e8fcb95",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/0669eb5eb1dd7e9acef8d4c25eba8cca8e8fcb95",
+    "sha": "dc687283a197c33d66888abdaa91bf0a62824dea",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/dc687283a197c33d66888abdaa91bf0a62824dea",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update webob from 1.8.3 to 1.8.4",
-    "commit_date": "2018-11-14 13:05:09",
+    "commit_message": "Update setuptools from 40.5.0 to 40.6.2",
+    "commit_date": "2018-11-21 13:05:56",
     "files_changed": [
       "modules/signingserver/files/linux_requirements.txt"
     ]
   },
   "19": {
-    "sha": "251ce6e45995f43349f2634de8d93b1ed435d073",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/251ce6e45995f43349f2634de8d93b1ed435d073",
+    "sha": "3f307e388142530939ac72ea08eaff9e9e5527d3",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/3f307e388142530939ac72ea08eaff9e9e5527d3",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update webob from 1.8.3 to 1.8.4",
-    "commit_date": "2018-11-14 13:05:07",
+    "commit_message": "Update redis from 2.10.6 to 3.0.1",
+    "commit_date": "2018-11-21 13:05:54",
     "files_changed": [
-      "modules/selfserve_agent/files/requirements.txt"
+      "modules/signingserver/files/mac_requirements.txt"
     ]
   },
   "20": {
-    "sha": "394234d95ec0426f9dc2caa1d4ec094107997321",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/394234d95ec0426f9dc2caa1d4ec094107997321",
+    "sha": "152b12e8c7911f07c09bc3872e28b636c5cee1a8",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/152b12e8c7911f07c09bc3872e28b636c5cee1a8",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update sqlalchemy from 1.2.13 to 1.2.14",
-    "commit_date": "2018-11-14 13:05:06",
-    "files_changed": [
-      "modules/selfserve_agent/files/requirements.txt"
-    ]
-  },
-  "21": {
-    "sha": "fd1ca43fab8903f13c29174a2792b153f29672f4",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/fd1ca43fab8903f13c29174a2792b153f29672f4",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update matplotlib from 3.0.1 to 3.0.2",
-    "commit_date": "2018-11-14 13:05:04",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "22": {
-    "sha": "f84dad71d0376ad6079ef606ea717edf1c6a5b68",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/f84dad71d0376ad6079ef606ea717edf1c6a5b68",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update httplib2 from 0.11.3 to 0.12.0",
-    "commit_date": "2018-11-14 13:05:01",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "23": {
-    "sha": "940a0643cc41d827b402a98e12fddef89f7b662a",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/940a0643cc41d827b402a98e12fddef89f7b662a",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update google-auth from 1.5.1 to 1.6.1",
-    "commit_date": "2018-11-14 13:05:00",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "24": {
-    "sha": "976678f43ee6699564159d640e57eae388ca4298",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/976678f43ee6699564159d640e57eae388ca4298",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update mozilla-version from 0.3.0 to 0.3.1",
-    "commit_date": "2018-11-14 13:04:58",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "25": {
-    "sha": "8988c2830ea4191e4595330a5343daceab0110f1",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/8988c2830ea4191e4595330a5343daceab0110f1",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update mozilla-version from 0.3.0 to 0.3.1",
-    "commit_date": "2018-11-14 13:04:57",
-    "files_changed": [
-      "modules/bouncer_scriptworker/files/requirements.txt"
-    ]
-  },
-  "26": {
-    "sha": "48484d1af727b1b33cb10c1f16b392e0406f2b33",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/48484d1af727b1b33cb10c1f16b392e0406f2b33",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update mozilla-version from 0.3.0 to 0.3.1",
-    "commit_date": "2018-11-14 13:04:55",
-    "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
-  "27": {
-    "sha": "75b55febf9e83c6b014168f501ef0f4cd03ec19d",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/75b55febf9e83c6b014168f501ef0f4cd03ec19d",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update botocore from 1.12.39 to 1.12.44",
-    "commit_date": "2018-11-14 13:04:54",
-    "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
-  "28": {
-    "sha": "ffe16d9e63c4f2d2b5766e468a1423b6e2f33d10",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/ffe16d9e63c4f2d2b5766e468a1423b6e2f33d10",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update boto3 from 1.9.39 to 1.9.44",
-    "commit_date": "2018-11-14 13:04:52",
-    "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
-  "29": {
-    "sha": "8d51ef84a87adadfca6da2de75e56cceb75443bf",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/8d51ef84a87adadfca6da2de75e56cceb75443bf",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:51",
+    "commit_message": "Update redis from 2.10.6 to 3.0.1",
+    "commit_date": "2018-11-21 13:05:53",
     "files_changed": [
       "modules/signingserver/files/linux_requirements.txt"
     ]
   },
-  "30": {
-    "sha": "022c4e1a0cf4c4cacd83fd3fe6d36a0fb85568af",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/022c4e1a0cf4c4cacd83fd3fe6d36a0fb85568af",
+  "21": {
+    "sha": "1222b481ff37fe0448bc25e037d0e39d67004ea2",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/1222b481ff37fe0448bc25e037d0e39d67004ea2",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:49",
+    "commit_message": "Update redis from 2.10.6 to 3.0.1",
+    "commit_date": "2018-11-21 13:05:51",
     "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
+      "modules/selfserve_agent/files/requirements.txt"
     ]
   },
-  "31": {
-    "sha": "7a6e1c42384d02e7398c587e06aaef6254596171",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/7a6e1c42384d02e7398c587e06aaef6254596171",
+  "22": {
+    "sha": "7c17696752f451fcb5fafab72f2d3bf410966727",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/7c17696752f451fcb5fafab72f2d3bf410966727",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:48",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "32": {
-    "sha": "55b4956e24a87e59915563359d1c03dcff9458f0",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/55b4956e24a87e59915563359d1c03dcff9458f0",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:46",
-    "files_changed": [
-      "modules/buildduty_tools/files/requirements.txt"
-    ]
-  },
-  "33": {
-    "sha": "a76c9e5265593d74f4e9966f5c0d17a084e697f4",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a76c9e5265593d74f4e9966f5c0d17a084e697f4",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update cryptography from 2.3.1 to 2.4.1",
-    "commit_date": "2018-11-14 13:04:45",
-    "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-27.txt"
-    ]
-  },
-  "34": {
-    "sha": "b3a4914dcefa8d473297a33343fc4d9f364239a5",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/b3a4914dcefa8d473297a33343fc4d9f364239a5",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:43",
-    "files_changed": [
-      "modules/tree_scriptworker/files/requirements.txt"
-    ]
-  },
-  "35": {
-    "sha": "7f404e1bae6e7b27be3e7d27df4617093ca43ba7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/7f404e1bae6e7b27be3e7d27df4617093ca43ba7",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:42",
-    "files_changed": [
-      "modules/transparency_scriptworker/files/requirements.txt"
-    ]
-  },
-  "36": {
-    "sha": "4eb1c176d86b0079d2b25a0ecfb826b5fa4a5365",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/4eb1c176d86b0079d2b25a0ecfb826b5fa4a5365",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:41",
-    "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
-    ]
-  },
-  "37": {
-    "sha": "2221c9aa761cf1baed10635e217aded67f8cf180",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/2221c9aa761cf1baed10635e217aded67f8cf180",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:39",
-    "files_changed": [
-      "modules/shipit_scriptworker/files/requirements.txt"
-    ]
-  },
-  "38": {
-    "sha": "e168037180bda9eb92ac2069bb23e01ec3342fba",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/e168037180bda9eb92ac2069bb23e01ec3342fba",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:37",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "39": {
-    "sha": "f26289c3678b2a73f5b24893a765a520d58e3697",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/f26289c3678b2a73f5b24893a765a520d58e3697",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:36",
-    "files_changed": [
-      "modules/bouncer_scriptworker/files/requirements.txt"
-    ]
-  },
-  "40": {
-    "sha": "2a5419d924c500adcb9a159b072271f572ceaaa0",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/2a5419d924c500adcb9a159b072271f572ceaaa0",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:34",
+    "commit_message": "Update botocore from 1.12.44 to 1.12.49",
+    "commit_date": "2018-11-21 13:05:50",
     "files_changed": [
       "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
-  "41": {
-    "sha": "e553f8f2cae8827775d5f83d40c4a36485fcef68",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/e553f8f2cae8827775d5f83d40c4a36485fcef68",
+  "23": {
+    "sha": "9d52ea9e7f47a110377d8df7e2c1fab73cd28637",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/9d52ea9e7f47a110377d8df7e2c1fab73cd28637",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update boto3 from 1.9.44 to 1.9.49",
+    "commit_date": "2018-11-21 13:05:49",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
+  },
+  "24": {
+    "sha": "e26d5b3268fd214d950ef9c599dd52cf4fe53ab1",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/e26d5b3268fd214d950ef9c599dd52cf4fe53ab1",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:33",
+    "commit_date": "2018-11-21 13:05:47",
+    "files_changed": [
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
+  },
+  "25": {
+    "sha": "c7e3daa0b2297e46f63bbd9aceff8f21cd342f0e",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c7e3daa0b2297e46f63bbd9aceff8f21cd342f0e",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-21 13:05:46",
+    "files_changed": [
+      "modules/transparency_scriptworker/files/requirements.txt"
+    ]
+  },
+  "26": {
+    "sha": "06cbf5d164552b6c801a35acf5f03654d6f03290",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/06cbf5d164552b6c801a35acf5f03654d6f03290",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-21 13:05:44",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
+  },
+  "27": {
+    "sha": "7737e7ab5cdc560abe4462d0cde849a7a1ce68b3",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/7737e7ab5cdc560abe4462d0cde849a7a1ce68b3",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-21 13:05:43",
+    "files_changed": [
+      "modules/shipit_scriptworker/files/requirements.txt"
+    ]
+  },
+  "28": {
+    "sha": "b338b61f75e66fa631f1cb624cd875f29f72d8ca",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/b338b61f75e66fa631f1cb624cd875f29f72d8ca",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-21 13:05:41",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt"
+    ]
+  },
+  "29": {
+    "sha": "b3a02a5af98dd3b5ec1e081bd9cf48d7416fd561",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/b3a02a5af98dd3b5ec1e081bd9cf48d7416fd561",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-21 13:05:39",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
+  },
+  "30": {
+    "sha": "919cd6ef92fb430313a6213b35dda64b72c037d3",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/919cd6ef92fb430313a6213b35dda64b72c037d3",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-21 13:05:38",
+    "files_changed": [
+      "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
+  },
+  "31": {
+    "sha": "8b9ac24ac6e30bbbc333908fa2f65946eeea59d5",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/8b9ac24ac6e30bbbc333908fa2f65946eeea59d5",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-21 13:05:36",
     "files_changed": [
       "modules/balrog_scriptworker/files/requirements-3.txt"
     ]
   },
-  "42": {
-    "sha": "f455a268b654d273aa60af0660edd6c0a53620cd",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/f455a268b654d273aa60af0660edd6c0a53620cd",
+  "32": {
+    "sha": "78f1dc9f3e5cf797ac3678f9d4cde86eecc45a0f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/78f1dc9f3e5cf797ac3678f9d4cde86eecc45a0f",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
     "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
-    "commit_date": "2018-11-14 13:04:31",
+    "commit_date": "2018-11-21 13:05:35",
     "files_changed": [
       "modules/addon_scriptworker/files/requirements.txt"
     ]
   },
-  "43": {
-    "sha": "2c9ca48c0d2bc83506cfd98a3ab502d735176766",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/2c9ca48c0d2bc83506cfd98a3ab502d735176766",
+  "33": {
+    "sha": "de2e7f356981ed54f11975c262a61a41a169122e",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/de2e7f356981ed54f11975c262a61a41a169122e",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:30",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:33",
     "files_changed": [
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "44": {
-    "sha": "b6ed370d770d5559a9775927635abe5f7646bcb7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/b6ed370d770d5559a9775927635abe5f7646bcb7",
+  "34": {
+    "sha": "512cf377fcd61b56db6693af9ede2ed9d76c6920",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/512cf377fcd61b56db6693af9ede2ed9d76c6920",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:28",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:31",
     "files_changed": [
       "modules/transparency_scriptworker/files/requirements.txt"
     ]
   },
-  "45": {
-    "sha": "adac4b661bed951ebabe28cadeeaa5eed7c822fa",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/adac4b661bed951ebabe28cadeeaa5eed7c822fa",
+  "35": {
+    "sha": "6d8a66dbda9f53339c41e9d29d430f23304f5b88",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/6d8a66dbda9f53339c41e9d29d430f23304f5b88",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:27",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:29",
     "files_changed": [
       "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "46": {
-    "sha": "b722735f1e7c8da5f4d4529d4b8c52b97d34e7b3",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/b722735f1e7c8da5f4d4529d4b8c52b97d34e7b3",
+  "36": {
+    "sha": "0e24ece663d47148be4014cb46b9feedd99ef682",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/0e24ece663d47148be4014cb46b9feedd99ef682",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:25",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:27",
     "files_changed": [
       "modules/shipit_scriptworker/files/requirements.txt"
     ]
   },
-  "47": {
-    "sha": "d279999046132aa59c3076d9ccb9f6649ce6a27b",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/d279999046132aa59c3076d9ccb9f6649ce6a27b",
+  "37": {
+    "sha": "f091ebaa029185290036221e6dc4820003aa172d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/f091ebaa029185290036221e6dc4820003aa172d",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:24",
-    "files_changed": [
-      "modules/releaserunner3/files/requirements.txt"
-    ]
-  },
-  "48": {
-    "sha": "b3041a63b3f5a30b6361a142d7cc15c354b4c96a",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/b3041a63b3f5a30b6361a142d7cc15c354b4c96a",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:23",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:26",
     "files_changed": [
       "modules/pushapk_scriptworker/files/requirements.txt"
     ]
   },
-  "49": {
-    "sha": "6356e97142a696e0471f33748969badefef84b21",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/6356e97142a696e0471f33748969badefef84b21",
+  "38": {
+    "sha": "b6eb6ab31fc653be4bcf2d8c86f20d124bbc0bb4",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/b6eb6ab31fc653be4bcf2d8c86f20d124bbc0bb4",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:21",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:24",
     "files_changed": [
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "50": {
-    "sha": "75cd280eae11bd252e346bc628097dfd02f2422e",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/75cd280eae11bd252e346bc628097dfd02f2422e",
+  "39": {
+    "sha": "d68856cb1047006a4e21f1c0be41019f76471a48",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/d68856cb1047006a4e21f1c0be41019f76471a48",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:20",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:23",
     "files_changed": [
       "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
-  "51": {
-    "sha": "ab0db5d22d1c6a867da9fd59d4a3e59c1805dccc",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/ab0db5d22d1c6a867da9fd59d4a3e59c1805dccc",
+  "40": {
+    "sha": "d77dd2e0c085026ceb682bcfb31edd56a5cf10b6",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/d77dd2e0c085026ceb682bcfb31edd56a5cf10b6",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:18",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:21",
     "files_changed": [
       "modules/balrog_scriptworker/files/requirements-3.txt"
     ]
   },
-  "52": {
-    "sha": "a501885b6fc2610dd91220c1407ce85dbe213b60",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a501885b6fc2610dd91220c1407ce85dbe213b60",
+  "41": {
+    "sha": "7225a6e155e72bc7ebb02214ecd9f3b16f67832d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/7225a6e155e72bc7ebb02214ecd9f3b16f67832d",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:17",
-    "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-27.txt"
-    ]
-  },
-  "53": {
-    "sha": "13e22b105d2d20cade96f233dca9eb73162542d8",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/13e22b105d2d20cade96f233dca9eb73162542d8",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update requests from 2.20.0 to 2.20.1",
-    "commit_date": "2018-11-14 13:04:15",
+    "commit_message": "Update multidict from 4.4.2 to 4.5.0",
+    "commit_date": "2018-11-21 13:05:20",
     "files_changed": [
       "modules/addon_scriptworker/files/requirements.txt"
     ]

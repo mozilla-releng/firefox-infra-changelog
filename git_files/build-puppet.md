@@ -1,59 +1,47 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2018-11-14 04:03:44.528699
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2018-11-19 05:15:53.601441
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
-|53|Callek|Merge pull request #298 from mozilla-releng/dlabici-backout  BUG: 1507497 - Downgrade Cryptography back to 2.3.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/b7682969492b19cad0602439aab3bf14f0e4003d)|2018-11-15 15:12:06
-|52|Akhliskun|Rollback the downgrade at Callek's request.|[URL](https://github.com/mozilla-releng/build-puppet/commit/a4afe238dae323f2978834c023c212f8901e0b81)|2018-11-15 15:10:28
-|51|Akhliskun|BUG: 1507497 - Downgrade Cryptography back to 2.3.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/972b03ad8c808329a14538eb18acd390354a0241)|2018-11-15 15:00:31
-|50|Callek|Merge pull request #297 from mozilla-releng/pyup-scheduled-update-2018-11-14  Scheduled weekly dependency update for week 45|[URL](https://github.com/mozilla-releng/build-puppet/commit/e54c82bee3112a152c382d27d4fa1667a2df428c)|2018-11-15 13:18:44
-|49|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/0073285ea40dc7c688157032b5578db1ea0b306d)|2018-11-14 15:05:46
-|48|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/978cb6ece61e89f320a697affab9fa35142e7fb1)|2018-11-14 15:05:41
-|47|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/1591171354d3589c6488fedd220f325ae90ee6d9)|2018-11-14 15:05:37
-|46|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/6e3c3b13c9a4238adf4e6697979f4e3e8b8ac485)|2018-11-14 15:05:32
-|45|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/30cb66d445ec3ffa0c5a5a6135f53f59778a8ef3)|2018-11-14 15:05:28
-|44|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/f80166782de628b44293e9880b1baeb977c404e5)|2018-11-14 15:05:24
-|43|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/bdc28ed238a24da5087938f5afe9c68cba8a7c54)|2018-11-14 15:05:18
-|42|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0  revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/0a70515f41be89bc619e2093e7e0622a65aa84f7)|2018-11-14 15:05:11
-|41|popadrianc|revert taskcluster-urls from 11.0.0 to 10.1.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/49e40c5480e3e5c77bcfcc38169d427ef1263e54)|2018-11-14 15:05:04
-|40|popadrianc|revert setuptools from 40.6.2 to 40.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/0d97de4155f9972e49844ddd9fceb5ef5dfd5e0c)|2018-11-14 14:40:40
-|39|pyup-bot|Update setuptools from 40.5.0 to 40.6.2|[URL](https://github.com/mozilla-releng/build-puppet/commit/301df7b450d8f165fbe2766a9ecb807f222edc71)|2018-11-14 13:05:13
-|38|pyup-bot|Update datadog from 0.23.0 to 0.24.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/a4f7dedbafe221d29d09157c79db76274c32e8d3)|2018-11-14 13:05:12
-|37|pyup-bot|Update webob from 1.8.3 to 1.8.4|[URL](https://github.com/mozilla-releng/build-puppet/commit/43dc5ac16112174d1d85c39a19ffe60729ff4b15)|2018-11-14 13:05:10
-|36|pyup-bot|Update webob from 1.8.3 to 1.8.4|[URL](https://github.com/mozilla-releng/build-puppet/commit/0669eb5eb1dd7e9acef8d4c25eba8cca8e8fcb95)|2018-11-14 13:05:09
-|35|pyup-bot|Update webob from 1.8.3 to 1.8.4|[URL](https://github.com/mozilla-releng/build-puppet/commit/251ce6e45995f43349f2634de8d93b1ed435d073)|2018-11-14 13:05:07
-|34|pyup-bot|Update sqlalchemy from 1.2.13 to 1.2.14|[URL](https://github.com/mozilla-releng/build-puppet/commit/394234d95ec0426f9dc2caa1d4ec094107997321)|2018-11-14 13:05:06
-|33|pyup-bot|Update matplotlib from 3.0.1 to 3.0.2|[URL](https://github.com/mozilla-releng/build-puppet/commit/fd1ca43fab8903f13c29174a2792b153f29672f4)|2018-11-14 13:05:04
-|32|pyup-bot|Update httplib2 from 0.11.3 to 0.12.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/f84dad71d0376ad6079ef606ea717edf1c6a5b68)|2018-11-14 13:05:01
-|31|pyup-bot|Update google-auth from 1.5.1 to 1.6.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/940a0643cc41d827b402a98e12fddef89f7b662a)|2018-11-14 13:05:00
-|30|pyup-bot|Update mozilla-version from 0.3.0 to 0.3.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/976678f43ee6699564159d640e57eae388ca4298)|2018-11-14 13:04:58
-|29|pyup-bot|Update mozilla-version from 0.3.0 to 0.3.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/8988c2830ea4191e4595330a5343daceab0110f1)|2018-11-14 13:04:57
-|28|pyup-bot|Update mozilla-version from 0.3.0 to 0.3.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/48484d1af727b1b33cb10c1f16b392e0406f2b33)|2018-11-14 13:04:55
-|27|pyup-bot|Update botocore from 1.12.39 to 1.12.44|[URL](https://github.com/mozilla-releng/build-puppet/commit/75b55febf9e83c6b014168f501ef0f4cd03ec19d)|2018-11-14 13:04:54
-|26|pyup-bot|Update boto3 from 1.9.39 to 1.9.44|[URL](https://github.com/mozilla-releng/build-puppet/commit/ffe16d9e63c4f2d2b5766e468a1423b6e2f33d10)|2018-11-14 13:04:52
-|25|pyup-bot|Update cryptography from 2.3.1 to 2.4.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/8d51ef84a87adadfca6da2de75e56cceb75443bf)|2018-11-14 13:04:51
-|24|pyup-bot|Update cryptography from 2.3.1 to 2.4.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/022c4e1a0cf4c4cacd83fd3fe6d36a0fb85568af)|2018-11-14 13:04:49
-|23|pyup-bot|Update cryptography from 2.3.1 to 2.4.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/7a6e1c42384d02e7398c587e06aaef6254596171)|2018-11-14 13:04:48
-|22|pyup-bot|Update cryptography from 2.3.1 to 2.4.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/55b4956e24a87e59915563359d1c03dcff9458f0)|2018-11-14 13:04:46
-|21|pyup-bot|Update cryptography from 2.3.1 to 2.4.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/a76c9e5265593d74f4e9966f5c0d17a084e697f4)|2018-11-14 13:04:45
-|20|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/b3a4914dcefa8d473297a33343fc4d9f364239a5)|2018-11-14 13:04:43
-|19|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/7f404e1bae6e7b27be3e7d27df4617093ca43ba7)|2018-11-14 13:04:42
-|18|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/4eb1c176d86b0079d2b25a0ecfb826b5fa4a5365)|2018-11-14 13:04:41
-|17|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/2221c9aa761cf1baed10635e217aded67f8cf180)|2018-11-14 13:04:39
-|16|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/e168037180bda9eb92ac2069bb23e01ec3342fba)|2018-11-14 13:04:37
-|15|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/f26289c3678b2a73f5b24893a765a520d58e3697)|2018-11-14 13:04:36
-|14|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/2a5419d924c500adcb9a159b072271f572ceaaa0)|2018-11-14 13:04:34
-|13|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/e553f8f2cae8827775d5f83d40c4a36485fcef68)|2018-11-14 13:04:33
-|12|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/f455a268b654d273aa60af0660edd6c0a53620cd)|2018-11-14 13:04:31
-|11|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/2c9ca48c0d2bc83506cfd98a3ab502d735176766)|2018-11-14 13:04:30
-|10|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/b6ed370d770d5559a9775927635abe5f7646bcb7)|2018-11-14 13:04:28
-|9|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/adac4b661bed951ebabe28cadeeaa5eed7c822fa)|2018-11-14 13:04:27
-|8|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/b722735f1e7c8da5f4d4529d4b8c52b97d34e7b3)|2018-11-14 13:04:25
-|7|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/d279999046132aa59c3076d9ccb9f6649ce6a27b)|2018-11-14 13:04:24
-|6|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/b3041a63b3f5a30b6361a142d7cc15c354b4c96a)|2018-11-14 13:04:23
-|5|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/6356e97142a696e0471f33748969badefef84b21)|2018-11-14 13:04:21
-|4|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/75cd280eae11bd252e346bc628097dfd02f2422e)|2018-11-14 13:04:20
-|3|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/ab0db5d22d1c6a867da9fd59d4a3e59c1805dccc)|2018-11-14 13:04:18
-|2|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/a501885b6fc2610dd91220c1407ce85dbe213b60)|2018-11-14 13:04:17
-|1|pyup-bot|Update requests from 2.20.0 to 2.20.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/13e22b105d2d20cade96f233dca9eb73162542d8)|2018-11-14 13:04:15
+|41|JohanLorenzo|Bug 1492245 - Bump pushapkscript to 0.9.0 (#308)|[URL](https://github.com/mozilla-releng/build-puppet/commit/85d1b7f41ec671ce8462d34aa3ff1569cabc7a5e)|2018-11-23 17:06:17
+|40|JohanLorenzo|Bug 1492245 - Bump signingscript to 9.5.1 (#307)|[URL](https://github.com/mozilla-releng/build-puppet/commit/275b1b8c5d8222308da716407067c2e1f8fdbc97)|2018-11-23 14:22:02
+|39|JohanLorenzo|Bug 1492245 - signing_scriptworker: Expose Fennec on Autograph (#306)|[URL](https://github.com/mozilla-releng/build-puppet/commit/b820c2ace1a3eb608330188e54b5a6d4b294ef8d)|2018-11-22 16:08:35
+|38|MihaiTabara|Merge pull request #304 from tp-tc/balrogscript-remove-tools    Update balrogscript: Get rid of tools in balrog.|[URL](https://github.com/mozilla-releng/build-puppet/commit/b7ed8207631f1c0fd13e2365ac726bc5d494c50d)|2018-11-22 11:51:05
+|37|klibby|Merge pull request #302 from mitchhentges/bug1509144  Bug 1509144 - grant mhentges access to jumphosts|[URL](https://github.com/mozilla-releng/build-puppet/commit/bb5699e7a1157144ea606508aa3f4bf35a4cb8ab)|2018-11-21 20:36:13
+|36|mitchhentges|Bug 1509144 - grant mhentges access to jumphosts|[URL](https://github.com/mozilla-releng/build-puppet/commit/575bcac08344ded61015819bb455ac36c76258fb)|2018-11-21 19:40:24
+|35|mutterroland|Merge pull request #300 from mozilla-releng/pyup-scheduled-update-2018-11-21  Scheduled weekly dependency update for week 46|[URL](https://github.com/mozilla-releng/build-puppet/commit/ba74de2a0876165d35033252c83ce505f26cf103)|2018-11-21 14:38:24
+|34|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/2fe522f36a4073029c178c22ea0e419cd87fe875)|2018-11-21 13:45:09
+|33|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/77b9289c4b8e0dcc81cd488d7b018ffbadbb2cac)|2018-11-21 13:45:07
+|32|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/77ae30b7491c34c68e4ad98a1a62df740e4e3066)|2018-11-21 13:45:05
+|31|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/a823ed03858a5cb8448e82a71d7f556cf4939e3e)|2018-11-21 13:45:03
+|30|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/bb73d0f535d07e002baaa70af9ac78f59f0ead8e)|2018-11-21 13:45:02
+|29|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/8705bc5e1dc658c8728c4bd0939672e08947bc2d)|2018-11-21 13:45:00
+|28|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/38a8f9f0d54b62c90a723d55712a2b6d420ce3f0)|2018-11-21 13:44:58
+|27|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/ca61b2e86e5ff147a373bff00c31b6f6b5268b4e)|2018-11-21 13:44:56
+|26|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/aa038b920ec81a768fb3a43cd9107f970df9f223)|2018-11-21 13:44:54
+|25|pyup-bot|Update cryptography from 2.4.1 to 2.4.2|[URL](https://github.com/mozilla-releng/build-puppet/commit/02b4c6d526433dde41f351541b66c2890769dd36)|2018-11-21 13:05:57
+|24|pyup-bot|Update setuptools from 40.5.0 to 40.6.2|[URL](https://github.com/mozilla-releng/build-puppet/commit/dc687283a197c33d66888abdaa91bf0a62824dea)|2018-11-21 13:05:56
+|23|pyup-bot|Update redis from 2.10.6 to 3.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/3f307e388142530939ac72ea08eaff9e9e5527d3)|2018-11-21 13:05:54
+|22|pyup-bot|Update redis from 2.10.6 to 3.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/152b12e8c7911f07c09bc3872e28b636c5cee1a8)|2018-11-21 13:05:53
+|21|pyup-bot|Update redis from 2.10.6 to 3.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/1222b481ff37fe0448bc25e037d0e39d67004ea2)|2018-11-21 13:05:51
+|20|pyup-bot|Update botocore from 1.12.44 to 1.12.49|[URL](https://github.com/mozilla-releng/build-puppet/commit/7c17696752f451fcb5fafab72f2d3bf410966727)|2018-11-21 13:05:50
+|19|pyup-bot|Update boto3 from 1.9.44 to 1.9.49|[URL](https://github.com/mozilla-releng/build-puppet/commit/9d52ea9e7f47a110377d8df7e2c1fab73cd28637)|2018-11-21 13:05:49
+|18|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/e26d5b3268fd214d950ef9c599dd52cf4fe53ab1)|2018-11-21 13:05:47
+|17|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/c7e3daa0b2297e46f63bbd9aceff8f21cd342f0e)|2018-11-21 13:05:46
+|16|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/06cbf5d164552b6c801a35acf5f03654d6f03290)|2018-11-21 13:05:44
+|15|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/7737e7ab5cdc560abe4462d0cde849a7a1ce68b3)|2018-11-21 13:05:43
+|14|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/b338b61f75e66fa631f1cb624cd875f29f72d8ca)|2018-11-21 13:05:41
+|13|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/b3a02a5af98dd3b5ec1e081bd9cf48d7416fd561)|2018-11-21 13:05:39
+|12|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/919cd6ef92fb430313a6213b35dda64b72c037d3)|2018-11-21 13:05:38
+|11|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/8b9ac24ac6e30bbbc333908fa2f65946eeea59d5)|2018-11-21 13:05:36
+|10|pyup-bot|Update taskcluster-urls from 10.1.0 to 11.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/78f1dc9f3e5cf797ac3678f9d4cde86eecc45a0f)|2018-11-21 13:05:35
+|9|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/de2e7f356981ed54f11975c262a61a41a169122e)|2018-11-21 13:05:33
+|8|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/512cf377fcd61b56db6693af9ede2ed9d76c6920)|2018-11-21 13:05:31
+|7|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/6d8a66dbda9f53339c41e9d29d430f23304f5b88)|2018-11-21 13:05:29
+|6|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/0e24ece663d47148be4014cb46b9feedd99ef682)|2018-11-21 13:05:27
+|5|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/f091ebaa029185290036221e6dc4820003aa172d)|2018-11-21 13:05:26
+|4|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/b6eb6ab31fc653be4bcf2d8c86f20d124bbc0bb4)|2018-11-21 13:05:24
+|3|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/d68856cb1047006a4e21f1c0be41019f76471a48)|2018-11-21 13:05:23
+|2|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/d77dd2e0c085026ceb682bcfb31edd56a5cf10b6)|2018-11-21 13:05:21
+|1|pyup-bot|Update multidict from 4.4.2 to 4.5.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/7225a6e155e72bc7ebb02214ecd9f3b16f67832d)|2018-11-21 13:05:20
 
 

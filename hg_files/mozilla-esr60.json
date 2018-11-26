@@ -1,122 +1,122 @@
 {
   "0": {
+    "commiter_name": "Gregory Szorc <gps@mozilla.com>",
+    "commit_date": "2018-06-08 02:05:58",
+    "commit_message": "Bug 1467605 - Disable processing of fetch dependencies; r=glandium a=tomprince  90dca0906337 accidentally broke `mach artifact toolchain --from-build` because that code is attempting to load toolchain tasks in isolation. The new \"use_fetches\" transform added to toolchain tasks requires that \"fetch\" tasks are already processed and their references are available to toolchain tasks.  This commit adds a mechanism to effectively disable the \"use_fetches\" transform when called by `mach artifact toolchain`. It is a hack. I suspect future planned work around artifacts/fetches will necessitate additional changes to the `mach artifact toolchain` code. But this can be deferred to a later day: this commit unbusts `mach artifact toolchain` and isn't super hacky, so it seems more reasonable than backing out fetch tasks completely.  Differential Revision: https://phabricator.services.mozilla.com/D1588",
+    "node": "a23dce703d2b616e678f7a72967075f90d650032"
+  },
+  "1": {
     "commiter_name": "Magnus Melin <mkmelin+mozilla@iki.fi>",
     "commit_date": "2018-11-19 21:55:32",
     "commit_message": "Bug 1507907 - Null check result of CFDateFormatterCreate. r=gandalf, a=jcristau",
     "node": "8d50553b267a8c38d2fd1c0a38c14bd1b32e0fdb"
   },
-  "1": {
+  "2": {
     "commiter_name": "Stephen A Pohl <spohl.mozilla.bugs@gmail.com>",
     "commit_date": "2018-11-20 09:48:00",
     "commit_message": "Bug 1445943 - Add Enterprise Policy support for macOS to ESR. This includes patches in bug 1445943, bug 1497408, bug 1497948, bug 1498032. r=mstange,felipe,glandium,spohl, a=lizzard",
     "node": "b1ece767c018300c56363f030f10cfc81516f4ba"
   },
-  "2": {
+  "3": {
     "commiter_name": "Magnus Melin <mkmelin+mozilla@iki.fi>",
     "commit_date": "2018-11-14 14:55:22",
     "commit_message": "Bug 1506390 - Ensure the default permissions do not intefere with the permission tests that assume no defaults. r=johannh, a=test-only DONTBUILD",
     "node": "2d3326755541b844e6c193c3e839d4fb91236444"
   },
-  "3": {
+  "4": {
     "commiter_name": "Magnus Melin <mkmelin+mozilla@iki.fi>",
     "commit_date": "2018-11-19 21:55:32",
     "commit_message": "Bug 1507907 - null check result of CFDateFormatterCreate. r=gandalf a=jorgk DONTBUILD",
     "node": "6eb715bb747cb405c647dac8948ef6b026fb2919"
   },
-  "4": {
+  "5": {
     "commiter_name": "Nicolas B. Pierron <nicolas.b.pierron@nbp.name>",
     "commit_date": "2018-11-19 22:28:43",
     "commit_message": "Bug 1502013 - RemoveUnmarkedBlocks should only mark operands of removed blocks. r=jandem, a=lizzard",
     "node": "a73a46ddc848aa60a7578c6b315b668914f0be9d"
   },
-  "5": {
+  "6": {
     "commiter_name": "Felipe Gomes <felipc@gmail.com>",
     "commit_date": "2018-11-19 22:27:02",
     "commit_message": "Bug 1495749 - Allow add-ons to be updated via policy by uninstalling and reinstalling them. r=mkaply a=lizzard",
     "node": "15813976ae1e690126764677c38514e8bdbfb393"
   },
-  "6": {
+  "7": {
     "commiter_name": "Michael Kaply <mozilla@kaply.com>",
     "commit_date": "2018-11-15 23:32:53",
     "commit_message": "Bug 1507614 - Identify ESR with MOZ_APP_VERSION_DISPLAY. r=glandium, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D12067",
     "node": "c419540e75dadc4ad89c596e43511c7265ab586b"
   },
-  "7": {
+  "8": {
     "commiter_name": "Ryan VanderMeulen <ryanvm@gmail.com>",
     "commit_date": "2018-11-19 19:56:40",
     "commit_message": "Backed out changeset 4503802587c8 (bug 1445943) for OSX policy engine test failures.",
     "node": "af3d0194519b7f984ebb79e6ad9b2c824afdb6ac"
   },
-  "8": {
+  "9": {
     "commiter_name": "Benjamin Bouvier <benj@benj.me>",
     "commit_date": "2018-11-16 12:44:36",
     "commit_message": "Bug 1507730 - Generate a temporary for negative power-of-two constants in mul64 on 32 bits platforms. r=lth, a=jcristau  In the code generator function, we assume we have a temp if a known constant is a non-negative power of two. But lowering only checked for power of twos independently of their sign, so this was incorrect. This patch syncs them up on both ARM32 and x86.",
     "node": "dd0f01818b9ce9257a1a2b1c9cfe8e7aabc8240e"
   },
-  "9": {
+  "10": {
     "commiter_name": "Benjamin Bouvier <benj@benj.me>",
     "commit_date": "2018-11-15 23:25:52",
     "commit_message": "Bug 1507564 - Bind code labels when generating lazy table stubs. r=luke, a=jcristau  A lazy stub could generate CodeLabels on x86, because of a constant NaN generated for the entry's epilogue that ended up in a constant pool. We need to actually bind these code labels in general.  Differential Revision: https://phabricator.services.mozilla.com/D12052",
     "node": "60619cc47b104fb091f377c015c97dc62ac27ae7"
   },
-  "10": {
+  "11": {
     "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
     "commit_date": "2018-11-15 13:57:00",
     "commit_message": "Bug 1506640 - Trace wrappers rooters during sweep phase. r=pbone, a=RyanVM",
     "node": "8bbf80948b500d813c50cba5e56307ed62bcc981"
   },
-  "11": {
+  "12": {
     "commiter_name": "Lee Salzman <lsalzman@mozilla.com>",
     "commit_date": "2018-11-14 18:16:01",
     "commit_message": "Bug 1493080 - Remove reference cycle between BufferTextureData and DrawTargets. r=jrmuizel, a=lizzard",
     "node": "a7cabf306d05ac71b99e29f965d20df28b0c8e3a"
   },
-  "12": {
+  "13": {
     "commiter_name": "Martin Stransky <stransky@redhat.com>",
     "commit_date": "2018-10-19 13:11:46",
     "commit_message": "Bug 1500366 - Register all DBus connection to be handled by gmain loop. r=jhorak, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D9230",
     "node": "abd59256c4e34bf576f00ec9ffd2d66f7b24adb6"
   },
-  "13": {
+  "14": {
     "commiter_name": "Stephen A Pohl <spohl.mozilla.bugs@gmail.com>",
     "commit_date": "2018-11-13 19:33:00",
     "commit_message": "Bug 1445943 - Add Enterprise Policy support for macOS to ESR. This includes patches in bug 1445943, bug 1497408, bug 1497948, bug 1498032. r=mstange,felipe,glandium,spohl, a=lizzard",
     "node": "4503802587c82e204de340291ce9b403753b82fa"
   },
-  "14": {
+  "15": {
     "commiter_name": "Magnus Melin <mkmelin+mozilla@iki.fi>",
     "commit_date": "2018-11-14 14:55:22",
     "commit_message": "Bug 1506390 - Ensure the default permissions do not intefere with the permission tests that assume no defaults. r=johannh, a=test-only",
     "node": "1cb019f041884c7ab81151fdb656dda856f1389e"
   },
-  "15": {
+  "16": {
     "commiter_name": "ffxbld <ffxbld@mozilla.com>",
     "commit_date": "2018-11-19 14:09:37",
     "commit_message": "No Bug, mozilla-esr60 repo-update HSTS HPKP - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12261",
     "node": "1da8a333774a9842d70a9c49e0197dcdbfe2a96d"
   },
-  "16": {
+  "17": {
     "commiter_name": "Jan Varga <jan.varga@gmail.com>",
     "commit_date": "2018-11-12 13:59:06",
     "commit_message": "Bug 1500310 - Better scoping for code in IDBObjectStore::GetAddInfo. r=asuth, a=RyanVM",
     "node": "b3a439a26186572b556bfc5f35f6ea044a2dd170"
   },
-  "17": {
+  "18": {
     "commiter_name": "Johann Hofmann <jhofmann@mozilla.com>",
     "commit_date": "2018-11-01 20:49:11",
     "commit_message": "Bug 1501680 - Don't send credentials in ssl error reports. r=Gijs, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D10594",
     "node": "282c6bb81562f0ec20f2c1ce56653a5fe7154010"
   },
-  "18": {
+  "19": {
     "commiter_name": "ffxbld <ffxbld@mozilla.com>",
     "commit_date": "2018-11-15 14:09:56",
     "commit_message": "No Bug, mozilla-esr60 repo-update HSTS HPKP blocklist - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12005",
     "node": "3423f7f2a5af2508f9ac1ece9557bfc22f4aa20c"
-  },
-  "19": {
-    "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-    "commit_date": "2018-11-14 08:58:53",
-    "commit_message": "Bug 1507035 - Fix run sizes for size classes >= 16KB on systems with large pages. r=njn, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D11836",
-    "node": "cec8b58ab3fe4c3426826a6be33c873076ead09b"
   }
 }

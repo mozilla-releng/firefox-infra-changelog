@@ -1,5 +1,88 @@
 {
   "0": {
-    "lastChecked": "2018-11-21 02:04:37.582664"
+    "lastChecked": "2018-11-26 03:16:32.167522"
+  },
+  "1": {
+    "sha": "4c89c1b239fd8415e1225ba738ba820342bd8081",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "Add support for Ship-it v2 (#14)",
+    "commit_date": "2018-11-21 16:33:53",
+    "files_changed": [
+      "CHANGELOG.md",
+      "SCOPES.md",
+      "requirements.txt",
+      "shipitscript/script.py",
+      "shipitscript/ship_actions.py",
+      "shipitscript/task.py",
+      "shipitscript/test/__init__.py",
+      "shipitscript/test/integration/test_integration_script.py",
+      "shipitscript/test/test_script.py",
+      "shipitscript/test/test_ship_actions.py",
+      "shipitscript/test/test_task.py",
+      "shipitscript/test/test_utils.py",
+      "shipitscript/utils.py",
+      "version.txt"
+    ]
+  },
+  "2": {
+    "sha": "0c892801fc9ad80e3a12b80ab69a7e3527ec0eea",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Address comments",
+    "commit_date": "2018-11-21 15:44:59",
+    "files_changed": [
+      "CHANGELOG.md",
+      "shipitscript/ship_actions.py"
+    ]
+  },
+  "3": {
+    "sha": "3033ccfe619289bfd022df1250a924f995ac33b8",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Revert local temp canges",
+    "commit_date": "2018-11-20 04:44:21",
+    "files_changed": [
+      "requirements.txt",
+      "tox.ini"
+    ]
+  },
+  "4": {
+    "sha": "fb22074bb0e5bc26373cf5c2305e89f2a45eae25",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Bump version to 3.0.0",
+    "commit_date": "2018-11-20 04:24:43",
+    "files_changed": [
+      "CHANGELOG.md",
+      "SCOPES.md",
+      "version.txt"
+    ]
+  },
+  "5": {
+    "sha": "2032f7bfc6c1629fa783a1af52f42ac51668d7f2",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Add support for masrk as shipped v2",
+    "commit_date": "2018-11-20 04:20:35",
+    "files_changed": [
+      "requirements.txt",
+      "shipitscript/script.py",
+      "shipitscript/ship_actions.py",
+      "shipitscript/task.py",
+      "shipitscript/test/__init__.py",
+      "shipitscript/test/integration/test_integration_script.py",
+      "shipitscript/test/test_script.py",
+      "shipitscript/test/test_ship_actions.py",
+      "shipitscript/test/test_task.py",
+      "shipitscript/test/test_utils.py",
+      "shipitscript/utils.py",
+      "tox.ini"
+    ]
   }
 }

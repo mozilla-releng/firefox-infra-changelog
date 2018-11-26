@@ -1,8 +1,53 @@
 {
   "0": {
-    "lastChecked": "2018-11-21 02:03:46.117192"
+    "lastChecked": "2018-11-26 03:15:54.542030"
   },
   "1": {
+    "sha": "6ca8f1735dbdf74f51dfae0795014eae039f79b4",
+    "url": "https://github.com/mozilla/release-services/commit/6ca8f1735dbdf74f51dfae0795014eae039f79b4",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Fix #1699. (#1700)",
+    "commit_date": "2018-11-23 14:25:20",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/workflow.py"
+    ]
+  },
+  "2": {
+    "sha": "99a13b60386e801229304e20e77892d65efedae5",
+    "url": "https://github.com/mozilla/release-services/commit/99a13b60386e801229304e20e77892d65efedae5",
+    "commiter_name": "lundjordan",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Bump version to 52 (#1675)",
+    "commit_date": "2018-11-22 15:19:22",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "3": {
+    "sha": "d8d2a0f6eb757a846fc4598fd26e2c06ccd6be2d",
+    "url": "https://github.com/mozilla/release-services/commit/d8d2a0f6eb757a846fc4598fd26e2c06ccd6be2d",
+    "commiter_name": "garbas",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "tooltool/api: disable production deployment (#1694)",
+    "commit_date": "2018-11-22 10:55:52",
+    "files_changed": [
+      "lib/please_cli/please_cli/config.py"
+    ]
+  },
+  "4": {
+    "sha": "62d1a69b098073ced1dd9fb28004a19ad8d6892c",
+    "url": "https://github.com/mozilla/release-services/commit/62d1a69b098073ced1dd9fb28004a19ad8d6892c",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Limit clang-format patch generation to allowed paths. (#1691)",
+    "commit_date": "2018-11-21 18:43:35",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "5": {
     "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
     "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
     "commiter_name": "La0",
@@ -19,7 +64,7 @@
       "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
     ]
   },
-  "2": {
+  "6": {
     "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
     "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
     "commiter_name": "kevinluvian",
@@ -32,7 +77,7 @@
       "src/codecoverage/backend/tests/test_coverage.py"
     ]
   },
-  "3": {
+  "7": {
     "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
     "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
     "commiter_name": "jankeromnes",
@@ -45,7 +90,7 @@
       "src/uplift/bot/uplift_bot/sync.py"
     ]
   },
-  "4": {
+  "8": {
     "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
     "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
     "commiter_name": "rail",
@@ -56,7 +101,7 @@
       "src/shipit/frontend/src/configs/testing.js"
     ]
   },
-  "5": {
+  "9": {
     "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
     "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
     "commiter_name": "rail",
@@ -68,7 +113,7 @@
       "src/shipit/api/shipit_api/api.yml"
     ]
   },
-  "6": {
+  "10": {
     "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
     "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
     "commiter_name": "rail",
@@ -82,7 +127,7 @@
       "src/shipit/api/shipit_api/models.py"
     ]
   },
-  "7": {
+  "11": {
     "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
     "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
     "commiter_name": "rail",
@@ -111,7 +156,7 @@
       "src/uplift/backend/requirements_frozen.txt"
     ]
   },
-  "8": {
+  "12": {
     "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
     "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
     "commiter_name": "La0",
@@ -120,30 +165,6 @@
     "commit_date": "2018-11-19 11:15:41",
     "files_changed": [
       "nix/gecko_env.nix"
-    ]
-  },
-  "9": {
-    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
-    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
-    "commiter_name": "garbas",
-    "commiter_email": null,
-    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
-    "commit_date": "2018-11-15 18:28:53",
-    "files_changed": [
-      "src/tooltool/api/tooltool_api/__init__.py"
-    ]
-  },
-  "10": {
-    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
-    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
-    "commiter_name": "marco-c",
-    "commiter_email": null,
-    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
-    "commit_date": "2018-11-14 17:38:32",
-    "files_changed": [
-      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
-      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
-      "src/codecoverage/bot/tests/test_taskcluster.py"
     ]
   }
 }
