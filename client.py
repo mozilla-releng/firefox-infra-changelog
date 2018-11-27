@@ -209,7 +209,7 @@ def filter_hg_commit_data(repository_url, push_type):
 
         # Use example of getting the commit email
         commit_email = extract_email(commiter_name)
-        print("Commiter Emaik: " + commit_email)
+        print("Commiter Email: " + commit_email)
 
         commit_message = keys["desc"]
         message = re.sub("[*\n\r]", " ", commit_message)
