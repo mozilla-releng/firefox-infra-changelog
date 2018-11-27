@@ -1,8 +1,74 @@
 {
   "0": {
-    "lastChecked": "2018-11-26 03:17:05.617442"
+    "lastChecked": "2018-11-27 03:15:49.949689"
   },
   "1": {
+    "sha": "0b56d73f1d59e63fedc48350bf8eaeb05453996e",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/0b56d73f1d59e63fedc48350bf8eaeb05453996e",
+    "commiter_name": "tomprince",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #43 from tp-tc/whats-new  Add support for generting whats-new blobs.",
+    "commit_date": "2018-11-26 19:59:40",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py",
+      "balrogscript/newsfragments/42.added",
+      "balrogscript/script.py",
+      "balrogscript/submitter/cli.py",
+      "balrogscript/test/test_script.py"
+    ]
+  },
+  "2": {
+    "sha": "18761ab899d94619ea2a36c0227f0b0cfb1c6dea",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/18761ab899d94619ea2a36c0227f0b0cfb1c6dea",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "3.3.0",
+    "commit_date": "2018-11-26 17:29:44",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py",
+      "balrogscript/newsfragments/42.added",
+      "balrogscript/newsfragments/43.added"
+    ]
+  },
+  "3": {
+    "sha": "e7a10365ddf6a5b82b204c072dc22d7b5267954f",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/e7a10365ddf6a5b82b204c072dc22d7b5267954f",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Add newsfragment.",
+    "commit_date": "2018-11-22 20:46:22",
+    "files_changed": [
+      "balrogscript/newsfragments/43.added"
+    ]
+  },
+  "4": {
+    "sha": "69fc7601f1ea569c9e40640f78b56c7d97bff71f",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/69fc7601f1ea569c9e40640f78b56c7d97bff71f",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Add code to create multiple blobs with different `updateLine` info.",
+    "commit_date": "2018-11-22 20:42:08",
+    "files_changed": [
+      "balrogscript/script.py",
+      "balrogscript/submitter/cli.py",
+      "balrogscript/test/test_script.py"
+    ]
+  },
+  "5": {
+    "sha": "7f820677b714da97f9eb5ab0298fe022a6a289ca",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/7f820677b714da97f9eb5ab0298fe022a6a289ca",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Add code to update multiple blobs with different suffixes.",
+    "commit_date": "2018-11-22 20:41:18",
+    "files_changed": [
+      "balrogscript/script.py",
+      "balrogscript/test/test_script.py"
+    ]
+  },
+  "6": {
     "sha": "af210e95451e950d9151e745ccc4d0f3965b91d7",
     "url": "https://github.com/mozilla-releng/balrogscript/commit/af210e95451e950d9151e745ccc4d0f3965b91d7",
     "commiter_name": "tomprince",
@@ -15,7 +81,7 @@
       "balrogscript/test/test_submitter_updates.py"
     ]
   },
-  "2": {
+  "7": {
     "sha": "7428dd6ac5cbcf59f5446fb786b06170fb83de72",
     "url": "https://github.com/mozilla-releng/balrogscript/commit/7428dd6ac5cbcf59f5446fb786b06170fb83de72",
     "commiter_name": "tomprince",
@@ -28,7 +94,7 @@
       "balrogscript/test/test_submitter_updates.py"
     ]
   },
-  "3": {
+  "8": {
     "sha": "bc93868fa200a26d1b20c59d5851803a8ce88941",
     "url": "https://github.com/mozilla-releng/balrogscript/commit/bc93868fa200a26d1b20c59d5851803a8ce88941",
     "commiter_name": "tomprince",
@@ -54,7 +120,7 @@
       "tox.ini"
     ]
   },
-  "4": {
+  "9": {
     "sha": "7599005406e4244f72bcb0f4e8777ef1ab2deb59",
     "url": "https://github.com/mozilla-releng/balrogscript/commit/7599005406e4244f72bcb0f4e8777ef1ab2deb59",
     "commiter_name": "tomprince",

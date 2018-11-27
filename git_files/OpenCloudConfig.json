@@ -1,8 +1,19 @@
 {
   "0": {
-    "lastChecked": "2018-11-26 03:16:57.591484"
+    "lastChecked": "2018-11-27 03:15:42.523124"
   },
   "1": {
+    "sha": "688a98094cdc0bd2e3838ab8e62b409d0f55d149",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/688a98094cdc0bd2e3838ab8e62b409d0f55d149",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1406354 - corrected path to manifest",
+    "commit_date": "2018-11-26 09:20:51",
+    "files_changed": [
+      "ci/update-workertype.sh"
+    ]
+  },
+  "2": {
     "sha": "496b6e8d17392503b50c05086c38167d5747fea6",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/496b6e8d17392503b50c05086c38167d5747fea6",
     "commiter_name": "grenade",
@@ -14,7 +25,7 @@
       "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
-  "2": {
+  "3": {
     "sha": "606fe69601a6621b144580f17365234e5347766d",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/606fe69601a6621b144580f17365234e5347766d",
     "commiter_name": "grenade",
@@ -25,7 +36,7 @@
       "ci/update-workertype.sh"
     ]
   },
-  "3": {
+  "4": {
     "sha": "9d74a89cadd596ffc7f5f0762d838ff4dd6651dc",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/9d74a89cadd596ffc7f5f0762d838ff4dd6651dc",
     "commiter_name": "grenade",
@@ -43,7 +54,7 @@
       "userdata/xDynamicConfig.ps1"
     ]
   },
-  "4": {
+  "5": {
     "sha": "02f8fe187edc61cbc5f35a01194329e421ab334c",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/02f8fe187edc61cbc5f35a01194329e421ab334c",
     "commiter_name": "grenade",
@@ -53,23 +64,5 @@
     "files_changed": [
       ".taskcluster.yml"
     ]
-  },
-  "5": {
-    "sha": "85ab65d2f630aa9b4167dde86723b9a0fd19b286",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/85ab65d2f630aa9b4167dde86723b9a0fd19b286",
-    "commiter_name": "grenade",
-    "commiter_email": "rthijssen@gmail.com",
-    "commit_message": "Bug 1406354 - commit syntax for beta deployments  deploy: beta  beta-source: mozilla-releng OpenCloudConfig refactor",
-    "commit_date": "2018-11-19 14:36:39",
-    "files_changed": []
-  },
-  "6": {
-    "sha": "354379279a0925412fa525efb0d54ba13ddee80c",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/354379279a0925412fa525efb0d54ba13ddee80c",
-    "commiter_name": "grenade",
-    "commiter_email": "rthijssen@gmail.com",
-    "commit_message": "Bug 1406354 - commit syntax for beta deployments  deploy: beta  beta-source: mozilla-releng OpenCloudConfig refactor",
-    "commit_date": "2018-11-19 12:40:54",
-    "files_changed": []
   }
 }

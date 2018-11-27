@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
-    "commit_date": "2018-11-26 00:58:14",
-    "commit_message": "Bug 1509227 - Cache selection state with RDL. r=miko  MozReview-Commit-ID: CmMDBlYzHyN  Differential Revision: https://phabricator.services.mozilla.com/D12722",
-    "node": "c65a0f1862dd7cbd485b9ea44618155b85156486"
+    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
+    "commit_date": "2018-11-27 02:46:50",
+    "commit_message": "Bug 1508044 - Part 4: Make nsChannelClassifier use nsContentUtils::IsThirdPartyWindowOrChannel() in order to avoid having duplicated logic r=francois  Depends on D12853  Differential Revision: https://phabricator.services.mozilla.com/D12854",
+    "node": "e3a074ae3f0c18a5329c23099c5169f135885852"
   },
   "1": {
-    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
-    "commit_date": "2018-11-26 04:32:15",
-    "commit_message": "Bug 1509226 - Avoid allocations to serialize clips. r=jrmuizel  MozReview-Commit-ID: CetmS5cZCMP  Differential Revision: https://phabricator.services.mozilla.com/D12721",
-    "node": "d6509279d52e5c1a9b2951b88f23a989470ff195"
+    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
+    "commit_date": "2018-11-27 02:43:20",
+    "commit_message": "Bug 1508044 - Part 3: Ensure that the third-party checks performed on channels in nsContentUtils::IsThirdPartyWindowOrChannel() follow the same logic as those performed in nsChannelClassifier r=francois  Depends on D12852  Differential Revision: https://phabricator.services.mozilla.com/D12853",
+    "node": "691286d50c87eb419c121c88836a67a8227e611b"
   },
   "2": {
-    "commiter_name": "Matt Woodrow <mwoodrow@mozilla.com>",
-    "commit_date": "2018-11-26 00:57:04",
-    "commit_message": "Bug 1420628 - Avoid allocations for each text display item. r=jrmuizel  MozReview-Commit-ID: HoRHQVEdJeT  Differential Revision: https://phabricator.services.mozilla.com/D12720",
-    "node": "f5c8fe43b6ee1be0f100ff3777c8d99c4ce8af40"
+    "commiter_name": "Ehsan Akhgari <ehsan@mozilla.com>",
+    "commit_date": "2018-11-27 02:38:52",
+    "commit_message": "Bug 1508044 - Part 2: Check the return values of mozIThirdPartyUtil::IsThirdPartyFoo() in nsContentUtils::IsThirdPartyWindowOrChannel() r=francois  Differential Revision: https://phabricator.services.mozilla.com/D12852",
+    "node": "5452c9164d46e49aa8ee6cd3444bb0f8cc7cc121"
   },
   "3": {
-    "commiter_name": "Hiroyuki Ikezoe <hikezoe@mozilla.com>",
-    "commit_date": "2018-11-26 03:35:10",
-    "commit_message": "Bug 1506860 - Revert the workaround that we did in bug 1504929. r=birtles  That's because the underlying issue which had caused intermittent failure has been fixed in 1506988.  Here is the link to the workaround commit; https://hg.mozilla.org/mozilla-central/rev/c84f0ad36ce9  Differential Revision: https://phabricator.services.mozilla.com/D12861",
-    "node": "995042d1cd8cdc7bd7ea8724017afde36cc69b7c"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-27 04:54:00",
+    "commit_message": "Bug 1510085 - Update webrender to commit 05bdcae134d73aca7bb48358e91de1f8aef27773 (WR PR #3354). r=kats  https://github.com/servo/webrender/pull/3354  Differential Revision: https://phabricator.services.mozilla.com/D13029",
+    "node": "a12365223e8b4c0eb19eb9e65ebd233069109540"
   },
   "4": {
-    "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
-    "commit_date": "2018-11-26 03:03:14",
-    "commit_message": "Backed out changeset 1575904619b5 (bug 1506547) for mochitest failures on test_reftests_with_caret.html.",
-    "node": "14d532b8d89432c1a4b01d5007960295a13022da"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-27 04:53:43",
+    "commit_message": "Bug 1510084 - Update webrender to commit 35027d93aded8c0a7887dadc8aef5e393171e802 (WR PR #3348). r=kats  https://github.com/servo/webrender/pull/3348  Differential Revision: https://phabricator.services.mozilla.com/D13028",
+    "node": "a613bf1190880ef45811a35ab8e6904fe9263192"
   },
   "5": {
-    "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-    "commit_date": "2018-11-25 22:01:07",
-    "commit_message": "Bug 1506547 - Align user-select behavior more with other UAs. r=mats  There's a few subtle behavior changes here, which I'll try to break down in the commit message.  The biggest one is the EditableDescendantCount stuff going away. This was added in bug 1181130, to prevent clicking on the non-editable div from selecting the editable div inside. This is problematic for multiple reasons:     First, I don't think non-editable regions of an editable element should    be user-select: all.     Second, it just doesn't work in Shadow DOM (the editable descendant count is    not kept up-to-date when not in the uncomposed doc), so nested    contenteditables behave differently inside vs. outside a Shadow Tree.     Third, I think it's user hostile to just entirely disable selection if you    have a contenteditable descendant as a child of a user-select: all thing.     WebKit behaves like this patch in the following test-case (though not Blink):       https://crisal.io/tmp/user-select-all-contenteditable-descendant.html     Edge doesn't seem to support user-select: all at all (no pun intended).     But we don't allow to select anything at all which looks wrong.     Fourth, it's not tested at all (which explains how we broke it in Shadow DOM    and not even notice...).  In any case I've verified that this doesn't regress the editor from that bug. If this regresses anything we can fix it as outlined in the first bullet point above, which should also make us more compatible with other UAs in that test-case.  The other change is `all` not overriding everything else. So, something like:    <div style=\"-webkit-user-select: all\">All <div style=\"-webkit-user-select: none\">None</div></div>  Totally ignores the -webkit-user-select: none declaration in Firefox before this change. This doesn't match any other UA nor the spec, and this patch aligns us with WebKit / Blink.  This in turn makes us not need -moz-text anymore, whose only purpose was to avoid this.  This also fixes a variety of bugs uncovered by the previous changes, like the SetIgnoreUserModify(false) call in editor being completely useless, since presShell->SetCaretEnabled ended in nsCaret::SetVisible, which overrode it.  This in turn uncovered even more bugs, from bugs in the caret painting code, like not checking -moz-user-modify on the right frame if you're the last frame of a line, to even funnier bits where before this patch you show the caret but can't write at all...  In any case, the new setup I came up with is that when you're editing (the selection is focused on an editable node) moving the caret forces it to end up in an editable node, thus jumping over non-editable ones.  This has the nice effect of not completely disabling selection of -moz-user-select: all elements that have editable descendants (which was a very ad-hoc hack for bug 1181130, and somewhat broken per the above), and also not needing the -moz-user-select: all for non-editable bits in contenteditable.css at all.  This also fixes issues with br-skipping like not being able to insert content in the following test-case:    <div contenteditable=\"true\"><span contenteditable=\"false\">xyz </span><br>editable</div>  If you start moving to the left from the second line, for example.  I think this yields way better behavior in all the relevant test-cases from bug 1181130 / bug 1109968 / bug 1132768, shouldn't cause any regression, and the complexity is significantly reduced in some places.  There's still some other broken bits that this patch doesn't fix, but I'll file follow-ups for those.  Differential Revision: https://phabricator.services.mozilla.com/D12687",
-    "node": "1575904619b592d61f38ce67ef94faa313108a2e"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-27 04:53:03",
+    "commit_message": "Bug 1510082 - Update reftest annotations for changes in WR PR #3346. r=kats  Depends on D13026  Differential Revision: https://phabricator.services.mozilla.com/D13027",
+    "node": "2b0c95030a8b9c00cd68bbb0c485b8378955ff40"
   },
   "6": {
-    "commiter_name": "ScottDowne <scott.downe@gmail.com>",
-    "commit_date": "2018-11-25 21:19:23",
-    "commit_message": "Bug 1509565 - Add Pocket bug fixes, Snippets Templates compat fixes to Activity Stream r=k88hudson  Differential Revision: https://phabricator.services.mozilla.com/D12805",
-    "node": "973e2824df9652776a27279ac1fcf579009c2642"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-27 04:52:50",
+    "commit_message": "Bug 1510082 - Update webrender to commit e2e52b1145ad959191c0612edd41b0b189cf6b59 (WR PR #3346). r=kats  https://github.com/servo/webrender/pull/3346  Differential Revision: https://phabricator.services.mozilla.com/D13026",
+    "node": "4585bb8bd85ac70f17a25bc2407d29b964a4e744"
   },
   "7": {
-    "commiter_name": "Ed Lee <edilee@mozilla.com>",
-    "commit_date": "2018-11-20 21:35:08",
-    "commit_message": "Bug 1507610 - Allow running find-dupes without all of MOZ_AUTOMATION r=mshal  Differential Revision: https://phabricator.services.mozilla.com/D12065",
-    "node": "def0fd8429f955dcd8f29ae54cd2e2e5cd28032d"
+    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
+    "commit_date": "2018-11-27 03:16:27",
+    "commit_message": "Bug 1510078 - Update webrender to commit f450af9277e2474e2a2a2c1358689ca9486e2a09 (WR PR #3345). r=kats  https://github.com/servo/webrender/pull/3345  Differential Revision: https://phabricator.services.mozilla.com/D13025",
+    "node": "895fcf304c2a19969e8d075457a7cee36ea06895"
   },
   "8": {
-    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
-    "commit_date": "2018-11-25 11:47:59",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "node": "c48931864919067283a60b9627690d356058161c"
+    "commiter_name": "D\u00e3o Gottwald <dao@mozilla.com>",
+    "commit_date": "2018-11-26 18:07:07",
+    "commit_message": "Bug 1509488 - Use keydown handler instead of <key> for Shift+Ctrl+Tab. r=jaws  Differential Revision: https://phabricator.services.mozilla.com/D12744",
+    "node": "40310bdbb6708f03fd171eb194abb09d7e02f72b"
   },
   "9": {
-    "commiter_name": "Eric Rahm <erahm@mozilla.com>",
-    "commit_date": "2018-02-02 22:42:55",
-    "commit_message": "Bug 1435899 - Use nsStringStream for the data channel buffer. r=bz  A pipe is no longer used for the input stream, instead we use a string stream which in most cases will be able to share the string data buffer rather than copying it.",
-    "node": "c4029bc621f59edca2c3e0011ca50747be81b2c7"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 02:06:22",
+    "commit_message": "Bug 1487287 - Move child process launch off the I/O thread. r=mccr8  Launching processes takes enough time that we should avoid blocking the parent process's IPC I/O thread for it; it's less bad for responsiveness than blocking the main thread, but it's not good.  On Windows we need to use a dedicated thread, because the sandbox isn't thread-safe and it asserts that the same thread is used for every launch.  Otherwise, a thread pool is used.  Depends on D8945  Differential Revision: https://phabricator.services.mozilla.com/D8946",
+    "node": "8b1f88d7bfeb1949060170ba51b6530db5e93c8e"
   },
   "10": {
-    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
-    "commit_date": "2018-02-27 09:03:00",
-    "commit_message": "Bug 1435899 - Close underlying stream in NonBlockingAsyncInputStream sooner. r=froydnj",
-    "node": "5461b62599d722d0c78b8f212653817d2d718362"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 02:06:20",
+    "commit_message": "Bug 1487287 - Set profiler env vars in child processes without side-effecting the parent process. r=mstange  We can directly set environment variables for the child process on all platforms now, instead of changing the parent's environment and inheriting the changes.  This simplifies memory management, but more importantly it's necessary for thread safety to allow launching processes from a thread pool.  Depends on D8944  Differential Revision: https://phabricator.services.mozilla.com/D8945",
+    "node": "8fa5e81ad8015f9bd5ba2b7497f840e4cc50b8bd"
   },
   "11": {
-    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
-    "commit_date": "2018-11-25 01:03:49",
-    "commit_message": "Bug 1509614 - Downgrade the loglevel for the `get_process_list()` messages in mozbase r=bc  `get_process_list()` makes multiple attempts at setting up adb, but errors setting up the connection get logged with a loglevel of ERROR. This patch makes these messages print with a loglevel of INFO unless this is the final attempt. This will cut down on superfluous error messages appearing in Treeherder's logviewer, while still providing all of the info fennec/tooling developers would need to fix the underlying problem here.  Differential Revision: https://phabricator.services.mozilla.com/D12813",
-    "node": "5120b8ce3de84ec0e94ed9ebe949f1245f4c9472"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 02:06:17",
+    "commit_message": "Bug 1474991 - Add new and improved performance telemetry for child process launching. r=mccr8,mconley,janerik  This patch adds some telemetry histograms:    CONTENT_PROCESS_LAUNCH_IS_SYNC - boolean, true if the content process was launched synchronously (blocking the main thread)    CONTENT_PROCESS_SYNC_LAUNCH_MS - the time consumed by sync launch; the main thread will be busy or blocked for this entire time    CONTENT_PROCESS_LAUNCH_TOTAL_MS - the total time elapsed from the start of async content process launch until the launch promise is resolved and the ContentParent can be sent IPDL messages    CONTENT_PROCESS_LAUNCH_MAINTHREAD_MS - the time consumed on the parent process main thread during async content process launch; typically this is due to ContentParent::Init.    CHILD_PROCESS_LAUNCH_MS - for any kind of Gecko child process (including plugins, GPU, etc.), the time taken in the common process launch code (which is run off-main-thread)  The probes restricted to async content process launch don't have \"async\" in the name because that will eventually become the only kind of content process launch.  Depends on D8943  Differential Revision: https://phabricator.services.mozilla.com/D8944",
+    "node": "7a480161fa0fc82f11d2ed492f9f8938a1cdf1fc"
   },
   "12": {
-    "commiter_name": "Tim Nguyen <ntim.bugs@gmail.com>",
-    "commit_date": "2018-11-24 15:07:23",
-    "commit_message": "Bug 1505582 - Update macOS arrowpanel background to match the specification. r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12820",
-    "node": "7d894090b1aaa917904f8f36caf6ef01a4949f45"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 02:35:53",
+    "commit_message": "Bug 1446161 - Asynchronously launch preallocated content processes using MozPromise. r=mccr8  There are several layers to this patch:  1. GeckoChildProcessHost now exposes a promise that's resolved when the process handle is available (or rejected if launch failed), as a nonblocking alternative to LaunchAndWaitForProcessHandle.  2. ContentParent builds on this with the private method LaunchSubprocessAsync and the public method PreallocateProcessAsync; synchronous launch continues to exist for the regular on-demand launch path, for the time being.  3. PreallocatedProcessManager now uses async launch, and handles the new \"launch in progress\" state appropriately.  Depends on D8942  Differential Revision: https://phabricator.services.mozilla.com/D8943",
+    "node": "80116391b7fe48cb2ecc1960721d74dc2c185c6a"
   },
   "13": {
-    "commiter_name": "Ferenc Nagy <nagy.ferenc.jr@gmail.com>",
-    "commit_date": "2018-11-24 15:18:45",
-    "commit_message": "Bug 1508631 - Fixing indentation in multiple lines r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12826",
-    "node": "5edbd3619c978b1dc78709685a89536c61df1263"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 02:06:14",
+    "commit_message": "Bug 1446161 - Remove the earlier attempt at async launch. r=spohl,mccr8  The first attempt at async launch tried to hide the asynchrony inside IPC, by making the process seem to be launched enough to construct new channels and send it messages, and lazily blocking on the pid/handle. Unfortunately, in practice we wind up needing the pid/handle immediately, and this requirement is too deeply embedded in IPC for that to be viable.  (The alternative that will be used instead -- exposing process launch via an explicitly asynchronous promise interface -- is made simpler by Project Fission's upcoming rewrite of how the DOM requests new content processes.)  Depends on D8941  Differential Revision: https://phabricator.services.mozilla.com/D8942",
+    "node": "1bdf64b29121762bbf6b1e13df1828034b149bac"
   },
   "14": {
-    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
-    "commit_date": "2018-11-24 14:56:25",
-    "commit_message": "Bug 1509592 - Update webrender to commit 7051f18fdcfbe60ecdbaeaa8e53c4ba98f2037a1 (WR PR #3344). r=kats  https://github.com/servo/webrender/pull/3344  Differential Revision: https://phabricator.services.mozilla.com/D12822",
-    "node": "b599964cc3ee9182a50a4ed38996cef6fe87c13a"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 22:21:03",
+    "commit_message": "Bug 1446161 - Remove CONTENT_PROCESS_LAUNCH_TIME_MS telemetry. r=mconley,chutten  The CONTENT_PROCESS_LAUNCH_TIME_MS histogram is currently gathering times from two different spans of the launch process and mixing them together; it's at best a rough approximation of \"launch time\".  In addition, with async launch we'll want to gather different metrics than for sync launch (see comments on bug 1474991).  So I'm removing this histogram and will replace it with separate sync and async metrics in bug 1474991; I intend to land both bugs' patches at or near the same time, so we won't have a gap in getting some kind of data.  Depends on D8940  Differential Revision: https://phabricator.services.mozilla.com/D8941",
+    "node": "37bf52f0e9cf2ccd4427197a2e99f40c239f01a7"
   },
   "15": {
-    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
-    "commit_date": "2018-11-23 18:10:08",
-    "commit_message": "Bug 1476775 - Part 2: Change the profiler usage in devtools after API change r=julienw,gregtatum  Depends on D6267  Differential Revision: https://phabricator.services.mozilla.com/D6268",
-    "node": "bed93ebb313b1fb65bfbce423c7c09ac277c26e9"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 02:06:09",
+    "commit_message": "Bug 1496608 - Don't leak GeckoChildProcessHost when a content process fails to launch. r=mccr8  Depends on D8939  Differential Revision: https://phabricator.services.mozilla.com/D8940",
+    "node": "8ede2ebe6b7ab639e729614cb3609776955a6bc2"
   },
   "16": {
-    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
-    "commit_date": "2018-11-21 16:13:15",
-    "commit_message": "Bug 1476775 - Part 1: Discard samples that are older than given duration r=mstange  Differential Revision: https://phabricator.services.mozilla.com/D6267",
-    "node": "9f21792d4ae6515aa1e12503b530757e884d4ff0"
+    "commiter_name": "Jed Davis <jld@mozilla.com>",
+    "commit_date": "2018-11-22 02:06:07",
+    "commit_message": "Bug 1488993 - Fix PreallocatedProcessManager blocker management (v2). r=mconley,smaug  This fixes/adjusts two things about how content process preallocation is blocked:  1. Processes aren't registered as blockers until after they launch successfully.  The main goal is to not leak a blocker if launch fails, but we don't need to block  while  launching synchronously, because this all happens on the main thread.  2. Preallocated processes themselves aren't blockers.  The main goal here is so that async preallocation doesn't need extra complexity to avoid being blocked by itself when launch completes.  This mostly doesn't affect actual behavior, because we currently support at most one preallocated process.  The difference is the window from when the process is sent its first PBrowserConstructor until when it's next idle, where there is now no longer a blocker, but this seems to be relatively short (~100ms) and we don't even try to launch a new process until at least 1s + an idle runnable.  This patch does not explicitly RemoveBlocker in ActorDestroy like the first attempt did, because it's unnecessary: this is handled in the ipc:content-shutdown observer.  Differential Revision: https://phabricator.services.mozilla.com/D8939",
+    "node": "cea43bc88c7a564f0ca72995f6eac6b0d118f3f1"
   },
   "17": {
-    "commiter_name": "Christian Holler <choller@mozilla.com>",
-    "commit_date": "2018-11-22 01:18:27",
-    "commit_message": "Bug 1506044 - Do not send cookies with ASan reporter submits. r=johannh  Differential Revision: https://phabricator.services.mozilla.com/D12317",
-    "node": "062aef718a607660023c7e818a3760e54b0575a8"
+    "commiter_name": "L. David Baron <dbaron@dbaron.org>",
+    "commit_date": "2018-11-26 01:18:19",
+    "commit_message": "Bug 1159042 - p6. Use NS_FRAME_DYNAMIC_REFLOW_ROOT - r=dholbert  Differential Revision: https://phabricator.services.mozilla.com/D9492",
+    "node": "fe77c09dee3107e675162b760a6efa9b5f0bcce3"
   },
   "18": {
-    "commiter_name": "Dorel Luca <dluca@mozilla.com>",
-    "commit_date": "2018-11-24 11:46:32",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "node": "76c1898f6b021986beccc1461b1800ebe9f9e251"
+    "commiter_name": "L. David Baron <dbaron@dbaron.org>",
+    "commit_date": "2018-11-27 01:21:54",
+    "commit_message": "Bug 1159042 - p5. Add NS_FRAME_DYNAMIC_REFLOW_ROOT on frames that we can dynamically make reflow roots - r=dholbert  Differential Revision: https://phabricator.services.mozilla.com/D9491",
+    "node": "db0e173a6ed2ed65c22a2e60bc3f358e3d19d82c"
   },
   "19": {
-    "commiter_name": "Steve Fink <sfink@mozilla.com>",
-    "commit_date": "2018-11-21 22:07:12",
-    "commit_message": "Bug 1426574 - Use fallible bitmap ops for AtomizeAndCopyChars, r=jonco",
-    "node": "e8eb60450f8c25c2985316e2896aa0574ba658d5"
+    "commiter_name": "Gerald Squelart <gsquelart@mozilla.com>",
+    "commit_date": "2018-11-27 01:24:34",
+    "commit_message": "Bug 1159042 - p4. Make mDirtyRoots manage roots in preferred depth order - r=dbaron  When popping a dirty root, take the shallowest one first (so we reflow from outer frames first, to avoid potential duplicate reflow of inner frames).  Prevent duplicate roots (to be reworked in a future bug).  Differential Revision: https://phabricator.services.mozilla.com/D9490",
+    "node": "080b9ceee8eca10edabc249172d7f113c3642873"
   }
 }

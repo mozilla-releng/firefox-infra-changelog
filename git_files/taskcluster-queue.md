@@ -1,7 +1,9 @@
-## TASKCLUSTER-QUEUE COMMIT MARKDOWN TABLE SINCE 2018-11-19 05:15:53.601441
+## TASKCLUSTER-QUEUE COMMIT MARKDOWN TABLE SINCE 2018-11-20 05:15:08.721118
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|10|djmitche|Merge pull request #303 from djmitche/bug1456909  Bug 1456909 - use monitor.oneShot()|[URL](https://github.com/taskcluster/taskcluster-queue/commit/9595f61cd17ad72c315e52d7d950026527ded5c6)|2018-11-26 22:05:11
+|9|djmitche|Bug 1456909 - use monitor.oneShot()|[URL](https://github.com/taskcluster/taskcluster-queue/commit/0e7810781f5e64b1ef06a01f97abf85830e024c9)|2018-11-26 19:30:30
 |8|djmitche|Bug 1508846 - upgrade tc-lib-api|[URL](https://github.com/taskcluster/taskcluster-queue/commit/5f259488c4ea8bd43a15fa4c5f1b660c2ce887da)|2018-11-21 21:35:58
 |7|djmitche|Merge pull request #299 from djmitche/bug1508395  Bug 1508395 - upgrade tc-lib-validate|[URL](https://github.com/taskcluster/taskcluster-queue/commit/ee3bef79dc9bb2726dd8cea644ad3290da60d3d4)|2018-11-21 21:34:10
 |6|djmitche|Merge branch 'master' into bug1508395|[URL](https://github.com/taskcluster/taskcluster-queue/commit/087cca55ada7a151518f018819b1a21f59df769d)|2018-11-21 21:34:04
