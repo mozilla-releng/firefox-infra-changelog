@@ -1,122 +1,122 @@
 {
   "0": {
-    "commiter_name": "Ed Lee <edilee@mozilla.com>",
-    "commit_date": "2018-11-20 21:35:08",
-    "commit_message": "Bug 1507610 - Allow running find-dupes without all of MOZ_AUTOMATION r=mshal  Differential Revision: https://phabricator.services.mozilla.com/D12065",
-    "node": "def0fd8429f955dcd8f29ae54cd2e2e5cd28032d"
+    "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
+    "commit_date": "2018-11-27 00:34:45",
+    "commit_message": "Merge inbound to mozilla-central a=merge",
+    "node": "a60b595747ade6cdad6b51906bc9a880f6276f19"
   },
   "1": {
-    "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
-    "commit_date": "2018-11-25 11:47:59",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "node": "c48931864919067283a60b9627690d356058161c"
+    "commiter_name": "Jonathan Watt <jwatt@jwatt.org>",
+    "commit_date": "2018-11-06 13:50:23",
+    "commit_message": "Bug 1505177. Remove gfxContext::CurrentDashOffset(). r=miko  Differential Revision: https://phabricator.services.mozilla.com/D11108",
+    "node": "e13ba7026e77deebda6fbfa1518709e24f6846e5"
   },
   "2": {
-    "commiter_name": "Eric Rahm <erahm@mozilla.com>",
-    "commit_date": "2018-02-02 22:42:55",
-    "commit_message": "Bug 1435899 - Use nsStringStream for the data channel buffer. r=bz  A pipe is no longer used for the input stream, instead we use a string stream which in most cases will be able to share the string data buffer rather than copying it.",
-    "node": "c4029bc621f59edca2c3e0011ca50747be81b2c7"
+    "commiter_name": "Jonathan Watt <jwatt@jwatt.org>",
+    "commit_date": "2018-11-05 15:00:33",
+    "commit_message": "Bug 1505374. Remove dead hasClip code from FrameLayerBuilder::AddPaintedDisplayItem. r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D11168",
+    "node": "b036888636d14a020679811996ae9063b6a12e6f"
   },
   "3": {
-    "commiter_name": "Andrea Marchesini <amarchesini@mozilla.com>",
-    "commit_date": "2018-02-27 09:03:00",
-    "commit_message": "Bug 1435899 - Close underlying stream in NonBlockingAsyncInputStream sooner. r=froydnj",
-    "node": "5461b62599d722d0c78b8f212653817d2d718362"
+    "commiter_name": "Jonathan Watt <jwatt@jwatt.org>",
+    "commit_date": "2018-11-05 09:03:55",
+    "commit_message": "Bug 1508358. Avoid clang-format messing up Doxygen comments in SVG code. r=longsonr  Differential Revision: https://phabricator.services.mozilla.com/D12336",
+    "node": "73cac4fab2def41df759926fe8e6fe8564c27610"
   },
   "4": {
-    "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
-    "commit_date": "2018-11-25 01:03:49",
-    "commit_message": "Bug 1509614 - Downgrade the loglevel for the `get_process_list()` messages in mozbase r=bc  `get_process_list()` makes multiple attempts at setting up adb, but errors setting up the connection get logged with a loglevel of ERROR. This patch makes these messages print with a loglevel of INFO unless this is the final attempt. This will cut down on superfluous error messages appearing in Treeherder's logviewer, while still providing all of the info fennec/tooling developers would need to fix the underlying problem here.  Differential Revision: https://phabricator.services.mozilla.com/D12813",
-    "node": "5120b8ce3de84ec0e94ed9ebe949f1245f4c9472"
+    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+    "commit_date": "2018-11-26 20:16:13",
+    "commit_message": "Bug 1481577 - make nsTHashtable pretty-printer aware of naming changes; r=tromey  kHashBits was renamed to mozilla::kHashNumberBits, which seems awkward to access from the pretty-printer.  So we compute its value from the HashNumber type instead.",
+    "node": "73de720af49df25489f2f47a84c14725e326478c"
   },
   "5": {
-    "commiter_name": "Tim Nguyen <ntim.bugs@gmail.com>",
-    "commit_date": "2018-11-24 15:07:23",
-    "commit_message": "Bug 1505582 - Update macOS arrowpanel background to match the specification. r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12820",
-    "node": "7d894090b1aaa917904f8f36caf6ef01a4949f45"
+    "commiter_name": "Jonathan Kew <jkew@mozilla.com>",
+    "commit_date": "2018-11-26 19:59:50",
+    "commit_message": "Bug 1509167 - Cache an nsFontMetrics reference in nsTextFrame so that we don't have to re-create it on every DrawText call. r=jwatt",
+    "node": "8a7a03bc253d12664de2a396b2483187499af996"
   },
   "6": {
-    "commiter_name": "Ferenc Nagy <nagy.ferenc.jr@gmail.com>",
-    "commit_date": "2018-11-24 15:18:45",
-    "commit_message": "Bug 1508631 - Fixing indentation in multiple lines r=dao  Differential Revision: https://phabricator.services.mozilla.com/D12826",
-    "node": "5edbd3619c978b1dc78709685a89536c61df1263"
+    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
+    "commit_date": "2018-11-26 16:59:22",
+    "commit_message": "Bug 1509878 - Upgrade libwebp to version 1.0.1 r=jrmuizel  Differential Revision: https://phabricator.services.mozilla.com/D12933",
+    "node": "5fb44413dac138585f4783470e5c9e9d7cf501f3"
   },
   "7": {
-    "commiter_name": "WR Updater Bot <graphics-team@mozilla.staktrace.com>",
-    "commit_date": "2018-11-24 14:56:25",
-    "commit_message": "Bug 1509592 - Update webrender to commit 7051f18fdcfbe60ecdbaeaa8e53c4ba98f2037a1 (WR PR #3344). r=kats  https://github.com/servo/webrender/pull/3344  Differential Revision: https://phabricator.services.mozilla.com/D12822",
-    "node": "b599964cc3ee9182a50a4ed38996cef6fe87c13a"
+    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+    "commit_date": "2018-11-26 19:39:11",
+    "commit_message": "Bug 1509916 - use less C-style casting in nsTHashtable.h; r=erahm",
+    "node": "c4508d6ea52f4654ee131de9b7c4042ad5fc4f43"
   },
   "8": {
-    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
-    "commit_date": "2018-11-23 18:10:08",
-    "commit_message": "Bug 1476775 - Part 2: Change the profiler usage in devtools after API change r=julienw,gregtatum  Depends on D6267  Differential Revision: https://phabricator.services.mozilla.com/D6268",
-    "node": "bed93ebb313b1fb65bfbce423c7c09ac277c26e9"
+    "commiter_name": "Csoregi Natalia <ncsoregi@mozilla.com>",
+    "commit_date": "2018-11-26 18:23:19",
+    "commit_message": "Merge mozilla-central to mozilla-inbound. CLOSED TREE",
+    "node": "b9f771437a1212f4de43cc8419803390358b0ca3"
   },
   "9": {
-    "commiter_name": "Naz\u0131m Can Alt\u0131nova <canaltinova@gmail.com>",
-    "commit_date": "2018-11-21 16:13:15",
-    "commit_message": "Bug 1476775 - Part 1: Discard samples that are older than given duration r=mstange  Differential Revision: https://phabricator.services.mozilla.com/D6267",
-    "node": "9f21792d4ae6515aa1e12503b530757e884d4ff0"
+    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
+    "commit_date": "2018-11-26 18:11:45",
+    "commit_message": "Bug 1508672 - Dynamically imported modules can throw any value as an exception r=jorendorff",
+    "node": "9363b52649ac9b814d4b0b9105cca8416c436223"
   },
   "10": {
-    "commiter_name": "Christian Holler <choller@mozilla.com>",
-    "commit_date": "2018-11-22 01:18:27",
-    "commit_message": "Bug 1506044 - Do not send cookies with ASan reporter submits. r=johannh  Differential Revision: https://phabricator.services.mozilla.com/D12317",
-    "node": "062aef718a607660023c7e818a3760e54b0575a8"
+    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
+    "commit_date": "2018-11-26 18:11:45",
+    "commit_message": "Bug 1508672 - Finish dynamic module import at a later time in the shell r=jorendorff",
+    "node": "46ce47bd336841a2d71eb53e3bf76f360784e040"
   },
   "11": {
-    "commiter_name": "Dorel Luca <dluca@mozilla.com>",
-    "commit_date": "2018-11-24 11:46:32",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "node": "76c1898f6b021986beccc1461b1800ebe9f9e251"
+    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
+    "commit_date": "2018-11-26 18:11:44",
+    "commit_message": "Bug 1508672 - Fix some minor test262 issues in dynamic import tests r=jorendorff",
+    "node": "93445c3027525c80ac196074b58976a6c648fd83"
   },
   "12": {
-    "commiter_name": "Steve Fink <sfink@mozilla.com>",
-    "commit_date": "2018-11-21 22:07:12",
-    "commit_message": "Bug 1426574 - Use fallible bitmap ops for AtomizeAndCopyChars, r=jonco",
-    "node": "e8eb60450f8c25c2985316e2896aa0574ba658d5"
+    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
+    "commit_date": "2018-11-26 18:11:44",
+    "commit_message": "Bug 1508672 - Make |new import()| a syntax error r=jorendorff",
+    "node": "0ee93898e415524e9ffbf569cbcedadd35a67ac6"
   },
   "13": {
-    "commiter_name": "Bogdan Tara <btara@mozilla.com>",
-    "commit_date": "2018-11-23 23:41:49",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
-    "node": "7e7bf210330b1a491e30a75917d8b9aafa790458"
+    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
+    "commit_date": "2018-11-26 18:11:44",
+    "commit_message": "Bug 1508672 - Enable passing test262 dynamic import tests r=jorendorff",
+    "node": "761da392dd7a800d04d1112d191d25f3cc632484"
   },
   "14": {
-    "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
-    "commit_date": "2018-11-23 20:39:19",
-    "commit_message": "Bug 1509550 - Add more test chunks for Android 7.0 x86 jsreftests; r=me,a=test-only",
-    "node": "d0b1dc88d15d0e3bf4adf8c491feab0e5f833a90"
+    "commiter_name": "Natalia Csoregi <ncsoregi@mozilla.com>",
+    "commit_date": "2018-11-26 07:18:00",
+    "commit_message": "Bug 1498426 - Disable dom/tests/browser/perfmetrics/browser_test_unresponsive.js on all platforms. r=jmaher",
+    "node": "8a05e30b76c481fd9da971c7ec15a8ca42445530"
   },
   "15": {
-    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
-    "commit_date": "2018-11-22 12:35:01",
-    "commit_message": "Bug 1509086 - [wpt-sync] Update web-platform-tests to 0944ee217e239e6b7cb0d532c828e728ff9b60e1, a=testonly  wpt-head: 0944ee217e239e6b7cb0d532c828e728ff9b60e1 wpt-type: landing ",
-    "node": "2e2c39fe9a0cf169a72854200d49a5e381b93451"
+    "commiter_name": "Honza Bambas <honzab.moz@firemni.cz>",
+    "commit_date": "2018-11-26 03:08:00",
+    "commit_message": "Bug 1487778 - Protect QueryPerformanceCounter against going backward, r=froydnj",
+    "node": "c766f7eaa9f940c6bd075fb0e87c2ee9b19fcb57"
   },
   "16": {
-    "commiter_name": "moz-wptsync-bot <wptsync@mozilla.com>",
-    "commit_date": "2018-11-20 02:15:13",
-    "commit_message": "Bug 1508746 [wpt PR 14131] - Update wpt metadata, a=testonly  wpt-pr: 14131 wpt-type: metadata ",
-    "node": "c068080c7860f702466f32c21751b4e223343c39"
+    "commiter_name": "Jan Beich <jbeich@FreeBSD.org>",
+    "commit_date": "2018-11-25 16:53:00",
+    "commit_message": "Bug 1509757 - Don't rely on GNU regex extension for character classes. r=froydnj $ echo --with-system-nspr --with-system-nss | gnused -e 's/--with-system-nspr\\S   //' --with-system-nss $ echo --with-system-nspr --with-system-nss | bsdsed -e 's/--with-system-nspr\\S   //' sed: 1: \"s/--with-system-nspr\\S  ...\": RE error: trailing backslash (\\)",
+    "node": "79b57272e805a27451a9ace83ee3cfed172ff8d5"
   },
   "17": {
-    "commiter_name": "Hiroshige Hayashizaki <hiroshige@chromium.org>",
-    "commit_date": "2018-11-22 12:34:42",
-    "commit_message": "Bug 1508746 [wpt PR 14131] - Fix test exclusion logic of wpt/referrer-policy test generator, a=testonly  Automatic update from web-platform-testsFix test exclusion logic of wpt/referrer-policy test generator  Previously, all worker-request, a-tag, area-tag tests were excluded because \"redirection\" field was not included in |selection_pattern|, and thus \"worker-requests-with-swap-origin-redirect\" and \"overhead-for-redirection\" entries in \"excluded_tests\" in spec.src.json were applied to all redirection types.  This CL - Includes \"redirection\" field in |selection_pattern| and   instead remove \"redirection\" field from filenames, and - Regenerates tests.  Therefore, this CL - Adds new test files for worker-request, a-tag, area-tag, and - Renames existing test files.  The only manual changes are - referrer-policy/generic/tools/common_paths.py - third_party/WebKit/LayoutTests/SlowTests - third_party/WebKit/LayoutTests/SmokeTests and all other modifications are made by referrer-policy/generic/tools/generate.py.  Bug: 880027 Change-Id: Ie628f92b334d6e2adddc5957cc6cceaa8c69f322 Reviewed-on: https://chromium-review.googlesource.com/c/1330901 Reviewed-by: Hiroki Nakagawa <nhiroki@chromium.org> Reviewed-by: Jochen Eisinger <jochen@chromium.org> Reviewed-by: Dirk Pranke <dpranke@chromium.org> Commit-Queue: Hiroshige Hayashizaki <hiroshige@chromium.org> Cr-Commit-Position: refs/heads/master@{#609433} warning: inexact rename detection was skipped due to too many files. warning: you may want to set your diff.renameLimit variable to at least 1920 and retry the command.  --  wpt-commits: 0944ee217e239e6b7cb0d532c828e728ff9b60e1 wpt-pr: 14131 ",
-    "node": "1b37261649fee3b6c5d84c4cd22f842fe1419a45"
+    "commiter_name": "Ryan VanderMeulen <ryanvm@gmail.com>",
+    "commit_date": "2018-11-26 17:42:24",
+    "commit_message": "Bug 1509894 - Update pdf.js to version 2.1.86. r=bdahl",
+    "node": "94f4e5b42ac7db98cb56a6d40ab475ef368d4280"
   },
   "18": {
-    "commiter_name": "Philipp Hancke <fippo@appear.in>",
-    "commit_date": "2018-11-22 12:34:39",
-    "commit_message": "Bug 1507228 [wpt PR 14054] - webrtc: add test for legacy default stream, a=testonly  Automatic update from web-platform-testswebrtc: add test for legacy default stream  adds a test covering the legacy behaviour of dealing with SDP not containing a a=msid lines.  See also https://github.com/rtcweb-wg/jsep/issues/856 https://github.com/w3c/webrtc-pc/issues/2027  -- +jib codereview  -- Merge pull request #14054 from fippo/default-stream-no-msid  webrtc: add test for legacy default stream --  wpt-commits: e9bc1b1358accf5a7abd21155399845fdc891d37, 10fe925252eb0a9ff3d4915f342d2662ebe94e31, 83d75544ac1390cdca8a771267ec3d223cf43bbf wpt-pr: 14054 ",
-    "node": "828269b597ba3112bb72c961d02b9a4ac3e6c02f"
+    "commiter_name": "Marco Castelluccio <mcastelluccio@mozilla.com>",
+    "commit_date": "2018-11-26 11:45:41",
+    "commit_message": "Bug 1419475 - Re-enable some mochitest suites using virtual-with-gpu that were failing with Windows ccov builds. r=jmaher",
+    "node": "102c7135d95248e596d0c3efcdaa4a634367f77d"
   },
   "19": {
-    "commiter_name": "jugglinmike <mike@mikepennisi.com>",
-    "commit_date": "2018-11-22 12:34:37",
-    "commit_message": "Bug 1508533 [wpt PR 14137] - [wpt] Refactor internal function for clarity, a=testonly  Automatic update from web-platform-tests[wpt] Refactor internal function for clarity (#14137)  The `affected_by_interfaces` function is used for flow control in the following `if` condition:      if rel_path in file_contents or repo_path in file_contents or affected_by_interfaces(file_contents):         affected_testfiles.add(test_full_path)  This usage suggests that the function should return a boolean value indicating whether the provided file contents are \"affected.\" However, it was previously implemented to interact with the `affected_testfiles` set directly and return `None` in all cases.  Refactor the implementation to adhere to the functional style implied by the call site. --  wpt-commits: a8607f41bb0ff223456623cf43b427d4ed5bc53f wpt-pr: 14137 ",
-    "node": "59c8ec95baa39ba312681c2840f00e9194c6e3b2"
+    "commiter_name": "Christoph Kerschbaumer <ckerschb@christophkerschbaumer.com>",
+    "commit_date": "2018-11-23 17:05:24",
+    "commit_message": "Bug 1509504: Trunacte outStr within nsCSPContext::GetPolicyString. r=baku",
+    "node": "9d911745f1d14397a313ff695cec0901316db1d7"
   }
 }

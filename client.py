@@ -12,6 +12,20 @@ lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
+def extract_email(commit_email):
+    """
+    Helper function!
+    Takes as parameter a string that contains between "<" and ">" an email that needs to be extracted.
+    The function uses find to search for the beginning of the email (that starts with "<") and adds the lengths of the
+    "<" so that returned email doesn't contain the "<" symbol and rfind to find the ending character ">". Both find and
+    rfind return the index where the carachters "<" and ">" are placed so when you do return commit_email with
+    [start_char_index:ending_char_index] the string shrinks to what's between the characters.
+    :param commit_email: string that contains an email
+    :return: string that contains only the email
+    """
+    return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
+
+
 def create_git_md_table(repository_name):
     """
     Uses 'repository_name' parameter to generate markdown tables for every json file inside 'git_files'.
@@ -192,6 +206,11 @@ def filter_hg_commit_data(repository_url, push_type):
         value = datetime.fromtimestamp(timestamp)
         commit_date = value.strftime("%Y-%m-%d %H:%M:%S")
         commiter_name = (keys["user"])
+
+        # Use example of getting the commit email
+        commit_email = extract_email(commiter_name)
+        print("Commiter Email: " + commit_email)
+
         commit_message = keys["desc"]
         message = re.sub("[*\n\r]", " ", commit_message)
         commit_node = keys["node"]
@@ -216,6 +235,7 @@ def create_files_for_hg(repositories_holder):
         repository_url = repositories_holder["Mercurial"][repo]["url"]
         repository_push_type = repositories_holder["Mercurial"][repo]["configuration"]["push_type"]
         repository_name = repo
+        print("Working on: " + repo + ". URL: " + repository_url)
         hg_changes = filter_hg_commit_data(repository_url, repository_push_type)
         hg_json_name = "./hg_files/" + "{}.json".format(repository_name)
         with open(hg_json_name, "w") as json_file:

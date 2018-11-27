@@ -1,8 +1,82 @@
 {
   "0": {
-    "lastChecked": "2018-11-26 03:15:54.542030"
+    "lastChecked": "2018-11-27 03:15:09.533590"
   },
   "1": {
+    "sha": "bd3823b22243eb577300a8458e85a6dc75db10da",
+    "url": "https://github.com/mozilla/release-services/commit/bd3823b22243eb577300a8458e85a6dc75db10da",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: fix misleading error output (#1705)",
+    "commit_date": "2018-11-26 21:31:48",
+    "files_changed": [
+      "lib/please_cli/please_cli/run.py"
+    ]
+  },
+  "2": {
+    "sha": "91a6a96247406ae77e74c54275797375dca2e2e3",
+    "url": "https://github.com/mozilla/release-services/commit/91a6a96247406ae77e74c54275797375dca2e2e3",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: change ./please check to use nix-build instead of nix-shell (#1677)",
+    "commit_date": "2018-11-26 20:17:28",
+    "files_changed": [
+      "lib/please_cli/please_cli/check.py",
+      "lib/please_cli/please_cli/config.py"
+    ]
+  },
+  "3": {
+    "sha": "39aab8d39fdef891bbe4f0c3352a3ceac6637eb9",
+    "url": "https://github.com/mozilla/release-services/commit/39aab8d39fdef891bbe4f0c3352a3ceac6637eb9",
+    "commiter_name": "rail",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "shipit/frontend: make ship_firefox_rc skippable (#1703)  Firefox RC has a special case, when we want to skip pushing the updates  to the beta channel and proceed with the release-only phases. In this  case we should be able to push to CDNs without requiring ship_firefox_rc  to be scheduled.",
+    "commit_date": "2018-11-26 16:06:14",
+    "files_changed": [
+      "src/shipit/frontend/src/views/ListReleases/index.js"
+    ]
+  },
+  "4": {
+    "sha": "0c2001d979bf9e46e633247a5f1ed3e10ac40ab8",
+    "url": "https://github.com/mozilla/release-services/commit/0c2001d979bf9e46e633247a5f1ed3e10ac40ab8",
+    "commiter_name": "garbas",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "tokens/api: disable production deployment (#1707)",
+    "commit_date": "2018-11-26 16:03:36",
+    "files_changed": [
+      "lib/please_cli/please_cli/config.py"
+    ]
+  },
+  "5": {
+    "sha": "c20f2b1bb975d23b7ef93581de39bfa28f9e60cf",
+    "url": "https://github.com/mozilla/release-services/commit/c20f2b1bb975d23b7ef93581de39bfa28f9e60cf",
+    "commiter_name": "garbas",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "shipit/api: product details (#1655)    shipit/api: command that downloads existing json files      shipit/api: basic types and methods      shipit/api: started to implement get_releases      shipit/api: typo      shipit/api: adding mozilla-version as a dependency      shipit/api: get release data from ./data folder      shipit/api: fetch releases from database using some pgsql dialect      shipit/api: get_release_history and get_primary_builds implemented getting data from old      shipit/api: flake8 gardening      shipit/api: getting data from db for get_releases and get_release_history      Merge fixes      pseudo code for get_primary_builds      upload to s3 bucket      json_exports.json and append 'json/1.0/' infront every path      taskcluster shouldn't be pinned      add awscli      flake8 gardening      Firefox versions      Change signature      Change signature 2      Mobile versions      Thunderbird versions      Fix signature      Do not query db      get_l10n first pass      Fixes      Fixes      Fixes for reals      download_product_details should be a normal python script      typos      flake8 garden      Add mobile details      adding git to the projects      adding worker boilerplate which listens on certain route key      Fix get_l10n      adding an api endpoint to trigger the rebuild product details      Fix issues      Implement get_l10n      moving product details code to product_details module and have a worker and cli call it      restructure get_l10n almost done      last parts of get_l10n      typo      increase initial VM size when creating docker containers      staticanalysis/bot: Bump rust to 1.30.0 (#1686)      backend_common: add swagger_ui (#1685)    connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.      shipit/api: Fix release sync, add dates (#1684)    Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.      data not needed anymore      shipit/api: update release status (#1688)    In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).      shipit/frontent: add testing config (#1687)    At this point it is the same as staging.js      uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)      minor details to make cli command work finally      flake8 garden      using backoff to retry download      some more fixes for product details      only take shipped into account      more fixes for product details output      flake8 garden      shipit/api: use f-string instead of .format      shipit/api: use functools.wraps instead of update_wrapper      shipit/api: add comment what coroutine function is about      shipit/api: in download_product-details command download-dir folder should not exists      shipit/api: we dont need to check for status since we anyway call raise_for_status      unused import",
+    "commit_date": "2018-11-26 14:23:54",
+    "files_changed": [
+      "lib/cli_common/cli_common/utils.py",
+      "nix/lib/default.nix",
+      "nix/requirements_override.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements.txt",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/settings.py",
+      "src/shipit/api/setup.py",
+      "src/shipit/api/shipit_api/__init__.py",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/config.py",
+      "src/shipit/api/shipit_api/models.py",
+      "src/shipit/api/shipit_api/product_details.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/shipit/api/shipit_api/worker.py"
+    ]
+  },
+  "6": {
     "sha": "6ca8f1735dbdf74f51dfae0795014eae039f79b4",
     "url": "https://github.com/mozilla/release-services/commit/6ca8f1735dbdf74f51dfae0795014eae039f79b4",
     "commiter_name": "jankeromnes",
@@ -13,7 +87,7 @@
       "src/staticanalysis/bot/static_analysis_bot/workflow.py"
     ]
   },
-  "2": {
+  "7": {
     "sha": "99a13b60386e801229304e20e77892d65efedae5",
     "url": "https://github.com/mozilla/release-services/commit/99a13b60386e801229304e20e77892d65efedae5",
     "commiter_name": "lundjordan",
@@ -25,7 +99,7 @@
       "VERSION"
     ]
   },
-  "3": {
+  "8": {
     "sha": "d8d2a0f6eb757a846fc4598fd26e2c06ccd6be2d",
     "url": "https://github.com/mozilla/release-services/commit/d8d2a0f6eb757a846fc4598fd26e2c06ccd6be2d",
     "commiter_name": "garbas",
@@ -36,7 +110,7 @@
       "lib/please_cli/please_cli/config.py"
     ]
   },
-  "4": {
+  "9": {
     "sha": "62d1a69b098073ced1dd9fb28004a19ad8d6892c",
     "url": "https://github.com/mozilla/release-services/commit/62d1a69b098073ced1dd9fb28004a19ad8d6892c",
     "commiter_name": "La0",
@@ -47,7 +121,7 @@
       "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
     ]
   },
-  "5": {
+  "10": {
     "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
     "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
     "commiter_name": "La0",
@@ -64,7 +138,7 @@
       "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
     ]
   },
-  "6": {
+  "11": {
     "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
     "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
     "commiter_name": "kevinluvian",
@@ -77,7 +151,7 @@
       "src/codecoverage/backend/tests/test_coverage.py"
     ]
   },
-  "7": {
+  "12": {
     "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
     "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
     "commiter_name": "jankeromnes",
@@ -88,83 +162,6 @@
       "src/uplift/bot/uplift_bot/bugzilla.py",
       "src/uplift/bot/uplift_bot/cli.py",
       "src/uplift/bot/uplift_bot/sync.py"
-    ]
-  },
-  "8": {
-    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
-    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
-    "commiter_name": "rail",
-    "commiter_email": null,
-    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
-    "commit_date": "2018-11-20 01:39:45",
-    "files_changed": [
-      "src/shipit/frontend/src/configs/testing.js"
-    ]
-  },
-  "9": {
-    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
-    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
-    "commiter_name": "rail",
-    "commiter_email": null,
-    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
-    "commit_date": "2018-11-19 20:45:16",
-    "files_changed": [
-      "src/shipit/api/shipit_api/api.py",
-      "src/shipit/api/shipit_api/api.yml"
-    ]
-  },
-  "10": {
-    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
-    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
-    "commiter_name": "rail",
-    "commiter_email": null,
-    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
-    "commit_date": "2018-11-19 15:19:47",
-    "files_changed": [
-      "src/shipit/api/shipit_api/api.py",
-      "src/shipit/api/shipit_api/api.yml",
-      "src/shipit/api/shipit_api/cli.py",
-      "src/shipit/api/shipit_api/models.py"
-    ]
-  },
-  "11": {
-    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
-    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
-    "commiter_name": "rail",
-    "commiter_email": null,
-    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
-    "commit_date": "2018-11-19 15:01:56",
-    "files_changed": [
-      "lib/backend_common/requirements-dev.txt",
-      "lib/backend_common/requirements-extra.json",
-      "nix/requirements_override.nix",
-      "src/codecoverage/backend/requirements.nix",
-      "src/codecoverage/backend/requirements_frozen.txt",
-      "src/notification/identity/requirements.nix",
-      "src/notification/identity/requirements_frozen.txt",
-      "src/notification/policy/requirements.nix",
-      "src/notification/policy/requirements_frozen.txt",
-      "src/shipit/api/requirements.nix",
-      "src/shipit/api/requirements_frozen.txt",
-      "src/tokens/api/requirements.nix",
-      "src/tokens/api/requirements_frozen.txt",
-      "src/tooltool/api/requirements.nix",
-      "src/tooltool/api/requirements_frozen.txt",
-      "src/treestatus/api/requirements.nix",
-      "src/treestatus/api/requirements_frozen.txt",
-      "src/uplift/backend/requirements.nix",
-      "src/uplift/backend/requirements_frozen.txt"
-    ]
-  },
-  "12": {
-    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
-    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
-    "commiter_name": "La0",
-    "commiter_email": null,
-    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
-    "commit_date": "2018-11-19 11:15:41",
-    "files_changed": [
-      "nix/gecko_env.nix"
     ]
   }
 }
