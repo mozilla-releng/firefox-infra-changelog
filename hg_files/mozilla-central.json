@@ -1,122 +1,165 @@
 {
   "0": {
-    "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
-    "commit_date": "2018-11-27 00:34:45",
-    "commit_message": "Merge inbound to mozilla-central a=merge",
-    "node": "a60b595747ade6cdad6b51906bc9a880f6276f19"
+    "lastChecked": "2018-11-27 15:27:11.691007"
   },
   "1": {
-    "commiter_name": "Jonathan Watt <jwatt@jwatt.org>",
-    "commit_date": "2018-11-06 13:50:23",
-    "commit_message": "Bug 1505177. Remove gfxContext::CurrentDashOffset(). r=miko  Differential Revision: https://phabricator.services.mozilla.com/D11108",
-    "node": "e13ba7026e77deebda6fbfa1518709e24f6846e5"
+    "node": "ce39a152428a7f8ba5a4c82455dcf501c76c031b",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ce39a152428a",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Merge mozilla-inbound to mozilla-central a=merge",
+    "commit_date": "2018-11-27 09:43:31"
   },
   "2": {
-    "commiter_name": "Jonathan Watt <jwatt@jwatt.org>",
-    "commit_date": "2018-11-05 15:00:33",
-    "commit_message": "Bug 1505374. Remove dead hasClip code from FrameLayerBuilder::AddPaintedDisplayItem. r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D11168",
-    "node": "b036888636d14a020679811996ae9063b6a12e6f"
+    "node": "85ed5eb2a3663f024355370b1a6b7df35582a79d",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=85ed5eb2a366",
+    "commiter_name": "Steve Fink ",
+    "commit_email": "sfink@mozilla.com",
+    "commit_message": "Bug 1509992 - turn off Windows Jit job, r=jmaher",
+    "commit_date": "2018-11-26 20:12:50"
   },
   "3": {
-    "commiter_name": "Jonathan Watt <jwatt@jwatt.org>",
-    "commit_date": "2018-11-05 09:03:55",
-    "commit_message": "Bug 1508358. Avoid clang-format messing up Doxygen comments in SVG code. r=longsonr  Differential Revision: https://phabricator.services.mozilla.com/D12336",
-    "node": "73cac4fab2def41df759926fe8e6fe8564c27610"
+    "node": "47750e022e23d5b4eb445443a737a04ba9b45391",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=47750e022e23",
+    "commiter_name": "Paul Bone ",
+    "commit_email": "pbone@mozilla.com",
+    "commit_message": "Bug 1507379 - Make some nursery string values available in the profiler r=sfink",
+    "commit_date": "2018-11-16 05:53:05"
   },
   "4": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-26 20:16:13",
-    "commit_message": "Bug 1481577 - make nsTHashtable pretty-printer aware of naming changes; r=tromey  kHashBits was renamed to mozilla::kHashNumberBits, which seems awkward to access from the pretty-printer.  So we compute its value from the HashNumber type instead.",
-    "node": "73de720af49df25489f2f47a84c14725e326478c"
+    "node": "b12b2142017abdb8cce3ea9758ed0af16c398e15",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b12b2142017a",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1500703 - Include more context when reporting recording mismatches, r=mccr8.",
+    "commit_date": "2018-11-26 22:42:28"
   },
   "5": {
-    "commiter_name": "Jonathan Kew <jkew@mozilla.com>",
-    "commit_date": "2018-11-26 19:59:50",
-    "commit_message": "Bug 1509167 - Cache an nsFontMetrics reference in nsTextFrame so that we don't have to re-create it on every DrawText call. r=jwatt",
-    "node": "8a7a03bc253d12664de2a396b2483187499af996"
+    "node": "b9f41dd78cfdd2739b343595c1647ef1c4f57875",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b9f41dd78cfd",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1509562 Part 4 - Define redirections directly, instead of with a giant macro, r=lsmyth.",
+    "commit_date": "2018-11-23 19:35:54"
   },
   "6": {
-    "commiter_name": "Andrew Osmond <aosmond@mozilla.com>",
-    "commit_date": "2018-11-26 16:59:22",
-    "commit_message": "Bug 1509878 - Upgrade libwebp to version 1.0.1 r=jrmuizel  Differential Revision: https://phabricator.services.mozilla.com/D12933",
-    "node": "5fb44413dac138585f4783470e5c9e9d7cf501f3"
+    "node": "d0efb6f89bd0b8d070ab4a1bf6fca4d328dcb670",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d0efb6f89bd0",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1509562 Part 3 - Remove dependence on CallEvent_  enum, r=lsmyth.",
+    "commit_date": "2018-11-23 19:27:38"
   },
   "7": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-26 19:39:11",
-    "commit_message": "Bug 1509916 - use less C-style casting in nsTHashtable.h; r=erahm",
-    "node": "c4508d6ea52f4654ee131de9b7c4042ad5fc4f43"
+    "node": "bb62b5dc4dbec70a1645b59d6059726f50820ead",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bb62b5dc4dbe",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1509562 Part 2 - Avoid UAF when resetting middleman calls, r=lsmyth.",
+    "commit_date": "2018-11-23 19:09:18"
   },
   "8": {
-    "commiter_name": "Csoregi Natalia <ncsoregi@mozilla.com>",
-    "commit_date": "2018-11-26 18:23:19",
-    "commit_message": "Merge mozilla-central to mozilla-inbound. CLOSED TREE",
-    "node": "b9f771437a1212f4de43cc8419803390358b0ca3"
+    "node": "3f77f0486954f769e7870d02386ea15ca53f82ff",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3f77f0486954",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1509562 Part 1 - Remove restriction on redirections being a statically defined array, r=lsmyth.",
+    "commit_date": "2018-11-23 19:06:30"
   },
   "9": {
-    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
-    "commit_date": "2018-11-26 18:11:45",
-    "commit_message": "Bug 1508672 - Dynamically imported modules can throw any value as an exception r=jorendorff",
-    "node": "9363b52649ac9b814d4b0b9105cca8416c436223"
+    "node": "70f4239b2fab7f622de52ba287e6eaa105dd604d",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=70f4239b2fab",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1508693 - Add middleman call support for functions used in rendering widgets, r=lsmyth.",
+    "commit_date": "2018-11-23 19:06:16"
   },
   "10": {
-    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
-    "commit_date": "2018-11-26 18:11:45",
-    "commit_message": "Bug 1508672 - Finish dynamic module import at a later time in the shell r=jorendorff",
-    "node": "46ce47bd336841a2d71eb53e3bf76f360784e040"
+    "node": "98430e6d541b8e5ffd0492d84afd5c031eb79905",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=98430e6d541b",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1508099 Part 2 - Record refcount changes for image decoders and decoding tasks, r=tnikkel.",
+    "commit_date": "2018-11-17 22:55:12"
   },
   "11": {
-    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
-    "commit_date": "2018-11-26 18:11:44",
-    "commit_message": "Bug 1508672 - Fix some minor test262 issues in dynamic import tests r=jorendorff",
-    "node": "93445c3027525c80ac196074b58976a6c648fd83"
+    "node": "456275c5ddac8e6c7cd9a71a4f10ed56c0f1bfc3",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=456275c5ddac",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1508099 Part 1 - Add macros for recording refcounts on non-nsISupports classes, r=froydnj.",
+    "commit_date": "2018-11-17 22:54:55"
   },
   "12": {
-    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
-    "commit_date": "2018-11-26 18:11:44",
-    "commit_message": "Bug 1508672 - Make |new import()| a syntax error r=jorendorff",
-    "node": "0ee93898e415524e9ffbf569cbcedadd35a67ac6"
+    "node": "b0e69b1368832a3846c0940a6fb8bb834bdc62a1",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b0e69b136883",
+    "commiter_name": "Andreea Pavel ",
+    "commit_email": "apavel@mozilla.com",
+    "commit_message": "Backed out 8 changesets (bug 1446161, bug 1487287, bug 1488993, bug 1474991, bug 1496608) for very frequent automation.py crashes on a CLOSED TREE  Backed out changeset 8b1f88d7bfeb (bug 1487287) Backed out changeset 8fa5e81ad801 (bug 1487287) Backed out changeset 7a480161fa0f (bug 1474991) Backed out changeset 80116391b7fe (bug 1446161) Backed out changeset 1bdf64b29121 (bug 1446161) Backed out changeset 37bf52f0e9cf (bug 1446161) Backed out changeset 8ede2ebe6b7a (bug 1496608) Backed out changeset cea43bc88c7a (bug 1488993)",
+    "commit_date": "2018-11-27 06:53:18"
   },
   "13": {
-    "commiter_name": "Jon Coppeard <jcoppeard@mozilla.com>",
-    "commit_date": "2018-11-26 18:11:44",
-    "commit_message": "Bug 1508672 - Enable passing test262 dynamic import tests r=jorendorff",
-    "node": "761da392dd7a800d04d1112d191d25f3cc632484"
+    "node": "e321cef882b8caf0063cf9d17eec89a8b3170606",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e321cef882b8",
+    "commiter_name": "Daniel Varga ",
+    "commit_email": "dvarga@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+    "commit_date": "2018-11-27 05:36:22"
   },
   "14": {
-    "commiter_name": "Natalia Csoregi <ncsoregi@mozilla.com>",
-    "commit_date": "2018-11-26 07:18:00",
-    "commit_message": "Bug 1498426 - Disable dom/tests/browser/perfmetrics/browser_test_unresponsive.js on all platforms. r=jmaher",
-    "node": "8a05e30b76c481fd9da971c7ec15a8ca42445530"
+    "node": "d5a15c64bd401768c581663b1b13f45e66080616",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d5a15c64bd40",
+    "commiter_name": "Dorel Luca ",
+    "commit_email": "dluca@mozilla.com",
+    "commit_message": "Backed out 6 changesets (bug 1159042) for crashtest failures. CLOSED TREE  Backed out changeset fe77c09dee31 (bug 1159042) Backed out changeset db0e173a6ed2 (bug 1159042) Backed out changeset 080b9ceee8ec (bug 1159042) Backed out changeset 6a5191742ca1 (bug 1159042) Backed out changeset 3a86c3e65d44 (bug 1159042) Backed out changeset 845bc8316b05 (bug 1159042)",
+    "commit_date": "2018-11-27 04:30:07"
   },
   "15": {
-    "commiter_name": "Honza Bambas <honzab.moz@firemni.cz>",
-    "commit_date": "2018-11-26 03:08:00",
-    "commit_message": "Bug 1487778 - Protect QueryPerformanceCounter against going backward, r=froydnj",
-    "node": "c766f7eaa9f940c6bd075fb0e87c2ee9b19fcb57"
+    "node": "63cbd79e897de14cb164992d37b15700fec420f0",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=63cbd79e897d",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1503074 - Only touch the FX_TAB_SWITCH_COMPOSITE_E10S_MS stopwatch when we have actually started it in the past  Differential Revision: https://phabricator.services.mozilla.com/D12966",
+    "commit_date": "2018-11-26 19:16:09"
   },
   "16": {
-    "commiter_name": "Jan Beich <jbeich@FreeBSD.org>",
-    "commit_date": "2018-11-25 16:53:00",
-    "commit_message": "Bug 1509757 - Don't rely on GNU regex extension for character classes. r=froydnj $ echo --with-system-nspr --with-system-nss | gnused -e 's/--with-system-nspr\\S   //' --with-system-nss $ echo --with-system-nspr --with-system-nss | bsdsed -e 's/--with-system-nspr\\S   //' sed: 1: \"s/--with-system-nspr\\S  ...\": RE error: trailing backslash (\\)",
-    "node": "79b57272e805a27451a9ace83ee3cfed172ff8d5"
+    "node": "e3a074ae3f0c18a5329c23099c5169f135885852",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e3a074ae3f0c",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1508044 - Part 4: Make nsChannelClassifier use nsContentUtils::IsThirdPartyWindowOrChannel() in order to avoid having duplicated logic r=francois  Depends on D12853  Differential Revision: https://phabricator.services.mozilla.com/D12854",
+    "commit_date": "2018-11-27 00:46:50"
   },
   "17": {
-    "commiter_name": "Ryan VanderMeulen <ryanvm@gmail.com>",
-    "commit_date": "2018-11-26 17:42:24",
-    "commit_message": "Bug 1509894 - Update pdf.js to version 2.1.86. r=bdahl",
-    "node": "94f4e5b42ac7db98cb56a6d40ab475ef368d4280"
+    "node": "691286d50c87eb419c121c88836a67a8227e611b",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=691286d50c87",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1508044 - Part 3: Ensure that the third-party checks performed on channels in nsContentUtils::IsThirdPartyWindowOrChannel() follow the same logic as those performed in nsChannelClassifier r=francois  Depends on D12852  Differential Revision: https://phabricator.services.mozilla.com/D12853",
+    "commit_date": "2018-11-27 00:43:20"
   },
   "18": {
-    "commiter_name": "Marco Castelluccio <mcastelluccio@mozilla.com>",
-    "commit_date": "2018-11-26 11:45:41",
-    "commit_message": "Bug 1419475 - Re-enable some mochitest suites using virtual-with-gpu that were failing with Windows ccov builds. r=jmaher",
-    "node": "102c7135d95248e596d0c3efcdaa4a634367f77d"
+    "node": "5452c9164d46e49aa8ee6cd3444bb0f8cc7cc121",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5452c9164d46",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1508044 - Part 2: Check the return values of mozIThirdPartyUtil::IsThirdPartyFoo() in nsContentUtils::IsThirdPartyWindowOrChannel() r=francois  Differential Revision: https://phabricator.services.mozilla.com/D12852",
+    "commit_date": "2018-11-27 00:38:52"
   },
   "19": {
-    "commiter_name": "Christoph Kerschbaumer <ckerschb@christophkerschbaumer.com>",
-    "commit_date": "2018-11-23 17:05:24",
-    "commit_message": "Bug 1509504: Trunacte outStr within nsCSPContext::GetPolicyString. r=baku",
-    "node": "9d911745f1d14397a313ff695cec0901316db1d7"
+    "node": "a12365223e8b4c0eb19eb9e65ebd233069109540",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a12365223e8b",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1510085 - Update webrender to commit 05bdcae134d73aca7bb48358e91de1f8aef27773 (WR PR #3354). r=kats  https://github.com/servo/webrender/pull/3354  Differential Revision: https://phabricator.services.mozilla.com/D13029",
+    "commit_date": "2018-11-27 02:54:00"
+  },
+  "20": {
+    "node": "a613bf1190880ef45811a35ab8e6904fe9263192",
+    "URL": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a613bf119088",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1510084 - Update webrender to commit 35027d93aded8c0a7887dadc8aef5e393171e802 (WR PR #3348). r=kats  https://github.com/servo/webrender/pull/3348  Differential Revision: https://phabricator.services.mozilla.com/D13028",
+    "commit_date": "2018-11-27 02:53:43"
   }
 }

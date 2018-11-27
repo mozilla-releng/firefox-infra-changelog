@@ -1,122 +1,165 @@
 {
   "0": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-27 00:42:28",
-    "commit_message": "Bug 1500703 - Include more context when reporting recording mismatches, r=mccr8.",
-    "node": "b12b2142017abdb8cce3ea9758ed0af16c398e15"
+    "lastChecked": "2018-11-27 15:27:15.760333"
   },
   "1": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-23 21:35:54",
-    "commit_message": "Bug 1509562 Part 4 - Define redirections directly, instead of with a giant macro, r=lsmyth.",
-    "node": "b9f41dd78cfdd2739b343595c1647ef1c4f57875"
+    "node": "e9a02a8a62e5ee81c00ff7cff86744cc0f4d4e41",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e9a02a8a62e5",
+    "commiter_name": "Diego Pino Garcia ",
+    "commit_email": "dpino@igalia.com",
+    "commit_message": "Bug 1509147 - Rename payer and paymentMethod on nsIPaymentDetails to payerErrors and paymentMethodErrors respectively r=baku",
+    "commit_date": "2018-11-26 01:08:00"
   },
   "2": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-23 21:27:38",
-    "commit_message": "Bug 1509562 Part 3 - Remove dependence on CallEvent_  enum, r=lsmyth.",
-    "node": "d0efb6f89bd0b8d070ab4a1bf6fca4d328dcb670"
+    "node": "deb83c7936386cd93471ee58e300a2e561782295",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=deb83c793638",
+    "commiter_name": "Cristina Coroiu ",
+    "commit_email": "ccoroiu@mozilla.com",
+    "commit_message": "Bug 1383454 - Disable box-sizing-replaced-003.xht on mac for frequent failures. r=jmaher",
+    "commit_date": "2018-11-26 15:51:00"
   },
   "3": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-23 21:09:18",
-    "commit_message": "Bug 1509562 Part 2 - Avoid UAF when resetting middleman calls, r=lsmyth.",
-    "node": "bb62b5dc4dbec70a1645b59d6059726f50820ead"
+    "node": "34b22b4e2b029b67e030d58f20b8b4bdc99331c4",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=34b22b4e2b02",
+    "commiter_name": "Bruce ",
+    "commit_email": "bruce.bugz@gmail.com",
+    "commit_message": "Bug 1509209 - Show scrollbars in the Trackers sub-panel only if the content overflows. r=johannh",
+    "commit_date": "2018-11-26 20:21:00"
   },
   "4": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-23 21:06:30",
-    "commit_message": "Bug 1509562 Part 1 - Remove restriction on redirections being a statically defined array, r=lsmyth.",
-    "node": "3f77f0486954f769e7870d02386ea15ca53f82ff"
+    "node": "07789ba4c3d73b0318cbd9fa10c8e7f110565801",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=07789ba4c3d7",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1505887 - Fix FindChromeAccessOnlySubtreeOwner so that we handle UA widget being ChromeOnlyAccess root. r=smaug  A single video controls test crashed without this, while dereferencing a null anonOwnerRelated in:    https://searchfox.org/mozilla-central/rev/c0b26c40769a1e5607a1ae8be37fe64df64fc55e/dom/base/FragmentOrElement.cpp#964  I think this is the right fix for it, but the code that uses this is kind of complex, so worth double-checking... :) ",
+    "commit_date": "2018-11-15 21:28:56"
   },
   "5": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-23 21:06:16",
-    "commit_message": "Bug 1508693 - Add middleman call support for functions used in rendering widgets, r=lsmyth.",
-    "node": "70f4239b2fab7f622de52ba287e6eaa105dd604d"
+    "node": "ad4ea72ce4d4f7c9150575f6173fa0fbb05e967c",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ad4ea72ce4d4",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1505887 - Make CanCallerAccess(nsINode ) know about chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11409 ",
+    "commit_date": "2018-11-26 20:11:12"
   },
   "6": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-18 00:55:12",
-    "commit_message": "Bug 1508099 Part 2 - Record refcount changes for image decoders and decoding tasks, r=tnikkel.",
-    "node": "98430e6d541b8e5ffd0492d84afd5c031eb79905"
+    "node": "8221df0f4e50bbdebe7cd65c1b3adf799a1aa6a6",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8221df0f4e50",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1505887 - Make UAWidgets chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11408 ",
+    "commit_date": "2018-11-26 20:09:51"
   },
   "7": {
-    "commiter_name": "Brian Hackett <bhackett1024@gmail.com>",
-    "commit_date": "2018-11-18 00:54:55",
-    "commit_message": "Bug 1508099 Part 1 - Add macros for recording refcounts on non-nsISupports classes, r=froydnj.",
-    "node": "456275c5ddac8e6c7cd9a71a4f10ed56c0f1bfc3"
+    "node": "dc298299ebadd4b20eb58ea1ee6404b416eed422",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dc298299ebad",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Backed out 4 changesets (bug 1505887, bug 1509989) for failing crashtests on tests/layout/style/crashtests/1509989.html on a CLOSED TREE.  Backed out changeset dc6c022e9fe1 (bug 1509989) Backed out changeset 490a99122a7f (bug 1505887) Backed out changeset 7b9afff4ff11 (bug 1505887) Backed out changeset 15da6e919d80 (bug 1505887)",
+    "commit_date": "2018-11-27 12:10:30"
   },
   "8": {
-    "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
-    "commit_date": "2018-11-27 02:59:05",
-    "commit_message": "Bug 1483478 - Store memory dump artifacts in awsy-lite; r=glandium",
-    "node": "510f4bccd603a6a64b514e174c5d9e52d7afd185"
+    "node": "6c94d53b486c1140051607b71bf66c0e014c605c",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6c94d53b486c",
+    "commiter_name": "Benjamin Bouvier ",
+    "commit_email": "benj@benj.me",
+    "commit_message": "Bug 1509848: Run clippy on Baldrdash; r=sunfish",
+    "commit_date": "2018-11-19 16:23:41"
   },
   "9": {
-    "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-    "commit_date": "2018-11-27 01:51:35",
-    "commit_message": "Bug 1509927 - use a little more KnownNotNull placement new in MFBT; r=njn  This change avoids some useless null checks.",
-    "node": "4b797608c0576725cc6f5c46f2255a268a05f3e0"
+    "node": "fc064fbbcdf011cb2028f36b7afec810e64a865c",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fc064fbbcdf0",
+    "commiter_name": "Benjamin Bouvier ",
+    "commit_email": "benj@benj.me",
+    "commit_message": "Bug 1509848: Cleanups in Baldrdash code; r=lth",
+    "commit_date": "2018-11-16 17:57:42"
   },
   "10": {
-    "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
-    "commit_date": "2018-11-27 01:04:58",
-    "commit_message": "Merge mozilla-central to inbound a=merge on a CLOSED TREE",
-    "node": "cf079e81ea44a2fb38a32843e537a2819ab3b5a2"
+    "node": "ecf218f8c16a46fecbcf7e24c2e862b726a0c020",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ecf218f8c16a",
+    "commiter_name": "Benjamin Bouvier ",
+    "commit_email": "benj@benj.me",
+    "commit_message": "Bug 1509848: Reenable warnings in Baldrdash and fix them; r=sunfish",
+    "commit_date": "2018-11-19 14:27:46"
   },
   "11": {
-    "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
-    "commit_date": "2018-11-27 00:34:45",
-    "commit_message": "Merge inbound to mozilla-central a=merge",
-    "node": "a60b595747ade6cdad6b51906bc9a880f6276f19"
+    "node": "9fcec7e5baa7e044e0a403d70ded222dc4d7bb1f",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9fcec7e5baa7",
+    "commiter_name": "Benjamin Bouvier ",
+    "commit_email": "benj@benj.me",
+    "commit_message": "Bug 1509848: Allow Baldrdash to be compiled independently from Spidermonkey; r=froydnj  This allows tools like the Rust Language Server to still run for Cranelift, allowing IDE integration and useful developer feedback when hacking in this directory.",
+    "commit_date": "2018-11-19 14:27:20"
   },
   "12": {
-    "commiter_name": "Erica Wright <ewright@mozilla.com>",
-    "commit_date": "2018-11-26 18:59:19",
-    "commit_message": "Bug 1501990 - Add a mode label to the Content Blocking section in the control center. r=johannh,flod  Differential Revision: https://phabricator.services.mozilla.com/D12717",
-    "node": "f38d34679027acdcb303231cadbc7aef1849af53"
+    "node": "2b4844c3f4d88f746755c49d8d41de016ef8f2cb",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2b4844c3f4d8",
+    "commiter_name": "Benjamin Bouvier ",
+    "commit_email": "benj@benj.me",
+    "commit_message": "Bug 1509846: Validate in parallel when compiling with Cranelift; r=lth",
+    "commit_date": "2018-11-26 13:13:47"
   },
   "13": {
-    "commiter_name": "Valentin Gosu <valentin.gosu@gmail.com>",
-    "commit_date": "2018-11-26 19:38:42",
-    "commit_message": "Bug 1260527 - Change HttpChannelChild to open IPDL earlier than AsyncOpen r=kershaw,dragana  Since we need the loadInfo to set up the IPDL connection, we move the logic to do so from HttpChannelChild::AsyncOpen to HttpChannelChild::SetLoadInfo via InitIPCChannel. It would have been nicer to do so in HttpChannelChild::Init, but I ran into issues with view-source channels, which required an ugly hack.  Also note that RemoteChannelExists() preserves the existing contract - it is true between asyncOpen and onStopRequest - but the name is slightly off, as the channel has already been open by the time we call asyncOpen. We will fix this in a follow-up.  Differential Revision: https://phabricator.services.mozilla.com/D12419",
-    "node": "d15f0ac561d9fc06518cf12851aaecf52eba485e"
+    "node": "e3ca695c95b2f5f69e6be409e8be394ade8932b3",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e3ca695c95b2",
+    "commiter_name": "Jonathan Watt ",
+    "commit_email": "jwatt@jwatt.org",
+    "commit_message": "Bug 1510167. Mark some nsGkAtom  arguments as const in DOM code. r=baku  Differential Revision: https://phabricator.services.mozilla.com/D13049",
+    "commit_date": "2018-11-13 12:48:21"
   },
   "14": {
-    "commiter_name": "Andreas Pehrson <apehrson@mozilla.com>",
-    "commit_date": "2018-11-26 18:54:13",
-    "commit_message": "Bug 1306999 - Change from \"playing\" to \"loadeddata\" before assuming there's a video frame. r=jib  Differential Revision: https://phabricator.services.mozilla.com/D12929",
-    "node": "759ec08eebaaa4418a3a96b20d5942d55a3cafcc"
+    "node": "9ec6a81e695aef5d519d0e8a79927a9d6e915c03",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9ec6a81e695a",
+    "commiter_name": "Jonathan Watt ",
+    "commit_email": "jwatt@jwatt.org",
+    "commit_message": "Bug 1510116. Fix some unified build issues in layout code. r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D13039",
+    "commit_date": "2018-11-12 22:20:52"
   },
   "15": {
-    "commiter_name": "Raphael Pierzina <rpierzina@mozilla.com>",
-    "commit_date": "2018-11-26 18:50:15",
-    "commit_message": "Bug 1509879 - Fix TypeError in firefox-puppeteer's TabBar.close_all_tabs(); r=davehunt  Differential Revision: https://phabricator.services.mozilla.com/D12921",
-    "node": "55a495eadcc150d65d9a8760283cc13612c59b66"
+    "node": "dc6c022e9fe127bd0d32e25e3206f79e3d0d954c",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dc6c022e9fe1",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1509989, bug 1505887 - Add a crashtest. ",
+    "commit_date": "2018-11-27 10:43:23"
   },
   "16": {
-    "commiter_name": "Ryan Hunt <rhunt@eqrion.net>",
-    "commit_date": "2018-11-22 16:15:21",
-    "commit_message": "Bug 1508789 - Add tests for 'pointer-events: none' on the root element. r=mstange  Depends on D12500  Differential Revision: https://phabricator.services.mozilla.com/D12622",
-    "node": "56b6151b48228e19e2e076053294b78f75880046"
+    "node": "490a99122a7fc04ad0ec6bf9e32036c36b92d631",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=490a99122a7f",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1505887 - Fix FindChromeAccessOnlySubtreeOwner so that we handle UA widget being ChromeOnlyAccess root. r=smaug  A single video controls test crashed without this, while dereferencing a null anonOwnerRelated in:    https://searchfox.org/mozilla-central/rev/c0b26c40769a1e5607a1ae8be37fe64df64fc55e/dom/base/FragmentOrElement.cpp#964  I think this is the right fix for it, but the code that uses this is kind of complex, so worth double-checking... :) ",
+    "commit_date": "2018-11-15 21:28:56"
   },
   "17": {
-    "commiter_name": "Ryan Hunt <rhunt@eqrion.net>",
-    "commit_date": "2018-11-22 16:16:14",
-    "commit_message": "Bug 1508789 - Force 'pointer-events: auto' used value for root content. r=mstange  It seems that other browsers don't allow 'pointer-events: none' on the root content, and this can cause us interoperability issues.  Differential Revision: https://phabricator.services.mozilla.com/D12500",
-    "node": "d15d34168dd095c25dfbca6313a3bfa1b389da38"
+    "node": "7b9afff4ff11f683d9a5e46ae92d80d6e9e7add3",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7b9afff4ff11",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1505887 - Make CanCallerAccess(nsINode ) know about chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11409 ",
+    "commit_date": "2018-11-26 20:11:12"
   },
   "18": {
-    "commiter_name": "Patrick Brosset <pbrosset@mozilla.com>",
-    "commit_date": "2018-11-26 18:39:23",
-    "commit_message": "Bug 1509070 - Add histogram to track the type of flex elements selected r=miker  Differential Revision: https://phabricator.services.mozilla.com/D12564",
-    "node": "6713926d58d28f438b010bf217fba98722e2c1e8"
+    "node": "15da6e919d804d770219f720fb93b7c2d42e5f10",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=15da6e919d80",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1505887 - Make UAWidgets chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11408 ",
+    "commit_date": "2018-11-26 20:09:51"
   },
   "19": {
-    "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
-    "commit_date": "2018-11-26 18:26:19",
-    "commit_message": "Bug 1508652 - Put WR captures on Android into the external files dir. r=snorp,kvark  Differential Revision: https://phabricator.services.mozilla.com/D12769",
-    "node": "6fdc307a0717b978eb31ef83f7e053b6e1beb33f"
+    "node": "aabcdc32ab3ca9a0eab35055ff8ba1f3a109b019",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=aabcdc32ab3c",
+    "commiter_name": "Jefry Lagrange ",
+    "commit_email": "jefry.reyes@gmail.com",
+    "commit_message": "Bug 1508584 - Add some space between console message and file name. r=nchevobbe",
+    "commit_date": "2018-11-26 07:26:00"
+  },
+  "20": {
+    "node": "4f9a88ca20ebd876c51948bc171269502865c3ee",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4f9a88ca20eb",
+    "commiter_name": "Tooru Fujisawa ",
+    "commit_email": "arai_a@mac.com",
+    "commit_message": "Bug 1509768 - Handle the case that String#replace is called with a empty string pattern on a rope. r=evilpie",
+    "commit_date": "2018-11-27 10:18:52"
   }
 }
