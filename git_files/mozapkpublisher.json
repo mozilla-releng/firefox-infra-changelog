@@ -1,5 +1,155 @@
 {
   "0": {
-    "lastChecked": "2018-11-27 03:15:42.152556"
+    "lastChecked": "2018-11-28 04:33:24.841722"
+  },
+  "1": {
+    "sha": "c80a8c4ccff4cafd581d023bd7d812e3a6cff588",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/c80a8c4ccff4cafd581d023bd7d812e3a6cff588",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #137 from mitchhentges/65-nightly-checksum  Fixes #65 - nightly en-US releases are now downloadable again",
+    "commit_date": "2018-11-27 18:25:02",
+    "files_changed": [
+      "mozapkpublisher/get_apk.py",
+      "mozapkpublisher/test/test_get_apk.py"
+    ]
+  },
+  "2": {
+    "sha": "e142d382b029801a78f897eb0429940c6ed137d2",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/e142d382b029801a78f897eb0429940c6ed137d2",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Merge remote-tracking branch 'upstream/master' into 65-nightly-checksum  # Conflicts: #\tmozapkpublisher/get_apk.py",
+    "commit_date": "2018-11-27 18:15:21",
+    "files_changed": [
+      "mozapkpublisher/common/utils.py",
+      "mozapkpublisher/get_apk.py",
+      "mozapkpublisher/test/common/test_utils.py",
+      "mozapkpublisher/test/integration/test_get_apk.py",
+      "requirements-test.txt",
+      "requirements-test.txt.in",
+      "requirements.txt",
+      "requirements.txt.in"
+    ]
+  },
+  "3": {
+    "sha": "a2d2ca219218cb880e69ff514e9f271752bd659d",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/a2d2ca219218cb880e69ff514e9f271752bd659d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #136 from mitchhentges/62-async-file-download  62: Download files asynchronously",
+    "commit_date": "2018-11-27 17:56:37",
+    "files_changed": [
+      "mozapkpublisher/common/utils.py",
+      "mozapkpublisher/get_apk.py",
+      "mozapkpublisher/test/common/test_utils.py",
+      "mozapkpublisher/test/integration/test_get_apk.py",
+      "requirements-test.txt",
+      "requirements-test.txt.in",
+      "requirements.txt",
+      "requirements.txt.in"
+    ]
+  },
+  "4": {
+    "sha": "4a6979c5f268d2e2504bc7221898957750614dcc",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/4a6979c5f268d2e2504bc7221898957750614dcc",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds coverage for version >= 59 download",
+    "commit_date": "2018-11-26 23:49:42",
+    "files_changed": [
+      "mozapkpublisher/test/test_get_apk.py"
+    ]
+  },
+  "5": {
+    "sha": "c2fa3b1957b24766a9bf5a4c4975b9cf8d1b04f6",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/c2fa3b1957b24766a9bf5a4c4975b9cf8d1b04f6",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Fixes #65 - nightly en-US releases are now downloadable again",
+    "commit_date": "2018-11-26 23:41:14",
+    "files_changed": [
+      "mozapkpublisher/get_apk.py",
+      "mozapkpublisher/test/test_get_apk.py"
+    ]
+  },
+  "6": {
+    "sha": "d7c00a8dc2712f0ff62f7ed12412ba618f3a0aad",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/d7c00a8dc2712f0ff62f7ed12412ba618f3a0aad",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds pytest-asyncio to dependencies",
+    "commit_date": "2018-11-26 20:16:49",
+    "files_changed": [
+      "requirements-test.txt",
+      "requirements-test.txt.in"
+    ]
+  },
+  "7": {
+    "sha": "7705f55cb67b3b4decb16bf67348650099e2dc2e",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/7705f55cb67b3b4decb16bf67348650099e2dc2e",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Improves async handling for backwards-compatibility and readability",
+    "commit_date": "2018-11-24 00:43:32",
+    "files_changed": [
+      "mozapkpublisher/get_apk.py",
+      "mozapkpublisher/test/common/test_utils.py",
+      "mozapkpublisher/test/integration/test_get_apk.py"
+    ]
+  },
+  "8": {
+    "sha": "881f4453aa477329a52bbd7ca4c0512c64b89c6b",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/881f4453aa477329a52bbd7ca4c0512c64b89c6b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Use sha512, not sha256, for requirements hashes",
+    "commit_date": "2018-11-24 00:07:26",
+    "files_changed": [
+      "mozapkpublisher/test/common/test_utils.py",
+      "requirements-test.txt",
+      "requirements.txt"
+    ]
+  },
+  "9": {
+    "sha": "658e20bb4a9a587e112f2792494a00ae09399cb7",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/658e20bb4a9a587e112f2792494a00ae09399cb7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds log when HTTP request to download file starts",
+    "commit_date": "2018-11-23 23:56:40",
+    "files_changed": [
+      "mozapkpublisher/common/utils.py",
+      "requirements.txt",
+      "requirements.txt.in"
+    ]
+  },
+  "10": {
+    "sha": "63596b0a58beab805ec6d006e4c0b523a617edab",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/63596b0a58beab805ec6d006e4c0b523a617edab",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Fixes tests",
+    "commit_date": "2018-11-22 02:47:02",
+    "files_changed": [
+      "mozapkpublisher/test/common/test_utils.py",
+      "requirements-test.txt",
+      "requirements-test.txt.in"
+    ]
+  },
+  "11": {
+    "sha": "6e35fdd11042c2cf2465e1b6e5d5677d9e299bcb",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/6e35fdd11042c2cf2465e1b6e5d5677d9e299bcb",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Downloads files asynchronously",
+    "commit_date": "2018-11-22 01:05:29",
+    "files_changed": [
+      "mozapkpublisher/common/utils.py",
+      "mozapkpublisher/get_apk.py",
+      "mozapkpublisher/test/integration/test_get_apk.py",
+      "requirements.txt",
+      "requirements.txt.in"
+    ]
   }
 }

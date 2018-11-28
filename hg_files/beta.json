@@ -1,122 +1,165 @@
 {
   "0": {
-    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-    "commit_date": "2018-11-26 22:00:03",
-    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with FIREFOX_64_0b13_BUILD1 a=release CLOSED TREE DONTBUILD",
-    "node": "1de2da145deca64be1d48a29ce0ce252f25eb6f6"
+    "lastChecked": "2018-11-28 04:34:01.876928"
   },
   "1": {
-    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-    "commit_date": "2018-11-26 21:55:47",
-    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with DEVEDITION_64_0b13_BUILD1 a=release CLOSED TREE DONTBUILD",
-    "node": "1f765885f8e0816f8efea218e85803327ff1ad7e"
+    "node": "cb7da1cd7bd115c37f05e547b34853e127a88cac",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=cb7da1cd7bd1",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Backed out changeset 244c37e0926f (bug 1490102) for causing mochitest Android 4.3 API16+ failures on test_group_zoom.html. a=backout",
+    "commit_date": "2018-11-27 18:51:42"
   },
   "2": {
-    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-    "commit_date": "2018-11-26 21:52:00",
-    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with FENNEC_64_0b13_BUILD1 a=release CLOSED TREE DONTBUILD",
-    "node": "5ef41ecb6387d31433027fa3fefceb2096bf56a9"
+    "node": "a01591977ac3518a0ccf2841b02652dfa651970e",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a01591977ac3",
+    "commiter_name": "L10n Bumper Bot ",
+    "commit_email": "release+l10nbumper@mozilla.com",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  bn-BD -> a55c8e19f64b es-MX -> b7bf9308aa06 ro -> ac56ad2ca3d5",
+    "commit_date": "2018-11-27 17:00:32"
   },
   "3": {
-    "commiter_name": "k88hudson <k88hudson@gmail.com>",
-    "commit_date": "2018-11-22 18:36:43",
-    "commit_message": "Bug 1506838 - ASR Snippets: Send to device, template issues. r=andreio, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12682",
-    "node": "efca407c5be1476d88cd3ff717ce92cfa7bbfb76"
+    "node": "e962fa30c854da351e968e2b882067b1e2fa3a0a",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=e962fa30c854",
+    "commiter_name": "L10n Bumper Bot ",
+    "commit_email": "release+l10nbumper@mozilla.com",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  bn-BD -> a55c8e19f64b es-MX -> b7bf9308aa06",
+    "commit_date": "2018-11-27 17:00:26"
   },
   "4": {
-    "commiter_name": "Florian Qu\u00e8ze <florian@queze.net>",
-    "commit_date": "2018-11-14 15:46:43",
-    "commit_message": "Bug 1507114 - Use a span element instead of an img element for action and twisty icons. r=emilio, a=RyanVM",
-    "node": "f1f4ff30a2995da028729fdc453cec6ff255874a"
+    "node": "11d6e8ce19922d925cffd38f598b528905cdc4b2",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=11d6e8ce1992",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with FENNEC_64_0b13_RELEASE a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-27 16:34:11"
   },
   "5": {
-    "commiter_name": "Andrew McCreight <continuation@gmail.com>",
-    "commit_date": "2018-11-20 01:16:24",
-    "commit_message": "Bug 1504365 - Clear weak pointers in shutdown observers. r=erahm, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12348",
-    "node": "76164912276b772bc0526abb98747479a4600cfe"
+    "node": "9957fba578b782b2a73ab229eb4f330960da0cc7",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=9957fba578b7",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with FIREFOX_64_0b13_RELEASE a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-27 16:30:59"
   },
   "6": {
-    "commiter_name": "ScottDowne <scott.downe@gmail.com>",
-    "commit_date": "2018-11-22 23:32:20",
-    "commit_message": "Bug 1507973 - V2 personalization using remote settings attachments. r=nanj, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12710",
-    "node": "71f76865c0934a3c389d2d45ac65e80929a72bc3"
+    "node": "0971257a70137d4fd055190b8629d5fa77818781",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=0971257a7013",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
+    "commit_date": "2018-11-27 16:28:09"
   },
   "7": {
-    "commiter_name": "Petru Lingurar <petru.lingurar@softvision.ro>",
-    "commit_date": "2018-11-22 16:52:46",
-    "commit_message": "Bug 1484528 - Prevent page loading indicator running continuously. r=JanH, a=RyanVM  The page loading indicator should be animated while it is visible. Previously for controlling the animation the visibility state of the parent Drawable - ShiftDrawable would be checked, which in all cases would return true, so the animation would run indefinitely.  The patch modifies setVisible() in accordance with the Framework version of DrawableWrapper to corectly set the visibility of both the wrapper and the wrapped drawables so that isVisible() will now return the correct value which will allow stopping the animation.  Differential Revision: https://phabricator.services.mozilla.com/D12552",
-    "node": "8d5ec415316b873f2bca4b89b48b7190f02ed306"
+    "node": "4e8e4bca98c0795d7fdcf57f95153ded661cff42",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=4e8e4bca98c0",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with DEVEDITION_64_0b13_RELEASE a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-27 16:28:02"
   },
   "8": {
-    "commiter_name": "Bryce Van Dyk <bvandyk@mozilla.com>",
-    "commit_date": "2018-11-21 23:44:18",
-    "commit_message": "Bug 1507389 - Update GMP fallback downloader for Widevine 4.10.1196.0. r=rhelmer, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D11981",
-    "node": "20620b54cc8cb5bf7f4c346ee7973698230450cd"
+    "node": "244c37e0926f5487c130dcc793b4510c4251bc6c",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=244c37e0926f",
+    "commiter_name": "Andreea Pavel ",
+    "commit_email": "apavel@mozilla.com",
+    "commit_message": "Bug 1490102 - Augment helper_basic_doubletap_zoom to also test zooming out. r=kats a=test-only  Summary: This required some changes to the page structure to exercise the codepath that bug 1478335 fixed.  Reviewers: kats  Reviewed By: kats  Bug #: 1490102  Differential Revision: https://phabricator.services.mozilla.com/D11437",
+    "commit_date": "2018-11-27 15:43:11"
   },
   "9": {
-    "commiter_name": "Valentin Gosu <valentin.gosu@gmail.com>",
-    "commit_date": "2018-11-19 17:41:57",
-    "commit_message": "Bug 1507157 - Set network.disable.ipc.security to true. r=kershaw, a=RyanVM  This pref is left over from B2G days. It is currently disabled for firefox desktop, but not for Android. This didn't affect us until now because we always ran Android tests in non-e10s mode.  The pref ought to be removed in bug 1306801.  Differential Revision: https://phabricator.services.mozilla.com/D12293",
-    "node": "5cb26828de28e16dbd8e4cc61a13d3d4dd62507f"
+    "node": "a50d4342bc54d61b32bce30b13202d489c104766",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a50d4342bc54",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1499088 - Don't let WR ride to release on 64. r=jrmuizel a=jcristau ",
+    "commit_date": "2018-11-27 15:32:11"
   },
   "10": {
-    "commiter_name": "Jean-Yves Avenard <jyavenard@mozilla.com>",
-    "commit_date": "2018-11-15 14:44:56",
-    "commit_message": "Bug 1474443 - Remove cycle between MP4Demuxer and MP4TrackDemuxer. r=padenot, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12004",
-    "node": "fdd0d5ac1d28020c16b5da499d5e65441c4e1f09"
+    "node": "0421f44fa04e65fa0e379879ff615b2d735eeb25",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=0421f44fa04e",
+    "commiter_name": "L10n Bumper Bot ",
+    "commit_email": "release+l10nbumper@mozilla.com",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  da -> d8212826666c gl -> 91d52ebf4594 te -> 5a75601675e9",
+    "commit_date": "2018-11-27 15:00:19"
   },
   "11": {
-    "commiter_name": "ScottDowne <scott.downe@gmail.com>",
-    "commit_date": "2018-11-22 21:17:24",
-    "commit_message": "Bug 1507599 - Top stories more Recommendations link showing up for German locale even though page is English. r=andreio, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12598",
-    "node": "b519e727ee9eaa9496136670b81dbe5ba749c44c"
+    "node": "9c0fecd35cf37c18824d6edcbfe0530a04297dad",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=9c0fecd35cf3",
+    "commiter_name": "L10n Bumper Bot ",
+    "commit_email": "release+l10nbumper@mozilla.com",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  da -> d8212826666c gl -> 6698015ca4d7 te -> 5a75601675e9",
+    "commit_date": "2018-11-27 15:00:14"
   },
   "12": {
-    "commiter_name": "ffxbld <ffxbld@mozilla.com>",
-    "commit_date": "2018-11-26 14:11:10",
-    "commit_message": "No Bug, mozilla-beta repo-update HSTS HPKP remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12896",
-    "node": "1d1018c58a27b9cd4b09228ad04e51419fcd091c"
+    "node": "502ef41ea69edb186ecf85978f81fed4051f201f",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=502ef41ea69e",
+    "commiter_name": "L10n Bumper Bot ",
+    "commit_email": "release+l10nbumper@mozilla.com",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  it -> 12bd244ad87a",
+    "commit_date": "2018-11-27 11:00:13"
   },
   "13": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-26 14:00:12",
-    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  vi -> 2d7ffe5defbb",
-    "node": "dd698bfe963903495792e63e44c72fed704996cd"
+    "node": "8c431cc8df59bd3f62b5c463ec0faf6d95a3314d",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=8c431cc8df59",
+    "commiter_name": "L10n Bumper Bot ",
+    "commit_email": "release+l10nbumper@mozilla.com",
+    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  be -> f7d41fe05542 cs -> 632316dc3720 cy -> cabc3feb28b0 eo -> 979ac6e49f6f fr -> 2f4e31bee6be gl -> 3c898dbb31c7 gu-IN -> 65395abb8d3f ia -> f9b117cb81ad it -> 7c2562347887 ja -> b08599d9deb8 ja-JP-mac -> 6ab41927967b ka -> f022f1156c33 nb-NO -> 3ea05cc325d6 nl -> a21d015a8410 nn-NO -> 43d0073c1228 pl -> b0fa22405368 sl -> 3f288cbaea3d uk -> 2057edb7ff1e",
+    "commit_date": "2018-11-27 10:00:18"
   },
   "14": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-26 13:00:18",
-    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  cy -> 3f699bf62687 gl -> 710bccfa8ab9 nn-NO -> 78519d6299be ro -> 4e9d03685276 vi -> 2d7ffe5defbb",
-    "node": "37a815d4e6563ba5d677a4fce409fe08c243f129"
+    "node": "3e903fa3e036a81d38ec665c63dd81e4d4f38520",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3e903fa3e036",
+    "commiter_name": "L10n Bumper Bot ",
+    "commit_email": "release+l10nbumper@mozilla.com",
+    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  cy -> cabc3feb28b0 da -> 57849d70dd81 eo -> e68fab6e3170 fr -> 50589eb7144e gl -> 1b03c01b1cc4 gu-IN -> 65395abb8d3f ja -> 01d2c65a9ab0 ml -> 237843b00ffd nb-NO -> 3ea05cc325d6 nl -> a21d015a8410 nn-NO -> a5dc87c405a2 pl -> b0fa22405368 sl -> 3f288cbaea3d uk -> 2057edb7ff1e",
+    "commit_date": "2018-11-27 10:00:12"
   },
   "15": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-26 13:00:12",
-    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  gl -> 710bccfa8ab9 ro -> 4e9d03685276",
-    "node": "a94215b78def36c89d45a64a481a57282513e7f3"
+    "node": "1de2da145deca64be1d48a29ce0ce252f25eb6f6",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=1de2da145dec",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with FIREFOX_64_0b13_BUILD1 a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-26 20:00:03"
   },
   "16": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-26 10:00:19",
-    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  ach -> 54d298962cc1 ar -> 042829c7fed1 az -> c66b02f405b1 be -> b47eae8913af bn-BD -> 1f6b97f3020f cak -> 86717f451b28 cs -> fcb12296b2e3 cy -> caa9ef30dc5e da -> 582e63de9bf1 de -> ae44e80bb284 dsb -> 4d038664189d es-AR -> 57b14b6ebd69 es-CL -> 836f1df5f480 es-ES -> a3404316cfa7 et -> 844cfe03fb48 fi -> 1585d5ffd39d fr -> 8ce17f8291d9 fy-NL -> 466fb0faecd6 gd -> 70e9447e53aa gl -> 4d0f63165c52 hsb -> 091136f610b0 hu -> f89d3894545c ia -> 1635fe34b7cc id -> c653179b87ca it -> 527cef28bac8 ka -> 23c4fe8080a2 kab -> 151bb4be90ab kk -> 9568b77c964e km -> c1e0e7fbedf0 ko -> 6eaf0fdf1a25 lt -> ce9ca32dd21a ms -> 447edd41851e my -> 5483951a9472 nb-NO -> 78ba24497732 nl -> 372c98210e25 oc -> 609dc711c007 pa-IN -> f67a6eddf1b0 pl -> ae9a428812c6 pt-BR -> f6921dd61384 pt-PT -> c604ae8a2e4c rm -> 9d623e715f6b ro -> 1174eee2d553 ru -> 109d0a53ca4b sk -> 288bbb4cfec6 sl -> 7de9ec79d72b sv-SE -> 529f87bf8fe6 te -> d3c2b4150824 tr -> 57d07e15f12f uk -> db26224ed070 vi -> c904599da2d7 zh-TW -> e83f0c1dfb7c",
-    "node": "82492fe221617c70aa044ec39d9afa7354b5715d"
+    "node": "1f765885f8e0816f8efea218e85803327ff1ad7e",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=1f765885f8e0",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with DEVEDITION_64_0b13_BUILD1 a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-26 19:55:47"
   },
   "17": {
-    "commiter_name": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
-    "commit_date": "2018-11-26 10:00:12",
-    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  be -> efecc66e91b2 bn-BD -> 1f6b97f3020f br -> a23513677e62 cak -> 86717f451b28 da -> 87c3c03d0078 de -> ae44e80bb284 dsb -> 4d038664189d eo -> 13e69da97b01 es-AR -> 57b14b6ebd69 es-CL -> 836f1df5f480 es-ES -> a3404316cfa7 et -> 844cfe03fb48 eu -> 3ab606912eee fi -> 8c07f989cd32 fr -> 1fda0d98caf2 gl -> 196080f2e44d hi-IN -> 2bfcb7be7b10 hu -> 8014326648c8 id -> 7fcff9d98ce1 it -> 527cef28bac8 ka -> 23c4fe8080a2 kk -> 9568b77c964e ko -> 6136ee5d3e66 lt -> ce9ca32dd21a nb-NO -> 78ba24497732 nl -> 9259aecd268e nn-NO -> 78519d6299be oc -> 609dc711c007 pa-IN -> f67a6eddf1b0 pl -> 364734fc8d80 pt-BR -> f6921dd61384 rm -> 9d623e715f6b ro -> 1174eee2d553 ru -> 109d0a53ca4b sk -> 288bbb4cfec6 sl -> 25d7ba3d836b sv-SE -> 3b67ddd7dfd7 te -> d3c2b4150824 trs -> 3352dad7a578 uk -> 4dd3cfe23702 vi -> c904599da2d7 zh-TW -> 0856f4e244d5",
-    "node": "cd9d8341d93554d54a6c7077aef548b792ccb67f"
+    "node": "5ef41ecb6387d31433027fa3fefceb2096bf56a9",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=5ef41ecb6387",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging efca407c5be1476d88cd3ff717ce92cfa7bbfb76 with FENNEC_64_0b13_BUILD1 a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-26 19:52:00"
   },
   "18": {
-    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-    "commit_date": "2018-11-23 18:38:13",
-    "commit_message": "No bug - Tagging 4fcfd15911a112ef9444082b78bfcc41ec974216 with DEVEDITION_64_0b12_RELEASE a=release CLOSED TREE DONTBUILD",
-    "node": "9d89091fbd356fdcd83956c8424ae29d8cb9eb71"
+    "node": "efca407c5be1476d88cd3ff717ce92cfa7bbfb76",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=efca407c5be1",
+    "commiter_name": "k88hudson ",
+    "commit_email": "k88hudson@gmail.com",
+    "commit_message": "Bug 1506838 - ASR Snippets: Send to device, template issues. r=andreio, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12682",
+    "commit_date": "2018-11-22 16:36:43"
   },
   "19": {
-    "commiter_name": "Mozilla Releng Treescript <release+treescript@mozilla.org>",
-    "commit_date": "2018-11-23 18:35:26",
-    "commit_message": "No bug - Tagging 4fcfd15911a112ef9444082b78bfcc41ec974216 with FIREFOX_64_0b12_RELEASE a=release CLOSED TREE DONTBUILD",
-    "node": "0b30fd875e249e6cf169592130e5dda8cce3c95a"
+    "node": "f1f4ff30a2995da028729fdc453cec6ff255874a",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=f1f4ff30a299",
+    "commiter_name": "Florian Qu\u00e8ze ",
+    "commit_email": "florian@queze.net",
+    "commit_message": "Bug 1507114 - Use a span element instead of an img element for action and twisty icons. r=emilio, a=RyanVM",
+    "commit_date": "2018-11-14 13:46:43"
+  },
+  "20": {
+    "node": "76164912276b772bc0526abb98747479a4600cfe",
+    "URL": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=76164912276b",
+    "commiter_name": "Andrew McCreight ",
+    "commit_email": "continuation@gmail.com",
+    "commit_message": "Bug 1504365 - Clear weak pointers in shutdown observers. r=erahm, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12348",
+    "commit_date": "2018-11-19 23:16:24"
   }
 }

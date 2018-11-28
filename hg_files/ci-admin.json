@@ -1,122 +1,165 @@
 {
   "0": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-10-22 20:52:14",
-    "commit_message": "Bug 1492665 - add modify_resources support r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6933",
-    "node": "99d859a7a6551c356bee6b28ab7b1dd83375e4df"
+    "lastChecked": "2018-11-28 04:34:12.965108"
   },
   "1": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-10-22 20:52:13",
-    "commit_message": "Bug 1492665 - add support for environments.yml r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6932",
-    "node": "241f75b5d808eb696498a9779e959bcf5ea6ed8b"
+    "node": "99d859a7a6551c356bee6b28ab7b1dd83375e4df",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=99d859a7a655",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1492665 - add modify_resources support r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6933",
+    "commit_date": "2018-10-22 17:52:14"
   },
   "2": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-10-19 06:02:08",
-    "commit_message": "Bug 1494320 - remove unnecessary resources.manage r=tomprince  These were in place in order to delete some old, now-unused roles.  They're gone, so no need to continue to manage those namespaces.  Differential Revision: https://phabricator.services.mozilla.com/D9166",
-    "node": "d1796b61fbd0779e30b9a2226db7152c00772870"
+    "node": "241f75b5d808eb696498a9779e959bcf5ea6ed8b",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=241f75b5d808",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1492665 - add support for environments.yml r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6932",
+    "commit_date": "2018-10-22 17:52:13"
   },
   "3": {
-    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-    "commit_date": "2018-09-26 05:48:44",
-    "commit_message": "Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D6858",
-    "node": "9d35e153d813a1a68238d8af2e19a13957c2a3be"
+    "node": "d1796b61fbd0779e30b9a2226db7152c00772870",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=d1796b61fbd0",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1494320 - remove unnecessary resources.manage r=tomprince  These were in place in order to delete some old, now-unused roles.  They're gone, so no need to continue to manage those namespaces.  Differential Revision: https://phabricator.services.mozilla.com/D9166",
+    "commit_date": "2018-10-19 03:02:08"
   },
   "4": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-12 21:07:53",
-    "commit_message": "Bug 1489181: handle input_schema in actions.yml r=aki  Differential Revision: https://phabricator.services.mozilla.com/D5683",
-    "node": "c88ca415a1c6259a6b3cea1a40523426bad9690e"
+    "node": "9d35e153d813a1a68238d8af2e19a13957c2a3be",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=9d35e153d813",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D6858",
+    "commit_date": "2018-09-26 02:48:44"
   },
   "5": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-11 20:47:09",
-    "commit_message": "Bug 1490066: fix unit tests and add a few r=tomprince  I broke the unit tests in bug 1488766 and also introduced a bug (no longer allowing granting to a single group); this fixes that up and even adds some tests.  Differential Revision: https://phabricator.services.mozilla.com/D5464",
-    "node": "edad9f8f78d42bc547c1f684b0f9dc116ccbd00a"
+    "node": "c88ca415a1c6259a6b3cea1a40523426bad9690e",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=c88ca415a1c6",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1489181: handle input_schema in actions.yml r=aki  Differential Revision: https://phabricator.services.mozilla.com/D5683",
+    "commit_date": "2018-09-12 18:07:53"
   },
   "6": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-10 17:31:22",
-    "commit_message": "Bug 1489983: fix markdown link in descriptions r=janx  Differential Revision: https://phabricator.services.mozilla.com/D5430",
-    "node": "5b8819a7b072b15f545cc1025efff61bb4ea98b5"
+    "node": "edad9f8f78d42bc547c1f684b0f9dc116ccbd00a",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=edad9f8f78d4",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1490066: fix unit tests and add a few r=tomprince  I broke the unit tests in bug 1488766 and also introduced a bug (no longer allowing granting to a single group); this fixes that up and even adds some tests.  Differential Revision: https://phabricator.services.mozilla.com/D5464",
+    "commit_date": "2018-09-11 17:47:09"
   },
   "7": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-07 22:40:00",
-    "commit_message": "Bug 1488766: improve error handling for malformed grants.yml r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5158",
-    "node": "135f264d65d29a2916d27b3947d78b16dd261af5"
+    "node": "5b8819a7b072b15f545cc1025efff61bb4ea98b5",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=5b8819a7b072",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1489983: fix markdown link in descriptions r=janx  Differential Revision: https://phabricator.services.mozilla.com/D5430",
+    "commit_date": "2018-09-10 14:31:22"
   },
   "8": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-07 22:39:52",
-    "commit_message": "Bug 1488766: also substitute {hgmo_path} r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5155",
-    "node": "95397719f02d073284645ee8613189efd811694a"
+    "node": "135f264d65d29a2916d27b3947d78b16dd261af5",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=135f264d65d2",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1488766: improve error handling for malformed grants.yml r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5158",
+    "commit_date": "2018-09-07 19:40:00"
   },
   "9": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-06 01:14:03",
-    "commit_message": "(hotfix) add created and expires to .taskcluster.yml",
-    "node": "559c3f6fd3291e3061771741b4f2a82ee50ef7d7"
+    "node": "95397719f02d073284645ee8613189efd811694a",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=95397719f02d",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1488766: also substitute {hgmo_path} r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5155",
+    "commit_date": "2018-09-07 19:39:52"
   },
   "10": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-06 01:12:25",
-    "commit_message": "(hotfix) add taskId and taskGroupid to .taskcluster.yml",
-    "node": "a7d020a0ad133bdf9c49029f914178650dcd730e"
+    "node": "559c3f6fd3291e3061771741b4f2a82ee50ef7d7",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=559c3f6fd329",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "(hotfix) add created and expires to .taskcluster.yml",
+    "commit_date": "2018-09-05 22:14:03"
   },
   "11": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-06 01:05:03",
-    "commit_message": "(hotfix) add empty scopes to .taskcluster.yml",
-    "node": "6e5f123d07c9df63748baa5fb7c5fbb41926cf8a"
+    "node": "a7d020a0ad133bdf9c49029f914178650dcd730e",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=a7d020a0ad13",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "(hotfix) add taskId and taskGroupid to .taskcluster.yml",
+    "commit_date": "2018-09-05 22:12:25"
   },
   "12": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-06 00:10:40",
-    "commit_message": "Bug 1486431: add .taskcluster.yml, running unit tests and ci-admin check r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5063",
-    "node": "f15c251a51bf42407ae4274b18a4e7a2780a6865"
+    "node": "6e5f123d07c9df63748baa5fb7c5fbb41926cf8a",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=6e5f123d07c9",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "(hotfix) add empty scopes to .taskcluster.yml",
+    "commit_date": "2018-09-05 22:05:03"
   },
   "13": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-05 22:37:23",
-    "commit_message": "Bug 1479103: upgrade to the latest taskcluster client r=tomprince  Depends on D4244  Differential Revision: https://phabricator.services.mozilla.com/D4246",
-    "node": "2a84daadfd6e6cacd84d1a8759946729ab61016c"
+    "node": "f15c251a51bf42407ae4274b18a4e7a2780a6865",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=f15c251a51bf",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1486431: add .taskcluster.yml, running unit tests and ci-admin check r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5063",
+    "commit_date": "2018-09-05 21:10:40"
   },
   "14": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-05 22:29:06",
-    "commit_message": "Bug 1479103: upgrade everything to the latest compatible version  Differential Revision: https://phabricator.services.mozilla.com/D4244",
-    "node": "e917ceff76e4e73d611f93ab409ac7baf3c4536e"
+    "node": "2a84daadfd6e6cacd84d1a8759946729ab61016c",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=2a84daadfd6e",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1479103: upgrade to the latest taskcluster client r=tomprince  Depends on D4244  Differential Revision: https://phabricator.services.mozilla.com/D4246",
+    "commit_date": "2018-09-05 19:37:23"
   },
   "15": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-09-05 22:33:23",
-    "commit_message": "Bug 1479103: pin to major versions in setup.py r=tomprince  This also adjusts `pipupdate.sh` so that it correctly reads `requirements.txt` before writing it back out, avoiding the issue where it upgrades everything.  Differential Revision: https://phabricator.services.mozilla.com/D4243",
-    "node": "871ead5583b0090825f91c210e22e43122037b3b"
+    "node": "e917ceff76e4e73d611f93ab409ac7baf3c4536e",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=e917ceff76e4",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1479103: upgrade everything to the latest compatible version  Differential Revision: https://phabricator.services.mozilla.com/D4244",
+    "commit_date": "2018-09-05 19:29:06"
   },
   "16": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-07-25 00:59:31",
-    "commit_message": "Bug 1465842: implement grants.yml; r=bstack,tomprince,pmoore  In the same commit, this removes all other code that sets repo roles or user roles, as otherwise they try to generate the same resources.  Checks in place during development (but not to land) ensure that actual scopes do not change.",
-    "node": "e8c729ab1b1584b0212c52795c8ae14cf5a87c8d"
+    "node": "871ead5583b0090825f91c210e22e43122037b3b",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=871ead5583b0",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1479103: pin to major versions in setup.py r=tomprince  This also adjusts `pipupdate.sh` so that it correctly reads `requirements.txt` before writing it back out, avoiding the issue where it upgrades everything.  Differential Revision: https://phabricator.services.mozilla.com/D4243",
+    "commit_date": "2018-09-05 19:33:23"
   },
   "17": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-08-30 15:27:49",
-    "commit_message": "Bug 1465842: move ciconfig into sub-modules r=bstack,pmoore,tomprince  If only because this avoids naming conflicts between modules defining the data structure and modules generating resources based on those data structures..  Depends on D2442  Differential Revision: https://phabricator.services.mozilla.com/D2443",
-    "node": "ee3a60eba89f4822473f2911690e62c07ced6ef0"
+    "node": "e8c729ab1b1584b0212c52795c8ae14cf5a87c8d",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=e8c729ab1b15",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1465842: implement grants.yml; r=bstack,tomprince,pmoore  In the same commit, this removes all other code that sets repo roles or user roles, as otherwise they try to generate the same resources.  Checks in place during development (but not to land) ensure that actual scopes do not change.",
+    "commit_date": "2018-07-24 21:59:31"
   },
   "18": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-08-29 21:29:20",
-    "commit_message": "Bug 1465842: test for signing scopes r=bstack,pmoore,tomprince  This is never going to be a super-secure check, but will help make sure we don't do anything boneheaded.  Depends on D2439  Differential Revision: https://phabricator.services.mozilla.com/D2440",
-    "node": "172a91b213c3ce8af44e0141213a9c8fa7f74593"
+    "node": "ee3a60eba89f4822473f2911690e62c07ced6ef0",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=ee3a60eba89f",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1465842: move ciconfig into sub-modules r=bstack,pmoore,tomprince  If only because this avoids naming conflicts between modules defining the data structure and modules generating resources based on those data structures..  Depends on D2442  Differential Revision: https://phabricator.services.mozilla.com/D2443",
+    "commit_date": "2018-08-30 12:27:49"
   },
   "19": {
-    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-    "commit_date": "2018-08-27 22:03:14",
+    "node": "172a91b213c3ce8af44e0141213a9c8fa7f74593",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=172a91b213c3",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
+    "commit_message": "Bug 1465842: test for signing scopes r=bstack,pmoore,tomprince  This is never going to be a super-secure check, but will help make sure we don't do anything boneheaded.  Depends on D2439  Differential Revision: https://phabricator.services.mozilla.com/D2440",
+    "commit_date": "2018-08-29 18:29:20"
+  },
+  "20": {
+    "node": "db811713c8927f729779d3d00271fbf66cd2c006",
+    "URL": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=db811713c892",
+    "commiter_name": "Dustin J. Mitchell ",
+    "commit_email": "dustin@mozilla.com",
     "commit_message": "Bug 1465842: add 'ci-admin check', upgrade requirements r=bstack,pmoore  Differential Revision: https://phabricator.services.mozilla.com/D2439",
-    "node": "db811713c8927f729779d3d00271fbf66cd2c006"
+    "commit_date": "2018-08-27 19:03:14"
   }
 }
