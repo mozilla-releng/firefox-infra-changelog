@@ -12,6 +12,20 @@ lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
+def get_version_from_build_puppet(version_path, repo_name):
+    """
+    :param: version_path: Path to the requierments.txt where the version number is stored
+    :param: repo_name: The repo for which we are checking the version.
+    :return: Returns the version number that is stored in build-puppet for each *scriptworker
+    """
+    file_to_string = requests.get(version_path).text.split()
+    for word in file_to_string:
+        if repo_name in word:
+            version_in_puppet = re.split('\\b==\\b', word)[-1]
+            if version_in_puppet != repo_name:
+                return version_in_puppet
+
+
 def extract_email(commit_email):
     """
     Helper function!
@@ -102,21 +116,24 @@ def create_hg_md_table(repository_name):
 
         for key in data:
             commit_number = commit_number_list[-1]
-            commit_author = data[key]["commiter_name"]
-            commit_author = re.sub("\u0131", "i", commit_author)
-            date = data[key]["commit_date"]
-            message = data[key]["commit_message"]
-            node = data[key]["node"]
+            try:
+                commit_author = data[key]["commiter_name"]
+                commit_author = re.sub("\u0131", "i", commit_author)
+                date = data[key]["commit_date"]
+                message = data[key]["commit_message"]
+                url = data[key]["URL"]
 
-            row = "|" + commit_number + \
-                  "|" + commit_author + \
-                  "|" + message + \
-                  "|" + node + \
-                  "|" + date + "\n"
+                row = "|" + commit_number + \
+                      "|" + commit_author + \
+                      "|" + message + \
+                      "|" + url + \
+                      "|" + date + "\n"
 
-            del commit_number_list[-1]
-            for repo in tables.keys():
-                tables[repo] = tables[repo] + row
+                del commit_number_list[-1]
+                for repo in tables.keys():
+                    tables[repo] = tables[repo] + row
+            except KeyError:
+                last_checked = data[key]["lastChecked"]
 
         md_file_name = "{}.md".format(repository_name)
         md_file = open(current_dir + "/hg_files/" + md_file_name, "w")
@@ -179,7 +196,7 @@ def filter_git_commit_data(repository_name, repository_team):
     json_file.close()
 
 
-def filter_hg_commit_data(repository_url, push_type):
+def filter_hg_commit_data(repository_name, repository_url):
     """
     This function takes a repository url and push type and returns a dictionary that contains changes in that specific
     repository.
@@ -191,36 +208,37 @@ def filter_hg_commit_data(repository_url, push_type):
     :param push_type: would probably be "json-log" most of the time.
     :return: returns a dictionary that contains the commits in the provided hg_repository_name
     """
-    request_url = ""
-    if push_type == "json-log":
-        request_url = repository_url + push_type
-    else:
-        print("Feature not implemented. Please use \"json-log\".")
-    r = requests.get(request_url)
-    p = r.json()
-    changelog = {}
+    request_url = repository_url + "json-log"
+    hg_repo_data = {}
     commit_number = 0
-    for keys in p["changesets"]:
-        commit = {}
-        timestamp = keys["date"][0]
-        value = datetime.fromtimestamp(timestamp)
-        commit_date = value.strftime("%Y-%m-%d %H:%M:%S")
-        commiter_name = (keys["user"])
+    print("Working on repo:", repository_name)
+    hg_repo_data.update({commit_number: {"lastChecked": str(datetime.utcnow())}})
+    data = json.loads(requests.get(request_url).text)
+    commit_number += 1
 
-        # Use example of getting the commit email
-        commit_email = extract_email(commiter_name)
-        print("Commiter Email: " + commit_email)
-
-        commit_message = keys["desc"]
+    for entry in data["changesets"]:
+        node = entry["node"]
+        url = repository_url + "pushloghtml?changeset=" + node[:12]
+        commiter = entry["user"]
+        commiter_name = commiter.split('<')[0]
+        # commiter_email = commiter.split('<')[1]
+        commiter_email = extract_email(commiter)
+        commit_message = entry["desc"]
         message = re.sub("[*\n\r]", " ", commit_message)
-        commit_node = keys["node"]
-        commit.update({"commiter_name": commiter_name,
-                       "commit_date": commit_date,
-                       "commit_message": message,
-                       "node": commit_node})
-        changelog.update({commit_number: commit})
+        date = entry["date"]
+        hg_repo_data.update({commit_number: {
+            "node": node,
+            "URL": url,
+            "commiter_name": commiter_name,
+            "commit_email": commiter_email,
+            "commit_message": message,
+            "commit_date": datetime.utcfromtimestamp(date[0]).strftime('%Y-%m-%d %H:%M:%S')
+        }})
         commit_number += 1
-    return changelog
+    hg_json_filename = "{}.json".format(repository_name)
+    json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
+    json.dump(hg_repo_data, json_file, indent=2)
+    json_file.close()
 
 
 def create_files_for_hg(repositories_holder):
@@ -232,15 +250,9 @@ def create_files_for_hg(repositories_holder):
     :return: the end result is a .json and a .md file for every git repository. can be found inside hg_files/
     """
     for repo in repositories_holder["Mercurial"]:
-        repository_url = repositories_holder["Mercurial"][repo]["url"]
-        repository_push_type = repositories_holder["Mercurial"][repo]["configuration"]["push_type"]
         repository_name = repo
-        print("Working on: " + repo + ". URL: " + repository_url)
-        hg_changes = filter_hg_commit_data(repository_url, repository_push_type)
-        hg_json_name = "./hg_files/" + "{}.json".format(repository_name)
-        with open(hg_json_name, "w") as json_file:
-            json.dump(hg_changes, json_file, indent=2)
-        json_file.close()
+        repository_url = repositories_holder["Mercurial"][repo]["url"]
+        filter_hg_commit_data(repository_name, repository_url)
         create_hg_md_table(repository_name)
 
 
@@ -255,6 +267,11 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
+        try:
+            repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
+            version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
+        except KeyError:
+            pass
         filter_git_commit_data(repository_name, repository_team)
         create_git_md_table(repository_name)
 
@@ -376,3 +393,7 @@ if __name__ == "__main__":
     create_files_for_hg(repositories)
     clear_file("main_md_table.md")
     generate_main_md_table()
+
+
+
+

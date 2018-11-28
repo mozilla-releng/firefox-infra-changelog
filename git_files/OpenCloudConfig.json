@@ -1,8 +1,104 @@
 {
   "0": {
-    "lastChecked": "2018-11-27 03:15:42.523124"
+    "lastChecked": "2018-11-28 04:33:29.723380"
   },
   "1": {
+    "sha": "c421eb84b254a74a84916ad5bd1d957bea060f33",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/c421eb84b254a74a84916ad5bd1d957bea060f33",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1510220 - defer upgrades in registry  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-27 13:39:44",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "2": {
+    "sha": "0952e36cbab072488f1bea41d1095a13063c705e",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/0952e36cbab072488f1bea41d1095a13063c705e",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1509722 - correction to run-userdata ec2config setting  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-27 12:53:44",
+    "files_changed": [
+      "userdata/OCC-Bootstrap.psm1"
+    ]
+  },
+  "3": {
+    "sha": "7ead7d21328907a108fb6bd228fef28c700d60c6",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/7ead7d21328907a108fb6bd228fef28c700d60c6",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1509722 - shorter match string  on some os's the transcript line length is truncated at row 80, causing occasional failure to match longer strings that contain a newline  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-27 11:56:39",
+    "files_changed": [
+      "userdata/OCC-Bootstrap.psm1"
+    ]
+  },
+  "4": {
+    "sha": "07d3d6340f241e398fd91285363447e9dda0e47b",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/07d3d6340f241e398fd91285363447e9dda0e47b",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1509722 - redeploy, prevent halt-on-idle shutdown  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-27 10:28:52",
+    "files_changed": [
+      "userdata/HaltOnIdle.ps1"
+    ]
+  },
+  "5": {
+    "sha": "9af661f41e9085149b690fad872ea315f22ac2f7",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/9af661f41e9085149b690fad872ea315f22ac2f7",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug - 1493688 add workertypes for 1803 testing  deploy: alpha",
+    "commit_date": "2018-11-27 10:10:57",
+    "files_changed": [
+      ".taskcluster.yml",
+      "ci/update-workertype.sh",
+      "userdata/Manifest/gecko-1-b-win2012-beta.json",
+      "userdata/Manifest/gecko-1-b-win2012.json",
+      "userdata/Manifest/gecko-2-b-win2012.json",
+      "userdata/Manifest/gecko-3-b-win2012-c4.json",
+      "userdata/Manifest/gecko-3-b-win2012-c5.json",
+      "userdata/Manifest/gecko-3-b-win2012.json",
+      "userdata/Manifest/gecko-t-win10-64-alpha.json",
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-a.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64.json",
+      "userdata/Manifest/gecko-t-win7-32-beta.json",
+      "userdata/Manifest/gecko-t-win7-32-cu.json",
+      "userdata/Manifest/gecko-t-win7-32-gpu-b.json",
+      "userdata/Manifest/gecko-t-win7-32-gpu.json",
+      "userdata/Manifest/gecko-t-win7-32.json",
+      "userdata/Manifest/relops-image-builder.json"
+    ]
+  },
+  "6": {
+    "sha": "822e71bff955f714d1d318dc2b0483ca672e2e53",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/822e71bff955f714d1d318dc2b0483ca672e2e53",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": " Bug 1509722 - disable windows defender & supporting services (#215)  disable: wscsvc, SecurityHealthService, Sense; manual: WdBoot, WdFilter, WdNisDrv, WdNisSvc, WinDefend, boot loop until all disables are successful.  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-27 09:16:58",
+    "files_changed": [
+      "readme.md",
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json",
+      "userdata/OCC-Bootstrap.psm1",
+      "userdata/xDynamicConfig.ps1"
+    ]
+  },
+  "7": {
     "sha": "688a98094cdc0bd2e3838ab8e62b409d0f55d149",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/688a98094cdc0bd2e3838ab8e62b409d0f55d149",
     "commiter_name": "grenade",
@@ -13,7 +109,7 @@
       "ci/update-workertype.sh"
     ]
   },
-  "2": {
+  "8": {
     "sha": "496b6e8d17392503b50c05086c38167d5747fea6",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/496b6e8d17392503b50c05086c38167d5747fea6",
     "commiter_name": "grenade",
@@ -25,7 +121,7 @@
       "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
-  "3": {
+  "9": {
     "sha": "606fe69601a6621b144580f17365234e5347766d",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/606fe69601a6621b144580f17365234e5347766d",
     "commiter_name": "grenade",
@@ -36,7 +132,7 @@
       "ci/update-workertype.sh"
     ]
   },
-  "4": {
+  "10": {
     "sha": "9d74a89cadd596ffc7f5f0762d838ff4dd6651dc",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/9d74a89cadd596ffc7f5f0762d838ff4dd6651dc",
     "commiter_name": "grenade",
@@ -52,17 +148,6 @@
       "userdata/hw-startup-check.ps1",
       "userdata/rundsc.ps1",
       "userdata/xDynamicConfig.ps1"
-    ]
-  },
-  "5": {
-    "sha": "02f8fe187edc61cbc5f35a01194329e421ab334c",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/02f8fe187edc61cbc5f35a01194329e421ab334c",
-    "commiter_name": "grenade",
-    "commiter_email": "rthijssen@gmail.com",
-    "commit_message": "Bug 1406354 - support deployment of beta workers from beta branch",
-    "commit_date": "2018-11-20 08:40:12",
-    "files_changed": [
-      ".taskcluster.yml"
     ]
   }
 }
