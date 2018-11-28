@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-11-27 03:15:54.050972"
+    "lastChecked": "2018-11-28 04:33:45.418887"
   },
   "1": {
     "sha": "68bd2858a24e54fb079e76b8997b1ef19bfb5f88",
@@ -113,31 +113,6 @@
       "schemas/constants.yml",
       "src/v1.js",
       "test/client_test.js"
-    ]
-  },
-  "10": {
-    "sha": "b19103d6d2ac47d16e2086a283e04320651ff383",
-    "url": "https://github.com/taskcluster/taskcluster-auth/commit/b19103d6d2ac47d16e2086a283e04320651ff383",
-    "commiter_name": "djmitche",
-    "commiter_email": "dustin@v.igoro.us",
-    "commit_message": "Bug 1508849 - implement   -scope protection differently  The old solution used a negative lookbehind, which per https://json-schema.org/understanding-json-schema/reference/regular_expressions.html#regular-expressions is not supported in json-schema.  In fact, it's not supported in even fairly recent versions of Node.  This causes problems when validating schemas using those old versions of node (or using json-schema validators that do not support this form).  So, the new solution is to explicitly forbid those forms where used in creating clients and roles.  The result is much the same, as evidenced by the minimal changes to the tests.",
-    "commit_date": "2018-11-21 00:46:14",
-    "files_changed": [
-      "schemas/constants.yml",
-      "src/v1.js",
-      "test/client_test.js"
-    ]
-  },
-  "11": {
-    "sha": "e52d89a68dc312b5ca045558ff7d4011663312db",
-    "url": "https://github.com/taskcluster/taskcluster-auth/commit/e52d89a68dc312b5ca045558ff7d4011663312db",
-    "commiter_name": "djmitche",
-    "commiter_email": "dustin@v.igoro.us",
-    "commit_message": "Bug 1508395 - upgrade tc-lib-validate  The change ony affects the output of writeDocs.",
-    "commit_date": "2018-11-20 19:10:53",
-    "files_changed": [
-      "package.json",
-      "yarn.lock"
     ]
   }
 }

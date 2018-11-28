@@ -12,6 +12,20 @@ lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
+def get_version_from_build_puppet(version_path, repo_name):
+    """
+    :param: version_path: Path to the requierments.txt where the version number is stored
+    :param: repo_name: The repo for which we are checking the version.
+    :return: Returns the version number that is stored in build-puppet for each *scriptworker
+    """
+    file_to_string = requests.get(version_path).text.split()
+    for word in file_to_string:
+        if repo_name in word:
+            version_in_puppet = re.split('\\b==\\b', word)[-1]
+            if version_in_puppet != repo_name:
+                return version_in_puppet
+
+
 def extract_email(commit_email):
     """
     Helper function!
@@ -227,7 +241,6 @@ def filter_hg_commit_data(repository_name, repository_url):
     json_file.close()
 
 
-
 def create_files_for_hg(repositories_holder):
     """
     Main HG function. Takes every Mercurial repo from a .json file which is populated with repositories and writes all
@@ -254,6 +267,11 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
+        try:
+            repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
+            version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
+        except KeyError:
+            pass
         filter_git_commit_data(repository_name, repository_team)
         create_git_md_table(repository_name)
 
@@ -375,3 +393,7 @@ if __name__ == "__main__":
     create_files_for_hg(repositories)
     clear_file("main_md_table.md")
     generate_main_md_table()
+
+
+
+

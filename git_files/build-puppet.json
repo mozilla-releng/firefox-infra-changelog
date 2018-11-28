@@ -1,8 +1,94 @@
 {
   "0": {
-    "lastChecked": "2018-11-27 03:15:21.456936"
+    "lastChecked": "2018-11-28 04:33:03.141787"
   },
   "1": {
+    "sha": "bfeb4b9b7a7931e277c607283e99f9c5c323fb28",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/bfeb4b9b7a7931e277c607283e99f9c5c323fb28",
+    "commiter_name": "tomprince",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #311 from tp-tc/scriptworker-cron  Bump scriptworker to 17.0.0 for push information in cron tasks.",
+    "commit_date": "2018-11-27 21:24:14",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt",
+      "modules/balrog_scriptworker/files/requirements-3.txt",
+      "modules/beetmover_scriptworker/files/requirements.txt",
+      "modules/bouncer_scriptworker/files/requirements.txt",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/shipit_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt",
+      "modules/transparency_scriptworker/files/requirements.txt",
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
+  },
+  "2": {
+    "sha": "08f05d12e2cae01c387e5ac0b19c3d78597828d2",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/08f05d12e2cae01c387e5ac0b19c3d78597828d2",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Bump scriptworker to 17.0.0 for push information in cron tasks.",
+    "commit_date": "2018-11-27 18:00:24",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt",
+      "modules/balrog_scriptworker/files/requirements-3.txt",
+      "modules/beetmover_scriptworker/files/requirements.txt",
+      "modules/bouncer_scriptworker/files/requirements.txt",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/shipit_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt",
+      "modules/transparency_scriptworker/files/requirements.txt",
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
+  },
+  "3": {
+    "sha": "81815340e943aab9e886a3f6c799d58c101451ac",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/81815340e943aab9e886a3f6c799d58c101451ac",
+    "commiter_name": "tomprince",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #309 from tp-tc/whats-new  Update balrogscript for WNP support.",
+    "commit_date": "2018-11-27 17:02:34",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-27.txt",
+      "modules/balrog_scriptworker/manifests/init.pp"
+    ]
+  },
+  "4": {
+    "sha": "a198270e36c42b6541542d48f895c8479415b9b7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/a198270e36c42b6541542d48f895c8479415b9b7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #303 from mitchhentges/bug1508508  Adds configuration for reference browser (prod and staging)",
+    "commit_date": "2018-11-27 16:57:38",
+    "files_changed": [
+      "manifests/moco-nodes.pp",
+      "modules/signing_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb",
+      "modules/signing_scriptworker/templates/passwords-mobile.json.erb"
+    ]
+  },
+  "5": {
+    "sha": "64391f41a76f1442c29c4e71b13aaca005f255e6",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/64391f41a76f1442c29c4e71b13aaca005f255e6",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds \"dep-\" mobile nodes to moco-nodes",
+    "commit_date": "2018-11-23 21:17:00",
+    "files_changed": [
+      "manifests/moco-nodes.pp"
+    ]
+  },
+  "6": {
+    "sha": "1378688efe01fde25107223f650d3b72578c42cb",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/1378688efe01fde25107223f650d3b72578c42cb",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Updates settings with new mobile-dep configuration",
+    "commit_date": "2018-11-23 21:00:07",
+    "files_changed": [
+      "modules/signing_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "7": {
     "sha": "85d1b7f41ec671ce8462d34aa3ff1569cabc7a5e",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/85d1b7f41ec671ce8462d34aa3ff1569cabc7a5e",
     "commiter_name": "JohanLorenzo",
@@ -13,7 +99,7 @@
       "modules/pushapk_scriptworker/files/requirements.txt"
     ]
   },
-  "2": {
+  "8": {
     "sha": "275b1b8c5d8222308da716407067c2e1f8fdbc97",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/275b1b8c5d8222308da716407067c2e1f8fdbc97",
     "commiter_name": "JohanLorenzo",
@@ -24,7 +110,41 @@
       "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "3": {
+  "9": {
+    "sha": "78207d834e2aa6a5de6d2bc2a26719aa16859c3b",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/78207d834e2aa6a5de6d2bc2a26719aa16859c3b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Moves mobile dep configuration to separate file",
+    "commit_date": "2018-11-23 00:40:39",
+    "files_changed": [
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb",
+      "modules/signing_scriptworker/templates/passwords-mobile.json.erb"
+    ]
+  },
+  "10": {
+    "sha": "b2218517cdb7b6997b52136b8620a789f3c6a0f7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/b2218517cdb7b6997b52136b8620a789f3c6a0f7",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Update balrogscript to 3.3.0 for WNP support.",
+    "commit_date": "2018-11-22 18:50:55",
+    "files_changed": [
+      "modules/balrog_scriptworker/files/requirements-27.txt"
+    ]
+  },
+  "11": {
+    "sha": "ccce096610079c17326f4b765c2f30c1305f8eb5",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ccce096610079c17326f4b765c2f30c1305f8eb5",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Stop removing tools checkout from balrogworkers.  Now that we've deployed the new balrogscript, none of the workers should have tools installed, so we can stop removing it.",
+    "commit_date": "2018-11-22 18:50:44",
+    "files_changed": [
+      "modules/balrog_scriptworker/manifests/init.pp"
+    ]
+  },
+  "12": {
     "sha": "b820c2ace1a3eb608330188e54b5a6d4b294ef8d",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/b820c2ace1a3eb608330188e54b5a6d4b294ef8d",
     "commiter_name": "JohanLorenzo",
@@ -37,7 +157,7 @@
       "modules/signing_scriptworker/templates/passwords.json.erb"
     ]
   },
-  "4": {
+  "13": {
     "sha": "b7ed8207631f1c0fd13e2365ac726bc5d494c50d",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/b7ed8207631f1c0fd13e2365ac726bc5d494c50d",
     "commiter_name": "MihaiTabara",
@@ -51,7 +171,7 @@
       "modules/balrog_scriptworker/templates/script_config.json.erb"
     ]
   },
-  "5": {
+  "14": {
     "sha": "bb5699e7a1157144ea606508aa3f4bf35a4cb8ab",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/bb5699e7a1157144ea606508aa3f4bf35a4cb8ab",
     "commiter_name": "klibby",
@@ -62,7 +182,18 @@
       "manifests/moco-config.pp"
     ]
   },
-  "6": {
+  "15": {
+    "sha": "77a45ba81538405d0ef92b28f8027df78f116e6e",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/77a45ba81538405d0ef92b28f8027df78f116e6e",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds configuration for reference browser (prod and staging)",
+    "commit_date": "2018-11-21 20:02:18",
+    "files_changed": [
+      "modules/signing_scriptworker/templates/passwords-mobile.json.erb"
+    ]
+  },
+  "16": {
     "sha": "575bcac08344ded61015819bb455ac36c76258fb",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/575bcac08344ded61015819bb455ac36c76258fb",
     "commiter_name": "mitchhentges",
@@ -73,7 +204,7 @@
       "manifests/moco-config.pp"
     ]
   },
-  "7": {
+  "17": {
     "sha": "ba74de2a0876165d35033252c83ce505f26cf103",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/ba74de2a0876165d35033252c83ce505f26cf103",
     "commiter_name": "mutterroland",
@@ -95,7 +226,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "8": {
+  "18": {
     "sha": "2fe522f36a4073029c178c22ea0e419cd87fe875",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/2fe522f36a4073029c178c22ea0e419cd87fe875",
     "commiter_name": "mutterroland",
@@ -106,7 +237,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "9": {
+  "19": {
     "sha": "77b9289c4b8e0dcc81cd488d7b018ffbadbb2cac",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/77b9289c4b8e0dcc81cd488d7b018ffbadbb2cac",
     "commiter_name": "mutterroland",
@@ -117,7 +248,7 @@
       "modules/transparency_scriptworker/files/requirements.txt"
     ]
   },
-  "10": {
+  "20": {
     "sha": "77ae30b7491c34c68e4ad98a1a62df740e4e3066",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/77ae30b7491c34c68e4ad98a1a62df740e4e3066",
     "commiter_name": "mutterroland",
@@ -128,7 +259,7 @@
       "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "11": {
+  "21": {
     "sha": "a823ed03858a5cb8448e82a71d7f556cf4939e3e",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/a823ed03858a5cb8448e82a71d7f556cf4939e3e",
     "commiter_name": "mutterroland",
@@ -139,7 +270,7 @@
       "modules/shipit_scriptworker/files/requirements.txt"
     ]
   },
-  "12": {
+  "22": {
     "sha": "bb73d0f535d07e002baaa70af9ac78f59f0ead8e",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/bb73d0f535d07e002baaa70af9ac78f59f0ead8e",
     "commiter_name": "mutterroland",
@@ -150,7 +281,7 @@
       "modules/pushapk_scriptworker/files/requirements.txt"
     ]
   },
-  "13": {
+  "23": {
     "sha": "8705bc5e1dc658c8728c4bd0939672e08947bc2d",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/8705bc5e1dc658c8728c4bd0939672e08947bc2d",
     "commiter_name": "mutterroland",
@@ -161,7 +292,7 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "14": {
+  "24": {
     "sha": "38a8f9f0d54b62c90a723d55712a2b6d420ce3f0",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/38a8f9f0d54b62c90a723d55712a2b6d420ce3f0",
     "commiter_name": "mutterroland",
@@ -172,7 +303,7 @@
       "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
-  "15": {
+  "25": {
     "sha": "ca61b2e86e5ff147a373bff00c31b6f6b5268b4e",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/ca61b2e86e5ff147a373bff00c31b6f6b5268b4e",
     "commiter_name": "mutterroland",
@@ -183,7 +314,7 @@
       "modules/balrog_scriptworker/files/requirements-3.txt"
     ]
   },
-  "16": {
+  "26": {
     "sha": "aa038b920ec81a768fb3a43cd9107f970df9f223",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/aa038b920ec81a768fb3a43cd9107f970df9f223",
     "commiter_name": "mutterroland",
@@ -194,7 +325,7 @@
       "modules/addon_scriptworker/files/requirements.txt"
     ]
   },
-  "17": {
+  "27": {
     "sha": "02b4c6d526433dde41f351541b66c2890769dd36",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/02b4c6d526433dde41f351541b66c2890769dd36",
     "commiter_name": "pyup-bot",
@@ -205,7 +336,7 @@
       "modules/signingserver/files/linux_requirements.txt"
     ]
   },
-  "18": {
+  "28": {
     "sha": "dc687283a197c33d66888abdaa91bf0a62824dea",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/dc687283a197c33d66888abdaa91bf0a62824dea",
     "commiter_name": "pyup-bot",
@@ -216,7 +347,7 @@
       "modules/signingserver/files/linux_requirements.txt"
     ]
   },
-  "19": {
+  "29": {
     "sha": "3f307e388142530939ac72ea08eaff9e9e5527d3",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/3f307e388142530939ac72ea08eaff9e9e5527d3",
     "commiter_name": "pyup-bot",
@@ -227,7 +358,7 @@
       "modules/signingserver/files/mac_requirements.txt"
     ]
   },
-  "20": {
+  "30": {
     "sha": "152b12e8c7911f07c09bc3872e28b636c5cee1a8",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/152b12e8c7911f07c09bc3872e28b636c5cee1a8",
     "commiter_name": "pyup-bot",
@@ -238,7 +369,7 @@
       "modules/signingserver/files/linux_requirements.txt"
     ]
   },
-  "21": {
+  "31": {
     "sha": "1222b481ff37fe0448bc25e037d0e39d67004ea2",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/1222b481ff37fe0448bc25e037d0e39d67004ea2",
     "commiter_name": "pyup-bot",
@@ -249,7 +380,7 @@
       "modules/selfserve_agent/files/requirements.txt"
     ]
   },
-  "22": {
+  "32": {
     "sha": "7c17696752f451fcb5fafab72f2d3bf410966727",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/7c17696752f451fcb5fafab72f2d3bf410966727",
     "commiter_name": "pyup-bot",
@@ -260,7 +391,7 @@
       "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
-  "23": {
+  "33": {
     "sha": "9d52ea9e7f47a110377d8df7e2c1fab73cd28637",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/9d52ea9e7f47a110377d8df7e2c1fab73cd28637",
     "commiter_name": "pyup-bot",
@@ -271,7 +402,7 @@
       "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
-  "24": {
+  "34": {
     "sha": "e26d5b3268fd214d950ef9c599dd52cf4fe53ab1",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/e26d5b3268fd214d950ef9c599dd52cf4fe53ab1",
     "commiter_name": "pyup-bot",
@@ -282,7 +413,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "25": {
+  "35": {
     "sha": "c7e3daa0b2297e46f63bbd9aceff8f21cd342f0e",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/c7e3daa0b2297e46f63bbd9aceff8f21cd342f0e",
     "commiter_name": "pyup-bot",
@@ -293,7 +424,7 @@
       "modules/transparency_scriptworker/files/requirements.txt"
     ]
   },
-  "26": {
+  "36": {
     "sha": "06cbf5d164552b6c801a35acf5f03654d6f03290",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/06cbf5d164552b6c801a35acf5f03654d6f03290",
     "commiter_name": "pyup-bot",
@@ -304,7 +435,7 @@
       "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "27": {
+  "37": {
     "sha": "7737e7ab5cdc560abe4462d0cde849a7a1ce68b3",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/7737e7ab5cdc560abe4462d0cde849a7a1ce68b3",
     "commiter_name": "pyup-bot",
@@ -315,7 +446,7 @@
       "modules/shipit_scriptworker/files/requirements.txt"
     ]
   },
-  "28": {
+  "38": {
     "sha": "b338b61f75e66fa631f1cb624cd875f29f72d8ca",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/b338b61f75e66fa631f1cb624cd875f29f72d8ca",
     "commiter_name": "pyup-bot",
@@ -326,7 +457,7 @@
       "modules/pushapk_scriptworker/files/requirements.txt"
     ]
   },
-  "29": {
+  "39": {
     "sha": "b3a02a5af98dd3b5ec1e081bd9cf48d7416fd561",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/b3a02a5af98dd3b5ec1e081bd9cf48d7416fd561",
     "commiter_name": "pyup-bot",
@@ -337,7 +468,7 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "30": {
+  "40": {
     "sha": "919cd6ef92fb430313a6213b35dda64b72c037d3",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/919cd6ef92fb430313a6213b35dda64b72c037d3",
     "commiter_name": "pyup-bot",
@@ -348,7 +479,7 @@
       "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
-  "31": {
+  "41": {
     "sha": "8b9ac24ac6e30bbbc333908fa2f65946eeea59d5",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/8b9ac24ac6e30bbbc333908fa2f65946eeea59d5",
     "commiter_name": "pyup-bot",
@@ -359,7 +490,7 @@
       "modules/balrog_scriptworker/files/requirements-3.txt"
     ]
   },
-  "32": {
+  "42": {
     "sha": "78f1dc9f3e5cf797ac3678f9d4cde86eecc45a0f",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/78f1dc9f3e5cf797ac3678f9d4cde86eecc45a0f",
     "commiter_name": "pyup-bot",
@@ -370,7 +501,7 @@
       "modules/addon_scriptworker/files/requirements.txt"
     ]
   },
-  "33": {
+  "43": {
     "sha": "de2e7f356981ed54f11975c262a61a41a169122e",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/de2e7f356981ed54f11975c262a61a41a169122e",
     "commiter_name": "pyup-bot",
@@ -381,7 +512,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "34": {
+  "44": {
     "sha": "512cf377fcd61b56db6693af9ede2ed9d76c6920",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/512cf377fcd61b56db6693af9ede2ed9d76c6920",
     "commiter_name": "pyup-bot",
@@ -392,7 +523,7 @@
       "modules/transparency_scriptworker/files/requirements.txt"
     ]
   },
-  "35": {
+  "45": {
     "sha": "6d8a66dbda9f53339c41e9d29d430f23304f5b88",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/6d8a66dbda9f53339c41e9d29d430f23304f5b88",
     "commiter_name": "pyup-bot",
@@ -403,7 +534,7 @@
       "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "36": {
+  "46": {
     "sha": "0e24ece663d47148be4014cb46b9feedd99ef682",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/0e24ece663d47148be4014cb46b9feedd99ef682",
     "commiter_name": "pyup-bot",
@@ -414,7 +545,7 @@
       "modules/shipit_scriptworker/files/requirements.txt"
     ]
   },
-  "37": {
+  "47": {
     "sha": "f091ebaa029185290036221e6dc4820003aa172d",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/f091ebaa029185290036221e6dc4820003aa172d",
     "commiter_name": "pyup-bot",
@@ -425,7 +556,7 @@
       "modules/pushapk_scriptworker/files/requirements.txt"
     ]
   },
-  "38": {
+  "48": {
     "sha": "b6eb6ab31fc653be4bcf2d8c86f20d124bbc0bb4",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/b6eb6ab31fc653be4bcf2d8c86f20d124bbc0bb4",
     "commiter_name": "pyup-bot",
@@ -436,7 +567,7 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "39": {
+  "49": {
     "sha": "d68856cb1047006a4e21f1c0be41019f76471a48",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/d68856cb1047006a4e21f1c0be41019f76471a48",
     "commiter_name": "pyup-bot",
@@ -447,7 +578,7 @@
       "modules/beetmover_scriptworker/files/requirements.txt"
     ]
   },
-  "40": {
+  "50": {
     "sha": "d77dd2e0c085026ceb682bcfb31edd56a5cf10b6",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/d77dd2e0c085026ceb682bcfb31edd56a5cf10b6",
     "commiter_name": "pyup-bot",
@@ -458,7 +589,7 @@
       "modules/balrog_scriptworker/files/requirements-3.txt"
     ]
   },
-  "41": {
+  "51": {
     "sha": "7225a6e155e72bc7ebb02214ecd9f3b16f67832d",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/7225a6e155e72bc7ebb02214ecd9f3b16f67832d",
     "commiter_name": "pyup-bot",

@@ -1,12 +1,22 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2018-11-20 05:15:08.721118
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2018-11-21 06:32:53.472188
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
-|41|JohanLorenzo|Bug 1492245 - Bump pushapkscript to 0.9.0 (#308)|[URL](https://github.com/mozilla-releng/build-puppet/commit/85d1b7f41ec671ce8462d34aa3ff1569cabc7a5e)|2018-11-23 17:06:17
-|40|JohanLorenzo|Bug 1492245 - Bump signingscript to 9.5.1 (#307)|[URL](https://github.com/mozilla-releng/build-puppet/commit/275b1b8c5d8222308da716407067c2e1f8fdbc97)|2018-11-23 14:22:02
-|39|JohanLorenzo|Bug 1492245 - signing_scriptworker: Expose Fennec on Autograph (#306)|[URL](https://github.com/mozilla-releng/build-puppet/commit/b820c2ace1a3eb608330188e54b5a6d4b294ef8d)|2018-11-22 16:08:35
-|38|MihaiTabara|Merge pull request #304 from tp-tc/balrogscript-remove-tools    Update balrogscript: Get rid of tools in balrog.|[URL](https://github.com/mozilla-releng/build-puppet/commit/b7ed8207631f1c0fd13e2365ac726bc5d494c50d)|2018-11-22 11:51:05
-|37|klibby|Merge pull request #302 from mitchhentges/bug1509144  Bug 1509144 - grant mhentges access to jumphosts|[URL](https://github.com/mozilla-releng/build-puppet/commit/bb5699e7a1157144ea606508aa3f4bf35a4cb8ab)|2018-11-21 20:36:13
+|51|tomprince|Merge pull request #311 from tp-tc/scriptworker-cron  Bump scriptworker to 17.0.0 for push information in cron tasks.|[URL](https://github.com/mozilla-releng/build-puppet/commit/bfeb4b9b7a7931e277c607283e99f9c5c323fb28)|2018-11-27 21:24:14
+|50|tomprince|Bump scriptworker to 17.0.0 for push information in cron tasks.|[URL](https://github.com/mozilla-releng/build-puppet/commit/08f05d12e2cae01c387e5ac0b19c3d78597828d2)|2018-11-27 18:00:24
+|49|tomprince|Merge pull request #309 from tp-tc/whats-new  Update balrogscript for WNP support.|[URL](https://github.com/mozilla-releng/build-puppet/commit/81815340e943aab9e886a3f6c799d58c101451ac)|2018-11-27 17:02:34
+|48|mitchhentges|Merge pull request #303 from mitchhentges/bug1508508  Adds configuration for reference browser (prod and staging)|[URL](https://github.com/mozilla-releng/build-puppet/commit/a198270e36c42b6541542d48f895c8479415b9b7)|2018-11-27 16:57:38
+|47|mitchhentges|Adds "dep-" mobile nodes to moco-nodes|[URL](https://github.com/mozilla-releng/build-puppet/commit/64391f41a76f1442c29c4e71b13aaca005f255e6)|2018-11-23 21:17:00
+|46|mitchhentges|Updates settings with new mobile-dep configuration|[URL](https://github.com/mozilla-releng/build-puppet/commit/1378688efe01fde25107223f650d3b72578c42cb)|2018-11-23 21:00:07
+|45|JohanLorenzo|Bug 1492245 - Bump pushapkscript to 0.9.0 (#308)|[URL](https://github.com/mozilla-releng/build-puppet/commit/85d1b7f41ec671ce8462d34aa3ff1569cabc7a5e)|2018-11-23 17:06:17
+|44|JohanLorenzo|Bug 1492245 - Bump signingscript to 9.5.1 (#307)|[URL](https://github.com/mozilla-releng/build-puppet/commit/275b1b8c5d8222308da716407067c2e1f8fdbc97)|2018-11-23 14:22:02
+|43|mitchhentges|Moves mobile dep configuration to separate file|[URL](https://github.com/mozilla-releng/build-puppet/commit/78207d834e2aa6a5de6d2bc2a26719aa16859c3b)|2018-11-23 00:40:39
+|42|tomprince|Update balrogscript to 3.3.0 for WNP support.|[URL](https://github.com/mozilla-releng/build-puppet/commit/b2218517cdb7b6997b52136b8620a789f3c6a0f7)|2018-11-22 18:50:55
+|41|tomprince|Stop removing tools checkout from balrogworkers.  Now that we've deployed the new balrogscript, none of the workers should have tools installed, so we can stop removing it.|[URL](https://github.com/mozilla-releng/build-puppet/commit/ccce096610079c17326f4b765c2f30c1305f8eb5)|2018-11-22 18:50:44
+|40|JohanLorenzo|Bug 1492245 - signing_scriptworker: Expose Fennec on Autograph (#306)|[URL](https://github.com/mozilla-releng/build-puppet/commit/b820c2ace1a3eb608330188e54b5a6d4b294ef8d)|2018-11-22 16:08:35
+|39|MihaiTabara|Merge pull request #304 from tp-tc/balrogscript-remove-tools    Update balrogscript: Get rid of tools in balrog.|[URL](https://github.com/mozilla-releng/build-puppet/commit/b7ed8207631f1c0fd13e2365ac726bc5d494c50d)|2018-11-22 11:51:05
+|38|klibby|Merge pull request #302 from mitchhentges/bug1509144  Bug 1509144 - grant mhentges access to jumphosts|[URL](https://github.com/mozilla-releng/build-puppet/commit/bb5699e7a1157144ea606508aa3f4bf35a4cb8ab)|2018-11-21 20:36:13
+|37|mitchhentges|Adds configuration for reference browser (prod and staging)|[URL](https://github.com/mozilla-releng/build-puppet/commit/77a45ba81538405d0ef92b28f8027df78f116e6e)|2018-11-21 20:02:18
 |36|mitchhentges|Bug 1509144 - grant mhentges access to jumphosts|[URL](https://github.com/mozilla-releng/build-puppet/commit/575bcac08344ded61015819bb455ac36c76258fb)|2018-11-21 19:40:24
 |35|mutterroland|Merge pull request #300 from mozilla-releng/pyup-scheduled-update-2018-11-21  Scheduled weekly dependency update for week 46|[URL](https://github.com/mozilla-releng/build-puppet/commit/ba74de2a0876165d35033252c83ce505f26cf103)|2018-11-21 14:38:24
 |34|mutterroland|Revert taskcluster-urls from 11.0.0 => 10.1.0  Reverting taskcluster-urls from 11.0.0 => 10.1.0 and adding # pyup: ignore as the same action need to take place last week.|[URL](https://github.com/mozilla-releng/build-puppet/commit/2fe522f36a4073029c178c22ea0e419cd87fe875)|2018-11-21 13:45:09

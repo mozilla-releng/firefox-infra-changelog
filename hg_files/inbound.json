@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-27 15:27:15.760333"
+    "lastChecked": "2018-11-28 04:33:59.925223"
   },
   "1": {
-    "node": "e9a02a8a62e5ee81c00ff7cff86744cc0f4d4e41",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e9a02a8a62e5",
-    "commiter_name": "Diego Pino Garcia ",
-    "commit_email": "dpino@igalia.com",
-    "commit_message": "Bug 1509147 - Rename payer and paymentMethod on nsIPaymentDetails to payerErrors and paymentMethodErrors respectively r=baku",
-    "commit_date": "2018-11-26 01:08:00"
+    "node": "e9a8d57b5c3ebfab4222042d258d793db527c2e1",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e9a8d57b5c3e",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound.",
+    "commit_date": "2018-11-28 04:12:39"
   },
   "2": {
-    "node": "deb83c7936386cd93471ee58e300a2e561782295",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=deb83c793638",
-    "commiter_name": "Cristina Coroiu ",
-    "commit_email": "ccoroiu@mozilla.com",
-    "commit_message": "Bug 1383454 - Disable box-sizing-replaced-003.xht on mac for frequent failures. r=jmaher",
-    "commit_date": "2018-11-26 15:51:00"
+    "node": "a12d80e08655c13245add6f6dacc91f8a6d9cf89",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a12d80e08655",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "commit_date": "2018-11-28 04:08:19"
   },
   "3": {
-    "node": "34b22b4e2b029b67e030d58f20b8b4bdc99331c4",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=34b22b4e2b02",
-    "commiter_name": "Bruce ",
-    "commit_email": "bruce.bugz@gmail.com",
-    "commit_message": "Bug 1509209 - Show scrollbars in the Trackers sub-panel only if the content overflows. r=johannh",
-    "commit_date": "2018-11-26 20:21:00"
+    "node": "2d8ce84e0107c99974201c1b67864786b22f3ff8",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2d8ce84e0107",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1508472 - Part 2: Second batch of comment fix-ups in preparation for the tree reformat r=sylvestre  This is a best effort attempt at ensuring that the adverse impact of reformatting the entire tree over the comments would be minimal.  I've used a combination of strategies including disabling of formatting, some manual formatting and some changes to formatting to work around some clang-format limitations.  Differential Revision: https://phabricator.services.mozilla.com/D13073",
+    "commit_date": "2018-11-28 00:54:56"
   },
   "4": {
-    "node": "07789ba4c3d73b0318cbd9fa10c8e7f110565801",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=07789ba4c3d7",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1505887 - Fix FindChromeAccessOnlySubtreeOwner so that we handle UA widget being ChromeOnlyAccess root. r=smaug  A single video controls test crashed without this, while dereferencing a null anonOwnerRelated in:    https://searchfox.org/mozilla-central/rev/c0b26c40769a1e5607a1ae8be37fe64df64fc55e/dom/base/FragmentOrElement.cpp#964  I think this is the right fix for it, but the code that uses this is kind of complex, so worth double-checking... :) ",
-    "commit_date": "2018-11-15 21:28:56"
+    "node": "24657145bfd4b354d1c2336f496e1f0a9eecd30a",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=24657145bfd4",
+    "commiter_name": "Michael Cooper ",
+    "commit_email": "mcooper@mozilla.com",
+    "commit_message": "Bug 1440778 - Implement show-heartbeat as internal Normandy action r=Gijs  The original, server-side implementation of this action was at https://github.com/mozilla/normandy/blob/68d3e55a9d8605bda793620640d074d7e5503e37/client/actions/show-heartbeat/index.js  Differential Revision: https://phabricator.services.mozilla.com/D12345",
+    "commit_date": "2018-11-27 21:42:44"
   },
   "5": {
-    "node": "ad4ea72ce4d4f7c9150575f6173fa0fbb05e967c",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ad4ea72ce4d4",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1505887 - Make CanCallerAccess(nsINode ) know about chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11409 ",
-    "commit_date": "2018-11-26 20:11:12"
+    "node": "aa19f5470ee060a96cc5280d8e1f4c2e74fe6395",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=aa19f5470ee0",
+    "commiter_name": "Dana Keeler ",
+    "commit_email": "dkeeler@mozilla.com",
+    "commit_message": "Bug 1503348 - (3/3) - add support for decoding and verifying Signed Tree Head Data V2 r=jcj  Differential Revision: https://phabricator.services.mozilla.com/D11812",
+    "commit_date": "2018-11-27 19:51:56"
   },
   "6": {
-    "node": "8221df0f4e50bbdebe7cd65c1b3adf799a1aa6a6",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8221df0f4e50",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1505887 - Make UAWidgets chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11408 ",
-    "commit_date": "2018-11-26 20:09:51"
+    "node": "129e0faf881363698dd884916e4601d68c6d71c3",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=129e0faf8813",
+    "commiter_name": "Dana Keeler ",
+    "commit_email": "dkeeler@mozilla.com",
+    "commit_message": "Bug 1503348 - (2/3) - fix up DecodeInclusionProof to take an Input rather than a Reader r=jcj  DecodeInclusionProof as originally implemented used the wrong convention - its input argument should have always been an Input rather than a Reader.  Differential Revision: https://phabricator.services.mozilla.com/D11811",
+    "commit_date": "2018-11-27 18:58:11"
   },
   "7": {
-    "node": "dc298299ebadd4b20eb58ea1ee6404b416eed422",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dc298299ebad",
-    "commiter_name": "Razvan Maries ",
-    "commit_email": "rmaries@mozilla.com",
-    "commit_message": "Backed out 4 changesets (bug 1505887, bug 1509989) for failing crashtests on tests/layout/style/crashtests/1509989.html on a CLOSED TREE.  Backed out changeset dc6c022e9fe1 (bug 1509989) Backed out changeset 490a99122a7f (bug 1505887) Backed out changeset 7b9afff4ff11 (bug 1505887) Backed out changeset 15da6e919d80 (bug 1505887)",
-    "commit_date": "2018-11-27 12:10:30"
+    "node": "9ef08b4eeea6096d4687a5f957da9f35909d461d",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9ef08b4eeea6",
+    "commiter_name": "Dana Keeler ",
+    "commit_email": "dkeeler@mozilla.com",
+    "commit_message": "Bug 1503348 - (1/3) remove obsolete SignedTreeHead definitions and tests r=jcj  The original implementation of Certificate Transparency included a definition for the first version of the Signed Tree Head data structure but it was never actually used. Now that we're implementing Binary Transparency, we need to implement support for Signed Tree Head V2. Because the focus and approach are different, the first step is to remove the original implementation.  Differential Revision: https://phabricator.services.mozilla.com/D11810",
+    "commit_date": "2018-11-27 18:58:07"
   },
   "8": {
-    "node": "6c94d53b486c1140051607b71bf66c0e014c605c",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6c94d53b486c",
-    "commiter_name": "Benjamin Bouvier ",
-    "commit_email": "benj@benj.me",
-    "commit_message": "Bug 1509848: Run clippy on Baldrdash; r=sunfish",
-    "commit_date": "2018-11-19 16:23:41"
+    "node": "093960021b8b20b3c1963c9d1b1fc6809f60fd6b",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=093960021b8b",
+    "commiter_name": "Marco Bonardo ",
+    "commit_email": "mbonardo@mozilla.com",
+    "commit_message": "Bug 1510281 - Use a private and isolated context for search suggestions. r=mkaply  Differential Revision: https://phabricator.services.mozilla.com/D13082",
+    "commit_date": "2018-11-27 17:18:28"
   },
   "9": {
-    "node": "fc064fbbcdf011cb2028f36b7afec810e64a865c",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fc064fbbcdf0",
-    "commiter_name": "Benjamin Bouvier ",
-    "commit_email": "benj@benj.me",
-    "commit_message": "Bug 1509848: Cleanups in Baldrdash code; r=lth",
-    "commit_date": "2018-11-16 17:57:42"
+    "node": "d476f054342f039445afddff474f4c8b4d9edea2",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d476f054342f",
+    "commiter_name": "Mike Conley ",
+    "commit_email": "mconley@mozilla.com",
+    "commit_message": "Bug 1507536 - Set skipintoolbarset=\"true\" on some titlebar items to avoid redundant context menu items. r=dao  This adds a skipintoolbarset to the toolbar-menubar spacer and the titlebar-buttonbox-container hbox to avoid a case where an exception can be thrown from CustomizableUI.isWidgetRemovable, which expects all direct descendants of toolbars to either have an ID, be one of a special set of node types, or have skipintoolbarset=\"true\" set on it.  Differential Revision: https://phabricator.services.mozilla.com/D13147",
+    "commit_date": "2018-11-27 22:33:33"
   },
   "10": {
-    "node": "ecf218f8c16a46fecbcf7e24c2e862b726a0c020",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ecf218f8c16a",
-    "commiter_name": "Benjamin Bouvier ",
-    "commit_email": "benj@benj.me",
-    "commit_message": "Bug 1509848: Reenable warnings in Baldrdash and fix them; r=sunfish",
-    "commit_date": "2018-11-19 14:27:46"
+    "node": "5e887c4ebd791fc491977bdc0ee8fc787f46b33a",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5e887c4ebd79",
+    "commiter_name": "Alexandre Poirot ",
+    "commit_email": "poirot.alex@gmail.com",
+    "commit_message": "Bug 1509315 - Make the console test helper use getTab instead of listTabs. r=yulia  Ideally, it would use TargetFactory. But as that's mochitest chrome, we don't have natural access to gBrowser/firefox tab.  MozReview-Commit-ID: 4nrfFZu6jAU  Depends on D12734  Differential Revision: https://phabricator.services.mozilla.com/D12735",
+    "commit_date": "2018-11-27 21:48:12"
   },
   "11": {
-    "node": "9fcec7e5baa7e044e0a403d70ded222dc4d7bb1f",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9fcec7e5baa7",
-    "commiter_name": "Benjamin Bouvier ",
-    "commit_email": "benj@benj.me",
-    "commit_message": "Bug 1509848: Allow Baldrdash to be compiled independently from Spidermonkey; r=froydnj  This allows tools like the Rust Language Server to still run for Cranelift, allowing IDE integration and useful developer feedback when hacking in this directory.",
-    "commit_date": "2018-11-19 14:27:20"
+    "node": "30bc5b0c60ebfe0444530fa9af86c5c8d5498ecd",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=30bc5b0c60eb",
+    "commiter_name": "Alexandre Poirot ",
+    "commit_email": "poirot.alex@gmail.com",
+    "commit_message": "Bug 1509315 - Refactor console attachConsole test helpers to async. r=yulia  MozReview-Commit-ID: 2jIm73AiIPN  Depends on D12733  Differential Revision: https://phabricator.services.mozilla.com/D12734",
+    "commit_date": "2018-11-27 21:48:05"
   },
   "12": {
-    "node": "2b4844c3f4d88f746755c49d8d41de016ef8f2cb",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2b4844c3f4d8",
-    "commiter_name": "Benjamin Bouvier ",
-    "commit_email": "benj@benj.me",
-    "commit_message": "Bug 1509846: Validate in parallel when compiling with Cranelift; r=lth",
-    "commit_date": "2018-11-26 13:13:47"
+    "node": "3eadd3d0580012f95a9d8e8ac24befb60d93b3fd",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3eadd3d05800",
+    "commiter_name": "Alexandre Poirot ",
+    "commit_email": "poirot.alex@gmail.com",
+    "commit_message": "Bug 1509315 - Remove unecessary calls to listTabs. r=yulia  These tests are calling listTabs, but that is no longer necessary thanks to rootForm being automatically managed within RootFront.  MozReview-Commit-ID: AmC6dTIJjiY  Depends on D12732  Differential Revision: https://phabricator.services.mozilla.com/D12733",
+    "commit_date": "2018-11-27 21:48:03"
   },
   "13": {
-    "node": "e3ca695c95b2f5f69e6be409e8be394ade8932b3",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e3ca695c95b2",
-    "commiter_name": "Jonathan Watt ",
-    "commit_email": "jwatt@jwatt.org",
-    "commit_message": "Bug 1510167. Mark some nsGkAtom  arguments as const in DOM code. r=baku  Differential Revision: https://phabricator.services.mozilla.com/D13049",
-    "commit_date": "2018-11-13 12:48:21"
+    "node": "322f2dd202990fc3bc215a7296423ca683738244",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=322f2dd20299",
+    "commiter_name": "Alexandre Poirot ",
+    "commit_email": "poirot.alex@gmail.com",
+    "commit_message": "Bug 1509315 - Remove leftover from debugger head.js file. r=yulia  I also removed the get root form leftover.  MozReview-Commit-ID: DxPwG9a5YAG  Depends on D12731  Differential Revision: https://phabricator.services.mozilla.com/D12732",
+    "commit_date": "2018-11-27 21:48:01"
   },
   "14": {
-    "node": "9ec6a81e695aef5d519d0e8a79927a9d6e915c03",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9ec6a81e695a",
-    "commiter_name": "Jonathan Watt ",
-    "commit_email": "jwatt@jwatt.org",
-    "commit_message": "Bug 1510116. Fix some unified build issues in layout code. r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D13039",
-    "commit_date": "2018-11-12 22:20:52"
+    "node": "18f76c41550516fb1cf4bcbe8bfaf82d480322e7",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=18f76c415505",
+    "commiter_name": "Alexandre Poirot ",
+    "commit_email": "poirot.alex@gmail.com",
+    "commit_message": "Bug 1509315 - Use TargetFactory.forTab for creating targets in tests. r=yulia  There is 4 patterns here:   Tests using attachThreadActorForUrl like event-listeners ones. I augmented this helper method to call TargetFactory.   Tests using attachTargetActorForUrl like debugger-statement, dbg-navigation and target-scoped-actor. Uses TargetFactory directly.   Tests using connectDebuggerClient like navigateEvents and spaw_actor_in_parent. Uses TargetFactory directly.   All the others, where creating DebuggerClient on their own, and calling listTabs+attachTarget. They now use TargetFactory directly.  A note about webconsole-helpers, only consoleClient attribute was used from tests using this helper. Also, in various tests I remove the call to client.destroy, that's because shared-head will close all the tabs/toolboxes and it should lead to target/client destruction. Finally, debugger-statement now request the thread actor via the client instead of manual request, it should help the refactoring to a front!  MozReview-Commit-ID: 2ah4UmSjuoi  Depends on D12730  Differential Revision: https://phabricator.services.mozilla.com/D12731",
+    "commit_date": "2018-11-27 21:47:59"
   },
   "15": {
-    "node": "dc6c022e9fe127bd0d32e25e3206f79e3d0d954c",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dc6c022e9fe1",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1509989, bug 1505887 - Add a crashtest. ",
-    "commit_date": "2018-11-27 10:43:23"
+    "node": "ce2018b0349dc53c3394559a20e729797034ce8c",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ce2018b0349d",
+    "commiter_name": "Alexandre Poirot ",
+    "commit_email": "poirot.alex@gmail.com",
+    "commit_message": "Bug 1509315 - Pass the full target form to all BrowsingContextTargetFront instances. r=yulia  For now, we only pass { actor } for all tab target fronts created via DebuggerClient.attachTarget, whereas parent process target fronts were passing the full form from RootFront.getProcess.  MozReview-Commit-ID: 1H2NxFv8glY  Differential Revision: https://phabricator.services.mozilla.com/D12730",
+    "commit_date": "2018-11-27 21:47:52"
   },
   "16": {
-    "node": "490a99122a7fc04ad0ec6bf9e32036c36b92d631",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=490a99122a7f",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1505887 - Fix FindChromeAccessOnlySubtreeOwner so that we handle UA widget being ChromeOnlyAccess root. r=smaug  A single video controls test crashed without this, while dereferencing a null anonOwnerRelated in:    https://searchfox.org/mozilla-central/rev/c0b26c40769a1e5607a1ae8be37fe64df64fc55e/dom/base/FragmentOrElement.cpp#964  I think this is the right fix for it, but the code that uses this is kind of complex, so worth double-checking... :) ",
-    "commit_date": "2018-11-15 21:28:56"
+    "node": "ed3560460fe93c21664313f318c25cf2cb5eefc6",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ed3560460fe9",
+    "commiter_name": "Dragana Damjanovic ",
+    "commit_email": "dd.mozilla@gmail.com",
+    "commit_message": "Bug 1510307 - Fix the comment next to esni pref. r=JuniorHsu  Differential Revision: https://phabricator.services.mozilla.com/D13083",
+    "commit_date": "2018-11-27 17:09:58"
   },
   "17": {
-    "node": "7b9afff4ff11f683d9a5e46ae92d80d6e9e7add3",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7b9afff4ff11",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1505887 - Make CanCallerAccess(nsINode ) know about chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11409 ",
-    "commit_date": "2018-11-26 20:11:12"
+    "node": "1de661bbcc0ca1a2a32b589ef9cdc29ca374bfc1",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1de661bbcc0c",
+    "commiter_name": "Dragana Damjanovic ",
+    "commit_email": "dd.mozilla@gmail.com",
+    "commit_message": "Bug 1497868 - In nsFtp, close data pipe as well. r=mayhemer  Differential Revision: https://phabricator.services.mozilla.com/D12740",
+    "commit_date": "2018-11-27 19:48:20"
   },
   "18": {
-    "node": "15da6e919d804d770219f720fb93b7c2d42e5f10",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=15da6e919d80",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1505887 - Make UAWidgets chromeonly content. r=bz  Differential Revision: https://phabricator.services.mozilla.com/D11408 ",
-    "commit_date": "2018-11-26 20:09:51"
+    "node": "49aba2e71c128cd0d1be6df09e7931884ed91b3e",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=49aba2e71c12",
+    "commiter_name": "Randall Barker ",
+    "commit_email": "rbarker@mozilla.com",
+    "commit_message": "Bug 1503039 - Add tests for GeckoView MediaElement r=snorp,esawin,imanol  Differential Revision: https://phabricator.services.mozilla.com/D10137",
+    "commit_date": "2018-11-27 21:58:46"
   },
   "19": {
-    "node": "aabcdc32ab3ca9a0eab35055ff8ba1f3a109b019",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=aabcdc32ab3c",
-    "commiter_name": "Jefry Lagrange ",
-    "commit_email": "jefry.reyes@gmail.com",
-    "commit_message": "Bug 1508584 - Add some space between console message and file name. r=nchevobbe",
-    "commit_date": "2018-11-26 07:26:00"
+    "node": "5e1161b3716a6b8492ee8029920a19595c42a136",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5e1161b3716a",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "Bug 1509309 - Move most browser- .js scripts from global-scripts.inc to browser.xul. r=Standard8  Differential Revision: https://phabricator.services.mozilla.com/D13064",
+    "commit_date": "2018-11-27 21:55:21"
   },
   "20": {
-    "node": "4f9a88ca20ebd876c51948bc171269502865c3ee",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4f9a88ca20eb",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1509768 - Handle the case that String#replace is called with a empty string pattern on a rope. r=evilpie",
-    "commit_date": "2018-11-27 10:18:52"
+    "node": "74216c81fc8d385d94e1f7ea6b0c2377aca65953",
+    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=74216c81fc8d",
+    "commiter_name": "Erica Wright ",
+    "commit_email": "ewright@mozilla.com",
+    "commit_message": "Bug 1509558 - Trackers sub-panel category menu is correct in RTL mode. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13114",
+    "commit_date": "2018-11-27 21:54:02"
   }
 }

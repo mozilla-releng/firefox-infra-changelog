@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-27 15:27:12.678165"
+    "lastChecked": "2018-11-28 04:33:55.971080"
   },
   "1": {
-    "node": "36634d5964f3c64b78bac7855d6d896968529fe8",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=36634d5964f3",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/mediasession/idlharness.window.js",
-    "commit_date": "2018-11-27 15:25:13"
+    "node": "34f5d6b72c5788aa94d70fcf05f0d6aefd852eb8",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=34f5d6b72c57",
+    "commiter_name": "Tooru Fujisawa ",
+    "commit_email": "arai_a@mac.com",
+    "commit_message": "try: -b do -p sm-plain-linux64 -u none -t none",
+    "commit_date": "2018-11-28 04:28:35"
   },
   "2": {
-    "node": "5628f6105f12149b80ec309332f65f8970b936d1",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=5628f6105f12",
-    "commiter_name": "Alphan Chen ",
-    "commit_email": "alchen@mozilla.com",
-    "commit_message": "try: -b d -p android-x86,android-api-16,android-aarch64 -u autophone-mochitest-geckoview-e10s,autophone-robocoptest-autophone2,autophone-s1s2geckoview,autophone-s1s2geckoview-e10s,autophone-smoketest,firefox-ui-functional,mochitests,xpcshell,xpcshell-1,xpcshell-2,xpcshell-3 -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-11-27 15:23:42"
+    "node": "7b9283b53fb537f688572347d681e6faad83ace7",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=7b9283b53fb5",
+    "commiter_name": "Tooru Fujisawa ",
+    "commit_email": "arai_a@mac.com",
+    "commit_message": "Bug 1508063 - Part 4: Move non-auto-generated part of BinASTParser into BinASTParserPerTokenizer.",
+    "commit_date": "2018-11-28 04:25:43"
   },
   "3": {
-    "node": "64ae783083f442b94f4532b5132ba3331c3d3dc5",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=64ae783083f4",
-    "commiter_name": "Alphan Chen ",
-    "commit_email": "alchen@mozilla.com",
-    "commit_message": "(Nov27) Bug 1497146 part 3 - Convert FormData.jsm to C++ [restore() part]  Test Plan: browser/components/sessionstore/test/  Reviewers: nika  Tags: #secure-revision  Bug #: 1497146  Differential Revision: https://phabricator.services.mozilla.com/D12672 ",
-    "commit_date": "2018-11-22 16:03:01"
+    "node": "0c8799b1424413d6a3c15bb13700acedaccb2d35",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=0c8799b14244",
+    "commiter_name": "Tooru Fujisawa ",
+    "commit_email": "arai_a@mac.com",
+    "commit_message": "Bug 1508063 - Part 3: Fix typo in Binsource.yaml.",
+    "commit_date": "2018-11-28 04:16:14"
   },
   "4": {
-    "node": "8124e3caa221962bbc0e9fa102451f18f423a529",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=8124e3caa221",
-    "commiter_name": "Andreas Farre ",
-    "commit_email": "farre@mozilla.com",
-    "commit_message": "try: -b o -p all -u all[Ubuntu] -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-11-27 15:19:17"
+    "node": "46acabefea8842abe59a88947142ec423a85f1e9",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=46acabefea88",
+    "commiter_name": "Tooru Fujisawa ",
+    "commit_email": "arai_a@mac.com",
+    "commit_message": "Bug 1508063 - Part 2: Move auto-generated enum to BinASTEnum.h.",
+    "commit_date": "2018-11-28 04:15:33"
   },
   "5": {
-    "node": "647696b2ea3720c0d9078ed8c6896297463fb721",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=647696b2ea37",
-    "commiter_name": "Andreas Farre ",
-    "commit_email": "farre@mozilla.com",
-    "commit_message": "Bug 1505838 - Add BrowsingContextGroup. r=peterv  Add top-level and auxiliary browsing contexts to a group of BrowsingContexts on creation and store a pointer to that group in all children of the BrowsingContexts in the group. With this it is possible to compute the transitive closure of related browsing contexts.  Since we'll not be using linked lists of BrowsingContexts for neither groups nor children we can move children to be an array of BrowsingContexts and adjust to use a the more convenient HashMap for roots. ",
-    "commit_date": "2018-11-22 16:48:34"
+    "node": "af6136b995028187fd0648641ca41a6244f3efbe",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=af6136b99502",
+    "commiter_name": "Tooru Fujisawa ",
+    "commit_email": "arai_a@mac.com",
+    "commit_message": "Bug 1508063 - Part 1: Move BinASTParserBase into its own files.",
+    "commit_date": "2018-11-28 00:57:55"
   },
   "6": {
-    "node": "31c25cbdb2a086f9dc2e89f6e9cf62449b8b26e7",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=31c25cbdb2a0",
-    "commiter_name": "Jesse Schwartzentruber ",
-    "commit_email": "truber@mozilla.com",
-    "commit_message": "try: -b o -p android-x86_64-asan-fuzzing,linux64-asan-fuzzing,macosx64-asan-fuzzing,win64-asan -u none -t none  Create --enable-fuzzing ASAN build job for Android x86-64 firefox.  Tags: #secure-revision  Bug #: 1482167  Differential Revision: https://phabricator.services.mozilla.com/D3027 ",
-    "commit_date": "2018-07-11 15:57:03"
+    "node": "adfe21dfa1468f7eee4b4d3e88ae3cacade0cbd2",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=adfe21dfa146",
+    "commiter_name": "Nico Grunbaum ",
+    "commit_email": "na-g@nostrum.com",
+    "commit_message": "Fuzzy query=!pgo !ccov !stylo !reftest !wdspec !qr mochitest-browser | mochitest-media | web-platform  Pushed via `mach try again`",
+    "commit_date": "2018-11-28 04:16:31"
   },
   "7": {
-    "node": "2dbf0b7f615f7b238574fb9884cd515dc9254209",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=2dbf0b7f615f",
-    "commiter_name": "Andrew Halberstadt ",
-    "commit_email": "ahalberstadt@mozilla.com",
-    "commit_message": "Fuzzy query='build-win64/opt  Pushed via `mach try fuzzy`",
-    "commit_date": "2018-11-27 15:07:20"
+    "node": "881ad99ca1fbda0dc47c5c3ca14079cb2fa5835a",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=881ad99ca1fb",
+    "commiter_name": "Nico Grunbaum ",
+    "commit_email": "na-g@nostrum.com",
+    "commit_message": "Bug 1328194 - remove deprecated PeerConnection.getStats callback and legacy stats",
+    "commit_date": "2018-11-28 04:16:11"
   },
   "8": {
-    "node": "53cd9fe89a8b2c4bff2ee1f2f1a298233f9edfbb",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=53cd9fe89a8b",
-    "commiter_name": "Andrew Halberstadt ",
-    "commit_email": "ahalberstadt@mozilla.com",
-    "commit_message": "Bug 1509391 - [eslint] Ignore excluded files that mozlint wasn't able to handle automatically  Normally eslint handles its own file exclusions, but there are still some globally excluded paths that |mach lint| passes in (e.g objdirs and things in ThirdPartyPaths.txt).  This makes sure that if they show up in the 'config', we handle them.  Differential Revision: https://phabricator.services.mozilla.com/D12712",
-    "commit_date": "2018-11-22 21:38:24"
+    "node": "90fcfc11bacafa67fdaccaf4674988d508a51f0d",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=90fcfc11baca",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "try: -b do -p android-api-16,win64,macosx64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t all[linux64-qr,windows10-64-qr,macosx64-qr]  Pushed via `mach try syntax`",
+    "commit_date": "2018-11-28 04:02:07"
   },
   "9": {
-    "node": "254f86a44b1f4bdf27c41cf9e3c4e297bf0380b8",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=254f86a44b1f",
-    "commiter_name": "Byron Campen [:bwc] ",
-    "commit_email": "docfaraday@gmail.com",
-    "commit_message": "try: -b do -p all -u web-platform-tests -t none",
-    "commit_date": "2018-11-27 14:57:17"
+    "node": "b9be19e6cb7a7e08fb041dae83d0a61373feb625",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=b9be19e6cb7a",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "placeholder for try push  MozReview-Commit-ID: LKDk2deY2x7",
+    "commit_date": "2018-11-28 04:02:02"
   },
   "10": {
-    "node": "3fe644d3c2abd791c9c78ac56f9e09f41f4289ea",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=3fe644d3c2ab",
-    "commiter_name": "Julian Seward ",
-    "commit_email": "jseward@acm.org",
-    "commit_message": "try: -b do -p all -u all -t none",
-    "commit_date": "2018-11-27 14:57:03"
+    "node": "644116821b7c54d6f1de2e64fbc3f04c6a7a2fd6",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=644116821b7c",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Placeholder  MozReview-Commit-ID: LhRD1MOzjK",
+    "commit_date": "2018-11-28 04:01:09"
   },
   "11": {
-    "node": "5e471b43b42ef9c72eff2f8b2f8572b41cd96350",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=5e471b43b42e",
-    "commiter_name": "Julian Seward ",
-    "commit_email": "jseward@acm.org",
-    "commit_message": "[mq]: bug150XXXX-reinstate-stackmap-debug-printing-1.diff",
-    "commit_date": "2018-11-27 14:56:40"
+    "node": "d628f42825402dfb409d694536ca9fc9bc8eb3c5",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=d628f4282540",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1510376 - Update webrender to commit 3d73e3885907ae3d48b46fba891073abdb59e76d (WR PR #3359). r?kats  https://github.com/servo/webrender/pull/3359",
+    "commit_date": "2018-11-28 04:01:07"
   },
   "12": {
-    "node": "80581c04aede0a5190533ee001d69cc4ccb2b25c",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=80581c04aede",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/cookies/http-state/attribute-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/charset-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/chromium-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/comma-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/domain-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/general-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/mozilla-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/name-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/ordering-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/path-tests.html web-platform-tests:testing/web-platform/tests/cookies/http-state/value-tests.html web-platform-tests:testing/web-platform/tests/css/css-transitions/transitions-animatable-properties-01.html web-platform-tests:testing/web-platform/tests/encrypted-media/clearkey-mp4-waiting-for-a-key.https.html web-platform-tests:testing/web-platform/tests/encrypted-media/drm-mp4-waiting-for-a-key.https.html",
-    "commit_date": "2018-11-27 14:56:40"
+    "node": "75d25888cc9186e1f5c0f1dfa613c4c5ad846b43",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=75d25888cc91",
+    "commiter_name": "Matthew Noorenberghe ",
+    "commit_email": "mozilla@noorenberghe.ca",
+    "commit_message": "Bug 1510470 - Disable OS re-auth for credit cards by default. r=timdream  Differential Revision: https://phabricator.services.mozilla.com/D13169",
+    "commit_date": "2018-11-28 01:08:35"
   },
   "13": {
-    "node": "d2107b6526b2dc84bda0af36224e64387e4db0de",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=d2107b6526b2",
-    "commiter_name": "Dan Minor ",
-    "commit_email": "dminor@mozilla.com",
-    "commit_message": "try: -b do -p linux64 -u mochitest-media-e10s -t none  Pushed via `mach try syntax`",
-    "commit_date": "2018-11-27 14:53:55"
+    "node": "b99cfc042c4f45b6adb6f6d57ca4efcfa6d6d1a6",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=b99cfc042c4f",
+    "commiter_name": "Kyle Machulis ",
+    "commit_email": "kyle@nonpolynomial.com",
+    "commit_message": "Bug 1505601 - Turn nsIDocShell XPIDL const lists into cenums; r=bzbarsky  Turn all const lists and related attributes into cenums, to provide a vague sense of type safety.  Depends on D11715  Differential Revision: https://phabricator.services.mozilla.com/D11716",
+    "commit_date": "2018-11-28 03:30:56"
   },
   "14": {
-    "node": "2fede6412690c0c79110061779e5666741795381",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=2fede6412690",
-    "commiter_name": "Dan Minor ",
-    "commit_email": "dminor@mozilla.com",
-    "commit_message": "Bug 1509994 - Regenerate moz.build files; r=pehrsons",
-    "commit_date": "2018-11-27 13:39:10"
+    "node": "62089e4c3cc06b7a867e40b1ab75992cb04820ff",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=62089e4c3cc0",
+    "commiter_name": "Kyle Machulis ",
+    "commit_email": "kyle@nonpolynomial.com",
+    "commit_message": "Bug 1505601 - Move nsIDocShell INTERNAL_LOAD consts to nsDocShell; r=bzbarsky  Consts aren't used in JS anyways, so there's no reason for them to be in the IDL.  Differential Revision: https://phabricator.services.mozilla.com/D11715",
+    "commit_date": "2018-11-28 03:30:54"
   },
   "15": {
-    "node": "04e1e1e3d15364d5dcf019eda80fb4340c06be31",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=04e1e1e3d153",
-    "commiter_name": "Dan Minor ",
-    "commit_email": "dminor@mozilla.com",
-    "commit_message": "Bug 1509994 - Update gn generated json files; r=pehrsons",
-    "commit_date": "2018-11-27 13:11:53"
+    "node": "bba74d02a136e322e179e738632be392ee8b2ede",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=bba74d02a136",
+    "commiter_name": "Thomas Daede ",
+    "commit_email": "tdaede@mozilla.com",
+    "commit_message": "Bug 1501796 - Add nasm to debian7-build dockerfile. r=glandium  Differential Revision: https://phabricator.services.mozilla.com/D9747",
+    "commit_date": "2018-11-28 03:23:08"
   },
   "16": {
-    "node": "b255483ea677435ea687acf0f7dcd4d90af80aa7",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=b255483ea677",
-    "commiter_name": "Dan Minor ",
-    "commit_email": "dminor@mozilla.com",
-    "commit_message": "Bug 1509994 - Move video_engine from webrtc to systemservices; r=pehrsons  Historically this code was part of webrtc.org but has since been removed from upstream. Rather than maintaining it as a local diff against upstream, we should just move it to where it is used.",
-    "commit_date": "2018-11-27 12:47:30"
+    "node": "d085db32a53d617676be6f855063d1499dbb1d71",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=d085db32a53d",
+    "commiter_name": "Thomas Daede ",
+    "commit_email": "tdaede@mozilla.com",
+    "commit_message": "Bug 1510113 - Never inline SaveToEnv or SaveWordToEnv. r=karlt  This allows Valgrind to recognize the call stacks to this function, avoiding Valgrind warnings in intentional leaks in these functions.  Differential Revision: https://phabricator.services.mozilla.com/D13036",
+    "commit_date": "2018-11-28 03:10:55"
   },
   "17": {
-    "node": "c6f2647b1220bfc305a9f963024df6f2eb8a9838",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=c6f2647b1220",
-    "commiter_name": "James Willcox ",
-    "commit_email": "snorp@snorp.net",
-    "commit_message": "Fuzzy query=android-em-7.0  Pushed via `mach try fuzzy` ",
-    "commit_date": "2018-11-27 14:51:30"
+    "node": "3d6e1fe4c371780a6bfcd9c33adce87dd4f38fc6",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=3d6e1fe4c371",
+    "commiter_name": "Timothy Guan-tin Chien ",
+    "commit_email": "timdream@gmail.com",
+    "commit_message": "Bug 1508000 - Dispatch UAWidgetUnbindFromTree event before calling nsGenericHTMLElement::UnbindFromTree() r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D12205",
+    "commit_date": "2018-11-28 02:29:38"
   },
   "18": {
-    "node": "8cb109582294ebd38af2bce55c546901174212b7",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=8cb109582294",
-    "commiter_name": "James Willcox ",
-    "commit_email": "snorp@snorp.net",
-    "commit_message": "Bug 1507702 - Don't make about:crash  accessible to web content r?Ehsan,bzbarsky   Differential Revision: https://phabricator.services.mozilla.com/D12133",
-    "commit_date": "2018-11-26 21:28:21"
+    "node": "94ecc40729d0302ee3953dbab0d280d4a6b174c4",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=94ecc40729d0",
+    "commiter_name": "Hiroyuki Ikezoe ",
+    "commit_email": "hikezoe@mozilla.com",
+    "commit_message": "Bug 1504065 - Drop text in the child element inside background-color animated element to avoid fuzziness on Windows 7 GPU. r=birtles  Depends on D13002  Differential Revision: https://phabricator.services.mozilla.com/D13171",
+    "commit_date": "2018-11-28 01:43:55"
   },
   "19": {
-    "node": "88115c3e07be3b22d49ab525732e0c3743970480",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=88115c3e07be",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "try: -b o -p linux64,win64 -u mochitest-e10s-bc -t none",
-    "commit_date": "2018-11-27 14:48:45"
+    "node": "a30f77050399cefc43236e7c552760ce6a68275a",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=a30f77050399",
+    "commiter_name": "Hiroyuki Ikezoe ",
+    "commit_email": "hikezoe@mozilla.com",
+    "commit_message": "Bug 1504065 - Support background-color animations on the compositor for nsIDOMWindowUtils::GetOMTAValue. r=birtles  Depends on D13001  Differential Revision: https://phabricator.services.mozilla.com/D13002",
+    "commit_date": "2018-11-28 00:59:15"
   },
   "20": {
-    "node": "837bf80ab6d081947a7bc68f6ab02447e235d332",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=837bf80ab6d0",
-    "commiter_name": "Jesse Schwartzentruber ",
-    "commit_email": "truber@mozilla.com",
-    "commit_message": "try: -b do -p win64-asan-fuzzing,win64-fuzzing,win64,linux64-asan-fuzzing,linux64-fuzzing,win32,macosx64-asan-fuzzing -u none -t none  Bug 1509500 - Add win64 fuzzing builds. ",
-    "commit_date": "2018-11-15 18:23:51"
+    "node": "d99d8f275d8bfa954671ea2663bbe37a561d7583",
+    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=d99d8f275d8b",
+    "commiter_name": "Hiroyuki Ikezoe ",
+    "commit_email": "hikezoe@mozilla.com",
+    "commit_message": "Bug 1504065 - Run background-color animations on the compositor. r=birtles  Changes for nsIDOMWindowUtils.getOMTAValue is in the next commit with come test cases.  Differential Revision: https://phabricator.services.mozilla.com/D13001",
+    "commit_date": "2018-11-28 00:58:46"
   }
 }

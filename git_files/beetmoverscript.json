@@ -1,5 +1,64 @@
 {
   "0": {
-    "lastChecked": "2018-11-27 03:15:14.847312"
+    "lastChecked": "2018-11-28 04:37:52.436039"
+  },
+  "1": {
+    "sha": "883524121b34c630533fbec8db73c08797dcc7be",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/883524121b34c630533fbec8db73c08797dcc7be",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "8.0.0",
+    "commit_date": "2018-11-28 01:08:55",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "beetmoverscript/_version.py"
+    ]
+  },
+  "2": {
+    "sha": "240e7a6cf19f7e56c003e51a09e11f29c6696580",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/240e7a6cf19f7e56c003e51a09e11f29c6696580",
+    "commiter_name": "srfraser",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Declarative artifacts, reworking lguo's PR (#185)    Declarative artifacts, reworking lguo's PR      Remove debugging      unused import, for debugging      Adjust for new artifactMap format.    I'm not too happy about the way taskId is currently handled,  I'd like to improve on that before production deploys.      Support for artifact map within push-to-maven      Improve test coverage      Adjust key for artifacts_to_beetmove for maven with map      Update comment for clarity      Add test for cot in taskId",
+    "commit_date": "2018-11-28 01:04:36",
+    "files_changed": [
+      "beetmoverscript/data/artifactMap_beetmover_task_schema.json",
+      "beetmoverscript/maven_utils.py",
+      "beetmoverscript/script.py",
+      "beetmoverscript/task.py",
+      "beetmoverscript/test/templates/fake_nightly.yml",
+      "beetmoverscript/test/test_maven_utils.py",
+      "beetmoverscript/test/test_script.py",
+      "beetmoverscript/test/test_task.py",
+      "beetmoverscript/test/test_utils.py",
+      "beetmoverscript/test/test_work_dir/cot/eSzfNqMZT_mSiQQXu8hyqg/public/build/buildhub.json",
+      "beetmoverscript/test/test_work_dir/task.json",
+      "beetmoverscript/test/test_work_dir/task_artifact_map.json",
+      "beetmoverscript/test/test_work_dir/task_missing_installer.json",
+      "beetmoverscript/test/test_work_dir/task_missing_relprops.json",
+      "beetmoverscript/utils.py"
+    ]
+  },
+  "3": {
+    "sha": "73eb1f663e5f25b629f429a9148bcf9d0ee8cf11",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/73eb1f663e5f25b629f429a9148bcf9d0ee8cf11",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Update requests",
+    "commit_date": "2018-11-26 16:34:29",
+    "files_changed": [
+      "requirements-prod.txt"
+    ]
+  },
+  "4": {
+    "sha": "e845c331e8c9ce250c05c8c16fab5b73975d0689",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/e845c331e8c9ce250c05c8c16fab5b73975d0689",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Use pip-compile to define requirements-prod.txt",
+    "commit_date": "2018-11-26 16:33:40",
+    "files_changed": [
+      "requirements-prod.txt"
+    ]
   }
 }
