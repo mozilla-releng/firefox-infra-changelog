@@ -1,5 +1,83 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 04:37:54.603496"
+    "lastChecked": "2018-11-28 23:43:37.122698"
+  },
+  "1": {
+    "sha": "53b3aced71ef8176d4ebf5001f06870fbfb922cb",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/53b3aced71ef8176d4ebf5001f06870fbfb922cb",
+    "commiter_name": "bccrisan",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from mozilla-releng/pyup-scheduled-update-2018-11-28  Scheduled weekly dependency update for week 47",
+    "commit_date": "2018-11-28 14:45:11",
+    "files_changed": [
+      "requirements/base.txt",
+      "requirements/test.txt"
+    ]
+  },
+  "2": {
+    "sha": "f7c329cc4a58f719cadbad22dffc00de57b3bff3",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/f7c329cc4a58f719cadbad22dffc00de57b3bff3",
+    "commiter_name": "bccrisan",
+    "commiter_email": null,
+    "commit_message": "Reverted taskcluster-urls from 11.0.0 to 10.1.0      With the correct hashes",
+    "commit_date": "2018-11-28 14:35:25",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "3": {
+    "sha": "f8329c0c3b62cccfb94a4b7231dfc3aeaa6f00f7",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/f8329c0c3b62cccfb94a4b7231dfc3aeaa6f00f7",
+    "commiter_name": "bccrisan",
+    "commiter_email": null,
+    "commit_message": "Reverted taskcluster-urls from 11.0.0 to 10.1.0",
+    "commit_date": "2018-11-28 14:33:42",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "4": {
+    "sha": "ea0762e8f314761e49f6606680d2f831bb9bd79d",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/ea0762e8f314761e49f6606680d2f831bb9bd79d",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update pytest from 4.0.0 to 4.0.1",
+    "commit_date": "2018-11-28 13:04:13",
+    "files_changed": [
+      "requirements/test.txt"
+    ]
+  },
+  "5": {
+    "sha": "257b3340f9cd0bb3bee7bf88439b666a7512fc33",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/257b3340f9cd0bb3bee7bf88439b666a7512fc33",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-28 13:04:11",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "6": {
+    "sha": "ee00e72e06c12365d51af81961ca52f1f39785d2",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/ee00e72e06c12365d51af81961ca52f1f39785d2",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update scriptworker from 16.2.1 to 17.0.0",
+    "commit_date": "2018-11-28 13:04:09",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "7": {
+    "sha": "3f008d23361935d2d27923a5d4b6d3d9ef40994e",
+    "url": "https://github.com/mozilla-releng/addonscript/commit/3f008d23361935d2d27923a5d4b6d3d9ef40994e",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update multidict from 4.5.0 to 4.5.1",
+    "commit_date": "2018-11-28 13:04:07",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
   }
 }

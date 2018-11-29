@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 04:34:00.883004"
+    "lastChecked": "2018-11-28 23:44:28.229185"
   },
   "1": {
-    "node": "6f6c836a215ce7f11b7ccd1a6ff4d2206521cd79",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=6f6c836a215c",
+    "sha": "0ba73c30a3d9f213323766057d2176cd253efdd3",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=0ba73c30a3d9",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 1510472 - Add null check to avoid crash due to nsDependentCString(null). r=mkmelin a=jorgk",
+    "commit_date": "2018-11-28 09:14:26"
+  },
+  "2": {
+    "sha": "4f5ec4473e22a72d72241ef98216ce9fbe51c569",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=4f5ec4473e22",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 1510028 - Add null check to avoid crash due to nsDependentCString(null). r=mkmelin a=jorgk",
+    "commit_date": "2018-11-27 22:10:19"
+  },
+  "3": {
+    "sha": "189364307b2e821567aef43c0faded255f4bf4d8",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=189364307b2e",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 1509685 - Add more bounds checking in nsMsgDBView::UpdateDisplayMessage() to avoid crashes. r=alta88 a=jorgk",
+    "commit_date": "2018-11-27 20:11:03"
+  },
+  "4": {
+    "sha": "9c373f4cbef707b9cfd7eb01879020f0b58af771",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=9c373f4cbef7",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 1470049 - Partially revert rev 40f5ba35583 (bug 1385573) to fix insertion into threaded unified/search view. a=backout",
+    "commit_date": "2018-11-28 09:06:46"
+  },
+  "5": {
+    "sha": "cc3a5040f78d7db669a48c77dec43e1790843684",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=cc3a5040f78d",
+    "commiter_name": "aceman ",
+    "commit_email": "acelists@atlas.sk",
+    "commit_message": "Bug 1509586 - Look for requireEncryptMessage in params.smFields in msgCompSecurityInfo.js. r=mkmelin a=jorgk",
+    "commit_date": "2018-11-25 10:55:00"
+  },
+  "6": {
+    "sha": "6f6c836a215ce7f11b7ccd1a6ff4d2206521cd79",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=6f6c836a215c",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "Bug 1510035 - Set orient=\"vertical\" on splitter on search and AB search. r=Paenglab a=jorgk",
     "commit_date": "2018-11-26 22:47:22"
   },
-  "2": {
-    "node": "ef701c1534bfe8a22705b77f9f517f00abd795ac",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=ef701c1534bf",
+  "7": {
+    "sha": "ef701c1534bfe8a22705b77f9f517f00abd795ac",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=ef701c1534bf",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "Bug 409458 - fix backport error: mailServices.js vs. MailServices.jsm. rs=bustage-fix a=jorgk",
     "commit_date": "2018-11-27 10:10:14"
   },
-  "3": {
-    "node": "607e7138912852c182fd42d9e0f3c87ea3b8eeb3",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=607e71389128",
+  "8": {
+    "sha": "607e7138912852c182fd42d9e0f3c87ea3b8eeb3",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=607e71389128",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
     "commit_date": "2018-08-15 21:36:04"
   },
-  "4": {
-    "node": "f2bea6614d22d3efdd2274ab7d63d62c18c2590f",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=f2bea6614d22",
+  "9": {
+    "sha": "f2bea6614d22d3efdd2274ab7d63d62c18c2590f",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=f2bea6614d22",
     "commiter_name": "Richard Marti ",
     "commit_email": "richard.marti@gmail.com",
     "commit_message": "Bug 1508611 - Set orient=\"vertical\" on splitter in filter editor to show it immediately. r+a=jorgk",
     "commit_date": "2018-11-25 12:15:02"
   },
-  "5": {
-    "node": "949fc4394c9f2a940139ed16aa214c9d5337e6b6",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=949fc4394c9f",
+  "10": {
+    "sha": "949fc4394c9f2a940139ed16aa214c9d5337e6b6",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=949fc4394c9f",
     "commiter_name": "Magnus Melin ",
     "commit_email": "mkmelin+mozilla@iki.fi",
     "commit_message": "Bug 1271353 - check own email addresses case-insensitively in correspondents column and ignore plus addressing part. r+a=jorgk",
     "commit_date": "2018-11-21 08:40:25"
   },
-  "6": {
-    "node": "879f355b920c29492bf3867c7406df174d26f08b",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=879f355b920c",
+  "11": {
+    "sha": "879f355b920c29492bf3867c7406df174d26f08b",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=879f355b920c",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "Bug 1401858 - add null check to avoid crash in EncodedHeader()/DecodedHeader(). r=mkmelin a=jorgk",
     "commit_date": "2018-11-25 22:28:26"
   },
-  "7": {
-    "node": "e3a599bf7d540a475f30b807ed6711bce1f16cfb",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=e3a599bf7d54",
+  "12": {
+    "sha": "e3a599bf7d540a475f30b807ed6711bce1f16cfb",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=e3a599bf7d54",
     "commiter_name": "Hiroyuki Ikezoe ",
     "commit_email": "hiikezoe@mozilla-japan.org",
     "commit_message": "Bug 409458 - nsIMsgFolder.AddFolderListener should hold a reference to the listener. r=standard8,neil,darktrojan,jorgk a=jorgk",
     "commit_date": "2018-08-30 03:42:58"
   },
-  "8": {
-    "node": "a6e340fe4c07d16d962abab48404aad0d07848b8",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=a6e340fe4c07",
+  "13": {
+    "sha": "a6e340fe4c07d16d962abab48404aad0d07848b8",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=a6e340fe4c07",
     "commiter_name": "Neil Rashbrook ",
     "commit_email": "neil@parkwaycc.co.uk",
     "commit_message": "Bug 1482040 - Fix failure in test_uid.js by iterating MailServices.ab.directories 'manually'. r=darktrojan a=jorgk DONTBUILD",
     "commit_date": "2018-11-20 06:29:00"
   },
-  "9": {
-    "node": "afa9e6f5d698d35b4c2e5da7bb711bfbccd6dd54",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=afa9e6f5d698",
+  "14": {
+    "sha": "afa9e6f5d698d35b4c2e5da7bb711bfbccd6dd54",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=afa9e6f5d698",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
     "commit_date": "2018-08-15 21:36:04"
   },
-  "10": {
-    "node": "9a121656853775e6af93e34d9a476c7a84bf22da",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=9a1216568537",
+  "15": {
+    "sha": "9a121656853775e6af93e34d9a476c7a84bf22da",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=9a1216568537",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "Backed out changeset c597411fe241 for accidentally landing with DONTBUILD. a=jorgk",
     "commit_date": "2018-11-20 12:47:36"
   },
-  "11": {
-    "node": "39a6b979d966f7b98ac908e3b2d4eebffc550f24",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=39a6b979d966",
+  "16": {
+    "sha": "39a6b979d966f7b98ac908e3b2d4eebffc550f24",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=39a6b979d966",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "No bug - Empty commit. a=jorgk",
     "commit_date": "2018-07-31 17:38:08"
   },
-  "12": {
-    "node": "c597411fe2411e2bd76b21a64b1142fa0335e1e6",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=c597411fe241",
+  "17": {
+    "sha": "c597411fe2411e2bd76b21a64b1142fa0335e1e6",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=c597411fe241",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
     "commit_message": "No bug - Pin mozilla-esr60 version for release. a=jorgk DONTBUILD",
     "commit_date": "2018-08-15 21:36:04"
   },
-  "13": {
-    "node": "4f5354ecf23fd73446760ff46f58dec8e01fe7f8",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=4f5354ecf23f",
+  "18": {
+    "sha": "4f5354ecf23fd73446760ff46f58dec8e01fe7f8",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=4f5354ecf23f",
     "commiter_name": "aceman ",
     "commit_email": "acelists@atlas.sk",
     "commit_message": "Bug 1481915 - Do not allow converting Local Folders to maildir if the needed pref isn't set. r=mkmelin a=jorgk",
     "commit_date": "2018-11-18 14:52:00"
   },
-  "14": {
-    "node": "43b80ff56fa2d0cae801b8e14fed0980219f2605",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=43b80ff56fa2",
+  "19": {
+    "sha": "43b80ff56fa2d0cae801b8e14fed0980219f2605",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=43b80ff56fa2",
     "commiter_name": "Neil Rashbrook ",
     "commit_email": "neil@parkwaycc.co.uk",
     "commit_message": "Bug 1493143 - Allow copy service to find request by dstFolder for folder copy/move; change IMAP notify accordingly. r+a=jorgk",
     "commit_date": "2018-09-21 03:50:00"
   },
-  "15": {
-    "node": "55f5634ac8652274f32a38ac4e4fabe6ac451895",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=55f5634ac865",
+  "20": {
+    "sha": "55f5634ac8652274f32a38ac4e4fabe6ac451895",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=55f5634ac865",
     "commiter_name": "Magnus Melin ",
     "commit_email": "mkmelin+mozilla@iki.fi",
     "commit_message": "Bug 1507718 - crash in nsImapProtocol::GetMessageSize(). Make m_hostSessionList an nsCOMPtr. r+a=jorgk",
     "commit_date": "2018-11-16 13:41:13"
-  },
-  "16": {
-    "node": "d3b45f75c1dbec8907242485f4c0f42f166a1b28",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=d3b45f75c1db",
-    "commiter_name": "Magnus Melin ",
-    "commit_email": "mkmelin+mozilla@iki.fi",
-    "commit_message": "Bug 1072748 - Switch Thunderbird from xpinstall.whitelist.add to using a default permissions file. r+a=jorgk  - port bug 506446 (use default_permissions file)  - port bug 1050080 (remove xpinstall.whitelist.add)  - port bug 1224000 - browser/omni.ja doesn't contain startup cache anymore and resource://app/ doesn't point where it's supposed to",
-    "commit_date": "2018-11-07 10:34:21"
-  },
-  "17": {
-    "node": "dc6b5da0d19e640c5f267fba283414c924951eff",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=dc6b5da0d19e",
-    "commiter_name": "MakeMyDay ",
-    "commit_email": "makemyday@gmx-topmail.de",
-    "commit_message": "Bug 1504753 - Change call cal.userCanRespondToInvitation to cal.acl.userCanRespondToInvitation. r+a=philipp",
-    "commit_date": "2018-11-05 17:27:39"
-  },
-  "18": {
-    "node": "53892f6ffc3a37e0f0c9a4290950f079a68f9425",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=53892f6ffc3a",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1333038 - Use 'modern' pointers to fix crash due to nsMsgLineStreamBuffer object being deleted while still in use. r=mkmelin a=jorgk Suspected \"use after free\" in nsMsgLineStreamBuffer::ReadNextLine() leading to crash since object may be destroyed while still in use on another thread.",
-    "commit_date": "2018-10-29 08:28:55"
-  },
-  "19": {
-    "node": "73ed0515afc2a98dd34890ada1a80324c42daf0a",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=73ed0515afc2",
-    "commiter_name": "Geoff Lankow ",
-    "commit_email": "geoff@darktrojan.net",
-    "commit_message": "Bug 1490626 - Add new notifications we need for WebExt address book API; r=mkmelin a=jorgk",
-    "commit_date": "2018-09-27 00:01:04"
-  },
-  "20": {
-    "node": "7fe1827e6b395377f9c72160e9d191104fc313ed",
-    "URL": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=7fe1827e6b39",
-    "commiter_name": "Geoff Lankow ",
-    "commit_email": "geoff@darktrojan.net",
-    "commit_message": "Bug 1482040 - Add UID property to address book interfaces; r=mkmelin a=jorgk",
-    "commit_date": "2018-09-25 23:56:46"
   }
 }

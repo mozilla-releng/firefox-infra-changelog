@@ -1,5 +1,72 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 04:33:24.375036"
+    "lastChecked": "2018-11-28 23:43:55.838242"
+  },
+  "1": {
+    "sha": "c83d29641e1ac75de051ea014ac343698b524db7",
+    "url": "https://github.com/mozilla-releng/treescript/commit/c83d29641e1ac75de051ea014ac343698b524db7",
+    "commiter_name": "bccrisan",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #151 from mozilla-releng/pyup-scheduled-update-2018-11-28  Scheduled weekly dependency update for week 47",
+    "commit_date": "2018-11-28 14:45:06",
+    "files_changed": [
+      "requirements/base.txt",
+      "requirements/test.txt"
+    ]
+  },
+  "2": {
+    "sha": "de0ae52c16b7057442e85a8cec29f5abedd99640",
+    "url": "https://github.com/mozilla-releng/treescript/commit/de0ae52c16b7057442e85a8cec29f5abedd99640",
+    "commiter_name": "bccrisan",
+    "commiter_email": null,
+    "commit_message": "Reverted taskcluster-urls from 11.0.0 to 10.1.0",
+    "commit_date": "2018-11-28 14:39:23",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "3": {
+    "sha": "73a1408d496a548caee57355ee6d265095700673",
+    "url": "https://github.com/mozilla-releng/treescript/commit/73a1408d496a548caee57355ee6d265095700673",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update pytest from 4.0.0 to 4.0.1",
+    "commit_date": "2018-11-28 13:08:13",
+    "files_changed": [
+      "requirements/test.txt"
+    ]
+  },
+  "4": {
+    "sha": "45c05e11786e8db3256ce4e366463e1fcba8908b",
+    "url": "https://github.com/mozilla-releng/treescript/commit/45c05e11786e8db3256ce4e366463e1fcba8908b",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update taskcluster-urls from 10.1.0 to 11.0.0",
+    "commit_date": "2018-11-28 13:08:11",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "5": {
+    "sha": "ed15273352b7222d3536fd371be1e096404d0c69",
+    "url": "https://github.com/mozilla-releng/treescript/commit/ed15273352b7222d3536fd371be1e096404d0c69",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update scriptworker from 16.2.1 to 17.0.0",
+    "commit_date": "2018-11-28 13:08:09",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
+  },
+  "6": {
+    "sha": "9e5973e63ca218d74c369588fab57b09de1ef41e",
+    "url": "https://github.com/mozilla-releng/treescript/commit/9e5973e63ca218d74c369588fab57b09de1ef41e",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update multidict from 4.5.0 to 4.5.1",
+    "commit_date": "2018-11-28 13:08:07",
+    "files_changed": [
+      "requirements/base.txt"
+    ]
   }
 }

@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 04:33:59.925223"
+    "lastChecked": "2018-11-28 23:44:27.199508"
   },
   "1": {
-    "node": "e9a8d57b5c3ebfab4222042d258d793db527c2e1",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e9a8d57b5c3e",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.",
-    "commit_date": "2018-11-28 04:12:39"
+    "sha": "d321a6c5e0718dc0f8e26c567555ed296c751d9e",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d321a6c5e071",
+    "commiter_name": "Boris Zbarsky ",
+    "commit_email": "bzbarsky@mit.edu",
+    "commit_message": "Bug 1491925.  Remove the various instrumentation we added to pin down InnerSetNewDocument failures.  r=mccr8.  This is a straight backout of (in that order) bug 1505468, bug 1503664, bug 1501479, bug 1499150, bug 1496805, and the second part of bug 1493849.  The first part of bug 1493849 was a backout of earlier instrumentation, and that should stay.  At this point we know we're hitting OOM inside the JS engine while trying to define properties on Document.prototype, so all this MOZ_CRASH instrumentation is no longer needed.",
+    "commit_date": "2018-11-28 23:24:53"
   },
   "2": {
-    "node": "a12d80e08655c13245add6f6dacc91f8a6d9cf89",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a12d80e08655",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "commit_date": "2018-11-28 04:08:19"
+    "sha": "50f492dc4eda48eaf11a20ef1ac729ae14396fd7",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=50f492dc4eda",
+    "commiter_name": "Mats Palmgren ",
+    "commit_email": "mats@mozilla.com",
+    "commit_message": "Bug 1509903 part 2 - Make the remaining nsTextFrame virtual methods 'final' unless they are overridden by nsContinuingTextFrame.  r=emilio",
+    "commit_date": "2018-11-28 23:17:25"
   },
   "3": {
-    "node": "2d8ce84e0107c99974201c1b67864786b22f3ff8",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2d8ce84e0107",
-    "commiter_name": "Ehsan Akhgari ",
-    "commit_email": "ehsan@mozilla.com",
-    "commit_message": "Bug 1508472 - Part 2: Second batch of comment fix-ups in preparation for the tree reformat r=sylvestre  This is a best effort attempt at ensuring that the adverse impact of reformatting the entire tree over the comments would be minimal.  I've used a combination of strategies including disabling of formatting, some manual formatting and some changes to formatting to work around some clang-format limitations.  Differential Revision: https://phabricator.services.mozilla.com/D13073",
-    "commit_date": "2018-11-28 00:54:56"
+    "sha": "69bf9d3d6b3cce3e8d4d44dcd5b70c5e76054ecf",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=69bf9d3d6b3c",
+    "commiter_name": "Mats Palmgren ",
+    "commit_email": "mats@mozilla.com",
+    "commit_message": "Bug 1509903 part 1 - Make nsTextFrame::IsFrameSelected() 'final' and inline nsIFrame::IsSelected() to de-virtualize the IsFrameSelected() call in some cases.  r=emilio  In particular, in nsCharClipDisplayItem::IsSelected() we know that the frame must be a nsTextFrame (or nsContinuingTextFrame) which means nsTextFrame::IsFrameSelected() can be called directly now.",
+    "commit_date": "2018-11-28 23:17:25"
   },
   "4": {
-    "node": "24657145bfd4b354d1c2336f496e1f0a9eecd30a",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=24657145bfd4",
-    "commiter_name": "Michael Cooper ",
-    "commit_email": "mcooper@mozilla.com",
-    "commit_message": "Bug 1440778 - Implement show-heartbeat as internal Normandy action r=Gijs  The original, server-side implementation of this action was at https://github.com/mozilla/normandy/blob/68d3e55a9d8605bda793620640d074d7e5503e37/client/actions/show-heartbeat/index.js  Differential Revision: https://phabricator.services.mozilla.com/D12345",
-    "commit_date": "2018-11-27 21:42:44"
+    "sha": "2ffaf47c0ff4e219eb24c94dcba322ae7bf628b3",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2ffaf47c0ff4",
+    "commiter_name": "Mats Palmgren ",
+    "commit_email": "mats@mozilla.com",
+    "commit_message": "Bug 1510674 - Remove a few unnecessary #include \"nsCSSFrameConstructor.h\".  r=emilio  There are no uses of any frame-ctor things in these files AFAICT.",
+    "commit_date": "2018-11-28 23:17:25"
   },
   "5": {
-    "node": "aa19f5470ee060a96cc5280d8e1f4c2e74fe6395",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=aa19f5470ee0",
-    "commiter_name": "Dana Keeler ",
-    "commit_email": "dkeeler@mozilla.com",
-    "commit_message": "Bug 1503348 - (3/3) - add support for decoding and verifying Signed Tree Head Data V2 r=jcj  Differential Revision: https://phabricator.services.mozilla.com/D11812",
-    "commit_date": "2018-11-27 19:51:56"
+    "sha": "c99a9a65ebedc8c294452f57ee08c49f3c1b5b3d",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c99a9a65ebed",
+    "commiter_name": "Geoff Brown ",
+    "commit_email": "gbrown@mozilla.com",
+    "commit_message": "Bug 1510449 (follow-up) Fix flake8 line-too-long; a=test-only on a CLOSED TREE",
+    "commit_date": "2018-11-28 23:07:37"
   },
   "6": {
-    "node": "129e0faf881363698dd884916e4601d68c6d71c3",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=129e0faf8813",
-    "commiter_name": "Dana Keeler ",
-    "commit_email": "dkeeler@mozilla.com",
-    "commit_message": "Bug 1503348 - (2/3) - fix up DecodeInclusionProof to take an Input rather than a Reader r=jcj  DecodeInclusionProof as originally implemented used the wrong convention - its input argument should have always been an Input rather than a Reader.  Differential Revision: https://phabricator.services.mozilla.com/D11811",
-    "commit_date": "2018-11-27 18:58:11"
+    "sha": "a0c38715c0c64126f8e59f099d2c225943d128ed",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a0c38715c0c6",
+    "commiter_name": "Geoff Brown ",
+    "commit_email": "gbrown@mozilla.com",
+    "commit_message": "Bug 1510449 - Support installing geckoview test apps from mach test commands; r=me,a=test-only",
+    "commit_date": "2018-11-28 22:46:37"
   },
   "7": {
-    "node": "9ef08b4eeea6096d4687a5f957da9f35909d461d",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9ef08b4eeea6",
-    "commiter_name": "Dana Keeler ",
-    "commit_email": "dkeeler@mozilla.com",
-    "commit_message": "Bug 1503348 - (1/3) remove obsolete SignedTreeHead definitions and tests r=jcj  The original implementation of Certificate Transparency included a definition for the first version of the Signed Tree Head data structure but it was never actually used. Now that we're implementing Binary Transparency, we need to implement support for Signed Tree Head V2. Because the focus and approach are different, the first step is to remove the original implementation.  Differential Revision: https://phabricator.services.mozilla.com/D11810",
-    "commit_date": "2018-11-27 18:58:07"
+    "sha": "5823e2fa901ec178f6528560a43496734316d774",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5823e2fa901e",
+    "commiter_name": "Geoff Brown ",
+    "commit_email": "gbrown@mozilla.com",
+    "commit_message": "Bug 1505536 - Add Android x86-64 debug builds; r=nalexander",
+    "commit_date": "2018-11-28 22:46:37"
   },
   "8": {
-    "node": "093960021b8b20b3c1963c9d1b1fc6809f60fd6b",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=093960021b8b",
-    "commiter_name": "Marco Bonardo ",
-    "commit_email": "mbonardo@mozilla.com",
-    "commit_message": "Bug 1510281 - Use a private and isolated context for search suggestions. r=mkaply  Differential Revision: https://phabricator.services.mozilla.com/D13082",
-    "commit_date": "2018-11-27 17:18:28"
+    "sha": "09acef99bf7ef6192b4be3347513a1be2b42d55a",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=09acef99bf7e",
+    "commiter_name": "Geoff Brown ",
+    "commit_email": "gbrown@mozilla.com",
+    "commit_message": "Bug 1467868 - Support Android aarch64 artifact builds; r=nalexander",
+    "commit_date": "2018-11-28 22:46:37"
   },
   "9": {
-    "node": "d476f054342f039445afddff474f4c8b4d9edea2",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d476f054342f",
-    "commiter_name": "Mike Conley ",
-    "commit_email": "mconley@mozilla.com",
-    "commit_message": "Bug 1507536 - Set skipintoolbarset=\"true\" on some titlebar items to avoid redundant context menu items. r=dao  This adds a skipintoolbarset to the toolbar-menubar spacer and the titlebar-buttonbox-container hbox to avoid a case where an exception can be thrown from CustomizableUI.isWidgetRemovable, which expects all direct descendants of toolbars to either have an ID, be one of a special set of node types, or have skipintoolbarset=\"true\" set on it.  Differential Revision: https://phabricator.services.mozilla.com/D13147",
-    "commit_date": "2018-11-27 22:33:33"
+    "sha": "f005cfb0b0fa95ce3b58dd87fc21615c041e603d",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f005cfb0b0fa",
+    "commiter_name": "Geoff Brown ",
+    "commit_email": "gbrown@mozilla.com",
+    "commit_message": "Bug 1467868 - Add Android aarch64/debug build; r=nalexander",
+    "commit_date": "2018-11-28 22:46:37"
   },
   "10": {
-    "node": "5e887c4ebd791fc491977bdc0ee8fc787f46b33a",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5e887c4ebd79",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Bug 1509315 - Make the console test helper use getTab instead of listTabs. r=yulia  Ideally, it would use TargetFactory. But as that's mochitest chrome, we don't have natural access to gBrowser/firefox tab.  MozReview-Commit-ID: 4nrfFZu6jAU  Depends on D12734  Differential Revision: https://phabricator.services.mozilla.com/D12735",
-    "commit_date": "2018-11-27 21:48:12"
+    "sha": "237e92ff9ceb03e634371ab105a69f5f086fc7e0",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=237e92ff9ceb",
+    "commiter_name": "Coroiu Cristina ",
+    "commit_email": "ccoroiu@mozilla.com",
+    "commit_message": "Merge mozilla-central to inbound a=merge on a CLOSED TREE",
+    "commit_date": "2018-11-28 22:34:07"
   },
   "11": {
-    "node": "30bc5b0c60ebfe0444530fa9af86c5c8d5498ecd",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=30bc5b0c60eb",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Bug 1509315 - Refactor console attachConsole test helpers to async. r=yulia  MozReview-Commit-ID: 2jIm73AiIPN  Depends on D12733  Differential Revision: https://phabricator.services.mozilla.com/D12734",
-    "commit_date": "2018-11-27 21:48:05"
+    "sha": "f2915d3ee5f8705676e4bb643eab54b62246f25f",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f2915d3ee5f8",
+    "commiter_name": "Coroiu Cristina ",
+    "commit_email": "ccoroiu@mozilla.com",
+    "commit_message": "Merge inbound to mozilla-central a=merge",
+    "commit_date": "2018-11-28 21:49:09"
   },
   "12": {
-    "node": "3eadd3d0580012f95a9d8e8ac24befb60d93b3fd",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3eadd3d05800",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Bug 1509315 - Remove unecessary calls to listTabs. r=yulia  These tests are calling listTabs, but that is no longer necessary thanks to rootForm being automatically managed within RootFront.  MozReview-Commit-ID: AmC6dTIJjiY  Depends on D12732  Differential Revision: https://phabricator.services.mozilla.com/D12733",
-    "commit_date": "2018-11-27 21:48:03"
+    "sha": "e374d095d1e2d4c5d9c7c1cc412bb1798149d003",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e374d095d1e2",
+    "commiter_name": "Coroiu Cristina ",
+    "commit_email": "ccoroiu@mozilla.com",
+    "commit_message": "Merge autoland to mozilla-central a=merge",
+    "commit_date": "2018-11-28 21:47:17"
   },
   "13": {
-    "node": "322f2dd202990fc3bc215a7296423ca683738244",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=322f2dd20299",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Bug 1509315 - Remove leftover from debugger head.js file. r=yulia  I also removed the get root form leftover.  MozReview-Commit-ID: DxPwG9a5YAG  Depends on D12731  Differential Revision: https://phabricator.services.mozilla.com/D12732",
-    "commit_date": "2018-11-27 21:48:01"
+    "sha": "4a3f88e3629875813584f135f9e250b82eb4aa48",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4a3f88e36298",
+    "commiter_name": "Brindusan Cristian ",
+    "commit_email": "cbrindusan@mozilla.com",
+    "commit_message": "Backed out 3 changesets (bug 1486659) as requested by jhlin on irc for breaking video playback on Android and causing regression Bug 1510464. a=backout  Backed out changeset 9c2834ca8823 (bug 1486659) Backed out changeset 5d897c0c7a25 (bug 1486659) Backed out changeset b0fdcebfd20d (bug 1486659)",
+    "commit_date": "2018-11-28 17:09:13"
   },
   "14": {
-    "node": "18f76c41550516fb1cf4bcbe8bfaf82d480322e7",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=18f76c415505",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Bug 1509315 - Use TargetFactory.forTab for creating targets in tests. r=yulia  There is 4 patterns here:   Tests using attachThreadActorForUrl like event-listeners ones. I augmented this helper method to call TargetFactory.   Tests using attachTargetActorForUrl like debugger-statement, dbg-navigation and target-scoped-actor. Uses TargetFactory directly.   Tests using connectDebuggerClient like navigateEvents and spaw_actor_in_parent. Uses TargetFactory directly.   All the others, where creating DebuggerClient on their own, and calling listTabs+attachTarget. They now use TargetFactory directly.  A note about webconsole-helpers, only consoleClient attribute was used from tests using this helper. Also, in various tests I remove the call to client.destroy, that's because shared-head will close all the tabs/toolboxes and it should lead to target/client destruction. Finally, debugger-statement now request the thread actor via the client instead of manual request, it should help the refactoring to a front!  MozReview-Commit-ID: 2ah4UmSjuoi  Depends on D12730  Differential Revision: https://phabricator.services.mozilla.com/D12731",
-    "commit_date": "2018-11-27 21:47:59"
+    "sha": "33a1a7271fe37f0e5118dc71381f7e29d3809a89",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=33a1a7271fe3",
+    "commiter_name": "Paul Adenot ",
+    "commit_email": "paul@paul.cx",
+    "commit_message": "Bug 1274392 - When echo cancellation is disabled, disable automatic gain control and noise suppression as well. r=jib  Differential Revision: https://phabricator.services.mozilla.com/D12902",
+    "commit_date": "2018-11-28 13:41:02"
   },
   "15": {
-    "node": "ce2018b0349dc53c3394559a20e729797034ce8c",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ce2018b0349d",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Bug 1509315 - Pass the full target form to all BrowsingContextTargetFront instances. r=yulia  For now, we only pass { actor } for all tab target fronts created via DebuggerClient.attachTarget, whereas parent process target fronts were passing the full form from RootFront.getProcess.  MozReview-Commit-ID: 1H2NxFv8glY  Differential Revision: https://phabricator.services.mozilla.com/D12730",
-    "commit_date": "2018-11-27 21:47:52"
-  },
-  "16": {
-    "node": "ed3560460fe93c21664313f318c25cf2cb5eefc6",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ed3560460fe9",
-    "commiter_name": "Dragana Damjanovic ",
-    "commit_email": "dd.mozilla@gmail.com",
-    "commit_message": "Bug 1510307 - Fix the comment next to esni pref. r=JuniorHsu  Differential Revision: https://phabricator.services.mozilla.com/D13083",
-    "commit_date": "2018-11-27 17:09:58"
-  },
-  "17": {
-    "node": "1de661bbcc0ca1a2a32b589ef9cdc29ca374bfc1",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1de661bbcc0c",
-    "commiter_name": "Dragana Damjanovic ",
-    "commit_email": "dd.mozilla@gmail.com",
-    "commit_message": "Bug 1497868 - In nsFtp, close data pipe as well. r=mayhemer  Differential Revision: https://phabricator.services.mozilla.com/D12740",
-    "commit_date": "2018-11-27 19:48:20"
-  },
-  "18": {
-    "node": "49aba2e71c128cd0d1be6df09e7931884ed91b3e",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=49aba2e71c12",
-    "commiter_name": "Randall Barker ",
-    "commit_email": "rbarker@mozilla.com",
-    "commit_message": "Bug 1503039 - Add tests for GeckoView MediaElement r=snorp,esawin,imanol  Differential Revision: https://phabricator.services.mozilla.com/D10137",
-    "commit_date": "2018-11-27 21:58:46"
-  },
-  "19": {
-    "node": "5e1161b3716a6b8492ee8029920a19595c42a136",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5e1161b3716a",
+    "sha": "4e55f708271a1394f850d3bbd5a853b283f32184",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4e55f708271a",
     "commiter_name": "D\u00e3o Gottwald ",
     "commit_email": "dao@mozilla.com",
-    "commit_message": "Bug 1509309 - Move most browser- .js scripts from global-scripts.inc to browser.xul. r=Standard8  Differential Revision: https://phabricator.services.mozilla.com/D13064",
-    "commit_date": "2018-11-27 21:55:21"
+    "commit_message": "Bug 1508081 - Make tab line color fallback to the selected tab text color instead of accentcolor. r=ntim  Differential Revision: https://phabricator.services.mozilla.com/D13232",
+    "commit_date": "2018-11-28 12:29:49"
+  },
+  "16": {
+    "sha": "1f338cc3d9bbd955bc5b692cd09d13c4606a5cff",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1f338cc3d9bb",
+    "commiter_name": "Michael Ratcliffe ",
+    "commit_email": "mratcliffe@mozilla.com",
+    "commit_message": "Bug 1509457 - Flex line background pattern shouldn't be draw outside of flex lines r=gl  Differential Revision: https://phabricator.services.mozilla.com/D12749",
+    "commit_date": "2018-11-28 12:27:20"
+  },
+  "17": {
+    "sha": "6adfb885abd523d418b0919cabd04b4a22472a25",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6adfb885abd5",
+    "commiter_name": "Matthew Gaudet ",
+    "commit_email": "mgaudet@mozilla.com",
+    "commit_message": "Bug 1510018: Fix error in callVM comment r=nbp DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D13106",
+    "commit_date": "2018-11-28 10:28:57"
+  },
+  "18": {
+    "sha": "de432b1f84fcb772f1432fba941246782f1ab1d0",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=de432b1f84fc",
+    "commiter_name": "Julian Descottes ",
+    "commit_email": "jdescottes@mozilla.com",
+    "commit_message": "Bug 1510182 - Load edit menu strings for each new toolbox window;r=Honza  Differential Revision: https://phabricator.services.mozilla.com/D13222",
+    "commit_date": "2018-11-28 11:43:34"
+  },
+  "19": {
+    "sha": "66612048bbdcd6a587c480ede79a5cc53138db7e",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=66612048bbdc",
+    "commiter_name": "Jan-Erik Rediger ",
+    "commit_email": "jrediger@mozilla.com",
+    "commit_message": "Bug 1498163 - Migrate external callers to the new snapshot API r=chutten  Differential Revision: https://phabricator.services.mozilla.com/D12890",
+    "commit_date": "2018-11-28 09:36:03"
   },
   "20": {
-    "node": "74216c81fc8d385d94e1f7ea6b0c2377aca65953",
-    "URL": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=74216c81fc8d",
-    "commiter_name": "Erica Wright ",
-    "commit_email": "ewright@mozilla.com",
-    "commit_message": "Bug 1509558 - Trackers sub-panel category menu is correct in RTL mode. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13114",
-    "commit_date": "2018-11-27 21:54:02"
+    "sha": "ff378a3336a5704867e20ea5a27893e729aa5f9e",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ff378a3336a5",
+    "commiter_name": "Qinghao_Jack_Song ",
+    "commit_email": "songqing@msu.edu",
+    "commit_message": "Bug 1498448 - Migrate Certificate Manager Dialog to use fluent for localization r=Gijs,flod,zbraniecki  Differential Revision: https://phabricator.services.mozilla.com/D8499",
+    "commit_date": "2018-11-28 10:30:06"
   }
 }
