@@ -271,7 +271,7 @@ def extract_json(json_files, path_to_files):
         with open(file_path) as json_files:
             data = json.load(json_files)
             base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
-            repository_name = "[" + file.rstrip().replace(".json", "") + "]" + "(" + github_base_link + \
+            repository_name = "[" + file.rstrip().replace(".json", "") + "]" + "(" + base_link + \
                               file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md") + ")"
 
             try:
