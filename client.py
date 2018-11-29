@@ -34,21 +34,22 @@ def extract_email(commit_email):
     "<" so that returned email doesn't contain the "<" symbol and rfind to find the ending character ">". Both find and
     rfind return the index where the carachters "<" and ">" are placed so when you do return commit_email with
     [start_char_index:ending_char_index] the string shrinks to what's between the characters.
-    :param commit_email: string that contains an email
-    :return: string that contains only the email
+    :param commit_email: String that contains an email
+    :return: String that contains only the email
     """
     return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
 
 
-def create_git_md_table(repository_name):
+def create_md_table(repository_name, path_to_files):
     """
-    Uses 'repository_name' parameter to generate markdown tables for every json file inside 'git_files'.
-    :param repository_name: used to display the repo name in the title row of the MD table
+    Uses 'repository_name' parameter to generate markdown tables for every json file inside path_to_files parameter.
+    :param repository_name: Used to display the repo name in the title row of the MD table
+    :param path_to_files: Used to store path to json files (git_files, hg_files)
     :return: MD tables for every json file inside the git_files dir.
     """
 
     try:
-        json_data = open(current_dir + "/git_files/" + "{}.json".format(repository_name)).read()
+        json_data = open(current_dir + "/{}/".format(path_to_files) + "{}.json".format(repository_name)).read()
         data = json.loads(json_data)
         base_table = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
                      "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
@@ -63,6 +64,7 @@ def create_git_md_table(repository_name):
             commit_number = commit_number_list[-1]
             try:
                 commit_author = data[key]["commiter_name"]
+                commit_author = re.sub("\u0131", "i", commit_author)  #this is temporary
                 date = data[key]["commit_date"]
                 message = data[key]["commit_message"]
                 url = data[key]["url"]
@@ -80,7 +82,7 @@ def create_git_md_table(repository_name):
                 last_checked = data[key]["lastChecked"]
 
         md_file_name = "{}.md".format(repository_name)
-        md_file = open(current_dir + "/git_files/" + md_file_name, "w")
+        md_file = open(current_dir + "/{}/".format(path_to_files) + md_file_name, "w")
 
         try:
             for key, value in tables.items():
@@ -95,65 +97,13 @@ def create_git_md_table(repository_name):
         print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def create_hg_md_table(repository_name):
-    """
-    Uses 'repository_name' parameter to generate markdown tables for every json file inside 'hg_files'.
-    :param repository_name: used to display the repo name in the title row of the MD table
-    :return: MD tables for every json file inside the hg_files dir.
-    """
-
-    try:
-        json_data = open(current_dir + "/hg_files/" + "{}.json".format(repository_name)).read()
-        data = json.loads(json_data)
-        base_table = "| Commit Number | Commiter | Commit Message | Node | Date | \n" + \
-                     "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
-        tables = {}
-        md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
-        commit_number_list = [key for key in data]
-
-        for repo in md_title:
-            tables[repo] = base_table
-
-        for key in data:
-            commit_number = commit_number_list[-1]
-            try:
-                commit_author = data[key]["commiter_name"]
-                commit_author = re.sub("\u0131", "i", commit_author)
-                date = data[key]["commit_date"]
-                message = data[key]["commit_message"]
-                url = data[key]["URL"]
-
-                row = "|" + commit_number + \
-                      "|" + commit_author + \
-                      "|" + message + \
-                      "|" + url + \
-                      "|" + date + "\n"
-
-                del commit_number_list[-1]
-                for repo in tables.keys():
-                    tables[repo] = tables[repo] + row
-            except KeyError:
-                last_checked = data[key]["lastChecked"]
-
-        md_file_name = "{}.md".format(repository_name)
-        md_file = open(current_dir + "/hg_files/" + md_file_name, "w")
-
-        for key, value in tables.items():
-            if value != base_table:
-                md_file.write("## " + key.upper() + "\n\n")
-                md_file.write(value + "\n\n")
-        md_file.close()
-    except FileNotFoundError:
-        print("Json for {} is empty! Skipping!".format(repository_name))
-
-
 def filter_git_commit_data(repository_name, repository_team):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
     :param repository_team:
     :param repository_name:
-    :return: filtered json data
+    :return: Filtered json data
     TODO: please add the exception blocks since the script fails when it can't pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
             github.GithubException.GithubException: 502 {'message': 'Server Error'}
@@ -204,9 +154,9 @@ def filter_hg_commit_data(repository_name, repository_url):
     Example:
     example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
     This will be later used to get the commits from https://hg.mozilla.org/
-    :param repository_url: link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
-    :param push_type: would probably be "json-log" most of the time.
-    :return: returns a dictionary that contains the commits in the provided hg_repository_name
+    :param repository_url: Link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
+    :param push_type: Would probably be "json-log" most of the time.
+    :return: Returns a dictionary that contains the commits in the provided hg_repository_name
     """
     request_url = repository_url + "json-log"
     hg_repo_data = {}
@@ -221,14 +171,13 @@ def filter_hg_commit_data(repository_name, repository_url):
         url = repository_url + "pushloghtml?changeset=" + node[:12]
         commiter = entry["user"]
         commiter_name = commiter.split('<')[0]
-        # commiter_email = commiter.split('<')[1]
         commiter_email = extract_email(commiter)
         commit_message = entry["desc"]
         message = re.sub("[*\n\r]", " ", commit_message)
         date = entry["date"]
         hg_repo_data.update({commit_number: {
-            "node": node,
-            "URL": url,
+            "sha": node,
+            "url": url,
             "commiter_name": commiter_name,
             "commit_email": commiter_email,
             "commit_message": message,
@@ -246,14 +195,14 @@ def create_files_for_hg(repositories_holder):
     Main HG function. Takes every Mercurial repo from a .json file which is populated with repositories and writes all
      the commit data of each repo in a.
     creates a json and MD file for each repo as well.
-    :param: repositories_holder: expects a .json file that contains a list of repositories
-    :return: the end result is a .json and a .md file for every git repository. can be found inside hg_files/
+    :param: repositories_holder: Expects a .json file that contains a list of repositories
+    :return: The end result is a .json and a .md file for every git repository. can be found inside hg_files/
     """
     for repo in repositories_holder["Mercurial"]:
         repository_name = repo
         repository_url = repositories_holder["Mercurial"][repo]["url"]
         filter_hg_commit_data(repository_name, repository_url)
-        create_hg_md_table(repository_name)
+        create_md_table(repository_name, "hg_files")
 
 
 def create_files_for_git(repositories_holder):
@@ -261,8 +210,8 @@ def create_files_for_git(repositories_holder):
     Main GIT function. Takes every Git repo from a .json file which is populated with repositories and writes all
     the commit data of each repo in a.
     creates a json and MD file for each repo as well.
-    :param: repositories_holder: expects a .json file that contains a list of repositories
-    :return: the end result is a .json and a .md file for every git repository. can be found inside git_files/
+    :param: repositories_holder: Expects a .json file that contains a list of repositories
+    :return: The end result is a .json and a .md file for every git repository. can be found inside git_files/
     """
     for repo in repositories_holder["Github"]:
         repository_name = repo
@@ -273,7 +222,7 @@ def create_files_for_git(repositories_holder):
         except KeyError:
             pass
         filter_git_commit_data(repository_name, repository_team)
-        create_git_md_table(repository_name)
+        create_md_table(repository_name, "git_files")
 
 
 def clear_file(file_name):
@@ -308,16 +257,16 @@ def write_main_md_table(file_name, repository, last_commit, deploy_time):
     write_file.write(row)
 
 
-def extract_hg_json(json_files):
+def extract_json(json_files, path_to_files):
     """
     Extracts the json data from json files and writes the data to the main markdown table file. The function looks
     into json files after the last commit, extracts it and calls the write_main_md_table function.
-
-    :param json_files: list of files to extract commits from.
+    :param json_files: List of files to extract commits from.
+    :param path_to_files: Folder to json files
     :return: none
     """
     for file in json_files:
-        file_path = "hg_files/" + file
+        file_path = "{}/".format(path_to_files) + file
 
         with open(file_path) as json_files:
             data = json.load(json_files)
@@ -335,52 +284,24 @@ def extract_hg_json(json_files):
                 pass
 
 
-def extract_github_data(json_files):
-    """
-    Extracts the json data from json files and writes the data to the main markdown table file. The function looks
-    into json files after the last commit, extracts it and calls the write_main_md_table function.
-
-    :param json_files: list of files to extract commits from.
-    :return: none
-    """
-    for file in json_files:
-        file_path = "git_files/" + file
-
-        with open(file_path) as json_files:
-            data = json.load(json_files)
-            github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/"
-            repository_name = "[" + file.rstrip().replace(".json", "") + "]" + "(" + github_base_link + \
-                              file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md") + ")"
-
-            try:
-                commit_number = "1"  # This needs to be string.
-                commit_description = data[commit_number]["commit_message"]
-                commit_date = data[commit_number]["commit_date"]
-                write_main_md_table("main_md_table.md", repository_name, commit_description, commit_date)
-            except KeyError:
-                print("File " + file + " is empty. \n Please check:" + repository_name + " for more details.\n")
-                pass
-
-
-def generate_main_md_table():
+def generate_main_md_table(path_to_files):
     """
     Looks into repositories folders (hg_files & git files), filters the files to load the json's using a passfilter and
     calls after extraction functions.
+    :param path_to_files: Folder to json files
     """
     # Get current folder path.
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # Look into repositories folder and list all of the files
-    hg_only_files = [f for f in listdir(dir_path + "/hg_files") if isfile(join(dir_path + "/hg_files", f))]
-    git_only_files = [f for f in listdir(dir_path + "/git_files") if isfile(join(dir_path + "/git_files", f))]
+    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if isfile(join(dir_path + "/{}".format(path_to_files), f))]
 
     # Pass filter only the ".json" objects
-    hg_json_files = [jf for jf in hg_only_files if ".json" in jf]
-    git_json_files = [jf for jf in git_only_files if ".json" in jf]
+    json_files = [jf for jf in only_files if ".json" in jf]
 
     # Extract data from json_files and writes to main markdown table.
-    extract_hg_json(hg_json_files)
-    extract_github_data(git_json_files)
+    extract_json(json_files, path_to_files)
+
     print("Table successfully generated.")
 
 
@@ -392,8 +313,5 @@ if __name__ == "__main__":
     create_files_for_git(repositories)
     create_files_for_hg(repositories)
     clear_file("main_md_table.md")
-    generate_main_md_table()
-
-
-
-
+    generate_main_md_table("hg_files")
+    generate_main_md_table("git_files")
