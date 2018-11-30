@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 04:33:55.971080"
+    "lastChecked": "2018-11-28 23:44:24.180223"
   },
   "1": {
-    "node": "34f5d6b72c5788aa94d70fcf05f0d6aefd852eb8",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=34f5d6b72c57",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "try: -b do -p sm-plain-linux64 -u none -t none",
-    "commit_date": "2018-11-28 04:28:35"
+    "sha": "6b2b61d055279cb5dff4361fc428460891d6ddd2",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6b2b61d05527",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "try: -b o -p win64,linux64,macosx64 -u none -t none  Pushed via `mach try syntax`",
+    "commit_date": "2018-11-28 23:36:56"
   },
   "2": {
-    "node": "7b9283b53fb537f688572347d681e6faad83ace7",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=7b9283b53fb5",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 4: Move non-auto-generated part of BinASTParser into BinASTParserPerTokenizer.",
-    "commit_date": "2018-11-28 04:25:43"
+    "sha": "3483636335ce0d970f4363c05e2a12707610f968",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=3483636335ce",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "Bug 1510058 - Work around mWidget becoming null during DidComposite, and add a diagnostic assert that will hopefully root out the culprit. r?jrmuizel  Differential Revision: https://phabricator.services.mozilla.com/D13309",
+    "commit_date": "2018-11-28 20:56:28"
   },
   "3": {
-    "node": "0c8799b1424413d6a3c15bb13700acedaccb2d35",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=0c8799b14244",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 3: Fix typo in Binsource.yaml.",
-    "commit_date": "2018-11-28 04:16:14"
+    "sha": "a7b5ed57fc3156db351fac75a9ff62ddba1f3bfd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a7b5ed57fc31",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "Bug 1504101 - When symbolicating profiles from remote targets, consult objdirs for symbol information. r?julienw  Differential Revision: https://phabricator.services.mozilla.com/D13176",
+    "commit_date": "2018-11-28 16:59:48"
   },
   "4": {
-    "node": "46acabefea8842abe59a88947142ec423a85f1e9",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=46acabefea88",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 2: Move auto-generated enum to BinASTEnum.h.",
-    "commit_date": "2018-11-28 04:15:33"
+    "sha": "a35e3d5221dcd9ed34b9d1cf40c2ea0a04fd80db",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a35e3d5221dc",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "Bug 1504101 - Add UI to the performance pane that lets the user pick an objdir for local builds. r?julienw  The picked objdirs are stored in a preference named devtools.performance.recording.objdirs as a JSON-ified array of string paths.  Differential Revision: https://phabricator.services.mozilla.com/D13041",
+    "commit_date": "2018-11-27 04:33:07"
   },
   "5": {
-    "node": "af6136b995028187fd0648641ca41a6244f3efbe",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=af6136b99502",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 1: Move BinASTParserBase into its own files.",
-    "commit_date": "2018-11-28 00:57:55"
+    "sha": "a177666ff9cbe65be6ea530a5095ba14d2b81b15",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a177666ff9cb",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "Bug 1509549 - Use ProfilerGetSymbols for mac/linux symbolication instead of calling out to the nm command line tool. r?kmag  One advantage of this is that, on Macs that don't have the Xcode command line tools installed, Xcode will no longer pop up a dialog.  Differential Revision: https://phabricator.services.mozilla.com/D13006",
+    "commit_date": "2018-11-26 21:54:11"
   },
   "6": {
-    "node": "adfe21dfa1468f7eee4b4d3e88ae3cacade0cbd2",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=adfe21dfa146",
-    "commiter_name": "Nico Grunbaum ",
-    "commit_email": "na-g@nostrum.com",
-    "commit_message": "Fuzzy query=!pgo !ccov !stylo !reftest !wdspec !qr mochitest-browser | mochitest-media | web-platform  Pushed via `mach try again`",
-    "commit_date": "2018-11-28 04:16:31"
+    "sha": "83d53c657d686681ccfa6ef8f82e388b518ee179",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=83d53c657d68",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "Bug 1509549 - Add a ProfilerGetSymbols module which can dump symbols with the help of a dynamically-loaded WebAssembly module. r?kmag  At the moment, the module can only dump ELF and Mach-O binaries, so it works for everything but Windows binaries. I'm planning on adding Windows support soon.  The module is currently hosted on https://zealous-rosalind-a98ce8.netlify.com/ , which is a netlify server that serves files from the following repo: https://github.com/mstange/profiler-assets  To make all of this look a bit more official, I'm planning on doing two things:  - Move the github repo under the devtools-html organization  - Get a firefox.com subdomain such as profiler-assets.firefox.com for hosting  Differential Revision: https://phabricator.services.mozilla.com/D13005",
+    "commit_date": "2018-11-26 21:49:51"
   },
   "7": {
-    "node": "881ad99ca1fbda0dc47c5c3ca14079cb2fa5835a",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=881ad99ca1fb",
-    "commiter_name": "Nico Grunbaum ",
-    "commit_email": "na-g@nostrum.com",
-    "commit_message": "Bug 1328194 - remove deprecated PeerConnection.getStats callback and legacy stats",
-    "commit_date": "2018-11-28 04:16:11"
+    "sha": "7f77ae6bae7fbb6298d7a6bb1808c2e2e342b1eb",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7f77ae6bae7f",
+    "commiter_name": "Brendan Dahl ",
+    "commit_email": "bdahl@mozilla.com",
+    "commit_message": "Fuzzy query=!msvc !qr /opt-talos-e10s  Pushed via `mach try fuzzy` ",
+    "commit_date": "2018-11-28 23:35:39"
   },
   "8": {
-    "node": "90fcfc11bacafa67fdaccaf4674988d508a51f0d",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=90fcfc11baca",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "try: -b do -p android-api-16,win64,macosx64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t all[linux64-qr,windows10-64-qr,macosx64-qr]  Pushed via `mach try syntax`",
-    "commit_date": "2018-11-28 04:02:07"
+    "sha": "7fd288dd95d3daf373140fa81e029e0c737a3080",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7fd288dd95d3",
+    "commiter_name": "Brendan Dahl ",
+    "commit_email": "bdahl@mozilla.com",
+    "commit_message": "Delay frame loader initialization. ",
+    "commit_date": "2018-11-28 23:35:13"
   },
   "9": {
-    "node": "b9be19e6cb7a7e08fb041dae83d0a61373feb625",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=b9be19e6cb7a",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "placeholder for try push  MozReview-Commit-ID: LKDk2deY2x7",
-    "commit_date": "2018-11-28 04:02:02"
+    "sha": "26ec732cbece0069976e44d056ef58384b823d44",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=26ec732cbece",
+    "commiter_name": "Thomas Daede ",
+    "commit_email": "tdaede@mozilla.com",
+    "commit_message": "Fuzzy query=win64  Pushed via `mach try fuzzy` ",
+    "commit_date": "2018-11-28 23:30:16"
   },
   "10": {
-    "node": "644116821b7c54d6f1de2e64fbc3f04c6a7a2fd6",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=644116821b7c",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Placeholder  MozReview-Commit-ID: LhRD1MOzjK",
-    "commit_date": "2018-11-28 04:01:09"
+    "sha": "9e0ec05b80f1b6165a4e579a89e81113bd54cee9",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9e0ec05b80f1",
+    "commiter_name": "Randall Barker ",
+    "commit_email": "rbarker@mozilla.com",
+    "commit_message": "Fuzzy query=geckoview  Pushed via `mach try fuzzy` ",
+    "commit_date": "2018-11-28 23:21:32"
   },
   "11": {
-    "node": "d628f42825402dfb409d694536ca9fc9bc8eb3c5",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=d628f4282540",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1510376 - Update webrender to commit 3d73e3885907ae3d48b46fba891073abdb59e76d (WR PR #3359). r?kats  https://github.com/servo/webrender/pull/3359",
-    "commit_date": "2018-11-28 04:01:07"
+    "sha": "c731654269746707d106794041770445d62bcdc0",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c73165426974",
+    "commiter_name": "Randall Barker ",
+    "commit_email": "rbarker@mozilla.com",
+    "commit_message": "Bug 1510823 - Update GeckoView CrashReporter sendCrashReport() to return the crash ID ",
+    "commit_date": "2018-11-28 23:19:14"
   },
   "12": {
-    "node": "75d25888cc9186e1f5c0f1dfa613c4c5ad846b43",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=75d25888cc91",
-    "commiter_name": "Matthew Noorenberghe ",
-    "commit_email": "mozilla@noorenberghe.ca",
-    "commit_message": "Bug 1510470 - Disable OS re-auth for credit cards by default. r=timdream  Differential Revision: https://phabricator.services.mozilla.com/D13169",
-    "commit_date": "2018-11-28 01:08:35"
+    "sha": "aff62045557caef5b13db5af4a3455d810464db3",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=aff62045557c",
+    "commiter_name": "Denis Palmeiro ",
+    "commit_email": "dpalmeiro@mozilla.com",
+    "commit_message": "try: -b do -p all -u all[x64] -t all[x64]  Pushed via `mach try syntax`",
+    "commit_date": "2018-11-28 23:10:51"
   },
   "13": {
-    "node": "b99cfc042c4f45b6adb6f6d57ca4efcfa6d6d1a6",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=b99cfc042c4f",
-    "commiter_name": "Kyle Machulis ",
-    "commit_email": "kyle@nonpolynomial.com",
-    "commit_message": "Bug 1505601 - Turn nsIDocShell XPIDL const lists into cenums; r=bzbarsky  Turn all const lists and related attributes into cenums, to provide a vague sense of type safety.  Depends on D11715  Differential Revision: https://phabricator.services.mozilla.com/D11716",
-    "commit_date": "2018-11-28 03:30:56"
+    "sha": "6d10a8a04ffc78dbd3190be7d8470d3912ff75f0",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6d10a8a04ffc",
+    "commiter_name": "Denis Palmeiro ",
+    "commit_email": "dpalmeiro@mozilla.com",
+    "commit_message": "Use an inline Shape cache before creating a Shape hash table",
+    "commit_date": "2018-11-05 16:50:37"
   },
   "14": {
-    "node": "62089e4c3cc06b7a867e40b1ab75992cb04820ff",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=62089e4c3cc0",
-    "commiter_name": "Kyle Machulis ",
-    "commit_email": "kyle@nonpolynomial.com",
-    "commit_message": "Bug 1505601 - Move nsIDocShell INTERNAL_LOAD consts to nsDocShell; r=bzbarsky  Consts aren't used in JS anyways, so there's no reason for them to be in the IDL.  Differential Revision: https://phabricator.services.mozilla.com/D11715",
-    "commit_date": "2018-11-28 03:30:54"
+    "sha": "774cec2b4735cac862f68baf76d522ebdf4bad17",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=774cec2b4735",
+    "commiter_name": "Mike Conley ",
+    "commit_email": "mconley@mozilla.com",
+    "commit_message": "Disabled activity stream process profiling (good): try: -b o -p linux64 -u none -t other-e10s mozharness: --geckoProfile --artifact",
+    "commit_date": "2018-11-28 23:07:00"
   },
   "15": {
-    "node": "bba74d02a136e322e179e738632be392ee8b2ede",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=bba74d02a136",
-    "commiter_name": "Thomas Daede ",
-    "commit_email": "tdaede@mozilla.com",
-    "commit_message": "Bug 1501796 - Add nasm to debian7-build dockerfile. r=glandium  Differential Revision: https://phabricator.services.mozilla.com/D9747",
-    "commit_date": "2018-11-28 03:23:08"
+    "sha": "8992e8f27e0a007d0c50cfc70a7eced3fa8d973d",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=8992e8f27e0a",
+    "commiter_name": "Mike Conley ",
+    "commit_email": "mconley@mozilla.com",
+    "commit_message": "Baseline profiling (separate process - bad): try: -b o -p linux64 -u none -t other-e10s mozharness: --geckoProfile --artifact",
+    "commit_date": "2018-11-28 23:05:56"
   },
   "16": {
-    "node": "d085db32a53d617676be6f855063d1499dbb1d71",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=d085db32a53d",
-    "commiter_name": "Thomas Daede ",
-    "commit_email": "tdaede@mozilla.com",
-    "commit_message": "Bug 1510113 - Never inline SaveToEnv or SaveWordToEnv. r=karlt  This allows Valgrind to recognize the call stacks to this function, avoiding Valgrind warnings in intentional leaks in these functions.  Differential Revision: https://phabricator.services.mozilla.com/D13036",
-    "commit_date": "2018-11-28 03:10:55"
+    "sha": "09c08d84a4cb3bb57e753b450dafe3a942a06463",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=09c08d84a4cb",
+    "commiter_name": "Mike Conley ",
+    "commit_email": "mconley@mozilla.com",
+    "commit_message": "Disabled activity stream process (good): try: -b o -p linux64 -u none -t other-e10s --artifact --rebuild 10",
+    "commit_date": "2018-11-28 23:03:55"
   },
   "17": {
-    "node": "3d6e1fe4c371780a6bfcd9c33adce87dd4f38fc6",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=3d6e1fe4c371",
-    "commiter_name": "Timothy Guan-tin Chien ",
-    "commit_email": "timdream@gmail.com",
-    "commit_message": "Bug 1508000 - Dispatch UAWidgetUnbindFromTree event before calling nsGenericHTMLElement::UnbindFromTree() r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D12205",
-    "commit_date": "2018-11-28 02:29:38"
+    "sha": "499ba5eeca51f90743befd0f912a8d3cec3db690",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=499ba5eeca51",
+    "commiter_name": "Mike Conley ",
+    "commit_email": "mconley@mozilla.com",
+    "commit_message": "Disable separate privileged content process",
+    "commit_date": "2018-11-28 23:03:26"
   },
   "18": {
-    "node": "94ecc40729d0302ee3953dbab0d280d4a6b174c4",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=94ecc40729d0",
-    "commiter_name": "Hiroyuki Ikezoe ",
-    "commit_email": "hikezoe@mozilla.com",
-    "commit_message": "Bug 1504065 - Drop text in the child element inside background-color animated element to avoid fuzziness on Windows 7 GPU. r=birtles  Depends on D13002  Differential Revision: https://phabricator.services.mozilla.com/D13171",
-    "commit_date": "2018-11-28 01:43:55"
+    "sha": "ee4a01f2b0776205776584bdb8c8172122fcc9e0",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ee4a01f2b077",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/css/geometry/DOMMatrix-002.html web-platform-tests:testing/web-platform/tests/css/geometry/DOMMatrix-003.html web-platform-tests:testing/web-platform/tests/css/geometry/historical.html",
+    "commit_date": "2018-11-28 23:02:51"
   },
   "19": {
-    "node": "a30f77050399cefc43236e7c552760ce6a68275a",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=a30f77050399",
-    "commiter_name": "Hiroyuki Ikezoe ",
-    "commit_email": "hikezoe@mozilla.com",
-    "commit_message": "Bug 1504065 - Support background-color animations on the compositor for nsIDOMWindowUtils::GetOMTAValue. r=birtles  Depends on D13001  Differential Revision: https://phabricator.services.mozilla.com/D13002",
-    "commit_date": "2018-11-28 00:59:15"
+    "sha": "81375c3bf7aa8684002bb23d3221d79948a21309",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=81375c3bf7aa",
+    "commiter_name": "Hwanseung Lee ",
+    "commit_email": "hs1217.lee@samsung.com",
+    "commit_message": "Bug 1510815 [wpt PR 14281] - [GeometryInterface] add scaleNonUniform method in DOMMatrixReadOnly, a=testonly  DOMMatrix should be alias to SVGMatrix.(it was not implement in blink yet) SVGMatrix have scaleNonUniform() function. but DOMMatrix was not. there are some website which is used SVGMatrix.scaleNonUniform(). it would be possible brake some website when DOMMatrix be alias to SVGMatrix.  Intent to implement and ship: https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/BJJKDby5p7w  Bug: 905921 Change-Id: Ic09b8d6e46d0aa822b766bd6cfbc5ce7c2164849  wpt-commit: 13988ee1bafb2f37d4ea3f4adf5f398bc6bb6055 wpt-pr: 14281 ",
+    "commit_date": "2018-11-28 23:01:37"
   },
   "20": {
-    "node": "d99d8f275d8bfa954671ea2663bbe37a561d7583",
-    "URL": "https://hg.mozilla.org/try/pushloghtml?changeset=d99d8f275d8b",
-    "commiter_name": "Hiroyuki Ikezoe ",
-    "commit_email": "hikezoe@mozilla.com",
-    "commit_message": "Bug 1504065 - Run background-color animations on the compositor. r=birtles  Changes for nsIDOMWindowUtils.getOMTAValue is in the next commit with come test cases.  Differential Revision: https://phabricator.services.mozilla.com/D13001",
-    "commit_date": "2018-11-28 00:58:46"
+    "sha": "cee3e570f44305add7755dbb56fd74a8100fb2a7",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=cee3e570f443",
+    "commiter_name": "Mike Conley ",
+    "commit_email": "mconley@mozilla.com",
+    "commit_message": "Baseline (separate process - bad): try: -b o -p linux64 -u none -t other-e10s --artifact --rebuild 10",
+    "commit_date": "2018-11-28 23:01:57"
   }
 }
