@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 23:43:58.379659"
+    "lastChecked": "2018-11-30 00:56:33.555738"
   },
   "1": {
     "sha": "13ff33b29e775fc5e663141885ba3da97fe4eb3d",
@@ -132,34 +132,6 @@
     "commit_date": "2018-11-23 23:56:40",
     "files_changed": [
       "mozapkpublisher/common/utils.py",
-      "requirements.txt",
-      "requirements.txt.in"
-    ]
-  },
-  "11": {
-    "sha": "63596b0a58beab805ec6d006e4c0b523a617edab",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/63596b0a58beab805ec6d006e4c0b523a617edab",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Fixes tests",
-    "commit_date": "2018-11-22 02:47:02",
-    "files_changed": [
-      "mozapkpublisher/test/common/test_utils.py",
-      "requirements-test.txt",
-      "requirements-test.txt.in"
-    ]
-  },
-  "12": {
-    "sha": "6e35fdd11042c2cf2465e1b6e5d5677d9e299bcb",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/6e35fdd11042c2cf2465e1b6e5d5677d9e299bcb",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Downloads files asynchronously",
-    "commit_date": "2018-11-22 01:05:29",
-    "files_changed": [
-      "mozapkpublisher/common/utils.py",
-      "mozapkpublisher/get_apk.py",
-      "mozapkpublisher/test/integration/test_get_apk.py",
       "requirements.txt",
       "requirements.txt.in"
     ]

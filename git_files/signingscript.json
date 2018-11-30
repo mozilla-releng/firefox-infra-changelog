@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 23:44:10.730911"
+    "lastChecked": "2018-11-30 00:56:48.246201"
   },
   "1": {
     "sha": "c15e3121714bef54103d4d7b126b470054b79d39",
@@ -24,41 +24,6 @@
     "files_changed": [
       "signingscript/test/test_sign.py",
       "signingscript/utils.py"
-    ]
-  },
-  "3": {
-    "sha": "02621783091e6139d313b7ef27a33314f9e1b596",
-    "url": "https://github.com/mozilla-releng/signingscript/commit/02621783091e6139d313b7ef27a33314f9e1b596",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "9.5.0",
-    "commit_date": "2018-11-22 15:12:48",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "4": {
-    "sha": "75e15a0b743977c70e1b2ad1651d267706063f02",
-    "url": "https://github.com/mozilla-releng/signingscript/commit/75e15a0b743977c70e1b2ad1651d267706063f02",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Generalize APK format to  Keep autograph_focus for migration purpose",
-    "commit_date": "2018-11-22 14:49:05",
-    "files_changed": [
-      "signingscript/task.py",
-      "signingscript/test/test_task.py"
-    ]
-  },
-  "5": {
-    "sha": "81021996e7a62075f4572b89e8bd246cc2ae918d",
-    "url": "https://github.com/mozilla-releng/signingscript/commit/81021996e7a62075f4572b89e8bd246cc2ae918d",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": ".travis.yml: Bump autograph to 2.5.0 (#92)",
-    "commit_date": "2018-11-22 15:06:53",
-    "files_changed": [
-      ".travis.yml"
     ]
   }
 }

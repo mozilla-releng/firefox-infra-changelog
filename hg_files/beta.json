@@ -1,8 +1,64 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 23:44:29.158469"
+    "lastChecked": "2018-11-30 00:57:03.398790"
   },
   "1": {
+    "sha": "2534c71731b1a8a1088e09b37760440f673e287a",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=2534c71731b1",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with FIREFOX_64_0b14_RELEASE a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-29 16:30:14"
+  },
+  "2": {
+    "sha": "96633aad9421e5ee9d4bace7a30ee505ff41cf37",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=96633aad9421",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
+    "commit_date": "2018-11-29 16:27:18"
+  },
+  "3": {
+    "sha": "29f7e13e6a7e081402b6abfa1b4f4b5ce930fbc0",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=29f7e13e6a7e",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with DEVEDITION_64_0b14_RELEASE a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-11-29 16:27:15"
+  },
+  "4": {
+    "sha": "2cc5c3f56a466e7a456285402dfae1216b79be60",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=2cc5c3f56a46",
+    "commiter_name": "Olli Pettay ",
+    "commit_email": "Olli.Pettay@helsinki.fi",
+    "commit_message": "Bug 1510471 - Avoid useless FrameNeedsReflow call. r=emilio, a=RyanVM",
+    "commit_date": "2018-11-28 17:48:03"
+  },
+  "5": {
+    "sha": "028d808491d7d9510a4be8d1d36cb003b2e319f1",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=028d808491d7",
+    "commiter_name": "Gabriele Svelto ",
+    "commit_email": "gsvelto@mozilla.com",
+    "commit_message": "Bug 1502977 - Reinstate the code blocking the \"Facebook Photo Uploader\" plugin on Mac and update the associated annotation. r=jmathies, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12354",
+    "commit_date": "2018-11-28 18:52:41"
+  },
+  "6": {
+    "sha": "86447d3b0fa20ec922db7c97719e1c5f3fe1a70c",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=86447d3b0fa2",
+    "commiter_name": "ffxbld ",
+    "commit_email": "ffxbld@mozilla.com",
+    "commit_message": "No Bug, mozilla-beta repo-update HSTS HPKP blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D13386",
+    "commit_date": "2018-11-29 12:14:05"
+  },
+  "7": {
+    "sha": "f65cadcba4bd3c4b72ffbd1743279867a9415a3b",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=f65cadcba4bd",
+    "commiter_name": "Henrik Skupin ",
+    "commit_email": "mail@hskupin.info",
+    "commit_message": "Bug 1351940 - [marionette] Only convert a valid outerWindowID to a string. r=ato, a=test-only  Differential Revision: https://phabricator.services.mozilla.com/D13206",
+    "commit_date": "2018-11-28 20:48:42"
+  },
+  "8": {
     "sha": "19d90b48fffb3382eb0ef3767b7f71f753935c65",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=19d90b48fffb",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -10,7 +66,7 @@
     "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with FIREFOX_64_0b14_BUILD1 a=release CLOSED TREE DONTBUILD",
     "commit_date": "2018-11-28 21:27:36"
   },
-  "2": {
+  "9": {
     "sha": "cad43b85841f72c7f4472bf810462c522049976b",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=cad43b85841f",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -18,7 +74,7 @@
     "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with DEVEDITION_64_0b14_BUILD1 a=release CLOSED TREE DONTBUILD",
     "commit_date": "2018-11-28 21:20:22"
   },
-  "3": {
+  "10": {
     "sha": "fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=fa72e773a9eb",
     "commiter_name": "Shane Caraveo ",
@@ -26,7 +82,7 @@
     "commit_message": "Bug 1508853 make the search default panel persistent, r=aswan a=jcristau  This is a quick fix to ensure that the search install panel is shown when an extension uses is_default.  The intention is to uplift for 64.  Differential Revision: https://phabricator.services.mozilla.com/D13078",
     "commit_date": "2018-11-27 18:05:59"
   },
-  "4": {
+  "11": {
     "sha": "63ec2966de2035d3799d156c94ef42fed7587bc1",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=63ec2966de20",
     "commiter_name": "Sebastian Hengst ",
@@ -34,7 +90,7 @@
     "commit_message": "Bug 1500563 - Add ASR snippet schemas and default values for fields to Activity Stream r=k88hudson a=jcristau  Reviewers: k88hudson  Reviewed By: k88hudson  Bug #: 1500563  Differential Revision: https://phabricator.services.mozilla.com/D13102",
     "commit_date": "2018-11-28 18:48:35"
   },
-  "5": {
+  "12": {
     "sha": "140ce47ccf2bb401dfddc6776de3ff3bfdadcc92",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=140ce47ccf2b",
     "commiter_name": "Dana Keeler ",
@@ -42,7 +98,7 @@
     "commit_message": "bug 1502841 - follow-up to ensure reentering DataStorageSharedThread::Shutdown() doesn't cause problems r=jcj a=jcristau  We shouldn't reenter DataStorageSharedThread::Shutdown(), but it may be possible. To guard against potentially attempting to shut down the shared thread more than once, we can check gDataStorageSharedThreadShutDown first.  Differential Revision: https://phabricator.services.mozilla.com/D12050",
     "commit_date": "2018-11-16 16:14:52"
   },
-  "6": {
+  "13": {
     "sha": "ce690bc5055827ce9a768a24472ed270b21231c3",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=ce690bc50558",
     "commiter_name": "Dana Keeler ",
@@ -50,7 +106,7 @@
     "commit_message": "bug 1502841 - fix a deadlock by not holding the DataStorageSharedThread lock while shutting the thread down r=jcj a=jcristau  Judging by some stack traces we've received in crash reports, while shutting down the DataStorageSharedThread, it is possible to process an event on that thread that causes an attempt to re-initialize DataStorage. This wouldn't be a problem because we have a shutdown sentinel boolean and we exit early if it is true. However, checking the boolean involves acquiring the static lock for the thread, which means we can't be holding the lock while we're shutting down the thread.  Differential Revision: https://phabricator.services.mozilla.com/D11708",
     "commit_date": "2018-11-14 00:28:52"
   },
-  "7": {
+  "14": {
     "sha": "a5dfb5153b78bc8fd4838c885c92318fe45a3116",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a5dfb5153b78",
     "commiter_name": "Sebastian Hengst ",
@@ -58,7 +114,7 @@
     "commit_message": "Backed out changeset 768deaa64aca (bug 1510281) on request from mak. a=backout",
     "commit_date": "2018-11-28 18:15:33"
   },
-  "8": {
+  "15": {
     "sha": "3a87f2a3619ad37967ac6cfa830148019a8f9290",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3a87f2a3619a",
     "commiter_name": "Drew Willcoxon ",
@@ -66,7 +122,7 @@
     "commit_message": "Bug 1502576 - The search bar's popup should not open when clicking menu items in its context menu. r=mkaply a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12374",
     "commit_date": "2018-11-26 18:11:50"
   },
-  "9": {
+  "16": {
     "sha": "006e128f380173c9a42ac1feb3a60b8fef7f7a9e",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=006e128f3801",
     "commiter_name": "Ed Lee ",
@@ -74,7 +130,7 @@
     "commit_message": "Bug 1508409 - Update strings (menu title and others) for 64. r=k88hudson a=jcristau  Reviewers: k88hudson  Reviewed By: k88hudson  Bug #: 1508409  Differential Revision: https://phabricator.services.mozilla.com/D12971",
     "commit_date": "2018-11-28 17:49:56"
   },
-  "10": {
+  "17": {
     "sha": "768deaa64acac6b713d21296122feb96725d9993",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=768deaa64aca",
     "commiter_name": "Marco Bonardo ",
@@ -82,7 +138,7 @@
     "commit_message": "Bug 1510281 - Use a private and isolated context for search suggestions. r=mkaply a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13082",
     "commit_date": "2018-11-27 17:18:28"
   },
-  "11": {
+  "18": {
     "sha": "307b6790d4109a19d88a529fead1337e48f4656f",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=307b6790d410",
     "commiter_name": "D\u00e3o Gottwald ",
@@ -90,7 +146,7 @@
     "commit_message": "Bug 1509488 - Use keydown handler instead of <key> for Shift+Ctrl+Tab. r=jaws a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12744",
     "commit_date": "2018-11-26 16:07:07"
   },
-  "12": {
+  "19": {
     "sha": "390cd25cecd6b5c73d33b842522a0a789affbe00",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=390cd25cecd6",
     "commiter_name": "Jonathan Watt ",
@@ -98,68 +154,12 @@
     "commit_message": "Bug 1509394. Fix pointer events regression for SVG clipPath clipped content. r=longsonr a=jcristau  References to a clipPath that is non-existent or invalid should be ignored, not cause the referencing element to ignore pointer events.  Differential Revision: https://phabricator.services.mozilla.com/D12959",
     "commit_date": "2018-11-12 14:59:31"
   },
-  "13": {
+  "20": {
     "sha": "460fc055455eee173a13d73f7f9cf44609f7576c",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=460fc055455e",
     "commiter_name": "Jan Beich ",
     "commit_email": "jbeich@FreeBSD.org",
     "commit_message": "Bug 1509757 - Don't rely on GNU regex extension for character classes. r=froydnj a=lizzard $ echo --with-system-nspr --with-system-nss | gnused -e 's/--with-system-nspr\\S   //' --with-system-nss $ echo --with-system-nspr --with-system-nss | bsdsed -e 's/--with-system-nspr\\S   //' sed: 1: \"s/--with-system-nspr\\S  ...\": RE error: trailing backslash (\\)",
     "commit_date": "2018-11-25 14:53:00"
-  },
-  "14": {
-    "sha": "6fcd1d505c808bd7e14aaefecb9759cd7194bb87",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=6fcd1d505c80",
-    "commiter_name": "Steve Fink ",
-    "commit_email": "sfink@mozilla.com",
-    "commit_message": "Bug 1426574 - Use fallible bitmap ops for AtomizeAndCopyChars, r=jonco a=lizzard",
-    "commit_date": "2018-11-21 20:07:12"
-  },
-  "15": {
-    "sha": "ec33377dad653e3d1b0e4c49a26cf37f2663c168",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=ec33377dad65",
-    "commiter_name": "Michael Kaply ",
-    "commit_email": "mozilla@kaply.com",
-    "commit_message": "Bug 1507223 - Show an error when full URL is used for permissions. r=Felipe a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D12181",
-    "commit_date": "2018-11-19 16:15:56"
-  },
-  "16": {
-    "sha": "7e6e1cdaaad3c10c45c35b6764fab2716f0f4840",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=7e6e1cdaaad3",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1499028: Update list of currencies for Intl.NumberFormat. r=Waldo a=lizzard",
-    "commit_date": "2018-10-15 11:41:17"
-  },
-  "17": {
-    "sha": "2948dd9cd0fca129b84b3873767bc9b6fadd513f",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=2948dd9cd0fc",
-    "commiter_name": "L10n Bumper Bot ",
-    "commit_email": "release+l10nbumper@mozilla.com",
-    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  te -> b2b27ade8497",
-    "commit_date": "2018-11-28 16:00:36"
-  },
-  "18": {
-    "sha": "f2f88ac41900147f4721ab52f5fe49a599661e26",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=f2f88ac41900",
-    "commiter_name": "L10n Bumper Bot ",
-    "commit_email": "release+l10nbumper@mozilla.com",
-    "commit_message": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD  ar -> 964bc00f6186 be -> 678398ac238d bn-BD -> a8d19a066b4b ca -> 59ca77968770 da -> b3ff273f3eea de -> 3d8de7aaf36b es-CL -> 13c705a36908 nl -> e344985f0fb3 oc -> 396b8174110a sk -> 7324d7c44ddc",
-    "commit_date": "2018-11-28 14:00:17"
-  },
-  "19": {
-    "sha": "cb7e0006e293c430f4dd430435ede3fac063a4a5",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=cb7e0006e293",
-    "commiter_name": "L10n Bumper Bot ",
-    "commit_email": "release+l10nbumper@mozilla.com",
-    "commit_message": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD  be -> 678398ac238d de -> f12cddde4128 es-CL -> 13c705a36908 sk -> 7324d7c44ddc",
-    "commit_date": "2018-11-28 14:00:12"
-  },
-  "20": {
-    "sha": "be8fbba20256fdddd75041d7a10a08af088c1daf",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=be8fbba20256",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1482395: [mozrelease] Fix product details links for beta and deveditions; r=sfraser a=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D13225",
-    "commit_date": "2018-11-28 09:54:40"
   }
 }

@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 23:44:14.852485"
+    "lastChecked": "2018-11-30 00:56:50.820096"
   },
   "1": {
     "sha": "0b56d73f1d59e63fedc48350bf8eaeb05453996e",
@@ -30,106 +30,6 @@
       "balrogscript/_version.py",
       "balrogscript/newsfragments/42.added",
       "balrogscript/newsfragments/43.added"
-    ]
-  },
-  "3": {
-    "sha": "e7a10365ddf6a5b82b204c072dc22d7b5267954f",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/e7a10365ddf6a5b82b204c072dc22d7b5267954f",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Add newsfragment.",
-    "commit_date": "2018-11-22 20:46:22",
-    "files_changed": [
-      "balrogscript/newsfragments/43.added"
-    ]
-  },
-  "4": {
-    "sha": "69fc7601f1ea569c9e40640f78b56c7d97bff71f",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/69fc7601f1ea569c9e40640f78b56c7d97bff71f",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Add code to create multiple blobs with different `updateLine` info.",
-    "commit_date": "2018-11-22 20:42:08",
-    "files_changed": [
-      "balrogscript/script.py",
-      "balrogscript/submitter/cli.py",
-      "balrogscript/test/test_script.py"
-    ]
-  },
-  "5": {
-    "sha": "7f820677b714da97f9eb5ab0298fe022a6a289ca",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/7f820677b714da97f9eb5ab0298fe022a6a289ca",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Add code to update multiple blobs with different suffixes.",
-    "commit_date": "2018-11-22 20:41:18",
-    "files_changed": [
-      "balrogscript/script.py",
-      "balrogscript/test/test_script.py"
-    ]
-  },
-  "6": {
-    "sha": "af210e95451e950d9151e745ccc4d0f3965b91d7",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/af210e95451e950d9151e745ccc4d0f3965b91d7",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #42 from tp-tc/tools-tests  Import some tests.",
-    "commit_date": "2018-11-22 18:42:07",
-    "files_changed": [
-      "balrogscript/newsfragments/42.added",
-      "balrogscript/test/test_submitter_cli.py",
-      "balrogscript/test/test_submitter_updates.py"
-    ]
-  },
-  "7": {
-    "sha": "7428dd6ac5cbcf59f5446fb786b06170fb83de72",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/7428dd6ac5cbcf59f5446fb786b06170fb83de72",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Import some tests.",
-    "commit_date": "2018-11-22 17:54:16",
-    "files_changed": [
-      "balrogscript/newsfragments/42.added",
-      "balrogscript/test/test_submitter_cli.py",
-      "balrogscript/test/test_submitter_updates.py"
-    ]
-  },
-  "8": {
-    "sha": "bc93868fa200a26d1b20c59d5851803a8ce88941",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/bc93868fa200a26d1b20c59d5851803a8ce88941",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #40 from tp-tc/import-tools  Import code from build-tools.",
-    "commit_date": "2018-11-22 06:53:38",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "balrogscript/_version.py",
-      "balrogscript/script.py",
-      "balrogscript/submitter/__init__.py",
-      "balrogscript/submitter/cli.py",
-      "balrogscript/submitter/release.py",
-      "balrogscript/submitter/util.py",
-      "balrogscript/test/data/hardcoded_config.json",
-      "balrogscript/test/test_script.py",
-      "config_example.json",
-      "docker/Dockerfile",
-      "docker/tc_testbuild.sh",
-      "requirements-dev.txt",
-      "requirements-prod.txt",
-      "setup.py",
-      "tox.ini"
-    ]
-  },
-  "9": {
-    "sha": "7599005406e4244f72bcb0f4e8777ef1ab2deb59",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/7599005406e4244f72bcb0f4e8777ef1ab2deb59",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "3.2.1",
-    "commit_date": "2018-11-22 05:57:21",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "balrogscript/_version.py"
     ]
   }
 }

@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 23:44:25.952991"
+    "lastChecked": "2018-11-30 00:56:59.641397"
   },
   "1": {
-    "sha": "95c294286e66c5e4d3ae15706247ad95357b34fd",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=95c294286e66",
-    "commiter_name": "Henrik Skupin ",
-    "commit_email": "mail@hskupin.info",
-    "commit_message": "Bug 1351940 - [marionette] Only convert a valid outerWindowID to a string. r=ato  Differential Revision: https://phabricator.services.mozilla.com/D13206",
-    "commit_date": "2018-11-28 20:48:42"
+    "sha": "2f92fd614d56a6c6b68041f4cdf70c358c01e7c8",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2f92fd614d56",
+    "commiter_name": "Masayuki Nakano ",
+    "commit_email": "masayuki@d-toybox.com",
+    "commit_message": "Bug 1496288 - part 2: Stop dispatching non-printable \"keypress\" events, set keyCode or charCode value to the other value when it's zero, start to dispatch \"keydown\" and \"keyup\" events during composition, and enable window.event by default r=smaug  First one is for bug 968056.  UI Events declares that \"keypress\" events should be dispatched only when a key press produces one or more characters (and also discussing about Enter key press for backward compatibility).  Therefore, we should stop dispatching \"keypress\" events for non-printable keys (like arrow keys, Ctrl + A, etc) in the default group on content for conforming to UI Events, but keep dispatching them in chrome and in the system group on content.  Next one is for bug 1479964.  No spec declares that what value should be set to keyCode and charCode value of \"keypress\" events because declaring that would break existing web apps which handle them with UA string.  However, some web apps assume that if window.event is available, keyCode value of \"keypress\" event is set to a Unicode code point of inputting character.  We set only charCode to it, but the other browsers sets both keyCode and charCode to a Unicode code point of inputting character.  Therefore, we need to follow the other browsers' behavior for this because changing value from zero to non-zero is safer than non-zero to non-zero or zero.  And also next one is for bug 354358.  UI Events declares that \"keydown\" and \"keyup\" events represent physical key state and should be fired even during composition.  As far as the reported issues, this behavior is expected mainly by Korean web developers and some web apps depend on the behavior.  Therefore, we need to start to dispatch them during composition.  Finally, for bug 218415, we should enable window.event.  This is declared by the Living DOM Standard.  A lot of web apps depend on window.event and the last blocker, bug 1479964 was fixed so that it is the time to enable this.  Differential Revision: https://phabricator.services.mozilla.com/D13376",
+    "commit_date": "2018-11-29 15:18:17"
   },
   "2": {
-    "sha": "e5c59d7e5a55cd3a312c7915072f57922cefeb1e",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e5c59d7e5a55",
-    "commiter_name": "Nico Grunbaum ",
-    "commit_email": "na-g@nostrum.com",
-    "commit_message": "Bug 1324788 - Bug 1324688 - Bring RTCIceCandidateStats up to spec r=mjf,jib,smaug  Bug 1324788 - P1 - rename RTCIceCandidate stat \"portNumber\" to spec \"port\" Bug 1324788 - P2 - update RTCIceCandidateStats candidateType enum to spec Bug 1324788 - P3 - add RTCIceCandidatePair.priority stat Bug 1324788 - P4 - update WebRTC ICE candidate stats field componentId to spec name transportId Bug 1324788 - P5 - remove deprecated RTCIceCandidateStats.mozLocalTransport field Bug 1324788 - P6 - update WebRTC ICE candidate stats field transport to spec name, protocol Bug 1324788 - P7 - remove deprecated RTCIceCandidateStats.candidateId Bug 1324788 - P8 - reorder RTCIceCandidateStats dictionary members to match the spec Bug 1324788 - P9 - make RTCIceCandidateStats.transportId ChromeOnly  Differential Revision: https://phabricator.services.mozilla.com/D12953",
-    "commit_date": "2018-11-28 20:30:07"
+    "sha": "f854c2a5429c4fbf93359a24fcd89b34fed6e541",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f854c2a5429c",
+    "commiter_name": "Masayuki Nakano ",
+    "commit_email": "masayuki@d-toybox.com",
+    "commit_message": "Bug 1496288 - part 1: Make blacklist prefs for keypress event behavior changes ride the train r=smaug  Basically, we shouldn't have blacklist to disable web API.  However, the keypress event behavior changes are not standardized things.  Therefore, if some web developers realize that they need to change their apps when it's too late for them, Firefox users need to use another browser for such web apps for several weeks or more, and such things may make the users switch their default browser.  For avoiding such worst scenario, we should take the blacklists and if we get such compatibility reports, we should add the domains into the blacklist even in release channel.  Differential Revision: https://phabricator.services.mozilla.com/D13374",
+    "commit_date": "2018-11-29 15:04:18"
   },
   "3": {
-    "sha": "d1415db52fe837241d2d7bcc1cf242159806d837",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d1415db52fe8",
-    "commiter_name": "Michael Kaply ",
-    "commit_email": "mozilla@kaply.com",
-    "commit_message": "Bug 1507629 - Switch to localized Amazon where possible. r=flod  Differential Revision: https://phabricator.services.mozilla.com/D13297",
-    "commit_date": "2018-11-28 19:39:12"
+    "sha": "49b56d4d7fafc0a8bdabc00ce6b956564d9690a9",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=49b56d4d7faf",
+    "commiter_name": "Masayuki Nakano ",
+    "commit_email": "masayuki@d-toybox.com",
+    "commit_message": "Bug 1510111 - Remove www.rememberthemilk.com from the blacklist of keyCode/charCode mirroring of keypress events r=smaug  Remember The Milk have upgraded their Google Closure Library and the bug has gone now.  Let's remove www.rememberthemilk.com from the blacklist.  Differential Revision: https://phabricator.services.mozilla.com/D13373",
+    "commit_date": "2018-11-29 21:32:27"
   },
   "4": {
-    "sha": "b1441844989695a3d9e979107bfaa36d531ca38c",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b14418449896",
-    "commiter_name": "Jason Orendorff ",
-    "commit_email": "jorendorff@mozilla.com",
-    "commit_message": "Bug 1506200 - Remove ReadableStream EmbeddingFlags. r=baku,jwalden  Differential Revision: https://phabricator.services.mozilla.com/D11903",
-    "commit_date": "2018-11-28 22:20:55"
+    "sha": "2b8cf5fe84e5d21c678131290d06da9cf3fa6aae",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2b8cf5fe84e5",
+    "commiter_name": "Junior Hsu ",
+    "commit_email": "juhsu@mozilla.com",
+    "commit_message": "Bug 1505844 - nullcheck of non-ClassOfService channel in FetchDriver to avoid crash r=mayhemer  Differential Revision: https://phabricator.services.mozilla.com/D12363",
+    "commit_date": "2018-11-28 22:32:32"
   },
   "5": {
-    "sha": "0ed1cec73c666a422436ed04879fb8b5229fb9ca",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ed1cec73c66",
-    "commiter_name": "Henrik Skupin ",
-    "commit_email": "mail@hskupin.info",
-    "commit_message": "Bug 1509256 - Fix application update preferences for backward compatibility in Marionette and geckodriver. r=ato,bytesized  Because in Marionette the application updates cannot be turned off via the preference \"app.update.disabledForTesting\" (see bug 1508726), the preference \"app.update.auto\" has to be used for the time being to control that by default no updates should be downloaded and installed.  Even \"app.update.disabledForTesting\" doesn't work right now, it might be good to leave it. It would help us in the future so that we won't have to release new Marionette client and geckodriver releases, if it gets supported in Firefox.  Note that this band-aid fix will only work for Firefox releases from 57 to 64. For Firefox 65 and onwards the fix on bug 1508726 will be needed.  Depends on D13059  Differential Revision: https://phabricator.services.mozilla.com/D13060",
-    "commit_date": "2018-11-28 22:10:40"
+    "sha": "305c06df7740f4b2393c53dae175f0d199f3e30b",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=305c06df7740",
+    "commiter_name": "Panos Astithas ",
+    "commit_email": "past@mozilla.com",
+    "commit_message": "Bug 1508184 - Don't try to set the active python during bootstrap if not necessary r=gps  Differential Revision: https://phabricator.services.mozilla.com/D12237",
+    "commit_date": "2018-11-30 00:25:48"
   },
   "6": {
-    "sha": "50ff40cd5813e399775dfe026353a9407fd0c053",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=50ff40cd5813",
-    "commiter_name": "Henrik Skupin ",
-    "commit_email": "mail@hskupin.info",
-    "commit_message": "Bug 1509256 - Clarify where to add preferences for geckodriver and Marionette. r=ato  It should be made clear that only those preferences should be added to marionette.js which have an immediate effect. All others which eg. require a restart, or have to be set before the application starts the first time, must be added to the appropriate client's profile generation code.  Differential Revision: https://phabricator.services.mozilla.com/D13059",
-    "commit_date": "2018-11-27 20:12:04"
+    "sha": "1e64f8c3f949bb16b4981f255033021b42118586",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1e64f8c3f949",
+    "commiter_name": "Andreea Pavel ",
+    "commit_email": "apavel@mozilla.com",
+    "commit_message": "Backed out changeset f9900ac6071c (bug 571074) for failing clipboard at browser/base/content/test/general/browser_clipboard.js on a CLOSED TREE",
+    "commit_date": "2018-11-30 00:30:22"
   },
   "7": {
-    "sha": "162db3b0344a7342e41f1ad67946e92ac9cafc2a",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=162db3b0344a",
-    "commiter_name": "Razvan Caliman ",
-    "commit_email": "rcaliman@mozilla.com",
-    "commit_message": "Bug 1508338 - Add dark theme colors to Changes panel; r=gl  Differential Revision: https://phabricator.services.mozilla.com/D12770",
-    "commit_date": "2018-11-28 21:58:22"
+    "sha": "57816e067da5bac79091eb33436e2d45c8699079",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=57816e067da5",
+    "commiter_name": "Miko Mynttinen ",
+    "commit_email": "mikokm@gmail.com",
+    "commit_message": "Bug 1509579 - Part 2: Do not call MarkNeedsDisplayItemRebuild(), when GetDependentFrame() == Frame() r=mattwoodrow  Depends on D13279  Differential Revision: https://phabricator.services.mozilla.com/D13280",
+    "commit_date": "2018-11-29 20:40:58"
   },
   "8": {
-    "sha": "c67e1875a652439706487664fda9e6c10f2285ed",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c67e1875a652",
-    "commiter_name": "Andrew McCreight ",
-    "commit_email": "continuation@gmail.com",
-    "commit_message": "Bug 1510478 - Disable clang-formatting for XPTCall stub files. r=Ehsan  Many of the inline assembly macros in these files get reformatted poorly by clang-format, so don't format them for now. In followup work, in bug 1510781, hopefully we can write a larger patch to only disable clang-format for the specific macros and then format the rest of the files.  The problematic include STUB_ENTRY and STUB_MANGLED_ENTRY.  Differential Revision: https://phabricator.services.mozilla.com/D13311",
-    "commit_date": "2018-11-28 21:26:43"
+    "sha": "6a516d21eae63a07573958fedb5ff291e2c393b8",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6a516d21eae6",
+    "commiter_name": "Miko Mynttinen ",
+    "commit_email": "mikokm@gmail.com",
+    "commit_message": "Bug 1509579 - Part 1: Do not mark frames modified after the rebuild limit has been reached r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D13279",
+    "commit_date": "2018-11-29 05:19:36"
   },
   "9": {
-    "sha": "d53add8e41304d0da346582da8c16fd43c9f174a",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d53add8e4130",
-    "commiter_name": "Andrew McCreight ",
-    "commit_email": "continuation@gmail.com",
-    "commit_message": "Bug 1508818, part 5 - Disable Clang formatting in a few places in xpcom/. r=froydnj  nsCRTGlue.cpp has a few data tables that get broken up badly by clang-format, so just disable the formatting. There are some more tables in this file, but the arrangement doesn't seem to matter for them.  The bloat log header is just a little bit of ASCII art, so just ignore it in formatting so it is easier to read.  MOZ_COLLECT_REPORT uses very wide string constants that get rewrapped in an ugly way by clang-format, so just disable the formatting for them.  Depends on D13185  Differential Revision: https://phabricator.services.mozilla.com/D13186",
-    "commit_date": "2018-11-28 21:06:13"
+    "sha": "76a737a5a6e94e14b5fad10ca62ab259a27e2615",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76a737a5a6e9",
+    "commiter_name": "Edgar Chen ",
+    "commit_email": "echen@mozilla.com",
+    "commit_message": "Bug 1505547 - Use DocumentOrShadowRoot level checks in videocontrols for fullscreen; r=timdream  Differential Revision: https://phabricator.services.mozilla.com/D13402",
+    "commit_date": "2018-11-29 23:01:55"
   },
   "10": {
-    "sha": "09c2de91a87f13c8de2da8508bae2bc2daff6b70",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=09c2de91a87f",
-    "commiter_name": "Andrew McCreight ",
-    "commit_email": "continuation@gmail.com",
-    "commit_message": "Bug 1508818, part 4 - Rearrange various string literals so they fit in 80 columns. r=froydnj  clang-format doesn't seem to reflow text when a single string constant is represented as multiple lines of string literals to fit within 80 columns. Instead, if a single string literal is too long, it breaks off a piece and moves it to the next line, which leads to a bunch of choppy short string bits. The resulting string literals are still a bit choppy, mostly because I didn't want to break up the long names of prefs.  Here's an example of what I mean:  |--- max width --- | \"some long string literal\" \"is here but it goes on for multiple lines\"  This gets turned into:  |--- max width --- | \"some long string \" \"literal\" \"is here but it \" \"goes on for multiple lines\"  My patch manually would turn this into:  |--- max width --- | \"some long string \" \"literal is here \" \"but it goes on \" \"for multiple lines\"  The strings in my patch don't always end up at column 80, because the width is set to work with wherever clang format ends up actually indenting them.  There are more instances of this problem when MOZ_COLLECT_REPORT is used, but that can be dealt with in another bug. There are a ton of them.  Depends on D13184  Differential Revision: https://phabricator.services.mozilla.com/D13185",
-    "commit_date": "2018-11-28 21:06:53"
+    "sha": "f9900ac6071c17ff7af3ccfaf2a8ce02ea66cffc",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f9900ac6071c",
+    "commiter_name": "Tom Schuster ",
+    "commit_email": "evilpies@gmail.com",
+    "commit_message": "Bug 571074 - Mark nsITransferable.getTransferData as [must_use]. r=mats  Differential Revision: https://phabricator.services.mozilla.com/D13454",
+    "commit_date": "2018-11-29 21:57:40"
   },
   "11": {
-    "sha": "67b1d1e433013e79b67684b48c4c074712e2509e",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=67b1d1e43301",
-    "commiter_name": "Andrew McCreight ",
-    "commit_email": "continuation@gmail.com",
-    "commit_message": "Bug 1508818, part 3 - Shrink comments so they don't get poorly reflowed by clang-format. r=froydnj  Clang format does not always reflow comments correctly to get them within 80 columns.  The major categories of failures I have noticed in xpcom/ are:  - Comments that are lists. I fixed these by manually getting them so   they'll be within 80 columns after clang-format runs.  - Comments intermixed with lists of things like enums, initializers,   or even fields in a class. It doesn't seem to associate the comment   with the item in the list correctly. The worst cases of these happen   when it changes initializer lists from having commas at the start of   each item to having them at the end. In the initializer comma cases,   I fixed them by making the commas at the end, so clang-format won't   mix things up. For other cases, I often moved the comment for an   item onto its own line, because it was not possible to have both the   comment and the item on the same line and stay within 80 columns.  - One odd case is nsEnumeratorUtils.cpp, where the end of line comment   after a NS_DECL macro confused clang-format and made it stop   realizing that the NS_DECL thing was a complete statement. I also   added a blank line to that file before a declaration because I think   that is better.  Depends on D13183  Differential Revision: https://phabricator.services.mozilla.com/D13184",
-    "commit_date": "2018-11-28 21:06:09"
+    "sha": "6b447ab87004213505fbdcb0d2538a2634550737",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6b447ab87004",
+    "commiter_name": "Blake Kaplan ",
+    "commit_email": "mrbkap@gmail.com",
+    "commit_message": "Bug 1510809 - Fire updatefound correctly for SWC.register r=asuth  Currently, we are required to fire updatefound in three cases:      When a \"soft\" update finds an update.     When a call to ServiceWorkerRegistration.update finds an update.     When ServiceWorkerContainer.register registers a ServiceWorker.  In the first case, there are no requirements on the timing of the event. For the second two cases, however, the promise returned by update or register needs to resolve before updatefound is dispatched. We hack around the first case by explicitly counting the calls to update and only dispatching updatefound when the final promise resolves. In the case of SWC.register, the ServiceWorkerRegistration object might not even exist when it notices that we need to fire updatefound, which suggests that we need some code to tell it when to fire the event; except that in the soft update case, there is no obvious place to do so. So, the easiest way to resolve this is to have the parent process tell the ServiceWorkerRegistration when to fire updatefound itself. This way, we don't rely on any tricky timing and everything is consistent with itself.  Differential Revision: https://phabricator.services.mozilla.com/D13368",
+    "commit_date": "2018-11-29 23:06:32"
   },
   "12": {
-    "sha": "b226d4c40893fdd080f65c9d8d8a52990a5386be",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b226d4c40893",
-    "commiter_name": "Andrew McCreight ",
-    "commit_email": "continuation@gmail.com",
-    "commit_message": "Bug 1508818, part 2 - Remove DEBUG_rickg from nsDeque.cpp. r=froydnj  Clang format makes this code look pretty bad, but I think it is safe to just remove it.  Depends on D13182  Differential Revision: https://phabricator.services.mozilla.com/D13183",
-    "commit_date": "2018-11-28 21:06:07"
+    "sha": "ea4b9bbb0cf49ff47f18427132141e42f71982ee",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ea4b9bbb0cf4",
+    "commiter_name": "Eugen Sawin ",
+    "commit_email": "esawin@mozilla.com",
+    "commit_message": "Bug 1511012 - [1.0] Ensure non-null scheme before accessing it. r=droeh  Differential Revision: https://phabricator.services.mozilla.com/D13455",
+    "commit_date": "2018-11-29 22:06:32"
   },
   "13": {
-    "sha": "41195aed7eef4e1575d37e806bc53876043ad376",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=41195aed7eef",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1474991 - Add new and improved performance telemetry for child process launching. r=mccr8,mconley,janerik  This patch adds some telemetry histograms:    CONTENT_PROCESS_LAUNCH_IS_SYNC - boolean, true if the content process was launched synchronously (blocking the main thread)    CONTENT_PROCESS_SYNC_LAUNCH_MS - the time consumed by sync launch; the main thread will be busy or blocked for this entire time    CONTENT_PROCESS_LAUNCH_TOTAL_MS - the total time elapsed from the start of async content process launch until the launch promise is resolved and the ContentParent can be sent IPDL messages    CONTENT_PROCESS_LAUNCH_MAINTHREAD_MS - the time consumed on the parent process main thread during async content process launch; typically this is due to ContentParent::Init.    CHILD_PROCESS_LAUNCH_MS - for any kind of Gecko child process (including plugins, GPU, etc.), the time taken in the common process launch code (which is run off-main-thread)  The probes restricted to async content process launch don't have \"async\" in the name because that will eventually become the only kind of content process launch.  Depends on D8943  Differential Revision: https://phabricator.services.mozilla.com/D8944",
-    "commit_date": "2018-11-28 20:42:33"
+    "sha": "863959eb64d1f39ad7c07e44f98263ee10d6ef5a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=863959eb64d1",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1508962 part 4 - Abstract jump opcodes in BaselineCodeGen. r=djvj  Differential Revision: https://phabricator.services.mozilla.com/D12924",
+    "commit_date": "2018-11-29 22:44:50"
   },
   "14": {
-    "sha": "9f5e62b653028ed2b31c16c2556343739a0f55b8",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9f5e62b65302",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1446161 - Asynchronously launch preallocated content processes using MozPromise. r=mccr8  There are several layers to this patch:  1. GeckoChildProcessHost now exposes a promise that's resolved when the process handle is available (or rejected if launch failed), as a nonblocking alternative to LaunchAndWaitForProcessHandle.  2. ContentParent builds on this with the private method LaunchSubprocessAsync and the public method PreallocateProcessAsync; synchronous launch continues to exist for the regular on-demand launch path, for the time being.  3. PreallocatedProcessManager now uses async launch, and handles the new \"launch in progress\" state appropriately.  Depends on D8942  Differential Revision: https://phabricator.services.mozilla.com/D8943",
-    "commit_date": "2018-11-28 20:42:31"
+    "sha": "c315f5473734de31c574cb650c67a98916f9f64b",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c315f5473734",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1508962 part 3 - Eliminate some  pc uses where we know the JSOp statically. r=djvj  Differential Revision: https://phabricator.services.mozilla.com/D12922",
+    "commit_date": "2018-11-29 22:44:48"
   },
   "15": {
-    "sha": "3cbd2cf23c867eddeaeccdfffc70485f2ad3c9c0",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3cbd2cf23c86",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1446161 - Remove the earlier attempt at async launch. r=spohl,mccr8  The first attempt at async launch tried to hide the asynchrony inside IPC, by making the process seem to be launched enough to construct new channels and send it messages, and lazily blocking on the pid/handle. Unfortunately, in practice we wind up needing the pid/handle immediately, and this requirement is too deeply embedded in IPC for that to be viable.  (The alternative that will be used instead -- exposing process launch via an explicitly asynchronous promise interface -- is made simpler by Project Fission's upcoming rewrite of how the DOM requests new content processes.)  Depends on D8941  Differential Revision: https://phabricator.services.mozilla.com/D8942",
-    "commit_date": "2018-11-28 20:42:24"
+    "sha": "e0b75c94bc06140a53af4e9bc1a6c738b62d5793",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e0b75c94bc06",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1508962 part 2 - Implement emitDebugInstrumentation to abstract emitting debugging-specific code. r=djvj  Differential Revision: https://phabricator.services.mozilla.com/D12523",
+    "commit_date": "2018-11-29 22:44:44"
   },
   "16": {
-    "sha": "25b4fcd4382dfa21ee08f1b7604c649132f52500",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=25b4fcd4382d",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1446161 - Remove CONTENT_PROCESS_LAUNCH_TIME_MS telemetry. r=mconley,chutten  The CONTENT_PROCESS_LAUNCH_TIME_MS histogram is currently gathering times from two different spans of the launch process and mixing them together; it's at best a rough approximation of \"launch time\".  In addition, with async launch we'll want to gather different metrics than for sync launch (see comments on bug 1474991).  So I'm removing this histogram and will replace it with separate sync and async metrics in bug 1474991; I intend to land both bugs' patches at or near the same time, so we won't have a gap in getting some kind of data.  Depends on D8940  Differential Revision: https://phabricator.services.mozilla.com/D8941",
-    "commit_date": "2018-11-28 20:42:17"
+    "sha": "77764799fba3b6f29fb7b5ce15e4ba73f263832f",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=77764799fba3",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1508962 part 1 - Add a BaselineCodeGen<Handler> base class to BaselineCompiler and use it for JSOp compilation. r=djvj  This is just the first step: the Handler classes are still empty and BaselineCodeGen contains fields/methods that should eventually move out of there. That will happen in follow-up patches.  Rooting analysis now reported a hazard in ObjectGroup::getOrFixupCopyOnWriteObject, this patch has the trivial fix for that too.  Differential Revision: https://phabricator.services.mozilla.com/D12522",
+    "commit_date": "2018-11-29 22:43:00"
   },
   "17": {
-    "sha": "1b92017b48651531b42b12856acf0f36001168ae",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1b92017b4865",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1496608 - Don't leak GeckoChildProcessHost when a content process fails to launch. r=mccr8  Depends on D8939  Differential Revision: https://phabricator.services.mozilla.com/D8940",
-    "commit_date": "2018-11-28 20:42:07"
+    "sha": "7a24e1e35a7e4a372f719463ca367882bb6de5dd",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7a24e1e35a7e",
+    "commiter_name": "Jason Orendorff ",
+    "commit_email": "jorendorff@mozilla.com",
+    "commit_message": "Bug 1511040 - Handle errors in test_readableStreams.html. r=baku  Differential Revision: https://phabricator.services.mozilla.com/D13410",
+    "commit_date": "2018-11-29 22:44:46"
   },
   "18": {
-    "sha": "e0e1a14b592fd45b1e4c8dffe51d68dbe84cd265",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e0e1a14b592f",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1488993 - Fix PreallocatedProcessManager blocker management (v2). r=mconley,smaug  This fixes/adjusts two things about how content process preallocation is blocked:  1. Processes aren't registered as blockers until after they launch successfully.  The main goal is to not leak a blocker if launch fails, but we don't need to block  while  launching synchronously, because this all happens on the main thread.  2. Preallocated processes themselves aren't blockers.  The main goal here is so that async preallocation doesn't need extra complexity to avoid being blocked by itself when launch completes.  This mostly doesn't affect actual behavior, because we currently support at most one preallocated process.  The difference is the window from when the process is sent its first PBrowserConstructor until when it's next idle, where there is now no longer a blocker, but this seems to be relatively short (~100ms) and we don't even try to launch a new process until at least 1s + an idle runnable.  This patch does not explicitly RemoveBlocker in ActorDestroy like the first attempt did, because it's unnecessary: this is handled in the ipc:content-shutdown observer.  Differential Revision: https://phabricator.services.mozilla.com/D8939",
-    "commit_date": "2018-11-28 20:42:00"
+    "sha": "7180b12513ad5f0a0d1edf3188610a848b3b6ebf",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7180b12513ad",
+    "commiter_name": "Jason Orendorff ",
+    "commit_email": "jorendorff@mozilla.com",
+    "commit_message": "Bug 1391756 - Try to fix rare timeout in dom/tests/mochitest/fetch/test_readableStreams.html. r=baku  Also removes an infinite regress of nested iframes. The original problem was that tests would start running before the child iframe was done loading. The straightforward fix is to have the child frame start the test. But this caused further error messages because the child iframe is loaded more than once; removing the iframe from the iframe fixes this.  Differential Revision: https://phabricator.services.mozilla.com/D13385",
+    "commit_date": "2018-11-29 22:35:04"
   },
   "19": {
-    "sha": "5b0d04272c75c8cf03e38dc372ef950e43dfb1ba",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5b0d04272c75",
-    "commiter_name": "Gabriele Svelto ",
-    "commit_email": "gsvelto@mozilla.com",
-    "commit_message": "Bug 1510582 - Remove useless inclusions of Services.h r=erahm  Differential Revision: https://phabricator.services.mozilla.com/D13240",
-    "commit_date": "2018-11-28 17:25:23"
+    "sha": "5808b57453825fe1185e94fd4e7e2e551bdf878f",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5808b5745382",
+    "commiter_name": "Jason Orendorff ",
+    "commit_email": "jorendorff@mozilla.com",
+    "commit_message": "Bug 1507248 - Use virtual methods for external readable stream callbacks. r=baku,jwalden  Differential Revision: https://phabricator.services.mozilla.com/D11926",
+    "commit_date": "2018-11-29 22:33:43"
   },
   "20": {
-    "sha": "352048c0769370981a78204b5855a35247d3e354",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=352048c07693",
-    "commiter_name": "Dan Minor ",
-    "commit_email": "dminor@mozilla.com",
-    "commit_message": "Bug 1509994 - Regenerate moz.build files; r=pehrsons  Depends on D13095  Differential Revision: https://phabricator.services.mozilla.com/D13096",
-    "commit_date": "2018-11-27 17:34:05"
+    "sha": "0ceb5c6cc6b076e9b79f9d5f70ae901f8fd9644e",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ceb5c6cc6b0",
+    "commiter_name": "Jared Wein ",
+    "commit_email": "jwein@mozilla.com",
+    "commit_message": "Bug 1511095 - Remove support for the 30fps pref, and replace the loading.svg with the 30fps variant. r=mconley  Differential Revision: https://phabricator.services.mozilla.com/D13462",
+    "commit_date": "2018-11-29 22:26:13"
   }
 }
