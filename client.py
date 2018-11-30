@@ -67,6 +67,7 @@ def create_md_table(repository_name, path_to_files):
                 commit_author = re.sub("\u0131", "i", commit_author)  #this is temporary
                 date = data[key]["commit_date"]
                 message = data[key]["commit_message"]
+                message = re.sub("\|", "\|", message)
                 url = data[key]["url"]
 
                 row = "|" + commit_number + \

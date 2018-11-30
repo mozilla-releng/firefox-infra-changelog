@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 23:44:22.823020"
+    "lastChecked": "2018-11-30 00:56:56.837474"
   },
   "1": {
-    "sha": "f2915d3ee5f8705676e4bb643eab54b62246f25f",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f2915d3ee5f8",
-    "commiter_name": "Coroiu Cristina ",
-    "commit_email": "ccoroiu@mozilla.com",
-    "commit_message": "Merge inbound to mozilla-central a=merge",
-    "commit_date": "2018-11-28 21:49:09"
+    "sha": "ecb2818bcd055bc5381d0702c955ee78a64dc41c",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ecb2818bcd05",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Backed out 4 changesets (bug 1509573) for unexpected bustages a=backout.  Backed out changeset ace2d2ada8ef (bug 1509573) Backed out changeset 059741f95cf4 (bug 1509573) Backed out changeset 36cf7b9ce095 (bug 1509573) Backed out changeset d7e0661e34c2 (bug 1509573)",
+    "commit_date": "2018-11-29 23:40:06"
   },
   "2": {
-    "sha": "8d0013f9a06dc1a374e5725876ff24aa880f8978",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d0013f9a06d",
-    "commiter_name": "Gabriel Luong ",
-    "commit_email": "gabriel.luong@gmail.com",
-    "commit_message": "Bug 1507750 - Compare the flexbox state for any changes before updating on reflows. r=pbro",
-    "commit_date": "2018-11-28 16:25:19"
+    "sha": "6453222232be364fb8ce3fd29b6cbcd480e5f2e3",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6453222232be",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1499644 - Move IC data out of BaselineScript. r=tcampbell  ICEntries and the fallback stub space are now stored in ICScript. The ICScript  is stored in TypeScript to not increase sizeof(JSScript).  We need this for bug 1499324 but it also lets us greatly simplify the BaselineDebugModeOSR code as this patch shows.  Note: some ICScript method definitions are still in BaselineJIT.cpp instead of BaselineIC.cpp to make this patch easier to review. We could move them to BaselineIC.cpp as a follow-up change.  Differential Revision: https://phabricator.services.mozilla.com/D11746",
+    "commit_date": "2018-11-29 19:08:28"
   },
   "3": {
-    "sha": "4201f7161e7a5323d7a9250f08c1d046aa85456d",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4201f7161e7a",
-    "commiter_name": "Benjamin Bouvier ",
-    "commit_email": "benj@benj.me",
-    "commit_message": "Bug 1509283: Compile the last wasm function batch on the main thread; r=luke",
-    "commit_date": "2018-11-22 10:12:20"
+    "sha": "1cce2b80c6452dce775e3fa1c180cc1c7c4e9012",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1cce2b80c645",
+    "commiter_name": "Timothy Guan-tin Chien ",
+    "commit_email": "timdream@gmail.com",
+    "commit_message": "Bug 1509291 - Wait for window to unload before ending the test r=Felipe  Differential Revision: https://phabricator.services.mozilla.com/D13446",
+    "commit_date": "2018-11-29 18:16:16"
   },
   "4": {
-    "sha": "44cd6ec4fbd5da73777883f4faf9fe822f7de513",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=44cd6ec4fbd5",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 5: Move non-auto-generated part of BinASTParser into BinASTParserPerTokenizer. r=Yoric",
-    "commit_date": "2018-11-28 16:03:46"
+    "sha": "54649cf34d98c313a706c333b395b1aff6c3c260",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=54649cf34d98",
+    "commiter_name": "Daniel Holbert ",
+    "commit_email": "dholbert@cs.stanford.edu",
+    "commit_message": "Bug 1337655 part 2: Turn off moz-prefixed CSS gradient functions for nightly. r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D13298",
+    "commit_date": "2018-11-29 18:27:30"
   },
   "5": {
-    "sha": "02386132c1e9bfa3ef88b9ae7d967f90b6e1045e",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=02386132c1e9",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 4: Rename BinSource-auto.{cpp,h} to BinASTParser.{cpp,h}, and BinSource.{cpp,h} to BinASTParserPerTokenizer.{cpp,h}. r=Yoric",
-    "commit_date": "2018-11-28 16:03:45"
+    "sha": "11965d6a2fca3d51187eece61e0e61bafecd6bf8",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=11965d6a2fca",
+    "commiter_name": "Daniel Holbert ",
+    "commit_email": "dholbert@cs.stanford.edu",
+    "commit_message": "Bug 1337655 part 1: Move some prefixed gradient values to pref-controlled sections of property_database.js. r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D13370",
+    "commit_date": "2018-11-29 18:27:28"
   },
   "6": {
-    "sha": "f96f280927ff0bc9340a7726d28851f884998126",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f96f280927ff",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 3: Fix typo in Binsource.yaml. r=Yoric",
-    "commit_date": "2018-11-28 16:03:45"
+    "sha": "a0e0ae690520f845febd99f243e7910fda287aad",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a0e0ae690520",
+    "commiter_name": "Andreea Pavel ",
+    "commit_email": "apavel@mozilla.com",
+    "commit_message": "Backed out 3 changesets (bug 1509493) for failng win xpcshell at netwerk/test/unit/test_mozTXTToHTMLConv.js on a CLOSED TREE  Backed out changeset 05562b7d3eff (bug 1509493) Backed out changeset 6498765e1d65 (bug 1509493) Backed out changeset 5e4a5cf81c26 (bug 1509493)",
+    "commit_date": "2018-11-29 18:54:22"
   },
   "7": {
-    "sha": "391d7669e9b28c4475ead6f5f6771dfa1fd05deb",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=391d7669e9b2",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 2: Move auto-generated enum to BinASTEnum.h. r=Yoric",
-    "commit_date": "2018-11-28 16:03:45"
+    "sha": "daf1ffb72989d83be571e2bfb614dbee639915ce",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=daf1ffb72989",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "Bug 1510058 - Work around mWidget becoming null during DidComposite, and add a diagnostic assert that will hopefully root out the culprit. r=jrmuizel  Differential Revision: https://phabricator.services.mozilla.com/D13309",
+    "commit_date": "2018-11-29 17:48:43"
   },
   "8": {
-    "sha": "2abc868cd4169ab888b5a5e7d7ebd5687b06232d",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2abc868cd416",
-    "commiter_name": "Tooru Fujisawa ",
-    "commit_email": "arai_a@mac.com",
-    "commit_message": "Bug 1508063 - Part 1: Move BinASTParserBase into its own files. r=Yoric",
-    "commit_date": "2018-11-28 16:03:45"
+    "sha": "daaecb62f373d33c60e6a77bcce01d27e19a3282",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=daaecb62f373",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Make MediaStreamGraph pull data per track instead of per stream. r=padenot  Differential Revision: https://phabricator.services.mozilla.com/D13086",
+    "commit_date": "2018-11-29 17:37:42"
   },
   "9": {
-    "sha": "141af7d07a50aa91d40d993020cfe2703450cf23",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=141af7d07a50",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1510430 - Update Debugger Frontend v104. r=dwalsh ",
-    "commit_date": "2018-11-27 23:02:34"
+    "sha": "311cee86bc66141b8f59be67cd203018f5799cae",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=311cee86bc66",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Remove early PullNewData return. r=padenot  Without knownTracksTime, StreamTracks::GetFirstTrackEnd() returns STREAM_TIME_MAX for an empty StreamTracks, so PullNewData() thinks no new data is needed.  This circumvents that by always checking whether tracks need data.  Differential Revision: https://phabricator.services.mozilla.com/D12928",
+    "commit_date": "2018-11-29 17:37:35"
   },
   "10": {
-    "sha": "dcb2522d819e0c4193d10c446e4a9215c4f2295f",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dcb2522d819e",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1509973 - Follow-up to increase timeout for windows ASAN reftests. r=me ",
-    "commit_date": "2018-11-28 15:21:13"
+    "sha": "dfde7b2c53a63c1fbeb90f984f912c8fd73da623",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dfde7b2c53a6",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Clean up what appears to be wip-leftover gunk in DecodedStream. r=jya  Differential Revision: https://phabricator.services.mozilla.com/D12926",
+    "commit_date": "2018-11-29 17:37:21"
   },
   "11": {
-    "sha": "90b9a0bd1fc5a87c9c00275b641b3fb6d6da46c1",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=90b9a0bd1fc5",
-    "commiter_name": "Andrea Marchesini ",
-    "commit_email": "amarchesini@mozilla.com",
-    "commit_message": "Bug 1503681 - rel=noopener implicit for target=_blank in anchor and area elements when no rel attribute is set - fix tests, r=me",
-    "commit_date": "2018-11-28 12:42:57"
+    "sha": "8a064f0dbb2f09c589514f71b06e37ed36362cd1",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8a064f0dbb2f",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Rename track-end-time methods in StreamTracks. r=padenot  They deserve descriptive names.  Differential Revision: https://phabricator.services.mozilla.com/D12925",
+    "commit_date": "2018-11-29 17:37:17"
   },
   "12": {
-    "sha": "94ff32de21d6fcb638a3759e12735edf31136033",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=94ff32de21d6",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "Backed out changeset e6377178d093 (bug 1503161) for causing a bunch of regressions",
-    "commit_date": "2018-11-28 11:59:52"
+    "sha": "1d1b47e235375f3a52faafe37a2e560a98c5b51f",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1d1b47e23537",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Remove the concept of a known tracks time from MediaStreamGraph. r=padenot  Differential Revision: https://phabricator.services.mozilla.com/D12923",
+    "commit_date": "2018-11-29 17:37:06"
   },
   "13": {
-    "sha": "c36ca97de3d05dd769986a1ce315c1a4ed9a7f12",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c36ca97de3d0",
-    "commiter_name": "Andrew Osmond ",
-    "commit_email": "aosmond@mozilla.com",
-    "commit_message": "Bug 1509408 - Fix animated image distortion regressions caused by frame recycling. r=tnikkel  When bug 1508393 landed, it not only enabled producing of full frames on the decoder threads, it also enabled recycling of old animated image frame buffers it would have otherwise discarded. It reuses the contents of the buffer where possible given we know what pixels changed between the old frame and the frame we want to produce. However where this calculation was done was incorrect. We originally calculated it when we advanced the frame, but at that point there is no guarantee that we have all of the necessary information; we may have fallen behind on decoding. As such, we move the calculation to where we actually perform the recycling. At this point we are guaranteed to have all the necessary frames between the recycling and display queues.  Differential Revision: https://phabricator.services.mozilla.com/D12903 ",
-    "commit_date": "2018-11-26 12:30:50"
+    "sha": "f988af9437f591cc5c7d3917ba370e2edc82d1a6",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f988af9437f5",
+    "commiter_name": "Wes Kocher ",
+    "commit_email": "wkocher@mozilla.com",
+    "commit_message": "Bug 1504357 - Make sure --repeat-until-unexpected doesn't loop over zero tests r=jgraham  If zero tests are selected to run while --repeat-until-unexpected is specified, wptrunner can get into a fast infinite loop of running nothing until killed by the user.  This patch should stop that from happening by breaking the loop after the first iteration of nothing finishes.  Differential Revision: https://phabricator.services.mozilla.com/D13204",
+    "commit_date": "2018-11-29 17:12:18"
   },
   "14": {
-    "sha": "d75d80adf8a159071845ff87a79867dedf0e8e0b",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d75d80adf8a1",
-    "commiter_name": "Andrea Marchesini ",
-    "commit_email": "amarchesini@mozilla.com",
-    "commit_message": "Bug 1503681 - rel=noopener implicit for target=_blank in anchor and area elements when no rel attribute is set - fix tests, r=me CLOSED TREE",
-    "commit_date": "2018-11-28 11:39:19"
+    "sha": "5ad19f2159391c4299c6b665794068e7567f38e3",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5ad19f215939",
+    "commiter_name": "Luca Greco ",
+    "commit_email": "lgreco@mozilla.com",
+    "commit_message": "Bug 1472740 - Avoid LWT aliases in theme API tests that are not specifically about LWT aliases. r=ntim,jaws  This patch replace the LWT aliases with their related non-deprecated alias in all the theme API tests that don't seem to be specifically testing the LWT aliases (e.g. browser_ext_themes_lwtsupport.js is leaved unmodified for this reason).  The main reason to replace them in the \"not stricly LWT-related\" tests before their final removal (currently planned for Firefox 69) is that the deprecation warnings will make these tests more noisy (and so they may be making harder to investigate failures, without any actual gain in terms of coverage).  Depends on D12297  Differential Revision: https://phabricator.services.mozilla.com/D12783",
+    "commit_date": "2018-11-26 16:10:36"
   },
   "15": {
-    "sha": "8e91d8ea0141e8f2bf3aaa13958ceea9fb3f19a1",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8e91d8ea0141",
-    "commiter_name": "Mihai Tabara ",
-    "commit_email": "mtabara@mozilla.com",
-    "commit_message": "Bug 1466714 - follow-up flake8 fix. r=bustage CLOSED TREE",
-    "commit_date": "2018-11-28 11:28:20"
+    "sha": "7b5c486601e568aaa8538d7286dc3bd8be84ad8a",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7b5c486601e5",
+    "commiter_name": "Luca Greco ",
+    "commit_email": "lgreco@mozilla.com",
+    "commit_message": "Bug 1472740 - Warn on deprecated static theme LWT aliases usage. r=ntim,jaws  This patch doesn't currently prevent a static theme which uses the LWT aliases from being installed successfully but, as the first step for their deprecation and removal, it starts to log a warning message when these aliases are being used (e.g. when installing the static theme extension from \"about:debugging\", these warnings are being shown to the theme author).  A similar linting warning is going to be emitted on AMO submissions (See https://github.com/mozilla/addons-linter/issues/2259), and it will be turned it into a linting error once AMO should start to prevent new static theme submittions from using the LWT aliases.  Differential Revision: https://phabricator.services.mozilla.com/D12297",
+    "commit_date": "2018-11-23 18:58:45"
   },
   "16": {
-    "sha": "e375e10f670a4deb1a8971df66633819d2ec14a6",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e375e10f670a",
-    "commiter_name": "Simon Fraser ",
-    "commit_email": "sfraser@mozilla.com",
-    "commit_message": "Bug 1466714 - declarative artifacts in-tree work for Fennec. r=mtabara",
-    "commit_date": "2018-11-28 11:13:52"
+    "sha": "e6fa8908256b2de05afea8cbc841ecfee8756114",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e6fa8908256b",
+    "commiter_name": "Michael Froman ",
+    "commit_email": "mfroman@mozilla.com",
+    "commit_message": "Bug 1498624 - pt2 - Implement Win sandbox for RDD process. r=bobowen  Differential Revision: https://phabricator.services.mozilla.com/D13101",
+    "commit_date": "2018-11-29 17:02:16"
   },
   "17": {
-    "sha": "7e8744eac2cae3d8d944a3c103cb63b104fb27ed",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7e8744eac2ca",
-    "commiter_name": "Brindusan Cristian ",
-    "commit_email": "cbrindusan@mozilla.com",
-    "commit_message": "Backed out changeset 8fc810b6e528 (bug 1509102) for xpcshell failures from test_serializers_entities.js. CLOSED TREE",
-    "commit_date": "2018-11-28 10:16:26"
+    "sha": "d81d2b5e6e27308135996c6105b875dd088af81f",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d81d2b5e6e27",
+    "commiter_name": "Daniel Varga ",
+    "commit_email": "dvarga@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+    "commit_date": "2018-11-29 17:13:14"
   },
   "18": {
-    "sha": "834ac503d67e50f15dc1ca15e43cd700c571ba81",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=834ac503d67e",
-    "commiter_name": "Narcis Beleuzu ",
-    "commit_email": "nbeleuzu@mozilla.com",
-    "commit_message": "Merge mozilla-central to inbound. CLOSED TREE",
-    "commit_date": "2018-11-28 10:02:34"
+    "sha": "9b21db074305040e2058811d24f7dbc95eb4adbf",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9b21db074305",
+    "commiter_name": "Shane Caraveo ",
+    "commit_email": "scaraveo@mozilla.com",
+    "commit_message": "Bug 1507138 fix default port usage with proxy settings, r=aswan  Differential Revision: https://phabricator.services.mozilla.com/D13324",
+    "commit_date": "2018-11-29 16:19:40"
   },
   "19": {
-    "sha": "e6a4330eb15f1536f505d6794c4efac3ca9fcf7e",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e6a4330eb15f",
-    "commiter_name": "Andrea Marchesini ",
-    "commit_email": "amarchesini@mozilla.com",
-    "commit_message": "Bug 1503681 - rel=noopener implicit for target=_blank in anchor and area elements when no rel attribute is set - fix tests, r=me",
-    "commit_date": "2018-11-28 07:22:06"
+    "sha": "8d3e17a3c95e00634c8e54da19f7f8bb328e948f",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d3e17a3c95e",
+    "commiter_name": "Raphael Pierzina ",
+    "commit_email": "rpierzina@mozilla.com",
+    "commit_message": "Bug 1509913 - Add helper function for checking UUID values to telemetry-tests-client; r=Dexter  Differential Revision: https://phabricator.services.mozilla.com/D13415",
+    "commit_date": "2018-11-29 16:02:21"
   },
   "20": {
-    "sha": "45e6f25036c57ad42140e749bb2927e5365d038c",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=45e6f25036c5",
-    "commiter_name": "Andrea Marchesini ",
-    "commit_email": "amarchesini@mozilla.com",
-    "commit_message": "Bug 1503681 - rel=noopener implicit for target=_blank in anchor and area elements when no rel attribute is set - WPT, r=annevk",
-    "commit_date": "2018-11-28 07:22:05"
+    "sha": "88ca4ffc6f68dc0134cfdda117d1c56caa4b7789",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=88ca4ffc6f68",
+    "commiter_name": "Matthew Gaudet ",
+    "commit_email": "mgaudet@mozilla.com",
+    "commit_message": "Bug 1504005 - Initial Structured Spewer r=jandem  This spewer design has two goals:    1. Provide a spew mechanism that has first-class support for slicing and      dicing output. This means that filtering by script and channel should be      the dominant output mechanism.   2. Provide a simple powerful mechanism for getting information out of the      compiler and into tools. I'm inspired by tools like CacheIR analyzer,      IR Hydra, and the upcoming tracelogger integration into perf.html.  Differential Revision: https://phabricator.services.mozilla.com/D11787",
+    "commit_date": "2018-11-29 14:37:01"
   }
 }

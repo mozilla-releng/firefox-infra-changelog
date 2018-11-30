@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 23:44:27.199508"
+    "lastChecked": "2018-11-30 00:57:00.840689"
   },
   "1": {
-    "sha": "d321a6c5e0718dc0f8e26c567555ed296c751d9e",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d321a6c5e071",
-    "commiter_name": "Boris Zbarsky ",
-    "commit_email": "bzbarsky@mit.edu",
-    "commit_message": "Bug 1491925.  Remove the various instrumentation we added to pin down InnerSetNewDocument failures.  r=mccr8.  This is a straight backout of (in that order) bug 1505468, bug 1503664, bug 1501479, bug 1499150, bug 1496805, and the second part of bug 1493849.  The first part of bug 1493849 was a backout of earlier instrumentation, and that should stay.  At this point we know we're hitting OOM inside the JS engine while trying to define properties on Document.prototype, so all this MOZ_CRASH instrumentation is no longer needed.",
-    "commit_date": "2018-11-28 23:24:53"
+    "sha": "9268bf6329ffd7c0fbbb3712cba7b91bbea1f2c0",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9268bf6329ff",
+    "commiter_name": "Gabriel Luong ",
+    "commit_email": "gabriel.luong@gmail.com",
+    "commit_message": "Bug 1509907 - Add telemetry to track flexbox highlighter usage. r=miker  This also adds a telemetry count for the grid highlighter being turned on by the markup view, which was not in place when we added the telemetry for the grid highlighter.",
+    "commit_date": "2018-11-29 23:45:43"
   },
   "2": {
-    "sha": "50f492dc4eda48eaf11a20ef1ac729ae14396fd7",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=50f492dc4eda",
-    "commiter_name": "Mats Palmgren ",
-    "commit_email": "mats@mozilla.com",
-    "commit_message": "Bug 1509903 part 2 - Make the remaining nsTextFrame virtual methods 'final' unless they are overridden by nsContinuingTextFrame.  r=emilio",
-    "commit_date": "2018-11-28 23:17:25"
+    "sha": "368e88f08417bc4edcd4c4b48b43369083f0e7b4",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=368e88f08417",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 857456 Follow-up: temporarily disable addon test in testDistribution.java rs=nalexander",
+    "commit_date": "2018-11-29 23:42:08"
   },
   "3": {
-    "sha": "69bf9d3d6b3cce3e8d4d44dcd5b70c5e76054ecf",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=69bf9d3d6b3c",
-    "commiter_name": "Mats Palmgren ",
-    "commit_email": "mats@mozilla.com",
-    "commit_message": "Bug 1509903 part 1 - Make nsTextFrame::IsFrameSelected() 'final' and inline nsIFrame::IsSelected() to de-virtualize the IsFrameSelected() call in some cases.  r=emilio  In particular, in nsCharClipDisplayItem::IsSelected() we know that the frame must be a nsTextFrame (or nsContinuingTextFrame) which means nsTextFrame::IsFrameSelected() can be called directly now.",
-    "commit_date": "2018-11-28 23:17:25"
+    "sha": "e0639d2ca407392acc67e65cc7eb058363e733e3",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e0639d2ca407",
+    "commiter_name": "Lee Salzman ",
+    "commit_email": "lsalzman@mozilla.com",
+    "commit_message": "Bug 1490537 - init and shutdown Skia in the GPU process. r=mattwoodrow",
+    "commit_date": "2018-11-29 23:09:46"
   },
   "4": {
-    "sha": "2ffaf47c0ff4e219eb24c94dcba322ae7bf628b3",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2ffaf47c0ff4",
-    "commiter_name": "Mats Palmgren ",
-    "commit_email": "mats@mozilla.com",
-    "commit_message": "Bug 1510674 - Remove a few unnecessary #include \"nsCSSFrameConstructor.h\".  r=emilio  There are no uses of any frame-ctor things in these files AFAICT.",
-    "commit_date": "2018-11-28 23:17:25"
+    "sha": "3a2c2eb8f481dedfdf7680b856cdef72a34fece9",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3a2c2eb8f481",
+    "commiter_name": "Adam Holm ",
+    "commit_email": "asorholm@email.arizona.edu",
+    "commit_message": "Bug 1451591 - Flush CacheIR Spewer on regular intervals. r=mgaudet",
+    "commit_date": "2018-11-28 20:08:52"
   },
   "5": {
-    "sha": "c99a9a65ebedc8c294452f57ee08c49f3c1b5b3d",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c99a9a65ebed",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1510449 (follow-up) Fix flake8 line-too-long; a=test-only on a CLOSED TREE",
-    "commit_date": "2018-11-28 23:07:37"
+    "sha": "e2a7b9a99226012bac933c5315c898ef9379211b",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e2a7b9a99226",
+    "commiter_name": "Diego Pino Garcia ",
+    "commit_email": "dpino@igalia.com",
+    "commit_message": "Bug 1249606 - Automatically generate operator== for WebIDL dictionaries. r=bzbarsky",
+    "commit_date": "2018-11-29 22:07:30"
   },
   "6": {
-    "sha": "a0c38715c0c64126f8e59f099d2c225943d128ed",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a0c38715c0c6",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1510449 - Support installing geckoview test apps from mach test commands; r=me,a=test-only",
-    "commit_date": "2018-11-28 22:46:37"
+    "sha": "0c715a8f0170fd4b19c4281c269c03f872090648",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0c715a8f0170",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 857456 Part 4: Remove toolkit support for install.rdf r=kmag",
+    "commit_date": "2018-11-26 21:44:32"
   },
   "7": {
-    "sha": "5823e2fa901ec178f6528560a43496734316d774",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5823e2fa901e",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1505536 - Add Android x86-64 debug builds; r=nalexander",
-    "commit_date": "2018-11-28 22:46:37"
+    "sha": "e3b6db3b34ab06b60ab5b0f9d8d5695df754b7e1",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e3b6db3b34ab",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 857456 Part 3: Convert (non-) strict compatibility tests to use an external extension loader r=kmag  The addon manager has a bunch of handling for \"strict compatibility\" -- an option for individual profiles and addons to control exactly how compatibility is handled.  However, WebExtensions don't use or expose this feature.  We want to retain this capability for other projects that use the addon manager but since it cannot be tested with WebExtensions, this patch converts its tests to use the new extension loading hook added in the previous patch.",
+    "commit_date": "2018-11-25 04:27:20"
   },
   "8": {
-    "sha": "09acef99bf7ef6192b4be3347513a1be2b42d55a",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=09acef99bf7e",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1467868 - Support Android aarch64 artifact builds; r=nalexander",
-    "commit_date": "2018-11-28 22:46:37"
+    "sha": "061b97e02ede2133f50956feba25fd8798745347",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=061b97e02ede",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 857456 Part 2: Separate handling for non-webextensions from the addons manager r=kmag  This patch adds a hook to the addon manager that can be used to teach it how to load xpi-packaged addons that the addon manager doesn't already know about.  Handing for install.rdf/bootstrap.js is (temporarily) converted to use this hook rather than being built directly into the addon manager.",
+    "commit_date": "2018-11-21 04:19:59"
   },
   "9": {
-    "sha": "f005cfb0b0fa95ce3b58dd87fc21615c041e603d",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f005cfb0b0fa",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1467868 - Add Android aarch64/debug build; r=nalexander",
-    "commit_date": "2018-11-28 22:46:37"
+    "sha": "51bb2e2f30d2c1486ebbc75568e09976a374fe6c",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=51bb2e2f30d2",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 857456 Part 1: Get rid of internal/external type distinction in addons manager r=kmag  AddonInternal objects have a \"type\" field which is used inside the addon manager, but AddonWrapper objects map the internal values to different externally visible values.  The internal values generally convey whether a particular addon uses webextension packaging (ie manifest.json) or not.  This patch cleans that all up by adding a new isWebExtension property and then just using the externally visible values for type consistently.",
+    "commit_date": "2018-11-22 04:01:26"
   },
   "10": {
-    "sha": "237e92ff9ceb03e634371ab105a69f5f086fc7e0",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=237e92ff9ceb",
-    "commiter_name": "Coroiu Cristina ",
-    "commit_email": "ccoroiu@mozilla.com",
-    "commit_message": "Merge mozilla-central to inbound a=merge on a CLOSED TREE",
-    "commit_date": "2018-11-28 22:34:07"
+    "sha": "efac27a2bec4fa7e81fa3c8a6d023795aa6447dc",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=efac27a2bec4",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 857456 Part 0: Clean up remaining tests using legacy extensions r=kmag",
+    "commit_date": "2018-11-29 02:45:08"
   },
   "11": {
-    "sha": "f2915d3ee5f8705676e4bb643eab54b62246f25f",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f2915d3ee5f8",
-    "commiter_name": "Coroiu Cristina ",
-    "commit_email": "ccoroiu@mozilla.com",
-    "commit_message": "Merge inbound to mozilla-central a=merge",
-    "commit_date": "2018-11-28 21:49:09"
+    "sha": "da158202751e9481710c64264d5f0e9161f6eb36",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=da158202751e",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE",
+    "commit_date": "2018-11-29 21:46:52"
   },
   "12": {
-    "sha": "e374d095d1e2d4c5d9c7c1cc412bb1798149d003",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e374d095d1e2",
-    "commiter_name": "Coroiu Cristina ",
-    "commit_email": "ccoroiu@mozilla.com",
-    "commit_message": "Merge autoland to mozilla-central a=merge",
-    "commit_date": "2018-11-28 21:47:17"
+    "sha": "6453222232be364fb8ce3fd29b6cbcd480e5f2e3",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6453222232be",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1499644 - Move IC data out of BaselineScript. r=tcampbell  ICEntries and the fallback stub space are now stored in ICScript. The ICScript  is stored in TypeScript to not increase sizeof(JSScript).  We need this for bug 1499324 but it also lets us greatly simplify the BaselineDebugModeOSR code as this patch shows.  Note: some ICScript method definitions are still in BaselineJIT.cpp instead of BaselineIC.cpp to make this patch easier to review. We could move them to BaselineIC.cpp as a follow-up change.  Differential Revision: https://phabricator.services.mozilla.com/D11746",
+    "commit_date": "2018-11-29 19:08:28"
   },
   "13": {
-    "sha": "4a3f88e3629875813584f135f9e250b82eb4aa48",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4a3f88e36298",
-    "commiter_name": "Brindusan Cristian ",
-    "commit_email": "cbrindusan@mozilla.com",
-    "commit_message": "Backed out 3 changesets (bug 1486659) as requested by jhlin on irc for breaking video playback on Android and causing regression Bug 1510464. a=backout  Backed out changeset 9c2834ca8823 (bug 1486659) Backed out changeset 5d897c0c7a25 (bug 1486659) Backed out changeset b0fdcebfd20d (bug 1486659)",
-    "commit_date": "2018-11-28 17:09:13"
+    "sha": "1cce2b80c6452dce775e3fa1c180cc1c7c4e9012",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1cce2b80c645",
+    "commiter_name": "Timothy Guan-tin Chien ",
+    "commit_email": "timdream@gmail.com",
+    "commit_message": "Bug 1509291 - Wait for window to unload before ending the test r=Felipe  Differential Revision: https://phabricator.services.mozilla.com/D13446",
+    "commit_date": "2018-11-29 18:16:16"
   },
   "14": {
-    "sha": "33a1a7271fe37f0e5118dc71381f7e29d3809a89",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=33a1a7271fe3",
-    "commiter_name": "Paul Adenot ",
-    "commit_email": "paul@paul.cx",
-    "commit_message": "Bug 1274392 - When echo cancellation is disabled, disable automatic gain control and noise suppression as well. r=jib  Differential Revision: https://phabricator.services.mozilla.com/D12902",
-    "commit_date": "2018-11-28 13:41:02"
+    "sha": "54649cf34d98c313a706c333b395b1aff6c3c260",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=54649cf34d98",
+    "commiter_name": "Daniel Holbert ",
+    "commit_email": "dholbert@cs.stanford.edu",
+    "commit_message": "Bug 1337655 part 2: Turn off moz-prefixed CSS gradient functions for nightly. r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D13298",
+    "commit_date": "2018-11-29 18:27:30"
   },
   "15": {
-    "sha": "4e55f708271a1394f850d3bbd5a853b283f32184",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4e55f708271a",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "Bug 1508081 - Make tab line color fallback to the selected tab text color instead of accentcolor. r=ntim  Differential Revision: https://phabricator.services.mozilla.com/D13232",
-    "commit_date": "2018-11-28 12:29:49"
+    "sha": "11965d6a2fca3d51187eece61e0e61bafecd6bf8",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=11965d6a2fca",
+    "commiter_name": "Daniel Holbert ",
+    "commit_email": "dholbert@cs.stanford.edu",
+    "commit_message": "Bug 1337655 part 1: Move some prefixed gradient values to pref-controlled sections of property_database.js. r=emilio  Differential Revision: https://phabricator.services.mozilla.com/D13370",
+    "commit_date": "2018-11-29 18:27:28"
   },
   "16": {
-    "sha": "1f338cc3d9bbd955bc5b692cd09d13c4606a5cff",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1f338cc3d9bb",
-    "commiter_name": "Michael Ratcliffe ",
-    "commit_email": "mratcliffe@mozilla.com",
-    "commit_message": "Bug 1509457 - Flex line background pattern shouldn't be draw outside of flex lines r=gl  Differential Revision: https://phabricator.services.mozilla.com/D12749",
-    "commit_date": "2018-11-28 12:27:20"
+    "sha": "a0e0ae690520f845febd99f243e7910fda287aad",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a0e0ae690520",
+    "commiter_name": "Andreea Pavel ",
+    "commit_email": "apavel@mozilla.com",
+    "commit_message": "Backed out 3 changesets (bug 1509493) for failng win xpcshell at netwerk/test/unit/test_mozTXTToHTMLConv.js on a CLOSED TREE  Backed out changeset 05562b7d3eff (bug 1509493) Backed out changeset 6498765e1d65 (bug 1509493) Backed out changeset 5e4a5cf81c26 (bug 1509493)",
+    "commit_date": "2018-11-29 18:54:22"
   },
   "17": {
-    "sha": "6adfb885abd523d418b0919cabd04b4a22472a25",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6adfb885abd5",
-    "commiter_name": "Matthew Gaudet ",
-    "commit_email": "mgaudet@mozilla.com",
-    "commit_message": "Bug 1510018: Fix error in callVM comment r=nbp DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D13106",
-    "commit_date": "2018-11-28 10:28:57"
+    "sha": "daf1ffb72989d83be571e2bfb614dbee639915ce",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=daf1ffb72989",
+    "commiter_name": "Markus Stange ",
+    "commit_email": "mstange@themasta.com",
+    "commit_message": "Bug 1510058 - Work around mWidget becoming null during DidComposite, and add a diagnostic assert that will hopefully root out the culprit. r=jrmuizel  Differential Revision: https://phabricator.services.mozilla.com/D13309",
+    "commit_date": "2018-11-29 17:48:43"
   },
   "18": {
-    "sha": "de432b1f84fcb772f1432fba941246782f1ab1d0",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=de432b1f84fc",
-    "commiter_name": "Julian Descottes ",
-    "commit_email": "jdescottes@mozilla.com",
-    "commit_message": "Bug 1510182 - Load edit menu strings for each new toolbox window;r=Honza  Differential Revision: https://phabricator.services.mozilla.com/D13222",
-    "commit_date": "2018-11-28 11:43:34"
+    "sha": "daaecb62f373d33c60e6a77bcce01d27e19a3282",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=daaecb62f373",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Make MediaStreamGraph pull data per track instead of per stream. r=padenot  Differential Revision: https://phabricator.services.mozilla.com/D13086",
+    "commit_date": "2018-11-29 17:37:42"
   },
   "19": {
-    "sha": "66612048bbdcd6a587c480ede79a5cc53138db7e",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=66612048bbdc",
-    "commiter_name": "Jan-Erik Rediger ",
-    "commit_email": "jrediger@mozilla.com",
-    "commit_message": "Bug 1498163 - Migrate external callers to the new snapshot API r=chutten  Differential Revision: https://phabricator.services.mozilla.com/D12890",
-    "commit_date": "2018-11-28 09:36:03"
+    "sha": "311cee86bc66141b8f59be67cd203018f5799cae",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=311cee86bc66",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Remove early PullNewData return. r=padenot  Without knownTracksTime, StreamTracks::GetFirstTrackEnd() returns STREAM_TIME_MAX for an empty StreamTracks, so PullNewData() thinks no new data is needed.  This circumvents that by always checking whether tracks need data.  Differential Revision: https://phabricator.services.mozilla.com/D12928",
+    "commit_date": "2018-11-29 17:37:35"
   },
   "20": {
-    "sha": "ff378a3336a5704867e20ea5a27893e729aa5f9e",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ff378a3336a5",
-    "commiter_name": "Qinghao_Jack_Song ",
-    "commit_email": "songqing@msu.edu",
-    "commit_message": "Bug 1498448 - Migrate Certificate Manager Dialog to use fluent for localization r=Gijs,flod,zbraniecki  Differential Revision: https://phabricator.services.mozilla.com/D8499",
-    "commit_date": "2018-11-28 10:30:06"
+    "sha": "dfde7b2c53a63c1fbeb90f984f912c8fd73da623",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dfde7b2c53a6",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Clean up what appears to be wip-leftover gunk in DecodedStream. r=jya  Differential Revision: https://phabricator.services.mozilla.com/D12926",
+    "commit_date": "2018-11-29 17:37:21"
   }
 }
