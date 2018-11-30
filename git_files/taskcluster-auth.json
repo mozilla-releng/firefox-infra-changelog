@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 04:33:45.418887"
+    "lastChecked": "2018-11-28 23:44:18.757079"
   },
   "1": {
     "sha": "68bd2858a24e54fb079e76b8997b1ef19bfb5f88",
@@ -48,71 +48,6 @@
     "commit_date": "2018-11-26 18:10:46",
     "files_changed": [
       "src/exchanges.js"
-    ]
-  },
-  "5": {
-    "sha": "ee8964bac335b073f41210c3968e7f12a5ec5341",
-    "url": "https://github.com/taskcluster/taskcluster-auth/commit/ee8964bac335b073f41210c3968e7f12a5ec5341",
-    "commiter_name": "djmitche",
-    "commiter_email": "dustin@v.igoro.us",
-    "commit_message": "Bug 1508846 - upgrade tc-lib-api",
-    "commit_date": "2018-11-21 20:12:20",
-    "files_changed": [
-      "package.json",
-      "src/v1.js",
-      "test/helper.js",
-      "yarn.lock"
-    ]
-  },
-  "6": {
-    "sha": "d0bc2154649c75406ff56757d126127289ee4e01",
-    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d0bc2154649c75406ff56757d126127289ee4e01",
-    "commiter_name": "djmitche",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #181 from djmitche/bug1505405  Bug 1505405 - upgrade tc-lib-pulse",
-    "commit_date": "2018-11-21 20:32:22",
-    "files_changed": [
-      "package.json",
-      "src/exchanges.js",
-      "yarn.lock"
-    ]
-  },
-  "7": {
-    "sha": "33052858d025cf67f128dff7fd55231c323c95b1",
-    "url": "https://github.com/taskcluster/taskcluster-auth/commit/33052858d025cf67f128dff7fd55231c323c95b1",
-    "commiter_name": "djmitche",
-    "commiter_email": "dustin@v.igoro.us",
-    "commit_message": "Bug 1505405 - upgrade tc-lib-pulse  This only affects the output references format (for RFC 128)",
-    "commit_date": "2018-11-20 19:13:43",
-    "files_changed": [
-      "package.json",
-      "src/exchanges.js",
-      "yarn.lock"
-    ]
-  },
-  "8": {
-    "sha": "9ed089f62916fa2a54967379cfb5bc35156b8cea",
-    "url": "https://github.com/taskcluster/taskcluster-auth/commit/9ed089f62916fa2a54967379cfb5bc35156b8cea",
-    "commiter_name": "djmitche",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #180 from djmitche/bug1508395  Bug 1508395 - upgrade tc-lib-validate",
-    "commit_date": "2018-11-21 19:48:44",
-    "files_changed": [
-      "package.json",
-      "yarn.lock"
-    ]
-  },
-  "9": {
-    "sha": "052d624ea730559489f6984b8fb47b819e2ffe94",
-    "url": "https://github.com/taskcluster/taskcluster-auth/commit/052d624ea730559489f6984b8fb47b819e2ffe94",
-    "commiter_name": "djmitche",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #182 from djmitche/bug1508849  Bug 1508849 - implement   -scope protection differently",
-    "commit_date": "2018-11-21 19:48:33",
-    "files_changed": [
-      "schemas/constants.yml",
-      "src/v1.js",
-      "test/client_test.js"
     ]
   }
 }

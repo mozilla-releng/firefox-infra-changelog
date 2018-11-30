@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-11-28 04:33:36.528412"
+    "lastChecked": "2018-11-28 23:44:10.730911"
   },
   "1": {
     "sha": "c15e3121714bef54103d4d7b126b470054b79d39",
@@ -59,19 +59,6 @@
     "commit_date": "2018-11-22 15:06:53",
     "files_changed": [
       ".travis.yml"
-    ]
-  },
-  "6": {
-    "sha": "c76359c8895aa65fd3d0233039a242f9e088eed8",
-    "url": "https://github.com/mozilla-releng/signingscript/commit/c76359c8895aa65fd3d0233039a242f9e088eed8",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Fix broken tests (due to package upgrades) (#91)    Fix pytest 4 exception    Fix JSON decoder issue",
-    "commit_date": "2018-11-21 13:48:58",
-    "files_changed": [
-      "signingscript/sign.py",
-      "signingscript/test/test_script.py",
-      "signingscript/test/test_sign.py"
     ]
   }
 }
