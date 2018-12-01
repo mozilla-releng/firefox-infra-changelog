@@ -1,5 +1,28 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:00.467091"
+    "lastChecked": "2018-12-01 03:45:10.630238",
+    "last_two_Release": null
+  },
+  "1": {
+    "sha": "f8d9c823a7fc598ba5e6623dd1f4e65c1de38393",
+    "url": "https://github.com/mozilla-releng/ship-it/commit/f8d9c823a7fc598ba5e6623dd1f4e65c1de38393",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "Add comment about syncing v1 and v2 configs (#246)",
+    "commit_date": "2018-11-30 19:20:47",
+    "files_changed": [
+      "kickoff/config.py"
+    ]
+  },
+  "2": {
+    "sha": "f1a6646f20ef404c2667d3b714c3ef90b6719546",
+    "url": "https://github.com/mozilla-releng/ship-it/commit/f1a6646f20ef404c2667d3b714c3ef90b6719546",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "Bug 1511159 - Disable firefox releases (#245)",
+    "commit_date": "2018-11-30 17:07:43",
+    "files_changed": [
+      "kickoff/templates/submit_release.html"
+    ]
   }
 }

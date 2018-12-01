@@ -1,29 +1,19 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:48.246201"
-  },
-  "1": {
-    "sha": "c15e3121714bef54103d4d7b126b470054b79d39",
-    "url": "https://github.com/mozilla-releng/signingscript/commit/c15e3121714bef54103d4d7b126b470054b79d39",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "9.5.1",
-    "commit_date": "2018-11-23 12:48:01",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "2": {
-    "sha": "57943a9e24a28ecdfc74062a9adc523288d557e0",
-    "url": "https://github.com/mozilla-releng/signingscript/commit/57943a9e24a28ecdfc74062a9adc523288d557e0",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Fix SHA1 detection for APKs",
-    "commit_date": "2018-11-23 12:46:38",
-    "files_changed": [
-      "signingscript/test/test_sign.py",
-      "signingscript/utils.py"
-    ]
+    "lastChecked": "2018-12-01 03:45:59.817814",
+    "last_two_Release": {
+      "LatestRelease": {
+        "Version": "9.5.1",
+        "Sha": "c15e3121714bef54103d4d7b126b470054b79d39",
+        "Date": "Fri, 23 Nov 2018 13:14:04 GMT",
+        "Author": "JohanLorenzo"
+      },
+      "PreviousRelease": {
+        "Version": "9.5.0",
+        "Sha": "02621783091e6139d313b7ef27a33314f9e1b596",
+        "Date": "Thu, 22 Nov 2018 15:26:22 GMT",
+        "Author": "JohanLorenzo"
+      }
+    }
   }
 }

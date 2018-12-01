@@ -1,6 +1,20 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:33.555738"
+    "lastChecked": "2018-12-01 03:45:44.818451",
+    "last_two_Release": {
+      "LatestRelease": {
+        "Version": "0.9.2",
+        "Sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
+        "Date": "Thu, 08 Nov 2018 09:57:02 GMT",
+        "Author": "JohanLorenzo"
+      },
+      "PreviousRelease": {
+        "Version": "0.9.1",
+        "Sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
+        "Date": "Wed, 07 Nov 2018 19:08:58 GMT",
+        "Author": "JohanLorenzo"
+      }
+    }
   },
   "1": {
     "sha": "13ff33b29e775fc5e663141885ba3da97fe4eb3d",
@@ -95,45 +109,6 @@
     "files_changed": [
       "requirements-test.txt",
       "requirements-test.txt.in"
-    ]
-  },
-  "8": {
-    "sha": "7705f55cb67b3b4decb16bf67348650099e2dc2e",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/7705f55cb67b3b4decb16bf67348650099e2dc2e",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Improves async handling for backwards-compatibility and readability",
-    "commit_date": "2018-11-24 00:43:32",
-    "files_changed": [
-      "mozapkpublisher/get_apk.py",
-      "mozapkpublisher/test/common/test_utils.py",
-      "mozapkpublisher/test/integration/test_get_apk.py"
-    ]
-  },
-  "9": {
-    "sha": "881f4453aa477329a52bbd7ca4c0512c64b89c6b",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/881f4453aa477329a52bbd7ca4c0512c64b89c6b",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Use sha512, not sha256, for requirements hashes",
-    "commit_date": "2018-11-24 00:07:26",
-    "files_changed": [
-      "mozapkpublisher/test/common/test_utils.py",
-      "requirements-test.txt",
-      "requirements.txt"
-    ]
-  },
-  "10": {
-    "sha": "658e20bb4a9a587e112f2792494a00ae09399cb7",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/658e20bb4a9a587e112f2792494a00ae09399cb7",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Adds log when HTTP request to download file starts",
-    "commit_date": "2018-11-23 23:56:40",
-    "files_changed": [
-      "mozapkpublisher/common/utils.py",
-      "requirements.txt",
-      "requirements.txt.in"
     ]
   }
 }
