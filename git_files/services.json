@@ -1,8 +1,48 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:01.326900"
+    "lastChecked": "2018-12-01 03:45:12.512897",
+    "last_two_Release": {
+      "LatestRelease": {
+        "Version": "v51",
+        "Sha": "30b0a8e67c2240456cd7d932785b690991f498a2",
+        "Date": "Wed, 21 Nov 2018 18:05:34 GMT",
+        "Author": "rail"
+      },
+      "PreviousRelease": {
+        "Version": "v50",
+        "Sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+        "Date": "Fri, 02 Nov 2018 15:15:35 GMT",
+        "Author": "La0"
+      }
+    }
   },
   "1": {
+    "sha": "e278e5523f2e64ef97cdc5a99bc3201b2dc4e662",
+    "url": "https://github.com/mozilla/release-services/commit/e278e5523f2e64ef97cdc5a99bc3201b2dc4e662",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontend: enable release branches (#1718)    shipit/frontend: enable release branches      add release branches    remove unused `channel` config    add development.js for local development",
+    "commit_date": "2018-11-30 16:29:25",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/development.js",
+      "src/shipit/frontend/src/configs/master.js",
+      "src/shipit/frontend/src/configs/production.js",
+      "src/shipit/frontend/src/configs/staging.js",
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "2": {
+    "sha": "59e200570ff180de1d4e9eac3296a8a14affb833",
+    "url": "https://github.com/mozilla/release-services/commit/59e200570ff180de1d4e9eac3296a8a14affb833",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Fix #1701, clean up after 'before' analysis. (#1706)",
+    "commit_date": "2018-11-30 14:19:32",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/workflow.py"
+    ]
+  },
+  "3": {
     "sha": "ba32844533d6357b483e700351402adf9538916c",
     "url": "https://github.com/mozilla/release-services/commit/ba32844533d6357b483e700351402adf9538916c",
     "commiter_name": "rail",
@@ -14,7 +54,7 @@
       "src/shipit/frontend/src/views/NewRelease/index.js"
     ]
   },
-  "2": {
+  "4": {
     "sha": "83e1e3adfbdc1984c4b9b81e114f77d384150a38",
     "url": "https://github.com/mozilla/release-services/commit/83e1e3adfbdc1984c4b9b81e114f77d384150a38",
     "commiter_name": "marco-c",
@@ -78,7 +118,7 @@
       "src/bugbug/train/tests/test_bot.py"
     ]
   },
-  "3": {
+  "5": {
     "sha": "6fd51a1df35bc074290c496f742408a2c1d0c308",
     "url": "https://github.com/mozilla/release-services/commit/6fd51a1df35bc074290c496f742408a2c1d0c308",
     "commiter_name": "kevinluvian",
@@ -90,7 +130,7 @@
       "src/uplift/bot/tests/test_libmozdata.py"
     ]
   },
-  "4": {
+  "6": {
     "sha": "0d863a5b87fc68bec504e243ee120cb3da296edd",
     "url": "https://github.com/mozilla/release-services/commit/0d863a5b87fc68bec504e243ee120cb3da296edd",
     "commiter_name": "La0",
@@ -102,7 +142,7 @@
       "src/uplift/bot/requirements_frozen.txt"
     ]
   },
-  "5": {
+  "7": {
     "sha": "74243201c7440b99cde9e86ddc8f275bfd7b000d",
     "url": "https://github.com/mozilla/release-services/commit/74243201c7440b99cde9e86ddc8f275bfd7b000d",
     "commiter_name": "rail",
@@ -114,7 +154,7 @@
       "src/shipit/api/shipit_api/api.yml"
     ]
   },
-  "6": {
+  "8": {
     "sha": "43b84ba4807c81e1eb10891050e82ffa27c7bb1c",
     "url": "https://github.com/mozilla/release-services/commit/43b84ba4807c81e1eb10891050e82ffa27c7bb1c",
     "commiter_name": "La0",
@@ -125,7 +165,7 @@
       "src/staticanalysis/bot/static_analysis_bot/report/phabricator.py"
     ]
   },
-  "7": {
+  "9": {
     "sha": "bd3823b22243eb577300a8458e85a6dc75db10da",
     "url": "https://github.com/mozilla/release-services/commit/bd3823b22243eb577300a8458e85a6dc75db10da",
     "commiter_name": "kevinluvian",
@@ -136,7 +176,7 @@
       "lib/please_cli/please_cli/run.py"
     ]
   },
-  "8": {
+  "10": {
     "sha": "91a6a96247406ae77e74c54275797375dca2e2e3",
     "url": "https://github.com/mozilla/release-services/commit/91a6a96247406ae77e74c54275797375dca2e2e3",
     "commiter_name": "kevinluvian",
@@ -148,7 +188,7 @@
       "lib/please_cli/please_cli/config.py"
     ]
   },
-  "9": {
+  "11": {
     "sha": "39aab8d39fdef891bbe4f0c3352a3ceac6637eb9",
     "url": "https://github.com/mozilla/release-services/commit/39aab8d39fdef891bbe4f0c3352a3ceac6637eb9",
     "commiter_name": "rail",
@@ -159,7 +199,7 @@
       "src/shipit/frontend/src/views/ListReleases/index.js"
     ]
   },
-  "10": {
+  "12": {
     "sha": "0c2001d979bf9e46e633247a5f1ed3e10ac40ab8",
     "url": "https://github.com/mozilla/release-services/commit/0c2001d979bf9e46e633247a5f1ed3e10ac40ab8",
     "commiter_name": "garbas",
@@ -170,7 +210,7 @@
       "lib/please_cli/please_cli/config.py"
     ]
   },
-  "11": {
+  "13": {
     "sha": "c20f2b1bb975d23b7ef93581de39bfa28f9e60cf",
     "url": "https://github.com/mozilla/release-services/commit/c20f2b1bb975d23b7ef93581de39bfa28f9e60cf",
     "commiter_name": "garbas",
@@ -197,17 +237,6 @@
       "src/shipit/api/shipit_api/release.py",
       "src/shipit/api/shipit_api/tasks.py",
       "src/shipit/api/shipit_api/worker.py"
-    ]
-  },
-  "12": {
-    "sha": "6ca8f1735dbdf74f51dfae0795014eae039f79b4",
-    "url": "https://github.com/mozilla/release-services/commit/6ca8f1735dbdf74f51dfae0795014eae039f79b4",
-    "commiter_name": "jankeromnes",
-    "commiter_email": null,
-    "commit_message": "staticanalysis/bot: Fix #1699. (#1700)",
-    "commit_date": "2018-11-23 14:25:20",
-    "files_changed": [
-      "src/staticanalysis/bot/static_analysis_bot/workflow.py"
     ]
   }
 }

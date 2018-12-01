@@ -1,8 +1,53 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:52.361798"
+    "lastChecked": "2018-12-01 03:46:05.477607",
+    "last_two_Release": null
   },
   "1": {
+    "sha": "dbbcef916c53765e535d7cd9580367089cec3a17",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/dbbcef916c53765e535d7cd9580367089cec3a17",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #185 from djmitche/bug1509089  Bug 1509089 - remove LOCK_ROLES support",
+    "commit_date": "2018-11-30 02:24:43",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "2": {
+    "sha": "9babc5e6d48fc27013e58e8e67eb085bfaa6561e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/9babc5e6d48fc27013e58e8e67eb085bfaa6561e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #186 from djmitche/bug1509154  Bug 1509154 - await row removals",
+    "commit_date": "2018-11-30 02:24:34",
+    "files_changed": [
+      "test/helper.js"
+    ]
+  },
+  "3": {
+    "sha": "6375db436a015e587979ded3e94fe36cd90ec7c6",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/6375db436a015e587979ded3e94fe36cd90ec7c6",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1509154 - await row removals",
+    "commit_date": "2018-11-29 01:23:01",
+    "files_changed": [
+      "test/helper.js"
+    ]
+  },
+  "4": {
+    "sha": "b8c3dfe5dc51e448e3c4773b7bd386e8db37ffe9",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/b8c3dfe5dc51e448e3c4773b7bd386e8db37ffe9",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1509089 - remove LOCK_ROLES support  This was a big old hack meant to block changes to roles during the transition to storing roles in a blob.  It's not needed anymore.",
+    "commit_date": "2018-11-28 22:01:44",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "5": {
     "sha": "68bd2858a24e54fb079e76b8997b1ef19bfb5f88",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/68bd2858a24e54fb079e76b8997b1ef19bfb5f88",
     "commiter_name": "djmitche",
@@ -15,7 +60,7 @@
       "yarn.lock"
     ]
   },
-  "2": {
+  "6": {
     "sha": "e414f8fd6a2aae1a8dd5ec378bfac8771eac4063",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/e414f8fd6a2aae1a8dd5ec378bfac8771eac4063",
     "commiter_name": "djmitche",
@@ -26,7 +71,7 @@
       "src/exchanges.js"
     ]
   },
-  "3": {
+  "7": {
     "sha": "85c8a9e8ca9847fdaf85b61391d52046deca152f",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/85c8a9e8ca9847fdaf85b61391d52046deca152f",
     "commiter_name": "djmitche",
@@ -39,7 +84,7 @@
       "yarn.lock"
     ]
   },
-  "4": {
+  "8": {
     "sha": "c0f7725ddbe0816b5189aca59077831ae795f73d",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/c0f7725ddbe0816b5189aca59077831ae795f73d",
     "commiter_name": "djmitche",

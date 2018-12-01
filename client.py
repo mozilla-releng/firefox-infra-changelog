@@ -12,6 +12,32 @@ lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
+def get_version(repo_name, repo_team):
+    """
+    :param repo_name: repository name
+    :param repo_team: repository team
+    :return: a dictionary with information from the last two release version: latestRelease and previousRelease
+    """
+    repo_path = repo_team + repo_name
+    iteration = 0
+    for tags in git.get_repo(repo_path).get_tags():
+        if iteration == 0:
+            latestRelease = {'Version': tags.name,
+                    'Sha': tags.commit.sha,
+                    'Date': tags.commit.commit.last_modified,
+                    'Author': tags.commit.author.login
+                    }
+            iteration = 1
+        elif iteration == 1:
+            previousRelease = {'Version': tags.name,
+                    'Sha': tags.commit.sha,
+                    'Date': tags.commit.commit.last_modified,
+                    'Author': tags.commit.author.login
+                    }
+            return {'LatestRelease': latestRelease, 'PreviousRelease': previousRelease}
+
+
+
 def get_version_from_build_puppet(version_path, repo_name):
     """
     :param: version_path: Path to the requierments.txt where the version number is stored
@@ -98,12 +124,13 @@ def create_md_table(repository_name, path_to_files):
         print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def filter_git_commit_data(repository_name, repository_team):
+def filter_git_commit_data(repository_name, repository_team, repository_version):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
     :param repository_team:
     :param repository_name:
+    :param repository_version
     :return: Filtered json data
     TODO: please add the exception blocks since the script fails when it can't pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
@@ -112,10 +139,10 @@ def filter_git_commit_data(repository_name, repository_team):
     repo_dict = {}
     number = 0
     repository_path = repository_team + repository_name
-    print("Working on repo:", repository_name)
-    repo_dict.update({number: {"lastChecked": str(datetime.utcnow())}})
+    print("Working on repo: {}, Latest release: {}".format(repository_name, repository_version))
+    repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
+                               "last_two_Release": repository_version}})
     number += 1
-
     for commit in git.get_repo(repository_path).get_commits(since=lastWeek):
         each_commit = {}
         author_info = {}
@@ -217,12 +244,13 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
+        repository_version = get_version(repository_name, repository_team)
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
             version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
         except KeyError:
             pass
-        filter_git_commit_data(repository_name, repository_team)
+        filter_git_commit_data(repository_name, repository_team, repository_version)
         create_md_table(repository_name, "git_files")
 
 
