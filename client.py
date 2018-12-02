@@ -1,14 +1,13 @@
 import os
 from github import Github  # pip3 install PyGitHub
 from datetime import datetime, timedelta
-import datetime
 import json
 import re
 import requests
 from os import listdir
 from os.path import isfile, join
 
-lastWeek = datetime.datetime.now() - timedelta(days=7)
+lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -159,19 +158,15 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
     number = 0
     repository_path = repository_team + repository_name
     print("Working on repo: {}, Latest release: {}".format(repository_name, repository_version))
-    repo_dict.update({number: {"lastChecked": str(datetime.datetime.utcnow()),
+    repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
                                "last_two_Release": repository_version}})
 
     try:
-        #x = type(repository_version['LatestRelease']['Date'])
-        x = datetime.datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
-        #y = repository_version['PreviousRelease']['Date']
-        #h = datetime.strptime(x, '%Y-%m-%d %H:%M:%S')
-        #c = datetime.strptime(y, '%Y-%m-%d %H:%M:%S')
-        y = datetime.datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
+        x = datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
+        y = datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
         z = x - y
     except TypeError:
-        z = datetime.datetime.now() - timedelta(days=7)
+        z = datetime.now() - timedelta(days=7)
     number += 1
     for commit in git.get_repo(repository_path).get_commits(since=z):
         each_commit = {}
