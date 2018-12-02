@@ -1,11 +1,12 @@
-import os
-from github import Github  # pip3 install PyGitHub
-from datetime import datetime, timedelta
 import json
+import os
 import re
-import requests
+from datetime import datetime, timedelta
 from os import listdir
 from os.path import isfile, join
+
+import requests
+from github import Github
 
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -27,17 +28,17 @@ def get_version(repo_name, repo_team):
         author = tags.commit.author.login
         if iteration == 0:
             latestrelease = {'Version': version,
-                    'Sha': sha,
-                    'Date': date,
-                    'Author': author
-                    }
+                             'Sha': sha,
+                             'Date': date,
+                             'Author': author
+                             }
             iteration = 1
         elif iteration == 1:
             previousrelease = {'Version': version,
-                    'Sha': sha,
-                    'Date': date,
-                    'Author':author
-                    }
+                               'Sha': sha,
+                               'Date': date,
+                               'Author': author
+                               }
             return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
 
 
@@ -108,7 +109,7 @@ def create_md_table(repository_name, path_to_files):
             commit_number = commit_number_list[-1]
             try:
                 commit_author = data[key]["commiter_name"]
-                commit_author = re.sub("\u0131", "i", commit_author)  #this is temporary
+                commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
                 date = data[key]["commit_date"]
                 message = data[key]["commit_message"]
                 message = re.sub("\|", "\|", message)
@@ -270,7 +271,7 @@ def create_files_for_git(repositories_holder):
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
         repository_version = get_version(repository_name, repository_team)
-        #lasttime = since(repository_name, "git_files")
+        # lasttime = since(repository_name, "git_files")
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
             version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
@@ -349,7 +350,8 @@ def generate_main_md_table(path_to_files):
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if isfile(join(dir_path + "/{}".format(path_to_files), f))]
+    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
+                  isfile(join(dir_path + "/{}".format(path_to_files), f))]
 
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]
