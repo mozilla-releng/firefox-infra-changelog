@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 05:00:44.070034",
+    "lastChecked": "2018-12-02 17:57:18.716830",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "3.0.0",
@@ -121,6 +121,53 @@
     "files_changed": [
       ".travis.yml",
       "setup.py"
+    ]
+  },
+  "8": {
+    "sha": "8522dd18645e6809ecf4a1802b6e383ac4bfded5",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Add SCOPES.md (#12)",
+    "commit_date": "2018-07-12 15:28:23",
+    "files_changed": [
+      "SCOPES.md"
+    ]
+  },
+  "9": {
+    "sha": "e2051ad7d5e30cbabbfdd953894abfc5518e4e37",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "2.1.1",
+    "commit_date": "2018-07-02 18:52:51",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "10": {
+    "sha": "baefe18bdd070d3f7d6eafb08be0f1b25528be57",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Fix timings comparison in shipitscript (#11)",
+    "commit_date": "2018-07-02 18:49:00",
+    "files_changed": [
+      "shipitscript/test/test_utils.py",
+      "shipitscript/utils.py"
+    ]
+  },
+  "11": {
+    "sha": "890bb8af933befe2c7daad69a2074c066b6d031a",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "2.1.0",
+    "commit_date": "2018-07-02 15:03:27",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
     ]
   }
 }

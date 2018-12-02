@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 05:02:03.395759"
+    "lastChecked": "2018-12-02 17:58:17.925386"
   },
   "1": {
-    "sha": "6060cddc780cb1e461841c1ad5ee363c6cd1470f",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6060cddc780c",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "Bug 1511652 - Override the :-moz-focusring outline on Ctrl+Tab previews on Windows. r=bgrins  Differential Revision: https://phabricator.services.mozilla.com/D13622",
-    "commit_date": "2018-12-01 22:28:44"
+    "sha": "e990a032ac3cf6c071a79014d4b412bcd2007af1",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e990a032ac3c",
+    "commiter_name": "Ben Armstrong ",
+    "commit_email": "ben.armstrong22@gmail.com",
+    "commit_message": "Bug 1503760: Changed browser.downloads.search({}) to return 0 byte downloads. r=aswan  Updated the totalBytesGreater property in browser.downloads.search({}) to default to -1 so files with a byte size of 0 will be returned.  Differential Revision: https://phabricator.services.mozilla.com/D12344",
+    "commit_date": "2018-11-26 22:54:49"
   },
   "2": {
-    "sha": "3be4f687430ae11fe0131245a09f71f8bd879108",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3be4f687430a",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511664 - Update webrender to commit 6ca634197cfe26738194f87042020fe838c0047a (WR PR #3379). r=kats  https://github.com/servo/webrender/pull/3379  Differential Revision: https://phabricator.services.mozilla.com/D13630",
-    "commit_date": "2018-12-02 00:43:40"
+    "sha": "dcc5dcceb8661d9c74ba44dc2b2280c3b37cf467",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dcc5dcceb866",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511725 - Update string-cache-codegen.  Generated with cargo update -p string_cache_codegen and ./mach vendor rust.  Differential Revision: https://phabricator.services.mozilla.com/D13649",
+    "commit_date": "2018-12-02 17:34:27"
   },
   "3": {
-    "sha": "1ff8628621d03f4dc89d8b098208bbf2ecc9e479",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1ff8628621d0",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511663 - Update webrender to commit 92235d1fc4ff4c4fb4e1ed709eb3136e96c786b5 (WR PR #3378). r=kats  https://github.com/servo/webrender/pull/3378  Differential Revision: https://phabricator.services.mozilla.com/D13629",
-    "commit_date": "2018-12-02 00:41:55"
+    "sha": "e65a1d1d653cadb25091dac2ec3758b5dba28eb3",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e65a1d1d653c",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "Bug 1504985 - Remove dependency on the textoverflow attribute from browser_UrlbarInput_tooltip.js. r=mak  The textoverflow attribute is set asynchronously thanks to bug 1419391, making this test more complicated than necessary. We can use the private _overflowing (UrlbarInput) and _inOverflow (urlbarBindings.xml) flags instead.  Differential Revision: https://phabricator.services.mozilla.com/D13639",
+    "commit_date": "2018-12-02 14:20:33"
   },
   "4": {
-    "sha": "ebc8ca6c03b47d2a9b560d764bac2bfbca941ba1",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ebc8ca6c03b4",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511662 - Update webrender to commit 0f2403d0813b5dd2113f61cc1548f4a8562881a2 (WR PR #3376). r=kats  https://github.com/servo/webrender/pull/3376  Differential Revision: https://phabricator.services.mozilla.com/D13628",
-    "commit_date": "2018-12-02 00:39:11"
+    "sha": "7f9b27677bc015b40c879b7889be44c6d0878f3b",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7f9b27677bc0",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "No bug - remove an unused struct.  Differential Revision: https://phabricator.services.mozilla.com/D13641",
+    "commit_date": "2018-12-02 14:34:28"
   },
   "5": {
-    "sha": "df8c8aa616045a2076d1f0c8b1ebedf322aec212",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=df8c8aa61604",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511661 - Update webrender to commit 1619d945e853db14a9d62ed75dce7216ff3cdbc2 (WR PR #3366). r=kats  https://github.com/servo/webrender/pull/3366  Differential Revision: https://phabricator.services.mozilla.com/D13627",
-    "commit_date": "2018-12-02 00:37:23"
-  },
-  "6": {
-    "sha": "be65d09ef059e78daf60df9737503cfcb6dc8a86",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=be65d09ef059",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511409 - Update webrender to commit dbaa10971f08f964120ba339f5b0ab3e7ace77d6 (WR PR #3374). r=kats  https://github.com/servo/webrender/pull/3374  Differential Revision: https://phabricator.services.mozilla.com/D13626",
-    "commit_date": "2018-12-02 00:35:50"
-  },
-  "7": {
-    "sha": "6cb8a465440afd06dc059f209aba683b2e2c0cb5",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6cb8a465440a",
+    "sha": "e7f045faf96d4d00a6caa058c5a26fd88946393a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e7f045faf96d",
     "commiter_name": "Johann Hofmann ",
     "commit_email": "jhofmann@mozilla.com",
     "commit_message": "Bug 1501992 - Add tests for the cookies subpanel in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13146",
-    "commit_date": "2018-12-01 23:25:44"
+    "commit_date": "2018-12-02 12:47:43"
   },
-  "8": {
-    "sha": "b54b117c15e9abe79342925671ff13a790c1c454",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b54b117c15e9",
+  "6": {
+    "sha": "fb6917f64dcf45c42d0e14923fe5d24c98f4a93a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fb6917f64dcf",
     "commiter_name": "Johann Hofmann ",
     "commit_email": "jhofmann@mozilla.com",
     "commit_message": "Bug 1501992 - Add a sub-panel for Cookies in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D12596",
-    "commit_date": "2018-12-01 23:25:38"
+    "commit_date": "2018-12-02 12:47:36"
+  },
+  "7": {
+    "sha": "324e00e894edd403d6a1a5ab439641b42807707d",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=324e00e894ed",
+    "commiter_name": "Ciure Andrei ",
+    "commit_email": "aciure@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland.  a=merge CLOSED TREE",
+    "commit_date": "2018-12-02 11:55:21"
+  },
+  "8": {
+    "sha": "08e30fbc9ab1de03a15011808497ac373683ef25",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=08e30fbc9ab1",
+    "commiter_name": "Ciure Andrei ",
+    "commit_email": "aciure@mozilla.com",
+    "commit_message": "Backed out 2 changesets (bug 1501992) for browser_trackingUI_state.js perma fails a=backout  Backed out changeset 6cb8a465440a (bug 1501992) Backed out changeset b54b117c15e9 (bug 1501992)",
+    "commit_date": "2018-12-02 11:53:33"
   },
   "9": {
-    "sha": "3c08dc2c9eaa6a4892203375fddc160cd9594a52",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3c08dc2c9eaa",
-    "commiter_name": "Dorel Luca ",
-    "commit_email": "dluca@mozilla.com",
-    "commit_message": "Backed out 2 changesets (bug 1506987, bug 1507200) for browser-chrome failure in toolkit/mozapps/extensions/test/browser/browser_theme_previews.js  Backed out changeset 0b72233729d8 (bug 1507200) Backed out changeset fe515e34cc3f (bug 1506987)",
-    "commit_date": "2018-12-01 22:16:20"
+    "sha": "f23d8b5068f7905a1f708c7aa1037ccb75943610",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f23d8b5068f7",
+    "commiter_name": "Marco Bonardo ",
+    "commit_email": "mbonardo@mozilla.com",
+    "commit_message": "Bug 1495183 - Create a first muxer implementation. r=adw  Differential Revision: https://phabricator.services.mozilla.com/D13552",
+    "commit_date": "2018-12-02 09:58:15"
   },
   "10": {
-    "sha": "a2d943e9f9aa4f27bb879b4b1fc065c0189bba98",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a2d943e9f9aa",
-    "commiter_name": "Alex Chronopoulos ",
-    "commit_email": "achronop@gmail.com",
-    "commit_message": "Bug 1509327 - Use timing and color information from decoded picture in dav1d wrapper. r=jya  Latest dav1d version supports to store the timing information in undecoded frame and restore it later from decoded picture. This can provide more accurate timing especially during drain. In additionto that, colorspace information is set according to the size of the image. Finally this patch addresses some style comments.  Differential Revision: https://phabricator.services.mozilla.com/D13428",
-    "commit_date": "2018-12-01 22:03:29"
+    "sha": "8e021c409c6a16d9bab9713d20e30fa05c5b8365",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8e021c409c6a",
+    "commiter_name": "Ciure Andrei ",
+    "commit_email": "aciure@mozilla.com",
+    "commit_message": "Merge inbound to mozilla-central. a=merge",
+    "commit_date": "2018-12-02 09:46:09"
   },
   "11": {
-    "sha": "6facccbbd28cafc05f7e8615b7367f0cb3b08449",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6facccbbd28c",
-    "commiter_name": "Alex Chronopoulos ",
-    "commit_email": "achronop@gmail.com",
-    "commit_message": "Bug 1509327 - Update libdav1d build file after import. r=TD-Linux  Differential Revision: https://phabricator.services.mozilla.com/D13427",
-    "commit_date": "2018-11-30 19:07:07"
+    "sha": "0ad042243cf0ea701257465d72e780d4dbfc0225",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ad042243cf0",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 1505911 - Follow-up: fix error in part 1. r=valentin",
+    "commit_date": "2018-12-02 06:13:50"
   },
   "12": {
-    "sha": "2094783e32887a88fbffb420ae5dabad37ed5f2e",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2094783e3288",
-    "commiter_name": "Alex Chronopoulos ",
-    "commit_email": "achronop@gmail.com",
-    "commit_message": "Bug 1509327 - Update dav1d from upstream to 36b807a. r=TD-Linux  Differential Revision: https://phabricator.services.mozilla.com/D13426",
-    "commit_date": "2018-12-01 21:59:40"
+    "sha": "c120724df998b9590951b54fad6049595ecda0cb",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c120724df998",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1511567 - Add UI transitions. r=bhackett  Tags:  Bug #: 1511567  Differential Revision: https://phabricator.services.mozilla.com/D13605 ",
+    "commit_date": "2018-12-01 00:39:31"
   },
   "13": {
-    "sha": "543776f08dbb459ecf33bff0d0714926cbb20b8b",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=543776f08dbb",
-    "commiter_name": "Joel Maher ",
-    "commit_email": "jmaher@mozilla.com",
-    "commit_message": "Bug 1511411 - Add displaylist_mutate to raptor tests running on windows10-64-ux opt. r=rwood  Add displaylist_mutate and related tests to run on low end hardware  Differential Revision: https://phabricator.services.mozilla.com/D13598",
-    "commit_date": "2018-12-01 15:27:06"
+    "sha": "0dc7783a6cd9f60f7ac9757e62037a9c1fbb0839",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0dc7783a6cd9",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1511422 - The console separator should be below the message when we're paused after the log. r=bhackett  Tags:  Differential Revision: https://phabricator.services.mozilla.com/D13581 ",
+    "commit_date": "2018-11-30 19:22:20"
   },
   "14": {
-    "sha": "0b72233729d8b5562eeaaab6031a249bf90a5a8c",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0b72233729d8",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1507200 - Sort themes with previews higher in about:addons r=aswan  Differential Revision: https://phabricator.services.mozilla.com/D12120",
-    "commit_date": "2018-12-01 03:55:36"
+    "sha": "0d11eb20a6af24bb4d332cbbc7bacc4d6cebcc36",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0d11eb20a6af",
+    "commiter_name": "Lars T Hansen ",
+    "commit_email": "lhansen@mozilla.com",
+    "commit_message": "Bug 1508665 - Split BaseStackFrame to simplify it.  r=bbouvier  BaseStackFrame is split into two parts:  - BaseStackFrameAllocator is now responsible for dealing with stack   allocation and deallocation in all complex cases (which means   everything except for the simple native masm.Push and masm.Pop   cases).  - What's left of BaseStackFrame is then a simple-to-use API for the   rest of the compiler that maintains and checks invariants and does   various kinds of bookkeeping and hides the remaining differences   between the chunky and non-chunky stacks.  The latter class inherits from the former because this is simplest (and it's easy to accomplish with 'protected').  There are a couple of minor functional changes here:  - The variable maxFramePushed_ now actually records the maximum value   of masm.framePushed, not the maximum stack height.  The new behavior   is correct even with the chunky stack, since this value is used for   stack overflow checking.  There should however be no observable   changes because of this.  (Trivial reason: only ARM64 is affected   and we have no ARM64 products.  Deeper reason: stacks are aligned at   coarser boundaries than our stack chunks, and have lots of headroom.)  - Member variables tracking the stack height are now set up in a new   method, onFixedStackAllocated(), which is called after   beginFunction() has allocated the space for the Header and Local   areas of the frame.  The old behavior was correct but very obscure.   The new code is easier to understand.",
+    "commit_date": "2018-11-26 14:15:59"
   },
   "15": {
-    "sha": "fe515e34cc3f080252720e20049dab49815dc194",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fe515e34cc3f",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1506987 - Include preview for theme in AOM if it is added while open r=aswan  Differential Revision: https://phabricator.services.mozilla.com/D12593",
-    "commit_date": "2018-12-01 03:55:25"
+    "sha": "01648611837dfa623fa2b3f112ffd1baa8a0a746",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=01648611837d",
+    "commiter_name": "Lars T Hansen ",
+    "commit_email": "lhansen@mozilla.com",
+    "commit_message": "Bug 1510193 - don't use TypedObjects if not available and necessary. r=jorendorff  We rely on TypedObjects for the experimental wasm GC feature, but that feature is Nightly-only and we should not be touching TypedObjects if we don't need them.  Furthermore we should just fail to compile outright if wasm GC is enabled but TypedObjects are not.",
+    "commit_date": "2018-11-29 09:10:02"
   },
   "16": {
-    "sha": "caef08c907dd6519f2b918cfcfb11a02e3b5cd18",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=caef08c907dd",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1510017 - Ensure label is reset when adding browser language r=jaws  Differential Revision: https://phabricator.services.mozilla.com/D12987",
-    "commit_date": "2018-11-29 18:39:02"
+    "sha": "7a7d0cec00a317f56a756ac1357ab3fed3af9bb1",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7a7d0cec00a3",
+    "commiter_name": "Gabriel Luong ",
+    "commit_email": "gabriel.luong@gmail.com",
+    "commit_message": "Bug 1509459 - Get the flexbox highlighter state if the highlighter is ready in the flexbox panel. r=pbro",
+    "commit_date": "2018-11-28 16:39:40"
   },
   "17": {
-    "sha": "dddf315cfaa2d25019b82b8dcfebe88850ed27be",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dddf315cfaa2",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1504868 - Add missing padding back to browser languages dialog r=jaws  Differential Revision: https://phabricator.services.mozilla.com/D12986",
-    "commit_date": "2018-11-29 18:39:00"
+    "sha": "f2833f7caddf3b3ced10d94175c4774dc46db7be",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f2833f7caddf",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1506310: Fix typo in determining whether builds under test need signed extenions by release type; r=me",
+    "commit_date": "2018-12-02 01:48:20"
   },
   "18": {
-    "sha": "5f0040d4be16cc77f49209551a4f7d03697a98fc",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5f0040d4be16",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1506835 - Resize browser languages dialog when error appears r=jaws       Differential Revision: https://phabricator.services.mozilla.com/D12985",
-    "commit_date": "2018-11-30 19:37:41"
+    "sha": "7c3a7a19c646122770b6c332601badb2bc65ccc8",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7c3a7a19c646",
+    "commiter_name": "Narcis Beleuzu ",
+    "commit_email": "nbeleuzu@mozilla.com",
+    "commit_message": "Backed out changeset b9eb6110ecfc (bug 1511422) for dt failures on /browser_browser_toolbox_debugger.js",
+    "commit_date": "2018-12-01 22:17:13"
   },
   "19": {
-    "sha": "d244292c2a127fafda775e1db5e0a8e4decea5ff",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d244292c2a12",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1510490 - Make tup build typenum. r=frodynj  Differential Revision: https://phabricator.services.mozilla.com//D13619 ",
-    "commit_date": "2018-12-01 18:46:08"
+    "sha": "3a943b45881a477872f02fe7a601e838cb233f42",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3a943b45881a",
+    "commiter_name": "Daniel Varga ",
+    "commit_email": "dvarga@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound. a=merge",
+    "commit_date": "2018-12-01 21:42:02"
   },
   "20": {
-    "sha": "e52996e78762b9363a86c81a0c0b4d167c17cbd1",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e52996e78762",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1510490 - Follow-up to fix Btup build bustage. r=bholley  Differential Revision: https://phabricator.services.mozilla.com/D13604 ",
-    "commit_date": "2018-12-01 04:39:39"
+    "sha": "427accad16ae157eebbe24f95f64812ada65304a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=427accad16ae",
+    "commiter_name": "Jan Andre Ikenmeyer [:darkspirit] ",
+    "commit_email": "jan@ikenmeyer.eu",
+    "commit_message": "Bug 1477037 - Add NULL check on aArgv. r=froydnj",
+    "commit_date": "2018-12-01 01:08:42"
   }
 }
