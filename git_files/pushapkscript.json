@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 05:01:44.333633",
+    "lastChecked": "2018-12-02 17:57:56.657745",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "0.9.0",
@@ -17,18 +17,6 @@
     }
   },
   "1": {
-    "sha": "a577909566c8e3eb688570a502e11b2668220386",
-    "url": "https://github.com/mozilla-releng/pushapkscript/commit/a577909566c8e3eb688570a502e11b2668220386",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Fix deprecation warnings (#53)",
-    "commit_date": "2018-11-27 09:12:10",
-    "files_changed": [
-      "pushapkscript/googleplay.py",
-      "pushapkscript/script.py"
-    ]
-  },
-  "2": {
     "sha": "58b5746152105b09751139192ac63f89486b664b",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/58b5746152105b09751139192ac63f89486b664b",
     "commiter_name": "JohanLorenzo",
@@ -40,7 +28,7 @@
       "version.txt"
     ]
   },
-  "3": {
+  "2": {
     "sha": "c783b80979156bf3cb2c78369dce300e2f76e5b6",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/c783b80979156bf3cb2c78369dce300e2f76e5b6",
     "commiter_name": "JohanLorenzo",
@@ -56,7 +44,7 @@
       "pushapkscript/test/test_script.py"
     ]
   },
-  "4": {
+  "3": {
     "sha": "654ff459c35c9100cb9da8176c0e431a459e57d8",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/654ff459c35c9100cb9da8176c0e431a459e57d8",
     "commiter_name": "mitchhentges",
@@ -67,7 +55,7 @@
       "examples/task.example.json"
     ]
   },
-  "5": {
+  "4": {
     "sha": "0fa1fec2424cba14dfa2c22ab42e44e937ffedc4",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/0fa1fec2424cba14dfa2c22ab42e44e937ffedc4",
     "commiter_name": "mitchhentges",
@@ -78,7 +66,7 @@
       ".travis.yml"
     ]
   },
-  "6": {
+  "5": {
     "sha": "2e8cc150527906f7d9bd23658c96f5d4221fdcf9",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/2e8cc150527906f7d9bd23658c96f5d4221fdcf9",
     "commiter_name": "mitchhentges",
@@ -89,7 +77,7 @@
       ".travis.yml"
     ]
   },
-  "7": {
+  "6": {
     "sha": "91aaa35f170f6f263b2ebb1dca6c6f44ef6ea8bc",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/91aaa35f170f6f263b2ebb1dca6c6f44ef6ea8bc",
     "commiter_name": "JohanLorenzo",
@@ -103,7 +91,7 @@
       "setup.py"
     ]
   },
-  "8": {
+  "7": {
     "sha": "bc2d1c8eef6fffdf0f4b55be54f636c2feedd3bc",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/bc2d1c8eef6fffdf0f4b55be54f636c2feedd3bc",
     "commiter_name": "JohanLorenzo",
@@ -114,7 +102,7 @@
       ".travis.yml"
     ]
   },
-  "9": {
+  "8": {
     "sha": "8eeb5523eae0f228fb54300cf25549e844449658",
     "url": "https://github.com/mozilla-releng/pushapkscript/commit/8eeb5523eae0f228fb54300cf25549e844449658",
     "commiter_name": "escapewindow",
@@ -124,6 +112,18 @@
     "files_changed": [
       ".travis.yml",
       "setup.py"
+    ]
+  },
+  "9": {
+    "sha": "f49f468012854f47ade5b01dac7bc0663442b153",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/f49f468012854f47ade5b01dac7bc0663442b153",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "0.8.0",
+    "commit_date": "2018-06-22 12:00:20",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
     ]
   }
 }

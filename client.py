@@ -27,17 +27,17 @@ def get_version(repo_name, repo_team):
         date = tags.commit.commit.last_modified
         author = tags.commit.author.login
         if iteration == 0:
-            latestrelease = {'Version': version,
-                             'Sha': sha,
-                             'Date': date,
-                             'Author': author
+            latestrelease = {'version': version,
+                             'sha': sha,
+                             'date': date,
+                             'author': author
                              }
             iteration = 1
         elif iteration == 1:
-            previousrelease = {'Version': version,
-                               'Sha': sha,
-                               'Date': date,
-                               'Author': author
+            previousrelease = {'version': version,
+                               'sha': sha,
+                               'date': date,
+                               'author': author
                                }
             return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
 
@@ -145,40 +145,40 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
     repository_path = repository_team + repository_name
     print("Working on repo: {}, Latest release: {}".format(repository_name, repository_version))
     repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
-                               "last_two_Release": repository_version}})
+                               "last_two_releases": repository_version}})
 
     try:
-        latestRelease = datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
-        previousRelease = datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
-        timeDifference = latestRelease - previousRelease
-        lastCheck = datetime.now() - timeDifference
+        latestRelease = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        previousRelease = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
     except TypeError:
-        lastCheck = datetime.now() - timedelta(days=7)
+        previousRelease = lastWeek
+        latestRelease = datetime.now()
     number += 1
-    for commit in git.get_repo(repository_path).get_commits(since=lastCheck):
-        each_commit = {}
-        author_info = {}
-        files_changed = []
-        commit_sha = commit.sha
-        commiter_name = commit.author.login
-        commiter_email = commit.committer.email
-        commit_message = commit.commit.message
-        commit_html_url = commit.html_url
-        for entry in commit.files:
-            files_changed.append(entry.filename)
-        commit_date = str(commit.commit.author.date)
-        message = re.sub("[*\n\r]", " ", commit_message)
-        author_info.update({"sha": commit_sha,
-                            "url": commit_html_url,
-                            "commiter_name": commiter_name,
-                            "commiter_email": commiter_email,
-                            "commit_message": message,
-                            "commit_date": commit_date,
-                            "files_changed": files_changed
-                            })
-        each_commit.update({int(number): author_info})
-        number += 1
-        repo_dict.update(each_commit)
+    for commit in git.get_repo(repository_path).get_commits(since=previousRelease):
+        commit_date = commit.commit.author.date
+        if commit_date <= latestRelease:
+            each_commit = {}
+            author_info = {}
+            files_changed = []
+            commit_sha = commit.sha
+            commiter_name = commit.author.login
+            commiter_email = commit.committer.email
+            commit_message = commit.commit.message
+            commit_html_url = commit.html_url
+            for entry in commit.files:
+                files_changed.append(entry.filename)
+            message = re.sub("[*\n\r]", " ", commit_message)
+            author_info.update({"sha": commit_sha,
+                                "url": commit_html_url,
+                                "commiter_name": commiter_name,
+                                "commiter_email": commiter_email,
+                                "commit_message": message,
+                                "commit_date": str(commit_date),
+                                "files_changed": files_changed
+                                })
+            each_commit.update({int(number): author_info})
+            number += 1
+            repo_dict.update(each_commit)
 
     git_json_filename = "{}.json".format(repository_name)
     json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
@@ -357,4 +357,4 @@ if __name__ == "__main__":
     create_files_for_hg(repositories)
     clear_file("main_md_table.md")
     generate_main_md_table("hg_files")
-    generate_main_md_table("git_files")
+generate_main_md_table("git_files")

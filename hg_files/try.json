@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 05:02:01.653816"
+    "lastChecked": "2018-12-02 17:58:16.292101"
   },
   "1": {
-    "sha": "294a10637b37481327dbda5984e49f148bfea52b",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=294a10637b37",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Fuzzy query=android web-  Pushed via `mach try again`",
-    "commit_date": "2018-12-02 04:50:10"
+    "sha": "400e741d50311cf7bc765c81c76db61975cd54ee",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=400e741d5031",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Fuzzy query=analysis  Pushed via `mach try fuzzy`",
+    "commit_date": "2018-12-02 17:50:30"
   },
   "2": {
-    "sha": "7fa9bb879070c79ca4f375a8255a50ae7e470847",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7fa9bb879070",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "[mq]: geckoview-wpt",
-    "commit_date": "2018-12-02 04:50:00"
+    "sha": "d5c03b3dc89b80868e4dc2a3e32f89000bcf3eb1",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d5c03b3dc89b",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Disregard VideoChunk durations in VideoTrackEncoder. r?padenot",
+    "commit_date": "2018-11-30 22:01:14"
   },
   "3": {
-    "sha": "2620dbc435bb7ecbf75f46b6173bb838cc7cb052",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=2620dbc435bb",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-02 04:38:35"
+    "sha": "0463742d129f9db8c4b05fd08b861df8ed7d5dc4",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0463742d129f",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Route MediaEncoder::Suspend/Resume through the graph thread for less drift. r?padenot",
+    "commit_date": "2018-11-30 21:59:47"
   },
   "4": {
-    "sha": "cd6998ea14fbb3d220ee4bfa30a94b1f656dd58f",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=cd6998ea14fb",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511673 - Disable highlighting debugger lines when in replay mode. r=dwalsh  Tags: #secure-revision  Bug #: 1511673  Differential Revision: https://phabricator.services.mozilla.com/D13637 ",
-    "commit_date": "2018-12-02 04:35:52"
+    "sha": "3e99861ff96a24c990941d3bc0a1a85bca8dba0f",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=3e99861ff96a",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Remove support for direct audio listeners from AudioTrackEncoder. r?padenot",
+    "commit_date": "2018-11-30 21:55:30"
   },
   "5": {
-    "sha": "c120724df998b9590951b54fad6049595ecda0cb",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c120724df998",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511567 - Add UI transitions. r=bhackett  Tags:  Bug #: 1511567  Differential Revision: https://phabricator.services.mozilla.com/D13605 ",
-    "commit_date": "2018-12-01 00:39:31"
+    "sha": "1bc9c7cb36a445b81e3d4249b5de3da79d794db9",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=1bc9c7cb36a4",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Automatically progress a pushed video track to avoid blocking its stream. r?padenot",
+    "commit_date": "2018-11-30 15:44:54"
   },
   "6": {
-    "sha": "0dc7783a6cd9f60f7ac9757e62037a9c1fbb0839",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0dc7783a6cd9",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511422 - The console separator should be below the message when we're paused after the log. r=bhackett  Tags:  Differential Revision: https://phabricator.services.mozilla.com/D13581 ",
-    "commit_date": "2018-11-30 19:22:20"
+    "sha": "c3d252d1d544be7d5899671b4d7207b2a286b85b",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c3d252d1d544",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Add drift compensation to MediaEncoder. r?padenot",
+    "commit_date": "2018-11-29 20:51:51"
   },
   "7": {
-    "sha": "0d11eb20a6af24bb4d332cbbc7bacc4d6cebcc36",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0d11eb20a6af",
-    "commiter_name": "Lars T Hansen ",
-    "commit_email": "lhansen@mozilla.com",
-    "commit_message": "Bug 1508665 - Split BaseStackFrame to simplify it.  r=bbouvier  BaseStackFrame is split into two parts:  - BaseStackFrameAllocator is now responsible for dealing with stack   allocation and deallocation in all complex cases (which means   everything except for the simple native masm.Push and masm.Pop   cases).  - What's left of BaseStackFrame is then a simple-to-use API for the   rest of the compiler that maintains and checks invariants and does   various kinds of bookkeeping and hides the remaining differences   between the chunky and non-chunky stacks.  The latter class inherits from the former because this is simplest (and it's easy to accomplish with 'protected').  There are a couple of minor functional changes here:  - The variable maxFramePushed_ now actually records the maximum value   of masm.framePushed, not the maximum stack height.  The new behavior   is correct even with the chunky stack, since this value is used for   stack overflow checking.  There should however be no observable   changes because of this.  (Trivial reason: only ARM64 is affected   and we have no ARM64 products.  Deeper reason: stacks are aligned at   coarser boundaries than our stack chunks, and have lots of headroom.)  - Member variables tracking the stack height are now set up in a new   method, onFixedStackAllocated(), which is called after   beginFunction() has allocated the space for the Header and Local   areas of the frame.  The old behavior was correct but very obscure.   The new code is easier to understand.",
-    "commit_date": "2018-11-26 14:15:59"
+    "sha": "bc51387eaa32d0759dcb506bb2d90b58bae9f065",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=bc51387eaa32",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "pehrsons@mozilla.com",
+    "commit_message": "Bug 1423253 - Add a drift compensator to reclock video timestamps. r?padenot",
+    "commit_date": "2018-11-29 15:41:16"
   },
   "8": {
-    "sha": "01648611837dfa623fa2b3f112ffd1baa8a0a746",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=01648611837d",
-    "commiter_name": "Lars T Hansen ",
-    "commit_email": "lhansen@mozilla.com",
-    "commit_message": "Bug 1510193 - don't use TypedObjects if not available and necessary. r=jorendorff  We rely on TypedObjects for the experimental wasm GC feature, but that feature is Nightly-only and we should not be touching TypedObjects if we don't need them.  Furthermore we should just fail to compile outright if wasm GC is enabled but TypedObjects are not.",
-    "commit_date": "2018-11-29 09:10:02"
+    "sha": "ae21b7f4c06aab77689755be52b5e136d16a57ef",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ae21b7f4c06a",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Change MediaEngineRemoteVideoSource to push instead of pull. r?padenot",
+    "commit_date": "2018-11-28 17:07:30"
   },
   "9": {
-    "sha": "7a7d0cec00a317f56a756ac1357ab3fed3af9bb1",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7a7d0cec00a3",
-    "commiter_name": "Gabriel Luong ",
-    "commit_email": "gabriel.luong@gmail.com",
-    "commit_message": "Bug 1509459 - Get the flexbox highlighter state if the highlighter is ready in the flexbox panel. r=pbro",
-    "commit_date": "2018-11-28 16:39:40"
+    "sha": "5b58c9195d4dea4c663c83ad6d4c2227f45a46a7",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5b58c9195d4d",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Change CanvasCaptureMediaStream's driver to push instead of pull. r?padenot",
+    "commit_date": "2018-11-28 15:15:31"
   },
   "10": {
-    "sha": "78e5c62dc4695983686153464951549f50831da0",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=78e5c62dc469",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Fuzzy query=androidwpt11  Pushed via `mach try fuzzy`",
-    "commit_date": "2018-12-02 03:19:49"
+    "sha": "fd376f27c10094e36f521f9f0a3591d00b1b4c2d",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=fd376f27c100",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Throttle sending video frames by age instead of queue size. r?padenot",
+    "commit_date": "2018-11-26 16:32:57"
   },
   "11": {
-    "sha": "4240ff0386be6eb26c8cf10c3a59605dfc46ab1e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4240ff0386be",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "fix jitrealm init",
-    "commit_date": "2018-12-02 03:19:29"
+    "sha": "0ca8422dd6fd644a15b1f6c8abc3057881aa94ac",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0ca8422dd6fd",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1423253 - Use a timer to make sure we keep sending video over a peer connection when there's no input. r?dminor  The webrtc-pc spec says: > If track is ended, or if the track's output is disabled, i.e. the track is > disabled and/or muted, the RTCRtpSender MUST send silence (audio), > black frames (video) or a zero-information-content equivalent. > In the case of video, the RTCRtpSender SHOULD send one black frame per second.  This patch covers this case, and the case when no frames reach the MediaPipeline, for both direct and non-direct video listeners.",
+    "commit_date": "2018-11-26 15:58:36"
   },
   "12": {
-    "sha": "7655e474ea57fbf2d3d188fb2f10ef61c5b07685",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7655e474ea57",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Fuzzy query=android7wpt11  Pushed via `mach try fuzzy`",
-    "commit_date": "2018-12-02 03:14:17"
+    "sha": "0a4abfdb6e8ff6241adcbbf346cec9fdf33b4f5d",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0a4abfdb6e8f",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Make MediaStreamGraph pull data per track instead of per stream. r?padenot  Differential Revision: https://phabricator.services.mozilla.com/D13086",
+    "commit_date": "2018-11-26 17:11:37"
   },
   "13": {
-    "sha": "d881a8ce677da34bfdb0553ad452da387ce0dbbe",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d881a8ce677d",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Fuzzy query=android web-  Pushed via `mach try again`",
-    "commit_date": "2018-12-02 03:08:30"
+    "sha": "1313ab55bbcb3c1f5e457f07077bffe6caca2895",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=1313ab55bbcb",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Remove early PullNewData return. r?padenot  Without knownTracksTime, StreamTracks::GetFirstTrackEnd() returns STREAM_TIME_MAX for an empty StreamTracks, so PullNewData() thinks no new data is needed.  This circumvents that by always checking whether tracks need data.  Differential Revision: https://phabricator.services.mozilla.com/D12928",
+    "commit_date": "2018-11-26 14:14:22"
   },
   "14": {
-    "sha": "91732fb07fb1ac54f9b8d975465d510e3398ef04",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=91732fb07fb1",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "[mq]: geckoview-wpt",
-    "commit_date": "2018-12-02 03:08:11"
+    "sha": "8074a9a9a025c60e90b3d0427be3f4063aa08710",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=8074a9a9a025",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Clean up what appears to be wip-leftover gunk in DecodedStream. r?jya  Differential Revision: https://phabricator.services.mozilla.com/D12926",
+    "commit_date": "2018-11-26 10:26:42"
   },
   "15": {
-    "sha": "0c0e3d5ae09f03c7452d48ffb0dbd0ae30bb2e4f",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0c0e3d5ae09f",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Fuzzy query=android web-  Pushed via `mach try again`",
-    "commit_date": "2018-12-02 03:01:26"
+    "sha": "fe184fdb2c5273496509e4a0de3c3e4865557042",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=fe184fdb2c52",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Rename track-end-time methods in StreamTracks. r?padenot  They deserve descriptive names.  Differential Revision: https://phabricator.services.mozilla.com/D12925",
+    "commit_date": "2018-11-26 10:25:26"
   },
   "16": {
-    "sha": "11087e820f36ca0c1ec0158efeb36e50cd680bac",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=11087e820f36",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "[mq]: geckoview-wpt",
-    "commit_date": "2018-12-02 03:01:16"
+    "sha": "81c3a53fae47f496a01f8616ea41f8f1377166f4",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=81c3a53fae47",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1509548 - Remove the concept of a known tracks time from MediaStreamGraph. r?padenot  Differential Revision: https://phabricator.services.mozilla.com/D12923",
+    "commit_date": "2018-11-26 10:24:13"
   },
   "17": {
-    "sha": "a67f0289d0b32c09804d3e8e62e40acb79c77517",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a67f0289d0b3",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-02 02:43:40"
+    "sha": "6e20f597f722ff629dfcb8b054c6fdfb73e45c01",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6e20f597f722",
+    "commiter_name": "Edouard Oger ",
+    "commit_email": "eoger@fastmail.com",
+    "commit_message": "try: -b o -p linux64 -u crashtest,firefox-ui-functional,geckoview,geckoview-junit,jsreftest,marionette,marionette-e10s,mochitests,reftest,robocop,web-platform-tests,xpcshell -t none --artifact  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-02 17:39:31"
   },
   "18": {
-    "sha": "158a72d2b9c4b4b574055de625b8e50aba458eec",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=158a72d2b9c4",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511567 - Add UI transitions. r=bhackett  Tags:  Bug #: 1511567  Differential Revision: https://phabricator.services.mozilla.com/D13605 ",
-    "commit_date": "2018-12-01 00:39:31"
+    "sha": "47979ade46ac765c2862508733d72cdaf85335f9",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=47979ade46ac",
+    "commiter_name": "Art-Vanderlay ",
+    "commit_email": "causality1@outlook.com",
+    "commit_message": "Bug 1507836 - Use long style in \"last sync\" date formatted  Summary: Changed format style in \"last sync\" date from short to long.  Hovering over listed devices in 'send tab to device' on the page action menu shows the last sync date in the short style (last synced: 1 min ago). Changed this to display date in the long style (last synced: 1 minute ago).  Test Plan: Try test  Reviewers: eoger  Bug #: 1507836  Differential Revision: https://phabricator.services.mozilla.com/D13634 ",
+    "commit_date": "2018-12-02 17:38:32"
   },
   "19": {
-    "sha": "5552eb9c51ed18f1f51231fce0a2b11c107ebd04",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5552eb9c51ed",
+    "sha": "32845c32c0088df57c6321648687a3d2daaf381b",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=32845c32c008",
     "commiter_name": "Jason Laster ",
     "commit_email": "jlaster@mozilla.com",
     "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-02 02:26:45"
+    "commit_date": "2018-12-02 17:19:09"
   },
   "20": {
-    "sha": "34a17bf726b48e3153785a80655ff881c159ee7e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=34a17bf726b4",
+    "sha": "ebe9ab686dc67c4d97ef716d52a9bca2c4fa71c7",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ebe9ab686dc6",
     "commiter_name": "Jason Laster ",
     "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511422 - The console separator should be below the message when we're paused after the log. r=bhackett  Tags:  Differential Revision: https://phabricator.services.mozilla.com/D13581 ",
-    "commit_date": "2018-11-30 19:22:20"
+    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-02 17:17:04"
   }
 }

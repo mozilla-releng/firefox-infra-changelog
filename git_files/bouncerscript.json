@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 05:00:48.775444",
+    "lastChecked": "2018-12-02 17:57:23.764788",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "3.3.0",
@@ -135,6 +135,33 @@
     "commit_date": "2018-11-02 18:27:30",
     "files_changed": [
       "bouncerscript/constants.py"
+    ]
+  },
+  "11": {
+    "sha": "89da29e5bd9ea8c5063f526b2c73e45159f2bdb8",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/89da29e5bd9ea8c5063f526b2c73e45159f2bdb8",
+    "commiter_name": "tomprince",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #41 from tp-tc/stub-path-platforms   Check that paths exist per-platform.",
+    "commit_date": "2018-09-04 22:05:15",
+    "files_changed": [
+      "CHANGELOG.md",
+      "bouncerscript/script.py",
+      "bouncerscript/test/test_utils.py",
+      "bouncerscript/utils.py",
+      "version.txt"
+    ]
+  },
+  "12": {
+    "sha": "3e8b26caf9477d8c56cdbd8fa9a886c079597695",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/3e8b26caf9477d8c56cdbd8fa9a886c079597695",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "3.2.1",
+    "commit_date": "2018-09-04 21:39:08",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
     ]
   }
 }
