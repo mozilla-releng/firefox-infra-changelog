@@ -1,8 +1,104 @@
 {
   "0": {
-    "lastChecked": "2018-12-01 15:38:13.372661"
+    "lastChecked": "2018-12-02 05:02:00.592870"
   },
   "1": {
+    "sha": "d244292c2a127fafda775e1db5e0a8e4decea5ff",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d244292c2a12",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1510490 - Make tup build typenum. r=frodynj  Differential Revision: https://phabricator.services.mozilla.com//D13619 ",
+    "commit_date": "2018-12-01 18:46:08"
+  },
+  "2": {
+    "sha": "e52996e78762b9363a86c81a0c0b4d167c17cbd1",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e52996e78762",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1510490 - Follow-up to fix Btup build bustage. r=bholley  Differential Revision: https://phabricator.services.mozilla.com/D13604 ",
+    "commit_date": "2018-12-01 04:39:39"
+  },
+  "3": {
+    "sha": "1ccc107e3483771561d445f68b599697714bb51c",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1ccc107e3483",
+    "commiter_name": "Bobby Holley ",
+    "commit_email": "bobbyholley@gmail.com",
+    "commit_message": "Bug 1510490 - Cache exactly the shaders that are used early in startup. r=mattwoodrow,sotaro  Depends on D13443  Differential Revision: https://phabricator.services.mozilla.com/D13444",
+    "commit_date": "2018-12-01 03:06:10"
+  },
+  "4": {
+    "sha": "88fa86e7860715f518ff0734f75643ca61879d3b",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=88fa86e78607",
+    "commiter_name": "Bobby Holley ",
+    "commit_email": "bobbyholley@gmail.com",
+    "commit_message": "Bug 1510490 - Add versioning support for serialized shaders. r=mattwoodrow  Depends on D13442  Differential Revision: https://phabricator.services.mozilla.com/D13443",
+    "commit_date": "2018-12-01 03:06:08"
+  },
+  "5": {
+    "sha": "f1e9ef6b59e6acf4a8e8784034c43addf1a1fa43",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f1e9ef6b59e6",
+    "commiter_name": "Bobby Holley ",
+    "commit_email": "bobbyholley@gmail.com",
+    "commit_message": "Bug 1510490 - Use digests instead of sources to key cached binaries. r=mattwoodrow  Depends on D13441  Differential Revision: https://phabricator.services.mozilla.com/D13442",
+    "commit_date": "2018-12-01 03:06:01"
+  },
+  "6": {
+    "sha": "783f72b2788799549e2e786995c17a7c39e646f6",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=783f72b27887",
+    "commiter_name": "Bobby Holley ",
+    "commit_email": "bobbyholley@gmail.com",
+    "commit_message": "Bug 1510490 - Rejigger shader concatenation to avoid allocating and operate on a callback. r=mattwoodrow  Depends on D13440  Differential Revision: https://phabricator.services.mozilla.com/D13441",
+    "commit_date": "2018-12-01 03:05:58"
+  },
+  "7": {
+    "sha": "ef8f344dca811b76a6b556d13b3aa7f5452fb5b2",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ef8f344dca81",
+    "commiter_name": "Bobby Holley ",
+    "commit_email": "bobbyholley@gmail.com",
+    "commit_message": "Bug 1510490 - Measure shader cache memory usage and remove total_gpu_bytes. r=mattwoodrow  The latter causes confusion in the memory reports because it gets summed up and thus effectively doubles the reported texture memory usage. I've decided it's best to drop, and so might as well do that while we're already messing around with the memory reports and the associated boilerplate.  Depends on D13439  Differential Revision: https://phabricator.services.mozilla.com/D13440",
+    "commit_date": "2018-12-01 03:05:56"
+  },
+  "8": {
+    "sha": "96f2bb9d45989631add2109578ee61065efdf9fc",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96f2bb9d4598",
+    "commiter_name": "Bobby Holley ",
+    "commit_email": "bobbyholley@gmail.com",
+    "commit_message": "Bug 1510490 - Add dependency on SHA2. r=mattwoodrow  Just pushing this down my patch queue to avoid triggering large cargo rebuilds when rebasing.  Depends on D13438  Differential Revision: https://phabricator.services.mozilla.com/D13439",
+    "commit_date": "2018-12-01 03:05:54"
+  },
+  "9": {
+    "sha": "40bf513c2e6101ada92b5645783b349383dbd1ea",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=40bf513c2e61",
+    "commiter_name": "Bobby Holley ",
+    "commit_email": "bobbyholley@gmail.com",
+    "commit_message": "Bug 1510490 - Improve some comments. r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D13438",
+    "commit_date": "2018-12-01 03:05:52"
+  },
+  "10": {
+    "sha": "cec3942679044e0372823429292aada0157a8875",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cec394267904",
+    "commiter_name": "Hrushikesh Bodas ",
+    "commit_email": "hrushikeshcoc@gmail.com",
+    "commit_message": "Bug 1509469 Remove unused ContentAreaUtils.ioService r=dao  Differential Revision: https://phabricator.services.mozilla.com/D13614",
+    "commit_date": "2018-12-01 15:05:59"
+  },
+  "11": {
+    "sha": "ac75e40dd2ab684d8bbf074ec677db2d77c93055",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ac75e40dd2ab",
+    "commiter_name": "Gurzau Raul ",
+    "commit_email": "rgurzau@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
+    "commit_date": "2018-12-01 14:32:55"
+  },
+  "12": {
+    "sha": "2f15c3366bf0c1993c63c46e3e3efc4a2c9a4842",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2f15c3366bf0",
+    "commiter_name": "Ting-Yu Lin ",
+    "commit_email": "tlin@mozilla.com",
+    "commit_message": "Bug 1511536 - Restore the comment in nsCSSFrameConstructor::ConstructBlock(), and disable clang-format. r=sylvestre  The example frame tree didn't survive the global clang-format change.  DONTBUILD because this is a comment-only change.  Differential Revision: https://phabricator.services.mozilla.com/D13602",
+    "commit_date": "2018-12-01 13:48:45"
+  },
+  "13": {
     "sha": "b3085cd7b7c20a55894eb3dcd8c92ab2bc0f03f3",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b3085cd7b7c2",
     "commiter_name": "Gurzau Raul ",
@@ -10,7 +106,7 @@
     "commit_message": "Merge inbound to mozilla-central.  a=merge",
     "commit_date": "2018-12-01 14:30:37"
   },
-  "2": {
+  "14": {
     "sha": "dec172d2c7fd901849b9496601f73483b31f12b0",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dec172d2c7fd",
     "commiter_name": "Simon Montagu ",
@@ -18,7 +114,7 @@
     "commit_message": "Bug 1505911 - Add struct testing to test_mozTXTToHTMLConv.js. r=valentin",
     "commit_date": "2018-11-30 17:41:55"
   },
-  "3": {
+  "15": {
     "sha": "f64d8eeab965ad962b09952d5e3978db0d4b8199",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f64d8eeab965",
     "commiter_name": "Jorg K ",
@@ -26,7 +122,7 @@
     "commit_message": "Bug 1505911 - Add glyph testing to test_mozTXTToHTMLConv.js. r=valentin",
     "commit_date": "2018-11-30 17:41:45"
   },
-  "4": {
+  "16": {
     "sha": "0c40ca38958fc08fb4289dd1eb45b7fd7258ff99",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0c40ca38958f",
     "commiter_name": "Simon Montagu ",
@@ -34,7 +130,7 @@
     "commit_message": "Bug 1505911 - Use IsAlpha/IsDigit instead of IsAsciiAlpha/IsAsciiDigit for full Unicode support. r=valentin",
     "commit_date": "2013-09-01 09:23:43"
   },
-  "5": {
+  "17": {
     "sha": "7fc73687c1ef6d72850b1e8241104708fd1bca35",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7fc73687c1ef",
     "commiter_name": "Valentin Gosu ",
@@ -42,7 +138,7 @@
     "commit_message": "Bug 1505911 - Change interfaces to use AString instead of wstring r=juhsu",
     "commit_date": "2018-11-30 17:57:24"
   },
-  "6": {
+  "18": {
     "sha": "b12e6afd5831cc692e666d4295cbb260613fd8ad",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b12e6afd5831",
     "commiter_name": "Botond Ballo ",
@@ -50,7 +146,7 @@
     "commit_message": "Bug 1511375 - Update the visual viewport size in UpdateResolution() if either the zoom or the display size might have changed. r=kats  Differential Revision: https://phabricator.services.mozilla.com/D13578",
     "commit_date": "2018-12-01 05:34:57"
   },
-  "7": {
+  "19": {
     "sha": "a5b0559c23721f0d6a54242afa17bf0124b10c5d",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a5b0559c2372",
     "commiter_name": "Coroiu Cristina ",
@@ -58,108 +154,12 @@
     "commit_message": "Merge mozilla-central to autoland a=merge",
     "commit_date": "2018-12-01 05:55:13"
   },
-  "8": {
+  "20": {
     "sha": "40e9134d42956f70b15b3d13f119178ff98e942f",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=40e9134d4295",
     "commiter_name": "shindli ",
     "commit_email": "shindli@mozilla.com",
     "commit_message": "Backed out changeset fedf8f5b79e5 (bug 1510490) for not fixing the Btup bustages CLOSED TREE",
     "commit_date": "2018-12-01 05:08:10"
-  },
-  "9": {
-    "sha": "b425a0d640af3e4132aceb85f3474b98d5b48c54",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b425a0d640af",
-    "commiter_name": "shindli ",
-    "commit_email": "shindli@mozilla.com",
-    "commit_message": "Backed out 7 changesets (bug 1510490) for Btup bustages CLOSED TREE  Backed out changeset f9d8e4ebe0a2 (bug 1510490) Backed out changeset 55fa8c9b0c7e (bug 1510490) Backed out changeset ee215fdef53f (bug 1510490) Backed out changeset c02d08e9dd38 (bug 1510490) Backed out changeset 6fafd118a82a (bug 1510490) Backed out changeset 094544e620e1 (bug 1510490) Backed out changeset 96e1ddc0637b (bug 1510490)",
-    "commit_date": "2018-12-01 05:07:26"
-  },
-  "10": {
-    "sha": "e2b33de5f4c7be06299e1d16d1d9df10a91b274e",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e2b33de5f4c7",
-    "commiter_name": "shindli ",
-    "commit_email": "shindli@mozilla.com",
-    "commit_message": "Backed out 2 changesets (bug 1501992) for bc failures in browser/components/urlbar/tests/browser/browser_UrlbarInput_tooltip.js CLOSED TREE  Backed out changeset ae07b8338331 (bug 1501992) Backed out changeset 3ab27af474f9 (bug 1501992)",
-    "commit_date": "2018-12-01 05:06:36"
-  },
-  "11": {
-    "sha": "fedf8f5b79e57be608f1bf82f6bbe4728692f42b",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fedf8f5b79e5",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1510490 - Follow-up to fix Btup build bustage on a CLOSED TREE. r=kats  Differential Revision: https://phabricator.services.mozilla.com/D13604",
-    "commit_date": "2018-12-01 04:39:39"
-  },
-  "12": {
-    "sha": "2c9bc41949eeec1b16efebb7704b104cf31aead3",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2c9bc41949ee",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1499470 - Provide option to opt-out of add-on recommendations r=mixedpuppy,flod,Gijs  Differential Revision: https://phabricator.services.mozilla.com/D13168",
-    "commit_date": "2018-11-30 14:19:04"
-  },
-  "13": {
-    "sha": "6d3b77d3edc407d8d1740c56e7cb3ae139fbd4dd",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6d3b77d3edc4",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511413 - Update webrender to commit 5b26863178f8533eeba2de28c6bdc019ba9ed3e8 (WR PR #3375). r=kats  https://github.com/servo/webrender/pull/3375  Differential Revision: https://phabricator.services.mozilla.com/D13603",
-    "commit_date": "2018-12-01 02:53:32"
-  },
-  "14": {
-    "sha": "f9d8e4ebe0a2f40646dff560a0cdccd0f722f3ea",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f9d8e4ebe0a2",
-    "commiter_name": "Bobby Holley ",
-    "commit_email": "bobbyholley@gmail.com",
-    "commit_message": "Bug 1510490 - Cache exactly the shaders that are used early in startup. r=mattwoodrow,sotaro  Depends on D13443  Differential Revision: https://phabricator.services.mozilla.com/D13444",
-    "commit_date": "2018-12-01 03:06:10"
-  },
-  "15": {
-    "sha": "55fa8c9b0c7e895c476d26452debc13a8b4678c1",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=55fa8c9b0c7e",
-    "commiter_name": "Bobby Holley ",
-    "commit_email": "bobbyholley@gmail.com",
-    "commit_message": "Bug 1510490 - Add versioning support for serialized shaders. r=mattwoodrow  Depends on D13442  Differential Revision: https://phabricator.services.mozilla.com/D13443",
-    "commit_date": "2018-12-01 03:06:08"
-  },
-  "16": {
-    "sha": "ee215fdef53fbccacf05ef299e2b3367100645bf",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ee215fdef53f",
-    "commiter_name": "Bobby Holley ",
-    "commit_email": "bobbyholley@gmail.com",
-    "commit_message": "Bug 1510490 - Use digests instead of sources to key cached binaries. r=mattwoodrow  Depends on D13441  Differential Revision: https://phabricator.services.mozilla.com/D13442",
-    "commit_date": "2018-12-01 03:06:01"
-  },
-  "17": {
-    "sha": "c02d08e9dd38e073fe23f50b029a44f572dffbdb",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c02d08e9dd38",
-    "commiter_name": "Bobby Holley ",
-    "commit_email": "bobbyholley@gmail.com",
-    "commit_message": "Bug 1510490 - Rejigger shader concatenation to avoid allocating and operate on a callback. r=mattwoodrow  Depends on D13440  Differential Revision: https://phabricator.services.mozilla.com/D13441",
-    "commit_date": "2018-12-01 03:05:58"
-  },
-  "18": {
-    "sha": "6fafd118a82a58aa39d9a4c26107a28f631e3a94",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6fafd118a82a",
-    "commiter_name": "Bobby Holley ",
-    "commit_email": "bobbyholley@gmail.com",
-    "commit_message": "Bug 1510490 - Measure shader cache memory usage and remove total_gpu_bytes. r=mattwoodrow  The latter causes confusion in the memory reports because it gets summed up and thus effectively doubles the reported texture memory usage. I've decided it's best to drop, and so might as well do that while we're already messing around with the memory reports and the associated boilerplate.  Depends on D13439  Differential Revision: https://phabricator.services.mozilla.com/D13440",
-    "commit_date": "2018-12-01 03:05:56"
-  },
-  "19": {
-    "sha": "094544e620e15303149b832f95293dff9a001645",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=094544e620e1",
-    "commiter_name": "Bobby Holley ",
-    "commit_email": "bobbyholley@gmail.com",
-    "commit_message": "Bug 1510490 - Add dependency on SHA2. r=mattwoodrow  Just pushing this down my patch queue to avoid triggering large cargo rebuilds when rebasing.  Depends on D13438  Differential Revision: https://phabricator.services.mozilla.com/D13439",
-    "commit_date": "2018-12-01 03:05:54"
-  },
-  "20": {
-    "sha": "96e1ddc0637be0c1166da92c34550ef418e4aa91",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96e1ddc0637b",
-    "commiter_name": "Bobby Holley ",
-    "commit_email": "bobbyholley@gmail.com",
-    "commit_message": "Bug 1510490 - Improve some comments. r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D13438",
-    "commit_date": "2018-12-01 03:05:52"
   }
 }

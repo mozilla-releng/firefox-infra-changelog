@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-01 15:49:55.921596",
+    "lastChecked": "2018-12-02 05:00:48.775444",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "3.3.0",
@@ -15,5 +15,126 @@
         "Author": "tomprince"
       }
     }
+  },
+  "1": {
+    "sha": "c3be67b9b8886f78514503b97ff055553fbe77f2",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/c3be67b9b8886f78514503b97ff055553fbe77f2",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #46 from Callek/3.3.0  Bump to 3.3.0 for MSI installer",
+    "commit_date": "2018-11-12 16:20:14",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "2": {
+    "sha": "14820782bf1f83eabfa396b036b60e78df596399",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/14820782bf1f83eabfa396b036b60e78df596399",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Bump to 3.3.0 for MSI installer",
+    "commit_date": "2018-11-12 16:01:24",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "3": {
+    "sha": "3792c3106c05c09875cdf9634e6da305188a9b95",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/3792c3106c05c09875cdf9634e6da305188a9b95",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #43 from Callek/msi  Support .msi in bouncerscript",
+    "commit_date": "2018-11-12 15:09:06",
+    "files_changed": [
+      "bouncerscript/constants.py",
+      "bouncerscript/task.py",
+      "bouncerscript/test/test_task.py"
+    ]
+  },
+  "4": {
+    "sha": "3409785ede3fa3a0377b8cee3e5bca3ab49757ed",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/3409785ede3fa3a0377b8cee3e5bca3ab49757ed",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into msi",
+    "commit_date": "2018-11-10 09:49:19",
+    "files_changed": [
+      "bouncerscript/task.py"
+    ]
+  },
+  "5": {
+    "sha": "a88e5f643bd2671cc47c6240a2794d8d11a5d792",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/a88e5f643bd2671cc47c6240a2794d8d11a5d792",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Fix logging (#45)",
+    "commit_date": "2018-11-10 09:49:02",
+    "files_changed": [
+      "bouncerscript/task.py"
+    ]
+  },
+  "6": {
+    "sha": "ce515b8a8bd853c39f3f87d848017b0c3e8b63e7",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/ce515b8a8bd853c39f3f87d848017b0c3e8b63e7",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Support msi for aliases and product submission",
+    "commit_date": "2018-11-08 20:53:47",
+    "files_changed": [
+      "bouncerscript/constants.py",
+      "bouncerscript/test/test_task.py"
+    ]
+  },
+  "7": {
+    "sha": "a4f4426a5935e5c1267f7ba752df44ffda14dc12",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/a4f4426a5935e5c1267f7ba752df44ffda14dc12",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Add msi support for nightly locations",
+    "commit_date": "2018-11-02 20:00:05",
+    "files_changed": [
+      "bouncerscript/constants.py",
+      "bouncerscript/task.py",
+      "bouncerscript/test/test_task.py"
+    ]
+  },
+  "8": {
+    "sha": "7c86c5cf2340ad691a43993dbc8e05e31f31e4ce",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/7c86c5cf2340ad691a43993dbc8e05e31f31e4ce",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Add documentation for bouncerscript logic. (#44)",
+    "commit_date": "2018-11-08 13:33:35",
+    "files_changed": [
+      "README.md",
+      "media/Firefox-63.0b9-Complete.png",
+      "media/Firefox-64.0b3_locations.png",
+      "media/aliases.png",
+      "media/nightly_locations.png"
+    ]
+  },
+  "9": {
+    "sha": "bb85d6ac0677760b6f28082f13b4e9c065d8fbc1",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/bb85d6ac0677760b6f28082f13b4e9c065d8fbc1",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #42 from Callek/flake8_update  Fix flake8 issues with newest package",
+    "commit_date": "2018-11-02 20:33:51",
+    "files_changed": [
+      "bouncerscript/constants.py"
+    ]
+  },
+  "10": {
+    "sha": "cffb0e05872cbfb3dd657a512e3fa4efa2429db9",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/cffb0e05872cbfb3dd657a512e3fa4efa2429db9",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Fix flake8 issues with newest package",
+    "commit_date": "2018-11-02 18:27:30",
+    "files_changed": [
+      "bouncerscript/constants.py"
+    ]
   }
 }

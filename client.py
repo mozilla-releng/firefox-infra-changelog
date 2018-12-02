@@ -5,9 +5,10 @@ from datetime import datetime, timedelta
 from os import listdir
 from os.path import isfile, join
 
+import isodate as isodate
 import requests
 from github import Github
-
+import isodate
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -68,21 +69,6 @@ def extract_email(commit_email):
     :return: String that contains only the email
     """
     return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
-
-
-def since(repository_name, path_to_files):
-    json_data = open(current_dir + "/{}/".format(path_to_files) + "{}.json".format(repository_name)).read()
-    data = json.loads(json_data)
-    for key in data:
-        try:
-            x = key['0']['last_two_release']['LatestRelease']['Date']
-            y = key['0']['last_two_release']['PreviousRelease']['Date']
-            z = x - y
-            print(z)
-            return z
-        except TypeError:
-            z = datetime.now() - timedelta(days=7)
-            return z
 
 
 def create_md_table(repository_name, path_to_files):
@@ -166,10 +152,11 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
         x = datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
         y = datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
         z = x - y
+        lastCheck = datetime.now() - z
     except TypeError:
-        z = datetime.now() - timedelta(days=7)
+        lastCheck = datetime.now() - timedelta(days=7)
     number += 1
-    for commit in git.get_repo(repository_path).get_commits(since=z):
+    for commit in git.get_repo(repository_path).get_commits(since=lastCheck):
         each_commit = {}
         author_info = {}
         files_changed = []
