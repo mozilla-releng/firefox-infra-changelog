@@ -1,13 +1,12 @@
-import json
 import os
 import re
-from datetime import datetime, timedelta
-from os import listdir
-from os.path import isfile, join
-
-import isodate
+import json
 import requests
+from os import listdir
 from github import Github
+from os.path import isfile, join
+from datetime import datetime, timedelta
+
 
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
