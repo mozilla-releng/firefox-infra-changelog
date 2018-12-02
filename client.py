@@ -148,10 +148,10 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
                                "last_two_Release": repository_version}})
 
     try:
-        x = datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
-        y = datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
-        z = x - y
-        lastCheck = datetime.now() - z
+        latestRelease = datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
+        previousRelease = datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
+        timeDifference = latestRelease - previousRelease
+        lastCheck = datetime.now() - timeDifference
     except TypeError:
         lastCheck = datetime.now() - timedelta(days=7)
     number += 1
