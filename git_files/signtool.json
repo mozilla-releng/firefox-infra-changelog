@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-01 15:38:05.880598",
+    "lastChecked": "2018-12-02 05:01:50.775975",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "3.2.1",
@@ -15,5 +15,53 @@
         "Author": "JohanLorenzo"
       }
     }
+  },
+  "1": {
+    "sha": "5710c473fc04ff0a7b7b850ba237b9c5df3d1e83",
+    "url": "https://github.com/mozilla-releng/signtool/commit/5710c473fc04ff0a7b7b850ba237b9c5df3d1e83",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #12 from escapewindow/retry-connectionerror  Retry for ConnectionError during upload.",
+    "commit_date": "2018-08-27 17:31:58",
+    "files_changed": [
+      ".travis.yml",
+      "CHANGELOG.md",
+      "setup.py",
+      "signtool/signing/client.py"
+    ]
+  },
+  "2": {
+    "sha": "62debcab19529af096cb7298c9557e8914cae589",
+    "url": "https://github.com/mozilla-releng/signtool/commit/62debcab19529af096cb7298c9557e8914cae589",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "3.2.1",
+    "commit_date": "2018-08-27 17:17:03",
+    "files_changed": [
+      "CHANGELOG.md",
+      "setup.py"
+    ]
+  },
+  "3": {
+    "sha": "85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+    "url": "https://github.com/mozilla-releng/signtool/commit/85d4d8ff6c2ec91a4b3f7a00d754d30228b12ece",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "switch to python 3.7 release; try to fix coveralls",
+    "commit_date": "2018-08-25 01:41:10",
+    "files_changed": [
+      ".travis.yml"
+    ]
+  },
+  "4": {
+    "sha": "18c2cf87aaea71208ece3fe575bd466b674b3981",
+    "url": "https://github.com/mozilla-releng/signtool/commit/18c2cf87aaea71208ece3fe575bd466b674b3981",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Retry for ConnectionError during upload.  The remote_signfile function is pretty ugly and should be rewritten. However, I believe we were failing to retry because we're in the except block of the outer try/except, and the inner try/except didn't catch ConnectionError. RequestException should catch both HTTPError and ConnecitonError.  Fixes https://github.com/mozilla-releng/signingscript/issues/66 .",
+    "commit_date": "2018-08-25 00:50:23",
+    "files_changed": [
+      "signtool/signing/client.py"
+    ]
   }
 }

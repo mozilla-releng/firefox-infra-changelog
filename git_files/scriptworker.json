@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-01 15:37:53.219805",
+    "lastChecked": "2018-12-02 05:01:32.362027",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "17.0.0",
@@ -131,6 +131,124 @@
       "CHANGELOG.md",
       "scriptworker/version.py",
       "version.json"
+    ]
+  },
+  "11": {
+    "sha": "ae4cc4de36bd59a235c7a48e17d15c827caa3024",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/ae4cc4de36bd59a235c7a48e17d15c827caa3024",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #269 from escapewindow/pip-compile-multi  Pip compile multi",
+    "commit_date": "2018-11-13 21:32:49",
+    "files_changed": [
+      "MANIFEST.in",
+      "docker/Dockerfile.test",
+      "docs/cot_gpg_key_mgmt.rst",
+      "docs/releases.md",
+      "requirements-prod.txt",
+      "requirements-test-prod.txt",
+      "requirements/Dockerfile",
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.in",
+      "requirements/test.txt",
+      "scripts/create_gpg_keys.py",
+      "scripts/gpg_helper.sh",
+      "scripts/pip"
+    ]
+  },
+  "12": {
+    "sha": "48f9c9ca3c0d1eaae3c41d76f9166224a6eee45f",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/48f9c9ca3c0d1eaae3c41d76f9166224a6eee45f",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "update pinned requirements",
+    "commit_date": "2018-11-13 21:10:04",
+    "files_changed": [
+      "requirements/base.txt",
+      "requirements/test.txt"
+    ]
+  },
+  "13": {
+    "sha": "f760315f4f9f06e9492f4c87d8b79cfa0bde61c6",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/f760315f4f9f06e9492f4c87d8b79cfa0bde61c6",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "address review comments",
+    "commit_date": "2018-11-13 21:09:55",
+    "files_changed": [
+      "scripts/pip"
+    ]
+  },
+  "14": {
+    "sha": "648de55b994a2fb9f57bd6991e7a8a54ef3a4790",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/648de55b994a2fb9f57bd6991e7a8a54ef3a4790",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "pin hashes via pip-compile-multi in docker  I've been pinning mac-specific wheel hashes in dephash, which is wrong.",
+    "commit_date": "2018-10-30 23:37:30",
+    "files_changed": [
+      "MANIFEST.in",
+      "docker/Dockerfile.test",
+      "docs/cot_gpg_key_mgmt.rst",
+      "docs/releases.md",
+      "requirements-prod.txt",
+      "requirements-test-prod.txt",
+      "requirements/Dockerfile",
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.in",
+      "requirements/test.txt",
+      "scripts/create_gpg_keys.py",
+      "scripts/gpg_helper.sh",
+      "scripts/pip"
+    ]
+  },
+  "15": {
+    "sha": "7ecf1958e98b1822e596651a62c1581bde8b7436",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/7ecf1958e98b1822e596651a62c1581bde8b7436",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #270 from MihaiTabara/docs  Bug 1503549 - improve docs for ramping up scriptworkers after aws-man\u2026",
+    "commit_date": "2018-11-02 23:16:33",
+    "files_changed": [
+      "docs/_static/dns.png",
+      "docs/new_instance.md",
+      "scriptworker/gpg.py"
+    ]
+  },
+  "16": {
+    "sha": "b722dc37d9187e791e13dd4c190880f74034250d",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/b722dc37d9187e791e13dd4c190880f74034250d",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Fix markdown syntax.",
+    "commit_date": "2018-11-02 23:03:24",
+    "files_changed": [
+      "docs/new_instance.md"
+    ]
+  },
+  "17": {
+    "sha": "c63ffda1e5131ea82c157f117f01098e53b9ebf4",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/c63ffda1e5131ea82c157f117f01098e53b9ebf4",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Fix flake8 issues.",
+    "commit_date": "2018-11-02 22:05:21",
+    "files_changed": [
+      "scriptworker/gpg.py"
+    ]
+  },
+  "18": {
+    "sha": "34f792dc72185b3ea99c1c81a7d3337674779b84",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/34f792dc72185b3ea99c1c81a7d3337674779b84",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Bug 1503549 - improve docs for ramping up scriptworkers after aws-manager2 retirement.",
+    "commit_date": "2018-11-02 21:52:28",
+    "files_changed": [
+      "docs/_static/dns.png",
+      "docs/new_instance.md"
     ]
   }
 }

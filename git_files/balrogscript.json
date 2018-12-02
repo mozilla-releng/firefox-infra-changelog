@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-01 15:38:03.931878",
+    "lastChecked": "2018-12-02 05:01:49.618126",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "3.3.0",
@@ -15,35 +15,5 @@
         "Author": "tomprince"
       }
     }
-  },
-  "1": {
-    "sha": "0b56d73f1d59e63fedc48350bf8eaeb05453996e",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/0b56d73f1d59e63fedc48350bf8eaeb05453996e",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #43 from tp-tc/whats-new  Add support for generting whats-new blobs.",
-    "commit_date": "2018-11-26 19:59:40",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "balrogscript/_version.py",
-      "balrogscript/newsfragments/42.added",
-      "balrogscript/script.py",
-      "balrogscript/submitter/cli.py",
-      "balrogscript/test/test_script.py"
-    ]
-  },
-  "2": {
-    "sha": "18761ab899d94619ea2a36c0227f0b0cfb1c6dea",
-    "url": "https://github.com/mozilla-releng/balrogscript/commit/18761ab899d94619ea2a36c0227f0b0cfb1c6dea",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "3.3.0",
-    "commit_date": "2018-11-26 17:29:44",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "balrogscript/_version.py",
-      "balrogscript/newsfragments/42.added",
-      "balrogscript/newsfragments/43.added"
-    ]
   }
 }

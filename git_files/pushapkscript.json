@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-01 15:38:02.097551",
+    "lastChecked": "2018-12-02 05:01:44.333633",
     "last_two_Release": {
       "LatestRelease": {
         "Version": "0.9.0",
@@ -26,6 +26,104 @@
     "files_changed": [
       "pushapkscript/googleplay.py",
       "pushapkscript/script.py"
+    ]
+  },
+  "2": {
+    "sha": "58b5746152105b09751139192ac63f89486b664b",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/58b5746152105b09751139192ac63f89486b664b",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "0.9.0",
+    "commit_date": "2018-11-23 14:54:01",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "3": {
+    "sha": "c783b80979156bf3cb2c78369dce300e2f76e5b6",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/c783b80979156bf3cb2c78369dce300e2f76e5b6",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Parse manifest to detect what digest algorithm was used",
+    "commit_date": "2018-11-23 13:58:08",
+    "files_changed": [
+      "pushapkscript/jarsigner.py",
+      "pushapkscript/manifest.py",
+      "pushapkscript/script.py",
+      "pushapkscript/test/test_jarsigner.py",
+      "pushapkscript/test/test_manifest.py",
+      "pushapkscript/test/test_script.py"
+    ]
+  },
+  "4": {
+    "sha": "654ff459c35c9100cb9da8176c0e431a459e57d8",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/654ff459c35c9100cb9da8176c0e431a459e57d8",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Removes stray comma from example task json (#51)",
+    "commit_date": "2018-11-12 09:10:41",
+    "files_changed": [
+      "examples/task.example.json"
+    ]
+  },
+  "5": {
+    "sha": "0fa1fec2424cba14dfa2c22ab42e44e937ffedc4",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/0fa1fec2424cba14dfa2c22ab42e44e937ffedc4",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #50 from mitchhentges/fix-travis-jdk-switcher  Resolves Travis Xenial image using Java11 instead of Java8",
+    "commit_date": "2018-11-09 22:28:06",
+    "files_changed": [
+      ".travis.yml"
+    ]
+  },
+  "6": {
+    "sha": "2e8cc150527906f7d9bd23658c96f5d4221fdcf9",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/2e8cc150527906f7d9bd23658c96f5d4221fdcf9",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Manually adds java 8 to front of $PATH for xenial Travis builds",
+    "commit_date": "2018-11-09 21:41:37",
+    "files_changed": [
+      ".travis.yml"
+    ]
+  },
+  "7": {
+    "sha": "91aaa35f170f6f263b2ebb1dca6c6f44ef6ea8bc",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/91aaa35f170f6f263b2ebb1dca6c6f44ef6ea8bc",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Update documentation (#47)    Update documentation to not reference `dry_run` anymore    Remove rst README in favor of the md one    Fix warning at packaging time    Change where the worker-type should point.",
+    "commit_date": "2018-10-19 16:33:54",
+    "files_changed": [
+      "MANIFEST.in",
+      "README.md",
+      "README.rst",
+      "setup.py"
+    ]
+  },
+  "8": {
+    "sha": "bc2d1c8eef6fffdf0f4b55be54f636c2feedd3bc",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/bc2d1c8eef6fffdf0f4b55be54f636c2feedd3bc",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Clean .travis.yml up (#44)    Use TOXENV variable in travis    Make coverage not silently fail anymore    Remove unused and unset SKIP_NETWORK_TESTS    Remove useless dist section and comment why we need sudo",
+    "commit_date": "2018-08-01 12:21:08",
+    "files_changed": [
+      ".travis.yml"
+    ]
+  },
+  "9": {
+    "sha": "8eeb5523eae0f228fb54300cf25549e844449658",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/8eeb5523eae0f228fb54300cf25549e844449658",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Require py37 to be green (#43)    Use openjdk8 on the py3.7 env    Remove unnecessary addon section",
+    "commit_date": "2018-08-01 09:09:56",
+    "files_changed": [
+      ".travis.yml",
+      "setup.py"
     ]
   }
 }
