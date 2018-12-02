@@ -27,17 +27,17 @@ def get_version(repo_name, repo_team):
         date = tags.commit.commit.last_modified
         author = tags.commit.author.login
         if iteration == 0:
-            latestrelease = {'Version': version,
-                             'Sha': sha,
-                             'Date': date,
-                             'Author': author
+            latestrelease = {'version': version,
+                             'sha': sha,
+                             'date': date,
+                             'author': author
                              }
             iteration = 1
         elif iteration == 1:
-            previousrelease = {'Version': version,
-                               'Sha': sha,
-                               'Date': date,
-                               'Author': author
+            previousrelease = {'version': version,
+                               'sha': sha,
+                               'date': date,
+                               'author': author
                                }
             return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
 
@@ -145,11 +145,11 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
     repository_path = repository_team + repository_name
     print("Working on repo: {}, Latest release: {}".format(repository_name, repository_version))
     repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
-                               "last_two_Release": repository_version}})
+                               "last_two_releases": repository_version}})
 
     try:
-        latestRelease = datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
-        previousRelease = datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
+        latestRelease = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        previousRelease = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
     except TypeError:
         previousRelease = lastWeek
         latestRelease = datetime.now()
