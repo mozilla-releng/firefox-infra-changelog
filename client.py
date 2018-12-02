@@ -5,10 +5,10 @@ from datetime import datetime, timedelta
 from os import listdir
 from os.path import isfile, join
 
-import isodate as isodate
+import isodate
 import requests
 from github import Github
-import isodate
+
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
