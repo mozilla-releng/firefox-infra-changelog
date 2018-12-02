@@ -1,8 +1,16 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:57:05.490997"
+    "lastChecked": "2018-12-01 15:38:21.368542"
   },
   "1": {
+    "sha": "0010639216223e5f5fcf753bb64fb93588d787bd",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=001063921622",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1510441: Add `.cron.yml` to the taskgraph sparse profile; r=gps a=tomprince DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D13142",
+    "commit_date": "2018-11-30 00:26:19"
+  },
+  "2": {
     "sha": "e4f8cf7a8390aa0ba77ec9541bf36ee1aeebd847",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=e4f8cf7a8390",
     "commiter_name": "ffxbld ",
@@ -10,7 +18,7 @@
     "commit_message": "No Bug, mozilla-release repo-update blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D13382",
     "commit_date": "2018-11-29 10:08:27"
   },
-  "2": {
+  "3": {
     "sha": "d8068ca9e32af390060256913be2ce047d894fa8",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d8068ca9e32a",
     "commiter_name": "ffxbld ",
@@ -18,7 +26,7 @@
     "commit_message": "No Bug, mozilla-release repo-update blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D12254",
     "commit_date": "2018-11-19 10:27:53"
   },
-  "3": {
+  "4": {
     "sha": "4666a1c322d8c9aa6128f6b8949074803116db83",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=4666a1c322d8",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -26,7 +34,7 @@
     "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release",
     "commit_date": "2018-11-15 22:24:12"
   },
-  "4": {
+  "5": {
     "sha": "d0ee6cc33f6b47020556c1886b23094fdbbbb101",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d0ee6cc33f6b",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -34,7 +42,7 @@
     "commit_message": "No bug - Tagging 2085f7f22a53096e032c9c0a4931d282ed3f0d43 with FIREFOX_63_0_3_RELEASE a=release CLOSED TREE",
     "commit_date": "2018-11-15 22:24:08"
   },
-  "5": {
+  "6": {
     "sha": "fcf7ccebcc660e1a9da7dc554ec62d65a99dd3b4",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=fcf7ccebcc66",
     "commiter_name": "ffxbld ",
@@ -42,7 +50,7 @@
     "commit_message": "No Bug, mozilla-release repo-update blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D11998",
     "commit_date": "2018-11-15 10:07:57"
   },
-  "6": {
+  "7": {
     "sha": "d8336bc2c1e54e77285720606178e673be19f276",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d8336bc2c1e5",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -50,7 +58,7 @@
     "commit_message": "No bug - Tagging 2085f7f22a53096e032c9c0a4931d282ed3f0d43 with FIREFOX_63_0_3_BUILD1 a=release CLOSED TREE DONTBUILD",
     "commit_date": "2018-11-15 00:20:28"
   },
-  "7": {
+  "8": {
     "sha": "2085f7f22a53096e032c9c0a4931d282ed3f0d43",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=2085f7f22a53",
     "commiter_name": "Michael Cooper ",
@@ -58,7 +66,7 @@
     "commit_message": "Bug 1502410 - Don't use deleteBranch in Normandy. r=Gijs,adw, a=ritu  nsIPrefBranch.deleteBranch doesn't work as documented when the preference's default value was set very early after Firefox has started, such as when Normandy sets startup branches. This is filed as bug 1505941. In order to work around this problem, this patch makes Normandy never use deleteBranch, except in tests where it is safe to do so.  With this patch, an experiment that is run on the default branch for a preference that does not have a default value in the tree cannot be promptly unenrolled, instead we must wait until the preference is naturally cleared when Firefox restarts. This is better than never unenrolling though.  Differential Revision: https://phabricator.services.mozilla.com/D11383",
     "commit_date": "2018-11-14 16:47:14"
   },
-  "8": {
+  "9": {
     "sha": "056066d28f8a685510d25af9a2236f42e2f53fcd",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=056066d28f8a",
     "commiter_name": "Drew Willcoxon ",
@@ -66,7 +74,7 @@
     "commit_message": "Bug 1504370 - Update SEARCH_COUNTS telemetry for private browsing mode. r=mkaply, a=pascalc    If a search is performed in a private window and the new pref `browser.engagement.search_counts.pbm` is true, then do not record `SEARCH_COUNTS` telemetry. Note that the the pref must be true. If it's false or doesn't exist, then we record telemetry even in pbm like we normally do currently. (We record `SEARCH_COUNTS` telemetry in two places: (1) In BrowserUsageTelemetry.jsm, and (2) \"in-content\" telemetry directly in the search service. So skip both of those places.)   Also skip the other ancillary telemetry recorded by `BrowserUsageTelemetry._recordSearch`: a keyed scalar and a telemetry event.   I made some modifications to the search service to let me test the \"in-content\" telemetry keys  Differential Revision: https://phabricator.services.mozilla.com/D10851",
     "commit_date": "2018-11-06 17:58:07"
   },
-  "9": {
+  "10": {
     "sha": "7dc20948e0ff163e5a9825500544a467b920323e",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=7dc20948e0ff",
     "commiter_name": "Johan Lorenzo ",
@@ -74,7 +82,7 @@
     "commit_message": "Bug 1505514 - geckoview artifacts don't specify branch when mozilla-release. r=snorp, a=release  Differential Revision: https://phabricator.services.mozilla.com/D11447",
     "commit_date": "2018-11-13 12:55:33"
   },
-  "10": {
+  "11": {
     "sha": "c7d6ec9d4a1c7312f60974b7a05755a08d0fa96f",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=c7d6ec9d4a1c",
     "commiter_name": "Andi-Bogdan Postelnicu ",
@@ -82,7 +90,7 @@
     "commit_message": "Bug 1501351 - Gradle fails to download some artifacts even though bintray advertises it has them. r=nalexander, a=release  Differential Revision: https://phabricator.services.mozilla.com/D9553",
     "commit_date": "2018-10-23 17:27:54"
   },
-  "11": {
+  "12": {
     "sha": "3e36063212e3f68ea6be99f943fd89eb3db64983",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3e36063212e3",
     "commiter_name": "Tom Prince ",
@@ -90,7 +98,7 @@
     "commit_message": "Bug 1506920 - [taskgraph] Track parent images in docker image digests. r=dustin, a=release  The digest for a docker image task did not include the digest for the parent image in it, and so in particular did not depend on the versions of packages included in a parent image.  If two branches have a docker image with identical docker files, but different parents, this would lead to them both getting the same digest, leading to unexpected interference between the branches.  This fixes things by including the digest of the parent image as input into the digest of child images.  Differential Revision: https://phabricator.services.mozilla.com/D11807",
     "commit_date": "2018-11-14 14:29:26"
   },
-  "12": {
+  "13": {
     "sha": "1b78230f1e90aaec18928b98a3b555ccbfa25410",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=1b78230f1e90",
     "commiter_name": "Andrea Marchesini ",
@@ -98,7 +106,7 @@
     "commit_message": "Bug 1498510 - Move nsICSPEventListener out of CSP object, r=ckerschb a=pascalc",
     "commit_date": "2018-11-14 13:12:31"
   },
-  "13": {
+  "14": {
     "sha": "9ff7289af005bc97da4ce8ff49cd899f3898494e",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=9ff7289af005",
     "commiter_name": "Paul Adenot ",
@@ -106,7 +114,7 @@
     "commit_message": "Bug 1502748 - Back out of code which shouldn't have landed in bug 1308436. a=pascalc",
     "commit_date": "2018-11-13 16:35:51"
   },
-  "14": {
+  "15": {
     "sha": "527b9e310603f6bd71d00caa757a30f2769f6895",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=527b9e310603",
     "commiter_name": "Emilio Cobos \u00c1lvarez ",
@@ -114,7 +122,7 @@
     "commit_message": "Bug 1505520 - Back out bug 1478455. r=xidorn, a=pascalc  It breaks websites.  Differential Revision: https://phabricator.services.mozilla.com/D11232",
     "commit_date": "2018-11-07 21:03:18"
   },
-  "15": {
+  "16": {
     "sha": "5783aac8a1de4ea1b5667ea4df68b673f30ea9d3",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=5783aac8a1de",
     "commiter_name": "Markus Stange ",
@@ -122,7 +130,7 @@
     "commit_message": "Bug 1503424 - Null-check NSWorkspaceAccessibilityDisplayOptionsDidChangeNotification before using it in order to fix a startup crash on 10.10. r=hiro, a=pascalc  Differential Revision: https://phabricator.services.mozilla.com/D11239",
     "commit_date": "2018-11-07 21:38:21"
   },
-  "16": {
+  "17": {
     "sha": "62d17dbe09ab40325dc1fa8f35299ebfa4f05f4e",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=62d17dbe09ab",
     "commiter_name": "ScottDowne ",
@@ -130,7 +138,7 @@
     "commit_message": "Bug 1504165 - Two Sponsored cards are wrongly displayed after increasing the number of Pocket recommendations. r=k88hudson, a=pascalc  Differential Revision: https://phabricator.services.mozilla.com/D11385",
     "commit_date": "2018-11-08 22:15:18"
   },
-  "17": {
+  "18": {
     "sha": "b667a0520fe8fefd2befae05c94c3c54d7ca4845",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=b667a0520fe8",
     "commiter_name": "Honza Bambas ",
@@ -138,7 +146,7 @@
     "commit_message": "Bug 1503354 - Disable background HTTP response throttling for causing visible regressions. r=dragana, a=pascalc",
     "commit_date": "2018-10-31 06:13:00"
   },
-  "18": {
+  "19": {
     "sha": "22273af49058a386f369d21f546321108290cb6a",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=22273af49058",
     "commiter_name": "Emilio Cobos \u00c1lvarez ",
@@ -146,20 +154,12 @@
     "commit_message": "Bug 1503401 - Keep Firefox 63 building with newer cbindgen versions. r=boris, a=pascalc",
     "commit_date": "2018-10-31 18:09:00"
   },
-  "19": {
+  "20": {
     "sha": "810f1fec3cd0079f75d1e745a537f3fc9f53108c",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=810f1fec3cd0",
     "commiter_name": "Ryan VanderMeulen ",
     "commit_email": "ryanvm@gmail.com",
     "commit_message": "Backed out changeset 67f5be8d6bbe (bug 1498510) for bustage.",
     "commit_date": "2018-11-13 15:03:18"
-  },
-  "20": {
-    "sha": "89d88d0951c3a86eef72ba6bef4264a861294eb2",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=89d88d0951c3",
-    "commiter_name": "Felipe Gomes ",
-    "commit_email": "felipc@gmail.com",
-    "commit_message": "Bug 1499896 - Clean up listeners to an empty array instead of null. r=mconley, a=pascalc  Differential Revision: https://phabricator.services.mozilla.com/D9047",
-    "commit_date": "2018-10-30 19:55:03"
   }
 }

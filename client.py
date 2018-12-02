@@ -1,14 +1,14 @@
 import os
 from github import Github  # pip3 install PyGitHub
 from datetime import datetime, timedelta
+import datetime
 import json
 import re
 import requests
 from os import listdir
 from os.path import isfile, join
 
-# Create a Github instance:
-lastWeek = datetime.now() - timedelta(days=7)
+lastWeek = datetime.datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -20,22 +20,26 @@ def get_version(repo_name, repo_team):
     """
     repo_path = repo_team + repo_name
     iteration = 0
+
     for tags in git.get_repo(repo_path).get_tags():
+        version = tags.name
+        sha = tags.commit.sha
+        date = tags.commit.commit.last_modified
+        author = tags.commit.author.login
         if iteration == 0:
-            latestRelease = {'Version': tags.name,
-                    'Sha': tags.commit.sha,
-                    'Date': tags.commit.commit.last_modified,
-                    'Author': tags.commit.author.login
+            latestrelease = {'Version': version,
+                    'Sha': sha,
+                    'Date': date,
+                    'Author': author
                     }
             iteration = 1
         elif iteration == 1:
-            previousRelease = {'Version': tags.name,
-                    'Sha': tags.commit.sha,
-                    'Date': tags.commit.commit.last_modified,
-                    'Author': tags.commit.author.login
+            previousrelease = {'Version': version,
+                    'Sha': sha,
+                    'Date': date,
+                    'Author':author
                     }
-            return {'LatestRelease': latestRelease, 'PreviousRelease': previousRelease}
-
+            return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
 
 
 def get_version_from_build_puppet(version_path, repo_name):
@@ -64,6 +68,21 @@ def extract_email(commit_email):
     :return: String that contains only the email
     """
     return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
+
+
+def since(repository_name, path_to_files):
+    json_data = open(current_dir + "/{}/".format(path_to_files) + "{}.json".format(repository_name)).read()
+    data = json.loads(json_data)
+    for key in data:
+        try:
+            x = key['0']['last_two_release']['LatestRelease']['Date']
+            y = key['0']['last_two_release']['PreviousRelease']['Date']
+            z = x - y
+            print(z)
+            return z
+        except TypeError:
+            z = datetime.now() - timedelta(days=7)
+            return z
 
 
 def create_md_table(repository_name, path_to_files):
@@ -140,10 +159,21 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
     number = 0
     repository_path = repository_team + repository_name
     print("Working on repo: {}, Latest release: {}".format(repository_name, repository_version))
-    repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
+    repo_dict.update({number: {"lastChecked": str(datetime.datetime.utcnow()),
                                "last_two_Release": repository_version}})
+
+    try:
+        #x = type(repository_version['LatestRelease']['Date'])
+        x = datetime.datetime.strptime(repository_version['LatestRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
+        #y = repository_version['PreviousRelease']['Date']
+        #h = datetime.strptime(x, '%Y-%m-%d %H:%M:%S')
+        #c = datetime.strptime(y, '%Y-%m-%d %H:%M:%S')
+        y = datetime.datetime.strptime(repository_version['PreviousRelease']['Date'], '%a, %d %b %Y %H:%M:%S GMT')
+        z = x - y
+    except TypeError:
+        z = datetime.datetime.now() - timedelta(days=7)
     number += 1
-    for commit in git.get_repo(repository_path).get_commits(since=lastWeek):
+    for commit in git.get_repo(repository_path).get_commits(since=z):
         each_commit = {}
         author_info = {}
         files_changed = []
@@ -245,6 +275,7 @@ def create_files_for_git(repositories_holder):
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
         repository_version = get_version(repository_name, repository_team)
+        #lasttime = since(repository_name, "git_files")
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
             version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)

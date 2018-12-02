@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:57.788549"
+    "lastChecked": "2018-12-01 15:38:14.376985"
   },
   "1": {
-    "sha": "38d3c4d3d13cf5f0adeacc5b611b46b14c5e97d9",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=38d3c4d3d13c",
-    "commiter_name": "Ting-Yu Lin ",
-    "commit_email": "tlin@mozilla.com",
-    "commit_message": "try: -b do -p linux64 -u all -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-11-30 00:53:21"
+    "sha": "e7373fd2525d4de52199dd1841afd1301aeffcb1",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e7373fd2525d",
+    "commiter_name": "Mark Striemer ",
+    "commit_email": "mstriemer@mozilla.com",
+    "commit_message": "try: -b o -p win64,linux64,macosx64 -u mochitest-bc,mochitest-e10s-bc,xpcshell -t none  Pushed via `mach try syntax`",
+    "commit_date": "2018-12-01 15:35:42"
   },
   "2": {
-    "sha": "8030473ccb4b4f674c4c8930cf9c6ca55c57e1b5",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=8030473ccb4b",
-    "commiter_name": "Ting-Yu Lin ",
-    "commit_email": "tlin@mozilla.com",
-    "commit_message": "Bug 1507244 Part 2 - Suppress column-span descendants under a new block formatting context.  Bug 1506163 fixed only part of the issue. There are more types of frames that create block formatting context such as table, grid, flex, etc. I use the following page as a reference.  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context ",
-    "commit_date": "2018-11-30 00:20:49"
+    "sha": "b0057c7ff549e1c737b1ffe256c468a9404d2c8e",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b0057c7ff549",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpParameters-codecs.html web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpParameters-degradationPreference.html web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpParameters-encodings.html web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpParameters-headerExtensions.html web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpParameters-rtcp.html web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpParameters-transactionId.html web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpReceiver-getParameters.html",
+    "commit_date": "2018-12-01 15:35:18"
   },
   "3": {
-    "sha": "e20fc9f93f64b76c500f15ae59a71e72b59e1b45",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e20fc9f93f64",
-    "commiter_name": "Ting-Yu Lin ",
-    "commit_email": "tlin@mozilla.com",
-    "commit_message": "Bug 1507244 Part 1 - Add block formatting context bits for column-span in nsBlockFrame::Init().  That's the common place where the bits are added. ",
-    "commit_date": "2018-11-30 00:18:21"
+    "sha": "7b759dd52188000702084644f7bce1225bd09409",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7b759dd52188",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "Bug 1511578 [wpt PR 14319] - Update wpt metadata, a=testonly  wpt-pr: 14319 wpt-type: metadata ",
+    "commit_date": "2018-12-01 15:35:00"
   },
   "4": {
-    "sha": "b5ba4e80eb0d15d94a53333953b1beb406efbb53",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b5ba4e80eb0d",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/characteristicProperties.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptor/gen-characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptor/gen-descriptor-get-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptor/gen-service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptors/gen-characteristic-is-removed-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptors/gen-characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptors/gen-descriptor-get-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptors/gen-service-is-removed-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/getDescriptors/gen-service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/notifications/characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/notifications/service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/readValue/add-multiple-event-listeners.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/readValue/characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/readValue/event-is-fired.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/readValue/gen-characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/readValue/read-succeeds.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/readValue/read-updates-value.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/readValue/service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/service-same-from-2-characteristics.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/service-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/startNotifications/gen-characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/writeValue/characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/writeValue/gen-characteristic-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/writeValue/service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/characteristic/writeValue/write-succeeds.https.html web-platform-tests:testing/web-platform/tests/bluetooth/descriptor/readValue/gen-service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/descriptor/readValue/read-succeeds.https.html web-platform-tests:testing/web-platform/tests/bluetooth/descriptor/writeValue/gen-service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/device/gattserverdisconnected-event/disconnected.https.html web-platform-tests:testing/web-platform/tests/bluetooth/device/gattserverdisconnected-event/disconnected_gc.https.html web-platform-tests:testing/web-platform/tests/bluetooth/device/gattserverdisconnected-event/one-event-per-disconnection.https.html web-platform-tests:testing/web-platform/tests/bluetooth/device/gattserverdisconnected-event/reconnect-during-disconnected-event.https.html web-platform-tests:testing/web-platform/tests/bluetooth/idl/idl-BluetoothDevice.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/acceptAllDevices/device-with-empty-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/acceptAllDevices/device-with-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/acceptAllDevices/optional-services-missing.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/acceptAllDevices/optional-services-present.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/blocklisted-service-in-filter.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/blocklisted-service-in-optionalServices.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/device-name-longer-than-29-bytes.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/empty-filter.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/empty-filters-member.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/empty-namePrefix.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/empty-services-member.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/filters-xor-acceptAllDevices.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-exceeded-name-unicode.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-exceeded-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-exceeded-namePrefix-unicode.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-exceeded-namePrefix.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-name-unicode.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-namePrefix-unicode.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/max-length-namePrefix.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/no-arguments.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/unicode-valid-length-name-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/unicode-valid-length-name-namePrefix.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/wrong-service-in-optionalServices-member.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/canonicalizeFilter/wrong-service-in-services-member.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/cross-origin-iframe.sub.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/discovery-succeeds.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/doesnt-consume-user-gesture.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/filter-matches.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/le-not-supported.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/name-empty-device-from-name-empty-filter.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/not-processing-user-gesture.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/radio-not-present.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/request-from-iframe.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/request-from-sandboxed-iframe.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/same-device.https.html web-platform-tests:testing/web-platform/tests/bluetooth/requestDevice/single-filter-single-service.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/connect/connection-succeeds.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/connect/garbage-collection-ran-during-success.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/connect/get-same-gatt-server.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/device-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/disconnect/connect-disconnect-twice.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/disconnect/detach-gc.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/disconnect/disconnect-twice-in-a-row.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/disconnect/gc-detach.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-disconnect-called-before.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-disconnect-called-during-error.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-disconnect-called-during-success.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-disconnect-invalidates-objects.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-disconnected-device.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-discovery-complete-no-permission-absent-service.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-discovery-complete-service-not-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-garbage-collection-ran-during-error.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-garbage-collection-ran-during-success.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-get-different-service-after-reconnection.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-get-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-invalid-service-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-no-permission-absent-service.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-no-permission-for-any-service.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-no-permission-present-service.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/gen-service-not-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/service-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryService/two-iframes-from-same-origin.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/blocklisted-services-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/blocklisted-services.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/correct-services.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-called-before-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-called-before.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-called-during-error-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-called-during-error.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-called-during-success-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-called-during-success.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-invalidates-objects-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnect-invalidates-objects.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnected-device-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-disconnected-device.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-discovery-complete-no-permission-absent-service-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-discovery-complete-service-not-found-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-garbage-collection-ran-during-error-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-garbage-collection-ran-during-error.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-garbage-collection-ran-during-success-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-garbage-collection-ran-during-success.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-get-different-service-after-reconnection-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-get-different-service-after-reconnection.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-get-same-object-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-get-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-invalid-service-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-no-permission-absent-service-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-no-permission-for-any-service-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-no-permission-for-any-service.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-no-permission-present-service-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/gen-service-not-found-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/services-found-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/services-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/server/getPrimaryServices/services-not-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/device-same-from-2-services.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/device-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/characteristic-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/gen-blocklisted-characteristic.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/gen-characteristic-not-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/gen-garbage-collection-ran-during-error.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/gen-get-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/gen-invalid-characteristic-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/gen-reconnect-during.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristic/gen-service-is-removed.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/blocklisted-characteristics.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/characteristics-found-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/characteristics-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/characteristics-not-found.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-blocklisted-characteristic-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-characteristic-not-found-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-garbage-collection-ran-during-error-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-garbage-collection-ran-during-error.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-get-same-object-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-get-same-object.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-invalid-characteristic-name.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-reconnect-during-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-reconnect-during.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-service-is-removed-with-uuid.https.html web-platform-tests:testing/web-platform/tests/bluetooth/service/getCharacteristics/gen-service-is-removed.https.html web-platform-tests:testing/web-platform/tests/css/selectors/focus-visible-007.html web-platform-tests:testing/web-platform/tests/feature-policy/autoplay-allowed-by-feature-policy-attribute-redirect-on-load.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/autoplay-allowed-by-feature-policy-attribute.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/autoplay-allowed-by-feature-policy.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/autoplay-default-feature-policy.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/autoplay-disabled-by-feature-policy.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/picture-in-picture-allowed-by-feature-policy-attribute-redirect-on-load.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/picture-in-picture-allowed-by-feature-policy-attribute.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/picture-in-picture-allowed-by-feature-policy.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/picture-in-picture-default-feature-policy.https.sub.html web-platform-tests:testing/web-platform/tests/feature-policy/picture-in-picture-disabled-by-feature-policy.https.sub.html web-platform-tests:testing/web-platform/tests/fetch/sec-metadata/window-open.tentative.https.sub.html web-platform-tests:testing/web-platform/tests/html/editing/focus/focus-01.html web-platform-tests:testing/web-platform/tests/html/editing/focus/focus-02.html web-platform-tests:testing/web-platform/tests/html/editing/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-negative.html web-platform-tests:testing/web-platform/tests/html/editing/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-order.html web-platform-tests:testing/web-platform/tests/html/editing/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-positive.html web-platform-tests:testing/web-platform/tests/html/editing/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-zero.html web-platform-tests:testing/web-platform/tests/infrastructure/testdriver/click.html web-platform-tests:testing/web-platform/tests/infrastructure/testdriver/send_keys.html web-platform-tests:testing/web-platform/tests/payment-request/payment-request-abort-method.https.html web-platform-tests:testing/web-platform/tests/picture-in-picture/disable-picture-in-picture.html web-platform-tests:testing/web-platform/tests/picture-in-picture/enter-picture-in-picture.html web-platform-tests:testing/web-platform/tests/picture-in-picture/exit-picture-in-picture.html web-platform-tests:testing/web-platform/tests/picture-in-picture/leave-picture-in-picture.html web-platform-tests:testing/web-platform/tests/picture-in-picture/picture-in-picture-element.html web-platform-tests:testing/web-platform/tests/picture-in-picture/picture-in-picture-window.html web-platform-tests:testing/web-platform/tests/picture-in-picture/request-picture-in-picture.html web-platform-tests:testing/web-platform/tests/picture-in-picture/shadow-dom.html web-platform-tests:testing/web-platform/tests/uievents/order-of-events/mouse-events/click-cancel.html web-platform-tests:testing/web-platform/tests/webusb/usb.https.html",
-    "commit_date": "2018-11-30 00:49:11"
+    "sha": "d7b376d4f288b70621640f0a17bfbc75e2ab2373",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d7b376d4f288",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-01 15:33:41"
   },
   "5": {
-    "sha": "decc51658691829b85644395f2e8ee4ce08a3f9b",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=decc51658691",
-    "commiter_name": "Thomas Daede ",
-    "commit_email": "tdaede@mozilla.com",
-    "commit_message": "Fuzzy query=linux64 build  Pushed via `mach try fuzzy` ",
-    "commit_date": "2018-11-30 00:42:41"
+    "sha": "b3be2eb82cacf305a5561e296ed934e137e3313d",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b3be2eb82cac",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1511567 - Add UI transitions. r=bhackett  Tags: #secure-revision  Bug #: 1511567  Differential Revision: https://phabricator.services.mozilla.com/D13605 ",
+    "commit_date": "2018-12-01 00:39:31"
   },
   "6": {
-    "sha": "2b19810238005d347e43de76befd494df45513d0",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=2b1981023800",
-    "commiter_name": "Thomas Daede ",
-    "commit_email": "tdaede@mozilla.com",
-    "commit_message": "Update deb7 nasm to 2.14. ",
-    "commit_date": "2018-11-30 00:41:56"
+    "sha": "5baf2cb7704ae1ee8add78031ce39a24bf50f530",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5baf2cb7704a",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/css/css-multicol/balance-table-with-fractional-height-row.html",
+    "commit_date": "2018-12-01 15:26:15"
   },
   "7": {
-    "sha": "d5b36df725ffb6eec779909bb07def48eb42b3dd",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d5b36df725ff",
-    "commiter_name": "Bas Schouten ",
-    "commit_email": "bschouten@mozilla.com",
-    "commit_message": "try: -b do -p all -u all -t none  Pushed via `mach try syntax`",
-    "commit_date": "2018-11-30 00:37:44"
+    "sha": "883ee7df523059764f7c57dd8c69d57307bd0daa",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=883ee7df5230",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "Bug 1511576 [wpt PR 14318] - Update wpt metadata, a=testonly  wpt-pr: 14318 wpt-type: metadata ",
+    "commit_date": "2018-12-01 15:25:57"
   },
   "8": {
-    "sha": "4b000b4f27abfa1474e0f0079e4f4039e3c46d0e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4b000b4f27ab",
-    "commiter_name": "Bas Schouten ",
-    "commit_email": "bschouten@mozilla.com",
-    "commit_message": "Bug 1506537 - Part 3: Add test for keypress telemetry. r=mstange",
-    "commit_date": "2018-11-30 00:37:06"
+    "sha": "8d48ae11db3097e3426fcb713527fb29d68ee232",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=8d48ae11db30",
+    "commiter_name": "Rob Wood ",
+    "commit_email": "rwood@mozilla.com",
+    "commit_message": "Fuzzy query=raptor tp6-6  Pushed via `mach try fuzzy`",
+    "commit_date": "2018-12-01 15:25:20"
   },
   "9": {
-    "sha": "0018d3ea559ffd89e8c3dfe9ee42daf22364e50d",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0018d3ea559f",
-    "commiter_name": "Bas Schouten ",
-    "commit_email": "bschouten@mozilla.com",
-    "commit_message": "Bug 1506537 - Part 2: Add telemetry probe for keypress presentation latency. r=smaug",
-    "commit_date": "2018-11-30 00:21:01"
+    "sha": "f328404243d3a0cdf163d7e079475df0185cfa96",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=f328404243d3",
+    "commiter_name": "Rob Wood ",
+    "commit_email": "rwood@mozilla.com",
+    "commit_message": "Bug 1510400 - Promote new tp6-3, 4, 5, and 6 tests to tier 1; r?jmaher,davehunt  Differential Revision: https://phabricator.services.mozilla.com/D13615",
+    "commit_date": "2018-12-01 15:21:34"
   },
   "10": {
-    "sha": "da06004508e82e70c763e854246c90e5c5aed659",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=da06004508e8",
-    "commiter_name": "Bas Schouten ",
-    "commit_email": "bschouten@mozilla.com",
-    "commit_message": "Bug 1506537 - Part 1: Register KeyPress events with the LayerManager when painting is scheduled. r=smaug",
-    "commit_date": "2018-11-30 00:20:36"
+    "sha": "e987e55bf874e2147dc799ecd8b686c6c711d722",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e987e55bf874",
+    "commiter_name": "Gurzau Raul ",
+    "commit_email": "rgurzau@mozilla.com",
+    "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+    "commit_date": "2018-12-01 14:33:38"
   },
   "11": {
-    "sha": "e9e278c7bd9e5f9bedb788ce9bb334aa0ffdb0c4",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e9e278c7bd9e",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "staging release: 64.0b8  Pushed via `mach try release`",
-    "commit_date": "2018-11-30 00:32:46"
+    "sha": "74ec1377930745c3f3fdf9492c46001552ff14c2",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=74ec13779307",
+    "commiter_name": "Cristina Coroiu ",
+    "commit_email": "ccoroiu@mozilla.com",
+    "commit_message": "Bug 1505235 - disable browser_multiple_popups.js on win for frequent failures. r=jmaher",
+    "commit_date": "2018-11-30 15:06:00"
   },
   "12": {
-    "sha": "79af916d6921940ff28d5ecdaa8524c898aa46af",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=79af916d6921",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Hack pgo.",
-    "commit_date": "2018-11-29 23:39:46"
+    "sha": "6473a52f955fd083d7963dfb44a1a1dc134011f1",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6473a52f955f",
+    "commiter_name": "Bogdan Tara ",
+    "commit_email": "btara@mozilla.com",
+    "commit_message": "Backed out changeset 8d0d845aa081 (bug 1511565) for perma failing on shape-outside-ellipse-005.html CLOSED TREE",
+    "commit_date": "2018-12-01 13:51:52"
   },
   "13": {
-    "sha": "c200830ee2bd87dbab1b58404c739faa1bba292c",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c200830ee2bd",
-    "commiter_name": "Thomas Daede ",
-    "commit_email": "tdaede@mozilla.com",
-    "commit_message": "Fuzzy query=win64 nasm  Pushed via `mach try fuzzy` ",
-    "commit_date": "2018-11-30 00:31:13"
+    "sha": "008ba82aff2edbb5b4e5ef671efe81cd43a3d068",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=008ba82aff2e",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/web-nfc/idlharness.https.window.js",
+    "commit_date": "2018-12-01 15:04:51"
   },
   "14": {
-    "sha": "54bc813cf4e7641674f9db895cb11e9fe6e4a3a4",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=54bc813cf4e7",
-    "commiter_name": "Thomas Daede ",
-    "commit_email": "tdaede@mozilla.com",
-    "commit_message": "asdofjadfijasdfiojtooltool manifest ",
-    "commit_date": "2018-11-29 02:39:49"
+    "sha": "03d5a0e5e6f2fa9402747ff90597f00c25d9aef3",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=03d5a0e5e6f2",
+    "commiter_name": "Automat af Gr\u00e4nssnitt ",
+    "commit_email": "auto@foolip.org",
+    "commit_message": "Bug 1511605 [wpt PR 14325] - Update interfaces/web-nfc.idl, a=testonly  Source: https://github.com/tidoust/reffy-reports/blob/c609c4b/whatwg/idl/web-nfc.idl Build: https://travis-ci.org/tidoust/reffy-reports/builds/462099771  wpt-commit: ad69f9383dd451b6ae1fc17958428c0db686bb67 wpt-pr: 14325 ",
+    "commit_date": "2018-12-01 14:59:39"
   },
   "15": {
-    "sha": "56e72b53be5322f2489e0562868a5b5bd6fdc9fa",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=56e72b53be53",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "staging release: 64.0b8  Pushed via `mach try release`",
-    "commit_date": "2018-11-30 00:18:55"
+    "sha": "7dc14d1edf0c19dc65485d6f188bbbefe488d2dd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7dc14d1edf0c",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "try: -b o -p linux64 -u mochitest-e10s-bc -t none --artifact",
+    "commit_date": "2018-12-01 15:03:19"
   },
   "16": {
-    "sha": "9571f7d6240ff6a07772705d228bce7d407cbcd3",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9571f7d6240f",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Hack pgo.",
-    "commit_date": "2018-11-29 23:39:46"
+    "sha": "a00cb1e565a029a515bb7d1130a541bbc43ae602",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a00cb1e565a0",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "try: -b do -p android-api-16,win64,macosx64,linux64,linux64-base-toolchains,linux -u all[linux64-qr,windows10-64-qr,macosx64-qr] -t all[linux64-qr,windows10-64-qr,macosx64-qr]  Pushed via `mach try syntax`",
+    "commit_date": "2018-12-01 15:01:28"
   },
   "17": {
-    "sha": "443d00653f4da1603dd03c88ae4433a3faffc3ec",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=443d00653f4d",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/css/geometry/DOMMatrix-002.html web-platform-tests:testing/web-platform/tests/css/geometry/DOMMatrix-003.html web-platform-tests:testing/web-platform/tests/css/geometry/historical.html",
-    "commit_date": "2018-11-30 00:06:54"
+    "sha": "6486e0bb12c18e9b52231137b4a47e37c91dadfa",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6486e0bb12c1",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "placeholder for try push  MozReview-Commit-ID: LKDk2deY2x7",
+    "commit_date": "2018-12-01 15:01:24"
   },
   "18": {
-    "sha": "13df26c543481113ebf20b748cbbccb19a82864f",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=13df26c54348",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "Bug 1510815 [wpt PR 14281] - Update wpt metadata, a=testonly  wpt-pr: 14281 wpt-type: metadata ",
-    "commit_date": "2018-11-29 09:29:42"
+    "sha": "18d91c8604042908bbf2dd1a7a6c3098e5d0c726",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=18d91c860404",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1511409 - Re-generate FFI header. r?kats",
+    "commit_date": "2018-12-01 15:01:22"
   },
   "19": {
-    "sha": "157e09c113566c9a090ed0401a115e85c2a2487e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=157e09c11356",
-    "commiter_name": "Brendan Dahl ",
-    "commit_email": "bdahl@mozilla.com",
-    "commit_message": "Fuzzy query=!msvc !qr /opt-talos-e10s  Pushed via `mach try fuzzy` ",
-    "commit_date": "2018-11-30 00:04:28"
+    "sha": "6d0fa45a7760527d3e89069cbd4a0544fb233541",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6d0fa45a7760",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1511409 - Re-vendor rust dependencies. r?kats",
+    "commit_date": "2018-12-01 15:01:15"
   },
   "20": {
-    "sha": "cc4bb3d3f23e7b72211201278fe94fb3b2b3d8a1",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=cc4bb3d3f23e",
-    "commiter_name": "Brendan Dahl ",
-    "commit_email": "bdahl@mozilla.com",
-    "commit_message": "Sync dispatch dom content loaded. ",
-    "commit_date": "2018-11-30 00:04:04"
+    "sha": "238377449462c5adaf4273abff611e4a09b88a34",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=238377449462",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Placeholder  MozReview-Commit-ID: LhRD1MOzjK",
+    "commit_date": "2018-12-01 15:00:51"
   }
 }
