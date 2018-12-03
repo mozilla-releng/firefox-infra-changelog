@@ -44,6 +44,51 @@ def create_files_for_git(repositories_holder):
         create_md_table(repository_name, "git_files")
 
 
+def get_version(repo_name, repo_team):
+    """
+    :param repo_name: repository name
+    :param repo_team: repository team
+    :return: a dictionary with information from the last two release version: latestRelease and previousRelease
+    """
+    repo_path = repo_team + repo_name
+    iteration = 0
+
+    for tags in git.get_repo(repo_path).get_tags():
+        version = tags.name
+        sha = tags.commit.sha
+        date = tags.commit.commit.last_modified
+        author = tags.commit.author.login
+        if iteration == 0:
+            latestrelease = {'version': version,
+                             'sha': sha,
+                             'date': date,
+                             'author': author
+                             }
+            iteration = 1
+        elif iteration == 1:
+            previousrelease = {'version': version,
+                               'sha': sha,
+                               'date': date,
+                               'author': author
+                               }
+            return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
+
+
+def get_version_from_build_puppet(version_path, repo_name):
+    """
+    :param: version_path: Path to the requierments.txt where the version number is stored
+    :param: repo_name: The repo for which we are checking the version.
+    :return: Returns the version number that is stored in build-puppet for each *scriptworker
+    """
+    file_to_string = requests.get(version_path).text.split()
+    for word in file_to_string:
+        if repo_name in word:
+            version_in_puppet = re.split('\\b==\\b', word)[-1]
+            # the next check makes sure to only return the version in case the repo name appears multiple times
+            if version_in_puppet != repo_name:
+                return version_in_puppet
+
+
 def filter_git_commit_data(repository_name, repository_team, repository_version):
     """
     Filters out only the data that we need from a commit
@@ -159,6 +204,20 @@ def filter_hg_commit_data(repository_name, repository_url):
     json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
     json.dump(hg_repo_data, json_file, indent=2)
     json_file.close()
+
+
+def extract_email(commit_email):
+    """
+    Helper function!
+    Takes as parameter a string that contains between "<" and ">" an email that needs to be extracted.
+    The function uses find to search for the beginning of the email (that starts with "<") and adds the lengths of the
+    "<" so that returned email doesn't contain the "<" symbol and rfind to find the ending character ">". Both find and
+    rfind return the index where the carachters "<" and ">" are placed so when you do return commit_email with
+    [start_char_index:ending_char_index] the string shrinks to what's between the characters.
+    :param commit_email: String that contains an email
+    :return: String that contains only the email
+    """
+    return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
 
 
 def create_md_table(repository_name, path_to_files):
@@ -331,65 +390,6 @@ def write_main_md_table(file_name, repository_url, last_commit, deploy_time):
           "|" + "\n"
     write_file = open(file_name, "a")
     write_file.write(row)
-
-
-def get_version(repo_name, repo_team):
-    """
-    :param repo_name: repository name
-    :param repo_team: repository team
-    :return: a dictionary with information from the last two release version: latestRelease and previousRelease
-    """
-    repo_path = repo_team + repo_name
-    iteration = 0
-
-    for tags in git.get_repo(repo_path).get_tags():
-        version = tags.name
-        sha = tags.commit.sha
-        date = tags.commit.commit.last_modified
-        author = tags.commit.author.login
-        if iteration == 0:
-            latestrelease = {'version': version,
-                             'sha': sha,
-                             'date': date,
-                             'author': author
-                             }
-            iteration = 1
-        elif iteration == 1:
-            previousrelease = {'version': version,
-                               'sha': sha,
-                               'date': date,
-                               'author': author
-                               }
-            return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
-
-
-def get_version_from_build_puppet(version_path, repo_name):
-    """
-    :param: version_path: Path to the requierments.txt where the version number is stored
-    :param: repo_name: The repo for which we are checking the version.
-    :return: Returns the version number that is stored in build-puppet for each *scriptworker
-    """
-    file_to_string = requests.get(version_path).text.split()
-    for word in file_to_string:
-        if repo_name in word:
-            version_in_puppet = re.split('\\b==\\b', word)[-1]
-            # the next check makes sure to only return the version in case the repo name appears multiple times
-            if version_in_puppet != repo_name:
-                return version_in_puppet
-
-
-def extract_email(commit_email):
-    """
-    Helper function!
-    Takes as parameter a string that contains between "<" and ">" an email that needs to be extracted.
-    The function uses find to search for the beginning of the email (that starts with "<") and adds the lengths of the
-    "<" so that returned email doesn't contain the "<" symbol and rfind to find the ending character ">". Both find and
-    rfind return the index where the carachters "<" and ">" are placed so when you do return commit_email with
-    [start_char_index:ending_char_index] the string shrinks to what's between the characters.
-    :param commit_email: String that contains an email
-    :return: String that contains only the email
-    """
-    return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
 
 
 if __name__ == "__main__":
