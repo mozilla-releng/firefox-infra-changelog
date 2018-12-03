@@ -1,8 +1,40 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 17:58:21.144725"
+    "lastChecked": "2018-12-03 04:27:59.350899"
   },
   "1": {
+    "sha": "e4535e943651ce499a93bbc4592cb16adab897bd",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=e4535e943651",
+    "commiter_name": "Ryan VanderMeulen ",
+    "commit_email": "ryanvm@gmail.com",
+    "commit_message": "Bug 1511516 - Update Firefox 64 to NSS 3.40.1. r=jcj, a=lizzard UPGRADE_NSS_RELEASE",
+    "commit_date": "2018-12-02 21:22:47"
+  },
+  "2": {
+    "sha": "cb70f86f71435d262a2686b2ff85d11bb53f4348",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=cb70f86f7143",
+    "commiter_name": "Xidorn Quan ",
+    "commit_email": "me@upsuper.org",
+    "commit_message": "Bug 1506447 - Check overlay before checking custom scrollbar style in nsNativeThemeCocoa::GetWidgetTransparency. r=spohl, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D12856",
+    "commit_date": "2018-11-25 11:31:53"
+  },
+  "3": {
+    "sha": "729dc4b0b006c47a77ce65fd129054962467d6ec",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=729dc4b0b006",
+    "commiter_name": "Brendan Dahl ",
+    "commit_email": "bdahl@mozilla.com",
+    "commit_message": "Bug 1509576 - Fix crash when showing tooltip. r=NeilDeakin, a=lizzard  Handle the case when there is no tooltip text provider.  Differential Revision: https://phabricator.services.mozilla.com/D13105",
+    "commit_date": "2018-11-28 18:42:57"
+  },
+  "4": {
+    "sha": "3bebbace6e4a76ba5c158a922b8f8b541a709e30",
+    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3bebbace6e4a",
+    "commiter_name": "Petru Lingurar ",
+    "commit_email": "petru.lingurar@softvision.ro",
+    "commit_message": "Bug 1504780 - Prevent crash if GeckoProfile path is not known. r=snorp, a=lizzard  In this case the profile name will be null, situation already handled, in which a telemetry ping about the crash will not be sent but the crash can still be reported to crash-stats.  Differential Revision: https://phabricator.services.mozilla.com/D12741",
+    "commit_date": "2018-11-26 19:21:56"
+  },
+  "5": {
     "sha": "f744e835c8bf344bcd6f64b4b894a0a4d64a1c1c",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=f744e835c8bf",
     "commiter_name": "Tom Prince ",
@@ -10,7 +42,7 @@
     "commit_message": "Bug 1508494: Update WNP with locales for 64; r=flod a=whats-new  Differential Revision: https://phabricator.services.mozilla.com/D13555",
     "commit_date": "2018-12-01 06:00:21"
   },
-  "2": {
+  "6": {
     "sha": "f4fe9800063b5110cb59f2eafdc1ffc45feb5a60",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=f4fe9800063b",
     "commiter_name": "Jeff Gilbert ",
@@ -18,7 +50,7 @@
     "commit_message": "Bug 1467406 - Remove broken default-fb invalidation path. r=lsalzman a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D13047",
     "commit_date": "2018-11-27 15:49:21"
   },
-  "3": {
+  "7": {
     "sha": "3be25c15b7e9e3326826739bdc4f24ba94e8578b",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3be25c15b7e9",
     "commiter_name": "Rob Wu ",
@@ -26,7 +58,7 @@
     "commit_message": "Bug 1508144 - Ignore clicks on non-clickable menu items. r=mixedpuppy, a=jcristau  Bug 1469148 added support for detecting which mouse button was used, by synthetizing \"command\" events when a \"click\" event was captured. The implementation did not account for unclickable menu items, such as items that act as the parent of a submenu (see bug report), separators and disabled menu items.  This patch adds the necessary checks and regression tests for these scenarios to make sure that such clicks are ignored, as expected.  Differential Revision: https://phabricator.services.mozilla.com/D13084",
     "commit_date": "2018-11-28 15:09:26"
   },
-  "4": {
+  "8": {
     "sha": "24a6a9b747b34914d8dcd6ae714ca37fe5d56739",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=24a6a9b747b3",
     "commiter_name": "Jason Orendorff ",
@@ -34,7 +66,7 @@
     "commit_message": "Bug 1391756 - Try to fix rare timeout in dom/tests/mochitest/fetch/test_readableStreams.html. r=baku, a=test-only  Also removes an infinite regress of nested iframes. The original problem was that tests would start running before the child iframe was done loading. The straightforward fix is to have the child frame start the test. But this caused further error messages because the child iframe is loaded more than once; removing the iframe from the iframe fixes this.  Differential Revision: https://phabricator.services.mozilla.com/D13385",
     "commit_date": "2018-11-29 22:35:04"
   },
-  "5": {
+  "9": {
     "sha": "3dce43d9b92c7947a8de8638d80adc5b04c3d9d9",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3dce43d9b92c",
     "commiter_name": "Tom Prince ",
@@ -42,7 +74,7 @@
     "commit_message": "Bug 1510441: Add `.cron.yml` to the taskgraph sparse profile; r=gps a=tomprince DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D13142",
     "commit_date": "2018-11-30 00:26:19"
   },
-  "6": {
+  "10": {
     "sha": "2534c71731b1a8a1088e09b37760440f673e287a",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=2534c71731b1",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -50,7 +82,7 @@
     "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with FIREFOX_64_0b14_RELEASE a=release CLOSED TREE DONTBUILD",
     "commit_date": "2018-11-29 16:30:14"
   },
-  "7": {
+  "11": {
     "sha": "96633aad9421e5ee9d4bace7a30ee505ff41cf37",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=96633aad9421",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -58,7 +90,7 @@
     "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
     "commit_date": "2018-11-29 16:27:18"
   },
-  "8": {
+  "12": {
     "sha": "29f7e13e6a7e081402b6abfa1b4f4b5ce930fbc0",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=29f7e13e6a7e",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -66,7 +98,7 @@
     "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with DEVEDITION_64_0b14_RELEASE a=release CLOSED TREE DONTBUILD",
     "commit_date": "2018-11-29 16:27:15"
   },
-  "9": {
+  "13": {
     "sha": "2cc5c3f56a466e7a456285402dfae1216b79be60",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=2cc5c3f56a46",
     "commiter_name": "Olli Pettay ",
@@ -74,7 +106,7 @@
     "commit_message": "Bug 1510471 - Avoid useless FrameNeedsReflow call. r=emilio, a=RyanVM",
     "commit_date": "2018-11-28 17:48:03"
   },
-  "10": {
+  "14": {
     "sha": "028d808491d7d9510a4be8d1d36cb003b2e319f1",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=028d808491d7",
     "commiter_name": "Gabriele Svelto ",
@@ -82,7 +114,7 @@
     "commit_message": "Bug 1502977 - Reinstate the code blocking the \"Facebook Photo Uploader\" plugin on Mac and update the associated annotation. r=jmathies, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12354",
     "commit_date": "2018-11-28 18:52:41"
   },
-  "11": {
+  "15": {
     "sha": "86447d3b0fa20ec922db7c97719e1c5f3fe1a70c",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=86447d3b0fa2",
     "commiter_name": "ffxbld ",
@@ -90,7 +122,7 @@
     "commit_message": "No Bug, mozilla-beta repo-update HSTS HPKP blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D13386",
     "commit_date": "2018-11-29 12:14:05"
   },
-  "12": {
+  "16": {
     "sha": "f65cadcba4bd3c4b72ffbd1743279867a9415a3b",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=f65cadcba4bd",
     "commiter_name": "Henrik Skupin ",
@@ -98,7 +130,7 @@
     "commit_message": "Bug 1351940 - [marionette] Only convert a valid outerWindowID to a string. r=ato, a=test-only  Differential Revision: https://phabricator.services.mozilla.com/D13206",
     "commit_date": "2018-11-28 20:48:42"
   },
-  "13": {
+  "17": {
     "sha": "19d90b48fffb3382eb0ef3767b7f71f753935c65",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=19d90b48fffb",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -106,7 +138,7 @@
     "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with FIREFOX_64_0b14_BUILD1 a=release CLOSED TREE DONTBUILD",
     "commit_date": "2018-11-28 21:27:36"
   },
-  "14": {
+  "18": {
     "sha": "cad43b85841f72c7f4472bf810462c522049976b",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=cad43b85841f",
     "commiter_name": "Mozilla Releng Treescript ",
@@ -114,7 +146,7 @@
     "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with DEVEDITION_64_0b14_BUILD1 a=release CLOSED TREE DONTBUILD",
     "commit_date": "2018-11-28 21:20:22"
   },
-  "15": {
+  "19": {
     "sha": "fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=fa72e773a9eb",
     "commiter_name": "Shane Caraveo ",
@@ -122,44 +154,12 @@
     "commit_message": "Bug 1508853 make the search default panel persistent, r=aswan a=jcristau  This is a quick fix to ensure that the search install panel is shown when an extension uses is_default.  The intention is to uplift for 64.  Differential Revision: https://phabricator.services.mozilla.com/D13078",
     "commit_date": "2018-11-27 18:05:59"
   },
-  "16": {
+  "20": {
     "sha": "63ec2966de2035d3799d156c94ef42fed7587bc1",
     "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=63ec2966de20",
     "commiter_name": "Sebastian Hengst ",
     "commit_email": "archaeopteryx@coole-files.de",
     "commit_message": "Bug 1500563 - Add ASR snippet schemas and default values for fields to Activity Stream r=k88hudson a=jcristau  Reviewers: k88hudson  Reviewed By: k88hudson  Bug #: 1500563  Differential Revision: https://phabricator.services.mozilla.com/D13102",
     "commit_date": "2018-11-28 18:48:35"
-  },
-  "17": {
-    "sha": "140ce47ccf2bb401dfddc6776de3ff3bfdadcc92",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=140ce47ccf2b",
-    "commiter_name": "Dana Keeler ",
-    "commit_email": "dkeeler@mozilla.com",
-    "commit_message": "bug 1502841 - follow-up to ensure reentering DataStorageSharedThread::Shutdown() doesn't cause problems r=jcj a=jcristau  We shouldn't reenter DataStorageSharedThread::Shutdown(), but it may be possible. To guard against potentially attempting to shut down the shared thread more than once, we can check gDataStorageSharedThreadShutDown first.  Differential Revision: https://phabricator.services.mozilla.com/D12050",
-    "commit_date": "2018-11-16 16:14:52"
-  },
-  "18": {
-    "sha": "ce690bc5055827ce9a768a24472ed270b21231c3",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=ce690bc50558",
-    "commiter_name": "Dana Keeler ",
-    "commit_email": "dkeeler@mozilla.com",
-    "commit_message": "bug 1502841 - fix a deadlock by not holding the DataStorageSharedThread lock while shutting the thread down r=jcj a=jcristau  Judging by some stack traces we've received in crash reports, while shutting down the DataStorageSharedThread, it is possible to process an event on that thread that causes an attempt to re-initialize DataStorage. This wouldn't be a problem because we have a shutdown sentinel boolean and we exit early if it is true. However, checking the boolean involves acquiring the static lock for the thread, which means we can't be holding the lock while we're shutting down the thread.  Differential Revision: https://phabricator.services.mozilla.com/D11708",
-    "commit_date": "2018-11-14 00:28:52"
-  },
-  "19": {
-    "sha": "a5dfb5153b78bc8fd4838c885c92318fe45a3116",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a5dfb5153b78",
-    "commiter_name": "Sebastian Hengst ",
-    "commit_email": "archaeopteryx@coole-files.de",
-    "commit_message": "Backed out changeset 768deaa64aca (bug 1510281) on request from mak. a=backout",
-    "commit_date": "2018-11-28 18:15:33"
-  },
-  "20": {
-    "sha": "3a87f2a3619ad37967ac6cfa830148019a8f9290",
-    "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3a87f2a3619a",
-    "commiter_name": "Drew Willcoxon ",
-    "commit_email": "adw@mozilla.com",
-    "commit_message": "Bug 1502576 - The search bar's popup should not open when clicking menu items in its context menu. r=mkaply a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12374",
-    "commit_date": "2018-11-26 18:11:50"
   }
 }

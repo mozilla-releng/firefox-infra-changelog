@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 17:58:16.292101"
+    "lastChecked": "2018-12-03 04:27:54.364934"
   },
   "1": {
-    "sha": "400e741d50311cf7bc765c81c76db61975cd54ee",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=400e741d5031",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Fuzzy query=analysis  Pushed via `mach try fuzzy`",
-    "commit_date": "2018-12-02 17:50:30"
+    "sha": "ac982b4b79f29e7b16b2c9d27b2b124dde4a5761",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ac982b4b79f2",
+    "commiter_name": "Daniel Holbert ",
+    "commit_email": "dholbert@cs.stanford.edu",
+    "commit_message": "try: -b do -p all -u reftest -t none  Pushed via `mach try syntax`",
+    "commit_date": "2018-12-03 03:13:40"
   },
   "2": {
-    "sha": "d5c03b3dc89b80868e4dc2a3e32f89000bcf3eb1",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d5c03b3dc89b",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Disregard VideoChunk durations in VideoTrackEncoder. r?padenot",
-    "commit_date": "2018-11-30 22:01:14"
+    "sha": "b7261f2f150ec609cec7c1f08e1fa7459994ddf3",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b7261f2f150e",
+    "commiter_name": "Daniel Holbert ",
+    "commit_email": "dholbert@cs.stanford.edu",
+    "commit_message": "Bug 1452527: Un-skip reftest svg/outline.html on mac/linux, and mark it as fuzzy in general. (no review, just adjusting test annotation)  The fuzzy() annotation here is using the max-difference from the Windows failures in bug 1452527, and the number-of-mismatching-pixels from mac/linux failures in bug 1503525.",
+    "commit_date": "2018-12-03 01:09:25"
   },
   "3": {
-    "sha": "0463742d129f9db8c4b05fd08b861df8ed7d5dc4",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0463742d129f",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Route MediaEncoder::Suspend/Resume through the graph thread for less drift. r?padenot",
-    "commit_date": "2018-11-30 21:59:47"
+    "sha": "e26d4066d473c61169382eabc54486ed76d5ce30",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e26d4066d473",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-reftests[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-reftests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-wdspec[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact",
+    "commit_date": "2018-12-03 02:58:46"
   },
   "4": {
-    "sha": "3e99861ff96a24c990941d3bc0a1a85bca8dba0f",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=3e99861ff96a",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Remove support for direct audio listeners from AudioTrackEncoder. r?padenot",
-    "commit_date": "2018-11-30 21:55:30"
+    "sha": "571c0722b626972e9f26931e042883f6800aa436",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=571c0722b626",
+    "commiter_name": "qiuzhong ",
+    "commit_email": "zhongx.qiu@intel.com",
+    "commit_message": "Bug 1511405 [wpt PR 14309] - Improve testharness.js for removing timeout, a=testonly    Simply ignore test-level timeout rather than raising an error.   More clean code for setting test.timeout_length.  wpt-commit: 03adb6f5e41da970876e1072fd3dce8d7663af1f wpt-pr: 14309 ",
+    "commit_date": "2018-12-03 02:50:33"
   },
   "5": {
-    "sha": "1bc9c7cb36a445b81e3d4249b5de3da79d794db9",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=1bc9c7cb36a4",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Automatically progress a pushed video track to avoid blocking its stream. r?padenot",
-    "commit_date": "2018-11-30 15:44:54"
+    "sha": "2b91125b613d57945cc94a4bb09f69a7489fdef5",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=2b91125b613d",
+    "commiter_name": "Masayuki Nakano ",
+    "commit_email": "masayuki@d-toybox.com",
+    "commit_message": "try: -b d -p linux64 -u mochitests -t none  Pushed via `mach try syntax`",
+    "commit_date": "2018-12-03 02:37:43"
   },
   "6": {
-    "sha": "c3d252d1d544be7d5899671b4d7207b2a286b85b",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c3d252d1d544",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Add drift compensation to MediaEncoder. r?padenot",
-    "commit_date": "2018-11-29 20:51:51"
+    "sha": "f4ffd9844c4d918ab9b5c35768d9500d70003018",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=f4ffd9844c4d",
+    "commiter_name": "Masayuki Nakano ",
+    "commit_email": "masayuki@d-toybox.com",
+    "commit_message": "Bug 1511752 - Make IMContextWrapper::OnKeyEvent() treat GDK_KEY_PRESS event without any key information in a dead key sequence as synthesized by current keyboard layout for asynchronous handling r=m_kato  Some keyboard layouts which have dead keys may handle dead key composition asynchronously.  In this case, they don't rely on IME like iBus/Fcitx.  As far as I've tested, German (QWERTY) keyboard layout is one of such keyboard layout.  This returns true when gtk_im_context_filter_keypress() is called for a base character input (like \"a\").  Then, it synthesizes GDK_KEY_PRESS event without any key information such as: > { type=GDK_KEY_PRESS, keyval=(null), unicode=0x0, state=, time=0, >   hardware_keycode=0, group=0 } So, this is not marked as IBUS_IGNORED_MASK nor FcitxKeyState_IgnoredMask by IME, but we should ignore this event since we should've already dispatched \"keydown\" event for the preceding \"a\" key event, and anyway \"keydown\" event for the synthesized event does not make sense for any web apps.  This patch makes IMContextWrapper::OnKeyEvent() ignore such key event, i.e., when it's in a dead key sequence, and GDK_KEY_PRESS does not have enough information, e.g., hardware_keycode shouldn't be 0 especially for printable keys.  Therefore, this patch make it check only hardware_keycode value and gdk_keyval_to_unicode(aEvent->keyval) value.  If some keyboard layouts would send the original key event as is, we would need to do more, but currently, this is enough and safe to land this timing.",
+    "commit_date": "2018-12-03 01:16:35"
   },
   "7": {
-    "sha": "bc51387eaa32d0759dcb506bb2d90b58bae9f065",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=bc51387eaa32",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "pehrsons@mozilla.com",
-    "commit_message": "Bug 1423253 - Add a drift compensator to reclock video timestamps. r?padenot",
-    "commit_date": "2018-11-29 15:41:16"
+    "sha": "bfcf4b585550836cf7af5e7db38b3d5f410b4601",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=bfcf4b585550",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-03 02:16:57"
   },
   "8": {
-    "sha": "ae21b7f4c06aab77689755be52b5e136d16a57ef",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ae21b7f4c06a",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Change MediaEngineRemoteVideoSource to push instead of pull. r?padenot",
-    "commit_date": "2018-11-28 17:07:30"
+    "sha": "016950978d668f33cbb65396d100c82cc2255537",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=016950978d66",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Revert \"Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js\"  This reverts commit fd12a44e915d4e06f4509588ff4667dd9646e2dd. ",
+    "commit_date": "2018-12-03 00:33:06"
   },
   "9": {
-    "sha": "5b58c9195d4dea4c663c83ad6d4c2227f45a46a7",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5b58c9195d4d",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Change CanvasCaptureMediaStream's driver to push instead of pull. r?padenot",
-    "commit_date": "2018-11-28 15:15:31"
+    "sha": "62642adce23eaffb8ded43640f9d78ee1c431d7a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=62642adce23e",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-03 01:54:16"
   },
   "10": {
-    "sha": "fd376f27c10094e36f521f9f0a3591d00b1b4c2d",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=fd376f27c100",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Throttle sending video frames by age instead of queue size. r?padenot",
-    "commit_date": "2018-11-26 16:32:57"
+    "sha": "31a54783aa74cfc342bbb5d1f325d4a4a258ee4e",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=31a54783aa74",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Revert \"Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js\"  This reverts commit fd12a44e915d4e06f4509588ff4667dd9646e2dd. ",
+    "commit_date": "2018-12-03 00:33:06"
   },
   "11": {
-    "sha": "0ca8422dd6fd644a15b1f6c8abc3057881aa94ac",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0ca8422dd6fd",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1423253 - Use a timer to make sure we keep sending video over a peer connection when there's no input. r?dminor  The webrtc-pc spec says: > If track is ended, or if the track's output is disabled, i.e. the track is > disabled and/or muted, the RTCRtpSender MUST send silence (audio), > black frames (video) or a zero-information-content equivalent. > In the case of video, the RTCRtpSender SHOULD send one black frame per second.  This patch covers this case, and the case when no frames reach the MediaPipeline, for both direct and non-direct video listeners.",
-    "commit_date": "2018-11-26 15:58:36"
+    "sha": "098c543f74c68ee61b4de82dae21870b1eb8fa12",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=098c543f74c6",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Backed out changeset 2b3af7022014 (bug 1502733) for raptor Android timeout errors.",
+    "commit_date": "2018-12-03 01:31:10"
   },
   "12": {
-    "sha": "0a4abfdb6e8ff6241adcbbf346cec9fdf33b4f5d",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0a4abfdb6e8f",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1509548 - Make MediaStreamGraph pull data per track instead of per stream. r?padenot  Differential Revision: https://phabricator.services.mozilla.com/D13086",
-    "commit_date": "2018-11-26 17:11:37"
+    "sha": "2b3af7022014b0d4a10a2c8812da9d2735f75a9b",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=2b3af7022014",
+    "commiter_name": "Emanuel Hoogeveen ",
+    "commit_email": "emanuel.hoogeveen@protonmail.com",
+    "commit_message": "Bug 1502733 - Clean up and refactor GC system memory allocation functions. r=sfink",
+    "commit_date": "2018-12-03 00:39:43"
   },
   "13": {
-    "sha": "1313ab55bbcb3c1f5e457f07077bffe6caca2895",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=1313ab55bbcb",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1509548 - Remove early PullNewData return. r?padenot  Without knownTracksTime, StreamTracks::GetFirstTrackEnd() returns STREAM_TIME_MAX for an empty StreamTracks, so PullNewData() thinks no new data is needed.  This circumvents that by always checking whether tracks need data.  Differential Revision: https://phabricator.services.mozilla.com/D12928",
-    "commit_date": "2018-11-26 14:14:22"
+    "sha": "6f8e5bc8aa87966d1fc9c4056fe7759bab47ba6f",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6f8e5bc8aa87",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-03 01:42:35"
   },
   "14": {
-    "sha": "8074a9a9a025c60e90b3d0427be3f4063aa08710",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=8074a9a9a025",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1509548 - Clean up what appears to be wip-leftover gunk in DecodedStream. r?jya  Differential Revision: https://phabricator.services.mozilla.com/D12926",
-    "commit_date": "2018-11-26 10:26:42"
+    "sha": "e83a65a3f03fa17cf39d82be15a27e7aea730b53",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e83a65a3f03f",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Fuzzy query=build  Pushed via `mach try fuzzy` ",
+    "commit_date": "2018-12-03 01:33:27"
   },
   "15": {
-    "sha": "fe184fdb2c5273496509e4a0de3c3e4865557042",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=fe184fdb2c52",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1509548 - Rename track-end-time methods in StreamTracks. r?padenot  They deserve descriptive names.  Differential Revision: https://phabricator.services.mozilla.com/D12925",
-    "commit_date": "2018-11-26 10:25:26"
+    "sha": "b506ba92b126645d88ea00948026cc83ebb0680e",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b506ba92b126",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Further build fixup. ",
+    "commit_date": "2018-12-03 01:33:05"
   },
   "16": {
-    "sha": "81c3a53fae47f496a01f8616ea41f8f1377166f4",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=81c3a53fae47",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1509548 - Remove the concept of a known tracks time from MediaStreamGraph. r?padenot  Differential Revision: https://phabricator.services.mozilla.com/D12923",
-    "commit_date": "2018-11-26 10:24:13"
+    "sha": "645d6ff24f5b60bef22744aaaae884a30f355b95",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=645d6ff24f5b",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-03 00:34:18"
   },
   "17": {
-    "sha": "6e20f597f722ff629dfcb8b054c6fdfb73e45c01",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6e20f597f722",
-    "commiter_name": "Edouard Oger ",
-    "commit_email": "eoger@fastmail.com",
-    "commit_message": "try: -b o -p linux64 -u crashtest,firefox-ui-functional,geckoview,geckoview-junit,jsreftest,marionette,marionette-e10s,mochitests,reftest,robocop,web-platform-tests,xpcshell -t none --artifact  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-02 17:39:31"
+    "sha": "006f9aefd2cd40918747ab9a172abe4b1e960c4a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=006f9aefd2cd",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Revert \"Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js\"  This reverts commit fd12a44e915d4e06f4509588ff4667dd9646e2dd. ",
+    "commit_date": "2018-12-03 00:33:06"
   },
   "18": {
-    "sha": "47979ade46ac765c2862508733d72cdaf85335f9",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=47979ade46ac",
-    "commiter_name": "Art-Vanderlay ",
-    "commit_email": "causality1@outlook.com",
-    "commit_message": "Bug 1507836 - Use long style in \"last sync\" date formatted  Summary: Changed format style in \"last sync\" date from short to long.  Hovering over listed devices in 'send tab to device' on the page action menu shows the last sync date in the short style (last synced: 1 min ago). Changed this to display date in the long style (last synced: 1 minute ago).  Test Plan: Try test  Reviewers: eoger  Bug #: 1507836  Differential Revision: https://phabricator.services.mozilla.com/D13634 ",
-    "commit_date": "2018-12-02 17:38:32"
+    "sha": "4976cba52e47aaba70bcc69357ad33335c2a9e3a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4976cba52e47",
+    "commiter_name": "Noemi Erli ",
+    "commit_email": "nerli@mozilla.com",
+    "commit_message": "Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js",
+    "commit_date": "2018-12-02 23:19:00"
   },
   "19": {
-    "sha": "32845c32c0088df57c6321648687a3d2daaf381b",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=32845c32c008",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-02 17:19:09"
+    "sha": "c758d2a5b8cb04b1b5e5188a309d2994ad430d80",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c758d2a5b8cb",
+    "commiter_name": "arthur.iakab ",
+    "commit_email": "aiakab@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound",
+    "commit_date": "2018-12-02 22:02:03"
   },
   "20": {
-    "sha": "ebe9ab686dc67c4d97ef716d52a9bca2c4fa71c7",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ebe9ab686dc6",
+    "sha": "d0fb1493b28bd765b60b5a34c72f3b6f1a493aee",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d0fb1493b28b",
     "commiter_name": "Jason Laster ",
     "commit_email": "jlaster@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,macosx64 -u mochitest-clipboard-e10s,mochitest-e10s-dt -t none --artifact  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-02 17:17:04"
+    "commit_message": "Bug 1511717 -  Pausing should jump to the first non-blackboxed frame. r=bhackett  Tags:  Bug #: 1511717  Differential Revision: https://phabricator.services.mozilla.com/D13648 ",
+    "commit_date": "2018-11-29 23:40:16"
   }
 }

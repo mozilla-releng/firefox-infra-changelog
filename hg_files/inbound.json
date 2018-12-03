@@ -1,8 +1,152 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 17:58:19.136537"
+    "lastChecked": "2018-12-03 04:27:57.428744"
   },
   "1": {
+    "sha": "016950978d668f33cbb65396d100c82cc2255537",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=016950978d66",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Revert \"Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js\"  This reverts commit fd12a44e915d4e06f4509588ff4667dd9646e2dd. ",
+    "commit_date": "2018-12-03 00:33:06"
+  },
+  "2": {
+    "sha": "098c543f74c68ee61b4de82dae21870b1eb8fa12",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=098c543f74c6",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Backed out changeset 2b3af7022014 (bug 1502733) for raptor Android timeout errors.",
+    "commit_date": "2018-12-03 01:31:10"
+  },
+  "3": {
+    "sha": "2b3af7022014b0d4a10a2c8812da9d2735f75a9b",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2b3af7022014",
+    "commiter_name": "Emanuel Hoogeveen ",
+    "commit_email": "emanuel.hoogeveen@protonmail.com",
+    "commit_message": "Bug 1502733 - Clean up and refactor GC system memory allocation functions. r=sfink",
+    "commit_date": "2018-12-03 00:39:43"
+  },
+  "4": {
+    "sha": "4976cba52e47aaba70bcc69357ad33335c2a9e3a",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4976cba52e47",
+    "commiter_name": "Noemi Erli ",
+    "commit_email": "nerli@mozilla.com",
+    "commit_message": "Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js",
+    "commit_date": "2018-12-02 23:19:00"
+  },
+  "5": {
+    "sha": "c758d2a5b8cb04b1b5e5188a309d2994ad430d80",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c758d2a5b8cb",
+    "commiter_name": "arthur.iakab ",
+    "commit_email": "aiakab@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound",
+    "commit_date": "2018-12-02 22:02:03"
+  },
+  "6": {
+    "sha": "fb9b6c3665571b702d087dce1bf9e6e024c92131",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fb9b6c366557",
+    "commiter_name": "Art-Vanderlay ",
+    "commit_email": "causality1@outlook.com",
+    "commit_message": "Bug 1507836 - Use long style in \"last sync\" date formatted r=eoger  Changed format style in \"last sync\" date from short to long.  Hovering over listed devices in 'send tab to device' on the page action menu shows the last sync date in the short style (last synced: 1 min ago). Changed this to display date in the long style (last synced: 1 minute ago).  Differential Revision: https://phabricator.services.mozilla.com/D13634",
+    "commit_date": "2018-12-02 18:46:47"
+  },
+  "7": {
+    "sha": "e990a032ac3cf6c071a79014d4b412bcd2007af1",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e990a032ac3c",
+    "commiter_name": "Ben Armstrong ",
+    "commit_email": "ben.armstrong22@gmail.com",
+    "commit_message": "Bug 1503760: Changed browser.downloads.search({}) to return 0 byte downloads. r=aswan  Updated the totalBytesGreater property in browser.downloads.search({}) to default to -1 so files with a byte size of 0 will be returned.  Differential Revision: https://phabricator.services.mozilla.com/D12344",
+    "commit_date": "2018-11-26 22:54:49"
+  },
+  "8": {
+    "sha": "dcc5dcceb8661d9c74ba44dc2b2280c3b37cf467",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dcc5dcceb866",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511725 - Update string-cache-codegen.  Generated with cargo update -p string_cache_codegen and ./mach vendor rust.  Differential Revision: https://phabricator.services.mozilla.com/D13649",
+    "commit_date": "2018-12-02 17:34:27"
+  },
+  "9": {
+    "sha": "e65a1d1d653cadb25091dac2ec3758b5dba28eb3",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e65a1d1d653c",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "Bug 1504985 - Remove dependency on the textoverflow attribute from browser_UrlbarInput_tooltip.js. r=mak  The textoverflow attribute is set asynchronously thanks to bug 1419391, making this test more complicated than necessary. We can use the private _overflowing (UrlbarInput) and _inOverflow (urlbarBindings.xml) flags instead.  Differential Revision: https://phabricator.services.mozilla.com/D13639",
+    "commit_date": "2018-12-02 14:20:33"
+  },
+  "10": {
+    "sha": "7f9b27677bc015b40c879b7889be44c6d0878f3b",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7f9b27677bc0",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "No bug - remove an unused struct.  Differential Revision: https://phabricator.services.mozilla.com/D13641",
+    "commit_date": "2018-12-02 14:34:28"
+  },
+  "11": {
+    "sha": "e7f045faf96d4d00a6caa058c5a26fd88946393a",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e7f045faf96d",
+    "commiter_name": "Johann Hofmann ",
+    "commit_email": "jhofmann@mozilla.com",
+    "commit_message": "Bug 1501992 - Add tests for the cookies subpanel in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13146",
+    "commit_date": "2018-12-02 12:47:43"
+  },
+  "12": {
+    "sha": "fb6917f64dcf45c42d0e14923fe5d24c98f4a93a",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fb6917f64dcf",
+    "commiter_name": "Johann Hofmann ",
+    "commit_email": "jhofmann@mozilla.com",
+    "commit_message": "Bug 1501992 - Add a sub-panel for Cookies in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D12596",
+    "commit_date": "2018-12-02 12:47:36"
+  },
+  "13": {
+    "sha": "324e00e894edd403d6a1a5ab439641b42807707d",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=324e00e894ed",
+    "commiter_name": "Ciure Andrei ",
+    "commit_email": "aciure@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland.  a=merge CLOSED TREE",
+    "commit_date": "2018-12-02 11:55:21"
+  },
+  "14": {
+    "sha": "f23d8b5068f7905a1f708c7aa1037ccb75943610",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f23d8b5068f7",
+    "commiter_name": "Marco Bonardo ",
+    "commit_email": "mbonardo@mozilla.com",
+    "commit_message": "Bug 1495183 - Create a first muxer implementation. r=adw  Differential Revision: https://phabricator.services.mozilla.com/D13552",
+    "commit_date": "2018-12-02 09:58:15"
+  },
+  "15": {
+    "sha": "d0fb1493b28bd765b60b5a34c72f3b6f1a493aee",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d0fb1493b28b",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1511717 -  Pausing should jump to the first non-blackboxed frame. r=bhackett  Tags:  Bug #: 1511717  Differential Revision: https://phabricator.services.mozilla.com/D13648 ",
+    "commit_date": "2018-11-29 23:40:16"
+  },
+  "16": {
+    "sha": "b40559c21959c884c4ef1a23d036cfafed890606",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b40559c21959",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Bug 1511710 - Add some spaces for Infix operators. r=eslint-fix",
+    "commit_date": "2018-12-02 21:34:21"
+  },
+  "17": {
+    "sha": "037421492f0b064a57b8132deb6bdd0bb6d922d5",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=037421492f0b",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1511710 - The timeline should let you zoom. r=bhackett  Tags:  Bug #: 1511710  Differential Revision: https://phabricator.services.mozilla.com/D13643 ",
+    "commit_date": "2018-12-02 13:02:20"
+  },
+  "18": {
+    "sha": "e8396abdafe1786bc1434daeaca60cb3090e6d2f",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e8396abdafe1",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1511673 - Disable highlighting debugger lines when in replay mode. r=bhackett  Tags:  Bug #: 1511673  Differential Revision: https://phabricator.services.mozilla.com/D13637 ",
+    "commit_date": "2018-12-02 04:35:52"
+  },
+  "19": {
     "sha": "0c29c0c61a3aed41c295446b2b3dc693bad33155",
     "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0c29c0c61a3a",
     "commiter_name": "Ciure Andrei ",
@@ -10,156 +154,12 @@
     "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
     "commit_date": "2018-12-02 11:56:11"
   },
-  "2": {
+  "20": {
     "sha": "08e30fbc9ab1de03a15011808497ac373683ef25",
     "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=08e30fbc9ab1",
     "commiter_name": "Ciure Andrei ",
     "commit_email": "aciure@mozilla.com",
     "commit_message": "Backed out 2 changesets (bug 1501992) for browser_trackingUI_state.js perma fails a=backout  Backed out changeset 6cb8a465440a (bug 1501992) Backed out changeset b54b117c15e9 (bug 1501992)",
     "commit_date": "2018-12-02 11:53:33"
-  },
-  "3": {
-    "sha": "adb3cb65badb25f414c3b3eedc4f2f5d8ec7cf29",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=adb3cb65badb",
-    "commiter_name": "Ciure Andrei ",
-    "commit_email": "aciure@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
-    "commit_date": "2018-12-02 09:55:39"
-  },
-  "4": {
-    "sha": "8e021c409c6a16d9bab9713d20e30fa05c5b8365",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8e021c409c6a",
-    "commiter_name": "Ciure Andrei ",
-    "commit_email": "aciure@mozilla.com",
-    "commit_message": "Merge inbound to mozilla-central. a=merge",
-    "commit_date": "2018-12-02 09:46:09"
-  },
-  "5": {
-    "sha": "93bdaf4be8e4042cadf8fddcc20d43155622474c",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=93bdaf4be8e4",
-    "commiter_name": "Valentin Gosu ",
-    "commit_email": "valentin.gosu@gmail.com",
-    "commit_message": "Bug 1511591 - Update rust-url to version 1.7.2 r=froydnj  Differential Revision: https://phabricator.services.mozilla.com/D13613",
-    "commit_date": "2018-12-01 14:58:03"
-  },
-  "6": {
-    "sha": "6060cddc780cb1e461841c1ad5ee363c6cd1470f",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6060cddc780c",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "Bug 1511652 - Override the :-moz-focusring outline on Ctrl+Tab previews on Windows. r=bgrins  Differential Revision: https://phabricator.services.mozilla.com/D13622",
-    "commit_date": "2018-12-01 22:28:44"
-  },
-  "7": {
-    "sha": "3be4f687430ae11fe0131245a09f71f8bd879108",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3be4f687430a",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511664 - Update webrender to commit 6ca634197cfe26738194f87042020fe838c0047a (WR PR #3379). r=kats  https://github.com/servo/webrender/pull/3379  Differential Revision: https://phabricator.services.mozilla.com/D13630",
-    "commit_date": "2018-12-02 00:43:40"
-  },
-  "8": {
-    "sha": "1ff8628621d03f4dc89d8b098208bbf2ecc9e479",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1ff8628621d0",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511663 - Update webrender to commit 92235d1fc4ff4c4fb4e1ed709eb3136e96c786b5 (WR PR #3378). r=kats  https://github.com/servo/webrender/pull/3378  Differential Revision: https://phabricator.services.mozilla.com/D13629",
-    "commit_date": "2018-12-02 00:41:55"
-  },
-  "9": {
-    "sha": "ebc8ca6c03b47d2a9b560d764bac2bfbca941ba1",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ebc8ca6c03b4",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511662 - Update webrender to commit 0f2403d0813b5dd2113f61cc1548f4a8562881a2 (WR PR #3376). r=kats  https://github.com/servo/webrender/pull/3376  Differential Revision: https://phabricator.services.mozilla.com/D13628",
-    "commit_date": "2018-12-02 00:39:11"
-  },
-  "10": {
-    "sha": "df8c8aa616045a2076d1f0c8b1ebedf322aec212",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=df8c8aa61604",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511661 - Update webrender to commit 1619d945e853db14a9d62ed75dce7216ff3cdbc2 (WR PR #3366). r=kats  https://github.com/servo/webrender/pull/3366  Differential Revision: https://phabricator.services.mozilla.com/D13627",
-    "commit_date": "2018-12-02 00:37:23"
-  },
-  "11": {
-    "sha": "be65d09ef059e78daf60df9737503cfcb6dc8a86",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=be65d09ef059",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511409 - Update webrender to commit dbaa10971f08f964120ba339f5b0ab3e7ace77d6 (WR PR #3374). r=kats  https://github.com/servo/webrender/pull/3374  Differential Revision: https://phabricator.services.mozilla.com/D13626",
-    "commit_date": "2018-12-02 00:35:50"
-  },
-  "12": {
-    "sha": "6cb8a465440afd06dc059f209aba683b2e2c0cb5",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6cb8a465440a",
-    "commiter_name": "Johann Hofmann ",
-    "commit_email": "jhofmann@mozilla.com",
-    "commit_message": "Bug 1501992 - Add tests for the cookies subpanel in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13146",
-    "commit_date": "2018-12-01 23:25:44"
-  },
-  "13": {
-    "sha": "b54b117c15e9abe79342925671ff13a790c1c454",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b54b117c15e9",
-    "commiter_name": "Johann Hofmann ",
-    "commit_email": "jhofmann@mozilla.com",
-    "commit_message": "Bug 1501992 - Add a sub-panel for Cookies in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D12596",
-    "commit_date": "2018-12-01 23:25:38"
-  },
-  "14": {
-    "sha": "3c08dc2c9eaa6a4892203375fddc160cd9594a52",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3c08dc2c9eaa",
-    "commiter_name": "Dorel Luca ",
-    "commit_email": "dluca@mozilla.com",
-    "commit_message": "Backed out 2 changesets (bug 1506987, bug 1507200) for browser-chrome failure in toolkit/mozapps/extensions/test/browser/browser_theme_previews.js  Backed out changeset 0b72233729d8 (bug 1507200) Backed out changeset fe515e34cc3f (bug 1506987)",
-    "commit_date": "2018-12-01 22:16:20"
-  },
-  "15": {
-    "sha": "a2d943e9f9aa4f27bb879b4b1fc065c0189bba98",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a2d943e9f9aa",
-    "commiter_name": "Alex Chronopoulos ",
-    "commit_email": "achronop@gmail.com",
-    "commit_message": "Bug 1509327 - Use timing and color information from decoded picture in dav1d wrapper. r=jya  Latest dav1d version supports to store the timing information in undecoded frame and restore it later from decoded picture. This can provide more accurate timing especially during drain. In additionto that, colorspace information is set according to the size of the image. Finally this patch addresses some style comments.  Differential Revision: https://phabricator.services.mozilla.com/D13428",
-    "commit_date": "2018-12-01 22:03:29"
-  },
-  "16": {
-    "sha": "6facccbbd28cafc05f7e8615b7367f0cb3b08449",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6facccbbd28c",
-    "commiter_name": "Alex Chronopoulos ",
-    "commit_email": "achronop@gmail.com",
-    "commit_message": "Bug 1509327 - Update libdav1d build file after import. r=TD-Linux  Differential Revision: https://phabricator.services.mozilla.com/D13427",
-    "commit_date": "2018-11-30 19:07:07"
-  },
-  "17": {
-    "sha": "2094783e32887a88fbffb420ae5dabad37ed5f2e",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2094783e3288",
-    "commiter_name": "Alex Chronopoulos ",
-    "commit_email": "achronop@gmail.com",
-    "commit_message": "Bug 1509327 - Update dav1d from upstream to 36b807a. r=TD-Linux  Differential Revision: https://phabricator.services.mozilla.com/D13426",
-    "commit_date": "2018-12-01 21:59:40"
-  },
-  "18": {
-    "sha": "543776f08dbb459ecf33bff0d0714926cbb20b8b",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=543776f08dbb",
-    "commiter_name": "Joel Maher ",
-    "commit_email": "jmaher@mozilla.com",
-    "commit_message": "Bug 1511411 - Add displaylist_mutate to raptor tests running on windows10-64-ux opt. r=rwood  Add displaylist_mutate and related tests to run on low end hardware  Differential Revision: https://phabricator.services.mozilla.com/D13598",
-    "commit_date": "2018-12-01 15:27:06"
-  },
-  "19": {
-    "sha": "0b72233729d8b5562eeaaab6031a249bf90a5a8c",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0b72233729d8",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1507200 - Sort themes with previews higher in about:addons r=aswan  Differential Revision: https://phabricator.services.mozilla.com/D12120",
-    "commit_date": "2018-12-01 03:55:36"
-  },
-  "20": {
-    "sha": "fe515e34cc3f080252720e20049dab49815dc194",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fe515e34cc3f",
-    "commiter_name": "Mark Striemer ",
-    "commit_email": "mstriemer@mozilla.com",
-    "commit_message": "Bug 1506987 - Include preview for theme in AOM if it is added while open r=aswan  Differential Revision: https://phabricator.services.mozilla.com/D12593",
-    "commit_date": "2018-12-01 03:55:25"
   }
 }
