@@ -1,8 +1,16 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 15:58:23.563839"
+    "lastChecked": "2018-12-03 19:46:32.052104"
   },
   "1": {
+    "sha": "60b122ce38e6f529db79fd61db75ee8a8c6f3011",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=60b122ce38e6",
+    "commiter_name": "ffxbld ",
+    "commit_email": "release@mozilla.com",
+    "commit_message": "No bug - Tagging mozilla-central 9ad82455dcee2bc1d438e46016b8db00e88758a8 with FIREFOX_BETA_65_BASE a=release DONTBUILD CLOSED TREE",
+    "commit_date": "2018-12-03 15:59:35"
+  },
+  "2": {
     "sha": "9ad82455dcee2bc1d438e46016b8db00e88758a8",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9ad82455dcee",
     "commiter_name": "Boris Zbarsky ",
@@ -10,7 +18,7 @@
     "commit_message": "Bug 1510689.  Only define IsNonConfigurableReadonlyPrimitiveGlobalProp if we plan to use it.  r=peterv a=Aryx,beta-fix",
     "commit_date": "2018-12-03 14:14:15"
   },
-  "2": {
+  "3": {
     "sha": "01d0813d8203d78613fc33a3e8e32627c1300b50",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=01d0813d8203",
     "commiter_name": "Margareta Eliza Balazs ",
@@ -18,7 +26,7 @@
     "commit_message": "Merge inbound to mozilla-central.  a=merge",
     "commit_date": "2018-12-03 09:30:40"
   },
-  "3": {
+  "4": {
     "sha": "290a2b092c01cbb0a897bf4036f149aaafec70d0",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=290a2b092c01",
     "commiter_name": "Daniel Holbert ",
@@ -26,7 +34,7 @@
     "commit_message": "Bug 1452527: Un-skip reftest svg/outline.html on mac/linux, and mark it as fuzzy in general. (no review, just adjusting test annotation)  The fuzzy() annotation here is using the max-difference from the Windows failures in bug 1452527, and the number-of-mismatching-pixels from mac/linux failures in bug 1503525.",
     "commit_date": "2018-12-03 01:09:25"
   },
-  "4": {
+  "5": {
     "sha": "016950978d668f33cbb65396d100c82cc2255537",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=016950978d66",
     "commiter_name": "Jason Laster ",
@@ -34,7 +42,7 @@
     "commit_message": "Revert \"Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js\"  This reverts commit fd12a44e915d4e06f4509588ff4667dd9646e2dd. ",
     "commit_date": "2018-12-03 00:33:06"
   },
-  "5": {
+  "6": {
     "sha": "098c543f74c68ee61b4de82dae21870b1eb8fa12",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=098c543f74c6",
     "commiter_name": "Cosmin Sabou ",
@@ -42,7 +50,7 @@
     "commit_message": "Backed out changeset 2b3af7022014 (bug 1502733) for raptor Android timeout errors.",
     "commit_date": "2018-12-03 01:31:10"
   },
-  "6": {
+  "7": {
     "sha": "2b3af7022014b0d4a10a2c8812da9d2735f75a9b",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2b3af7022014",
     "commiter_name": "Emanuel Hoogeveen ",
@@ -50,7 +58,7 @@
     "commit_message": "Bug 1502733 - Clean up and refactor GC system memory allocation functions. r=sfink",
     "commit_date": "2018-12-03 00:39:43"
   },
-  "7": {
+  "8": {
     "sha": "4976cba52e47aaba70bcc69357ad33335c2a9e3a",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4976cba52e47",
     "commiter_name": "Noemi Erli ",
@@ -58,7 +66,7 @@
     "commit_message": "Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js",
     "commit_date": "2018-12-02 23:19:00"
   },
-  "8": {
+  "9": {
     "sha": "c758d2a5b8cb04b1b5e5188a309d2994ad430d80",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c758d2a5b8cb",
     "commiter_name": "arthur.iakab ",
@@ -66,7 +74,7 @@
     "commit_message": "Merge mozilla-central to mozilla-inbound",
     "commit_date": "2018-12-02 22:02:03"
   },
-  "9": {
+  "10": {
     "sha": "d0fb1493b28bd765b60b5a34c72f3b6f1a493aee",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d0fb1493b28b",
     "commiter_name": "Jason Laster ",
@@ -74,7 +82,7 @@
     "commit_message": "Bug 1511717 -  Pausing should jump to the first non-blackboxed frame. r=bhackett  Tags:  Bug #: 1511717  Differential Revision: https://phabricator.services.mozilla.com/D13648 ",
     "commit_date": "2018-11-29 23:40:16"
   },
-  "10": {
+  "11": {
     "sha": "b40559c21959c884c4ef1a23d036cfafed890606",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b40559c21959",
     "commiter_name": "Cosmin Sabou ",
@@ -82,7 +90,7 @@
     "commit_message": "Bug 1511710 - Add some spaces for Infix operators. r=eslint-fix",
     "commit_date": "2018-12-02 21:34:21"
   },
-  "11": {
+  "12": {
     "sha": "037421492f0b064a57b8132deb6bdd0bb6d922d5",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=037421492f0b",
     "commiter_name": "Jason Laster ",
@@ -90,7 +98,7 @@
     "commit_message": "Bug 1511710 - The timeline should let you zoom. r=bhackett  Tags:  Bug #: 1511710  Differential Revision: https://phabricator.services.mozilla.com/D13643 ",
     "commit_date": "2018-12-02 13:02:20"
   },
-  "12": {
+  "13": {
     "sha": "e8396abdafe1786bc1434daeaca60cb3090e6d2f",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e8396abdafe1",
     "commiter_name": "Jason Laster ",
@@ -98,7 +106,7 @@
     "commit_message": "Bug 1511673 - Disable highlighting debugger lines when in replay mode. r=bhackett  Tags:  Bug #: 1511673  Differential Revision: https://phabricator.services.mozilla.com/D13637 ",
     "commit_date": "2018-12-02 04:35:52"
   },
-  "13": {
+  "14": {
     "sha": "0c29c0c61a3aed41c295446b2b3dc693bad33155",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0c29c0c61a3a",
     "commiter_name": "Ciure Andrei ",
@@ -106,7 +114,7 @@
     "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
     "commit_date": "2018-12-02 11:56:11"
   },
-  "14": {
+  "15": {
     "sha": "adb3cb65badb25f414c3b3eedc4f2f5d8ec7cf29",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=adb3cb65badb",
     "commiter_name": "Ciure Andrei ",
@@ -114,7 +122,7 @@
     "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
     "commit_date": "2018-12-02 09:55:39"
   },
-  "15": {
+  "16": {
     "sha": "a17e7caad4470179473f9058e4ad17e72462eb73",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a17e7caad447",
     "commiter_name": "Jonathan Kew ",
@@ -122,7 +130,7 @@
     "commit_message": "Bug 1458365 - Re-enable test_dont_use_document_colors.html on Windows/ASAN, as it no longer seems to fail there. r=dmajor",
     "commit_date": "2018-12-02 08:27:03"
   },
-  "16": {
+  "17": {
     "sha": "a73e91a77409762488958bf3b9430a2bec80c59c",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a73e91a77409",
     "commiter_name": "Tom Prince ",
@@ -130,7 +138,7 @@
     "commit_message": "Bug 1509962: [update-verify] Use taskgraph fetches in update-verify; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D12981",
     "commit_date": "2018-12-03 06:44:55"
   },
-  "17": {
+  "18": {
     "sha": "dd003a5330b7ed468571c94dfdcceb44fd3f9e56",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dd003a5330b7",
     "commiter_name": "Tom Prince ",
@@ -138,7 +146,7 @@
     "commit_message": "Bug 1509962: [update-verify] Use argparse in update-verify code; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D12980",
     "commit_date": "2018-12-03 06:44:43"
   },
-  "18": {
+  "19": {
     "sha": "3e98ee808894e9d4a27926e310d08a687a1b7909",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3e98ee808894",
     "commiter_name": "Tom Prince ",
@@ -146,20 +154,12 @@
     "commit_message": "Bug 1509962: [update-verify] Remove some unused options from update-verify code; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D12979",
     "commit_date": "2018-12-03 06:44:37"
   },
-  "19": {
+  "20": {
     "sha": "7eb869c7fd0a51a5809065ecaca31dfcc3b45e78",
     "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7eb869c7fd0a",
     "commiter_name": "Tom Prince ",
     "commit_email": "mozilla@hocat.ca",
     "commit_message": "Bug 1509962: [update-verify] Run lint against python code in update-verify; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D12978",
     "commit_date": "2018-12-03 06:44:31"
-  },
-  "20": {
-    "sha": "4c4352291d629aaaaf39718c3cea57870db048d1",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4c4352291d62",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1509962: [update-verify] Use in-tree update-verify code; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D12977",
-    "commit_date": "2018-12-03 06:44:28"
   }
 }

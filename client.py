@@ -293,10 +293,21 @@ def clear_file(file_name, string_number_of_commits="five"):
 
 
 def generate_markdown_header(file_name, repository_name, markdown_link, json_link):
+    """
+    This function appends the markdown header to the main markdown table. It includes the repository title (name), the
+    markdown link and the json link.
+    :param file_name: name of the file in which the content it's added.
+    :param repository_name: name of the repository for the generated table.
+    :param markdown_link: markdown link for the header table.
+    :param json_link: json link for the header table.
+    :return: none, expected to write to file_name.
+    """
     file = open(file_name, "a")
 
-    repository_title = "|\t" + repository_name + "\t|\t" + "[MarkDown](" + markdown_link + ")" + "\t|\t" + "[Json](" + json_link + ")" + "\t| \n"
-    title_table_formation = "|:----------------:|:-------------------------------------:|:---------------------------------:| \n"
+    repository_title = "|\t" + repository_name + "\t|\t" + "[MarkDown](" + markdown_link + ")" + "\t|\t" + "[Json](" + \
+                       json_link + ")" + "\t| \n"
+    title_table_formation = "|:----------------:|:-------------------------------------:|:----------" \
+                            "-----------------------:| \n "
     base_table = "|      Repository      |                   Last commit               |    Deploy time       | \n" + \
                  "|:--------------------:|:-------------------------------------------:|:--------------------:| \n"
     file.write("\n" + repository_title + title_table_formation + "\n" + base_table)
@@ -305,10 +316,10 @@ def generate_markdown_header(file_name, repository_name, markdown_link, json_lin
 
 def write_main_md_table(file_name, repository_url, last_commit, deploy_time):
     """
-    This function opens a file (that file should be already created and should contain a markdown table header) and
-    appends to it a row that will contain the repository, the last commit and the deploy time.
+    This function opens a file (that file should be already created and appends to it a row that will contain the
+    repository, the last commit and the deploy time.
     :param file_name: Name of the file in which the content is appended. (should also contain the path)
-    :param repository_url: Repository name for the first element of the table.
+    :param repository_url: Repository url for the first element of the table.
     :param last_commit: Description of the last commit used as the 2nd element of the table
     :param deploy_time: Time and Time designator used as the 3rd element of the table
     :return:
@@ -340,8 +351,11 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
             repository_json = base_link + file.rstrip().replace(" ", "%20")
             repository_title = file.replace(".json", "")
             try:
+                # Generates the markdown header for a specific repository
                 generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
-
+                # Write the commits from json files into the main markdown table
+                # The number of commits writen to a table depends on the commits_per_repo value (by default = 5 in the
+                # function definition.
                 for commit_iterator in range(1, commits_per_repo + 1):
                     # The commit number must be a number with string type.
                     commit_number = str(commit_iterator)

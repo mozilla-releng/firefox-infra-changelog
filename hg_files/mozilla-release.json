@@ -1,8 +1,56 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 15:58:34.097036"
+    "lastChecked": "2018-12-03 19:46:42.052904"
   },
   "1": {
+    "sha": "321f1fb3b41f81d84adef4a7ba1fccf8f81f8364",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=321f1fb3b41f",
+    "commiter_name": "Ursula Sarracini ",
+    "commit_email": "ursulasarracini@gmail.com",
+    "commit_message": "Bug 1510678 - Change recommended addons for Firefox 64 CFR release. r=k88hudson\ta=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13437",
+    "commit_date": "2018-11-29 17:43:06"
+  },
+  "2": {
+    "sha": "fa624a63f7d980ba24f314f47ab996082dd2cea8",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=fa624a63f7d9",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "Bug 1502530 - Part 2: Update tzdata in ICU data files to 2018g. r=Waldo a=jcristau",
+    "commit_date": "2018-11-06 13:18:26"
+  },
+  "3": {
+    "sha": "4498eed63436479a013da6b7328e62b755274239",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=4498eed63436",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "Bug 1502530 - Part 1: Update tzdata updater to use new location. r=Waldo a=jcristau",
+    "commit_date": "2018-11-06 10:48:56"
+  },
+  "4": {
+    "sha": "d27d733d06cf1ba92fc87adfe4780df4e55a418a",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d27d733d06cf",
+    "commiter_name": "Ted Campbell ",
+    "commit_email": "tcampbell@mozilla.com",
+    "commit_message": "Bug 1507433 - Avoid shape teleporting if any uncacheable prototypes. r=jandem a=jcristau  These cases are rare and uncacheable prototype shapes are tricky to get right so simplify code instead. The impact is that accessing non-own properties of an object that mutates its prototype will have a few more shape / group guards than are strictly needed.  Differential Revision: https://phabricator.services.mozilla.com/D12806",
+    "commit_date": "2018-11-27 13:10:49"
+  },
+  "5": {
+    "sha": "f4770816becdd778b95d41461a7a1b6d5fab69b3",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f4770816becd",
+    "commiter_name": "Kate Hudson ",
+    "commit_email": "k88hudson@gmail.com",
+    "commit_message": "Bug 1509810 - ASR Snippets: FxA signup template issues. r=ursula a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13445",
+    "commit_date": "2018-11-29 17:49:59"
+  },
+  "6": {
+    "sha": "5856e2411504142c566c1f6cd3670a8c567b069e",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=5856e2411504",
+    "commiter_name": "Masayuki Nakano ",
+    "commit_email": "masayuki@d-toybox.com",
+    "commit_message": "Bug 1510985 - Remove Event.returnValue temporarily in 64. r=smaug a=jcristau  Event.returnValue causes breaking a bank application.  The reason of the breakage is, the web app assumes that Event.returnValue is available only on IE and it hits same incompatibility issue with window.event (bug 1479964). Additionally, the app may be used in various domains including in intranet. Therefore, we cannot disable it with blacklist of domains like other similar changes.  Fortunately, we can ship new keypress event behaviors which is tracked by bug 1479964 in 65.  So, for backward compatibility with 62 or earlier, we should temporarily disable Event.returnValue in 64.  But unfortunately, this was introduced in 63.  So, if some web apps have started to use this legacy attribute, we need to contact their vendors, though.",
+    "commit_date": "2018-12-03 16:23:38"
+  },
+  "7": {
     "sha": "f040763d99ad0cc888b453da4de53422593810dd",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f040763d99ad",
     "commiter_name": "ffxbld ",
@@ -10,7 +58,7 @@
     "commit_message": "Update configs. IGNORE BROKEN CHANGESETS CLOSED TREE NO BUG a=release ba=release",
     "commit_date": "2018-12-03 15:33:47"
   },
-  "2": {
+  "8": {
     "sha": "ca7d2e41bb018048b0fd8252df95a300a84295fe",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=ca7d2e41bb01",
     "commiter_name": "ffxbld ",
@@ -18,7 +66,7 @@
     "commit_message": "No bug - Tagging mozilla-release 0010639216223e5f5fcf753bb64fb93588d787bd with FIREFOX_RELEASE_63_END a=release DONTBUILD CLOSED TREE",
     "commit_date": "2018-12-03 15:29:01"
   },
-  "3": {
+  "9": {
     "sha": "09ecade3ebaafb137ee231dbccecd6951eda029c",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=09ecade3ebaa",
     "commiter_name": "ffxbld ",
@@ -26,7 +74,7 @@
     "commit_message": "Preserve old tags after debugsetparents. CLOSED TREE DONTBUILD a=release",
     "commit_date": "2018-12-03 15:28:58"
   },
-  "4": {
+  "10": {
     "sha": "91ff80fb4297f7acb8e75b5b73063d6d46443247",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=91ff80fb4297",
     "commiter_name": "ffxbld ",
@@ -34,7 +82,7 @@
     "commit_message": "Merge old head via |hg debugsetparents 36afbf7b676c904b00ec0f032148d98655267c37 0010639216223e5f5fcf753bb64fb93588d787bd|. CLOSED TREE DONTBUILD a=release",
     "commit_date": "2018-12-03 15:28:52"
   },
-  "5": {
+  "11": {
     "sha": "36afbf7b676c904b00ec0f032148d98655267c37",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=36afbf7b676c",
     "commiter_name": "ffxbld ",
@@ -42,7 +90,7 @@
     "commit_message": "No bug - Tagging mozilla-beta e4535e943651ce499a93bbc4592cb16adab897bd with FIREFOX_RELEASE_64_BASE a=release DONTBUILD CLOSED TREE",
     "commit_date": "2018-12-03 15:26:20"
   },
-  "6": {
+  "12": {
     "sha": "e4535e943651ce499a93bbc4592cb16adab897bd",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=e4535e943651",
     "commiter_name": "Ryan VanderMeulen ",
@@ -50,7 +98,7 @@
     "commit_message": "Bug 1511516 - Update Firefox 64 to NSS 3.40.1. r=jcj, a=lizzard UPGRADE_NSS_RELEASE",
     "commit_date": "2018-12-02 21:22:47"
   },
-  "7": {
+  "13": {
     "sha": "cb70f86f71435d262a2686b2ff85d11bb53f4348",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=cb70f86f7143",
     "commiter_name": "Xidorn Quan ",
@@ -58,7 +106,7 @@
     "commit_message": "Bug 1506447 - Check overlay before checking custom scrollbar style in nsNativeThemeCocoa::GetWidgetTransparency. r=spohl, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D12856",
     "commit_date": "2018-11-25 11:31:53"
   },
-  "8": {
+  "14": {
     "sha": "729dc4b0b006c47a77ce65fd129054962467d6ec",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=729dc4b0b006",
     "commiter_name": "Brendan Dahl ",
@@ -66,7 +114,7 @@
     "commit_message": "Bug 1509576 - Fix crash when showing tooltip. r=NeilDeakin, a=lizzard  Handle the case when there is no tooltip text provider.  Differential Revision: https://phabricator.services.mozilla.com/D13105",
     "commit_date": "2018-11-28 18:42:57"
   },
-  "9": {
+  "15": {
     "sha": "3bebbace6e4a76ba5c158a922b8f8b541a709e30",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3bebbace6e4a",
     "commiter_name": "Petru Lingurar ",
@@ -74,7 +122,7 @@
     "commit_message": "Bug 1504780 - Prevent crash if GeckoProfile path is not known. r=snorp, a=lizzard  In this case the profile name will be null, situation already handled, in which a telemetry ping about the crash will not be sent but the crash can still be reported to crash-stats.  Differential Revision: https://phabricator.services.mozilla.com/D12741",
     "commit_date": "2018-11-26 19:21:56"
   },
-  "10": {
+  "16": {
     "sha": "f744e835c8bf344bcd6f64b4b894a0a4d64a1c1c",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f744e835c8bf",
     "commiter_name": "Tom Prince ",
@@ -82,7 +130,7 @@
     "commit_message": "Bug 1508494: Update WNP with locales for 64; r=flod a=whats-new  Differential Revision: https://phabricator.services.mozilla.com/D13555",
     "commit_date": "2018-12-01 06:00:21"
   },
-  "11": {
+  "17": {
     "sha": "f4fe9800063b5110cb59f2eafdc1ffc45feb5a60",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f4fe9800063b",
     "commiter_name": "Jeff Gilbert ",
@@ -90,7 +138,7 @@
     "commit_message": "Bug 1467406 - Remove broken default-fb invalidation path. r=lsalzman a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D13047",
     "commit_date": "2018-11-27 15:49:21"
   },
-  "12": {
+  "18": {
     "sha": "3be25c15b7e9e3326826739bdc4f24ba94e8578b",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3be25c15b7e9",
     "commiter_name": "Rob Wu ",
@@ -98,7 +146,7 @@
     "commit_message": "Bug 1508144 - Ignore clicks on non-clickable menu items. r=mixedpuppy, a=jcristau  Bug 1469148 added support for detecting which mouse button was used, by synthetizing \"command\" events when a \"click\" event was captured. The implementation did not account for unclickable menu items, such as items that act as the parent of a submenu (see bug report), separators and disabled menu items.  This patch adds the necessary checks and regression tests for these scenarios to make sure that such clicks are ignored, as expected.  Differential Revision: https://phabricator.services.mozilla.com/D13084",
     "commit_date": "2018-11-28 15:09:26"
   },
-  "13": {
+  "19": {
     "sha": "24a6a9b747b34914d8dcd6ae714ca37fe5d56739",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=24a6a9b747b3",
     "commiter_name": "Jason Orendorff ",
@@ -106,60 +154,12 @@
     "commit_message": "Bug 1391756 - Try to fix rare timeout in dom/tests/mochitest/fetch/test_readableStreams.html. r=baku, a=test-only  Also removes an infinite regress of nested iframes. The original problem was that tests would start running before the child iframe was done loading. The straightforward fix is to have the child frame start the test. But this caused further error messages because the child iframe is loaded more than once; removing the iframe from the iframe fixes this.  Differential Revision: https://phabricator.services.mozilla.com/D13385",
     "commit_date": "2018-11-29 22:35:04"
   },
-  "14": {
+  "20": {
     "sha": "3dce43d9b92c7947a8de8638d80adc5b04c3d9d9",
     "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3dce43d9b92c",
     "commiter_name": "Tom Prince ",
     "commit_email": "mozilla@hocat.ca",
     "commit_message": "Bug 1510441: Add `.cron.yml` to the taskgraph sparse profile; r=gps a=tomprince DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D13142",
     "commit_date": "2018-11-30 00:26:19"
-  },
-  "15": {
-    "sha": "2534c71731b1a8a1088e09b37760440f673e287a",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=2534c71731b1",
-    "commiter_name": "Mozilla Releng Treescript ",
-    "commit_email": "release+treescript@mozilla.org",
-    "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with FIREFOX_64_0b14_RELEASE a=release CLOSED TREE DONTBUILD",
-    "commit_date": "2018-11-29 16:30:14"
-  },
-  "16": {
-    "sha": "96633aad9421e5ee9d4bace7a30ee505ff41cf37",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=96633aad9421",
-    "commiter_name": "Mozilla Releng Treescript ",
-    "commit_email": "release+treescript@mozilla.org",
-    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
-    "commit_date": "2018-11-29 16:27:18"
-  },
-  "17": {
-    "sha": "29f7e13e6a7e081402b6abfa1b4f4b5ce930fbc0",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=29f7e13e6a7e",
-    "commiter_name": "Mozilla Releng Treescript ",
-    "commit_email": "release+treescript@mozilla.org",
-    "commit_message": "No bug - Tagging fa72e773a9ebcd6de1c0e0d25e1cb6b07f09b6e8 with DEVEDITION_64_0b14_RELEASE a=release CLOSED TREE DONTBUILD",
-    "commit_date": "2018-11-29 16:27:15"
-  },
-  "18": {
-    "sha": "2cc5c3f56a466e7a456285402dfae1216b79be60",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=2cc5c3f56a46",
-    "commiter_name": "Olli Pettay ",
-    "commit_email": "Olli.Pettay@helsinki.fi",
-    "commit_message": "Bug 1510471 - Avoid useless FrameNeedsReflow call. r=emilio, a=RyanVM",
-    "commit_date": "2018-11-28 17:48:03"
-  },
-  "19": {
-    "sha": "028d808491d7d9510a4be8d1d36cb003b2e319f1",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=028d808491d7",
-    "commiter_name": "Gabriele Svelto ",
-    "commit_email": "gsvelto@mozilla.com",
-    "commit_message": "Bug 1502977 - Reinstate the code blocking the \"Facebook Photo Uploader\" plugin on Mac and update the associated annotation. r=jmathies, a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12354",
-    "commit_date": "2018-11-28 18:52:41"
-  },
-  "20": {
-    "sha": "86447d3b0fa20ec922db7c97719e1c5f3fe1a70c",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=86447d3b0fa2",
-    "commiter_name": "ffxbld ",
-    "commit_email": "ffxbld@mozilla.com",
-    "commit_message": "No Bug, mozilla-beta repo-update HSTS HPKP blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D13386",
-    "commit_date": "2018-11-29 12:14:05"
   }
 }
