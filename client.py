@@ -12,121 +12,36 @@ lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
-def get_version(repo_name, repo_team):
+def create_files_for_git(repositories_holder):
     """
-    :param repo_name: repository name
-    :param repo_team: repository team
-    :return: a dictionary with information from the last two release version: latestRelease and previousRelease
+    Main GIT function. Takes every Git repo from a .json file which is populated with repositories and writes all
+    the commit data of each repo in a.
+    creates a json and MD file for each repo as well.
+    :param: repositories_holder: Expects a .json file that contains a list of repositories
+    :return: The end result is a .json and a .md file for every git repository. can be found inside git_files/
     """
-    repo_path = repo_team + repo_name
-    iteration = 0
-
-    for tags in git.get_repo(repo_path).get_tags():
-        version = tags.name
-        sha = tags.commit.sha
-        date = tags.commit.commit.last_modified
-        author = tags.commit.author.login
-        if iteration == 0:
-            latestrelease = {'version': version,
-                             'sha': sha,
-                             'date': date,
-                             'author': author
-                             }
-            iteration = 1
-        elif iteration == 1:
-            previousrelease = {'version': version,
-                               'sha': sha,
-                               'date': date,
-                               'author': author
-                               }
-            return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
-
-
-def get_version_from_build_puppet(version_path, repo_name):
-    """
-    :param: version_path: Path to the requierments.txt where the version number is stored
-    :param: repo_name: The repo for which we are checking the version.
-    :return: Returns the version number that is stored in build-puppet for each *scriptworker
-    """
-    file_to_string = requests.get(version_path).text.split()
-    for word in file_to_string:
-        if repo_name in word:
-            version_in_puppet = re.split('\\b==\\b', word)[-1]
-            # the next check makes sure to only return the version in case the repo name appears multiple times
-            if version_in_puppet != repo_name:
-                return version_in_puppet
-
-
-def extract_email(commit_email):
-    """
-    Helper function!
-    Takes as parameter a string that contains between "<" and ">" an email that needs to be extracted.
-    The function uses find to search for the beginning of the email (that starts with "<") and adds the lengths of the
-    "<" so that returned email doesn't contain the "<" symbol and rfind to find the ending character ">". Both find and
-    rfind return the index where the carachters "<" and ">" are placed so when you do return commit_email with
-    [start_char_index:ending_char_index] the string shrinks to what's between the characters.
-    :param commit_email: String that contains an email
-    :return: String that contains only the email
-    """
-    return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
-
-
-def create_md_table(repository_name, path_to_files):
-    """
-    Uses 'repository_name' parameter to generate markdown tables for every json file inside path_to_files parameter.
-    :param repository_name: Used to display the repo name in the title row of the MD table
-    :param path_to_files: Used to store path to json files (git_files, hg_files)
-    :return: MD tables for every json file inside the git_files dir.
-    """
-
-    try:
-        json_data = open(current_dir + "/{}/".format(path_to_files) + "{}.json".format(repository_name)).read()
-        data = json.loads(json_data)
-        base_table = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
-                     "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
-        tables = {}
-        md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
-        commit_number_list = [key for key in data]
-
-        for repo in md_title:
-            tables[repo] = base_table
-
-        for key in data:
-            commit_number = commit_number_list[-1]
-            try:
-                commit_author = data[key]["commiter_name"]
-                commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
-                date = data[key]["commit_date"]
-                message = data[key]["commit_message"]
-                message = re.sub("\|", "\|", message)
-                url = data[key]["url"]
-
-                row = "|" + commit_number + \
-                      "|" + commit_author + \
-                      "|" + message + \
-                      "|" + "[URL](" + url + ")" + \
-                      "|" + date + "\n"
-
-                del commit_number_list[-1]
-                for repo in tables.keys():
-                    tables[repo] = tables[repo] + row
-            except KeyError:
-                last_checked = data[key]["lastChecked"]
-
-        md_file_name = "{}.md".format(repository_name)
-        md_file = open(current_dir + "/{}/".format(path_to_files) + md_file_name, "w")
-
+    for repo in repositories_holder["Github"]:
+        repository_name = repo
+        repository_team = repositories_holder["Github"][repo]["team"]
+        repository_version = get_version(repository_name, repository_team)
+        version_in_puppet = 0
+        print("Working on repo: {}".format(repository_name))
         try:
-            for key, value in tables.items():
-                if value != base_table:
-                    md_file.write("## " + key.upper() + "\n\n")
-                    md_file.write(value + "\n\n")
+            repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
+            version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
         except KeyError:
             pass
-
-        md_file.close()
-    except FileNotFoundError:
-        print("Json for {} is empty! Skipping!".format(repository_name))
+        if repository_version is not None:
+            try:
+                if repository_version['LatestRelease']['version'] == version_in_puppet:
+                    print('No new changes came into production!')
+                else:
+                    filter_git_commit_data(repository_name, repository_team, repository_version)
+            except TypeError:
+                pass
+        else:
+            filter_git_commit_data(repository_name, repository_team, repository_version)
+        create_md_table(repository_name, "git_files")
 
 
 def filter_git_commit_data(repository_name, repository_team, repository_version):
@@ -187,6 +102,21 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
     json_file.close()
 
 
+def create_files_for_hg(repositories_holder):
+    """
+    Main HG function. Takes every Mercurial repo from a .json file which is populated with repositories and writes all
+     the commit data of each repo in a.
+    creates a json and MD file for each repo as well.
+    :param: repositories_holder: Expects a .json file that contains a list of repositories
+    :return: The end result is a .json and a .md file for every git repository. can be found inside hg_files/
+    """
+    for repo in repositories_holder["Mercurial"]:
+        repository_name = repo
+        repository_url = repositories_holder["Mercurial"][repo]["url"]
+        filter_hg_commit_data(repository_name, repository_url)
+        create_md_table(repository_name, "hg_files")
+
+
 def filter_hg_commit_data(repository_name, repository_url):
     """
     This function takes a repository url and push type and returns a dictionary that contains changes in that specific
@@ -231,51 +161,62 @@ def filter_hg_commit_data(repository_name, repository_url):
     json_file.close()
 
 
-def create_files_for_hg(repositories_holder):
+def create_md_table(repository_name, path_to_files):
     """
-    Main HG function. Takes every Mercurial repo from a .json file which is populated with repositories and writes all
-     the commit data of each repo in a.
-    creates a json and MD file for each repo as well.
-    :param: repositories_holder: Expects a .json file that contains a list of repositories
-    :return: The end result is a .json and a .md file for every git repository. can be found inside hg_files/
+    Uses 'repository_name' parameter to generate markdown tables for every json file inside path_to_files parameter.
+    :param repository_name: Used to display the repo name in the title row of the MD table
+    :param path_to_files: Used to store path to json files (git_files, hg_files)
+    :return: MD tables for every json file inside the git_files dir.
     """
-    for repo in repositories_holder["Mercurial"]:
-        repository_name = repo
-        repository_url = repositories_holder["Mercurial"][repo]["url"]
-        filter_hg_commit_data(repository_name, repository_url)
-        create_md_table(repository_name, "hg_files")
 
+    try:
+        json_data = open(current_dir + "/{}/".format(path_to_files) + "{}.json".format(repository_name)).read()
+        data = json.loads(json_data)
+        base_table = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
+                     "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
+        tables = {}
+        md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
+        commit_number_list = [key for key in data]
 
-def create_files_for_git(repositories_holder):
-    """
-    Main GIT function. Takes every Git repo from a .json file which is populated with repositories and writes all
-    the commit data of each repo in a.
-    creates a json and MD file for each repo as well.
-    :param: repositories_holder: Expects a .json file that contains a list of repositories
-    :return: The end result is a .json and a .md file for every git repository. can be found inside git_files/
-    """
-    for repo in repositories_holder["Github"]:
-        repository_name = repo
-        repository_team = repositories_holder["Github"][repo]["team"]
-        repository_version = get_version(repository_name, repository_team)
-        version_in_puppet = 0
-        print("Working on repo: {}".format(repository_name))
+        for repo in md_title:
+            tables[repo] = base_table
+
+        for key in data:
+            commit_number = commit_number_list[-1]
+            try:
+                commit_author = data[key]["commiter_name"]
+                commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
+                date = data[key]["commit_date"]
+                message = data[key]["commit_message"]
+                message = re.sub("\|", "\|", message)
+                url = data[key]["url"]
+
+                row = "|" + commit_number + \
+                      "|" + commit_author + \
+                      "|" + message + \
+                      "|" + "[URL](" + url + ")" + \
+                      "|" + date + "\n"
+
+                del commit_number_list[-1]
+                for repo in tables.keys():
+                    tables[repo] = tables[repo] + row
+            except KeyError:
+                last_checked = data[key]["lastChecked"]
+
+        md_file_name = "{}.md".format(repository_name)
+        md_file = open(current_dir + "/{}/".format(path_to_files) + md_file_name, "w")
+
         try:
-            repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
-            version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
+            for key, value in tables.items():
+                if value != base_table:
+                    md_file.write("## " + key.upper() + "\n\n")
+                    md_file.write(value + "\n\n")
         except KeyError:
             pass
-        if repository_version is not None:
-            try:
-                if repository_version['LatestRelease']['version'] == version_in_puppet:
-                    print('No new changes came into production!')
-                else:
-                    filter_git_commit_data(repository_name, repository_team, repository_version)
-            except TypeError:
-                pass
-        else:
-            filter_git_commit_data(repository_name, repository_team, repository_version)
-        create_md_table(repository_name, "git_files")
+
+        md_file.close()
+    except FileNotFoundError:
+        print("Json for {} is empty! Skipping!".format(repository_name))
 
 
 def clear_file(file_name, string_number_of_commits="five"):
@@ -290,6 +231,66 @@ def clear_file(file_name, string_number_of_commits="five"):
     heading = "#  Last " + string_number_of_commits + " commits from every repository \n"
     file.write(heading)
     file.close()
+
+
+def generate_main_md_table(path_to_files):
+    """
+    Looks into repositories folders (hg_files & git files), filters the files to load the json's using a passfilter and
+    calls after extraction functions.
+    :param path_to_files: Folder to json files
+    """
+    # Get current folder path.
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+
+    # Look into repositories folder and list all of the files
+    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
+                  isfile(join(dir_path + "/{}".format(path_to_files), f))]
+
+    # Pass filter only the ".json" objects
+    json_files = [jf for jf in only_files if ".json" in jf]
+
+    # Extract data from json_files and writes to main markdown table.
+    extract_json(json_files, path_to_files)
+
+    print("Table successfully generated.")
+
+
+def extract_json(json_files, path_to_files, commits_per_repo=5):
+    """
+    Extracts the json data from json files and writes the data to the main markdown table file. The function looks
+    into json files after the last commit, extracts it and calls the write_main_md_table function.
+    :param commits_per_repo: number of commits to be used in the main markdown file
+    :param json_files: List of files to extract commits from.
+    :param path_to_files: Folder to json files
+    :return: none
+    """
+    for file in json_files:
+        file_path = "{}/".format(path_to_files) + file
+
+        with open(file_path) as json_files:
+            data = json.load(json_files)
+            base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
+            repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
+            repository_json = base_link + file.rstrip().replace(" ", "%20")
+            repository_title = file.replace(".json", "")
+            try:
+                # Generates the markdown header for a specific repository
+                generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
+                # Write the commits from json files into the main markdown table
+                # The number of commits writen to a table depends on the commits_per_repo value (by default = 5 in the
+                # function definition.
+                for commit_iterator in range(1, commits_per_repo + 1):
+                    # The commit number must be a number with string type.
+                    commit_number = str(commit_iterator)
+                    commit_description = data[commit_number]["commit_message"]
+                    commit_url = data[commit_number]["url"]
+                    repository_url = "[Link to commit](" + commit_url + ")"
+                    commit_date = data[commit_number]["commit_date"]
+                    write_main_md_table("main_md_table.md", repository_url, commit_description, commit_date)
+
+            except KeyError:
+                print("File " + file + " is empty. \n Please check:" + repository_url + " for more details.\n")
+                pass
 
 
 def generate_markdown_header(file_name, repository_name, markdown_link, json_link):
@@ -332,64 +333,63 @@ def write_main_md_table(file_name, repository_url, last_commit, deploy_time):
     write_file.write(row)
 
 
-def extract_json(json_files, path_to_files, commits_per_repo=5):
+def get_version(repo_name, repo_team):
     """
-    Extracts the json data from json files and writes the data to the main markdown table file. The function looks
-    into json files after the last commit, extracts it and calls the write_main_md_table function.
-    :param commits_per_repo: number of commits to be used in the main markdown file
-    :param json_files: List of files to extract commits from.
-    :param path_to_files: Folder to json files
-    :return: none
+    :param repo_name: repository name
+    :param repo_team: repository team
+    :return: a dictionary with information from the last two release version: latestRelease and previousRelease
     """
-    for file in json_files:
-        file_path = "{}/".format(path_to_files) + file
+    repo_path = repo_team + repo_name
+    iteration = 0
 
-        with open(file_path) as json_files:
-            data = json.load(json_files)
-            base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
-            repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
-            repository_json = base_link + file.rstrip().replace(" ", "%20")
-            repository_title = file.replace(".json", "")
-            try:
-                # Generates the markdown header for a specific repository
-                generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
-                # Write the commits from json files into the main markdown table
-                # The number of commits writen to a table depends on the commits_per_repo value (by default = 5 in the
-                # function definition.
-                for commit_iterator in range(1, commits_per_repo + 1):
-                    # The commit number must be a number with string type.
-                    commit_number = str(commit_iterator)
-                    commit_description = data[commit_number]["commit_message"]
-                    commit_url = data[commit_number]["url"]
-                    repository_url = "[Link to commit](" + commit_url + ")"
-                    commit_date = data[commit_number]["commit_date"]
-                    write_main_md_table("main_md_table.md", repository_url, commit_description, commit_date)
-
-            except KeyError:
-                print("File " + file + " is empty. \n Please check:" + repository_url + " for more details.\n")
-                pass
+    for tags in git.get_repo(repo_path).get_tags():
+        version = tags.name
+        sha = tags.commit.sha
+        date = tags.commit.commit.last_modified
+        author = tags.commit.author.login
+        if iteration == 0:
+            latestrelease = {'version': version,
+                             'sha': sha,
+                             'date': date,
+                             'author': author
+                             }
+            iteration = 1
+        elif iteration == 1:
+            previousrelease = {'version': version,
+                               'sha': sha,
+                               'date': date,
+                               'author': author
+                               }
+            return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
 
 
-def generate_main_md_table(path_to_files):
+def get_version_from_build_puppet(version_path, repo_name):
     """
-    Looks into repositories folders (hg_files & git files), filters the files to load the json's using a passfilter and
-    calls after extraction functions.
-    :param path_to_files: Folder to json files
+    :param: version_path: Path to the requierments.txt where the version number is stored
+    :param: repo_name: The repo for which we are checking the version.
+    :return: Returns the version number that is stored in build-puppet for each *scriptworker
     """
-    # Get current folder path.
-    dir_path = os.path.dirname(os.path.realpath(__file__))
+    file_to_string = requests.get(version_path).text.split()
+    for word in file_to_string:
+        if repo_name in word:
+            version_in_puppet = re.split('\\b==\\b', word)[-1]
+            # the next check makes sure to only return the version in case the repo name appears multiple times
+            if version_in_puppet != repo_name:
+                return version_in_puppet
 
-    # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
-                  isfile(join(dir_path + "/{}".format(path_to_files), f))]
 
-    # Pass filter only the ".json" objects
-    json_files = [jf for jf in only_files if ".json" in jf]
-
-    # Extract data from json_files and writes to main markdown table.
-    extract_json(json_files, path_to_files)
-
-    print("Table successfully generated.")
+def extract_email(commit_email):
+    """
+    Helper function!
+    Takes as parameter a string that contains between "<" and ">" an email that needs to be extracted.
+    The function uses find to search for the beginning of the email (that starts with "<") and adds the lengths of the
+    "<" so that returned email doesn't contain the "<" symbol and rfind to find the ending character ">". Both find and
+    rfind return the index where the carachters "<" and ">" are placed so when you do return commit_email with
+    [start_char_index:ending_char_index] the string shrinks to what's between the characters.
+    :param commit_email: String that contains an email
+    :return: String that contains only the email
+    """
+    return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
 
 
 if __name__ == "__main__":
