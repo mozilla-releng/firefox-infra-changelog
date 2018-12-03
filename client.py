@@ -52,6 +52,7 @@ def get_version_from_build_puppet(version_path, repo_name):
     for word in file_to_string:
         if repo_name in word:
             version_in_puppet = re.split('\\b==\\b', word)[-1]
+            # the next check makes sure to only return the version in case the repo name appears multiple times
             if version_in_puppet != repo_name:
                 return version_in_puppet
 
@@ -134,7 +135,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
     Substitute the special characters from commit message using 'sub' function from 're' library
     :param repository_team:
     :param repository_name:
-    :param repository_version
+    :param repository_version: dictionary that contains data from the last 2 releases
     :return: Filtered json data
     TODO: please add the exception blocks since the script fails when it can't pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
@@ -143,20 +144,20 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
     repo_dict = {}
     number = 0
     repository_path = repository_team + repository_name
-    print("Working on repo: {}, Latest release: {}".format(repository_name, repository_version))
     repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
                                "last_two_releases": repository_version}})
 
     try:
-        latestRelease = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
-        previousRelease = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        latest_release = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        previous_release = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
     except TypeError:
-        previousRelease = lastWeek
-        latestRelease = datetime.now()
+        previous_release = lastWeek
+        latest_release = datetime.utcnow()
+
     number += 1
-    for commit in git.get_repo(repository_path).get_commits(since=previousRelease):
+    for commit in git.get_repo(repository_path).get_commits(since=previous_release):
         commit_date = commit.commit.author.date
-        if commit_date <= latestRelease:
+        if commit_date <= latest_release:
             each_commit = {}
             author_info = {}
             files_changed = []
@@ -257,13 +258,23 @@ def create_files_for_git(repositories_holder):
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
         repository_version = get_version(repository_name, repository_team)
-        # lasttime = since(repository_name, "git_files")
+        version_in_puppet = 0
+        print("Working on repo: {}".format(repository_name))
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
             version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
         except KeyError:
             pass
-        filter_git_commit_data(repository_name, repository_team, repository_version)
+        if repository_version is not None:
+            try:
+                if repository_version['LatestRelease']['version'] == version_in_puppet:
+                    print('No new changes came into production!')
+                else:
+                    filter_git_commit_data(repository_name, repository_team, repository_version)
+            except TypeError:
+                pass
+        else:
+            filter_git_commit_data(repository_name, repository_team, repository_version)
         create_md_table(repository_name, "git_files")
 
 
@@ -357,4 +368,4 @@ if __name__ == "__main__":
     create_files_for_hg(repositories)
     clear_file("main_md_table.md")
     generate_main_md_table("hg_files")
-generate_main_md_table("git_files")
+    generate_main_md_table("git_files")
