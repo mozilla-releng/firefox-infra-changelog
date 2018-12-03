@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 04:27:57.428744"
+    "lastChecked": "2018-12-03 15:58:29.349899"
   },
   "1": {
-    "sha": "016950978d668f33cbb65396d100c82cc2255537",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=016950978d66",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Revert \"Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js\"  This reverts commit fd12a44e915d4e06f4509588ff4667dd9646e2dd. ",
-    "commit_date": "2018-12-03 00:33:06"
+    "sha": "decb54eeaa7db1b065fb92eede8ac43c3edb5199",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=decb54eeaa7d",
+    "commiter_name": "Vincent R ",
+    "commit_email": "grosbouddha@gmail.com",
+    "commit_message": "Bug 1503175 - Restore the previous inspector layout when reopening. r=gl",
+    "commit_date": "2018-11-09 17:56:05"
   },
   "2": {
-    "sha": "098c543f74c68ee61b4de82dae21870b1eb8fa12",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=098c543f74c6",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Backed out changeset 2b3af7022014 (bug 1502733) for raptor Android timeout errors.",
-    "commit_date": "2018-12-03 01:31:10"
+    "sha": "bc9324a80fac8d94452ee278c2332f23ce04fbdf",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bc9324a80fac",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Minor build fixup after the Servo crossbeam_channel update. ",
+    "commit_date": "2018-12-03 13:08:34"
   },
   "3": {
-    "sha": "2b3af7022014b0d4a10a2c8812da9d2735f75a9b",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2b3af7022014",
-    "commiter_name": "Emanuel Hoogeveen ",
-    "commit_email": "emanuel.hoogeveen@protonmail.com",
-    "commit_message": "Bug 1502733 - Clean up and refactor GC system memory allocation functions. r=sfink",
-    "commit_date": "2018-12-03 00:39:43"
+    "sha": "eeef84fe603dacc8421c14ac951cffe569c8c815",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=eeef84fe603d",
+    "commiter_name": "Bastien Orivel ",
+    "commit_email": "eijebong@bananium.fr",
+    "commit_message": "Bug 1511811 - Update crossbeam-channel to 0.3.  Cherry-picks https://github.com/servo/servo/pull/22142 ",
+    "commit_date": "2018-11-07 18:48:07"
   },
   "4": {
-    "sha": "4976cba52e47aaba70bcc69357ad33335c2a9e3a",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4976cba52e47",
-    "commiter_name": "Noemi Erli ",
-    "commit_email": "nerli@mozilla.com",
-    "commit_message": "Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js",
-    "commit_date": "2018-12-02 23:19:00"
+    "sha": "7a36832beb552ab97cb7a723a8cad888ed318dd4",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7a36832beb55",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Update Servo's version of encoding_rs. ",
+    "commit_date": "2018-12-02 18:56:33"
   },
   "5": {
-    "sha": "c758d2a5b8cb04b1b5e5188a309d2994ad430d80",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c758d2a5b8cb",
-    "commiter_name": "arthur.iakab ",
-    "commit_email": "aiakab@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound",
-    "commit_date": "2018-12-02 22:02:03"
+    "sha": "4a9fe235c6b0f2255880fe8c914b6f57f929232c",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4a9fe235c6b0",
+    "commiter_name": "Paul Rouget ",
+    "commit_email": "me@paulrouget.com",
+    "commit_message": "Bug 1511811 - Update mozjs and enable 'init_once' feature for Android.  Cherry-picks https://github.com/servo/servo/pull/22200 ",
+    "commit_date": "2018-11-19 08:11:54"
   },
   "6": {
-    "sha": "fb9b6c3665571b702d087dce1bf9e6e024c92131",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fb9b6c366557",
-    "commiter_name": "Art-Vanderlay ",
-    "commit_email": "causality1@outlook.com",
-    "commit_message": "Bug 1507836 - Use long style in \"last sync\" date formatted r=eoger  Changed format style in \"last sync\" date from short to long.  Hovering over listed devices in 'send tab to device' on the page action menu shows the last sync date in the short style (last synced: 1 min ago). Changed this to display date in the long style (last synced: 1 minute ago).  Differential Revision: https://phabricator.services.mozilla.com/D13634",
-    "commit_date": "2018-12-02 18:46:47"
+    "sha": "2c5cf5f741b890fb71bf0c27c743e4f0e3a1dbed",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2c5cf5f741b8",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Rustfmt new changes to ensure Servo-tidy doesn't complain. ",
+    "commit_date": "2018-12-02 18:42:03"
   },
   "7": {
-    "sha": "e990a032ac3cf6c071a79014d4b412bcd2007af1",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e990a032ac3c",
-    "commiter_name": "Ben Armstrong ",
-    "commit_email": "ben.armstrong22@gmail.com",
-    "commit_message": "Bug 1503760: Changed browser.downloads.search({}) to return 0 byte downloads. r=aswan  Updated the totalBytesGreater property in browser.downloads.search({}) to default to -1 so files with a byte size of 0 will be returned.  Differential Revision: https://phabricator.services.mozilla.com/D12344",
-    "commit_date": "2018-11-26 22:54:49"
+    "sha": "1ae60a036ccaeb642f90260969f6b7625e87a0ad",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1ae60a036cca",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Make page-break-  Gecko-only.  Servo doesn't support it. ",
+    "commit_date": "2018-12-02 15:13:05"
   },
   "8": {
-    "sha": "dcc5dcceb8661d9c74ba44dc2b2280c3b37cf467",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dcc5dcceb866",
+    "sha": "79cd08c08d39dbaba7641d69ef906d887ff1310a",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=79cd08c08d39",
     "commiter_name": "Emilio Cobos \u00c1lvarez ",
     "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1511725 - Update string-cache-codegen.  Generated with cargo update -p string_cache_codegen and ./mach vendor rust.  Differential Revision: https://phabricator.services.mozilla.com/D13649",
-    "commit_date": "2018-12-02 17:34:27"
+    "commit_message": "Bug 1511811 - Remove useless GECKO_BORROWED_TYPE_MUT.  This causes a typedef mozilla::ServoElementSnapshot ServoElementSnapshot; to be created, which we rely on bindgen not generating.  But bindgen will start (correctly) generating it in:    https://github.com/rust-lang/rust-bindgen/pull/1436  So easiest fix is just to remove this typedef, since it's just used by one FFI function. ",
+    "commit_date": "2018-12-03 13:05:14"
   },
   "9": {
-    "sha": "e65a1d1d653cadb25091dac2ec3758b5dba28eb3",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e65a1d1d653c",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "Bug 1504985 - Remove dependency on the textoverflow attribute from browser_UrlbarInput_tooltip.js. r=mak  The textoverflow attribute is set asynchronously thanks to bug 1419391, making this test more complicated than necessary. We can use the private _overflowing (UrlbarInput) and _inOverflow (urlbarBindings.xml) flags instead.  Differential Revision: https://phabricator.services.mozilla.com/D13639",
-    "commit_date": "2018-12-02 14:20:33"
-  },
-  "10": {
-    "sha": "7f9b27677bc015b40c879b7889be44c6d0878f3b",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7f9b27677bc0",
+    "sha": "f038d9fa2026c01bc7a76ba799c9a1fcc16e67ae",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f038d9fa2026",
     "commiter_name": "Emilio Cobos \u00c1lvarez ",
     "commit_email": "emilio@crisal.io",
-    "commit_message": "No bug - remove an unused struct.  Differential Revision: https://phabricator.services.mozilla.com/D13641",
-    "commit_date": "2018-12-02 14:34:28"
+    "commit_message": "Bug 1511811 - Use https for the MPL license URL.  Cherry-picks https://github.com/servo/servo/pull/22198 ",
+    "commit_date": "2018-12-02 18:46:06"
+  },
+  "10": {
+    "sha": "f713c586d397c53c3d3dc403638d7609f3da4e56",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f713c586d397",
+    "commiter_name": "shindli ",
+    "commit_email": "shindli@mozilla.com",
+    "commit_message": "Backed out 13 changesets (bug 1511811) for Btup bustages  Backed out changeset d71cde918f43 (bug 1511811) Backed out changeset 0ae2634de8e1 (bug 1511811) Backed out changeset 53d1f5ca4099 (bug 1511811) Backed out changeset 5a08148928ef (bug 1511811) Backed out changeset da7816ec50ef (bug 1511811) Backed out changeset 5fe23889cccc (bug 1511811) Backed out changeset 800bc60c75a7 (bug 1511811) Backed out changeset 2392d8199cd0 (bug 1511811) Backed out changeset 7bc486fbd195 (bug 1511811) Backed out changeset d2c997426108 (bug 1511811) Backed out changeset ddd573878432 (bug 1511811) Backed out changeset 29c8ec1559a4 (bug 1511811) Backed out changeset f5851346109d (bug 1511811)",
+    "commit_date": "2018-12-03 13:39:11"
   },
   "11": {
-    "sha": "e7f045faf96d4d00a6caa058c5a26fd88946393a",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e7f045faf96d",
-    "commiter_name": "Johann Hofmann ",
-    "commit_email": "jhofmann@mozilla.com",
-    "commit_message": "Bug 1501992 - Add tests for the cookies subpanel in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13146",
-    "commit_date": "2018-12-02 12:47:43"
+    "sha": "d71cde918f439e98df4e73b9952dcd4e8a825c96",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d71cde918f43",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Minor build fixup after the Servo crossbeam_channel update. ",
+    "commit_date": "2018-12-03 13:08:34"
   },
   "12": {
-    "sha": "fb6917f64dcf45c42d0e14923fe5d24c98f4a93a",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fb6917f64dcf",
-    "commiter_name": "Johann Hofmann ",
-    "commit_email": "jhofmann@mozilla.com",
-    "commit_message": "Bug 1501992 - Add a sub-panel for Cookies in the control center. r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D12596",
-    "commit_date": "2018-12-02 12:47:36"
+    "sha": "0ae2634de8e17f16c000873f527544099d490d77",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0ae2634de8e1",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Go back to bindgen 0.43 since I can't manage to make the tup build succeed. ",
+    "commit_date": "2018-12-02 20:10:51"
   },
   "13": {
-    "sha": "324e00e894edd403d6a1a5ab439641b42807707d",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=324e00e894ed",
-    "commiter_name": "Ciure Andrei ",
-    "commit_email": "aciure@mozilla.com",
-    "commit_message": "Merge mozilla-central to autoland.  a=merge CLOSED TREE",
-    "commit_date": "2018-12-02 11:55:21"
+    "sha": "53d1f5ca409995685b42fb725be5de45661c83a0",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=53d1f5ca4099",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Fix formatting of inverse transform matrix to appease tidy. ",
+    "commit_date": "2018-12-02 19:05:00"
   },
   "14": {
-    "sha": "f23d8b5068f7905a1f708c7aa1037ccb75943610",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f23d8b5068f7",
-    "commiter_name": "Marco Bonardo ",
-    "commit_email": "mbonardo@mozilla.com",
-    "commit_message": "Bug 1495183 - Create a first muxer implementation. r=adw  Differential Revision: https://phabricator.services.mozilla.com/D13552",
-    "commit_date": "2018-12-02 09:58:15"
+    "sha": "5a08148928ef20ffcbd1bf8797f6074fd6bfc04d",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5a08148928ef",
+    "commiter_name": "Bastien Orivel ",
+    "commit_email": "eijebong@bananium.fr",
+    "commit_message": "Bug 1511811 - Update crossbeam-channel to 0.3.  Cherry-picks https://github.com/servo/servo/pull/22142 ",
+    "commit_date": "2018-11-07 18:48:07"
   },
   "15": {
-    "sha": "d0fb1493b28bd765b60b5a34c72f3b6f1a493aee",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d0fb1493b28b",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511717 -  Pausing should jump to the first non-blackboxed frame. r=bhackett  Tags:  Bug #: 1511717  Differential Revision: https://phabricator.services.mozilla.com/D13648 ",
-    "commit_date": "2018-11-29 23:40:16"
+    "sha": "da7816ec50ef02601f44884abb3c0ca58299daae",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=da7816ec50ef",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Update Servo's version of encoding_rs. ",
+    "commit_date": "2018-12-02 18:56:33"
   },
   "16": {
-    "sha": "b40559c21959c884c4ef1a23d036cfafed890606",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b40559c21959",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Bug 1511710 - Add some spaces for Infix operators. r=eslint-fix",
-    "commit_date": "2018-12-02 21:34:21"
+    "sha": "5fe23889cccccabd18b268a0fce7ded32926e145",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5fe23889cccc",
+    "commiter_name": "Paul Rouget ",
+    "commit_email": "me@paulrouget.com",
+    "commit_message": "Bug 1511811 - Update mozjs and enable 'init_once' feature for Android.  Cherry-picks https://github.com/servo/servo/pull/22200 ",
+    "commit_date": "2018-11-19 08:11:54"
   },
   "17": {
-    "sha": "037421492f0b064a57b8132deb6bdd0bb6d922d5",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=037421492f0b",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511710 - The timeline should let you zoom. r=bhackett  Tags:  Bug #: 1511710  Differential Revision: https://phabricator.services.mozilla.com/D13643 ",
-    "commit_date": "2018-12-02 13:02:20"
+    "sha": "800bc60c75a70ffef92582695b21b2d808ff7b91",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=800bc60c75a7",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Make page-break-  Gecko-only.  Servo doesn't support it. ",
+    "commit_date": "2018-12-02 15:13:05"
   },
   "18": {
-    "sha": "e8396abdafe1786bc1434daeaca60cb3090e6d2f",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e8396abdafe1",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1511673 - Disable highlighting debugger lines when in replay mode. r=bhackett  Tags:  Bug #: 1511673  Differential Revision: https://phabricator.services.mozilla.com/D13637 ",
-    "commit_date": "2018-12-02 04:35:52"
+    "sha": "2392d8199cd01b4b0923007088b7cd55e1edc353",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2392d8199cd0",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Use https for the MPL license URL.  Cherry-picks https://github.com/servo/servo/pull/22198 ",
+    "commit_date": "2018-12-02 18:46:06"
   },
   "19": {
-    "sha": "0c29c0c61a3aed41c295446b2b3dc693bad33155",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0c29c0c61a3a",
-    "commiter_name": "Ciure Andrei ",
-    "commit_email": "aciure@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
-    "commit_date": "2018-12-02 11:56:11"
+    "sha": "7bc486fbd1952be76b2b0d5571669b980be7f03d",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7bc486fbd195",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Rustfmt new changes to ensure Servo-tidy doesn't complain. ",
+    "commit_date": "2018-12-02 18:42:03"
   },
   "20": {
-    "sha": "08e30fbc9ab1de03a15011808497ac373683ef25",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=08e30fbc9ab1",
-    "commiter_name": "Ciure Andrei ",
-    "commit_email": "aciure@mozilla.com",
-    "commit_message": "Backed out 2 changesets (bug 1501992) for browser_trackingUI_state.js perma fails a=backout  Backed out changeset 6cb8a465440a (bug 1501992) Backed out changeset b54b117c15e9 (bug 1501992)",
-    "commit_date": "2018-12-02 11:53:33"
+    "sha": "d2c99742610827141e7c50a5da9692449fcbc6b3",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d2c997426108",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511811 - Revendor Rust dependencies. ",
+    "commit_date": "2018-12-02 17:15:47"
   }
 }

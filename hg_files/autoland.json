@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 04:27:56.324813"
+    "lastChecked": "2018-12-03 15:58:28.151469"
   },
   "1": {
-    "sha": "b1c9fa45f90ee5f26843749557a2fda84581f406",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b1c9fa45f90e",
-    "commiter_name": "Noemi Erli ",
-    "commit_email": "nerli@mozilla.com",
-    "commit_message": "Backed out changeset b3c8a3a052ea (bug 1452146) for mochitest automation.py failures",
-    "commit_date": "2018-12-03 03:13:57"
+    "sha": "7670b6ce33a4b3ad15ff3dc1ec3bfb9349cec19b",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7670b6ce33a4",
+    "commiter_name": "Sebastian Hengst ",
+    "commit_email": "archaeopteryx@coole-files.de",
+    "commit_message": "Backed out 4 changesets (bug 1503393) for failing various browser-chrome tests, e.g. browser_extension_controlled.js. CLOSED TREE  Backed out changeset 52e8ef71af9b (bug 1503393) Backed out changeset 7878029aaba6 (bug 1503393) Backed out changeset 02e383b73c97 (bug 1503393) Backed out changeset 49428012434e (bug 1503393)",
+    "commit_date": "2018-12-03 15:28:06"
   },
   "2": {
-    "sha": "b3c8a3a052ea96b093839b5732661e6c1d006a77",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b3c8a3a052ea",
-    "commiter_name": "Nils Ohlmeier [:drno] ",
-    "commit_email": "drno@ohlmeier.org",
-    "commit_message": "Bug 1452146 - flip av1 and rdd on for OSX and Win. r=mjf  Differential Revision: https://phabricator.services.mozilla.com/D13638",
-    "commit_date": "2018-12-02 15:23:37"
+    "sha": "52e8ef71af9b837be53b294d09381d70c5efceba",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=52e8ef71af9b",
+    "commiter_name": "Daniel Stenberg ",
+    "commit_email": "daniel@haxx.se",
+    "commit_message": "bug 1503393 - adjust tests for localhost proxying r=mayhemer Fix test_proxy-failover_canceled and browser_firstPartyIsolation",
+    "commit_date": "2018-12-03 14:28:14"
   },
   "3": {
-    "sha": "29385deef9ea018dd480de4f4c9ceaa4b1308c5d",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29385deef9ea",
-    "commiter_name": "Valentin Gosu ",
-    "commit_email": "valentin.gosu@gmail.com",
-    "commit_message": "Bug 1502025 - Add IPv6 support to httpd.js r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13335",
-    "commit_date": "2018-12-02 23:29:45"
+    "sha": "7878029aaba609b5433d3eea98873a450cf2cb62",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7878029aaba6",
+    "commiter_name": "Gijs Kruitbosch ",
+    "commit_email": "gijskruitbosch@gmail.com",
+    "commit_message": "Bug 1503393 - Make 'no proxy' field editable r=jaws",
+    "commit_date": "2018-12-03 14:27:50"
   },
   "4": {
-    "sha": "389ecc0ddf76e316c9ec17e8847829f19cb49af6",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=389ecc0ddf76",
-    "commiter_name": "Valentin Gosu ",
-    "commit_email": "valentin.gosu@gmail.com",
-    "commit_message": "Bug 1502025 - Use captive portal endpoints for connectivity checks r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13334",
-    "commit_date": "2018-12-02 23:29:27"
+    "sha": "02e383b73c971e656097b3040e9cc523039018d6",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=02e383b73c97",
+    "commiter_name": "Daniel Stenberg ",
+    "commit_email": "daniel@haxx.se",
+    "commit_message": "bug 1503393 - verify default localhost not-proxied with PAC r=mayhemer",
+    "commit_date": "2018-12-03 14:27:29"
   },
   "5": {
-    "sha": "552ef6767e3b9244a8f31382306f3ffa42bdb2de",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=552ef6767e3b",
-    "commiter_name": "Valentin Gosu ",
-    "commit_email": "valentin.gosu@gmail.com",
-    "commit_message": "Bug 1502025 - Remove failure counters from nsSocketTransport2 r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13333",
-    "commit_date": "2018-12-02 23:29:10"
+    "sha": "49428012434e379316f2d831a088a27cf1b429ee",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=49428012434e",
+    "commiter_name": "Daniel Stenberg ",
+    "commit_email": "daniel@haxx.se",
+    "commit_message": "bug 1503393 - never let \"localhost\" get sent to a proxy r=mayhemer",
+    "commit_date": "2018-12-03 14:27:11"
   },
   "6": {
-    "sha": "e18883f3328eb3d949fb7458005d84b2e2bbad3c",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e18883f3328e",
-    "commiter_name": "Valentin Gosu ",
-    "commit_email": "valentin.gosu@gmail.com",
-    "commit_message": "Bug 1502025 - Add NS_HTTP_DISABLE_IPV4 and NS_HTTP_DISABLE_IPV6 flags r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13332",
-    "commit_date": "2018-12-02 23:28:52"
+    "sha": "f349e5a7d515306dcfa5d0b9eb62f676873e8e78",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f349e5a7d515",
+    "commiter_name": "Martin Stransky ",
+    "commit_email": "stransky@redhat.com",
+    "commit_message": "Bug 1511011 - Clean up wayland subsurface creation/management, r=jhorak  - Don't create wl_subsurface in map event but rather when it's requested by compositor. - Don't create wl_surface at nsWindow::OnExposeEvent but check ready_to_draw instead. - Rename parent_surface_committed_handler to frame_clock_after_paint_handler. - Rename parent_surface_committed to ready_to_draw. - Rename needs_clear to surface_needs_clear.  Depends on D13404  Differential Revision: https://phabricator.services.mozilla.com/D13405",
+    "commit_date": "2018-12-03 13:06:21"
   },
   "7": {
-    "sha": "6cbbac93c27318820e9a626a25aced587ef3a010",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6cbbac93c273",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1511210 part 3 - Remove unnecessary call to ensureHasTypes in jit::CreateThis. r=tcampbell  This was added in bug 833076 because back then TypeScript::SetThis assumed non-null script->types. However since bug 875276 we don't need this anymore.  Differential Revision: https://phabricator.services.mozilla.com/D13652",
-    "commit_date": "2018-12-02 22:38:39"
+    "sha": "819a462d5dd04f30bc50b47d9e10930ae7b1c627",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=819a462d5dd0",
+    "commiter_name": "Martin Stransky ",
+    "commit_email": "stransky@redhat.com",
+    "commit_message": "Bug 1511011 - Removed moz_container_move as it's not used, r=jhorak  Differential Revision: https://phabricator.services.mozilla.com/D13404",
+    "commit_date": "2018-12-03 13:06:17"
   },
   "8": {
-    "sha": "30e5ba51f64aa65ed086da3ccc7b4b139d139e79",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=30e5ba51f64a",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1511210 part 2 - Ensure we have a JitRealm in ICScript::create. r=tcampbell  Depends on D13650  Differential Revision: https://phabricator.services.mozilla.com/D13651",
-    "commit_date": "2018-12-02 22:29:55"
+    "sha": "ccf502c02f51b2a3ab97a153902aa050a1b96cbc",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ccf502c02f51",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1511660 - Update webrender to commit a1758f0fc17a71c8d53387be5e9da42495ee11ae (WR PR #3380). r=kats  https://github.com/servo/webrender/pull/3380  Differential Revision: https://phabricator.services.mozilla.com/D13674",
+    "commit_date": "2018-12-03 13:06:45"
   },
   "9": {
-    "sha": "aa8de096f6dcdadc8186637f6a742dc350d11781",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=aa8de096f6dc",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1511210 part 1 - Check script warm up count before calling ensureJitRealmExists in CanEnterBaselineJIT. r=tcampbell  This is just a minor optimization, but it makes the bug fixed by part 2 reproducible when running jit-tests.  Differential Revision: https://phabricator.services.mozilla.com/D13650",
-    "commit_date": "2018-12-02 22:05:08"
+    "sha": "b41192e679458ff4fcea290f8dd06326fd828ca1",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b41192e67945",
+    "commiter_name": "ffxbld ",
+    "commit_email": "ffxbld@mozilla.com",
+    "commit_message": "No Bug, mozilla-central repo-update HSTS HPKP remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D13670",
+    "commit_date": "2018-12-03 12:52:08"
   },
   "10": {
-    "sha": "95e75223f6c7dc1bdd13488deb46a18541c00c93",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=95e75223f6c7",
-    "commiter_name": "Fabian Henneke ",
-    "commit_email": "fabian@henneke.me",
-    "commit_message": "Bug 1509493 - Fix markup generation for nested email addresses r=BenB  In mozTXTToHTMLConv, FindURL is not able to correctly calculate replaceBefore for nested email addresses/URLs such as john@doe.org}john@doe.org. As a workaround, we keep track of the end of the last URL HTML markup in the output string and skip any subsequent URLs whose replaceBefore would cut into this markup.  Depends on D13645  Differential Revision: https://phabricator.services.mozilla.com/D13646",
-    "commit_date": "2018-12-02 16:18:29"
+    "sha": "b46490e922b4b404359830f21aa1f01097201335",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b46490e922b4",
+    "commiter_name": "Axel Hecht ",
+    "commit_email": "axel@pike.org",
+    "commit_message": "Bug 1492070, update mach command for compare-locales, #firefox-build-system-reviewers r=firefox-build-system-reviewers,ted  Differential Revision: https://phabricator.services.mozilla.com/D11902",
+    "commit_date": "2018-12-03 12:08:31"
   },
   "11": {
-    "sha": "00d7ff2eeb0ad9eaeb2fe79a0c275b305f26f766",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=00d7ff2eeb0a",
-    "commiter_name": "Fabian Henneke ",
-    "commit_email": "fabian@henneke.me",
-    "commit_message": "Bug 1509493 - Do not include unmatched ')' in email addresses r=BenB  Depends on D13644  Differential Revision: https://phabricator.services.mozilla.com/D13645",
-    "commit_date": "2018-12-02 16:20:03"
+    "sha": "408d885bc1319299823b56584b10a2e0cf30c559",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=408d885bc131",
+    "commiter_name": "Axel Hecht ",
+    "commit_email": "axel@pike.org",
+    "commit_message": "Bug 1492070, update l10n python libraries, r=stas  update fluent.syntax to 0.9.0 update compare-locales to 5.0.2 update fluent.migrate to https://hg.mozilla.org/l10n/fluent-migration/rev/3877312dc1f4 This includes migration-specific fixes for bugs 1491591, 1491833, 1491859, 1496127  All of these changes have been reviewed before in their respective upstream repositories.  Differential Revision: https://phabricator.services.mozilla.com/D11861",
+    "commit_date": "2018-12-03 12:03:59"
   },
   "12": {
-    "sha": "b4808c4e7d61c68cebd13865685a28a47d72b982",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b4808c4e7d61",
-    "commiter_name": "Fabian Henneke ",
-    "commit_email": "fabian@henneke.me",
-    "commit_message": "Bug 1509493 - Provide basic test coverage for email address parsing r=BenB  Depends on D13511  Differential Revision: https://phabricator.services.mozilla.com/D13644",
-    "commit_date": "2018-12-02 22:14:11"
+    "sha": "147a524d090bd96e16642c53062908bc8ab039f6",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=147a524d090b",
+    "commiter_name": "ffxbld ",
+    "commit_email": "ffxbld@mozilla.com",
+    "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser  Differential Revision: https://phabricator.services.mozilla.com/D13667",
+    "commit_date": "2018-12-03 12:04:22"
   },
   "13": {
-    "sha": "51e67c682e39c167ae275cb2a18ee31f68346a09",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=51e67c682e39",
-    "commiter_name": "Fabian Henneke ",
-    "commit_email": "fabian@henneke.me",
-    "commit_message": "Bug 1509493 - Always linkify common URL schemes in plain text r=BenB  Differential Revision: https://phabricator.services.mozilla.com/D13511",
-    "commit_date": "2018-12-02 16:20:05"
+    "sha": "5e2fad03c885961363aa136290e69df9009f4726",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5e2fad03c885",
+    "commiter_name": "Edgar Chen ",
+    "commit_email": "echen@mozilla.com",
+    "commit_message": "Bug 1507543 - Spellchecker for contenteditable/design-mode should not run without focus; r=m_kato  Differential Revision: https://phabricator.services.mozilla.com/D12875",
+    "commit_date": "2018-12-03 11:20:09"
   },
   "14": {
-    "sha": "c50c098e40c48f8ef04afe7267db57e2f2c7ff1f",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c50c098e40c4",
-    "commiter_name": "Rob Wu ",
-    "commit_email": "rob@robwu.nl",
-    "commit_message": "Bug 1504660 - Implement Xrays for instanceof r=bholley  Ensure that \"a instanceof b\" has Xray semantics, i.e. that when b is a XrayWrapper, that the wrapped object's getters, `Symbol.hasInstance` hook and proxy traps are not triggered.  The toolkit/components/mozintl/test/test_mozintlhelper.js test was updated to explicitly waive Xrays, instead of relying on the previous behavior where Xrays were automatically waived.  Depends on D11591  Depends on D11591  Differential Revision: https://phabricator.services.mozilla.com/D11592",
-    "commit_date": "2018-12-02 22:21:51"
+    "sha": "01d0813d8203d78613fc33a3e8e32627c1300b50",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=01d0813d8203",
+    "commiter_name": "Margareta Eliza Balazs ",
+    "commit_email": "ebalazs@mozilla.com",
+    "commit_message": "Merge inbound to mozilla-central.  a=merge",
+    "commit_date": "2018-12-03 09:30:40"
   },
   "15": {
-    "sha": "c07309d939ddc4763c644ae5dbc78265d8fa001f",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c07309d939dd",
-    "commiter_name": "Rob Wu ",
-    "commit_email": "rob@robwu.nl",
-    "commit_message": "Bug 1504660 - Move js::InstanceOfOperator to JS::InstanceofOperator r=bholley  There is currently no public API to call the 'instanceof' handler without triggering proxies. The public method, JS_HasInstance, may skip the default logic if a class has a non-null JSHasInstanceOp. (i.e. js/src/proxy/Proxy.cpp and js/src/ctypes/CTypes.cpp ).  To serve the need of the next patch (which needs to trigger the instanceof logic without triggering the proxy), this patch publishes the js::InstanceofOperator method. JS::InstanceOfOperator is the new name, and the new capitalization matches the name of the abstract operation in the ES6 specification.  Differential Revision: https://phabricator.services.mozilla.com/D11591",
-    "commit_date": "2018-12-02 22:21:48"
+    "sha": "290a2b092c01cbb0a897bf4036f149aaafec70d0",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=290a2b092c01",
+    "commiter_name": "Daniel Holbert ",
+    "commit_email": "dholbert@cs.stanford.edu",
+    "commit_message": "Bug 1452527: Un-skip reftest svg/outline.html on mac/linux, and mark it as fuzzy in general. (no review, just adjusting test annotation)  The fuzzy() annotation here is using the max-difference from the Windows failures in bug 1452527, and the number-of-mismatching-pixels from mac/linux failures in bug 1503525.",
+    "commit_date": "2018-12-03 01:09:25"
   },
   "16": {
-    "sha": "a2d7fd0f5139d9885ecf3799c070f0e66872c066",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a2d7fd0f5139",
-    "commiter_name": "Rob Wood ",
-    "commit_email": "rwood@mozilla.com",
-    "commit_message": "Bug 1510400 - Promote new tp6-3, 4, 5, and 6 tests to tier 1; r=jmaher  Differential Revision: https://phabricator.services.mozilla.com/D13615",
-    "commit_date": "2018-12-01 21:57:11"
+    "sha": "016950978d668f33cbb65396d100c82cc2255537",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=016950978d66",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Revert \"Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js\"  This reverts commit fd12a44e915d4e06f4509588ff4667dd9646e2dd. ",
+    "commit_date": "2018-12-03 00:33:06"
   },
   "17": {
-    "sha": "fb9b6c3665571b702d087dce1bf9e6e024c92131",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fb9b6c366557",
-    "commiter_name": "Art-Vanderlay ",
-    "commit_email": "causality1@outlook.com",
-    "commit_message": "Bug 1507836 - Use long style in \"last sync\" date formatted r=eoger  Changed format style in \"last sync\" date from short to long.  Hovering over listed devices in 'send tab to device' on the page action menu shows the last sync date in the short style (last synced: 1 min ago). Changed this to display date in the long style (last synced: 1 minute ago).  Differential Revision: https://phabricator.services.mozilla.com/D13634",
-    "commit_date": "2018-12-02 18:46:47"
+    "sha": "098c543f74c68ee61b4de82dae21870b1eb8fa12",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=098c543f74c6",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Backed out changeset 2b3af7022014 (bug 1502733) for raptor Android timeout errors.",
+    "commit_date": "2018-12-03 01:31:10"
   },
   "18": {
-    "sha": "e990a032ac3cf6c071a79014d4b412bcd2007af1",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e990a032ac3c",
-    "commiter_name": "Ben Armstrong ",
-    "commit_email": "ben.armstrong22@gmail.com",
-    "commit_message": "Bug 1503760: Changed browser.downloads.search({}) to return 0 byte downloads. r=aswan  Updated the totalBytesGreater property in browser.downloads.search({}) to default to -1 so files with a byte size of 0 will be returned.  Differential Revision: https://phabricator.services.mozilla.com/D12344",
-    "commit_date": "2018-11-26 22:54:49"
+    "sha": "2b3af7022014b0d4a10a2c8812da9d2735f75a9b",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2b3af7022014",
+    "commiter_name": "Emanuel Hoogeveen ",
+    "commit_email": "emanuel.hoogeveen@protonmail.com",
+    "commit_message": "Bug 1502733 - Clean up and refactor GC system memory allocation functions. r=sfink",
+    "commit_date": "2018-12-03 00:39:43"
   },
   "19": {
-    "sha": "dcc5dcceb8661d9c74ba44dc2b2280c3b37cf467",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dcc5dcceb866",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1511725 - Update string-cache-codegen.  Generated with cargo update -p string_cache_codegen and ./mach vendor rust.  Differential Revision: https://phabricator.services.mozilla.com/D13649",
-    "commit_date": "2018-12-02 17:34:27"
+    "sha": "4976cba52e47aaba70bcc69357ad33335c2a9e3a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4976cba52e47",
+    "commiter_name": "Noemi Erli ",
+    "commit_email": "nerli@mozilla.com",
+    "commit_message": "Backed out changeset d0fb1493b28b (bug 1511717) for devtools failures in browser_webconsole_eval_in_debugger_stackframe.js",
+    "commit_date": "2018-12-02 23:19:00"
   },
   "20": {
-    "sha": "e65a1d1d653cadb25091dac2ec3758b5dba28eb3",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e65a1d1d653c",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "Bug 1504985 - Remove dependency on the textoverflow attribute from browser_UrlbarInput_tooltip.js. r=mak  The textoverflow attribute is set asynchronously thanks to bug 1419391, making this test more complicated than necessary. We can use the private _overflowing (UrlbarInput) and _inOverflow (urlbarBindings.xml) flags instead.  Differential Revision: https://phabricator.services.mozilla.com/D13639",
-    "commit_date": "2018-12-02 14:20:33"
+    "sha": "c758d2a5b8cb04b1b5e5188a309d2994ad430d80",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c758d2a5b8cb",
+    "commiter_name": "arthur.iakab ",
+    "commit_email": "aiakab@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound",
+    "commit_date": "2018-12-02 22:02:03"
   }
 }
