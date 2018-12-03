@@ -278,31 +278,53 @@ def create_files_for_git(repositories_holder):
         create_md_table(repository_name, "git_files")
 
 
-def clear_file(file_name):
+def clear_file(file_name, string_number_of_commits="five"):
     """
     This function takes a file that clears the content and output's a base table header for a markdown file.
+    :param string_number_of_commits: literal number that needs to match the number of commits shown on main markdown
+    table
     :param file_name: Name of the file to be written. (should also contain the path)
     :return: A file should be created and should contain base table.
     """
     file = open(file_name, "w")
-    heading = "###  Last commits from every repository"
-    base_table = "|      Repository      |                   Last commit               |    Deploy time       | \n" + \
-                 "|:--------------------:|:-------------------------------------------:|:--------------------:| \n"
-    file.write(heading + "\n" + base_table)
+    heading = "#  Last " + string_number_of_commits + " commits from every repository \n"
+    file.write(heading)
     file.close()
 
 
-def write_main_md_table(file_name, repository, last_commit, deploy_time):
+def generate_markdown_header(file_name, repository_name, markdown_link, json_link):
     """
-    This function opens a file (that file should be already created and should contain a markdown table header) and
-    appends to it a row that will contain the repository, the last commit and the deploy time.
+    This function appends the markdown header to the main markdown table. It includes the repository title (name), the
+    markdown link and the json link.
+    :param file_name: name of the file in which the content it's added.
+    :param repository_name: name of the repository for the generated table.
+    :param markdown_link: markdown link for the header table.
+    :param json_link: json link for the header table.
+    :return: none, expected to write to file_name.
+    """
+    file = open(file_name, "a")
+
+    repository_title = "|\t" + repository_name + "\t|\t" + "[MarkDown](" + markdown_link + ")" + "\t|\t" + "[Json](" + \
+                       json_link + ")" + "\t| \n"
+    title_table_formation = "|:----------------:|:-------------------------------------:|:----------" \
+                            "-----------------------:| \n "
+    base_table = "|      Repository      |                   Last commit               |    Deploy time       | \n" + \
+                 "|:--------------------:|:-------------------------------------------:|:--------------------:| \n"
+    file.write("\n" + repository_title + title_table_formation + "\n" + base_table)
+    file.close()
+
+
+def write_main_md_table(file_name, repository_url, last_commit, deploy_time):
+    """
+    This function opens a file (that file should be already created and appends to it a row that will contain the
+    repository, the last commit and the deploy time.
     :param file_name: Name of the file in which the content is appended. (should also contain the path)
-    :param repository: Repository name for the first element of the table.
+    :param repository_url: Repository url for the first element of the table.
     :param last_commit: Description of the last commit used as the 2nd element of the table
     :param deploy_time: Time and Time designator used as the 3rd element of the table
     :return:
     """
-    row = "|" + repository + \
+    row = "|" + repository_url + \
           "|" + last_commit + \
           "|" + deploy_time + \
           "|" + "\n"
@@ -310,10 +332,11 @@ def write_main_md_table(file_name, repository, last_commit, deploy_time):
     write_file.write(row)
 
 
-def extract_json(json_files, path_to_files):
+def extract_json(json_files, path_to_files, commits_per_repo=5):
     """
     Extracts the json data from json files and writes the data to the main markdown table file. The function looks
     into json files after the last commit, extracts it and calls the write_main_md_table function.
+    :param commits_per_repo: number of commits to be used in the main markdown file
     :param json_files: List of files to extract commits from.
     :param path_to_files: Folder to json files
     :return: none
@@ -324,16 +347,26 @@ def extract_json(json_files, path_to_files):
         with open(file_path) as json_files:
             data = json.load(json_files)
             base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
-            repository_name = "[" + file.rstrip().replace(".json", "") + "]" + "(" + base_link + \
-                              file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md") + ")"
-
+            repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
+            repository_json = base_link + file.rstrip().replace(" ", "%20")
+            repository_title = file.replace(".json", "")
             try:
-                commit_number = "1"
-                commit_description = data[commit_number]["commit_message"]
-                commit_date = data[commit_number]["commit_date"]
-                write_main_md_table("main_md_table.md", repository_name, commit_description, commit_date)
+                # Generates the markdown header for a specific repository
+                generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
+                # Write the commits from json files into the main markdown table
+                # The number of commits writen to a table depends on the commits_per_repo value (by default = 5 in the
+                # function definition.
+                for commit_iterator in range(1, commits_per_repo + 1):
+                    # The commit number must be a number with string type.
+                    commit_number = str(commit_iterator)
+                    commit_description = data[commit_number]["commit_message"]
+                    commit_url = data[commit_number]["url"]
+                    repository_url = "[Link to commit](" + commit_url + ")"
+                    commit_date = data[commit_number]["commit_date"]
+                    write_main_md_table("main_md_table.md", repository_url, commit_description, commit_date)
+
             except KeyError:
-                print("File " + file + " is empty. \n Please check:" + repository_name + " for more details.\n")
+                print("File " + file + " is empty. \n Please check:" + repository_url + " for more details.\n")
                 pass
 
 
