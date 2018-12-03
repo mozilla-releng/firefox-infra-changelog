@@ -1,16 +1,19 @@
-## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2018-11-23 02:56:00.467091
+## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2018-11-26 06:26:50.747249
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
-|10|MihaiTabara|Merge pull request #279 from MihaiTabara/moredocs  Fix new_instance docs to ease understanding.|[URL](https://github.com/mozilla-releng/scriptworker/commit/9fc92a8e54d7f277b35daa5eb22940a10829f54b)|2018-11-29 21:03:07
-|9|MihaiTabara|Doc fixup.|[URL](https://github.com/mozilla-releng/scriptworker/commit/2b73ecd7ac5505cc7fa89e05a548a4fe39b0ded7)|2018-11-29 20:53:18
-|8|MihaiTabara|Add dig info for dns records checking.|[URL](https://github.com/mozilla-releng/scriptworker/commit/286d0a91a98e2e76172e847c90537ccea223bb9a)|2018-11-29 20:45:46
-|7|MihaiTabara|Fix new_instance docs to ease understanding.|[URL](https://github.com/mozilla-releng/scriptworker/commit/c30edafd03c6c2bb97b4a30462f6cf5ee17a1061)|2018-11-29 20:43:50
-|6|JohanLorenzo|17.0.1|[URL](https://github.com/mozilla-releng/scriptworker/commit/ca4b03482f1b23b450597ab57ba09529dfc8dcfa)|2018-11-29 16:17:29
-|5|JohanLorenzo|Fix json-e context for mobile projects|[URL](https://github.com/mozilla-releng/scriptworker/commit/524c7e376f130886bfe6cc5c62bcfcb0464300ae)|2018-11-29 14:52:20
-|4|tomprince|Merge pull request #276 from mozilla-releng/mitchhentges-patch-1  Adds missing space to new_instance docs|[URL](https://github.com/mozilla-releng/scriptworker/commit/9c7570cf15975475e616475874d95a972ed13d96)|2018-11-29 02:36:56
-|3|mitchhentges|Adds missing space to new_instance docs|[URL](https://github.com/mozilla-releng/scriptworker/commit/27fd473c0c86ebf2f65443ffbc4f423583d90f42)|2018-11-29 01:33:24
-|2|tomprince|Merge pull request #275 from tp-tc/version-bump  17.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/9e0d17f54b2a4d9c73ea5538f11b4d6cb9c1dd89)|2018-11-27 18:16:43
-|1|tomprince|17.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f)|2018-11-27 17:46:52
+|13|tomprince|17.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f)|2018-11-27 17:46:52
+|12|escapewindow|Merge pull request #269 from escapewindow/pip-compile-multi  Pip compile multi|[URL](https://github.com/mozilla-releng/scriptworker/commit/ae4cc4de36bd59a235c7a48e17d15c827caa3024)|2018-11-13 21:32:49
+|11|escapewindow|update pinned requirements|[URL](https://github.com/mozilla-releng/scriptworker/commit/48f9c9ca3c0d1eaae3c41d76f9166224a6eee45f)|2018-11-13 21:10:04
+|10|escapewindow|address review comments|[URL](https://github.com/mozilla-releng/scriptworker/commit/f760315f4f9f06e9492f4c87d8b79cfa0bde61c6)|2018-11-13 21:09:55
+|9|escapewindow|pin hashes via pip-compile-multi in docker  I've been pinning mac-specific wheel hashes in dephash, which is wrong.|[URL](https://github.com/mozilla-releng/scriptworker/commit/648de55b994a2fb9f57bd6991e7a8a54ef3a4790)|2018-10-30 23:37:30
+|8|MihaiTabara|Merge pull request #270 from MihaiTabara/docs  Bug 1503549 - improve docs for ramping up scriptworkers after aws-man…|[URL](https://github.com/mozilla-releng/scriptworker/commit/7ecf1958e98b1822e596651a62c1581bde8b7436)|2018-11-02 23:16:33
+|7|MihaiTabara|Fix markdown syntax.|[URL](https://github.com/mozilla-releng/scriptworker/commit/b722dc37d9187e791e13dd4c190880f74034250d)|2018-11-02 23:03:24
+|6|MihaiTabara|Fix flake8 issues.|[URL](https://github.com/mozilla-releng/scriptworker/commit/c63ffda1e5131ea82c157f117f01098e53b9ebf4)|2018-11-02 22:05:21
+|5|MihaiTabara|Bug 1503549 - improve docs for ramping up scriptworkers after aws-manager2 retirement.|[URL](https://github.com/mozilla-releng/scriptworker/commit/34f792dc72185b3ea99c1c81a7d3337674779b84)|2018-11-02 21:52:28
+|4|Callek|Merge pull request #253 from Callek/1486970   Bug 1486970 - Need to pass push info to cron decision task validation|[URL](https://github.com/mozilla-releng/scriptworker/commit/2f38da7282620af08f08a1f63cd2cdcd4e72a4b9)|2018-10-19 19:51:57
+|3|Callek|Bug 1486970 - Support actual push values for cron tasks, rather than stubs. r=aki|[URL](https://github.com/mozilla-releng/scriptworker/commit/5646e094d8f0b932f2f53709f2b387981f0b661b)|2018-09-06 19:45:53
+|2|escapewindow|use ARG to allow for a 3.6 and 3.7 docker image from the same Dockerfile (#266)    use ARG to allow for a 3.6 and 3.7 docker image from the same Dockerfile      address review comments|[URL](https://github.com/mozilla-releng/scriptworker/commit/8dc1015249cb00b010a97633c194f5999102b434)|2018-10-19 19:13:55
+|1|escapewindow|Merge pull request #267 from JohanLorenzo/bug-1486089-2  Bug 1486089 - part 2: Whitelist android-components and reference-browser repos|[URL](https://github.com/mozilla-releng/scriptworker/commit/e6257cd7db50c2c308221846f5eac7cc205a4ce1)|2018-10-15 16:06:45
 
 

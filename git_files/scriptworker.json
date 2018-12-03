@@ -1,112 +1,22 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:43.780135"
+    "lastChecked": "2018-12-03 04:27:32.543713",
+    "last_two_releases": {
+      "LatestRelease": {
+        "version": "17.0.0",
+        "sha": "0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f",
+        "date": "Tue, 27 Nov 2018 17:46:52 GMT",
+        "author": "tomprince"
+      },
+      "PreviousRelease": {
+        "version": "16.2.1",
+        "sha": "e6257cd7db50c2c308221846f5eac7cc205a4ce1",
+        "date": "Mon, 15 Oct 2018 16:06:45 GMT",
+        "author": "escapewindow"
+      }
+    }
   },
   "1": {
-    "sha": "9fc92a8e54d7f277b35daa5eb22940a10829f54b",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/9fc92a8e54d7f277b35daa5eb22940a10829f54b",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #279 from MihaiTabara/moredocs  Fix new_instance docs to ease understanding.",
-    "commit_date": "2018-11-29 21:03:07",
-    "files_changed": [
-      "docs/new_instance.md"
-    ]
-  },
-  "2": {
-    "sha": "2b73ecd7ac5505cc7fa89e05a548a4fe39b0ded7",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/2b73ecd7ac5505cc7fa89e05a548a4fe39b0ded7",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "Doc fixup.",
-    "commit_date": "2018-11-29 20:53:18",
-    "files_changed": [
-      "docs/new_instance.md"
-    ]
-  },
-  "3": {
-    "sha": "286d0a91a98e2e76172e847c90537ccea223bb9a",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/286d0a91a98e2e76172e847c90537ccea223bb9a",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "Add dig info for dns records checking.",
-    "commit_date": "2018-11-29 20:45:46",
-    "files_changed": [
-      "docs/new_instance.md"
-    ]
-  },
-  "4": {
-    "sha": "c30edafd03c6c2bb97b4a30462f6cf5ee17a1061",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/c30edafd03c6c2bb97b4a30462f6cf5ee17a1061",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "Fix new_instance docs to ease understanding.",
-    "commit_date": "2018-11-29 20:43:50",
-    "files_changed": [
-      "docs/new_instance.md"
-    ]
-  },
-  "5": {
-    "sha": "ca4b03482f1b23b450597ab57ba09529dfc8dcfa",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/ca4b03482f1b23b450597ab57ba09529dfc8dcfa",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "17.0.1",
-    "commit_date": "2018-11-29 16:17:29",
-    "files_changed": [
-      "CHANGELOG.md",
-      "scriptworker/version.py",
-      "version.json"
-    ]
-  },
-  "6": {
-    "sha": "524c7e376f130886bfe6cc5c62bcfcb0464300ae",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/524c7e376f130886bfe6cc5c62bcfcb0464300ae",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Fix json-e context for mobile projects",
-    "commit_date": "2018-11-29 14:52:20",
-    "files_changed": [
-      "scriptworker/cot/verify.py",
-      "scriptworker/test/test_cot_verify.py"
-    ]
-  },
-  "7": {
-    "sha": "9c7570cf15975475e616475874d95a972ed13d96",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/9c7570cf15975475e616475874d95a972ed13d96",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #276 from mozilla-releng/mitchhentges-patch-1  Adds missing space to new_instance docs",
-    "commit_date": "2018-11-29 02:36:56",
-    "files_changed": [
-      "docs/new_instance.md"
-    ]
-  },
-  "8": {
-    "sha": "27fd473c0c86ebf2f65443ffbc4f423583d90f42",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/27fd473c0c86ebf2f65443ffbc4f423583d90f42",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Adds missing space to new_instance docs",
-    "commit_date": "2018-11-29 01:33:24",
-    "files_changed": [
-      "docs/new_instance.md"
-    ]
-  },
-  "9": {
-    "sha": "9e0d17f54b2a4d9c73ea5538f11b4d6cb9c1dd89",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/9e0d17f54b2a4d9c73ea5538f11b4d6cb9c1dd89",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #275 from tp-tc/version-bump  17.0.0",
-    "commit_date": "2018-11-27 18:16:43",
-    "files_changed": [
-      "CHANGELOG.md",
-      "scriptworker/version.py",
-      "version.json"
-    ]
-  },
-  "10": {
     "sha": "0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f",
     "commiter_name": "tomprince",
@@ -115,6 +25,177 @@
     "commit_date": "2018-11-27 17:46:52",
     "files_changed": [
       "CHANGELOG.md",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "2": {
+    "sha": "ae4cc4de36bd59a235c7a48e17d15c827caa3024",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/ae4cc4de36bd59a235c7a48e17d15c827caa3024",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #269 from escapewindow/pip-compile-multi  Pip compile multi",
+    "commit_date": "2018-11-13 21:32:49",
+    "files_changed": [
+      "MANIFEST.in",
+      "docker/Dockerfile.test",
+      "docs/cot_gpg_key_mgmt.rst",
+      "docs/releases.md",
+      "requirements-prod.txt",
+      "requirements-test-prod.txt",
+      "requirements/Dockerfile",
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.in",
+      "requirements/test.txt",
+      "scripts/create_gpg_keys.py",
+      "scripts/gpg_helper.sh",
+      "scripts/pip"
+    ]
+  },
+  "3": {
+    "sha": "48f9c9ca3c0d1eaae3c41d76f9166224a6eee45f",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/48f9c9ca3c0d1eaae3c41d76f9166224a6eee45f",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "update pinned requirements",
+    "commit_date": "2018-11-13 21:10:04",
+    "files_changed": [
+      "requirements/base.txt",
+      "requirements/test.txt"
+    ]
+  },
+  "4": {
+    "sha": "f760315f4f9f06e9492f4c87d8b79cfa0bde61c6",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/f760315f4f9f06e9492f4c87d8b79cfa0bde61c6",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "address review comments",
+    "commit_date": "2018-11-13 21:09:55",
+    "files_changed": [
+      "scripts/pip"
+    ]
+  },
+  "5": {
+    "sha": "648de55b994a2fb9f57bd6991e7a8a54ef3a4790",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/648de55b994a2fb9f57bd6991e7a8a54ef3a4790",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "pin hashes via pip-compile-multi in docker  I've been pinning mac-specific wheel hashes in dephash, which is wrong.",
+    "commit_date": "2018-10-30 23:37:30",
+    "files_changed": [
+      "MANIFEST.in",
+      "docker/Dockerfile.test",
+      "docs/cot_gpg_key_mgmt.rst",
+      "docs/releases.md",
+      "requirements-prod.txt",
+      "requirements-test-prod.txt",
+      "requirements/Dockerfile",
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.in",
+      "requirements/test.txt",
+      "scripts/create_gpg_keys.py",
+      "scripts/gpg_helper.sh",
+      "scripts/pip"
+    ]
+  },
+  "6": {
+    "sha": "7ecf1958e98b1822e596651a62c1581bde8b7436",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/7ecf1958e98b1822e596651a62c1581bde8b7436",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #270 from MihaiTabara/docs  Bug 1503549 - improve docs for ramping up scriptworkers after aws-man\u2026",
+    "commit_date": "2018-11-02 23:16:33",
+    "files_changed": [
+      "docs/_static/dns.png",
+      "docs/new_instance.md",
+      "scriptworker/gpg.py"
+    ]
+  },
+  "7": {
+    "sha": "b722dc37d9187e791e13dd4c190880f74034250d",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/b722dc37d9187e791e13dd4c190880f74034250d",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Fix markdown syntax.",
+    "commit_date": "2018-11-02 23:03:24",
+    "files_changed": [
+      "docs/new_instance.md"
+    ]
+  },
+  "8": {
+    "sha": "c63ffda1e5131ea82c157f117f01098e53b9ebf4",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/c63ffda1e5131ea82c157f117f01098e53b9ebf4",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Fix flake8 issues.",
+    "commit_date": "2018-11-02 22:05:21",
+    "files_changed": [
+      "scriptworker/gpg.py"
+    ]
+  },
+  "9": {
+    "sha": "34f792dc72185b3ea99c1c81a7d3337674779b84",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/34f792dc72185b3ea99c1c81a7d3337674779b84",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Bug 1503549 - improve docs for ramping up scriptworkers after aws-manager2 retirement.",
+    "commit_date": "2018-11-02 21:52:28",
+    "files_changed": [
+      "docs/_static/dns.png",
+      "docs/new_instance.md"
+    ]
+  },
+  "10": {
+    "sha": "2f38da7282620af08f08a1f63cd2cdcd4e72a4b9",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/2f38da7282620af08f08a1f63cd2cdcd4e72a4b9",
+    "commiter_name": "Callek",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #253 from Callek/1486970   Bug 1486970 - Need to pass push info to cron decision task validation",
+    "commit_date": "2018-10-19 19:51:57",
+    "files_changed": [
+      "scriptworker/cot/verify.py",
+      "scriptworker/test/data/cotv2/cron.json",
+      "scriptworker/test/test_cot_verify.py"
+    ]
+  },
+  "11": {
+    "sha": "5646e094d8f0b932f2f53709f2b387981f0b661b",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/5646e094d8f0b932f2f53709f2b387981f0b661b",
+    "commiter_name": "Callek",
+    "commiter_email": "Callek@gmail.com",
+    "commit_message": "Bug 1486970 - Support actual push values for cron tasks, rather than stubs. r=aki",
+    "commit_date": "2018-09-06 19:45:53",
+    "files_changed": [
+      "scriptworker/cot/verify.py",
+      "scriptworker/test/data/cotv2/cron.json",
+      "scriptworker/test/test_cot_verify.py"
+    ]
+  },
+  "12": {
+    "sha": "8dc1015249cb00b010a97633c194f5999102b434",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/8dc1015249cb00b010a97633c194f5999102b434",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "use ARG to allow for a 3.6 and 3.7 docker image from the same Dockerfile (#266)    use ARG to allow for a 3.6 and 3.7 docker image from the same Dockerfile      address review comments",
+    "commit_date": "2018-10-19 19:13:55",
+    "files_changed": [
+      "README.rst",
+      "docker/Dockerfile.test",
+      "docker/Dockerfile.test-py37"
+    ]
+  },
+  "13": {
+    "sha": "e6257cd7db50c2c308221846f5eac7cc205a4ce1",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/e6257cd7db50c2c308221846f5eac7cc205a4ce1",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #267 from JohanLorenzo/bug-1486089-2  Bug 1486089 - part 2: Whitelist android-components and reference-browser repos",
+    "commit_date": "2018-10-15 16:06:45",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/constants.py",
       "scriptworker/version.py",
       "version.json"
     ]

@@ -1,15 +1,45 @@
 import os
-from github import Github  # pip3 install PyGitHub
-from datetime import datetime, timedelta
-import json
 import re
+import json
 import requests
 from os import listdir
+from github import Github
 from os.path import isfile, join
+from datetime import datetime, timedelta
 
-# Create a Github instance:
+
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
+
+
+def get_version(repo_name, repo_team):
+    """
+    :param repo_name: repository name
+    :param repo_team: repository team
+    :return: a dictionary with information from the last two release version: latestRelease and previousRelease
+    """
+    repo_path = repo_team + repo_name
+    iteration = 0
+
+    for tags in git.get_repo(repo_path).get_tags():
+        version = tags.name
+        sha = tags.commit.sha
+        date = tags.commit.commit.last_modified
+        author = tags.commit.author.login
+        if iteration == 0:
+            latestrelease = {'version': version,
+                             'sha': sha,
+                             'date': date,
+                             'author': author
+                             }
+            iteration = 1
+        elif iteration == 1:
+            previousrelease = {'version': version,
+                               'sha': sha,
+                               'date': date,
+                               'author': author
+                               }
+            return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
 
 
 def get_version_from_build_puppet(version_path, repo_name):
@@ -22,6 +52,7 @@ def get_version_from_build_puppet(version_path, repo_name):
     for word in file_to_string:
         if repo_name in word:
             version_in_puppet = re.split('\\b==\\b', word)[-1]
+            # the next check makes sure to only return the version in case the repo name appears multiple times
             if version_in_puppet != repo_name:
                 return version_in_puppet
 
@@ -64,7 +95,7 @@ def create_md_table(repository_name, path_to_files):
             commit_number = commit_number_list[-1]
             try:
                 commit_author = data[key]["commiter_name"]
-                commit_author = re.sub("\u0131", "i", commit_author)  #this is temporary
+                commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
                 date = data[key]["commit_date"]
                 message = data[key]["commit_message"]
                 message = re.sub("\|", "\|", message)
@@ -98,12 +129,13 @@ def create_md_table(repository_name, path_to_files):
         print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def filter_git_commit_data(repository_name, repository_team):
+def filter_git_commit_data(repository_name, repository_team, repository_version):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
     :param repository_team:
     :param repository_name:
+    :param repository_version: dictionary that contains data from the last 2 releases
     :return: Filtered json data
     TODO: please add the exception blocks since the script fails when it can't pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
@@ -112,34 +144,42 @@ def filter_git_commit_data(repository_name, repository_team):
     repo_dict = {}
     number = 0
     repository_path = repository_team + repository_name
-    print("Working on repo:", repository_name)
-    repo_dict.update({number: {"lastChecked": str(datetime.utcnow())}})
-    number += 1
+    repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
+                               "last_two_releases": repository_version}})
 
-    for commit in git.get_repo(repository_path).get_commits(since=lastWeek):
-        each_commit = {}
-        author_info = {}
-        files_changed = []
-        commit_sha = commit.sha
-        commiter_name = commit.author.login
-        commiter_email = commit.committer.email
-        commit_message = commit.commit.message
-        commit_html_url = commit.html_url
-        for entry in commit.files:
-            files_changed.append(entry.filename)
-        commit_date = str(commit.commit.author.date)
-        message = re.sub("[*\n\r]", " ", commit_message)
-        author_info.update({"sha": commit_sha,
-                            "url": commit_html_url,
-                            "commiter_name": commiter_name,
-                            "commiter_email": commiter_email,
-                            "commit_message": message,
-                            "commit_date": commit_date,
-                            "files_changed": files_changed
-                            })
-        each_commit.update({int(number): author_info})
-        number += 1
-        repo_dict.update(each_commit)
+    try:
+        latest_release = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        previous_release = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+    except TypeError:
+        previous_release = lastWeek
+        latest_release = datetime.utcnow()
+
+    number += 1
+    for commit in git.get_repo(repository_path).get_commits(since=previous_release):
+        commit_date = commit.commit.author.date
+        if commit_date <= latest_release:
+            each_commit = {}
+            author_info = {}
+            files_changed = []
+            commit_sha = commit.sha
+            commiter_name = commit.author.login
+            commiter_email = commit.committer.email
+            commit_message = commit.commit.message
+            commit_html_url = commit.html_url
+            for entry in commit.files:
+                files_changed.append(entry.filename)
+            message = re.sub("[*\n\r]", " ", commit_message)
+            author_info.update({"sha": commit_sha,
+                                "url": commit_html_url,
+                                "commiter_name": commiter_name,
+                                "commiter_email": commiter_email,
+                                "commit_message": message,
+                                "commit_date": str(commit_date),
+                                "files_changed": files_changed
+                                })
+            each_commit.update({int(number): author_info})
+            number += 1
+            repo_dict.update(each_commit)
 
     git_json_filename = "{}.json".format(repository_name)
     json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
@@ -217,12 +257,24 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
+        repository_version = get_version(repository_name, repository_team)
+        version_in_puppet = 0
+        print("Working on repo: {}".format(repository_name))
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
             version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
         except KeyError:
             pass
-        filter_git_commit_data(repository_name, repository_team)
+        if repository_version is not None:
+            try:
+                if repository_version['LatestRelease']['version'] == version_in_puppet:
+                    print('No new changes came into production!')
+                else:
+                    filter_git_commit_data(repository_name, repository_team, repository_version)
+            except TypeError:
+                pass
+        else:
+            filter_git_commit_data(repository_name, repository_team, repository_version)
         create_md_table(repository_name, "git_files")
 
 
@@ -295,7 +347,8 @@ def generate_main_md_table(path_to_files):
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if isfile(join(dir_path + "/{}".format(path_to_files), f))]
+    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
+                  isfile(join(dir_path + "/{}".format(path_to_files), f))]
 
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]

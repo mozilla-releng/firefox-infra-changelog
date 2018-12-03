@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:59.641397"
+    "lastChecked": "2018-12-03 04:27:56.324813"
   },
   "1": {
-    "sha": "2f92fd614d56a6c6b68041f4cdf70c358c01e7c8",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2f92fd614d56",
-    "commiter_name": "Masayuki Nakano ",
-    "commit_email": "masayuki@d-toybox.com",
-    "commit_message": "Bug 1496288 - part 2: Stop dispatching non-printable \"keypress\" events, set keyCode or charCode value to the other value when it's zero, start to dispatch \"keydown\" and \"keyup\" events during composition, and enable window.event by default r=smaug  First one is for bug 968056.  UI Events declares that \"keypress\" events should be dispatched only when a key press produces one or more characters (and also discussing about Enter key press for backward compatibility).  Therefore, we should stop dispatching \"keypress\" events for non-printable keys (like arrow keys, Ctrl + A, etc) in the default group on content for conforming to UI Events, but keep dispatching them in chrome and in the system group on content.  Next one is for bug 1479964.  No spec declares that what value should be set to keyCode and charCode value of \"keypress\" events because declaring that would break existing web apps which handle them with UA string.  However, some web apps assume that if window.event is available, keyCode value of \"keypress\" event is set to a Unicode code point of inputting character.  We set only charCode to it, but the other browsers sets both keyCode and charCode to a Unicode code point of inputting character.  Therefore, we need to follow the other browsers' behavior for this because changing value from zero to non-zero is safer than non-zero to non-zero or zero.  And also next one is for bug 354358.  UI Events declares that \"keydown\" and \"keyup\" events represent physical key state and should be fired even during composition.  As far as the reported issues, this behavior is expected mainly by Korean web developers and some web apps depend on the behavior.  Therefore, we need to start to dispatch them during composition.  Finally, for bug 218415, we should enable window.event.  This is declared by the Living DOM Standard.  A lot of web apps depend on window.event and the last blocker, bug 1479964 was fixed so that it is the time to enable this.  Differential Revision: https://phabricator.services.mozilla.com/D13376",
-    "commit_date": "2018-11-29 15:18:17"
+    "sha": "b1c9fa45f90ee5f26843749557a2fda84581f406",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b1c9fa45f90e",
+    "commiter_name": "Noemi Erli ",
+    "commit_email": "nerli@mozilla.com",
+    "commit_message": "Backed out changeset b3c8a3a052ea (bug 1452146) for mochitest automation.py failures",
+    "commit_date": "2018-12-03 03:13:57"
   },
   "2": {
-    "sha": "f854c2a5429c4fbf93359a24fcd89b34fed6e541",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f854c2a5429c",
-    "commiter_name": "Masayuki Nakano ",
-    "commit_email": "masayuki@d-toybox.com",
-    "commit_message": "Bug 1496288 - part 1: Make blacklist prefs for keypress event behavior changes ride the train r=smaug  Basically, we shouldn't have blacklist to disable web API.  However, the keypress event behavior changes are not standardized things.  Therefore, if some web developers realize that they need to change their apps when it's too late for them, Firefox users need to use another browser for such web apps for several weeks or more, and such things may make the users switch their default browser.  For avoiding such worst scenario, we should take the blacklists and if we get such compatibility reports, we should add the domains into the blacklist even in release channel.  Differential Revision: https://phabricator.services.mozilla.com/D13374",
-    "commit_date": "2018-11-29 15:04:18"
+    "sha": "b3c8a3a052ea96b093839b5732661e6c1d006a77",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b3c8a3a052ea",
+    "commiter_name": "Nils Ohlmeier [:drno] ",
+    "commit_email": "drno@ohlmeier.org",
+    "commit_message": "Bug 1452146 - flip av1 and rdd on for OSX and Win. r=mjf  Differential Revision: https://phabricator.services.mozilla.com/D13638",
+    "commit_date": "2018-12-02 15:23:37"
   },
   "3": {
-    "sha": "49b56d4d7fafc0a8bdabc00ce6b956564d9690a9",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=49b56d4d7faf",
-    "commiter_name": "Masayuki Nakano ",
-    "commit_email": "masayuki@d-toybox.com",
-    "commit_message": "Bug 1510111 - Remove www.rememberthemilk.com from the blacklist of keyCode/charCode mirroring of keypress events r=smaug  Remember The Milk have upgraded their Google Closure Library and the bug has gone now.  Let's remove www.rememberthemilk.com from the blacklist.  Differential Revision: https://phabricator.services.mozilla.com/D13373",
-    "commit_date": "2018-11-29 21:32:27"
+    "sha": "29385deef9ea018dd480de4f4c9ceaa4b1308c5d",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29385deef9ea",
+    "commiter_name": "Valentin Gosu ",
+    "commit_email": "valentin.gosu@gmail.com",
+    "commit_message": "Bug 1502025 - Add IPv6 support to httpd.js r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13335",
+    "commit_date": "2018-12-02 23:29:45"
   },
   "4": {
-    "sha": "2b8cf5fe84e5d21c678131290d06da9cf3fa6aae",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2b8cf5fe84e5",
-    "commiter_name": "Junior Hsu ",
-    "commit_email": "juhsu@mozilla.com",
-    "commit_message": "Bug 1505844 - nullcheck of non-ClassOfService channel in FetchDriver to avoid crash r=mayhemer  Differential Revision: https://phabricator.services.mozilla.com/D12363",
-    "commit_date": "2018-11-28 22:32:32"
+    "sha": "389ecc0ddf76e316c9ec17e8847829f19cb49af6",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=389ecc0ddf76",
+    "commiter_name": "Valentin Gosu ",
+    "commit_email": "valentin.gosu@gmail.com",
+    "commit_message": "Bug 1502025 - Use captive portal endpoints for connectivity checks r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13334",
+    "commit_date": "2018-12-02 23:29:27"
   },
   "5": {
-    "sha": "305c06df7740f4b2393c53dae175f0d199f3e30b",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=305c06df7740",
-    "commiter_name": "Panos Astithas ",
-    "commit_email": "past@mozilla.com",
-    "commit_message": "Bug 1508184 - Don't try to set the active python during bootstrap if not necessary r=gps  Differential Revision: https://phabricator.services.mozilla.com/D12237",
-    "commit_date": "2018-11-30 00:25:48"
+    "sha": "552ef6767e3b9244a8f31382306f3ffa42bdb2de",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=552ef6767e3b",
+    "commiter_name": "Valentin Gosu ",
+    "commit_email": "valentin.gosu@gmail.com",
+    "commit_message": "Bug 1502025 - Remove failure counters from nsSocketTransport2 r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13333",
+    "commit_date": "2018-12-02 23:29:10"
   },
   "6": {
-    "sha": "1e64f8c3f949bb16b4981f255033021b42118586",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1e64f8c3f949",
-    "commiter_name": "Andreea Pavel ",
-    "commit_email": "apavel@mozilla.com",
-    "commit_message": "Backed out changeset f9900ac6071c (bug 571074) for failing clipboard at browser/base/content/test/general/browser_clipboard.js on a CLOSED TREE",
-    "commit_date": "2018-11-30 00:30:22"
+    "sha": "e18883f3328eb3d949fb7458005d84b2e2bbad3c",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e18883f3328e",
+    "commiter_name": "Valentin Gosu ",
+    "commit_email": "valentin.gosu@gmail.com",
+    "commit_message": "Bug 1502025 - Add NS_HTTP_DISABLE_IPV4 and NS_HTTP_DISABLE_IPV6 flags r=dragana  Differential Revision: https://phabricator.services.mozilla.com/D13332",
+    "commit_date": "2018-12-02 23:28:52"
   },
   "7": {
-    "sha": "57816e067da5bac79091eb33436e2d45c8699079",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=57816e067da5",
-    "commiter_name": "Miko Mynttinen ",
-    "commit_email": "mikokm@gmail.com",
-    "commit_message": "Bug 1509579 - Part 2: Do not call MarkNeedsDisplayItemRebuild(), when GetDependentFrame() == Frame() r=mattwoodrow  Depends on D13279  Differential Revision: https://phabricator.services.mozilla.com/D13280",
-    "commit_date": "2018-11-29 20:40:58"
+    "sha": "6cbbac93c27318820e9a626a25aced587ef3a010",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6cbbac93c273",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1511210 part 3 - Remove unnecessary call to ensureHasTypes in jit::CreateThis. r=tcampbell  This was added in bug 833076 because back then TypeScript::SetThis assumed non-null script->types. However since bug 875276 we don't need this anymore.  Differential Revision: https://phabricator.services.mozilla.com/D13652",
+    "commit_date": "2018-12-02 22:38:39"
   },
   "8": {
-    "sha": "6a516d21eae63a07573958fedb5ff291e2c393b8",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6a516d21eae6",
-    "commiter_name": "Miko Mynttinen ",
-    "commit_email": "mikokm@gmail.com",
-    "commit_message": "Bug 1509579 - Part 1: Do not mark frames modified after the rebuild limit has been reached r=mattwoodrow  Differential Revision: https://phabricator.services.mozilla.com/D13279",
-    "commit_date": "2018-11-29 05:19:36"
+    "sha": "30e5ba51f64aa65ed086da3ccc7b4b139d139e79",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=30e5ba51f64a",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1511210 part 2 - Ensure we have a JitRealm in ICScript::create. r=tcampbell  Depends on D13650  Differential Revision: https://phabricator.services.mozilla.com/D13651",
+    "commit_date": "2018-12-02 22:29:55"
   },
   "9": {
-    "sha": "76a737a5a6e94e14b5fad10ca62ab259a27e2615",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76a737a5a6e9",
-    "commiter_name": "Edgar Chen ",
-    "commit_email": "echen@mozilla.com",
-    "commit_message": "Bug 1505547 - Use DocumentOrShadowRoot level checks in videocontrols for fullscreen; r=timdream  Differential Revision: https://phabricator.services.mozilla.com/D13402",
-    "commit_date": "2018-11-29 23:01:55"
+    "sha": "aa8de096f6dcdadc8186637f6a742dc350d11781",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=aa8de096f6dc",
+    "commiter_name": "Jan de Mooij ",
+    "commit_email": "jdemooij@mozilla.com",
+    "commit_message": "Bug 1511210 part 1 - Check script warm up count before calling ensureJitRealmExists in CanEnterBaselineJIT. r=tcampbell  This is just a minor optimization, but it makes the bug fixed by part 2 reproducible when running jit-tests.  Differential Revision: https://phabricator.services.mozilla.com/D13650",
+    "commit_date": "2018-12-02 22:05:08"
   },
   "10": {
-    "sha": "f9900ac6071c17ff7af3ccfaf2a8ce02ea66cffc",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f9900ac6071c",
-    "commiter_name": "Tom Schuster ",
-    "commit_email": "evilpies@gmail.com",
-    "commit_message": "Bug 571074 - Mark nsITransferable.getTransferData as [must_use]. r=mats  Differential Revision: https://phabricator.services.mozilla.com/D13454",
-    "commit_date": "2018-11-29 21:57:40"
+    "sha": "95e75223f6c7dc1bdd13488deb46a18541c00c93",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=95e75223f6c7",
+    "commiter_name": "Fabian Henneke ",
+    "commit_email": "fabian@henneke.me",
+    "commit_message": "Bug 1509493 - Fix markup generation for nested email addresses r=BenB  In mozTXTToHTMLConv, FindURL is not able to correctly calculate replaceBefore for nested email addresses/URLs such as john@doe.org}john@doe.org. As a workaround, we keep track of the end of the last URL HTML markup in the output string and skip any subsequent URLs whose replaceBefore would cut into this markup.  Depends on D13645  Differential Revision: https://phabricator.services.mozilla.com/D13646",
+    "commit_date": "2018-12-02 16:18:29"
   },
   "11": {
-    "sha": "6b447ab87004213505fbdcb0d2538a2634550737",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6b447ab87004",
-    "commiter_name": "Blake Kaplan ",
-    "commit_email": "mrbkap@gmail.com",
-    "commit_message": "Bug 1510809 - Fire updatefound correctly for SWC.register r=asuth  Currently, we are required to fire updatefound in three cases:      When a \"soft\" update finds an update.     When a call to ServiceWorkerRegistration.update finds an update.     When ServiceWorkerContainer.register registers a ServiceWorker.  In the first case, there are no requirements on the timing of the event. For the second two cases, however, the promise returned by update or register needs to resolve before updatefound is dispatched. We hack around the first case by explicitly counting the calls to update and only dispatching updatefound when the final promise resolves. In the case of SWC.register, the ServiceWorkerRegistration object might not even exist when it notices that we need to fire updatefound, which suggests that we need some code to tell it when to fire the event; except that in the soft update case, there is no obvious place to do so. So, the easiest way to resolve this is to have the parent process tell the ServiceWorkerRegistration when to fire updatefound itself. This way, we don't rely on any tricky timing and everything is consistent with itself.  Differential Revision: https://phabricator.services.mozilla.com/D13368",
-    "commit_date": "2018-11-29 23:06:32"
+    "sha": "00d7ff2eeb0ad9eaeb2fe79a0c275b305f26f766",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=00d7ff2eeb0a",
+    "commiter_name": "Fabian Henneke ",
+    "commit_email": "fabian@henneke.me",
+    "commit_message": "Bug 1509493 - Do not include unmatched ')' in email addresses r=BenB  Depends on D13644  Differential Revision: https://phabricator.services.mozilla.com/D13645",
+    "commit_date": "2018-12-02 16:20:03"
   },
   "12": {
-    "sha": "ea4b9bbb0cf49ff47f18427132141e42f71982ee",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ea4b9bbb0cf4",
-    "commiter_name": "Eugen Sawin ",
-    "commit_email": "esawin@mozilla.com",
-    "commit_message": "Bug 1511012 - [1.0] Ensure non-null scheme before accessing it. r=droeh  Differential Revision: https://phabricator.services.mozilla.com/D13455",
-    "commit_date": "2018-11-29 22:06:32"
+    "sha": "b4808c4e7d61c68cebd13865685a28a47d72b982",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b4808c4e7d61",
+    "commiter_name": "Fabian Henneke ",
+    "commit_email": "fabian@henneke.me",
+    "commit_message": "Bug 1509493 - Provide basic test coverage for email address parsing r=BenB  Depends on D13511  Differential Revision: https://phabricator.services.mozilla.com/D13644",
+    "commit_date": "2018-12-02 22:14:11"
   },
   "13": {
-    "sha": "863959eb64d1f39ad7c07e44f98263ee10d6ef5a",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=863959eb64d1",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1508962 part 4 - Abstract jump opcodes in BaselineCodeGen. r=djvj  Differential Revision: https://phabricator.services.mozilla.com/D12924",
-    "commit_date": "2018-11-29 22:44:50"
+    "sha": "51e67c682e39c167ae275cb2a18ee31f68346a09",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=51e67c682e39",
+    "commiter_name": "Fabian Henneke ",
+    "commit_email": "fabian@henneke.me",
+    "commit_message": "Bug 1509493 - Always linkify common URL schemes in plain text r=BenB  Differential Revision: https://phabricator.services.mozilla.com/D13511",
+    "commit_date": "2018-12-02 16:20:05"
   },
   "14": {
-    "sha": "c315f5473734de31c574cb650c67a98916f9f64b",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c315f5473734",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1508962 part 3 - Eliminate some  pc uses where we know the JSOp statically. r=djvj  Differential Revision: https://phabricator.services.mozilla.com/D12922",
-    "commit_date": "2018-11-29 22:44:48"
+    "sha": "c50c098e40c48f8ef04afe7267db57e2f2c7ff1f",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c50c098e40c4",
+    "commiter_name": "Rob Wu ",
+    "commit_email": "rob@robwu.nl",
+    "commit_message": "Bug 1504660 - Implement Xrays for instanceof r=bholley  Ensure that \"a instanceof b\" has Xray semantics, i.e. that when b is a XrayWrapper, that the wrapped object's getters, `Symbol.hasInstance` hook and proxy traps are not triggered.  The toolkit/components/mozintl/test/test_mozintlhelper.js test was updated to explicitly waive Xrays, instead of relying on the previous behavior where Xrays were automatically waived.  Depends on D11591  Depends on D11591  Differential Revision: https://phabricator.services.mozilla.com/D11592",
+    "commit_date": "2018-12-02 22:21:51"
   },
   "15": {
-    "sha": "e0b75c94bc06140a53af4e9bc1a6c738b62d5793",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e0b75c94bc06",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1508962 part 2 - Implement emitDebugInstrumentation to abstract emitting debugging-specific code. r=djvj  Differential Revision: https://phabricator.services.mozilla.com/D12523",
-    "commit_date": "2018-11-29 22:44:44"
+    "sha": "c07309d939ddc4763c644ae5dbc78265d8fa001f",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c07309d939dd",
+    "commiter_name": "Rob Wu ",
+    "commit_email": "rob@robwu.nl",
+    "commit_message": "Bug 1504660 - Move js::InstanceOfOperator to JS::InstanceofOperator r=bholley  There is currently no public API to call the 'instanceof' handler without triggering proxies. The public method, JS_HasInstance, may skip the default logic if a class has a non-null JSHasInstanceOp. (i.e. js/src/proxy/Proxy.cpp and js/src/ctypes/CTypes.cpp ).  To serve the need of the next patch (which needs to trigger the instanceof logic without triggering the proxy), this patch publishes the js::InstanceofOperator method. JS::InstanceOfOperator is the new name, and the new capitalization matches the name of the abstract operation in the ES6 specification.  Differential Revision: https://phabricator.services.mozilla.com/D11591",
+    "commit_date": "2018-12-02 22:21:48"
   },
   "16": {
-    "sha": "77764799fba3b6f29fb7b5ce15e4ba73f263832f",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=77764799fba3",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1508962 part 1 - Add a BaselineCodeGen<Handler> base class to BaselineCompiler and use it for JSOp compilation. r=djvj  This is just the first step: the Handler classes are still empty and BaselineCodeGen contains fields/methods that should eventually move out of there. That will happen in follow-up patches.  Rooting analysis now reported a hazard in ObjectGroup::getOrFixupCopyOnWriteObject, this patch has the trivial fix for that too.  Differential Revision: https://phabricator.services.mozilla.com/D12522",
-    "commit_date": "2018-11-29 22:43:00"
+    "sha": "a2d7fd0f5139d9885ecf3799c070f0e66872c066",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a2d7fd0f5139",
+    "commiter_name": "Rob Wood ",
+    "commit_email": "rwood@mozilla.com",
+    "commit_message": "Bug 1510400 - Promote new tp6-3, 4, 5, and 6 tests to tier 1; r=jmaher  Differential Revision: https://phabricator.services.mozilla.com/D13615",
+    "commit_date": "2018-12-01 21:57:11"
   },
   "17": {
-    "sha": "7a24e1e35a7e4a372f719463ca367882bb6de5dd",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7a24e1e35a7e",
-    "commiter_name": "Jason Orendorff ",
-    "commit_email": "jorendorff@mozilla.com",
-    "commit_message": "Bug 1511040 - Handle errors in test_readableStreams.html. r=baku  Differential Revision: https://phabricator.services.mozilla.com/D13410",
-    "commit_date": "2018-11-29 22:44:46"
+    "sha": "fb9b6c3665571b702d087dce1bf9e6e024c92131",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fb9b6c366557",
+    "commiter_name": "Art-Vanderlay ",
+    "commit_email": "causality1@outlook.com",
+    "commit_message": "Bug 1507836 - Use long style in \"last sync\" date formatted r=eoger  Changed format style in \"last sync\" date from short to long.  Hovering over listed devices in 'send tab to device' on the page action menu shows the last sync date in the short style (last synced: 1 min ago). Changed this to display date in the long style (last synced: 1 minute ago).  Differential Revision: https://phabricator.services.mozilla.com/D13634",
+    "commit_date": "2018-12-02 18:46:47"
   },
   "18": {
-    "sha": "7180b12513ad5f0a0d1edf3188610a848b3b6ebf",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7180b12513ad",
-    "commiter_name": "Jason Orendorff ",
-    "commit_email": "jorendorff@mozilla.com",
-    "commit_message": "Bug 1391756 - Try to fix rare timeout in dom/tests/mochitest/fetch/test_readableStreams.html. r=baku  Also removes an infinite regress of nested iframes. The original problem was that tests would start running before the child iframe was done loading. The straightforward fix is to have the child frame start the test. But this caused further error messages because the child iframe is loaded more than once; removing the iframe from the iframe fixes this.  Differential Revision: https://phabricator.services.mozilla.com/D13385",
-    "commit_date": "2018-11-29 22:35:04"
+    "sha": "e990a032ac3cf6c071a79014d4b412bcd2007af1",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e990a032ac3c",
+    "commiter_name": "Ben Armstrong ",
+    "commit_email": "ben.armstrong22@gmail.com",
+    "commit_message": "Bug 1503760: Changed browser.downloads.search({}) to return 0 byte downloads. r=aswan  Updated the totalBytesGreater property in browser.downloads.search({}) to default to -1 so files with a byte size of 0 will be returned.  Differential Revision: https://phabricator.services.mozilla.com/D12344",
+    "commit_date": "2018-11-26 22:54:49"
   },
   "19": {
-    "sha": "5808b57453825fe1185e94fd4e7e2e551bdf878f",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5808b5745382",
-    "commiter_name": "Jason Orendorff ",
-    "commit_email": "jorendorff@mozilla.com",
-    "commit_message": "Bug 1507248 - Use virtual methods for external readable stream callbacks. r=baku,jwalden  Differential Revision: https://phabricator.services.mozilla.com/D11926",
-    "commit_date": "2018-11-29 22:33:43"
+    "sha": "dcc5dcceb8661d9c74ba44dc2b2280c3b37cf467",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dcc5dcceb866",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1511725 - Update string-cache-codegen.  Generated with cargo update -p string_cache_codegen and ./mach vendor rust.  Differential Revision: https://phabricator.services.mozilla.com/D13649",
+    "commit_date": "2018-12-02 17:34:27"
   },
   "20": {
-    "sha": "0ceb5c6cc6b076e9b79f9d5f70ae901f8fd9644e",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ceb5c6cc6b0",
-    "commiter_name": "Jared Wein ",
-    "commit_email": "jwein@mozilla.com",
-    "commit_message": "Bug 1511095 - Remove support for the 30fps pref, and replace the loading.svg with the 30fps variant. r=mconley  Differential Revision: https://phabricator.services.mozilla.com/D13462",
-    "commit_date": "2018-11-29 22:26:13"
+    "sha": "e65a1d1d653cadb25091dac2ec3758b5dba28eb3",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e65a1d1d653c",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "Bug 1504985 - Remove dependency on the textoverflow attribute from browser_UrlbarInput_tooltip.js. r=mak  The textoverflow attribute is set asynchronously thanks to bug 1419391, making this test more complicated than necessary. We can use the private _overflowing (UrlbarInput) and _inOverflow (urlbarBindings.xml) flags instead.  Differential Revision: https://phabricator.services.mozilla.com/D13639",
+    "commit_date": "2018-12-02 14:20:33"
   }
 }

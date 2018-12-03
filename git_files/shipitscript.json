@@ -1,5 +1,173 @@
 {
   "0": {
-    "lastChecked": "2018-11-30 00:56:30.142061"
+    "lastChecked": "2018-12-03 04:27:18.774012",
+    "last_two_releases": {
+      "LatestRelease": {
+        "version": "3.0.0",
+        "sha": "4c89c1b239fd8415e1225ba738ba820342bd8081",
+        "date": "Wed, 21 Nov 2018 16:33:53 GMT",
+        "author": "rail"
+      },
+      "PreviousRelease": {
+        "version": "2.1.0",
+        "sha": "890bb8af933befe2c7daad69a2074c066b6d031a",
+        "date": "Mon, 02 Jul 2018 15:03:27 GMT",
+        "author": "MihaiTabara"
+      }
+    }
+  },
+  "1": {
+    "sha": "4c89c1b239fd8415e1225ba738ba820342bd8081",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "Add support for Ship-it v2 (#14)",
+    "commit_date": "2018-11-21 16:33:53",
+    "files_changed": [
+      "CHANGELOG.md",
+      "SCOPES.md",
+      "requirements.txt",
+      "shipitscript/script.py",
+      "shipitscript/ship_actions.py",
+      "shipitscript/task.py",
+      "shipitscript/test/__init__.py",
+      "shipitscript/test/integration/test_integration_script.py",
+      "shipitscript/test/test_script.py",
+      "shipitscript/test/test_ship_actions.py",
+      "shipitscript/test/test_task.py",
+      "shipitscript/test/test_utils.py",
+      "shipitscript/utils.py",
+      "version.txt"
+    ]
+  },
+  "2": {
+    "sha": "0c892801fc9ad80e3a12b80ab69a7e3527ec0eea",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Address comments",
+    "commit_date": "2018-11-21 15:44:59",
+    "files_changed": [
+      "CHANGELOG.md",
+      "shipitscript/ship_actions.py"
+    ]
+  },
+  "3": {
+    "sha": "3033ccfe619289bfd022df1250a924f995ac33b8",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Revert local temp canges",
+    "commit_date": "2018-11-20 04:44:21",
+    "files_changed": [
+      "requirements.txt",
+      "tox.ini"
+    ]
+  },
+  "4": {
+    "sha": "fb22074bb0e5bc26373cf5c2305e89f2a45eae25",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Bump version to 3.0.0",
+    "commit_date": "2018-11-20 04:24:43",
+    "files_changed": [
+      "CHANGELOG.md",
+      "SCOPES.md",
+      "version.txt"
+    ]
+  },
+  "5": {
+    "sha": "2032f7bfc6c1629fa783a1af52f42ac51668d7f2",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Add support for masrk as shipped v2",
+    "commit_date": "2018-11-20 04:20:35",
+    "files_changed": [
+      "requirements.txt",
+      "shipitscript/script.py",
+      "shipitscript/ship_actions.py",
+      "shipitscript/task.py",
+      "shipitscript/test/__init__.py",
+      "shipitscript/test/integration/test_integration_script.py",
+      "shipitscript/test/test_script.py",
+      "shipitscript/test/test_ship_actions.py",
+      "shipitscript/test/test_task.py",
+      "shipitscript/test/test_utils.py",
+      "shipitscript/utils.py",
+      "tox.ini"
+    ]
+  },
+  "6": {
+    "sha": "7edf12f6d68375ea9d0d847ee784a197490665a4",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #13 from escapewindow/py37  require py37 to be green",
+    "commit_date": "2018-07-27 23:05:59",
+    "files_changed": [
+      ".travis.yml",
+      "setup.py"
+    ]
+  },
+  "7": {
+    "sha": "603525b424c44e87f3958578f4b20ac12b62d33c",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "require py37 to be green",
+    "commit_date": "2018-07-27 22:47:35",
+    "files_changed": [
+      ".travis.yml",
+      "setup.py"
+    ]
+  },
+  "8": {
+    "sha": "8522dd18645e6809ecf4a1802b6e383ac4bfded5",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Add SCOPES.md (#12)",
+    "commit_date": "2018-07-12 15:28:23",
+    "files_changed": [
+      "SCOPES.md"
+    ]
+  },
+  "9": {
+    "sha": "e2051ad7d5e30cbabbfdd953894abfc5518e4e37",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "2.1.1",
+    "commit_date": "2018-07-02 18:52:51",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "10": {
+    "sha": "baefe18bdd070d3f7d6eafb08be0f1b25528be57",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Fix timings comparison in shipitscript (#11)",
+    "commit_date": "2018-07-02 18:49:00",
+    "files_changed": [
+      "shipitscript/test/test_utils.py",
+      "shipitscript/utils.py"
+    ]
+  },
+  "11": {
+    "sha": "890bb8af933befe2c7daad69a2074c066b6d031a",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "2.1.0",
+    "commit_date": "2018-07-02 15:03:27",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
   }
 }
