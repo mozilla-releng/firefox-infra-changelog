@@ -1,4 +1,5 @@
-## BALROGSCRIPT COMMIT MARKDOWN TABLE SINCE 2018-11-26 21:45:13.184847
+## REPOSITORY NAME: BALROGSCRIPT
+ CURRENT VERSION: 3.3.0 RELEASED ON MON, 26 NOV 2018 17:29:44 GMT
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 

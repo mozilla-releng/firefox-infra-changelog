@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 19:45:32.383680",
+    "lastChecked": "2018-12-05 01:51:15.648031",
     "last_two_releases": null
   },
   "1": {
@@ -329,92 +329,6 @@
     "commit_date": "2018-11-28 09:53:35",
     "files_changed": [
       "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
-  "29": {
-    "sha": "2aef9521b2bfabde8cbbd2e8388dab84b017f5ca",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/2aef9521b2bfabde8cbbd2e8388dab84b017f5ca",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "Bump beetmoverscript in beetmoverworkers.",
-    "commit_date": "2018-11-28 01:11:53",
-    "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
-  "30": {
-    "sha": "4d55efd50ee5b9ca6f6d1e2c76bd11ed503918c7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/4d55efd50ee5b9ca6f6d1e2c76bd11ed503918c7",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Adds mobile-dep pushapk env config",
-    "commit_date": "2018-11-28 00:04:27",
-    "files_changed": [
-      "modules/pushapk_scriptworker/manifests/settings.pp"
-    ]
-  },
-  "31": {
-    "sha": "bfeb4b9b7a7931e277c607283e99f9c5c323fb28",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/bfeb4b9b7a7931e277c607283e99f9c5c323fb28",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #311 from tp-tc/scriptworker-cron  Bump scriptworker to 17.0.0 for push information in cron tasks.",
-    "commit_date": "2018-11-27 21:24:14",
-    "files_changed": [
-      "modules/addon_scriptworker/files/requirements.txt",
-      "modules/balrog_scriptworker/files/requirements-3.txt",
-      "modules/beetmover_scriptworker/files/requirements.txt",
-      "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/shipit_scriptworker/files/requirements.txt",
-      "modules/signing_scriptworker/files/requirements.txt",
-      "modules/transparency_scriptworker/files/requirements.txt",
-      "modules/tree_scriptworker/files/requirements.txt"
-    ]
-  },
-  "32": {
-    "sha": "08f05d12e2cae01c387e5ac0b19c3d78597828d2",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/08f05d12e2cae01c387e5ac0b19c3d78597828d2",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Bump scriptworker to 17.0.0 for push information in cron tasks.",
-    "commit_date": "2018-11-27 18:00:24",
-    "files_changed": [
-      "modules/addon_scriptworker/files/requirements.txt",
-      "modules/balrog_scriptworker/files/requirements-3.txt",
-      "modules/beetmover_scriptworker/files/requirements.txt",
-      "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/shipit_scriptworker/files/requirements.txt",
-      "modules/signing_scriptworker/files/requirements.txt",
-      "modules/transparency_scriptworker/files/requirements.txt",
-      "modules/tree_scriptworker/files/requirements.txt"
-    ]
-  },
-  "33": {
-    "sha": "81815340e943aab9e886a3f6c799d58c101451ac",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/81815340e943aab9e886a3f6c799d58c101451ac",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #309 from tp-tc/whats-new  Update balrogscript for WNP support.",
-    "commit_date": "2018-11-27 17:02:34",
-    "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-27.txt",
-      "modules/balrog_scriptworker/manifests/init.pp"
-    ]
-  },
-  "34": {
-    "sha": "a198270e36c42b6541542d48f895c8479415b9b7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a198270e36c42b6541542d48f895c8479415b9b7",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #303 from mitchhentges/bug1508508  Adds configuration for reference browser (prod and staging)",
-    "commit_date": "2018-11-27 16:57:38",
-    "files_changed": [
-      "manifests/moco-nodes.pp",
-      "modules/signing_scriptworker/manifests/settings.pp",
-      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb",
-      "modules/signing_scriptworker/templates/passwords-mobile.json.erb"
     ]
   }
 }

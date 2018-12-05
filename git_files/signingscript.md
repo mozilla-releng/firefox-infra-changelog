@@ -1,4 +1,5 @@
-## SIGNINGSCRIPT COMMIT MARKDOWN TABLE SINCE 2018-11-26 21:45:13.184847
+## REPOSITORY NAME: SIGNINGSCRIPT
+ CURRENT VERSION: 9.5.1 RELEASED ON FRI, 23 NOV 2018 13:14:04 GMT
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 

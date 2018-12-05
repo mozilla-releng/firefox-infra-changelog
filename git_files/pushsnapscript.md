@@ -1,4 +1,5 @@
-## PUSHSNAPSCRIPT COMMIT MARKDOWN TABLE SINCE 2018-11-26 21:45:13.184847
+## REPOSITORY NAME: PUSHSNAPSCRIPT
+ CURRENT VERSION: 0.2.4 RELEASED ON MON, 08 OCT 2018 09:00:24 GMT
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 

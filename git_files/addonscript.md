@@ -1,4 +1,5 @@
-## ADDONSCRIPT COMMIT MARKDOWN TABLE SINCE 2018-11-26 21:45:13.184847
+## REPOSITORY NAME: ADDONSCRIPT
+ CURRENT VERSION: 1.0 RELEASED ON THU, 17 MAY 2018 13:58:03 GMT
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
