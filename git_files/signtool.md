@@ -1,4 +1,5 @@
-## SIGNTOOL COMMIT MARKDOWN TABLE SINCE 2018-11-26 21:45:13.184847
+## REPOSITORY NAME: SIGNTOOL
+ CURRENT VERSION: 3.2.1 RELEASED ON MON, 27 AUG 2018 17:17:03 GMT
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 

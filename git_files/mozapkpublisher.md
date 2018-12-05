@@ -1,4 +1,5 @@
-## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2018-11-26 21:45:13.184847
+## REPOSITORY NAME: MOZAPKPUBLISHER
+ CURRENT VERSION: 0.9.2 RELEASED ON THU, 08 NOV 2018 09:57:02 GMT
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 

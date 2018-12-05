@@ -234,7 +234,12 @@ def create_md_table(repository_name, path_to_files):
         base_table = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
                      "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
         tables = {}
-        md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
+        try:
+            version = data['0']["last_two_releases"]["LatestRelease"]["version"]
+            date = data['0']["last_two_releases"]["LatestRelease"]["date"]
+            md_title = ["Repository name: {}\n Current version: {} released on {}".format(repository_name, version, date)]
+        except:
+            md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
         commit_number_list = [key for key in data]
 
         for repo in md_title:
@@ -260,7 +265,7 @@ def create_md_table(repository_name, path_to_files):
                 for repo in tables.keys():
                     tables[repo] = tables[repo] + row
             except KeyError:
-                last_checked = data[key]["lastChecked"]
+                pass
 
         md_file_name = "{}.md".format(repository_name)
         md_file = open(current_dir + "/{}/".format(path_to_files) + md_file_name, "w")

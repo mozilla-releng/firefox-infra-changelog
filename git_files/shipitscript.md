@@ -1,4 +1,5 @@
-## SHIPITSCRIPT COMMIT MARKDOWN TABLE SINCE 2018-11-26 21:45:13.184847
+## REPOSITORY NAME: SHIPITSCRIPT
+ CURRENT VERSION: 3.0.0 RELEASED ON WED, 21 NOV 2018 16:33:53 GMT
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
