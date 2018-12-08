@@ -1,34 +1,71 @@
 {
   "0": {
-    "lastChecked": "2018-12-06 17:20:23.358247",
+    "lastChecked": "2018-12-08 15:20:52.317913",
     "last_two_releases": null
   },
   "1": {
-    "sha": "a198270e36c42b6541542d48f895c8479415b9b7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a198270e36c42b6541542d48f895c8479415b9b7",
-    "commiter_name": "mitchhentges",
+    "sha": "9f3cf327c3a20d1954ee2627a15b2e8dfa86ea8d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/9f3cf327c3a20d1954ee2627a15b2e8dfa86ea8d",
+    "commiter_name": "dragoscrisan",
     "commiter_email": null,
-    "commit_message": "Merge pull request #303 from mitchhentges/bug1508508  Adds configuration for reference browser (prod and staging)",
-    "commit_date": "2018-11-27 16:57:38",
+    "commit_message": "Force reboot linux workers (#305)    Force reboot linux workers      Force reboot linux workers      Force reboot linux workers      Force reboot linux workers      Create a separate reboot command for OSX and Linux workers      Create a separate reboot command for OSX and Linux workers      Create a separate reboot command for OSX and Linux workers",
+    "commit_date": "2018-12-03 08:28:30",
     "files_changed": [
-      "manifests/moco-nodes.pp",
-      "modules/signing_scriptworker/manifests/settings.pp",
-      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb",
-      "modules/signing_scriptworker/templates/passwords-mobile.json.erb"
+      "modules/generic_worker/manifests/init.pp",
+      "modules/generic_worker/templates/run-generic-worker.sh.erb",
+      "modules/grub/templates/defaults.erb"
     ]
   },
   "2": {
-    "sha": "a198270e36c42b6541542d48f895c8479415b9b7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a198270e36c42b6541542d48f895c8479415b9b7",
+    "sha": "6d735b7ae012510bd96641ae01587eefa19fa744",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/6d735b7ae012510bd96641ae01587eefa19fa744",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "Bug 1511145: don't handle Firefox in releaserunner3 (#316)  Using fake values in case we don't hablde empty arrays properly",
+    "commit_date": "2018-11-30 17:10:54",
+    "files_changed": [
+      "manifests/moco-config.pp"
+    ]
+  },
+  "3": {
+    "sha": "0b8d96d712cfc710e2ca3d08ecaa5682369be068",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/0b8d96d712cfc710e2ca3d08ecaa5682369be068",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Bump scriptworker to 17.0.1 (#315)",
+    "commit_date": "2018-11-29 17:12:10",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt",
+      "modules/balrog_scriptworker/files/requirements-3.txt",
+      "modules/beetmover_scriptworker/files/requirements.txt",
+      "modules/bouncer_scriptworker/files/requirements.txt",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/shipit_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt",
+      "modules/transparency_scriptworker/files/requirements.txt",
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
+  },
+  "4": {
+    "sha": "de413d0e22b0f5d478efc9dc1ef5dc3233f1eec3",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/de413d0e22b0f5d478efc9dc1ef5dc3233f1eec3",
     "commiter_name": "mitchhentges",
     "commiter_email": null,
-    "commit_message": "Merge pull request #303 from mitchhentges/bug1508508  Adds configuration for reference browser (prod and staging)",
-    "commit_date": "2018-11-27 16:57:38",
+    "commit_message": "Merge pull request #312 from mitchhentges/pushapk-mobile-dep-settings  Adds mobile-dep pushapk env config",
+    "commit_date": "2018-11-28 23:14:51",
     "files_changed": [
-      "manifests/moco-nodes.pp",
-      "modules/signing_scriptworker/manifests/settings.pp",
-      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb",
-      "modules/signing_scriptworker/templates/passwords-mobile.json.erb"
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "5": {
+    "sha": "3f41e7d42861eab53e8533a9ade6cfce509e12d8",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/3f41e7d42861eab53e8533a9ade6cfce509e12d8",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds note that taskcluster_client_id should be simplified",
+    "commit_date": "2018-11-28 21:17:31",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp"
     ]
   }
 }
