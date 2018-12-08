@@ -12,17 +12,6 @@ lastWeek = datetime.now() - timedelta(days=10)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
-def commit_helper(a, b):  # helper function for filtering/ignoring commits
-
-    if a[:len(a)] == b[:len(a)]: # this helps us in comparing folders from ignore with folders that came in that form folder/folder/files.extension
-        return 1.0 # if the first len(a) characters match the first len(a) characters from folder folder/folder/files.extension returns 1.0
-    elif a[:len(a)] == b[-len(a):]: # same logic goes here but for files. Helps us comparing from ignore file.extension with /folder/folder/file.extension. This will compare len(a) with last len(a) characters and returns 1.0
-        return 1.0
-    else:
-        c = SequenceMatcher(None, a, b).ratio() # this does the same process but that happens when a file to ignore is compared to a folder to ignore, basically do not want to compare folders to files so this is more like a failover
-        return c
-
-
 def create_files_for_git(repositories_holder):
     """
     Main GIT function. Takes every Git repo from a .json file which is populated with repositories and writes all
@@ -38,6 +27,7 @@ def create_files_for_git(repositories_holder):
         version_in_puppet = 0
         folders_to_ignore = repositories_holder["Github"][repo]["configuration"]["folders-to-ignore"]
         files_to_ignore = repositories_holder["Github"][repo]["configuration"]["files-to-ignore"]
+        files_to_care_for = repositories_holder["Github"][repo]["configuration"]["files-we-care-about"]
         print("Working on repo: {}".format(repository_name))
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
@@ -49,11 +39,11 @@ def create_files_for_git(repositories_holder):
                 if repository_version['LatestRelease']['version'] == version_in_puppet:
                     print('No new changes came into production!')
                 else:
-                    filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore)
+                    filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore, files_to_care_for)
             except TypeError:
                 pass
         else:
-            filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore)
+            filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore, files_to_care_for)
         create_md_table(repository_name, "git_files")
 
 
@@ -102,7 +92,7 @@ def get_version_from_build_puppet(version_path, repo_name):
                 return version_in_puppet
 
 
-def filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore):
+def filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore, files_to_care_for):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
@@ -127,51 +117,55 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
         previous_release = lastWeek
         latest_release = datetime.utcnow()
 
-    ignore_list2 = [] #initialate a new list. Everything that did not pass the check in line 146 will be appended here
+    our_ignore_list = folders_to_ignore + files_to_ignore  # all files and folder we want to ignore
+    our_care_list = files_to_care_for  # list of paths that we care about
     number += 1
     for commit in git.get_repo(repository_path).get_commits(since=lastWeek):
         commit_date = commit.commit.author.date
-        files_list = [commit.files[i].filename for i in range(0, len(commit.files))] # this creates a list with all files that were modified in a commit
-        ignore_list = folders_to_ignore + files_to_ignore # this merges folder and files to ignore
-        for ignore in ignore_list:
-            if ignore not in ignore_list2:
-                ignore_list2.append(ignore) # if elements in ignore_list are not in ignore_list2 this appends them
-            for files in files_list:
-                procent = commit_helper(ignore, files) # this uses commit_helper to compare entries from ignore_list with files_list
-                print("Comparing {} with {}:{}".format(ignore, files, procent)) # shows what it compares and what commit_helper returns
-                if int(procent) == 1.0: # checks if value returned from commit_helper is 1.0. This is the first actual filter applied
-                    if files not in ignore_list2:
-                        ignore_list2.append(files) # if return from commit_helper is 1.0 that means that this specific file/folder must be always ignored, so add it to ignore_list2
-                    pass
-                elif int(procent) < 1.0 and files not in ignore_list2: # if return from commit_helper < 1.0 and files aren't in ignore_list2 that means we need that file so write that down in our json!!!
-                    if commit_date <= latest_release:
-                        each_commit = {}
-                        author_info = {}
-                        files_changed = []
-                        commit_sha = commit.sha
-                        commiter_name = commit.author.login
-                        commiter_email = commit.committer.email
-                        commit_message = commit.commit.message
-                        commit_html_url = commit.html_url
-                        for entry in commit.files:
-                            files_changed.append(entry.filename)
-                        message = re.sub("[*\n\r]", " ", commit_message)
-                        author_info.update({"sha": commit_sha,
-                                                    "url": commit_html_url,
-                                                    "commiter_name": commiter_name,
-                                                    "commiter_email": commiter_email,
-                                                    "commit_message": message,
-                                                    "commit_date": str(commit_date),
-                                                    "files_changed": files_changed
-                                                    })
-                        each_commit.update({int(number): author_info})
-                        number += 1
-                        repo_dict.update(each_commit)
+        checker = False  # if this turns true, it means we care about the commit and will append it
+        files_list = [commit.files[i].filename for i in range(0, len(commit.files))]  # this creates a list with all files that were modified in a commit
+        for our_element in our_ignore_list:
+            for care_element in our_care_list:
+                for file in files_list:
+                    if care_element in file:  # if this is true = this trumps all options. no matter what, we need this commit
+                        checker = True
+                        pass
+                    elif our_element in file:  # this is for repos in which we care about most files and a single commit changes a files we ignore + something else
+                        if our_element == our_care_list[-1] and len(files_list) > 1 and our_ignore_list != files_list:
+                            checker = True
+                            pass
+                    else:
+                        checker = True
 
-    git_json_filename = "{}.json".format(repository_name)
-    json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
-    json.dump(repo_dict, json_file, indent=2)
-    json_file.close()
+        if checker is True:  # if true we care about adding this commit
+            print("we care about this commit: ", commit.sha)
+            if commit_date <= latest_release:
+                each_commit = {}
+                author_info = {}
+                files_changed = []
+                commit_sha = commit.sha
+                commiter_name = commit.author.login
+                commiter_email = commit.committer.email
+                commit_message = commit.commit.message
+                commit_html_url = commit.html_url
+                for entry in commit.files:
+                    files_changed.append(entry.filename)
+                message = re.sub("[*\n\r]", " ", commit_message)
+                author_info.update({"sha": commit_sha,
+                                    "url": commit_html_url,
+                                    "commiter_name": commiter_name,
+                                    "commiter_email": commiter_email,
+                                    "commit_message": message,
+                                    "commit_date": str(commit_date),
+                                    "files_changed": files_changed
+                                    })
+                each_commit.update({int(number): author_info})
+                number += 1
+                repo_dict.update(each_commit)
+            git_json_filename = "{}.json".format(repository_name)
+            json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
+            json.dump(repo_dict, json_file, indent=2)
+            json_file.close()
 
 
 def create_files_for_hg(repositories_holder):
@@ -431,6 +425,6 @@ if __name__ == "__main__":
     repositories = json.loads(repositories_data)
     create_files_for_git(repositories)
     #create_files_for_hg(repositories) # ignore because we are testing git filtering
-    clear_file("main_md_table.md")
+    # clear_file("main_md_table.md")
     #generate_main_md_table("hg_files") # ignore because we are testing git filtering
-    generate_main_md_table("git_files")
+    # generate_main_md_table("git_files")

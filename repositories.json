@@ -11,12 +11,17 @@
       ],
       "configuration": {
         "type": " ",
+        "files-we-care-about": [
+          "modules/pushapk_scriptworker/manifests/settings.pp"
+
+        ],
         "folders-to-ignore": [
           "modules/"
 
         ],
         "files-to-ignore": [
-          "manifests/moco-config.pp"
+          "manifests/moco-config.pp",
+          "modules/generic_worker/manifests/init.pp"
         ],
         "release-path": " "
       }
