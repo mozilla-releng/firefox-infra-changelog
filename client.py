@@ -6,7 +6,6 @@ from os import listdir
 from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
-from difflib import SequenceMatcher
 
 lastWeek = datetime.now() - timedelta(days=10)
 current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -39,11 +38,25 @@ def create_files_for_git(repositories_holder):
                 if repository_version['LatestRelease']['version'] == version_in_puppet:
                     print('No new changes came into production!')
                 else:
-                    filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore, files_to_care_for)
+                    filter_git_commit_data(
+                                        repository_name,
+                                        repository_team,
+                                        repository_version,
+                                        folders_to_ignore,
+                                        files_to_ignore,
+                                        files_to_care_for
+                                   )
             except TypeError:
                 pass
         else:
-            filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore, files_to_care_for)
+            filter_git_commit_data(
+                                repository_name,
+                                repository_team,
+                                repository_version,
+                                folders_to_ignore,
+                                files_to_ignore,
+                                files_to_care_for
+                            )
         create_md_table(repository_name, "git_files")
 
 
@@ -61,20 +74,21 @@ def get_version(repo_name, repo_team):
         sha = tags.commit.sha
         date = tags.commit.commit.last_modified
         author = tags.commit.author.login
+        latest_release = {}
         if iteration == 0:
-            latestrelease = {'version': version,
+            latest_release = {'version': version,
                              'sha': sha,
                              'date': date,
                              'author': author
                              }
             iteration = 1
         elif iteration == 1:
-            previousrelease = {'version': version,
+            previous_release = {'version': version,
                                'sha': sha,
                                'date': date,
                                'author': author
                                }
-            return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
+        return {'LatestRelease': latest_release, 'PreviousRelease': previous_release}
 
 
 def get_version_from_build_puppet(version_path, repo_name):
@@ -92,7 +106,88 @@ def get_version_from_build_puppet(version_path, repo_name):
                 return version_in_puppet
 
 
-def filter_git_commit_data(repository_name, repository_team, repository_version, folders_to_ignore, files_to_ignore, files_to_care_for):
+def extract_files_from_commit(commit):
+    """
+    Helper Function!
+    This creates a list with all the files that were modified in a commit.
+    :param commit: Takes as a parameter a commit
+    :return: returns a list  with the commit files modified in the commit.
+    """
+    return [commit.files[i].filename for i in range(0, len(commit.files))]
+
+
+def compare_files(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path + filename of the modified files. The two lists are mutable.
+    :param first_list: First lists.
+    :param second_list:  Second list
+    :return: returns boolean value in case a match is found.
+    """
+    if set(first_list).intersection(second_list):
+        return True
+    else:
+        return False
+
+
+def extract_common_files(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path + filename of the modified files. The two lists are mutable.
+    :param first_list: First lists.
+    :param second_list:  Second list
+    :return: a list of mutuale files in the input lists.
+    """
+    return set(first_list).intersection(second_list)
+
+
+def compare_folders(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path of the files.
+    The second_list can accept "path + filename" but the first_list cannot.
+    The two lists are NOT mutable.
+    :param first_list: First lists that should contains paths
+    :param second_list:  Second list that should contain paths + filename.
+    :return: returns boolean value in case a match is found.
+    """
+    for ii in range(0, len(first_list)):
+        for jj in range(0, len(second_list)):
+            if first_list[ii] in second_list[jj]:
+                return True
+            else:
+                return False
+
+
+def extract_common_folders(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path of the files.
+    The second_list can accept "path + filename" but the first_list cannot.
+    The two lists are NOT mutable.
+    :param first_list: First lists that should contains paths
+    :param second_list:  Second list that should contain paths + filename.
+    :return: returns a list that should contain the common_folders.
+    """
+    common_folders = []
+    for ii in range(0, len(first_list)):
+        for jj in range(0, len(second_list)):
+            if first_list[ii] in second_list[jj]:
+                common_folders = first_list[ii]
+            else:
+                pass
+
+    return common_folders
+
+
+def filter_git_commit_data(
+                    repository_name,
+                    repository_team,
+                    repository_version,
+                    folders_to_ignore,
+                    files_to_ignore,
+                    files_to_care_for
+            ):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
@@ -120,25 +215,43 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
     our_ignore_list = folders_to_ignore + files_to_ignore  # all files and folder we want to ignore
     our_care_list = files_to_care_for  # list of paths that we care about
     number += 1
+
     for commit in git.get_repo(repository_path).get_commits(since=lastWeek):
         commit_date = commit.commit.author.date
         checker = False  # if this turns true, it means we care about the commit and will append it
-        files_list = [commit.files[i].filename for i in range(0, len(commit.files))]  # this creates a list with all files that were modified in a commit
-        for our_element in our_ignore_list:
-            for care_element in our_care_list:
-                for file in files_list:
-                    if care_element in file:  # if this is true = this trumps all options. no matter what, we need this commit
-                        checker = True
-                        pass
-                    elif our_element in file:  # this is for repos in which we care about most files and a single commit changes a files we ignore + something else
-                        if our_element == our_care_list[-1] and len(files_list) > 1 and our_ignore_list != files_list:
-                            checker = True
-                            pass
-                    else:
-                        checker = True
+
+        files_list = extract_files_from_commit(commit)
+
+        # Check for ignored files in commit
+        if compare_files(files_to_ignore, files_list):
+            print("Element found: " + str(extract_common_files(our_ignore_list, files_list)))
+            checker = True
+
+        # Check for care files in commit
+        if compare_files(files_to_care_for, files_list):
+            print("Element found: " + str(extract_common_files(our_care_list, files_list)))
+            checker = True
+
+        # Check for folders to take care of.
+        if compare_folders(folders_to_ignore, files_to_care_for):
+            print("Element found: " + str(extract_common_folders(our_care_list, files_list)))
+
+        # The code below was written by Zfay but is missing two checks and the code is very compressed.
+        # for our_element in our_ignore_list:
+        #     for care_element in our_care_list:
+        #         for file in files_list:
+        #             if care_element in file:  # if this is true = this trumps all options. no matter what, we need this commit
+        #                 checker = True
+        #                 pass
+        #             elif our_element in file:  # this is for repos in which we care about most files and a single commit changes a files we ignore + something else
+        #                 if our_element == our_care_list[-1] and len(files_list) > 1 and our_ignore_list != files_list:
+        #                     checker = True
+        #                     pass
+        #             else:
+        #                 checker = True
 
         if checker is True:  # if true we care about adding this commit
-            print("we care about this commit: ", commit.sha)
+            print("We care about this commit: ", commit.sha)
             if commit_date <= latest_release:
                 each_commit = {}
                 author_info = {}
