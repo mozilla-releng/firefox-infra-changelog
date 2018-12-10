@@ -6,7 +6,7 @@ from os import listdir
 from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
-
+import time
 
 lastWeek = datetime.now() - timedelta(days=7)
 current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -115,31 +115,95 @@ def filter_git_commit_data(repository_name, repository_team, repository_version)
         latest_release = datetime.utcnow()
 
     number += 1
-    for commit in git.get_repo(repository_path).get_commits(since=previous_release):
-        commit_date = commit.commit.author.date
-        if commit_date <= latest_release:
-            each_commit = {}
-            author_info = {}
-            files_changed = []
-            commit_sha = commit.sha
-            commiter_name = commit.author.login
-            commiter_email = commit.committer.email
-            commit_message = commit.commit.message
-            commit_html_url = commit.html_url
-            for entry in commit.files:
-                files_changed.append(entry.filename)
-            message = re.sub("[*\n\r]", " ", commit_message)
-            author_info.update({"sha": commit_sha,
-                                "url": commit_html_url,
-                                "commiter_name": commiter_name,
-                                "commiter_email": commiter_email,
-                                "commit_message": message,
-                                "commit_date": str(commit_date),
-                                "files_changed": files_changed
-                                })
-            each_commit.update({int(number): author_info})
-            number += 1
-            repo_dict.update(each_commit)
+    try:
+        for commit in git.get_repo(repository_path).get_commits():
+            commit_date = commit.commit.author.date
+            if commit_date <= latest_release:
+                each_commit = {}
+                author_info = {}
+                files_changed = []
+                try:
+                    commit_sha = commit.sha
+                except:
+                    commit_sha = "null"
+                try:
+                    commiter_name = commit.author.login
+                except:
+                    commiter_name = "null"
+                try:
+                    commiter_email = commit.committer.email
+                except:
+                    commiter_email = "null"
+                try:
+                    commit_message = commit.commit.message
+                except:
+                    commit_message = "null"
+                try:
+                    commit_html_url = commit.html_url
+                except:
+                    commit_html_url = "null"
+                try:
+                    for entry in commit.files:
+                        files_changed.append(entry.filename)
+                except:
+                    pass
+                message = re.sub("[*\n\r]", " ", commit_message)
+                author_info.update({"sha": commit_sha,
+                                    "url": commit_html_url,
+                                    "commiter_name": commiter_name,
+                                    "commiter_email": commiter_email,
+                                    "commit_message": message,
+                                    "commit_date": str(commit_date),
+                                    "files_changed": files_changed
+                                    })
+                each_commit.update({int(number): author_info})
+                number += 1
+                repo_dict.update(each_commit)
+    except:
+        time.sleep(3600)
+        for commit in git.get_repo(repository_path).get_commits():
+            commit_date = commit.commit.author.date
+            if commit_date <= latest_release:
+                each_commit = {}
+                author_info = {}
+                files_changed = []
+                try:
+                    commit_sha = commit.sha
+                except:
+                    commit_sha = "null"
+                try:
+                    commiter_name = commit.author.login
+                except:
+                    commiter_name = "null"
+                try:
+                    commiter_email = commit.committer.email
+                except:
+                    commiter_email = "null"
+                try:
+                    commit_message = commit.commit.message
+                except:
+                    commit_message = "null"
+                try:
+                    commit_html_url = commit.html_url
+                except:
+                    commit_html_url = "null"
+                try:
+                    for entry in commit.files:
+                        files_changed.append(entry.filename)
+                except:
+                    pass
+                message = re.sub("[*\n\r]", " ", commit_message)
+                author_info.update({"sha": commit_sha,
+                                    "url": commit_html_url,
+                                    "commiter_name": commiter_name,
+                                    "commiter_email": commiter_email,
+                                    "commit_message": message,
+                                    "commit_date": str(commit_date),
+                                    "files_changed": files_changed
+                                    })
+                each_commit.update({int(number): author_info})
+                number += 1
+                repo_dict.update(each_commit)
 
     git_json_filename = "{}.json".format(repository_name)
     json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
@@ -237,7 +301,8 @@ def create_md_table(repository_name, path_to_files):
         try:
             version = data['0']["last_two_releases"]["LatestRelease"]["version"]
             date = data['0']["last_two_releases"]["LatestRelease"]["date"]
-            md_title = ["Repository name: {}\n Current version: {} released on {}".format(repository_name, version, date)]
+            md_title = [
+                "Repository name: {}\n Current version: {} released on {}".format(repository_name, version, date)]
         except:
             md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
         commit_number_list = [key for key in data]
