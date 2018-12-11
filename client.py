@@ -7,7 +7,8 @@ from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
 
-lastWeek = datetime.now() - timedelta(days=10)
+
+lastWeek = datetime.now() - timedelta(days=5)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -199,18 +200,27 @@ def filter_git_commit_data(
     (e.g raise self.__createException(status, responseHeaders, output)
             github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
-    repo_dict = {}
-    number = 0
-    repository_path = repository_team + repository_name
-    repo_dict.update({number: {"lastChecked": str(datetime.utcnow()),
+    git_json_filename = "{}.json".format(repository_name)
+    try:
+        with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+            repo_dict = json.load(commit_json)
+            number = len(repo_dict)
+            repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
                                "last_two_releases": repository_version}})
+    except FileNotFoundError:
+        repo_dict = {}
+        repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
+                               "last_two_releases": repository_version}})
+        number = 1
 
+    repository_path = repository_team + repository_name
     try:
         latest_release = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
         previous_release = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
     except TypeError:
         previous_release = lastWeek
         latest_release = datetime.utcnow()
+
 
     our_ignore_list = folders_to_ignore + files_to_ignore  # all files and folder we want to ignore
     our_care_list = files_to_care_for  # list of paths that we care about
@@ -308,11 +318,20 @@ def filter_hg_commit_data(repository_name, repository_url):
     :param push_type: Would probably be "json-log" most of the time.
     :return: Returns a dictionary that contains the commits in the provided hg_repository_name
     """
+
+    hg_json_filename = "{}.json".format(repository_name)
+    try:
+        with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
+            hg_repo_data = json.load(commit_json)
+            commit_number = len(hg_repo_data)
+            hg_repo_data.update({'0': {"lastChecked": str(datetime.utcnow())}})
+    except FileNotFoundError:
+        hg_repo_data = {}
+        hg_repo_data.update({'0': {"lastChecked": str(datetime.utcnow())}})
+        commit_number = 0
     request_url = repository_url + "json-log"
     hg_repo_data = {}
-    commit_number = 0
     print("Working on repo:", repository_name)
-    hg_repo_data.update({commit_number: {"lastChecked": str(datetime.utcnow())}})
     data = json.loads(requests.get(request_url).text)
     commit_number += 1
 
@@ -334,7 +353,7 @@ def filter_hg_commit_data(repository_name, repository_url):
             "commit_date": datetime.utcfromtimestamp(date[0]).strftime('%Y-%m-%d %H:%M:%S')
         }})
         commit_number += 1
-    hg_json_filename = "{}.json".format(repository_name)
+
     json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
     json.dump(hg_repo_data, json_file, indent=2)
     json_file.close()
