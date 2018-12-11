@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-08 16:56:27.569887",
+    "lastChecked": "2018-12-11 03:44:34.925224",
     "last_two_releases": null
   },
   "1": {
@@ -14,39 +14,6 @@
       "modules/generic_worker/manifests/init.pp",
       "modules/generic_worker/templates/run-generic-worker.sh.erb",
       "modules/grub/templates/defaults.erb"
-    ]
-  },
-  "2": {
-    "sha": "6d735b7ae012510bd96641ae01587eefa19fa744",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/6d735b7ae012510bd96641ae01587eefa19fa744",
-    "commiter_name": "rail",
-    "commiter_email": null,
-    "commit_message": "Bug 1511145: don't handle Firefox in releaserunner3 (#316)  Using fake values in case we don't hablde empty arrays properly",
-    "commit_date": "2018-11-30 17:10:54",
-    "files_changed": [
-      "manifests/moco-config.pp"
-    ]
-  },
-  "3": {
-    "sha": "de413d0e22b0f5d478efc9dc1ef5dc3233f1eec3",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/de413d0e22b0f5d478efc9dc1ef5dc3233f1eec3",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #312 from mitchhentges/pushapk-mobile-dep-settings  Adds mobile-dep pushapk env config",
-    "commit_date": "2018-11-28 23:14:51",
-    "files_changed": [
-      "modules/pushapk_scriptworker/manifests/settings.pp"
-    ]
-  },
-  "4": {
-    "sha": "3f41e7d42861eab53e8533a9ade6cfce509e12d8",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/3f41e7d42861eab53e8533a9ade6cfce509e12d8",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Adds note that taskcluster_client_id should be simplified",
-    "commit_date": "2018-11-28 21:17:31",
-    "files_changed": [
-      "modules/pushapk_scriptworker/manifests/settings.pp"
     ]
   }
 }
