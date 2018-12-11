@@ -88,7 +88,7 @@ def get_version(repo_name, repo_team):
                                'date': date,
                                'author': author
                                }
-        return {'LatestRelease': latest_release, 'PreviousRelease': previous_release}
+            return {'LatestRelease': latest_release, 'PreviousRelease': previous_release}
 
 
 def get_version_from_build_puppet(version_path, repo_name):
