@@ -342,6 +342,7 @@ def create_md_table(repository_name, path_to_files):
             date = data['0']["last_two_releases"]["LatestRelease"]["date"]
             md_title = [
                 "Repository name: {}\n Current version: {} released on {}".format(repository_name, version, date)]
+
         except:
             md_title = ["{} commit markdown table since {}".format(repository_name, lastWeek)]
         commit_number_list = [key for key in data]
