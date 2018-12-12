@@ -1,9 +1,31 @@
 {
   "0": {
-    "lastChecked": "2018-12-10 04:31:39.290212",
+    "lastChecked": "2018-12-12 13:31:50.321489",
     "last_two_releases": null
   },
   "1": {
+    "sha": "01e0a190cba5bb6d81949fabe71054ab6d1a7bde",
+    "url": "https://github.com/mozilla-releng/ship-it/commit/01e0a190cba5bb6d81949fabe71054ab6d1a7bde",
+    "commiter_name": "clokep",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Bump TB version to 66. (#248)",
+    "commit_date": "2018-12-10 21:54:20",
+    "files_changed": [
+      "kickoff/config.py"
+    ]
+  },
+  "2": {
+    "sha": "4ff40330cb5221d24e76fa3c273ed4c549794bb5",
+    "url": "https://github.com/mozilla-releng/ship-it/commit/4ff40330cb5221d24e76fa3c273ed4c549794bb5",
+    "commiter_name": "pascalchevrel",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Nightly 66: Merge and deply when 66 builds are available for all locales (#247)",
+    "commit_date": "2018-12-10 16:49:45",
+    "files_changed": [
+      "kickoff/config.py"
+    ]
+  },
+  "3": {
     "sha": "f8d9c823a7fc598ba5e6623dd1f4e65c1de38393",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f8d9c823a7fc598ba5e6623dd1f4e65c1de38393",
     "commiter_name": "rail",
@@ -14,7 +36,7 @@
       "kickoff/config.py"
     ]
   },
-  "2": {
+  "4": {
     "sha": "f1a6646f20ef404c2667d3b714c3ef90b6719546",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f1a6646f20ef404c2667d3b714c3ef90b6719546",
     "commiter_name": "rail",
@@ -25,7 +47,7 @@
       "kickoff/templates/submit_release.html"
     ]
   },
-  "3": {
+  "5": {
     "sha": "6e63fa3ca7a575eb4b325d606f6652360fea20c7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6e63fa3ca7a575eb4b325d606f6652360fea20c7",
     "commiter_name": "flodolo",
@@ -37,7 +59,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "4": {
+  "6": {
     "sha": "04cbfefdf23e1cf9b21edd1aa6c0bb2eb2f893c0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/04cbfefdf23e1cf9b21edd1aa6c0bb2eb2f893c0",
     "commiter_name": "flodolo",
@@ -52,7 +74,7 @@
       "kickoff/static/regions/zh-TW.json"
     ]
   },
-  "5": {
+  "7": {
     "sha": "95c5ff57a76bce69795c40f78dbaeb06edf64f40",
     "url": "https://github.com/mozilla-releng/ship-it/commit/95c5ff57a76bce69795c40f78dbaeb06edf64f40",
     "commiter_name": "clokep",
@@ -63,7 +85,7 @@
       "kickoff/config.py"
     ]
   },
-  "6": {
+  "8": {
     "sha": "0ba35b256822831a1e78c05fbe673cb85c6f3b92",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0ba35b256822831a1e78c05fbe673cb85c6f3b92",
     "commiter_name": "jfx2006",
@@ -74,7 +96,7 @@
       "kickoff/thunderbirddetails.py"
     ]
   },
-  "7": {
+  "9": {
     "sha": "9c3ecce6e99318b6e1e8d02cfb7a5387845b2cf1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9c3ecce6e99318b6e1e8d02cfb7a5387845b2cf1",
     "commiter_name": "rail",
@@ -85,7 +107,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "8": {
+  "10": {
     "sha": "147947809b8d50f473f7396a46f29bdf6b13d0d3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/147947809b8d50f473f7396a46f29bdf6b13d0d3",
     "commiter_name": "pascalchevrel",
@@ -96,7 +118,7 @@
       "kickoff/config.py"
     ]
   },
-  "9": {
+  "11": {
     "sha": "4648ee60b768292498970b8cea7ea2e759a818f4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4648ee60b768292498970b8cea7ea2e759a818f4",
     "commiter_name": "nthomas-mozilla",
@@ -108,7 +130,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "10": {
+  "12": {
     "sha": "cced97b55b1bd3d08ddd2dc5f1423da60bd54a66",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cced97b55b1bd3d08ddd2dc5f1423da60bd54a66",
     "commiter_name": "pascalchevrel",
@@ -119,7 +141,7 @@
       "kickoff/templates/includes/fennec_release.html"
     ]
   },
-  "11": {
+  "13": {
     "sha": "403a63a189482ab59d7ad4550444c4cdcf381878",
     "url": "https://github.com/mozilla-releng/ship-it/commit/403a63a189482ab59d7ad4550444c4cdcf381878",
     "commiter_name": "clokep",
@@ -130,7 +152,7 @@
       "kickoff/config.py"
     ]
   },
-  "12": {
+  "14": {
     "sha": "0ad9c35d0a18e6b39b2c2c3ffe12461051f68033",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0ad9c35d0a18e6b39b2c2c3ffe12461051f68033",
     "commiter_name": "pascalchevrel",
@@ -141,7 +163,7 @@
       "kickoff/config.py"
     ]
   },
-  "13": {
+  "15": {
     "sha": "1837914a0af0db45e09fa3cdbca4a37b945d5d46",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1837914a0af0db45e09fa3cdbca4a37b945d5d46",
     "commiter_name": "jcristau",
@@ -152,7 +174,7 @@
       "kickoff/config.py"
     ]
   },
-  "14": {
+  "16": {
     "sha": "1e6660d55f6c8b99d3f134c8140e8288ad637af0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1e6660d55f6c8b99d3f134c8140e8288ad637af0",
     "commiter_name": "rail",
@@ -163,7 +185,7 @@
       "README.md"
     ]
   },
-  "15": {
+  "17": {
     "sha": "02fe79e54538f82c57581743bf7dbde4c266482e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/02fe79e54538f82c57581743bf7dbde4c266482e",
     "commiter_name": "rail",
@@ -182,7 +204,7 @@
       "tox.ini"
     ]
   },
-  "16": {
+  "18": {
     "sha": "a28f79c2cd1f3576685ffcb141ad9000dcfe2053",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a28f79c2cd1f3576685ffcb141ad9000dcfe2053",
     "commiter_name": "rail",
@@ -193,7 +215,7 @@
       "README.md"
     ]
   },
-  "17": {
+  "19": {
     "sha": "a31b5402e764e28bc78bc9468061f40400f754d2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a31b5402e764e28bc78bc9468061f40400f754d2",
     "commiter_name": "rail",
@@ -204,7 +226,7 @@
       "README.md"
     ]
   },
-  "18": {
+  "20": {
     "sha": "6aac6e285d6c02e072690fd8bdce4270041c621e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6aac6e285d6c02e072690fd8bdce4270041c621e",
     "commiter_name": "rail",
@@ -215,7 +237,7 @@
       "kickoff/config.py"
     ]
   },
-  "19": {
+  "21": {
     "sha": "def2841273e1b7364b8c8c610a2e310568c2c8df",
     "url": "https://github.com/mozilla-releng/ship-it/commit/def2841273e1b7364b8c8c610a2e310568c2c8df",
     "commiter_name": "pascalchevrel",
@@ -226,7 +248,7 @@
       "kickoff/config.py"
     ]
   },
-  "20": {
+  "22": {
     "sha": "e424531c72abdf505f2ce542d436cef2ec637e27",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e424531c72abdf505f2ce542d436cef2ec637e27",
     "commiter_name": "clokep",
@@ -237,7 +259,7 @@
       "kickoff/config.py"
     ]
   },
-  "21": {
+  "23": {
     "sha": "fb7fb746d772b13a69571e4dc61360b5cf040861",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fb7fb746d772b13a69571e4dc61360b5cf040861",
     "commiter_name": "nthomas-mozilla",
@@ -249,7 +271,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "22": {
+  "24": {
     "sha": "0097b55e7faae10ee2356a406e22ed557dfc5e71",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0097b55e7faae10ee2356a406e22ed557dfc5e71",
     "commiter_name": "nthomas-mozilla",
@@ -261,7 +283,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "23": {
+  "25": {
     "sha": "90794c58730ec20d00a184399f12b04cadc45484",
     "url": "https://github.com/mozilla-releng/ship-it/commit/90794c58730ec20d00a184399f12b04cadc45484",
     "commiter_name": "nthomas-mozilla",
@@ -273,7 +295,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "24": {
+  "26": {
     "sha": "780cba2177660cd82cd24d364adcdb456878baf7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/780cba2177660cd82cd24d364adcdb456878baf7",
     "commiter_name": "jcristau",
@@ -284,7 +306,7 @@
       "kickoff/config.py"
     ]
   },
-  "25": {
+  "27": {
     "sha": "18031eeb402d51ee15945a23cdea6630eb126db0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/18031eeb402d51ee15945a23cdea6630eb126db0",
     "commiter_name": "clokep",
@@ -295,7 +317,7 @@
       "kickoff/config.py"
     ]
   },
-  "26": {
+  "28": {
     "sha": "db84c96e73f3a969414bab83840d5efc8583e6ee",
     "url": "https://github.com/mozilla-releng/ship-it/commit/db84c96e73f3a969414bab83840d5efc8583e6ee",
     "commiter_name": "pascalchevrel",
@@ -306,7 +328,7 @@
       "kickoff/config.py"
     ]
   },
-  "27": {
+  "29": {
     "sha": "7c9690e706ae89b985fec832df8e418d9879f7fe",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7c9690e706ae89b985fec832df8e418d9879f7fe",
     "commiter_name": "flodolo",
@@ -318,7 +340,7 @@
       "kickoff/static/regions/crh.json"
     ]
   },
-  "28": {
+  "30": {
     "sha": "0617ca01994f7b5bab4d45ae65c935c1c5b30c1f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0617ca01994f7b5bab4d45ae65c935c1c5b30c1f",
     "commiter_name": "flodolo",
@@ -330,7 +352,7 @@
       "kickoff/static/regions/en-CA.json"
     ]
   },
-  "29": {
+  "31": {
     "sha": "b1485ef51368545564b479e5d3d4a85f530f778d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b1485ef51368545564b479e5d3d4a85f530f778d",
     "commiter_name": "flodolo",
@@ -357,7 +379,7 @@
       "kickoff/static/regions/zh-TW.json"
     ]
   },
-  "30": {
+  "32": {
     "sha": "98d08b2653c7f171e21e9fd018484c8f3388037c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/98d08b2653c7f171e21e9fd018484c8f3388037c",
     "commiter_name": "clokep",
@@ -368,7 +390,7 @@
       "kickoff/config.py"
     ]
   },
-  "31": {
+  "33": {
     "sha": "6b0b6849402a2dd47dd20d17d9d4f5baf59fe021",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6b0b6849402a2dd47dd20d17d9d4f5baf59fe021",
     "commiter_name": "pascalchevrel",
@@ -379,7 +401,7 @@
       "kickoff/config.py"
     ]
   },
-  "32": {
+  "34": {
     "sha": "b9785e897f9d7f9f79ae85cf4df015ac3d93b6bc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b9785e897f9d7f9f79ae85cf4df015ac3d93b6bc",
     "commiter_name": "mozbhearsum",
@@ -391,7 +413,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "33": {
+  "35": {
     "sha": "7bf4adb2f5ee1c0d6e62f07b667ed3301d215ce8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7bf4adb2f5ee1c0d6e62f07b667ed3301d215ce8",
     "commiter_name": "clokep",
@@ -402,7 +424,7 @@
       "kickoff/config.py"
     ]
   },
-  "34": {
+  "36": {
     "sha": "302edc8b442c606a73bd12538727ab3a775f5f73",
     "url": "https://github.com/mozilla-releng/ship-it/commit/302edc8b442c606a73bd12538727ab3a775f5f73",
     "commiter_name": "pascalchevrel",
@@ -413,7 +435,7 @@
       "kickoff/config.py"
     ]
   },
-  "35": {
+  "37": {
     "sha": "32837a41e144ffd4ce26a32718efe7b3bd7b761e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/32837a41e144ffd4ce26a32718efe7b3bd7b761e",
     "commiter_name": "JohanLorenzo",
@@ -425,7 +447,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "36": {
+  "38": {
     "sha": "e84b1178cd596159bad2cb3dd5e653d1fe2d143e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e84b1178cd596159bad2cb3dd5e653d1fe2d143e",
     "commiter_name": "JohanLorenzo",
@@ -442,7 +464,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "37": {
+  "39": {
     "sha": "c62574340c1688f659dadc22f9b0a73beaa35854",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c62574340c1688f659dadc22f9b0a73beaa35854",
     "commiter_name": "JohanLorenzo",
@@ -454,7 +476,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "38": {
+  "40": {
     "sha": "18dc35c511c2d38a1f7472c34c435176f3807212",
     "url": "https://github.com/mozilla-releng/ship-it/commit/18dc35c511c2d38a1f7472c34c435176f3807212",
     "commiter_name": "JohanLorenzo",
@@ -466,7 +488,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "39": {
+  "41": {
     "sha": "c2b1811a2bee0fd2d9192ede3d51c3a4d6125115",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c2b1811a2bee0fd2d9192ede3d51c3a4d6125115",
     "commiter_name": "Callek",
@@ -478,7 +500,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "40": {
+  "42": {
     "sha": "23042ec72ccf4242e31545b99800ca311c2af93a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/23042ec72ccf4242e31545b99800ca311c2af93a",
     "commiter_name": "clokep",
@@ -489,7 +511,7 @@
       "kickoff/config.py"
     ]
   },
-  "41": {
+  "43": {
     "sha": "65cf63978a74fb1c5ccd13cc9c8d874d54a81c0f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/65cf63978a74fb1c5ccd13cc9c8d874d54a81c0f",
     "commiter_name": "flodolo",
@@ -503,7 +525,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "42": {
+  "44": {
     "sha": "bc2cd492c430c084b7ad48a253b8066463c36c60",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bc2cd492c430c084b7ad48a253b8066463c36c60",
     "commiter_name": "pascalchevrel",
@@ -514,7 +536,7 @@
       "kickoff/config.py"
     ]
   },
-  "43": {
+  "45": {
     "sha": "514f3453562c395e7d6436de9ef1615d1f372e9d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/514f3453562c395e7d6436de9ef1615d1f372e9d",
     "commiter_name": "nthomas-mozilla",
@@ -526,7 +548,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "44": {
+  "46": {
     "sha": "36665384acc6a37e6bc838c38a2a6a4a93aca73c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/36665384acc6a37e6bc838c38a2a6a4a93aca73c",
     "commiter_name": "nthomas-mozilla",
@@ -539,7 +561,7 @@
       "scripts/sample-data.sql.bz2"
     ]
   },
-  "45": {
+  "47": {
     "sha": "5b95541df769f2790e2865ebaa538b0b51a368ef",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5b95541df769f2790e2865ebaa538b0b51a368ef",
     "commiter_name": "flodolo",
@@ -552,7 +574,7 @@
       "kickoff/static/regions/oc.json"
     ]
   },
-  "46": {
+  "48": {
     "sha": "0750452807ad795169c3f7905f0c152c84b415e8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0750452807ad795169c3f7905f0c152c84b415e8",
     "commiter_name": "kyoshino",
@@ -563,7 +585,7 @@
       "kickoff/thunderbirddetails.py"
     ]
   },
-  "47": {
+  "49": {
     "sha": "d34c28376080f21f9ce5785427ae41ac0876cdef",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d34c28376080f21f9ce5785427ae41ac0876cdef",
     "commiter_name": "sylvestre",
@@ -574,7 +596,7 @@
       "kickoff/static/regions/ia.json"
     ]
   },
-  "48": {
+  "50": {
     "sha": "da98dfc3a8cbb82079f4af18ce640084f6940b3e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/da98dfc3a8cbb82079f4af18ce640084f6940b3e",
     "commiter_name": "flodolo",
@@ -591,7 +613,7 @@
       "kickoff/static/regions/th.json"
     ]
   },
-  "49": {
+  "51": {
     "sha": "3204e41996511cc2937b8ed307b386d344facec9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3204e41996511cc2937b8ed307b386d344facec9",
     "commiter_name": "sylvestre",
@@ -602,7 +624,7 @@
       "kickoff/config.py"
     ]
   },
-  "50": {
+  "52": {
     "sha": "fd6897ccdea5cba09b6b399fa173a118dc66e541",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fd6897ccdea5cba09b6b399fa173a118dc66e541",
     "commiter_name": "clokep",
@@ -613,7 +635,7 @@
       "kickoff/config.py"
     ]
   },
-  "51": {
+  "53": {
     "sha": "dd919ae9fa1173fdfc9939eb21903a09527309cf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dd919ae9fa1173fdfc9939eb21903a09527309cf",
     "commiter_name": "rail",
@@ -624,7 +646,7 @@
       ".travis.yml"
     ]
   },
-  "52": {
+  "54": {
     "sha": "04804021054c464b15df60a1d1e9db4415f6bd78",
     "url": "https://github.com/mozilla-releng/ship-it/commit/04804021054c464b15df60a1d1e9db4415f6bd78",
     "commiter_name": "rail",
@@ -635,7 +657,7 @@
       ".travis.yml"
     ]
   },
-  "53": {
+  "55": {
     "sha": "9a6f22491fda54992ea0994fa31a0b49efc23877",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9a6f22491fda54992ea0994fa31a0b49efc23877",
     "commiter_name": "pascalchevrel",
@@ -646,7 +668,7 @@
       "kickoff/config.py"
     ]
   },
-  "54": {
+  "56": {
     "sha": "c1c4ec33c00a5fe44a425c2bb7d25cf820619765",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c1c4ec33c00a5fe44a425c2bb7d25cf820619765",
     "commiter_name": "flodolo",
@@ -659,7 +681,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "55": {
+  "57": {
     "sha": "ab9c74ade5746a0cb3bc3555fdce4efdb4c92020",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ab9c74ade5746a0cb3bc3555fdce4efdb4c92020",
     "commiter_name": "sylvestre",
@@ -672,7 +694,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "56": {
+  "58": {
     "sha": "d46f2a5de76a3d1dd5295eb4a8d0080d71212db7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d46f2a5de76a3d1dd5295eb4a8d0080d71212db7",
     "commiter_name": "rail",
@@ -683,7 +705,7 @@
       ".travis.yml"
     ]
   },
-  "57": {
+  "59": {
     "sha": "964e20f578185373253d9bbb1f0fb49fadad28e2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/964e20f578185373253d9bbb1f0fb49fadad28e2",
     "commiter_name": "clokep",
@@ -694,7 +716,7 @@
       "kickoff/config.py"
     ]
   },
-  "58": {
+  "60": {
     "sha": "c82a250d4bb530664b3c8eb52c9bc63bff4ca584",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c82a250d4bb530664b3c8eb52c9bc63bff4ca584",
     "commiter_name": "sylvestre",
@@ -705,7 +727,7 @@
       "Dockerfile-server"
     ]
   },
-  "59": {
+  "61": {
     "sha": "df7af251692fb287e792aa2e98103a36c1bc036f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/df7af251692fb287e792aa2e98103a36c1bc036f",
     "commiter_name": "sylvestre",
@@ -718,7 +740,7 @@
       "kickoff/static/regions/tl.json"
     ]
   },
-  "60": {
+  "62": {
     "sha": "6bffdd8a64bd67e8ab48ee346c0a63c993a9ab82",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6bffdd8a64bd67e8ab48ee346c0a63c993a9ab82",
     "commiter_name": "sylvestre",
@@ -730,7 +752,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "61": {
+  "63": {
     "sha": "2bd4a8b8deccd8597f789a89dbc2757915d020fb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2bd4a8b8deccd8597f789a89dbc2757915d020fb",
     "commiter_name": "jcristau",
@@ -743,7 +765,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "62": {
+  "64": {
     "sha": "0e4b579a769af601dca041348e71576ad142cbcf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0e4b579a769af601dca041348e71576ad142cbcf",
     "commiter_name": "pascalchevrel",
@@ -754,7 +776,7 @@
       "kickoff/config.py"
     ]
   },
-  "63": {
+  "65": {
     "sha": "9f0ba5e8bbc935cd803b900ee97a640c9e126884",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9f0ba5e8bbc935cd803b900ee97a640c9e126884",
     "commiter_name": "flodolo",
@@ -765,7 +787,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "64": {
+  "66": {
     "sha": "0707a6293e8ff9e3c0479e88cd554be5a8631c54",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0707a6293e8ff9e3c0479e88cd554be5a8631c54",
     "commiter_name": "rail",
@@ -776,7 +798,7 @@
       "Dockerfile-tests"
     ]
   },
-  "65": {
+  "67": {
     "sha": "8db07b8a6a277cab1740544c0d38a5479bd0574b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8db07b8a6a277cab1740544c0d38a5479bd0574b",
     "commiter_name": "sylvestre",
@@ -790,7 +812,7 @@
       "kickoff/static/regions/ta.json"
     ]
   },
-  "66": {
+  "68": {
     "sha": "a10aa8a277ee0ec12d94b6770f1f9844d168d5af",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a10aa8a277ee0ec12d94b6770f1f9844d168d5af",
     "commiter_name": "rimas-kudelis",
@@ -801,7 +823,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "67": {
+  "69": {
     "sha": "21ae4fde5df440edbe4edcc1645a1f99a3e39655",
     "url": "https://github.com/mozilla-releng/ship-it/commit/21ae4fde5df440edbe4edcc1645a1f99a3e39655",
     "commiter_name": "JohanLorenzo",
@@ -834,7 +856,7 @@
       "migrate_repo/versions/021_add_release_eta.py"
     ]
   },
-  "68": {
+  "70": {
     "sha": "cb5dec7d407cad25d635d36639de15410bedab3c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cb5dec7d407cad25d635d36639de15410bedab3c",
     "commiter_name": "sylvestre",
@@ -845,7 +867,7 @@
       "kickoff/config.py"
     ]
   },
-  "69": {
+  "71": {
     "sha": "708eee72fe3a9d94c13bbe8e6f2a7d163a7901a1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/708eee72fe3a9d94c13bbe8e6f2a7d163a7901a1",
     "commiter_name": "clokep",
@@ -856,7 +878,7 @@
       "kickoff/config.py"
     ]
   },
-  "70": {
+  "72": {
     "sha": "ac219820c3478151551970ca2dcc021f19db29cf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ac219820c3478151551970ca2dcc021f19db29cf",
     "commiter_name": "pascalchevrel",
@@ -867,7 +889,7 @@
       "kickoff/config.py"
     ]
   },
-  "71": {
+  "73": {
     "sha": "5ef6831bf9d1899ac506b159279fc4da9d5cbadf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5ef6831bf9d1899ac506b159279fc4da9d5cbadf",
     "commiter_name": "MihaiTabara",
@@ -878,7 +900,7 @@
       "kickoff/model.py"
     ]
   },
-  "72": {
+  "74": {
     "sha": "4654eb398e2773ccfae80b886142868b6e8d38db",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4654eb398e2773ccfae80b886142868b6e8d38db",
     "commiter_name": "rail",
@@ -890,7 +912,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "73": {
+  "75": {
     "sha": "899e20a4beca43530f854f1b61105bd88c13b89e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/899e20a4beca43530f854f1b61105bd88c13b89e",
     "commiter_name": "rail",
@@ -903,7 +925,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "74": {
+  "76": {
     "sha": "9c6ecbac45fe7f5e8f1a4f5bbde43361954a3847",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9c6ecbac45fe7f5e8f1a4f5bbde43361954a3847",
     "commiter_name": "rail",
@@ -929,7 +951,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "75": {
+  "77": {
     "sha": "f2bda95349f22fc22ed6584e4fd85512a14fd141",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f2bda95349f22fc22ed6584e4fd85512a14fd141",
     "commiter_name": "rail",
@@ -941,7 +963,7 @@
       "scripts/sample-data.sql.bz2"
     ]
   },
-  "76": {
+  "78": {
     "sha": "24f5c1f2a806c664e86106c50269e05a28a1d0a1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/24f5c1f2a806c664e86106c50269e05a28a1d0a1",
     "commiter_name": "rail",
@@ -952,7 +974,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "77": {
+  "79": {
     "sha": "aee5cc7aa8464469bfa6a45f5d8ed1e79b89e325",
     "url": "https://github.com/mozilla-releng/ship-it/commit/aee5cc7aa8464469bfa6a45f5d8ed1e79b89e325",
     "commiter_name": "flodolo",
@@ -967,7 +989,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "78": {
+  "80": {
     "sha": "1a086c4c4eb11948b2dc6e0ae81fa34c1de9608e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1a086c4c4eb11948b2dc6e0ae81fa34c1de9608e",
     "commiter_name": "rail",
@@ -978,7 +1000,7 @@
       "kickoff/config.py"
     ]
   },
-  "79": {
+  "81": {
     "sha": "fa052b10af8a982905669a4c87dd0122aa1fc894",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fa052b10af8a982905669a4c87dd0122aa1fc894",
     "commiter_name": "flodolo",
@@ -993,7 +1015,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "80": {
+  "82": {
     "sha": "567ee7b2e13c6af2c68bcab6a7fc54da51a283fc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/567ee7b2e13c6af2c68bcab6a7fc54da51a283fc",
     "commiter_name": "JohanLorenzo",
@@ -1004,7 +1026,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "81": {
+  "83": {
     "sha": "10425e0da83485426546f8ef8a8cdc911498d0fe",
     "url": "https://github.com/mozilla-releng/ship-it/commit/10425e0da83485426546f8ef8a8cdc911498d0fe",
     "commiter_name": "JohanLorenzo",
@@ -1017,7 +1039,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "82": {
+  "84": {
     "sha": "9b9d811d9047fa97b8fedd6631ca31963e195466",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9b9d811d9047fa97b8fedd6631ca31963e195466",
     "commiter_name": "flodolo",
@@ -1031,7 +1053,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "83": {
+  "85": {
     "sha": "3071a06aed02275d0db1bdb7eb92f65d569bde80",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3071a06aed02275d0db1bdb7eb92f65d569bde80",
     "commiter_name": "NinadBhat",
@@ -1042,7 +1064,7 @@
       "README.md"
     ]
   },
-  "84": {
+  "86": {
     "sha": "b2a1ad64f433ba30c5388646fe7acb6dcfad5f34",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b2a1ad64f433ba30c5388646fe7acb6dcfad5f34",
     "commiter_name": "rail",
@@ -1053,7 +1075,7 @@
       "README.md"
     ]
   },
-  "85": {
+  "87": {
     "sha": "bd7d47899819d6ed66c5d57e0d0f7689d5097f6d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bd7d47899819d6ed66c5d57e0d0f7689d5097f6d",
     "commiter_name": "JohanLorenzo",
@@ -1064,7 +1086,7 @@
       "kickoff/model.py"
     ]
   },
-  "86": {
+  "88": {
     "sha": "24460da3d0854cd665d9cb9f62e2adcd79fa23e8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/24460da3d0854cd665d9cb9f62e2adcd79fa23e8",
     "commiter_name": "rail",
@@ -1078,7 +1100,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "87": {
+  "89": {
     "sha": "cb2047d8d1d5ddb0cd9a1384ac4e623508139f1c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cb2047d8d1d5ddb0cd9a1384ac4e623508139f1c",
     "commiter_name": "kyoshino",
@@ -1089,7 +1111,7 @@
       "kickoff/config.py"
     ]
   },
-  "88": {
+  "90": {
     "sha": "9d00f3033b3bc000cacdd4ecaca2bd8acc43e461",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9d00f3033b3bc000cacdd4ecaca2bd8acc43e461",
     "commiter_name": "clokep",
@@ -1100,7 +1122,7 @@
       "kickoff/config.py"
     ]
   },
-  "89": {
+  "91": {
     "sha": "3b25fec8f6b6b995910db797729b519db85b3965",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3b25fec8f6b6b995910db797729b519db85b3965",
     "commiter_name": "JohanLorenzo",
@@ -1112,7 +1134,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "90": {
+  "92": {
     "sha": "d38eebadc316cac5a30bcc270fc3fd16f24649de",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d38eebadc316cac5a30bcc270fc3fd16f24649de",
     "commiter_name": "flodolo",
@@ -1132,7 +1154,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "91": {
+  "93": {
     "sha": "b60f202b60321adce000520a4ca5eb452793309c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b60f202b60321adce000520a4ca5eb452793309c",
     "commiter_name": "JohanLorenzo",
@@ -1143,7 +1165,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "92": {
+  "94": {
     "sha": "d81673835b16a11b45af63584455469eef456d9e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d81673835b16a11b45af63584455469eef456d9e",
     "commiter_name": "rail",
@@ -1154,7 +1176,7 @@
       "kickoff/config.py"
     ]
   },
-  "93": {
+  "95": {
     "sha": "87a4df903d6996a1bb295a508fa1b00751ce3ae6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/87a4df903d6996a1bb295a508fa1b00751ce3ae6",
     "commiter_name": "pascalchevrel",
@@ -1165,7 +1187,7 @@
       "kickoff/config.py"
     ]
   },
-  "94": {
+  "96": {
     "sha": "635a035c2e24d359abd47526568fae0d0f00aaaa",
     "url": "https://github.com/mozilla-releng/ship-it/commit/635a035c2e24d359abd47526568fae0d0f00aaaa",
     "commiter_name": "JohanLorenzo",
@@ -1176,7 +1198,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "95": {
+  "97": {
     "sha": "e01e03b2b295984878661ff6b7130bb23f8b670e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e01e03b2b295984878661ff6b7130bb23f8b670e",
     "commiter_name": "JohanLorenzo",
@@ -1188,7 +1210,7 @@
       ".travis.yml"
     ]
   },
-  "96": {
+  "98": {
     "sha": "3545cb741ec8fdb2f536142276a1b37acab2a9bf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3545cb741ec8fdb2f536142276a1b37acab2a9bf",
     "commiter_name": "sylvestre",
@@ -1199,7 +1221,7 @@
       "kickoff/config.py"
     ]
   },
-  "97": {
+  "99": {
     "sha": "90104f376a82498fc6e8378da8d283309865dce1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/90104f376a82498fc6e8378da8d283309865dce1",
     "commiter_name": "rail",
@@ -1210,7 +1232,7 @@
       "kickoff/config.py"
     ]
   },
-  "98": {
+  "100": {
     "sha": "3e6b991e4f162378a33de7d9c05e3b8b9763cba3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3e6b991e4f162378a33de7d9c05e3b8b9763cba3",
     "commiter_name": "marco-c",
@@ -1221,7 +1243,7 @@
       "kickoff/config.py"
     ]
   },
-  "99": {
+  "101": {
     "sha": "282785f929304ecb80f83d93956d6c7df7642681",
     "url": "https://github.com/mozilla-releng/ship-it/commit/282785f929304ecb80f83d93956d6c7df7642681",
     "commiter_name": "allan-silva",
@@ -1239,7 +1261,7 @@
       "migrate_repo/versions/019_drop_view_product_releases_mysql_upgrade.sql"
     ]
   },
-  "100": {
+  "102": {
     "sha": "5336aeff579944d9d908aea30bdd9ef06b32fb1a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5336aeff579944d9d908aea30bdd9ef06b32fb1a",
     "commiter_name": "rail",
@@ -1250,7 +1272,7 @@
       "kickoff/static/kickoff.css"
     ]
   },
-  "101": {
+  "103": {
     "sha": "8bf4d082ea7880e766eef051cec9bff1f36e9744",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8bf4d082ea7880e766eef051cec9bff1f36e9744",
     "commiter_name": "sylvestre",
@@ -1262,7 +1284,7 @@
       "kickoff/static/regions/ro.json"
     ]
   },
-  "102": {
+  "104": {
     "sha": "980ce336bccea7b5a927594e6abe5cbe2ed6fe9e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/980ce336bccea7b5a927594e6abe5cbe2ed6fe9e",
     "commiter_name": "sylvestre",
@@ -1274,7 +1296,7 @@
       "kickoff/templates/includes/firefox_release.html"
     ]
   },
-  "103": {
+  "105": {
     "sha": "c6122a633af820af9af5a07a96cd7e8dc6b3f471",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c6122a633af820af9af5a07a96cd7e8dc6b3f471",
     "commiter_name": "JohanLorenzo",
@@ -1292,7 +1314,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "104": {
+  "106": {
     "sha": "ebe86bcfa15d91db9a42309ef8b398a6078936a6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ebe86bcfa15d91db9a42309ef8b398a6078936a6",
     "commiter_name": "sylvestre",
@@ -1304,7 +1326,7 @@
       "kickoff/static/regions/kab.json"
     ]
   },
-  "105": {
+  "107": {
     "sha": "c97d209e898522018a6588ab159c4a58e8933b40",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c97d209e898522018a6588ab159c4a58e8933b40",
     "commiter_name": "lundjordan",
@@ -1315,7 +1337,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "106": {
+  "108": {
     "sha": "19ad1d79963a4e59f099d6ca1e15ffb1ff3c625e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/19ad1d79963a4e59f099d6ca1e15ffb1ff3c625e",
     "commiter_name": "kewisch",
@@ -1326,7 +1348,7 @@
       "kickoff/thunderbirddetails.py"
     ]
   },
-  "107": {
+  "109": {
     "sha": "a34cd575c98bab2c2609c323910715946f6e750d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a34cd575c98bab2c2609c323910715946f6e750d",
     "commiter_name": "rail",
@@ -1338,7 +1360,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "108": {
+  "110": {
     "sha": "56f8073b8069f4e12a344e4e0dec06493816c25a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/56f8073b8069f4e12a344e4e0dec06493816c25a",
     "commiter_name": "rail",
@@ -1355,7 +1377,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "109": {
+  "111": {
     "sha": "f3f5e8ea711ea9a9ccb778c0aa9fec9a1e2921bc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f3f5e8ea711ea9a9ccb778c0aa9fec9a1e2921bc",
     "commiter_name": "sylvestre",
@@ -1366,7 +1388,7 @@
       "kickoff/config.py"
     ]
   },
-  "110": {
+  "112": {
     "sha": "9aa7f24c66f43f282d3626d177520ea4ad072281",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9aa7f24c66f43f282d3626d177520ea4ad072281",
     "commiter_name": "sylvestre",
@@ -1377,7 +1399,7 @@
       "kickoff/__init__.py"
     ]
   },
-  "111": {
+  "113": {
     "sha": "1f2e9f0c5f65df038d1df016a7a3139a168486dd",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1f2e9f0c5f65df038d1df016a7a3139a168486dd",
     "commiter_name": "sylvestre",
@@ -1388,7 +1410,7 @@
       "kickoff/config.py"
     ]
   },
-  "112": {
+  "114": {
     "sha": "d158440da461df109b9d0281eb19917ff9e6bd00",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d158440da461df109b9d0281eb19917ff9e6bd00",
     "commiter_name": "sylvestre",
@@ -1399,7 +1421,7 @@
       "kickoff/config.py"
     ]
   },
-  "113": {
+  "115": {
     "sha": "828751c1279d6a5b07a5e217b47479682799f825",
     "url": "https://github.com/mozilla-releng/ship-it/commit/828751c1279d6a5b07a5e217b47479682799f825",
     "commiter_name": "sylvestre",
@@ -1410,7 +1432,7 @@
       "kickoff/config.py"
     ]
   },
-  "114": {
+  "116": {
     "sha": "28e811e70e334126f9bd53d62236cb9c48d15c63",
     "url": "https://github.com/mozilla-releng/ship-it/commit/28e811e70e334126f9bd53d62236cb9c48d15c63",
     "commiter_name": "sylvestre",
@@ -1422,7 +1444,7 @@
       "kickoff/static/regions/th.json"
     ]
   },
-  "115": {
+  "117": {
     "sha": "5312672d024e810ed6c273656cfb4eb052d4212f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5312672d024e810ed6c273656cfb4eb052d4212f",
     "commiter_name": "flodolo",
@@ -1435,7 +1457,7 @@
       "kickoff/static/regions/be.json"
     ]
   },
-  "116": {
+  "118": {
     "sha": "0cac23ab2bf379828b567ef769c2771ca2b287ec",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0cac23ab2bf379828b567ef769c2771ca2b287ec",
     "commiter_name": "marco-c",
@@ -1448,7 +1470,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "117": {
+  "119": {
     "sha": "33b396e22fa4963e140a9d4539fe5b3ad2aa7b29",
     "url": "https://github.com/mozilla-releng/ship-it/commit/33b396e22fa4963e140a9d4539fe5b3ad2aa7b29",
     "commiter_name": "rail",
@@ -1459,7 +1481,7 @@
       "kickoff/config.py"
     ]
   },
-  "118": {
+  "120": {
     "sha": "cbf7a64ac811fc9598ac6b6f84f2bdca667a10be",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cbf7a64ac811fc9598ac6b6f84f2bdca667a10be",
     "commiter_name": "linux-modder",
@@ -1470,7 +1492,7 @@
       "kickoff/config.py"
     ]
   },
-  "119": {
+  "121": {
     "sha": "e0f43f3cacf6ac1046245fe0b6b438ae360c8e36",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e0f43f3cacf6ac1046245fe0b6b438ae360c8e36",
     "commiter_name": "linux-modder",
@@ -1481,7 +1503,7 @@
       "kickoff/config.py"
     ]
   },
-  "120": {
+  "122": {
     "sha": "536ecc21118b40e5fd97f930ae3f12c702d188c0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/536ecc21118b40e5fd97f930ae3f12c702d188c0",
     "commiter_name": "nthomas-mozilla",
@@ -1492,7 +1514,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "121": {
+  "123": {
     "sha": "fb4fc196406ab08a83fe64cfaa633dfe1e0ccbad",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fb4fc196406ab08a83fe64cfaa633dfe1e0ccbad",
     "commiter_name": "nthomas-mozilla",
@@ -1505,7 +1527,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "122": {
+  "124": {
     "sha": "890929b0c3e6df1b72489d2f3cf60450b91114f2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/890929b0c3e6df1b72489d2f3cf60450b91114f2",
     "commiter_name": "nthomas-mozilla",
@@ -1517,7 +1539,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "123": {
+  "125": {
     "sha": "130c52f60fa9d41e436cc187c2b76069f013b3df",
     "url": "https://github.com/mozilla-releng/ship-it/commit/130c52f60fa9d41e436cc187c2b76069f013b3df",
     "commiter_name": "nthomas-mozilla",
@@ -1529,7 +1551,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "124": {
+  "126": {
     "sha": "8abfb5aaa5a6bc7fcb10e7aa98d1d946cd96d53f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8abfb5aaa5a6bc7fcb10e7aa98d1d946cd96d53f",
     "commiter_name": "nthomas-mozilla",
@@ -1544,7 +1566,7 @@
       "requirements/dev.txt"
     ]
   },
-  "125": {
+  "127": {
     "sha": "e8d3da5aa900086ac4ca75bb226eacb95f560f4d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e8d3da5aa900086ac4ca75bb226eacb95f560f4d",
     "commiter_name": "sylvestre",
@@ -1555,7 +1577,7 @@
       "kickoff/static/regions/fy-NL.json"
     ]
   },
-  "126": {
+  "128": {
     "sha": "6f1ba680341f1f60250f0f8c0403b9bf38d50c50",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6f1ba680341f1f60250f0f8c0403b9bf38d50c50",
     "commiter_name": "rail",
@@ -1566,7 +1588,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "127": {
+  "129": {
     "sha": "8292802248153fd9029064d4f15ed68a0d8c9170",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8292802248153fd9029064d4f15ed68a0d8c9170",
     "commiter_name": "pascalchevrel",
@@ -1577,7 +1599,7 @@
       "kickoff/config.py"
     ]
   },
-  "128": {
+  "130": {
     "sha": "266f7ab5878bc10855e734cc208e270a835ecadf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/266f7ab5878bc10855e734cc208e270a835ecadf",
     "commiter_name": "pascalchevrel",
@@ -1588,7 +1610,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "129": {
+  "131": {
     "sha": "507e7e8a148a2047cefcc27267b021b1c62dfb6a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/507e7e8a148a2047cefcc27267b021b1c62dfb6a",
     "commiter_name": "pascalchevrel",
@@ -1599,7 +1621,7 @@
       "kickoff/config.py"
     ]
   },
-  "130": {
+  "132": {
     "sha": "359f7ece1bf867951d95227136fabfbe4cf3bf2b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/359f7ece1bf867951d95227136fabfbe4cf3bf2b",
     "commiter_name": "rail",
@@ -1615,7 +1637,7 @@
       "kickoff/static/regions/sat.json"
     ]
   },
-  "131": {
+  "133": {
     "sha": "92d34b39261cd652dba8d90a3294cbdff6ba7dd4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/92d34b39261cd652dba8d90a3294cbdff6ba7dd4",
     "commiter_name": "flodolo",
@@ -1626,7 +1648,7 @@
       "kickoff/static/regions/ms.json"
     ]
   },
-  "132": {
+  "134": {
     "sha": "5061f2b9d24bffd62e2798b151d928583199bf30",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5061f2b9d24bffd62e2798b151d928583199bf30",
     "commiter_name": "flodolo",
@@ -1641,7 +1663,7 @@
       "kickoff/static/regions/sat.json"
     ]
   },
-  "133": {
+  "135": {
     "sha": "e6f9e05df6d9f7ce5552ea617e4849dab1e31426",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e6f9e05df6d9f7ce5552ea617e4849dab1e31426",
     "commiter_name": "flodolo",
@@ -1652,7 +1674,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "134": {
+  "136": {
     "sha": "ccbec96fc16b3d8ecd5f85930ae062798cd01f28",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ccbec96fc16b3d8ecd5f85930ae062798cd01f28",
     "commiter_name": "flodolo",
@@ -1664,7 +1686,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "135": {
+  "137": {
     "sha": "326257abcf9e17b44a6f33af1115428de599a53a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/326257abcf9e17b44a6f33af1115428de599a53a",
     "commiter_name": "sylvestre",
@@ -1675,7 +1697,7 @@
       "kickoff/static/regions/kab.json"
     ]
   },
-  "136": {
+  "138": {
     "sha": "058e3aad77be3daee496331bebb394bbdbee7968",
     "url": "https://github.com/mozilla-releng/ship-it/commit/058e3aad77be3daee496331bebb394bbdbee7968",
     "commiter_name": "flodolo",
@@ -1687,7 +1709,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "137": {
+  "139": {
     "sha": "fb8d0cceed538d4a5f5e6e9ad790f08cca81c385",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fb8d0cceed538d4a5f5e6e9ad790f08cca81c385",
     "commiter_name": "kewisch",
@@ -1698,7 +1720,7 @@
       "kickoff/thunderbirddetails.py"
     ]
   },
-  "138": {
+  "140": {
     "sha": "ddec89808518c155d8d8a7dd50ce36e471eea9de",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ddec89808518c155d8d8a7dd50ce36e471eea9de",
     "commiter_name": "sylvestre",
@@ -1709,7 +1731,7 @@
       "kickoff/static/regions/cs.json"
     ]
   },
-  "139": {
+  "141": {
     "sha": "451c03353be0317aa4a31ccce2db07f3080563a5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/451c03353be0317aa4a31ccce2db07f3080563a5",
     "commiter_name": "pascalchevrel",
@@ -1721,7 +1743,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "140": {
+  "142": {
     "sha": "db2d5583d7140a702212cb604dfe36cf6b6aec22",
     "url": "https://github.com/mozilla-releng/ship-it/commit/db2d5583d7140a702212cb604dfe36cf6b6aec22",
     "commiter_name": "JohanLorenzo",
@@ -1733,7 +1755,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "141": {
+  "143": {
     "sha": "08bb2fa2ecfba6c0219c8c8d78b2ac75a3c68d83",
     "url": "https://github.com/mozilla-releng/ship-it/commit/08bb2fa2ecfba6c0219c8c8d78b2ac75a3c68d83",
     "commiter_name": "rail",
@@ -1745,7 +1767,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "142": {
+  "144": {
     "sha": "210718bc31ce201ac5cfe2f32de1db01baef53d6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/210718bc31ce201ac5cfe2f32de1db01baef53d6",
     "commiter_name": "rail",
@@ -1756,7 +1778,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "143": {
+  "145": {
     "sha": "c3df3a556a98ef319e9dbc127616f83b08349831",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c3df3a556a98ef319e9dbc127616f83b08349831",
     "commiter_name": "sylvestre",
@@ -1776,7 +1798,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "144": {
+  "146": {
     "sha": "ac8e8903e4096406728d27a291c37360b8e24f5a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ac8e8903e4096406728d27a291c37360b8e24f5a",
     "commiter_name": "sylvestre",
@@ -1792,7 +1814,7 @@
       "kickoff/static/regions/uz.json"
     ]
   },
-  "145": {
+  "147": {
     "sha": "126c8fa391bfefcc42cb3e0818b61cd74c6f2bee",
     "url": "https://github.com/mozilla-releng/ship-it/commit/126c8fa391bfefcc42cb3e0818b61cd74c6f2bee",
     "commiter_name": "sylvestre",
@@ -1803,7 +1825,7 @@
       "kickoff/static/regions/tl.json"
     ]
   },
-  "146": {
+  "148": {
     "sha": "d57c9b1b8fa3b81eb8638936c3ce751ec5b98368",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d57c9b1b8fa3b81eb8638936c3ce751ec5b98368",
     "commiter_name": "rail",
@@ -1814,7 +1836,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "147": {
+  "149": {
     "sha": "b6e5fb416d39064e6c390eae9585b97ead5985f2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b6e5fb416d39064e6c390eae9585b97ead5985f2",
     "commiter_name": "JohanLorenzo",
@@ -1834,7 +1856,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "148": {
+  "150": {
     "sha": "ebb3672cb885907a8ad22d0676c78e45fc3a5b44",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ebb3672cb885907a8ad22d0676c78e45fc3a5b44",
     "commiter_name": "nthomas-mozilla",
@@ -1846,7 +1868,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "149": {
+  "151": {
     "sha": "bb184d68d2cb6a14fc1aa6ad2b32174e36ce8279",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bb184d68d2cb6a14fc1aa6ad2b32174e36ce8279",
     "commiter_name": "sylvestre",
@@ -1857,7 +1879,7 @@
       "kickoff/static/regions/ur.json"
     ]
   },
-  "150": {
+  "152": {
     "sha": "8f59a69556006590dbcd898e9d53074e53782ebc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8f59a69556006590dbcd898e9d53074e53782ebc",
     "commiter_name": "sylvestre",
@@ -1873,7 +1895,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "151": {
+  "153": {
     "sha": "80235e2312a621504a2c9a3343893fda6eb6c589",
     "url": "https://github.com/mozilla-releng/ship-it/commit/80235e2312a621504a2c9a3343893fda6eb6c589",
     "commiter_name": "JohanLorenzo",
@@ -1889,7 +1911,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "152": {
+  "154": {
     "sha": "03dff62e331974e487daab4cca947a86bbb982fb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/03dff62e331974e487daab4cca947a86bbb982fb",
     "commiter_name": "sylvestre",
@@ -1901,7 +1923,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "153": {
+  "155": {
     "sha": "f0288cc69e58968bdda13c84a8698f2b0cda048f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f0288cc69e58968bdda13c84a8698f2b0cda048f",
     "commiter_name": "JohanLorenzo",
@@ -1913,7 +1935,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "154": {
+  "156": {
     "sha": "e4f4773734cefa185d76a4d3a8d3a6e9caa8322f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e4f4773734cefa185d76a4d3a8d3a6e9caa8322f",
     "commiter_name": "sylvestre",
@@ -1950,7 +1972,7 @@
       "version.txt"
     ]
   },
-  "155": {
+  "157": {
     "sha": "ca3db03e6d82d9f392ee61b655356625a432838e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ca3db03e6d82d9f392ee61b655356625a432838e",
     "commiter_name": "rail",
@@ -1977,7 +1999,7 @@
       "migrate_repo/versions/018_Kill_dashboardCheck_mysql_upgrade.sql"
     ]
   },
-  "156": {
+  "158": {
     "sha": "0bae86ed9d72b61ab9b6776a3535c18f3b777a07",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0bae86ed9d72b61ab9b6776a3535c18f3b777a07",
     "commiter_name": "rail",
@@ -1995,7 +2017,7 @@
       "version.txt"
     ]
   },
-  "157": {
+  "159": {
     "sha": "ca62d6ecd8683e1bb3ebef720f6793cc55027132",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ca62d6ecd8683e1bb3ebef720f6793cc55027132",
     "commiter_name": "rail",
@@ -2007,7 +2029,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "158": {
+  "160": {
     "sha": "66b37446929315742a57771285c86cc9baf35cb7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/66b37446929315742a57771285c86cc9baf35cb7",
     "commiter_name": "rail",
@@ -2018,7 +2040,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "159": {
+  "161": {
     "sha": "0adf5d8fffa454bec15e6a7931570987f90f7739",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0adf5d8fffa454bec15e6a7931570987f90f7739",
     "commiter_name": "JohanLorenzo",
@@ -2029,7 +2051,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "160": {
+  "162": {
     "sha": "1b6c8eda147f6db65378dda8db700d2a012f6252",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1b6c8eda147f6db65378dda8db700d2a012f6252",
     "commiter_name": "JohanLorenzo",
@@ -2041,7 +2063,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "161": {
+  "163": {
     "sha": "20cd47fc98e6839623078206d68ac8630f95dd55",
     "url": "https://github.com/mozilla-releng/ship-it/commit/20cd47fc98e6839623078206d68ac8630f95dd55",
     "commiter_name": "JohanLorenzo",
@@ -2052,7 +2074,7 @@
       "kickoff/test/views/test_submit_release.py"
     ]
   },
-  "162": {
+  "164": {
     "sha": "b4522cde7dbe4e9a6d05c06ea153cd2bd9998a96",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b4522cde7dbe4e9a6d05c06ea153cd2bd9998a96",
     "commiter_name": "sylvestre",
@@ -2063,7 +2085,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "163": {
+  "165": {
     "sha": "93ec9a60dcaaae0d69e59e5a2a3e240faba92e88",
     "url": "https://github.com/mozilla-releng/ship-it/commit/93ec9a60dcaaae0d69e59e5a2a3e240faba92e88",
     "commiter_name": "JohanLorenzo",
@@ -2075,7 +2097,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "164": {
+  "166": {
     "sha": "2946cc3c71dc79f04e0e4c7d99a88fe264174669",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2946cc3c71dc79f04e0e4c7d99a88fe264174669",
     "commiter_name": "JohanLorenzo",
@@ -2086,7 +2108,7 @@
       "kickoff/test/views/test_dockerflow.py"
     ]
   },
-  "165": {
+  "167": {
     "sha": "381a42975d58ccb243a23845ced4e95c8a399a8e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/381a42975d58ccb243a23845ced4e95c8a399a8e",
     "commiter_name": "JohanLorenzo",
@@ -2097,7 +2119,7 @@
       "kickoff-web.py"
     ]
   },
-  "166": {
+  "168": {
     "sha": "07f8994a0dcd5d71c2588adbaccc85734d1e9ad8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/07f8994a0dcd5d71c2588adbaccc85734d1e9ad8",
     "commiter_name": "JohanLorenzo",
@@ -2108,7 +2130,7 @@
       "kickoff/test/views/test_dockerflow.py"
     ]
   },
-  "167": {
+  "169": {
     "sha": "87bcdd96db085311fd9cbb19a75704241f73d8ff",
     "url": "https://github.com/mozilla-releng/ship-it/commit/87bcdd96db085311fd9cbb19a75704241f73d8ff",
     "commiter_name": "JohanLorenzo",
@@ -2120,7 +2142,7 @@
       "kickoff/test/views/test_dockerflow.py"
     ]
   },
-  "168": {
+  "170": {
     "sha": "e775a5643bda96742683f810fbdb998384619a02",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e775a5643bda96742683f810fbdb998384619a02",
     "commiter_name": "rail",
@@ -2131,7 +2153,7 @@
       "kickoff/static/regions/ur.json"
     ]
   },
-  "169": {
+  "171": {
     "sha": "655eef190c9602c6f263be7e4ac2af683873bc7c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/655eef190c9602c6f263be7e4ac2af683873bc7c",
     "commiter_name": "JohanLorenzo",
@@ -2143,7 +2165,7 @@
       "kickoff/dockerflow.py"
     ]
   },
-  "170": {
+  "172": {
     "sha": "853aedd22de5f99ad80ed2d55fe42595f0ca998b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/853aedd22de5f99ad80ed2d55fe42595f0ca998b",
     "commiter_name": "JohanLorenzo",
@@ -2154,7 +2176,7 @@
       "kickoff/test/views/test_dockerflow.py"
     ]
   },
-  "171": {
+  "173": {
     "sha": "496e663ffb06b9335f7ebbcf2cd5cae686194910",
     "url": "https://github.com/mozilla-releng/ship-it/commit/496e663ffb06b9335f7ebbcf2cd5cae686194910",
     "commiter_name": "JohanLorenzo",
@@ -2165,7 +2187,7 @@
       "scripts/generate_version_file.sh"
     ]
   },
-  "172": {
+  "174": {
     "sha": "5ab261c915761bdcd8679225b0a4d61d1d3c6b4f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5ab261c915761bdcd8679225b0a4d61d1d3c6b4f",
     "commiter_name": "JohanLorenzo",
@@ -2178,7 +2200,7 @@
       "version.txt"
     ]
   },
-  "173": {
+  "175": {
     "sha": "12aa0234be732b5c539e45bda3373b55077b8ea3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/12aa0234be732b5c539e45bda3373b55077b8ea3",
     "commiter_name": "JohanLorenzo",
@@ -2189,7 +2211,7 @@
       "kickoff/test/views/test_dockerflow.py"
     ]
   },
-  "174": {
+  "176": {
     "sha": "6090eee85d500df88251928be6880ef5d915f4bd",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6090eee85d500df88251928be6880ef5d915f4bd",
     "commiter_name": "JohanLorenzo",
@@ -2200,7 +2222,7 @@
       "kickoff/dockerflow.py"
     ]
   },
-  "175": {
+  "177": {
     "sha": "6794e4309844ffe38cef33d69d021ed6339e396d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6794e4309844ffe38cef33d69d021ed6339e396d",
     "commiter_name": "JohanLorenzo",
@@ -2211,7 +2233,7 @@
       "kickoff/test/views/test_dockerflow.py"
     ]
   },
-  "176": {
+  "178": {
     "sha": "d24697c790ccb06e1245b10bf5de93a33616dc08",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d24697c790ccb06e1245b10bf5de93a33616dc08",
     "commiter_name": "JohanLorenzo",
@@ -2227,7 +2249,7 @@
       "scripts/initdb_and_run.sh"
     ]
   },
-  "177": {
+  "179": {
     "sha": "7610f2b3e75f1e247899838c551e547b83ca8002",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7610f2b3e75f1e247899838c551e547b83ca8002",
     "commiter_name": "sylvestre",
@@ -2238,7 +2260,7 @@
       "kickoff/static/regions/ur.json"
     ]
   },
-  "178": {
+  "180": {
     "sha": "c38b956f99bcbb68373b618d2249bd306cec0d8b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c38b956f99bcbb68373b618d2249bd306cec0d8b",
     "commiter_name": "sylvestre",
@@ -2375,7 +2397,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "179": {
+  "181": {
     "sha": "b6aa627c55c7b4da56d803753e87449bf6f6929a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b6aa627c55c7b4da56d803753e87449bf6f6929a",
     "commiter_name": "rail",
@@ -2400,7 +2422,7 @@
       "migrate_repo/versions/018_Kill_dashboardCheck_mysql_upgrade.sql"
     ]
   },
-  "180": {
+  "182": {
     "sha": "30941dfc4e5e07f142fb7f84f6b71bcc0aebbcbb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/30941dfc4e5e07f142fb7f84f6b71bcc0aebbcbb",
     "commiter_name": "rail",
@@ -2425,7 +2447,7 @@
       "migrate_repo/versions/018_Kill_dashboardCheck_mysql_upgrade.sql"
     ]
   },
-  "181": {
+  "183": {
     "sha": "345eafb01d7acafe1923c0cf53260ffa9c67dc84",
     "url": "https://github.com/mozilla-releng/ship-it/commit/345eafb01d7acafe1923c0cf53260ffa9c67dc84",
     "commiter_name": "rail",
@@ -2450,7 +2472,7 @@
       "migrate_repo/versions/018_Kill_dashboardCheck_mysql_upgrade.sql"
     ]
   },
-  "182": {
+  "184": {
     "sha": "16049b98c77b383d443f6f5f90584e0afe689a00",
     "url": "https://github.com/mozilla-releng/ship-it/commit/16049b98c77b383d443f6f5f90584e0afe689a00",
     "commiter_name": "sylvestre",
@@ -2574,7 +2596,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "183": {
+  "185": {
     "sha": "b3d44d6894da87eeebc815b85b9123b26bcffd28",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b3d44d6894da87eeebc815b85b9123b26bcffd28",
     "commiter_name": "rail",
@@ -2590,7 +2612,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "184": {
+  "186": {
     "sha": "873b83a50a9792cf3009949b4474875172405f83",
     "url": "https://github.com/mozilla-releng/ship-it/commit/873b83a50a9792cf3009949b4474875172405f83",
     "commiter_name": "JohanLorenzo",
@@ -2605,7 +2627,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "185": {
+  "187": {
     "sha": "d8eb0c44a7f330d3e597ace4cd5a9744096ee7ed",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d8eb0c44a7f330d3e597ace4cd5a9744096ee7ed",
     "commiter_name": "JohanLorenzo",
@@ -2616,7 +2638,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "186": {
+  "188": {
     "sha": "55265acb74d5a9dd2740a0b29397628b8231fb1e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/55265acb74d5a9dd2740a0b29397628b8231fb1e",
     "commiter_name": "JohanLorenzo",
@@ -2631,7 +2653,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "187": {
+  "189": {
     "sha": "f6dd4af12abec06e472a6e6d3a79c0f39954783a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f6dd4af12abec06e472a6e6d3a79c0f39954783a",
     "commiter_name": "JohanLorenzo",
@@ -2648,7 +2670,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "188": {
+  "190": {
     "sha": "d05f47880e9c0df019117ac69a5e158115785b1c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d05f47880e9c0df019117ac69a5e158115785b1c",
     "commiter_name": "sylvestre",
@@ -2761,7 +2783,7 @@
       "scripts/sync-and-check-l10n.py"
     ]
   },
-  "189": {
+  "191": {
     "sha": "e4f82ca9d26bd3a4e9fc2c3de1b6115bc5366274",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e4f82ca9d26bd3a4e9fc2c3de1b6115bc5366274",
     "commiter_name": "sylvestre",
@@ -2786,7 +2808,7 @@
       "migrate_repo/versions/018_Kill_dashboardCheck_mysql_upgrade.sql"
     ]
   },
-  "190": {
+  "192": {
     "sha": "ad266aa28dffbe664f91e0cc643b1006cbd831b5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ad266aa28dffbe664f91e0cc643b1006cbd831b5",
     "commiter_name": "JohanLorenzo",
@@ -2800,7 +2822,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "191": {
+  "193": {
     "sha": "8a18de3718e518fb55c89dabdd1533e0fb3e184f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8a18de3718e518fb55c89dabdd1533e0fb3e184f",
     "commiter_name": "JohanLorenzo",
@@ -2812,7 +2834,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "192": {
+  "194": {
     "sha": "873823988d24177bf45f468deb8255cf6dc6b284",
     "url": "https://github.com/mozilla-releng/ship-it/commit/873823988d24177bf45f468deb8255cf6dc6b284",
     "commiter_name": "sylvestre",
@@ -2823,7 +2845,7 @@
       "kickoff/config.py"
     ]
   },
-  "193": {
+  "195": {
     "sha": "480f45dbb5881541cb9ea9d51a226226175a5504",
     "url": "https://github.com/mozilla-releng/ship-it/commit/480f45dbb5881541cb9ea9d51a226226175a5504",
     "commiter_name": "nthomas-mozilla",
@@ -2835,7 +2857,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "194": {
+  "196": {
     "sha": "ce0b27a465e687c3af1ac457bcf7e13059ed96cf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ce0b27a465e687c3af1ac457bcf7e13059ed96cf",
     "commiter_name": "pascalchevrel",
@@ -2846,7 +2868,7 @@
       "kickoff/config.py"
     ]
   },
-  "195": {
+  "197": {
     "sha": "21d3295503cce28f860883ff697c3842945c8577",
     "url": "https://github.com/mozilla-releng/ship-it/commit/21d3295503cce28f860883ff697c3842945c8577",
     "commiter_name": "pascalchevrel",
@@ -2860,7 +2882,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "196": {
+  "198": {
     "sha": "95d7b169131aea1210fcfc05f78c2f877c6f6f8d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/95d7b169131aea1210fcfc05f78c2f877c6f6f8d",
     "commiter_name": "pascalchevrel",
@@ -2872,7 +2894,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "197": {
+  "199": {
     "sha": "e41af1dea55acf5e2241eee7d67a17870d1592dd",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e41af1dea55acf5e2241eee7d67a17870d1592dd",
     "commiter_name": "pascalchevrel",
@@ -2886,7 +2908,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "198": {
+  "200": {
     "sha": "0cbffec051ced0abae5c242752aac9b447d6a4ab",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0cbffec051ced0abae5c242752aac9b447d6a4ab",
     "commiter_name": "nthomas-mozilla",
@@ -2899,7 +2921,7 @@
       "scripts/run-mysqld.sh"
     ]
   },
-  "199": {
+  "201": {
     "sha": "93b76b933e07d8aa4820b9447051d6c34c3fe0f1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/93b76b933e07d8aa4820b9447051d6c34c3fe0f1",
     "commiter_name": "sylvestre",
@@ -2911,7 +2933,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "200": {
+  "202": {
     "sha": "3d95bfd0b36157fd53af28613d1b9f32582da1ee",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3d95bfd0b36157fd53af28613d1b9f32582da1ee",
     "commiter_name": "sylvestre",
@@ -2923,7 +2945,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "201": {
+  "203": {
     "sha": "cba58c76b2ab6601657562f11920e4d859ccf207",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cba58c76b2ab6601657562f11920e4d859ccf207",
     "commiter_name": "pascalchevrel",
@@ -2935,7 +2957,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "202": {
+  "204": {
     "sha": "d2a563cca0c5d5962a2e0394786018233ecd1828",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d2a563cca0c5d5962a2e0394786018233ecd1828",
     "commiter_name": "sylvestre",
@@ -2947,7 +2969,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "203": {
+  "205": {
     "sha": "26c9bb5d4431e29a7f0c1a11b3e46c69d5e70a42",
     "url": "https://github.com/mozilla-releng/ship-it/commit/26c9bb5d4431e29a7f0c1a11b3e46c69d5e70a42",
     "commiter_name": "pascalchevrel",
@@ -2959,7 +2981,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "204": {
+  "206": {
     "sha": "1133943ce622b6156452fdca06868a62667d2277",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1133943ce622b6156452fdca06868a62667d2277",
     "commiter_name": "sylvestre",
@@ -2972,7 +2994,7 @@
       "kickoff/test/views/test_jsonl10n.py"
     ]
   },
-  "205": {
+  "207": {
     "sha": "16c686b5db679569d2a5eddc6b6c909708732106",
     "url": "https://github.com/mozilla-releng/ship-it/commit/16c686b5db679569d2a5eddc6b6c909708732106",
     "commiter_name": "sylvestre",
@@ -2985,7 +3007,7 @@
       "kickoff/test/views/test_jsonl10n.py"
     ]
   },
-  "206": {
+  "208": {
     "sha": "cb725b48f4f3c6cba8b3cefa306a5cfc7080731c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cb725b48f4f3c6cba8b3cefa306a5cfc7080731c",
     "commiter_name": "JohanLorenzo",
@@ -2997,7 +3019,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "207": {
+  "209": {
     "sha": "40e9be7c0e0c356b07d783aafbea47a41160898b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/40e9be7c0e0c356b07d783aafbea47a41160898b",
     "commiter_name": "sylvestre",
@@ -3008,7 +3030,7 @@
       "kickoff/config.py"
     ]
   },
-  "208": {
+  "210": {
     "sha": "2b89ddf43dff631c88885d59c1a5397390cf106a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2b89ddf43dff631c88885d59c1a5397390cf106a",
     "commiter_name": "kyoshino",
@@ -3019,7 +3041,7 @@
       "kickoff/config.py"
     ]
   },
-  "209": {
+  "211": {
     "sha": "19a512cc0f747f12bd8245b2f1e1820295aeae4b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/19a512cc0f747f12bd8245b2f1e1820295aeae4b",
     "commiter_name": "pascalchevrel",
@@ -3030,7 +3052,7 @@
       "kickoff/config.py"
     ]
   },
-  "210": {
+  "212": {
     "sha": "9c4fb80942026dc5a936046c5c609e685afc59fb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9c4fb80942026dc5a936046c5c609e685afc59fb",
     "commiter_name": "sylvestre",
@@ -3048,7 +3070,7 @@
       "kickoff/test/views/test_jsonl10n.py"
     ]
   },
-  "211": {
+  "213": {
     "sha": "5e485d826f26576e5c7f42a1883196d44cd1dbc2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5e485d826f26576e5c7f42a1883196d44cd1dbc2",
     "commiter_name": "JohanLorenzo",
@@ -3065,7 +3087,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "212": {
+  "214": {
     "sha": "6a19095b3553553d2882e5068d7f6d3261180c38",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6a19095b3553553d2882e5068d7f6d3261180c38",
     "commiter_name": "sylvestre",
@@ -3077,7 +3099,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "213": {
+  "215": {
     "sha": "2f41c7984efa6bf7fd6c3b7420709bc9ee81feb6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2f41c7984efa6bf7fd6c3b7420709bc9ee81feb6",
     "commiter_name": "sylvestre",
@@ -3088,7 +3110,7 @@
       "kickoff/templates/json_exports.html"
     ]
   },
-  "214": {
+  "216": {
     "sha": "0d4de0ae7ea175997ba83730a43b13f0974f5bee",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0d4de0ae7ea175997ba83730a43b13f0974f5bee",
     "commiter_name": "sylvestre",
@@ -3099,7 +3121,7 @@
       ".editorconfig"
     ]
   },
-  "215": {
+  "217": {
     "sha": "caf7ee3ad1c2becfcac582da8d37e1e598c09dfe",
     "url": "https://github.com/mozilla-releng/ship-it/commit/caf7ee3ad1c2becfcac582da8d37e1e598c09dfe",
     "commiter_name": "JohanLorenzo",
@@ -3110,7 +3132,7 @@
       ".editorconfig"
     ]
   },
-  "216": {
+  "218": {
     "sha": "6443abc6914b3eac070a50d23d7c0c7dd208d3c2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6443abc6914b3eac070a50d23d7c0c7dd208d3c2",
     "commiter_name": "sylvestre",
@@ -3123,7 +3145,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "217": {
+  "219": {
     "sha": "f2f97303a0190c80275d47b4ccc5db8e8af5ac93",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f2f97303a0190c80275d47b4ccc5db8e8af5ac93",
     "commiter_name": "pascalchevrel",
@@ -3135,7 +3157,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "218": {
+  "220": {
     "sha": "41086c02b3a43feb5410a7463a050b46424b1698",
     "url": "https://github.com/mozilla-releng/ship-it/commit/41086c02b3a43feb5410a7463a050b46424b1698",
     "commiter_name": "pascalchevrel",
@@ -3147,7 +3169,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "219": {
+  "221": {
     "sha": "8c3f7ae1d48bf7687577f9f027c20d56f6cd300c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8c3f7ae1d48bf7687577f9f027c20d56f6cd300c",
     "commiter_name": "nthomas-mozilla",
@@ -3160,7 +3182,7 @@
       "scripts/sample-data.sql.bz2"
     ]
   },
-  "220": {
+  "222": {
     "sha": "d491499aef810c6d08200f27add4e295ea51539e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d491499aef810c6d08200f27add4e295ea51539e",
     "commiter_name": "JohanLorenzo",
@@ -3171,7 +3193,7 @@
       ".gitignore"
     ]
   },
-  "221": {
+  "223": {
     "sha": "bc2c01de271399df099b12e7c289b97bbcbd2de5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bc2c01de271399df099b12e7c289b97bbcbd2de5",
     "commiter_name": "rail",
@@ -3196,7 +3218,7 @@
       "migrate_repo/versions/017_rename_postrelease_mysql_upgrade.sql"
     ]
   },
-  "222": {
+  "224": {
     "sha": "c7cd654ae67d35e24e2c2979423f35d798a01d86",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c7cd654ae67d35e24e2c2979423f35d798a01d86",
     "commiter_name": "rail",
@@ -3209,7 +3231,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "223": {
+  "225": {
     "sha": "2f44c81815d95ad4ba803eb33c479d56ed92cb1f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2f44c81815d95ad4ba803eb33c479d56ed92cb1f",
     "commiter_name": "rail",
@@ -3227,7 +3249,7 @@
       "kickoff/test/views/test_jsonl10n.py"
     ]
   },
-  "224": {
+  "226": {
     "sha": "7b4202be3bd64665434abb0cae2f964a1e4af66c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7b4202be3bd64665434abb0cae2f964a1e4af66c",
     "commiter_name": "nthomas-mozilla",
@@ -3239,7 +3261,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "225": {
+  "227": {
     "sha": "7a89f7c70e8557281f200cfa81fea592e8290c7a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7a89f7c70e8557281f200cfa81fea592e8290c7a",
     "commiter_name": "sylvestre",
@@ -3251,7 +3273,7 @@
       "kickoff/jsonexportl10n.py"
     ]
   },
-  "226": {
+  "228": {
     "sha": "4fcb1eb25a4563aec7bd9c4eabb613b33bfa8e5e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4fcb1eb25a4563aec7bd9c4eabb613b33bfa8e5e",
     "commiter_name": "nthomas-mozilla",
@@ -3265,7 +3287,7 @@
       "scripts/update-ADI.py"
     ]
   },
-  "227": {
+  "229": {
     "sha": "eddac46b1cf3e017d70fd0accb28ac855f05ad8b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/eddac46b1cf3e017d70fd0accb28ac855f05ad8b",
     "commiter_name": "sylvestre",
@@ -3277,7 +3299,7 @@
       "kickoff/test/base.py"
     ]
   },
-  "228": {
+  "230": {
     "sha": "9b540b8a79f92d69df709cd7b9852404fce2595a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9b540b8a79f92d69df709cd7b9852404fce2595a",
     "commiter_name": "sylvestre",
@@ -3288,7 +3310,7 @@
       "kickoff/jsonexportl10n.py"
     ]
   },
-  "229": {
+  "231": {
     "sha": "6e176afebd2e8094fbfa0acc9c025d861f44a5fc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6e176afebd2e8094fbfa0acc9c025d861f44a5fc",
     "commiter_name": "sylvestre",
@@ -3302,7 +3324,7 @@
       "kickoff/test/views/test_jsonl10n.py"
     ]
   },
-  "230": {
+  "232": {
     "sha": "3d470137acc473e88fc12b5d51bb0431cc4a04a4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3d470137acc473e88fc12b5d51bb0431cc4a04a4",
     "commiter_name": "sylvestre",
@@ -3314,7 +3336,7 @@
       "kickoff/test/views/test_jsonl10n.py"
     ]
   },
-  "231": {
+  "233": {
     "sha": "83fdfd48b9f7373207b260c21c60f9d23c12aa92",
     "url": "https://github.com/mozilla-releng/ship-it/commit/83fdfd48b9f7373207b260c21c60f9d23c12aa92",
     "commiter_name": "sylvestre",
@@ -3328,7 +3350,7 @@
       "kickoff/templates/localeVersionList.html"
     ]
   },
-  "232": {
+  "234": {
     "sha": "a478cfda3133b758b0a5324bc8d9018a7bf2e24d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a478cfda3133b758b0a5324bc8d9018a7bf2e24d",
     "commiter_name": "sylvestre",
@@ -3340,7 +3362,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "233": {
+  "235": {
     "sha": "148dae960ae1438e167444cdfcb0ac7c57191f4a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/148dae960ae1438e167444cdfcb0ac7c57191f4a",
     "commiter_name": "nthomas-mozilla",
@@ -3438,7 +3460,7 @@
       "vendor/lib/python/requests/utils.py"
     ]
   },
-  "234": {
+  "236": {
     "sha": "8649eb31c17194235975e7b9b9544a22bf056868",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8649eb31c17194235975e7b9b9544a22bf056868",
     "commiter_name": "nthomas-mozilla",
@@ -3450,7 +3472,7 @@
       "scripts/run-mysqld.sh"
     ]
   },
-  "235": {
+  "237": {
     "sha": "3fff526ba8f6f8e7a237b7ce5373f7bd23424466",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3fff526ba8f6f8e7a237b7ce5373f7bd23424466",
     "commiter_name": "nthomas-mozilla",
@@ -3462,7 +3484,7 @@
       "scripts/run-mysqld.sh"
     ]
   },
-  "236": {
+  "238": {
     "sha": "e149314e9f5522bba89a12a3f10a70daac61da1b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e149314e9f5522bba89a12a3f10a70daac61da1b",
     "commiter_name": "rail",
@@ -3473,7 +3495,7 @@
       "kickoff/config.py"
     ]
   },
-  "237": {
+  "239": {
     "sha": "2d100167891a7f56ccb4b0218d1f0e705e43688b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2d100167891a7f56ccb4b0218d1f0e705e43688b",
     "commiter_name": "kyoshino",
@@ -3484,7 +3506,7 @@
       "kickoff/config.py"
     ]
   },
-  "238": {
+  "240": {
     "sha": "12901c0eee082b64169eb15656cd9f16b0989e9f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/12901c0eee082b64169eb15656cd9f16b0989e9f",
     "commiter_name": "rail",
@@ -3495,7 +3517,7 @@
       "kickoff/config.py"
     ]
   },
-  "239": {
+  "241": {
     "sha": "eea9dce2c53790ddcd733c5cb1593c76c34ad404",
     "url": "https://github.com/mozilla-releng/ship-it/commit/eea9dce2c53790ddcd733c5cb1593c76c34ad404",
     "commiter_name": "TheoChevalier",
@@ -3506,7 +3528,7 @@
       "kickoff/config.py"
     ]
   },
-  "240": {
+  "242": {
     "sha": "f88022b0aaa95ca2fe7651c13dd08398463f3f0f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f88022b0aaa95ca2fe7651c13dd08398463f3f0f",
     "commiter_name": "rail",
@@ -3518,7 +3540,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "241": {
+  "243": {
     "sha": "5f3bfdc33b13a29eecba6072b4de011b815bd924",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5f3bfdc33b13a29eecba6072b4de011b815bd924",
     "commiter_name": "rail",
@@ -3530,7 +3552,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "242": {
+  "244": {
     "sha": "aefce3c330d991cf7b939636ceae7796a761de51",
     "url": "https://github.com/mozilla-releng/ship-it/commit/aefce3c330d991cf7b939636ceae7796a761de51",
     "commiter_name": "rail",
@@ -3541,7 +3563,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "243": {
+  "245": {
     "sha": "bbedbe46e35677396dc6bceeb4ee9b9e3408c72a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bbedbe46e35677396dc6bceeb4ee9b9e3408c72a",
     "commiter_name": "rail",
@@ -3552,7 +3574,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "244": {
+  "246": {
     "sha": "a0ec8ea1e5f8e28eebda5349fc35ef9e921eba92",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a0ec8ea1e5f8e28eebda5349fc35ef9e921eba92",
     "commiter_name": "rail",
@@ -3563,7 +3585,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "245": {
+  "247": {
     "sha": "efab99546f46ab12713e0815c245afca0ddf0a69",
     "url": "https://github.com/mozilla-releng/ship-it/commit/efab99546f46ab12713e0815c245afca0ddf0a69",
     "commiter_name": "rail",
@@ -3574,7 +3596,7 @@
       "kickoff/config.py"
     ]
   },
-  "246": {
+  "248": {
     "sha": "e523686a9df841a895d8dd6610afcb65d5fcacb2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e523686a9df841a895d8dd6610afcb65d5fcacb2",
     "commiter_name": "sylvestre",
@@ -3585,7 +3607,7 @@
       "kickoff/config.py"
     ]
   },
-  "247": {
+  "249": {
     "sha": "d76b85324c4fb3599397e3339c7a7ae621da6380",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d76b85324c4fb3599397e3339c7a7ae621da6380",
     "commiter_name": "sylvestre",
@@ -3596,7 +3618,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "248": {
+  "250": {
     "sha": "cbadb6b4c2c2e1e55a031073c564cccdec55f728",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cbadb6b4c2c2e1e55a031073c564cccdec55f728",
     "commiter_name": "rail",
@@ -3607,7 +3629,7 @@
       "kickoff/static/kickoff.js"
     ]
   },
-  "249": {
+  "251": {
     "sha": "837ae2c47f1096890eb3d2370055ef417716a094",
     "url": "https://github.com/mozilla-releng/ship-it/commit/837ae2c47f1096890eb3d2370055ef417716a094",
     "commiter_name": "sylvestre",
@@ -3618,7 +3640,7 @@
       "kickoff/static/kickoff.js"
     ]
   },
-  "250": {
+  "252": {
     "sha": "6e5d9c1d185d89bfca698d48b2f595c9f2489769",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6e5d9c1d185d89bfca698d48b2f595c9f2489769",
     "commiter_name": "rail",
@@ -3629,7 +3651,7 @@
       "scripts/run_tests.sh"
     ]
   },
-  "251": {
+  "253": {
     "sha": "82955668f8a0ff198739aaa1f2293e4f2156cde2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/82955668f8a0ff198739aaa1f2293e4f2156cde2",
     "commiter_name": "moul",
@@ -3640,7 +3662,7 @@
       "scripts/run_tests.sh"
     ]
   },
-  "252": {
+  "254": {
     "sha": "b9f06a18e6a531086133e2ea5c98a8899b6c5f8a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b9f06a18e6a531086133e2ea5c98a8899b6c5f8a",
     "commiter_name": "rail",
@@ -3655,7 +3677,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "253": {
+  "255": {
     "sha": "8162f6db5045fad3ff8fe402248f2ca4488cbf39",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8162f6db5045fad3ff8fe402248f2ca4488cbf39",
     "commiter_name": "rail",
@@ -3756,7 +3778,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "254": {
+  "256": {
     "sha": "67c8b37f51cbd877eef6c20a0df6add870215fd1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/67c8b37f51cbd877eef6c20a0df6add870215fd1",
     "commiter_name": "sylvestre",
@@ -3771,7 +3793,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "255": {
+  "257": {
     "sha": "c456de9c72b4a164a0a5d1a48cfb9c287455756c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c456de9c72b4a164a0a5d1a48cfb9c287455756c",
     "commiter_name": "sylvestre",
@@ -3872,7 +3894,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "256": {
+  "258": {
     "sha": "cf58e19c17e5d4be77f954329f13d5328abbf95b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cf58e19c17e5d4be77f954329f13d5328abbf95b",
     "commiter_name": "sylvestre",
@@ -3883,7 +3905,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "257": {
+  "259": {
     "sha": "47a2c86fec1a60766ea6e4b8c6c631a69c3f4b17",
     "url": "https://github.com/mozilla-releng/ship-it/commit/47a2c86fec1a60766ea6e4b8c6c631a69c3f4b17",
     "commiter_name": "rail",
@@ -3894,7 +3916,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "258": {
+  "260": {
     "sha": "b3876b356ce95a0759468f30f7c0df6769048be0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b3876b356ce95a0759468f30f7c0df6769048be0",
     "commiter_name": "rail",
@@ -3905,7 +3927,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "259": {
+  "261": {
     "sha": "fad3d0ef57f89f11878c664edd8a88cfca83d982",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fad3d0ef57f89f11878c664edd8a88cfca83d982",
     "commiter_name": "sylvestre",
@@ -3916,7 +3938,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "260": {
+  "262": {
     "sha": "2f226255c2c51ed1c541000f04942407f1f76d7e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2f226255c2c51ed1c541000f04942407f1f76d7e",
     "commiter_name": "sylvestre",
@@ -3927,7 +3949,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "261": {
+  "263": {
     "sha": "dfcef56796991130dba7d7cf4235e540d5095089",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dfcef56796991130dba7d7cf4235e540d5095089",
     "commiter_name": "sylvestre",
@@ -3938,7 +3960,7 @@
       "kickoff/config.py"
     ]
   },
-  "262": {
+  "264": {
     "sha": "0e51dcc8db269f4076d00c7955b9fdd0aef1565d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0e51dcc8db269f4076d00c7955b9fdd0aef1565d",
     "commiter_name": "rail",
@@ -3951,7 +3973,7 @@
       "vendor/lib/python/ordereddict.py"
     ]
   },
-  "263": {
+  "265": {
     "sha": "124ab44522a708e140fdb8d97b24c957e65cb7aa",
     "url": "https://github.com/mozilla-releng/ship-it/commit/124ab44522a708e140fdb8d97b24c957e65cb7aa",
     "commiter_name": "sylvestre",
@@ -3964,7 +3986,7 @@
       "vendor/lib/python/ordereddict.py"
     ]
   },
-  "264": {
+  "266": {
     "sha": "73cc97e43adc125cead0834384caa4366cf29f81",
     "url": "https://github.com/mozilla-releng/ship-it/commit/73cc97e43adc125cead0834384caa4366cf29f81",
     "commiter_name": "sylvestre",
@@ -3975,7 +3997,7 @@
       "kickoff/jsonexport.py"
     ]
   },
-  "265": {
+  "267": {
     "sha": "e428b2cb7ec204675b47dbecdecb650978f1d992",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e428b2cb7ec204675b47dbecdecb650978f1d992",
     "commiter_name": "sylvestre",
@@ -3986,7 +4008,7 @@
       "requirements/prod.txt"
     ]
   },
-  "266": {
+  "268": {
     "sha": "4f7ab80e63b5a88932f4d5f616b7de0b760147b6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4f7ab80e63b5a88932f4d5f616b7de0b760147b6",
     "commiter_name": "sylvestre",
@@ -4001,7 +4023,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "267": {
+  "269": {
     "sha": "5d017181f129e5ae7b3ef7210e5b0f6d713cf156",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5d017181f129e5ae7b3ef7210e5b0f6d713cf156",
     "commiter_name": "allan-silva",
@@ -4016,7 +4038,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "268": {
+  "270": {
     "sha": "e3723885934532c54e76f427900c147102f6c349",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e3723885934532c54e76f427900c147102f6c349",
     "commiter_name": "sylvestre",
@@ -4027,7 +4049,7 @@
       "scripts/vertica.py"
     ]
   },
-  "269": {
+  "271": {
     "sha": "f112f9a679886198746f95d7a34ec12e5b3e5159",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f112f9a679886198746f95d7a34ec12e5b3e5159",
     "commiter_name": "sylvestre",
@@ -4038,7 +4060,7 @@
       "scripts/vertica.py"
     ]
   },
-  "270": {
+  "272": {
     "sha": "40ff1bd7a266030e4d81a94b2c28ad5df03b1bfa",
     "url": "https://github.com/mozilla-releng/ship-it/commit/40ff1bd7a266030e4d81a94b2c28ad5df03b1bfa",
     "commiter_name": "sylvestre",
@@ -4056,7 +4078,7 @@
       "kickoff/views/status.py"
     ]
   },
-  "271": {
+  "273": {
     "sha": "c89962498297921821d7501a2f4f4ea82411a859",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c89962498297921821d7501a2f4f4ea82411a859",
     "commiter_name": "sylvestre",
@@ -4073,7 +4095,7 @@
       "kickoff/views/status.py"
     ]
   },
-  "272": {
+  "274": {
     "sha": "38720a85a9378759c439a1c92a59827b3a28f0f3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/38720a85a9378759c439a1c92a59827b3a28f0f3",
     "commiter_name": "sylvestre",
@@ -4084,7 +4106,7 @@
       ".travis.yml"
     ]
   },
-  "273": {
+  "275": {
     "sha": "5bf3630bbe80f444d9347b3727e7775cafb0cbe1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5bf3630bbe80f444d9347b3727e7775cafb0cbe1",
     "commiter_name": "sylvestre",
@@ -4097,7 +4119,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "274": {
+  "276": {
     "sha": "ef60f326e950bcebf13ea9d831757c1b49aac7fa",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ef60f326e950bcebf13ea9d831757c1b49aac7fa",
     "commiter_name": "sylvestre",
@@ -4115,7 +4137,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "275": {
+  "277": {
     "sha": "a00c7a50a418540ba85e8719afa552d04d76f4a2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a00c7a50a418540ba85e8719afa552d04d76f4a2",
     "commiter_name": "allan-silva",
@@ -4133,7 +4155,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "276": {
+  "278": {
     "sha": "4f44c5ff5658fa5a94ae2f596b86cfe5cd43b71f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4f44c5ff5658fa5a94ae2f596b86cfe5cd43b71f",
     "commiter_name": "Callek",
@@ -4144,7 +4166,7 @@
       "kickoff/static/kickoff.js"
     ]
   },
-  "277": {
+  "279": {
     "sha": "e69c427f8e675ffed2d004430cf8c2a6b5c48ca5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e69c427f8e675ffed2d004430cf8c2a6b5c48ca5",
     "commiter_name": "sylvestre",
@@ -4155,7 +4177,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "278": {
+  "280": {
     "sha": "2ab12b07dd05f540ad56fee7ad0663bb4cc0e810",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2ab12b07dd05f540ad56fee7ad0663bb4cc0e810",
     "commiter_name": "allan-silva",
@@ -4166,7 +4188,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "279": {
+  "281": {
     "sha": "cae605cc30164602ec0a426e84725c4bd9b079ee",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cae605cc30164602ec0a426e84725c4bd9b079ee",
     "commiter_name": "sylvestre",
@@ -4177,7 +4199,7 @@
       "README.md"
     ]
   },
-  "280": {
+  "282": {
     "sha": "15685bfd6472d94e93a64e20b51aafd98f871e54",
     "url": "https://github.com/mozilla-releng/ship-it/commit/15685bfd6472d94e93a64e20b51aafd98f871e54",
     "commiter_name": "sylvestre",
@@ -4191,7 +4213,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "281": {
+  "283": {
     "sha": "4ec608b36792fb5bdde213b73e870e3b19d62118",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4ec608b36792fb5bdde213b73e870e3b19d62118",
     "commiter_name": "allan-silva",
@@ -4205,7 +4227,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "282": {
+  "284": {
     "sha": "69265cccf2122e74d2f54d9998a5136e19aa8b11",
     "url": "https://github.com/mozilla-releng/ship-it/commit/69265cccf2122e74d2f54d9998a5136e19aa8b11",
     "commiter_name": "Callek",
@@ -4216,7 +4238,7 @@
       "kickoff/static/kickoff.js"
     ]
   },
-  "283": {
+  "285": {
     "sha": "fc8380d869fb00791c47867e02bf7200415bfd63",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fc8380d869fb00791c47867e02bf7200415bfd63",
     "commiter_name": "Callek",
@@ -4242,7 +4264,7 @@
       "migrate_repo/versions/014_product_releases_mh_default_upgrade.sql"
     ]
   },
-  "284": {
+  "286": {
     "sha": "dc935c4ea097b7c5883675b373f66a0c74990a4a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dc935c4ea097b7c5883675b373f66a0c74990a4a",
     "commiter_name": "Callek",
@@ -4255,7 +4277,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "285": {
+  "287": {
     "sha": "7b7e74b120d8bc262d51275181e8328e69a1f011",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7b7e74b120d8bc262d51275181e8328e69a1f011",
     "commiter_name": "Callek",
@@ -4269,7 +4291,7 @@
       "migrate_repo/versions/014_product_releases_mh_default_upgrade.sql"
     ]
   },
-  "286": {
+  "288": {
     "sha": "c28bb96a453af752061c748d7b1a594c9e6c5bc9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c28bb96a453af752061c748d7b1a594c9e6c5bc9",
     "commiter_name": "Callek",
@@ -4292,7 +4314,7 @@
       "migrate_repo/versions/013_add_mh_changeset.py"
     ]
   },
-  "287": {
+  "289": {
     "sha": "59d38d2172cbdb3cfd765a1d0b4e0a2bf629329b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/59d38d2172cbdb3cfd765a1d0b4e0a2bf629329b",
     "commiter_name": "Callek",
@@ -4311,7 +4333,7 @@
       "scripts/run_tests.sh"
     ]
   },
-  "288": {
+  "290": {
     "sha": "bead758a25f13efd69662a1595aaf9a6436e15c0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bead758a25f13efd69662a1595aaf9a6436e15c0",
     "commiter_name": "Callek",
@@ -4322,7 +4344,7 @@
       "scripts/initdb_and_run.sh"
     ]
   },
-  "289": {
+  "291": {
     "sha": "49b4166cb34496eca38a93c52493aba6ecc414c8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/49b4166cb34496eca38a93c52493aba6ecc414c8",
     "commiter_name": "Callek",
@@ -4333,7 +4355,7 @@
       "scripts/initdb_and_run.sh"
     ]
   },
-  "290": {
+  "292": {
     "sha": "6bd2190f0b317f45ccea1d829200fa56758da360",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6bd2190f0b317f45ccea1d829200fa56758da360",
     "commiter_name": "Callek",
@@ -4346,7 +4368,7 @@
       "Vagrantfile"
     ]
   },
-  "291": {
+  "293": {
     "sha": "9840417d4374be0770118ecc433647c8e432e955",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9840417d4374be0770118ecc433647c8e432e955",
     "commiter_name": "Callek",
@@ -4363,7 +4385,7 @@
       "testing/run_tests.sh"
     ]
   },
-  "292": {
+  "294": {
     "sha": "c6f7b0f55913338b54be3c5518208ca0673ad1de",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c6f7b0f55913338b54be3c5518208ca0673ad1de",
     "commiter_name": "Callek",
@@ -4377,7 +4399,7 @@
       "testing/run_tests.sh"
     ]
   },
-  "293": {
+  "295": {
     "sha": "d5714c838ce817b735348ea822f2a5c46153f1a8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d5714c838ce817b735348ea822f2a5c46153f1a8",
     "commiter_name": "rail",
@@ -4389,7 +4411,7 @@
       "docker-compose.yml"
     ]
   },
-  "294": {
+  "296": {
     "sha": "55f3982eb291d92ebd05ba3e17e701e2185a4cf4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/55f3982eb291d92ebd05ba3e17e701e2185a4cf4",
     "commiter_name": "rail",
@@ -4401,7 +4423,7 @@
       "kickoff/static/kickoff.js"
     ]
   },
-  "295": {
+  "297": {
     "sha": "45696198d96e8dd0667bc38ef35de9d9632edfda",
     "url": "https://github.com/mozilla-releng/ship-it/commit/45696198d96e8dd0667bc38ef35de9d9632edfda",
     "commiter_name": "allan-silva",
@@ -4413,7 +4435,7 @@
       "kickoff/static/kickoff.js"
     ]
   },
-  "296": {
+  "298": {
     "sha": "35fb4780662c3afb742510851b9edd88f7bb74d5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/35fb4780662c3afb742510851b9edd88f7bb74d5",
     "commiter_name": "sylvestre",
@@ -4437,7 +4459,7 @@
       "migrate_repo/versions/012_create_view_product_releases_default_upgrade.sql"
     ]
   },
-  "297": {
+  "299": {
     "sha": "da9e2ab333115d072f87bc47fb3775c7995f3e3f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/da9e2ab333115d072f87bc47fb3775c7995f3e3f",
     "commiter_name": "allan-silva",
@@ -4461,7 +4483,7 @@
       "migrate_repo/versions/012_create_view_product_releases_default_upgrade.sql"
     ]
   },
-  "298": {
+  "300": {
     "sha": "78a42c0f38cf49b03501bb8e2ab88c3dbc78da48",
     "url": "https://github.com/mozilla-releng/ship-it/commit/78a42c0f38cf49b03501bb8e2ab88c3dbc78da48",
     "commiter_name": "rail",
@@ -4472,7 +4494,7 @@
       "kickoff/templates/status.html"
     ]
   },
-  "299": {
+  "301": {
     "sha": "2cb5b62f746a1d61c5fb5c541e48fb2a7b781067",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2cb5b62f746a1d61c5fb5c541e48fb2a7b781067",
     "commiter_name": "allan-silva",
@@ -4483,7 +4505,7 @@
       "kickoff/templates/status.html"
     ]
   },
-  "300": {
+  "302": {
     "sha": "52eeba7cde39af5f7ee5f731bd3f1ec1169fe321",
     "url": "https://github.com/mozilla-releng/ship-it/commit/52eeba7cde39af5f7ee5f731bd3f1ec1169fe321",
     "commiter_name": "rail",
@@ -4497,7 +4519,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "301": {
+  "303": {
     "sha": "b5dc66afbc281d92d0c1365c55033026f3b993cf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b5dc66afbc281d92d0c1365c55033026f3b993cf",
     "commiter_name": "sylvestre",
@@ -4511,7 +4533,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "302": {
+  "304": {
     "sha": "d908440330f6a289c5221452017facc57554350d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d908440330f6a289c5221452017facc57554350d",
     "commiter_name": "rail",
@@ -4522,7 +4544,7 @@
       "README"
     ]
   },
-  "303": {
+  "305": {
     "sha": "948a6bcc24c4dcf124cdc5ae518044f90fde1ed3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/948a6bcc24c4dcf124cdc5ae518044f90fde1ed3",
     "commiter_name": "sylvestre",
@@ -4533,7 +4555,7 @@
       "README"
     ]
   },
-  "304": {
+  "306": {
     "sha": "df44559e02baed88f669b6f0021627bd6af984a5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/df44559e02baed88f669b6f0021627bd6af984a5",
     "commiter_name": "rail",
@@ -4556,7 +4578,7 @@
       "migrate_repo/versions/009_Add_more_info_release.py"
     ]
   },
-  "305": {
+  "307": {
     "sha": "bd83d3e7b0221d6162ab4e01314ec3c92775b2ac",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bd83d3e7b0221d6162ab4e01314ec3c92775b2ac",
     "commiter_name": "sylvestre",
@@ -4567,7 +4589,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "306": {
+  "308": {
     "sha": "1573975ecb3e7b24f0459ff820ef0f4bf2b9ac75",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1573975ecb3e7b24f0459ff820ef0f4bf2b9ac75",
     "commiter_name": "sylvestre",
@@ -4589,7 +4611,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "307": {
+  "309": {
     "sha": "ff6b61cb1b2fc813877a424ad30c54df4e05f62b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ff6b61cb1b2fc813877a424ad30c54df4e05f62b",
     "commiter_name": "sylvestre",
@@ -4600,7 +4622,7 @@
       "migrate_repo/versions/009_Add_more_info_release.py"
     ]
   },
-  "308": {
+  "310": {
     "sha": "56f83ae8b65f458439f1337f7bf8e7ebb03ea49f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/56f83ae8b65f458439f1337f7bf8e7ebb03ea49f",
     "commiter_name": "sylvestre",
@@ -4612,7 +4634,7 @@
       "kickoff/model.py"
     ]
   },
-  "309": {
+  "311": {
     "sha": "52fc09ada5c40beabbcd538c9cb25908f5569135",
     "url": "https://github.com/mozilla-releng/ship-it/commit/52fc09ada5c40beabbcd538c9cb25908f5569135",
     "commiter_name": "rail",
@@ -4626,7 +4648,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "310": {
+  "312": {
     "sha": "2f70c7c557a090a396c61b0f3b8a2814cf578232",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2f70c7c557a090a396c61b0f3b8a2814cf578232",
     "commiter_name": "sylvestre",
@@ -4640,7 +4662,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "311": {
+  "313": {
     "sha": "a946d16d4120a05b26883c8206350876c9d96ec4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a946d16d4120a05b26883c8206350876c9d96ec4",
     "commiter_name": "rail",
@@ -4655,7 +4677,7 @@
       "package.json"
     ]
   },
-  "312": {
+  "314": {
     "sha": "6644e5ad4682f13cc2115715ef395c111826e44c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6644e5ad4682f13cc2115715ef395c111826e44c",
     "commiter_name": "sylvestre",
@@ -4667,7 +4689,7 @@
       "package.json"
     ]
   },
-  "313": {
+  "315": {
     "sha": "24e179f7b008b30fe43771722053b0aef71f306a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/24e179f7b008b30fe43771722053b0aef71f306a",
     "commiter_name": "sylvestre",
@@ -4679,7 +4701,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "314": {
+  "316": {
     "sha": "7d7daf927f6998e7cadf65f2dd1c17deab86eee1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7d7daf927f6998e7cadf65f2dd1c17deab86eee1",
     "commiter_name": "sylvestre",
@@ -4692,7 +4714,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "315": {
+  "317": {
     "sha": "6bb17595846a0ed4b87541e8f9fa361e8cc4bc63",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6bb17595846a0ed4b87541e8f9fa361e8cc4bc63",
     "commiter_name": "sylvestre",
@@ -4705,7 +4727,7 @@
       "package.json"
     ]
   },
-  "316": {
+  "318": {
     "sha": "f2ecdf0e3b530123ff495237cc7b691ed42dda36",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f2ecdf0e3b530123ff495237cc7b691ed42dda36",
     "commiter_name": "rail",
@@ -4716,7 +4738,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "317": {
+  "319": {
     "sha": "619b47ed2947795c67eab68ccfd54de23db22341",
     "url": "https://github.com/mozilla-releng/ship-it/commit/619b47ed2947795c67eab68ccfd54de23db22341",
     "commiter_name": "sylvestre",
@@ -4727,7 +4749,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "318": {
+  "320": {
     "sha": "582edc99b8a97afac6fba297736484b48ea038c5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/582edc99b8a97afac6fba297736484b48ea038c5",
     "commiter_name": "rail",
@@ -4739,7 +4761,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "319": {
+  "321": {
     "sha": "995162eba13e1112db3084244a6e51b932687c19",
     "url": "https://github.com/mozilla-releng/ship-it/commit/995162eba13e1112db3084244a6e51b932687c19",
     "commiter_name": "sylvestre",
@@ -4751,7 +4773,7 @@
       "kickoff/static/languages.json"
     ]
   },
-  "320": {
+  "322": {
     "sha": "d27872c0518fa3cea493e7fea02a26f68f7b499c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d27872c0518fa3cea493e7fea02a26f68f7b499c",
     "commiter_name": "rail",
@@ -4765,7 +4787,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "321": {
+  "323": {
     "sha": "6278bdb141980ab01dc1eff2c61fc2c12b154849",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6278bdb141980ab01dc1eff2c61fc2c12b154849",
     "commiter_name": "rail",
@@ -4776,7 +4798,7 @@
       "json/languages.json"
     ]
   },
-  "322": {
+  "324": {
     "sha": "3171f443d5770e883b1489e380cd738629e38f27",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3171f443d5770e883b1489e380cd738629e38f27",
     "commiter_name": "sylvestre",
@@ -4787,7 +4809,7 @@
       "json/languages.json"
     ]
   },
-  "323": {
+  "325": {
     "sha": "d332cc6d74932b298ef86214b0a4f8d3f8d5c7fc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d332cc6d74932b298ef86214b0a4f8d3f8d5c7fc",
     "commiter_name": "sylvestre",
@@ -4800,7 +4822,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "324": {
+  "326": {
     "sha": "5725984bcd9976d4b4d4d1989ff0cf3013d7c8f9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5725984bcd9976d4b4d4d1989ff0cf3013d7c8f9",
     "commiter_name": "sylvestre",
@@ -4812,7 +4834,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "325": {
+  "327": {
     "sha": "6b23f6e90f5f6d49e11ef01dbcf81c761615aff2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6b23f6e90f5f6d49e11ef01dbcf81c761615aff2",
     "commiter_name": "bhearsum",
@@ -4824,7 +4846,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "326": {
+  "328": {
     "sha": "5126828c346f55874be8e3c5e7dc20e87a31e528",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5126828c346f55874be8e3c5e7dc20e87a31e528",
     "commiter_name": "sylvestre",
@@ -4836,7 +4858,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "327": {
+  "329": {
     "sha": "8843131ef864445585317fbb5defc790896dadc5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8843131ef864445585317fbb5defc790896dadc5",
     "commiter_name": "sylvestre",
@@ -4847,7 +4869,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "328": {
+  "330": {
     "sha": "ebc19b1e6d2081764d2b890bbbe03374e8808324",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ebc19b1e6d2081764d2b890bbbe03374e8808324",
     "commiter_name": "rail",
@@ -4875,7 +4897,7 @@
       "migrate_repo/versions/008_Add_shipped_at.py"
     ]
   },
-  "329": {
+  "331": {
     "sha": "9023117ce1b2b9dac654a63187c7ed1b31b10da0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9023117ce1b2b9dac654a63187c7ed1b31b10da0",
     "commiter_name": "rail",
@@ -4886,7 +4908,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "330": {
+  "332": {
     "sha": "d9d22d68012589fc380e7b2c955522b67f43773e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d9d22d68012589fc380e7b2c955522b67f43773e",
     "commiter_name": "sylvestre",
@@ -4897,7 +4919,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "331": {
+  "333": {
     "sha": "832faefff86c9308979ccaf4824bf4e58f972b28",
     "url": "https://github.com/mozilla-releng/ship-it/commit/832faefff86c9308979ccaf4824bf4e58f972b28",
     "commiter_name": "sylvestre",
@@ -4909,7 +4931,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "332": {
+  "334": {
     "sha": "0c1b170456deccaf0ae5d17aaf29c13b216b5947",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0c1b170456deccaf0ae5d17aaf29c13b216b5947",
     "commiter_name": "sylvestre",
@@ -4920,7 +4942,7 @@
       "kickoff/config.py"
     ]
   },
-  "333": {
+  "335": {
     "sha": "718b966cd10a880e2ed4f527c95a93d6080d83e8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/718b966cd10a880e2ed4f527c95a93d6080d83e8",
     "commiter_name": "sylvestre",
@@ -4931,7 +4953,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "334": {
+  "336": {
     "sha": "35094042bafc117561b976307c215240d1258e9f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/35094042bafc117561b976307c215240d1258e9f",
     "commiter_name": "rail",
@@ -4942,7 +4964,7 @@
       "kickoff/templates/includes/releases_submitted.html"
     ]
   },
-  "335": {
+  "337": {
     "sha": "06b8a57b0e58768eede4854ec4ca02a32125d254",
     "url": "https://github.com/mozilla-releng/ship-it/commit/06b8a57b0e58768eede4854ec4ca02a32125d254",
     "commiter_name": "sylvestre",
@@ -4953,7 +4975,7 @@
       "kickoff/templates/includes/releases_submitted.html"
     ]
   },
-  "336": {
+  "338": {
     "sha": "88668318837eec1e34a84356d8222a2b961e96d1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/88668318837eec1e34a84356d8222a2b961e96d1",
     "commiter_name": "rail",
@@ -4964,7 +4986,7 @@
       "kickoff/model.py"
     ]
   },
-  "337": {
+  "339": {
     "sha": "877eeaa66ee5abb129d88e6ea78c25ad8730f8fb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/877eeaa66ee5abb129d88e6ea78c25ad8730f8fb",
     "commiter_name": "sylvestre",
@@ -4992,7 +5014,7 @@
       "migrate_repo/versions/008_Add_shipped_at.py"
     ]
   },
-  "338": {
+  "340": {
     "sha": "91abb635b6117f70368acecf9e254f2020a656c3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/91abb635b6117f70368acecf9e254f2020a656c3",
     "commiter_name": "bhearsum",
@@ -5003,7 +5025,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "339": {
+  "341": {
     "sha": "d3929ebf8003a2e8d994be7f79a6ee44364bc587",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d3929ebf8003a2e8d994be7f79a6ee44364bc587",
     "commiter_name": "sylvestre",
@@ -5014,7 +5036,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "340": {
+  "342": {
     "sha": "422d0f25c755799f8d87f05da2035fc9bec02945",
     "url": "https://github.com/mozilla-releng/ship-it/commit/422d0f25c755799f8d87f05da2035fc9bec02945",
     "commiter_name": "rail",
@@ -5042,7 +5064,7 @@
       "migrate_repo/versions/008_Add_shipped_at.py"
     ]
   },
-  "341": {
+  "343": {
     "sha": "be4b70562a01359da5a73b03520c25cc0e286c98",
     "url": "https://github.com/mozilla-releng/ship-it/commit/be4b70562a01359da5a73b03520c25cc0e286c98",
     "commiter_name": "rail",
@@ -5070,7 +5092,7 @@
       "migrate_repo/versions/008_Add_shipped_at.py"
     ]
   },
-  "342": {
+  "344": {
     "sha": "e37965c92a8ea277203424b2d14a0ff233ec957f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e37965c92a8ea277203424b2d14a0ff233ec957f",
     "commiter_name": "bhearsum",
@@ -5098,7 +5120,7 @@
       "migrate_repo/versions/008_Add_shipped_at.py"
     ]
   },
-  "343": {
+  "345": {
     "sha": "3d1f4a47e29eb64f2874bd21a62432c77281ee26",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3d1f4a47e29eb64f2874bd21a62432c77281ee26",
     "commiter_name": "sylvestre",
@@ -5112,7 +5134,7 @@
       "kickoff/test/views/test_json.py"
     ]
   },
-  "344": {
+  "346": {
     "sha": "03cc2c8cf9899276667f9073da188b83076cc424",
     "url": "https://github.com/mozilla-releng/ship-it/commit/03cc2c8cf9899276667f9073da188b83076cc424",
     "commiter_name": "sylvestre",
@@ -5123,7 +5145,7 @@
       "kickoff/config.py"
     ]
   },
-  "345": {
+  "347": {
     "sha": "ef361c6740e015da9929cf3eedb6f39a31323ac0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ef361c6740e015da9929cf3eedb6f39a31323ac0",
     "commiter_name": "sylvestre",
@@ -5151,7 +5173,7 @@
       "migrate_repo/versions/008_Add_shipped_at.py"
     ]
   },
-  "346": {
+  "348": {
     "sha": "76e873e0df7f17559da040ae4ad92c99abbb4cf9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/76e873e0df7f17559da040ae4ad92c99abbb4cf9",
     "commiter_name": "bhearsum",
@@ -5162,7 +5184,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "347": {
+  "349": {
     "sha": "e61b9df54bd7e754ea7c02118b4bb58a2905d75d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e61b9df54bd7e754ea7c02118b4bb58a2905d75d",
     "commiter_name": "sylvestre",
@@ -5173,7 +5195,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "348": {
+  "350": {
     "sha": "95578596a8fcf8778af0e134d77f22e5a9a70709",
     "url": "https://github.com/mozilla-releng/ship-it/commit/95578596a8fcf8778af0e134d77f22e5a9a70709",
     "commiter_name": "bhearsum",
@@ -5185,7 +5207,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "349": {
+  "351": {
     "sha": "6f809e28e1b77bd30f219cad5cdc25f8a26fa428",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6f809e28e1b77bd30f219cad5cdc25f8a26fa428",
     "commiter_name": "sylvestre",
@@ -5197,7 +5219,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "350": {
+  "352": {
     "sha": "cb27d8804f2db129d11f9d3b0e794469640db0cc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cb27d8804f2db129d11f9d3b0e794469640db0cc",
     "commiter_name": "bhearsum",
@@ -5208,7 +5230,7 @@
       "kickoff/model.py"
     ]
   },
-  "351": {
+  "353": {
     "sha": "dc7accd18d3299465b36ffbb7534cf2f1d436c98",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dc7accd18d3299465b36ffbb7534cf2f1d436c98",
     "commiter_name": "sylvestre",
@@ -5219,7 +5241,7 @@
       "kickoff/model.py"
     ]
   },
-  "352": {
+  "354": {
     "sha": "a08bcd0c86b1d26c34b6fb1966e20654cecdb107",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a08bcd0c86b1d26c34b6fb1966e20654cecdb107",
     "commiter_name": "bhearsum",
@@ -5231,7 +5253,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "353": {
+  "355": {
     "sha": "f4ac5fd21201ae98e9e548701be0ee024bf003d6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f4ac5fd21201ae98e9e548701be0ee024bf003d6",
     "commiter_name": "sylvestre",
@@ -5243,7 +5265,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "354": {
+  "356": {
     "sha": "c0d65f8029c2b4db9ada0d4f4cb132d4049f3da9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c0d65f8029c2b4db9ada0d4f4cb132d4049f3da9",
     "commiter_name": "sylvestre",
@@ -5254,7 +5276,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "355": {
+  "357": {
     "sha": "ea50c22795934d0ddbec463bead6da68c0704f37",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ea50c22795934d0ddbec463bead6da68c0704f37",
     "commiter_name": "bhearsum",
@@ -5265,7 +5287,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "356": {
+  "358": {
     "sha": "ca378999615adaf369995b9661c603801249a278",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ca378999615adaf369995b9661c603801249a278",
     "commiter_name": "bhearsum",
@@ -5278,7 +5300,7 @@
       "kickoff/templates/includes/firefox_release.html"
     ]
   },
-  "357": {
+  "359": {
     "sha": "9ebf46ef0e2a0275ab83897e4ca1fb646bbba721",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9ebf46ef0e2a0275ab83897e4ca1fb646bbba721",
     "commiter_name": "sylvestre",
@@ -5289,7 +5311,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "358": {
+  "360": {
     "sha": "a43d25084ab8cb59974a65a2a0256e91f371b293",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a43d25084ab8cb59974a65a2a0256e91f371b293",
     "commiter_name": "sylvestre",
@@ -5300,7 +5322,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "359": {
+  "361": {
     "sha": "7a9b7aca3dab307577a66937c9c618a29e2533db",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7a9b7aca3dab307577a66937c9c618a29e2533db",
     "commiter_name": "sylvestre",
@@ -5313,7 +5335,7 @@
       "kickoff/templates/includes/firefox_release.html"
     ]
   },
-  "360": {
+  "362": {
     "sha": "17d894378abd06b8c4f3ae5d96c4d33efbce64ac",
     "url": "https://github.com/mozilla-releng/ship-it/commit/17d894378abd06b8c4f3ae5d96c4d33efbce64ac",
     "commiter_name": "bhearsum",
@@ -5325,7 +5347,7 @@
       "scripts/vertica.py"
     ]
   },
-  "361": {
+  "363": {
     "sha": "8e44d0165992b35f994c9ac3f9b11417085255cb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8e44d0165992b35f994c9ac3f9b11417085255cb",
     "commiter_name": "sylvestre",
@@ -5336,7 +5358,7 @@
       "kickoff/templates/includes/firefox_release.html"
     ]
   },
-  "362": {
+  "364": {
     "sha": "cb98b1d2176f92247fa2e197c931242b01c56dbb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cb98b1d2176f92247fa2e197c931242b01c56dbb",
     "commiter_name": "sylvestre",
@@ -5347,7 +5369,7 @@
       "scripts/vertica.py"
     ]
   },
-  "363": {
+  "365": {
     "sha": "c9d53359fd0f30d3feb75d75179d0f9d7c24baf6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c9d53359fd0f30d3feb75d75179d0f9d7c24baf6",
     "commiter_name": "rail",
@@ -5358,7 +5380,7 @@
       "contribute.json"
     ]
   },
-  "364": {
+  "366": {
     "sha": "a06dd9a403138823f16725ee85f8c0e3917171b2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a06dd9a403138823f16725ee85f8c0e3917171b2",
     "commiter_name": "Osmose",
@@ -5369,7 +5391,7 @@
       "contribute.json"
     ]
   },
-  "365": {
+  "367": {
     "sha": "cf26efc1d24d21ccccc04674a35c2db918439253",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cf26efc1d24d21ccccc04674a35c2db918439253",
     "commiter_name": "rail",
@@ -5381,7 +5403,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "366": {
+  "368": {
     "sha": "fb5f79e60ffee7a700c8a1384cf1fffd99044590",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fb5f79e60ffee7a700c8a1384cf1fffd99044590",
     "commiter_name": "sylvestre",
@@ -5392,7 +5414,7 @@
       "contribute.json"
     ]
   },
-  "367": {
+  "369": {
     "sha": "c1e40b95cdf5509b98a1a38addc2fe58b3126d0e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c1e40b95cdf5509b98a1a38addc2fe58b3126d0e",
     "commiter_name": "sylvestre",
@@ -5403,7 +5425,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "368": {
+  "370": {
     "sha": "468ec13051c667943c186e41edc27a5fd5fd83f7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/468ec13051c667943c186e41edc27a5fd5fd83f7",
     "commiter_name": "bhearsum",
@@ -5414,7 +5436,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "369": {
+  "371": {
     "sha": "c4a4509c14ae56f211d2080ac992a6e556ea4466",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c4a4509c14ae56f211d2080ac992a6e556ea4466",
     "commiter_name": "sylvestre",
@@ -5425,7 +5447,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "370": {
+  "372": {
     "sha": "dae2c3c195149e8a685851bb886b29be44bd8990",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dae2c3c195149e8a685851bb886b29be44bd8990",
     "commiter_name": "bhearsum",
@@ -5437,7 +5459,7 @@
       "kickoff/templates/includes/firefox_release.html"
     ]
   },
-  "371": {
+  "373": {
     "sha": "6efd8c428ee2c81b01ab990294a991ef83d2fde9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6efd8c428ee2c81b01ab990294a991ef83d2fde9",
     "commiter_name": "sylvestre",
@@ -5448,7 +5470,7 @@
       "kickoff/templates/includes/firefox_release.html"
     ]
   },
-  "372": {
+  "374": {
     "sha": "ed4f8990ad9d0354fa594d840caa2a7a03516bff",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ed4f8990ad9d0354fa594d840caa2a7a03516bff",
     "commiter_name": "sylvestre",
@@ -5459,7 +5481,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "373": {
+  "375": {
     "sha": "e0cc2f94a4bae070b14f79f21898ab805df7ab2d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e0cc2f94a4bae070b14f79f21898ab805df7ab2d",
     "commiter_name": "mozbhearsum",
@@ -5470,7 +5492,7 @@
       "kickoff-web.py"
     ]
   },
-  "374": {
+  "376": {
     "sha": "aaedd5d215ff845b5431f2f165148b6342a36c7a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/aaedd5d215ff845b5431f2f165148b6342a36c7a",
     "commiter_name": "bhearsum",
@@ -5486,7 +5508,7 @@
       "scripts/vertica.py"
     ]
   },
-  "375": {
+  "377": {
     "sha": "2363a8b1486edb4e4b5fe9d2f3940d435fa60c24",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2363a8b1486edb4e4b5fe9d2f3940d435fa60c24",
     "commiter_name": "sylvestre",
@@ -5498,7 +5520,7 @@
       "scripts/vertica.py"
     ]
   },
-  "376": {
+  "378": {
     "sha": "a154ee6cae7ceac3fdecaa6cd95d73782bdf3c43",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a154ee6cae7ceac3fdecaa6cd95d73782bdf3c43",
     "commiter_name": "sylvestre",
@@ -5512,7 +5534,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "377": {
+  "379": {
     "sha": "c6935abd629b27e7fbdac022325a7b0c83d8e676",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c6935abd629b27e7fbdac022325a7b0c83d8e676",
     "commiter_name": "bhearsum",
@@ -5525,7 +5547,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "378": {
+  "380": {
     "sha": "d1495d501454bc596208a44ecb894494828bed7f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d1495d501454bc596208a44ecb894494828bed7f",
     "commiter_name": "sylvestre",
@@ -5537,7 +5559,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "379": {
+  "381": {
     "sha": "2608350b8de382bbb2d8ae3aad157c5915cbfb50",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2608350b8de382bbb2d8ae3aad157c5915cbfb50",
     "commiter_name": "sylvestre",
@@ -5548,7 +5570,7 @@
       ".landscape.yaml"
     ]
   },
-  "380": {
+  "382": {
     "sha": "7000f69313049faeb68df9c5a80c5cdbcfbe86f5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7000f69313049faeb68df9c5a80c5cdbcfbe86f5",
     "commiter_name": "bhearsum",
@@ -5561,7 +5583,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "381": {
+  "383": {
     "sha": "c60dc5b85adaf505b81a21594f4d7e2624a4a741",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c60dc5b85adaf505b81a21594f4d7e2624a4a741",
     "commiter_name": "sylvestre",
@@ -5574,7 +5596,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "382": {
+  "384": {
     "sha": "4db8443d7cb4e5789a0442f9147a3b84cb9d2741",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4db8443d7cb4e5789a0442f9147a3b84cb9d2741",
     "commiter_name": "bhearsum",
@@ -5585,7 +5607,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "383": {
+  "385": {
     "sha": "d56339b009a6e72f03f4ebdaa8b508caef527687",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d56339b009a6e72f03f4ebdaa8b508caef527687",
     "commiter_name": "sylvestre",
@@ -5596,7 +5618,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "384": {
+  "386": {
     "sha": "0a70910924724cf255a06c6d62a9165344fdf8e4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0a70910924724cf255a06c6d62a9165344fdf8e4",
     "commiter_name": "rail",
@@ -5607,7 +5629,7 @@
       ".travis.yml"
     ]
   },
-  "385": {
+  "387": {
     "sha": "b7aff02231726b3c946b6b4bd871313bb405c66e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b7aff02231726b3c946b6b4bd871313bb405c66e",
     "commiter_name": "rail",
@@ -5618,7 +5640,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "386": {
+  "388": {
     "sha": "db03ae7f08093e249a24b6dd0567869bc67d50b2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/db03ae7f08093e249a24b6dd0567869bc67d50b2",
     "commiter_name": "sylvestre",
@@ -5629,7 +5651,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "387": {
+  "389": {
     "sha": "c28100363401a6c49f2f819addba95f5edd98c33",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c28100363401a6c49f2f819addba95f5edd98c33",
     "commiter_name": "Callek",
@@ -5640,7 +5662,7 @@
       ".travis.yml"
     ]
   },
-  "388": {
+  "390": {
     "sha": "2b97aeb88ac24b47d08f939592e2945d232f1afc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2b97aeb88ac24b47d08f939592e2945d232f1afc",
     "commiter_name": "rail",
@@ -5651,7 +5673,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "389": {
+  "391": {
     "sha": "e47d18f7b9e360a487c77e4955db69ab8c6a629e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e47d18f7b9e360a487c77e4955db69ab8c6a629e",
     "commiter_name": "sylvestre",
@@ -5662,7 +5684,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "390": {
+  "392": {
     "sha": "d10b5b634baec309b23146b9e2a86ee4d6a7cb9e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d10b5b634baec309b23146b9e2a86ee4d6a7cb9e",
     "commiter_name": "rail",
@@ -5675,7 +5697,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "391": {
+  "393": {
     "sha": "3713fe856d8b805fc9452dc8272802a798695d53",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3713fe856d8b805fc9452dc8272802a798695d53",
     "commiter_name": "sylvestre",
@@ -5688,7 +5710,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "392": {
+  "394": {
     "sha": "6100d7de9190454b4056843d0be2fa06bfd598d5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6100d7de9190454b4056843d0be2fa06bfd598d5",
     "commiter_name": "rail",
@@ -5699,7 +5721,7 @@
       ".coveragerc"
     ]
   },
-  "393": {
+  "395": {
     "sha": "2bf9c4339a56e9c3c9210066a76a95a40d0649cc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2bf9c4339a56e9c3c9210066a76a95a40d0649cc",
     "commiter_name": "sylvestre",
@@ -5710,7 +5732,7 @@
       ".coveragerc"
     ]
   },
-  "394": {
+  "396": {
     "sha": "47223fe555bff376b5af91a149c928ae67c36775",
     "url": "https://github.com/mozilla-releng/ship-it/commit/47223fe555bff376b5af91a149c928ae67c36775",
     "commiter_name": "rail",
@@ -5721,7 +5743,7 @@
       ".travis.yml"
     ]
   },
-  "395": {
+  "397": {
     "sha": "90d677cd0601f4ad2d16178017f37e04a53e0867",
     "url": "https://github.com/mozilla-releng/ship-it/commit/90d677cd0601f4ad2d16178017f37e04a53e0867",
     "commiter_name": "sylvestre",
@@ -5732,7 +5754,7 @@
       ".travis.yml"
     ]
   },
-  "396": {
+  "398": {
     "sha": "5562b97c8e92d9017219283088065fb18b86405f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5562b97c8e92d9017219283088065fb18b86405f",
     "commiter_name": "rail",
@@ -5744,7 +5766,7 @@
       "package.json"
     ]
   },
-  "397": {
+  "399": {
     "sha": "26a14042799676dce78e280e4ae737a329e60fd4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/26a14042799676dce78e280e4ae737a329e60fd4",
     "commiter_name": "sylvestre",
@@ -5756,7 +5778,7 @@
       "package.json"
     ]
   },
-  "398": {
+  "400": {
     "sha": "dd345edb1e5b42f3135202f0da62669b34ffa273",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dd345edb1e5b42f3135202f0da62669b34ffa273",
     "commiter_name": "mozbhearsum",
@@ -5767,7 +5789,7 @@
       "kickoff.wsgi"
     ]
   },
-  "399": {
+  "401": {
     "sha": "37814db0d8f1ad4fdd727fac66fc44e57c2bd529",
     "url": "https://github.com/mozilla-releng/ship-it/commit/37814db0d8f1ad4fdd727fac66fc44e57c2bd529",
     "commiter_name": "rail",
@@ -5783,7 +5805,7 @@
       "tox.ini"
     ]
   },
-  "400": {
+  "402": {
     "sha": "a0bc1ff353e5750eff490f77fdb886dc64ba3332",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a0bc1ff353e5750eff490f77fdb886dc64ba3332",
     "commiter_name": "rail",
@@ -5794,7 +5816,7 @@
       "kickoff/model.py"
     ]
   },
-  "401": {
+  "403": {
     "sha": "9f697de5efd1f8f00a0707d53ee66995595de6b8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9f697de5efd1f8f00a0707d53ee66995595de6b8",
     "commiter_name": "mozbhearsum",
@@ -5805,7 +5827,7 @@
       "kickoff/model.py"
     ]
   },
-  "402": {
+  "404": {
     "sha": "264f93346d423c596be2552679754475fc1ecd65",
     "url": "https://github.com/mozilla-releng/ship-it/commit/264f93346d423c596be2552679754475fc1ecd65",
     "commiter_name": "mozbhearsum",
@@ -5817,7 +5839,7 @@
       "requirements/dev.txt"
     ]
   },
-  "403": {
+  "405": {
     "sha": "0482d5772f916b422781fc17c704e09f232e1cff",
     "url": "https://github.com/mozilla-releng/ship-it/commit/0482d5772f916b422781fc17c704e09f232e1cff",
     "commiter_name": "sylvestre",
@@ -5828,7 +5850,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "404": {
+  "406": {
     "sha": "d31a84fffe2ae4035a72fe5dfeddcfdec44b5709",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d31a84fffe2ae4035a72fe5dfeddcfdec44b5709",
     "commiter_name": "sylvestre",
@@ -5839,7 +5861,7 @@
       "README"
     ]
   },
-  "405": {
+  "407": {
     "sha": "5c8967241d6fdef7e8333cfd63f9d17a35ed8220",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5c8967241d6fdef7e8333cfd63f9d17a35ed8220",
     "commiter_name": "rail",
@@ -5851,7 +5873,7 @@
       "kickoff/views/status.py"
     ]
   },
-  "406": {
+  "408": {
     "sha": "63d284bb8611b55d5cf6155f8911d34200d0d80d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/63d284bb8611b55d5cf6155f8911d34200d0d80d",
     "commiter_name": "sylvestre",
@@ -5864,7 +5886,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "407": {
+  "409": {
     "sha": "c7f959f5eed87c280a26886183481bd347fcb1b0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c7f959f5eed87c280a26886183481bd347fcb1b0",
     "commiter_name": "sylvestre",
@@ -5876,7 +5898,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "408": {
+  "410": {
     "sha": "03eefe98de76f1ba624ec4e494be3fc16375a267",
     "url": "https://github.com/mozilla-releng/ship-it/commit/03eefe98de76f1ba624ec4e494be3fc16375a267",
     "commiter_name": "sylvestre",
@@ -5887,7 +5909,7 @@
       "README"
     ]
   },
-  "409": {
+  "411": {
     "sha": "9a2d76b82f3644c6d0e3761eb0f1783c3195b169",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9a2d76b82f3644c6d0e3761eb0f1783c3195b169",
     "commiter_name": "sylvestre",
@@ -5898,7 +5920,7 @@
       "kickoff/test/js/jstest.html"
     ]
   },
-  "410": {
+  "412": {
     "sha": "982514fb7e92990f8b2f206476262c1857447d7b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/982514fb7e92990f8b2f206476262c1857447d7b",
     "commiter_name": "sylvestre",
@@ -5911,7 +5933,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "411": {
+  "413": {
     "sha": "f1aa6259652cdb3e856067c582338379adc34410",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f1aa6259652cdb3e856067c582338379adc34410",
     "commiter_name": "rail",
@@ -5922,7 +5944,7 @@
       "kickoff/views/status.py"
     ]
   },
-  "412": {
+  "414": {
     "sha": "de69ed02944f13f988cdd68affd85889ad8b184c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/de69ed02944f13f988cdd68affd85889ad8b184c",
     "commiter_name": "sylvestre",
@@ -5933,7 +5955,7 @@
       "kickoff/test/js/jstest.html"
     ]
   },
-  "413": {
+  "415": {
     "sha": "5c259efaaa17021c9aa5b16b253084c8a384ac22",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5c259efaaa17021c9aa5b16b253084c8a384ac22",
     "commiter_name": "sylvestre",
@@ -5945,7 +5967,7 @@
       "kickoff/test/js/tests.js"
     ]
   },
-  "414": {
+  "416": {
     "sha": "19657262d528f0d242272e7923cd09b216e187e6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/19657262d528f0d242272e7923cd09b216e187e6",
     "commiter_name": "sylvestre",
@@ -5956,7 +5978,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "415": {
+  "417": {
     "sha": "1681713bd54d4ffb8626390481bb25527b8795d1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1681713bd54d4ffb8626390481bb25527b8795d1",
     "commiter_name": "sylvestre",
@@ -5967,7 +5989,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "416": {
+  "418": {
     "sha": "a5847a13052dd31f7b1d8d3625b4f4e2de9ef5d4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a5847a13052dd31f7b1d8d3625b4f4e2de9ef5d4",
     "commiter_name": "sylvestre",
@@ -5978,7 +6000,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "417": {
+  "419": {
     "sha": "3e9dd93eb62bd58acc021ef57648d7e5063d5f22",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3e9dd93eb62bd58acc021ef57648d7e5063d5f22",
     "commiter_name": "sylvestre",
@@ -5992,7 +6014,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "418": {
+  "420": {
     "sha": "88a763516b04d9412449e4936c00c5855cf18889",
     "url": "https://github.com/mozilla-releng/ship-it/commit/88a763516b04d9412449e4936c00c5855cf18889",
     "commiter_name": "sylvestre",
@@ -6006,7 +6028,7 @@
       "kickoff/views/status.py"
     ]
   },
-  "419": {
+  "421": {
     "sha": "953f7739ec15ad5fc5a2ce7a9471a67aeff12aad",
     "url": "https://github.com/mozilla-releng/ship-it/commit/953f7739ec15ad5fc5a2ce7a9471a67aeff12aad",
     "commiter_name": "sylvestre",
@@ -6017,7 +6039,7 @@
       "kickoff/model.py"
     ]
   },
-  "420": {
+  "422": {
     "sha": "6d4cda3a8489c9419f57659a88cc0f6c3d4bd25a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6d4cda3a8489c9419f57659a88cc0f6c3d4bd25a",
     "commiter_name": "mozbhearsum",
@@ -6036,7 +6058,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "421": {
+  "423": {
     "sha": "fd238e12d1259ed4db78afad6871b5ec38883a1c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fd238e12d1259ed4db78afad6871b5ec38883a1c",
     "commiter_name": "mozbhearsum",
@@ -6047,7 +6069,7 @@
       "requirements/compiled.txt"
     ]
   },
-  "422": {
+  "424": {
     "sha": "f48eb516e148441809ae3d612667ad00b292dd53",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f48eb516e148441809ae3d612667ad00b292dd53",
     "commiter_name": "sylvestre",
@@ -6063,7 +6085,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "423": {
+  "425": {
     "sha": "cd12a36e63f4ef7f85673e845d20fd8ae0a72099",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cd12a36e63f4ef7f85673e845d20fd8ae0a72099",
     "commiter_name": "sylvestre",
@@ -6077,7 +6099,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "424": {
+  "426": {
     "sha": "93065893cd8c6cb8f53fbc4a2e08a8baf14dfe12",
     "url": "https://github.com/mozilla-releng/ship-it/commit/93065893cd8c6cb8f53fbc4a2e08a8baf14dfe12",
     "commiter_name": "lsblakk",
@@ -6090,7 +6112,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "425": {
+  "427": {
     "sha": "867998a62e5dcd764b99522dbee1b1a699842ca3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/867998a62e5dcd764b99522dbee1b1a699842ca3",
     "commiter_name": "nthomas-mozilla",
@@ -6101,7 +6123,7 @@
       "kickoff/templates/includes/releases_running.html"
     ]
   },
-  "426": {
+  "428": {
     "sha": "ef28f02d85af16f8b572dd8595c72f1f5c0fc826",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ef28f02d85af16f8b572dd8595c72f1f5c0fc826",
     "commiter_name": "sylvestre",
@@ -6115,7 +6137,7 @@
       "migrate_repo/versions/007_Add_starter.py"
     ]
   },
-  "427": {
+  "429": {
     "sha": "c3f1281895a63b07c1667230a16c93929614df05",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c3f1281895a63b07c1667230a16c93929614df05",
     "commiter_name": "sylvestre",
@@ -6126,7 +6148,7 @@
       "kickoff/__init__.py"
     ]
   },
-  "428": {
+  "430": {
     "sha": "76ae9bcd8a7c58fe1adae4249e44bb65b5b21a22",
     "url": "https://github.com/mozilla-releng/ship-it/commit/76ae9bcd8a7c58fe1adae4249e44bb65b5b21a22",
     "commiter_name": "sylvestre",
@@ -6137,7 +6159,7 @@
       "kickoff/templates/includes/releases_reviewed.html"
     ]
   },
-  "429": {
+  "431": {
     "sha": "4aac657123ce6a311eea40de14a23c5d3612f630",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4aac657123ce6a311eea40de14a23c5d3612f630",
     "commiter_name": "sylvestre",
@@ -6151,7 +6173,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "430": {
+  "432": {
     "sha": "98543054d578d7c0b8ea91ac23a94283a5904e61",
     "url": "https://github.com/mozilla-releng/ship-it/commit/98543054d578d7c0b8ea91ac23a94283a5904e61",
     "commiter_name": "JohnLZeller",
@@ -6179,7 +6201,7 @@
       "kickoff/views/status.py"
     ]
   },
-  "431": {
+  "433": {
     "sha": "d6fb32752ac368600287dc88e80f50e4899f17ad",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d6fb32752ac368600287dc88e80f50e4899f17ad",
     "commiter_name": "mozbhearsum",
@@ -6191,7 +6213,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "432": {
+  "434": {
     "sha": "3cb9318d72eeadfbb15e87eb396c47a23dc7ef39",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3cb9318d72eeadfbb15e87eb396c47a23dc7ef39",
     "commiter_name": "sylvestre",
@@ -6204,7 +6226,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "433": {
+  "435": {
     "sha": "ef347c77630cb413c49b0df3e059a1ed2a56b812",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ef347c77630cb413c49b0df3e059a1ed2a56b812",
     "commiter_name": "sylvestre",
@@ -6231,7 +6253,7 @@
       "scripts/update/update.py"
     ]
   },
-  "434": {
+  "436": {
     "sha": "1cec9deec611df9e6ea239ced93b8e6fdb532f4a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1cec9deec611df9e6ea239ced93b8e6fdb532f4a",
     "commiter_name": "sylvestre",
@@ -6245,7 +6267,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "435": {
+  "437": {
     "sha": "016644675bf6450cf4a5881e50c72c10e22fc12d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/016644675bf6450cf4a5881e50c72c10e22fc12d",
     "commiter_name": "JohnLZeller",
@@ -6259,7 +6281,7 @@
       "kickoff/views/status.py"
     ]
   },
-  "436": {
+  "438": {
     "sha": "e78dfaa7e6f7a564097b4786fa2a205047d7796a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e78dfaa7e6f7a564097b4786fa2a205047d7796a",
     "commiter_name": "sylvestre",
@@ -6270,7 +6292,7 @@
       "kickoff/static/suggestions.js"
     ]
   },
-  "437": {
+  "439": {
     "sha": "10eff1aadc6885c8d2ec6c3bba797bd7cba4dd30",
     "url": "https://github.com/mozilla-releng/ship-it/commit/10eff1aadc6885c8d2ec6c3bba797bd7cba4dd30",
     "commiter_name": "sylvestre",
@@ -6284,7 +6306,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "438": {
+  "440": {
     "sha": "1f24d5c5528f4c39295047ee27a32d3ed338a642",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1f24d5c5528f4c39295047ee27a32d3ed338a642",
     "commiter_name": "JohnLZeller",
@@ -6296,7 +6318,7 @@
       "migrate_repo/versions/006_Add_group.py"
     ]
   },
-  "439": {
+  "441": {
     "sha": "c335cd541b6309a635ba3688a23910a1be7967b4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c335cd541b6309a635ba3688a23910a1be7967b4",
     "commiter_name": "JohnLZeller",
@@ -6308,7 +6330,7 @@
       "migrate_repo/versions/005_Add_ReleaseEvents_and_enUSPlatforms.py"
     ]
   },
-  "440": {
+  "442": {
     "sha": "5833b50075ef229aa2382ded24b4f8a143f9908d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5833b50075ef229aa2382ded24b4f8a143f9908d",
     "commiter_name": "mozbhearsum",
@@ -6320,7 +6342,7 @@
       "migrate_repo/versions/005_Add_ReleaseEvents_and_enUSPlatforms.py"
     ]
   },
-  "441": {
+  "443": {
     "sha": "4efc9f7821f53aeb531def64023f62d9ee7deb17",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4efc9f7821f53aeb531def64023f62d9ee7deb17",
     "commiter_name": "null",
@@ -6332,7 +6354,7 @@
       "migrate_repo/versions/005_Add_ReleaseEvents_and_enUSPlatforms.py"
     ]
   },
-  "442": {
+  "444": {
     "sha": "329e1db9f1cef4899c882520e62d0923a055863c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/329e1db9f1cef4899c882520e62d0923a055863c",
     "commiter_name": "sylvestre",
@@ -6343,7 +6365,7 @@
       "kickoff/static/kickoff.js"
     ]
   },
-  "443": {
+  "445": {
     "sha": "a0179a0938cde68d405c2f93f74f0ee747e967a0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a0179a0938cde68d405c2f93f74f0ee747e967a0",
     "commiter_name": "sylvestre",
@@ -6355,7 +6377,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "444": {
+  "446": {
     "sha": "9d8327ea3c68e464c7a55c9a37380d86dcc7d809",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9d8327ea3c68e464c7a55c9a37380d86dcc7d809",
     "commiter_name": "sylvestre",
@@ -6372,7 +6394,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "445": {
+  "447": {
     "sha": "a15c2e82f25f0ae016d285b85a674b28d9e8f387",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a15c2e82f25f0ae016d285b85a674b28d9e8f387",
     "commiter_name": "sylvestre",
@@ -6383,7 +6405,7 @@
       "migrate_repo/versions/004_Add_comment.py"
     ]
   },
-  "446": {
+  "448": {
     "sha": "dba423e28effa308140530c6130492d4776afc9d",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dba423e28effa308140530c6130492d4776afc9d",
     "commiter_name": "sylvestre",
@@ -6394,7 +6416,7 @@
       "migrate_repo/README"
     ]
   },
-  "447": {
+  "449": {
     "sha": "001a10a4926c58ee1664c1438229b5fd8119a59c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/001a10a4926c58ee1664c1438229b5fd8119a59c",
     "commiter_name": "sylvestre",
@@ -6405,7 +6427,7 @@
       "kickoff/model.py"
     ]
   },
-  "448": {
+  "450": {
     "sha": "d4168d89808fe62e0235128e692547b084a85b36",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d4168d89808fe62e0235128e692547b084a85b36",
     "commiter_name": "JohnLZeller",
@@ -6416,7 +6438,7 @@
       "Vagrantfile"
     ]
   },
-  "449": {
+  "451": {
     "sha": "1354473616b6d14b9bebcc61d94a3fc4f839dd58",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1354473616b6d14b9bebcc61d94a3fc4f839dd58",
     "commiter_name": "JohnLZeller",
@@ -6427,7 +6449,7 @@
       "README"
     ]
   },
-  "450": {
+  "452": {
     "sha": "e3810d34b2a9ae1d15c861fdab618cb18953c549",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e3810d34b2a9ae1d15c861fdab618cb18953c549",
     "commiter_name": "JohnLZeller",
@@ -6440,7 +6462,7 @@
       "Vagrantfile"
     ]
   },
-  "451": {
+  "453": {
     "sha": "6dbe4ad4a9925fc6dbfc4830e13eba988b6501ff",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6dbe4ad4a9925fc6dbfc4830e13eba988b6501ff",
     "commiter_name": "mozbhearsum",
@@ -6451,7 +6473,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "452": {
+  "454": {
     "sha": "3f4a93e57980519e7eecf3ae46bf1694d4f3f7b7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3f4a93e57980519e7eecf3ae46bf1694d4f3f7b7",
     "commiter_name": "sylvestre",
@@ -6462,7 +6484,7 @@
       "kickoff/templates/includes/fennec_release.html"
     ]
   },
-  "453": {
+  "455": {
     "sha": "a8ff3a5ade292e5827ca00fbd00ccb50319ec8b4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a8ff3a5ade292e5827ca00fbd00ccb50319ec8b4",
     "commiter_name": "mozbhearsum",
@@ -6473,7 +6495,7 @@
       "kickoff/templates/includes/fennec_release.html"
     ]
   },
-  "454": {
+  "456": {
     "sha": "789c69bc51636ead0815140f8ffdcf550ffdb3ff",
     "url": "https://github.com/mozilla-releng/ship-it/commit/789c69bc51636ead0815140f8ffdcf550ffdb3ff",
     "commiter_name": "sylvestre",
@@ -6484,7 +6506,7 @@
       "kickoff/templates/includes/fennec_release.html"
     ]
   },
-  "455": {
+  "457": {
     "sha": "eccf073efcc3be268ba0a0805f60ad7b5363bf31",
     "url": "https://github.com/mozilla-releng/ship-it/commit/eccf073efcc3be268ba0a0805f60ad7b5363bf31",
     "commiter_name": "sylvestre",
@@ -6495,7 +6517,7 @@
       "README"
     ]
   },
-  "456": {
+  "458": {
     "sha": "d567b664d160a8aeca8ec475d2c51cf358a37fe8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d567b664d160a8aeca8ec475d2c51cf358a37fe8",
     "commiter_name": "sylvestre",
@@ -6507,7 +6529,7 @@
       "kickoff/templates/includes/firefox_release.html"
     ]
   },
-  "457": {
+  "459": {
     "sha": "c98e6e75b7ae78338a4fcb18dcb88c074e605077",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c98e6e75b7ae78338a4fcb18dcb88c074e605077",
     "commiter_name": "sylvestre",
@@ -6518,7 +6540,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "458": {
+  "460": {
     "sha": "3e14de04fbf5170485fcb753f37ebd5b4926ad65",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3e14de04fbf5170485fcb753f37ebd5b4926ad65",
     "commiter_name": "rail",
@@ -6529,7 +6551,7 @@
       "vendor/lib/python/mozilla/build/versions.py"
     ]
   },
-  "459": {
+  "461": {
     "sha": "a73fb1b725da381ce0e702dce86cc3bd5a9ee745",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a73fb1b725da381ce0e702dce86cc3bd5a9ee745",
     "commiter_name": "nthomas-mozilla",
@@ -6541,7 +6563,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "460": {
+  "462": {
     "sha": "c537ebaba9863151567a17a6ee6b1bc45368c92c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c537ebaba9863151567a17a6ee6b1bc45368c92c",
     "commiter_name": "mozbhearsum",
@@ -6552,7 +6574,7 @@
       "vendor/lib/python/mozilla/build/versions.py"
     ]
   },
-  "461": {
+  "463": {
     "sha": "e783e2b6fbcb3c5ad2ca1db2d0ae344a66121bf4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e783e2b6fbcb3c5ad2ca1db2d0ae344a66121bf4",
     "commiter_name": "gerva",
@@ -6566,7 +6588,7 @@
       "kickoff/templates/includes/releases_submitted.html"
     ]
   },
-  "462": {
+  "464": {
     "sha": "bb8d650c560763a196a311914e185d6db78c6316",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bb8d650c560763a196a311914e185d6db78c6316",
     "commiter_name": "gerva",
@@ -6578,7 +6600,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "463": {
+  "465": {
     "sha": "b83ce2adc3155a0b2d7b0fce3bcf91da8869ed35",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b83ce2adc3155a0b2d7b0fce3bcf91da8869ed35",
     "commiter_name": "gerva",
@@ -6594,7 +6616,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "464": {
+  "466": {
     "sha": "dc8c0aa9aa7dd1db95250bf4260e316d758be662",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dc8c0aa9aa7dd1db95250bf4260e316d758be662",
     "commiter_name": "gerva",
@@ -6606,7 +6628,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "465": {
+  "467": {
     "sha": "7793bb96b2c6f424cd4d09a675e5a20280d8abe3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7793bb96b2c6f424cd4d09a675e5a20280d8abe3",
     "commiter_name": "mozbhearsum",
@@ -6620,7 +6642,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "466": {
+  "468": {
     "sha": "63af8f53fdcb295a1fbb30f73e99a3bd7fdefc36",
     "url": "https://github.com/mozilla-releng/ship-it/commit/63af8f53fdcb295a1fbb30f73e99a3bd7fdefc36",
     "commiter_name": "mozbhearsum",
@@ -6631,7 +6653,7 @@
       "scripts/update/update.py"
     ]
   },
-  "467": {
+  "469": {
     "sha": "119ef8f58d6778fb2d49897f81e0020f0d32e1f7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/119ef8f58d6778fb2d49897f81e0020f0d32e1f7",
     "commiter_name": "mozbhearsum",
@@ -6642,7 +6664,7 @@
       "scripts/update/update.py"
     ]
   },
-  "468": {
+  "470": {
     "sha": "bb025b9d69f6b1d543990469f50afef738b728fb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bb025b9d69f6b1d543990469f50afef738b728fb",
     "commiter_name": "mozbhearsum",
@@ -6654,7 +6676,7 @@
       "scripts/update/update.py"
     ]
   },
-  "469": {
+  "471": {
     "sha": "3db30b30532263e0f5451ca2d921c5dd9d575a8e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3db30b30532263e0f5451ca2d921c5dd9d575a8e",
     "commiter_name": "gerva",
@@ -6669,7 +6691,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "470": {
+  "472": {
     "sha": "d3092f3563c6b4f4e1f092b98002e9326e988b49",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d3092f3563c6b4f4e1f092b98002e9326e988b49",
     "commiter_name": "gerva",
@@ -6717,7 +6739,7 @@
       "kickoff/templates/submit_release.html"
     ]
   },
-  "471": {
+  "473": {
     "sha": "94b968f1de7f115ec42d9a54a7588284b31879a1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/94b968f1de7f115ec42d9a54a7588284b31879a1",
     "commiter_name": "mozbhearsum",
@@ -6729,7 +6751,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "472": {
+  "474": {
     "sha": "f0b35a949659a8fb085896c742d30a0b3499fc13",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f0b35a949659a8fb085896c742d30a0b3499fc13",
     "commiter_name": "mozbhearsum",
@@ -6740,7 +6762,7 @@
       "kickoff/__init__.py"
     ]
   },
-  "473": {
+  "475": {
     "sha": "472bc4801079181269763541e6e5c8cc3ebd28dc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/472bc4801079181269763541e6e5c8cc3ebd28dc",
     "commiter_name": "mozbhearsum",
@@ -6751,7 +6773,7 @@
       "kickoff/__init__.py"
     ]
   },
-  "474": {
+  "476": {
     "sha": "1a653560d49aa1ee3583606a2e2b1169c8b7568f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1a653560d49aa1ee3583606a2e2b1169c8b7568f",
     "commiter_name": "mozbhearsum",
@@ -6770,7 +6792,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "475": {
+  "477": {
     "sha": "cf3217f22f96c1903b2af18e0f570932a43bfa74",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cf3217f22f96c1903b2af18e0f570932a43bfa74",
     "commiter_name": "mozbhearsum",
@@ -6782,7 +6804,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "476": {
+  "478": {
     "sha": "9f4edacbe2f3d4a35ecd215782869f4db709c919",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9f4edacbe2f3d4a35ecd215782869f4db709c919",
     "commiter_name": "gerva",
@@ -6793,7 +6815,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "477": {
+  "479": {
     "sha": "7467f6d416c3174c0fc76886a790bdf187ded715",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7467f6d416c3174c0fc76886a790bdf187ded715",
     "commiter_name": "mozbhearsum",
@@ -6805,7 +6827,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "478": {
+  "480": {
     "sha": "cfdda7447a5f6f65ececec8ed333d80eb51fe1bb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/cfdda7447a5f6f65ececec8ed333d80eb51fe1bb",
     "commiter_name": "mozbhearsum",
@@ -6817,7 +6839,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "479": {
+  "481": {
     "sha": "6b4a3ff39aec1d262f033734e52ff505c5b6e7ab",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6b4a3ff39aec1d262f033734e52ff505c5b6e7ab",
     "commiter_name": "gerva",
@@ -6828,7 +6850,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "480": {
+  "482": {
     "sha": "24576c0aeea4d54dc9d9efb6af50db0c47d434b8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/24576c0aeea4d54dc9d9efb6af50db0c47d434b8",
     "commiter_name": "mozbhearsum",
@@ -6840,7 +6862,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "481": {
+  "483": {
     "sha": "15c53890dca17dd4693da1db6ae34f5b432e4bc0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/15c53890dca17dd4693da1db6ae34f5b432e4bc0",
     "commiter_name": "mozbhearsum",
@@ -6851,7 +6873,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "482": {
+  "484": {
     "sha": "dbdf5941ba01096e7e55204c6fa6d6b3bcd10abc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/dbdf5941ba01096e7e55204c6fa6d6b3bcd10abc",
     "commiter_name": "mozbhearsum",
@@ -6863,7 +6885,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "483": {
+  "485": {
     "sha": "999c52e4e7d7c431517c21f3e38ba41ba5d86386",
     "url": "https://github.com/mozilla-releng/ship-it/commit/999c52e4e7d7c431517c21f3e38ba41ba5d86386",
     "commiter_name": "mozbhearsum",
@@ -6877,7 +6899,7 @@
       "kickoff/templates/includes/thunderbird_release.html"
     ]
   },
-  "484": {
+  "486": {
     "sha": "806b81d8c37a232c3bea4f5e088b5ad6f9bdf2d6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/806b81d8c37a232c3bea4f5e088b5ad6f9bdf2d6",
     "commiter_name": "mozbhearsum",
@@ -6888,7 +6910,7 @@
       "kickoff.wsgi"
     ]
   },
-  "485": {
+  "487": {
     "sha": "2649ef76b9bc99ae3ae01ef68372469a3cba48a2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2649ef76b9bc99ae3ae01ef68372469a3cba48a2",
     "commiter_name": "mozbhearsum",
@@ -6915,7 +6937,7 @@
       "vendor/lib/python/mozilla/release/info.py"
     ]
   },
-  "486": {
+  "488": {
     "sha": "24f6c3220a2607451121fbcae5965f523e0f312b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/24f6c3220a2607451121fbcae5965f523e0f312b",
     "commiter_name": "mozbhearsum",
@@ -7225,7 +7247,7 @@
       "vendor/lib/python/pytz/zoneinfo/Asia/Oral"
     ]
   },
-  "487": {
+  "489": {
     "sha": "680d5c4a11891acb6d7a94c207a594c92cf4ec36",
     "url": "https://github.com/mozilla-releng/ship-it/commit/680d5c4a11891acb6d7a94c207a594c92cf4ec36",
     "commiter_name": "mozbhearsum",
@@ -7239,7 +7261,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "488": {
+  "490": {
     "sha": "9c6a969d3a8a4f19aa0009593a6660d3b3c422bf",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9c6a969d3a8a4f19aa0009593a6660d3b3c422bf",
     "commiter_name": "mozbhearsum",
@@ -7259,7 +7281,7 @@
       "migrate_repo/versions/002_Add_promptWaitTime_and_relbranches.py"
     ]
   },
-  "489": {
+  "491": {
     "sha": "818ae88227e7e6dc29beae6da0f20353ef3bbf30",
     "url": "https://github.com/mozilla-releng/ship-it/commit/818ae88227e7e6dc29beae6da0f20353ef3bbf30",
     "commiter_name": "mozbhearsum",
@@ -7271,7 +7293,7 @@
       "kickoff/views/forms.py"
     ]
   },
-  "490": {
+  "492": {
     "sha": "51e2d697b1a7c7498889eb8ec275ae8f4c284e40",
     "url": "https://github.com/mozilla-releng/ship-it/commit/51e2d697b1a7c7498889eb8ec275ae8f4c284e40",
     "commiter_name": "mozbhearsum",
@@ -7282,7 +7304,7 @@
       "kickoff.wsgi"
     ]
   },
-  "491": {
+  "493": {
     "sha": "fcd5337e817ed397886688bdce3bd9ab14d1a099",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fcd5337e817ed397886688bdce3bd9ab14d1a099",
     "commiter_name": "mozbhearsum",
@@ -7293,7 +7315,7 @@
       "kickoff/__init__.py"
     ]
   },
-  "492": {
+  "494": {
     "sha": "2f372f772acf6737691b96502fb797fdc8584bd3",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2f372f772acf6737691b96502fb797fdc8584bd3",
     "commiter_name": "mozbhearsum",
@@ -7327,7 +7349,7 @@
       "vendor/lib/python/mozilla/release/l10n.py"
     ]
   },
-  "493": {
+  "495": {
     "sha": "7ea2056c190f1d7828883c4d764f7fb592a2ec58",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7ea2056c190f1d7828883c4d764f7fb592a2ec58",
     "commiter_name": "mozbhearsum",
@@ -7340,7 +7362,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "494": {
+  "496": {
     "sha": "ad5e2cd6d741df0e073b024974ab0f8fa2d2dd17",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ad5e2cd6d741df0e073b024974ab0f8fa2d2dd17",
     "commiter_name": "mozbhearsum",
@@ -7354,7 +7376,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "495": {
+  "497": {
     "sha": "9027bcb972d078c14fe45b5a2fddf5254c143f60",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9027bcb972d078c14fe45b5a2fddf5254c143f60",
     "commiter_name": "mozbhearsum",
@@ -7365,7 +7387,7 @@
       "kickoff.wsgi"
     ]
   },
-  "496": {
+  "498": {
     "sha": "a992135b56f7c108618a9a286850932418c7b8b1",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a992135b56f7c108618a9a286850932418c7b8b1",
     "commiter_name": "mozbhearsum",
@@ -7376,7 +7398,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "497": {
+  "499": {
     "sha": "1fa30a853de13d39d4759cf7f8975ee0b136d803",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1fa30a853de13d39d4759cf7f8975ee0b136d803",
     "commiter_name": "mozbhearsum",
@@ -7387,7 +7409,7 @@
       "kickoff/static/favicon.ico"
     ]
   },
-  "498": {
+  "500": {
     "sha": "3d72c48cb806ec43e2cb3356b996cf95f52fb102",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3d72c48cb806ec43e2cb3356b996cf95f52fb102",
     "commiter_name": "mozbhearsum",
@@ -7404,7 +7426,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "499": {
+  "501": {
     "sha": "71a888be755c285bc6c78680489001f973081b84",
     "url": "https://github.com/mozilla-releng/ship-it/commit/71a888be755c285bc6c78680489001f973081b84",
     "commiter_name": "mozbhearsum",
@@ -7415,7 +7437,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "500": {
+  "502": {
     "sha": "187e29fe366d56635466019fa9f40a17437cc2bb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/187e29fe366d56635466019fa9f40a17437cc2bb",
     "commiter_name": "mozbhearsum",
@@ -7487,7 +7509,7 @@
       "vendor/lib/python/tempita/compat3.py"
     ]
   },
-  "501": {
+  "503": {
     "sha": "af9cab515ae654a3fc4d2fc0505e26e2231861d8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/af9cab515ae654a3fc4d2fc0505e26e2231861d8",
     "commiter_name": "mozbhearsum",
@@ -7498,7 +7520,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "502": {
+  "504": {
     "sha": "6ea16cebbf9996a4d6a0de947b8c33f138c09f7a",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6ea16cebbf9996a4d6a0de947b8c33f138c09f7a",
     "commiter_name": "mozbhearsum",
@@ -7510,7 +7532,7 @@
       "requirements/compiled.txt"
     ]
   },
-  "503": {
+  "505": {
     "sha": "23e3d7853df50271fbe57871f4778fb149779205",
     "url": "https://github.com/mozilla-releng/ship-it/commit/23e3d7853df50271fbe57871f4778fb149779205",
     "commiter_name": "mozbhearsum",
@@ -7661,7 +7683,7 @@
       "vendor/lib/python/wtforms/widgets/core.py"
     ]
   },
-  "504": {
+  "506": {
     "sha": "5d6d1a3f7d3ca8a4bf66fa06774103acac0b6d3c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5d6d1a3f7d3ca8a4bf66fa06774103acac0b6d3c",
     "commiter_name": "bkero",
@@ -7672,7 +7694,7 @@
       "testfile"
     ]
   },
-  "505": {
+  "507": {
     "sha": "c677b4f8dbc9fd018235c4fe42132e485c50c1e4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c677b4f8dbc9fd018235c4fe42132e485c50c1e4",
     "commiter_name": "bkero",
@@ -7683,7 +7705,7 @@
       "testfile"
     ]
   },
-  "506": {
+  "508": {
     "sha": "a8fa90cc6fed3366269213706656e29c7c4c602f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/a8fa90cc6fed3366269213706656e29c7c4c602f",
     "commiter_name": "mozbhearsum",
@@ -7701,7 +7723,7 @@
       "vendor/lib/python/mozilla/build/versions.py"
     ]
   },
-  "507": {
+  "509": {
     "sha": "ceac0335a31ea0d2917b36dc6116e946072d8299",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ceac0335a31ea0d2917b36dc6116e946072d8299",
     "commiter_name": "mozbhearsum",
@@ -7712,7 +7734,7 @@
       "kickoff.wsgi"
     ]
   },
-  "508": {
+  "510": {
     "sha": "08e9980085c1f8ed0924af678b612ed048eaed69",
     "url": "https://github.com/mozilla-releng/ship-it/commit/08e9980085c1f8ed0924af678b612ed048eaed69",
     "commiter_name": "mozbhearsum",
@@ -7723,7 +7745,7 @@
       "kickoff/__init__.py"
     ]
   },
-  "509": {
+  "511": {
     "sha": "2305b88f847f6366137a0298e60c39b7b5e65c94",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2305b88f847f6366137a0298e60c39b7b5e65c94",
     "commiter_name": "mozbhearsum",
@@ -7738,7 +7760,7 @@
       "vendor/lib/python/mozilla/build/versions.py"
     ]
   },
-  "510": {
+  "512": {
     "sha": "172773f862a48a28d7a7f9f9298c69ead29a9397",
     "url": "https://github.com/mozilla-releng/ship-it/commit/172773f862a48a28d7a7f9f9298c69ead29a9397",
     "commiter_name": "mozbhearsum",
@@ -7750,7 +7772,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "511": {
+  "513": {
     "sha": "d5ae0acb07bcc1899fe29d2d29f25fea81ca19fc",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d5ae0acb07bcc1899fe29d2d29f25fea81ca19fc",
     "commiter_name": "mozbhearsum",
@@ -7761,7 +7783,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "512": {
+  "514": {
     "sha": "c88bd2210c76bffac341fe7d7cfc4dc3e73ab6e7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c88bd2210c76bffac341fe7d7cfc4dc3e73ab6e7",
     "commiter_name": "mozbhearsum",
@@ -7772,7 +7794,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "513": {
+  "515": {
     "sha": "d5b3d94e5842535aa8d64b5ba7c6d21563945d65",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d5b3d94e5842535aa8d64b5ba7c6d21563945d65",
     "commiter_name": "mozbhearsum",
@@ -7783,7 +7805,7 @@
       "kickoff/model.py"
     ]
   },
-  "514": {
+  "516": {
     "sha": "01997cc9d41d2a4bf681752ef4dfdd874528ad17",
     "url": "https://github.com/mozilla-releng/ship-it/commit/01997cc9d41d2a4bf681752ef4dfdd874528ad17",
     "commiter_name": "mozbhearsum",
@@ -7798,7 +7820,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "515": {
+  "517": {
     "sha": "f397d3c47e539edf52def48b704a72f67f89d299",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f397d3c47e539edf52def48b704a72f67f89d299",
     "commiter_name": "mozbhearsum",
@@ -7809,7 +7831,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "516": {
+  "518": {
     "sha": "305803308930bcf1908a2c6cf599c9cf4f360251",
     "url": "https://github.com/mozilla-releng/ship-it/commit/305803308930bcf1908a2c6cf599c9cf4f360251",
     "commiter_name": "mozbhearsum",
@@ -7824,7 +7846,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "517": {
+  "519": {
     "sha": "9f52625cc79f9b8961e2f4d316b2fa5963befdbb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/9f52625cc79f9b8961e2f4d316b2fa5963befdbb",
     "commiter_name": "mozbhearsum",
@@ -7836,7 +7858,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "518": {
+  "520": {
     "sha": "5d7f78eebf930bad2ab48060419b4431e83243d9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5d7f78eebf930bad2ab48060419b4431e83243d9",
     "commiter_name": "mozbhearsum",
@@ -7853,7 +7875,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "519": {
+  "521": {
     "sha": "c5b5289d4f0475e03c087bde5d98707e14095313",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c5b5289d4f0475e03c087bde5d98707e14095313",
     "commiter_name": "mozbhearsum",
@@ -7865,7 +7887,7 @@
       "kickoff/templates/submit_release.html"
     ]
   },
-  "520": {
+  "522": {
     "sha": "ef483db73cf0d73ed1af664a376ee7a59c7a1fd2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ef483db73cf0d73ed1af664a376ee7a59c7a1fd2",
     "commiter_name": "mozbhearsum",
@@ -7876,7 +7898,7 @@
       "kickoff/views/csrf.py"
     ]
   },
-  "521": {
+  "523": {
     "sha": "310cf26687227a4abd8ef2c27cb51aa0cb2bf0a6",
     "url": "https://github.com/mozilla-releng/ship-it/commit/310cf26687227a4abd8ef2c27cb51aa0cb2bf0a6",
     "commiter_name": "mozbhearsum",
@@ -7893,7 +7915,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "522": {
+  "524": {
     "sha": "2d3bc0eb784992ef38b49e4bc3e0024bdf0dbff9",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2d3bc0eb784992ef38b49e4bc3e0024bdf0dbff9",
     "commiter_name": "mozbhearsum",
@@ -7905,7 +7927,7 @@
       "kickoff.wsgi"
     ]
   },
-  "523": {
+  "525": {
     "sha": "d21a170d3af8f8ef0548fcb6185a5e31d8df93a7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d21a170d3af8f8ef0548fcb6185a5e31d8df93a7",
     "commiter_name": "mozbhearsum",
@@ -7916,7 +7938,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "524": {
+  "526": {
     "sha": "3fd0e3581fca4ed5c6bee55b2b2764e6c9ec915b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3fd0e3581fca4ed5c6bee55b2b2764e6c9ec915b",
     "commiter_name": "mozbhearsum",
@@ -7928,7 +7950,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "525": {
+  "527": {
     "sha": "83c7c717c2af8e1cee016832b5377d4ce6280bf8",
     "url": "https://github.com/mozilla-releng/ship-it/commit/83c7c717c2af8e1cee016832b5377d4ce6280bf8",
     "commiter_name": "mozbhearsum",
@@ -7941,7 +7963,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "526": {
+  "528": {
     "sha": "1ad87d13943266328d76306f6f87e83f22404e8b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1ad87d13943266328d76306f6f87e83f22404e8b",
     "commiter_name": "mozbhearsum",
@@ -7953,7 +7975,7 @@
       "kickoff.wsgi"
     ]
   },
-  "527": {
+  "529": {
     "sha": "686c017a1aa7c4aef12ab68f1e6cdfb83068bd69",
     "url": "https://github.com/mozilla-releng/ship-it/commit/686c017a1aa7c4aef12ab68f1e6cdfb83068bd69",
     "commiter_name": "mozbhearsum",
@@ -7964,7 +7986,7 @@
       "kickoff.wsgi"
     ]
   },
-  "528": {
+  "530": {
     "sha": "d695c43b7335522a03ef8de760e0634f28601896",
     "url": "https://github.com/mozilla-releng/ship-it/commit/d695c43b7335522a03ef8de760e0634f28601896",
     "commiter_name": "mozbhearsum",
@@ -7976,7 +7998,7 @@
       "kickoff.wsgi"
     ]
   },
-  "529": {
+  "531": {
     "sha": "47c300ef1c459967241f8ff9baf5f086116a58e4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/47c300ef1c459967241f8ff9baf5f086116a58e4",
     "commiter_name": "mozbhearsum",
@@ -7989,7 +8011,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "530": {
+  "532": {
     "sha": "17c8e0f82bea652bf9325fc7dcc60a34a03223af",
     "url": "https://github.com/mozilla-releng/ship-it/commit/17c8e0f82bea652bf9325fc7dcc60a34a03223af",
     "commiter_name": "mozbhearsum",
@@ -8004,7 +8026,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "531": {
+  "533": {
     "sha": "92c75dbd8fc14c46cbb9695174954a35879e8821",
     "url": "https://github.com/mozilla-releng/ship-it/commit/92c75dbd8fc14c46cbb9695174954a35879e8821",
     "commiter_name": "mozbhearsum",
@@ -8018,7 +8040,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "532": {
+  "534": {
     "sha": "2edcc8adc67c2842325c2dcfdf4a6859daf48514",
     "url": "https://github.com/mozilla-releng/ship-it/commit/2edcc8adc67c2842325c2dcfdf4a6859daf48514",
     "commiter_name": "mozbhearsum",
@@ -8032,7 +8054,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "533": {
+  "535": {
     "sha": "864712fafa39b2cf7b0a3f471c22b1d73b165b34",
     "url": "https://github.com/mozilla-releng/ship-it/commit/864712fafa39b2cf7b0a3f471c22b1d73b165b34",
     "commiter_name": "mozbhearsum",
@@ -8044,7 +8066,7 @@
       "kickoff/test/views/test_releases.py"
     ]
   },
-  "534": {
+  "536": {
     "sha": "ff261e00ba66530c1e058fbcaa086550f3f61d6f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/ff261e00ba66530c1e058fbcaa086550f3f61d6f",
     "commiter_name": "mozbhearsum",
@@ -8057,7 +8079,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "535": {
+  "537": {
     "sha": "5516f6181d9966bb3110c55ea5b504e38a315acb",
     "url": "https://github.com/mozilla-releng/ship-it/commit/5516f6181d9966bb3110c55ea5b504e38a315acb",
     "commiter_name": "mozbhearsum",
@@ -8069,7 +8091,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "536": {
+  "538": {
     "sha": "6cf74111ad5718b893787a77cad9fe3f08f078f4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6cf74111ad5718b893787a77cad9fe3f08f078f4",
     "commiter_name": "mozbhearsum",
@@ -8082,7 +8104,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "537": {
+  "539": {
     "sha": "6c6a49132af3d25c7a256057e6f4f41aaa9f2e33",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6c6a49132af3d25c7a256057e6f4f41aaa9f2e33",
     "commiter_name": "mozbhearsum",
@@ -8093,7 +8115,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "538": {
+  "540": {
     "sha": "4ecd0d5ad4cf00000705dea2dbb47b50d4df251f",
     "url": "https://github.com/mozilla-releng/ship-it/commit/4ecd0d5ad4cf00000705dea2dbb47b50d4df251f",
     "commiter_name": "mozbhearsum",
@@ -8105,7 +8127,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "539": {
+  "541": {
     "sha": "1777f16eca71338b3921620afaa813c332d13444",
     "url": "https://github.com/mozilla-releng/ship-it/commit/1777f16eca71338b3921620afaa813c332d13444",
     "commiter_name": "mozbhearsum",
@@ -8120,7 +8142,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "540": {
+  "542": {
     "sha": "37c3a38b06266debbc9cb99ec3097e41d8934331",
     "url": "https://github.com/mozilla-releng/ship-it/commit/37c3a38b06266debbc9cb99ec3097e41d8934331",
     "commiter_name": "mozbhearsum",
@@ -8132,7 +8154,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "541": {
+  "543": {
     "sha": "e26b62c65235b853e4082e0d9306fbe5de6b4db2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e26b62c65235b853e4082e0d9306fbe5de6b4db2",
     "commiter_name": "mozbhearsum",
@@ -8143,7 +8165,7 @@
       "kickoff/templates/base.html"
     ]
   },
-  "542": {
+  "544": {
     "sha": "7e9b5571fd786b1f8a99c4af173e9a8233e15829",
     "url": "https://github.com/mozilla-releng/ship-it/commit/7e9b5571fd786b1f8a99c4af173e9a8233e15829",
     "commiter_name": "mozbhearsum",
@@ -8157,7 +8179,7 @@
       "kickoff/templates/submit_release.html"
     ]
   },
-  "543": {
+  "545": {
     "sha": "bd1c1329c1ffd219a92ae4aa20b39ebc75b26c71",
     "url": "https://github.com/mozilla-releng/ship-it/commit/bd1c1329c1ffd219a92ae4aa20b39ebc75b26c71",
     "commiter_name": "mozbhearsum",
@@ -8172,7 +8194,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "544": {
+  "546": {
     "sha": "84ba0d2fc033e772255c587c04b03ead3e0c2b85",
     "url": "https://github.com/mozilla-releng/ship-it/commit/84ba0d2fc033e772255c587c04b03ead3e0c2b85",
     "commiter_name": "mozbhearsum",
@@ -8183,7 +8205,7 @@
       "kickoff-web.py"
     ]
   },
-  "545": {
+  "547": {
     "sha": "3f5e9cc9699d1a404a15711c7719e4e65f09387e",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3f5e9cc9699d1a404a15711c7719e4e65f09387e",
     "commiter_name": "mozbhearsum",
@@ -8198,7 +8220,7 @@
       "vendor/lib/python/mozilla/release/info.py"
     ]
   },
-  "546": {
+  "548": {
     "sha": "927b901f8bc2602bbea827667d70340d37072af7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/927b901f8bc2602bbea827667d70340d37072af7",
     "commiter_name": "mozbhearsum",
@@ -8209,7 +8231,7 @@
       "vendor/lib/python/mozilla/release/info.py"
     ]
   },
-  "547": {
+  "549": {
     "sha": "035487e7844f454f6155918add8603be7b5fed8b",
     "url": "https://github.com/mozilla-releng/ship-it/commit/035487e7844f454f6155918add8603be7b5fed8b",
     "commiter_name": "mozbhearsum",
@@ -8223,7 +8245,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "548": {
+  "550": {
     "sha": "826a5a05fdaee9e844155b46a6c9c8df67552415",
     "url": "https://github.com/mozilla-releng/ship-it/commit/826a5a05fdaee9e844155b46a6c9c8df67552415",
     "commiter_name": "mozbhearsum",
@@ -8236,7 +8258,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "549": {
+  "551": {
     "sha": "3c8be2070162e4603d20d0dc12899debe0cbd7fd",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3c8be2070162e4603d20d0dc12899debe0cbd7fd",
     "commiter_name": "mozbhearsum",
@@ -8249,7 +8271,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "550": {
+  "552": {
     "sha": "90e4775b72df00f2b5f7c3ba84b5f57154448f28",
     "url": "https://github.com/mozilla-releng/ship-it/commit/90e4775b72df00f2b5f7c3ba84b5f57154448f28",
     "commiter_name": "mozbhearsum",
@@ -8262,7 +8284,7 @@
       "kickoff/templates/index.html"
     ]
   },
-  "551": {
+  "553": {
     "sha": "fb7f7e3784052ffac7cae4ad8c7d026fa2a690e0",
     "url": "https://github.com/mozilla-releng/ship-it/commit/fb7f7e3784052ffac7cae4ad8c7d026fa2a690e0",
     "commiter_name": "mozbhearsum",
@@ -8273,7 +8295,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "552": {
+  "554": {
     "sha": "41f8aa3450a32629a4485df1a406d05d52cb6a47",
     "url": "https://github.com/mozilla-releng/ship-it/commit/41f8aa3450a32629a4485df1a406d05d52cb6a47",
     "commiter_name": "mozbhearsum",
@@ -8284,7 +8306,7 @@
       "kickoff/templates/releases.html"
     ]
   },
-  "553": {
+  "555": {
     "sha": "f8b295a3fd020a8273e079f2548c1f2f534aa4e7",
     "url": "https://github.com/mozilla-releng/ship-it/commit/f8b295a3fd020a8273e079f2548c1f2f534aa4e7",
     "commiter_name": "mozbhearsum",
@@ -8296,7 +8318,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "554": {
+  "556": {
     "sha": "e29b303cd86a61dd4114851619802713963aef22",
     "url": "https://github.com/mozilla-releng/ship-it/commit/e29b303cd86a61dd4114851619802713963aef22",
     "commiter_name": "mozbhearsum",
@@ -8307,7 +8329,7 @@
       "kickoff-web.py"
     ]
   },
-  "555": {
+  "557": {
     "sha": "b8ee6b686fbfc21d1fcca1ed3aca416808f0d4c5",
     "url": "https://github.com/mozilla-releng/ship-it/commit/b8ee6b686fbfc21d1fcca1ed3aca416808f0d4c5",
     "commiter_name": "mozbhearsum",
@@ -8318,7 +8340,7 @@
       "kickoff-web.py"
     ]
   },
-  "556": {
+  "558": {
     "sha": "3de52aa8d1aeaaabe6aacd5c0668612a90e925f2",
     "url": "https://github.com/mozilla-releng/ship-it/commit/3de52aa8d1aeaaabe6aacd5c0668612a90e925f2",
     "commiter_name": "mozbhearsum",
@@ -8333,7 +8355,7 @@
       "vendor/lib/python/mozilla/release/info.py"
     ]
   },
-  "557": {
+  "559": {
     "sha": "8d49aed524499af8885c584b833e7195e0604f1c",
     "url": "https://github.com/mozilla-releng/ship-it/commit/8d49aed524499af8885c584b833e7195e0604f1c",
     "commiter_name": "mozbhearsum",
@@ -8347,7 +8369,7 @@
       "kickoff/views/releases.py"
     ]
   },
-  "558": {
+  "560": {
     "sha": "c376a8e6288dc7c5f5550891d56e9b973bfdeaac",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c376a8e6288dc7c5f5550891d56e9b973bfdeaac",
     "commiter_name": "mozbhearsum",
@@ -8371,7 +8393,7 @@
       "kickoff/views/submit.py"
     ]
   },
-  "559": {
+  "561": {
     "sha": "24356a3333e4e617fbdd377e357bf0c13ddf2b10",
     "url": "https://github.com/mozilla-releng/ship-it/commit/24356a3333e4e617fbdd377e357bf0c13ddf2b10",
     "commiter_name": "mozbhearsum",
@@ -8497,7 +8519,7 @@
       "vendor/lib/python/wtforms/widgets/core.py"
     ]
   },
-  "560": {
+  "562": {
     "sha": "89bb3ca323aa1e998e6d61cd7bdf7def57aaee50",
     "url": "https://github.com/mozilla-releng/ship-it/commit/89bb3ca323aa1e998e6d61cd7bdf7def57aaee50",
     "commiter_name": "mozbhearsum",
@@ -8510,7 +8532,7 @@
       "requirements/prod.txt"
     ]
   },
-  "561": {
+  "563": {
     "sha": "c0534330421a61a19c9cd7ab9291a57bf0d9a642",
     "url": "https://github.com/mozilla-releng/ship-it/commit/c0534330421a61a19c9cd7ab9291a57bf0d9a642",
     "commiter_name": "mozbhearsum",
@@ -8521,7 +8543,7 @@
       "README.md"
     ]
   },
-  "562": {
+  "564": {
     "sha": "6c512e79cc4a7f9d1041445867a660fe85b019d4",
     "url": "https://github.com/mozilla-releng/ship-it/commit/6c512e79cc4a7f9d1041445867a660fe85b019d4",
     "commiter_name": "bhearsum",
