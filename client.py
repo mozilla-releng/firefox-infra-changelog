@@ -53,8 +53,8 @@ def create_files_for_git(repositories_holder):
             pass
         if repository_version is not None:
             try:
-                if repository_version['LatestRelease']['version'] == version_in_puppet:
-                    print('No new changes came into production!')
+                if repository_version["LatestRelease"]["version"] == version_in_puppet:
+                    print("No new changes came into production!")
                 else:
                     filter_git_commit_data(repository_name, repository_team, repository_version, repository_type)
             except TypeError:
@@ -79,19 +79,19 @@ def get_version(repo_name, repo_team):
             date = tags.commit.commit.last_modified
             author = tags.commit.author.login
             if iteration == 0:
-                latestrelease = {'version': version,
-                                 'sha': sha,
-                                 'date': date,
-                                 'author': author
+                latestrelease = {"version": version,
+                                 "sha": sha,
+                                 "date": date,
+                                 "author": author
                                  }
                 iteration = 1
             elif iteration == 1:
-                previousrelease = {'version': version,
-                                   'sha': sha,
-                                   'date': date,
-                                   'author': author
+                previousrelease = {"version": version,
+                                   "sha": sha,
+                                   "date": date,
+                                   "author": author
                                    }
-                return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
+                return {"LatestRelease": latestrelease, "PreviousRelease": previousrelease}
 
 
 def get_version_from_build_puppet(version_path, repo_name):
@@ -103,7 +103,7 @@ def get_version_from_build_puppet(version_path, repo_name):
     file_to_string = requests.get(version_path).text.split()
     for word in file_to_string:
         if repo_name in word:
-            version_in_puppet = re.split('\\b==\\b', word)[-1]
+            version_in_puppet = re.split("\\b==\\b", word)[-1]
             # the next check makes sure to only return the version in case the repo name appears multiple times
             if version_in_puppet != repo_name:
                 return version_in_puppet
@@ -127,19 +127,19 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
         with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
             repo_dict = json.load(commit_json)
             number = len(repo_dict)
-            last_checked = repo_dict['0']["lastChecked"]
-            repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
+            last_checked = repo_dict["0"]["lastChecked"]
+            repo_dict.update({"0": {"lastChecked": str(datetime.utcnow()),
                                     "last_two_releases": repository_version}})
     except FileNotFoundError:
         repo_dict = {}
-        repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
+        repo_dict.update({"0": {"lastChecked": str(datetime.utcnow()),
                                 "last_two_releases": repository_version}})
         number = 1
     repository_path = repository_team + repository_name
 
     try:
-        latest_release = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
-        previous_release = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        latest_release = datetime.strptime(repository_version["LatestRelease"]["date"], "%a, %d %b %Y %H:%M:%S GMT")
+        previous_release = datetime.strptime(repository_version["PreviousRelease"]["date"], "%a, %d %b %Y %H:%M:%S GMT")
     except TypeError:
         previous_release = lastWeek
         pass
@@ -194,9 +194,9 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
                 repo_dict.update(each_commit)
     elif repository_type == "no tag" and limit_checker() == 1:
         try:
-            oldest_commit = datetime.strptime(last_checked, '%Y-%m-%d %H:%M:%S.%f')
+            oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S.%f")
         except ValueError:
-            oldest_commit = datetime.strptime(last_checked, '%Y-%m-%d %H:%M:%S')
+            oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S")
         newest_commit = datetime.utcnow()
         for commit in git.get_repo(repository_path).get_commits(since=oldest_commit, until=newest_commit):
             if limit_checker() == 1:
@@ -245,7 +245,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
                 each_commit.update({int(number): author_info})
                 number += 1
                 repo_dict.update(each_commit)
-                repo_dict.update({'0': {"lastChecked": str(commit_date)}})
+                repo_dict.update({"0": {"lastChecked": str(commit_date)}})
 
     git_json_filename = "{}.json".format(repository_name)
     json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
@@ -276,8 +276,8 @@ def filter_hg_commit_data(repository_name, repository_url):
     Example:
     example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
     This will be later used to get the commits from https://hg.mozilla.org/
+    :param repository_name: name of the repository
     :param repository_url: Link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
-    :param push_type: Would probably be "json-log" most of the time.
     :return: Returns a dictionary that contains the commits in the provided hg_repository_name
     """
     request_url = repository_url + "json-log"
