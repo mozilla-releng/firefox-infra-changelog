@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 19:46:40.919440"
+    "lastChecked": "2018-12-13 11:15:03.210115"
   },
   "1": {
-    "sha": "5311a17b136e5e3370f686ffa18fe2deebc44cfe",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=5311a17b136e",
-    "commiter_name": "Masayuki Nakano ",
-    "commit_email": "masayuki@d-toybox.com",
-    "commit_message": "Bug 1510183 - Make HTMLEditor treat empty string attribute of style as nullptr of nsAtom rather than nsGkAtoms::_empty. r=m_kato a=jorgk DONTBUILD  After fixing bug 1427060, HTMLEditor treats attribute of style as nullptr. However, if empty string is used to call NS_Atomize(), it returns nsGkAtoms::_empty.  Therefore, HTMLEditor fails to check whether attribute is specified or not with nullptr check since some root callers sets nsGkAtoms::_empty instead of nullptr.  This patch makes HTMLEditor always use nullptr for empty string of attribute of style with wrapping NS_Atomize() with AtomzieAttribute().  Additionally, for safer change, this patch makes PropItem and TypeInState treat nsGkAtom::_empty as nullptr.",
-    "commit_date": "2018-11-30 01:21:59"
+    "sha": "6a1fced923f7af546ba8a7a0a528ec21a00deea0",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=6a1fced923f7",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
+    "commit_date": "2018-12-11 14:12:32"
   },
   "2": {
-    "sha": "6cc5fc0eaeaf9a9abcfc2722999ecdc6b539c23d",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=6cc5fc0eaeaf",
-    "commiter_name": "ffxbld ",
-    "commit_email": "release@mozilla.com",
-    "commit_message": "Update configs. IGNORE BROKEN CHANGESETS CLOSED TREE NO BUG a=release ba=release",
-    "commit_date": "2018-12-03 16:38:03"
+    "sha": "d7a01fb1c26867fdf9743d4df657a3f1697b95f5",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d7a01fb1c268",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging 6cc5fc0eaeaf9a9abcfc2722999ecdc6b539c23d with FIREFOX_60_4_0esr_RELEASE a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-12-11 14:12:28"
   },
   "3": {
-    "sha": "d428d2b8f5851aead9e33d9fbd465daf9ee184f7",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d428d2b8f585",
-    "commiter_name": "Ryan VanderMeulen ",
-    "commit_email": "ryanvm@gmail.com",
-    "commit_message": "Bug 1511495 - Update Firefox ESR60 to NSS 3.36.6. r=jcj, a=lizzard UPGRADE_NSS_RELEASE",
-    "commit_date": "2018-12-02 21:32:17"
+    "sha": "53b49526917f873423d08d86712b000ff9f564d3",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=53b49526917f",
+    "commiter_name": "Wes Kocher ",
+    "commit_email": "wkocher@mozilla.com",
+    "commit_message": "Bug 1423215 - Upload an uncompressed runnable-jobs.json artifact in addition to the gz version r=dustin a=tomprince  Uploading both versions will hopefully make this easier to uplift. Once old pushes and artifacts expire, we can stop uploading the gzipped version.  Differential Revision: https://phabricator.services.mozilla.com/D13601",
+    "commit_date": "2018-12-09 05:07:48"
   },
   "4": {
-    "sha": "42791ed044618b41dac82fe85d0c10655511e2ee",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=42791ed04461",
-    "commiter_name": "Simon Montagu ",
-    "commit_email": "smontagu@smontagu.org",
-    "commit_message": "Bug 1505911 - Use IsAlpha/IsDigit instead of IsAsciiAlpha/IsAsciiDigit for full Unicode support. r=valentin a=jorgk DONTBUILD",
-    "commit_date": "2013-09-01 09:23:43"
-  },
-  "5": {
-    "sha": "3e8c9f8c5307bce9bdfbe419a92f93cf7b11f7cb",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=3e8c9f8c5307",
-    "commiter_name": "Henrik Skupin ",
-    "commit_email": "mail@hskupin.info",
-    "commit_message": "Bug 1351940 - [marionette] Only convert a valid outerWindowID to a string. r=ato, a=test-only  Differential Revision: https://phabricator.services.mozilla.com/D13206",
-    "commit_date": "2018-11-28 20:48:42"
-  },
-  "6": {
-    "sha": "7a8060fc91cd897bb5b6060f42cc183581463e04",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=7a8060fc91cd",
-    "commiter_name": "Jason Orendorff ",
-    "commit_email": "jorendorff@mozilla.com",
-    "commit_message": "Bug 1391756 - Try to fix rare timeout in dom/tests/mochitest/fetch/test_readableStreams.html. r=baku, a=test-only  Also removes an infinite regress of nested iframes. The original problem was that tests would start running before the child iframe was done loading. The straightforward fix is to have the child frame start the test. But this caused further error messages because the child iframe is loaded more than once; removing the iframe from the iframe fixes this.  Differential Revision: https://phabricator.services.mozilla.com/D13385",
-    "commit_date": "2018-11-29 22:35:04"
-  },
-  "7": {
-    "sha": "db9f8b0634ece4ba033c6227d8d65cd437748ee8",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=db9f8b0634ec",
-    "commiter_name": "Mihai Tabara ",
-    "commit_email": "mtabara@mozilla.com",
-    "commit_message": "Bug 1499440 - add esr60/release configs for mark-as-started task.r=aki a=release",
-    "commit_date": "2018-10-18 19:32:39"
-  },
-  "8": {
-    "sha": "7b5c4718f62552e43cc6f19c728f5ff2af1896ad",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=7b5c4718f625",
-    "commiter_name": "Mihai Tabara ",
-    "commit_email": "mtabara@mozilla.com",
-    "commit_message": "Bug 1475101 - add mark-as-started task. r=rail a=release",
-    "commit_date": "2018-09-12 12:58:52"
-  },
-  "9": {
-    "sha": "1376c48eaf2b6313a9084165e99c377eeb9a8ddc",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=1376c48eaf2b",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1510441: Add `.cron.yml` to the taskgraph sparse profile; r=gps a=tomprince DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D13142",
-    "commit_date": "2018-11-30 00:26:19"
-  },
-  "10": {
-    "sha": "c2832f98fe516ebad6add8105169c9cd99795013",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=c2832f98fe51",
-    "commiter_name": "Ryan VanderMeulen ",
-    "commit_email": "ryanvm@gmail.com",
-    "commit_message": "Bug 1510471 - Fix bustage. r=smaug, a=bustage",
-    "commit_date": "2018-11-29 16:26:50"
-  },
-  "11": {
-    "sha": "20e31905de62c24725d62988dd23a0764a7cfcb5",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=20e31905de62",
-    "commiter_name": "Olli Pettay ",
-    "commit_email": "Olli.Pettay@helsinki.fi",
-    "commit_message": "Bug 1510471 - Avoid useless FrameNeedsReflow call. r=emilio, a=RyanVM",
-    "commit_date": "2018-11-28 17:48:03"
-  },
-  "12": {
-    "sha": "54c9c6a08ed2a60e706f561b509bd2c8e11082dc",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=54c9c6a08ed2",
-    "commiter_name": "Henrik Skupin ",
-    "commit_email": "mail@hskupin.info",
-    "commit_message": "Bug 1507267 - [awsy] Re-enable \"about:newtab\" page after Bug 1507267. r=erahm a=test-only  Bug 1506643 disabled the usage of \"about:newtab\". But it's actually needed by awsy for testing the memory consumption of Firefox.  Differential Revision: https://phabricator.services.mozilla.com/D11932",
-    "commit_date": "2018-11-14 22:38:48"
-  },
-  "13": {
-    "sha": "fbba8450659ff174beac3d1d69e7de277ae432e4",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=fbba8450659f",
-    "commiter_name": "Jan Beich ",
-    "commit_email": "jbeich@FreeBSD.org",
-    "commit_message": "Bug 1509757 - Don't rely on GNU regex extension for character classes. r=froydnj a=lizzard $ echo --with-system-nspr --with-system-nss | gnused -e 's/--with-system-nspr\\S   //' --with-system-nss $ echo --with-system-nspr --with-system-nss | bsdsed -e 's/--with-system-nspr\\S   //' sed: 1: \"s/--with-system-nspr\\S  ...\": RE error: trailing backslash (\\)",
-    "commit_date": "2018-11-25 14:53:00"
-  },
-  "14": {
-    "sha": "0db86656655bb4df54ecb6aa40e3d57e81edfb0b",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0db86656655b",
-    "commiter_name": "Steve Fink ",
-    "commit_email": "sfink@mozilla.com",
-    "commit_message": "Bug 1426574 - Use fallible bitmap ops for AtomizeAndCopyChars. r=jonco, a=lizzard",
-    "commit_date": "2018-11-21 20:07:12"
-  },
-  "15": {
-    "sha": "a62ede2dd3bc9d363f7b2b94c18b126ae5d637c4",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=a62ede2dd3bc",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1499028: Update list of currencies for Intl.NumberFormat. r=Waldo a=lizzard",
-    "commit_date": "2018-10-15 11:41:17"
-  },
-  "16": {
-    "sha": "641d739989925a7f19aad7a711cabadf2cc2c215",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=641d73998992",
-    "commiter_name": "Michael Kaply ",
-    "commit_email": "mozilla@kaply.com",
-    "commit_message": "Bug 1493249 - Correct esr60 specific iterator error. r=felipe, a=RyanVM",
-    "commit_date": "2018-11-28 17:21:52"
-  },
-  "17": {
-    "sha": "d716dbe3b698dc648ff10cba50428d271e60232f",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d716dbe3b698",
-    "commiter_name": "ffxbld ",
-    "commit_email": "ffxbld@mozilla.com",
-    "commit_message": "No Bug, mozilla-esr60 repo-update HSTS HPKP blocklist - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D13387",
-    "commit_date": "2018-11-29 12:14:15"
-  },
-  "18": {
-    "sha": "6f64e970b7e97d84b36211377a4eb2f5ea112855",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=6f64e970b7e9",
-    "commiter_name": "Michael Kaply ",
-    "commit_email": "mozilla@kaply.com",
-    "commit_message": "Bug 1504691 - Read certs from local and roaming on Windows. r=Felipe, a=lizzard",
-    "commit_date": "2018-11-28 20:36:15"
-  },
-  "19": {
-    "sha": "e3557a7b598a2baae7dc38fd18a2b648748d65ff",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=e3557a7b598a",
-    "commiter_name": "Michael Kaply ",
-    "commit_email": "mozilla@kaply.com",
-    "commit_message": "Bug 1474683 - Add support for importing certificates. r=Felipe, a=lizzard",
-    "commit_date": "2018-11-28 20:33:30"
-  },
-  "20": {
-    "sha": "9f4280a52132bd8335d4833304e4bb7ee4d7c07d",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=9f4280a52132",
+    "sha": "c23331af8ac635f86d748c0eb1e5bbb8fcfd86d9",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=c23331af8ac6",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Backed out part of changeset fe4514c84e7a (bug 169521 for causing bug 1509102) to build Thunderbird 60.3.2. a=jorgk DONTBUILD",
-    "commit_date": "2018-11-26 22:11:03"
+    "commit_message": "Backed out changeset 28aff45820d6 (bug 1475775 for causing bug 1510212) to build Thunderbird 60.4.0. a=jorgk DONTBUILD",
+    "commit_date": "2018-12-08 16:20:05"
+  },
+  "5": {
+    "sha": "0ced5dcd70178aa6b380084dd07bf5e45102779c",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0ced5dcd7017",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Backed out changeset 3bed863ee656 (bug 1496736 for causing bug 1510212) to build Thunderbird 60.4.0. a=jorgk",
+    "commit_date": "2018-12-08 16:16:34"
+  },
+  "6": {
+    "sha": "389bc30fbc0b6f7bb0e26c0d3e49e4c8c00a8d66",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=389bc30fbc0b",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "merge 6cc5fc0eaeaf (FIREFOX_60_4_0esr_BUILD2) to THUNDERBIRD_60_VERBRANCH. a=jorgk",
+    "commit_date": "2018-12-08 16:13:17"
+  },
+  "7": {
+    "sha": "28aff45820d64b2fe9ccfd2708da5a08ea608fd0",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=28aff45820d6",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Revert backout of bug 1475775 (changeset f0bcd8dbddfb) to allow merge with 60.4. a=backout",
+    "commit_date": "2018-12-08 15:27:08"
+  },
+  "8": {
+    "sha": "27d80d202f78bbcdf16184e8b9994be6f2e82a5e",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=27d80d202f78",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Tweak buglist email to be nicely formated and not use URL shortener; r=mtabara a=release  Differential Revision: https://phabricator.services.mozilla.com/D11096",
+    "commit_date": "2018-11-06 18:54:20"
+  },
+  "9": {
+    "sha": "ce2b8fd01f4c51bf31208c611ee6b8f38fa66260",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=ce2b8fd01f4c",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Fix typo in taskcluster proxy configuration; r=me",
+    "commit_date": "2018-11-01 20:21:12"
+  },
+  "10": {
+    "sha": "3832eeb1e124902dc51e2a5e5a57dc1cbfeb434e",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=3832eeb1e124",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Pass repository to buglist commands; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10156",
+    "commit_date": "2018-10-30 18:21:49"
+  },
+  "11": {
+    "sha": "0ad7b557626801057e4476940132c53d6665f5e2",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0ad7b5576268",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Send an email when a release starts with a bug list; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10155",
+    "commit_date": "2018-10-30 21:04:00"
+  },
+  "12": {
+    "sha": "1a026a44500b6f451cf5ee2bb32bd294039cdb58",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=1a026a44500b",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Add command to generate buglist for a given release; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10154",
+    "commit_date": "2018-10-30 18:21:40"
+  },
+  "13": {
+    "sha": "2e17368b47c9a06e2118b0033b9c8c72292411b5",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=2e17368b47c9",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Cleanup buglist_creator code; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10153",
+    "commit_date": "2018-10-30 18:21:38"
+  },
+  "14": {
+    "sha": "0b195464716bdb35e84b447cb84a6da522453032",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0b195464716b",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Fix flake8 errors in buglist_creator; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10152",
+    "commit_date": "2018-10-30 18:21:36"
+  },
+  "15": {
+    "sha": "d3cbc4397cf6d5f6cc701c992a6895d9f4dac0b8",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d3cbc4397cf6",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Add buglist_creator to test-suite; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10151",
+    "commit_date": "2018-10-30 18:21:34"
+  },
+  "16": {
+    "sha": "144b86ee4a5c4939501164818280ce2d88e6afe2",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=144b86ee4a5c",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Import buglist_creator from build-tools; r=mtabara  This is imported from https://hg.mozilla.org/build/tools/file/482c0f6537d47f7cbf1326066ecd1d3efbbd53a7  Differential Revision: https://phabricator.services.mozilla.com/D10150",
+    "commit_date": "2018-10-30 18:21:32"
+  },
+  "17": {
+    "sha": "4585f0bba945bd55ee2082ed0b1e28359a8b7b55",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=4585f0bba945",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: Set TASKCLUSTER_ROOT_URL in tasks that use the taskcluster proxy; r=dustin  This sets `TASKCLUSTER_BASE_URL` instead of `TASKCLUSTER_ROOT_URL`, since the proxy doesn't support the redeployable URL schema yet.  Differential Revision: https://phabricator.services.mozilla.com/D10149",
+    "commit_date": "2018-10-30 21:03:48"
+  },
+  "18": {
+    "sha": "ae67721d8d1432e94b3e6b39d4b49125e169eedc",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=ae67721d8d14",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: Add `VOLUME` definitions to base debian images; r=gps  For tasks that only need python, the base images are sufficient. The in-tree code verifies that the caches are setup as volumes in the image being used, so set the caches in the base images as well.  Differential Revision: https://phabricator.services.mozilla.com/D10148",
+    "commit_date": "2018-10-30 18:26:04"
+  },
+  "19": {
+    "sha": "376d2bf874d452fab90f5b69822dfcd2036b26d3",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=376d2bf874d4",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: [mozrelease] Add mozrelease tests to taskcluster; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10147",
+    "commit_date": "2018-10-30 18:40:23"
+  },
+  "20": {
+    "sha": "53fd9b6081618cb5e5d2f291f5d2bb5e8c810b7f",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=53fd9b608161",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1492128: Vendor taskcluster==4.0.1; r=firefox-build-system-reviewers,gps  We can't use taskcluster 5.0.0 yet, because taskcluster-proxy does not support new-style URLs.  Differential Revision: https://phabricator.services.mozilla.com/D10146",
+    "commit_date": "2018-10-30 17:50:49"
   }
 }

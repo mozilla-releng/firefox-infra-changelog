@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 19:46:36.208179"
+    "lastChecked": "2018-12-13 11:14:58.470003"
   },
   "1": {
-    "sha": "a002d2b3408bf9ac543f723c50818e8bfdb27fea",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a002d2b3408b",
-    "commiter_name": "Gijs Kruitbosch ",
-    "commit_email": "gijskruitbosch@gmail.com",
-    "commit_message": "Bug 1062128 - set tooltiptext for new tab button directly for a11y reasons, r=johannh  Differential Revision: https://phabricator.services.mozilla.com/D13406",
-    "commit_date": "2018-12-03 18:22:05"
+    "sha": "5b3f86194b14c5867311dc93006a8215e8b38df8",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5b3f86194b14",
+    "commiter_name": "Mark Banner ",
+    "commit_email": "standard8@mozilla.com",
+    "commit_message": "Bug 1512516 - Fix intermittent failure in browser_searchTelemetry.js by waiting for idle a few times so that the messages have chance to get to the actors. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14369",
+    "commit_date": "2018-12-13 10:51:41"
   },
   "2": {
-    "sha": "e4e25a7e681f9574874c7bf947c7d60e1219cd9b",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e4e25a7e681f",
-    "commiter_name": "D\u00e3o Gottwald ",
-    "commit_email": "dao@mozilla.com",
-    "commit_message": "Bug 1511496 - Let the autohiding menu bar match the tab bar's height. r=mconley  Differential Revision: https://phabricator.services.mozilla.com/D13595",
-    "commit_date": "2018-12-03 17:03:21"
+    "sha": "c06f16a4668c3c66b1a977207bc8a07e274420c2",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c06f16a4668c",
+    "commiter_name": "inspiro ",
+    "commit_email": "sharma.divyansh.501@iitg.ac.in",
+    "commit_message": "Bug 1204247: Remove code supporting metro under testing/ r=jmaher  Bug 1204247: Remove code supporting metro under testing/  Differential Revision: https://phabricator.services.mozilla.com/D14386",
+    "commit_date": "2018-12-13 10:57:04"
   },
   "3": {
-    "sha": "cac01bf337321891bb372357235494c760f28cb5",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=cac01bf33732",
-    "commiter_name": "Mike Conley ",
-    "commit_email": "mconley@mozilla.com",
-    "commit_message": "Bug 1505063 - Only flip remoteness in RDM if we're switching from the privileged content process. r=ochameau  This means that for the File URI content process, we end up closing RDM if the page navigates. This appears to be an acceptable trade-off, as this is the behaviour we've been shipping since bug 1453519 landed (Firefox 61).  Differential Revision: https://phabricator.services.mozilla.com/D13331",
-    "commit_date": "2018-12-03 17:00:20"
+    "sha": "48011ca989a24b2eac337b390288951e46df2338",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48011ca989a2",
+    "commiter_name": "Michael Kaply ",
+    "commit_email": "mozilla@kaply.com",
+    "commit_message": "Bug 1297382 - Don't show context menu for one-off setting button r=dao  Differential Revision: https://phabricator.services.mozilla.com/D14264",
+    "commit_date": "2018-12-13 09:00:37"
   },
   "4": {
-    "sha": "1a6f9251c41f32feca557aa9f9ace21070bf803e",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1a6f9251c41f",
-    "commiter_name": "Martin Stransky ",
-    "commit_email": "stransky@redhat.com",
-    "commit_message": "Bug 1491808 - [Linux/CSD/Titlebar] Force toplevel window repaint when titlebar rendering is enabled and its state changes, r=bzbarsky  Titlebar (StyleAppearance::MozWindowTitlebar) style depends on toplevel window focus and we need to redraw it when toplevel window focus changes.  Unfortunately according to https://gitlab.gnome.org/GNOME/gtk/issues/1395 the toplevel window focus can't be used here as we can have active but unfocused toplevel window during drag & drop.  Gtk+ controls window active appearance by window-state-event signal but gecko uses focus-in/out signals, so we need to repaint the titlebar when window-state-event comes  after  focus-in/out signals.  We can't call mWidgetListener->WindowActivated() (and WindowDeactivated()) as it was already called from focus-in/out handlers before window-state-event.  Depends on D13051  Differential Revision: https://phabricator.services.mozilla.com/D13052",
-    "commit_date": "2018-12-03 12:48:52"
+    "sha": "5039eedfcae8dc4c5b85402665749bc0f99b8225",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5039eedfcae8",
+    "commiter_name": "Jan-Erik Rediger ",
+    "commit_email": "jrediger@mozilla.com",
+    "commit_message": "Bug 1511307 - Remove not-ready note from docs r=chutten  Differential Revision: https://phabricator.services.mozilla.com/D14136",
+    "commit_date": "2018-12-13 10:02:31"
   },
   "5": {
-    "sha": "d1fc8c77ad7fc8098a798cb0df05587d7f374b95",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d1fc8c77ad7f",
-    "commiter_name": "Martin Stransky ",
-    "commit_email": "stransky@redhat.com",
-    "commit_message": "Bug 1491808 - Listen on window-state-event to set titlebar active/inactive state, r=jhorak  This is a workaround for https://gitlab.gnome.org/GNOME/gtk/issues/1395 Gtk+ controls window active appearance by window-state-event signal but gecko uses focus-in/out signals.  So we need to set the the titlebar state when window-state-event comes  after  focus-in/out signals.  Differential Revision: https://phabricator.services.mozilla.com/D13051",
-    "commit_date": "2018-12-03 12:48:35"
-  },
-  "6": {
-    "sha": "7670b6ce33a4b3ad15ff3dc1ec3bfb9349cec19b",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7670b6ce33a4",
-    "commiter_name": "Sebastian Hengst ",
-    "commit_email": "archaeopteryx@coole-files.de",
-    "commit_message": "Backed out 4 changesets (bug 1503393) for failing various browser-chrome tests, e.g. browser_extension_controlled.js. CLOSED TREE  Backed out changeset 52e8ef71af9b (bug 1503393) Backed out changeset 7878029aaba6 (bug 1503393) Backed out changeset 02e383b73c97 (bug 1503393) Backed out changeset 49428012434e (bug 1503393)",
-    "commit_date": "2018-12-03 15:28:06"
-  },
-  "7": {
-    "sha": "52e8ef71af9b837be53b294d09381d70c5efceba",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=52e8ef71af9b",
-    "commiter_name": "Daniel Stenberg ",
-    "commit_email": "daniel@haxx.se",
-    "commit_message": "bug 1503393 - adjust tests for localhost proxying r=mayhemer Fix test_proxy-failover_canceled and browser_firstPartyIsolation",
-    "commit_date": "2018-12-03 14:28:14"
-  },
-  "8": {
-    "sha": "7878029aaba609b5433d3eea98873a450cf2cb62",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7878029aaba6",
-    "commiter_name": "Gijs Kruitbosch ",
-    "commit_email": "gijskruitbosch@gmail.com",
-    "commit_message": "Bug 1503393 - Make 'no proxy' field editable r=jaws",
-    "commit_date": "2018-12-03 14:27:50"
-  },
-  "9": {
-    "sha": "02e383b73c971e656097b3040e9cc523039018d6",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=02e383b73c97",
-    "commiter_name": "Daniel Stenberg ",
-    "commit_email": "daniel@haxx.se",
-    "commit_message": "bug 1503393 - verify default localhost not-proxied with PAC r=mayhemer",
-    "commit_date": "2018-12-03 14:27:29"
-  },
-  "10": {
-    "sha": "49428012434e379316f2d831a088a27cf1b429ee",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=49428012434e",
-    "commiter_name": "Daniel Stenberg ",
-    "commit_email": "daniel@haxx.se",
-    "commit_message": "bug 1503393 - never let \"localhost\" get sent to a proxy r=mayhemer",
-    "commit_date": "2018-12-03 14:27:11"
-  },
-  "11": {
-    "sha": "f349e5a7d515306dcfa5d0b9eb62f676873e8e78",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f349e5a7d515",
-    "commiter_name": "Martin Stransky ",
-    "commit_email": "stransky@redhat.com",
-    "commit_message": "Bug 1511011 - Clean up wayland subsurface creation/management, r=jhorak  - Don't create wl_subsurface in map event but rather when it's requested by compositor. - Don't create wl_surface at nsWindow::OnExposeEvent but check ready_to_draw instead. - Rename parent_surface_committed_handler to frame_clock_after_paint_handler. - Rename parent_surface_committed to ready_to_draw. - Rename needs_clear to surface_needs_clear.  Depends on D13404  Differential Revision: https://phabricator.services.mozilla.com/D13405",
-    "commit_date": "2018-12-03 13:06:21"
-  },
-  "12": {
-    "sha": "819a462d5dd04f30bc50b47d9e10930ae7b1c627",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=819a462d5dd0",
-    "commiter_name": "Martin Stransky ",
-    "commit_email": "stransky@redhat.com",
-    "commit_message": "Bug 1511011 - Removed moz_container_move as it's not used, r=jhorak  Differential Revision: https://phabricator.services.mozilla.com/D13404",
-    "commit_date": "2018-12-03 13:06:17"
-  },
-  "13": {
-    "sha": "ccf502c02f51b2a3ab97a153902aa050a1b96cbc",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ccf502c02f51",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1511660 - Update webrender to commit a1758f0fc17a71c8d53387be5e9da42495ee11ae (WR PR #3380). r=kats  https://github.com/servo/webrender/pull/3380  Differential Revision: https://phabricator.services.mozilla.com/D13674",
-    "commit_date": "2018-12-03 13:06:45"
-  },
-  "14": {
-    "sha": "b41192e679458ff4fcea290f8dd06326fd828ca1",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b41192e67945",
-    "commiter_name": "ffxbld ",
-    "commit_email": "ffxbld@mozilla.com",
-    "commit_message": "No Bug, mozilla-central repo-update HSTS HPKP remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D13670",
-    "commit_date": "2018-12-03 12:52:08"
-  },
-  "15": {
-    "sha": "b46490e922b4b404359830f21aa1f01097201335",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b46490e922b4",
-    "commiter_name": "Axel Hecht ",
-    "commit_email": "axel@pike.org",
-    "commit_message": "Bug 1492070, update mach command for compare-locales, #firefox-build-system-reviewers r=firefox-build-system-reviewers,ted  Differential Revision: https://phabricator.services.mozilla.com/D11902",
-    "commit_date": "2018-12-03 12:08:31"
-  },
-  "16": {
-    "sha": "408d885bc1319299823b56584b10a2e0cf30c559",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=408d885bc131",
-    "commiter_name": "Axel Hecht ",
-    "commit_email": "axel@pike.org",
-    "commit_message": "Bug 1492070, update l10n python libraries, r=stas  update fluent.syntax to 0.9.0 update compare-locales to 5.0.2 update fluent.migrate to https://hg.mozilla.org/l10n/fluent-migration/rev/3877312dc1f4 This includes migration-specific fixes for bugs 1491591, 1491833, 1491859, 1496127  All of these changes have been reviewed before in their respective upstream repositories.  Differential Revision: https://phabricator.services.mozilla.com/D11861",
-    "commit_date": "2018-12-03 12:03:59"
-  },
-  "17": {
-    "sha": "147a524d090bd96e16642c53062908bc8ab039f6",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=147a524d090b",
-    "commiter_name": "ffxbld ",
-    "commit_email": "ffxbld@mozilla.com",
-    "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser  Differential Revision: https://phabricator.services.mozilla.com/D13667",
-    "commit_date": "2018-12-03 12:04:22"
-  },
-  "18": {
-    "sha": "5e2fad03c885961363aa136290e69df9009f4726",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5e2fad03c885",
-    "commiter_name": "Edgar Chen ",
-    "commit_email": "echen@mozilla.com",
-    "commit_message": "Bug 1507543 - Spellchecker for contenteditable/design-mode should not run without focus; r=m_kato  Differential Revision: https://phabricator.services.mozilla.com/D12875",
-    "commit_date": "2018-12-03 11:20:09"
-  },
-  "19": {
-    "sha": "01d0813d8203d78613fc33a3e8e32627c1300b50",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=01d0813d8203",
+    "sha": "f13995099c32c7137fcfbb7b9101aff6c44084bd",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f13995099c32",
     "commiter_name": "Margareta Eliza Balazs ",
     "commit_email": "ebalazs@mozilla.com",
-    "commit_message": "Merge inbound to mozilla-central.  a=merge",
-    "commit_date": "2018-12-03 09:30:40"
+    "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
+    "commit_date": "2018-12-13 09:46:22"
+  },
+  "6": {
+    "sha": "5c892a6147ae856f208e77c265eda4d7b677ac52",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5c892a6147ae",
+    "commiter_name": "Cameron Kaiser ",
+    "commit_email": "spectre@floodgap.com",
+    "commit_message": "Bug 1512162: Disable stack protection for a portion of XPConnect on ppc64le due to a compiler bug. r=bholley",
+    "commit_date": "2018-12-13 02:52:08"
+  },
+  "7": {
+    "sha": "3ecc407c0cc8705ba7b60fbbe8964e794c0a5651",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3ecc407c0cc8",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound.",
+    "commit_date": "2018-12-13 04:01:44"
+  },
+  "8": {
+    "sha": "1cb15212e6b5bb0d451b4e21689d7ec3c8da0f0f",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1cb15212e6b5",
+    "commiter_name": "Jeff Walden ",
+    "commit_email": "jwalden@mit.edu",
+    "commit_message": "Replace an unnecessary U+00A0 NO-BREAK SPACE with a plain ol' ASCII space in devtools/client/inspector/test/head.js to make the file entirely ASCII, as a simplifying measure for another bug being fixed.  No bug, rs=me and DONTBUILD",
+    "commit_date": "2018-12-11 21:39:46"
+  },
+  "9": {
+    "sha": "3bb8efd6f02e7f24d6ee5a590a8bcaf336140675",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3bb8efd6f02e",
+    "commiter_name": "adam.kolodko ",
+    "commit_email": "adam.kolodko@hotmail.com",
+    "commit_message": "Bug 1508990 - Enable ESLint for dom/ipc/ (manual changes) r=Standard8,mrbkap  Depends on D13887  Differential Revision: https://phabricator.services.mozilla.com/D14036",
+    "commit_date": "2018-12-13 00:45:24"
+  },
+  "10": {
+    "sha": "ee53b81938266fffd38972636e7f992989281048",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee53b8193826",
+    "commiter_name": "adam.kolodko ",
+    "commit_email": "adam.kolodko@hotmail.com",
+    "commit_message": "Bug 1508990 - Enable ESLint for dom/ipc/ (automatic changes) r=Standard8,mrbkap  Differential Revision: https://phabricator.services.mozilla.com/D13887",
+    "commit_date": "2018-12-13 00:43:55"
+  },
+  "11": {
+    "sha": "2a9b1509c18f96d50c06cc29c2342b8c585b963b",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2a9b1509c18f",
+    "commiter_name": "Narcis Beleuzu ",
+    "commit_email": "nbeleuzu@mozilla.com",
+    "commit_message": "Backed out changeset 3fa420b71260 (bug 1477113) for bc failures on browser_total.js. CLOSED TREE",
+    "commit_date": "2018-12-13 07:53:39"
+  },
+  "12": {
+    "sha": "4a2e65b750282683982627bbaf8f07a7de855d7a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4a2e65b75028",
+    "commiter_name": "Hiroyuki Ikezoe ",
+    "commit_email": "hikezoe@mozilla.com",
+    "commit_message": "Bug 1513750 - Add BUG_COMPONENT \"Core :: CSS Transitions and Animations\" component for css-animations/ and css-transitions/. r=birtles  Also the css-easing/ entry is moved to the position by alphabetical order.  Differential Revision: https://phabricator.services.mozilla.com/D14354",
+    "commit_date": "2018-12-13 07:13:39"
+  },
+  "13": {
+    "sha": "7e17aa956dc60adac6ad4c9bfc5414ff0b59c848",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7e17aa956dc6",
+    "commiter_name": "Nicolas Chevobbe ",
+    "commit_email": "nchevobbe@mozilla.com",
+    "commit_message": "Bug 1513505 - Fix invoke getter on prototype's property; r=jdescottes.  This lands the fix done in the debugger Reps for ObjectInspector (https://github.com/devtools-html/debugger.html/pull/7484\\), and add a test to ensure we don't regress this. We take this as an opportunity to put some object inspector helpers in head.js so we don't repeat ourselves too much.  Differential Revision: https://phabricator.services.mozilla.com/D14240",
+    "commit_date": "2018-12-12 14:50:16"
+  },
+  "14": {
+    "sha": "3fa420b71260567a549549f1c57e32cd1bbcfcbb",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3fa420b71260",
+    "commiter_name": "Jared Wein ",
+    "commit_email": "jwein@mozilla.com",
+    "commit_message": "Bug 1477113 - Dispatch paymentmethodchange event from the front-end. r=MattN  Differential Revision: https://phabricator.services.mozilla.com/D13740",
+    "commit_date": "2018-12-13 06:35:30"
+  },
+  "15": {
+    "sha": "273b6d2127671a017d770ed0c54483fbd90467d7",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=273b6d212767",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland.",
+    "commit_date": "2018-12-13 04:00:52"
+  },
+  "16": {
+    "sha": "8d6e7614d2f0a37511a98a399cd72df97c9bc653",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8d6e7614d2f0",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+    "commit_date": "2018-12-13 03:56:48"
+  },
+  "17": {
+    "sha": "008fb8183cac0505185e73348609be9065a17e53",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=008fb8183cac",
+    "commiter_name": "Irvin Ives Lau ",
+    "commit_email": "lauirvin98@gmail.com",
+    "commit_message": "Bug 1509634 - Remove toolkit/themes/osx/mozapps/extensions/toolbarbutton-dropmarker.png and replace usage with arrow-dropdown-12.svg. r=jaws",
+    "commit_date": "2018-12-12 21:31:12"
+  },
+  "18": {
+    "sha": "1e7843022450c852030788360f3a314de6678dac",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1e7843022450",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge autoland to mozilla-central. a=merge",
+    "commit_date": "2018-12-13 03:54:41"
+  },
+  "19": {
+    "sha": "ef4f3c28e91ccdc6e563d5911a933692ffddffe4",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ef4f3c28e91c",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Backed out 2 changesets (bug 1511235) for causing bugs 1513454, 1513456 as alwu requested on irc. a=backout  Backed out changeset 4c9f874d6868 (bug 1511235) Backed out changeset 3432e8bee7f1 (bug 1511235)",
+    "commit_date": "2018-12-13 01:43:36"
   },
   "20": {
-    "sha": "290a2b092c01cbb0a897bf4036f149aaafec70d0",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=290a2b092c01",
-    "commiter_name": "Daniel Holbert ",
-    "commit_email": "dholbert@cs.stanford.edu",
-    "commit_message": "Bug 1452527: Un-skip reftest svg/outline.html on mac/linux, and mark it as fuzzy in general. (no review, just adjusting test annotation)  The fuzzy() annotation here is using the max-difference from the Windows failures in bug 1452527, and the number-of-mismatching-pixels from mac/linux failures in bug 1503525.",
-    "commit_date": "2018-12-03 01:09:25"
+    "sha": "f07678ec2ad81a8b80a503ce80c85a7c363f4e43",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f07678ec2ad8",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound.",
+    "commit_date": "2018-12-12 22:02:44"
   }
 }
