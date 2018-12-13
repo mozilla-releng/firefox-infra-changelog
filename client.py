@@ -193,7 +193,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
                 number += 1
                 repo_dict.update(each_commit)
     elif repository_type == "no tag" and limit_checker() == 1:
-        oldest_commit = datetime.strptime(last_checked, '%Y-%m-%d %H:%M:%S')
+        oldest_commit = datetime.strptime(last_checked, '%Y-%m-%d %H:%M:%S.%f')
         newest_commit = datetime.utcnow()
         for commit in git.get_repo(repository_path).get_commits(since=oldest_commit, until=newest_commit):
             if limit_checker() == 1:
