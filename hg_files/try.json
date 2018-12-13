@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-13 11:14:55.869403"
+    "lastChecked": "2018-12-13 12:16:41.382792"
   },
   "1": {
-    "sha": "95c3a37d617d1bed7c375a85743352dde694c698",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=95c3a37d617d",
-    "commiter_name": "Jonathan Kew ",
-    "commit_email": "jkew@mozilla.com",
-    "commit_message": "try: -b do -p all -u all  Pushed via `mach try syntax`",
-    "commit_date": "2018-12-13 10:57:57"
+    "sha": "04ffa65bae2a8da930f94afe839fbec43d3ab78e",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=04ffa65bae2a",
+    "commiter_name": "vinoth ",
+    "commit_email": "cegvinoth@gmail.com",
+    "commit_message": "try: -b do -p all -u all -t none  Pushed via `mach try syntax`",
+    "commit_date": "2018-12-13 12:15:13"
   },
   "2": {
-    "sha": "7eefd41c49dd39d9e57695d215d55101346f056a",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7eefd41c49dd",
-    "commiter_name": "Jonathan Kew ",
-    "commit_email": "jkew@mozilla.com",
-    "commit_message": "[mq]: localized-names-fix",
-    "commit_date": "2018-12-13 10:57:41"
+    "sha": "5e45710cfdda1ebf2a80a5085722fadfc7b51fdd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5e45710cfdda",
+    "commiter_name": "vinoth ",
+    "commit_email": "cegvinoth@gmail.com",
+    "commit_message": "Bug 1508282 - Temporary whitelist of files to skip Eval Assertion",
+    "commit_date": "2018-12-13 12:14:55"
   },
   "3": {
-    "sha": "4ba4b4fa5bd81a1851154dca467c27f93698d679",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4ba4b4fa5bd8",
-    "commiter_name": "Jonathan Kew ",
-    "commit_email": "jkew@mozilla.com",
-    "commit_message": "Implement macOS backend for the shared font list.",
-    "commit_date": "2018-12-12 22:30:21"
+    "sha": "80676ed904cd279861fa89a075e8f1f11ce72e8d",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=80676ed904cd",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "try: -b do -p all -u jsreftest -t none",
+    "commit_date": "2018-12-13 12:11:21"
   },
   "4": {
-    "sha": "b2e512f31bcf26e5f5fbaad5191c8be49338db6e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b2e512f31bcf",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/fetch/api/headers/headers-no-cors.window.js",
-    "commit_date": "2018-12-13 10:57:22"
+    "sha": "7bbba5f30423e69133f373a086075ac04af267fd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7bbba5f30423",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "Bug 1512989 - Part 2: Fix browser jstests failures. r=jorendorff",
+    "commit_date": "2018-12-13 12:10:06"
   },
   "5": {
-    "sha": "897637457ab629455249af2237039bb92258600c",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=897637457ab6",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "Bug 1511386 [wpt PR 14307] - Update wpt metadata, a=testonly  wpt-pr: 14307 wpt-type: metadata ",
-    "commit_date": "2018-12-01 00:04:19"
+    "sha": "b051e7bd174f19f73a965d23a9f66895a5bd1251",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b051e7bd174f",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "Bug 1512989 - Part 1: Pass correct test type. r=ahal",
+    "commit_date": "2018-12-13 10:24:56"
   },
   "6": {
-    "sha": "291198d4215a7fe27b5db34fe3f8a422ca0cf7a5",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=291198d4215a",
-    "commiter_name": "Yutaka Hirano ",
-    "commit_email": "yhirano@chromium.org",
-    "commit_message": "Bug 1511386 [wpt PR 14307] - Fix Headers mutation with \"request-no-cors\" guard, a=testonly  https://github.com/whatwg/fetch/pull/833  Bug: 905677 Change-Id: Ie4141c2b900931ef88e7734cb152b6d28955999f Reviewed-on: https://chromium-review.googlesource.com/c/1352075 Reviewed-by: Takashi Toyoshima <toyoshim@chromium.org> Commit-Queue: Yutaka Hirano <yhirano@chromium.org> Cr-Commit-Position: refs/heads/master@{#616230}  wpt-commit: c2079df31c20fb30259e40021551a42d3d261dc2 wpt-pr: 14307 ",
-    "commit_date": "2018-12-13 10:54:51"
-  },
-  "7": {
-    "sha": "9b48564f438ec294e7c122ff4579ca2e44ae6466",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9b48564f438e",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "try: -b o -p linux64 -u test-verify-e10s --artifact  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-13 10:46:37"
-  },
-  "8": {
-    "sha": "0229046596121d71bf27ddc70382e72cfff4ec54",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=022904659612",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "debug ",
-    "commit_date": "2018-12-12 22:35:18"
-  },
-  "9": {
-    "sha": "0752ccdddb52cb9f7e5c1e978bb74b540df6ee41",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0752ccdddb52",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Bug 1508285 - Refactor RootFront.listTabs to return BrowsingContextTargetFront instead of JSON form. r=yulia,jdescottes  MozReview-Commit-ID: 4CMHJ3tV7Rc  Differential Revision: https://phabricator.services.mozilla.com/D14175 ",
-    "commit_date": "2018-12-05 23:34:50"
-  },
-  "10": {
-    "sha": "45299385d4d2dfec36cd5bbc292da0714d3a6c31",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=45299385d4d2",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "try: -b do -p linux,linux64,macosx64 -u all -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-13 10:37:53"
-  },
-  "11": {
-    "sha": "26dc1dc3cb6d86066b57672a460cfae2394cd06e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=26dc1dc3cb6d",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "test with mini xpcom ",
-    "commit_date": "2018-12-13 10:37:32"
-  },
-  "12": {
-    "sha": "5c317ce2a521627fd0da335727ab7745ed3cb6ec",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5c317ce2a521",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P8: Report telemetry from socket process to parent process  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14362 ",
-    "commit_date": "2018-12-13 01:26:01"
-  },
-  "13": {
-    "sha": "0ce723af025e45ecb9f8a3ba225d2d9e4bc75ac9",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0ce723af025e",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P7: Setup Gecko profiler on the socket process  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14351 ",
-    "commit_date": "2018-12-13 00:48:16"
-  },
-  "14": {
-    "sha": "61f1d1fa199ca05ef54d5c50394580fe6ca76af3",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=61f1d1fa199c",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P6: Create Background between content process and socket process  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14348 ",
-    "commit_date": "2018-12-12 23:56:22"
-  },
-  "15": {
-    "sha": "f63285739bbd2e66a2db82987ba959441ed02b33",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=f63285739bbd",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P5: Create IPC between content process and socket process  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14257 ",
-    "commit_date": "2018-12-12 14:01:20"
-  },
-  "16": {
-    "sha": "024a6dfc09679f59cdc209b4e5b7c6947f6827a3",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=024a6dfc0967",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P4: Update online/offline status to socket process  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14161 ",
-    "commit_date": "2018-12-11 16:36:21"
-  },
-  "17": {
-    "sha": "1940c93f38e3a6d31359f3aea19c8cdec9a9f528",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=1940c93f38e3",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P3: Setup memory reporter on socket process  Summary: To setup memory reporter on socket process, this patch modifies the PSocketProcess protocol to implement the same memory reporting functions as the PContent and PGPU protocols.  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14155 ",
-    "commit_date": "2018-12-11 16:10:05"
-  },
-  "18": {
-    "sha": "c56676811f77ba6d069d087559e9b10127859399",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c56676811f77",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P2: Setup crash reporter on socket process  Summary: This patch is quite straightforward. Just add socket process support.  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14151 ",
-    "commit_date": "2018-12-11 15:41:15"
-  },
-  "19": {
-    "sha": "216bcfc47fa12ca55bbc0c1789bb6ea8839412e3",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=216bcfc47fa1",
-    "commiter_name": "Kershaw Chang ",
-    "commit_email": "kershaw@mozilla.com",
-    "commit_message": "Bug 1513057 - P1: Start the new socket process basics (prefs, full xpcom init, logging, no sandboxing)  Tags: #secure-revision  Bug #: 1513057  Differential Revision: https://phabricator.services.mozilla.com/D14148 ",
-    "commit_date": "2018-09-13 11:05:42"
-  },
-  "20": {
-    "sha": "ac74177f3d28e337d1ffd7c337403c5a4b31090e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ac74177f3d28",
+    "sha": "68a0c065741312164f434e555d505dbc71e008f9",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=68a0c0657413",
     "commiter_name": "Dale Harvey ",
     "commit_email": "dale@arandomurl.com",
     "commit_message": "try: -b o -p linux64 -u mochitests,xpcshell -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-13 10:36:07"
+    "commit_date": "2018-12-13 12:04:12"
+  },
+  "7": {
+    "sha": "08c7330f395fa484b623d68ad541fcd0c0811c30",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=08c7330f395f",
+    "commiter_name": "Dale Harvey ",
+    "commit_email": "dale@arandomurl.com",
+    "commit_message": "Bug 1488946 - Remove about:searchreset. r=mkaply ",
+    "commit_date": "2018-12-12 23:33:57"
+  },
+  "8": {
+    "sha": "a1dceb0d0abc4175b51c30ca10dbb9aa9f81eddc",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a1dceb0d0abc",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "try: -b o -p linux64 -u all[linux64-qr] -t none  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-13 12:03:39"
+  },
+  "9": {
+    "sha": "9e10edf0f95361d11101c646e31325489aa215d8",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9e10edf0f953",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "test ",
+    "commit_date": "2018-12-13 12:01:37"
+  },
+  "10": {
+    "sha": "b436ff9b51cb9670de43d5cfdfb053bdcc8eec66",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b436ff9b51cb",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1507884 - Add tasks for linux-based testing of webrender standalone. r?jrmuizel   Differential Revision: https://phabricator.services.mozilla.com/D14407",
+    "commit_date": "2018-12-13 11:46:17"
+  },
+  "11": {
+    "sha": "4590a9e0e9b59938e2413401d699e30bdc68f694",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4590a9e0e9b5",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1507884 - Add a wrench-deps toolchain to provide a tarball of crates wrench depends on. r?tomprince  Although this task technically doesn't build a toolchain, the set of steps it needs to do is very similar to what a toolchain build does, so we're shoehorning this task into the toolchain kind. The task basically runs `cargo vendor` on the gfx/wr/Cargo.lock file (if/when it changes) and exports a tarball of the resulting vendored crates. This allows downstream tasks that build stuff in gfx/wr to not have to re-fetch these crates from crates.io on every test run.  Differential Revision: https://phabricator.services.mozilla.com/D14406",
+    "commit_date": "2018-12-13 11:46:06"
+  },
+  "12": {
+    "sha": "aa8c87f49f7cac97b30b2c928131f90a1d012264",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=aa8c87f49f7c",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1507884 - Add a docker image for building and testing webrender standalone. r?glandium   Differential Revision: https://phabricator.services.mozilla.com/D14405",
+    "commit_date": "2018-12-13 11:45:52"
+  },
+  "13": {
+    "sha": "c9302b4e9c8b8f06dea8a2f9f9e0a335abccd629",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c9302b4e9c8b",
+    "commiter_name": "Dale Harvey ",
+    "commit_email": "dale@arandomurl.com",
+    "commit_message": "try: -b o -p linux64 -u mochitests,xpcshell -t none  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-13 12:01:18"
+  },
+  "14": {
+    "sha": "7016c769d0a73f2642fc5d800c2c52d608ebd86a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7016c769d0a7",
+    "commiter_name": "Dale Harvey ",
+    "commit_email": "dale@arandomurl.com",
+    "commit_message": "Bug 1488946 - Remove about:searchreset. r=mkaply ",
+    "commit_date": "2018-12-12 23:33:57"
+  },
+  "15": {
+    "sha": "65cff62d58e7a4bd7eff19c16c9c4d478237015f",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=65cff62d58e7",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/custom-elements/reactions/HTMLBaseElement.html",
+    "commit_date": "2018-12-13 11:48:19"
+  },
+  "16": {
+    "sha": "e3bcc1b4198b13ff500dfac7ed4292b8d6a006bc",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e3bcc1b4198b",
+    "commiter_name": "kaixinjxq ",
+    "commit_email": "xiuqix.jiang@intel.com",
+    "commit_message": "Bug 1513857 [wpt PR 14491] - Add CEReactions tests for HTMLBaseElement, a=testonly  wpt-commit: 91265abdedc9bcb0e79ae17fa6a9f0cbf3e3a90e wpt-pr: 14491 ",
+    "commit_date": "2018-12-13 11:43:15"
+  },
+  "17": {
+    "sha": "c42a7d56f684f31155bbcf0321b97dee94c2ac7a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c42a7d56f684",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Fuzzy query='webren  Pushed via `mach try fuzzy` ",
+    "commit_date": "2018-12-13 11:31:47"
+  },
+  "18": {
+    "sha": "ed13962ecd6045dfb516ee8d72a31ea65ce9dcf4",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ed13962ecd60",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "try: -b o -p win64 -u mochitest-e10s-bc -t none",
+    "commit_date": "2018-12-13 11:28:35"
+  },
+  "19": {
+    "sha": "c8e2500276404bc15b99437d9a3cf8475fe65e1f",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c8e250027640",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/web-nfc/idlharness.https.window.js",
+    "commit_date": "2018-12-13 11:26:02"
+  },
+  "20": {
+    "sha": "9bb1f08040bb9eaf26880d6eef37aeb0bbfc40bd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9bb1f08040bb",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "Bug 1512580 [wpt PR 14411] - Update wpt metadata, a=testonly  wpt-pr: 14411 wpt-type: metadata ",
+    "commit_date": "2018-12-07 09:03:46"
   }
 }

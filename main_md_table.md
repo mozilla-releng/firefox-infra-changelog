@@ -5,11 +5,11 @@
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29c74238cd77)|Bug 1513746 - Update webrender to commit 6bf4830c0b9158245e436f8d5dc08970d1a90fe9 (WR PR #3405). r=kats  https://github.com/servo/webrender/pull/3405  Differential Revision: https://phabricator.services.mozilla.com/D14403|2018-12-13 11:30:44|
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=af4424f8c7f8)|Bug 1506175 - Fetch recipes from Remote Settings r=mythmon,Gijs  Instead of obtaining the recipes from the Normandy server, obtain them from RemoteSettings  Differential Revision: https://phabricator.services.mozilla.com/D11490|2018-12-11 16:10:21|
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e48f9ff4829)|Bug 1497414 - Make contain:layout+size frames reflow roots - r=dbaron,dholbert  Differential Revision: https://phabricator.services.mozilla.com/D8056|2018-12-13 11:19:55|
 |[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5b3f86194b14)|Bug 1512516 - Fix intermittent failure in browser_searchTelemetry.js by waiting for idle a few times so that the messages have chance to get to the actors. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14369|2018-12-13 10:51:41|
 |[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c06f16a4668c)|Bug 1204247: Remove code supporting metro under testing/ r=jmaher  Bug 1204247: Remove code supporting metro under testing/  Differential Revision: https://phabricator.services.mozilla.com/D14386|2018-12-13 10:57:04|
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48011ca989a2)|Bug 1297382 - Don't show context menu for one-off setting button r=dao  Differential Revision: https://phabricator.services.mozilla.com/D14264|2018-12-13 09:00:37|
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5039eedfcae8)|Bug 1511307 - Remove not-ready note from docs r=chutten  Differential Revision: https://phabricator.services.mozilla.com/D14136|2018-12-13 10:02:31|
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f13995099c32)|Merge mozilla-central to autoland. a=merge CLOSED TREE|2018-12-13 09:46:22|
 
 |	beta	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -126,11 +126,11 @@
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=95c3a37d617d)|try: -b do -p all -u all  Pushed via `mach try syntax`|2018-12-13 10:57:57|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=7eefd41c49dd)|[mq]: localized-names-fix|2018-12-13 10:57:41|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=4ba4b4fa5bd8)|Implement macOS backend for the shared font list.|2018-12-12 22:30:21|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=b2e512f31bcf)|try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/fetch/api/headers/headers-no-cors.window.js|2018-12-13 10:57:22|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=897637457ab6)|Bug 1511386 [wpt PR 14307] - Update wpt metadata, a=testonly  wpt-pr: 14307 wpt-type: metadata |2018-12-01 00:04:19|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=04ffa65bae2a)|try: -b do -p all -u all -t none  Pushed via `mach try syntax`|2018-12-13 12:15:13|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=5e45710cfdda)|Bug 1508282 - Temporary whitelist of files to skip Eval Assertion|2018-12-13 12:14:55|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=80676ed904cd)|try: -b do -p all -u jsreftest -t none|2018-12-13 12:11:21|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=7bbba5f30423)|Bug 1512989 - Part 2: Fix browser jstests failures. r=jorendorff|2018-12-13 12:10:06|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=b051e7bd174f)|Bug 1512989 - Part 1: Pass correct test type. r=ahal|2018-12-13 10:24:56|
 
 |	addonscript	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/addonscript.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/addonscript.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -321,6 +321,7 @@
 |[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/cb8f3946830b982b58d2f93b99202cab15f40719)|Bug 1509189 - use unique table names to avoid conflicts  Taskcluster-Github already does something like this.  The tables get cleaned out and should have no rows at test completion, so this doesn't use a lot of space.  There's no limit (aside from space) on the number of tables in an account.|2018-11-29 01:12:10|
 |[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/f16ab6658148efcac18434802525091f66359f42)|Merge pull request #305 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|2018-12-07 15:23:43|
 |[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/904a244e39a0d96488f7fe41f031355b0e01f018)|Bug 1510377 - use tc-lib-references to validate references|2018-12-06 00:01:53|
+|[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/f16ab6658148efcac18434802525091f66359f42)|Merge pull request #305 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|2018-12-07 15:23:43|
 
 |	treescript	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 

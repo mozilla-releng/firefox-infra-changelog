@@ -1,8 +1,32 @@
 {
   "0": {
-    "lastChecked": "2018-12-13 11:14:58.470003"
+    "lastChecked": "2018-12-13 12:16:44.191778"
   },
   "1": {
+    "sha": "29c74238cd77c77810351adc8d1d3b003f8d733a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29c74238cd77",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1513746 - Update webrender to commit 6bf4830c0b9158245e436f8d5dc08970d1a90fe9 (WR PR #3405). r=kats  https://github.com/servo/webrender/pull/3405  Differential Revision: https://phabricator.services.mozilla.com/D14403",
+    "commit_date": "2018-12-13 11:30:44"
+  },
+  "2": {
+    "sha": "af4424f8c7f827ad141fa30df2f7f449c214b05a",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=af4424f8c7f8",
+    "commiter_name": "Mathieu Leplatre ",
+    "commit_email": "mathieu@mozilla.com",
+    "commit_message": "Bug 1506175 - Fetch recipes from Remote Settings r=mythmon,Gijs  Instead of obtaining the recipes from the Normandy server, obtain them from RemoteSettings  Differential Revision: https://phabricator.services.mozilla.com/D11490",
+    "commit_date": "2018-12-11 16:10:21"
+  },
+  "3": {
+    "sha": "4e48f9ff4829b70f9bdeaa7240f123f5378a5ea8",
+    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e48f9ff4829",
+    "commiter_name": "Gerald Squelart ",
+    "commit_email": "gsquelart@mozilla.com",
+    "commit_message": "Bug 1497414 - Make contain:layout+size frames reflow roots - r=dbaron,dholbert  Differential Revision: https://phabricator.services.mozilla.com/D8056",
+    "commit_date": "2018-12-13 11:19:55"
+  },
+  "4": {
     "sha": "5b3f86194b14c5867311dc93006a8215e8b38df8",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5b3f86194b14",
     "commiter_name": "Mark Banner ",
@@ -10,7 +34,7 @@
     "commit_message": "Bug 1512516 - Fix intermittent failure in browser_searchTelemetry.js by waiting for idle a few times so that the messages have chance to get to the actors. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14369",
     "commit_date": "2018-12-13 10:51:41"
   },
-  "2": {
+  "5": {
     "sha": "c06f16a4668c3c66b1a977207bc8a07e274420c2",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c06f16a4668c",
     "commiter_name": "inspiro ",
@@ -18,7 +42,7 @@
     "commit_message": "Bug 1204247: Remove code supporting metro under testing/ r=jmaher  Bug 1204247: Remove code supporting metro under testing/  Differential Revision: https://phabricator.services.mozilla.com/D14386",
     "commit_date": "2018-12-13 10:57:04"
   },
-  "3": {
+  "6": {
     "sha": "48011ca989a24b2eac337b390288951e46df2338",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48011ca989a2",
     "commiter_name": "Michael Kaply ",
@@ -26,7 +50,7 @@
     "commit_message": "Bug 1297382 - Don't show context menu for one-off setting button r=dao  Differential Revision: https://phabricator.services.mozilla.com/D14264",
     "commit_date": "2018-12-13 09:00:37"
   },
-  "4": {
+  "7": {
     "sha": "5039eedfcae8dc4c5b85402665749bc0f99b8225",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5039eedfcae8",
     "commiter_name": "Jan-Erik Rediger ",
@@ -34,7 +58,7 @@
     "commit_message": "Bug 1511307 - Remove not-ready note from docs r=chutten  Differential Revision: https://phabricator.services.mozilla.com/D14136",
     "commit_date": "2018-12-13 10:02:31"
   },
-  "5": {
+  "8": {
     "sha": "f13995099c32c7137fcfbb7b9101aff6c44084bd",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f13995099c32",
     "commiter_name": "Margareta Eliza Balazs ",
@@ -42,7 +66,7 @@
     "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
     "commit_date": "2018-12-13 09:46:22"
   },
-  "6": {
+  "9": {
     "sha": "5c892a6147ae856f208e77c265eda4d7b677ac52",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5c892a6147ae",
     "commiter_name": "Cameron Kaiser ",
@@ -50,7 +74,7 @@
     "commit_message": "Bug 1512162: Disable stack protection for a portion of XPConnect on ppc64le due to a compiler bug. r=bholley",
     "commit_date": "2018-12-13 02:52:08"
   },
-  "7": {
+  "10": {
     "sha": "3ecc407c0cc8705ba7b60fbbe8964e794c0a5651",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3ecc407c0cc8",
     "commiter_name": "Cosmin Sabou ",
@@ -58,7 +82,7 @@
     "commit_message": "Merge mozilla-central to mozilla-inbound.",
     "commit_date": "2018-12-13 04:01:44"
   },
-  "8": {
+  "11": {
     "sha": "1cb15212e6b5bb0d451b4e21689d7ec3c8da0f0f",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1cb15212e6b5",
     "commiter_name": "Jeff Walden ",
@@ -66,7 +90,7 @@
     "commit_message": "Replace an unnecessary U+00A0 NO-BREAK SPACE with a plain ol' ASCII space in devtools/client/inspector/test/head.js to make the file entirely ASCII, as a simplifying measure for another bug being fixed.  No bug, rs=me and DONTBUILD",
     "commit_date": "2018-12-11 21:39:46"
   },
-  "9": {
+  "12": {
     "sha": "3bb8efd6f02e7f24d6ee5a590a8bcaf336140675",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3bb8efd6f02e",
     "commiter_name": "adam.kolodko ",
@@ -74,7 +98,7 @@
     "commit_message": "Bug 1508990 - Enable ESLint for dom/ipc/ (manual changes) r=Standard8,mrbkap  Depends on D13887  Differential Revision: https://phabricator.services.mozilla.com/D14036",
     "commit_date": "2018-12-13 00:45:24"
   },
-  "10": {
+  "13": {
     "sha": "ee53b81938266fffd38972636e7f992989281048",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee53b8193826",
     "commiter_name": "adam.kolodko ",
@@ -82,7 +106,7 @@
     "commit_message": "Bug 1508990 - Enable ESLint for dom/ipc/ (automatic changes) r=Standard8,mrbkap  Differential Revision: https://phabricator.services.mozilla.com/D13887",
     "commit_date": "2018-12-13 00:43:55"
   },
-  "11": {
+  "14": {
     "sha": "2a9b1509c18f96d50c06cc29c2342b8c585b963b",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2a9b1509c18f",
     "commiter_name": "Narcis Beleuzu ",
@@ -90,7 +114,7 @@
     "commit_message": "Backed out changeset 3fa420b71260 (bug 1477113) for bc failures on browser_total.js. CLOSED TREE",
     "commit_date": "2018-12-13 07:53:39"
   },
-  "12": {
+  "15": {
     "sha": "4a2e65b750282683982627bbaf8f07a7de855d7a",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4a2e65b75028",
     "commiter_name": "Hiroyuki Ikezoe ",
@@ -98,7 +122,7 @@
     "commit_message": "Bug 1513750 - Add BUG_COMPONENT \"Core :: CSS Transitions and Animations\" component for css-animations/ and css-transitions/. r=birtles  Also the css-easing/ entry is moved to the position by alphabetical order.  Differential Revision: https://phabricator.services.mozilla.com/D14354",
     "commit_date": "2018-12-13 07:13:39"
   },
-  "13": {
+  "16": {
     "sha": "7e17aa956dc60adac6ad4c9bfc5414ff0b59c848",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7e17aa956dc6",
     "commiter_name": "Nicolas Chevobbe ",
@@ -106,7 +130,7 @@
     "commit_message": "Bug 1513505 - Fix invoke getter on prototype's property; r=jdescottes.  This lands the fix done in the debugger Reps for ObjectInspector (https://github.com/devtools-html/debugger.html/pull/7484\\), and add a test to ensure we don't regress this. We take this as an opportunity to put some object inspector helpers in head.js so we don't repeat ourselves too much.  Differential Revision: https://phabricator.services.mozilla.com/D14240",
     "commit_date": "2018-12-12 14:50:16"
   },
-  "14": {
+  "17": {
     "sha": "3fa420b71260567a549549f1c57e32cd1bbcfcbb",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3fa420b71260",
     "commiter_name": "Jared Wein ",
@@ -114,7 +138,7 @@
     "commit_message": "Bug 1477113 - Dispatch paymentmethodchange event from the front-end. r=MattN  Differential Revision: https://phabricator.services.mozilla.com/D13740",
     "commit_date": "2018-12-13 06:35:30"
   },
-  "15": {
+  "18": {
     "sha": "273b6d2127671a017d770ed0c54483fbd90467d7",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=273b6d212767",
     "commiter_name": "Cosmin Sabou ",
@@ -122,7 +146,7 @@
     "commit_message": "Merge mozilla-central to autoland.",
     "commit_date": "2018-12-13 04:00:52"
   },
-  "16": {
+  "19": {
     "sha": "8d6e7614d2f0a37511a98a399cd72df97c9bc653",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8d6e7614d2f0",
     "commiter_name": "Cosmin Sabou ",
@@ -130,36 +154,12 @@
     "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
     "commit_date": "2018-12-13 03:56:48"
   },
-  "17": {
+  "20": {
     "sha": "008fb8183cac0505185e73348609be9065a17e53",
     "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=008fb8183cac",
     "commiter_name": "Irvin Ives Lau ",
     "commit_email": "lauirvin98@gmail.com",
     "commit_message": "Bug 1509634 - Remove toolkit/themes/osx/mozapps/extensions/toolbarbutton-dropmarker.png and replace usage with arrow-dropdown-12.svg. r=jaws",
     "commit_date": "2018-12-12 21:31:12"
-  },
-  "18": {
-    "sha": "1e7843022450c852030788360f3a314de6678dac",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1e7843022450",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge autoland to mozilla-central. a=merge",
-    "commit_date": "2018-12-13 03:54:41"
-  },
-  "19": {
-    "sha": "ef4f3c28e91ccdc6e563d5911a933692ffddffe4",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ef4f3c28e91c",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Backed out 2 changesets (bug 1511235) for causing bugs 1513454, 1513456 as alwu requested on irc. a=backout  Backed out changeset 4c9f874d6868 (bug 1511235) Backed out changeset 3432e8bee7f1 (bug 1511235)",
-    "commit_date": "2018-12-13 01:43:36"
-  },
-  "20": {
-    "sha": "f07678ec2ad81a8b80a503ce80c85a7c363f4e43",
-    "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f07678ec2ad8",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.",
-    "commit_date": "2018-12-12 22:02:44"
   }
 }
