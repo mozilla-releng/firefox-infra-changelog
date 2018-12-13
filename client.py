@@ -280,7 +280,7 @@ def filter_hg_commit_data(repository_name, repository_url):
     request_url = repository_url + "json-log"
     hg_repo_data = {}
     commit_number = 0
-    print("Working on repo:", repository_name)
+    print("\nWorking on repo:", repository_name)
     hg_repo_data.update({commit_number: {"lastChecked": str(datetime.utcnow())}})
     data = json.loads(requests.get(request_url).text)
     commit_number += 1
