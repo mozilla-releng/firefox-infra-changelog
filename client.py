@@ -17,7 +17,7 @@ def limit_checker():
     unix_reset_time = git.rate_limiting_resettime
     reset_time = datetime.fromtimestamp(unix_reset_time)
     if rate_limit >= 5:
-        sys.stdout.write('\rRate limit is: ' + str(rate_limit))
+        sys.stdout.write("\rRate limit is: " + str(rate_limit))
         sys.stdout.flush()
         return 1
     else:
@@ -25,7 +25,7 @@ def limit_checker():
         while rate_limit < 5000 and reset_time >= datetime.now():
             unix_reset_time = git.rate_limiting_resettime
             reset_time = datetime.fromtimestamp(unix_reset_time)
-            sys.stdout.write('\rRequests limit reset at: ' + str(reset_time))
+            sys.stdout.write("\rRequests limit reset at: " + str(reset_time))
             sys.stdout.flush()
         print("\nRequests limit has been reset! ")
         return 1
@@ -45,7 +45,7 @@ def create_files_for_git(repositories_holder):
         repository_version = get_version(repository_name, repository_team)
         version_in_puppet = 0
         repository_type = repositories_holder["Github"][repo]["configuration"]["type"]
-        print("Working on repo: {}".format(repository_name))
+        print("\nWorking on repo: {}".format(repository_name))
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
             version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
