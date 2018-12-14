@@ -1,7 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-05 01:51:15.648031",
-    "last_two_releases": null
+    "lastChecked": "2018-12-05 20:57:44"
   },
   "1": {
     "sha": "9f3cf327c3a20d1954ee2627a15b2e8dfa86ea8d",
@@ -329,6 +328,370 @@
     "commit_date": "2018-11-28 09:53:35",
     "files_changed": [
       "modules/beetmover_scriptworker/files/requirements.txt"
+    ]
+  },
+  "29": {
+    "sha": "2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #317 from mitchhentges/adds-mobile-dep-service-acct-noops  Adds Google service account \"noop\"s for \"mobile-dep\"",
+    "commit_date": "2018-12-12 00:12:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/reference_browser_dep.pem",
+      "modules/pushapk_scriptworker/files/reference_browser_release.pem",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "30": {
+    "sha": "5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "commiter_name": "dragoscrisan",
+    "commiter_email": null,
+    "commit_message": "Add python3.6 to PATH on OSX workers (#318)",
+    "commit_date": "2018-12-10 13:21:08",
+    "files_changed": [
+      "modules/packages/manifests/mozilla/python3.pp"
+    ]
+  },
+  "31": {
+    "sha": "c494ad924db908d32670e3406a12295e87829325",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c494ad924db908d32670e3406a12295e87829325",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Uses reference-browser secrets for reference-browser signing",
+    "commit_date": "2018-12-06 19:17:38",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "32": {
+    "sha": "ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Separates release-browser google play config from focus",
+    "commit_date": "2018-12-05 20:57:44",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "33": {
+    "sha": "2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #317 from mitchhentges/adds-mobile-dep-service-acct-noops  Adds Google service account \"noop\"s for \"mobile-dep\"",
+    "commit_date": "2018-12-12 00:12:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/reference_browser_dep.pem",
+      "modules/pushapk_scriptworker/files/reference_browser_release.pem",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "34": {
+    "sha": "5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "commiter_name": "dragoscrisan",
+    "commiter_email": null,
+    "commit_message": "Add python3.6 to PATH on OSX workers (#318)",
+    "commit_date": "2018-12-10 13:21:08",
+    "files_changed": [
+      "modules/packages/manifests/mozilla/python3.pp"
+    ]
+  },
+  "35": {
+    "sha": "c494ad924db908d32670e3406a12295e87829325",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c494ad924db908d32670e3406a12295e87829325",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Uses reference-browser secrets for reference-browser signing",
+    "commit_date": "2018-12-06 19:17:38",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "36": {
+    "sha": "ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Separates release-browser google play config from focus",
+    "commit_date": "2018-12-05 20:57:44",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "37": {
+    "sha": "2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #317 from mitchhentges/adds-mobile-dep-service-acct-noops  Adds Google service account \"noop\"s for \"mobile-dep\"",
+    "commit_date": "2018-12-12 00:12:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/reference_browser_dep.pem",
+      "modules/pushapk_scriptworker/files/reference_browser_release.pem",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "38": {
+    "sha": "5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "commiter_name": "dragoscrisan",
+    "commiter_email": null,
+    "commit_message": "Add python3.6 to PATH on OSX workers (#318)",
+    "commit_date": "2018-12-10 13:21:08",
+    "files_changed": [
+      "modules/packages/manifests/mozilla/python3.pp"
+    ]
+  },
+  "39": {
+    "sha": "c494ad924db908d32670e3406a12295e87829325",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c494ad924db908d32670e3406a12295e87829325",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Uses reference-browser secrets for reference-browser signing",
+    "commit_date": "2018-12-06 19:17:38",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "40": {
+    "sha": "ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Separates release-browser google play config from focus",
+    "commit_date": "2018-12-05 20:57:44",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "41": {
+    "sha": "2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #317 from mitchhentges/adds-mobile-dep-service-acct-noops  Adds Google service account \"noop\"s for \"mobile-dep\"",
+    "commit_date": "2018-12-12 00:12:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/reference_browser_dep.pem",
+      "modules/pushapk_scriptworker/files/reference_browser_release.pem",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "42": {
+    "sha": "5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "commiter_name": "dragoscrisan",
+    "commiter_email": null,
+    "commit_message": "Add python3.6 to PATH on OSX workers (#318)",
+    "commit_date": "2018-12-10 13:21:08",
+    "files_changed": [
+      "modules/packages/manifests/mozilla/python3.pp"
+    ]
+  },
+  "43": {
+    "sha": "c494ad924db908d32670e3406a12295e87829325",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c494ad924db908d32670e3406a12295e87829325",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Uses reference-browser secrets for reference-browser signing",
+    "commit_date": "2018-12-06 19:17:38",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "44": {
+    "sha": "ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Separates release-browser google play config from focus",
+    "commit_date": "2018-12-05 20:57:44",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "45": {
+    "sha": "2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #317 from mitchhentges/adds-mobile-dep-service-acct-noops  Adds Google service account \"noop\"s for \"mobile-dep\"",
+    "commit_date": "2018-12-12 00:12:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/reference_browser_dep.pem",
+      "modules/pushapk_scriptworker/files/reference_browser_release.pem",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "46": {
+    "sha": "5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "commiter_name": "dragoscrisan",
+    "commiter_email": null,
+    "commit_message": "Add python3.6 to PATH on OSX workers (#318)",
+    "commit_date": "2018-12-10 13:21:08",
+    "files_changed": [
+      "modules/packages/manifests/mozilla/python3.pp"
+    ]
+  },
+  "47": {
+    "sha": "c494ad924db908d32670e3406a12295e87829325",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c494ad924db908d32670e3406a12295e87829325",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Uses reference-browser secrets for reference-browser signing",
+    "commit_date": "2018-12-06 19:17:38",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "48": {
+    "sha": "ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Separates release-browser google play config from focus",
+    "commit_date": "2018-12-05 20:57:44",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "49": {
+    "sha": "2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #317 from mitchhentges/adds-mobile-dep-service-acct-noops  Adds Google service account \"noop\"s for \"mobile-dep\"",
+    "commit_date": "2018-12-12 00:12:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/reference_browser_dep.pem",
+      "modules/pushapk_scriptworker/files/reference_browser_release.pem",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "50": {
+    "sha": "5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "commiter_name": "dragoscrisan",
+    "commiter_email": null,
+    "commit_message": "Add python3.6 to PATH on OSX workers (#318)",
+    "commit_date": "2018-12-10 13:21:08",
+    "files_changed": [
+      "modules/packages/manifests/mozilla/python3.pp"
+    ]
+  },
+  "51": {
+    "sha": "c494ad924db908d32670e3406a12295e87829325",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c494ad924db908d32670e3406a12295e87829325",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Uses reference-browser secrets for reference-browser signing",
+    "commit_date": "2018-12-06 19:17:38",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "52": {
+    "sha": "ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Separates release-browser google play config from focus",
+    "commit_date": "2018-12-05 20:57:44",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "53": {
+    "sha": "2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/2db0ad237012f9f349d29f9ae296cbf43972c4a7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #317 from mitchhentges/adds-mobile-dep-service-acct-noops  Adds Google service account \"noop\"s for \"mobile-dep\"",
+    "commit_date": "2018-12-12 00:12:18",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/reference_browser_dep.pem",
+      "modules/pushapk_scriptworker/files/reference_browser_release.pem",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "54": {
+    "sha": "5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/5e0ad0687479e0281fa7270f02a6ff962eab8f7f",
+    "commiter_name": "dragoscrisan",
+    "commiter_email": null,
+    "commit_message": "Add python3.6 to PATH on OSX workers (#318)",
+    "commit_date": "2018-12-10 13:21:08",
+    "files_changed": [
+      "modules/packages/manifests/mozilla/python3.pp"
+    ]
+  },
+  "55": {
+    "sha": "c494ad924db908d32670e3406a12295e87829325",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/c494ad924db908d32670e3406a12295e87829325",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Uses reference-browser secrets for reference-browser signing",
+    "commit_date": "2018-12-06 19:17:38",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb"
+    ]
+  },
+  "56": {
+    "sha": "ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/ce4dd8b213b13fdf5a03c5cd06f574d14a532e7d",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Separates release-browser google play config from focus",
+    "commit_date": "2018-12-05 20:57:44",
+    "files_changed": [
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
     ]
   }
 }
