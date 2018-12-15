@@ -13,6 +13,12 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
 def limit_checker():
+    """
+    This function checks if your limit requests is not exceeded.
+    Every time when this function is called, it returns 1 in case of your requests limit is not exceeded,
+    otherwise it wait for the reset time to pass.
+    :return: it returns 1 if your limit requests is not exceeded
+    """
     rate_limit = git.rate_limiting[0]
     unix_reset_time = git.rate_limiting_resettime
     reset_time = datetime.fromtimestamp(unix_reset_time)
@@ -25,9 +31,8 @@ def limit_checker():
         while rate_limit < 5000 and reset_time >= datetime.now():
             unix_reset_time = git.rate_limiting_resettime
             reset_time = datetime.fromtimestamp(unix_reset_time)
-            sys.stdout.write("\rRequests limit reset at: " + str(reset_time))
-            sys.stdout.flush()
-        print("\nRequests limit has been reset! ")
+            print("The requests limit is reset to: " + str(reset_time))
+        print("\nThe requests limit has been reset! ")
         return 1
 
 
