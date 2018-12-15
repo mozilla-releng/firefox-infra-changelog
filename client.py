@@ -13,23 +13,30 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
 def limit_checker():
+    """
+    This function checks if your limit requests is not exceeded.
+    Every time when this function is called, it returns 1 in case of your requests limit is not exceeded,
+    otherwise it wait for the reset time to pass.
+    :return: it returns 1 if your limit requests is not exceeded
+    """
     rate_limit = git.rate_limiting[0]
     unix_reset_time = git.rate_limiting_resettime
     reset_time = datetime.fromtimestamp(unix_reset_time)
     if rate_limit >= 5:
-        sys.stdout.write('\rRate limit is: ' + str(rate_limit))
+        sys.stdout.write("\rRate limit is: " + str(rate_limit))
         sys.stdout.flush()
         return 1
     else:
-        print("You have reached the requests limit!")
-        while rate_limit < 5000 and reset_time >= datetime.now():
-            unix_reset_time = git.rate_limiting_resettime
-            reset_time = datetime.fromtimestamp(unix_reset_time)
-            sys.stdout.write('\rRequests limit reset at: ' + str(reset_time))
-            sys.stdout.flush()
-        print("\nRequests limit has been reset! ")
-        return 1
-
+        try:
+            print("You have reached the requests limit!")
+            print("The requests limit is reset to: " + str(reset_time))
+            while rate_limit < 5000 and reset_time >= datetime.now():
+                unix_reset_time = git.rate_limiting_resettime
+                reset_time = datetime.fromtimestamp(unix_reset_time)
+            print("\nThe requests limit has been reset! ")
+            return 1
+        except:
+            print("The requests limit is reset to: " + str(reset_time))
 
 def create_files_for_git(repositories_holder):
     """
@@ -45,7 +52,7 @@ def create_files_for_git(repositories_holder):
         repository_version = get_version(repository_name, repository_team)
         version_in_puppet = 0
         repository_type = repositories_holder["Github"][repo]["configuration"]["type"]
-        print("Working on repo: {}".format(repository_name))
+        print("\nWorking on repo: {}".format(repository_name))
         try:
             repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
             version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
@@ -53,8 +60,8 @@ def create_files_for_git(repositories_holder):
             pass
         if repository_version is not None:
             try:
-                if repository_version['LatestRelease']['version'] == version_in_puppet:
-                    print('No new changes came into production!')
+                if repository_version["LatestRelease"]["version"] == version_in_puppet:
+                    print("No new changes came into production!")
                 else:
                     filter_git_commit_data(repository_name, repository_team, repository_version, repository_type)
             except TypeError:
@@ -72,26 +79,26 @@ def get_version(repo_name, repo_team):
     """
     repo_path = repo_team + repo_name
     iteration = 0
-    if limit_checker() == 1:
+    if limit_checker() == 1:        # check if the requests limit is not exceeded
         for tags in git.get_repo(repo_path).get_tags():
             version = tags.name
             sha = tags.commit.sha
             date = tags.commit.commit.last_modified
             author = tags.commit.author.login
             if iteration == 0:
-                latestrelease = {'version': version,
-                                 'sha': sha,
-                                 'date': date,
-                                 'author': author
+                latestrelease = {"version": version,
+                                 "sha": sha,
+                                 "date": date,
+                                 "author": author
                                  }
                 iteration = 1
             elif iteration == 1:
-                previousrelease = {'version': version,
-                                   'sha': sha,
-                                   'date': date,
-                                   'author': author
+                previousrelease = {"version": version,
+                                   "sha": sha,
+                                   "date": date,
+                                   "author": author
                                    }
-                return {'LatestRelease': latestrelease, 'PreviousRelease': previousrelease}
+                return {"LatestRelease": latestrelease, "PreviousRelease": previousrelease}
 
 
 def get_version_from_build_puppet(version_path, repo_name):
@@ -100,13 +107,14 @@ def get_version_from_build_puppet(version_path, repo_name):
     :param: repo_name: The repo for which we are checking the version.
     :return: Returns the version number that is stored in build-puppet for each *scriptworker
     """
-    file_to_string = requests.get(version_path).text.split()
-    for word in file_to_string:
-        if repo_name in word:
-            version_in_puppet = re.split('\\b==\\b', word)[-1]
-            # the next check makes sure to only return the version in case the repo name appears multiple times
-            if version_in_puppet != repo_name:
-                return version_in_puppet
+    if limit_checker() == 1:        # check if the requests limit is not exceeded
+        file_to_string = requests.get(version_path).text.split()
+        for word in file_to_string:
+            if repo_name in word:
+                version_in_puppet = re.split("\\b==\\b", word)[-1]
+                # the next check makes sure to only return the version in case the repo name appears multiple times
+                if version_in_puppet != repo_name:
+                    return version_in_puppet
 
 
 def filter_git_commit_data(repository_name, repository_team, repository_version, repository_type):
@@ -123,23 +131,25 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
     """
 
     git_json_filename = "{}.json".format(repository_name)
+    repository_path = repository_team + repository_name
     try:
         with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
             repo_dict = json.load(commit_json)
             number = len(repo_dict)
-            last_checked = repo_dict['0']["lastChecked"]
-            repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
+            last_checked = repo_dict["0"]["lastChecked"]
+            repo_dict.update({"0": {"lastChecked": str(datetime.utcnow()),
                                     "last_two_releases": repository_version}})
     except FileNotFoundError:
         repo_dict = {}
-        repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
+        last_checked = str(git.get_repo(repository_path).created_at)
+        repo_dict.update({"0": {"lastChecked": str(datetime.utcnow()),
                                 "last_two_releases": repository_version}})
         number = 1
-    repository_path = repository_team + repository_name
+
 
     try:
-        latest_release = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
-        previous_release = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        latest_release = datetime.strptime(repository_version["LatestRelease"]["date"], "%a, %d %b %Y %H:%M:%S GMT")
+        previous_release = datetime.strptime(repository_version["PreviousRelease"]["date"], "%a, %d %b %Y %H:%M:%S GMT")
     except TypeError:
         previous_release = lastWeek
         pass
@@ -152,33 +162,33 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
                 files_changed = []
                 try:
                     commit_sha = commit.sha
-                except:
+                except ValueError:
                     commit_sha = "null"
                 try:
                     commiter_name = commit.author.login
-                except:
+                except ValueError:
                     commiter_name = "null"
                 try:
                     commiter_email = commit.committer.email
-                except:
+                except ValueError:
                     commiter_email = "null"
                 try:
                     commit_message = commit.commit.message
                     commit_message = re.sub("[*\n\r]", " ", commit_message)
-                except:
+                except ValueError:
                     commit_message = "null"
                 try:
                     commit_html_url = commit.html_url
-                except:
+                except ValueError:
                     commit_html_url = "null"
                 try:
                     for entry in commit.files:
                         files_changed.append(entry.filename)
-                except:
+                except ValueError:
                     pass
                 try:
                     commit_date = commit.commit.author.date
-                except:
+                except ValueError:
                     commit_date = "null"
 
                 author_info.update({"sha": commit_sha,
@@ -193,7 +203,11 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
                 number += 1
                 repo_dict.update(each_commit)
     elif repository_type == "no tag" and limit_checker() == 1:
-        oldest_commit = datetime.strptime(last_checked, '%Y-%m-%d %H:%M:%S.%f')
+        try:
+            oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S.%f")
+        except:
+            oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S")
+
         newest_commit = datetime.utcnow()
         for commit in git.get_repo(repository_path).get_commits(since=oldest_commit, until=newest_commit):
             if limit_checker() == 1:
@@ -205,13 +219,13 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
                 except:
                     commit_sha = "null"
                 try:
-                    commiter_name = commit.author.login
+                    committer_name = commit.author.login
                 except:
-                    commiter_name = "null"
+                    committer_name = "null"
                 try:
-                    commiter_email = commit.committer.email
+                    committer_email = commit.committer.email
                 except:
-                    commiter_email = "null"
+                    committer_email = "null"
                 try:
                     commit_message = commit.commit.message
                     commit_message = re.sub("[*\n\r]", " ", commit_message)
@@ -233,8 +247,8 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
 
                 author_info.update({"sha": commit_sha,
                                     "url": commit_html_url,
-                                    "commiter_name": commiter_name,
-                                    "commiter_email": commiter_email,
+                                    "commiter_name": committer_name,
+                                    "commiter_email": committer_email,
                                     "commit_message": commit_message,
                                     "commit_date": str(commit_date),
                                     "files_changed": files_changed
@@ -242,7 +256,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
                 each_commit.update({int(number): author_info})
                 number += 1
                 repo_dict.update(each_commit)
-                repo_dict.update({'0': {"lastChecked": str(commit_date)}})
+                repo_dict.update({"0": {"lastChecked": str(commit_date)}})
 
     git_json_filename = "{}.json".format(repository_name)
     json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
@@ -273,14 +287,14 @@ def filter_hg_commit_data(repository_name, repository_url):
     Example:
     example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
     This will be later used to get the commits from https://hg.mozilla.org/
+    :param repository_name: name of the repository
     :param repository_url: Link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
-    :param push_type: Would probably be "json-log" most of the time.
     :return: Returns a dictionary that contains the commits in the provided hg_repository_name
     """
     request_url = repository_url + "json-log"
     hg_repo_data = {}
     commit_number = 0
-    print("Working on repo:", repository_name)
+    print("\nWorking on repo:", repository_name)
     hg_repo_data.update({commit_number: {"lastChecked": str(datetime.utcnow())}})
     data = json.loads(requests.get(request_url).text)
     commit_number += 1

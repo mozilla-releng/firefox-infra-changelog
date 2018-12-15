@@ -5,33 +5,33 @@
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=adf4bd858ab4)|Bug 1511252 - Clean up .tab-throbber-tabslist rules. r=dao  Differential Revision: https://phabricator.services.mozilla.com/D13687|2018-12-04 20:46:46|
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=639759093881)|Bug 1512075 - Upgrade to Mercurial 4.8.1; r=ted  This was released a few minutes ago. It contains some fixes necessary to support partial clones.  Differential Revision: https://phabricator.services.mozilla.com/D13768|2018-12-04 23:31:26|
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c28a868a45f5)|Bug 1512075 - Upgrade to latest robustcheckout; r=ted  From changeset d0828787e64fa55b535c7e783bc97612f5c30cff from version-control-tools repository.  Differential Revision: https://phabricator.services.mozilla.com/D13767|2018-12-04 23:30:29|
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7dc99db92ea4)|Bug 1497016 - Add an API to extract tracelogger data and use this within the gecko profiler r=mstange,djvj  Add a new class to extract tracelogger data using chunked buffers and use this to write the data out to the profiler JSON output.  Copying the data in chunks lets us minimize our memory overhead when writing out to the profiler so a large array of millions of elements does not need to be allocated ahead of time.  Differential Revision: https://phabricator.services.mozilla.com/D11791|2018-12-04 21:43:38|
-|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=36c4c80ddc1a)|Bug 1352355 - Fix use of wpt settings in firefox Browser, r=ato  The settngs() method is called to get a list of session-level settings that should be applied when running a test. If those settings differ from the ones applied to the previous test then we have to restart the browser. But if we set the session on the class in the settings method then at shutdown time we'll have incorrect settings. This is important for things like leak checking where the values affect the shutdown process. So instead ensure that we only set the settings on the class during startup.  Depends on D12414  Differential Revision: https://phabricator.services.mozilla.com/D13512|2018-11-30 23:17:47|
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29c74238cd77)|Bug 1513746 - Update webrender to commit 6bf4830c0b9158245e436f8d5dc08970d1a90fe9 (WR PR #3405). r=kats  https://github.com/servo/webrender/pull/3405  Differential Revision: https://phabricator.services.mozilla.com/D14403|2018-12-13 11:30:44|
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=af4424f8c7f8)|Bug 1506175 - Fetch recipes from Remote Settings r=mythmon,Gijs  Instead of obtaining the recipes from the Normandy server, obtain them from RemoteSettings  Differential Revision: https://phabricator.services.mozilla.com/D11490|2018-12-11 16:10:21|
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e48f9ff4829)|Bug 1497414 - Make contain:layout+size frames reflow roots - r=dbaron,dholbert  Differential Revision: https://phabricator.services.mozilla.com/D8056|2018-12-13 11:19:55|
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5b3f86194b14)|Bug 1512516 - Fix intermittent failure in browser_searchTelemetry.js by waiting for idle a few times so that the messages have chance to get to the actors. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14369|2018-12-13 10:51:41|
+|[Link to commit](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c06f16a4668c)|Bug 1204247: Remove code supporting metro under testing/ r=jmaher  Bug 1204247: Remove code supporting metro under testing/  Differential Revision: https://phabricator.services.mozilla.com/D14386|2018-12-13 10:57:04|
 
 |	beta	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=1f6ce017121d)|Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD|2018-12-04 19:46:27|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=002917d5ac54)|No bug - Tagging 34fd146e3a2cae7f729e04d2048cc176958505b0 with DEVEDITION_65_0b1_RELEASE a=release CLOSED TREE DONTBUILD|2018-12-04 19:46:23|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=b852717708af)|No bug - Tagging cfb1a45b322e63746074f79741837063fc3651e0 with FENNEC_64_0b15_RELEASE a=release CLOSED TREE DONTBUILD|2018-12-04 18:18:32|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=88f8cfa6a977)|No bug - Tagging 34fd146e3a2cae7f729e04d2048cc176958505b0 with DEVEDITION_65_0b1_BUILD2 a=release CLOSED TREE DONTBUILD|2018-12-04 16:26:35|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=34fd146e3a2c)|Bug 1511988 - Convert aboutNetworking.ftl to LF line ending r=Pike a=release-bustage on CLOSED TREE  Differential Revision: https://phabricator.services.mozilla.com/D13730|2018-12-04 15:12:32|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=022e5d97749f)|Bug 1512037 - Bail out from prefersReducedMotion() if the target device is Android 4.1 or older. r=snorp a=jcristau  Settings.Global can't be used on such devices.  Differential Revision: https://phabricator.services.mozilla.com/D14226|2018-12-11 23:38:26|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=b0e263db0edf)|Backed out changeset ac3f8e63166b (bug 1512037) for causing Android build bustages|2018-12-12 19:12:55|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a13db67049a2)|Bug 1511232 - Additional test expectation adjustments for test_window_define_nonconfigurable.html for non-Trunk trees. a=test-only|2018-12-12 18:53:13|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=9b0e6c52f470)|Bug 1436244 - Allow 2000 bytes leaking on wpt mac, r=mccr8 a=test-only  Differential Revision: https://phabricator.services.mozilla.com/D14080|2018-12-11 14:47:00|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=7fb6548db01e)|Bug 1508794 - skip on debug org.mozilla.geckoview.test.GeckoSessionTestRuleTest.waitForChromeJS. r=gbrown a=test-only  skip on debug org.mozilla.geckoview.test.GeckoSessionTestRuleTest.waitForChromeJS  Differential Revision: https://phabricator.services.mozilla.com/D14190|2018-12-11 20:47:40|
 
 |	braindump	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/braindump.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/braindump.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
+|[Link to commit](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=535d3728de73)|Fix params layout.|2018-12-11 20:45:39|
+|[Link to commit](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=c4919d73df5a)|Make required-signoffs the default.|2018-12-05 16:32:54|
 |[Link to commit](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=c73fd4625695)|add some partials to the unsigned mars params|2018-11-16 03:03:39|
 |[Link to commit](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=2f1b5cddb5f6)|add params-required-signoffs for bug 1501878|2018-11-12 19:19:42|
 |[Link to commit](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=0d4a4254960b)|quote mr versions to avoid being treated as floats|2018-11-02 20:18:01|
-|[Link to commit](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=56f54e63a30d)|Bug 1500897 - taskgraph-diff: Add "hg_branch" data|2018-10-23 14:46:00|
-|[Link to commit](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=b5f69b20179d)|No bug - Remove check_servo filter r=tomprince  Deleted in https://hg.mozilla.org/mozilla-central/rev/6c2ca1a524e6|2018-10-26 13:07:04|
 
 |	ci-admin	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -60,22 +60,22 @@
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=e4d520b5dc17)|Backed out changeset a6e340fe4c07 and 7fe1827e6b39 (bug 1482040) for causing address book and auto-complete slowness (bug 1511885). a=backout  Backed out changeset a6e340fe4c07 (bug 1482040) Backed out changeset 7fe1827e6b39 (bug 1482040)|2018-12-04 17:38:23|
-|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=d6e310cff401)|Backed out changeset 73ed0515afc2 (bug 1490626) for causing address book and auto-complete slowness (bug 1511885). a=backout|2018-12-04 17:36:10|
-|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=fe462e7a581c)|No bug - Pin mozilla-esr60 version for release. a=jorgk|2018-12-03 21:30:47|
-|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=c088b10cdb9d)|No bug - Pin mozilla-esr60 version for release. a=jorgk|2018-08-15 21:36:04|
-|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=17f398c01f88)|Bug 1510913 - Remove the chromeclass-toolbar's unneeded margin-inline-start. r+a=jorgk|2018-12-01 10:12:18|
+|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=3510ade6c2cb)|Bug 1512977 - Part 2: Stop relying on x-mac-croatian for testing. r=mkmelin a=jorgk|2018-12-11 22:01:43|
+|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=c4abcd141b6c)|Bug 1512977 - Part 1: Remove charset aliases for unsupported x-mac-NNNNN and MUTF-7, remove hard-coded x-windows-949. r=hsivonen a=jorgk|2018-12-11 22:01:41|
+|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=bf0d776d3044)|Bug 809513 - Only notify for new mail in Inbox and non-special/virtual folders. r=aceman a=jorgk|2018-11-30 21:39:30|
+|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=076be5ca12a9)|Bug 1481052 - FileLink WebExtensions API; r=Fallen a=jorgk|2018-11-28 23:04:41|
+|[Link to commit](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=ece4d20e004b)|Bug 820767 - Recognize plausible legacy Java-style encoding names and comment the alias file. r+a=jorgk    ms-prefixed labels for code pages in common with DOS and Windows (excl 866)    cp-prefixed labels for code pages in common with DOS and Windows (group existing)    No-hyphen label for ISO-2022-JP    Underscore labels for Unix CJK encodings    Remove some aliases for encodings that aren't supported    Map ISO-8859-1 aliases to windows-1252    Correct the case of gbk to GBK    Group UTF-7 labels together    Document all entries (even old ones)|2018-12-09 00:47:00|
 
 |	inbound	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/inbound.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/inbound.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=84a17995db6f)|Bug 1512082 - Add TRY_SELECTOR env to templates expected value. r=me|2018-12-04 22:42:41|
-|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8860aa6f15ed)|Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE|2018-12-04 22:01:48|
-|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0a65dda20ade)|Merge mozilla-inbound to mozilla-central a=merge|2018-12-04 21:53:17|
-|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=55b77d1533ab)|Merge autoland to mozilla-central a=merge|2018-12-04 21:50:32|
-|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4021b5422562)|Bug 1511376 - Firefox crashes during startup when executed from tempdir r=Alex_Gaynor  Change nsMacUtilsImpl::GetAppPath() to not depend on the app bundle ending in ".app".  Differential Revision: https://phabricator.services.mozilla.com/D13682|2018-12-04 19:02:06|
+|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=247e265373eb)|Bug 1513465 - Fix bug in weak map checking where values are atoms and we aren't collecting the atoms zone r=sfink|2018-12-13 10:38:59|
+|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e79c7b512fd6)|Bug 1513699 - Disable SkiaGL on WebRender r=jrmuizel  Disable SkiaGL on WebRender, since there is a case that R8G8B8X8 is used, but WebRender does not support R8G8B8X8 yet. And SkiaGL is already disabled by Bug 1468801.  Differential Revision: https://phabricator.services.mozilla.com/D14366|2018-12-13 09:01:16|
+|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5c892a6147ae)|Bug 1512162: Disable stack protection for a portion of XPConnect on ppc64le due to a compiler bug. r=bholley|2018-12-13 02:52:08|
+|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3ecc407c0cc8)|Merge mozilla-central to mozilla-inbound.|2018-12-13 04:01:44|
+|[Link to commit](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8d6e7614d2f0)|Merge mozilla-inbound to mozilla-central. a=merge|2018-12-13 03:56:48|
 
 |	mozilla-build	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-build.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-build.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -93,44 +93,44 @@
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0a65dda20ade)|Merge mozilla-inbound to mozilla-central a=merge|2018-12-04 21:53:17|
-|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e77b8931ae7a)|Bug 1511692 - suppress warning for NS_BASE_STREAM_CLOSED from base streams Available() call. r=baku|2018-12-03 22:48:00|
-|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a5e9c1404b37)|Merge mozilla-central to mozilla-inbound. a=merge|2018-12-04 09:45:55|
-|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=23f6608c96b8)|Bug 1511894 - Re-enable wasm abort.any.js on fennec wpt r=me a=testonly|2018-12-03 22:37:58|
-|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=570521ec4d0f)|Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE|2018-12-03 21:53:09|
+|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5c892a6147ae)|Bug 1512162: Disable stack protection for a portion of XPConnect on ppc64le due to a compiler bug. r=bholley|2018-12-13 02:52:08|
+|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3ecc407c0cc8)|Merge mozilla-central to mozilla-inbound.|2018-12-13 04:01:44|
+|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1cb15212e6b5)|Replace an unnecessary U+00A0 NO-BREAK SPACE with a plain ol' ASCII space in devtools/client/inspector/test/head.js to make the file entirely ASCII, as a simplifying measure for another bug being fixed.  No bug, rs=me and DONTBUILD|2018-12-11 21:39:46|
+|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d6e7614d2f0)|Merge mozilla-inbound to mozilla-central. a=merge|2018-12-13 03:56:48|
+|[Link to commit](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=008fb8183cac)|Bug 1509634 - Remove toolkit/themes/osx/mozapps/extensions/toolbarbutton-dropmarker.png and replace usage with arrow-dropdown-12.svg. r=jaws|2018-12-12 21:31:12|
 
 |	mozilla-esr60	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=27d80d202f78)|Bug 1492128: [mozrelease] Tweak buglist email to be nicely formated and not use URL shortener; r=mtabara a=release  Differential Revision: https://phabricator.services.mozilla.com/D11096|2018-11-06 18:54:20|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=ce2b8fd01f4c)|Bug 1492128: [mozrelease] Fix typo in taskcluster proxy configuration; r=me|2018-11-01 20:21:12|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=3832eeb1e124)|Bug 1492128: [mozrelease] Pass repository to buglist commands; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10156|2018-10-30 18:21:49|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0ad7b5576268)|Bug 1492128: [mozrelease] Send an email when a release starts with a bug list; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10155|2018-10-30 21:04:00|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=1a026a44500b)|Bug 1492128: [mozrelease] Add command to generate buglist for a given release; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10154|2018-10-30 18:21:40|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=6a1fced923f7)|Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD|2018-12-11 14:12:32|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d7a01fb1c268)|No bug - Tagging 6cc5fc0eaeaf9a9abcfc2722999ecdc6b539c23d with FIREFOX_60_4_0esr_RELEASE a=release CLOSED TREE DONTBUILD|2018-12-11 14:12:28|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=53b49526917f)|Bug 1423215 - Upload an uncompressed runnable-jobs.json artifact in addition to the gz version r=dustin a=tomprince  Uploading both versions will hopefully make this easier to uplift. Once old pushes and artifacts expire, we can stop uploading the gzipped version.  Differential Revision: https://phabricator.services.mozilla.com/D13601|2018-12-09 05:07:48|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=c23331af8ac6)|Backed out changeset 28aff45820d6 (bug 1475775 for causing bug 1510212) to build Thunderbird 60.4.0. a=jorgk DONTBUILD|2018-12-08 16:20:05|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0ced5dcd7017)|Backed out changeset 3bed863ee656 (bug 1496736 for causing bug 1510212) to build Thunderbird 60.4.0. a=jorgk|2018-12-08 16:16:34|
 
 |	mozilla-release	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=26d700d8010a)|Bug 1499418 - Refactor and move Fennec's telemetry classes to geckoview/. r=jchen, a=RyanVM|2018-11-13 14:29:21|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=348872e1c4fe)|Bug 1499418 - Add GeckoView page load and startup performance telemetry probes. r=snorp,chutten,jchen, a=RyanVM|2018-11-13 14:39:11|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=626d7b63b958)|No bug - Tagging 80a34446b74a1ee3d0d5e3bf69232b8b0a5e64ab with FIREFOX_64_0_BUILD1 a=release CLOSED TREE DONTBUILD|2018-12-03 23:36:36|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=80a34446b74a)|Bug 1510985 - Remove Event.returnValue temporarily in 64. r=smaug a=jcristau  Event.returnValue causes breaking a bank application.  The reason of the breakage is, the web app assumes that Event.returnValue is available only on IE and it hits same incompatibility issue with window.event (bug 1479964). Additionally, the app may be used in various domains including in intranet. Therefore, we cannot disable it with blacklist of domains like other similar changes.  Fortunately, we can ship new keypress event behaviors which is tracked by bug 1479964 in 65.  So, for backward compatibility with 62 or earlier, we should temporarily disable Event.returnValue in 64.  But unfortunately, this was introduced in 63.  So, if some web apps have started to use this legacy attribute, we need to contact their vendors, though.|2018-12-03 20:24:39|
-|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=c814d6d044cc)|Backed out changeset 5856e2411504 (bug 1510985) for landing a partial patch|2018-12-03 20:23:07|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=239f593d11e5)|Bug 1511398 - Check if the retrieved accessible child is actually valid when filling the bundle's data, r=yzen a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13611|2018-12-06 15:43:23|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f891c440a238)|Bug 1511759 - Null-check focus path cached accessible. r=yzen a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13729|2018-12-05 19:14:54|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=6ee1fe6cdff8)|Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD|2018-12-11 13:54:22|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=1d9508601922)|No bug - Tagging 8337ebb86a425a1c65467fc68eb7c26b9046159e with FIREFOX_64_0_RELEASE a=release CLOSED TREE DONTBUILD|2018-12-11 13:54:18|
+|[Link to commit](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d44db55d8b56)|Bug 1423215 - Upload an uncompressed runnable-jobs.json artifact in addition to the gz version r=dustin a=tomprince  Uploading both versions will hopefully make this easier to uplift. Once old pushes and artifacts expire, we can stop uploading the gzipped version.  Differential Revision: https://phabricator.services.mozilla.com/D13601|2018-12-09 05:07:48|
 
 |	try	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/try.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/try.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=a5f93b9a1704)|try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/storage/estimate-indexeddb.https.any.js|2018-12-05 01:44:28|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=f7443fe3e23a)|try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/storage/estimate-usage-details-application-cache.https.tentative.html web-platform-tests:testing/web-platform/tests/storage/estimate-usage-details-caches.https.tentative.any.js web-platform-tests:testing/web-platform/tests/storage/estimate-usage-details-service-workers.https.tentative.window.js|2018-12-05 01:17:04|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=40bc2390bb96)|Bug 1512098 [wpt PR 14362] - Update wpt metadata, a=testonly  wpt-pr: 14362 wpt-type: metadata |2018-12-05 01:16:47|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=6f916b0e97a5)|try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/IndexedDB/idb-explicit-commit.any.js|2018-12-05 01:02:28|
-|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=a39ab7b3c0a0)|Bug 1512104 [wpt PR 14363] - [IndexedDB] Testing ordering and error handling for transaction.commit, a=testonly    Tests that transaction ordering is consistent, even if a transaction   calls commit().   Tests that request errors cause a commit()-ed transaction to abort.  The second case seems to be broken in our implementation.  R=andreasbutler@google.com, cmp@chromium.org  Bug: 911877 Change-Id: I47da6ce9d350f6c47afcd02cf808d4fefb5f013f  wpt-commit: 184fcfe5959cc7fafd01f90ddc9c98ad767eaa18 wpt-pr: 14363 |2018-12-05 01:00:32|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=04ffa65bae2a)|try: -b do -p all -u all -t none  Pushed via `mach try syntax`|2018-12-13 12:15:13|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=5e45710cfdda)|Bug 1508282 - Temporary whitelist of files to skip Eval Assertion|2018-12-13 12:14:55|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=80676ed904cd)|try: -b do -p all -u jsreftest -t none|2018-12-13 12:11:21|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=7bbba5f30423)|Bug 1512989 - Part 2: Fix browser jstests failures. r=jorendorff|2018-12-13 12:10:06|
+|[Link to commit](https://hg.mozilla.org/try/pushloghtml?changeset=b051e7bd174f)|Bug 1512989 - Part 1: Pass correct test type. r=ahal|2018-12-13 10:24:56|
 
 |	addonscript	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/addonscript.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/addonscript.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -181,9 +181,6 @@
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|[Link to commit](https://github.com/mozilla-releng/build-cloud-tools/commit/3962e62c72251ae9fc531bdb5b14ba40243a5b70)|Merge branch 'La0-buildhub-cert'|2018-12-04 16:30:17|
-|[Link to commit](https://github.com/mozilla-releng/build-cloud-tools/commit/7fe44bf80d48b949c4d65c7642e3e4b69780af84)|Add CNAME record for DigiCert on buildhub.moz.tools|2018-12-04 15:48:33|
-|[Link to commit](https://github.com/mozilla-releng/build-cloud-tools/commit/cb2ede208a3dda6df742eb0f251827762931f1d1)|Merge branch 'La0-buildhub'|2018-11-29 02:03:48|
 
 |	build-puppet	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -204,6 +201,8 @@
 |[Link to commit](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|0.9.2|2018-11-08 09:57:02|
 |[Link to commit](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|Add requirements.txt.in in package so setup.py can use it|2018-11-08 09:56:04|
 |[Link to commit](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|0.9.1|2018-11-07 19:08:58|
+|[Link to commit](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|0.9.2|2018-11-08 09:57:02|
+|[Link to commit](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|Add requirements.txt.in in package so setup.py can use it|2018-11-08 09:56:04|
 
 |	OpenCloudConfig	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -264,8 +263,11 @@
  
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
+|[Link to commit](https://github.com/mozilla-releng/ship-it/commit/01e0a190cba5bb6d81949fabe71054ab6d1a7bde)|Bump TB version to 66. (#248)|2018-12-10 21:54:20|
+|[Link to commit](https://github.com/mozilla-releng/ship-it/commit/4ff40330cb5221d24e76fa3c273ed4c549794bb5)|Nightly 66: Merge and deply when 66 builds are available for all locales (#247)|2018-12-10 16:49:45|
 |[Link to commit](https://github.com/mozilla-releng/ship-it/commit/f8d9c823a7fc598ba5e6623dd1f4e65c1de38393)|Add comment about syncing v1 and v2 configs (#246)|2018-11-30 19:20:47|
 |[Link to commit](https://github.com/mozilla-releng/ship-it/commit/f1a6646f20ef404c2667d3b714c3ef90b6719546)|Bug 1511159 - Disable firefox releases (#245)|2018-11-30 17:07:43|
+|[Link to commit](https://github.com/mozilla-releng/ship-it/commit/6e63fa3ca7a575eb4b325d606f6652360fea20c7)|Bug 1508140 - Add 'trs' to product-details (#243)|2018-11-19 02:14:35|
 
 |	shipitscript	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -308,6 +310,7 @@
 |[Link to commit](https://github.com/taskcluster/taskcluster-auth/commit/9babc5e6d48fc27013e58e8e67eb085bfaa6561e)|Merge pull request #186 from djmitche/bug1509154  Bug 1509154 - await row removals|2018-11-30 02:24:34|
 |[Link to commit](https://github.com/taskcluster/taskcluster-auth/commit/6375db436a015e587979ded3e94fe36cd90ec7c6)|Bug 1509154 - await row removals|2018-11-29 01:23:01|
 |[Link to commit](https://github.com/taskcluster/taskcluster-auth/commit/b8c3dfe5dc51e448e3c4773b7bd386e8db37ffe9)|Bug 1509089 - remove LOCK_ROLES support  This was a big old hack meant to block changes to roles during the transition to storing roles in a blob.  It's not needed anymore.|2018-11-28 22:01:44|
+|[Link to commit](https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e)|Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|2018-12-10 18:27:23|
 
 |	taskcluster-queue	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 
@@ -316,6 +319,9 @@
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
 |[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/c3a424aa0811c0b8bef42219a485d5a179a14ba2)|Merge pull request #304 from djmitche/bug1509189  Bug 1509189 - use unique table names to avoid conflicts|2018-11-30 02:12:03|
 |[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/cb8f3946830b982b58d2f93b99202cab15f40719)|Bug 1509189 - use unique table names to avoid conflicts  Taskcluster-Github already does something like this.  The tables get cleaned out and should have no rows at test completion, so this doesn't use a lot of space.  There's no limit (aside from space) on the number of tables in an account.|2018-11-29 01:12:10|
+|[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/f16ab6658148efcac18434802525091f66359f42)|Merge pull request #305 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|2018-12-07 15:23:43|
+|[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/904a244e39a0d96488f7fe41f031355b0e01f018)|Bug 1510377 - use tc-lib-references to validate references|2018-12-06 00:01:53|
+|[Link to commit](https://github.com/taskcluster/taskcluster-queue/commit/f16ab6658148efcac18434802525091f66359f42)|Merge pull request #305 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|2018-12-07 15:23:43|
 
 |	treescript	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------------:|:-------------------------------------:|:---------------------------------:| 

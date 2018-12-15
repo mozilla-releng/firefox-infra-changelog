@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 19:46:38.365862"
+    "lastChecked": "2018-12-13 12:16:46.785534"
   },
   "1": {
-    "sha": "c088b10cdb9d2fe30ea689e5740a16357e0c1034",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=c088b10cdb9d",
+    "sha": "3510ade6c2cb18d26fa7ec47a418ce774f31b614",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=3510ade6c2cb",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
-    "commit_date": "2018-08-15 21:36:04"
+    "commit_message": "Bug 1512977 - Part 2: Stop relying on x-mac-croatian for testing. r=mkmelin a=jorgk",
+    "commit_date": "2018-12-11 22:01:43"
   },
   "2": {
-    "sha": "17f398c01f885872419879e2714a5dada95451bc",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=17f398c01f88",
-    "commiter_name": "Richard Marti ",
-    "commit_email": "richard.marti@gmail.com",
-    "commit_message": "Bug 1510913 - Remove the chromeclass-toolbar's unneeded margin-inline-start. r+a=jorgk",
-    "commit_date": "2018-12-01 10:12:18"
+    "sha": "c4abcd141b6ccc281c26765731795005784210c7",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=c4abcd141b6c",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 1512977 - Part 1: Remove charset aliases for unsupported x-mac-NNNNN and MUTF-7, remove hard-coded x-windows-949. r=hsivonen a=jorgk",
+    "commit_date": "2018-12-11 22:01:41"
   },
   "3": {
-    "sha": "04fee377d47e89dedeb57f3099f13f3f4772aaf4",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=04fee377d47e",
-    "commiter_name": "Richard Marti ",
-    "commit_email": "richard.marti@gmail.com",
-    "commit_message": "Bug 1509483 - Set a background color for #calendar-task-details-container on macOS. r+a=philipp",
-    "commit_date": "2018-11-23 18:28:23"
+    "sha": "bf0d776d3044be78117b7d198e44299ed954de43",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=bf0d776d3044",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 809513 - Only notify for new mail in Inbox and non-special/virtual folders. r=aceman a=jorgk",
+    "commit_date": "2018-11-30 21:39:30"
   },
   "4": {
-    "sha": "fea596d791dfdcae52986975d4ee8ca62030951f",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=fea596d791df",
-    "commiter_name": "Mozilla Releng Treescript ",
-    "commit_email": "release+treescript@mozilla.org",
-    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release",
-    "commit_date": "2018-11-29 23:29:47"
+    "sha": "076be5ca12a94eaf19618618977ed1f5f2101be4",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=076be5ca12a9",
+    "commiter_name": "Geoff Lankow ",
+    "commit_email": "geoff@darktrojan.net",
+    "commit_message": "Bug 1481052 - FileLink WebExtensions API; r=Fallen a=jorgk",
+    "commit_date": "2018-11-28 23:04:41"
   },
   "5": {
-    "sha": "bd67cdfc2e4085a8f6b969219949620628d9c078",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=bd67cdfc2e40",
-    "commiter_name": "Mozilla Releng Treescript ",
-    "commit_email": "release+treescript@mozilla.org",
-    "commit_message": "No bug - Tagging 0ba73c30a3d9f213323766057d2176cd253efdd3 with THUNDERBIRD_60_3_2_BUILD1, THUNDERBIRD_60_3_2_RELEASE a=release CLOSED TREE",
-    "commit_date": "2018-11-29 23:29:46"
+    "sha": "ece4d20e004b8609ebdb9539da2f3075e833d8f0",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=ece4d20e004b",
+    "commiter_name": "Henri Sivonen ",
+    "commit_email": "hsivonen@hsivonen.fi",
+    "commit_message": "Bug 820767 - Recognize plausible legacy Java-style encoding names and comment the alias file. r+a=jorgk    ms-prefixed labels for code pages in common with DOS and Windows (excl 866)    cp-prefixed labels for code pages in common with DOS and Windows (group existing)    No-hyphen label for ISO-2022-JP    Underscore labels for Unix CJK encodings    Remove some aliases for encodings that aren't supported    Map ISO-8859-1 aliases to windows-1252    Correct the case of gbk to GBK    Group UTF-7 labels together    Document all entries (even old ones)",
+    "commit_date": "2018-12-09 00:47:00"
   },
   "6": {
-    "sha": "7a117f25d40ecfb0bd352775eada66b6ffd6938c",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=7a117f25d40e",
+    "sha": "37dd76e3e5007e399ed6daca1f2408d129dff15a",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=37dd76e3e500",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1509685 - Add more bounds checking in nsMsgDBView::UpdateDisplayMessage() to avoid crashes, take 2. r=alta88 a=jorgk DONTBUILD",
-    "commit_date": "2018-11-28 20:48:00"
+    "commit_message": "Bug 1511950 - Follow-up: Adapt test test-cp932-display.js to ESR 60. r+a=jorgk DONTBUILD",
+    "commit_date": "2018-12-09 19:59:59"
   },
   "7": {
-    "sha": "0ba73c30a3d9f213323766057d2176cd253efdd3",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=0ba73c30a3d9",
+    "sha": "ce3267a40e99bcb3831455632605e9a82e92c252",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=ce3267a40e99",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1510472 - Add null check to avoid crash due to nsDependentCString(null). r=mkmelin a=jorgk",
-    "commit_date": "2018-11-28 09:14:26"
+    "commit_message": "No bug - Port https://hg.mozilla.org/mozilla-central/rev/41e787e7785f: remove update from mozharness actions. rs=bustage-fix a=jorgk",
+    "commit_date": "2018-09-19 22:49:53"
   },
   "8": {
-    "sha": "4f5ec4473e22a72d72241ef98216ce9fbe51c569",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=4f5ec4473e22",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1510028 - Add null check to avoid crash due to nsDependentCString(null). r=mkmelin a=jorgk",
-    "commit_date": "2018-11-27 22:10:19"
-  },
-  "9": {
-    "sha": "189364307b2e821567aef43c0faded255f4bf4d8",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=189364307b2e",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1509685 - Add more bounds checking in nsMsgDBView::UpdateDisplayMessage() to avoid crashes. r=alta88 a=jorgk",
-    "commit_date": "2018-11-27 20:11:03"
-  },
-  "10": {
-    "sha": "9c373f4cbef707b9cfd7eb01879020f0b58af771",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=9c373f4cbef7",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1470049 - Partially revert rev 40f5ba35583 (bug 1385573) to fix insertion into threaded unified/search view. a=backout",
-    "commit_date": "2018-11-28 09:06:46"
-  },
-  "11": {
-    "sha": "cc3a5040f78d7db669a48c77dec43e1790843684",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=cc3a5040f78d",
+    "sha": "dd636f3ec3fe47f418d1c94897409ddf30c63548",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=dd636f3ec3fe",
     "commiter_name": "aceman ",
     "commit_email": "acelists@atlas.sk",
-    "commit_message": "Bug 1509586 - Look for requireEncryptMessage in params.smFields in msgCompSecurityInfo.js. r=mkmelin a=jorgk",
-    "commit_date": "2018-11-25 10:55:00"
+    "commit_message": "Bug 1495895 - make adding compose attachments more robust in MozMill tests. r+a=jorgk DONTBUILD",
+    "commit_date": "2018-10-02 12:30:00"
+  },
+  "9": {
+    "sha": "321076459c7e7d81d4fdcff7284ebcc0fc53e272",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=321076459c7e",
+    "commiter_name": "aceman ",
+    "commit_email": "acelists@atlas.sk",
+    "commit_message": "Bug 1512808 - fix date format detection in initLocaleShortDateFormat(). r+a=jorgk",
+    "commit_date": "2018-12-08 13:57:00"
+  },
+  "10": {
+    "sha": "f520e6a3bb4350297d2c14a725f86f416db26c84",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=f520e6a3bb43",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Bug 1511950 - Follow-up: Fix backport error. r+a=jorgk",
+    "commit_date": "2018-12-09 08:44:13"
+  },
+  "11": {
+    "sha": "71a02d037d351885576f99fba58b4d67e657ce62",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=71a02d037d35",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Port bug 1466537 - add 'enable-full-crashsymbols: true' to nightly builds. rs+a=jorgk",
+    "commit_date": "2018-12-08 23:25:43"
   },
   "12": {
-    "sha": "6f6c836a215ce7f11b7ccd1a6ff4d2206521cd79",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=6f6c836a215c",
+    "sha": "42ff108f0802546124598336e97bd5e996790f42",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=42ff108f0802",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1510035 - Set orient=\"vertical\" on splitter on search and AB search. r=Paenglab a=jorgk",
-    "commit_date": "2018-11-26 22:47:22"
+    "commit_message": "Bug 1511950 - Add MozMill test for message display in cp932. r=mkmelin a=jorgk",
+    "commit_date": "2018-12-05 22:06:00"
   },
   "13": {
-    "sha": "ef701c1534bfe8a22705b77f9f517f00abd795ac",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=ef701c1534bf",
+    "sha": "1c58185f5700ee50efab4282ffc8ae9286e8f2df",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=1c58185f5700",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 409458 - fix backport error: mailServices.js vs. MailServices.jsm. rs=bustage-fix a=jorgk",
-    "commit_date": "2018-11-27 10:10:14"
+    "commit_message": "Bug 1511950 - Add GetCharsetAlias() call to JS Mime. r=mkmelin a=jorgk",
+    "commit_date": "2018-12-05 22:05:58"
   },
   "14": {
-    "sha": "607e7138912852c182fd42d9e0f3c87ea3b8eeb3",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=607e71389128",
+    "sha": "5d43ca613923a9e4362628efdeba170518966bca",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=5d43ca613923",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
-    "commit_date": "2018-08-15 21:36:04"
+    "commit_message": "Bug 1511950 - Add missing calls to GetCharsetAlias() to take Thunderbird's aliases into account. r=mkmelin a=jorgk",
+    "commit_date": "2018-12-05 10:27:59"
   },
   "15": {
-    "sha": "f2bea6614d22d3efdd2274ab7d63d62c18c2590f",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=f2bea6614d22",
-    "commiter_name": "Richard Marti ",
-    "commit_email": "richard.marti@gmail.com",
-    "commit_message": "Bug 1508611 - Set orient=\"vertical\" on splitter in filter editor to show it immediately. r+a=jorgk",
-    "commit_date": "2018-11-25 12:15:02"
+    "sha": "0db5f3f7acd8b1f9d71794c8ed2da363b3fed6e6",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=0db5f3f7acd8",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Port bug 1469436 (two changesets: 2477607822a3 and 33f3e7a6ca7a). rs=bustage-fix       Port bug 1469436, take 2 (port more of changeset 33f3e7a6ca7a). rs=bustage-fix       Port bug 1469436, take 3 (port more of changeset 33f3e7a6ca7a). rs=bustage-fix",
+    "commit_date": "2018-07-13 11:24:28"
   },
   "16": {
-    "sha": "949fc4394c9f2a940139ed16aa214c9d5337e6b6",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=949fc4394c9f",
-    "commiter_name": "Magnus Melin ",
-    "commit_email": "mkmelin+mozilla@iki.fi",
-    "commit_message": "Bug 1271353 - check own email addresses case-insensitively in correspondents column and ignore plus addressing part. r+a=jorgk",
-    "commit_date": "2018-11-21 08:40:25"
+    "sha": "e224e5b9ec04a6a83119e5698f96f0b6c93c9be4",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=e224e5b9ec04",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Port bug 1467359 - add Fetch-URL to config.yml. rs=bustage-fix a=jorgk DONTBUILD",
+    "commit_date": "2018-07-31 10:50:35"
   },
   "17": {
-    "sha": "879f355b920c29492bf3867c7406df174d26f08b",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=879f355b920c",
+    "sha": "440a81faa54eb312e75d696af3cc6cbdac2ae5b9",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=440a81faa54e",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Bug 1401858 - add null check to avoid crash in EncodedHeader()/DecodedHeader(). r=mkmelin a=jorgk",
-    "commit_date": "2018-11-25 22:28:26"
+    "commit_message": "Port changesets from bug 1490094 and bug 1487172. rs=bustage-fix       Bug 1490094 - Follow-up: Correct balrog rule numbers for Thunderbird's 'staging'. r=me       Bug 1490094 - Follow-up: Change release-type from esr60 to release. f=tomprince, rs=jorgk  Thunderbird does not use \"esr. \" as a release type. See https://hg.mozilla.org/mozilla-central/file/tip/taskcluster/taskgraph/decision.py#l95",
+    "commit_date": "2018-09-18 09:13:37"
   },
   "18": {
-    "sha": "e3a599bf7d540a475f30b807ed6711bce1f16cfb",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=e3a599bf7d54",
-    "commiter_name": "Hiroyuki Ikezoe ",
-    "commit_email": "hiikezoe@mozilla-japan.org",
-    "commit_message": "Bug 409458 - nsIMsgFolder.AddFolderListener should hold a reference to the listener. r=standard8,neil,darktrojan,jorgk a=jorgk",
-    "commit_date": "2018-08-30 03:42:58"
-  },
-  "19": {
-    "sha": "a6e340fe4c07d16d962abab48404aad0d07848b8",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=a6e340fe4c07",
-    "commiter_name": "Neil Rashbrook ",
-    "commit_email": "neil@parkwaycc.co.uk",
-    "commit_message": "Bug 1482040 - Fix failure in test_uid.js by iterating MailServices.ab.directories 'manually'. r=darktrojan a=jorgk DONTBUILD",
-    "commit_date": "2018-11-20 06:29:00"
-  },
-  "20": {
-    "sha": "afa9e6f5d698d35b4c2e5da7bb711bfbccd6dd54",
-    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=afa9e6f5d698",
+    "sha": "02ceff96f1f87197133ab75db22239f566791139",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=02ceff96f1f8",
     "commiter_name": "Jorg K ",
     "commit_email": "jorgk@jorgk.com",
-    "commit_message": "No bug - Pin mozilla-esr60 version for release. a=jorgk",
-    "commit_date": "2018-08-15 21:36:04"
+    "commit_message": "Port bug 1490094: [release] Configure staging release resources via dedicated parameter. rs=bustage-fix       Port bug 1490094: Follow-up: Fix indentation issues. rs=white-space-only       Bug 1490094 - Follow-up: fix incorrect release levels. r=me",
+    "commit_date": "2018-09-12 08:52:47"
+  },
+  "19": {
+    "sha": "84bb306f9c5d4b3261ea3d07da86ccb93b535f90",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=84bb306f9c5d",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "No bug - Pin mozilla-esr60 version for release and set version to 60.4.0. a=jorgk",
+    "commit_date": "2018-12-08 16:37:46"
+  },
+  "20": {
+    "sha": "e4d520b5dc17e8a0e3ba4d760556b1ba4aad4842",
+    "url": "https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=e4d520b5dc17",
+    "commiter_name": "Jorg K ",
+    "commit_email": "jorgk@jorgk.com",
+    "commit_message": "Backed out changeset a6e340fe4c07 and 7fe1827e6b39 (bug 1482040) for causing address book and auto-complete slowness (bug 1511885). a=backout  Backed out changeset a6e340fe4c07 (bug 1482040) Backed out changeset 7fe1827e6b39 (bug 1482040)",
+    "commit_date": "2018-12-04 17:38:23"
   }
 }

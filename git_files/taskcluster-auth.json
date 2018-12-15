@@ -1,7 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-05 01:51:54.337880",
-    "last_two_releases": null
+    "lastChecked": "2018-12-05 23:38:19"
   },
   "1": {
     "sha": "dbbcef916c53765e535d7cd9580367089cec3a17",
@@ -43,6 +42,349 @@
     "commiter_email": "dustin@v.igoro.us",
     "commit_message": "Bug 1509089 - remove LOCK_ROLES support  This was a big old hack meant to block changes to roles during the transition to storing roles in a blob.  It's not needed anymore.",
     "commit_date": "2018-11-28 22:01:44",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "5": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "6": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "7": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "8": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "9": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "10": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "11": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "12": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "13": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "14": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "15": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "16": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "17": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "18": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "19": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "20": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "21": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "22": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "23": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "24": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "25": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "26": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "27": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "28": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "29": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "30": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "31": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "32": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
     "files_changed": [
       "src/v1.js"
     ]

@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-05 01:51:02.545423",
+    "lastChecked": "2018-12-13 12:15:52.185979",
     "last_two_releases": {
       "LatestRelease": {
         "version": "v51",
@@ -323,6 +323,4127 @@
     ]
   },
   "17": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "18": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "19": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "20": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "21": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "22": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "23": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "24": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "25": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "26": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "27": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "28": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "29": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "30": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "31": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "32": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "33": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "34": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "35": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "36": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "37": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "38": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "39": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "40": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "41": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "42": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "43": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "44": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "45": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "46": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "47": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "48": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "49": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "50": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "51": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "52": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "53": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "54": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "55": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "56": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "57": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "58": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "59": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "60": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "61": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "62": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "63": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "64": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "65": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "66": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "67": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "68": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "69": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "70": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "71": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "72": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "73": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "74": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "75": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "76": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "77": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "78": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "79": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "80": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "81": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "82": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "83": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "84": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "85": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "86": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "87": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "88": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "89": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "90": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "91": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "92": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "93": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "94": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "95": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "96": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "97": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "98": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "99": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "100": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "101": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "102": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "103": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "104": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "105": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "106": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "107": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "108": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "109": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "110": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "111": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "112": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "113": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "114": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "115": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "116": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "117": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "118": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "119": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "120": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "121": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "122": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "123": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "124": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "125": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "126": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "127": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "128": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "129": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "130": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "131": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "132": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "133": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "134": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "135": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "136": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "137": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "138": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "139": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "140": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "141": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "142": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "143": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "144": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "145": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "146": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "147": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "148": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "149": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "150": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "151": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "152": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "153": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "154": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "155": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "156": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "157": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "158": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "159": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "160": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "161": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "162": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "163": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "164": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "165": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "166": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "167": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "168": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "169": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "170": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "171": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "172": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "173": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "174": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "175": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "176": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "177": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "178": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "179": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "180": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "181": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "182": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "183": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "184": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "185": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "186": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "187": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "188": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "189": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "190": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "191": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "192": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "193": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "194": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "195": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "196": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "197": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "198": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "199": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "200": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "201": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "202": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "203": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "204": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "205": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "206": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "207": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "208": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "209": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "210": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "211": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "212": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "213": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "214": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "215": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "216": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "217": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "218": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "219": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "220": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "221": {
+    "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
+    "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
+    "commiter_name": "La0",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "docs: Remove IRC notification (#1646)",
+    "commit_date": "2018-11-02 15:15:35",
+    "files_changed": [
+      "src/docs/deploy/regular.rst"
+    ]
+  },
+  "222": {
+    "sha": "ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "url": "https://github.com/mozilla/release-services/commit/ae0004b50d4d2252d5b8ed3d3d3aa232a1412d14",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Filter clang-format publishable issues by their path. (#1689)",
+    "commit_date": "2018-11-20 15:36:16",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py",
+      "src/staticanalysis/bot/static_analysis_bot/cli.py",
+      "src/staticanalysis/bot/static_analysis_bot/config.py",
+      "src/staticanalysis/bot/tests/conftest.py",
+      "src/staticanalysis/bot/tests/test_clang.py",
+      "src/staticanalysis/bot/tests/test_issues.py",
+      "src/staticanalysis/bot/tests/test_reporter_phabricator.py"
+    ]
+  },
+  "223": {
+    "sha": "f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "url": "https://github.com/mozilla/release-services/commit/f5434b1aff3d78db8bfceae7cfa872382c4b1d9f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": null,
+    "commit_message": "codecoverage/backend: Add test for codecoverage backend with mocked rq and Redis (#1673)",
+    "commit_date": "2018-11-20 11:57:13",
+    "files_changed": [
+      "src/codecoverage/backend/tests/__init__.py",
+      "src/codecoverage/backend/tests/conftest.py",
+      "src/codecoverage/backend/tests/test_coverage.py"
+    ]
+  },
+  "224": {
+    "sha": "88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "url": "https://github.com/mozilla/release-services/commit/88b939c265b26fe9e960d7a3361648d9ea522af6",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "uplift/bot: Add a BUGZILLA_COMMENT_ONLY setting in order to report failed uplifts without cancelling requests. (#1680)",
+    "commit_date": "2018-11-20 09:34:34",
+    "files_changed": [
+      "src/uplift/bot/uplift_bot/bugzilla.py",
+      "src/uplift/bot/uplift_bot/cli.py",
+      "src/uplift/bot/uplift_bot/sync.py"
+    ]
+  },
+  "225": {
+    "sha": "3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "url": "https://github.com/mozilla/release-services/commit/3399eed333cb502e46c5a7b83f3673d0fb4faafb",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/frontent: add testing config (#1687)  At this point it is the same as staging.js",
+    "commit_date": "2018-11-20 01:39:45",
+    "files_changed": [
+      "src/shipit/frontend/src/configs/testing.js"
+    ]
+  },
+  "226": {
+    "sha": "37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "url": "https://github.com/mozilla/release-services/commit/37bc7cafe221c5cea7d33041125d95312fe7757f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: update release status (#1688)  In the future we will need to update the release status explicitly from  a in-tree scheduled task, so we mark a release as completed only after  all required tasks are done (bouncer, tests, etc).",
+    "commit_date": "2018-11-19 20:45:16",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml"
+    ]
+  },
+  "227": {
+    "sha": "4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "url": "https://github.com/mozilla/release-services/commit/4117cbaa527bd0a7d70edd0e9ad15cc1a0f6ee6f",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "shipit/api: Fix release sync, add dates (#1684)  Initially I didn't add the started/completed datetimes to the sync  functionality, probably because they are not exposed in the constructor.    Additionally I added an API endpoint to sync the datetimes only.",
+    "commit_date": "2018-11-19 15:19:47",
+    "files_changed": [
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/api.yml",
+      "src/shipit/api/shipit_api/cli.py",
+      "src/shipit/api/shipit_api/models.py"
+    ]
+  },
+  "228": {
+    "sha": "a508a60b9049302aae8c8128467d2646a345b38a",
+    "url": "https://github.com/mozilla/release-services/commit/a508a60b9049302aae8c8128467d2646a345b38a",
+    "commiter_name": "rail",
+    "commiter_email": null,
+    "commit_message": "backend_common: add swagger_ui (#1685)  connexion 2.0 doesn't bundle swagger UI anymore by default, so the  projects that enable the API extension don't get it installed. I also  regenerated the dependencies of the projects that switched to connexion  2.0.",
+    "commit_date": "2018-11-19 15:01:56",
+    "files_changed": [
+      "lib/backend_common/requirements-dev.txt",
+      "lib/backend_common/requirements-extra.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt"
+    ]
+  },
+  "229": {
+    "sha": "75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "url": "https://github.com/mozilla/release-services/commit/75d8a9229cf31db102d7cc69c58fe4bfd26fc724",
+    "commiter_name": "La0",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Bump rust to 1.30.0 (#1686)",
+    "commit_date": "2018-11-19 11:15:41",
+    "files_changed": [
+      "nix/gecko_env.nix"
+    ]
+  },
+  "230": {
+    "sha": "bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "url": "https://github.com/mozilla/release-services/commit/bf1f4e93bd3f54c23a4cebaf844dfa977339c0a4",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: use app.cli.add_command instead of decorator for flask subcommands (#1683)",
+    "commit_date": "2018-11-15 18:28:53",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/__init__.py"
+    ]
+  },
+  "231": {
+    "sha": "ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "url": "https://github.com/mozilla/release-services/commit/ce6a87eb0c462e98e353c8c6b5a06ad9caf7e5a3",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "codecoverage/bot: Use a placeholder chunk for build tasks to avoid having empty chunks (#1682)",
+    "commit_date": "2018-11-14 17:38:32",
+    "files_changed": [
+      "src/codecoverage/bot/code_coverage_bot/chunk_mapping.py",
+      "src/codecoverage/bot/code_coverage_bot/taskcluster.py",
+      "src/codecoverage/bot/tests/test_taskcluster.py"
+    ]
+  },
+  "232": {
+    "sha": "0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "url": "https://github.com/mozilla/release-services/commit/0efec3094069275c8c9155bfc4d70ffd9cace3bb",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: refactor mkProject to only pass project_name (#1678)",
+    "commit_date": "2018-11-13 00:48:39",
+    "files_changed": [
+      "lib/frontend_common/example/default.nix",
+      "lib/please_cli/default.nix",
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "nix/templates/backend-json-api/{{cookiecutter.project_path}}/default.nix",
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/bot/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/docs/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/releng_frontend/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/frontend/VERSION",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/staticanalysis/frontend/VERSION",
+      "src/staticanalysis/frontend/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "233": {
+    "sha": "55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "url": "https://github.com/mozilla/release-services/commit/55795964c7b8af1f658ae4cf0437f90ac284f86f",
+    "commiter_name": "kevinluvian",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "please-cli: display in which project shell you are (#1676)",
+    "commit_date": "2018-11-13 00:16:42",
+    "files_changed": [
+      "nix/default.nix",
+      "nix/lib/default.nix",
+      "src/docs/default.nix",
+      "src/shipit/frontend/default.nix",
+      "src/staticanalysis/frontend/default.nix"
+    ]
+  },
+  "234": {
+    "sha": "591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "url": "https://github.com/mozilla/release-services/commit/591e05867afb6a7dd5fb3917aac0511d323f9110",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: update dependencies (#1670)",
+    "commit_date": "2018-11-12 23:36:45",
+    "files_changed": [
+      "lib/backend_common/backend_common/__init__.py",
+      "lib/backend_common/backend_common/api.py",
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/backend_common/auth0.py",
+      "lib/backend_common/backend_common/cache.py",
+      "lib/backend_common/backend_common/db.py",
+      "lib/backend_common/backend_common/notifications.py",
+      "lib/backend_common/backend_common/pulse.py",
+      "lib/backend_common/backend_common/testing.py",
+      "lib/backend_common/setup.py",
+      "lib/cli_common/cli_common/taskcluster.py",
+      "lib/cli_common/cli_common/utils.py",
+      "lib/cli_common/requirements-dev.txt",
+      "lib/cli_common/setup.py",
+      "lib/please_cli/please_cli/base_image.py",
+      "lib/please_cli/please_cli/decision_task.py",
+      "lib/please_cli/requirements.nix",
+      "lib/please_cli/requirements_frozen.txt",
+      "nix/nix.json",
+      "nix/nixpkgs-mozilla.json",
+      "nix/nixpkgs.json",
+      "nix/requirements_override.nix",
+      "src/codecoverage/backend/codecoverage_backend/services/codecov.py",
+      "src/codecoverage/backend/requirements-dev.txt",
+      "src/codecoverage/backend/requirements.nix",
+      "src/codecoverage/backend/requirements_frozen.txt",
+      "src/codecoverage/bot/requirements.nix",
+      "src/codecoverage/bot/requirements_frozen.txt",
+      "src/codecoverage/crawler/requirements.nix",
+      "src/codecoverage/crawler/requirements.txt",
+      "src/codecoverage/crawler/requirements_frozen.txt",
+      "src/common/naming/requirements.nix",
+      "src/common/naming/requirements_frozen.txt",
+      "src/docs/requirements.nix",
+      "src/docs/requirements_frozen.txt",
+      "src/notification/identity/requirements.nix",
+      "src/notification/identity/requirements_frozen.txt",
+      "src/notification/policy/requirements.nix",
+      "src/notification/policy/requirements_frozen.txt",
+      "src/pulselistener/requirements.nix",
+      "src/pulselistener/requirements_frozen.txt",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/shipit/api/shipit_api/api.py",
+      "src/shipit/api/shipit_api/release.py",
+      "src/shipit/api/shipit_api/tasks.py",
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/static_analysis_bot/infer/__init__.py",
+      "src/staticanalysis/bot/static_analysis_bot/retrigger.py",
+      "src/staticanalysis/bot/static_analysis_bot/revisions.py",
+      "src/tokens/api/requirements.nix",
+      "src/tokens/api/requirements_frozen.txt",
+      "src/tooltool/api/default.nix",
+      "src/tooltool/api/requirements.nix",
+      "src/tooltool/api/requirements_frozen.txt",
+      "src/tooltool/api/tooltool_api/__init__.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/treestatus/api/default.nix",
+      "src/treestatus/api/requirements.nix",
+      "src/treestatus/api/requirements_frozen.txt",
+      "src/uplift/backend/requirements.nix",
+      "src/uplift/backend/requirements_frozen.txt",
+      "src/uplift/bot/requirements.nix",
+      "src/uplift/bot/requirements_frozen.txt"
+    ]
+  },
+  "235": {
+    "sha": "77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "url": "https://github.com/mozilla/release-services/commit/77b4e9d1b463b01ab4fdc56cbef1a71176e5ddf8",
+    "commiter_name": "marco-c",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Update parsepatch to latest version and add a regression test for checking if an issue is in a revision (#1679)    staticanalysis/bot: Add tests for Revision.analyze_patch      staticanalysis/bot: Update parsepatch to 0.1.3",
+    "commit_date": "2018-11-12 16:40:20",
+    "files_changed": [
+      "src/staticanalysis/bot/requirements.nix",
+      "src/staticanalysis/bot/requirements_frozen.txt",
+      "src/staticanalysis/bot/tests/test_revisions.py"
+    ]
+  },
+  "236": {
+    "sha": "e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "url": "https://github.com/mozilla/release-services/commit/e505e8e2aad9ff34e5dc2f9e8cbe100684ca9200",
+    "commiter_name": "jankeromnes",
+    "commiter_email": null,
+    "commit_message": "staticanalysis/bot: Use the right diffs for the improvement patch. (#1671)",
+    "commit_date": "2018-11-08 13:47:00",
+    "files_changed": [
+      "src/staticanalysis/bot/static_analysis_bot/clang/format.py"
+    ]
+  },
+  "237": {
+    "sha": "8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "url": "https://github.com/mozilla/release-services/commit/8650a55cb9e33bcbe429ad9e3a8b5759e530129b",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: bumping to v51 (#1672)",
+    "commit_date": "2018-11-07 22:14:32",
+    "files_changed": [
+      ".taskcluster.yml",
+      "VERSION"
+    ]
+  },
+  "238": {
     "sha": "b9843defb782381398b0c486d6cc87e9fbc33599",
     "url": "https://github.com/mozilla/release-services/commit/b9843defb782381398b0c486d6cc87e9fbc33599",
     "commiter_name": "La0",

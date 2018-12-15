@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 19:46:33.402269"
+    "lastChecked": "2018-12-13 12:16:41.382792"
   },
   "1": {
-    "sha": "681e4322572146a24481a31779d2a7db03d35d7f",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=681e43225721",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/accumulation-per-property.html web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/addition-per-property.html web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/interpolation-per-property.html",
-    "commit_date": "2018-12-03 19:36:25"
+    "sha": "04ffa65bae2a8da930f94afe839fbec43d3ab78e",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=04ffa65bae2a",
+    "commiter_name": "vinoth ",
+    "commit_email": "cegvinoth@gmail.com",
+    "commit_message": "try: -b do -p all -u all -t none  Pushed via `mach try syntax`",
+    "commit_date": "2018-12-13 12:15:13"
   },
   "2": {
-    "sha": "ebaa8ea0b0399be7fdeaf012943941358a1fac36",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ebaa8ea0b039",
-    "commiter_name": "Kevin Ellis ",
-    "commit_email": "kevers@chromium.org",
-    "commit_message": "Bug 1509898 [wpt PR 14236] - Simplify interpolation of 2-D matrix transforms., a=testonly  The decomposition of a transformation matrix into translations, rotation, scale and skew transforms is not unique. In some cases, the generalized 3-D decomposition does not align with the working draft for CSS transforms (https://drafts.csswg.org/css-transforms/).  In the special case where the transforms being interpolated are both 2-D, a simplified model provides more restricted set of decomposition transforms with less computational overhead.  Bug: 797472 Change-Id: I2b8ba99fe02c2eef878d94f5dfaea55c39652759 Reviewed-on: https://chromium-review.googlesource.com/c/1332253 Commit-Queue: Kevin Ellis <kevers@chromium.org> Commit-Queue: Ian Vollick <vollick@chromium.org> Reviewed-by: Ian Vollick <vollick@chromium.org> Cr-Commit-Position: refs/heads/master@{#613191}  wpt-commit: a8ce772c68778cfb2c273fffb81e61da62d77bef wpt-pr: 14236 ",
-    "commit_date": "2018-12-03 19:31:48"
+    "sha": "5e45710cfdda1ebf2a80a5085722fadfc7b51fdd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5e45710cfdda",
+    "commiter_name": "vinoth ",
+    "commit_email": "cegvinoth@gmail.com",
+    "commit_message": "Bug 1508282 - Temporary whitelist of files to skip Eval Assertion",
+    "commit_date": "2018-12-13 12:14:55"
   },
   "3": {
-    "sha": "ad2c0b8a5d45da721cbd8d3fbee99e7a5333b45e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ad2c0b8a5d45",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/accumulation-per-property.html web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/addition-per-property.html web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/interpolation-per-property.html",
-    "commit_date": "2018-12-03 19:08:16"
+    "sha": "80676ed904cd279861fa89a075e8f1f11ce72e8d",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=80676ed904cd",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "try: -b do -p all -u jsreftest -t none",
+    "commit_date": "2018-12-13 12:11:21"
   },
   "4": {
-    "sha": "ed96a106a8348be159aad60942a0be2cc031ca97",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ed96a106a834",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/webrtc/RTCRtpSender-transport.https.html",
-    "commit_date": "2018-12-03 19:01:24"
+    "sha": "7bbba5f30423e69133f373a086075ac04af267fd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7bbba5f30423",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "Bug 1512989 - Part 2: Fix browser jstests failures. r=jorendorff",
+    "commit_date": "2018-12-13 12:10:06"
   },
   "5": {
-    "sha": "d78db7bc9f939426b312c9543b38f3e198f53be9",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d78db7bc9f93",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "Bug 1511855 [wpt PR 14341] - Update wpt metadata, a=testonly  wpt-pr: 14341 wpt-type: metadata ",
-    "commit_date": "2018-12-03 19:01:07"
+    "sha": "b051e7bd174f19f73a965d23a9f66895a5bd1251",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b051e7bd174f",
+    "commiter_name": "Andr\u00e9 Bargull ",
+    "commit_email": "andre.bargull@gmail.com",
+    "commit_message": "Bug 1512989 - Part 1: Pass correct test type. r=ahal",
+    "commit_date": "2018-12-13 10:24:56"
   },
   "6": {
-    "sha": "12c9978fbcab8c10847d8d4be3d922fad7f6e013",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=12c9978fbcab",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "try: -b do -p linux64 -u mochitest-chrome,mochitest-dt,test-verify-e10s,xpcshell -t damp-e10s --artifact  Pushed via `mach try syntax`  MozReview-Commit-ID: 4T6wS3kB4Uz ",
-    "commit_date": "2018-12-03 18:55:52"
+    "sha": "68a0c065741312164f434e555d505dbc71e008f9",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=68a0c0657413",
+    "commiter_name": "Dale Harvey ",
+    "commit_email": "dale@arandomurl.com",
+    "commit_message": "try: -b o -p linux64 -u mochitests,xpcshell -t none  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-13 12:04:12"
   },
   "7": {
-    "sha": "c18245bc5cbbf69662e4e318ef2c52abcaa63621",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c18245bc5cbb",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Adapt tests to new API  MozReview-Commit-ID: LUIgkTLCdkM ",
-    "commit_date": "2018-11-26 09:00:16"
+    "sha": "08c7330f395fa484b623d68ad541fcd0c0811c30",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=08c7330f395f",
+    "commiter_name": "Dale Harvey ",
+    "commit_email": "dale@arandomurl.com",
+    "commit_message": "Bug 1488946 - Remove about:searchreset. r=mkaply ",
+    "commit_date": "2018-12-12 23:33:57"
   },
   "8": {
-    "sha": "059372f87f0bbbd1283049b12e851ca428a00ba1",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=059372f87f0b",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Call front constructors with new.  MozReview-Commit-ID: 3AZfpmParGN ",
-    "commit_date": "2018-11-26 08:55:06"
+    "sha": "a1dceb0d0abc4175b51c30ca10dbb9aa9f81eddc",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a1dceb0d0abc",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "try: -b o -p linux64 -u all[linux64-qr] -t none  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-13 12:03:39"
   },
   "9": {
-    "sha": "15983d78d8488c20a86d56c9d2b8c085c1432bbc",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=15983d78d848",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Manually refactor fronts that use uncommon patterns. ",
-    "commit_date": "2018-11-25 21:12:03"
+    "sha": "9e10edf0f95361d11101c646e31325489aa215d8",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9e10edf0f953",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "test ",
+    "commit_date": "2018-12-13 12:01:37"
   },
   "10": {
-    "sha": "5ae86689d4f4d6deb0107048c41d313d65f3cca7",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5ae86689d4f4",
-    "commiter_name": "Alexandre Poirot ",
-    "commit_email": "poirot.alex@gmail.com",
-    "commit_message": "Adapt pre event to the new API.  MozReview-Commit-ID: I8urhoXV3S2 ",
-    "commit_date": "2018-11-25 21:08:55"
+    "sha": "b436ff9b51cb9670de43d5cfdfb053bdcc8eec66",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b436ff9b51cb",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1507884 - Add tasks for linux-based testing of webrender standalone. r?jrmuizel   Differential Revision: https://phabricator.services.mozilla.com/D14407",
+    "commit_date": "2018-12-13 11:46:17"
   },
   "11": {
-    "sha": "be0e8ce190c9d9770bae24bc1e60590d20f92bb8",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=be0e8ce190c9",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-reftests[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-reftests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests-reftests:testing/web-platform/tests/css/filter-effects/backdrop-filter-basic-background-color.html web-platform-tests-reftests:testing/web-platform/tests/css/filter-effects/backdrop-filter-clip-rect.html web-platform-tests-reftests:testing/web-platform/tests/css/filter-effects/backdrop-filter-edge-pixels.html web-platform-tests-reftests:testing/web-platform/tests/css/filter-effects/backdrop-filter-isolation-fixed.html web-platform-tests-reftests:testing/web-platform/tests/css/filter-effects/backdrop-filter-isolation-isolate.html web-platform-tests-reftests:testing/web-platform/tests/css/filter-effects/backdrop-filter-isolation.html",
-    "commit_date": "2018-12-03 18:54:15"
+    "sha": "4590a9e0e9b59938e2413401d699e30bdc68f694",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4590a9e0e9b5",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1507884 - Add a wrench-deps toolchain to provide a tarball of crates wrench depends on. r?tomprince  Although this task technically doesn't build a toolchain, the set of steps it needs to do is very similar to what a toolchain build does, so we're shoehorning this task into the toolchain kind. The task basically runs `cargo vendor` on the gfx/wr/Cargo.lock file (if/when it changes) and exports a tarball of the resulting vendored crates. This allows downstream tasks that build stuff in gfx/wr to not have to re-fetch these crates from crates.io on every test run.  Differential Revision: https://phabricator.services.mozilla.com/D14406",
+    "commit_date": "2018-12-13 11:46:06"
   },
   "12": {
-    "sha": "01011b560011061a3c5dfa67e298a0528b84ce48",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=01011b560011",
-    "commiter_name": "Mason Freed ",
-    "commit_email": "masonfreed@chromium.org",
-    "commit_message": "Bug 1511859 [wpt PR 14342] - Implement correct opacity and filter handling within backdrop-filter, a=testonly  Prior to this CL, opacity and filters applied to the backdrop-filtered element did not get apply to the backdrop-filtered backdrop. Now, the opacity and filters get applied directly to the backdrop-filtered image directly, which is an approximation but should be very close.  Also fixed up a few of the backdrop-filter tests to account for this, and removed a few lines from TestExpectations that now work.  Bug: 497522 Change-Id: If671bdf65ac0ae04cf175143eb8949ff4be0837b  wpt-commit: da0ee4903e43336063ed588f57239d54471ac463 wpt-pr: 14342 ",
-    "commit_date": "2018-12-03 18:51:07"
+    "sha": "aa8c87f49f7cac97b30b2c928131f90a1d012264",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=aa8c87f49f7c",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1507884 - Add a docker image for building and testing webrender standalone. r?glandium   Differential Revision: https://phabricator.services.mozilla.com/D14405",
+    "commit_date": "2018-12-13 11:45:52"
   },
   "13": {
-    "sha": "f3f9e6980f9de3c7574eb57f8c809d7eeab32c72",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=f3f9e6980f9d",
-    "commiter_name": "Mason Freed ",
-    "commit_email": "masonfreed@chromium.org",
-    "commit_message": "Adding more WPT tests for backdrop-filter  This set includes a few more known issues, and changes the definition of opacity to match our more recent proposal. Under that proposal, the opacity of the backdrop-filter element applies to the filtered backdrop image as well.  Bug: 497522 Change-Id: I2fa0bbb710b7a4ba5592c9a4b9ea5ecaaf5b9ddf Reviewed-on: https://chromium-review.googlesource.com/c/1354347 Reviewed-by: Chris Harrelson <chrishtr@chromium.org> Commit-Queue: Mason Freed <masonfreed@chromium.org> Cr-Commit-Position: refs/heads/master@{#612325}  wpt-commit: f1be71266b0c801b2255254d60b88fa9e64b8dd0 wpt-type: dependency ",
-    "commit_date": "2018-12-03 18:51:05"
+    "sha": "c9302b4e9c8b8f06dea8a2f9f9e0a335abccd629",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c9302b4e9c8b",
+    "commiter_name": "Dale Harvey ",
+    "commit_email": "dale@arandomurl.com",
+    "commit_message": "try: -b o -p linux64 -u mochitests,xpcshell -t none  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-13 12:01:18"
   },
   "14": {
-    "sha": "d24d2cbedc37229c0ec19cb823d8806161552746",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d24d2cbedc37",
-    "commiter_name": "Johann Hofmann ",
-    "commit_email": "jhofmann@mozilla.com",
-    "commit_message": "try: -b do -p win64,linux64,macosx64 -u mochitests -t none --artifact  Pushed via `mach try syntax`",
-    "commit_date": "2018-12-03 18:41:50"
+    "sha": "7016c769d0a73f2642fc5d800c2c52d608ebd86a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7016c769d0a7",
+    "commiter_name": "Dale Harvey ",
+    "commit_email": "dale@arandomurl.com",
+    "commit_message": "Bug 1488946 - Remove about:searchreset. r=mkaply ",
+    "commit_date": "2018-12-12 23:33:57"
   },
   "15": {
-    "sha": "61049e9a3d388255c652cdf6a74760be2ae683fd",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=61049e9a3d38",
-    "commiter_name": "Johann Hofmann ",
-    "commit_email": "jhofmann@mozilla.com",
-    "commit_message": "Bug 1414804 - Fix test for expired certificate \"helpful\" messaging to users with broken system clocks. r=Gijs  Differential Revision: https://phabricator.services.mozilla.com/D13690",
-    "commit_date": "2018-12-03 18:18:36"
+    "sha": "65cff62d58e7a4bd7eff19c16c9c4d478237015f",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=65cff62d58e7",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/custom-elements/reactions/HTMLBaseElement.html",
+    "commit_date": "2018-12-13 11:48:19"
   },
   "16": {
-    "sha": "c39e8782e18b361733e6d62de0815d66ae314076",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c39e8782e18b",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --rebuild 10 --try-test-paths web-platform-tests:testing/web-platform/tests/event-timing/event-timing-bufferbeforeonload.html web-platform-tests:testing/web-platform/tests/event-timing/event-timing-onloadthenobserve-firstInput.html web-platform-tests:testing/web-platform/tests/event-timing/event-timing-onloadthenobserve.html web-platform-tests:testing/web-platform/tests/event-timing/event-timing-retrieve-firstInput.html",
-    "commit_date": "2018-12-03 18:48:32"
+    "sha": "e3bcc1b4198b13ff500dfac7ed4292b8d6a006bc",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e3bcc1b4198b",
+    "commiter_name": "kaixinjxq ",
+    "commit_email": "xiuqix.jiang@intel.com",
+    "commit_message": "Bug 1513857 [wpt PR 14491] - Add CEReactions tests for HTMLBaseElement, a=testonly  wpt-commit: 91265abdedc9bcb0e79ae17fa6a9f0cbf3e3a90e wpt-pr: 14491 ",
+    "commit_date": "2018-12-13 11:43:15"
   },
   "17": {
-    "sha": "5ffc853c7358b654982ac91b672d2e401f0f338a",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5ffc853c7358",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "Bug 1511841 [wpt PR 14340] - Update wpt metadata, a=testonly  wpt-pr: 14340 wpt-type: metadata ",
-    "commit_date": "2018-12-03 17:44:37"
+    "sha": "c42a7d56f684f31155bbcf0321b97dee94c2ac7a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c42a7d56f684",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Fuzzy query='webren  Pushed via `mach try fuzzy` ",
+    "commit_date": "2018-12-13 11:31:47"
   },
   "18": {
-    "sha": "d70645ff273a091210a0a66b190d53c6bfc22bed",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=d70645ff273a",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "try: -b do -p linux64 -u all -t none  Pushed via `mach try syntax`",
-    "commit_date": "2018-12-03 18:20:07"
+    "sha": "ed13962ecd6045dfb516ee8d72a31ea65ce9dcf4",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ed13962ecd60",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "try: -b o -p win64 -u mochitest-e10s-bc -t none",
+    "commit_date": "2018-12-13 11:28:35"
   },
   "19": {
-    "sha": "5f578f7baab6a3a1c9c75034c70e72eacdce0750",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5f578f7baab6",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "superfun",
-    "commit_date": "2018-12-03 17:57:14"
-  },
-  "20": {
-    "sha": "283799e6ac9a0a1ee6815055eca7107b9d24f426",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=283799e6ac9a",
+    "sha": "c8e2500276404bc15b99437d9a3cf8475fe65e1f",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c8e250027640",
     "commiter_name": "moz-wptsync-bot ",
     "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/accumulation-per-property.html web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/addition-per-property.html web-platform-tests:testing/web-platform/tests/web-animations/animation-model/animation-types/interpolation-per-property.html",
-    "commit_date": "2018-12-03 18:04:03"
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/web-nfc/idlharness.https.window.js",
+    "commit_date": "2018-12-13 11:26:02"
+  },
+  "20": {
+    "sha": "9bb1f08040bb9eaf26880d6eef37aeb0bbfc40bd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9bb1f08040bb",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "Bug 1512580 [wpt PR 14411] - Update wpt metadata, a=testonly  wpt-pr: 14411 wpt-type: metadata ",
+    "commit_date": "2018-12-07 09:03:46"
   }
 }

@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-03 19:46:42.052904"
+    "lastChecked": "2018-12-13 12:16:50.378368"
   },
   "1": {
-    "sha": "321f1fb3b41f81d84adef4a7ba1fccf8f81f8364",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=321f1fb3b41f",
-    "commiter_name": "Ursula Sarracini ",
-    "commit_email": "ursulasarracini@gmail.com",
-    "commit_message": "Bug 1510678 - Change recommended addons for Firefox 64 CFR release. r=k88hudson\ta=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13437",
-    "commit_date": "2018-11-29 17:43:06"
+    "sha": "239f593d11e560db428a96c5f67261280a77a219",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=239f593d11e5",
+    "commiter_name": "Eitan Isaacson ",
+    "commit_email": "eitan@monotonous.org",
+    "commit_message": "Bug 1511398 - Check if the retrieved accessible child is actually valid when filling the bundle's data, r=yzen a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13611",
+    "commit_date": "2018-12-06 15:43:23"
   },
   "2": {
-    "sha": "fa624a63f7d980ba24f314f47ab996082dd2cea8",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=fa624a63f7d9",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1502530 - Part 2: Update tzdata in ICU data files to 2018g. r=Waldo a=jcristau",
-    "commit_date": "2018-11-06 13:18:26"
+    "sha": "f891c440a238a9be83252fafdb0906e9ca243424",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f891c440a238",
+    "commiter_name": "Eitan Isaacson ",
+    "commit_email": "eitan@monotonous.org",
+    "commit_message": "Bug 1511759 - Null-check focus path cached accessible. r=yzen a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13729",
+    "commit_date": "2018-12-05 19:14:54"
   },
   "3": {
-    "sha": "4498eed63436479a013da6b7328e62b755274239",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=4498eed63436",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1502530 - Part 1: Update tzdata updater to use new location. r=Waldo a=jcristau",
-    "commit_date": "2018-11-06 10:48:56"
+    "sha": "6ee1fe6cdff8786b08c0bd6e1b6a5804925d84fc",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=6ee1fe6cdff8",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
+    "commit_date": "2018-12-11 13:54:22"
   },
   "4": {
-    "sha": "d27d733d06cf1ba92fc87adfe4780df4e55a418a",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d27d733d06cf",
-    "commiter_name": "Ted Campbell ",
-    "commit_email": "tcampbell@mozilla.com",
-    "commit_message": "Bug 1507433 - Avoid shape teleporting if any uncacheable prototypes. r=jandem a=jcristau  These cases are rare and uncacheable prototype shapes are tricky to get right so simplify code instead. The impact is that accessing non-own properties of an object that mutates its prototype will have a few more shape / group guards than are strictly needed.  Differential Revision: https://phabricator.services.mozilla.com/D12806",
-    "commit_date": "2018-11-27 13:10:49"
+    "sha": "1d950860192203202a32e4d7f1752e70c7f32837",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=1d9508601922",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging 8337ebb86a425a1c65467fc68eb7c26b9046159e with FIREFOX_64_0_RELEASE a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-12-11 13:54:18"
   },
   "5": {
-    "sha": "f4770816becdd778b95d41461a7a1b6d5fab69b3",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f4770816becd",
-    "commiter_name": "Kate Hudson ",
-    "commit_email": "k88hudson@gmail.com",
-    "commit_message": "Bug 1509810 - ASR Snippets: FxA signup template issues. r=ursula a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13445",
-    "commit_date": "2018-11-29 17:49:59"
+    "sha": "d44db55d8b564a8117d985e353b1470ebfbaa703",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d44db55d8b56",
+    "commiter_name": "Wes Kocher ",
+    "commit_email": "wkocher@mozilla.com",
+    "commit_message": "Bug 1423215 - Upload an uncompressed runnable-jobs.json artifact in addition to the gz version r=dustin a=tomprince  Uploading both versions will hopefully make this easier to uplift. Once old pushes and artifacts expire, we can stop uploading the gzipped version.  Differential Revision: https://phabricator.services.mozilla.com/D13601",
+    "commit_date": "2018-12-09 05:07:48"
   },
   "6": {
-    "sha": "5856e2411504142c566c1f6cd3670a8c567b069e",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=5856e2411504",
-    "commiter_name": "Masayuki Nakano ",
-    "commit_email": "masayuki@d-toybox.com",
-    "commit_message": "Bug 1510985 - Remove Event.returnValue temporarily in 64. r=smaug a=jcristau  Event.returnValue causes breaking a bank application.  The reason of the breakage is, the web app assumes that Event.returnValue is available only on IE and it hits same incompatibility issue with window.event (bug 1479964). Additionally, the app may be used in various domains including in intranet. Therefore, we cannot disable it with blacklist of domains like other similar changes.  Fortunately, we can ship new keypress event behaviors which is tracked by bug 1479964 in 65.  So, for backward compatibility with 62 or earlier, we should temporarily disable Event.returnValue in 64.  But unfortunately, this was introduced in 63.  So, if some web apps have started to use this legacy attribute, we need to contact their vendors, though.",
-    "commit_date": "2018-12-03 16:23:38"
+    "sha": "d7f1b0b90dcc2fd7b999cd8e1935ef4f1c6a8357",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d7f1b0b90dcc",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging 8337ebb86a425a1c65467fc68eb7c26b9046159e with FIREFOX_64_0_BUILD3 a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-12-07 02:55:16"
   },
   "7": {
-    "sha": "f040763d99ad0cc888b453da4de53422593810dd",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f040763d99ad",
+    "sha": "8337ebb86a425a1c65467fc68eb7c26b9046159e",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=8337ebb86a42",
     "commiter_name": "ffxbld ",
-    "commit_email": "release@mozilla.com",
-    "commit_message": "Update configs. IGNORE BROKEN CHANGESETS CLOSED TREE NO BUG a=release ba=release",
-    "commit_date": "2018-12-03 15:33:47"
+    "commit_email": "ffxbld@mozilla.com",
+    "commit_message": "No Bug, mozilla-release repo-update remote-settings - a=repo-update r=RyanVM",
+    "commit_date": "2018-12-06 20:18:54"
   },
   "8": {
-    "sha": "ca7d2e41bb018048b0fd8252df95a300a84295fe",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=ca7d2e41bb01",
-    "commiter_name": "ffxbld ",
-    "commit_email": "release@mozilla.com",
-    "commit_message": "No bug - Tagging mozilla-release 0010639216223e5f5fcf753bb64fb93588d787bd with FIREFOX_RELEASE_63_END a=release DONTBUILD CLOSED TREE",
-    "commit_date": "2018-12-03 15:29:01"
-  },
-  "9": {
-    "sha": "09ecade3ebaafb137ee231dbccecd6951eda029c",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=09ecade3ebaa",
-    "commiter_name": "ffxbld ",
-    "commit_email": "release@mozilla.com",
-    "commit_message": "Preserve old tags after debugsetparents. CLOSED TREE DONTBUILD a=release",
-    "commit_date": "2018-12-03 15:28:58"
-  },
-  "10": {
-    "sha": "91ff80fb4297f7acb8e75b5b73063d6d46443247",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=91ff80fb4297",
-    "commiter_name": "ffxbld ",
-    "commit_email": "release@mozilla.com",
-    "commit_message": "Merge old head via |hg debugsetparents 36afbf7b676c904b00ec0f032148d98655267c37 0010639216223e5f5fcf753bb64fb93588d787bd|. CLOSED TREE DONTBUILD a=release",
-    "commit_date": "2018-12-03 15:28:52"
-  },
-  "11": {
-    "sha": "36afbf7b676c904b00ec0f032148d98655267c37",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=36afbf7b676c",
-    "commiter_name": "ffxbld ",
-    "commit_email": "release@mozilla.com",
-    "commit_message": "No bug - Tagging mozilla-beta e4535e943651ce499a93bbc4592cb16adab897bd with FIREFOX_RELEASE_64_BASE a=release DONTBUILD CLOSED TREE",
-    "commit_date": "2018-12-03 15:26:20"
-  },
-  "12": {
-    "sha": "e4535e943651ce499a93bbc4592cb16adab897bd",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=e4535e943651",
-    "commiter_name": "Ryan VanderMeulen ",
-    "commit_email": "ryanvm@gmail.com",
-    "commit_message": "Bug 1511516 - Update Firefox 64 to NSS 3.40.1. r=jcj, a=lizzard UPGRADE_NSS_RELEASE",
-    "commit_date": "2018-12-02 21:22:47"
-  },
-  "13": {
-    "sha": "cb70f86f71435d262a2686b2ff85d11bb53f4348",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=cb70f86f7143",
-    "commiter_name": "Xidorn Quan ",
-    "commit_email": "me@upsuper.org",
-    "commit_message": "Bug 1506447 - Check overlay before checking custom scrollbar style in nsNativeThemeCocoa::GetWidgetTransparency. r=spohl, a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D12856",
-    "commit_date": "2018-11-25 11:31:53"
-  },
-  "14": {
-    "sha": "729dc4b0b006c47a77ce65fd129054962467d6ec",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=729dc4b0b006",
-    "commiter_name": "Brendan Dahl ",
-    "commit_email": "bdahl@mozilla.com",
-    "commit_message": "Bug 1509576 - Fix crash when showing tooltip. r=NeilDeakin, a=lizzard  Handle the case when there is no tooltip text provider.  Differential Revision: https://phabricator.services.mozilla.com/D13105",
-    "commit_date": "2018-11-28 18:42:57"
-  },
-  "15": {
-    "sha": "3bebbace6e4a76ba5c158a922b8f8b541a709e30",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3bebbace6e4a",
-    "commiter_name": "Petru Lingurar ",
-    "commit_email": "petru.lingurar@softvision.ro",
-    "commit_message": "Bug 1504780 - Prevent crash if GeckoProfile path is not known. r=snorp, a=lizzard  In this case the profile name will be null, situation already handled, in which a telemetry ping about the crash will not be sent but the crash can still be reported to crash-stats.  Differential Revision: https://phabricator.services.mozilla.com/D12741",
-    "commit_date": "2018-11-26 19:21:56"
-  },
-  "16": {
-    "sha": "f744e835c8bf344bcd6f64b4b894a0a4d64a1c1c",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f744e835c8bf",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1508494: Update WNP with locales for 64; r=flod a=whats-new  Differential Revision: https://phabricator.services.mozilla.com/D13555",
-    "commit_date": "2018-12-01 06:00:21"
-  },
-  "17": {
-    "sha": "f4fe9800063b5110cb59f2eafdc1ffc45feb5a60",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f4fe9800063b",
-    "commiter_name": "Jeff Gilbert ",
-    "commit_email": "jgilbert@mozilla.com",
-    "commit_message": "Bug 1467406 - Remove broken default-fb invalidation path. r=lsalzman a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D13047",
-    "commit_date": "2018-11-27 15:49:21"
-  },
-  "18": {
-    "sha": "3be25c15b7e9e3326826739bdc4f24ba94e8578b",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3be25c15b7e9",
-    "commiter_name": "Rob Wu ",
-    "commit_email": "rob@robwu.nl",
-    "commit_message": "Bug 1508144 - Ignore clicks on non-clickable menu items. r=mixedpuppy, a=jcristau  Bug 1469148 added support for detecting which mouse button was used, by synthetizing \"command\" events when a \"click\" event was captured. The implementation did not account for unclickable menu items, such as items that act as the parent of a submenu (see bug report), separators and disabled menu items.  This patch adds the necessary checks and regression tests for these scenarios to make sure that such clicks are ignored, as expected.  Differential Revision: https://phabricator.services.mozilla.com/D13084",
-    "commit_date": "2018-11-28 15:09:26"
-  },
-  "19": {
-    "sha": "24a6a9b747b34914d8dcd6ae714ca37fe5d56739",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=24a6a9b747b3",
+    "sha": "e5f98886a12a70badb1de16258da93520633d4d4",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=e5f98886a12a",
     "commiter_name": "Jason Orendorff ",
     "commit_email": "jorendorff@mozilla.com",
-    "commit_message": "Bug 1391756 - Try to fix rare timeout in dom/tests/mochitest/fetch/test_readableStreams.html. r=baku, a=test-only  Also removes an infinite regress of nested iframes. The original problem was that tests would start running before the child iframe was done loading. The straightforward fix is to have the child frame start the test. But this caused further error messages because the child iframe is loaded more than once; removing the iframe from the iframe fixes this.  Differential Revision: https://phabricator.services.mozilla.com/D13385",
-    "commit_date": "2018-11-29 22:35:04"
+    "commit_message": "Bug 1493560 - Change test to allow another possibility. r=arai a=test-only  This also changes the test to print something informative on failure.  Differential Revision: https://phabricator.services.mozilla.com/D9046",
+    "commit_date": "2018-10-22 15:03:20"
+  },
+  "9": {
+    "sha": "290d09651022f524b7bcc5a5514dc616f93fe89a",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=290d09651022",
+    "commiter_name": "Julien Cristau ",
+    "commit_email": "jcristau@mozilla.com",
+    "commit_message": "Backed out 2 changesets (bug 1259822, bug 1488417) for web compat issues.  a=backout  Backed out changeset 0413c9c3d902 (bug 1488417) Backed out changeset 35c61888a49d (bug 1259822)",
+    "commit_date": "2018-12-06 19:57:31"
+  },
+  "10": {
+    "sha": "021689730ee5825fe63215bf8a6c91670eb5e39c",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=021689730ee5",
+    "commiter_name": "Julien Cristau ",
+    "commit_email": "jcristau@mozilla.com",
+    "commit_message": "Bug 1512496 - Backed out 1 changesets (bug 675428) for causing bug 1496380.  a=backout  Backed out changeset 725a692947dd (bug 675428)",
+    "commit_date": "2018-12-06 19:47:30"
+  },
+  "11": {
+    "sha": "923a3316fad472d1eeb420705368a21c8150f5d1",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=923a3316fad4",
+    "commiter_name": "Mozilla Releng Treescript ",
+    "commit_email": "release+treescript@mozilla.org",
+    "commit_message": "No bug - Tagging 319052b37637c5472406ea7ee330d2cd50dca3e0 with FIREFOX_64_0_BUILD2 a=release CLOSED TREE DONTBUILD",
+    "commit_date": "2018-12-06 00:58:28"
+  },
+  "12": {
+    "sha": "6891b272d3fd577a8f7fa4926c56ecc78a06dc3d",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=6891b272d3fd",
+    "commiter_name": "Jim Chen ",
+    "commit_email": "nchen@mozilla.com",
+    "commit_message": "Bug 1470786 - 1. Support async text changes from replacing text; r=esawin a=RyanVM  Currently, we expect editing operations in GeckoEditableSupport::OnImeReplaceText to cause synchronous text change notifications. However, under e10s, text change notifications can be asynchornous. The new code keeps track of active OnImeReplaceText calls, and look for async text changes before replying to the calls.  MozReview-Commit-ID: INM3JLmQebK",
+    "commit_date": "2018-07-17 15:22:34"
+  },
+  "13": {
+    "sha": "f95d41399777f747623ca1cc0de49bdcf451abe3",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=f95d41399777",
+    "commiter_name": "Julien Cristau ",
+    "commit_email": "jcristau@mozilla.com",
+    "commit_message": "Merge default into GECKOVIEW_64_RELBRANCH. a=merge",
+    "commit_date": "2018-12-05 21:28:28"
+  },
+  "14": {
+    "sha": "319052b37637c5472406ea7ee330d2cd50dca3e0",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=319052b37637",
+    "commiter_name": "Gijs Kruitbosch ",
+    "commit_email": "gijskruitbosch@gmail.com",
+    "commit_message": "Bug 1511903 - r=johannh a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D13714",
+    "commit_date": "2018-12-05 10:24:56"
+  },
+  "15": {
+    "sha": "0d9074318f9c9ae05696710b3fe4d578c8253ea2",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=0d9074318f9c",
+    "commiter_name": "James Willcox ",
+    "commit_email": "snorp@snorp.net",
+    "commit_message": "Bug 1507702 - Don't make about:crash  accessible to web content r=Ehsan,bzbarsky a=jcristau  Differential Revision: https://phabricator.services.mozilla.com/D12133",
+    "commit_date": "2018-11-29 14:35:07"
+  },
+  "16": {
+    "sha": "69b56f092ceb1a25dce37a1250901021cb970634",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=69b56f092ceb",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1501533 - Block a bunch of low-powered nvidia cards from getting WebRender. r=mattwoodrow a=jcristau  Depends on D9677  Differential Revision: https://phabricator.services.mozilla.com/D9678",
+    "commit_date": "2018-10-24 18:58:00"
+  },
+  "17": {
+    "sha": "c0b34e54297366e0e419aa1285b2e082d8983653",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=c0b34e542973",
+    "commiter_name": "Kartikaya Gupta ",
+    "commit_email": "kgupta@mozilla.com",
+    "commit_message": "Bug 1498417 - Don't manually blacklist non-nVidia drivers from WebRender. r=mattwoodrow a=jcristau  We already have a check for the nvidia vendor id in gfxPlatform.cpp so we don't need to list all the other vendors explicitly.  Differential Revision: https://phabricator.services.mozilla.com/D9677",
+    "commit_date": "2018-10-24 18:58:28"
+  },
+  "18": {
+    "sha": "2360b266d799798d6f2f927a77e9e769f6f772dd",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=2360b266d799",
+    "commiter_name": "Jeff Gilbert ",
+    "commit_email": "jgilbert@mozilla.com",
+    "commit_message": "Bug 1492580 - Restore CONTEXT_LOST handling. (minimal) r=lsalzman a=jcristau  Similar to the full patch, but about 30% smaller: Contains all fixes to dom/canvas. Contains context loss functional fixes for GLContext. We don't update gfx/gl to handle context loss in its asserts. DEBUG builds will probably assert, crash, and burn when trying to deal with context loss, but that's fine for Beta.",
+    "commit_date": "2018-12-05 21:10:07"
+  },
+  "19": {
+    "sha": "26d700d8010a12f4feb3092ceb576916a7e96321",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=26d700d8010a",
+    "commiter_name": "Eugen Sawin ",
+    "commit_email": "esawin@mozilla.com",
+    "commit_message": "Bug 1499418 - Refactor and move Fennec's telemetry classes to geckoview/. r=jchen, a=RyanVM",
+    "commit_date": "2018-11-13 14:29:21"
   },
   "20": {
-    "sha": "3dce43d9b92c7947a8de8638d80adc5b04c3d9d9",
-    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3dce43d9b92c",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1510441: Add `.cron.yml` to the taskgraph sparse profile; r=gps a=tomprince DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D13142",
-    "commit_date": "2018-11-30 00:26:19"
+    "sha": "348872e1c4fe3f126ad9fad49dac6c3d15447bb7",
+    "url": "https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=348872e1c4fe",
+    "commiter_name": "Eugen Sawin ",
+    "commit_email": "esawin@mozilla.com",
+    "commit_message": "Bug 1499418 - Add GeckoView page load and startup performance telemetry probes. r=snorp,chutten,jchen, a=RyanVM",
+    "commit_date": "2018-11-13 14:39:11"
   }
 }
