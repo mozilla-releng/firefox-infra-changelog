@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-13 12:16:45.261557"
+    "lastChecked": "2018-12-15 16:56:38.883242"
   },
   "1": {
-    "sha": "247e265373eb26566e94303fa42b1237b80295d9",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=247e265373eb",
-    "commiter_name": "Jon Coppeard ",
-    "commit_email": "jcoppeard@mozilla.com",
-    "commit_message": "Bug 1513465 - Fix bug in weak map checking where values are atoms and we aren't collecting the atoms zone r=sfink",
-    "commit_date": "2018-12-13 10:38:59"
+    "sha": "8a6afcb74cd9cc711a601fad300be5e6b0493c2a",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8a6afcb74cd9",
+    "commiter_name": "Bogdan Tara ",
+    "commit_email": "btara@mozilla.com",
+    "commit_message": "Backed out changeset b6d7250b9df3 (bug 1514346) for sm fuzzing build bustage CLOSED TREE",
+    "commit_date": "2018-12-15 16:53:26"
   },
   "2": {
-    "sha": "e79c7b512fd6d5ada535da090ded8fa87b8f5f98",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e79c7b512fd6",
-    "commiter_name": "sotaro ",
-    "commit_email": "sotaro.ikeda.g@gmail.com",
-    "commit_message": "Bug 1513699 - Disable SkiaGL on WebRender r=jrmuizel  Disable SkiaGL on WebRender, since there is a case that R8G8B8X8 is used, but WebRender does not support R8G8B8X8 yet. And SkiaGL is already disabled by Bug 1468801.  Differential Revision: https://phabricator.services.mozilla.com/D14366",
-    "commit_date": "2018-12-13 09:01:16"
+    "sha": "b6d7250b9df350bbd32a904076e8c3bcd76ff4fe",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b6d7250b9df3",
+    "commiter_name": "Steve Fink ",
+    "commit_email": "sfink@mozilla.com",
+    "commit_message": "Bug 1514346 - Add --enable-gczeal to fuzzing builds, r=decoder",
+    "commit_date": "2018-12-14 19:47:30"
   },
   "3": {
-    "sha": "5c892a6147ae856f208e77c265eda4d7b677ac52",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5c892a6147ae",
-    "commiter_name": "Cameron Kaiser ",
-    "commit_email": "spectre@floodgap.com",
-    "commit_message": "Bug 1512162: Disable stack protection for a portion of XPConnect on ppc64le due to a compiler bug. r=bholley",
-    "commit_date": "2018-12-13 02:52:08"
+    "sha": "3ead21c6776be63d27764706e7f2bad26f2a6c9b",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3ead21c6776b",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "Bug 1506869 - Rename roundButtonBackground and roundButtonPressedBackground. r=jaws",
+    "commit_date": "2018-12-15 11:25:53"
   },
   "4": {
-    "sha": "3ecc407c0cc8705ba7b60fbbe8964e794c0a5651",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3ecc407c0cc8",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.",
-    "commit_date": "2018-12-13 04:01:44"
+    "sha": "f44070541fb66edcb0360828c5b8bbea632018c3",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f44070541fb6",
+    "commiter_name": "Noemi Erli ",
+    "commit_email": "nerli@mozilla.com",
+    "commit_message": "Backed out changeset 571c01c5f84b (bug 1511604) for causing mochitest failures CLOSED TREE",
+    "commit_date": "2018-12-15 10:58:28"
   },
   "5": {
-    "sha": "8d6e7614d2f0a37511a98a399cd72df97c9bc653",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8d6e7614d2f0",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "commit_date": "2018-12-13 03:56:48"
+    "sha": "c328c00179a934a6828d263caf5022c504538d57",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c328c00179a9",
+    "commiter_name": "P Kausthubh S ",
+    "commit_email": "spkausthubh@gmail.com",
+    "commit_message": "Bug 1362841 - Mirror the theme icons in customize mode in RTL to match the UI, r=gijs",
+    "commit_date": "2018-12-15 09:40:19"
   },
   "6": {
-    "sha": "1e7843022450c852030788360f3a314de6678dac",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1e7843022450",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge autoland to mozilla-central. a=merge",
-    "commit_date": "2018-12-13 03:54:41"
+    "sha": "4b48d8884cdbf198543623dc3bbb8c6154e48c96",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4b48d8884cdb",
+    "commiter_name": "Noemi Erli ",
+    "commit_email": "nerli@mozilla.com",
+    "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+    "commit_date": "2018-12-15 09:42:56"
   },
   "7": {
-    "sha": "cca0fa760d54c9509b8f5b1ca576c2ced63e8df1",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=cca0fa760d54",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1512537 - Update test expectations. r=kats  Differential Revision: https://phabricator.services.mozilla.com/D14245",
-    "commit_date": "2018-12-13 00:53:07"
+    "sha": "5b0b8a39d09e49efe283b94deba6853e223edad3",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5b0b8a39d09e",
+    "commiter_name": "Noemi Erli ",
+    "commit_email": "nerli@mozilla.com",
+    "commit_message": "Merge inbound to mozilla-central.  a=merge",
+    "commit_date": "2018-12-15 09:39:40"
   },
   "8": {
-    "sha": "f9f6c219680d235a47297f613e564d0cb339fa48",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f9f6c219680d",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1512537 - Update euclid. r=kats  Differential Revision: https://phabricator.services.mozilla.com/D14246",
-    "commit_date": "2018-12-13 00:53:58"
+    "sha": "10aa1d02448438169fc49d467dd7f9a0fd70ca1f",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=10aa1d024484",
+    "commiter_name": "Timothy Guan-tin Chien ",
+    "commit_email": "timdream@gmail.com",
+    "commit_message": "Bug 1513600 - Use elementFromPoint() to measure isMouseOverVideo r=jaws  The checkEventWithin method is broken by two bugs:  The first one is bug 1493525 because we ended up pass the proxy instance, instead of the element reference, as the parent node to compare. The second one is unknown and happened sometime after that bug. The |relatedTarget| of the mouse event is always <video>, instead of the element within Shadow DOM that the cursor is moving out to.  Instead of identify the second bug in the DOM, this patch employs a simpler fix by using elementFromPoint() to identify the cursor position.  Differential Revision: https://phabricator.services.mozilla.com/D14342",
+    "commit_date": "2018-12-15 02:56:27"
   },
   "9": {
-    "sha": "4a0097b6b670cd2b850b656c6d4192e4ae9b2049",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4a0097b6b670",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1512537 - Let the reference frame know about the transform style. r=kats  This is the only Gecko side change needed for https://github.com/servo/webrender/pull/3401.  Differential Revision: https://phabricator.services.mozilla.com/D14247",
-    "commit_date": "2018-12-13 00:54:48"
-  },
-  "10": {
-    "sha": "1da261b7f019321c54677afcefe19da35dec68e0",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1da261b7f019",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1513682 - Update webrender to commit b5f190951f27dd04067489b9fbbeb87f55765f57 (WR PR #3401). r=kats  https://github.com/servo/webrender/pull/3401  Differential Revision: https://phabricator.services.mozilla.com/D14353",
-    "commit_date": "2018-12-13 00:55:13"
-  },
-  "11": {
-    "sha": "606d75702c5cc63ea9f2cefcdac7d49aa53dabe6",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=606d75702c5c",
-    "commiter_name": "Jim Blandy ",
-    "commit_email": "jimb@mozilla.com",
-    "commit_message": "Bug 1509420: Handle CCWs of functions properly in bindToAsyncStack shell function. r=jorendorff  In js.cpp, BindToAsyncStack used JSObject::isCallable to check the type of its argument, and then BoundToAsyncStack (the native for the function returned) assumed that it could call JSObject::as<JSFunction> on that value.  However, there are many things that are isCallable but not is<JSFunction>, two examples being CCWs and function proxies.  Differential Revision: https://phabricator.services.mozilla.com/D14343",
-    "commit_date": "2018-12-12 23:58:03"
-  },
-  "12": {
-    "sha": "8c491aa06a8e3943f5a946fcf9080adcdc399e0e",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8c491aa06a8e",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1501382 - Add a mochitest. r=botond  Differential Revision: https://phabricator.services.mozilla.com/D14285",
-    "commit_date": "2018-12-12 22:58:40"
-  },
-  "13": {
-    "sha": "bde7618ae76524b36cfa8ede3e3819cf99d9d968",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bde7618ae765",
-    "commiter_name": "Dana Keeler ",
-    "commit_email": "dkeeler@mozilla.com",
-    "commit_message": "bug 1496215 - Enable EV Treatment for UCA Extended Validation Root owned by SHECA r=jcj  Differential Revision: https://phabricator.services.mozilla.com/D14344",
-    "commit_date": "2018-12-12 22:37:17"
-  },
-  "14": {
-    "sha": "ded3b65ca045796830bf03282370926b5810dd25",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ded3b65ca045",
-    "commiter_name": "Michael Froman ",
-    "commit_email": "mfroman@mozilla.com",
-    "commit_message": "Bug 1452146 - flip av1 and rdd on for Win. r=drno  Differential Revision: https://phabricator.services.mozilla.com/D13482",
-    "commit_date": "2018-12-06 15:39:23"
-  },
-  "15": {
-    "sha": "c38131baf66082a231aa7ce376b12ff886516ab7",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c38131baf660",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1513277 part 2 - Use the scripted caller's global in mozJSComponentLoader::FindTargetObject. r=kmag  We have a few places where C++ calls ChromeUtils::Import directly. I fixed these to pass the target object directly instead of an empty Optional<>.  Differential Revision: https://phabricator.services.mozilla.com/D14180",
-    "commit_date": "2018-12-12 21:30:04"
-  },
-  "16": {
-    "sha": "63993693c624ce68ae3e11d0e92b98fb86e431b6",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=63993693c624",
-    "commiter_name": "Jan de Mooij ",
-    "commit_email": "jdemooij@mozilla.com",
-    "commit_message": "Bug 1513277 part 1 - Use the scripted caller's global in Cu.importGlobalProperties. r=kmag  With same-compartment-realms enabled we can call a cross-realm Cu.importGlobalProperties and we ended up defining properties on the wrong global.  Differential Revision: https://phabricator.services.mozilla.com/D14179",
-    "commit_date": "2018-12-12 21:03:18"
-  },
-  "17": {
-    "sha": "ef4f3c28e91ccdc6e563d5911a933692ffddffe4",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ef4f3c28e91c",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Backed out 2 changesets (bug 1511235) for causing bugs 1513454, 1513456 as alwu requested on irc. a=backout  Backed out changeset 4c9f874d6868 (bug 1511235) Backed out changeset 3432e8bee7f1 (bug 1511235)",
-    "commit_date": "2018-12-13 01:43:36"
-  },
-  "18": {
-    "sha": "a7266f39e1df0cfffbef96a5a8cf85aa004c86cb",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a7266f39e1df",
+    "sha": "70a854d2ee1ebc18f9438af38731527738b2ed24",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=70a854d2ee1e",
     "commiter_name": "Cosmin Sabou ",
     "commit_email": "csabou@mozilla.com",
     "commit_message": "Merge mozilla-central to autoland.",
-    "commit_date": "2018-12-12 22:01:46"
+    "commit_date": "2018-12-15 02:57:48"
+  },
+  "10": {
+    "sha": "dc069bf6f13e488efebf9d06ddc7291321f00f11",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dc069bf6f13e",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1514439 - Fix tidy issues. ",
+    "commit_date": "2018-12-15 02:50:09"
+  },
+  "11": {
+    "sha": "208951ef2fa261f465e533113954c9b7b6b72595",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=208951ef2fa2",
+    "commiter_name": "Shotaro Yamada ",
+    "commit_email": "sinkuu@sinkuu.xyz",
+    "commit_message": "Bug 1514439 - Remove redundant `.clone()`s. r=emilio ",
+    "commit_date": "2018-12-11 01:43:51"
+  },
+  "12": {
+    "sha": "d9ae98eb3ddc42558c8fde369e1abc1acfb9e5b4",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d9ae98eb3ddc",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1514439 - Fix formatting of inverse transform matrix. ",
+    "commit_date": "2018-12-02 19:05:00"
+  },
+  "13": {
+    "sha": "adf7dac59077630c80c01ec6c322e83c3306b666",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=adf7dac59077",
+    "commiter_name": "Timothy Guan-tin Chien ",
+    "commit_email": "timdream@gmail.com",
+    "commit_message": "Bug 1510848 - Do not unattach UA Widget Shadow Root if the element is already re-attached to the tree r=emilio,smaug  This patch moves all UA Widget calls to helper functions in Element.cpp. The helper function AttachAndSetUAShadowRoot sets the shadow root in a runnable, so that it is in the same order of NotifyUAWidget  runnables.  Differential Revision: https://phabricator.services.mozilla.com/D13479",
+    "commit_date": "2018-12-15 02:48:46"
+  },
+  "14": {
+    "sha": "74bfa63e922c5782da7f5a58979bbddec0e4fa45",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=74bfa63e922c",
+    "commiter_name": "Jed Davis ",
+    "commit_email": "jld@mozilla.com",
+    "commit_message": "Bug 1510934 - Ensure that pref changes during content process launch are delivered to the process. r=njn  Some prefs need to be available before IPC is started, so we serialize a snapshot when we start launching the process, and then stream further changes over IPC messages.  However, async launch introduces a window between the snapshot and when the parent can start sending messages, during which other code can run on the main thread and change prefs.  In order to not lose those updates, they're queued and sent when the launch is complete.  Depends on D14089  Differential Revision: https://phabricator.services.mozilla.com/D14090",
+    "commit_date": "2018-12-14 05:28:56"
+  },
+  "15": {
+    "sha": "c2e55bc9206b1dd51be3723b610c62bcb5b82efd",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c2e55bc9206b",
+    "commiter_name": "Jed Davis ",
+    "commit_email": "jld@mozilla.com",
+    "commit_message": "Bug 1510934 - Change ContentParent's alive/dead tracking to launching/alive/dead. r=mrbkap  We need content processes that are created but not finished launching (not \"alive\" yet) to be treated differently from ones that have exited (no longer \"alive\"), so the boolean mIsAlive is expanded to a 3-state enumeration, which could be expanded more in the future if needed.  (This is similar to GeckoChildProcessHost::mProcessState, but it's synchronized with the rest of the ContentParent's state, which can lag the GeckoChildProcessHost state due to runnable dispatch.)  This patch also removes mIsAvailable/IsAvailable/MarkAsTroubled, which are unused as of bug 1459212.  Differential Revision: https://phabricator.services.mozilla.com/D14089",
+    "commit_date": "2018-12-15 01:38:27"
+  },
+  "16": {
+    "sha": "b232989d707c19b4ae49982a243e128fcdd63592",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b232989d707c",
+    "commiter_name": "Matt Woodrow ",
+    "commit_email": "mwoodrow@mozilla.com",
+    "commit_message": "Bug 1500864 - Cull items within opacity:0 containers when merging with retained display lists. r=mstange  Depends on D14303  Differential Revision: https://phabricator.services.mozilla.com/D14304",
+    "commit_date": "2018-12-14 19:46:51"
+  },
+  "17": {
+    "sha": "551e3cbe82ba1a58b864d0b1bdf8ed27026e1c24",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=551e3cbe82ba",
+    "commiter_name": "Matt Woodrow ",
+    "commit_email": "mwoodrow@mozilla.com",
+    "commit_message": "Bug 1500864 - Don't record a display list mutation based on the partial build rect, rely on comparisons during merging. r=mstange  Differential Revision: https://phabricator.services.mozilla.com/D14303",
+    "commit_date": "2018-12-14 19:31:59"
+  },
+  "18": {
+    "sha": "f4ae445c27170b47c330b7e5091063dc43d408ca",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f4ae445c2717",
+    "commiter_name": "tossj ",
+    "commit_email": "tossj@outlook.com",
+    "commit_message": "Bug 1437258 - Move webRequestBlocking permission check to webRequest child to log error to debugging console. r=mixedpuppy  With this change, ext-webRequest.js will throw an ExtensionError when \"blocking\" is used without the \"webRequestBlocking\" permission, and ExtensionParent.jsm will relay that error to ExtensionChild.jsm so an error can be logged to the extension debugging console. Previously, the error was only being logged to the browser console.  Differential Revision: https://phabricator.services.mozilla.com/D9937",
+    "commit_date": "2018-12-10 15:57:50"
   },
   "19": {
-    "sha": "07642926acbc40a099d770e3f909d7ee1bd60d17",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=07642926acbc",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1513684 - Update webrender to commit ed1fb8952062da154f8f6b391e6807115fc74d50 (WR PR #3400). r=kats  https://github.com/servo/webrender/pull/3400  Differential Revision: https://phabricator.services.mozilla.com/D14322",
-    "commit_date": "2018-12-12 21:44:22"
+    "sha": "d93a297a30971da0511fe511e8891c038aa562b1",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d93a297a3097",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Backed out changeset 4e2f1afadef2 (bug 1508664) for ESlint failure on AddonTestUtils.jsm",
+    "commit_date": "2018-12-15 00:55:48"
   },
   "20": {
-    "sha": "db84d5ee7e7a6ce9bbe009f8a54cd98293744d79",
-    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=db84d5ee7e7a",
-    "commiter_name": "Michael Cooper ",
-    "commit_email": "mcooper@mozilla.com",
-    "commit_message": "Bug 1440778 - Implement show-heartbeat as internal Normandy action r=Gijs  The original, server-side implementation of this action was at https://github.com/mozilla/normandy/blob/68d3e55a9d8605bda793620640d074d7e5503e37/client/actions/show-heartbeat/index.js  Differential Revision: https://phabricator.services.mozilla.com/D12345",
-    "commit_date": "2018-12-12 21:39:00"
+    "sha": "4e2f1afadef23d2cbe85b98fd501898cd2dc4b0d",
+    "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4e2f1afadef2",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 1508664 Avoid importing Extension.jsm too early r=kmag  The test failure from this bug was due to code that reads Services.appinfo running too early before our test code that overrides appinfo got a chance to run.  Addon Manager test code could use a more thorough cleanup pass, but this is a quick-and-dirty fix suitable for uplifting in the short term.  Differential Revision: https://phabricator.services.mozilla.com/D14656",
+    "commit_date": "2018-12-15 00:35:47"
   }
 }
