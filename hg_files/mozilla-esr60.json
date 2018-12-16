@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-13 12:16:49.363745"
+    "lastChecked": "2018-12-15 16:56:42.323327"
   },
   "1": {
-    "sha": "6a1fced923f7af546ba8a7a0a528ec21a00deea0",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=6a1fced923f7",
-    "commiter_name": "Mozilla Releng Treescript ",
-    "commit_email": "release+treescript@mozilla.org",
-    "commit_message": "Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD",
-    "commit_date": "2018-12-11 14:12:32"
+    "sha": "4bcb64fd8fa1aae1bdb7a2a019a283eacb7af4ca",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=4bcb64fd8fa1",
+    "commiter_name": "Sylvestre Ledru ",
+    "commit_email": "sledru@mozilla.com",
+    "commit_message": "Bug 1513900 - Reformat everything on the ESR branch to the Google coding style r=ehsan a=liz # ignore-this-changeset",
+    "commit_date": "2018-12-14 09:28:50"
   },
   "2": {
-    "sha": "d7a01fb1c26867fdf9743d4df657a3f1697b95f5",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d7a01fb1c268",
-    "commiter_name": "Mozilla Releng Treescript ",
-    "commit_email": "release+treescript@mozilla.org",
-    "commit_message": "No bug - Tagging 6cc5fc0eaeaf9a9abcfc2722999ecdc6b539c23d with FIREFOX_60_4_0esr_RELEASE a=release CLOSED TREE DONTBUILD",
-    "commit_date": "2018-12-11 14:12:28"
+    "sha": "54261d68de3b2feb4e76ea79b73c095666d58c60",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=54261d68de3b",
+    "commiter_name": "Sylvestre Ledru ",
+    "commit_email": "sledru@mozilla.com",
+    "commit_message": "Added tag PRE_TREEWIDE_CLANG_FORMAT for changeset ff97c7a84632",
+    "commit_date": "2018-12-14 08:29:05"
   },
   "3": {
-    "sha": "53b49526917f873423d08d86712b000ff9f564d3",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=53b49526917f",
-    "commiter_name": "Wes Kocher ",
-    "commit_email": "wkocher@mozilla.com",
-    "commit_message": "Bug 1423215 - Upload an uncompressed runnable-jobs.json artifact in addition to the gz version r=dustin a=tomprince  Uploading both versions will hopefully make this easier to uplift. Once old pushes and artifacts expire, we can stop uploading the gzipped version.  Differential Revision: https://phabricator.services.mozilla.com/D13601",
-    "commit_date": "2018-12-09 05:07:48"
+    "sha": "ff97c7a84632446ac0eb653e51d04f9f2393ab8f",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=ff97c7a84632",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1513901 - Remove the virtual keyword from two fuctions on the ESR branch; r=froydnj a=lizzard  Differential Revision: https://phabricator.services.mozilla.com/D14423 ",
+    "commit_date": "2018-12-13 14:18:19"
   },
   "4": {
-    "sha": "c23331af8ac635f86d748c0eb1e5bbb8fcfd86d9",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=c23331af8ac6",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Backed out changeset 28aff45820d6 (bug 1475775 for causing bug 1510212) to build Thunderbird 60.4.0. a=jorgk DONTBUILD",
-    "commit_date": "2018-12-08 16:20:05"
+    "sha": "cfcc65a371dbc9e24937ad0d3afac6551a5dce4b",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=cfcc65a371db",
+    "commiter_name": "Andi-Bogdan Postelnicu ",
+    "commit_email": "bpostelnicu@mozilla.com",
+    "commit_message": "Bug 1448382 - Add js/src/vtune/ to the ThirdPartyPaths and .clang-format-ignore. r=sylvestre  MozReview-Commit-ID: 4Tni5V4K9Tv",
+    "commit_date": "2018-03-23 19:38:55"
   },
   "5": {
-    "sha": "0ced5dcd70178aa6b380084dd07bf5e45102779c",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0ced5dcd7017",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Backed out changeset 3bed863ee656 (bug 1496736 for causing bug 1510212) to build Thunderbird 60.4.0. a=jorgk",
-    "commit_date": "2018-12-08 16:16:34"
+    "sha": "1f86411acbf4dc248784217e18ec8de475ba3f72",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=1f86411acbf4",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1508773 - Add dom/media/platforms/ffmpeg/ffmpeg57 and dom/media/platforms/ffmpeg/ffmpeg58 to the list of third-party directories r=jya  Differential Revision: https://phabricator.services.mozilla.com/D12470",
+    "commit_date": "2018-11-20 21:19:36"
   },
   "6": {
-    "sha": "389bc30fbc0b6f7bb0e26c0d3e49e4c8c00a8d66",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=389bc30fbc0b",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "merge 6cc5fc0eaeaf (FIREFOX_60_4_0esr_BUILD2) to THUNDERBIRD_60_VERBRANCH. a=jorgk",
-    "commit_date": "2018-12-08 16:13:17"
+    "sha": "57392aed86e0137f8ca66a28e07dcc96c09e4bc1",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=57392aed86e0",
+    "commiter_name": "Sylvestre Ledru ",
+    "commit_email": "sledru@mozilla.com",
+    "commit_message": "Bug 1508220 - Refresh the list of third party code in dom/media/ r=jya  DONTBUILD  Differential Revision: https://phabricator.services.mozilla.com/D12249 ",
+    "commit_date": "2018-11-19 14:41:33"
   },
   "7": {
-    "sha": "28aff45820d64b2fe9ccfd2708da5a08ea608fd0",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=28aff45820d6",
-    "commiter_name": "Jorg K ",
-    "commit_email": "jorgk@jorgk.com",
-    "commit_message": "Revert backout of bug 1475775 (changeset f0bcd8dbddfb) to allow merge with 60.4. a=backout",
-    "commit_date": "2018-12-08 15:27:08"
+    "sha": "b8701a05f4ec6be5f1d847edd3236e16f5f8ea2d",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=b8701a05f4ec",
+    "commiter_name": "Bryce Van Dyk ",
+    "commit_email": "bvandyk@mozilla.com",
+    "commit_message": "Bug 1486502 - Add widevine CDM headers to third party paths, clang-format ignore. r=sylvestre  We wish to keep the widevine headers in the same formatting as upstream to ease comparison and as we do not modify these files. This patch adds the existing headers, as well as another we anticipate pulling down for our next bump (content_decryption_module_proxy.h) to the ignored paths. These files are ignored individually rather than the whole directory they're in, as we also have Mozilla code in that dir.  Differential Revision: https://phabricator.services.mozilla.com/D4347 ",
+    "commit_date": "2018-08-27 16:25:54"
   },
   "8": {
-    "sha": "27d80d202f78bbcdf16184e8b9994be6f2e82a5e",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=27d80d202f78",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Tweak buglist email to be nicely formated and not use URL shortener; r=mtabara a=release  Differential Revision: https://phabricator.services.mozilla.com/D11096",
-    "commit_date": "2018-11-06 18:54:20"
+    "sha": "a2d8d7d608915c2284e3ff9acafa172c5e96c5c6",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=a2d8d7d60891",
+    "commiter_name": "Sylvestre Ledru ",
+    "commit_email": "sledru@mozilla.com",
+    "commit_message": "Bug 1464452 - Add richtext to the list of thirdparties r=andi  MozReview-Commit-ID: 44BqrMb6Ko0",
+    "commit_date": "2018-05-25 16:01:11"
   },
   "9": {
-    "sha": "ce2b8fd01f4c51bf31208c611ee6b8f38fa66260",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=ce2b8fd01f4c",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Fix typo in taskcluster proxy configuration; r=me",
-    "commit_date": "2018-11-01 20:21:12"
+    "sha": "562c947bf64b944bd4b31d7f17a86dcfb8828787",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=562c947bf64b",
+    "commiter_name": "Sylvestre Ledru ",
+    "commit_email": "sledru@mozilla.com",
+    "commit_message": "Bug 1445269 - Refresh tools/rewriting/ThirdPartyPaths.txt r=tjr ",
+    "commit_date": "2018-12-13 05:47:07"
   },
   "10": {
-    "sha": "3832eeb1e124902dc51e2a5e5a57dc1cbfeb434e",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=3832eeb1e124",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Pass repository to buglist commands; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10156",
-    "commit_date": "2018-10-30 18:21:49"
+    "sha": "dfc3f6cce0bc1f402cf476cfb43888cad7c2dfc4",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=dfc3f6cce0bc",
+    "commiter_name": "Sylvestre Ledru ",
+    "commit_email": "sledru@mozilla.com",
+    "commit_message": "Bug 1511284 - Also ignore breakpad client r=me CLOSED TREE",
+    "commit_date": "2018-11-30 07:00:43"
   },
   "11": {
-    "sha": "0ad7b557626801057e4476940132c53d6665f5e2",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0ad7b5576268",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Send an email when a release starts with a bug list; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10155",
-    "commit_date": "2018-10-30 21:04:00"
+    "sha": "3ed441e5310db4207b0b3ae1c3a82d7c9f95f4f3",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=3ed441e5310d",
+    "commiter_name": "Andrew McCreight ",
+    "commit_email": "continuation@gmail.com",
+    "commit_message": "Bug 1511141 - Disable formatting for more MOZ_COLLECT_REPORT calls. r=erahm  Differential Revision: https://phabricator.services.mozilla.com/D13463",
+    "commit_date": "2018-11-29 21:41:48"
   },
   "12": {
-    "sha": "1a026a44500b6f451cf5ee2bb32bd294039cdb58",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=1a026a44500b",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Add command to generate buglist for a given release; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10154",
-    "commit_date": "2018-10-30 18:21:40"
+    "sha": "914b2e8e71e124375d682bb3d1f732c75dd72548",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=914b2e8e71e1",
+    "commiter_name": "Sylvestre Ledru ",
+    "commit_email": "sledru@mozilla.com",
+    "commit_message": "Bug 1511140 - Declare PRINT_MACH_RESULT only once r=Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13458",
+    "commit_date": "2018-11-29 20:21:29"
   },
   "13": {
-    "sha": "2e17368b47c9a06e2118b0033b9c8c72292411b5",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=2e17368b47c9",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Cleanup buglist_creator code; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10153",
-    "commit_date": "2018-10-30 18:21:38"
+    "sha": "df8965873cb35fc19a92b2c9d7809da5643d2d8a",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=df8965873cb3",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1510893 - Add the wayland-scanner generated source files to .clang-format-ignore r=sylvestre  Differential Revision: https://phabricator.services.mozilla.com/D13363",
+    "commit_date": "2018-11-29 08:25:42"
   },
   "14": {
-    "sha": "0b195464716bdb35e84b447cb84a6da522453032",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=0b195464716b",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Fix flake8 errors in buglist_creator; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10152",
-    "commit_date": "2018-10-30 18:21:36"
+    "sha": "d107ad96761957728e0c769caeef17f54a8928d0",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d107ad967619",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1510787 - Add security/sandbox/chromium-shim/ to the list of third-party sources r=sylvestre  Differential Revision: https://phabricator.services.mozilla.com/D13318",
+    "commit_date": "2018-11-29 08:25:27"
   },
   "15": {
-    "sha": "d3cbc4397cf6d5f6cc701c992a6895d9f4dac0b8",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=d3cbc4397cf6",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Add buglist_creator to test-suite; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10151",
-    "commit_date": "2018-10-30 18:21:34"
+    "sha": "9d8c0487ed6ea038db226e5e65379ba9051e5438",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=9d8c0487ed6e",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1510765 - Add netwerk/dns/nsIDNKitInterface.h to the list of third-party sources r=sylvestre  Differential Revision: https://phabricator.services.mozilla.com/D13306",
+    "commit_date": "2018-11-29 08:25:04"
   },
   "16": {
-    "sha": "144b86ee4a5c4939501164818280ce2d88e6afe2",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=144b86ee4a5c",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Import buglist_creator from build-tools; r=mtabara  This is imported from https://hg.mozilla.org/build/tools/file/482c0f6537d47f7cbf1326066ecd1d3efbbd53a7  Differential Revision: https://phabricator.services.mozilla.com/D10150",
-    "commit_date": "2018-10-30 18:21:32"
+    "sha": "bbf5812ece1a2a7d7dd55cde3d03ed06db23488b",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=bbf5812ece1a",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1510526 - Add a few autogenerated files to .clang-format-ignore r=sylvestre  Differential Revision: https://phabricator.services.mozilla.com/D13194 ",
+    "commit_date": "2018-11-28 07:40:30"
   },
   "17": {
-    "sha": "4585f0bba945bd55ee2082ed0b1e28359a8b7b55",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=4585f0bba945",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: Set TASKCLUSTER_ROOT_URL in tasks that use the taskcluster proxy; r=dustin  This sets `TASKCLUSTER_BASE_URL` instead of `TASKCLUSTER_ROOT_URL`, since the proxy doesn't support the redeployable URL schema yet.  Differential Revision: https://phabricator.services.mozilla.com/D10149",
-    "commit_date": "2018-10-30 21:03:48"
+    "sha": "a493698c2605ab7df57f32e1dad8d9f36f9cc5ff",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=a493698c2605",
+    "commiter_name": "Ehsan Akhgari ",
+    "commit_email": "ehsan@mozilla.com",
+    "commit_message": "Bug 1510513 - Retain the formatting of MOZ_DEFINE_ENUM_  macros r=sylvestre  These macros tend to be handled quite poorly since the clang-format tokenizer cannot figure out how to handle them.  Differential Revision: https://phabricator.services.mozilla.com/D13179 ",
+    "commit_date": "2018-11-28 09:14:19"
   },
   "18": {
-    "sha": "ae67721d8d1432e94b3e6b39d4b49125e169eedc",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=ae67721d8d14",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: Add `VOLUME` definitions to base debian images; r=gps  For tasks that only need python, the base images are sufficient. The in-tree code verifies that the caches are setup as volumes in the image being used, so set the caches in the base images as well.  Differential Revision: https://phabricator.services.mozilla.com/D10148",
-    "commit_date": "2018-10-30 18:26:04"
+    "sha": "05635b000b55fce4110bf12777e99f3b01602784",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=05635b000b55",
+    "commiter_name": "Andrew McCreight ",
+    "commit_email": "continuation@gmail.com",
+    "commit_message": "Bug 1510478 - Disable clang-formatting for XPTCall stub files. r=Ehsan  Many of the inline assembly macros in these files get reformatted poorly by clang-format, so don't format them for now. In followup work, in bug 1510781, hopefully we can write a larger patch to only disable clang-format for the specific macros and then format the rest of the files.  The problematic include STUB_ENTRY and STUB_MANGLED_ENTRY.  Differential Revision: https://phabricator.services.mozilla.com/D13311",
+    "commit_date": "2018-11-28 21:26:43"
   },
   "19": {
-    "sha": "376d2bf874d452fab90f5b69822dfcd2036b26d3",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=376d2bf874d4",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: [mozrelease] Add mozrelease tests to taskcluster; r=mtabara  Differential Revision: https://phabricator.services.mozilla.com/D10147",
-    "commit_date": "2018-10-30 18:40:23"
+    "sha": "434cd9e99c91b6386163ba48ff05c083e473d5b5",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=434cd9e99c91",
+    "commiter_name": "Jeff Gilbert ",
+    "commit_email": "jgilbert@mozilla.com",
+    "commit_message": "Bug 1510467 - Mark gfx/gl/GLConsts.h as generated in .clang-format-ignore. r=eakhgari  s/off/on once in GLContext.cpp. ",
+    "commit_date": "2018-11-28 02:04:17"
   },
   "20": {
-    "sha": "53fd9b6081618cb5e5d2f291f5d2bb5e8c810b7f",
-    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=53fd9b608161",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1492128: Vendor taskcluster==4.0.1; r=firefox-build-system-reviewers,gps  We can't use taskcluster 5.0.0 yet, because taskcluster-proxy does not support new-style URLs.  Differential Revision: https://phabricator.services.mozilla.com/D10146",
-    "commit_date": "2018-10-30 17:50:49"
+    "sha": "afee65b5cbdf71d7e419c36e5b1be6c1c23a87b6",
+    "url": "https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=afee65b5cbdf",
+    "commiter_name": "Jeff Gilbert ",
+    "commit_email": "jgilbert@mozilla.com",
+    "commit_message": "Bug 1510467 - Preserve purposely-formatted code from clang-format. (webgl, gfx/gl)  MozReview-Commit-ID: 2U2oqQ53nTZ ",
+    "commit_date": "2018-11-27 08:47:49"
   }
 }

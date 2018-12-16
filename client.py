@@ -38,6 +38,7 @@ def limit_checker():
         except:
             print("The requests limit is reset to: " + str(reset_time))
 
+
 def create_files_for_git(repositories_holder):
     """
     Main GIT function. Takes every Git repo from a .json file which is populated with repositories and writes all
@@ -68,7 +69,10 @@ def create_files_for_git(repositories_holder):
                 pass
         else:
             filter_git_commit_data(repository_name, repository_team, repository_version, repository_type)
-        create_md_table(repository_name, "git_files")
+        try:
+            create_md_table(repository_name, "git_files")
+        except:
+            pass
 
 
 def get_version(repo_name, repo_team):
@@ -207,6 +211,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_version,
             oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S.%f")
         except:
             oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S")
+
         newest_commit = datetime.utcnow()
         for commit in git.get_repo(repository_path).get_commits(since=oldest_commit, until=newest_commit):
             if limit_checker() == 1:

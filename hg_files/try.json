@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-13 12:16:41.382792"
+    "lastChecked": "2018-12-15 16:56:34.911226"
   },
   "1": {
-    "sha": "04ffa65bae2a8da930f94afe839fbec43d3ab78e",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=04ffa65bae2a",
-    "commiter_name": "vinoth ",
-    "commit_email": "cegvinoth@gmail.com",
-    "commit_message": "try: -b do -p all -u all -t none  Pushed via `mach try syntax`",
-    "commit_date": "2018-12-13 12:15:13"
+    "sha": "eb796058356f27090feffdd15ec3daeb039cb6d9",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=eb796058356f",
+    "commiter_name": "Marco Castelluccio ",
+    "commit_email": "mcastelluccio@mozilla.com",
+    "commit_message": "Fuzzy query=ccov build  Pushed via `mach try fuzzy`",
+    "commit_date": "2018-12-15 16:45:51"
   },
   "2": {
-    "sha": "5e45710cfdda1ebf2a80a5085722fadfc7b51fdd",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5e45710cfdda",
-    "commiter_name": "vinoth ",
-    "commit_email": "cegvinoth@gmail.com",
-    "commit_message": "Bug 1508282 - Temporary whitelist of files to skip Eval Assertion",
-    "commit_date": "2018-12-13 12:14:55"
+    "sha": "cf903df8ccaf4ff67750cf83aeecc87fad232da7",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=cf903df8ccaf",
+    "commiter_name": "Marco Castelluccio ",
+    "commit_email": "mcastelluccio@mozilla.com",
+    "commit_message": "Bug 1473067 - Parse coverage artifacts at the end of builds. r=ted",
+    "commit_date": "2018-12-10 12:29:43"
   },
   "3": {
-    "sha": "80676ed904cd279861fa89a075e8f1f11ce72e8d",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=80676ed904cd",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "try: -b do -p all -u jsreftest -t none",
-    "commit_date": "2018-12-13 12:11:21"
-  },
-  "4": {
-    "sha": "7bbba5f30423e69133f373a086075ac04af267fd",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7bbba5f30423",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1512989 - Part 2: Fix browser jstests failures. r=jorendorff",
-    "commit_date": "2018-12-13 12:10:06"
-  },
-  "5": {
-    "sha": "b051e7bd174f19f73a965d23a9f66895a5bd1251",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b051e7bd174f",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1512989 - Part 1: Pass correct test type. r=ahal",
-    "commit_date": "2018-12-13 10:24:56"
-  },
-  "6": {
-    "sha": "68a0c065741312164f434e555d505dbc71e008f9",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=68a0c0657413",
-    "commiter_name": "Dale Harvey ",
-    "commit_email": "dale@arandomurl.com",
-    "commit_message": "try: -b o -p linux64 -u mochitests,xpcshell -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-13 12:04:12"
-  },
-  "7": {
-    "sha": "08c7330f395fa484b623d68ad541fcd0c0811c30",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=08c7330f395f",
-    "commiter_name": "Dale Harvey ",
-    "commit_email": "dale@arandomurl.com",
-    "commit_message": "Bug 1488946 - Remove about:searchreset. r=mkaply ",
-    "commit_date": "2018-12-12 23:33:57"
-  },
-  "8": {
-    "sha": "a1dceb0d0abc4175b51c30ca10dbb9aa9f81eddc",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=a1dceb0d0abc",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "try: -b o -p linux64 -u all[linux64-qr] -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-13 12:03:39"
-  },
-  "9": {
-    "sha": "9e10edf0f95361d11101c646e31325489aa215d8",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9e10edf0f953",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "test ",
-    "commit_date": "2018-12-13 12:01:37"
-  },
-  "10": {
-    "sha": "b436ff9b51cb9670de43d5cfdfb053bdcc8eec66",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b436ff9b51cb",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1507884 - Add tasks for linux-based testing of webrender standalone. r?jrmuizel   Differential Revision: https://phabricator.services.mozilla.com/D14407",
-    "commit_date": "2018-12-13 11:46:17"
-  },
-  "11": {
-    "sha": "4590a9e0e9b59938e2413401d699e30bdc68f694",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4590a9e0e9b5",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1507884 - Add a wrench-deps toolchain to provide a tarball of crates wrench depends on. r?tomprince  Although this task technically doesn't build a toolchain, the set of steps it needs to do is very similar to what a toolchain build does, so we're shoehorning this task into the toolchain kind. The task basically runs `cargo vendor` on the gfx/wr/Cargo.lock file (if/when it changes) and exports a tarball of the resulting vendored crates. This allows downstream tasks that build stuff in gfx/wr to not have to re-fetch these crates from crates.io on every test run.  Differential Revision: https://phabricator.services.mozilla.com/D14406",
-    "commit_date": "2018-12-13 11:46:06"
-  },
-  "12": {
-    "sha": "aa8c87f49f7cac97b30b2c928131f90a1d012264",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=aa8c87f49f7c",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Bug 1507884 - Add a docker image for building and testing webrender standalone. r?glandium   Differential Revision: https://phabricator.services.mozilla.com/D14405",
-    "commit_date": "2018-12-13 11:45:52"
-  },
-  "13": {
-    "sha": "c9302b4e9c8b8f06dea8a2f9f9e0a335abccd629",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c9302b4e9c8b",
-    "commiter_name": "Dale Harvey ",
-    "commit_email": "dale@arandomurl.com",
-    "commit_message": "try: -b o -p linux64 -u mochitests,xpcshell -t none  Pushed via `mach try syntax` ",
-    "commit_date": "2018-12-13 12:01:18"
-  },
-  "14": {
-    "sha": "7016c769d0a73f2642fc5d800c2c52d608ebd86a",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=7016c769d0a7",
-    "commiter_name": "Dale Harvey ",
-    "commit_email": "dale@arandomurl.com",
-    "commit_message": "Bug 1488946 - Remove about:searchreset. r=mkaply ",
-    "commit_date": "2018-12-12 23:33:57"
-  },
-  "15": {
-    "sha": "65cff62d58e7a4bd7eff19c16c9c4d478237015f",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=65cff62d58e7",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/custom-elements/reactions/HTMLBaseElement.html",
-    "commit_date": "2018-12-13 11:48:19"
-  },
-  "16": {
-    "sha": "e3bcc1b4198b13ff500dfac7ed4292b8d6a006bc",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=e3bcc1b4198b",
-    "commiter_name": "kaixinjxq ",
-    "commit_email": "xiuqix.jiang@intel.com",
-    "commit_message": "Bug 1513857 [wpt PR 14491] - Add CEReactions tests for HTMLBaseElement, a=testonly  wpt-commit: 91265abdedc9bcb0e79ae17fa6a9f0cbf3e3a90e wpt-pr: 14491 ",
-    "commit_date": "2018-12-13 11:43:15"
-  },
-  "17": {
-    "sha": "c42a7d56f684f31155bbcf0321b97dee94c2ac7a",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c42a7d56f684",
-    "commiter_name": "Kartikaya Gupta ",
-    "commit_email": "kgupta@mozilla.com",
-    "commit_message": "Fuzzy query='webren  Pushed via `mach try fuzzy` ",
-    "commit_date": "2018-12-13 11:31:47"
-  },
-  "18": {
-    "sha": "ed13962ecd6045dfb516ee8d72a31ea65ce9dcf4",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ed13962ecd60",
+    "sha": "3df4639f33660d348a8c83ba083a423bf0019525",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=3df4639f3366",
     "commiter_name": "D\u00e3o Gottwald ",
     "commit_email": "dao@mozilla.com",
-    "commit_message": "try: -b o -p win64 -u mochitest-e10s-bc -t none",
-    "commit_date": "2018-12-13 11:28:35"
+    "commit_message": "try: -b o -p linux64 -u mochitest-e10s-bc -t none --artifact",
+    "commit_date": "2018-12-15 16:44:53"
+  },
+  "4": {
+    "sha": "b474ea43edb9b7a2daafcdaca85e4191bcb1a11e",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=b474ea43edb9",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "Bug 1514497 - Remove unused autocomplete-result-popupset and <children includes=\"toolbarbutton\"/> from the urlbar binding. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14681",
+    "commit_date": "2018-12-15 15:24:28"
+  },
+  "5": {
+    "sha": "6e5678f045eab7f3675a0df109b89851ae9da628",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=6e5678f045ea",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "try: -b do -p all -u gtest,mochitest-media,mochitest-media-e10s,reftest,reftest-e10s,reftest-no-accel,web-platform-tests -t none  Pushed via `mach try syntax` ",
+    "commit_date": "2018-12-15 16:33:05"
+  },
+  "6": {
+    "sha": "59d90f57789fbd320a9c0aedd32ddc3647311ca0",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=59d90f57789f",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "Bug 1513511 - Use new FFmpeg decode API with recent FFmpeg version. r?bryce  In libavcodec 58 and later, the old avcodec_decode_video2 is broken and only return the first visible frame found after a VP9 super-frame.  This resulted in some YouTube videos for about 10% of the frames to never be returned.  Only the new API properly behaves so we upgrade our code to use it.  Differential Revision: https://phabricator.services.mozilla.com/D14682",
+    "commit_date": "2018-12-15 16:32:41"
+  },
+  "7": {
+    "sha": "061d3b296926f7080ff7baed619f3cc53b0769bc",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=061d3b296926",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "Bug 1443429 - P4. Don't use WebVTTListener while in stable state.  WebVTTListener is a JS wrapper around vtt.js. ",
+    "commit_date": "2018-11-23 20:25:19"
+  },
+  "8": {
+    "sha": "584f4981220a018a4516791883fed9e73f686742",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=584f4981220a",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "Bug 1443429 - P3. Assert that we aren't running JS observable tasks while in stable state. r?bholley!   Differential Revision: https://phabricator.services.mozilla.com/D12703",
+    "commit_date": "2018-11-22 20:01:44"
+  },
+  "9": {
+    "sha": "291713b9fda4c960670769f0c7ed122cab4850f6",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=291713b9fda4",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "Bug 1443429 - P2. Fix constness. r?bholley!  And minor C++ cleanup to keep the static analyser happy.  Differential Revision: https://phabricator.services.mozilla.com/D12702 ",
+    "commit_date": "2018-11-22 20:01:24"
+  },
+  "10": {
+    "sha": "96e77f24c470f014b9307b59d3999f23d808931a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=96e77f24c470",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "Bug 1443429 - P1. Ensure that we don't run JS wrapper while in stable state. r?pehrsons!  Due to the state watcher logic, mirror tasks can be dispatched while in stable state. We must not have visible aJS change during such stable state.  Differential Revision: https://phabricator.services.mozilla.com/D12699 ",
+    "commit_date": "2018-12-03 22:26:10"
+  },
+  "11": {
+    "sha": "23868aa76dcbb81c547ec9d4dc2f82da34f36823",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=23868aa76dcb",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "Bug 1513227 - P2. Remove unused files. r?jolin!  Differential Revision: https://phabricator.services.mozilla.com/D14159",
+    "commit_date": "2018-12-11 16:28:39"
+  },
+  "12": {
+    "sha": "5587ffce6a67d0dd54ab1c223788818418a4482a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=5587ffce6a67",
+    "commiter_name": "Jean-Yves Avenard ",
+    "commit_email": "jyavenard@mozilla.com",
+    "commit_message": "Bug 1513227 - P1. Use correct constant to determine if HW decoding is enabled. r?jolin!  Differential Revision: https://phabricator.services.mozilla.com/D14158",
+    "commit_date": "2018-12-11 16:28:29"
+  },
+  "13": {
+    "sha": "66fa8a2c28a76e2527fe86bb6bffccab32b50e64",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=66fa8a2c28a7",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "try: -b o -p linux64 -u mochitest-e10s-bc -t none --artifact",
+    "commit_date": "2018-12-15 15:27:33"
+  },
+  "14": {
+    "sha": "ac1b6fb8ced40d441e7b60b30848af334ac5f1bd",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ac1b6fb8ced4",
+    "commiter_name": "D\u00e3o Gottwald ",
+    "commit_email": "dao@mozilla.com",
+    "commit_message": "x",
+    "commit_date": "2018-12-15 15:24:28"
+  },
+  "15": {
+    "sha": "97d87978fe61dd9539a0f7a46edaa81206bb32ad",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=97d87978fe61",
+    "commiter_name": "moz-wptsync-bot ",
+    "commit_email": "wptsync@mozilla.com",
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/clipboard-apis/async-navigator-clipboard-basics.https.html",
+    "commit_date": "2018-12-15 15:23:49"
+  },
+  "16": {
+    "sha": "f2cc007d82a0306d13b12bf34f6bac90f4d95c4a",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=f2cc007d82a0",
+    "commiter_name": "Darwin Huang ",
+    "commit_email": "huangdarwin@chromium.org",
+    "commit_message": "Bug 1514493 [wpt PR 14541] - WIP: Async Clipboard ReadImage/WriteImage prototype., a=testonly  API Goal: - Async Clipboard functionality to ReadImage() and WriteImage() - JS side will send Blobs with MIME type \"image/png\" - Images will be \"safe\", as we'll re-encode to strip potentially dangerous metadata and protect from arbitrary code execution. Only image types supported by the Skia library will be supported for this initial POC. - First release into experimental with this ReadImage()/WriteImage() - Later integrate into Read()/Write() and remove ReadImage()/WriteImage()  Features: - FileReader used to read Blobs asynchronously. - Image Decoding on a separate thread. - Image read/write accomplished, where Images are represented by Blobs holding MIME type \"image/png\" - Manual test requires user to copy the green image and then refresh.  Future work: - Image encoding on a separate thread as well. - Simplify and determine what code runs on which threads. - Move PNGCodec off of async clipboard area? - Improve test to be automatic instead of manual, and to not require user copy. - Consider use of ImageBitmapFactory increased types available for accessing the async clipboard, and reduction in potentially duplicate code, at the cost of a potential for increased complexity.  Bug: 150835 Change-Id: I4380116642b4720bb9773185eb2e28757688c5ec  wpt-commit: 76e335336ef78fabe03cf3e8ba7098458fe56e3b wpt-pr: 14541 ",
+    "commit_date": "2018-12-15 15:22:37"
+  },
+  "17": {
+    "sha": "9d4d9da1096608fb03c8ce76763ef77be871f56f",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9d4d9da10966",
+    "commiter_name": "Carl Corcoran ",
+    "commit_email": "ccorcoran@mozilla.com",
+    "commit_message": "try: -b o -p win32,win64 -u cppunit,xpcshell -t none  Pushed via `mach try syntax`",
+    "commit_date": "2018-12-15 15:02:27"
+  },
+  "18": {
+    "sha": "ef884869dfc5550417b8d5893ede6f77cccebd17",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=ef884869dfc5",
+    "commiter_name": "Carl Corcoran ",
+    "commit_email": "ccorcoran@mozilla.com",
+    "commit_message": "debug logging of loading test dll",
+    "commit_date": "2018-12-15 14:46:23"
   },
   "19": {
-    "sha": "c8e2500276404bc15b99437d9a3cf8475fe65e1f",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=c8e250027640",
-    "commiter_name": "moz-wptsync-bot ",
-    "commit_email": "wptsync@mozilla.com",
-    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/web-nfc/idlharness.https.window.js",
-    "commit_date": "2018-12-13 11:26:02"
+    "sha": "0f696ff9d7ee5e4de2e0fa78432b0a27bb6366d1",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=0f696ff9d7ee",
+    "commiter_name": "Carl Corcoran ",
+    "commit_email": "ccorcoran@mozilla.com",
+    "commit_message": "using dllmain",
+    "commit_date": "2018-12-15 15:00:17"
   },
   "20": {
-    "sha": "9bb1f08040bb9eaf26880d6eef37aeb0bbfc40bd",
-    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=9bb1f08040bb",
+    "sha": "4a17e3fffa873306f2775b6887986599d6d2d855",
+    "url": "https://hg.mozilla.org/try/pushloghtml?changeset=4a17e3fffa87",
     "commiter_name": "moz-wptsync-bot ",
     "commit_email": "wptsync@mozilla.com",
-    "commit_message": "Bug 1512580 [wpt PR 14411] - Update wpt metadata, a=testonly  wpt-pr: 14411 wpt-type: metadata ",
-    "commit_date": "2018-12-07 09:03:46"
+    "commit_message": "try: -b do -p win32,win64,linux64,linux -u web-platform-tests-e10s-1[linux64-stylo,Ubuntu,10.10,Windows 10],web-platform-tests-1[linux64-stylo,Ubuntu,10.10,Windows 10] -t none --artifact --try-test-paths web-platform-tests:testing/web-platform/tests/webrtc-quic/RTCQuicStream.https.html",
+    "commit_date": "2018-12-15 14:57:04"
   }
 }

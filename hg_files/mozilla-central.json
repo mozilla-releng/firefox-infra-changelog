@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-13 12:16:40.315075"
+    "lastChecked": "2018-12-15 16:56:33.923392"
   },
   "1": {
-    "sha": "5c892a6147ae856f208e77c265eda4d7b677ac52",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5c892a6147ae",
-    "commiter_name": "Cameron Kaiser ",
-    "commit_email": "spectre@floodgap.com",
-    "commit_message": "Bug 1512162: Disable stack protection for a portion of XPConnect on ppc64le due to a compiler bug. r=bholley",
-    "commit_date": "2018-12-13 02:52:08"
-  },
-  "2": {
-    "sha": "3ecc407c0cc8705ba7b60fbbe8964e794c0a5651",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3ecc407c0cc8",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.",
-    "commit_date": "2018-12-13 04:01:44"
-  },
-  "3": {
-    "sha": "1cb15212e6b5bb0d451b4e21689d7ec3c8da0f0f",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1cb15212e6b5",
-    "commiter_name": "Jeff Walden ",
-    "commit_email": "jwalden@mit.edu",
-    "commit_message": "Replace an unnecessary U+00A0 NO-BREAK SPACE with a plain ol' ASCII space in devtools/client/inspector/test/head.js to make the file entirely ASCII, as a simplifying measure for another bug being fixed.  No bug, rs=me and DONTBUILD",
-    "commit_date": "2018-12-11 21:39:46"
-  },
-  "4": {
-    "sha": "8d6e7614d2f0a37511a98a399cd72df97c9bc653",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d6e7614d2f0",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
-    "commit_date": "2018-12-13 03:56:48"
-  },
-  "5": {
-    "sha": "008fb8183cac0505185e73348609be9065a17e53",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=008fb8183cac",
-    "commiter_name": "Irvin Ives Lau ",
-    "commit_email": "lauirvin98@gmail.com",
-    "commit_message": "Bug 1509634 - Remove toolkit/themes/osx/mozapps/extensions/toolbarbutton-dropmarker.png and replace usage with arrow-dropdown-12.svg. r=jaws",
-    "commit_date": "2018-12-12 21:31:12"
-  },
-  "6": {
-    "sha": "f07678ec2ad81a8b80a503ce80c85a7c363f4e43",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f07678ec2ad8",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.",
-    "commit_date": "2018-12-12 22:02:44"
-  },
-  "7": {
-    "sha": "22e977cbf29560f5dd7e88f6349789c2649356a3",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=22e977cbf295",
+    "sha": "5b0b8a39d09e49efe283b94deba6853e223edad3",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5b0b8a39d09e",
     "commiter_name": "Noemi Erli ",
     "commit_email": "nerli@mozilla.com",
-    "commit_message": "Backed out 2 changesets (bug 1512989) for jsreftests failures  Backed out changeset 4c79e8192f9f (bug 1512989) Backed out changeset 59a6d8169f80 (bug 1512989)",
-    "commit_date": "2018-12-12 21:54:45"
+    "commit_message": "Merge inbound to mozilla-central.  a=merge",
+    "commit_date": "2018-12-15 09:39:40"
+  },
+  "2": {
+    "sha": "1b960c462dcbb0e6dcf0223e068317845f0f60c4",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1b960c462dcb",
+    "commiter_name": "Lina Cambridge ",
+    "commit_email": "lina@yakshaving.ninja",
+    "commit_message": "Bug 1498073 - Ensure each bookmark engine test cleans up. a=testonly",
+    "commit_date": "2018-12-15 05:32:20"
+  },
+  "3": {
+    "sha": "9016c136594b12fb155a6a2917d48c82ab5fa695",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9016c136594b",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound.",
+    "commit_date": "2018-12-15 02:58:47"
+  },
+  "4": {
+    "sha": "99dac743207c3624909cc0742c7b8b7ee00a6628",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=99dac743207c",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 1508664 Avoid importing Extension.jsm too early r=kmag  The test failure from this bug was due to code that reads Services.appinfo running too early before our test code that overrides appinfo got a chance to run.  Addon Manager test code could use a more thorough cleanup pass, but this is a quick-and-dirty fix suitable for uplifting in the short term.  Differential Revision: https://phabricator.services.mozilla.com/D14656",
+    "commit_date": "2018-12-15 00:29:38"
+  },
+  "5": {
+    "sha": "10aa1d02448438169fc49d467dd7f9a0fd70ca1f",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10aa1d024484",
+    "commiter_name": "Timothy Guan-tin Chien ",
+    "commit_email": "timdream@gmail.com",
+    "commit_message": "Bug 1513600 - Use elementFromPoint() to measure isMouseOverVideo r=jaws  The checkEventWithin method is broken by two bugs:  The first one is bug 1493525 because we ended up pass the proxy instance, instead of the element reference, as the parent node to compare. The second one is unknown and happened sometime after that bug. The |relatedTarget| of the mouse event is always <video>, instead of the element within Shadow DOM that the cursor is moving out to.  Instead of identify the second bug in the DOM, this patch employs a simpler fix by using elementFromPoint() to identify the cursor position.  Differential Revision: https://phabricator.services.mozilla.com/D14342",
+    "commit_date": "2018-12-15 02:56:27"
+  },
+  "6": {
+    "sha": "70a854d2ee1ebc18f9438af38731527738b2ed24",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=70a854d2ee1e",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland.",
+    "commit_date": "2018-12-15 02:57:48"
+  },
+  "7": {
+    "sha": "dc069bf6f13e488efebf9d06ddc7291321f00f11",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dc069bf6f13e",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1514439 - Fix tidy issues. ",
+    "commit_date": "2018-12-15 02:50:09"
   },
   "8": {
-    "sha": "f05193430ec40db4989ac4bdcd6ca59e45ea0270",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f05193430ec4",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - Update Debugger Frontend v107. r=davidwalsh ",
-    "commit_date": "2018-12-12 21:11:18"
+    "sha": "208951ef2fa261f465e533113954c9b7b6b72595",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=208951ef2fa2",
+    "commiter_name": "Shotaro Yamada ",
+    "commit_email": "sinkuu@sinkuu.xyz",
+    "commit_message": "Bug 1514439 - Remove redundant `.clone()`s. r=emilio ",
+    "commit_date": "2018-12-11 01:43:51"
   },
   "9": {
-    "sha": "9f9eac98f6b195b0a174c199e56d9b5ac78e11c2",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9f9eac98f6b1",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Remove unnecessary constructors (#7419). r=davidwalsh  Differential Revision: https://phabricator.services.mozilla.com/D14277",
-    "commit_date": "2018-12-12 16:11:30"
+    "sha": "d9ae98eb3ddc42558c8fde369e1abc1acfb9e5b4",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d9ae98eb3ddc",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1514439 - Fix formatting of inverse transform matrix. ",
+    "commit_date": "2018-12-02 19:05:00"
   },
   "10": {
-    "sha": "02a4af44b009657e680c8753f0c8062f52fdbf89",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=02a4af44b009",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Change conditional panel to use location (#7366). r=davidwalsh  Differential Revision: https://phabricator.services.mozilla.com/D14276",
-    "commit_date": "2018-12-12 16:10:46"
+    "sha": "adf7dac59077630c80c01ec6c322e83c3306b666",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=adf7dac59077",
+    "commiter_name": "Timothy Guan-tin Chien ",
+    "commit_email": "timdream@gmail.com",
+    "commit_message": "Bug 1510848 - Do not unattach UA Widget Shadow Root if the element is already re-attached to the tree r=emilio,smaug  This patch moves all UA Widget calls to helper functions in Element.cpp. The helper function AttachAndSetUAShadowRoot sets the shadow root in a runnable, so that it is in the same order of NotifyUAWidget  runnables.  Differential Revision: https://phabricator.services.mozilla.com/D13479",
+    "commit_date": "2018-12-15 02:48:46"
   },
   "11": {
-    "sha": "b4d5ae157f34af1bb3734e23d55819468e5dbb23",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b4d5ae157f34",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Clean up editor functions (#7413). r=davidwalsh  Differential Revision: https://phabricator.services.mozilla.com/D14275",
-    "commit_date": "2018-12-12 16:10:25"
+    "sha": "74bfa63e922c5782da7f5a58979bbddec0e4fa45",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=74bfa63e922c",
+    "commiter_name": "Jed Davis ",
+    "commit_email": "jld@mozilla.com",
+    "commit_message": "Bug 1510934 - Ensure that pref changes during content process launch are delivered to the process. r=njn  Some prefs need to be available before IPC is started, so we serialize a snapshot when we start launching the process, and then stream further changes over IPC messages.  However, async launch introduces a window between the snapshot and when the parent can start sending messages, during which other code can run on the main thread and change prefs.  In order to not lose those updates, they're queued and sent when the launch is complete.  Depends on D14089  Differential Revision: https://phabricator.services.mozilla.com/D14090",
+    "commit_date": "2018-12-14 05:28:56"
   },
   "12": {
-    "sha": "219f0f13c54de1a018b7c5f3df7ccbfa58ab4130",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=219f0f13c54d",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Add flow types to BreakpointContextMenu props (#7393). r=davidwalsh  Differential Revision: https://phabricator.services.mozilla.com/D14274",
-    "commit_date": "2018-12-12 16:06:51"
+    "sha": "c2e55bc9206b1dd51be3723b610c62bcb5b82efd",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c2e55bc9206b",
+    "commiter_name": "Jed Davis ",
+    "commit_email": "jld@mozilla.com",
+    "commit_message": "Bug 1510934 - Change ContentParent's alive/dead tracking to launching/alive/dead. r=mrbkap  We need content processes that are created but not finished launching (not \"alive\" yet) to be treated differently from ones that have exited (no longer \"alive\"), so the boolean mIsAlive is expanded to a 3-state enumeration, which could be expanded more in the future if needed.  (This is similar to GeckoChildProcessHost::mProcessState, but it's synchronized with the rest of the ContentParent's state, which can lag the GeckoChildProcessHost state due to runnable dispatch.)  This patch also removes mIsAvailable/IsAvailable/MarkAsTroubled, which are unused as of bug 1459212.  Differential Revision: https://phabricator.services.mozilla.com/D14089",
+    "commit_date": "2018-12-15 01:38:27"
   },
   "13": {
-    "sha": "d64f0394493001ef5994042f126a5eeb29d200d8",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d64f03944930",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Typecheck addBreakpoint and require breakpoint line numbers in editor gutter fns (#7390). r=davidwalsh  Differential Revision: https://phabricator.services.mozilla.com/D14273",
-    "commit_date": "2018-12-12 16:06:30"
+    "sha": "b232989d707c19b4ae49982a243e128fcdd63592",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b232989d707c",
+    "commiter_name": "Matt Woodrow ",
+    "commit_email": "mwoodrow@mozilla.com",
+    "commit_message": "Bug 1500864 - Cull items within opacity:0 containers when merging with retained display lists. r=mstange  Depends on D14303  Differential Revision: https://phabricator.services.mozilla.com/D14304",
+    "commit_date": "2018-12-14 19:46:51"
   },
   "14": {
-    "sha": "d2509329525e0a91d5ba32699360ffb03d905de8",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d2509329525e",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Only show the XHR breakpoint checkbox underline if there are real xhr bps (#7381). r=davidwalsh  Differential Revision: https://phabricator.services.mozilla.com/D14272",
-    "commit_date": "2018-12-12 16:06:03"
+    "sha": "551e3cbe82ba1a58b864d0b1bdf8ed27026e1c24",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=551e3cbe82ba",
+    "commiter_name": "Matt Woodrow ",
+    "commit_email": "mwoodrow@mozilla.com",
+    "commit_message": "Bug 1500864 - Don't record a display list mutation based on the partial build rect, rely on comparisons during merging. r=mstange  Differential Revision: https://phabricator.services.mozilla.com/D14303",
+    "commit_date": "2018-12-14 19:31:59"
   },
   "15": {
-    "sha": "f7bc43b3c24ee17ab74db42948c3a31c70861b72",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f7bc43b3c24e",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Don't filter out dollar symbols in function names (#7386). r=davidwalsh  Differential Revision: https://phabricator.services.mozilla.com/D14271",
-    "commit_date": "2018-12-12 16:05:11"
+    "sha": "f4ae445c27170b47c330b7e5091063dc43d408ca",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f4ae445c2717",
+    "commiter_name": "tossj ",
+    "commit_email": "tossj@outlook.com",
+    "commit_message": "Bug 1437258 - Move webRequestBlocking permission check to webRequest child to log error to debugging console. r=mixedpuppy  With this change, ext-webRequest.js will throw an ExtensionError when \"blocking\" is used without the \"webRequestBlocking\" permission, and ExtensionParent.jsm will relay that error to ExtensionChild.jsm so an error can be logged to the extension debugging console. Previously, the error was only being logged to the browser console.  Differential Revision: https://phabricator.services.mozilla.com/D9937",
+    "commit_date": "2018-12-10 15:57:50"
   },
   "16": {
-    "sha": "6d71e135cadb7f1477293afd0378eba485488220",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6d71e135cadb",
-    "commiter_name": "Jason Laster ",
-    "commit_email": "jlaster@mozilla.com",
-    "commit_message": "Bug 1513397 - [release 107] Resolve pause-point flow errors due to new mapped points. (#7375). r=davidwalsh ",
-    "commit_date": "2018-12-12 16:04:48"
+    "sha": "d93a297a30971da0511fe511e8891c038aa562b1",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d93a297a3097",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Backed out changeset 4e2f1afadef2 (bug 1508664) for ESlint failure on AddonTestUtils.jsm",
+    "commit_date": "2018-12-15 00:55:48"
   },
   "17": {
-    "sha": "a4e0d0abe854fca5d186b58d9385a335878e6751",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a4e0d0abe854",
-    "commiter_name": "Jeff Walden ",
-    "commit_email": "jwalden@mit.edu",
-    "commit_message": "Bug 1513152 - Load .sjs scripts in httpd.js as UTF-8, updating consumers of the in-tree .sjs scripts as necessary for the change.  r=kmag",
-    "commit_date": "2018-12-08 23:00:33"
+    "sha": "4e2f1afadef23d2cbe85b98fd501898cd2dc4b0d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4e2f1afadef2",
+    "commiter_name": "Andrew Swan ",
+    "commit_email": "aswan@mozilla.com",
+    "commit_message": "Bug 1508664 Avoid importing Extension.jsm too early r=kmag  The test failure from this bug was due to code that reads Services.appinfo running too early before our test code that overrides appinfo got a chance to run.  Addon Manager test code could use a more thorough cleanup pass, but this is a quick-and-dirty fix suitable for uplifting in the short term.  Differential Revision: https://phabricator.services.mozilla.com/D14656",
+    "commit_date": "2018-12-15 00:35:47"
   },
   "18": {
-    "sha": "4c79e8192f9f6e64d79d406f9fe4bd975a172229",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4c79e8192f9f",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1512989 - Part 2: Fix browser jstests failures. r=jorendorff",
-    "commit_date": "2018-12-12 16:45:47"
+    "sha": "96fdb239f5bc32ef52cb3a4f14b61f470a9b937e",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96fdb239f5bc",
+    "commiter_name": "Gijs Kruitbosch ",
+    "commit_email": "gijskruitbosch@gmail.com",
+    "commit_message": "Bug 1514239 - use fluent for the certificate export code in the cert manager, r=flod,keeler  Differential Revision: https://phabricator.services.mozilla.com/D14598",
+    "commit_date": "2018-12-15 00:26:09"
   },
   "19": {
-    "sha": "59a6d8169f802012b8b57f82cec2314ec16c825f",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=59a6d8169f80",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1512989 - Part 1: Pass correct test type. r=ahal",
-    "commit_date": "2018-12-11 14:06:34"
+    "sha": "b1e417f2b451a8c4549b79d376704b1bf9dde98e",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b1e417f2b451",
+    "commiter_name": "Logan Smyth ",
+    "commit_email": "loganfsmyth@gmail.com",
+    "commit_message": "Bug 1512437 - Part 3: Convert all OriginalLocation instances to GeneratedLocations. r=jlast  Differential Revision: https://phabricator.services.mozilla.com/D14629",
+    "commit_date": "2018-12-14 23:31:14"
   },
   "20": {
-    "sha": "8be0d3702f65e6a15ca5affb71484d68b5c9e759",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8be0d3702f65",
-    "commiter_name": "Andr\u00e9 Bargull ",
-    "commit_email": "andre.bargull@gmail.com",
-    "commit_message": "Bug 1506524: Handle LambdaArrow in MFunctionEnvironment::foldsTo. r=nbp",
-    "commit_date": "2018-12-05 11:15:51"
+    "sha": "df34d5c8f55eac9f921e41d61bcc2cb5f94c0bd9",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=df34d5c8f55e",
+    "commiter_name": "Logan Smyth ",
+    "commit_email": "loganfsmyth@gmail.com",
+    "commit_message": "Bug 1512437 - Part 2: Convert breakpoint APIs to be synchronous now that there are no sourcemaps. r=jlast  Differential Revision: https://phabricator.services.mozilla.com/D14628",
+    "commit_date": "2018-12-14 23:29:58"
   }
 }
