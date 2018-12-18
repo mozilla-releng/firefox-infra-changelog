@@ -3,104 +3,16 @@
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
-|99|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|98|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|97|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|96|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|95|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|94|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|93|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|92|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|91|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|90|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|89|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|88|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|87|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|86|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|85|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|84|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|83|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|82|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|81|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|80|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|79|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|78|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|77|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|76|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|75|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|74|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|73|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|72|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|71|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|70|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|69|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|68|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|67|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|66|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|65|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|64|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|63|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|62|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|61|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|60|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|59|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|58|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|57|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|56|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|55|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|54|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|53|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|52|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|51|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|50|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|49|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|48|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|47|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|46|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|45|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|44|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|43|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|42|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|41|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|40|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|39|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|38|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|37|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|36|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|35|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|34|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|33|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|32|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|31|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|30|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|29|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|28|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|27|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|26|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|25|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|24|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|23|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|22|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|21|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|20|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|19|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|18|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|17|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|16|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|15|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|14|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|13|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|12|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
-|11|rail|Add support for Ship-it v2 (#14)|[URL](https://github.com/mozilla-releng/shipitscript/commit/4c89c1b239fd8415e1225ba738ba820342bd8081)|2018-11-21 16:33:53
-|10|rail|Address comments|[URL](https://github.com/mozilla-releng/shipitscript/commit/0c892801fc9ad80e3a12b80ab69a7e3527ec0eea)|2018-11-21 15:44:59
-|9|rail|Revert local temp canges|[URL](https://github.com/mozilla-releng/shipitscript/commit/3033ccfe619289bfd022df1250a924f995ac33b8)|2018-11-20 04:44:21
-|8|rail|Bump version to 3.0.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/fb22074bb0e5bc26373cf5c2305e89f2a45eae25)|2018-11-20 04:24:43
-|7|rail|Add support for masrk as shipped v2|[URL](https://github.com/mozilla-releng/shipitscript/commit/2032f7bfc6c1629fa783a1af52f42ac51668d7f2)|2018-11-20 04:20:35
-|6|escapewindow|Merge pull request #13 from escapewindow/py37  require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/7edf12f6d68375ea9d0d847ee784a197490665a4)|2018-07-27 23:05:59
-|5|escapewindow|require py37 to be green|[URL](https://github.com/mozilla-releng/shipitscript/commit/603525b424c44e87f3958578f4b20ac12b62d33c)|2018-07-27 22:47:35
-|4|MihaiTabara|Add SCOPES.md (#12)|[URL](https://github.com/mozilla-releng/shipitscript/commit/8522dd18645e6809ecf4a1802b6e383ac4bfded5)|2018-07-12 15:28:23
-|3|MihaiTabara|2.1.1|[URL](https://github.com/mozilla-releng/shipitscript/commit/e2051ad7d5e30cbabbfdd953894abfc5518e4e37)|2018-07-02 18:52:51
-|2|MihaiTabara|Fix timings comparison in shipitscript (#11)|[URL](https://github.com/mozilla-releng/shipitscript/commit/baefe18bdd070d3f7d6eafb08be0f1b25528be57)|2018-07-02 18:49:00
-|1|MihaiTabara|2.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/890bb8af933befe2c7daad69a2074c066b6d031a)|2018-07-02 15:03:27
+|11|rail|Merge pull request #17 from garbas/fix-default-nix-argument  nix: use pkgs as a parameter, use layered docker image|[URL](https://github.com/mozilla-releng/shipitscript/commit/7c5698e73369eaaadeb03e17ab763e3635d7f47f)|2018-12-11 14:08:55
+|10|garbas|nix: use pkgs as a parameter, use layered docker image|[URL](https://github.com/mozilla-releng/shipitscript/commit/121f4dadb55daf3a19eaebbba364d5dbb89e1df1)|2018-12-11 09:49:02
+|9|rail|Merge pull request #16 from rail/nix|[URL](https://github.com/mozilla-releng/shipitscript/commit/348311c6289c13257415a07ac8924798f0fa1826)|2018-12-11 02:05:15
+|8|rail|Pass nixpkgs|[URL](https://github.com/mozilla-releng/shipitscript/commit/1dce963106879a83e98bb3e2c8c320b5853a78fe)|2018-12-10 21:07:26
+|7|rail|Update the dependencies|[URL](https://github.com/mozilla-releng/shipitscript/commit/baca137b1ff147a6ddf5beea7bb51b0e3e2a7014)|2018-12-10 17:08:29
+|6|rail|Pin nixpkgs|[URL](https://github.com/mozilla-releng/shipitscript/commit/5e1daeafcd2004b5cba3198b8aa4bb491d120d0f)|2018-12-10 17:01:08
+|5|rail|Better filter|[URL](https://github.com/mozilla-releng/shipitscript/commit/7305f4b26ad9a4df0aeea7e0321123f4d84f6b6b)|2018-12-09 02:47:55
+|4|rail|Simplify JSON import|[URL](https://github.com/mozilla-releng/shipitscript/commit/4acf102b8209532bc186565e10a669918ffea721)|2018-12-09 02:15:07
+|3|rail|Typo|[URL](https://github.com/mozilla-releng/shipitscript/commit/31c29b3bdc28da402535e6f8342c4240a2b01883)|2018-12-07 20:21:23
+|2|rail|Ignore .git and result|[URL](https://github.com/mozilla-releng/shipitscript/commit/f8388161103564c20d3d12898865fc490044bab6)|2018-12-07 17:56:53
+|1|rail|Nixify  This adds Nix expressions to nixify shipitsriptworker. It is also possible to generate a docker image (mostly used as an example, because there is no config file, nor a way to pass it and run shipitscript) and a tarball. The generated tarball can be used as a interim solution in puppet.|[URL](https://github.com/mozilla-releng/shipitscript/commit/9427312cde0ffeac9314bac0ab679ff559ce2465)|2018-12-06 01:47:51
 
 

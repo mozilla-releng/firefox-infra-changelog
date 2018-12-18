@@ -3,32 +3,10 @@
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
-|27|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|26|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|25|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|24|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|23|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|22|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|21|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|20|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|19|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|18|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|17|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|16|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|15|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|14|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|13|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|12|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|11|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|10|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|9|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|8|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|7|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|6|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|5|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|4|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
-|3|JohanLorenzo|0.9.2|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79)|2018-11-08 09:57:02
-|2|JohanLorenzo|Add requirements.txt.in in package so setup.py can use it|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544)|2018-11-08 09:56:04
-|1|JohanLorenzo|0.9.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4)|2018-11-07 19:08:58
+|5|mitchhentges|Merge pull request #142 from mitchhentges/reference-browser-compat  Removes firefox_  extraction for reference-browser|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/3539ea1a35edcd244d3aef7d11027376f47cd4a8)|2018-12-14 18:43:13
+|4|mitchhentges|Adds calculation of architecture and locales for r-b|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/60212bc7f1ec194e89ced2e6fd84fc2eb4fb9b50)|2018-12-13 23:18:55
+|3|mitchhentges|Removes "application.ini" extraction from reference browser apk|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/b743a7822390682f5f1bc3934558c2a396167acd)|2018-12-13 22:23:46
+|2|mitchhentges|Merge pull request #139 from mitchhentges/reference-browser-compat  Adds reference-browser as another focus-esque publishable browser|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/1fb14864d5118d3fc448ba6c9da0dbc9915e4269)|2018-12-12 00:08:13
+|1|mitchhentges|Removes reference-browser from the set of focus types|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/979da90f37b107b3c511029896e89428be7efb39)|2018-11-30 22:10:11
 
 

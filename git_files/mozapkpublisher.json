@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2018-12-15 16:56:06.444644",
+    "lastChecked": "2018-12-18 09:40:57.585644",
     "last_two_releases": {
       "LatestRelease": {
         "version": "0.9.2",
@@ -17,318 +17,64 @@
     }
   },
   "1": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
+    "sha": "3539ea1a35edcd244d3aef7d11027376f47cd4a8",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/3539ea1a35edcd244d3aef7d11027376f47cd4a8",
+    "commiter_name": "mitchhentges",
     "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
+    "commit_message": "Merge pull request #142 from mitchhentges/reference-browser-compat  Removes firefox_  extraction for reference-browser",
+    "commit_date": "2018-12-14 18:43:13",
     "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
+      "mozapkpublisher/common/apk/extractor.py"
     ]
   },
   "2": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
+    "sha": "60212bc7f1ec194e89ced2e6fd84fc2eb4fb9b50",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/60212bc7f1ec194e89ced2e6fd84fc2eb4fb9b50",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds calculation of architecture and locales for r-b",
+    "commit_date": "2018-12-13 23:18:55",
     "files_changed": [
-      "MANIFEST.in"
+      "mozapkpublisher/common/apk/extractor.py"
     ]
   },
   "3": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
+    "sha": "b743a7822390682f5f1bc3934558c2a396167acd",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/b743a7822390682f5f1bc3934558c2a396167acd",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Removes \"application.ini\" extraction from reference browser apk",
+    "commit_date": "2018-12-13 22:23:46",
     "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
+      "mozapkpublisher/common/apk/extractor.py"
     ]
   },
   "4": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
+    "sha": "1fb14864d5118d3fc448ba6c9da0dbc9915e4269",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/1fb14864d5118d3fc448ba6c9da0dbc9915e4269",
+    "commiter_name": "mitchhentges",
     "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
+    "commit_message": "Merge pull request #139 from mitchhentges/reference-browser-compat  Adds reference-browser as another focus-esque publishable browser",
+    "commit_date": "2018-12-12 00:08:13",
     "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
+      "mozapkpublisher/common/apk/checker.py",
+      "mozapkpublisher/common/googleplay.py",
+      "mozapkpublisher/common/utils.py",
+      "mozapkpublisher/test/common/apk/test_checker.py"
     ]
   },
   "5": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
+    "sha": "979da90f37b107b3c511029896e89428be7efb39",
+    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/979da90f37b107b3c511029896e89428be7efb39",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Removes reference-browser from the set of focus types",
+    "commit_date": "2018-11-30 22:10:11",
     "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "6": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "7": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "8": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
-    "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "9": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "10": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "11": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
-    "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "12": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "13": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "14": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
-    "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "15": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "16": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "17": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
-    "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "18": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "19": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "20": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
-    "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "21": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "22": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "23": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
-    "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "24": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "25": {
-    "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/ac653d9dccec8624f8ff25f31b994757cca5fd79",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.2",
-    "commit_date": "2018-11-08 09:57:02",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
-    ]
-  },
-  "26": {
-    "sha": "faf0e1d2f62664cf325375ae90e546a665d00544",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/faf0e1d2f62664cf325375ae90e546a665d00544",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Add requirements.txt.in in package so setup.py can use it",
-    "commit_date": "2018-11-08 09:56:04",
-    "files_changed": [
-      "MANIFEST.in"
-    ]
-  },
-  "27": {
-    "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "0.9.1",
-    "commit_date": "2018-11-07 19:08:58",
-    "files_changed": [
-      "CHANGELOG.md",
-      "version.txt"
+      "mozapkpublisher/common/apk/checker.py",
+      "mozapkpublisher/common/googleplay.py",
+      "mozapkpublisher/common/utils.py",
+      "mozapkpublisher/test/common/apk/test_checker.py"
     ]
   }
 }
