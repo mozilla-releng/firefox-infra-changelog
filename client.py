@@ -442,6 +442,33 @@ def generate_main_md_table(path_to_files):
     print("Table successfully generated.")
 
 
+def extract_reviewer(string):
+    """
+    Helper function!
+    Takes the string on the input and looks for a specific set of characters (either "r=" or "a=").
+    If at least one of them are present (most of the times they are in the mercurial world) then this function will
+    return the reviewer/approved by names.
+    If none of them are present, the function will return an empty string.
+    :param string: usually the commit message.
+    :return: a string that may contain the author name (if "r=" or "a=" exists)
+    """
+    reviewer = ""
+    approved_by = ""
+    try:
+        reviewer = string.split("r=")[1].split()[0]
+    except IndexError:
+        pass
+    try:
+        approved_by = string.split("a=")[1].split()[0]
+    except IndexError:
+        pass
+
+    if len(reviewer) < 1:
+        return approved_by
+    else:
+        return reviewer
+
+
 def extract_json(json_files, path_to_files, commits_per_repo=5):
     """
     Extracts the json data from json files and writes the data to the main markdown table file. The function looks
@@ -471,9 +498,20 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                     commit_number = str(commit_iterator)
                     commit_description = data[commit_number]["commit_message"]
                     commit_url = data[commit_number]["url"]
-                    repository_url = "[Link to commit](" + commit_url + ")"
+                    repository_url = "[Link](" + commit_url + ")"
                     commit_date = data[commit_number]["commit_date"]
-                    write_main_md_table("main_md_table.md", repository_url, commit_description, commit_date)
+                    author = data[commit_number]["commiter_name"]
+                    if path_to_files is "hg_files":
+                        review = extract_reviewer(commit_description)
+                    elif path_to_files is "git_files":
+                        review = "Placeholder" # TODO git handler for getting the reviewer.
+                    write_main_md_table("main_md_table.md",
+                                        repository_url,
+                                        commit_description,
+                                        author,
+                                        review,
+                                        commit_date
+                                        )
 
             except KeyError:
                 print("File " + file + " is empty. \n Please check:" + repository_url + " for more details.\n")
@@ -494,15 +532,17 @@ def generate_markdown_header(file_name, repository_name, markdown_link, json_lin
 
     repository_title = "|\t" + repository_name + "\t|\t" + "[MarkDown](" + markdown_link + ")" + "\t|\t" + "[Json](" + \
                        json_link + ")" + "\t| \n"
-    title_table_formation = "|:----------------:|:-------------------------------------:|:----------" \
-                            "-----------------------:| \n "
-    base_table = "|      Repository      |                   Last commit               |    Deploy time       | \n" + \
-                 "|:--------------------:|:-------------------------------------------:|:--------------------:| \n"
+
+    title_table_formation = "|:----------:|:-----------------------:|:--------:| \n "
+
+    base_table = "| Repository | Last commit | Author | Reviewer | Deploy time | \n" + \
+                 "|:----------:|:-----------:|:------:|:--------:|:-----------:| \n"
+
     file.write("\n" + repository_title + title_table_formation + "\n" + base_table)
     file.close()
 
 
-def write_main_md_table(file_name, repository_url, last_commit, deploy_time):
+def write_main_md_table(file_name, repository_url, last_commit, author, reviewer, deploy_time):
     """
     This function opens a file (that file should be already created and appends to it a row that will contain the
     repository, the last commit and the deploy time.
@@ -514,6 +554,8 @@ def write_main_md_table(file_name, repository_url, last_commit, deploy_time):
     """
     row = "|" + repository_url + \
           "|" + last_commit + \
+          "|" + author + \
+          "|" + reviewer + \
           "|" + deploy_time + \
           "|" + "\n"
     write_file = open(file_name, "a")
@@ -530,3 +572,4 @@ if __name__ == "__main__":
     clear_file("main_md_table.md")
     generate_main_md_table("hg_files")
     generate_main_md_table("git_files")
+
