@@ -535,7 +535,7 @@ def generate_markdown_header(file_name, repository_name, markdown_link, json_lin
 
     title_table_formation = "|:----------:|:-----------------------:|:--------:| \n "
 
-    base_table = "| Repository | Last commit | Author | Reviewer | Deploy time | \n" + \
+    base_table = "| Link | Last commit | Author | Reviewer | Deploy time | \n" + \
                  "|:----------:|:-----------:|:------:|:--------:|:-----------:| \n"
 
     file.write("\n" + repository_title + title_table_formation + "\n" + base_table)

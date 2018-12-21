@@ -3,7 +3,7 @@
 |	autoland	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=04a31c0080dc)|Bug 1508825 - Enable ESLint for dom/crypto (manual changes) r=Standard8,Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13694|Volodymyr Klymenko |Standard8,Ehsan|2018-12-14 22:54:56|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2b3549145fc3)|Bug 1508825 - Enable ESLint for dom/crypto/ (automatic changes) r=Standard8,Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13693|Volodymyr Klymenko |Standard8,Ehsan|2018-12-14 00:44:52|
@@ -14,7 +14,7 @@
 |	beta	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=17686e2a8e10)|Bug 1508664 - Avoid importing Extension.jsm too early r=kmag a=test-only  The test failure from this bug was due to code that reads Services.appinfo running too early before our test code that overrides appinfo got a chance to run.  Addon Manager test code could use a more thorough cleanup pass, but this is a quick-and-dirty fix suitable for uplifting in the short term.  Differential Revision: https://phabricator.services.mozilla.com/D14656|Andrew Swan |kmag|2018-12-15 00:29:38|
 |[Link](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=d2bd2bb0c329)|Backed out changeset 2c85064c240c (bug 1511818) for frequently failing xpc tests in services/sync/tests/unit/. a=backout|Cosmin Sabou |backout|2018-12-15 03:06:11|
@@ -25,7 +25,7 @@
 |	braindump	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/braindump.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/braindump.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=535d3728de73)|Fix params layout.|Tom Prince ||2018-12-11 20:45:39|
 |[Link](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=c4919d73df5a)|Make required-signoffs the default.|Tom Prince ||2018-12-05 16:32:54|
@@ -36,7 +36,7 @@
 |	ci-admin	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=99d859a7a655)|Bug 1492665 - add modify_resources support r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6933|Dustin J. Mitchell |Callek,bstack|2018-10-22 17:52:14|
 |[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=241f75b5d808)|Bug 1492665 - add support for environments.yml r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6932|Dustin J. Mitchell |Callek,bstack|2018-10-22 17:52:13|
@@ -47,7 +47,7 @@
 |	ci-configuration	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=e9634d8942ca)|Bug 1510441: Use sparse profile in cron tasks; r=gps  Differential Revision: https://phabricator.services.mozilla.com/D13141|Tom Prince |gps|2018-11-30 13:01:34|
 |[Link](https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=13cbc18135d2)|Bug 1503894 - reenable taskcluster-cron for comm-central repo. r=tomprince  This goes along with a .cron.yml update in comm-central that removes the periodic-file-update cron configuration. (Bug 1499590 comment 15)  This will get comm-central nightly builds working again.  Differential Revision: https://phabricator.services.mozilla.com/D10959|Rob Lemley |tomprince|2018-11-06 21:44:29|
@@ -58,7 +58,7 @@
 |	comm-esr60	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/comm-esr60.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/comm-esr60.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=3510ade6c2cb)|Bug 1512977 - Part 2: Stop relying on x-mac-croatian for testing. r=mkmelin a=jorgk|Jorg K |mkmelin|2018-12-11 22:01:43|
 |[Link](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=c4abcd141b6c)|Bug 1512977 - Part 1: Remove charset aliases for unsupported x-mac-NNNNN and MUTF-7, remove hard-coded x-windows-949. r=hsivonen a=jorgk|Jorg K |hsivonen|2018-12-11 22:01:41|
@@ -69,7 +69,7 @@
 |	inbound	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/inbound.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8a6afcb74cd9)|Backed out changeset b6d7250b9df3 (bug 1514346) for sm fuzzing build bustage CLOSED TREE|Bogdan Tara ||2018-12-15 16:53:26|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b6d7250b9df3)|Bug 1514346 - Add --enable-gczeal to fuzzing builds, r=decoder|Steve Fink |decoder|2018-12-14 19:47:30|
@@ -80,7 +80,7 @@
 |	mozilla-build	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-build.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-build.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/mozilla-build/pushloghtml?changeset=c5a55cf36958)|Bug 1501406 - Update vswhere to version 2.5.2.|Ryan VanderMeulen ||2018-10-23 19:12:46|
 |[Link](https://hg.mozilla.org/mozilla-build/pushloghtml?changeset=400ec3910570)|Bug 1501403 - Update UPX to version 3.95.|Ryan VanderMeulen ||2018-10-23 19:08:31|
@@ -91,7 +91,7 @@
 |	mozilla-central	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5b0b8a39d09e)|Merge inbound to mozilla-central.  a=merge|Noemi Erli |merge|2018-12-15 09:39:40|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1b960c462dcb)|Bug 1498073 - Ensure each bookmark engine test cleans up. a=testonly|Lina Cambridge |testonly|2018-12-15 05:32:20|
@@ -102,7 +102,7 @@
 |	mozilla-esr60	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=4bcb64fd8fa1)|Bug 1513900 - Reformat everything on the ESR branch to the Google coding style r=ehsan a=liz # ignore-this-changeset|Sylvestre Ledru |ehsan|2018-12-14 09:28:50|
 |[Link](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=54261d68de3b)|Added tag PRE_TREEWIDE_CLANG_FORMAT for changeset ff97c7a84632|Sylvestre Ledru ||2018-12-14 08:29:05|
@@ -113,7 +113,7 @@
 |	mozilla-release	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=979903e9e9a8)|Automatic version bump CLOSED TREE NO BUG a=release DONTBUILD|Mozilla Releng Treescript |release|2018-12-14 15:32:54|
 |[Link](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=333d8e9009d8)|No bug - Tagging 3864bee6b6ea0a9ea05474da7ee77c12bf680364 with FENNEC_64_0_1_RELEASE a=release CLOSED TREE DONTBUILD|Mozilla Releng Treescript |release|2018-12-14 15:32:50|
@@ -124,7 +124,7 @@
 |	try	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/try.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/try.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/try/pushloghtml?changeset=eb796058356f)|Fuzzy query=ccov build  Pushed via `mach try fuzzy`|Marco Castelluccio ||2018-12-15 16:45:51|
 |[Link](https://hg.mozilla.org/try/pushloghtml?changeset=cf903df8ccaf)|Bug 1473067 - Parse coverage artifacts at the end of builds. r=ted|Marco Castelluccio |ted|2018-12-10 12:29:43|
@@ -135,7 +135,7 @@
 |	build-cloud-tools	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/3962e62c72251ae9fc531bdb5b14ba40243a5b70)|Merge branch 'La0-buildhub-cert'|dividehex|Placeholder|2018-12-04 16:30:17|
 |[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/7fe44bf80d48b949c4d65c7642e3e4b69780af84)|Add CNAME record for DigiCert on buildhub.moz.tools|La0|Placeholder|2018-12-04 15:48:33|
@@ -146,7 +146,7 @@
 |	build-puppet	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/7dd2e3be0ad46789d7c94d3ad8ce28057e2e219e)|Merge pull request #327 from mitchhentges/pushapk-indentation  Indents all pushapk puppet config with 4 spaces|mitchhentges|Placeholder|2018-12-17 20:09:51|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/e8e82430350418b103b06894c6abc17e14d58eb3)|Indents all pushapk puppet config with 4 spaces|mitchhentges|Placeholder|2018-12-17 19:52:21|
@@ -157,7 +157,7 @@
 |	mozapkpublisher	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/3539ea1a35edcd244d3aef7d11027376f47cd4a8)|Merge pull request #142 from mitchhentges/reference-browser-compat  Removes firefox_  extraction for reference-browser|mitchhentges|Placeholder|2018-12-14 18:43:13|
 |[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/60212bc7f1ec194e89ced2e6fd84fc2eb4fb9b50)|Adds calculation of architecture and locales for r-b|mitchhentges|Placeholder|2018-12-13 23:18:55|
@@ -168,13 +168,13 @@
 |	OpenCloudConfig	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 
 |	scriptworker	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla-releng/scriptworker/commit/a1e005a297d7990fdeb56b3ed803d52dcb9137c3)|Create mobile contexts to make tests closer to reality|JohanLorenzo|Placeholder|2018-12-12 09:41:52|
 |[Link](https://github.com/mozilla-releng/scriptworker/commit/7b6716c0cd8302bf61cfeb1be74562d6c154b567)|Rename _get_additional_ _jsone_context into  _hg_ |JohanLorenzo|Placeholder|2018-12-11 14:12:07|
@@ -185,7 +185,7 @@
 |	services	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/services.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla/release-services/commit/8ecd55d9668ffe527c23d3fdb8a7849f927a5017)|cli_common: mark artifact as completed when uploaded manually, fixes #1755, refs #1758|La0|Placeholder|2018-12-18 08:34:14|
 |[Link](https://github.com/mozilla/release-services/commit/70bbd3d3fb477821bf6303ae7dd973e9fc272fd9)|staticanalysis/bot: Do not use improvement patches from before, fixes #1747, refs #1752.|La0|Placeholder|2018-12-17 16:02:42|
@@ -196,7 +196,7 @@
 |	shipitscript	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla-releng/shipitscript/commit/7c5698e73369eaaadeb03e17ab763e3635d7f47f)|Merge pull request #17 from garbas/fix-default-nix-argument  nix: use pkgs as a parameter, use layered docker image|rail|Placeholder|2018-12-11 14:08:55|
 |[Link](https://github.com/mozilla-releng/shipitscript/commit/121f4dadb55daf3a19eaebbba364d5dbb89e1df1)|nix: use pkgs as a parameter, use layered docker image|garbas|Placeholder|2018-12-11 09:49:02|
@@ -207,13 +207,13 @@
 |	signtool	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/signtool.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/signtool.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 
 |	taskcluster-auth	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e)|Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|djmitche|Placeholder|2018-12-10 18:27:23|
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7)|Bug 1510377 - use tc-lib-references to validate references|djmitche|Placeholder|2018-12-06 00:00:09|
@@ -224,7 +224,7 @@
 |	taskcluster-queue	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
-| Repository | Last commit | Author | Reviewer | Deploy time | 
+| Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/taskcluster/taskcluster-queue/commit/1e47a960a34cd36322900cad5bfc2834fcea7b8f)|Merge pull request #306 from djmitche/bug1502892  Bug 1502892 - refactor create/defineTask to check authorization before validation|djmitche|Placeholder|2018-12-14 17:22:13|
 |[Link](https://github.com/taskcluster/taskcluster-queue/commit/98f3728774245c48582184e4ba49dc7a00f84b9a)|Bug 1502892 - refactor create/defineTask to check authorization before validating|djmitche|Placeholder|2018-12-13 21:36:40|
