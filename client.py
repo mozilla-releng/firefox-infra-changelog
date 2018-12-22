@@ -50,29 +50,15 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
-        repository_version = get_version(repository_name, repository_team)
-        version_in_puppet = 0
+        # repository_version = get_version(repository_name, repository_team)   place inside build pupppet
         repository_type = repositories_holder["Github"][repo]["configuration"]["type"]
         print("\nWorking on repo: {}".format(repository_name))
-        try:
-            repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
-            version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
-        except KeyError:
-            pass
-        if repository_version is not None:
-            try:
-                if repository_version["LatestRelease"]["version"] == version_in_puppet:
-                    print("No new changes came into production!")
-                else:
-                    filter_git_commit_data(repository_name, repository_team, repository_version, repository_type)
-            except TypeError:
-                pass
-        else:
-            filter_git_commit_data(repository_name, repository_team, repository_version, repository_type)
-        try:
-            create_md_table(repository_name, "git_files")
-        except:
-            pass
+        folders_to_check = [x for x in repositories_holder["Github"][repo]["configuration"]["folders-to-check"]]
+        filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
+        # try:
+        #     create_md_table(repository_name, "git_files")
+        # except:
+        #     pass
 
 
 def get_version(repo_name, repo_team):
@@ -83,7 +69,7 @@ def get_version(repo_name, repo_team):
     """
     repo_path = repo_team + repo_name
     iteration = 0
-    if limit_checker() == 1:        # check if the requests limit is not exceeded
+    if limit_checker() == 1:  # check if the requests limit is not exceeded
         for tags in git.get_repo(repo_path).get_tags():
             version = tags.name
             sha = tags.commit.sha
@@ -105,13 +91,28 @@ def get_version(repo_name, repo_team):
                 return {"LatestRelease": latestrelease, "PreviousRelease": previousrelease}
 
 
+def compare_files(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path + filename of the modified files. The two lists are mutable.
+    :param first_list: First lists.
+    :param second_list:  Second list
+    :return: returns boolean value in case a match is found.
+    """
+    for i in first_list:
+        if i in second_list:
+            return True
+    else:
+        return False
+
+
 def get_version_from_build_puppet(version_path, repo_name):
     """
     :param: version_path: Path to the requierments.txt where the version number is stored
     :param: repo_name: The repo for which we are checking the version.
     :return: Returns the version number that is stored in build-puppet for each *scriptworker
     """
-    if limit_checker() == 1:        # check if the requests limit is not exceeded
+    if limit_checker() == 1:  # check if the requests limit is not exceeded
         file_to_string = requests.get(version_path).text.split()
         for word in file_to_string:
             if repo_name in word:
@@ -121,151 +122,156 @@ def get_version_from_build_puppet(version_path, repo_name):
                     return version_in_puppet
 
 
-def filter_git_commit_data(repository_name, repository_team, repository_version, repository_type):
+def get_commit_details(commit):
+    author_info = {}
+    files_changed = []
+    try:
+        commit_sha = commit.sha
+    except ValueError:
+        commit_sha = "null"
+    try:
+        commiter_name = commit.author.login
+    except ValueError:
+        commiter_name = "null"
+    try:
+        commiter_email = commit.committer.email
+    except ValueError:
+        commiter_email = "null"
+    try:
+        commit_message = commit.commit.message
+        commit_message = re.sub("[*\n\r]", " ", commit_message)
+    except ValueError:
+        commit_message = "null"
+    try:
+        commit_html_url = commit.html_url
+    except ValueError:
+        commit_html_url = "null"
+    try:
+        for entry in commit.files:
+            files_changed.append(entry.filename)
+    except ValueError:
+        pass
+    try:
+        commit_date = commit.commit.author.date
+    except ValueError:
+        commit_date = "null"
+
+    author_info.update({"sha": commit_sha,
+                        "url": commit_html_url,
+                        "commiter_name": commiter_name,
+                        "commiter_email": commiter_email,
+                        "commit_message": commit_message,
+                        "commit_date": str(commit_date),
+                        "files_changed": files_changed
+                        })
+    return author_info
+
+
+def filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
     :param repository_team:
-    :param repository_name:
-    :param repository_version: dictionary that contains data from the last 2 releases
+    :param repository_name: name of the given repo
+    :param repository_type: returns the type of a repo we are going to work with
+    :param folders_to_check: list that contains every folder we care about from given repo
     :return: Filtered json data
     TODO: please add the exception blocks since the script fails when it can't pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
             github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
-
     git_json_filename = "{}.json".format(repository_name)
     repository_path = repository_team + repository_name
-    try:
-        with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
-            repo_dict = json.load(commit_json)
-            number = len(repo_dict)
-            last_checked = repo_dict["0"]["lastChecked"]
-            repo_dict.update({"0": {"lastChecked": str(datetime.utcnow()),
-                                    "last_two_releases": repository_version}})
-    except FileNotFoundError:
-        repo_dict = {}
-        last_checked = str(git.get_repo(repository_path).created_at)
-        repo_dict.update({"0": {"lastChecked": str(datetime.utcnow()),
-                                "last_two_releases": repository_version}})
-        number = 1
-
-
-    try:
-        latest_release = datetime.strptime(repository_version["LatestRelease"]["date"], "%a, %d %b %Y %H:%M:%S GMT")
-        previous_release = datetime.strptime(repository_version["PreviousRelease"]["date"], "%a, %d %b %Y %H:%M:%S GMT")
-    except TypeError:
-        previous_release = lastWeek
-        pass
-
-    if repository_type == "tag" and limit_checker() == 1:
-        for commit in git.get_repo(repository_path).get_commits(since=previous_release, until=latest_release):
-            if limit_checker() == 1:
-                each_commit = {}
-                author_info = {}
-                files_changed = []
-                try:
-                    commit_sha = commit.sha
-                except ValueError:
-                    commit_sha = "null"
-                try:
-                    commiter_name = commit.author.login
-                except ValueError:
-                    commiter_name = "null"
-                try:
-                    commiter_email = commit.committer.email
-                except ValueError:
-                    commiter_email = "null"
-                try:
-                    commit_message = commit.commit.message
-                    commit_message = re.sub("[*\n\r]", " ", commit_message)
-                except ValueError:
-                    commit_message = "null"
-                try:
-                    commit_html_url = commit.html_url
-                except ValueError:
-                    commit_html_url = "null"
-                try:
-                    for entry in commit.files:
-                        files_changed.append(entry.filename)
-                except ValueError:
-                    pass
-                try:
-                    commit_date = commit.commit.author.date
-                except ValueError:
-                    commit_date = "null"
-
-                author_info.update({"sha": commit_sha,
-                                    "url": commit_html_url,
-                                    "commiter_name": commiter_name,
-                                    "commiter_email": commiter_email,
-                                    "commit_message": commit_message,
-                                    "commit_date": str(commit_date),
-                                    "files_changed": files_changed
-                                    })
-                each_commit.update({int(number): author_info})
-                number += 1
-                repo_dict.update(each_commit)
-    elif repository_type == "no tag" and limit_checker() == 1:
+    with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+        json_content = json.load(commit_json)  # loads the content of existing json into a variable
+        number = len(json_content)  # saves the number of dictionaries existing within current json
         try:
-            oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S.%f")
-        except:
-            oldest_commit = datetime.strptime(last_checked, "%Y-%m-%d %H:%M:%S")
-
-        newest_commit = datetime.utcnow()
-        for commit in git.get_repo(repository_path).get_commits(since=oldest_commit, until=newest_commit):
-            if limit_checker() == 1:
-                each_commit = {}
-                author_info = {}
+            last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S")
+            print(last_checked)
+        except ValueError:
+            last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S.%f")
+            print(last_checked)
+    new_commits = {}
+    # TYPE = NO-TAG
+    if repository_type == "no-tag":
+        for commit in git.get_repo(repository_path).get_commits(since=last_checked):
+            each_commit = {}
+            if len(folders_to_check) > 0:  # if this is greater than 0 it means we need to compare a list of what files changed to our list of files
                 files_changed = []
-                try:
-                    commit_sha = commit.sha
-                except:
-                    commit_sha = "null"
-                try:
-                    committer_name = commit.author.login
-                except:
-                    committer_name = "null"
-                try:
-                    committer_email = commit.committer.email
-                except:
-                    committer_email = "null"
-                try:
-                    commit_message = commit.commit.message
-                    commit_message = re.sub("[*\n\r]", " ", commit_message)
-                except:
-                    commit_message = "null"
-                try:
-                    commit_html_url = commit.html_url
-                except:
-                    commit_html_url = "null"
-                try:
-                    for entry in commit.files:
-                        files_changed.append(entry.filename)
-                except:
-                    pass
-                try:
-                    commit_date = commit.commit.author.date
-                except:
-                    commit_date = "null"
+                for entry in commit.files:
+                    files_changed.append(entry.filename)
+                if compare_files(files_changed, folders_to_check):
+                    each_commit.update({int(number): get_commit_details(commit)})
+                    new_commits.update(each_commit)
+            else:                          # else we just take all commits
+                each_commit.update({int(number): get_commit_details(commit)})
+                new_commits.update(each_commit)
+        if len(new_commits) > 0:
+            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+            json.dump(new_commits, json_file, indent=2)
+            json_file.close()
+            return True
+    # TYPE = COMMIT-KEYWORD
+    if repository_type == "commit-keyword":
+        for commit in git.get_repo(repository_path).get_commits(since=last_checked):
+            each_commit = {}
+            if "deploy" in commit.commit.message:
+                each_commit.update({int(number): get_commit_details(commit)})
+                new_commits.update(each_commit)
+        if len(new_commits) > 0:
+            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+            json.dump(new_commits, json_file, indent=2)
+            json_file.close()
+            return True
+    # TYPE = TAG
+    if repository_type == "tag:":
+        if repository_name == "build-puppet":
+            pathway = repositories["Github"][repository_name]["configuration"]["files-to-check"]
+            for commit in git.get_repo(repository_path).get_commits(since=last_checked):
+                for entry in commit.files:
+                    for scriptworkers in pathway:
+                        if entry.filename in pathway[scriptworkers]:
+                            repository_name = scriptworkers
+                            git_json_filename = "{}.json".format(repository_name)
+                            with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+                                json_content = json.load(commit_json)
+                                number = len(json_content)
+                            version_path = repositories["Github"]["build-puppet"]["configuration"]["files-to-check"][repository_name]
+                            latest_releases = get_version(repository_name, repository_team)
+                            if get_version_from_build_puppet(version_path, repository_name) == latest_releases["latestRelease"]["version"]:
+                                print("No new changes entered production")
+                            else:
+                                last_commit_date = latest_releases["previousrelease"]["date"]
+                                new_version_commit_date = latest_releases["latestRelease"]["date"]
+                                for commit2 in git.get_repo(repository_path).get_commits(since=last_commit_date):
+                                    each_commit = {}
+                                    if commit2.commit.author.date <= new_version_commit_date:
+                                        each_commit.update({int(number): get_commit_details(commit2)})
+                                        new_commits.update(each_commit)
+                        if len(new_commits) > 0:
+                            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+                            json.dump(new_commits, json_file, indent=2)
+                            json_file.close()
+                            return True
 
-                author_info.update({"sha": commit_sha,
-                                    "url": commit_html_url,
-                                    "commiter_name": committer_name,
-                                    "commiter_email": committer_email,
-                                    "commit_message": commit_message,
-                                    "commit_date": str(commit_date),
-                                    "files_changed": files_changed
-                                    })
-                each_commit.update({int(number): author_info})
-                number += 1
-                repo_dict.update(each_commit)
-                repo_dict.update({"0": {"lastChecked": str(commit_date)}})
-
-    git_json_filename = "{}.json".format(repository_name)
-    json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
-    json.dump(repo_dict, json_file, indent=2)
-    json_file.close()
+        else:
+            version_path = repositories["Github"][repository_name]["configuration"]["version-path"]
+            latest_releases = get_version(repository_name, repository_team)
+            if get_version_from_build_puppet(version_path, repository_name) == latest_releases["latestRelease"]["version"]:
+                print("No new changes entered production")
+            else:
+                last_commit_date = latest_releases["previousrelease"]["date"]
+                new_version_commit_date = latest_releases["latestRelease"]["date"]
+                for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
+                    each_commit = {}
+                    if commit.commit.author.date <= new_version_commit_date:
+                        each_commit.update({int(number): get_commit_details(commit)})
+                        new_commits.update(each_commit)
+                if len(new_commits) > 0:
+                    json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+                    json.dump(new_commits, json_file, indent=2)
+                    json_file.close()
+                    return True
 
 
 def create_files_for_hg(repositories_holder):
@@ -504,7 +510,7 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                     if path_to_files is "hg_files":
                         review = extract_reviewer(commit_description)
                     elif path_to_files is "git_files":
-                        review = "Placeholder" # TODO git handler for getting the reviewer.
+                        review = "Placeholder"  # TODO git handler for getting the reviewer.
                     write_main_md_table("main_md_table.md",
                                         repository_url,
                                         commit_description,
@@ -568,8 +574,7 @@ if __name__ == "__main__":
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
     create_files_for_git(repositories)
-    create_files_for_hg(repositories)
-    clear_file("main_md_table.md")
-    generate_main_md_table("hg_files")
-    generate_main_md_table("git_files")
-
+    # create_files_for_hg(repositories)
+    # clear_file("main_md_table.md")
+    # generate_main_md_table("hg_files")
+    # generate_main_md_table("git_files")
