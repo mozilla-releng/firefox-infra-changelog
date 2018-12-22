@@ -1,417 +1,90 @@
 {
   "Github": {
-    "services": {
-      "name": "Release Services",
-      "url": "https://github.com/mozilla/release-services",
-      "team": "mozilla/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
-      }
-    },
-    "beetmoverscript": {
-      "name": "Beet Mover Script",
-      "url": "https://github.com/mozilla-releng/beetmoverscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/beetmover_scriptworker/files/requirements.txt"
-      }
-    },
-    "addonscript": {
-      "name": "Addon Script",
-      "url": "https://github.com/mozilla-releng/addonscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/addon_scriptworker/files/requirements.txt"
-      }
-    },
     "build-cloud-tools": {
       "name": "Build Cloud Tools",
       "url": "https://github.com/mozilla-releng/build-cloud-tools",
       "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
+      "top-contributors": [" ", " "],
       "configuration": {
-        "type": "no tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
+        "type": "no-tag",
+        "folders-to-check": ["terraform/"]
       }
     },
-    "build-puppet": {
-      "name": "Build Puppet",
-      "url": "https://github.com/mozilla/build-puppet",
+    "services": {
+      "name": "Release Services",
+      "url": "https://github.com/mozilla/release-services",
       "team": "mozilla/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
+      "top-contributors": [" ", " "],
       "configuration": {
-        "type": "no tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
-      }
-    },
-    "shipitscript": {
-      "name": "Shipit Script",
-      "url": "https://github.com/mozilla-releng/shipitscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/shipit_scriptworker/files/requirements.txt"
-      }
-    },
-    "bouncerscript": {
-      "name": "Bouncer Script",
-      "url": "https://github.com/mozilla-releng/bouncerscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/bouncer_scriptworker/files/requirements.txt"
-      }
-    },
-    "treescript": {
-      "name": "Tree Script",
-      "url": "https://github.com/mozilla-releng/treescript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/tree_scriptworker/files/requirements.txt"
-      }
-    },
-    "mozapkpublisher": {
-      "name": "MozAPK Publisher",
-      "url": "https://github.com/mozilla-releng/mozapkpublisher",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
-      }
-    },
-    "OpenCloudConfig": {
-      "name": "Open Cloud Config",
-      "url": "https://github.com/mozilla-releng/OpenCloudConfig",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "no tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
-      }
-    },
-    "scriptworker": {
-      "name": "Script Worker",
-      "url": "https://github.com/mozilla-releng/scriptworker",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
-      }
-    },
-    "pushsnapscript": {
-      "name": "Push Snap Script",
-      "url": "https://github.com/mozilla-releng/pushsnapscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushsnap_scriptworker/files/requirements.txt"
-      }
-    },
-    "signingscript": {
-      "name": "Sign Script",
-      "url": "https://github.com/mozilla-releng/signingscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt"
-      }
-    },
-    "pushapkscript": {
-      "name": "PushAPK Script",
-      "url": "https://github.com/mozilla-releng/pushapkscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushapk_scriptworker/files/requirements.txt"
-      }
-    },
-    "balrogscript": {
-      "name": "Balrog Script",
-      "url": "https://github.com/mozilla-releng/balrogscript",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/balrog_scriptworker/files/requirements-27.txt"
-      }
-    },
-    "signtool": {
-      "name": "Sign Tool",
-      "url": "https://github.com/mozilla-releng/signtool",
-      "team": "mozilla-releng/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
-      "configuration": {
-        "type": "tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
+        "type": "no-tag",
+        "folders-to-check": [
+          "src/treestatus/api",
+          "src/tooltool/api",
+          "src/tokens/api"
+        ]
       }
     },
     "taskcluster-auth": {
       "name": "Taskcluster Auth",
       "url": "https://github.com/taskcluster/taskcluster-auth",
       "team": "taskcluster/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
+      "top-contributors": [" ", " "],
       "configuration": {
-        "type": "no tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
+        "type": "no-tag",
+        "folders-to-check": []
       }
     },
     "taskcluster-queue": {
       "name": "Taskcluster Queue",
       "url": "https://github.com/taskcluster/taskcluster-queue",
       "team": "taskcluster/",
-      "top-contributors": [
-        " ",
-        " "
-      ],
+      "top-contributors": [" ", " "],
       "configuration": {
-        "type": "no tag",
-        "folders-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "files-to-ignore": [
-          " ",
-          " ",
-          " "
-        ],
-        "release-path": " "
+        "type": "no-tag",
+        "folders-to-check": []
+      }
+    },
+    "OpenCloudConfig": {
+      "name": "Open Cloud Config",
+      "url": "https://github.com/mozilla-releng/OpenCloudConfig",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "commit-keyword",
+        "folders-to-check": []
+      }
+    },
+    "build-puppet": {
+      "name": "Build Puppet",
+      "url": "https://github.com/mozilla/build-puppet",
+      "team": "mozilla/",
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "files-to-check": {
+          "beetmoverscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/beetmover_scriptworker/files/requirements.txt",
+          "addonscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/addon_scriptworker/files/requirements.txt",
+          "shipitscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/shipit_scriptworker/files/requirements.txt",
+          "bouncerscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/bouncer_scriptworker/files/requirements.txt",
+          "treescript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/tree_scriptworker/files/requirements.txt",
+          "scriptworker": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt",
+          "pushsnapscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushsnap_scriptworker/files/requirements.txt",
+          "signingscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt",
+          "pushapkscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushapk_scriptworker/files/requirements.txt",
+          "balrogscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/balrog_scriptworker/files/requirements-27.txt",
+          "signtool": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt"
+        }
+      }
+    },
+    "mozapkpublisher": {
+      "name": "MozAPK Publisher",
+      "url": "https://github.com/mozilla-releng/mozapkpublisher",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/mozapkpublisher/master/version.txt"
       }
     }
   },
@@ -422,10 +95,7 @@
       "team": "",
       "top-contributors": [" ", " "],
       "configuration": {
-        "type": " ",
-        "folders-to-ignore": [" ", " ", " "],
-        "files-to-ignore": [" ", " ", " "],
-        "release-path": " ",
+        "folders-to-check": ["testing/mozharness" , "taskcluster"],
         "push_type": "json-log"
       }
     }
