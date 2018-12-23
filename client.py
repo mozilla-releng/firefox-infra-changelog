@@ -8,7 +8,8 @@ from os.path import isfile, join
 from datetime import datetime, timedelta
 import sys
 
-lastWeek = datetime.now() - timedelta(days=14)
+
+lastWeek = datetime.now() - timedelta(days=5)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -50,15 +51,42 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
-        # repository_version = get_version(repository_name, repository_team)   place inside build pupppet
-        repository_type = repositories_holder["Github"][repo]["configuration"]["type"]
-        print("\nWorking on repo: {}".format(repository_name))
-        folders_to_check = [x for x in repositories_holder["Github"][repo]["configuration"]["folders-to-check"]]
-        filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
-        # try:
-        #     create_md_table(repository_name, "git_files")
-        # except:
-        #     pass
+        repository_version = get_version(repository_name, repository_team)
+        version_in_puppet = 0
+        folders_to_ignore = repositories_holder["Github"][repo]["configuration"]["folders-to-ignore"]
+        files_to_ignore = repositories_holder["Github"][repo]["configuration"]["files-to-ignore"]
+        files_to_care_for = repositories_holder["Github"][repo]["configuration"]["files-we-care-about"]
+        print("Working on repo: {}".format(repository_name))
+        try:
+            repository_version_path = repositories["Github"][repo]["configuration"]["version-path"]
+            version_in_puppet = get_version_from_build_puppet(repository_version_path, repository_name)
+        except KeyError:
+            pass
+        if repository_version is not None:
+            try:
+                if repository_version['LatestRelease']['version'] == version_in_puppet:
+                    print('No new changes came into production!')
+                else:
+                    filter_git_commit_data(
+                                        repository_name,
+                                        repository_team,
+                                        repository_version,
+                                        folders_to_ignore,
+                                        files_to_ignore,
+                                        files_to_care_for
+                                   )
+            except TypeError:
+                pass
+        else:
+            filter_git_commit_data(
+                                repository_name,
+                                repository_team,
+                                repository_version,
+                                folders_to_ignore,
+                                files_to_ignore,
+                                files_to_care_for
+                            )
+        create_md_table(repository_name, "git_files")
 
 
 def get_version(repo_name, repo_team):
@@ -69,41 +97,27 @@ def get_version(repo_name, repo_team):
     """
     repo_path = repo_team + repo_name
     iteration = 0
-    if limit_checker() == 1:  # check if the requests limit is not exceeded
-        for tags in git.get_repo(repo_path).get_tags():
-            version = tags.name
-            sha = tags.commit.sha
-            date = tags.commit.commit.last_modified
-            author = tags.commit.author.login
-            if iteration == 0:
-                latestrelease = {"version": version,
-                                 "sha": sha,
-                                 "date": date,
-                                 "author": author
-                                 }
-                iteration = 1
-            elif iteration == 1:
-                previousrelease = {"version": version,
-                                   "sha": sha,
-                                   "date": date,
-                                   "author": author
-                                   }
-                return {"LatestRelease": latestrelease, "PreviousRelease": previousrelease}
 
-
-def compare_files(first_list, second_list):
-    """
-    Helper Function!
-    Compares two lists that should contain the path + filename of the modified files. The two lists are mutable.
-    :param first_list: First lists.
-    :param second_list:  Second list
-    :return: returns boolean value in case a match is found.
-    """
-    for i in first_list:
-        if i in second_list:
-            return True
-    else:
-        return False
+    for tags in git.get_repo(repo_path).get_tags():
+        version = tags.name
+        sha = tags.commit.sha
+        date = tags.commit.commit.last_modified
+        author = tags.commit.author.login
+        latest_release = {}
+        if iteration == 0:
+            latest_release = {'version': version,
+                             'sha': sha,
+                             'date': date,
+                             'author': author
+                             }
+            iteration = 1
+        elif iteration == 1:
+            previous_release = {'version': version,
+                               'sha': sha,
+                               'date': date,
+                               'author': author
+                               }
+            return {'LatestRelease': latest_release, 'PreviousRelease': previous_release}
 
 
 def get_version_from_build_puppet(version_path, repo_name):
@@ -167,7 +181,88 @@ def get_commit_details(commit):
     return author_info
 
 
-def filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check):
+def extract_files_from_commit(commit):
+    """
+    Helper Function!
+    This creates a list with all the files that were modified in a commit.
+    :param commit: Takes as a parameter a commit
+    :return: returns a list  with the commit files modified in the commit.
+    """
+    return [commit.files[i].filename for i in range(0, len(commit.files))]
+
+
+def compare_files(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path + filename of the modified files. The two lists are mutable.
+    :param first_list: First lists.
+    :param second_list:  Second list
+    :return: returns boolean value in case a match is found.
+    """
+    if set(first_list).intersection(second_list):
+        return True
+    else:
+        return False
+
+
+def extract_common_files(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path + filename of the modified files. The two lists are mutable.
+    :param first_list: First lists.
+    :param second_list:  Second list
+    :return: a list of mutuale files in the input lists.
+    """
+    return set(first_list).intersection(second_list)
+
+
+def compare_folders(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path of the files.
+    The second_list can accept "path + filename" but the first_list cannot.
+    The two lists are NOT mutable.
+    :param first_list: First lists that should contains paths
+    :param second_list:  Second list that should contain paths + filename.
+    :return: returns boolean value in case a match is found.
+    """
+    for ii in range(0, len(first_list)):
+        for jj in range(0, len(second_list)):
+            if first_list[ii] in second_list[jj]:
+                return True
+            else:
+                return False
+
+
+def extract_common_folders(first_list, second_list):
+    """
+    Helper Function!
+    Compares two lists that should contain the path of the files.
+    The second_list can accept "path + filename" but the first_list cannot.
+    The two lists are NOT mutable.
+    :param first_list: First lists that should contains paths
+    :param second_list:  Second list that should contain paths + filename.
+    :return: returns a list that should contain the common_folders.
+    """
+    common_folders = []
+    for ii in range(0, len(first_list)):
+        for jj in range(0, len(second_list)):
+            if first_list[ii] in second_list[jj]:
+                common_folders = first_list[ii]
+            else:
+                pass
+
+    return common_folders
+
+
+def filter_git_commit_data(
+                    repository_name,
+                    repository_team,
+                    repository_version,
+                    folders_to_ignore,
+                    files_to_ignore,
+                    files_to_care_for
+            ):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function from 're' library
@@ -181,97 +276,94 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
             github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     git_json_filename = "{}.json".format(repository_name)
+    try:
+        with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+            repo_dict = json.load(commit_json)
+            number = len(repo_dict)
+            repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
+                               "last_two_releases": repository_version}})
+    except FileNotFoundError:
+        repo_dict = {}
+        repo_dict.update({'0': {"lastChecked": str(datetime.utcnow()),
+                               "last_two_releases": repository_version}})
+        number = 1
+
     repository_path = repository_team + repository_name
-    with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
-        json_content = json.load(commit_json)  # loads the content of existing json into a variable
-        number = len(json_content)  # saves the number of dictionaries existing within current json
-        try:
-            last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S")
-            print(last_checked)
-        except ValueError:
-            last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S.%f")
-            print(last_checked)
-    new_commits = {}
-    # TYPE = NO-TAG
-    if repository_type == "no-tag":
-        for commit in git.get_repo(repository_path).get_commits(since=last_checked):
-            each_commit = {}
-            if len(folders_to_check) > 0:  # if this is greater than 0 it means we need to compare a list of what files changed to our list of files
+    try:
+        latest_release = datetime.strptime(repository_version['LatestRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+        previous_release = datetime.strptime(repository_version['PreviousRelease']['date'], '%a, %d %b %Y %H:%M:%S GMT')
+    except TypeError:
+        previous_release = lastWeek
+        latest_release = datetime.utcnow()
+
+
+    our_ignore_list = folders_to_ignore + files_to_ignore  # all files and folder we want to ignore
+    our_care_list = files_to_care_for  # list of paths that we care about
+    number += 1
+
+    for commit in git.get_repo(repository_path).get_commits(since=lastWeek):
+        commit_date = commit.commit.author.date
+        checker = False  # if this turns true, it means we care about the commit and will append it
+
+        files_list = extract_files_from_commit(commit)
+
+        # Check for ignored files in commit
+        if compare_files(files_to_ignore, files_list):
+            print("Element found: " + str(extract_common_files(our_ignore_list, files_list)))
+            checker = True
+
+        # Check for care files in commit
+        if compare_files(files_to_care_for, files_list):
+            print("Element found: " + str(extract_common_files(our_care_list, files_list)))
+            checker = True
+
+        # Check for folders to take care of.
+        if compare_folders(folders_to_ignore, files_to_care_for):
+            print("Element found: " + str(extract_common_folders(our_care_list, files_list)))
+
+        # The code below was written by Zfay but is missing two checks and the code is very compressed.
+        # for our_element in our_ignore_list:
+        #     for care_element in our_care_list:
+        #         for file in files_list:
+        #             if care_element in file:  # if this is true = this trumps all options. no matter what, we need this commit
+        #                 checker = True
+        #                 pass
+        #             elif our_element in file:  # this is for repos in which we care about most files and a single commit changes a files we ignore + something else
+        #                 if our_element == our_care_list[-1] and len(files_list) > 1 and our_ignore_list != files_list:
+        #                     checker = True
+        #                     pass
+        #             else:
+        #                 checker = True
+
+        if checker is True:  # if true we care about adding this commit
+            print("We care about this commit: ", commit.sha)
+            if commit_date <= latest_release:
+                each_commit = {}
+                author_info = {}
                 files_changed = []
+                commit_sha = commit.sha
+                commiter_name = commit.author.login
+                commiter_email = commit.committer.email
+                commit_message = commit.commit.message
+                commit_html_url = commit.html_url
                 for entry in commit.files:
                     files_changed.append(entry.filename)
-                if compare_files(files_changed, folders_to_check):
-                    each_commit.update({int(number): get_commit_details(commit)})
-                    new_commits.update(each_commit)
-            else:                          # else we just take all commits
-                each_commit.update({int(number): get_commit_details(commit)})
-                new_commits.update(each_commit)
-        if len(new_commits) > 0:
-            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
-            json.dump(new_commits, json_file, indent=2)
+                message = re.sub("[*\n\r]", " ", commit_message)
+                author_info.update({"sha": commit_sha,
+                                    "url": commit_html_url,
+                                    "commiter_name": commiter_name,
+                                    "commiter_email": commiter_email,
+                                    "commit_message": message,
+                                    "commit_date": str(commit_date),
+                                    "files_changed": files_changed
+                                    })
+                each_commit.update({int(number): author_info})
+                number += 1
+                repo_dict.update(each_commit)
+            git_json_filename = "{}.json".format(repository_name)
+            json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
+            json.dump(repo_dict, json_file, indent=2)
             json_file.close()
-            return True
-    # TYPE = COMMIT-KEYWORD
-    if repository_type == "commit-keyword":
-        for commit in git.get_repo(repository_path).get_commits(since=last_checked):
-            each_commit = {}
-            if "deploy" in commit.commit.message:
-                each_commit.update({int(number): get_commit_details(commit)})
-                new_commits.update(each_commit)
-        if len(new_commits) > 0:
-            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
-            json.dump(new_commits, json_file, indent=2)
-            json_file.close()
-            return True
-    # TYPE = TAG
-    if repository_type == "tag:":
-        if repository_name == "build-puppet":
-            pathway = repositories["Github"][repository_name]["configuration"]["files-to-check"]
-            for commit in git.get_repo(repository_path).get_commits(since=last_checked):
-                for entry in commit.files:
-                    for scriptworkers in pathway:
-                        if entry.filename in pathway[scriptworkers]:
-                            repository_name = scriptworkers
-                            git_json_filename = "{}.json".format(repository_name)
-                            with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
-                                json_content = json.load(commit_json)
-                                number = len(json_content)
-                            version_path = repositories["Github"]["build-puppet"]["configuration"]["files-to-check"][repository_name]
-                            latest_releases = get_version(repository_name, repository_team)
-                            if get_version_from_build_puppet(version_path, repository_name) == latest_releases["latestRelease"]["version"]:
-                                print("No new changes entered production")
-                            else:
-                                last_commit_date = latest_releases["previousrelease"]["date"]
-                                new_version_commit_date = latest_releases["latestRelease"]["date"]
-                                for commit2 in git.get_repo(repository_path).get_commits(since=last_commit_date):
-                                    each_commit = {}
-                                    if commit2.commit.author.date <= new_version_commit_date:
-                                        each_commit.update({int(number): get_commit_details(commit2)})
-                                        new_commits.update(each_commit)
-                        if len(new_commits) > 0:
-                            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
-                            json.dump(new_commits, json_file, indent=2)
-                            json_file.close()
-                            return True
-
-        else:
-            version_path = repositories["Github"][repository_name]["configuration"]["version-path"]
-            latest_releases = get_version(repository_name, repository_team)
-            if get_version_from_build_puppet(version_path, repository_name) == latest_releases["latestRelease"]["version"]:
-                print("No new changes entered production")
-            else:
-                last_commit_date = latest_releases["previousrelease"]["date"]
-                new_version_commit_date = latest_releases["latestRelease"]["date"]
-                for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
-                    each_commit = {}
-                    if commit.commit.author.date <= new_version_commit_date:
-                        each_commit.update({int(number): get_commit_details(commit)})
-                        new_commits.update(each_commit)
-                if len(new_commits) > 0:
-                    json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
-                    json.dump(new_commits, json_file, indent=2)
-                    json_file.close()
-                    return True
 
 
 def create_files_for_hg(repositories_holder):
@@ -301,11 +393,20 @@ def filter_hg_commit_data(repository_name, repository_url):
     :param repository_url: Link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
     :return: Returns a dictionary that contains the commits in the provided hg_repository_name
     """
+
+    hg_json_filename = "{}.json".format(repository_name)
+    try:
+        with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
+            hg_repo_data = json.load(commit_json)
+            commit_number = len(hg_repo_data)
+            hg_repo_data.update({'0': {"lastChecked": str(datetime.utcnow())}})
+    except FileNotFoundError:
+        hg_repo_data = {}
+        hg_repo_data.update({'0': {"lastChecked": str(datetime.utcnow())}})
+        commit_number = 0
     request_url = repository_url + "json-log"
     hg_repo_data = {}
-    commit_number = 0
-    print("\nWorking on repo:", repository_name)
-    hg_repo_data.update({commit_number: {"lastChecked": str(datetime.utcnow())}})
+    print("Working on repo:", repository_name)
     data = json.loads(requests.get(request_url).text)
     commit_number += 1
 
@@ -327,7 +428,7 @@ def filter_hg_commit_data(repository_name, repository_url):
             "commit_date": datetime.utcfromtimestamp(date[0]).strftime('%Y-%m-%d %H:%M:%S')
         }})
         commit_number += 1
-    hg_json_filename = "{}.json".format(repository_name)
+
     json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
     json.dump(hg_repo_data, json_file, indent=2)
     json_file.close()
@@ -574,7 +675,7 @@ if __name__ == "__main__":
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
     create_files_for_git(repositories)
-    # create_files_for_hg(repositories)
+    #create_files_for_hg(repositories) # ignore because we are testing git filtering
     # clear_file("main_md_table.md")
-    # generate_main_md_table("hg_files")
+    #generate_main_md_table("hg_files") # ignore because we are testing git filtering
     # generate_main_md_table("git_files")

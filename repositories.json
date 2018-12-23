@@ -1,102 +1,28 @@
 {
   "Github": {
-    "build-cloud-tools": {
-      "name": "Build Cloud Tools",
-      "url": "https://github.com/mozilla-releng/build-cloud-tools",
-      "team": "mozilla-releng/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "no-tag",
-        "folders-to-check": ["terraform/"]
-      }
-    },
-    "services": {
-      "name": "Release Services",
-      "url": "https://github.com/mozilla/release-services",
-      "team": "mozilla/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "no-tag",
-        "folders-to-check": [
-          "src/treestatus/api",
-          "src/tooltool/api",
-          "src/tokens/api"
-        ]
-      }
-    },
-    "taskcluster-auth": {
-      "name": "Taskcluster Auth",
-      "url": "https://github.com/taskcluster/taskcluster-auth",
-      "team": "taskcluster/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "no-tag",
-        "folders-to-check": []
-      }
-    },
-    "taskcluster-queue": {
-      "name": "Taskcluster Queue",
-      "url": "https://github.com/taskcluster/taskcluster-queue",
-      "team": "taskcluster/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "no-tag",
-        "folders-to-check": []
-      }
-    },
-    "OpenCloudConfig": {
-      "name": "Open Cloud Config",
-      "url": "https://github.com/mozilla-releng/OpenCloudConfig",
-      "team": "mozilla-releng/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "commit-keyword",
-        "folders-to-check": []
-      }
-    },
     "build-puppet": {
       "name": "Build Puppet",
       "url": "https://github.com/mozilla/build-puppet",
       "team": "mozilla/",
+      "top-contributors": [
+        " ",
+        " "
+      ],
       "configuration": {
-        "type": "tag",
-        "folders-to-check": [],
-        "files-to-check": {
-          "beetmoverscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/beetmover_scriptworker/files/requirements.txt",
-          "addonscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/addon_scriptworker/files/requirements.txt",
-          "shipitscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/shipit_scriptworker/files/requirements.txt",
-          "bouncerscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/bouncer_scriptworker/files/requirements.txt",
-          "treescript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/tree_scriptworker/files/requirements.txt",
-          "scriptworker": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt",
-          "pushsnapscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushsnap_scriptworker/files/requirements.txt",
-          "signingscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt",
-          "pushapkscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushapk_scriptworker/files/requirements.txt",
-          "balrogscript": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/balrog_scriptworker/files/requirements-27.txt",
-          "signtool": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt"
-        }
-      }
-    },
-    "mozapkpublisher": {
-      "name": "MozAPK Publisher",
-      "url": "https://github.com/mozilla-releng/mozapkpublisher",
-      "team": "mozilla-releng/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "tag",
-        "folders-to-check": [],
-        "version-path": "https://raw.githubusercontent.com/mozilla-releng/mozapkpublisher/master/version.txt"
-      }
-    }
-  },
-  "Mercurial": {
-    "mozilla-central": {
-      "name": "Mozilla Central",
-      "url": "https://hg.mozilla.org/mozilla-central/",
-      "team": "",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "folders-to-check": ["testing/mozharness" , "taskcluster"],
-        "push_type": "json-log"
+        "type": " ",
+        "files-we-care-about": [
+          "modules/pushapk_scriptworker/manifests/settings.pp"
+
+        ],
+        "folders-to-ignore": [
+          "modules/"
+
+        ],
+        "files-to-ignore": [
+          "manifests/moco-config.pp",
+          "modules/generic_worker/manifests/init.pp"
+        ],
+        "release-path": " "
       }
     }
   }
