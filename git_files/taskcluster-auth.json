@@ -1,8 +1,23 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 18:34:01"
+    "lastChecked": "2018-12-25 15:08:41.152364"
   },
   "1": {
+    "sha": "0ed7720082264fffa76b613de3bc18d888a8ae67",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/0ed7720082264fffa76b613de3bc18d888a8ae67",
+    "commiter_name": "OjaswinM",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Add listRoleIds() to paginate roles  (#189)    Add a listRoleIds endpoint      Fixed description in list-role-ids-response.yml      Return continuationToken only when limit is specified      Add tests      Improve tests and implement hashids      Add tests for invalid continuationToken",
+    "commit_date": "2018-12-19 15:44:04",
+    "files_changed": [
+      "package.json",
+      "schemas/v1/list-role-ids-response.yml",
+      "src/v1.js",
+      "test/role_test.js",
+      "yarn.lock"
+    ]
+  },
+  "2": {
     "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
     "commiter_name": "djmitche",
@@ -15,7 +30,7 @@
       "yarn.lock"
     ]
   },
-  "2": {
+  "3": {
     "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
     "commiter_name": "djmitche",
@@ -28,7 +43,7 @@
       "yarn.lock"
     ]
   },
-  "3": {
+  "4": {
     "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
     "commiter_name": "djmitche",
@@ -40,7 +55,7 @@
       "yarn.lock"
     ]
   },
-  "4": {
+  "5": {
     "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
     "commiter_name": "djmitche",
@@ -51,7 +66,67 @@
       "src/v1.js"
     ]
   },
-  "5": {
+  "6": {
+    "sha": "2a6d46d36e0b7e2fb4b6fc4ee59914033238506f",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/2a6d46d36e0b7e2fb4b6fc4ee59914033238506f",
+    "commiter_name": "arshadkazmi42",
+    "commiter_email": "arshadkazmi42@gmail.com",
+    "commit_message": "204 response changed to use res.reply",
+    "commit_date": "2018-12-02 18:34:01",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "7": {
+    "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-10 18:27:23",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "8": {
+    "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:00:09",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "9": {
+    "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) upgrade tc-lib-api for previous change",
+    "commit_date": "2018-12-05 23:45:07",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "10": {
+    "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply",
+    "commit_date": "2018-12-05 23:38:19",
+    "files_changed": [
+      "src/v1.js"
+    ]
+  },
+  "11": {
     "sha": "2a6d46d36e0b7e2fb4b6fc4ee59914033238506f",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/2a6d46d36e0b7e2fb4b6fc4ee59914033238506f",
     "commiter_name": "arshadkazmi42",

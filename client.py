@@ -50,15 +50,14 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
-        # repository_version = get_version(repository_name, repository_team)   place inside build pupppet
         repository_type = repositories_holder["Github"][repo]["configuration"]["type"]
         print("\nWorking on repo: {}".format(repository_name))
         folders_to_check = [x for x in repositories_holder["Github"][repo]["configuration"]["folders-to-check"]]
         filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
-        # try:
-        #     create_md_table(repository_name, "git_files")
-        # except:
-        #     pass
+        try:
+            create_md_table(repository_name, "git_files")
+        except:
+            pass
 
 
 def get_version(repo_name, repo_team):
@@ -187,27 +186,36 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         number = len(json_content)  # saves the number of dictionaries existing within current json
         try:
             last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S")
-            print(last_checked)
+            print("Repo last updated on: ", last_checked)
         except ValueError:
             last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S.%f")
-            print(last_checked)
+            print("Repo last updated on: ", last_checked)
     new_commits = {}
     # TYPE = NO-TAG
     if repository_type == "no-tag":
+        new_commits = {"0": {"lastChecked": str(datetime.utcnow())}}
+        number = 0
         for commit in git.get_repo(repository_path).get_commits(since=last_checked):
             each_commit = {}
             if len(folders_to_check) > 0:  # if this is greater than 0 it means we need to compare a list of what files changed to our list of files
                 files_changed = []
                 for entry in commit.files:
                     files_changed.append(entry.filename)
-                if compare_files(files_changed, folders_to_check):
+                if compare_files(files_changed, folders_to_check):  # checks if any object from list 1 if it's in list 2
+                    number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
                     new_commits.update(each_commit)
             else:                          # else we just take all commits
+                number += 1
                 each_commit.update({int(number): get_commit_details(commit)})
                 new_commits.update(each_commit)
+        if len(json_content) > 1:
+            for old_commit in json_content:
+                if old_commit != "0":
+                    number += 1
+                    new_commits.update({int(number): json_content[old_commit]})
         if len(new_commits) > 0:
-            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+            json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
             json.dump(new_commits, json_file, indent=2)
             json_file.close()
             return True
@@ -574,7 +582,7 @@ if __name__ == "__main__":
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
     create_files_for_git(repositories)
-    # create_files_for_hg(repositories)
-    # clear_file("main_md_table.md")
-    # generate_main_md_table("hg_files")
-    # generate_main_md_table("git_files")
+    create_files_for_hg(repositories)
+    clear_file("main_md_table.md")
+    generate_main_md_table("hg_files")
+    generate_main_md_table("git_files")
