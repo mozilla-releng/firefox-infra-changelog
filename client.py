@@ -16,8 +16,8 @@ def limit_checker():
     """
     This function checks if your limit requests is not exceeded.
     Every time when this function is called, it returns 1 in case of your requests limit is not exceeded,
-    otherwise it wait for the reset time to pass.
-    :return: it returns 1 if your limit requests is not exceeded
+    otherwise it will wait for the reset time to pass.
+    :return: returns 1 if your limit requests is not exceeded
     """
     rate_limit = git.rate_limiting[0]
     unix_reset_time = git.rate_limiting_resettime
@@ -29,14 +29,14 @@ def limit_checker():
     else:
         try:
             print("You have reached the requests limit!")
-            print("The requests limit is reset to: " + str(reset_time))
+            print("The requests limit will reset at:" + str(reset_time))
             while rate_limit < 5000 and reset_time >= datetime.now():
                 unix_reset_time = git.rate_limiting_resettime
                 reset_time = datetime.fromtimestamp(unix_reset_time)
-            print("\nThe requests limit has been reset! ")
+            print("\nThe requests limit has been reset!")
             return 1
         except:
-            print("The requests limit is reset to: " + str(reset_time))
+            print("The requests limit is reset to:" + str(reset_time))
 
 
 def create_files_for_git(repositories_holder):
@@ -186,10 +186,10 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         number = len(json_content)  # saves the number of dictionaries existing within current json
         try:
             last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S")
-            print("Repo last updated on: ", last_checked)
+            print("Repo last updated on:", last_checked)
         except ValueError:
             last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S.%f")
-            print("Repo last updated on: ", last_checked)
+            print("Repo last updated on:", last_checked)
     new_commits = {}
     # TYPE = NO-TAG
     if repository_type == "no-tag":
@@ -197,7 +197,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         number = 0
         for commit in git.get_repo(repository_path).get_commits(since=last_checked):
             each_commit = {}
-            if len(folders_to_check) > 0:  # if this is greater than 0 it means we need to compare a list of what files changed to our list of files
+            if len(folders_to_check) > 0:  # if greater than 0 compare a list of what files changed
                 files_changed = []
                 for entry in commit.files:
                     files_changed.append(entry.filename)
@@ -528,7 +528,7 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                                         )
 
             except KeyError:
-                print("File " + file + " is empty. \n Please check:" + repository_url + " for more details.\n")
+                print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
                 pass
 
 
