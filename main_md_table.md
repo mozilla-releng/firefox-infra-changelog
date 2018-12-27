@@ -93,11 +93,11 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5b0b8a39d09e)|Merge inbound to mozilla-central.  a=merge|Noemi Erli |merge|2018-12-15 09:39:40|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1b960c462dcb)|Bug 1498073 - Ensure each bookmark engine test cleans up. a=testonly|Lina Cambridge |testonly|2018-12-15 05:32:20|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9016c136594b)|Merge mozilla-central to mozilla-inbound.|Cosmin Sabou ||2018-12-15 02:58:47|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=99dac743207c)|Bug 1508664 Avoid importing Extension.jsm too early r=kmag  The test failure from this bug was due to code that reads Services.appinfo running too early before our test code that overrides appinfo got a chance to run.  Addon Manager test code could use a more thorough cleanup pass, but this is a quick-and-dirty fix suitable for uplifting in the short term.  Differential Revision: https://phabricator.services.mozilla.com/D14656|Andrew Swan |kmag|2018-12-15 00:29:38|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10aa1d024484)|Bug 1513600 - Use elementFromPoint() to measure isMouseOverVideo r=jaws  The checkEventWithin method is broken by two bugs:  The first one is bug 1493525 because we ended up pass the proxy instance, instead of the element reference, as the parent node to compare. The second one is unknown and happened sometime after that bug. The |relatedTarget| of the mouse event is always <video>, instead of the element within Shadow DOM that the cursor is moving out to.  Instead of identify the second bug in the DOM, this patch employs a simpler fix by using elementFromPoint() to identify the cursor position.  Differential Revision: https://phabricator.services.mozilla.com/D14342|Timothy Guan-tin Chien |jaws|2018-12-15 02:56:27|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=47d3977ee67e)|Merge inbound to mozilla-central a=merge|arthur.iakab |merge|2018-12-25 09:51:08|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=062104031126)|Bug 1241958 - Add test for windowless workers, r=jlast.|Brian Hackett |jlast.|2018-12-24 18:40:04|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5327afef99b0)|Bug 1044074 - Add test that scroll event handlers do not break run-to-completion, no_r.|Brian Hackett ||2018-12-24 15:52:31|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=191dfb7c9ac3)|Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE|Razvan Maries |merge|2018-12-24 21:59:51|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2a93b82fd06d)|Bug 1515821 - Remove verbose warning in IsThirdPartyWindowOrChannel. r=ehsan|Eric Rahm |ehsan|2018-12-21 23:00:26|
 
 |	mozilla-esr60	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -137,9 +137,6 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/3962e62c72251ae9fc531bdb5b14ba40243a5b70)|Merge branch 'La0-buildhub-cert'|dividehex|Placeholder|2018-12-04 16:30:17|
-|[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/7fe44bf80d48b949c4d65c7642e3e4b69780af84)|Add CNAME record for DigiCert on buildhub.moz.tools|La0|Placeholder|2018-12-04 15:48:33|
-|[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/dab0cd3c12bc5aa9c8ad81d606b9654426623ac8)|Merge pull request #369 from dividehex/add_packer  Add packer method for building centos 6.5 base amis|dividehex|Placeholder|2018-12-18 17:51:45|
 |[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/3962e62c72251ae9fc531bdb5b14ba40243a5b70)|Merge branch 'La0-buildhub-cert'|dividehex|Placeholder|2018-12-04 16:30:17|
 |[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/7fe44bf80d48b949c4d65c7642e3e4b69780af84)|Add CNAME record for DigiCert on buildhub.moz.tools|La0|Placeholder|2018-12-04 15:48:33|
 
@@ -215,19 +212,19 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster-auth/commit/0ed7720082264fffa76b613de3bc18d888a8ae67)|Add listRoleIds() to paginate roles  (#189)    Add a listRoleIds endpoint      Fixed description in list-role-ids-response.yml      Return continuationToken only when limit is specified      Add tests      Improve tests and implement hashids      Add tests for invalid continuationToken|OjaswinM|Placeholder|2018-12-19 15:44:04|
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e)|Merge pull request #188 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|djmitche|Placeholder|2018-12-10 18:27:23|
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7)|Bug 1510377 - use tc-lib-references to validate references|djmitche|Placeholder|2018-12-06 00:00:09|
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2)|(hotfix) upgrade tc-lib-api for previous change|djmitche|Placeholder|2018-12-05 23:45:07|
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c)|Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply|djmitche|Placeholder|2018-12-05 23:38:19|
-|[Link](https://github.com/taskcluster/taskcluster-auth/commit/2a6d46d36e0b7e2fb4b6fc4ee59914033238506f)|204 response changed to use res.reply|arshadkazmi42|Placeholder|2018-12-02 18:34:01|
 
 |	taskcluster-queue	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster-queue/commit/883b49e1b8954897910a658da78fa9d437023025)|Merge pull request #307 from taskcluster/monorepo-fixes  Monorepo fixes|imbstack|Placeholder|2018-12-20 20:28:27|
+|[Link](https://github.com/taskcluster/taskcluster-queue/commit/53857be3999ed4ea579530f58e40901e361385cc)|Allow tests to complete|imbstack|Placeholder|2018-12-20 01:26:25|
+|[Link](https://github.com/taskcluster/taskcluster-queue/commit/d26369bd567d61dbdedad529be877597e6738e7b)|Fix engines to be more permissive|imbstack|Placeholder|2018-12-20 01:24:59|
 |[Link](https://github.com/taskcluster/taskcluster-queue/commit/1e47a960a34cd36322900cad5bfc2834fcea7b8f)|Merge pull request #306 from djmitche/bug1502892  Bug 1502892 - refactor create/defineTask to check authorization before validation|djmitche|Placeholder|2018-12-14 17:22:13|
 |[Link](https://github.com/taskcluster/taskcluster-queue/commit/98f3728774245c48582184e4ba49dc7a00f84b9a)|Bug 1502892 - refactor create/defineTask to check authorization before validating|djmitche|Placeholder|2018-12-13 21:36:40|
-|[Link](https://github.com/taskcluster/taskcluster-queue/commit/45bbf334a67982ff9cd6bd58b2ad0e502879cd89)|Bug 1502892 - add some more tests around createTask and priorities|djmitche|Placeholder|2018-12-13 21:20:09|
-|[Link](https://github.com/taskcluster/taskcluster-queue/commit/f16ab6658148efcac18434802525091f66359f42)|Merge pull request #305 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references|djmitche|Placeholder|2018-12-07 15:23:43|
-|[Link](https://github.com/taskcluster/taskcluster-queue/commit/904a244e39a0d96488f7fe41f031355b0e01f018)|Bug 1510377 - use tc-lib-references to validate references|djmitche|Placeholder|2018-12-06 00:01:53|

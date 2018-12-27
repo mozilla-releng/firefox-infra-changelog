@@ -16,8 +16,8 @@ def limit_checker():
     """
     This function checks if your limit requests is not exceeded.
     Every time when this function is called, it returns 1 in case of your requests limit is not exceeded,
-    otherwise it wait for the reset time to pass.
-    :return: it returns 1 if your limit requests is not exceeded
+    otherwise it will wait for the reset time to pass.
+    :return: returns 1 if your limit requests is not exceeded
     """
     rate_limit = git.rate_limiting[0]
     unix_reset_time = git.rate_limiting_resettime
@@ -29,14 +29,14 @@ def limit_checker():
     else:
         try:
             print("You have reached the requests limit!")
-            print("The requests limit is reset to: " + str(reset_time))
+            print("The requests limit will reset at:" + str(reset_time))
             while rate_limit < 5000 and reset_time >= datetime.now():
                 unix_reset_time = git.rate_limiting_resettime
                 reset_time = datetime.fromtimestamp(unix_reset_time)
-            print("\nThe requests limit has been reset! ")
+            print("\nThe requests limit has been reset!")
             return 1
         except:
-            print("The requests limit is reset to: " + str(reset_time))
+            print("The requests limit is reset to:" + str(reset_time))
 
 
 def create_files_for_git(repositories_holder):
@@ -50,15 +50,14 @@ def create_files_for_git(repositories_holder):
     for repo in repositories_holder["Github"]:
         repository_name = repo
         repository_team = repositories_holder["Github"][repo]["team"]
-        # repository_version = get_version(repository_name, repository_team)   place inside build pupppet
         repository_type = repositories_holder["Github"][repo]["configuration"]["type"]
         print("\nWorking on repo: {}".format(repository_name))
         folders_to_check = [x for x in repositories_holder["Github"][repo]["configuration"]["folders-to-check"]]
         filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
-        # try:
-        #     create_md_table(repository_name, "git_files")
-        # except:
-        #     pass
+        try:
+            create_md_table(repository_name, "git_files")
+        except:
+            pass
 
 
 def get_version(repo_name, repo_team):
@@ -187,27 +186,36 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         number = len(json_content)  # saves the number of dictionaries existing within current json
         try:
             last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S")
-            print(last_checked)
+            print("Repo last updated on:", last_checked)
         except ValueError:
             last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S.%f")
-            print(last_checked)
+            print("Repo last updated on:", last_checked)
     new_commits = {}
     # TYPE = NO-TAG
     if repository_type == "no-tag":
+        new_commits = {"0": {"lastChecked": str(datetime.utcnow())}}
+        number = 0
         for commit in git.get_repo(repository_path).get_commits(since=last_checked):
             each_commit = {}
-            if len(folders_to_check) > 0:  # if this is greater than 0 it means we need to compare a list of what files changed to our list of files
+            if len(folders_to_check) > 0:  # if greater than 0 compare a list of what files changed
                 files_changed = []
                 for entry in commit.files:
                     files_changed.append(entry.filename)
-                if compare_files(files_changed, folders_to_check):
+                if compare_files(files_changed, folders_to_check):  # checks if any object from list 1 if it's in list 2
+                    number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
                     new_commits.update(each_commit)
             else:                          # else we just take all commits
+                number += 1
                 each_commit.update({int(number): get_commit_details(commit)})
                 new_commits.update(each_commit)
+        if len(json_content) > 1:
+            for old_commit in json_content:
+                if old_commit != "0":
+                    number += 1
+                    new_commits.update({int(number): json_content[old_commit]})
         if len(new_commits) > 0:
-            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+            json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
             json.dump(new_commits, json_file, indent=2)
             json_file.close()
             return True
@@ -489,7 +497,7 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
 
         with open(file_path) as json_files:
             data = json.load(json_files)
-            base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
+            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
             repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
             repository_json = base_link + file.rstrip().replace(" ", "%20")
             repository_title = file.replace(".json", "")
@@ -520,7 +528,7 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                                         )
 
             except KeyError:
-                print("File " + file + " is empty. \n Please check:" + repository_url + " for more details.\n")
+                print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
                 pass
 
 
@@ -574,7 +582,7 @@ if __name__ == "__main__":
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
     create_files_for_git(repositories)
-    # create_files_for_hg(repositories)
-    # clear_file("main_md_table.md")
-    # generate_main_md_table("hg_files")
-    # generate_main_md_table("git_files")
+    create_files_for_hg(repositories)
+    clear_file("main_md_table.md")
+    generate_main_md_table("hg_files")
+    generate_main_md_table("git_files")

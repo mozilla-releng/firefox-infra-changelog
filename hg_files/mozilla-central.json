@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2018-12-15 16:56:33.923392"
+    "lastChecked": "2018-12-25 15:08:42.281635"
   },
   "1": {
-    "sha": "5b0b8a39d09e49efe283b94deba6853e223edad3",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5b0b8a39d09e",
-    "commiter_name": "Noemi Erli ",
-    "commit_email": "nerli@mozilla.com",
-    "commit_message": "Merge inbound to mozilla-central.  a=merge",
-    "commit_date": "2018-12-15 09:39:40"
+    "sha": "47d3977ee67ef6e2dbdcc5ce83a159c1c8e886f5",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=47d3977ee67e",
+    "commiter_name": "arthur.iakab ",
+    "commit_email": "aiakab@mozilla.com",
+    "commit_message": "Merge inbound to mozilla-central a=merge",
+    "commit_date": "2018-12-25 09:51:08"
   },
   "2": {
-    "sha": "1b960c462dcbb0e6dcf0223e068317845f0f60c4",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1b960c462dcb",
-    "commiter_name": "Lina Cambridge ",
-    "commit_email": "lina@yakshaving.ninja",
-    "commit_message": "Bug 1498073 - Ensure each bookmark engine test cleans up. a=testonly",
-    "commit_date": "2018-12-15 05:32:20"
+    "sha": "0621040311260830908b35fbeebd42041911c531",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=062104031126",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1241958 - Add test for windowless workers, r=jlast.",
+    "commit_date": "2018-12-24 18:40:04"
   },
   "3": {
-    "sha": "9016c136594b12fb155a6a2917d48c82ab5fa695",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9016c136594b",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound.",
-    "commit_date": "2018-12-15 02:58:47"
+    "sha": "5327afef99b0ab315a0ba93c0ceb0caab565d857",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5327afef99b0",
+    "commiter_name": "Brian Hackett ",
+    "commit_email": "bhackett1024@gmail.com",
+    "commit_message": "Bug 1044074 - Add test that scroll event handlers do not break run-to-completion, no_r.",
+    "commit_date": "2018-12-24 15:52:31"
   },
   "4": {
-    "sha": "99dac743207c3624909cc0742c7b8b7ee00a6628",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=99dac743207c",
-    "commiter_name": "Andrew Swan ",
-    "commit_email": "aswan@mozilla.com",
-    "commit_message": "Bug 1508664 Avoid importing Extension.jsm too early r=kmag  The test failure from this bug was due to code that reads Services.appinfo running too early before our test code that overrides appinfo got a chance to run.  Addon Manager test code could use a more thorough cleanup pass, but this is a quick-and-dirty fix suitable for uplifting in the short term.  Differential Revision: https://phabricator.services.mozilla.com/D14656",
-    "commit_date": "2018-12-15 00:29:38"
+    "sha": "191dfb7c9ac3d9bab913e3eb09c24f9a6810ea8a",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=191dfb7c9ac3",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE",
+    "commit_date": "2018-12-24 21:59:51"
   },
   "5": {
-    "sha": "10aa1d02448438169fc49d467dd7f9a0fd70ca1f",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10aa1d024484",
-    "commiter_name": "Timothy Guan-tin Chien ",
-    "commit_email": "timdream@gmail.com",
-    "commit_message": "Bug 1513600 - Use elementFromPoint() to measure isMouseOverVideo r=jaws  The checkEventWithin method is broken by two bugs:  The first one is bug 1493525 because we ended up pass the proxy instance, instead of the element reference, as the parent node to compare. The second one is unknown and happened sometime after that bug. The |relatedTarget| of the mouse event is always <video>, instead of the element within Shadow DOM that the cursor is moving out to.  Instead of identify the second bug in the DOM, this patch employs a simpler fix by using elementFromPoint() to identify the cursor position.  Differential Revision: https://phabricator.services.mozilla.com/D14342",
-    "commit_date": "2018-12-15 02:56:27"
+    "sha": "2a93b82fd06de22322e4fcc225c831710f6e3f7d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2a93b82fd06d",
+    "commiter_name": "Eric Rahm ",
+    "commit_email": "erahm@mozilla.com",
+    "commit_message": "Bug 1515821 - Remove verbose warning in IsThirdPartyWindowOrChannel. r=ehsan",
+    "commit_date": "2018-12-21 23:00:26"
   },
   "6": {
-    "sha": "70a854d2ee1ebc18f9438af38731527738b2ed24",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=70a854d2ee1e",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Merge mozilla-central to autoland.",
-    "commit_date": "2018-12-15 02:57:48"
+    "sha": "4094a816f2070977c253c1d0e702248f59a5f79c",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4094a816f207",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Backed out 2 changesets (bug 1422235) for failing reftests: tests/layout/reftests/css-mediaqueries/mq_print_iframe_overflow-block-ref.html. CLOSED TREE Backed out changeset 2f2f235a4cba (bug 1422235) Backed out changeset 849c2b71aae4 (bug 1422235)",
+    "commit_date": "2018-12-24 20:31:38"
   },
   "7": {
-    "sha": "dc069bf6f13e488efebf9d06ddc7291321f00f11",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dc069bf6f13e",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1514439 - Fix tidy issues. ",
-    "commit_date": "2018-12-15 02:50:09"
+    "sha": "5f85f8fe9a58cf56fc3dc2e56f9717c70ba6ff7d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5f85f8fe9a58",
+    "commiter_name": "longsonr ",
+    "commit_email": "longsonr@gmail.com",
+    "commit_message": "Bug 1516175 - Move nsSMILFloatType into the mozilla namespace r=birtles",
+    "commit_date": "2018-12-24 19:24:45"
   },
   "8": {
-    "sha": "208951ef2fa261f465e533113954c9b7b6b72595",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=208951ef2fa2",
-    "commiter_name": "Shotaro Yamada ",
-    "commit_email": "sinkuu@sinkuu.xyz",
-    "commit_message": "Bug 1514439 - Remove redundant `.clone()`s. r=emilio ",
-    "commit_date": "2018-12-11 01:43:51"
+    "sha": "8b2a9ba0dda5da7a06d8eb347b85e86e54aac53e",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8b2a9ba0dda5",
+    "commiter_name": "Raul Gurzau ",
+    "commit_email": "rgurzau",
+    "commit_message": "Bug 1483701 - Disable browser_ext_browserAction_popup_resize.js on Windows, Linux and Mac, debug and verify. r=jmaher",
+    "commit_date": "2018-12-23 12:23:00"
   },
   "9": {
-    "sha": "d9ae98eb3ddc42558c8fde369e1abc1acfb9e5b4",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d9ae98eb3ddc",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1514439 - Fix formatting of inverse transform matrix. ",
-    "commit_date": "2018-12-02 19:05:00"
+    "sha": "eb9b2b02f9fe2ee42a277dda5ec5c5dec8085ba2",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=eb9b2b02f9fe",
+    "commiter_name": "Raul Gurzau ",
+    "commit_email": "rgurzau",
+    "commit_message": "Bug 1258103 - Disabled test_bug369370.html on Linux. r=jmaher",
+    "commit_date": "2018-12-23 12:33:00"
   },
   "10": {
-    "sha": "adf7dac59077630c80c01ec6c322e83c3306b666",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=adf7dac59077",
-    "commiter_name": "Timothy Guan-tin Chien ",
-    "commit_email": "timdream@gmail.com",
-    "commit_message": "Bug 1510848 - Do not unattach UA Widget Shadow Root if the element is already re-attached to the tree r=emilio,smaug  This patch moves all UA Widget calls to helper functions in Element.cpp. The helper function AttachAndSetUAShadowRoot sets the shadow root in a runnable, so that it is in the same order of NotifyUAWidget  runnables.  Differential Revision: https://phabricator.services.mozilla.com/D13479",
-    "commit_date": "2018-12-15 02:48:46"
+    "sha": "27c3df89de47809899dbc8319e45bb8364096fa1",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=27c3df89de47",
+    "commiter_name": "Raul Gurzau ",
+    "commit_email": "rgurzau",
+    "commit_message": "Bug 1440059 - Disabled browser_console_context_menu_entries.js on Linux for all build types. r=jmaher",
+    "commit_date": "2018-12-23 12:37:00"
   },
   "11": {
-    "sha": "74bfa63e922c5782da7f5a58979bbddec0e4fa45",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=74bfa63e922c",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1510934 - Ensure that pref changes during content process launch are delivered to the process. r=njn  Some prefs need to be available before IPC is started, so we serialize a snapshot when we start launching the process, and then stream further changes over IPC messages.  However, async launch introduces a window between the snapshot and when the parent can start sending messages, during which other code can run on the main thread and change prefs.  In order to not lose those updates, they're queued and sent when the launch is complete.  Depends on D14089  Differential Revision: https://phabricator.services.mozilla.com/D14090",
-    "commit_date": "2018-12-14 05:28:56"
+    "sha": "2f2f235a4cba544d833d7f1ad798b182650e4df1",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2f2f235a4cba",
+    "commiter_name": "quasicomputational ",
+    "commit_email": "quasicomputational@gmail.com",
+    "commit_message": "Bug 1422235 - Implement the 'overflow-inline' media query. r=emilio",
+    "commit_date": "2018-12-22 19:41:33"
   },
   "12": {
-    "sha": "c2e55bc9206b1dd51be3723b610c62bcb5b82efd",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c2e55bc9206b",
-    "commiter_name": "Jed Davis ",
-    "commit_email": "jld@mozilla.com",
-    "commit_message": "Bug 1510934 - Change ContentParent's alive/dead tracking to launching/alive/dead. r=mrbkap  We need content processes that are created but not finished launching (not \"alive\" yet) to be treated differently from ones that have exited (no longer \"alive\"), so the boolean mIsAlive is expanded to a 3-state enumeration, which could be expanded more in the future if needed.  (This is similar to GeckoChildProcessHost::mProcessState, but it's synchronized with the rest of the ContentParent's state, which can lag the GeckoChildProcessHost state due to runnable dispatch.)  This patch also removes mIsAvailable/IsAvailable/MarkAsTroubled, which are unused as of bug 1459212.  Differential Revision: https://phabricator.services.mozilla.com/D14089",
-    "commit_date": "2018-12-15 01:38:27"
+    "sha": "849c2b71aae42d77e5eb33ef394a671b2f87d535",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=849c2b71aae4",
+    "commiter_name": "quasicomputational ",
+    "commit_email": "quasicomputational@gmail.com",
+    "commit_message": "Bug 1422235 - Implement the 'overflow-block' media query. r=emilio",
+    "commit_date": "2018-12-22 19:41:19"
   },
   "13": {
-    "sha": "b232989d707c19b4ae49982a243e128fcdd63592",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b232989d707c",
-    "commiter_name": "Matt Woodrow ",
-    "commit_email": "mwoodrow@mozilla.com",
-    "commit_message": "Bug 1500864 - Cull items within opacity:0 containers when merging with retained display lists. r=mstange  Depends on D14303  Differential Revision: https://phabricator.services.mozilla.com/D14304",
-    "commit_date": "2018-12-14 19:46:51"
+    "sha": "f90034ef430e89e9413cfb59791d55175136d40c",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f90034ef430e",
+    "commiter_name": "arthur.iakab ",
+    "commit_email": "aiakab@mozilla.com",
+    "commit_message": "Merge autoland to mozilla-central a=merge",
+    "commit_date": "2018-12-25 09:49:51"
   },
   "14": {
-    "sha": "551e3cbe82ba1a58b864d0b1bdf8ed27026e1c24",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=551e3cbe82ba",
-    "commiter_name": "Matt Woodrow ",
-    "commit_email": "mwoodrow@mozilla.com",
-    "commit_message": "Bug 1500864 - Don't record a display list mutation based on the partial build rect, rely on comparisons during merging. r=mstange  Differential Revision: https://phabricator.services.mozilla.com/D14303",
-    "commit_date": "2018-12-14 19:31:59"
+    "sha": "529855658a3a99bdf428d4cbcfd1be5ce53e3717",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=529855658a3a",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1516305 - Update webrender to commit 5da3e6bf916e84fc3ce72c6cf65c63df0cdd8eb5 (WR PR #3445). r=kats  https://github.com/servo/webrender/pull/3445  Differential Revision: https://phabricator.services.mozilla.com/D15317",
+    "commit_date": "2018-12-25 01:13:52"
   },
   "15": {
-    "sha": "f4ae445c27170b47c330b7e5091063dc43d408ca",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f4ae445c2717",
-    "commiter_name": "tossj ",
-    "commit_email": "tossj@outlook.com",
-    "commit_message": "Bug 1437258 - Move webRequestBlocking permission check to webRequest child to log error to debugging console. r=mixedpuppy  With this change, ext-webRequest.js will throw an ExtensionError when \"blocking\" is used without the \"webRequestBlocking\" permission, and ExtensionParent.jsm will relay that error to ExtensionChild.jsm so an error can be logged to the extension debugging console. Previously, the error was only being logged to the browser console.  Differential Revision: https://phabricator.services.mozilla.com/D9937",
-    "commit_date": "2018-12-10 15:57:50"
+    "sha": "e6dc0ee80b24e9625efd615f4632fc21b750bcdd",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e6dc0ee80b24",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1516304 - Re-vendor rust dependencies. r=kats  Depends on D15315  Differential Revision: https://phabricator.services.mozilla.com/D15316",
+    "commit_date": "2018-12-25 01:11:35"
   },
   "16": {
-    "sha": "d93a297a30971da0511fe511e8891c038aa562b1",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d93a297a3097",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Backed out changeset 4e2f1afadef2 (bug 1508664) for ESlint failure on AddonTestUtils.jsm",
-    "commit_date": "2018-12-15 00:55:48"
+    "sha": "3f05c8bf3f70ab2c546b19178acc645dff73c002",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3f05c8bf3f70",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1516304 - Update webrender to commit 7094d09cac1d4decad67f9828d9c85589e283dbd (WR PR #3447). r=kats  https://github.com/servo/webrender/pull/3447  Differential Revision: https://phabricator.services.mozilla.com/D15315",
+    "commit_date": "2018-12-25 01:11:14"
   },
   "17": {
-    "sha": "4e2f1afadef23d2cbe85b98fd501898cd2dc4b0d",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4e2f1afadef2",
-    "commiter_name": "Andrew Swan ",
-    "commit_email": "aswan@mozilla.com",
-    "commit_message": "Bug 1508664 Avoid importing Extension.jsm too early r=kmag  The test failure from this bug was due to code that reads Services.appinfo running too early before our test code that overrides appinfo got a chance to run.  Addon Manager test code could use a more thorough cleanup pass, but this is a quick-and-dirty fix suitable for uplifting in the short term.  Differential Revision: https://phabricator.services.mozilla.com/D14656",
-    "commit_date": "2018-12-15 00:35:47"
+    "sha": "9fcd338ab3516ba22c495e3cb2ecc52010580fb0",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9fcd338ab351",
+    "commiter_name": "WR Updater Bot ",
+    "commit_email": "graphics-team@mozilla.staktrace.com",
+    "commit_message": "Bug 1516184 - Update webrender to commit f8a423fa0a83f386b11dd5e31a8e916378d2921d (WR PR #3444). r=kats  https://github.com/servo/webrender/pull/3444  Differential Revision: https://phabricator.services.mozilla.com/D15314",
+    "commit_date": "2018-12-25 01:01:26"
   },
   "18": {
-    "sha": "96fdb239f5bc32ef52cb3a4f14b61f470a9b937e",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96fdb239f5bc",
-    "commiter_name": "Gijs Kruitbosch ",
-    "commit_email": "gijskruitbosch@gmail.com",
-    "commit_message": "Bug 1514239 - use fluent for the certificate export code in the cert manager, r=flod,keeler  Differential Revision: https://phabricator.services.mozilla.com/D14598",
-    "commit_date": "2018-12-15 00:26:09"
+    "sha": "147895cc0f258768adf296d04e48e0c4ba88c379",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=147895cc0f25",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+    "commit_date": "2018-12-24 21:57:43"
   },
   "19": {
-    "sha": "b1e417f2b451a8c4549b79d376704b1bf9dde98e",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b1e417f2b451",
-    "commiter_name": "Logan Smyth ",
-    "commit_email": "loganfsmyth@gmail.com",
-    "commit_message": "Bug 1512437 - Part 3: Convert all OriginalLocation instances to GeneratedLocations. r=jlast  Differential Revision: https://phabricator.services.mozilla.com/D14629",
-    "commit_date": "2018-12-14 23:31:14"
+    "sha": "54d643b4b99b1aa576342ad9a7ba79fdd9882ce5",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=54d643b4b99b",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "No bug: [taskgraph] Remove an unused global variable; r=aki  Differential Revision: https://phabricator.services.mozilla.com/D14615",
+    "commit_date": "2018-12-24 21:33:54"
   },
   "20": {
-    "sha": "df34d5c8f55eac9f921e41d61bcc2cb5f94c0bd9",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=df34d5c8f55e",
-    "commiter_name": "Logan Smyth ",
-    "commit_email": "loganfsmyth@gmail.com",
-    "commit_message": "Bug 1512437 - Part 2: Convert breakpoint APIs to be synchronous now that there are no sourcemaps. r=jlast  Differential Revision: https://phabricator.services.mozilla.com/D14628",
-    "commit_date": "2018-12-14 23:29:58"
+    "sha": "9cb78d2e31fb95da31304d5237fe82f80577d5d4",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9cb78d2e31fb",
+    "commiter_name": "Tom Prince ",
+    "commit_email": "mozilla@hocat.ca",
+    "commit_message": "Bug 1515649: [taskgraph] Disable asan-reporter-nigthly via run-on-projects; r=dustin  Now that the upload-  kinds inherit `run-on-projects`, we don't need to special case handling of them in target-tasks.  Differential Revision: https://phabricator.services.mozilla.com/D15153",
+    "commit_date": "2018-12-22 16:55:28"
   }
 }
