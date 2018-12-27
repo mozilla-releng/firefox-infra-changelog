@@ -497,7 +497,7 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
 
         with open(file_path) as json_files:
             data = json.load(json_files)
-            base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
+            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
             repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
             repository_json = base_link + file.rstrip().replace(" ", "%20")
             repository_title = file.replace(".json", "")
