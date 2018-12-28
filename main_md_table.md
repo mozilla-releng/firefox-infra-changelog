@@ -1,6 +1,6 @@
 #  Last five commits from every repository 
 
-|	autoland	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
+|	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -11,7 +11,7 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bfc4d495548f)|Bug 1492706 - Part 1: Catch OOM during startup session restore. r=nalexander  We just treat this like a defective session store file and first fall back to the backup (although if the OOM is caused by a too-large file, it is likely that the backup will be too large as well) and then turn off session restoring completely.  We don't plug those failures into the session restore telemetry, though, because that is supposed to only cover truly defective files.  Differential Revision: https://phabricator.services.mozilla.com/D12962|Jan Henning |nalexander|2018-12-14 21:07:39|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=00a5c85fba1e)|Merge mozilla-central to autoland. a=merge CLOSED TREE|Noemi Erli |merge|2018-12-15 09:42:09|
 
-|	beta	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/beta.json)	| 
+|	beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/beta.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -22,7 +22,7 @@
 |[Link](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=6f8e2bdfd8b6)|Bug 1513505 - Fix invoke getter on prototype's property; r=jdescottes a=RyanVM  This lands the fix done in the debugger Reps for ObjectInspector (https://github.com/devtools-html/debugger.html/pull/7484\), and add a test to ensure we don't regress this. We take this as an opportunity to put some object inspector helpers in head.js so we don't repeat ourselves too much.  Differential Revision: https://phabricator.services.mozilla.com/D14240|Nicolas Chevobbe |jdescottes|2018-12-12 14:50:16|
 |[Link](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=0d66c5be649b)|Bug 1513500 - Fixed it so getCurrentDisplay also checks if a flex container is actually a flex item. r=pbro a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D14312|Micah Tigley |pbro|2018-12-13 15:07:49|
 
-|	braindump	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/braindump.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/braindump.json)	| 
+|	braindump	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/braindump.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/braindump.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -33,7 +33,7 @@
 |[Link](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=2f1b5cddb5f6)|add params-required-signoffs for bug 1501878|Aki Sasaki ||2018-11-12 19:19:42|
 |[Link](https://hg.mozilla.org/build/braindump/pushloghtml?changeset=0d4a4254960b)|quote mr versions to avoid being treated as floats|Aki Sasaki ||2018-11-02 20:18:01|
 
-|	ci-admin	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
+|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -44,7 +44,7 @@
 |[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=9d35e153d813)|Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D6858|Tom Prince |dustin|2018-09-26 02:48:44|
 |[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=c88ca415a1c6)|Bug 1489181: handle input_schema in actions.yml r=aki  Differential Revision: https://phabricator.services.mozilla.com/D5683|Dustin J. Mitchell |aki|2018-09-12 18:07:53|
 
-|	ci-configuration	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
+|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -55,7 +55,7 @@
 |[Link](https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=48d479b3411b)|Bug 1502976 - upgrade decision image to the latest r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D10124|Dustin J. Mitchell |tomprince|2018-10-29 21:38:55|
 |[Link](https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=d56b6be4c4c1)|Bug 1499590 - Enable taskcluster-cron on additional comm- repos. r=dustin  The periodic-file-updates cron task is meant to run on comm-central, comm-beta, and comm-esr60 like it's mozilla- counterpart task.  Differential Revision: https://phabricator.services.mozilla.com/D9860|Rob Lemley |dustin|2018-10-26 17:55:26|
 
-|	comm-esr60	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/comm-esr60.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/comm-esr60.json)	| 
+|	comm-esr60	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/comm-esr60.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/comm-esr60.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -66,7 +66,7 @@
 |[Link](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=076be5ca12a9)|Bug 1481052 - FileLink WebExtensions API; r=Fallen a=jorgk|Geoff Lankow |Fallen|2018-11-28 23:04:41|
 |[Link](https://hg.mozilla.org/releases/comm-esr60/pushloghtml?changeset=ece4d20e004b)|Bug 820767 - Recognize plausible legacy Java-style encoding names and comment the alias file. r+a=jorgk    ms-prefixed labels for code pages in common with DOS and Windows (excl 866)    cp-prefixed labels for code pages in common with DOS and Windows (group existing)    No-hyphen label for ISO-2022-JP    Underscore labels for Unix CJK encodings    Remove some aliases for encodings that aren't supported    Map ISO-8859-1 aliases to windows-1252    Correct the case of gbk to GBK    Group UTF-7 labels together    Document all entries (even old ones)|Henri Sivonen |jorgk|2018-12-09 00:47:00|
 
-|	inbound	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/inbound.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/inbound.json)	| 
+|	inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -77,7 +77,7 @@
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f44070541fb6)|Backed out changeset 571c01c5f84b (bug 1511604) for causing mochitest failures CLOSED TREE|Noemi Erli ||2018-12-15 10:58:28|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c328c00179a9)|Bug 1362841 - Mirror the theme icons in customize mode in RTL to match the UI, r=gijs|P Kausthubh S |gijs|2018-12-15 09:40:19|
 
-|	mozilla-build	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-build.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-build.json)	| 
+|	mozilla-build	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-build.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-build.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -88,18 +88,18 @@
 |[Link](https://hg.mozilla.org/mozilla-build/pushloghtml?changeset=d45e1040d212)|Bug 1501395 - Update the bundled sqlite3 DLL to 3.25.2.|Ryan VanderMeulen ||2018-10-23 18:55:33|
 |[Link](https://hg.mozilla.org/mozilla-build/pushloghtml?changeset=1af5fbf9b763)|Bug 1501395 - Update python3 to version 3.7.1.|Ryan VanderMeulen ||2018-10-23 18:53:23|
 
-|	mozilla-central	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=47d3977ee67e)|Merge inbound to mozilla-central a=merge|arthur.iakab |merge|2018-12-25 09:51:08|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=062104031126)|Bug 1241958 - Add test for windowless workers, r=jlast.|Brian Hackett |jlast.|2018-12-24 18:40:04|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5327afef99b0)|Bug 1044074 - Add test that scroll event handlers do not break run-to-completion, no_r.|Brian Hackett ||2018-12-24 15:52:31|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=191dfb7c9ac3)|Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE|Razvan Maries |merge|2018-12-24 21:59:51|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2a93b82fd06d)|Bug 1515821 - Remove verbose warning in IsThirdPartyWindowOrChannel. r=ehsan|Eric Rahm |ehsan|2018-12-21 23:00:26|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a77e8f3efc4c)|Merge inbound to mozilla-central a=merge|arthur.iakab |merge|2018-12-27 21:56:49|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96499feeb5bf)|Bug 1433892 - Disable browser_ext_menus_events.js on Linux for frequent failures. r=jmaher|Cosmin Sabou |jmaher|2018-12-26 15:39:00|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ee0e1df960c4)|Bug 1516334 - don't draw emoji as paths when they are too big. r=rhunt|Lee Salzman |rhunt|2018-12-27 18:30:27|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3487b5f2f426)|Bug 1515963 - Add vixl::GdbDisassembleInstruction. r=sstangl  This add a simple function made to be called from gdb, which uses the vixl decoder to output in a static buffer the string corresponding to a single instruction.  This is useful when breaking at vixl::Simulator::ExecuteInstruction function, as follow:  (gdb) b vixl::Simulator::ExecuteInstruction Breakpoint 1 at 0x...: file ../jit/arm64/vixl/MozSimulator-vixl.cpp. (gdb) command 1 > call vixl::GdbDisassembleInstruction(this->pc_) > end |Nicolas B. Pierron |sstangl|2018-12-21 16:50:47|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=89834b056ca0)|Bug 1515704 - ARM64: Generate code for LPowHalfD. r=sstangl |Nicolas B. Pierron |sstangl|2018-12-20 17:53:41|
 
-|	mozilla-esr60	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.json)	| 
+|	mozilla-esr60	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-esr60.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -110,7 +110,7 @@
 |[Link](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=cfcc65a371db)|Bug 1448382 - Add js/src/vtune/ to the ThirdPartyPaths and .clang-format-ignore. r=sylvestre  MozReview-Commit-ID: 4Tni5V4K9Tv|Andi-Bogdan Postelnicu |sylvestre|2018-03-23 19:38:55|
 |[Link](https://hg.mozilla.org/releases/mozilla-esr60/pushloghtml?changeset=1f86411acbf4)|Bug 1508773 - Add dom/media/platforms/ffmpeg/ffmpeg57 and dom/media/platforms/ffmpeg/ffmpeg58 to the list of third-party directories r=jya  Differential Revision: https://phabricator.services.mozilla.com/D12470|Ehsan Akhgari |jya|2018-11-20 21:19:36|
 
-|	mozilla-release	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
+|	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -121,7 +121,7 @@
 |[Link](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=d6d490529a82)|No Bug, mozilla-release repo-update blocklist remote-settings - a=repo-update r=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D14388|ffxbld |RyanVM|2018-12-13 10:07:04|
 |[Link](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=755ccdb8118d)|No bug - Tagging 3864bee6b6ea0a9ea05474da7ee77c12bf680364 with FENNEC_64_0_1_BUILD1 a=release CLOSED TREE DONTBUILD|Mozilla Releng Treescript |release|2018-12-13 15:52:48|
 
-|	try	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/try.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/try.json)	| 
+|	try	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/try.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/try.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -132,7 +132,7 @@
 |[Link](https://hg.mozilla.org/try/pushloghtml?changeset=b474ea43edb9)|Bug 1514497 - Remove unused autocomplete-result-popupset and <children includes="toolbarbutton"/> from the urlbar binding. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14681|Dão Gottwald |mak|2018-12-15 15:24:28|
 |[Link](https://hg.mozilla.org/try/pushloghtml?changeset=6e5678f045ea)|try: -b do -p all -u gtest,mochitest-media,mochitest-media-e10s,reftest,reftest-e10s,reftest-no-accel,web-platform-tests -t none  Pushed via `mach try syntax` |Jean-Yves Avenard ||2018-12-15 16:33:05|
 
-|	build-cloud-tools	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
+|	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -140,7 +140,7 @@
 |[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/3962e62c72251ae9fc531bdb5b14ba40243a5b70)|Merge branch 'La0-buildhub-cert'|dividehex|Placeholder|2018-12-04 16:30:17|
 |[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/7fe44bf80d48b949c4d65c7642e3e4b69780af84)|Add CNAME record for DigiCert on buildhub.moz.tools|La0|Placeholder|2018-12-04 15:48:33|
 
-|	build-puppet	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
+|	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -151,7 +151,7 @@
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/d2287bfc06c78a549c20fee9e48b95d715816c24)|Merge pull request #325 from mitchhentges/reference-browser-puppet-secrets-underscore  Uses underscores for hiera content|mitchhentges|Placeholder|2018-12-17 17:05:13|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/50b02de5c90a7ba1b7a5866ec127dd0b46da4865)|Roll-out production credentials as well.|MihaiTabara|Placeholder|2018-12-17 16:46:33|
 
-|	mozapkpublisher	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
+|	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -162,13 +162,13 @@
 |[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/1fb14864d5118d3fc448ba6c9da0dbc9915e4269)|Merge pull request #139 from mitchhentges/reference-browser-compat  Adds reference-browser as another focus-esque publishable browser|mitchhentges|Placeholder|2018-12-12 00:08:13|
 |[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/979da90f37b107b3c511029896e89428be7efb39)|Removes reference-browser from the set of focus types|mitchhentges|Placeholder|2018-11-30 22:10:11|
 
-|	OpenCloudConfig	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
+|	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 
-|	scriptworker	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
+|	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -179,7 +179,7 @@
 |[Link](https://github.com/mozilla-releng/scriptworker/commit/84cec4e53646e0ae131920859abbe3bd5c6d3a47)|silence non-scriptworker test warnings|escapewindow|Placeholder|2018-12-12 23:25:32|
 |[Link](https://github.com/mozilla-releng/scriptworker/commit/931a23b64e40cd913a629b65f6e9ade989a33765)|Merge pull request #283 from escapewindow/docker-entrypoint  docker entrypoint for unittests + gpg testing|escapewindow|Placeholder|2018-12-11 22:43:53|
 
-|	services	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/services.json)	| 
+|	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -190,7 +190,7 @@
 |[Link](https://github.com/mozilla/release-services/commit/3d778a4e4ee931be254efe2254e0036639e8d1db)|shipit/api: do not iterate over None (#1748)  This fixes the case when we have no partials (Fennec) but stil want to  use the `is_rc()` function|rail|Placeholder|2018-12-13 15:07:14|
 |[Link](https://github.com/mozilla/release-services/commit/3ee50c9cdd4df8948fb8b59f561a5a75d6227277)|staticanalysis/bot: Better clang-format patch publication (#1729)|La0|Placeholder|2018-12-13 06:44:47|
 
-|	shipitscript	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
+|	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -201,13 +201,13 @@
 |[Link](https://github.com/mozilla-releng/shipitscript/commit/1dce963106879a83e98bb3e2c8c320b5853a78fe)|Pass nixpkgs|rail|Placeholder|2018-12-10 21:07:26|
 |[Link](https://github.com/mozilla-releng/shipitscript/commit/baca137b1ff147a6ddf5beea7bb51b0e3e2a7014)|Update the dependencies|rail|Placeholder|2018-12-10 17:08:29|
 
-|	signtool	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/signtool.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/signtool.json)	| 
+|	signtool	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 
-|	taskcluster-auth	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.json)	| 
+|	taskcluster-auth	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -218,7 +218,7 @@
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2)|(hotfix) upgrade tc-lib-api for previous change|djmitche|Placeholder|2018-12-05 23:45:07|
 |[Link](https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c)|Merge pull request #187 from arshadkazmi42/bug-1400999  204 response changed to use res.reply|djmitche|Placeholder|2018-12-05 23:38:19|
 
-|	taskcluster-queue	|	[MarkDown](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.md)	|	[Json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.json)	| 
+|	taskcluster-queue	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster-queue.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
