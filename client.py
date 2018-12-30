@@ -49,10 +49,10 @@ def create_files_for_git(repositories_holder):
     """
     for repo in repositories_holder["Github"]:
         repository_name = repo
-        repository_team = repositories_holder["Github"][repo]["team"]
-        repository_type = repositories_holder["Github"][repo]["configuration"]["type"]
+        repository_team = repositories_holder.get("Github").get(repo).get("team")
+        repository_type = repositories_holder.get("Github").get(repo).get("configuration").get("type")
         print("\nWorking on repo: {}".format(repository_name))
-        folders_to_check = [x for x in repositories_holder["Github"][repo]["configuration"]["folders-to-check"]]
+        folders_to_check = [x for x in repositories_holder.get("Github").get(repo).get("configuration").get("folders-to-check")]
         filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
         try:
             create_md_table(repository_name, "git_files")
@@ -187,10 +187,10 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         json_content = json.load(commit_json)  # loads the content of existing json into a variable
         number = len(json_content)  # saves the number of dictionaries existing within current json
         try:
-            last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S")
+            last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S")
             print("Repo last updated on:", last_checked)
         except ValueError:
-            last_checked = datetime.strptime(json_content["0"]["lastChecked"], "%Y-%m-%d %H:%M:%S.%f")
+            last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S.%f")
             print("Repo last updated on:", last_checked)
     new_commits = {"0": {"lastChecked": str(datetime.utcnow())}}
     all_new_commits = git.get_repo(repository_path).get_commits(since=last_checked)
@@ -305,6 +305,55 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
             json.dump(new_commits, json_file, indent=2)
             json_file.close()
             return True
+    # TYPE = TAG
+    if repository_type == "tag:":
+        if repository_name == "build-puppet":
+            pathway = repositories.get("Github").get(repository_name).get("configuration").get("files-to-check")
+            for commit in git.get_repo(repository_path).get_commits(since=last_checked):
+                for entry in commit.files:
+                    for scriptworkers in pathway:
+                        if entry.filename in pathway[scriptworkers]:
+                            repository_name = scriptworkers
+                            git_json_filename = "{}.json".format(repository_name)
+                            with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+                                json_content = json.load(commit_json)
+                                number = len(json_content)
+                            version_path = repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check").get(repository_name)
+                            latest_releases = get_version(repository_name, repository_team)
+                            if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latestRelease").get("version"):
+                                print("No new changes entered production")
+                            else:
+                                last_commit_date = latest_releases.get("previousrelease").get("date")
+                                new_version_commit_date = latest_releases.get("latestRelease").get("date")
+                                for commit2 in git.get_repo(repository_path).get_commits(since=last_commit_date):
+                                    each_commit = {}
+                                    if commit2.commit.author.date <= new_version_commit_date:
+                                        each_commit.update({int(number): get_commit_details(commit2)})
+                                        new_commits.update(each_commit)
+                        if len(new_commits) > 0:
+                            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+                            json.dump(new_commits, json_file, indent=2)
+                            json_file.close()
+                            return True
+
+        else:
+            version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
+            latest_releases = get_version(repository_name, repository_team)
+            if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latestRelease").get("version"):
+                print("No new changes entered production")
+            else:
+                last_commit_date = latest_releases.get("previousrelease").get("date")
+                new_version_commit_date = latest_releases.get("latestRelease").get("date")
+                for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
+                    each_commit = {}
+                    if commit.commit.author.date <= new_version_commit_date:
+                        each_commit.update({int(number): get_commit_details(commit)})
+                        new_commits.update(each_commit)
+                if len(new_commits) > 0:
+                    json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
+                    json.dump(new_commits, json_file, indent=2)
+                    json_file.close()
+                    return True
 
 
 def create_files_for_hg(repositories_holder):
@@ -317,7 +366,7 @@ def create_files_for_hg(repositories_holder):
     """
     for repo in repositories_holder["Mercurial"]:
         repository_name = repo
-        repository_url = repositories_holder["Mercurial"][repo]["url"]
+        repository_url = repositories_holder.get("Mercurial").get(repo).get("url")
         filter_hg_commit_data(repository_name, repository_url)
         create_md_table(repository_name, "hg_files")
 
@@ -395,8 +444,8 @@ def create_md_table(repository_name, path_to_files):
                      "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
         tables = {}
         try:
-            version = data['0']["last_two_releases"]["LatestRelease"]["version"]
-            date = data['0']["last_two_releases"]["LatestRelease"]["date"]
+            version = data.get('0').get("last_two_releases").get("LatestRelease").get("version")
+            date = data.get('0').get("last_two_releases").get("LatestRelease").get("date")
             md_title = [
                 "Repository name: {}\n Current version: {} released on {}".format(repository_name, version, date)]
 
@@ -410,12 +459,12 @@ def create_md_table(repository_name, path_to_files):
         for key in data:
             commit_number = commit_number_list[-1]
             try:
-                commit_author = data[key]["commiter_name"]
+                commit_author = data.get(key).get("commiter_name")
                 commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
-                date = data[key]["commit_date"]
-                message = data[key]["commit_message"]
+                date = data.get(key).get("commit_date")
+                message = data.get(key).get("commit_message")
                 message = re.sub("\|", "\|", message)
-                url = data[key]["url"]
+                url = data.get(key).get("url")
 
                 row = "|" + commit_number + \
                       "|" + commit_author + \
@@ -426,7 +475,7 @@ def create_md_table(repository_name, path_to_files):
                 del commit_number_list[-1]
                 for repo in tables.keys():
                     tables[repo] = tables[repo] + row
-            except KeyError:
+            except TypeError:
                 pass
 
         md_file_name = "{}.md".format(repository_name)
@@ -535,11 +584,11 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                 for commit_iterator in range(1, commits_per_repo + 1):
                     # The commit number must be a number with string type.
                     commit_number = str(commit_iterator)
-                    commit_description = data[commit_number]["commit_message"]
-                    commit_url = data[commit_number]["url"]
+                    commit_description = data.get(commit_number).get("commit_message")
+                    commit_url = data.get(commit_number).get("url")
                     repository_url = "[Link](" + commit_url + ")"
-                    commit_date = data[commit_number]["commit_date"]
-                    author = data[commit_number]["commiter_name"]
+                    commit_date = data.get(commit_number).get("commit_date")
+                    author = data.get(commit_number).get("commiter_name")
                     if path_to_files is "hg_files":
                         review = extract_reviewer(commit_description)
                     elif path_to_files is "git_files":
@@ -554,6 +603,8 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
 
             except KeyError:
                 print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
+                pass
+            except AttributeError:
                 pass
 
 
