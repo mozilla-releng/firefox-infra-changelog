@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 import sys
 
 lastWeek = datetime.now() - timedelta(days=14)
+lastMonth = datetime.utcnow() - timedelta(days=31)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -166,6 +167,53 @@ def get_commit_details(commit):
     return author_info
 
 
+def json_writer(repository_name, new_commits):
+    """
+
+    :param repository_name:
+    :param new_commits: a dictionary with the new commits
+    :return: write the json file with the old and the new commits
+    """
+    git_json_filename = "{}.json".format(repository_name)
+    try:
+        with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+            json_content = json.load(commit_json)  # loads the content of existing json into a variable
+    except:
+        json_content = ""
+    if len(json_content) > 1:
+        number = len(new_commits) - 1
+        for old_commit in json_content:
+            if old_commit != "0":
+                number += 1
+                new_commits.update({int(number): json_content[old_commit]})
+    if len(new_commits) > 0:
+        json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
+        json.dump(new_commits, json_file, indent=2)
+        json_file.close()
+    return True
+
+
+def last_check(repository_name):
+    """
+
+    :param repository_name:
+    :return: the last time when the repository was checked
+    """
+    git_json_filename = "{}.json".format(repository_name)
+    try:
+        with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+            json_content = json.load(commit_json)  # loads the content of existing json into a variable
+            try:
+                last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S")
+                print("Repo last updated on:", last_checked)
+            except ValueError:
+                last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S.%f")
+                print("Repo last updated on:", last_checked)
+    except:
+        last_checked = lastMonth
+    return last_checked
+
+
 def filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check):
     """
     Filters out only the data that we need from a commit
@@ -179,22 +227,12 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
     (e.g raise self.__createException(status, responseHeaders, output)
             github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
-    git_json_filename = "{}.json".format(repository_name)
     repository_path = repository_team + repository_name
-    with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
-        json_content = json.load(commit_json)  # loads the content of existing json into a variable
-        number = len(json_content)  # saves the number of dictionaries existing within current json
-        try:
-            last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S")
-            print("Repo last updated on:", last_checked)
-        except ValueError:
-            last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S.%f")
-            print("Repo last updated on:", last_checked)
-    new_commits = {}
+    last_checked = last_check(repository_name)
+    new_commits = {"0": {"lastChecked": str(datetime.utcnow())}}
+    number = 0
     # TYPE = NO-TAG
     if repository_type == "no-tag":
-        new_commits = {"0": {"lastChecked": str(datetime.utcnow())}}
-        number = 0
         for commit in git.get_repo(repository_path).get_commits(since=last_checked):
             each_commit = {}
             if len(folders_to_check) > 0:  # if greater than 0 compare a list of what files changed
@@ -209,30 +247,20 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                 number += 1
                 each_commit.update({int(number): get_commit_details(commit)})
                 new_commits.update(each_commit)
-        if len(json_content) > 1:
-            for old_commit in json_content:
-                if old_commit != "0":
-                    number += 1
-                    new_commits.update({int(number): json_content[old_commit]})
-        if len(new_commits) > 0:
-            json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
-            json.dump(new_commits, json_file, indent=2)
-            json_file.close()
-            return True
+        json_writer(repository_name, new_commits)
+        return True
     # TYPE = COMMIT-KEYWORD
     if repository_type == "commit-keyword":
         for commit in git.get_repo(repository_path).get_commits(since=last_checked):
             each_commit = {}
             if "deploy" in commit.commit.message:
+                number += 1
                 each_commit.update({int(number): get_commit_details(commit)})
                 new_commits.update(each_commit)
-        if len(new_commits) > 0:
-            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
-            json.dump(new_commits, json_file, indent=2)
-            json_file.close()
-            return True
+        json_writer(repository_name, new_commits)
+        return True
     # TYPE = TAG
-    if repository_type == "tag:":
+    if repository_type == "tag":
         if repository_name == "build-puppet":
             pathway = repositories.get("Github").get(repository_name).get("configuration").get("files-to-check")
             for commit in git.get_repo(repository_path).get_commits(since=last_checked):
@@ -240,10 +268,6 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                     for scriptworkers in pathway:
                         if entry.filename in pathway[scriptworkers]:
                             repository_name = scriptworkers
-                            git_json_filename = "{}.json".format(repository_name)
-                            with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
-                                json_content = json.load(commit_json)
-                                number = len(json_content)
                             version_path = repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check").get(repository_name)
                             latest_releases = get_version(repository_name, repository_team)
                             if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latestRelease").get("version"):
@@ -254,32 +278,28 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                 for commit2 in git.get_repo(repository_path).get_commits(since=last_commit_date):
                                     each_commit = {}
                                     if commit2.commit.author.date <= new_version_commit_date:
+                                        number += 1
                                         each_commit.update({int(number): get_commit_details(commit2)})
                                         new_commits.update(each_commit)
-                        if len(new_commits) > 0:
-                            json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
-                            json.dump(new_commits, json_file, indent=2)
-                            json_file.close()
-                            return True
-
+                        json_writer(repository_name, new_commits)
+                        return True
         else:
             version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
             latest_releases = get_version(repository_name, repository_team)
-            if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latestRelease").get("version"):
+            if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("LatestRelease").get("version"):
                 print("No new changes entered production")
             else:
-                last_commit_date = latest_releases.get("previousrelease").get("date")
-                new_version_commit_date = latest_releases.get("latestRelease").get("date")
+                last_commit_date = latest_releases.get("PreviousRelease").get("date")
+                last_commit_date = last_commit_date #TODO AssertionError: Wed, 19 Dec 2018 17:44:46 GMT turn into 19 Dec 2018 17:44:46
+                new_version_commit_date = latest_releases.get("LatestRelease").get("date")
                 for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
                     each_commit = {}
                     if commit.commit.author.date <= new_version_commit_date:
+                        number += 1
                         each_commit.update({int(number): get_commit_details(commit)})
                         new_commits.update(each_commit)
-                if len(new_commits) > 0:
-                    json_file = open(current_dir + "/git_files/" + git_json_filename, "a")
-                    json.dump(new_commits, json_file, indent=2)
-                    json_file.close()
-                    return True
+                json_writer(repository_name, new_commits)
+                return True
 
 
 def create_files_for_hg(repositories_holder):
