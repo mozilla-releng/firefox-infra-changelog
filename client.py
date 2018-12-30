@@ -512,7 +512,7 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                     commit_number = str(commit_iterator)
                     commit_description = data.get(commit_number).get("commit_message")
                     commit_url = data.get(commit_number).get("url")
-                    repository_url = "[Link](" + commit_url + ")"
+                    commit_url = "[Link](" + commit_url + ")"
                     commit_date = data.get(commit_number).get("commit_date")
                     author = data.get(commit_number).get("commiter_name")
                     if path_to_files is "hg_files":
@@ -520,13 +520,12 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                     elif path_to_files is "git_files":
                         review = "Placeholder"  # TODO git handler for getting the reviewer.
                     write_main_md_table("main_md_table.md",
-                                        repository_url,
+                                        commit_url,
                                         commit_description,
                                         author,
                                         review,
                                         commit_date
                                         )
-
             except KeyError:
                 print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
                 pass
