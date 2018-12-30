@@ -168,6 +168,25 @@ def get_commit_details(commit):
     return author_info
 
 
+def json_writer(git_json_filename, new_commits, json_content):
+    """
+    :param git_json_filename: name of the file we want to write into
+    :param new_commits: a dictionary with the new commits
+    :param json_content: content of existing json
+    :return: adds existing commits to the dict containing the new commits and writes them into a json
+    """
+    number = len(new_commits)
+    if len(json_content) > 1:
+        for old_commit in json_content:
+            if old_commit != "0":
+                number += 1
+                new_commits.update({int(number): json_content[old_commit]})
+    json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
+    json.dump(new_commits, json_file, indent=2)
+    json_file.close()
+    return True
+
+
 def filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check):
     """
     Filters out only the data that we need from a commit
@@ -212,16 +231,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                 number += 1
                 each_commit.update({int(number): get_commit_details(commit)})
                 new_commits.update(each_commit)
-        # next IF adds existing commits to the dict containing the new commits that we care about
-        if len(json_content) > 1:
-            for old_commit in json_content:
-                if old_commit != "0":
-                    number += 1
-                    new_commits.update({int(number): json_content[old_commit]})
-        json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
-        json.dump(new_commits, json_file, indent=2)
-        json_file.close()
-        return True
+        json_writer(git_json_filename, new_commits, json_content)
     # TYPE = COMMIT-KEYWORD
     if repository_type == "commit-keyword":
         print("am intrat")
