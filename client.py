@@ -54,11 +54,11 @@ def create_files_for_git(repositories_holder):
         print("\nWorking on repo: {}".format(repository_name))
         folders_to_check = [x for x in repositories_holder.get("Github").get(repo).get("configuration").get("folders-to-check")]
         filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
-        try:
-            create_md_table(repository_name, "git_files")
-            print("MD table generated successfully")
-        except:
-            pass
+        # try:
+        #     create_md_table(repository_name, "git_files")
+        #     print("MD table generated successfully")
+        # except:
+        #     pass
         print("Finished working on {}".format(repository_name))
 
 
@@ -245,11 +245,12 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
     if repository_type == "tag" and repository_name == "build-puppet":
             pathway = repositories.get("Github").get(repository_name).get("configuration").get("files-to-check")
             for commit in all_new_commits:
+                print([x.filename for x in commit.files])
                 for entry in commit.files:
                     for scriptworkers in pathway:
                         new_commits2 = {}
-                        print(scriptworkers)
                         if entry.filename in pathway[scriptworkers]:
+                            print(entry.filename)
                             repository_name2 = scriptworkers
                             print(repository_name2)
                             repository_path2 = repository_team + repository_name2
@@ -258,12 +259,12 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                 json_content2 = json.load(commit_json2)
                             version_path = repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check").get(repository_name2)
                             latest_releases = get_version(repository_name2, repository_team)
-                            if get_version_from_build_puppet(version_path, repository_name2) == latest_releases.get("latestRelease").get("version"):
+                            if get_version_from_build_puppet(version_path, repository_name2) == latest_releases.get("LatestRelease").get("version"):
                                 print("No new changes entered production")
                             else:
-                                last_commit_date = latest_releases.get("previousrelease").get("date")
+                                last_commit_date = latest_releases.get("PreviousRelease").get("date")
                                 print(last_commit_date)
-                                new_version_commit_date = latest_releases.get("latestRelease").get("date")
+                                new_version_commit_date = latest_releases.get("LatestRelease").get("date")
                                 for commit2 in git.get_repo(repository_path2).get_commits(since=last_commit_date):
                                     each_commit = {}
                                     if commit2.commit.author.date <= new_version_commit_date:
@@ -593,7 +594,7 @@ if __name__ == "__main__":
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
     create_files_for_git(repositories)
-    create_files_for_hg(repositories)
-    clear_file("main_md_table.md")
-    generate_main_md_table("hg_files")
-    generate_main_md_table("git_files")
+    # create_files_for_hg(repositories)
+    # clear_file("main_md_table.md")
+    # generate_main_md_table("hg_files")
+    # generate_main_md_table("git_files")
