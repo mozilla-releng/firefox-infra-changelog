@@ -1,16 +1,17 @@
 #  Last five commits from every repository 
 
-|	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
+|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=04a31c0080dc)|Bug 1508825 - Enable ESLint for dom/crypto (manual changes) r=Standard8,Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13694|Volodymyr Klymenko |Standard8,Ehsan|2018-12-14 22:54:56|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2b3549145fc3)|Bug 1508825 - Enable ESLint for dom/crypto/ (automatic changes) r=Standard8,Ehsan  Differential Revision: https://phabricator.services.mozilla.com/D13693|Volodymyr Klymenko |Standard8,Ehsan|2018-12-14 00:44:52|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=acefb73b4d60)|Bug 1492706 - Part 2: Cover common OOM causes in the Recent tabs panel. r=nalexander  Looking at Crash Stats, the most common causes of OOMs involving the RecentTabs- Adapter happen while reading the previous session store file into memory for parsing, respectively while stringifying the parsed data back into a flat String for further storage.  In the former case, we give up completely, because there's nothing we can do short of switching to a streaming JSON parser (which is out of scope for this bug), while in the latter case, we only skip the affected tab in the hope that at least some tabs might be small enough to not cause an OOM.  Differential Revision: https://phabricator.services.mozilla.com/D12963|Jan Henning |nalexander|2018-12-14 21:08:32|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bfc4d495548f)|Bug 1492706 - Part 1: Catch OOM during startup session restore. r=nalexander  We just treat this like a defective session store file and first fall back to the backup (although if the OOM is caused by a too-large file, it is likely that the backup will be too large as well) and then turn off session restoring completely.  We don't plug those failures into the session restore telemetry, though, because that is supposed to only cover truly defective files.  Differential Revision: https://phabricator.services.mozilla.com/D12962|Jan Henning |nalexander|2018-12-14 21:07:39|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=00a5c85fba1e)|Merge mozilla-central to autoland. a=merge CLOSED TREE|Noemi Erli |merge|2018-12-15 09:42:09|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=34970df80385)|Merge mozilla-inbound to mozilla-central a=merge|Razvan Maries |merge|2019-01-01 09:44:07|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=389460801c5c)|Bug 1501584 - Run jittests for opt js shell for arm7, arm64 on android-hw-p2, r=jmaher.|Bob Clary |jmaher.|2018-12-31 22:15:30|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c19c61fee4ec)|Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE|Daniel Varga |merge|2018-12-31 21:27:53|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d39f40e695de)|Bug 1392946 - backout 61eca43af2dffc3ba19cf343210d851c638694d5 since it was not effective|Geoff Brown ||2018-12-31 20:24:26|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d7a5d1ab4d8)|Bug 1516441 - backout f2dc090551f076387b984a670fe9eb7be9c8d460 since it was not effective|Geoff Brown ||2018-12-31 20:24:23|
 
+<<<<<<< HEAD
 |	beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/beta.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -73,7 +74,7 @@
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8a6afcb74cd9)|Backed out changeset b6d7250b9df3 (bug 1514346) for sm fuzzing build bustage CLOSED TREE|Bogdan Tara ||2018-12-15 16:53:26|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b6d7250b9df3)|Bug 1514346 - Add --enable-gczeal to fuzzing builds, r=decoder|Steve Fink |decoder|2018-12-14 19:47:30|
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3ead21c6776b)|Bug 1506869 - Rename roundButtonBackground and roundButtonPressedBackground. r=jaws|Dão Gottwald |jaws|2018-12-15 11:25:53|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3ead21c6776b)|Bug 1506869 - Rename roundButtonBackground and roundButtonPressedBackground. r=jaws|Dï¿½o Gottwald |jaws|2018-12-15 11:25:53|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f44070541fb6)|Backed out changeset 571c01c5f84b (bug 1511604) for causing mochitest failures CLOSED TREE|Noemi Erli ||2018-12-15 10:58:28|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c328c00179a9)|Bug 1362841 - Mirror the theme icons in customize mode in RTL to match the UI, r=gijs|P Kausthubh S |gijs|2018-12-15 09:40:19|
 
@@ -128,10 +129,12 @@
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/try/pushloghtml?changeset=eb796058356f)|Fuzzy query=ccov build  Pushed via `mach try fuzzy`|Marco Castelluccio ||2018-12-15 16:45:51|
 |[Link](https://hg.mozilla.org/try/pushloghtml?changeset=cf903df8ccaf)|Bug 1473067 - Parse coverage artifacts at the end of builds. r=ted|Marco Castelluccio |ted|2018-12-10 12:29:43|
-|[Link](https://hg.mozilla.org/try/pushloghtml?changeset=3df4639f3366)|try: -b o -p linux64 -u mochitest-e10s-bc -t none --artifact|Dão Gottwald ||2018-12-15 16:44:53|
-|[Link](https://hg.mozilla.org/try/pushloghtml?changeset=b474ea43edb9)|Bug 1514497 - Remove unused autocomplete-result-popupset and <children includes="toolbarbutton"/> from the urlbar binding. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14681|Dão Gottwald |mak|2018-12-15 15:24:28|
+|[Link](https://hg.mozilla.org/try/pushloghtml?changeset=3df4639f3366)|try: -b o -p linux64 -u mochitest-e10s-bc -t none --artifact|Dï¿½o Gottwald ||2018-12-15 16:44:53|
+|[Link](https://hg.mozilla.org/try/pushloghtml?changeset=b474ea43edb9)|Bug 1514497 - Remove unused autocomplete-result-popupset and <children includes="toolbarbutton"/> from the urlbar binding. r=mak  Differential Revision: https://phabricator.services.mozilla.com/D14681|Dï¿½o Gottwald |mak|2018-12-15 15:24:28|
 |[Link](https://hg.mozilla.org/try/pushloghtml?changeset=6e5678f045ea)|try: -b do -p all -u gtest,mochitest-media,mochitest-media-e10s,reftest,reftest-e10s,reftest-no-accel,web-platform-tests -t none  Pushed via `mach try syntax` |Jean-Yves Avenard ||2018-12-15 16:33:05|
 
+=======
+>>>>>>> master
 |	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -141,6 +144,7 @@
 |[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/7fe44bf80d48b949c4d65c7642e3e4b69780af84)|Add CNAME record for DigiCert on buildhub.moz.tools|La0|Placeholder|2018-12-04 15:48:33|
 
 |	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
+<<<<<<< HEAD
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -169,43 +173,43 @@
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 
 |	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
+=======
+>>>>>>> master
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/scriptworker/commit/a1e005a297d7990fdeb56b3ed803d52dcb9137c3)|Create mobile contexts to make tests closer to reality|JohanLorenzo|Placeholder|2018-12-12 09:41:52|
-|[Link](https://github.com/mozilla-releng/scriptworker/commit/7b6716c0cd8302bf61cfeb1be74562d6c154b567)|Rename _get_additional_ _jsone_context into  _hg_ |JohanLorenzo|Placeholder|2018-12-11 14:12:07|
-|[Link](https://github.com/mozilla-releng/scriptworker/commit/01549549503f93f93de586248abec117de8e5c46)|Merge pull request #285 from escapewindow/pytest-warnings  silence non-scriptworker test warnings|escapewindow|Placeholder|2018-12-13 00:15:03|
-|[Link](https://github.com/mozilla-releng/scriptworker/commit/84cec4e53646e0ae131920859abbe3bd5c6d3a47)|silence non-scriptworker test warnings|escapewindow|Placeholder|2018-12-12 23:25:32|
-|[Link](https://github.com/mozilla-releng/scriptworker/commit/931a23b64e40cd913a629b65f6e9ade989a33765)|Merge pull request #283 from escapewindow/docker-entrypoint  docker entrypoint for unittests + gpg testing|escapewindow|Placeholder|2018-12-11 22:43:53|
 
+<<<<<<< HEAD
 |	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	| 
+=======
+|	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
+>>>>>>> master
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla/release-services/commit/8ecd55d9668ffe527c23d3fdb8a7849f927a5017)|cli_common: mark artifact as completed when uploaded manually, fixes #1755, refs #1758|La0|Placeholder|2018-12-18 08:34:14|
-|[Link](https://github.com/mozilla/release-services/commit/70bbd3d3fb477821bf6303ae7dd973e9fc272fd9)|staticanalysis/bot: Do not use improvement patches from before, fixes #1747, refs #1752.|La0|Placeholder|2018-12-17 16:02:42|
-|[Link](https://github.com/mozilla/release-services/commit/02078ef90d3559b71dfa1ccb2a8d28876b2aad6e)|shipit/api: add tests (#1749)|rail|Placeholder|2018-12-13 16:06:46|
-|[Link](https://github.com/mozilla/release-services/commit/3d778a4e4ee931be254efe2254e0036639e8d1db)|shipit/api: do not iterate over None (#1748)  This fixes the case when we have no partials (Fennec) but stil want to  use the `is_rc()` function|rail|Placeholder|2018-12-13 15:07:14|
-|[Link](https://github.com/mozilla/release-services/commit/3ee50c9cdd4df8948fb8b59f561a5a75d6227277)|staticanalysis/bot: Better clang-format patch publication (#1729)|La0|Placeholder|2018-12-13 06:44:47|
 
+<<<<<<< HEAD
 |	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
+=======
+|	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
+>>>>>>> master
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/shipitscript/commit/7c5698e73369eaaadeb03e17ab763e3635d7f47f)|Merge pull request #17 from garbas/fix-default-nix-argument  nix: use pkgs as a parameter, use layered docker image|rail|Placeholder|2018-12-11 14:08:55|
-|[Link](https://github.com/mozilla-releng/shipitscript/commit/121f4dadb55daf3a19eaebbba364d5dbb89e1df1)|nix: use pkgs as a parameter, use layered docker image|garbas|Placeholder|2018-12-11 09:49:02|
-|[Link](https://github.com/mozilla-releng/shipitscript/commit/348311c6289c13257415a07ac8924798f0fa1826)|Merge pull request #16 from rail/nix|rail|Placeholder|2018-12-11 02:05:15|
-|[Link](https://github.com/mozilla-releng/shipitscript/commit/1dce963106879a83e98bb3e2c8c320b5853a78fe)|Pass nixpkgs|rail|Placeholder|2018-12-10 21:07:26|
-|[Link](https://github.com/mozilla-releng/shipitscript/commit/baca137b1ff147a6ddf5beea7bb51b0e3e2a7014)|Update the dependencies|rail|Placeholder|2018-12-10 17:08:29|
 
+<<<<<<< HEAD
 |	signtool	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.json)	| 
+=======
+|	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	| 
+>>>>>>> master
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla/release-services/commit/bdebc7818475c6a3a8a60127b152cefc33beb7b9)|setup: Update dependencies (and a bit more) (#1730)  Along with updating dependencies I'm also addressing few other issues which will take full rebuild:    - upgrade to python 3.7, fixes #1715   - switch from Flask-Cache to Flask-Caching, fixes #1285   - sharing pypi2nix cache between containers, fixes #1070|garbas|Placeholder|2018-12-06 16:54:16|
 
 |	taskcluster-auth	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster-auth.json)	| 
 |:----------:|:-----------------------:|:--------:| 
