@@ -1,0 +1,99 @@
+{
+  "0": {
+    "lastChecked": "2019-01-01 17:05:33.912601"
+  },
+  "1": {
+    "sha": "883b49e1b8954897910a658da78fa9d437023025",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/883b49e1b8954897910a658da78fa9d437023025",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #307 from taskcluster/monorepo-fixes  Monorepo fixes",
+    "commit_date": "2018-12-20 20:28:27",
+    "files_changed": [
+      "package.json",
+      "test/taskgroup_test.js"
+    ]
+  },
+  "2": {
+    "sha": "53857be3999ed4ea579530f58e40901e361385cc",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/53857be3999ed4ea579530f58e40901e361385cc",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Allow tests to complete",
+    "commit_date": "2018-12-20 01:26:25",
+    "files_changed": [
+      "test/taskgroup_test.js"
+    ]
+  },
+  "3": {
+    "sha": "d26369bd567d61dbdedad529be877597e6738e7b",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/d26369bd567d61dbdedad529be877597e6738e7b",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Fix engines to be more permissive",
+    "commit_date": "2018-12-20 01:24:59",
+    "files_changed": [
+      "package.json"
+    ]
+  },
+  "4": {
+    "sha": "1e47a960a34cd36322900cad5bfc2834fcea7b8f",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/1e47a960a34cd36322900cad5bfc2834fcea7b8f",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #306 from djmitche/bug1502892  Bug 1502892 - refactor create/defineTask to check authorization before validation",
+    "commit_date": "2018-12-14 17:22:13",
+    "files_changed": [
+      "src/api.js",
+      "test/createtask_test.js"
+    ]
+  },
+  "5": {
+    "sha": "98f3728774245c48582184e4ba49dc7a00f84b9a",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/98f3728774245c48582184e4ba49dc7a00f84b9a",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1502892 - refactor create/defineTask to check authorization before validating",
+    "commit_date": "2018-12-13 21:36:40",
+    "files_changed": [
+      "src/api.js"
+    ]
+  },
+  "6": {
+    "sha": "45bbf334a67982ff9cd6bd58b2ad0e502879cd89",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/45bbf334a67982ff9cd6bd58b2ad0e502879cd89",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1502892 - add some more tests around createTask and priorities",
+    "commit_date": "2018-12-13 21:20:09",
+    "files_changed": [
+      "test/createtask_test.js"
+    ]
+  },
+  "7": {
+    "sha": "f16ab6658148efcac18434802525091f66359f42",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/f16ab6658148efcac18434802525091f66359f42",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #305 from djmitche/bug1510377  Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-07 15:23:43",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  },
+  "8": {
+    "sha": "904a244e39a0d96488f7fe41f031355b0e01f018",
+    "url": "https://github.com/taskcluster/taskcluster-queue/commit/904a244e39a0d96488f7fe41f031355b0e01f018",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1510377 - use tc-lib-references to validate references",
+    "commit_date": "2018-12-06 00:01:53",
+    "files_changed": [
+      "package.json",
+      "test/references_test.js",
+      "yarn.lock"
+    ]
+  }
+}
