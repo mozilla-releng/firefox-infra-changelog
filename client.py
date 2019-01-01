@@ -7,6 +7,7 @@ from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
 import sys
+import timestring
 
 lastWeek = datetime.now() - timedelta(days=14)
 lastMonth = datetime.utcnow() - timedelta(days=31)
@@ -74,6 +75,7 @@ def get_version(repo_name, repo_team):
             version = tags.name
             sha = tags.commit.sha
             date = tags.commit.commit.last_modified
+            date = str(timestring.Date(date))
             author = tags.commit.author.login
             if iteration == 0:
                 latestrelease = {"version": version,
@@ -99,11 +101,11 @@ def compare_files(first_list, second_list):
     :param second_list:  Second list
     :return: returns boolean value in case a match is found.
     """
-    for i in first_list:
-        if i in second_list:
-            return True
+    if str(second_list[0]) in str(first_list[0]):
+        return True
     else:
         return False
+
 
 
 def get_version_from_build_puppet(version_path, repo_name):
@@ -289,9 +291,11 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
             if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("LatestRelease").get("version"):
                 print("No new changes entered production")
             else:
-                last_commit_date = latest_releases.get("PreviousRelease").get("date")
-                last_commit_date = last_commit_date #TODO AssertionError: Wed, 19 Dec 2018 17:44:46 GMT turn into 19 Dec 2018 17:44:46
+                last_commit_date = datetime.strptime(str(latest_releases.get("PreviousRelease").get("date")), "%Y-%m-%d %H:%M:%S")
                 new_version_commit_date = latest_releases.get("LatestRelease").get("date")
+                new_commits = {"0": {"lastChecked": str(datetime.utcnow()),
+                                     "last_two_releases": {"LatestRelease": latest_releases.get("LatestRelease"),
+                                                           "PreviousRelease": latest_releases.get("PreviousRelease")}}}
                 for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
                     each_commit = {}
                     if commit.commit.author.date <= new_version_commit_date:
