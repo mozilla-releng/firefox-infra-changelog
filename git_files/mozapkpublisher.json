@@ -1,80 +1,19 @@
 {
   "0": {
-    "lastChecked": "2018-12-18 09:40:57.585644",
+    "lastChecked": "2019-01-01 17:05:39.485380",
     "last_two_releases": {
       "LatestRelease": {
-        "version": "0.9.2",
-        "sha": "ac653d9dccec8624f8ff25f31b994757cca5fd79",
-        "date": "Thu, 08 Nov 2018 09:57:02 GMT",
+        "version": "0.10.1",
+        "sha": "b6706efa7f759a60feec456e74a12fa36bf4c1ce",
+        "date": "2018-12-27 00:00:00",
         "author": "JohanLorenzo"
       },
       "PreviousRelease": {
-        "version": "0.9.1",
-        "sha": "5e6e12b4f158efcfdc2b2e38f111087caf2c79d4",
-        "date": "Wed, 07 Nov 2018 19:08:58 GMT",
-        "author": "JohanLorenzo"
+        "version": "0.10.0",
+        "sha": "7508711e3f3fa0fbefe699bf341bfbd6bd333652",
+        "date": "2018-12-26 00:00:00",
+        "author": "mitchhentges"
       }
     }
-  },
-  "1": {
-    "sha": "3539ea1a35edcd244d3aef7d11027376f47cd4a8",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/3539ea1a35edcd244d3aef7d11027376f47cd4a8",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #142 from mitchhentges/reference-browser-compat  Removes firefox_  extraction for reference-browser",
-    "commit_date": "2018-12-14 18:43:13",
-    "files_changed": [
-      "mozapkpublisher/common/apk/extractor.py"
-    ]
-  },
-  "2": {
-    "sha": "60212bc7f1ec194e89ced2e6fd84fc2eb4fb9b50",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/60212bc7f1ec194e89ced2e6fd84fc2eb4fb9b50",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Adds calculation of architecture and locales for r-b",
-    "commit_date": "2018-12-13 23:18:55",
-    "files_changed": [
-      "mozapkpublisher/common/apk/extractor.py"
-    ]
-  },
-  "3": {
-    "sha": "b743a7822390682f5f1bc3934558c2a396167acd",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/b743a7822390682f5f1bc3934558c2a396167acd",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Removes \"application.ini\" extraction from reference browser apk",
-    "commit_date": "2018-12-13 22:23:46",
-    "files_changed": [
-      "mozapkpublisher/common/apk/extractor.py"
-    ]
-  },
-  "4": {
-    "sha": "1fb14864d5118d3fc448ba6c9da0dbc9915e4269",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/1fb14864d5118d3fc448ba6c9da0dbc9915e4269",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #139 from mitchhentges/reference-browser-compat  Adds reference-browser as another focus-esque publishable browser",
-    "commit_date": "2018-12-12 00:08:13",
-    "files_changed": [
-      "mozapkpublisher/common/apk/checker.py",
-      "mozapkpublisher/common/googleplay.py",
-      "mozapkpublisher/common/utils.py",
-      "mozapkpublisher/test/common/apk/test_checker.py"
-    ]
-  },
-  "5": {
-    "sha": "979da90f37b107b3c511029896e89428be7efb39",
-    "url": "https://github.com/mozilla-releng/mozapkpublisher/commit/979da90f37b107b3c511029896e89428be7efb39",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Removes reference-browser from the set of focus types",
-    "commit_date": "2018-11-30 22:10:11",
-    "files_changed": [
-      "mozapkpublisher/common/apk/checker.py",
-      "mozapkpublisher/common/googleplay.py",
-      "mozapkpublisher/common/utils.py",
-      "mozapkpublisher/test/common/apk/test_checker.py"
-    ]
   }
 }
