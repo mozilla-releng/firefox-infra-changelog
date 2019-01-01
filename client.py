@@ -101,10 +101,11 @@ def compare_files(first_list, second_list):
     :param second_list:  Second list
     :return: returns boolean value in case a match is found.
     """
-    if str(second_list[0]) in str(first_list[0]):
-        return True
-    else:
-        return False
+    for element_f in range(len(first_list)):
+        for element_s in range(len(second_list)):
+            if str(second_list[element_s]) in str(first_list[element_f]):
+                return True
+    return False
 
 
 
