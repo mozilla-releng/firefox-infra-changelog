@@ -1,19 +1,142 @@
 {
   "0": {
-    "lastChecked": "2018-12-18 09:41:04.145915",
+    "lastChecked": "2019-01-06 14:48:31.879495",
     "last_releases": {
-      "LatestRelease": {
-        "version": "17.0.1",
-        "sha": "0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f",
-        "date": "Tue, 27 Nov 2018 17:46:52 GMT",
-        "author": "tomprince"
+      "latest_release": {
+        "version": "3.5.0",
+        "sha": "2385c55447fad6264645db77368fbd4649a936ea",
+        "date": "2019-01-03 19:50:17",
+        "author": "mitchhentges"
       },
-      "PreviousRelease": {
-        "version": "17.0.0",
-        "sha": "e6257cd7db50c2c308221846f5eac7cc205a4ce1",
-        "date": "Mon, 15 Oct 2018 16:06:45 GMT",
-        "author": "escapewindow"
+      "previous_release": {
+        "version": "0.0.6",
+        "sha": "aa1b3268c0b72853b03abf9f39386a83afbc3862",
+        "date": "2017-02-28 23:04:05",
+        "author": "MihaiTabara"
       }
     }
+  },
+  "1": {
+    "sha": "2385c55447fad6264645db77368fbd4649a936ea",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0",
+    "commit_date": "2019-01-03 19:50:17",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py"
+    ]
+  },
+  "2": {
+    "sha": "875537fc60b40ecd3ae72c833b88f933f2b6c7b7",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/875537fc60b40ecd3ae72c833b88f933f2b6c7b7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "3.5.0",
+    "commit_date": "2019-01-02 18:02:59",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py"
+    ]
+  },
+  "3": {
+    "sha": "9c10524c6565320b1a0d318d056f7fd303376a29",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/9c10524c6565320b1a0d318d056f7fd303376a29",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #46 from mitchhentges/remove-schema-from-config  Removes task schema from example config, adds to default config",
+    "commit_date": "2019-01-02 17:14:42",
+    "files_changed": [
+      "balrogscript/script.py",
+      "balrogscript/test/data/hardcoded_config.json",
+      "config_example.json"
+    ]
+  },
+  "4": {
+    "sha": "441a9aeb77979f3df5ac0433e9557af89797e3de",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/441a9aeb77979f3df5ac0433e9557af89797e3de",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds TODO about using sync_main(...) like other scripts",
+    "commit_date": "2019-01-02 17:06:47",
+    "files_changed": [
+      "balrogscript/script.py"
+    ]
+  },
+  "5": {
+    "sha": "e869556984b250c500edd0b3c226ebb16643fbc0",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/e869556984b250c500edd0b3c226ebb16643fbc0",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Removes task schema from example config, adds to default config",
+    "commit_date": "2018-12-24 21:32:14",
+    "files_changed": [
+      "balrogscript/script.py",
+      "balrogscript/test/data/hardcoded_config.json",
+      "config_example.json"
+    ]
+  },
+  "6": {
+    "sha": "1c9d7d5efdb06cb992718fbc68a9cd3e9d4a47bb",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/1c9d7d5efdb06cb992718fbc68a9cd3e9d4a47bb",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #45 from mitchhentges/json-formatting  Runs autoformatter on json files",
+    "commit_date": "2018-12-31 18:15:02",
+    "files_changed": [
+      "balrogscript/test/data/hardcoded_config.json",
+      "config_example.json",
+      "docker/config.json"
+    ]
+  },
+  "7": {
+    "sha": "ca57823b4888867a74a9550d53d9f9b686a231da",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/ca57823b4888867a74a9550d53d9f9b686a231da",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Runs autoformatter on json files",
+    "commit_date": "2018-12-24 21:10:42",
+    "files_changed": [
+      "balrogscript/test/data/hardcoded_config.json",
+      "config_example.json",
+      "docker/config.json"
+    ]
+  },
+  "8": {
+    "sha": "ad93c2ae91295e48016c768f026d283b33e4165a",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/ad93c2ae91295e48016c768f026d283b33e4165a",
+    "commiter_name": "tomprince",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #44 from tp-tc/win64-aarch64  Add win64-aarch64 support.",
+    "commit_date": "2018-12-18 21:19:47",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py",
+      "balrogscript/submitter/release.py"
+    ]
+  },
+  "9": {
+    "sha": "665ade5268e0f031c5e1d63ee9a56b3555e67877",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/665ade5268e0f031c5e1d63ee9a56b3555e67877",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "3.4.0",
+    "commit_date": "2018-12-18 17:56:48",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "balrogscript/_version.py"
+    ]
+  },
+  "10": {
+    "sha": "28cb97fc2b1b7f2ae453626d4ca0032f1bd77bf0",
+    "url": "https://github.com/mozilla-releng/balrogscript/commit/28cb97fc2b1b7f2ae453626d4ca0032f1bd77bf0",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Add win64-aarch64 support.",
+    "commit_date": "2018-12-15 00:43:42",
+    "files_changed": [
+      "balrogscript/submitter/release.py"
+    ]
   }
 }

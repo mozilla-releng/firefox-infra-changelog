@@ -1,19 +1,69 @@
 {
   "0": {
-    "lastChecked": "2018-12-18 09:41:04.145915",
+    "lastChecked": "2019-01-06 14:49:03.775738",
     "last_releases": {
-      "LatestRelease": {
-        "version": "17.0.1",
-        "sha": "0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f",
-        "date": "Tue, 27 Nov 2018 17:46:52 GMT",
-        "author": "tomprince"
+      "latest_release": {
+        "version": "3.4.0",
+        "sha": "cf3b10f96874db1bb8107458b3ece1e281e902ea",
+        "date": "2019-01-03 19:57:59",
+        "author": "mitchhentges"
       },
-      "PreviousRelease": {
-        "version": "17.0.0",
-        "sha": "e6257cd7db50c2c308221846f5eac7cc205a4ce1",
-        "date": "Mon, 15 Oct 2018 16:06:45 GMT",
-        "author": "escapewindow"
+      "previous_release": {
+        "version": "1.1.0",
+        "sha": "89986e684214e8a8d7a16239f56474d7f0c2e9d8",
+        "date": "2018-03-19 11:40:50",
+        "author": "MihaiTabara"
       }
     }
+  },
+  "1": {
+    "sha": "cf3b10f96874db1bb8107458b3ece1e281e902ea",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/cf3b10f96874db1bb8107458b3ece1e281e902ea",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #48 from mitchhentges/release-3.4.0  3.4.0",
+    "commit_date": "2019-01-03 19:57:59",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "2": {
+    "sha": "1db10557cc46f331af59c27fd33943c12af0e856",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/1db10557cc46f331af59c27fd33943c12af0e856",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "3.4.0",
+    "commit_date": "2019-01-02 18:23:32",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "3": {
+    "sha": "bc709e70a78a49f94e775141137518997d9ad18b",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/bc709e70a78a49f94e775141137518997d9ad18b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #47 from mitchhentges/remove-schema-from-config  Removes task schema from example config, adds to default config",
+    "commit_date": "2019-01-02 17:12:19",
+    "files_changed": [
+      "bouncerscript/script.py",
+      "bouncerscript/test/__init__.py",
+      "examples/config.example.json"
+    ]
+  },
+  "4": {
+    "sha": "efd2c06441d325a5556a758923cd7a099e627df4",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/efd2c06441d325a5556a758923cd7a099e627df4",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Removes task schema from example config, adds to default config",
+    "commit_date": "2018-12-24 22:03:13",
+    "files_changed": [
+      "bouncerscript/script.py",
+      "bouncerscript/test/__init__.py",
+      "examples/config.example.json"
+    ]
   }
 }
