@@ -1,5 +1,49 @@
 {
   "Github": {
+    "build-cloud-tools": {
+      "name": "Build Cloud Tools",
+      "url": "https://github.com/mozilla-releng/build-cloud-tools",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "no-tag",
+        "folders-to-check": ["terraform/"]
+      }
+    },
+    "services": {
+      "name": "Release Services",
+      "url": "https://github.com/mozilla/release-services",
+      "team": "mozilla/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "no-tag",
+        "folders-to-check": [
+          "src/treestatus/api",
+          "src/tooltool/api",
+          "src/tokens/api"
+        ]
+      }
+    },
+    "taskcluster-auth": {
+      "name": "Taskcluster Auth",
+      "url": "https://github.com/taskcluster/taskcluster-auth",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "no-tag",
+        "folders-to-check": []
+      }
+    },
+    "taskcluster-queue": {
+      "name": "Taskcluster Queue",
+      "url": "https://github.com/taskcluster/taskcluster-queue",
+      "team": "taskcluster/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "no-tag",
+        "folders-to-check": []
+      }
+    },
     "OpenCloudConfig": {
       "name": "Open Cloud Config",
       "url": "https://github.com/mozilla-releng/OpenCloudConfig",
@@ -13,7 +57,7 @@
     "build-puppet": {
       "name": "Build Puppet",
       "url": "https://github.com/mozilla/build-puppet",
-      "team": "mozilla-releng/",
+      "team": "mozilla/",
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
