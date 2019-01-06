@@ -365,6 +365,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         else:
             last_commit_date = datetime.strptime(str(latest_releases.get("previous_release").get("date")), "%Y-%m-%d %H:%M:%S")
             new_version_commit_date = latest_releases.get("latest_release").get("date")
+            new_version_commit_date = datetime.strptime(new_version_commit_date, "%Y-%m-%d %H:%M:%S")
             new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
                                      "last_releases": latest_releases}}
             for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
