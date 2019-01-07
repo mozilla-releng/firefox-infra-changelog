@@ -1,165 +1,165 @@
 {
   "0": {
-    "lastChecked": "2019-01-01 17:05:39.835641"
+    "lastChecked": "2019-01-07 16:24:57.091282"
   },
   "1": {
-    "sha": "34970df803855000ad8ad935765ba1b4ea9f9050",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=34970df80385",
-    "commiter_name": "Razvan Maries ",
-    "commit_email": "rmaries@mozilla.com",
-    "commit_message": "Merge mozilla-inbound to mozilla-central a=merge",
-    "commit_date": "2019-01-01 09:44:07"
+    "sha": "0dcf945b38719b8475b212acc59105c933067ca6",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0dcf945b3871",
+    "commiter_name": "Oana Pop Rus ",
+    "commit_email": "opoprus@mozilla.com",
+    "commit_message": "Merge inbound to mozilla-central. a=merge",
+    "commit_date": "2019-01-07 09:30:15"
   },
   "2": {
-    "sha": "389460801c5c8d365eb498467c0efc245634be12",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=389460801c5c",
-    "commiter_name": "Bob Clary ",
-    "commit_email": "bclary@bclary.com",
-    "commit_message": "Bug 1501584 - Run jittests for opt js shell for arm7, arm64 on android-hw-p2, r=jmaher.",
-    "commit_date": "2018-12-31 22:15:30"
+    "sha": "00e735944f33227af38ce7af53282bb8fd213a61",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=00e735944f33",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Bug 1479782 - Disable devtools/client/netmonitor/test/browser_net_frame.js on win10. r=jmaher",
+    "commit_date": "2019-01-07 00:41:17"
   },
   "3": {
-    "sha": "c19c61fee4ec323972ab846c915d6f86774980e5",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c19c61fee4ec",
-    "commiter_name": "Daniel Varga ",
-    "commit_email": "dvarga@mozilla.com",
-    "commit_message": "Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE",
-    "commit_date": "2018-12-31 21:27:53"
+    "sha": "28134941aac4065784b991962cad17f9ac71208d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=28134941aac4",
+    "commiter_name": "Bastien Orivel ",
+    "commit_email": "eijebong@bananium.fr",
+    "commit_message": "Bug 1518045 - Update owning_ref to 0.4.  This cherry-picks https://github.com/servo/servo/pull/22534, plus the relevant re-vendoring. ",
+    "commit_date": "2018-12-22 20:02:42"
   },
   "4": {
-    "sha": "d39f40e695de6cabf1cda1bb6d9dfc4d5f2a6c98",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d39f40e695de",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1392946 - backout 61eca43af2dffc3ba19cf343210d851c638694d5 since it was not effective",
-    "commit_date": "2018-12-31 20:24:26"
+    "sha": "b144051398358a6f3b296d473abee52cdcab3544",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b14405139835",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1518045 - Rustfmt recent changes. ",
+    "commit_date": "2019-01-06 23:00:55"
   },
   "5": {
-    "sha": "8d7a5d1ab4d8fd3a4cb753e094aee6c25f7f75f4",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d7a5d1ab4d8",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1516441 - backout f2dc090551f076387b984a670fe9eb7be9c8d460 since it was not effective",
-    "commit_date": "2018-12-31 20:24:23"
+    "sha": "91e7ea77c846ae753fb3a28ab81598d2dc7ac865",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=91e7ea77c846",
+    "commiter_name": "Simon Sapin ",
+    "commit_email": "simon.sapin@exyr.org",
+    "commit_message": "Bug 1518045 - Publish selectors 0.21.0 on crates.io. r=emilio  This cherry-picks https://github.com/servo/servo/pull/22577, with the relevant lockfile update. ",
+    "commit_date": "2018-12-31 00:01:49"
   },
   "6": {
-    "sha": "5e43ba4cbf931962e0779b39aee35d2029a695e4",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5e43ba4cbf93",
-    "commiter_name": "longsonr ",
-    "commit_email": "longsonr@gmail.com",
-    "commit_message": "Bug 1516727 - Part 3 rename nsSVGAngle to SVGAngle r=jwatt",
-    "commit_date": "2018-12-31 19:00:42"
+    "sha": "123ac731210fea368ff7bd4db93889e0faf390f2",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=123ac731210f",
+    "commiter_name": "Bastien Orivel ",
+    "commit_email": "eijebong@bananium.fr",
+    "commit_message": "Bug 1518045 - Fix all clippy warnings in style_derive. r=emilio  This cherry-picks https://github.com/servo/servo/pull/22439. ",
+    "commit_date": "2018-12-12 20:32:52"
   },
   "7": {
-    "sha": "f2dc090551f076387b984a670fe9eb7be9c8d460",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f2dc090551f0",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1516441 - Skip test_fingerprints.html on android-hw; r=me,a=test-only  This test started to perma-fail after host-utils were updated.",
-    "commit_date": "2018-12-31 18:46:07"
+    "sha": "c62ba89a005dc61b5bc627c6779dd780609eadab",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c62ba89a005d",
+    "commiter_name": "Simon Sapin ",
+    "commit_email": "simon.sapin@exyr.org",
+    "commit_message": "Bug 1518045 - Rustfmt has changed its default style. r=emilio  This cherry-picks the formatting parts of https://github.com/servo/servo/pull/22385. ",
+    "commit_date": "2018-12-14 07:31:30"
   },
   "8": {
-    "sha": "61eca43af2dffc3ba19cf343210d851c638694d5",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=61eca43af2df",
-    "commiter_name": "Geoff Brown ",
-    "commit_email": "gbrown@mozilla.com",
-    "commit_message": "Bug 1392946 - Skip test_webvtt_positionalign.html on android-hw; r=me,a=test-only  This test started to perma-fail after host-utils were updated.",
-    "commit_date": "2018-12-31 18:46:04"
+    "sha": "4cfc198196e989cbda49033f03879d7f1b53fae7",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4cfc198196e9",
+    "commiter_name": "Emilio Cobos \u00c1lvarez ",
+    "commit_email": "emilio@crisal.io",
+    "commit_message": "Bug 1518045 - Make Servo use a single thread-pool for layout-related tasks per-process. r=jdm  Instead of per-document. This also allows to reuse this thread-pool if needed for other stuff, like parallel CSS parsing (#22478), and to share more code with Gecko, which is always nice.  This cherry-picks https://github.com/servo/servo/pull/22487, with a few minor fixes to the build that are landing as part of the sync associated to this bug, and an lsan exception tweak to point to the right module since it's moving. ",
+    "commit_date": "2018-12-17 22:46:42"
   },
   "9": {
-    "sha": "da77d34af70103094ca2fad7d7d9bf60b314cd73",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=da77d34af701",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1517038 - Update webrender to commit a970cbaa88a7516758046c8be016c34627d31355 (WR PR #3456). r=kats  https://github.com/servo/webrender/pull/3456  Differential Revision: https://phabricator.services.mozilla.com/D15550",
-    "commit_date": "2019-01-01 00:40:07"
+    "sha": "029414a7448afe97b06f3f5a9c96ceaae93c44e3",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=029414a7448a",
+    "commiter_name": "Cameron McCormack ",
+    "commit_email": "cam@mcc.id.au",
+    "commit_message": "Bug 1516831 - Add a process index to about:memory r=njn  Differential Revision: https://phabricator.services.mozilla.com/D15495",
+    "commit_date": "2019-01-07 03:06:27"
   },
   "10": {
-    "sha": "605aa74c29e369941cbf83c23492322c1256915c",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=605aa74c29e3",
-    "commiter_name": "Chris Peterson ",
-    "commit_email": "cpeterson@mozilla.com",
-    "commit_message": "Bug 1513950 - Run cpp-virtual-final lint on .cc files. r=ahal  At this time, there are no cpp-virtual-final warnings in any .cc files. :)  Also:  1. Remove unnecessary exclusion of node_modules because the directory contains no C++ code that would be checked by this lint.  2. Update number of virtual-override instances that prevent us from checking for `virtual void Bad() override`.  Differential Revision: https://phabricator.services.mozilla.com/D14529",
-    "commit_date": "2018-12-31 21:27:22"
+    "sha": "a52b66841df98457965924c2810e2a6396df896d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a52b66841df9",
+    "commiter_name": "Cameron McCormack ",
+    "commit_email": "cam@mcc.id.au",
+    "commit_message": "Bug 1517354 - Improve about:memory performance by not using toLocaleString r=njn  Differential Revision: https://phabricator.services.mozilla.com/D15627",
+    "commit_date": "2019-01-07 02:50:05"
   },
   "11": {
-    "sha": "2f42b03f9e8fc93439c11c6d65a066325b1c3796",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2f42b03f9e8f",
-    "commiter_name": "Daniel Varga ",
-    "commit_email": "dvarga@mozilla.com",
-    "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
-    "commit_date": "2018-12-31 21:26:34"
+    "sha": "2c87990aee062f3008c9e0ab792d8b6ef9c9215e",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2c87990aee06",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1421724 - Account for headless Firefox not exposing scary windows. r=florian  Differential Revision: https://phabricator.services.mozilla.com/D15712",
+    "commit_date": "2019-01-04 13:15:46"
   },
   "12": {
-    "sha": "1a2501b02a56344234a72e519c2a1ede2cb217c9",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1a2501b02a56",
-    "commiter_name": "WR Updater Bot ",
-    "commit_email": "graphics-team@mozilla.staktrace.com",
-    "commit_message": "Bug 1516810 - Update webrender to commit ff485fa67cc7341b8e7a0d32e377a419e8d252c6 (WR PR #3454). r=kats  https://github.com/servo/webrender/pull/3454  Differential Revision: https://phabricator.services.mozilla.com/D15532",
-    "commit_date": "2018-12-31 19:16:49"
+    "sha": "2c1444bc6c19082702d5c19533e0c9586bfb2233",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2c1444bc6c19",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "pehrsons@mozilla.com",
+    "commit_message": "Bug 1421724 - Steal back focus from global webrtc indicator when doing second gUM requests. r=florian  Differential Revision: https://phabricator.services.mozilla.com/D15711",
+    "commit_date": "2019-01-04 14:43:46"
   },
   "13": {
-    "sha": "807f9818930a9992834f1770bd2fa10147019c81",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=807f9818930a",
-    "commiter_name": "terrameijar ",
-    "commit_email": "terrameijar@gmail.com",
-    "commit_message": "Bug 1506611 - Fixed linter errors in testing/gtest r=ahal  Before this change, testing/gtest had 19 errors. These errors have been resolved.  Bug 1506611 - Fixed flake8 errors in testing/gtest  Differential Revision: https://phabricator.services.mozilla.com/D15074",
-    "commit_date": "2018-12-31 16:51:03"
+    "sha": "5c37c61c937ea037e696c3424a5281f91c3dcb30",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5c37c61c937e",
+    "commiter_name": "Andreas Pehrson ",
+    "commit_email": "apehrson@mozilla.com",
+    "commit_message": "Bug 1421724 - Re-enable browser-chrome gUM_screen test. r=marco  Differential Revision: https://phabricator.services.mozilla.com/D15710",
+    "commit_date": "2019-01-04 16:30:06"
   },
   "14": {
-    "sha": "6d8260b9f12f702f7be273620204f85f6c75d092",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6d8260b9f12f",
-    "commiter_name": "Gregory Szorc ",
-    "commit_email": "gps@mozilla.com",
-    "commit_message": "Bug 1512188 - Consolidate VCS checkout from args logic; r=tomprince,dustin  We create a minimal wrapper function to call collect_vcs_options() and vcs_checkout().  We could consolidate this logic into vcs_checkout(). But I don't have strong feelings about doing that.  Differential Revision: https://phabricator.services.mozilla.com/D13821",
-    "commit_date": "2018-12-31 18:50:34"
+    "sha": "640985215424f83155c5fecdcadbe5f284d6c565",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=640985215424",
+    "commiter_name": "longsonr ",
+    "commit_email": "longsonr@gmail.com",
+    "commit_message": "Bug 1518000 - Move nsSVGString and nsSVGViewBox to the mozilla namespace r=jwatt",
+    "commit_date": "2019-01-06 17:52:55"
   },
   "15": {
-    "sha": "a0d4382b904b0cbd9fc152c8b53b120fed317ea3",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a0d4382b904b",
-    "commiter_name": "Gregory Szorc ",
-    "commit_email": "gps@mozilla.com",
-    "commit_message": "Bug 1512188 - Collect hg store path in collect_vcs_options(); r=tomprince,dustin  One step closer to making all state gathering and normalization in one place.  Differential Revision: https://phabricator.services.mozilla.com/D13819",
-    "commit_date": "2018-12-31 18:54:14"
+    "sha": "1675da659cb6f6a7e4824bc3dbf4e892ca4a5592",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1675da659cb6",
+    "commiter_name": "Razvan Maries ",
+    "commit_email": "rmaries@mozilla.com",
+    "commit_message": "Backed out changeset e38d92bc7143 (bug 1505353) for causing build bustages. CLOSED TREE",
+    "commit_date": "2019-01-06 13:52:10"
   },
   "16": {
-    "sha": "504a204f8619f84e4deeefe9bcba48bd1bb0cb3c",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=504a204f8619",
-    "commiter_name": "Gregory Szorc ",
-    "commit_email": "gps@mozilla.com",
-    "commit_message": "Bug 1512188 - Move base repo normalization into collect_vcs_options(); r=tomprince,dustin  This is a generic normalization and doesn't need to be Firefox specific.  Differential Revision: https://phabricator.services.mozilla.com/D13817",
-    "commit_date": "2018-12-31 18:54:31"
+    "sha": "22aafd08880661e9e7d278c4cfabeba6e77d8b0a",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=22aafd088806",
+    "commiter_name": "Natalia Csoregi ",
+    "commit_email": "ncsoregi@mozilla.com",
+    "commit_message": "Bug 1508435 - Disabled devtools/client/inspector/markup/test/browser_markup_screenshot_node_shadowdom.js on Windows pgo/opt. r=jmaher",
+    "commit_date": "2019-01-05 04:56:00"
   },
   "17": {
-    "sha": "0af08435172d476b85c57f2c64eb652497594c0e",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0af08435172d",
-    "commiter_name": "Gregory Szorc ",
-    "commit_email": "gps@mozilla.com",
-    "commit_message": "Bug 1512188 - Collect environment variables into VCS options; r=tomprince,dustin  This makes behavior consistent across all VCS checkouts. I'm still not a fan of using environment variables here. But at least this gets us 1 step closer to being able to plug alternate logic in without having to update use of environment variables outside a single function.  Differential Revision: https://phabricator.services.mozilla.com/D13816",
-    "commit_date": "2018-12-31 18:52:32"
+    "sha": "9a33ce04d3a395ca317f8d9a9ee8dca061d4e49d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9a33ce04d3a3",
+    "commiter_name": "Andreea Pavel ",
+    "commit_email": "apavel@mozilla.com",
+    "commit_message": "Bug 1483696 - disabled test on linux32 debug r=jmaher",
+    "commit_date": "2019-01-03 12:44:00"
   },
   "18": {
-    "sha": "315bb83dabea111b7620b3c8ddb0b50d47c17052",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=315bb83dabea",
-    "commiter_name": "Gregory Szorc ",
-    "commit_email": "gps@mozilla.com",
-    "commit_message": "Bug 1512188 - make VCS checkout options generic; r=tomprince,dustin  We currently manage VCS checkout arguments as one-offs for each project. This isn't scalable and results in a bit of copy-pasta.  Let's make the VCS checkout arguments generic so we can have the same control for all repositories.  This commit focuses on consolidating the existing argument parser code. It stops short of further unification, which will be done in subsequent commits.  Differential Revision: https://phabricator.services.mozilla.com/D13815",
-    "commit_date": "2018-12-31 18:52:30"
+    "sha": "ab4bb599096c779cf2fb57d4f21f0b57c626af67",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ab4bb599096c",
+    "commiter_name": "Andreea Pavel ",
+    "commit_email": "apavel@mozilla.com",
+    "commit_message": "Bug 1485407 - test disabled on android debug r=jmaher",
+    "commit_date": "2019-01-03 13:46:00"
   },
   "19": {
-    "sha": "6e13c0c6c7c1fc5d45358c707e582726ec94b857",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6e13c0c6c7c1",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1512285: Stop checking out tools; r=nthomas,gps  This code was used by mozharness jobs to check out the tools repo. However, those jobs aren't actually using the repository.  Differential Revision: https://phabricator.services.mozilla.com/D13855",
-    "commit_date": "2018-12-31 18:52:28"
+    "sha": "e38d92bc71437687b8a005818d3515069a81e74d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e38d92bc7143",
+    "commiter_name": "Natalia Csoregi ",
+    "commit_email": "ncsoregi@mozilla.com",
+    "commit_message": "Bug 1505353 - Disable org.mozilla.geckoview.test.AccessibilityTest.autoFill_navigation on debug platform for frequent failures. r=jmaher",
+    "commit_date": "2019-01-05 03:31:00"
   },
   "20": {
-    "sha": "f861ce442580172136a58500837973efb06fdd08",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f861ce442580",
-    "commiter_name": "Gregory Szorc ",
-    "commit_email": "gps@mozilla.com",
-    "commit_message": "Bug 1512188 - Rename --sparse-profile to --gecko-sparse-profile; r=tomprince,dustin  We have multiple source checkouts. --sparse-profile is ambiguous as to which one it could refer to. Let's rename the argument so it is prefixed with the repo/project we are checking out.  Differential Revision: https://phabricator.services.mozilla.com/D13814",
-    "commit_date": "2018-12-31 18:52:26"
+    "sha": "10cf9aa5abe2f1e80a4492181402439903794dba",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10cf9aa5abe2",
+    "commiter_name": "Bob Clary ",
+    "commit_email": "bclary@bclary.com",
+    "commit_message": "Bug 1517053 - Enable power tests for Android hardware, r=jmaher.",
+    "commit_date": "2019-01-06 12:05:34"
   }
 }
