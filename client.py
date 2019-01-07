@@ -356,7 +356,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                         each_commit2.update({int(number2): get_commit_details(commit2)})
                                         new_scriptworker_dict.update(each_commit2)
                                 json_writer(scriptworker_repo, new_scriptworker_dict)
-
+            json_writer(repository_name, new_commit_dict)
     elif repository_type == "tag" and repository_name != "build-puppet":
         version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
         latest_releases = get_version(repository_name, repository_team)
