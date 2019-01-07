@@ -82,20 +82,20 @@ def get_version(repo_name, repo_team):
         date = date_format.strftime("%Y-%m-%d %H:%M:%S")
         author = tags.commit.author.login
         if iteration == 0:
-            latestrelease = {"version": version,
+            latest_release = {"version": version,
                              "sha": sha,
                              "date": date,
                              "author": author
                              }
-            empty_dict.update({"latest_release": latestrelease})
+            empty_dict.update({"latest_release": latest_release})
             iteration = 1
         elif iteration == 1:
-            previousrelease = {"version": version,
+            previous_release = {"version": version,
                                "sha": sha,
                                "date": date,
                                "author": author
                                }
-            empty_dict.update({"previous_release": previousrelease})
+            empty_dict.update({"previous_release": previous_release})
     return empty_dict
 
 
@@ -516,16 +516,14 @@ def create_md_table(repository_name, path_to_files):
         print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def clear_file(file_name, string_number_of_commits="five"):
+def clear_file(file_name):
     """
     This function takes a file that clears the content and output's a base table header for a markdown file.
-    :param string_number_of_commits: literal number that needs to match the number of commits shown on main markdown
-    table
     :param file_name: Name of the file to be written. (should also contain the path)
     :return: A file should be created and should contain base table.
     """
     file = open(file_name, "w")
-    heading = "#  Last " + string_number_of_commits + " commits from every repository \n"
+    heading = "##  Commits in production. \n"
     file.write(heading)
     file.close()
 
