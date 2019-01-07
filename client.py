@@ -7,6 +7,7 @@ from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
 import sys
+from dateutil.parser import parse
 import timestring
 
 lastWeek = datetime.now() - timedelta(days=14)
@@ -58,8 +59,10 @@ def create_files_for_git(repositories_holder):
         filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
         try:
             create_md_table(repository_name, "git_files")
+            print("MD table generated successfully")
         except:
             pass
+        print("Finished working on {}".format(repository_name))
 
 
 def get_version(repo_name, repo_team):
@@ -70,27 +73,30 @@ def get_version(repo_name, repo_team):
     """
     repo_path = repo_team + repo_name
     iteration = 0
-    if limit_checker() == 1:  # check if the requests limit is not exceeded
-        for tags in git.get_repo(repo_path).get_tags():
-            version = tags.name
-            sha = tags.commit.sha
-            date = tags.commit.commit.last_modified
-            date = str(timestring.Date(date))
-            author = tags.commit.author.login
-            if iteration == 0:
-                latestrelease = {"version": version,
-                                 "sha": sha,
-                                 "date": date,
-                                 "author": author
-                                 }
-                iteration = 1
-            elif iteration == 1:
-                previousrelease = {"version": version,
-                                   "sha": sha,
-                                   "date": date,
-                                   "author": author
-                                   }
-                return {"LatestRelease": latestrelease, "PreviousRelease": previousrelease}
+    empty_dict = {}
+    for tags in git.get_repo(repo_path).get_tags():
+        version = tags.name
+        sha = tags.commit.sha
+        date = tags.commit.commit.last_modified
+        date_format = parse(date)
+        date = date_format.strftime("%Y-%m-%d %H:%M:%S")
+        author = tags.commit.author.login
+        if iteration == 0:
+            latestrelease = {"version": version,
+                             "sha": sha,
+                             "date": date,
+                             "author": author
+                             }
+            empty_dict.update({"latest_release": latestrelease})
+            iteration = 1
+        elif iteration == 1:
+            previousrelease = {"version": version,
+                               "sha": sha,
+                               "date": date,
+                               "author": author
+                               }
+            empty_dict.update({"previous_release": previousrelease})
+    return empty_dict
 
 
 def compare_files(first_list, second_list):
@@ -108,21 +114,19 @@ def compare_files(first_list, second_list):
     return False
 
 
-
 def get_version_from_build_puppet(version_path, repo_name):
     """
     :param: version_path: Path to the requierments.txt where the version number is stored
     :param: repo_name: The repo for which we are checking the version.
     :return: Returns the version number that is stored in build-puppet for each *scriptworker
     """
-    if limit_checker() == 1:  # check if the requests limit is not exceeded
-        file_to_string = requests.get(version_path).text.split()
-        for word in file_to_string:
-            if repo_name in word:
-                version_in_puppet = re.split("\\b==\\b", word)[-1]
-                # the next check makes sure to only return the version in case the repo name appears multiple times
-                if version_in_puppet != repo_name:
-                    return version_in_puppet
+    file_to_string = requests.get(version_path).text.split()
+    for word in file_to_string:
+        if repo_name in word:
+            version_in_puppet = re.split("\\b==\\b", word)[-1]
+            # the next check makes sure to only return the version in case the repo name appears multiple times
+            if version_in_puppet != repo_name:
+                return version_in_puppet
 
 
 def get_commit_details(commit):
@@ -189,6 +193,7 @@ def json_writer(repository_name, new_commits):
             if old_commit != "0":
                 number += 1
                 new_commits.update({int(number): json_content[old_commit]})
+
     if len(new_commits) > 0:
         json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
         json.dump(new_commits, json_file, indent=2)
@@ -217,6 +222,33 @@ def last_check(repository_name):
     return last_checked
 
 
+def get_version_from_json(repo_name):
+    """
+    :param repo_name: name of the repo we are working on
+    :return: version our repo was bumped to by the last local commit that we have
+    """
+    git_json_filename = "{}.json".format(repo_name)
+    with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+        json_content = json.load(commit_json)  # loads the content of existing json into a variable
+    last_stored_version = json_content.get("0").get("last_releases").get("latest_release").get("version")
+    return last_stored_version
+
+
+def get_date_from_json(repo_name):
+    """
+    :param repo_name: name of the repo we are currently working on
+    :return: date of the last commit that we have locally in our json
+    """
+    git_json_filename = "{}.json".format(repo_name)
+    with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+        json_content = json.load(commit_json)  # loads the content of existing json into a variable
+    last_stored_date = json_content.get("0").get("last_releases").get("latest_release").get("date")
+    date_format = parse(last_stored_date)
+    last_stored_date = datetime.strptime(str(date_format), "%Y-%m-%d %H:%M:%S%z")
+    print("last local date was: ", last_stored_date)
+    return last_stored_date
+
+
 def filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check):
     """
     Filters out only the data that we need from a commit
@@ -232,8 +264,9 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
     """
     repository_path = repository_team + repository_name
     last_checked = last_check(repository_name)
-    new_commits = {"0": {"lastChecked": str(datetime.utcnow())}}
+    new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     number = 0
+    new_commits = git.get_repo(repository_path).get_commits(since=last_checked)
     # TYPE = NO-TAG
     if repository_type == "no-tag":
         for commit in git.get_repo(repository_path).get_commits(since=last_checked):
@@ -242,69 +275,107 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                 files_changed = []
                 for entry in commit.files:
                     files_changed.append(entry.filename)
-                if compare_files(files_changed, folders_to_check):  # checks if any object from list 1 if it's in list 2
+                if compare_files(files_changed, folders_to_check):  # checks if any object from list 1 is in list 2
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
-                    new_commits.update(each_commit)
-            else:                          # else we just take all commits
+                    new_commit_dict.update(each_commit)
+            # else we just take all commits
+            else:
                 number += 1
                 each_commit.update({int(number): get_commit_details(commit)})
-                new_commits.update(each_commit)
-        json_writer(repository_name, new_commits)
+                new_commit_dict.update(each_commit)
+
+        json_writer(repository_name, new_commit_dict)
         return True
     # TYPE = COMMIT-KEYWORD
     if repository_type == "commit-keyword":
-        for commit in git.get_repo(repository_path).get_commits(since=last_checked):
-            each_commit = {}
-            if "deploy" in commit.commit.message:
-                number += 1
-                each_commit.update({int(number): get_commit_details(commit)})
-                new_commits.update(each_commit)
-        json_writer(repository_name, new_commits)
+        for commit in new_commits:
+            files_changed_by_commit = [x.filename for x in commit.files]
+            if len(files_changed_by_commit) > 0:
+                each_commit = {}
+                print(commit.commit.message)
+                if "deploy" in commit.commit.message:
+                    number += 1
+                    each_commit.update({int(number): get_commit_details(commit)})
+                    new_commit_dict.update(each_commit)
+            json_writer(repository_name, new_commit_dict)
         return True
     # TYPE = TAG
-    if repository_type == "tag":
-        if repository_name == "build-puppet":
+    if repository_type == "tag" and repository_name == "build-puppet":
+            j = 1
             pathway = repositories.get("Github").get(repository_name).get("configuration").get("files-to-check")
-            for commit in git.get_repo(repository_path).get_commits(since=last_checked):
-                for entry in commit.files:
+            for commit in new_commits:
+                print("this is commit number: ", j)
+                j += 1
+                files_changed_by_commit = [x.filename for x in commit.files]
+                print(files_changed_by_commit)
+                print(len(files_changed_by_commit))
+                i = 1
+                for entry in files_changed_by_commit:
+                    print("changed file number:  ", i)
+                    i += 1
+                    print(entry)
                     for scriptworkers in pathway:
-                        if entry.filename in pathway[scriptworkers]:
-                            repository_name = scriptworkers
-                            version_path = repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check").get(repository_name)
-                            latest_releases = get_version(repository_name, repository_team)
-                            if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latestRelease").get("version"):
-                                print("No new changes entered production")
+                        print("checking repo: ", scriptworkers)
+                        number2 = 0
+                        if entry in pathway[scriptworkers]:
+                            print(scriptworkers, " needs to be checked.")
+                            scriptworker_repo = scriptworkers
+                            version_path = repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check").get(scriptworker_repo)
+                            latest_releases = get_version(scriptworker_repo, repository_team)
+                            version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
+                            if version_in_puppet == latest_releases.get("latest_release").get("version"):
+                                last_local_version = get_version_from_json(scriptworker_repo)
+                                print(last_local_version)
+                                # if build-puppet and scriptworker repo changelog have the same version after an update
+                                if version_in_puppet != last_local_version:
+                                    last_local_date = get_date_from_json(scriptworker_repo)
+                                    new_version_commit_date = datetime.strptime(latest_releases.get("latest_release").get("date"), "%Y-%m-%d %H:%M:%S")
+                                    new_scriptworker_dict = {(int(number2)): {"lastChecked": str(datetime.utcnow()),
+                                                                              "last_releases": latest_releases}}
+                                    new_repo_path = repository_team + scriptworker_repo
+                                    for commit2 in git.get_repo(new_repo_path).get_commits(since=last_local_date):
+                                        if commit2.commit.author.date <= new_version_commit_date:
+                                            each_commit2 = {}
+                                            number2 += 1
+                                            each_commit2.update({int(number2): get_commit_details(commit2)})
+                                            new_scriptworker_dict.update(each_commit2)
+                                    json_writer(scriptworker_repo, new_scriptworker_dict)
+                                else:
+                                    print("No new changes entered production")
                             else:
-                                last_commit_date = latest_releases.get("previousrelease").get("date")
-                                new_version_commit_date = latest_releases.get("latestRelease").get("date")
-                                for commit2 in git.get_repo(repository_path).get_commits(since=last_commit_date):
-                                    each_commit = {}
+                                last_commit_date = datetime.strptime(latest_releases.get("previous_release").get("date"), "%Y-%m-%d %H:%M:%S")
+                                new_version_commit_date = datetime.strptime(latest_releases.get("latest_release").get("date"), "%Y-%m-%d %H:%M:%S")
+                                new_scriptworker_dict = {(int(number2)): {"lastChecked": str(datetime.utcnow()),
+                                                                          "last_releases": latest_releases}}
+                                new_repo_path = repository_team + scriptworker_repo
+                                for commit2 in git.get_repo(new_repo_path).get_commits(since=last_commit_date):
                                     if commit2.commit.author.date <= new_version_commit_date:
-                                        number += 1
-                                        each_commit.update({int(number): get_commit_details(commit2)})
-                                        new_commits.update(each_commit)
-                        json_writer(repository_name, new_commits)
-                        return True
+                                        each_commit2 = {}
+                                        number2 += 1
+                                        each_commit2.update({int(number2): get_commit_details(commit2)})
+                                        new_scriptworker_dict.update(each_commit2)
+                                json_writer(scriptworker_repo, new_scriptworker_dict)
+            json_writer(repository_name, new_commit_dict)
+    elif repository_type == "tag" and repository_name != "build-puppet":
+        version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
+        latest_releases = get_version(repository_name, repository_team)
+        if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release").get("version"):
+            print("No new changes entered production")
         else:
-            version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
-            latest_releases = get_version(repository_name, repository_team)
-            if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("LatestRelease").get("version"):
-                print("No new changes entered production")
-            else:
-                last_commit_date = datetime.strptime(str(latest_releases.get("PreviousRelease").get("date")), "%Y-%m-%d %H:%M:%S")
-                new_version_commit_date = latest_releases.get("LatestRelease").get("date")
-                new_commits = {"0": {"lastChecked": str(datetime.utcnow()),
-                                     "last_two_releases": {"LatestRelease": latest_releases.get("LatestRelease"),
-                                                           "PreviousRelease": latest_releases.get("PreviousRelease")}}}
-                for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
-                    each_commit = {}
-                    if commit.commit.author.date <= new_version_commit_date:
-                        number += 1
-                        each_commit.update({int(number): get_commit_details(commit)})
-                        new_commits.update(each_commit)
-                json_writer(repository_name, new_commits)
-                return True
+            last_commit_date = datetime.strptime(str(latest_releases.get("previous_release").get("date")), "%Y-%m-%d %H:%M:%S")
+            new_version_commit_date = latest_releases.get("latest_release").get("date")
+            new_version_commit_date = datetime.strptime(new_version_commit_date, "%Y-%m-%d %H:%M:%S")
+            new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
+                                     "last_releases": latest_releases}}
+            for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
+                each_commit = {}
+                if commit.commit.author.date <= new_version_commit_date:
+                    number += 1
+                    each_commit.update({int(number): get_commit_details(commit)})
+                    new_commit_dict.update(each_commit)
+            json_writer(repository_name, new_commit_dict)
+            return True
 
 
 def create_files_for_hg(repositories_holder):

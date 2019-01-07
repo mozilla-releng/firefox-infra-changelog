@@ -1,5 +1,15 @@
 {
   "Github": {
+    "OpenCloudConfig": {
+      "name": "Open Cloud Config",
+      "url": "https://github.com/mozilla-releng/OpenCloudConfig",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "commit-keyword",
+        "folders-to-check": []
+      }
+    },
     "build-cloud-tools": {
       "name": "Build Cloud Tools",
       "url": "https://github.com/mozilla-releng/build-cloud-tools",
@@ -8,20 +18,6 @@
       "configuration": {
         "type": "no-tag",
         "folders-to-check": ["terraform/"]
-      }
-    },
-    "services": {
-      "name": "Release Services",
-      "url": "https://github.com/mozilla/release-services",
-      "team": "mozilla/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "no-tag",
-        "folders-to-check": [
-          "src/treestatus/api",
-          "src/tooltool/api",
-          "src/tokens/api"
-        ]
       }
     },
     "taskcluster-auth": {
@@ -44,20 +40,24 @@
         "folders-to-check": []
       }
     },
-    "OpenCloudConfig": {
-      "name": "Open Cloud Config",
-      "url": "https://github.com/mozilla-releng/OpenCloudConfig",
-      "team": "mozilla-releng/",
+    "services": {
+      "name": "Release Services",
+      "url": "https://github.com/mozilla/release-services",
+      "team": "mozilla/",
       "top-contributors": [" ", " "],
       "configuration": {
-        "type": "commit-keyword",
-        "folders-to-check": []
+        "type": "no-tag",
+        "folders-to-check": [
+          "src/treestatus/api",
+          "src/tooltool/api",
+          "src/tokens/api"
+        ]
       }
     },
     "build-puppet": {
       "name": "Build Puppet",
       "url": "https://github.com/mozilla/build-puppet",
-      "team": "mozilla/",
+      "team": "mozilla-releng/",
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -93,9 +93,15 @@
       "name": "Mozilla Central",
       "url": "https://hg.mozilla.org/mozilla-central/",
       "team": "",
-      "top-contributors": [" ", " "],
+      "top-contributors": [
+        " ",
+        " "
+      ],
       "configuration": {
-        "folders-to-check": ["testing/mozharness" , "taskcluster"],
+        "folders-to-check": [
+          "testing/mozharness",
+          "taskcluster"
+        ],
         "push_type": "json-log"
       }
     }

@@ -1,5 +1,168 @@
 {
   "0": {
+<<<<<<< HEAD
+    "lastChecked": "2018-12-28 05:07:52.040997"
+  },
+  "1": {
+    "sha": "a77e8f3efc4cb45b7caa0c87879910b9991b4219",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a77e8f3efc4c",
+    "commiter_name": "arthur.iakab ",
+    "commit_email": "aiakab@mozilla.com",
+    "commit_message": "Merge inbound to mozilla-central a=merge",
+    "commit_date": "2018-12-27 21:56:49"
+  },
+  "2": {
+    "sha": "96499feeb5bf1edfff264e1c6039b27c59afd2dd",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96499feeb5bf",
+    "commiter_name": "Cosmin Sabou ",
+    "commit_email": "csabou@mozilla.com",
+    "commit_message": "Bug 1433892 - Disable browser_ext_menus_events.js on Linux for frequent failures. r=jmaher",
+    "commit_date": "2018-12-26 15:39:00"
+  },
+  "3": {
+    "sha": "ee0e1df960c436578db1e92627b2c768c253c2a3",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ee0e1df960c4",
+    "commiter_name": "Lee Salzman ",
+    "commit_email": "lsalzman@mozilla.com",
+    "commit_message": "Bug 1516334 - don't draw emoji as paths when they are too big. r=rhunt",
+    "commit_date": "2018-12-27 18:30:27"
+  },
+  "4": {
+    "sha": "3487b5f2f426760ebc402e42755dcb164644f022",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3487b5f2f426",
+    "commiter_name": "Nicolas B. Pierron ",
+    "commit_email": "nicolas.b.pierron@nbp.name",
+    "commit_message": "Bug 1515963 - Add vixl::GdbDisassembleInstruction. r=sstangl  This add a simple function made to be called from gdb, which uses the vixl decoder to output in a static buffer the string corresponding to a single instruction.  This is useful when breaking at vixl::Simulator::ExecuteInstruction function, as follow:  (gdb) b vixl::Simulator::ExecuteInstruction Breakpoint 1 at 0x...: file ../jit/arm64/vixl/MozSimulator-vixl.cpp. (gdb) command 1 > call vixl::GdbDisassembleInstruction(this->pc_) > end ",
+    "commit_date": "2018-12-21 16:50:47"
+  },
+  "5": {
+    "sha": "89834b056ca0e1969845185d0d007a695b03c503",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=89834b056ca0",
+    "commiter_name": "Nicolas B. Pierron ",
+    "commit_email": "nicolas.b.pierron@nbp.name",
+    "commit_message": "Bug 1515704 - ARM64: Generate code for LPowHalfD. r=sstangl ",
+    "commit_date": "2018-12-20 17:53:41"
+  },
+  "6": {
+    "sha": "21ce5e3998e3b7716ef95b44bea56c8c44ab72a5",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=21ce5e3998e3",
+    "commiter_name": "longsonr ",
+    "commit_email": "longsonr@gmail.com",
+    "commit_message": "Bug 1516076 - Part 4 - make include order more sensible for some files r=dholbert",
+    "commit_date": "2018-12-27 17:30:38"
+  },
+  "7": {
+    "sha": "49233ec55bff867eaa73b1e5c5eb6d2e639da1ad",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=49233ec55bff",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - Update Debugger Frontend v112. r=bhackett ",
+    "commit_date": "2018-12-27 04:44:52"
+  },
+  "8": {
+    "sha": "8ded394acd8153647264a16e4883f46fd7345dd5",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8ded394acd81",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] Breakpoint svg changed (#7586). r=bhackett ",
+    "commit_date": "2018-12-23 19:46:54"
+  },
+  "9": {
+    "sha": "ea2807921cc3c593661f611d6b7d4f31f145b147",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ea2807921cc3",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] Enable Syntax Highlighting for ClojureScript (#7584). r=bhackett ",
+    "commit_date": "2018-12-23 19:46:40"
+  },
+  "10": {
+    "sha": "10dc48aa3b1e99cde812866d35e2c8f6ef39f942",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10dc48aa3b1e",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] Blackbox original sources (#7370). r=bhackett ",
+    "commit_date": "2018-12-23 19:46:23"
+  },
+  "11": {
+    "sha": "5bfef086654140a79a6164ff660fcc097603e7c8",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5bfef0866541",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] Fixes flow typing support for reselect (#7573). r=bhackett ",
+    "commit_date": "2018-12-23 19:46:07"
+  },
+  "12": {
+    "sha": "796402f4fa52d5e3021b52d1aea86282b2c52a1d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=796402f4fa52",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] 7190: Save generated file and source map (#7482). r=bhackett ",
+    "commit_date": "2018-12-23 19:45:49"
+  },
+  "13": {
+    "sha": "4ca33ee89eb8bc28bb65cccd49a94e30c123f4b4",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4ca33ee89eb8",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] Use CSS animation for the SearchInput loader. (#7565). r=bhackett ",
+    "commit_date": "2018-12-23 19:45:03"
+  },
+  "14": {
+    "sha": "05ce3a72db7854e0bfd42d6d5abb8d460501d2ce",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=05ce3a72db78",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] [search] fix file img icon background on focus (#7558) (#7564). r=bhackett ",
+    "commit_date": "2018-12-23 19:44:50"
+  },
+  "15": {
+    "sha": "48aa3ee2c926a0ca3900d810ceedcfe88c4b57b4",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=48aa3ee2c926",
+    "commiter_name": "Jason Laster ",
+    "commit_email": "jlaster@mozilla.com",
+    "commit_message": "Bug 1515951 - [release 112] Option to not auto expand a node if it has a lot of children (#7510). r=bhackett ",
+    "commit_date": "2018-12-23 19:44:35"
+  },
+  "16": {
+    "sha": "006f69326ccc4ad8bc70d348550ab4920f249e7b",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=006f69326ccc",
+    "commiter_name": "longsonr ",
+    "commit_email": "longsonr@gmail.com",
+    "commit_message": "Bug 1516194 - fix identation in SMILNullType.cpp r=dholbert",
+    "commit_date": "2018-12-27 17:12:48"
+  },
+  "17": {
+    "sha": "ca4a5a7852d634aae54ea71554b5ace139ec7abe",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ca4a5a7852d6",
+    "commiter_name": "longsonr ",
+    "commit_email": "longsonr@gmail.com",
+    "commit_message": "Bug 1516521 - rename nsSMILCSSValueType as SMILCSSValueType and move it to the mozilla namespace r=dholbert",
+    "commit_date": "2018-12-27 17:02:38"
+  },
+  "18": {
+    "sha": "7e0448a4aa482d253662ecb9209a67ac10c4d256",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7e0448a4aa48",
+    "commiter_name": "Paolo Amadini ",
+    "commit_email": "paolo.mozmail@amadzone.org",
+    "commit_message": "Bug 1516442 - Move \"listheader\" outside of \"richlistbox\". r=bgrins  The only uses of \"listheader\" are part of in-content preferences, and they are updated to use adjacent elements. This is in preparation for the removal of the inner scrollbox in the \"richlistbox\" binding.  Differential Revision: https://phabricator.services.mozilla.com/D15387",
+    "commit_date": "2018-12-26 17:00:31"
+  },
+  "19": {
+    "sha": "3a5eb424e65549b3116bed0e76b39aa03003833d",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3a5eb424e655",
+    "commiter_name": "longsonr ",
+    "commit_email": "longsonr@gmail.com",
+    "commit_message": "Bug 1516194 - rename nsSMILNullType to SMILNullType and move it to the mozilla namespace r=dholbert",
+    "commit_date": "2018-12-27 10:21:40"
+  },
+  "20": {
+    "sha": "41d9d168940d58a3184b5840797e2f0f8654c5a4",
+    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=41d9d168940d",
+    "commiter_name": "sotaro ",
+    "commit_email": "sotaro.ikeda.g@gmail.com",
+    "commit_message": "Bug 1493497 - Clear EGLSurfaceOverride correctly in SharedSurface_ANGLEShareHandle r=jgilbert",
+    "commit_date": "2018-12-27 08:00:59"
+=======
     "lastChecked": "2019-01-01 17:05:39.835641"
   },
   "1": {
@@ -161,5 +324,6 @@
     "commit_email": "gps@mozilla.com",
     "commit_message": "Bug 1512188 - Rename --sparse-profile to --gecko-sparse-profile; r=tomprince,dustin  We have multiple source checkouts. --sparse-profile is ambiguous as to which one it could refer to. Let's rename the argument so it is prefixed with the repo/project we are checking out.  Differential Revision: https://phabricator.services.mozilla.com/D13814",
     "commit_date": "2018-12-31 18:52:26"
+>>>>>>> master
   }
 }
