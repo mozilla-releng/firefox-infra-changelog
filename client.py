@@ -82,20 +82,20 @@ def get_version(repo_name, repo_team):
         date = date_format.strftime("%Y-%m-%d %H:%M:%S")
         author = tags.commit.author.login
         if iteration == 0:
-            latestrelease = {"version": version,
+            latest_release = {"version": version,
                              "sha": sha,
                              "date": date,
                              "author": author
                              }
-            empty_dict.update({"latest_release": latestrelease})
+            empty_dict.update({"latest_release": latest_release})
             iteration = 1
         elif iteration == 1:
-            previousrelease = {"version": version,
+            previous_release = {"version": version,
                                "sha": sha,
                                "date": date,
                                "author": author
                                }
-            empty_dict.update({"previous_release": previousrelease})
+            empty_dict.update({"previous_release": previous_release})
     return empty_dict
 
 
@@ -273,11 +273,6 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
             each_commit = {}
             if len(folders_to_check) > 0:  # if greater than 0 compare a list of what files changed
                 files_changed = []
-                commit_sha = commit.sha
-                commiter_name = commit.author.login
-                commiter_email = commit.committer.email
-                commit_message = commit.commit.message
-                commit_html_url = commit.html_url
                 for entry in commit.files:
                     files_changed.append(entry.filename)
                 if compare_files(files_changed, folders_to_check):  # checks if any object from list 1 is in list 2
@@ -410,20 +405,11 @@ def filter_hg_commit_data(repository_name, repository_url):
     :param repository_url: Link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
     :return: Returns a dictionary that contains the commits in the provided hg_repository_name
     """
-
-    hg_json_filename = "{}.json".format(repository_name)
-    try:
-        with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
-            hg_repo_data = json.load(commit_json)
-            commit_number = len(hg_repo_data)
-            hg_repo_data.update({'0': {"lastChecked": str(datetime.utcnow())}})
-    except FileNotFoundError:
-        hg_repo_data = {}
-        hg_repo_data.update({'0': {"lastChecked": str(datetime.utcnow())}})
-        commit_number = 0
     request_url = repository_url + "json-log"
     hg_repo_data = {}
-    print("Working on repo:", repository_name)
+    commit_number = 0
+    print("\nWorking on repo:", repository_name)
+    hg_repo_data.update({commit_number: {"lastChecked": str(datetime.utcnow())}})
     data = json.loads(requests.get(request_url).text)
     commit_number += 1
 
@@ -445,7 +431,7 @@ def filter_hg_commit_data(repository_name, repository_url):
             "commit_date": datetime.utcfromtimestamp(date[0]).strftime('%Y-%m-%d %H:%M:%S')
         }})
         commit_number += 1
-
+    hg_json_filename = "{}.json".format(repository_name)
     json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
     json.dump(hg_repo_data, json_file, indent=2)
     json_file.close()
@@ -530,16 +516,14 @@ def create_md_table(repository_name, path_to_files):
         print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def clear_file(file_name, string_number_of_commits="five"):
+def clear_file(file_name):
     """
     This function takes a file that clears the content and output's a base table header for a markdown file.
-    :param string_number_of_commits: literal number that needs to match the number of commits shown on main markdown
-    table
     :param file_name: Name of the file to be written. (should also contain the path)
     :return: A file should be created and should contain base table.
     """
     file = open(file_name, "w")
-    heading = "#  Last " + string_number_of_commits + " commits from every repository \n"
+    heading = "##  Commits in production. \n"
     file.write(heading)
     file.close()
 
