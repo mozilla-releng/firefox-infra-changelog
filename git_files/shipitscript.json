@@ -1,22 +1,72 @@
 {
   "0": {
-    "lastChecked": "2018-12-18 09:40:47.616103",
-    "last_two_releases": {
-      "LatestRelease": {
-        "version": "3.0.0",
-        "sha": "4c89c1b239fd8415e1225ba738ba820342bd8081",
-        "date": "Wed, 21 Nov 2018 16:33:53 GMT",
-        "author": "rail"
+    "lastChecked": "2019-01-06 14:49:21.090283",
+    "last_releases": {
+      "latest_release": {
+        "version": "3.1.0",
+        "sha": "b7762c589dde16808d83296009f017010264839f",
+        "date": "2019-01-03 19:56:09",
+        "author": "mitchhentges"
       },
-      "PreviousRelease": {
-        "version": "2.1.0",
-        "sha": "890bb8af933befe2c7daad69a2074c066b6d031a",
-        "date": "Mon, 02 Jul 2018 15:03:27 GMT",
-        "author": "MihaiTabara"
+      "previous_release": {
+        "version": "0.1.0",
+        "sha": "8f6ccd88dcd6c688302abdda148609ec60fccbd8",
+        "date": "2018-01-31 17:39:15",
+        "author": "JohanLorenzo"
       }
     }
   },
   "1": {
+    "sha": "b7762c589dde16808d83296009f017010264839f",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/b7762c589dde16808d83296009f017010264839f",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #19 from mitchhentges/release-3.1.0  3.1.0",
+    "commit_date": "2019-01-03 19:56:09",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "2": {
+    "sha": "e1019db21833ca4356101436c6cf4d50d37ac81f",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/e1019db21833ca4356101436c6cf4d50d37ac81f",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "3.1.0",
+    "commit_date": "2019-01-02 18:11:03",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "3": {
+    "sha": "af894d0590b12b0b5b76f7e2285eeeef69c5ef30",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/af894d0590b12b0b5b76f7e2285eeeef69c5ef30",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #18 from mitchhentges/remove-schema-from-config  Removes task schema from example config, adds to default config",
+    "commit_date": "2019-01-02 17:11:44",
+    "files_changed": [
+      "examples/config.example.json",
+      "shipitscript/script.py",
+      "shipitscript/test/test_script.py"
+    ]
+  },
+  "4": {
+    "sha": "456ce8f3797c22f4a449baa4db76c11b7cd86fa7",
+    "url": "https://github.com/mozilla-releng/shipitscript/commit/456ce8f3797c22f4a449baa4db76c11b7cd86fa7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Removes task schema from example config, adds to default config",
+    "commit_date": "2018-12-24 21:37:25",
+    "files_changed": [
+      "examples/config.example.json",
+      "shipitscript/script.py",
+      "shipitscript/test/test_script.py"
+    ]
+  },
+  "5": {
     "sha": "7c5698e73369eaaadeb03e17ab763e3635d7f47f",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/7c5698e73369eaaadeb03e17ab763e3635d7f47f",
     "commiter_name": "rail",
@@ -29,7 +79,7 @@
       "nix/pypi2nix.json"
     ]
   },
-  "2": {
+  "6": {
     "sha": "121f4dadb55daf3a19eaebbba364d5dbb89e1df1",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/121f4dadb55daf3a19eaebbba364d5dbb89e1df1",
     "commiter_name": "garbas",
@@ -42,7 +92,7 @@
       "nix/pypi2nix.json"
     ]
   },
-  "3": {
+  "7": {
     "sha": "348311c6289c13257415a07ac8924798f0fa1826",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/348311c6289c13257415a07ac8924798f0fa1826",
     "commiter_name": "rail",
@@ -59,7 +109,7 @@
       "nix/requirements_override.nix"
     ]
   },
-  "4": {
+  "8": {
     "sha": "1dce963106879a83e98bb3e2c8c320b5853a78fe",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/1dce963106879a83e98bb3e2c8c320b5853a78fe",
     "commiter_name": "rail",
@@ -71,7 +121,7 @@
       "nix/nixpkgs.json"
     ]
   },
-  "5": {
+  "9": {
     "sha": "baca137b1ff147a6ddf5beea7bb51b0e3e2a7014",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/baca137b1ff147a6ddf5beea7bb51b0e3e2a7014",
     "commiter_name": "rail",
@@ -83,7 +133,7 @@
       "nix/requirements_frozen.txt"
     ]
   },
-  "6": {
+  "10": {
     "sha": "5e1daeafcd2004b5cba3198b8aa4bb491d120d0f",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/5e1daeafcd2004b5cba3198b8aa4bb491d120d0f",
     "commiter_name": "rail",
@@ -94,7 +144,7 @@
       "nix/default.nix"
     ]
   },
-  "7": {
+  "11": {
     "sha": "7305f4b26ad9a4df0aeea7e0321123f4d84f6b6b",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/7305f4b26ad9a4df0aeea7e0321123f4d84f6b6b",
     "commiter_name": "rail",
@@ -105,7 +155,7 @@
       "nix/default.nix"
     ]
   },
-  "8": {
+  "12": {
     "sha": "4acf102b8209532bc186565e10a669918ffea721",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/4acf102b8209532bc186565e10a669918ffea721",
     "commiter_name": "rail",
@@ -116,7 +166,7 @@
       "nix/default.nix"
     ]
   },
-  "9": {
+  "13": {
     "sha": "31c29b3bdc28da402535e6f8342c4240a2b01883",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/31c29b3bdc28da402535e6f8342c4240a2b01883",
     "commiter_name": "rail",
@@ -127,7 +177,7 @@
       "nix/default.nix"
     ]
   },
-  "10": {
+  "14": {
     "sha": "f8388161103564c20d3d12898865fc490044bab6",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/f8388161103564c20d3d12898865fc490044bab6",
     "commiter_name": "rail",
@@ -138,7 +188,7 @@
       "nix/default.nix"
     ]
   },
-  "11": {
+  "15": {
     "sha": "9427312cde0ffeac9314bac0ab679ff559ce2465",
     "url": "https://github.com/mozilla-releng/shipitscript/commit/9427312cde0ffeac9314bac0ab679ff559ce2465",
     "commiter_name": "rail",

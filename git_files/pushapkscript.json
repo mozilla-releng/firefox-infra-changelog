@@ -1,0 +1,287 @@
+{
+  "0": {
+    "lastChecked": "2019-01-06 14:49:10.444035",
+    "last_releases": {
+      "latest_release": {
+        "version": "0.11.0",
+        "sha": "67c2714b27037f3f5b602b0a35f73bfee75dbdff",
+        "date": "2019-01-03 19:57:20",
+        "author": "mitchhentges"
+      },
+      "previous_release": {
+        "version": "0.1.0",
+        "sha": "54ad62f7b89fd5c9ab0e8b6c9f89269cf4434345",
+        "date": "2016-10-04 10:25:17",
+        "author": "JohanLorenzo"
+      }
+    }
+  },
+  "1": {
+    "sha": "67c2714b27037f3f5b602b0a35f73bfee75dbdff",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/67c2714b27037f3f5b602b0a35f73bfee75dbdff",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #68 from mitchhentges/release-0.11.0  0.11.0",
+    "commit_date": "2019-01-03 19:57:20",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "2": {
+    "sha": "9aaf19547241dcb8b356d2df37e31a3c370a595b",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/9aaf19547241dcb8b356d2df37e31a3c370a595b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "0.11.0",
+    "commit_date": "2019-01-02 18:21:01",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "3": {
+    "sha": "edae04d0d4d208b0d14438ec3abedc568ea0a984",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/edae04d0d4d208b0d14438ec3abedc568ea0a984",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #67 from mitchhentges/path-join-no-slashes  Removes \"/\" from os.path.join",
+    "commit_date": "2019-01-02 16:58:14",
+    "files_changed": [
+      "pushapkscript/script.py"
+    ]
+  },
+  "4": {
+    "sha": "fd38d6e7f7bf92f9af3c3821fc99fd494c116523",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/fd38d6e7f7bf92f9af3c3821fc99fd494c116523",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Removes \"/\" from os.path.join",
+    "commit_date": "2018-12-24 20:26:27",
+    "files_changed": [
+      "pushapkscript/script.py"
+    ]
+  },
+  "5": {
+    "sha": "5b2258d529caf79b49aa4014fd77d1b39db9a571",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/5b2258d529caf79b49aa4014fd77d1b39db9a571",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #64 from mitchhentges/59-schema-file-reference  Fixes #59, schema_file no longer recommended in config",
+    "commit_date": "2018-12-21 17:06:40",
+    "files_changed": [
+      "CHANGELOG.md",
+      "examples/config.example.json",
+      "pushapkscript/script.py",
+      "pushapkscript/test/integration/test_integration_script.py",
+      "pushapkscript/test/test_script.py",
+      "pushapkscript/test/test_task.py"
+    ]
+  },
+  "6": {
+    "sha": "08d9c2460b14db8324f9a581a0cbd94874f96616",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/08d9c2460b14db8324f9a581a0cbd94874f96616",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Fixes #59, schema_file no longer recommended in config",
+    "commit_date": "2018-12-20 23:01:09",
+    "files_changed": [
+      "CHANGELOG.md",
+      "examples/config.example.json",
+      "pushapkscript/script.py",
+      "pushapkscript/test/integration/test_integration_script.py",
+      "pushapkscript/test/test_script.py",
+      "pushapkscript/test/test_task.py"
+    ]
+  },
+  "7": {
+    "sha": "361419e1f9c1b3c7d2fb94b725ff32e8ae66c491",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/361419e1f9c1b3c7d2fb94b725ff32e8ae66c491",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #63 from mitchhentges/release-0.10.1  0.10.1",
+    "commit_date": "2018-12-20 19:37:59",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "8": {
+    "sha": "7b29abef6cf7da4aa932bfa84f807c5207e896ff",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/7b29abef6cf7da4aa932bfa84f807c5207e896ff",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "0.10.1",
+    "commit_date": "2018-12-20 19:28:08",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "9": {
+    "sha": "c9b527a04f50b89d07cf6c3dcfff09039e264d0a",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/c9b527a04f50b89d07cf6c3dcfff09039e264d0a",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #62 from mitchhentges/reference-browser-authorized  Authorize reference-browser to reach google play",
+    "commit_date": "2018-12-20 16:33:17",
+    "files_changed": [
+      "pushapkscript/googleplay.py"
+    ]
+  },
+  "10": {
+    "sha": "bd8d9ea627e4864ac5eec3bb86fa4cab3d24d436",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/bd8d9ea627e4864ac5eec3bb86fa4cab3d24d436",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Authorize reference-browser to reach google play",
+    "commit_date": "2018-12-20 16:23:53",
+    "files_changed": [
+      "pushapkscript/googleplay.py"
+    ]
+  },
+  "11": {
+    "sha": "48265da5511cf92b09f338ad98549b55d772acf9",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/48265da5511cf92b09f338ad98549b55d772acf9",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #61 from mitchhentges/release-0.10.0  Release 0.10.0",
+    "commit_date": "2018-12-19 17:44:45",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "12": {
+    "sha": "f93732c478657d5deee7dd8a8db2382c4cb5a54b",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/f93732c478657d5deee7dd8a8db2382c4cb5a54b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "0.10.0",
+    "commit_date": "2018-12-19 17:37:06",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "13": {
+    "sha": "8cc6e8823ea00be034e7081c7ddfcebde33bb031",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/8cc6e8823ea00be034e7081c7ddfcebde33bb031",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Add support for multiple prefixes",
+    "commit_date": "2018-11-28 14:57:06",
+    "files_changed": [
+      "CHANGELOG.md",
+      "examples/config.example.json",
+      "pushapkscript/task.py",
+      "pushapkscript/test/integration/test_integration_script.py",
+      "pushapkscript/test/test_googleplay.py",
+      "pushapkscript/test/test_jarsigner.py",
+      "pushapkscript/test/test_manifest.py",
+      "pushapkscript/test/test_task.py"
+    ]
+  },
+  "14": {
+    "sha": "4c8c918a5448d2f8e0f2007aec52767bad198d59",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/4c8c918a5448d2f8e0f2007aec52767bad198d59",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Migrate test_task to pytest",
+    "commit_date": "2018-11-28 15:06:51",
+    "files_changed": [
+      "pushapkscript/test/test_task.py"
+    ]
+  },
+  "15": {
+    "sha": "5e686f6c7718f38e80cfcde148c5b9a16c8775b3",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/5e686f6c7718f38e80cfcde148c5b9a16c8775b3",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #57 from mitchhentges/support-dep-postfix  Improves product extraction from scopes to ignore chunks on end of scope",
+    "commit_date": "2018-12-13 17:13:15",
+    "files_changed": [
+      "pushapkscript/task.py",
+      "pushapkscript/test/test_task.py"
+    ]
+  },
+  "16": {
+    "sha": "49a19ed04ba543e8ee832036469ad7496435c59b",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/49a19ed04ba543e8ee832036469ad7496435c59b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #58 from mitchhentges/reference-browser-digest  Adds digest-algorithm configuration for reference-browser",
+    "commit_date": "2018-12-13 17:11:23",
+    "files_changed": [
+      "pushapkscript/manifest.py"
+    ]
+  },
+  "17": {
+    "sha": "4d3b045a145b7fabbaaa6101fbc9b07d072e4827",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/4d3b045a145b7fabbaaa6101fbc9b07d072e4827",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Adds digest-algorithm configuration for reference-browser",
+    "commit_date": "2018-12-13 01:06:27",
+    "files_changed": [
+      "pushapkscript/manifest.py"
+    ]
+  },
+  "18": {
+    "sha": "0f5673048a88b2512747acc3d771d37da955a99b",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/0f5673048a88b2512747acc3d771d37da955a99b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Improves product extraction from scopes to ignore chunks on end of scope",
+    "commit_date": "2018-12-13 00:17:59",
+    "files_changed": [
+      "pushapkscript/task.py",
+      "pushapkscript/test/test_task.py"
+    ]
+  },
+  "19": {
+    "sha": "ea62e8b539e2266b51a5a3e1fe4109f4ef916e75",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/ea62e8b539e2266b51a5a3e1fe4109f4ef916e75",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #55 from mitchhentges/reference-browser-compat  Authorized reference-browser to reach GP, doesn't upload strings automatically",
+    "commit_date": "2018-12-05 20:23:43",
+    "files_changed": [
+      "pushapkscript/script.py"
+    ]
+  },
+  "20": {
+    "sha": "8a46b8514adbf5ffe325ee554acd76e63f9ea91c",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/8a46b8514adbf5ffe325ee554acd76e63f9ea91c",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Generalizes \"GP string search skip\" log message",
+    "commit_date": "2018-12-05 19:01:41",
+    "files_changed": [
+      "pushapkscript/script.py"
+    ]
+  },
+  "21": {
+    "sha": "dafa1cad9fd7292c18e8511285f236d0d4823512",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/dafa1cad9fd7292c18e8511285f236d0d4823512",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Reverts adding reference-browser to the list of authorized GP products",
+    "commit_date": "2018-11-30 23:54:17",
+    "files_changed": [
+      "pushapkscript/googleplay.py"
+    ]
+  },
+  "22": {
+    "sha": "a8f9307d78f4318ff719efe8ed199ca164fe097b",
+    "url": "https://github.com/mozilla-releng/pushapkscript/commit/a8f9307d78f4318ff719efe8ed199ca164fe097b",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Authorized reference-browser to reach GP, doesn't upload strings automatically",
+    "commit_date": "2018-11-30 00:47:32",
+    "files_changed": [
+      "pushapkscript/googleplay.py",
+      "pushapkscript/script.py"
+    ]
+  }
+}

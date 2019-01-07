@@ -1,6 +1,22 @@
 {
   "0": {
-    "lastChecked": "2018-12-18 09:41:02.148168",
-    "last_two_releases": null
+    "lastChecked": "2019-01-04 11:16:29.866175"
+  },
+  "1": {
+    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-28 17:08:20",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
   }
 }

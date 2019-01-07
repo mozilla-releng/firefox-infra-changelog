@@ -1,8 +1,23 @@
 {
   "0": {
-    "lastChecked": "2018-12-02 18:34:01"
+    "lastChecked": "2019-01-01 22:40:40.712041"
   },
   "1": {
+    "sha": "0ed7720082264fffa76b613de3bc18d888a8ae67",
+    "url": "https://github.com/taskcluster/taskcluster-auth/commit/0ed7720082264fffa76b613de3bc18d888a8ae67",
+    "commiter_name": "OjaswinM",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Add listRoleIds() to paginate roles  (#189)    Add a listRoleIds endpoint      Fixed description in list-role-ids-response.yml      Return continuationToken only when limit is specified      Add tests      Improve tests and implement hashids      Add tests for invalid continuationToken",
+    "commit_date": "2018-12-19 15:44:04",
+    "files_changed": [
+      "package.json",
+      "schemas/v1/list-role-ids-response.yml",
+      "src/v1.js",
+      "test/role_test.js",
+      "yarn.lock"
+    ]
+  },
+  "2": {
     "sha": "5077077f2e4094d22eef527dc9883cb8dffa387e",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/5077077f2e4094d22eef527dc9883cb8dffa387e",
     "commiter_name": "djmitche",
@@ -15,7 +30,7 @@
       "yarn.lock"
     ]
   },
-  "2": {
+  "3": {
     "sha": "325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/325de3bc38bed1b8800668f0eed6e0d2ec8b73e7",
     "commiter_name": "djmitche",
@@ -28,7 +43,7 @@
       "yarn.lock"
     ]
   },
-  "3": {
+  "4": {
     "sha": "d6424744e5f48b20255bac0083889508d3ab95a2",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/d6424744e5f48b20255bac0083889508d3ab95a2",
     "commiter_name": "djmitche",
@@ -40,7 +55,7 @@
       "yarn.lock"
     ]
   },
-  "4": {
+  "5": {
     "sha": "4c1447920ffafd15bdbc32cc5a243cd97c62684c",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/4c1447920ffafd15bdbc32cc5a243cd97c62684c",
     "commiter_name": "djmitche",
@@ -51,7 +66,7 @@
       "src/v1.js"
     ]
   },
-  "5": {
+  "6": {
     "sha": "2a6d46d36e0b7e2fb4b6fc4ee59914033238506f",
     "url": "https://github.com/taskcluster/taskcluster-auth/commit/2a6d46d36e0b7e2fb4b6fc4ee59914033238506f",
     "commiter_name": "arshadkazmi42",
