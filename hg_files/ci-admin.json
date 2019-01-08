@@ -1,165 +1,206 @@
 {
   "0": {
-    "lastChecked": "2019-01-07 16:24:58.968594"
-  },
-  "1": {
-    "sha": "b2d0f7af52d21bb252e6419b493bf9057cf2a64e",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=b2d0f7af52d2",
-    "commiter_name": "Aki Sasaki ",
-    "commit_email": "asasaki@mozilla.com",
-    "commit_message": "Bug 1485680 - if we modify the action hook task logic, we need to update scriptworker. r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D15482",
-    "commit_date": "2019-01-01 12:38:58"
-  },
-  "2": {
-    "sha": "0f4b1e9e03cd23d964396012614698ec587f46ef",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=0f4b1e9e03cd",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1515137 - pass environment rootUrl to cron context r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D14882",
-    "commit_date": "2018-12-18 19:45:56"
-  },
-  "3": {
-    "sha": "99d859a7a6551c356bee6b28ab7b1dd83375e4df",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=99d859a7a655",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1492665 - add modify_resources support r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6933",
-    "commit_date": "2018-10-22 17:52:14"
-  },
-  "4": {
-    "sha": "241f75b5d808eb696498a9779e959bcf5ea6ed8b",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=241f75b5d808",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1492665 - add support for environments.yml r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6932",
-    "commit_date": "2018-10-22 17:52:13"
-  },
-  "5": {
-    "sha": "d1796b61fbd0779e30b9a2226db7152c00772870",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=d1796b61fbd0",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1494320 - remove unnecessary resources.manage r=tomprince  These were in place in order to delete some old, now-unused roles.  They're gone, so no need to continue to manage those namespaces.  Differential Revision: https://phabricator.services.mozilla.com/D9166",
-    "commit_date": "2018-10-19 03:02:08"
-  },
-  "6": {
-    "sha": "9d35e153d813a1a68238d8af2e19a13957c2a3be",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=9d35e153d813",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D6858",
-    "commit_date": "2018-09-26 02:48:44"
-  },
-  "7": {
-    "sha": "c88ca415a1c6259a6b3cea1a40523426bad9690e",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=c88ca415a1c6",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1489181: handle input_schema in actions.yml r=aki  Differential Revision: https://phabricator.services.mozilla.com/D5683",
-    "commit_date": "2018-09-12 18:07:53"
-  },
-  "8": {
-    "sha": "edad9f8f78d42bc547c1f684b0f9dc116ccbd00a",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=edad9f8f78d4",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1490066: fix unit tests and add a few r=tomprince  I broke the unit tests in bug 1488766 and also introduced a bug (no longer allowing granting to a single group); this fixes that up and even adds some tests.  Differential Revision: https://phabricator.services.mozilla.com/D5464",
-    "commit_date": "2018-09-11 17:47:09"
-  },
-  "9": {
-    "sha": "5b8819a7b072b15f545cc1025efff61bb4ea98b5",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=5b8819a7b072",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1489983: fix markdown link in descriptions r=janx  Differential Revision: https://phabricator.services.mozilla.com/D5430",
-    "commit_date": "2018-09-10 14:31:22"
-  },
-  "10": {
-    "sha": "135f264d65d29a2916d27b3947d78b16dd261af5",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=135f264d65d2",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1488766: improve error handling for malformed grants.yml r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5158",
-    "commit_date": "2018-09-07 19:40:00"
-  },
-  "11": {
-    "sha": "95397719f02d073284645ee8613189efd811694a",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=95397719f02d",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1488766: also substitute {hgmo_path} r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5155",
-    "commit_date": "2018-09-07 19:39:52"
-  },
-  "12": {
-    "sha": "559c3f6fd3291e3061771741b4f2a82ee50ef7d7",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=559c3f6fd329",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "(hotfix) add created and expires to .taskcluster.yml",
-    "commit_date": "2018-09-05 22:14:03"
-  },
-  "13": {
-    "sha": "a7d020a0ad133bdf9c49029f914178650dcd730e",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=a7d020a0ad13",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "(hotfix) add taskId and taskGroupid to .taskcluster.yml",
-    "commit_date": "2018-09-05 22:12:25"
-  },
-  "14": {
-    "sha": "6e5f123d07c9df63748baa5fb7c5fbb41926cf8a",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=6e5f123d07c9",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "(hotfix) add empty scopes to .taskcluster.yml",
-    "commit_date": "2018-09-05 22:05:03"
-  },
-  "15": {
-    "sha": "f15c251a51bf42407ae4274b18a4e7a2780a6865",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=f15c251a51bf",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1486431: add .taskcluster.yml, running unit tests and ci-admin check r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5063",
-    "commit_date": "2018-09-05 21:10:40"
+    "last_push_id": 31
   },
   "16": {
-    "sha": "2a84daadfd6e6cacd84d1a8759946729ab61016c",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=2a84daadfd6e",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1479103: upgrade to the latest taskcluster client r=tomprince  Depends on D4244  Differential Revision: https://phabricator.services.mozilla.com/D4246",
-    "commit_date": "2018-09-05 19:37:23"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-05 22:34:54"
+  },
+  "1": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1479103: upgrade everything to the latest compatible version\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4244",
+    "files_changed": [
+      "requirements.txt"
+    ]
   },
   "17": {
-    "sha": "e917ceff76e4e73d611f93ab409ac7baf3c4536e",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=e917ceff76e4",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1479103: upgrade everything to the latest compatible version  Differential Revision: https://phabricator.services.mozilla.com/D4244",
-    "commit_date": "2018-09-05 19:29:06"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-05 22:37:30"
+  },
+  "2": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1479103: upgrade to the latest taskcluster client r=tomprince\n\nDepends on D4244\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4246",
+    "files_changed": [
+      "ciadmin/apply/__init__.py",
+      "ciadmin/current/hooks.py",
+      "ciadmin/current/roles.py",
+      "ciadmin/generate/in_tree_actions.py",
+      "requirements.txt",
+      "setup.py"
+    ]
   },
   "18": {
-    "sha": "871ead5583b0090825f91c210e22e43122037b3b",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=871ead5583b0",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1479103: pin to major versions in setup.py r=tomprince  This also adjusts `pipupdate.sh` so that it correctly reads `requirements.txt` before writing it back out, avoiding the issue where it upgrades everything.  Differential Revision: https://phabricator.services.mozilla.com/D4243",
-    "commit_date": "2018-09-05 19:33:23"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 00:54:26"
+  },
+  "3": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1486431: add .taskcluster.yml, running unit tests and ci-admin check r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5063",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
   },
   "19": {
-    "sha": "e8c729ab1b1584b0212c52795c8ae14cf5a87c8d",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=e8c729ab1b15",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1465842: implement grants.yml; r=bstack,tomprince,pmoore  In the same commit, this removes all other code that sets repo roles or user roles, as otherwise they try to generate the same resources.  Checks in place during development (but not to land) ensure that actual scopes do not change.",
-    "commit_date": "2018-07-24 21:59:31"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 01:05:28"
+  },
+  "4": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "(hotfix) add empty scopes to .taskcluster.yml",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
   },
   "20": {
-    "sha": "ee3a60eba89f4822473f2911690e62c07ced6ef0",
-    "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=ee3a60eba89f",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1465842: move ciconfig into sub-modules r=bstack,pmoore,tomprince  If only because this avoids naming conflicts between modules defining the data structure and modules generating resources based on those data structures..  Depends on D2442  Differential Revision: https://phabricator.services.mozilla.com/D2443",
-    "commit_date": "2018-08-30 12:27:49"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 01:12:29"
+  },
+  "5": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "(hotfix) add taskId and taskGroupid to .taskcluster.yml",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "21": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 01:14:08"
+  },
+  "6": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "(hotfix) add created and expires to .taskcluster.yml",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "22": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-07 22:42:11"
+  },
+  "7": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1488766: also substitute {hgmo_path} r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5155",
+    "files_changed": [
+      "ciadmin/generate/ciconfig/projects.py",
+      "ciadmin/generate/grants.py"
+    ]
+  },
+  "23": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-07 22:42:24"
+  },
+  "8": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1488766: improve error handling for malformed grants.yml r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5158",
+    "files_changed": [
+      "ciadmin/generate/ciconfig/grants.py"
+    ]
+  },
+  "24": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-10 17:54:50"
+  },
+  "9": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1489983: fix markdown link in descriptions r=janx\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5430",
+    "files_changed": [
+      "ciadmin/generate/grants.py"
+    ]
+  },
+  "25": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-11 21:00:43"
+  },
+  "10": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1490066: fix unit tests and add a few r=tomprince\n\nI broke the unit tests in bug 1488766 and also introduced a bug (no longer\nallowing granting to a single group); this fixes that up and even adds some\ntests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5464",
+    "files_changed": [
+      "ciadmin/generate/ciconfig/grants.py",
+      "tests/test_generate_ciconfig_grants.py",
+      "tests/test_generate_ciconfig_projects.py"
+    ]
+  },
+  "26": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-12 23:04:50"
+  },
+  "11": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1489181: handle input_schema in actions.yml r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5683",
+    "files_changed": [
+      "ciadmin/generate/ciconfig/actions.py",
+      "ciadmin/generate/in_tree_actions.py",
+      "tests/test_generate_ciconfig_actions.py"
+    ]
+  },
+  "27": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-26 05:49:00"
+  },
+  "12": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6858",
+    "files_changed": [
+      "ciadmin/generate/in_tree_actions.py"
+    ]
+  },
+  "28": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-10-22 20:50:28"
+  },
+  "13": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1494320 - remove unnecessary resources.manage r=tomprince\n\nThese were in place in order to delete some old, now-unused roles.  They're\ngone, so no need to continue to manage those namespaces.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9166",
+    "files_changed": [
+      "ciadmin/generate/__init__.py"
+    ]
+  },
+  "29": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-10-22 20:53:12"
+  },
+  "14": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1492665 - add support for environments.yml r=Callek,bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6932",
+    "files_changed": [
+      "ciadmin/generate/__init__.py",
+      "ciadmin/generate/ciconfig/environments.py",
+      "ciadmin/resources/resources.py",
+      "tests/test_generate_ciconfig_environment.py"
+    ]
+  },
+  "15": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1492665 - add modify_resources support r=Callek,bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6933",
+    "files_changed": [
+      "ciadmin/generate/__init__.py",
+      "ciadmin/generate/modify.py"
+    ]
+  },
+  "30": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-12-18 21:48:17"
+  },
+  "16": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1515137 - pass environment rootUrl to cron context r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D14882",
+    "files_changed": [
+      "ciadmin/generate/__init__.py",
+      "ciadmin/generate/cron_tasks.py",
+      "ciadmin/generate/grants.py",
+      "ciadmin/generate/in_tree_actions.py",
+      "ciadmin/generate/scm_group_roles.py"
+    ]
+  },
+  "31": {
+    "Pusher": "asasaki@mozilla.com",
+    "Date Of Push": "2019-01-02 22:26:29"
+  },
+  "17": {
+    "commiter_name": "Aki Sasaki <asasaki@mozilla.com>",
+    "commit_message": "Bug 1485680 - if we modify the action hook task logic, we need to update scriptworker. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15482",
+    "files_changed": [
+      "ciadmin/generate/in_tree_actions.py"
+    ]
   }
 }

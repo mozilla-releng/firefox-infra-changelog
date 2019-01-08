@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 import requests
 from os import listdir
 from github import Github
@@ -249,6 +250,33 @@ def get_date_from_json(repo_name):
     return last_stored_date
 
 
+def get_last_local_push_id(repo_name):
+    hg_json_filename = "{}.json".format(repo_name)
+    with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
+        json_content = json.load(commit_json)  # loads the content of existing json into a variable
+    last_stored_push_id = json_content.get("0").get("last_push_id")
+    print("Last local push id is : ", last_stored_push_id)
+    return last_stored_push_id
+
+
+def generate_hg_pushes_link(repo_name):
+    start_id = get_last_local_push_id(repo_name)
+    if repo_name == "mozilla-central":
+        data = json.loads(
+            requests.get("https://hg.mozilla.org/mozilla-central/json-pushes?version=2&full=1&startID=15&endID=16").text)
+        end_id = data.get("lastpushid")
+        generate_pushes_link = "https://hg.mozilla.org/mozilla-central/json-pushes?version=2&full=1&startID={}&endID={}".format(
+            start_id, end_id)
+    else:
+        data = json.loads(
+            requests.get(
+                "https://hg.mozilla.org/build/{}/json-pushes?version=2&full=1&startID=15&endID=16".format(repo_name)).text)
+        end_id = data.get("lastpushid")
+        generate_pushes_link = "https://hg.mozilla.org/build/{}/json-pushes?version=2&full=1&startID={}&endID={}".format(repo_name,
+            start_id, end_id)
+    return generate_pushes_link
+
+
 def filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check):
     """
     Filters out only the data that we need from a commit
@@ -388,12 +416,11 @@ def create_files_for_hg(repositories_holder):
     """
     for repo in repositories_holder["Mercurial"]:
         repository_name = repo
-        repository_url = repositories_holder.get("Mercurial").get(repo).get("url")
-        filter_hg_commit_data(repository_name, repository_url)
+        filter_hg_commit_data(repository_name)
         create_md_table(repository_name, "hg_files")
 
 
-def filter_hg_commit_data(repository_name, repository_url):
+def filter_hg_commit_data(repository_name):
     """
     This function takes a repository url and push type and returns a dictionary that contains changes in that specific
     repository.
@@ -405,32 +432,36 @@ def filter_hg_commit_data(repository_name, repository_url):
     :param repository_url: Link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
     :return: Returns a dictionary that contains the commits in the provided hg_repository_name
     """
-    request_url = repository_url + "json-log"
+    link = generate_hg_pushes_link(repository_name)
+    data = json.loads(requests.get(link).text)
+    last_push_id = data.get("lastpushid")
     hg_repo_data = {}
     commit_number = 0
     print("\nWorking on repo:", repository_name)
-    hg_repo_data.update({commit_number: {"lastChecked": str(datetime.utcnow())}})
-    data = json.loads(requests.get(request_url).text)
-    commit_number += 1
+    hg_repo_data.update({commit_number: {"last_push_id": last_push_id}})
+    hg_repo_data2 = {}
+    data = json.loads(requests.get(generate_hg_pushes_link(repository_name)).text)
+    for key in data.get("pushes"):
+        changeset_number = key
+        changeset_pusher = data.get("pushes").get(key).get("user")
+        date_of_push = data.get("pushes").get(key).get("date")
+        for keys in data.get("pushes").get(key).get("changesets"):
+            author = keys.get("author")
+            desc = keys.get("desc")
+            files_changed = []
+            commit_number += 1
 
-    for entry in data["changesets"]:
-        node = entry["node"]
-        url = repository_url + "pushloghtml?changeset=" + node[:12]
-        commiter = entry["user"]
-        commiter_name = commiter.split('<')[0]
-        commiter_email = extract_email(commiter)
-        commit_message = entry["desc"]
-        message = re.sub("[*\n\r]", " ", commit_message)
-        date = entry["date"]
-        hg_repo_data.update({commit_number: {
-            "sha": node,
-            "url": url,
-            "commiter_name": commiter_name,
-            "commit_email": commiter_email,
-            "commit_message": message,
-            "commit_date": datetime.utcfromtimestamp(date[0]).strftime('%Y-%m-%d %H:%M:%S')
-        }})
-        commit_number += 1
+            for entry in keys.get("files"):
+                files_changed.append(entry)
+            hg_repo_data2.update({commit_number: {"commiter_name": author,
+                                                  "commit_message": desc,
+                                                  "files_changed": files_changed}})
+
+            hg_repo_data.update({changeset_number: {
+                "Pusher": changeset_pusher,
+                "Date Of Push": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(date_of_push)),
+            }})
+            hg_repo_data.update(hg_repo_data2)
     hg_json_filename = "{}.json".format(repository_name)
     json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
     json.dump(hg_repo_data, json_file, indent=2)
@@ -676,8 +707,8 @@ if __name__ == "__main__":
     git = Github(TOKEN)
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
-    create_files_for_git(repositories)
+    #create_files_for_git(repositories)
     create_files_for_hg(repositories)
     clear_file("main_md_table.md")
     generate_main_md_table("hg_files")
-    generate_main_md_table("git_files")
+    #generate_main_md_table("git_files")

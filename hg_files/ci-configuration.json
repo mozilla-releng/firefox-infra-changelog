@@ -1,165 +1,381 @@
 {
   "0": {
-    "lastChecked": "2019-01-07 16:24:58.076232"
-  },
-  "1": {
-    "sha": "e7c0152d0dc45c88d33da39cdc9f676c66733d62",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=e7c0152d0dc4",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1515137 - set TASKCLUSTER_ROOT_URL for cron hooks r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D14883",
-    "commit_date": "2018-12-18 19:46:03"
-  },
-  "2": {
-    "sha": "e9634d8942ca960933881d003f5eedef2a7a0a9b",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=e9634d8942ca",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1510441: Use sparse profile in cron tasks; r=gps  Differential Revision: https://phabricator.services.mozilla.com/D13141",
-    "commit_date": "2018-11-30 13:01:34"
-  },
-  "3": {
-    "sha": "13cbc18135d221f327da6127ac11fc87a18a0bd4",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=13cbc18135d2",
-    "commiter_name": "Rob Lemley ",
-    "commit_email": "rob@thunderbird.net",
-    "commit_message": "Bug 1503894 - reenable taskcluster-cron for comm-central repo. r=tomprince  This goes along with a .cron.yml update in comm-central that removes the periodic-file-update cron configuration. (Bug 1499590 comment 15)  This will get comm-central nightly builds working again.  Differential Revision: https://phabricator.services.mozilla.com/D10959",
-    "commit_date": "2018-11-06 21:44:29"
-  },
-  "4": {
-    "sha": "38144ac82b0a672d1a97e7c06ee909e4ed768155",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=38144ac82b0a",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1503894 - disable taskcluster-cron for comm-central repos r=tomprince  The cron hook expects that it is checking out a gecko tree.  Robustcheckout kind of loses its mind when it clones mozilla-unified, then finds no ancestor in common with a comm-central pull.  Differential Revision: https://phabricator.services.mozilla.com/D10595",
-    "commit_date": "2018-11-01 18:52:02"
-  },
-  "5": {
-    "sha": "48d479b3411bb5e0469064e2ed2f8e27405d2ea2",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=48d479b3411b",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1502976 - upgrade decision image to the latest r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D10124",
-    "commit_date": "2018-10-29 21:38:55"
-  },
-  "6": {
-    "sha": "d56b6be4c4c1c9b0cbf43ee2cc382db5b068a489",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=d56b6be4c4c1",
-    "commiter_name": "Rob Lemley ",
-    "commit_email": "rob@thunderbird.net",
-    "commit_message": "Bug 1499590 - Enable taskcluster-cron on additional comm- repos. r=dustin  The periodic-file-updates cron task is meant to run on comm-central, comm-beta, and comm-esr60 like it's mozilla- counterpart task.  Differential Revision: https://phabricator.services.mozilla.com/D9860",
-    "commit_date": "2018-10-26 17:55:26"
-  },
-  "7": {
-    "sha": "07ded8ac445031570875c6f5d2725301a566247d",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=07ded8ac4450",
-    "commiter_name": "Brian Stack ",
-    "commit_email": "bstack@mozilla.com",
-    "commit_message": "Bug 1496210 - Allow ciduty to terminate instances r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D9718",
-    "commit_date": "2018-10-24 23:02:37"
-  },
-  "8": {
-    "sha": "64b57676d9b66703059d7dd6719aa8d8b63baf3c",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=64b57676d9b6",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1492665 - add environments.yml r=Callek,bstack  Differential Revision: https://phabricator.services.mozilla.com/D6931",
-    "commit_date": "2018-10-17 13:06:55"
-  },
-  "9": {
-    "sha": "31acfc4cc6b89b14d2cd63e426595e65ba9e030c",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=31acfc4cc6b8",
-    "commiter_name": "Aki Sasaki ",
-    "commit_email": "asasaki@mozilla.com",
-    "commit_message": "Bug 1499765 - grant releng-services hook trigger scopes to relman. r=bstack  Differential Revision: https://phabricator.services.mozilla.com/D9013",
-    "commit_date": "2018-10-17 19:34:03"
-  },
-  "10": {
-    "sha": "a9e46cb87f60d80f422b86f6298afe84bae5716a",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=a9e46cb87f60",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1499160: Allow releng to manage repo:hg.mozilla.org/  roles; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D8759",
-    "commit_date": "2018-10-15 20:22:15"
-  },
-  "11": {
-    "sha": "a7802577dfab94e75b31cbeab14ec2cc65fc9ac8",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=a7802577dfab",
-    "commiter_name": "Rob Lemley ",
-    "commit_email": "rob@thunderbird.net",
-    "commit_message": "Bug 1481203 - Add new release-mark-as-shipped scopes for Thunderbird r=dustin,tomprince  In Bug 1466627, the scopes for shipit-worker were changed. The original ` :shipit:production` and ' :shipit:staging` were changed to  ` :shipit:server:{staging,production}` (to contrast with the ` :actions:mark-as-{started,shipped}` that were also added there. This adjusts the scopes granted to comm-beta and comm-release to reflect that change.  Additionally, the duplicated stanzas for comm-beta and comm-release were combined.  Differential Revision: https://phabricator.services.mozilla.com/D8592",
-    "commit_date": "2018-10-15 19:08:56"
-  },
-  "12": {
-    "sha": "c28493f26de00846d3c538b9efd2e4d3e44eb900",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=c28493f26de0",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Allow level 3 trees to run shipit-dev tasks at highest priority; r=aki  Differential Revision: https://phabricator.services.mozilla.com/D8755",
-    "commit_date": "2018-10-15 18:34:44"
-  },
-  "13": {
-    "sha": "1b91356630155f8552bca0698559378ff46ba440",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=1b9135663015",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1496783: Add a group for managing thunderbird secrets; r=bstack  Differential Revision: https://phabricator.services.mozilla.com/D7914",
-    "commit_date": "2018-10-05 18:09:00"
-  },
-  "14": {
-    "sha": "0368c8f6f3729f8d45c5c0f7551e22bb7fff586f",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=0368c8f6f372",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Fix ship-it scopes for thunderbird releases; r=aki  Differential Revision: https://phabricator.services.mozilla.com/D7628",
-    "commit_date": "2018-10-03 17:09:01"
-  },
-  "15": {
-    "sha": "21b4b69a91afa06ed5d3372f230410558af9d900",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=21b4b69a91af",
-    "commiter_name": "Tom Prince ",
-    "commit_email": "mozilla@hocat.ca",
-    "commit_message": "Bug 1471987: Fix typos; r=me",
-    "commit_date": "2018-10-03 17:16:28"
+    "last_push_id": 49
   },
   "16": {
-    "sha": "9e898f79dbeaa915cc9de7b364cdeb8cbaf629b9",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=9e898f79dbea",
-    "commiter_name": "Rok Garbas ",
-    "commit_email": "rok@garbas.si",
-    "commit_message": "Bug 1471987 - assign tooltool/mapper/tokens releng scopes to ldap groups r=dustin,tomprince  Differential Revision: https://phabricator.services.mozilla.com/D6701",
-    "commit_date": "2018-10-01 22:03:03"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-07-27 23:24:58"
+  },
+  "1": {
+    "commiter_name": "Brian Stack <bstack@mozilla.com>",
+    "commit_message": "Bug 1469049 - Add scopes to version-control-tools r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2481",
+    "files_changed": [
+      "projects.yml"
+    ]
   },
   "17": {
-    "sha": "9000e725de95c050d2cde2b21b3c378ba5dc1d8a",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=9000e725de95",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1220705 - remove scope for taskclusterprivate/upload_symbols image r=ted,bstack  ted for confirmation this is dead, brian for r? from the taskgraph module.  Differential Revision: https://phabricator.services.mozilla.com/D6095",
-    "commit_date": "2018-09-18 16:21:39"
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-08-03 00:17:05"
+  },
+  "2": {
+    "commiter_name": "Brian Stack <bstack@mozilla.com>",
+    "commit_message": "Bug 1480584 - Add notify scopes for version-control-tools r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2685",
+    "files_changed": [
+      "projects.yml"
+    ]
   },
   "18": {
-    "sha": "6a0d56dea5c47a127b35fb350c558a3495ffa17f",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=6a0d56dea5c4",
-    "commiter_name": "Wander Lairson Costa ",
-    "commit_email": "wcosta@mozilla.com",
-    "commit_message": "Bug 1490962: access to all sizes of gce/gecko-t-linux workers for gecko repos r=dustin,tomprince  Differential Revision: https://phabricator.services.mozilla.com/D5757",
-    "commit_date": "2018-09-13 15:52:05"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-08-23 16:32:54"
+  },
+  "3": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1398277: add a special permission for retriggering decision tasks r=bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2303",
+    "files_changed": [
+      "actions.yml"
+    ]
   },
   "19": {
-    "sha": "dea5d65a07aa2855c45bbe7a3f675c89e04d244e",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=dea5d65a07aa",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1489181: add input_schema to actions.yml r=aki  Differential Revision: https://phabricator.services.mozilla.com/D5684",
-    "commit_date": "2018-09-12 18:08:06"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-08-29 18:38:35"
+  },
+  "4": {
+    "commiter_name": "Connor Sheehan <sheehan@mozilla.com>",
+    "commit_message": "Bug 1484792: trigger Taskcluster jobs on-push for projects/larch r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D3985",
+    "files_changed": [
+      "projects.yml"
+    ]
   },
   "20": {
-    "sha": "a4405bab72f44694c9a4c646eab48decd3755003",
-    "url": "https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=a4405bab72f4",
-    "commiter_name": "Dustin J. Mitchell ",
-    "commit_email": "dustin@mozilla.com",
-    "commit_message": "Bug 1488766: add scopes for retrigger-decision action r=tomprince,Callek  I'm concerned about the impacts of this change.  But it's just a gut feeling -- I can't figure out why.  What could go wrong here?  Differential Revision: https://phabricator.services.mozilla.com/D5159",
-    "commit_date": "2018-09-10 13:56:16"
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-08-30 17:17:05"
+  },
+  "5": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1465842: add grants and remove other scope specifications r=bstack,pmoore\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2445",
+    "files_changed": [
+      "actions.yml",
+      "grants.yml",
+      "projects.yml"
+    ]
+  },
+  "21": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-09-01 00:06:15"
+  },
+  "6": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Bug 1483326: Allow try builds to update staging bouncer aliases; r=bhearsum\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4783",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "22": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-09-04 23:13:30"
+  },
+  "7": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Bug 1473416: Add ship-it action to level 1 to allow staging releases try; r=bhearsum\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4802",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "23": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-09-05 20:50:24"
+  },
+  "8": {
+    "commiter_name": "Aki Sasaki <asasaki@mozilla.com>",
+    "commit_message": "bug 1488596 - add bouncer:action:* to all level1+ mozilla trees r=dustin,tomprince\n\nwe appear to need more actions enabled for bouncer relpro; the action:* is used elsewhere\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4990",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "24": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 00:48:52"
+  },
+  "9": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1486431: grant scopes to ci-admin and ci-configuration to run tasks r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5072",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "25": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 00:53:59"
+  },
+  "10": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1486431: add .taskcluster.yml to run ci-admin check against this rev r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5071",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "26": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 01:19:01"
+  },
+  "11": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "(hotfix) include required fields in .taskcluster.yml",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "27": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 01:20:31"
+  },
+  "12": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "(hotfix) add queue:scheduler-id:- to ci-admin/ci-configuration roles",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "28": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-06 16:38:18"
+  },
+  "13": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1488852: access to gce/gecko-t-linux workers for gecko repos r=tomprince,pmoore\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5058",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "29": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-09-07 23:51:50"
+  },
+  "14": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Bug 1473416: Fix level-1 ship-it action scopes; r=dustin\n\nThe scopes was missing the `:server:` segement.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5313",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "30": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-10 19:32:37"
+  },
+  "15": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1488766: add scopes for retrigger-decision action r=tomprince,Callek\n\nI'm concerned about the impacts of this change.  But it's just a gut feeling --\nI can't figure out why.  What could go wrong here?\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5159",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "31": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-12 23:04:46"
+  },
+  "16": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1489181: add input_schema to actions.yml r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5684",
+    "files_changed": [
+      "actions.yml"
+    ]
+  },
+  "32": {
+    "Pusher": "wcosta@mozilla.com",
+    "Date Of Push": "2018-09-13 19:10:48"
+  },
+  "17": {
+    "commiter_name": "Wander Lairson Costa <wcosta@mozilla.com>",
+    "commit_message": "Bug 1490962: access to all sizes of gce/gecko-t-linux workers for gecko repos r=dustin,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5757",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "33": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-09-18 19:34:05"
+  },
+  "18": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1220705 - remove scope for taskclusterprivate/upload_symbols image r=ted,bstack\n\nted for confirmation this is dead, brian for r? from the taskgraph module.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6095",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "34": {
+    "Pusher": "rgarbas@mozilla.com",
+    "Date Of Push": "2018-10-02 19:42:41"
+  },
+  "19": {
+    "commiter_name": "Rok Garbas <rok@garbas.si>",
+    "commit_message": "Bug 1471987 - assign tooltool/mapper/tokens releng scopes to ldap groups r=dustin,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6701",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "35": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-10-03 20:18:20"
+  },
+  "20": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Bug 1471987: Fix typos; r=me",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "36": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-10-03 20:18:37"
+  },
+  "21": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Fix ship-it scopes for thunderbird releases; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D7628",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "37": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-10-05 21:10:06"
+  },
+  "22": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Bug 1496783: Add a group for managing thunderbird secrets; r=bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D7914",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "38": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-10-15 21:38:50"
+  },
+  "23": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Allow level 3 trees to run shipit-dev tasks at highest priority; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8755",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "39": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-10-15 22:11:19"
+  },
+  "24": {
+    "commiter_name": "Rob Lemley <rob@thunderbird.net>",
+    "commit_message": "Bug 1481203 - Add new release-mark-as-shipped scopes for Thunderbird r=dustin,tomprince\n\nIn Bug 1466627, the scopes for shipit-worker were changed. The original `*:shipit:production` and '*:shipit:staging` were changed to  `*:shipit:server:{staging,production}` (to contrast with the `*:actions:mark-as-{started,shipped}` that were also added there. This adjusts the scopes granted to comm-beta and comm-release to reflect that change.\n\nAdditionally, the duplicated stanzas for comm-beta and comm-release were combined.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8592",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "40": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-10-15 23:22:25"
+  },
+  "25": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Bug 1499160: Allow releng to manage repo:hg.mozilla.org/* roles; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8759",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "41": {
+    "Pusher": "asasaki@mozilla.com",
+    "Date Of Push": "2018-10-17 22:46:50"
+  },
+  "26": {
+    "commiter_name": "Aki Sasaki <asasaki@mozilla.com>",
+    "commit_message": "Bug 1499765 - grant releng-services hook trigger scopes to relman. r=bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9013",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "42": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-10-22 20:52:27"
+  },
+  "27": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1492665 - add environments.yml r=Callek,bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6931",
+    "files_changed": [
+      "environments.yml"
+    ]
+  },
+  "43": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-10-25 02:53:02"
+  },
+  "28": {
+    "commiter_name": "Brian Stack <bstack@mozilla.com>",
+    "commit_message": "Bug 1496210 - Allow ciduty to terminate instances r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9718",
+    "files_changed": [
+      "grants.yml"
+    ]
+  },
+  "44": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-10-26 20:55:45"
+  },
+  "29": {
+    "commiter_name": "Rob Lemley <rob@thunderbird.net>",
+    "commit_message": "Bug 1499590 - Enable taskcluster-cron on additional comm- repos. r=dustin\n\nThe periodic-file-updates cron task is meant to run on comm-central, comm-beta,\nand comm-esr60 like it's mozilla- counterpart task.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9860",
+    "files_changed": [
+      "projects.yml"
+    ]
+  },
+  "45": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-10-29 23:40:59"
+  },
+  "30": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1502976 - upgrade decision image to the latest r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10124",
+    "files_changed": [
+      "cron-task-template.yml"
+    ]
+  },
+  "46": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-11-01 20:52:45"
+  },
+  "31": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1503894 - disable taskcluster-cron for comm-central repos r=tomprince\n\nThe cron hook expects that it is checking out a gecko tree.  Robustcheckout\nkind of loses its mind when it clones mozilla-unified, then finds no ancestor\nin common with a comm-central pull.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10595",
+    "files_changed": [
+      "projects.yml"
+    ]
+  },
+  "47": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-11-06 23:44:48"
+  },
+  "32": {
+    "commiter_name": "Rob Lemley <rob@thunderbird.net>",
+    "commit_message": "Bug 1503894 - reenable taskcluster-cron for comm-central repo. r=tomprince\n\nThis goes along with a .cron.yml update in comm-central that removes the\nperiodic-file-update cron configuration. (Bug 1499590 comment 15)\n\nThis will get comm-central nightly builds working again.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10959",
+    "files_changed": [
+      "projects.yml"
+    ]
+  },
+  "48": {
+    "Pusher": "mozilla@hocat.ca",
+    "Date Of Push": "2018-11-30 18:35:24"
+  },
+  "33": {
+    "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+    "commit_message": "Bug 1510441: Use sparse profile in cron tasks; r=gps\n\nDifferential Revision: https://phabricator.services.mozilla.com/D13141",
+    "files_changed": [
+      "cron-task-template.yml"
+    ]
+  },
+  "49": {
+    "Pusher": "dmitchell@mozilla.com",
+    "Date Of Push": "2018-12-18 21:48:21"
+  },
+  "34": {
+    "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+    "commit_message": "Bug 1515137 - set TASKCLUSTER_ROOT_URL for cron hooks r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D14883",
+    "files_changed": [
+      "cron-task-template.yml"
+    ]
   }
 }
