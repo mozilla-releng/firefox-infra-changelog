@@ -57,11 +57,11 @@ def create_files_for_git(repositories_holder):
         print("\nWorking on repo: {}".format(repository_name))
         folders_to_check = [x for x in repositories_holder.get("Github").get(repo).get("configuration").get("folders-to-check")]
         filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
-        try:
-            create_md_table(repository_name, "git_files")
-            print("MD table generated successfully")
-        except:
-            pass
+        # try:
+        #     create_md_table(repository_name, "git_files")
+        #     print("MD table generated successfully")
+        # except:
+        #     pass
         print("Finished working on {}".format(repository_name))
 
 
@@ -357,24 +357,24 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                         new_scriptworker_dict.update(each_commit2)
                                 json_writer(scriptworker_repo, new_scriptworker_dict)
 
-    elif repository_type == "tag" and repository_name != "build-puppet":
-        version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
-        latest_releases = get_version(repository_name, repository_team)
-        if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release").get("version"):
-            print("No new changes entered production")
-        else:
-            last_commit_date = datetime.strptime(str(latest_releases.get("previous_release").get("date")), "%Y-%m-%d %H:%M:%S")
-            new_version_commit_date = latest_releases.get("latest_release").get("date")
-            new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
-                                     "last_releases": latest_releases}}
-            for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
-                each_commit = {}
-                if commit.commit.author.date <= new_version_commit_date:
-                    number += 1
-                    each_commit.update({int(number): get_commit_details(commit)})
-                    new_commit_dict.update(each_commit)
-            json_writer(repository_name, new_commit_dict)
-            return True
+    # elif repository_type == "tag" and repository_name != "build-puppet":
+    #     version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
+    #     latest_releases = get_version(repository_name, repository_team)
+    #     if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release").get("version"):
+    #         print("No new changes entered production")
+    #     else:
+    #         last_commit_date = datetime.strptime(str(latest_releases.get("previous_release").get("date")), "%Y-%m-%d %H:%M:%S")
+    #         new_version_commit_date = latest_releases.get("latest_release").get("date")
+    #         new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
+    #                                  "last_releases": latest_releases}}
+    #         for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
+    #             each_commit = {}
+    #             if commit.commit.author.date <= new_version_commit_date:
+    #                 number += 1
+    #                 each_commit.update({int(number): get_commit_details(commit)})
+    #                 new_commit_dict.update(each_commit)
+    #         json_writer(repository_name, new_commit_dict)
+    #         return True
 
 
 def create_files_for_hg(repositories_holder):
@@ -678,7 +678,7 @@ if __name__ == "__main__":
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
     create_files_for_git(repositories)
-    create_files_for_hg(repositories)
-    clear_file("main_md_table.md")
-    generate_main_md_table("hg_files")
-    generate_main_md_table("git_files")
+    # create_files_for_hg(repositories)
+    # clear_file("main_md_table.md")
+    # generate_main_md_table("hg_files")
+    # generate_main_md_table("git_files")
