@@ -82,20 +82,20 @@ def get_version(repo_name, repo_team):
         date = date_format.strftime("%Y-%m-%d %H:%M:%S")
         author = tags.commit.author.login
         if iteration == 0:
-            latestrelease = {"version": version,
+            latest_release = {"version": version,
                              "sha": sha,
                              "date": date,
                              "author": author
                              }
-            empty_dict.update({"latest_release": latestrelease})
+            empty_dict.update({"latest_release": latest_release})
             iteration = 1
         elif iteration == 1:
-            previousrelease = {"version": version,
+            previous_release = {"version": version,
                                "sha": sha,
                                "date": date,
                                "author": author
                                }
-            empty_dict.update({"previous_release": previousrelease})
+            empty_dict.update({"previous_release": previous_release})
     return empty_dict
 
 
@@ -356,25 +356,26 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                         each_commit2.update({int(number2): get_commit_details(commit2)})
                                         new_scriptworker_dict.update(each_commit2)
                                 json_writer(scriptworker_repo, new_scriptworker_dict)
-
-    # elif repository_type == "tag" and repository_name != "build-puppet":
-    #     version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
-    #     latest_releases = get_version(repository_name, repository_team)
-    #     if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release").get("version"):
-    #         print("No new changes entered production")
-    #     else:
-    #         last_commit_date = datetime.strptime(str(latest_releases.get("previous_release").get("date")), "%Y-%m-%d %H:%M:%S")
-    #         new_version_commit_date = latest_releases.get("latest_release").get("date")
-    #         new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
-    #                                  "last_releases": latest_releases}}
-    #         for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
-    #             each_commit = {}
-    #             if commit.commit.author.date <= new_version_commit_date:
-    #                 number += 1
-    #                 each_commit.update({int(number): get_commit_details(commit)})
-    #                 new_commit_dict.update(each_commit)
-    #         json_writer(repository_name, new_commit_dict)
-    #         return True
+            json_writer(repository_name, new_commit_dict)
+    elif repository_type == "tag" and repository_name != "build-puppet":
+        version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
+        latest_releases = get_version(repository_name, repository_team)
+        if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release").get("version"):
+            print("No new changes entered production")
+        else:
+            last_commit_date = datetime.strptime(str(latest_releases.get("previous_release").get("date")), "%Y-%m-%d %H:%M:%S")
+            new_version_commit_date = latest_releases.get("latest_release").get("date")
+            new_version_commit_date = datetime.strptime(new_version_commit_date, "%Y-%m-%d %H:%M:%S")
+            new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
+                                     "last_releases": latest_releases}}
+            for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
+                each_commit = {}
+                if commit.commit.author.date <= new_version_commit_date:
+                    number += 1
+                    each_commit.update({int(number): get_commit_details(commit)})
+                    new_commit_dict.update(each_commit)
+            json_writer(repository_name, new_commit_dict)
+            return True
 
 
 def create_files_for_hg(repositories_holder):
@@ -515,16 +516,14 @@ def create_md_table(repository_name, path_to_files):
         print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def clear_file(file_name, string_number_of_commits="five"):
+def clear_file(file_name):
     """
     This function takes a file that clears the content and output's a base table header for a markdown file.
-    :param string_number_of_commits: literal number that needs to match the number of commits shown on main markdown
-    table
     :param file_name: Name of the file to be written. (should also contain the path)
     :return: A file should be created and should contain base table.
     """
     file = open(file_name, "w")
-    heading = "#  Last " + string_number_of_commits + " commits from every repository \n"
+    heading = "##  Commits in production. \n"
     file.write(heading)
     file.close()
 
