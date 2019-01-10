@@ -168,7 +168,7 @@ def get_commit_details(commit):
     return author_info
 
 
-def json_writer(repository_name, new_commits):
+def json_writer(repository_name, new_commits, folder):
     """
 
     :param repository_name:
@@ -177,7 +177,7 @@ def json_writer(repository_name, new_commits):
     """
     git_json_filename = "{}.json".format(repository_name)
     try:
-        with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
+        with open(current_dir + "/{}_files/".format(folder) + git_json_filename, "r") as commit_json:
             json_content = json.load(commit_json)  # loads the content of existing json into a variable
     except:
         json_content = ""
@@ -189,7 +189,7 @@ def json_writer(repository_name, new_commits):
                 new_commits.update({int(number): json_content[old_commit]})
 
     if len(new_commits) > 0:
-        json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
+        json_file = open(current_dir + "/{}_files/".format(folder) + git_json_filename, "w")
         json.dump(new_commits, json_file, indent=2)
         json_file.close()
     return True
@@ -306,7 +306,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                 each_commit.update({int(number): get_commit_details(commit)})
                 new_commit_dict.update(each_commit)
 
-        json_writer(repository_name, new_commit_dict)
+        json_writer(repository_name, new_commit_dict, "git")
         return True
     # TYPE = COMMIT-KEYWORD
     if repository_type == "commit-keyword":
@@ -319,7 +319,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
                     new_commit_dict.update(each_commit)
-            json_writer(repository_name, new_commit_dict)
+            json_writer(repository_name, new_commit_dict, "git")
         return True
     # TYPE = TAG
     if repository_type == "tag" and repository_name == "build-puppet":
@@ -370,7 +370,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                             number2 += 1
                                             each_commit2.update({int(number2): get_commit_details(commit2)})
                                             new_scriptworker_dict.update(each_commit2)
-                                    json_writer(scriptworker_repo, new_scriptworker_dict)
+                                    json_writer(scriptworker_repo, new_scriptworker_dict, "git")
                                 else:
                                     print("No new changes entered production")
                             else:
@@ -391,12 +391,12 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                         number2 += 1
                                         each_commit2.update({int(number2): get_commit_details(commit2)})
                                         new_scriptworker_dict.update(each_commit2)
-                                json_writer(scriptworker_repo, new_scriptworker_dict)
+                                json_writer(scriptworker_repo, new_scriptworker_dict, "git")
                 if switch:
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
                     new_commit_dict.update(each_commit)
-            json_writer(repository_name, new_commit_dict)
+            json_writer(repository_name, new_commit_dict, "git")
     elif repository_type == "tag" and repository_name != "build-puppet":
         version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
         latest_releases = get_version(repository_name, repository_team)
@@ -415,7 +415,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
                     new_commit_dict.update(each_commit)
-            json_writer(repository_name, new_commit_dict)
+            json_writer(repository_name, new_commit_dict, "git")
             return True
 
 
@@ -435,50 +435,45 @@ def create_files_for_hg(repositories_holder):
 
 def filter_hg_commit_data(repository_name):
     """
-    This function takes a repository url and push type and returns a dictionary that contains changes in that specific
-    repository.
-    The HG API also supports xml and rss.
-    Example:
-    example = get_push("https://hg.mozilla.org/build/nagios-tools/", "json-log")
-    This will be later used to get the commits from https://hg.mozilla.org/
+    This function generates data for hg json files
     :param repository_name: name of the repository
-    :param repository_url: Link of the repository, eg: https://hg.mozilla.org/build/nagios-tools/
-    :return: Returns a dictionary that contains the commits in the provided hg_repository_name
+    :return: Writes data in hg json files
     """
     link = generate_hg_pushes_link(repository_name)
     data = json.loads(requests.get(link).text)
     last_push_id = data.get("lastpushid")
     hg_repo_data = {}
-    commit_number = 0
     print("\nWorking on repo:", repository_name)
-    hg_repo_data.update({commit_number: {"last_push_id": last_push_id}})
-    hg_repo_data2 = {}
-    data = json.loads(requests.get(generate_hg_pushes_link(repository_name)).text)
+    hg_repo_data.update({"0": {"last_push_id": last_push_id}})
     for key in data.get("pushes"):
         changeset_number = key
         changeset_pusher = data.get("pushes").get(key).get("user")
         date_of_push = data.get("pushes").get(key).get("date")
+        hg_repo_data.update({changeset_number: {
+            "pusher": changeset_pusher,
+            "date_of_push": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(date_of_push)),
+            "changeset_commits": {}
+        }})
+        counter, counter2, counter3 = 0, 0, 0
         for keys in data.get("pushes").get(key).get("changesets"):
+            counter = [x + 1 for x in range(len(data.get("pushes").get(key).get("changesets")))]
             author = keys.get("author")
             desc = keys.get("desc")
             files_changed = []
-            commit_number += 1
-
             for entry in keys.get("files"):
                 files_changed.append(entry)
-            hg_repo_data2.update({commit_number: {"commiter_name": author,
-                                                  "commit_message": desc,
-                                                  "files_changed": files_changed}})
+            try:
+                counter2 = counter[counter3]
+                counter3 += 1
+            except IndexError:
+                pass
 
-            hg_repo_data.update({changeset_number: {
-                "Pusher": changeset_pusher,
-                "Date Of Push": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(date_of_push)),
-            }})
-            hg_repo_data.update(hg_repo_data2)
-    hg_json_filename = "{}.json".format(repository_name)
-    json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
-    json.dump(hg_repo_data, json_file, indent=2)
-    json_file.close()
+            hg_repo_data[key]["changeset_commits"].update({
+                counter2: {
+                      "commiter_name": author,
+                      "commit_message": desc,
+                      "files_changed": files_changed}})
+    json_writer(repository_name, hg_repo_data, "hg")
 
 
 def extract_email(commit_email):
@@ -720,8 +715,8 @@ if __name__ == "__main__":
     git = Github(TOKEN)
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
-    #create_files_for_git(repositories)
+    create_files_for_git(repositories)
     create_files_for_hg(repositories)
     clear_file("main_md_table.md")
     generate_main_md_table("hg_files")
-    #generate_main_md_table("git_files")
+    generate_main_md_table("git_files")
