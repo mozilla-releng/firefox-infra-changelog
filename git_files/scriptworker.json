@@ -1,19 +1,153 @@
 {
   "0": {
-    "lastChecked": "2018-12-18 09:41:04.145915",
+    "lastChecked": "2019-01-09 16:47:04.460654",
     "last_releases": {
       "latest_release": {
-        "version": "17.0.1",
-        "sha": "0b1e25dfc8c1a6d2b4de965fb1d1f3a6955e9a9f",
-        "date": "Tue, 27 Nov 2018 17:46:52 GMT",
-        "author": "tomprince"
-      },
-      "previous_release": {
-        "version": "17.0.0",
-        "sha": "e6257cd7db50c2c308221846f5eac7cc205a4ce1",
-        "date": "Mon, 15 Oct 2018 16:06:45 GMT",
-        "author": "escapewindow"
+        "version": "17.2.0",
+        "sha": "35e717bf42ef6543d26a2c8e043459f4cb147778",
+        "date": "2019-01-07 10:07:39",
+        "author": "JohanLorenzo"
       }
     }
+  },
+  "1": {
+    "sha": "b6c1f101819d6f73059b935d4e2b46403bf07efa",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/b6c1f101819d6f73059b935d4e2b46403bf07efa",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Enable mozilla-mobile staging release from Github forks",
+    "commit_date": "2018-11-09 14:59:11",
+    "files_changed": [
+      "scriptworker/constants.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/test/test_cot_verify.py",
+      "scriptworker/test/test_task.py"
+    ]
+  },
+  "2": {
+    "sha": "1492109d31f3075d27b44cd321b9cd267e1f8709",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/1492109d31f3075d27b44cd321b9cd267e1f8709",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "17.1.1",
+    "commit_date": "2019-01-03 00:21:43",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "3": {
+    "sha": "b6c1f101819d6f73059b935d4e2b46403bf07efa",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/b6c1f101819d6f73059b935d4e2b46403bf07efa",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Enable mozilla-mobile staging release from Github forks",
+    "commit_date": "2018-11-09 14:59:11",
+    "files_changed": [
+      "scriptworker/constants.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/test/test_cot_verify.py",
+      "scriptworker/test/test_task.py"
+    ]
+  },
+  "4": {
+    "sha": "1492109d31f3075d27b44cd321b9cd267e1f8709",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/1492109d31f3075d27b44cd321b9cd267e1f8709",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "17.1.1",
+    "commit_date": "2019-01-03 00:21:43",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "5": {
+    "sha": "453af4e8c6b243058cc29ef9e85b4c450715489e",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/453af4e8c6b243058cc29ef9e85b4c450715489e",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #291 from djmitche/bug1517201  Bug 1517201 - support reading action.extra.actionPerm",
+    "commit_date": "2019-01-03 00:18:40",
+    "files_changed": [
+      "scriptworker/cot/verify.py"
+    ]
+  },
+  "6": {
+    "sha": "a5f8d14be2f56daa39d8d3518cf18e3d7ac95792",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/a5f8d14be2f56daa39d8d3518cf18e3d7ac95792",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1517201 - support reading action.extra.actionPerm",
+    "commit_date": "2019-01-02 23:48:05",
+    "files_changed": [
+      "scriptworker/cot/verify.py"
+    ]
+  },
+  "7": {
+    "sha": "a86e056c8526238d690bd31a323d7adec6d13cb7",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/a86e056c8526238d690bd31a323d7adec6d13cb7",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #286 from escapewindow/action-hook4  bug 1485680 - convert release-promotion to an action hook",
+    "commit_date": "2018-12-28 19:36:44",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements/base.txt",
+      "requirements/test.txt",
+      "scriptworker/cot/verify.py",
+      "scriptworker/test/data/cotv2/actions.json",
+      "scriptworker/test/data/cotv2/cotv4_relpro_context.json",
+      "scriptworker/test/data/cotv2/cotv4_relpro_template.json",
+      "scriptworker/test/data/cotv3/.taskcluster.yml",
+      "scriptworker/test/data/cotv3/action_retrigger.json",
+      "scriptworker/test/data/cotv3/actions.json",
+      "scriptworker/test/data/cotv3/decision_try.json",
+      "scriptworker/test/data/cotv3/parameters.yml",
+      "scriptworker/test/data/cotv3/pushlog.json",
+      "scriptworker/test/data/cotv4/.taskcluster.yml",
+      "scriptworker/test/data/cotv4/action_relpro.json",
+      "scriptworker/test/data/cotv4/action_retrigger.json",
+      "scriptworker/test/data/cotv4/actions.json",
+      "scriptworker/test/data/cotv4/decision_try.json",
+      "scriptworker/test/data/cotv4/parameters.yml",
+      "scriptworker/test/data/cotv4/projects.yml",
+      "scriptworker/test/data/cotv4/pushlog.json",
+      "scriptworker/test/data/cotv4/retrigger_context.json",
+      "scriptworker/test/data/cotv4/retrigger_template.json",
+      "scriptworker/test/test_cot_verify.py",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "8": {
+    "sha": "c8c416e70e3e796449c639876a9dd12307829512",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/c8c416e70e3e796449c639876a9dd12307829512",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "17.1.0",
+    "commit_date": "2018-12-28 19:29:07",
+    "files_changed": [
+      "CHANGELOG.md",
+      "requirements/base.txt",
+      "requirements/test.txt",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "9": {
+    "sha": "b71d1aafd9db05f3ee8e917af7faba5c92ae6881",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/b71d1aafd9db05f3ee8e917af7faba5c92ae6881",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "address tomprince's review comments",
+    "commit_date": "2018-12-28 18:54:11",
+    "files_changed": [
+      "scriptworker/cot/verify.py",
+      "scriptworker/test/data/cotv4/broken_actions.json",
+      "scriptworker/test/test_cot_verify.py"
+    ]
   }
 }
