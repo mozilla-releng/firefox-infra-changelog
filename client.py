@@ -430,7 +430,7 @@ def create_files_for_hg(repositories_holder):
     for repo in repositories_holder["Mercurial"]:
         repository_name = repo
         filter_hg_commit_data(repository_name)
-        create_md_table(repository_name, "hg_files")
+        create_hg_md_table(repository_name)
 
 
 def filter_hg_commit_data(repository_name):
@@ -563,7 +563,7 @@ def create_hg_md_table(repository_name):
     """
 
     try:
-        json_data = open(current_dir + "/hg_files/" + "mozilla-central.json").read()
+        json_data = open(current_dir + "/hg_files/" + "{}.json".format(repository_name)).read()
         data = json.loads(json_data)
         base_table = "| Changeset | Commiter | Commit Message | \n" + \
                      "|:---:|:----:|:----------------------------------:| \n"
@@ -603,7 +603,7 @@ def create_hg_md_table(repository_name):
                 except TypeError:
                     pass
 
-        md_file_name = "fisier.md"
+        md_file_name = "{}.md".format(repository_name)
         md_file = open(current_dir + "/hg_files/" + md_file_name, "w")
 
         try:
