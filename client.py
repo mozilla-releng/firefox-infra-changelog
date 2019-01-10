@@ -554,6 +554,69 @@ def create_md_table(repository_name, path_to_files):
     except FileNotFoundError:
         print("Json for {} is empty! Skipping!".format(repository_name))
 
+def create_hg_md_table(repository_name):
+    """
+    Uses 'repository_name' parameter to generate markdown tables for every json file inside path_to_files parameter.
+    :param repository_name: Used to display the repo name in the title row of the MD table
+    :param path_to_files: Used to store path to json files (git_files, hg_files)
+    :return: MD tables for every json file inside the git_files dir.
+    """
+
+    try:
+        json_data = open(current_dir + "/hg_files/" + "mozilla-central.json").read()
+        data = json.loads(json_data)
+        base_table = "| Changeset | Commiter | Commit Message | \n" + \
+                     "|:---:|:----:|:----------------------------------:| \n"
+        tables = {}
+        try:
+            last_push_id = data.get('0').get("last_push_id")
+            md_title = [
+                "Repository name: {}\n Current push id: {}".format(repository_name, last_push_id)]
+
+        except:
+            md_title = ["{} commit markdown table since push id: {}".format(repository_name, last_push_id)]
+        commit_number_list = [key for key in data]
+
+        for repo in md_title:
+            tables[repo] = base_table
+
+        for key in data:
+            if key > "0":
+                changeset_id = key
+                date_of_push = data.get(key).get("date_of_push")
+                try:
+                    for entry in data.get(key).get("changeset_commits"):
+                        try:
+                            commit_author = data.get(key).get("changeset_commits").get(entry).get("commiter_name")
+                            commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
+                            message = data.get(key).get("changeset_commits").get(entry).get("commit_message")
+                            message = re.sub("\n|", "", message)
+
+                            row = "|" + changeset_id + "(" + date_of_push + ")" + \
+                                  "|" + commit_author + \
+                                  "|" + message + "\n"
+
+                            for repo in tables.keys():
+                                tables[repo] = tables[repo] + row
+                        except TypeError:
+                            pass
+                except TypeError:
+                    pass
+
+        md_file_name = "fisier.md"
+        md_file = open(current_dir + "/hg_files/" + md_file_name, "w")
+
+        try:
+            for key, value in tables.items():
+                if value != base_table:
+                    md_file.write("## " + key.upper() + "\n\n")
+                    md_file.write(value + "\n\n")
+        except KeyError:
+            pass
+
+        md_file.close()
+    except FileNotFoundError:
+        print("Json for {} is empty! Skipping!".format(repository_name))
 
 def clear_file(file_name):
     """
