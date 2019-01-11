@@ -1,165 +1,109 @@
 {
   "0": {
-    "lastChecked": "2019-01-07 16:24:57.091282"
+    "last_push_id": 35355
   },
   "1": {
-    "sha": "0dcf945b38719b8475b212acc59105c933067ca6",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0dcf945b3871",
-    "commiter_name": "Oana Pop Rus ",
-    "commit_email": "opoprus@mozilla.com",
-    "commit_message": "Merge inbound to mozilla-central. a=merge",
-    "commit_date": "2019-01-07 09:30:15"
+    "changeset_number": "35344",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-01-09 23:41:24",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=266dce70b10e",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1512253 - For building clang-tidy don't use temporary files when composing the hashes. r=froydnj,firefox-build-system-reviewers\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16017",
+        "files_changed": [
+          "taskcluster/ci/toolchain/linux.yml",
+          "taskcluster/ci/toolchain/macosx.yml",
+          "taskcluster/ci/toolchain/windows.yml"
+        ]
+      }
+    }
   },
   "2": {
-    "sha": "00e735944f33227af38ce7af53282bb8fd213a61",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=00e735944f33",
-    "commiter_name": "Cosmin Sabou ",
-    "commit_email": "csabou@mozilla.com",
-    "commit_message": "Bug 1479782 - Disable devtools/client/netmonitor/test/browser_net_frame.js on win10. r=jmaher",
-    "commit_date": "2019-01-07 00:41:17"
+    "changeset_number": "35346",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-01-10 06:03:25",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f8bb48d6a644",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1499822 - [taskgraph] Add a tag to help differentiate 'android-stuff' from builds, r=jmaher\n\nThis will be used by |mach try chooser| to help pull 'android-stuff' tasks\n(which aren't really builds) apart from the main build tasks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D14902",
+        "files_changed": [
+          "taskcluster/ci/build/android-stuff.yml"
+        ]
+      },
+      "49": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d4320750e1bf",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1518902 - Promote WR standalone CI jobs to tier-1. r=aryx\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16087",
+        "files_changed": [
+          "taskcluster/ci/toolchain/linux.yml",
+          "taskcluster/ci/webrender/kind.yml"
+        ]
+      },
+      "55": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6d3266df4764",
+        "commiter_name": "Dana Keeler <dkeeler@mozilla.com>",
+        "commit_message": "bug 1518679 - install 32-bit libsecret so secret storage tests can use libsecret on 32-bit test systems r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16085",
+        "files_changed": [
+          "security/manager/ssl/tests/unit/test_oskeystore.js",
+          "taskcluster/docker/recipes/ubuntu1604-test-system-setup.sh"
+        ]
+      }
+    }
   },
   "3": {
-    "sha": "28134941aac4065784b991962cad17f9ac71208d",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=28134941aac4",
-    "commiter_name": "Bastien Orivel ",
-    "commit_email": "eijebong@bananium.fr",
-    "commit_message": "Bug 1518045 - Update owning_ref to 0.4.  This cherry-picks https://github.com/servo/servo/pull/22534, plus the relevant re-vendoring. ",
-    "commit_date": "2018-12-22 20:02:42"
+    "changeset_number": "35348",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-01-10 11:38:54",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=35396e93307e",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 1507334 - Taskcluster configurations for 3-tier PGO; r=tomprince,firefox-build-system-reviewers,chmanchester#firefox-build-system-reviewers\n\nTwo new kinds are introduced - 'instrumented-build' and\n'generate-profile'. The instrumented-build kind is almost identical to\nthe build kind, except it can be used earlier in the task graph. The\n3-tier PGO process becomes:\n\ninstrumented-build -> generate-profile -> build\n\nThe final build stage is identical to any other build, except it has\nthe 'use-pgo' flag set to True in its task definition. This flag causes\nthe transforms to add the instrumented-build and generate-profile tasks\nto the taskgraph.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15750",
+        "files_changed": [
+          "taskcluster/ci/build/kind.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/generate-profile/kind.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/scripts/misc/run-profileserver.sh",
+          "taskcluster/taskgraph/transforms/build.py",
+          "taskcluster/taskgraph/transforms/run_pgo_profile.py"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6692901d43cf",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 1507334 - Disable 3-tier Linux PGO until bug 1516114 is fixed; r=firefox-build-system-reviewers,chmanchester#firefox-build-system-reviewers\n\nWith 3-tier PGO enabled, we seem to hit bug 1516114 more frequently than\nwe do with the standard all-in-one PGO. It probably makes sense for us\nto wait until that bug is fixed before fully switching it over,\notherwise we will have to mess with retriggering parts of the taskgraph.\n\nThe bulk of the 3-tier PGO work has been to support macOS and Android,\nso we can revisit Linux after those are completed.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15751",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      }
+    }
   },
   "4": {
-    "sha": "b144051398358a6f3b296d473abee52cdcab3544",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b14405139835",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1518045 - Rustfmt recent changes. ",
-    "commit_date": "2019-01-06 23:00:55"
-  },
-  "5": {
-    "sha": "91e7ea77c846ae753fb3a28ab81598d2dc7ac865",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=91e7ea77c846",
-    "commiter_name": "Simon Sapin ",
-    "commit_email": "simon.sapin@exyr.org",
-    "commit_message": "Bug 1518045 - Publish selectors 0.21.0 on crates.io. r=emilio  This cherry-picks https://github.com/servo/servo/pull/22577, with the relevant lockfile update. ",
-    "commit_date": "2018-12-31 00:01:49"
-  },
-  "6": {
-    "sha": "123ac731210fea368ff7bd4db93889e0faf390f2",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=123ac731210f",
-    "commiter_name": "Bastien Orivel ",
-    "commit_email": "eijebong@bananium.fr",
-    "commit_message": "Bug 1518045 - Fix all clippy warnings in style_derive. r=emilio  This cherry-picks https://github.com/servo/servo/pull/22439. ",
-    "commit_date": "2018-12-12 20:32:52"
-  },
-  "7": {
-    "sha": "c62ba89a005dc61b5bc627c6779dd780609eadab",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c62ba89a005d",
-    "commiter_name": "Simon Sapin ",
-    "commit_email": "simon.sapin@exyr.org",
-    "commit_message": "Bug 1518045 - Rustfmt has changed its default style. r=emilio  This cherry-picks the formatting parts of https://github.com/servo/servo/pull/22385. ",
-    "commit_date": "2018-12-14 07:31:30"
-  },
-  "8": {
-    "sha": "4cfc198196e989cbda49033f03879d7f1b53fae7",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4cfc198196e9",
-    "commiter_name": "Emilio Cobos \u00c1lvarez ",
-    "commit_email": "emilio@crisal.io",
-    "commit_message": "Bug 1518045 - Make Servo use a single thread-pool for layout-related tasks per-process. r=jdm  Instead of per-document. This also allows to reuse this thread-pool if needed for other stuff, like parallel CSS parsing (#22478), and to share more code with Gecko, which is always nice.  This cherry-picks https://github.com/servo/servo/pull/22487, with a few minor fixes to the build that are landing as part of the sync associated to this bug, and an lsan exception tweak to point to the right module since it's moving. ",
-    "commit_date": "2018-12-17 22:46:42"
-  },
-  "9": {
-    "sha": "029414a7448afe97b06f3f5a9c96ceaae93c44e3",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=029414a7448a",
-    "commiter_name": "Cameron McCormack ",
-    "commit_email": "cam@mcc.id.au",
-    "commit_message": "Bug 1516831 - Add a process index to about:memory r=njn  Differential Revision: https://phabricator.services.mozilla.com/D15495",
-    "commit_date": "2019-01-07 03:06:27"
-  },
-  "10": {
-    "sha": "a52b66841df98457965924c2810e2a6396df896d",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a52b66841df9",
-    "commiter_name": "Cameron McCormack ",
-    "commit_email": "cam@mcc.id.au",
-    "commit_message": "Bug 1517354 - Improve about:memory performance by not using toLocaleString r=njn  Differential Revision: https://phabricator.services.mozilla.com/D15627",
-    "commit_date": "2019-01-07 02:50:05"
-  },
-  "11": {
-    "sha": "2c87990aee062f3008c9e0ab792d8b6ef9c9215e",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2c87990aee06",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1421724 - Account for headless Firefox not exposing scary windows. r=florian  Differential Revision: https://phabricator.services.mozilla.com/D15712",
-    "commit_date": "2019-01-04 13:15:46"
-  },
-  "12": {
-    "sha": "2c1444bc6c19082702d5c19533e0c9586bfb2233",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2c1444bc6c19",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "pehrsons@mozilla.com",
-    "commit_message": "Bug 1421724 - Steal back focus from global webrtc indicator when doing second gUM requests. r=florian  Differential Revision: https://phabricator.services.mozilla.com/D15711",
-    "commit_date": "2019-01-04 14:43:46"
-  },
-  "13": {
-    "sha": "5c37c61c937ea037e696c3424a5281f91c3dcb30",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5c37c61c937e",
-    "commiter_name": "Andreas Pehrson ",
-    "commit_email": "apehrson@mozilla.com",
-    "commit_message": "Bug 1421724 - Re-enable browser-chrome gUM_screen test. r=marco  Differential Revision: https://phabricator.services.mozilla.com/D15710",
-    "commit_date": "2019-01-04 16:30:06"
-  },
-  "14": {
-    "sha": "640985215424f83155c5fecdcadbe5f284d6c565",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=640985215424",
-    "commiter_name": "longsonr ",
-    "commit_email": "longsonr@gmail.com",
-    "commit_message": "Bug 1518000 - Move nsSVGString and nsSVGViewBox to the mozilla namespace r=jwatt",
-    "commit_date": "2019-01-06 17:52:55"
-  },
-  "15": {
-    "sha": "1675da659cb6f6a7e4824bc3dbf4e892ca4a5592",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1675da659cb6",
-    "commiter_name": "Razvan Maries ",
-    "commit_email": "rmaries@mozilla.com",
-    "commit_message": "Backed out changeset e38d92bc7143 (bug 1505353) for causing build bustages. CLOSED TREE",
-    "commit_date": "2019-01-06 13:52:10"
-  },
-  "16": {
-    "sha": "22aafd08880661e9e7d278c4cfabeba6e77d8b0a",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=22aafd088806",
-    "commiter_name": "Natalia Csoregi ",
-    "commit_email": "ncsoregi@mozilla.com",
-    "commit_message": "Bug 1508435 - Disabled devtools/client/inspector/markup/test/browser_markup_screenshot_node_shadowdom.js on Windows pgo/opt. r=jmaher",
-    "commit_date": "2019-01-05 04:56:00"
-  },
-  "17": {
-    "sha": "9a33ce04d3a395ca317f8d9a9ee8dca061d4e49d",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9a33ce04d3a3",
-    "commiter_name": "Andreea Pavel ",
-    "commit_email": "apavel@mozilla.com",
-    "commit_message": "Bug 1483696 - disabled test on linux32 debug r=jmaher",
-    "commit_date": "2019-01-03 12:44:00"
-  },
-  "18": {
-    "sha": "ab4bb599096c779cf2fb57d4f21f0b57c626af67",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ab4bb599096c",
-    "commiter_name": "Andreea Pavel ",
-    "commit_email": "apavel@mozilla.com",
-    "commit_message": "Bug 1485407 - test disabled on android debug r=jmaher",
-    "commit_date": "2019-01-03 13:46:00"
-  },
-  "19": {
-    "sha": "e38d92bc71437687b8a005818d3515069a81e74d",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e38d92bc7143",
-    "commiter_name": "Natalia Csoregi ",
-    "commit_email": "ncsoregi@mozilla.com",
-    "commit_message": "Bug 1505353 - Disable org.mozilla.geckoview.test.AccessibilityTest.autoFill_navigation on debug platform for frequent failures. r=jmaher",
-    "commit_date": "2019-01-05 03:31:00"
-  },
-  "20": {
-    "sha": "10cf9aa5abe2f1e80a4492181402439903794dba",
-    "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10cf9aa5abe2",
-    "commiter_name": "Bob Clary ",
-    "commit_email": "bclary@bclary.com",
-    "commit_message": "Bug 1517053 - Enable power tests for Android hardware, r=jmaher.",
-    "commit_date": "2019-01-06 12:05:34"
+    "changeset_number": "35352",
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-01-11 06:12:48",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3fc0d08d2c0d",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1518972 - gecko-profile jobs should be tier-2, not tier-1; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16187",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      },
+      "74": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=84a19f32185f",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [taskgraph] Remove unused `channel` for defining taskcluster `gecko.*` routes; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16230",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
   }
 }
