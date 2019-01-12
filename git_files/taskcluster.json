@@ -1,0 +1,245 @@
+{
+  "0": {
+    "lastChecked": "2019-01-12 03:00:08.613124"
+  },
+  "1": {
+    "sha": "aa822ad2500f47ef295e490856f8c2e28359c512",
+    "url": "https://github.com/taskcluster/taskcluster/commit/aa822ad2500f47ef295e490856f8c2e28359c512",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #19 from taskcluster/renovate/slugid-2.x  Update dependency slugid to v2",
+    "commit_date": "2019-01-12 01:07:14",
+    "files_changed": [
+      "libraries/client/package.json",
+      "services/auth/package.json",
+      "services/github/package.json",
+      "services/notify/package.json",
+      "services/secrets/package.json",
+      "yarn.lock"
+    ]
+  },
+  "2": {
+    "sha": "2937f63065701ffa391121d08d566e35c2b220bb",
+    "url": "https://github.com/taskcluster/taskcluster/commit/2937f63065701ffa391121d08d566e35c2b220bb",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency slugid to v2",
+    "commit_date": "2019-01-12 00:55:38",
+    "files_changed": [
+      "libraries/client/package.json",
+      "services/auth/package.json",
+      "services/github/package.json",
+      "services/notify/package.json",
+      "services/secrets/package.json",
+      "yarn.lock"
+    ]
+  },
+  "3": {
+    "sha": "d4fa2cb3605336e27f38a8f2271f1f685073dc93",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d4fa2cb3605336e27f38a8f2271f1f685073dc93",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #13 from taskcluster/renovate/assume-2.x  Update dependency assume to v2",
+    "commit_date": "2019-01-12 00:54:42",
+    "files_changed": [
+      "services/auth/package.json",
+      "services/hooks/package.json",
+      "services/queue/package.json",
+      "yarn.lock"
+    ]
+  },
+  "4": {
+    "sha": "29c398016463c7b50703cd3224ecde4794703f15",
+    "url": "https://github.com/taskcluster/taskcluster/commit/29c398016463c7b50703cd3224ecde4794703f15",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #9 from taskcluster/renovate/statsum-0.x  Update dependency statsum to ^0.6.0",
+    "commit_date": "2019-01-12 00:31:48",
+    "files_changed": [
+      "services/auth/package.json",
+      "yarn.lock"
+    ]
+  },
+  "5": {
+    "sha": "b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
+    "url": "https://github.com/taskcluster/taskcluster/commit/b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Actually just remove unused assume",
+    "commit_date": "2019-01-12 00:30:58",
+    "files_changed": [
+      "services/auth/package.json",
+      "services/hooks/package.json",
+      "services/queue/package.json",
+      "yarn.lock"
+    ]
+  },
+  "6": {
+    "sha": "bf2ea3b95df04ab5f32facac44b3b10f354f7620",
+    "url": "https://github.com/taskcluster/taskcluster/commit/bf2ea3b95df04ab5f32facac44b3b10f354f7620",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency assume to v2",
+    "commit_date": "2019-01-12 00:14:50",
+    "files_changed": [
+      "services/auth/package.json",
+      "services/hooks/package.json",
+      "services/queue/package.json",
+      "yarn.lock"
+    ]
+  },
+  "7": {
+    "sha": "9159c878868282fad3f75122efed0475649d5441",
+    "url": "https://github.com/taskcluster/taskcluster/commit/9159c878868282fad3f75122efed0475649d5441",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency statsum to ^0.6.0",
+    "commit_date": "2019-01-12 00:14:37",
+    "files_changed": [
+      "services/auth/package.json",
+      "yarn.lock"
+    ]
+  },
+  "8": {
+    "sha": "0129356a3b44c862cbc502685aa1aacb9840f6c9",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0129356a3b44c862cbc502685aa1aacb9840f6c9",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #17 from taskcluster/renovate/nock-10.x  Update dependency nock to v10",
+    "commit_date": "2019-01-12 00:13:50",
+    "files_changed": [
+      "libraries/testing/package.json",
+      "yarn.lock"
+    ]
+  },
+  "9": {
+    "sha": "75fdbf91d771bce53951a92c666ff4b439152f22",
+    "url": "https://github.com/taskcluster/taskcluster/commit/75fdbf91d771bce53951a92c666ff4b439152f22",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency nock to v10",
+    "commit_date": "2019-01-11 00:44:08",
+    "files_changed": [
+      "libraries/testing/package.json",
+      "yarn.lock"
+    ]
+  },
+  "10": {
+    "sha": "1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #73 from taskcluster/fix-auth-flake  Bug 1518896 - Fix container listing test",
+    "commit_date": "2019-01-11 00:32:33",
+    "files_changed": [
+      "services/auth/src/azure.js",
+      "services/auth/test/azure_test.js"
+    ]
+  },
+  "11": {
+    "sha": "32874aa462882888bbdba94854e8d8b6edc01dcf",
+    "url": "https://github.com/taskcluster/taskcluster/commit/32874aa462882888bbdba94854e8d8b6edc01dcf",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Bug 1518896 - Fix container listing test",
+    "commit_date": "2019-01-09 20:29:01",
+    "files_changed": [
+      "services/auth/src/azure.js",
+      "services/auth/test/azure_test.js"
+    ]
+  },
+  "12": {
+    "sha": "acbcdad43f306f7db0462d6eccee3a986394e2ba",
+    "url": "https://github.com/taskcluster/taskcluster/commit/acbcdad43f306f7db0462d6eccee3a986394e2ba",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #76 from taskcluster/fix-broken-linkx-building-docs  Fix broken links in taskcluster building docs",
+    "commit_date": "2019-01-10 19:03:55",
+    "files_changed": [
+      "infrastructure/builder/docs/building-taskcluster.md"
+    ]
+  },
+  "13": {
+    "sha": "13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
+    "commiter_name": "petemoore",
+    "commiter_email": "pmoore@mozilla.com",
+    "commit_message": "Fix broken links in taskcluster building docs",
+    "commit_date": "2019-01-10 17:35:56",
+    "files_changed": [
+      "infrastructure/builder/docs/building-taskcluster.md"
+    ]
+  },
+  "14": {
+    "sha": "69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
+    "url": "https://github.com/taskcluster/taskcluster/commit/69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #72 from taskcluster/libxmljs-temp-fix  Temporarily set libxmljs directly in remotely-signed-s3 to de-flake tests",
+    "commit_date": "2019-01-09 20:14:25",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "15": {
+    "sha": "67162e5512c9f90c9c632226a9761b6e3a9e518d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/67162e5512c9f90c9c632226a9761b6e3a9e518d",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Temporarily set libxmljs directly in remotely-signed-s3 to de-flake tests  This can be undone as soon as remotely-signed-s3 >= 4 is published.",
+    "commit_date": "2019-01-09 19:03:35",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "16": {
+    "sha": "5077562bf7a44cedc6f195c396291f8bc88be2c5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5077562bf7a44cedc6f195c396291f8bc88be2c5",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #50 from djmitche/taskcluster-lib-scopes-pr26  Use hasOwnProperty as it is faster and more sane",
+    "commit_date": "2019-01-09 18:55:46",
+    "files_changed": [
+      "libraries/scopes/src/expressions.js"
+    ]
+  },
+  "17": {
+    "sha": "c6efcceab30d1ccbccf55501a3ffb57a003e143c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c6efcceab30d1ccbccf55501a3ffb57a003e143c",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #69 from taskcluster/unforget-infra  Unforget infra dependencies",
+    "commit_date": "2019-01-09 18:18:38",
+    "files_changed": [
+      "infrastructure/builder/package.json",
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "18": {
+    "sha": "92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
+    "url": "https://github.com/taskcluster/taskcluster/commit/92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #71 from taskcluster/renovate/nodemailer-5.x  Update dependency nodemailer to v5",
+    "commit_date": "2019-01-09 06:06:31",
+    "files_changed": [
+      "services/notify/package.json",
+      "yarn.lock"
+    ]
+  },
+  "19": {
+    "sha": "1ce83bd248b6be3735245e0844d4b2ecf3850695",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1ce83bd248b6be3735245e0844d4b2ecf3850695",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency nodemailer to v5",
+    "commit_date": "2019-01-09 02:47:02",
+    "files_changed": [
+      "services/notify/package.json",
+      "yarn.lock"
+    ]
+  }
+}

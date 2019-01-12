@@ -20,19 +20,9 @@
         "folders-to-check": ["terraform/"]
       }
     },
-    "taskcluster-auth": {
+    "taskcluster": {
       "name": "Taskcluster Auth",
-      "url": "https://github.com/taskcluster/taskcluster-auth",
-      "team": "taskcluster/",
-      "top-contributors": [" ", " "],
-      "configuration": {
-        "type": "no-tag",
-        "folders-to-check": []
-      }
-    },
-    "taskcluster-queue": {
-      "name": "Taskcluster Queue",
-      "url": "https://github.com/taskcluster/taskcluster-queue",
+      "url": "https://github.com/taskcluster/taskcluster",
       "team": "taskcluster/",
       "top-contributors": [" ", " "],
       "configuration": {

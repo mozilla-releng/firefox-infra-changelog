@@ -1,7 +1,17 @@
-## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2018-12-24 12:48:10.767705
+## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2018-12-29 05:00:07.086298
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|538|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
+|537|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
+|536|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
+|535|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
+|534|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
+|533|mitchhentges|0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/570ef3dbb5e4698d3779272087c8a189154a94a5)|2019-01-08 17:22:14
+|532|mitchhentges|Merge pull request #149 from mitchhentges/fenix  Adds fenix support|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/231ae70730eccf7d17d824fe20d64d01744549d7)|2019-01-08 17:13:11
+|531|mitchhentges|Adds fenix support|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/d5f5d780baa8a3426f5fa25d140259f8590d278f)|2019-01-08 01:49:54
+|530|JohanLorenzo|0.10.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/b6706efa7f759a60feec456e74a12fa36bf4c1ce)|2018-12-20 11:07:55
+|529|JohanLorenzo|Reference browser: Remove broken check about API levels and processor architecture|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/3f8624b739ec4cda708283b8de735ff98b22227f)|2018-12-20 10:41:14
 |528|JohanLorenzo|0.10.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/b6706efa7f759a60feec456e74a12fa36bf4c1ce)|2018-12-20 11:07:55
 |527|JohanLorenzo|Reference browser: Remove broken check about API levels and processor architecture|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/3f8624b739ec4cda708283b8de735ff98b22227f)|2018-12-20 10:41:14
 |526|mitchhentges|Merge pull request #144 from mitchhentges/release-0.10.0  Release 0.10.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/7508711e3f3fa0fbefe699bf341bfbd6bd333652)|2018-12-19 17:44:46

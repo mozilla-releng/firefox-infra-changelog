@@ -351,20 +351,20 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         return True
     # TYPE = TAG
     if repository_type == "tag" and repository_name == "build-puppet":
-            j = 1
+            commit_number_tracker = 1
             pathway = repositories.get("Github").get(repository_name).get("configuration").get("files-to-check")
             for commit in new_commits:
                 each_commit = {}
                 switch = False
-                print("this is commit number: ", j)
-                j += 1
+                print("this is commit number: ", commit_number_tracker)
+                commit_number_tracker += 1
                 files_changed_by_commit = [x.filename for x in commit.files]
                 print(files_changed_by_commit)
                 print(len(files_changed_by_commit))
-                i = 1
+                changed_file_number = 1
                 for entry in files_changed_by_commit:
-                    print("changed file number:  ", i)
-                    i += 1
+                    print("changed file number:  ", changed_file_number)
+                    changed_file_number += 1
                     print(entry)
                     for scriptworkers in pathway:
                         print("checking repo: ", scriptworkers)
@@ -399,6 +399,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                             each_commit2.update({int(number2): get_commit_details(commit2)})
                                             new_scriptworker_dict.update(each_commit2)
                                     json_writer_git(scriptworker_repo, new_scriptworker_dict)
+                                    create_md_table(scriptworker_repo, "git_files")
                                 else:
                                     print("No new changes entered production")
                             else:
@@ -420,6 +421,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                         each_commit2.update({int(number2): get_commit_details(commit2)})
                                         new_scriptworker_dict.update(each_commit2)
                                 json_writer_git(scriptworker_repo, new_scriptworker_dict)
+                                create_md_table(scriptworker_repo, "git_files")
                 if switch:
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
