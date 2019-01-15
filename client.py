@@ -9,7 +9,7 @@ from os.path import isfile, join
 from datetime import datetime, timedelta
 import sys
 from dateutil.parser import parse
-import timestring
+import subprocess
 
 lastWeek = datetime.now() - timedelta(days=14)
 lastMonth = datetime.utcnow() - timedelta(days=31)
@@ -823,6 +823,16 @@ def write_main_md_table(file_name, repository_url, last_commit, author, reviewer
     write_file.write(row)
 
 
+def push_files_to_git():
+    prname = "Git/Hg_files_update"
+    subprocess.call(["git", "checkout", prname])
+    #subprocess.call(["git", "push", "--set-upstream", "origin", prname])
+    subprocess.call(["git", "add", "git_files/"])
+    subprocess.call(["git", "add", "hg_files/"])
+    subprocess.call(["git", "commit", "-m", "git/hg files update {}".format(datetime.now())])
+    subprocess.call(["git", "push"])
+
+
 if __name__ == "__main__":
     TOKEN = os.environ.get("GIT_TOKEN")
     git = Github(TOKEN)
@@ -833,3 +843,4 @@ if __name__ == "__main__":
     clear_file("main_md_table.md")
     # generate_main_md_table("hg_files") TODO change the code to get the commit infos from hg json files (lines 754-761)
     generate_main_md_table("git_files")
+    push_files_to_git()
