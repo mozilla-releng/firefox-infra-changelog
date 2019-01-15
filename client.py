@@ -1,15 +1,17 @@
 import os
 import re
+import sys
 import json
 import time
 import requests
+import subprocess
 from os import listdir
 from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
-import sys
 from dateutil.parser import parse
-import subprocess
+from fic_modules import configuration
+
 
 lastWeek = datetime.now() - timedelta(days=14)
 lastMonth = datetime.utcnow() - timedelta(days=31)
@@ -834,13 +836,28 @@ def push_files_to_git():
 
 
 if __name__ == "__main__":
-    TOKEN = os.environ.get("GIT_TOKEN")
-    git = Github(TOKEN)
-    repositories_data = open("./repositories.json").read()
-    repositories = json.loads(repositories_data)
-    create_files_for_git(repositories)
-    create_files_for_hg(repositories)
-    clear_file("main_md_table.md")
-    # generate_main_md_table("hg_files") TODO change the code to get the commit infos from hg json files (lines 754-761)
-    generate_main_md_table("git_files")
-    push_files_to_git()
+    if "-dev" in sys.argv:
+        if "-help" in sys.argv:
+            configuration.HELP = True
+        if "-hg" in sys.argv:
+            configuration.HG = True
+        if "-git" in sys.argv:
+            configuration.GIT = True
+        if "-l" in sys.argv:
+            configuration.LOG = True
+        if "-r" in sys.argv:
+            runrepos = sys.argv.index("-r") + 1
+            configuration.REPO_CHOICE = list(sys.argv[runrepos])
+    else:
+        TOKEN = os.environ.get("GIT_TOKEN")
+        git = Github(TOKEN)
+        repositories_data = open("./repositories.json").read()
+        repositories = json.loads(repositories_data)
+        create_files_for_git(repositories)
+        create_files_for_hg(repositories)
+        clear_file("main_md_table.md")
+        # generate_main_md_table("hg_files") TODO change the code to get the commit infos from hg json files (lines 754-761)
+        generate_main_md_table("git_files")
+        push_files_to_git()
+
+
