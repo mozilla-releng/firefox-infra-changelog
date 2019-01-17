@@ -33,10 +33,11 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/bouncerscript/commit/225493087a68a73ae6eea239ee406686ea8f8898)|3.4.1|MihaiTabara|Placeholder|2019-01-15 13:17:21|
+|[Link](https://github.com/mozilla-releng/bouncerscript/commit/d19378fd25a08f1b1e24b4259f3145d3fb3cca65)|Bug 1519054 - add AArch64 as part of the BOUNCER LOCATIONS. (#49)  Bug 1519054 - add AArch64 as part of the bouncer locations.|MihaiTabara|Placeholder|2019-01-15 13:15:34|
+|[Link](https://github.com/mozilla-releng/bouncerscript/commit/cf3b10f96874db1bb8107458b3ece1e281e902ea)|Merge pull request #48 from mitchhentges/release-3.4.0  3.4.0|mitchhentges|Placeholder|2019-01-03 19:57:59|
 |[Link](https://github.com/mozilla-releng/bouncerscript/commit/cf3b10f96874db1bb8107458b3ece1e281e902ea)|Merge pull request #48 from mitchhentges/release-3.4.0  3.4.0|mitchhentges|Placeholder|2019-01-03 19:57:59|
 |[Link](https://github.com/mozilla-releng/bouncerscript/commit/1db10557cc46f331af59c27fd33943c12af0e856)|3.4.0|mitchhentges|Placeholder|2019-01-02 18:23:32|
-|[Link](https://github.com/mozilla-releng/bouncerscript/commit/bc709e70a78a49f94e775141137518997d9ad18b)|Merge pull request #47 from mitchhentges/remove-schema-from-config  Removes task schema from example config, adds to default config|mitchhentges|Placeholder|2019-01-02 17:12:19|
-|[Link](https://github.com/mozilla-releng/bouncerscript/commit/efd2c06441d325a5556a758923cd7a099e627df4)|Removes task schema from example config, adds to default config|mitchhentges|Placeholder|2018-12-24 22:03:13|
 
 |	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -51,28 +52,32 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/f674a5cc04c9217f944627e175edde864008c442)|Merge pull request #363 from MihaiTabara/bump  Bug 1519054 - Bump bouncerscipt in beetmoverworkers|MihaiTabara|Placeholder|2019-01-15 13:33:03|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/0399e01dd57abbf270c949fef95c31db17174235)|Scheduled weekly dependency update for week 01 (#358)    Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update boto3 from 1.9.71 to 1.9.75      Update botocore from 1.12.71 to 1.12.75      Update androguard from 3.2.1 to 3.3.1      Update lxml from 4.2.5 to 4.3.0      Update pytz from 2018.7 to 2018.9      Update gevent from 1.3.7 to 1.4.0      Update gevent from 1.3.7 to 1.4.0      Update webob from 1.8.4 to 1.8.5      Update webob from 1.8.4 to 1.8.5      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Revert androguard back to 3.2.1|pyup-bot|Placeholder|2019-01-09 16:55:30|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/7c9d12db511547d4a379049a38281fc9a1148e8c)|Bug 1512631 - Bump scriptworker to 17.2.0 (#357)|JohanLorenzo|Placeholder|2019-01-07 11:09:02|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/e991974d2d5808fc086d974265145b0fe58ebeec)|Merge pull request #348 from mitchhentges/remove-explicit-schema-file-config  Don't explicitly set "schema_file" for scriptworker scripts|mitchhentges|Placeholder|2019-01-04 16:56:48|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/3d09378acf76e837b2ab6d4842b885e9e7f0991b)|updates dependencies on scriptworker scriptsscripts|mitchhentges|Placeholder|2019-01-03 20:01:20|
-|[Link](https://github.com/mozilla-releng/build-puppet/commit/a0510f366049d5e28ffc3d3d0490c396a5412f44)|scriptworker 17.1.1 (#352)|escapewindow|Placeholder|2019-01-03 00:53:04|
 
 |	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|mitchhentges|Placeholder|2019-01-09 17:18:26|
-|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|mitchhentges|Placeholder|2019-01-09 17:18:26|
-|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|mitchhentges|Placeholder|2019-01-09 17:18:26|
-|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|mitchhentges|Placeholder|2019-01-09 17:18:26|
-|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|mitchhentges|Placeholder|2019-01-09 17:18:26|
+|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/7aa2bcef21e8ea1d943c5031681abe9ac7f7d10d)|0.13.0|JohanLorenzo|Placeholder|2019-01-15 14:56:05|
+|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/54452f3565673f23055cdbdccec14772c74404e0)|Bug 1368484 - part 2: Allow AArch64 to have a different API level|JohanLorenzo|Placeholder|2019-01-15 14:52:35|
+|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/7aa2bcef21e8ea1d943c5031681abe9ac7f7d10d)|0.13.0|JohanLorenzo|Placeholder|2019-01-15 14:56:05|
+|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/54452f3565673f23055cdbdccec14772c74404e0)|Bug 1368484 - part 2: Allow AArch64 to have a different API level|JohanLorenzo|Placeholder|2019-01-15 14:52:35|
+|[Link](https://github.com/mozilla-releng/mozapkpublisher/commit/7aa2bcef21e8ea1d943c5031681abe9ac7f7d10d)|0.13.0|JohanLorenzo|Placeholder|2019-01-15 14:56:05|
 
 |	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|grenade|Placeholder|2018-11-28 17:08:20|
+|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|grenade|Placeholder|2018-11-28 17:08:20|
+|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|grenade|Placeholder|2018-11-28 17:08:20|
+|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|grenade|Placeholder|2018-11-28 17:08:20|
 |[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|grenade|Placeholder|2018-11-28 17:08:20|
 
 |	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.json)	| 
@@ -108,6 +113,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla/release-services/commit/9a1f48c56dd6e007a0131147a19c4a883a0f8a45)|cli_common/pulse: desclare exchange when it includes pulse user in the name (#1791)|garbas|Placeholder|2019-01-16 22:24:58|
 
 |	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -137,11 +143,11 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/taskcluster/taskcluster/commit/aa822ad2500f47ef295e490856f8c2e28359c512)|Merge pull request #19 from taskcluster/renovate/slugid-2.x  Update dependency slugid to v2|imbstack|Placeholder|2019-01-12 01:07:14|
-|[Link](https://github.com/taskcluster/taskcluster/commit/2937f63065701ffa391121d08d566e35c2b220bb)|Update dependency slugid to v2|renovate-bot|Placeholder|2019-01-12 00:55:38|
-|[Link](https://github.com/taskcluster/taskcluster/commit/d4fa2cb3605336e27f38a8f2271f1f685073dc93)|Merge pull request #13 from taskcluster/renovate/assume-2.x  Update dependency assume to v2|imbstack|Placeholder|2019-01-12 00:54:42|
-|[Link](https://github.com/taskcluster/taskcluster/commit/29c398016463c7b50703cd3224ecde4794703f15)|Merge pull request #9 from taskcluster/renovate/statsum-0.x  Update dependency statsum to ^0.6.0|imbstack|Placeholder|2019-01-12 00:31:48|
-|[Link](https://github.com/taskcluster/taskcluster/commit/b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3)|Actually just remove unused assume|imbstack|Placeholder|2019-01-12 00:30:58|
+|[Link](https://github.com/taskcluster/taskcluster/commit/fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53)|(minor) fix lint|djmitche|Placeholder|2019-01-16 20:42:53|
+|[Link](https://github.com/taskcluster/taskcluster/commit/49cae3a99d6f994d3857c8b9d719216aa8f1685b)|Merge pull request #31 from arshadkazmi42/bug-1517494  Adds listRoles2 api with pagination|djmitche|Placeholder|2019-01-16 20:21:19|
+|[Link](https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28)|Merge pull request #96 from taskcluster/no-more-resolutions  Remove outdated resolution|djmitche|Placeholder|2019-01-16 19:46:20|
+|[Link](https://github.com/taskcluster/taskcluster/commit/cb01a41a19567239c3796b541111cff500117927)|Remove outdated resolution|imbstack|Placeholder|2019-01-16 18:34:16|
+|[Link](https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427)|Merge pull request #94 from taskcluster/renovate/remotely-signed-s3-4.x  Update dependency remotely-signed-s3 to v4|djmitche|Placeholder|2019-01-16 18:26:16|
 
 |	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
