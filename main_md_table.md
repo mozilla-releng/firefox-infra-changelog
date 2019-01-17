@@ -1,5 +1,30 @@
 ##  Commits in production. 
 
+|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=559c3f6fd329)|(hotfix) add created and expires to .taskcluster.yml|Dustin J. Mitchell <dustin@mozilla.com>||2018-09-06 01:14:08|
+
+|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=dea5d65a07aa)|Bug 1489181: add input_schema to actions.yml r=aki
+
+Differential Revision: https://phabricator.services.mozilla.com/D5684|Dustin J. Mitchell <dustin@mozilla.com>|aki|2018-09-12 23:04:46|
+
+|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=266dce70b10e)|Bug 1512253 - For building clang-tidy don't use temporary files when composing the hashes. r=froydnj,firefox-build-system-reviewers
+
+Differential Revision: https://phabricator.services.mozilla.com/D16017|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|froydnj,firefox-build-system-reviewers|2019-01-09 23:41:24|
+
 |	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
