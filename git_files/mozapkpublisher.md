@@ -1,7 +1,13 @@
-## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2018-12-29 05:00:07.086298
+## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2019-01-03 11:19:52.309261
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|544|JohanLorenzo|0.13.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/7aa2bcef21e8ea1d943c5031681abe9ac7f7d10d)|2019-01-15 14:56:05
+|543|JohanLorenzo|Bug 1368484 - part 2: Allow AArch64 to have a different API level|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/54452f3565673f23055cdbdccec14772c74404e0)|2019-01-15 14:52:35
+|542|JohanLorenzo|0.12.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/36444cc8ad5b041b2752665df5bec7edcfc56c14)|2019-01-14 11:00:13
+|541|JohanLorenzo|Avoid hardcoding the nightly package name|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/763a5458542ac72190e42de5b02bd70c723d0bd2)|2019-01-14 13:28:47
+|540|JohanLorenzo|Bug 1368484 - Allow AArch64 on Nightly only|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/441f186655f38f1afc5b5862ab59e2d95b79540c)|2019-01-14 10:56:10
+|539|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
 |538|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
 |537|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26
 |536|mitchhentges|Merge pull request #150 from mitchhentges/release-0.11.0  0.11.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/fab88a8fbccdfb1ab2a41b67c392f0c0ed34b3cb)|2019-01-09 17:18:26

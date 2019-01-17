@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 31
+    "last_push_id": 32
   },
   "1": {
     "changeset_number": "21",
@@ -184,6 +184,22 @@
         "commit_message": "Bug 1485680 - if we modify the action hook task logic, we need to update scriptworker. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15482",
         "files_changed": [
           "ciadmin/generate/in_tree_actions.py"
+        ]
+      }
+    }
+  },
+  "12": {
+    "changeset_number": "32",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-17 00:47:14",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=ae0505b4301c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Fix ci-admin tests; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16756",
+        "files_changed": [
+          ".taskcluster.yml",
+          "tests/test_generate_grants.py"
         ]
       }
     }
