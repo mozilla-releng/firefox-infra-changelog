@@ -1,7 +1,9 @@
-## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2019-01-03 11:19:52.309261
+## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2019-01-03 11:25:02.711283
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|546|JohanLorenzo|0.13.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/7aa2bcef21e8ea1d943c5031681abe9ac7f7d10d)|2019-01-15 14:56:05
+|545|JohanLorenzo|Bug 1368484 - part 2: Allow AArch64 to have a different API level|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/54452f3565673f23055cdbdccec14772c74404e0)|2019-01-15 14:52:35
 |544|JohanLorenzo|0.13.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/7aa2bcef21e8ea1d943c5031681abe9ac7f7d10d)|2019-01-15 14:56:05
 |543|JohanLorenzo|Bug 1368484 - part 2: Allow AArch64 to have a different API level|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/54452f3565673f23055cdbdccec14772c74404e0)|2019-01-15 14:52:35
 |542|JohanLorenzo|0.12.0|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/36444cc8ad5b041b2752665df5bec7edcfc56c14)|2019-01-14 11:00:13
