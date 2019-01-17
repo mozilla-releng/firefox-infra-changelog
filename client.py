@@ -670,6 +670,7 @@ def create_hg_md_table(repository_name):
     except FileNotFoundError:
         print("Json for {} is empty! Skipping!".format(repository_name))
 
+
 def clear_file(file_name):
     """
     This function takes a file that clears the content and output's a base table header for a markdown file.
@@ -694,14 +695,22 @@ def generate_main_md_table(path_to_files):
     # Look into repositories folder and list all of the files
     only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
                   isfile(join(dir_path + "/{}".format(path_to_files), f))]
-
+    print(only_files)
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]
-
+    print(json_files)
     # Extract data from json_files and writes to main markdown table.
-    extract_json(json_files, path_to_files)
+    print("Path is: ")
+    if path_to_files is "git_files":
+        extract_json_from_git(json_files, path_to_files)
+        print("GIT part from main markdown table was successfully generated.")
+    elif path_to_files is "hg_files":
+        extract_json_from_hg(json_files, path_to_files)
+        print("HG part from main markdown table was successfully generated.")
 
-    print("Table successfully generated.")
+    else:
+        print("No table was generated!")
+
 
 
 def extract_reviewer(string):
@@ -731,7 +740,7 @@ def extract_reviewer(string):
         return reviewer
 
 
-def extract_json(json_files, path_to_files, commits_per_repo=5):
+def extract_json_from_git(json_files, path_to_files, commits_per_repo=5):
     """
     Extracts the json data from json files and writes the data to the main markdown table file. The function looks
     into json files after the last commit, extracts it and calls the write_main_md_table function.
@@ -742,9 +751,10 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
     """
     for file in json_files:
         file_path = "{}/".format(path_to_files) + file
-
+        print(file_path)
         with open(file_path) as json_files:
             data = json.load(json_files)
+            print(data)
             base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
             repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
             repository_json = base_link + file.rstrip().replace(" ", "%20")
@@ -763,10 +773,7 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                     commit_url = "[Link](" + commit_url + ")"
                     commit_date = data.get(commit_number).get("commit_date")
                     author = data.get(commit_number).get("commiter_name")
-                    if path_to_files is "hg_files":
-                        review = extract_reviewer(commit_description)
-                    elif path_to_files is "git_files":
-                        review = "Placeholder"  # TODO git handler for getting the reviewer.
+                    review = "Placeholder"  # TODO git handler for getting the reviewer.
                     write_main_md_table("main_md_table.md",
                                         commit_url,
                                         commit_description,
@@ -779,6 +786,91 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                 pass
             except AttributeError:
                 pass
+
+
+def remove_chars(string, char):
+    """
+    Helper function!
+    Removes a specific character from a string
+    :param string: string that contains a special char
+    :param char: char to be removed from string
+    :return: returns a string without char.
+    """
+    return re.sub(char, " ", string)
+
+
+def write_date_header(file_name, datetime_object):
+    file = open(file_name, "a")
+
+    base_table = "|            | \n" + \
+                 "|:----------:| \n"
+    date_header = "| Generated on: " + str(datetime.utcnow()) + " and contains modifications from: " + str(datetime_object) + " |"
+    file.write("\n" + base_table + date_header + "\n")
+    file.close()
+
+
+def extract_json_from_hg(json_files, path_to_files, commits_per_repo=5):
+    """
+    Extracts the json data from json files and writes the data to the main markdown table file. The function looks
+    into json files after the last commit, extracts it and calls the write_main_md_table function.
+    :param commits_per_repo: number of commits to be used in the main markdown file
+    :param json_files: List of files to extract commits from.
+    :param path_to_files: Folder to json files
+    :return: none
+    """
+    for file in json_files:
+        file_path = "{}/".format(path_to_files) + file
+        print(file_path)
+        with open(file_path) as json_files:
+            data = json.load(json_files)
+            # print(data)
+            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
+            repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
+            repository_json = base_link + file.rstrip().replace(" ", "%20")
+            repository_title = file.replace(".json", "")
+
+            for i in range(0, len(data.keys())):
+                # print(str(data.get(str(i))), str(len(data.keys())-i-1))
+                pushed_on_day = data.get(str(len(data.keys())-i-1)).get("date_of_push")
+                try:
+                    datetime_object = datetime.strptime(pushed_on_day, "%Y-%m-%d %H:%M:%S")
+
+                except TypeError:
+                    pass
+                write_date_header("main_md_table.md", datetime_object)
+                generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
+
+
+
+            # try:
+            #     generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
+            #
+            #     extracted_key = ""
+            #     for key in data.get("1").get("changeset_commits").keys():
+            #         extracted_key = key
+            #         break
+            #
+            #     last_commit = data.get("1").get("changeset_commits").get(extracted_key).get("commit_message")
+            #     last_commit = remove_chars(last_commit, "\n")
+            #
+            #     author = data.get("1").get("changeset_commits").get(extracted_key).get("commiter_name")
+            #     reviewer = extract_reviewer(last_commit)
+            #
+            #     if reviewer is None:
+            #         reviewer = " "
+            #     deploy_time = data.get("1").get("date_of_push")
+            #     commit_url = "[Link](" + data.get("1")\
+            #                                  .get("changeset_commits")\
+            #                                  .get(extracted_key)\
+            #                                  .get("url") + ")"
+            #     write_main_md_table("main_md_table.md",
+            #                         commit_url,
+            #                         last_commit,
+            #                         author,
+            #                         reviewer,
+            #                         deploy_time)
+            # except KeyError:
+            #     print("Key Error")
 
 
 def generate_markdown_header(file_name, repository_name, markdown_link, json_link):
@@ -849,15 +941,15 @@ if __name__ == "__main__":
             runrepos = sys.argv.index("-r") + 1
             configuration.REPO_CHOICE = list(sys.argv[runrepos])
     else:
-        TOKEN = os.environ.get("GIT_TOKEN")
-        git = Github(TOKEN)
-        repositories_data = open("./repositories.json").read()
-        repositories = json.loads(repositories_data)
-        create_files_for_git(repositories)
-        create_files_for_hg(repositories)
+        # TOKEN = os.environ.get("GIT_TOKEN")
+        # git = Github(TOKEN)
+        # repositories_data = open("./repositories.json").read()
+        # repositories = json.loads(repositories_data)
+        # create_files_for_git(repositories)
+        # create_files_for_hg(repositories)
         clear_file("main_md_table.md")
-        # generate_main_md_table("hg_files") TODO change the code to get the commit infos from hg json files (lines 754-761)
-        generate_main_md_table("git_files")
-        push_files_to_git()
+        generate_main_md_table("hg_files")
+        # generate_main_md_table("git_files")
+        # push_files_to_git()
 
 
