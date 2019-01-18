@@ -349,7 +349,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
                     new_commit_dict.update(each_commit)
-            json_writer_git(repository_name, new_commit_dict)
+        json_writer_git(repository_name, new_commit_dict)
         return True
     # TYPE = TAG
     if repository_type == "tag" and repository_name == "build-puppet":
