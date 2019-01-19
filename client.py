@@ -668,6 +668,7 @@ def create_hg_md_table(repository_name):
     except FileNotFoundError:
         print("Json for {} is empty! Skipping!".format(repository_name))
 
+
 def clear_file(file_name):
     """
     This function takes a file that clears the content and output's a base table header for a markdown file.
@@ -692,6 +693,8 @@ def generate_main_md_table(path_to_files):
     # Look into repositories folder and list all of the files
     only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
                   isfile(join(dir_path + "/{}".format(path_to_files), f))]
+
+    print("only files: ", only_files)
 
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]
@@ -729,7 +732,7 @@ def extract_reviewer(string):
         return reviewer
 
 
-def extract_json(json_files, path_to_files, commits_per_repo=5):
+def extract_json(json_files, path_to_files):
     """
     Extracts the json data from json files and writes the data to the main markdown table file. The function looks
     into json files after the last commit, extracts it and calls the write_main_md_table function.
@@ -738,9 +741,12 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
     :param path_to_files: Folder to json files
     :return: none
     """
+    time_24h_ago = datetime.utcnow() - timedelta(days=1)
+    test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
+    time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
+
     for file in json_files:
         file_path = "{}/".format(path_to_files) + file
-
         with open(file_path) as json_files:
             data = json.load(json_files)
             base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
@@ -751,27 +757,49 @@ def extract_json(json_files, path_to_files, commits_per_repo=5):
                 # Generates the markdown header for a specific repository
                 generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
                 # Write the commits from json files into the main markdown table
-                # The number of commits writen to a table depends on the commits_per_repo value (by default = 5 in the
-                # function definition.
-                for commit_iterator in range(1, commits_per_repo + 1):
-                    # The commit number must be a number with string type.
-                    commit_number = str(commit_iterator)
-                    commit_description = data.get(commit_number).get("commit_message")
-                    commit_url = data.get(commit_number).get("url")
-                    commit_url = "[Link](" + commit_url + ")"
-                    commit_date = data.get(commit_number).get("commit_date")
-                    author = data.get(commit_number).get("commiter_name")
-                    if path_to_files is "hg_files":
-                        review = extract_reviewer(commit_description)
-                    elif path_to_files is "git_files":
-                        review = "Placeholder"  # TODO git handler for getting the reviewer.
-                    write_main_md_table("main_md_table.md",
-                                        commit_url,
-                                        commit_description,
-                                        author,
-                                        review,
-                                        commit_date
-                                        )
+                if path_to_files == "git_files":
+                    if "0" in data:
+                        del data["0"]
+                        print("0 deleted")
+                    for commit_iterator in data:
+                        commit_number = str(commit_iterator)
+                        commit_date = data.get(commit_number).get("commit_date")
+                        is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+                        print(is_it_under_24, "vs ", time_24h_ago)
+                        if is_it_under_24 > time_24h_ago:
+                            commit_description = data.get(commit_number).get("commit_message")
+                            commit_url = data.get(commit_number).get("url")
+                            commit_url = "[Link](" + commit_url + ")"
+                            author = data.get(commit_number).get("commiter_name")
+                            review = "Placeholder"  # TODO git handler for getting the reviewer.
+
+                            write_main_md_table("main_md_table.md",
+                                                commit_url,
+                                                commit_description,
+                                                author,
+                                                review,
+                                                commit_date)
+                elif path_to_files is "hg_files":
+                    if "0" in data:
+                        del data["0"]
+                    else:
+                        for changeset_iterator in data:
+                            for commit_iterator in data.get(changeset_iterator).get("changeset_commits"):
+                                commit_number = str(commit_iterator)
+                                commit_date = data.get(changeset_iterator).get("date_of_push")
+                                is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+                                if is_it_under_24 > time_24h_ago:
+                                    commit_description = commit_iterator.get("commit_message")
+                                    commit_url = commit_iterator.get("url")
+                                    commit_url = "[Link](" + commit_url + ")"
+                                    author = data.get(changeset_iterator).get("pusher")
+                                    review = extract_reviewer(commit_description)
+                                    write_main_md_table("main_md_table.md",
+                                                        commit_url,
+                                                        commit_description,
+                                                        author,
+                                                        review,
+                                                        commit_date)
             except KeyError:
                 print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
                 pass
@@ -828,8 +856,8 @@ if __name__ == "__main__":
     git = Github(TOKEN)
     repositories_data = open("./repositories.json").read()
     repositories = json.loads(repositories_data)
-    create_files_for_git(repositories)
-    create_files_for_hg(repositories)
-    clear_file("main_md_table.md")
-    # generate_main_md_table("hg_files") TODO change the code to get the commit infos from hg json files (lines 754-761)
+    # create_files_for_git(repositories)
+    # create_files_for_hg(repositories)
+    # clear_file("main_md_table.md")
+    generate_main_md_table("hg_files")
     generate_main_md_table("git_files")
