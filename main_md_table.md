@@ -1,4 +1,4 @@
-##  Commits in production generated for a day
+##  Commits in production - for one day, generated on: 2019-01-20 04:34:22.526201.
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
