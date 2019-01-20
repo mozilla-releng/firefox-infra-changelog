@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 31
+    "last_push_id": 34
   },
   "1": {
     "changeset_number": "21",
@@ -184,6 +184,70 @@
         "commit_message": "Bug 1485680 - if we modify the action hook task logic, we need to update scriptworker. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15482",
         "files_changed": [
           "ciadmin/generate/in_tree_actions.py"
+        ]
+      }
+    }
+  },
+  "12": {
+    "changeset_number": "32",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-17 00:47:14",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=ae0505b4301c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Fix ci-admin tests; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16756",
+        "files_changed": [
+          ".taskcluster.yml",
+          "tests/test_generate_grants.py"
+        ]
+      }
+    }
+  },
+  "13": {
+    "changeset_number": "33",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-18 23:21:58",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=65b3e50a57e4",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Fix flake8 errors; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16769",
+        "files_changed": [
+          ".taskcluster.yml",
+          "ciadmin/generate/ciconfig/actions.py",
+          "ciadmin/generate/cron_tasks.py",
+          "ciadmin/generate/modify.py",
+          "ciadmin/util/ansi.py",
+          "tests/test_current_hooks.py",
+          "tests/test_current_roles.py",
+          "tests/test_generate_ciconfig_actions.py",
+          "tests/test_generate_ciconfig_environment.py",
+          "tests/test_generate_ciconfig_get.py",
+          "tests/test_generate_ciconfig_grants.py",
+          "tests/test_generate_ciconfig_projects.py",
+          "tests/test_generate_grants.py",
+          "tests/test_generate_tcyml.py",
+          "tests/test_resources_hook.py",
+          "tests/test_resources_resources.py",
+          "tests/test_resources_role.py",
+          "tests/test_util_matchlist.py",
+          "tests/test_util_scopes.py"
+        ]
+      }
+    }
+  },
+  "14": {
+    "changeset_number": "34",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-18 23:36:42",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=8fe80858db7f",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Fix typo from flake8 run; r=me",
+        "files_changed": [
+          "tests/test_generate_ciconfig_grants.py"
         ]
       }
     }

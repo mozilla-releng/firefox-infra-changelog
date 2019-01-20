@@ -1,22 +1,42 @@
 {
   "0": {
-    "lastChecked": "2019-01-06 14:49:03.775738",
+    "lastChecked": "2019-01-17 09:20:33.006168",
     "last_releases": {
       "latest_release": {
-        "version": "3.4.0",
-        "sha": "cf3b10f96874db1bb8107458b3ece1e281e902ea",
-        "date": "2019-01-03 19:57:59",
-        "author": "mitchhentges"
-      },
-      "previous_release": {
-        "version": "1.1.0",
-        "sha": "89986e684214e8a8d7a16239f56474d7f0c2e9d8",
-        "date": "2018-03-19 11:40:50",
+        "version": "3.4.1",
+        "sha": "225493087a68a73ae6eea239ee406686ea8f8898",
+        "date": "2019-01-15 13:17:21",
         "author": "MihaiTabara"
       }
     }
   },
   "1": {
+    "sha": "225493087a68a73ae6eea239ee406686ea8f8898",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/225493087a68a73ae6eea239ee406686ea8f8898",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "3.4.1",
+    "commit_date": "2019-01-15 13:17:21",
+    "files_changed": [
+      "version.txt"
+    ]
+  },
+  "2": {
+    "sha": "d19378fd25a08f1b1e24b4259f3145d3fb3cca65",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/d19378fd25a08f1b1e24b4259f3145d3fb3cca65",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Bug 1519054 - add AArch64 as part of the BOUNCER LOCATIONS. (#49)  Bug 1519054 - add AArch64 as part of the bouncer locations.",
+    "commit_date": "2019-01-15 13:15:34",
+    "files_changed": [
+      "CHANGELOG.md",
+      "bouncerscript/constants.py",
+      "bouncerscript/test/test_task.py",
+      "bouncerscript/test/test_utils.py",
+      "tox.ini"
+    ]
+  },
+  "3": {
     "sha": "cf3b10f96874db1bb8107458b3ece1e281e902ea",
     "url": "https://github.com/mozilla-releng/bouncerscript/commit/cf3b10f96874db1bb8107458b3ece1e281e902ea",
     "commiter_name": "mitchhentges",
@@ -28,7 +48,19 @@
       "version.txt"
     ]
   },
-  "2": {
+  "4": {
+    "sha": "cf3b10f96874db1bb8107458b3ece1e281e902ea",
+    "url": "https://github.com/mozilla-releng/bouncerscript/commit/cf3b10f96874db1bb8107458b3ece1e281e902ea",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #48 from mitchhentges/release-3.4.0  3.4.0",
+    "commit_date": "2019-01-03 19:57:59",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "5": {
     "sha": "1db10557cc46f331af59c27fd33943c12af0e856",
     "url": "https://github.com/mozilla-releng/bouncerscript/commit/1db10557cc46f331af59c27fd33943c12af0e856",
     "commiter_name": "mitchhentges",
@@ -40,7 +72,7 @@
       "version.txt"
     ]
   },
-  "3": {
+  "6": {
     "sha": "bc709e70a78a49f94e775141137518997d9ad18b",
     "url": "https://github.com/mozilla-releng/bouncerscript/commit/bc709e70a78a49f94e775141137518997d9ad18b",
     "commiter_name": "mitchhentges",
@@ -53,7 +85,7 @@
       "examples/config.example.json"
     ]
   },
-  "4": {
+  "7": {
     "sha": "efd2c06441d325a5556a758923cd7a099e627df4",
     "url": "https://github.com/mozilla-releng/bouncerscript/commit/efd2c06441d325a5556a758923cd7a099e627df4",
     "commiter_name": "mitchhentges",
