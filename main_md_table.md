@@ -1,12 +1,10 @@
-##  Commits in production. 
-
+##  Commits in production generated for a day
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=65b3e50a57e4)|Fix flake8 errors; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D16769|mozilla@hocat.ca|dustin|2019-01-18 23:21:58|
-|[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=8fe80858db7f)|Fix typo from flake8 run; r=me|mozilla@hocat.ca|me|2019-01-18 23:36:42|
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
 |	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -20,8 +18,6 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ef3912c3403b)|Bug 1506912 - Raptor tp6m-1 pageload test on android geckoview; r=jmaher  Differential Revision: https://phabricator.services.mozilla.com/D15143|shindli@mozilla.com|jmaher|2019-01-17 18:13:20|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aee9f213f3c7)|Bug 1496890 - include client calling triggerHook in action description r=aki  Differential Revision: https://phabricator.services.mozilla.com/D16875|ebalazs@mozilla.com|aki|2019-01-18 11:38:33|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=39e888455f3f)|Bug 1521114 - remove trailing comma causing invalid artfacts.json r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D16989|opoprus@mozilla.com|tomprince|2019-01-19 05:35:41|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1e0f41f31abe)|No bug: [taskgraph] Simplify one of the docker tests; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D17010|opoprus@mozilla.com|dustin|2019-01-19 05:35:41|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a71f2830d570)|Backed out changeset aee9f213f3c7 (bug 1496890) for causing Bug 1521264. a=backout|csabou@mozilla.com|backout|2019-01-19 11:22:55|
