@@ -1,491 +1,148 @@
 ##  Commits in production. 
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.393407 and contains modifications from: 2019-01-17 00:47:14 |
-
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.395403 and contains modifications from: 2019-01-02 22:26:29 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.397400 and contains modifications from: 2018-12-18 21:48:17 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.398416 and contains modifications from: 2018-10-22 20:53:12 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.399396 and contains modifications from: 2018-10-22 20:50:28 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.400893 and contains modifications from: 2018-09-26 05:49:00 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.401897 and contains modifications from: 2018-09-12 23:04:50 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.402889 and contains modifications from: 2018-09-11 21:00:43 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.405884 and contains modifications from: 2018-09-10 17:54:50 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.406882 and contains modifications from: 2018-09-07 22:42:24 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.407880 and contains modifications from: 2018-09-07 22:42:11 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.409377 and contains modifications from: 2018-09-06 01:14:08 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.409877 and contains modifications from: 2018-09-06 01:14:08 |
-
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.411392 and contains modifications from: 2018-12-18 21:48:21 |
+|[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=65b3e50a57e4)|Fix flake8 errors; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D16769|mozilla@hocat.ca|dustin|2019-01-18 23:21:58|
+|[Link](https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=8fe80858db7f)|Fix typo from flake8 run; r=me|mozilla@hocat.ca|me|2019-01-18 23:36:42|
 
 |	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.412373 and contains modifications from: 2018-11-30 18:35:24 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.413387 and contains modifications from: 2018-11-06 23:44:48 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.414369 and contains modifications from: 2018-11-01 20:52:45 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.414885 and contains modifications from: 2018-10-29 23:40:59 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.415870 and contains modifications from: 2018-10-26 20:55:45 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.416882 and contains modifications from: 2018-10-25 02:53:02 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.417380 and contains modifications from: 2018-10-22 20:52:27 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.418361 and contains modifications from: 2018-10-17 22:46:50 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.419360 and contains modifications from: 2018-10-15 23:22:25 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.421355 and contains modifications from: 2018-10-15 22:11:19 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.422852 and contains modifications from: 2018-10-15 21:38:50 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.424350 and contains modifications from: 2018-10-05 21:10:06 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.425347 and contains modifications from: 2018-10-03 20:18:37 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.426346 and contains modifications from: 2018-10-03 20:18:20 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.427344 and contains modifications from: 2018-10-02 19:42:41 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.428342 and contains modifications from: 2018-09-18 19:34:05 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.429340 and contains modifications from: 2018-09-13 19:10:48 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.430338 and contains modifications from: 2018-09-12 23:04:46 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.431336 and contains modifications from: 2018-09-12 23:04:46 |
-
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.432834 and contains modifications from: 2019-01-16 19:01:05 |
+|[Link](https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=dea5d65a07aa)|Bug 1489181: add input_schema to actions.yml r=aki  Differential Revision: https://phabricator.services.mozilla.com/D5684|dmitchell@mozilla.com|aki|2019-01-19 23:04:46|
 
 |	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ef3912c3403b)|Bug 1506912 - Raptor tp6m-1 pageload test on android geckoview; r=jmaher  Differential Revision: https://phabricator.services.mozilla.com/D15143|shindli@mozilla.com|jmaher|2019-01-17 18:13:20|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aee9f213f3c7)|Bug 1496890 - include client calling triggerHook in action description r=aki  Differential Revision: https://phabricator.services.mozilla.com/D16875|ebalazs@mozilla.com|aki|2019-01-18 11:38:33|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=39e888455f3f)|Bug 1521114 - remove trailing comma causing invalid artfacts.json r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D16989|opoprus@mozilla.com|tomprince|2019-01-19 05:35:41|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1e0f41f31abe)|No bug: [taskgraph] Simplify one of the docker tests; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D17010|opoprus@mozilla.com|dustin|2019-01-19 05:35:41|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a71f2830d570)|Backed out changeset aee9f213f3c7 (bug 1496890) for causing Bug 1521264. a=backout|csabou@mozilla.com|backout|2019-01-19 11:22:55|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c55210f1f837)|Bug 1520374 - Simplify error message for "Could not install python package"; r=aryx  Information like the pip path, package name, etc is useful for debugging, but not for bug classification: Let's try to collect all such failures in one "Could not install python package" bug. The full command line and retry attempt history is still retrievable from the log, for debugging purposes.|csabou@mozilla.com|aryx|2019-01-19 11:59:33|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bfa40467bc83)|Bug 1520374 - follow-up - remove unused import; r=me,a=test-only on a CLOSED TREE|csabou@mozilla.com|me,a=test-only|2019-01-19 11:59:33|
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.433832 and contains modifications from: 2019-01-16 06:51:20 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.434331 and contains modifications from: 2019-01-16 06:47:18 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	balrogscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.435329 and contains modifications from: 2019-01-16 00:13:12 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	beetmoverscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.436327 and contains modifications from: 2019-01-15 18:08:45 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	bouncerscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.437326 and contains modifications from: 2019-01-15 11:28:57 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.439322 and contains modifications from: 2019-01-15 06:37:11 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.440819 and contains modifications from: 2019-01-14 23:49:33 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.441817 and contains modifications from: 2019-01-14 19:23:11 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.442815 and contains modifications from: 2019-01-14 19:21:48 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.443813 and contains modifications from: 2019-01-12 11:39:47 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	pushsnapscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.444811 and contains modifications from: 2019-01-11 06:12:48 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.445810 and contains modifications from: 2019-01-10 11:38:54 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.446808 and contains modifications from: 2019-01-10 06:03:25 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.447307 and contains modifications from: 2019-01-09 23:41:24 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	signingscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
 
-|            | 
-|:----------:| 
-| Generated on: 2019-01-17 16:20:45.448305 and contains modifications from: 2019-01-09 23:41:24 |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|	signtool	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
+
+|	taskcluster	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
+
+|	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day..|FIC - BOT|Self Generated| - |
