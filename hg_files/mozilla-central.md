@@ -1,8 +1,15 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35389
+ CURRENT PUSH ID: 35402
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|35400|2019-01-19 11:59:33|Geoff Brown <gbrown@mozilla.com>|Bug 1520374 - Simplify error message for "Could not install python package"; r=aryxInformation like the pip path, package name, etc is useful for debugging, butnot for bug classification: Let's try to collect all such failures in one"Could not install python package" bug. The full command line and retryattempt history is still retrievable from the log, for debugging purposes.|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c55210f1f837
+|35400|2019-01-19 11:59:33|Geoff Brown <gbrown@mozilla.com>|Bug 1520374 - follow-up - remove unused import; r=me,a=test-only on a CLOSED TREE|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bfa40467bc83
+|35398|2019-01-19 11:22:55|Cosmin Sabou <csabou@mozilla.com>|Backed out changeset aee9f213f3c7 (bug 1496890) for causing Bug 1521264. a=backout|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a71f2830d570
+|35397|2019-01-19 05:35:41|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1521114 - remove trailing comma causing invalid artfacts.json r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D16989|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=39e888455f3f
+|35397|2019-01-19 05:35:41|Tom Prince <mozilla@hocat.ca>|No bug: [taskgraph] Simplify one of the docker tests; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17010|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1e0f41f31abe
+|35395|2019-01-18 11:38:33|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1496890 - include client calling triggerHook in action description r=akiDifferential Revision: https://phabricator.services.mozilla.com/D16875|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aee9f213f3c7
+|35390|2019-01-17 18:13:20|Rob Wood <rwood@mozilla.com>|Bug 1506912 - Raptor tp6m-1 pageload test on android geckoview; r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D15143|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ef3912c3403b
 |35386|2019-01-16 19:01:05|Daniel Varga <dvarga@mozilla.com>|Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3b1fbe2830f3
 |35383|2019-01-16 06:51:20|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1517645 - log each task as it is cancelledReviewers: bstackSubscribers: tomprinceTags: #secure-revisionBug #: 1517645Differential Revision: https://phabricator.services.mozilla.com/D15852|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96a7386c6e5b
 |35383|2019-01-16 06:51:20|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1517645 - always use a highly concurrent requests sessionReviewers: bstackSubscribers: tomprinceTags: #secure-revisionBug #: 1517645Differential Revision: https://phabricator.services.mozilla.com/D15853|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=53380666b5c7

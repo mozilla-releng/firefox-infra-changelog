@@ -1,4 +1,4 @@
-##  Commits in production - for one day, generated on: 2019-01-20 04:38:35 UTC.
+##  Commits in production - for one day, generated on: 2019-01-20 04:43:14 UTC.
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -134,7 +134,9 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/taskcluster/taskcluster/commit/30372ec731730592a7bf22d4b349a61f75663883)|Merge pull request #120 from Biboswan/lastfireclientapi  Add new api listLastFires in client|djmitche|N/A|2019-01-19 20:07:38|
+|[Link](https://github.com/taskcluster/taskcluster/commit/58681e3b6aaa2dc55ae12f9cebf051c0ca525337)|Add new api listLastFires in client|Biboswan|N/A|2019-01-19 17:07:06|
+|[Link](https://github.com/taskcluster/taskcluster/commit/910ebcdc980e1dc8c1e87403f316aa83ce78747f)|Merge pull request #113 from djmitche/bug1516353  Bug 1516353 - import tc-terraform|djmitche|N/A|2019-01-19 14:38:49|
 
 |	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 

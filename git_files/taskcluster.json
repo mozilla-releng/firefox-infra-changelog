@@ -1,8 +1,1777 @@
 {
   "0": {
-    "lastChecked": "2019-01-17 10:12:43.308126"
+    "lastChecked": "2019-01-20 04:42:34.642017"
   },
   "1": {
+    "sha": "30372ec731730592a7bf22d4b349a61f75663883",
+    "url": "https://github.com/taskcluster/taskcluster/commit/30372ec731730592a7bf22d4b349a61f75663883",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #120 from Biboswan/lastfireclientapi  Add new api listLastFires in client",
+    "commit_date": "2019-01-19 20:07:38",
+    "files_changed": [
+      "libraries/client/src/apis.js"
+    ]
+  },
+  "2": {
+    "sha": "58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
+    "url": "https://github.com/taskcluster/taskcluster/commit/58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "Add new api listLastFires in client",
+    "commit_date": "2019-01-19 17:07:06",
+    "files_changed": [
+      "libraries/client/src/apis.js"
+    ]
+  },
+  "3": {
+    "sha": "910ebcdc980e1dc8c1e87403f316aa83ce78747f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/910ebcdc980e1dc8c1e87403f316aa83ce78747f",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #113 from djmitche/bug1516353  Bug 1516353 - import tc-terraform",
+    "commit_date": "2019-01-19 14:38:49",
+    "files_changed": [
+      ".taskcluster.yml",
+      "infrastructure/terraform/.gitignore",
+      "infrastructure/terraform/README.md",
+      "infrastructure/terraform/auth-service.tf",
+      "infrastructure/terraform/docs-service.tf",
+      "infrastructure/terraform/events-service.tf",
+      "infrastructure/terraform/gce-provider-service.tf",
+      "infrastructure/terraform/github-service.tf",
+      "infrastructure/terraform/hooks-service.tf",
+      "infrastructure/terraform/index-service.tf",
+      "infrastructure/terraform/ingress.tf",
+      "infrastructure/terraform/ingress.yaml",
+      "infrastructure/terraform/main.tf",
+      "infrastructure/terraform/modules/deployment/deployment.yaml",
+      "infrastructure/terraform/modules/deployment/main.tf",
+      "infrastructure/terraform/modules/deployment/service.yaml",
+      "infrastructure/terraform/modules/deployment/variables.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/main.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/outputs.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/variables.tf",
+      "infrastructure/terraform/modules/scheduled-job/cron.yaml",
+      "infrastructure/terraform/modules/scheduled-job/main.tf",
+      "infrastructure/terraform/modules/scheduled-job/variables.tf",
+      "infrastructure/terraform/modules/service-secrets/main.tf",
+      "infrastructure/terraform/modules/service-secrets/outputs.tf",
+      "infrastructure/terraform/modules/service-secrets/secrets_resource.yaml",
+      "infrastructure/terraform/modules/service-secrets/service-account.yaml",
+      "infrastructure/terraform/modules/service-secrets/variables.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/main.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/outputs.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/variables.tf",
+      "infrastructure/terraform/notify-service.tf",
+      "infrastructure/terraform/outputs.tf",
+      "infrastructure/terraform/queue-service.tf",
+      "infrastructure/terraform/references-service.tf",
+      "infrastructure/terraform/secrets-service.tf",
+      "infrastructure/terraform/taskcluster.tf.json",
+      "infrastructure/terraform/tools-ui.tf",
+      "infrastructure/terraform/variables.tf",
+      "test/meta_test.js"
+    ]
+  },
+  "4": {
+    "sha": "73e7191cd95704f5e61c3e744d38e57570bccbc7",
+    "url": "https://github.com/taskcluster/taskcluster/commit/73e7191cd95704f5e61c3e744d38e57570bccbc7",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #114 from taskcluster/renovate/eslint-5.x  Update dependency eslint to v5.12.1",
+    "commit_date": "2019-01-18 23:02:54",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "5": {
+    "sha": "a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency eslint to v5.12.1",
+    "commit_date": "2019-01-18 22:18:08",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "6": {
+    "sha": "eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #112 from djmitche/import-references  Bug 1520841 - Import references",
+    "commit_date": "2019-01-18 22:17:21",
+    "files_changed": [
+      ".taskcluster.yml",
+      "libraries/references/package.json",
+      "services/references/.gitignore",
+      "services/references/Dockerfile",
+      "services/references/README.md",
+      "services/references/nginx-site.conf",
+      "services/references/package.json",
+      "services/references/src/main.js"
+    ]
+  },
+  "7": {
+    "sha": "2926da3c9b179899ce1f4b084cb80d29359bccde",
+    "url": "https://github.com/taskcluster/taskcluster/commit/2926da3c9b179899ce1f4b084cb80d29359bccde",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516353 - test terraform syntax",
+    "commit_date": "2019-01-18 21:40:00",
+    "files_changed": [
+      ".taskcluster.yml",
+      "test/meta_test.js"
+    ]
+  },
+  "8": {
+    "sha": "a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge repo 'taskcluster-terraform' into monorepo",
+    "commit_date": "2019-01-18 21:28:55",
+    "files_changed": [
+      "infrastructure/terraform/.gitignore",
+      "infrastructure/terraform/README.md",
+      "infrastructure/terraform/auth-service.tf",
+      "infrastructure/terraform/docs-service.tf",
+      "infrastructure/terraform/events-service.tf",
+      "infrastructure/terraform/gce-provider-service.tf",
+      "infrastructure/terraform/github-service.tf",
+      "infrastructure/terraform/hooks-service.tf",
+      "infrastructure/terraform/index-service.tf",
+      "infrastructure/terraform/ingress.tf",
+      "infrastructure/terraform/ingress.yaml",
+      "infrastructure/terraform/main.tf",
+      "infrastructure/terraform/modules/deployment/deployment.yaml",
+      "infrastructure/terraform/modules/deployment/main.tf",
+      "infrastructure/terraform/modules/deployment/service.yaml",
+      "infrastructure/terraform/modules/deployment/variables.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/main.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/outputs.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/variables.tf",
+      "infrastructure/terraform/modules/scheduled-job/cron.yaml",
+      "infrastructure/terraform/modules/scheduled-job/main.tf",
+      "infrastructure/terraform/modules/scheduled-job/variables.tf",
+      "infrastructure/terraform/modules/service-secrets/main.tf",
+      "infrastructure/terraform/modules/service-secrets/outputs.tf",
+      "infrastructure/terraform/modules/service-secrets/secrets_resource.yaml",
+      "infrastructure/terraform/modules/service-secrets/service-account.yaml",
+      "infrastructure/terraform/modules/service-secrets/variables.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/main.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/outputs.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/variables.tf",
+      "infrastructure/terraform/notify-service.tf",
+      "infrastructure/terraform/outputs.tf",
+      "infrastructure/terraform/queue-service.tf",
+      "infrastructure/terraform/references-service.tf",
+      "infrastructure/terraform/secrets-service.tf",
+      "infrastructure/terraform/taskcluster.tf.json",
+      "infrastructure/terraform/tools-ui.tf",
+      "infrastructure/terraform/variables.tf"
+    ]
+  },
+  "9": {
+    "sha": "b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
+    "url": "https://github.com/taskcluster/taskcluster/commit/b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516353 - remove unnecesary files",
+    "commit_date": "2019-01-18 21:28:27",
+    "files_changed": [
+      "infrastructure/terraform/.taskcluster.yml",
+      "infrastructure/terraform/CODE_OF_CONDUCT.md",
+      "infrastructure/terraform/CONTRIBUTING.md",
+      "infrastructure/terraform/LICENSE"
+    ]
+  },
+  "10": {
+    "sha": "a263ab914e5684c0ea3a538040e4814515c90329",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a263ab914e5684c0ea3a538040e4814515c90329",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516353 - move taskcluster-terraform to infrastructure/terraform",
+    "commit_date": "2019-01-18 21:27:22",
+    "files_changed": [
+      "infrastructure/terraform/.gitignore",
+      "infrastructure/terraform/.taskcluster.yml",
+      "infrastructure/terraform/CODE_OF_CONDUCT.md",
+      "infrastructure/terraform/CONTRIBUTING.md",
+      "infrastructure/terraform/LICENSE",
+      "infrastructure/terraform/README.md",
+      "infrastructure/terraform/auth-service.tf",
+      "infrastructure/terraform/docs-service.tf",
+      "infrastructure/terraform/events-service.tf",
+      "infrastructure/terraform/gce-provider-service.tf",
+      "infrastructure/terraform/github-service.tf",
+      "infrastructure/terraform/hooks-service.tf",
+      "infrastructure/terraform/index-service.tf",
+      "infrastructure/terraform/ingress.tf",
+      "infrastructure/terraform/ingress.yaml",
+      "infrastructure/terraform/main.tf",
+      "infrastructure/terraform/modules/deployment/deployment.yaml",
+      "infrastructure/terraform/modules/deployment/main.tf",
+      "infrastructure/terraform/modules/deployment/service.yaml",
+      "infrastructure/terraform/modules/deployment/variables.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/main.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/outputs.tf",
+      "infrastructure/terraform/modules/rabbitmq-user/variables.tf",
+      "infrastructure/terraform/modules/scheduled-job/cron.yaml",
+      "infrastructure/terraform/modules/scheduled-job/main.tf",
+      "infrastructure/terraform/modules/scheduled-job/variables.tf",
+      "infrastructure/terraform/modules/service-secrets/main.tf",
+      "infrastructure/terraform/modules/service-secrets/outputs.tf",
+      "infrastructure/terraform/modules/service-secrets/secrets_resource.yaml",
+      "infrastructure/terraform/modules/service-secrets/service-account.yaml",
+      "infrastructure/terraform/modules/service-secrets/variables.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/main.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/outputs.tf",
+      "infrastructure/terraform/modules/taskcluster-service-iam-user/variables.tf",
+      "infrastructure/terraform/notify-service.tf",
+      "infrastructure/terraform/outputs.tf",
+      "infrastructure/terraform/queue-service.tf",
+      "infrastructure/terraform/references-service.tf",
+      "infrastructure/terraform/secrets-service.tf",
+      "infrastructure/terraform/taskcluster.tf.json",
+      "infrastructure/terraform/tools-ui.tf",
+      "infrastructure/terraform/variables.tf"
+    ]
+  },
+  "11": {
+    "sha": "39239a8f766fe304c9e4bd6544f02cc661dc162e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/39239a8f766fe304c9e4bd6544f02cc661dc162e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "include tc-references in .taskcluster.yml",
+    "commit_date": "2019-01-18 20:35:10",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "12": {
+    "sha": "1839eecdd38cf1f44e43db02f7aac8dd14756622",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1839eecdd38cf1f44e43db02f7aac8dd14756622",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "remove engine restriction from tc-references",
+    "commit_date": "2019-01-18 20:31:46",
+    "files_changed": [
+      "services/references/package.json"
+    ]
+  },
+  "13": {
+    "sha": "158a3ac6001023ac2f6fb8f99c37f4690fc47515",
+    "url": "https://github.com/taskcluster/taskcluster/commit/158a3ac6001023ac2f6fb8f99c37f4690fc47515",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1520841 - remove tc-references test",
+    "commit_date": "2019-01-18 20:28:08",
+    "files_changed": [
+      "services/references/package.json",
+      "services/references/test/built-services/auth/metadata.json",
+      "services/references/test/built-services/auth/references/api.json",
+      "services/references/test/built-services/auth/references/events.json",
+      "services/references/test/built-services/auth/schemas/v1/authenticate-hawk-request.json",
+      "services/references/test/built-services/auth/schemas/v1/authenticate-hawk-response.json",
+      "services/references/test/built-services/auth/schemas/v1/aws-s3-credentials-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-account-list-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-container-list-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-container-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-table-access-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-table-list-response.json",
+      "services/references/test/built-services/auth/schemas/v1/client-message.json",
+      "services/references/test/built-services/auth/schemas/v1/create-client-request.json",
+      "services/references/test/built-services/auth/schemas/v1/create-client-response.json",
+      "services/references/test/built-services/auth/schemas/v1/create-role-request.json",
+      "services/references/test/built-services/auth/schemas/v1/get-client-response.json",
+      "services/references/test/built-services/auth/schemas/v1/get-role-response.json",
+      "services/references/test/built-services/auth/schemas/v1/list-clients-response.json",
+      "services/references/test/built-services/auth/schemas/v1/list-roles-response.json",
+      "services/references/test/built-services/auth/schemas/v1/role-message.json",
+      "services/references/test/built-services/auth/schemas/v1/scopeset.json",
+      "services/references/test/built-services/auth/schemas/v1/sentry-dsn-response.json",
+      "services/references/test/built-services/auth/schemas/v1/statsum-token-response.json",
+      "services/references/test/built-services/auth/schemas/v1/test-authenticate-request.json",
+      "services/references/test/built-services/auth/schemas/v1/test-authenticate-response.json",
+      "services/references/test/built-services/auth/schemas/v1/webhooktunnel-token-response.json",
+      "services/references/test/built-services/azure-blob-storage/metadata.json",
+      "services/references/test/built-services/azure-entities/metadata.json",
+      "services/references/test/built-services/docker-exec-websocket-server/metadata.json",
+      "services/references/test/built-services/docker-worker/metadata.json",
+      "services/references/test/built-services/docs/metadata.json",
+      "services/references/test/built-services/events/metadata.json",
+      "services/references/test/built-services/events/references/api.json",
+      "services/references/test/built-services/fast-azure-storage/metadata.json",
+      "services/references/test/built-services/gce-provider/metadata.json",
+      "services/references/test/built-services/gce-provider/references/api.json",
+      "services/references/test/built-services/generic-worker/metadata.json",
+      "services/references/test/built-services/github/metadata.json",
+      "services/references/test/built-services/github/references/api.json",
+      "services/references/test/built-services/github/references/events.json",
+      "services/references/test/built-services/github/schemas/v1/build-list.json",
+      "services/references/test/built-services/github/schemas/v1/create-comment.json",
+      "services/references/test/built-services/github/schemas/v1/create-status.json",
+      "services/references/test/built-services/github/schemas/v1/github-pull-request-message.json",
+      "services/references/test/built-services/github/schemas/v1/github-push-message.json",
+      "services/references/test/built-services/github/schemas/v1/github-release-message.json",
+      "services/references/test/built-services/github/schemas/v1/repository.json",
+      "services/references/test/built-services/github/schemas/v1/taskcluster-github-config.json",
+      "services/references/test/built-services/github/schemas/v1/taskcluster-github-config.v1.json",
+      "services/references/test/built-services/go-schematypes/metadata.json",
+      "services/references/test/built-services/hooks/metadata.json",
+      "services/references/test/built-services/hooks/references/api.json",
+      "services/references/test/built-services/hooks/references/events.json",
+      "services/references/test/built-services/hooks/schemas/v1/create-hook-request.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-definition.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-metadata.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-schedule.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-status.json",
+      "services/references/test/built-services/hooks/schemas/v1/list-hook-groups-response.json",
+      "services/references/test/built-services/hooks/schemas/v1/list-hooks-response.json",
+      "services/references/test/built-services/hooks/schemas/v1/pulse-hook-changed-message.json",
+      "services/references/test/built-services/hooks/schemas/v1/schedule.json",
+      "services/references/test/built-services/hooks/schemas/v1/task-status.json",
+      "services/references/test/built-services/hooks/schemas/v1/task-template.json",
+      "services/references/test/built-services/hooks/schemas/v1/trigger-hook.json",
+      "services/references/test/built-services/hooks/schemas/v1/trigger-token-response.json",
+      "services/references/test/built-services/index/metadata.json",
+      "services/references/test/built-services/index/references/api.json",
+      "services/references/test/built-services/index/schemas/v1/indexed-task-response.json",
+      "services/references/test/built-services/index/schemas/v1/insert-task-request.json",
+      "services/references/test/built-services/index/schemas/v1/list-namespaces-request.json",
+      "services/references/test/built-services/index/schemas/v1/list-namespaces-response.json",
+      "services/references/test/built-services/index/schemas/v1/list-tasks-request.json",
+      "services/references/test/built-services/index/schemas/v1/list-tasks-response.json",
+      "services/references/test/built-services/json-e/metadata.json",
+      "services/references/test/built-services/login/metadata.json",
+      "services/references/test/built-services/login/references/api.json",
+      "services/references/test/built-services/login/schemas/v1/credentials-response.json",
+      "services/references/test/built-services/login/schemas/v1/oidc-credentials-response.json",
+      "services/references/test/built-services/notify/metadata.json",
+      "services/references/test/built-services/notify/references/api.json",
+      "services/references/test/built-services/notify/references/events.json",
+      "services/references/test/built-services/notify/schemas/v1/email-request.json",
+      "services/references/test/built-services/notify/schemas/v1/irc-request.json",
+      "services/references/test/built-services/notify/schemas/v1/notification-message.json",
+      "services/references/test/built-services/notify/schemas/v1/pulse-request.json",
+      "services/references/test/built-services/purge-cache/metadata.json",
+      "services/references/test/built-services/purge-cache/references/api.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/all-purge-cache-request-list.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/purge-cache-request-list.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/purge-cache-request.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/purge-cache-requests.json",
+      "services/references/test/built-services/queue/metadata.json",
+      "services/references/test/built-services/queue/references/api.json",
+      "services/references/test/built-services/queue/references/events.json",
+      "services/references/test/built-services/queue/schemas/v1/actions.json",
+      "services/references/test/built-services/queue/schemas/v1/artifact-created-message.json",
+      "services/references/test/built-services/queue/schemas/v1/claim-work-request.json",
+      "services/references/test/built-services/queue/schemas/v1/claim-work-response.json",
+      "services/references/test/built-services/queue/schemas/v1/create-task-request.json",
+      "services/references/test/built-services/queue/schemas/v1/list-artifacts-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-dependent-tasks-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-provisioners-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-task-group-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-workers-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-workertypes-response.json",
+      "services/references/test/built-services/queue/schemas/v1/pending-tasks-response.json",
+      "services/references/test/built-services/queue/schemas/v1/poll-task-urls-response.json",
+      "services/references/test/built-services/queue/schemas/v1/post-artifact-request.json",
+      "services/references/test/built-services/queue/schemas/v1/post-artifact-response.json",
+      "services/references/test/built-services/queue/schemas/v1/provisioner-response.json",
+      "services/references/test/built-services/queue/schemas/v1/put-artifact-request.json",
+      "services/references/test/built-services/queue/schemas/v1/quarantine-worker-request.json",
+      "services/references/test/built-services/queue/schemas/v1/task-claim-request.json",
+      "services/references/test/built-services/queue/schemas/v1/task-claim-response.json",
+      "services/references/test/built-services/queue/schemas/v1/task-completed-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-credentials.json",
+      "services/references/test/built-services/queue/schemas/v1/task-defined-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-definition-and-status.json",
+      "services/references/test/built-services/queue/schemas/v1/task-exception-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-exception-request.json",
+      "services/references/test/built-services/queue/schemas/v1/task-failed-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-group-resolved.json",
+      "services/references/test/built-services/queue/schemas/v1/task-metadata.json",
+      "services/references/test/built-services/queue/schemas/v1/task-pending-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-reclaim-response.json",
+      "services/references/test/built-services/queue/schemas/v1/task-run.json",
+      "services/references/test/built-services/queue/schemas/v1/task-running-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-status-response.json",
+      "services/references/test/built-services/queue/schemas/v1/task-status.json",
+      "services/references/test/built-services/queue/schemas/v1/task.json",
+      "services/references/test/built-services/queue/schemas/v1/update-provisioner-request.json",
+      "services/references/test/built-services/queue/schemas/v1/update-worker-request.json",
+      "services/references/test/built-services/queue/schemas/v1/update-workertype-request.json",
+      "services/references/test/built-services/queue/schemas/v1/worker-response.json",
+      "services/references/test/built-services/queue/schemas/v1/workertype-response.json",
+      "services/references/test/built-services/references/metadata.json",
+      "services/references/test/built-services/secrets/metadata.json",
+      "services/references/test/built-services/secrets/references/api.json",
+      "services/references/test/built-services/secrets/schemas/v1/secret-list.json",
+      "services/references/test/built-services/secrets/schemas/v1/secret.json",
+      "services/references/test/built-services/statsum/metadata.json",
+      "services/references/test/built-services/taskcluster-builder/metadata.json",
+      "services/references/test/built-services/taskcluster-cli/metadata.json",
+      "services/references/test/built-services/taskcluster-client-go/metadata.json",
+      "services/references/test/built-services/taskcluster-client-java/metadata.json",
+      "services/references/test/built-services/taskcluster-client-web/metadata.json",
+      "services/references/test/built-services/taskcluster-client.py/metadata.json",
+      "services/references/test/built-services/taskcluster-client/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-api/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-app/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-azure/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-docs/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-iterate/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-loader/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-log/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-monitor/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-scopes/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-testing/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-urls/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-validate/metadata.json",
+      "services/references/test/built-services/tools/metadata.json",
+      "services/references/test/built-services/typed-env-config/metadata.json",
+      "services/references/test/built-services/ws-shell/metadata.json",
+      "services/references/test/integration_test.js",
+      "services/references/test/mocha.opts"
+    ]
+  },
+  "14": {
+    "sha": "8da6f9a0a314111d1bfa71428f1175920679dce9",
+    "url": "https://github.com/taskcluster/taskcluster/commit/8da6f9a0a314111d1bfa71428f1175920679dce9",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "post-import stuff",
+    "commit_date": "2019-01-18 20:25:21",
+    "files_changed": [
+      "services/references/.eslintrc",
+      "services/references/.taskcluster.yml",
+      "services/references/CODE_OF_CONDUCT.md",
+      "services/references/CONTRIBUTING.md",
+      "services/references/LICENSE",
+      "services/references/package.json",
+      "services/references/yarn.lock"
+    ]
+  },
+  "15": {
+    "sha": "7073e919271708b5394c2abb42382306c928e63a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7073e919271708b5394c2abb42382306c928e63a",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1260285 - include tc-lib-urls as an undeclared dependency of tc-lib-references",
+    "commit_date": "2019-01-18 17:26:06",
+    "files_changed": [
+      "services/references/package.json",
+      "services/references/yarn.lock"
+    ]
+  },
+  "16": {
+    "sha": "61bb37c2ce4648aa0534037caf968ba1897c4919",
+    "url": "https://github.com/taskcluster/taskcluster/commit/61bb37c2ce4648aa0534037caf968ba1897c4919",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1250285 - upgrade tc-lib-refereces",
+    "commit_date": "2019-01-18 17:19:00",
+    "files_changed": [
+      "services/references/package.json",
+      "services/references/yarn.lock"
+    ]
+  },
+  "17": {
+    "sha": "38504daf3872070523aac7abce819b4eeb928b87",
+    "url": "https://github.com/taskcluster/taskcluster/commit/38504daf3872070523aac7abce819b4eeb928b87",
+    "commiter_name": "imbstack",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #9 from djmitche/remove-schemas  Remove schemas, which are now in tc-lib-references",
+    "commit_date": "2018-12-14 22:42:59",
+    "files_changed": [
+      "services/references/Dockerfile",
+      "services/references/schemas/action-schema-v1.yml",
+      "services/references/schemas/api-reference-v0.yml",
+      "services/references/schemas/exchanges-reference-v0.yml",
+      "services/references/schemas/manifest-v2.yml"
+    ]
+  },
+  "18": {
+    "sha": "0d801e69658b6b60582ae5726cd57b6d4fd527a9",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0d801e69658b6b60582ae5726cd57b6d4fd527a9",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #8 from djmitche/bug1507521  Bug 1507521 - use tc-lib-references",
+    "commit_date": "2018-11-26 21:23:38",
+    "files_changed": [
+      "services/references/README.md",
+      "services/references/package.json",
+      "services/references/src/load.js",
+      "services/references/src/main.js",
+      "services/references/src/store.js",
+      "services/references/src/update.js",
+      "services/references/test/built-services/auth/metadata.json",
+      "services/references/test/built-services/auth/references/api.json",
+      "services/references/test/built-services/auth/references/events.json",
+      "services/references/test/built-services/auth/schemas/v1/authenticate-hawk-request.json",
+      "services/references/test/built-services/auth/schemas/v1/authenticate-hawk-response.json",
+      "services/references/test/built-services/auth/schemas/v1/aws-s3-credentials-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-account-list-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-container-list-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-container-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-table-access-response.json",
+      "services/references/test/built-services/auth/schemas/v1/azure-table-list-response.json",
+      "services/references/test/built-services/auth/schemas/v1/client-message.json",
+      "services/references/test/built-services/auth/schemas/v1/create-client-request.json",
+      "services/references/test/built-services/auth/schemas/v1/create-client-response.json",
+      "services/references/test/built-services/auth/schemas/v1/create-role-request.json",
+      "services/references/test/built-services/auth/schemas/v1/get-client-response.json",
+      "services/references/test/built-services/auth/schemas/v1/get-role-response.json",
+      "services/references/test/built-services/auth/schemas/v1/list-clients-response.json",
+      "services/references/test/built-services/auth/schemas/v1/list-roles-response.json",
+      "services/references/test/built-services/auth/schemas/v1/role-message.json",
+      "services/references/test/built-services/auth/schemas/v1/scopeset.json",
+      "services/references/test/built-services/auth/schemas/v1/sentry-dsn-response.json",
+      "services/references/test/built-services/auth/schemas/v1/statsum-token-response.json",
+      "services/references/test/built-services/auth/schemas/v1/test-authenticate-request.json",
+      "services/references/test/built-services/auth/schemas/v1/test-authenticate-response.json",
+      "services/references/test/built-services/auth/schemas/v1/webhooktunnel-token-response.json",
+      "services/references/test/built-services/azure-blob-storage/metadata.json",
+      "services/references/test/built-services/azure-entities/metadata.json",
+      "services/references/test/built-services/docker-exec-websocket-server/metadata.json",
+      "services/references/test/built-services/docker-worker/metadata.json",
+      "services/references/test/built-services/docs/metadata.json",
+      "services/references/test/built-services/events/metadata.json",
+      "services/references/test/built-services/events/references/api.json",
+      "services/references/test/built-services/fast-azure-storage/metadata.json",
+      "services/references/test/built-services/gce-provider/metadata.json",
+      "services/references/test/built-services/gce-provider/references/api.json",
+      "services/references/test/built-services/generic-worker/metadata.json",
+      "services/references/test/built-services/github/metadata.json",
+      "services/references/test/built-services/github/references/api.json",
+      "services/references/test/built-services/github/references/events.json",
+      "services/references/test/built-services/github/schemas/v1/build-list.json",
+      "services/references/test/built-services/github/schemas/v1/create-comment.json",
+      "services/references/test/built-services/github/schemas/v1/create-status.json",
+      "services/references/test/built-services/github/schemas/v1/github-pull-request-message.json",
+      "services/references/test/built-services/github/schemas/v1/github-push-message.json",
+      "services/references/test/built-services/github/schemas/v1/github-release-message.json",
+      "services/references/test/built-services/github/schemas/v1/repository.json",
+      "services/references/test/built-services/github/schemas/v1/taskcluster-github-config.json",
+      "services/references/test/built-services/github/schemas/v1/taskcluster-github-config.v1.json",
+      "services/references/test/built-services/go-schematypes/metadata.json",
+      "services/references/test/built-services/hooks/metadata.json",
+      "services/references/test/built-services/hooks/references/api.json",
+      "services/references/test/built-services/hooks/references/events.json",
+      "services/references/test/built-services/hooks/schemas/v1/create-hook-request.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-definition.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-metadata.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-schedule.json",
+      "services/references/test/built-services/hooks/schemas/v1/hook-status.json",
+      "services/references/test/built-services/hooks/schemas/v1/list-hook-groups-response.json",
+      "services/references/test/built-services/hooks/schemas/v1/list-hooks-response.json",
+      "services/references/test/built-services/hooks/schemas/v1/pulse-hook-changed-message.json",
+      "services/references/test/built-services/hooks/schemas/v1/schedule.json",
+      "services/references/test/built-services/hooks/schemas/v1/task-status.json",
+      "services/references/test/built-services/hooks/schemas/v1/task-template.json",
+      "services/references/test/built-services/hooks/schemas/v1/trigger-hook.json",
+      "services/references/test/built-services/hooks/schemas/v1/trigger-token-response.json",
+      "services/references/test/built-services/index/metadata.json",
+      "services/references/test/built-services/index/references/api.json",
+      "services/references/test/built-services/index/schemas/v1/indexed-task-response.json",
+      "services/references/test/built-services/index/schemas/v1/insert-task-request.json",
+      "services/references/test/built-services/index/schemas/v1/list-namespaces-request.json",
+      "services/references/test/built-services/index/schemas/v1/list-namespaces-response.json",
+      "services/references/test/built-services/index/schemas/v1/list-tasks-request.json",
+      "services/references/test/built-services/index/schemas/v1/list-tasks-response.json",
+      "services/references/test/built-services/json-e/metadata.json",
+      "services/references/test/built-services/login/metadata.json",
+      "services/references/test/built-services/login/references/api.json",
+      "services/references/test/built-services/login/schemas/v1/credentials-response.json",
+      "services/references/test/built-services/login/schemas/v1/oidc-credentials-response.json",
+      "services/references/test/built-services/notify/metadata.json",
+      "services/references/test/built-services/notify/references/api.json",
+      "services/references/test/built-services/notify/references/events.json",
+      "services/references/test/built-services/notify/schemas/v1/email-request.json",
+      "services/references/test/built-services/notify/schemas/v1/irc-request.json",
+      "services/references/test/built-services/notify/schemas/v1/notification-message.json",
+      "services/references/test/built-services/notify/schemas/v1/pulse-request.json",
+      "services/references/test/built-services/purge-cache/metadata.json",
+      "services/references/test/built-services/purge-cache/references/api.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/all-purge-cache-request-list.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/purge-cache-request-list.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/purge-cache-request.json",
+      "services/references/test/built-services/purge-cache/schemas/v1/purge-cache-requests.json",
+      "services/references/test/built-services/queue/metadata.json",
+      "services/references/test/built-services/queue/references/api.json",
+      "services/references/test/built-services/queue/references/events.json",
+      "services/references/test/built-services/queue/schemas/v1/actions.json",
+      "services/references/test/built-services/queue/schemas/v1/artifact-created-message.json",
+      "services/references/test/built-services/queue/schemas/v1/claim-work-request.json",
+      "services/references/test/built-services/queue/schemas/v1/claim-work-response.json",
+      "services/references/test/built-services/queue/schemas/v1/create-task-request.json",
+      "services/references/test/built-services/queue/schemas/v1/list-artifacts-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-dependent-tasks-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-provisioners-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-task-group-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-workers-response.json",
+      "services/references/test/built-services/queue/schemas/v1/list-workertypes-response.json",
+      "services/references/test/built-services/queue/schemas/v1/pending-tasks-response.json",
+      "services/references/test/built-services/queue/schemas/v1/poll-task-urls-response.json",
+      "services/references/test/built-services/queue/schemas/v1/post-artifact-request.json",
+      "services/references/test/built-services/queue/schemas/v1/post-artifact-response.json",
+      "services/references/test/built-services/queue/schemas/v1/provisioner-response.json",
+      "services/references/test/built-services/queue/schemas/v1/put-artifact-request.json",
+      "services/references/test/built-services/queue/schemas/v1/quarantine-worker-request.json",
+      "services/references/test/built-services/queue/schemas/v1/task-claim-request.json",
+      "services/references/test/built-services/queue/schemas/v1/task-claim-response.json",
+      "services/references/test/built-services/queue/schemas/v1/task-completed-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-credentials.json",
+      "services/references/test/built-services/queue/schemas/v1/task-defined-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-definition-and-status.json",
+      "services/references/test/built-services/queue/schemas/v1/task-exception-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-exception-request.json",
+      "services/references/test/built-services/queue/schemas/v1/task-failed-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-group-resolved.json",
+      "services/references/test/built-services/queue/schemas/v1/task-metadata.json",
+      "services/references/test/built-services/queue/schemas/v1/task-pending-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-reclaim-response.json",
+      "services/references/test/built-services/queue/schemas/v1/task-run.json",
+      "services/references/test/built-services/queue/schemas/v1/task-running-message.json",
+      "services/references/test/built-services/queue/schemas/v1/task-status-response.json",
+      "services/references/test/built-services/queue/schemas/v1/task-status.json",
+      "services/references/test/built-services/queue/schemas/v1/task.json",
+      "services/references/test/built-services/queue/schemas/v1/update-provisioner-request.json",
+      "services/references/test/built-services/queue/schemas/v1/update-worker-request.json",
+      "services/references/test/built-services/queue/schemas/v1/update-workertype-request.json",
+      "services/references/test/built-services/queue/schemas/v1/worker-response.json",
+      "services/references/test/built-services/queue/schemas/v1/workertype-response.json",
+      "services/references/test/built-services/references/metadata.json",
+      "services/references/test/built-services/secrets/metadata.json",
+      "services/references/test/built-services/secrets/references/api.json",
+      "services/references/test/built-services/secrets/schemas/v1/secret-list.json",
+      "services/references/test/built-services/secrets/schemas/v1/secret.json",
+      "services/references/test/built-services/statsum/metadata.json",
+      "services/references/test/built-services/taskcluster-builder/metadata.json",
+      "services/references/test/built-services/taskcluster-cli/metadata.json",
+      "services/references/test/built-services/taskcluster-client-go/metadata.json",
+      "services/references/test/built-services/taskcluster-client-java/metadata.json",
+      "services/references/test/built-services/taskcluster-client-web/metadata.json",
+      "services/references/test/built-services/taskcluster-client.py/metadata.json",
+      "services/references/test/built-services/taskcluster-client/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-api/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-app/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-azure/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-docs/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-iterate/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-loader/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-log/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-monitor/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-scopes/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-testing/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-urls/metadata.json",
+      "services/references/test/built-services/taskcluster-lib-validate/metadata.json",
+      "services/references/test/built-services/tools/metadata.json",
+      "services/references/test/built-services/typed-env-config/metadata.json",
+      "services/references/test/built-services/ws-shell/metadata.json",
+      "services/references/test/helper.js",
+      "services/references/test/integration_test.js",
+      "services/references/test/load_test.js",
+      "services/references/test/store_test.js",
+      "services/references/test/update_test.js",
+      "services/references/yarn.lock"
+    ]
+  },
+  "19": {
+    "sha": "998899df571454e9de69f902a17daf36a3144618",
+    "url": "https://github.com/taskcluster/taskcluster/commit/998899df571454e9de69f902a17daf36a3144618",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "require API version  From https://github.com/taskcluster/taskcluster-lib-api/pull/122",
+    "commit_date": "2018-09-27 15:45:17",
+    "files_changed": [
+      "services/references/schemas/api-reference-v0.yml"
+    ]
+  },
+  "20": {
+    "sha": "c57689bf42a4cf06dba531ae86e35224219803c6",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c57689bf42a4cf06dba531ae86e35224219803c6",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #7 from djmitche/bug1460019  Bug 1460019 - Include a version in api.json",
+    "commit_date": "2018-09-20 20:13:36",
+    "files_changed": [
+      "services/references/schemas/api-reference-v0.yml"
+    ]
+  },
+  "21": {
+    "sha": "190f0dc3c179383b0298fc552f237df4d45f42aa",
+    "url": "https://github.com/taskcluster/taskcluster/commit/190f0dc3c179383b0298fc552f237df4d45f42aa",
+    "commiter_name": "ccooper",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Add documentation to bring taskcluster repos closer to the Github recommended community standards  Added licensing info (MPL2), contribution suggestions, and a link to the Mozilla Community Participation Guidelines.  Addresses https://bugzil.la/1408073 for this repo.  Carrying-over review from https://github.com/taskcluster/taskcluster-tools/pull/546",
+    "commit_date": "2018-09-13 15:07:27",
+    "files_changed": [
+      "services/references/CODE_OF_CONDUCT.md",
+      "services/references/CONTRIBUTING.md",
+      "services/references/LICENSE"
+    ]
+  },
+  "22": {
+    "sha": "f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #6 from djmitche/bug1476444  Bug 1476444 - set $schema for references, manifest",
+    "commit_date": "2018-07-20 19:04:47",
+    "files_changed": [
+      "services/references/src/main.js",
+      "services/references/src/store.js",
+      "services/references/src/update.js",
+      "services/references/test/store_test.js",
+      "services/references/test/update_test.js"
+    ]
+  },
+  "23": {
+    "sha": "3237de63cef974dfb4ec21735411e81a173469da",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3237de63cef974dfb4ec21735411e81a173469da",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) fix typo in Dockerfile, wrong filename in README",
+    "commit_date": "2018-07-19 15:15:31",
+    "files_changed": [
+      "services/references/Dockerfile",
+      "services/references/README.md"
+    ]
+  },
+  "24": {
+    "sha": "9d4639e02eea9a27a70664db50da3d6c39dff742",
+    "url": "https://github.com/taskcluster/taskcluster/commit/9d4639e02eea9a27a70664db50da3d6c39dff742",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #5 from djmitche/bug1476420  Bug 1478420 - Fix reference publishing",
+    "commit_date": "2018-07-19 14:23:45",
+    "files_changed": [
+      "services/references/Dockerfile",
+      "services/references/README.md",
+      "services/references/src/load.js",
+      "services/references/test/load_test.js"
+    ]
+  },
+  "25": {
+    "sha": "3fe87500e22d6e7c9721275dd66321d6f6b2720e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3fe87500e22d6e7c9721275dd66321d6f6b2720e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #4 from djmitche/bug1467480  Bug 1467480 - serve common references here",
+    "commit_date": "2018-07-03 19:42:40",
+    "files_changed": [
+      "services/references/package.json",
+      "services/references/schemas/action-schema-v1.yml",
+      "services/references/schemas/api-reference-v0.yml",
+      "services/references/schemas/exchanges-reference-v0.yml",
+      "services/references/schemas/manifest-v2.yml",
+      "services/references/src/main.js",
+      "services/references/src/update.js",
+      "services/references/test/update_test.js",
+      "services/references/yarn.lock"
+    ]
+  },
+  "26": {
+    "sha": "b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
+    "url": "https://github.com/taskcluster/taskcluster/commit/b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #3 from taskcluster/bug1470263  Bug 1470263 - create json schema for manifest.json",
+    "commit_date": "2018-06-21 18:55:35",
+    "files_changed": [
+      "services/references/schemas/manifest.yml"
+    ]
+  },
+  "27": {
+    "sha": "e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
+    "url": "https://github.com/taskcluster/taskcluster/commit/e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #2 from djmitche/bug1467210  Bug 1467210 - Serve a `manifest.json` file (in a new format)",
+    "commit_date": "2018-06-12 23:45:27",
+    "files_changed": [
+      "services/references/README.md",
+      "services/references/package.json",
+      "services/references/src/store.js",
+      "services/references/test/store_test.js",
+      "services/references/yarn.lock"
+    ]
+  },
+  "28": {
+    "sha": "0490184a91391efa3f01c5dbace65e87db9c8f20",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0490184a91391efa3f01c5dbace65e87db9c8f20",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge pull request #1 from djmitche/bug1466541  use --production to reduce build size",
+    "commit_date": "2018-06-04 18:58:25",
+    "files_changed": [
+      "services/references/Dockerfile"
+    ]
+  },
+  "29": {
+    "sha": "a218297e236dfe2f964b2f96ccef04cc0c321d7f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a218297e236dfe2f964b2f96ccef04cc0c321d7f",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "handle schemas with schemas.taskcluster.net 's correctly",
+    "commit_date": "2018-06-01 23:47:05",
+    "files_changed": [
+      "services/references/src/update.js",
+      "services/references/test/update_test.js"
+    ]
+  },
+  "30": {
+    "sha": "1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "add a Dockerfile to serve this with Nginx",
+    "commit_date": "2018-06-01 23:11:34",
+    "files_changed": [
+      "services/references/.gitignore",
+      "services/references/Dockerfile",
+      "services/references/nginx-site.conf"
+    ]
+  },
+  "31": {
+    "sha": "67da8d11f50ae68142fdb13ab50c9f183e52456f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/67da8d11f50ae68142fdb13ab50c9f183e52456f",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "add CI",
+    "commit_date": "2018-06-01 22:18:42",
+    "files_changed": [
+      "services/references/.taskcluster.yml"
+    ]
+  },
+  "32": {
+    "sha": "7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "mention requirement for Node 8",
+    "commit_date": "2018-06-01 22:17:51",
+    "files_changed": [
+      "services/references/README.md"
+    ]
+  },
+  "33": {
+    "sha": "30401b64459da526c3ce11def5fc93d50035094e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/30401b64459da526c3ce11def5fc93d50035094e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "remove unnecessary use of commander",
+    "commit_date": "2018-06-01 22:14:41",
+    "files_changed": [
+      "services/references/package.json",
+      "services/references/src/main.js",
+      "services/references/taskcluster-references",
+      "services/references/yarn.lock"
+    ]
+  },
+  "34": {
+    "sha": "e84021107115016d5c0023fb18ea7726b5f8beab",
+    "url": "https://github.com/taskcluster/taskcluster/commit/e84021107115016d5c0023fb18ea7726b5f8beab",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "support storing",
+    "commit_date": "2018-06-01 22:09:53",
+    "files_changed": [
+      "services/references/src/load.js",
+      "services/references/src/main.js",
+      "services/references/src/store.js",
+      "services/references/src/update.js",
+      "services/references/test/load_test.js",
+      "services/references/test/store_test.js",
+      "services/references/test/update_test.js"
+    ]
+  },
+  "35": {
+    "sha": "d6402324224cd7173edbd87c51a2e310930268df",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d6402324224cd7173edbd87c51a2e310930268df",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "update",
+    "commit_date": "2018-06-01 21:45:33",
+    "files_changed": [
+      "services/references/package.json",
+      "services/references/src/main.js",
+      "services/references/yarn.lock"
+    ]
+  },
+  "36": {
+    "sha": "fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "loading",
+    "commit_date": "2018-06-01 21:22:31",
+    "files_changed": [
+      "services/references/package.json",
+      "services/references/src/build.js",
+      "services/references/src/load.js",
+      "services/references/src/main.js",
+      "services/references/test/build_test.js",
+      "services/references/test/helper.js",
+      "services/references/test/load_test.js",
+      "services/references/yarn.lock"
+    ]
+  },
+  "37": {
+    "sha": "8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
+    "url": "https://github.com/taskcluster/taskcluster/commit/8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "initial shape of the service",
+    "commit_date": "2018-06-01 20:09:28",
+    "files_changed": [
+      "services/references/.eslintrc",
+      "services/references/.gitignore",
+      "services/references/README.md",
+      "services/references/package.json",
+      "services/references/src/build.js",
+      "services/references/src/main.js",
+      "services/references/taskcluster-references",
+      "services/references/test/build_test.js",
+      "services/references/test/mocha.opts",
+      "services/references/yarn.lock"
+    ]
+  },
+  "38": {
+    "sha": "9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Remove stray curly bracket",
+    "commit_date": "2019-01-18 18:30:58",
+    "files_changed": [
+      "services/github/src/handlers.js"
+    ]
+  },
+  "39": {
+    "sha": "fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1260285 - release tc-lib-references v1.5.0",
+    "commit_date": "2019-01-18 17:15:17",
+    "files_changed": [
+      "libraries/references/package.json"
+    ]
+  },
+  "40": {
+    "sha": "6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
+    "url": "https://github.com/taskcluster/taskcluster/commit/6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #98 from djmitche/bug1260285-b  Bug 1260285 - publish legacy schemas with a rewritten $schema",
+    "commit_date": "2019-01-18 15:11:26",
+    "files_changed": [
+      "libraries/validate/src/schemaset.js"
+    ]
+  },
+  "41": {
+    "sha": "2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #108 from djmitche/hassan-tc-web-server  make @helfi92 owner of web-server changes",
+    "commit_date": "2019-01-18 14:24:35",
+    "files_changed": [
+      ".github/CODEOWNERS"
+    ]
+  },
+  "42": {
+    "sha": "ce1c231b06efceebebeda268a127d73a4333b987",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ce1c231b06efceebebeda268a127d73a4333b987",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "make @helfi92 owner of web-server changes",
+    "commit_date": "2019-01-18 00:00:51",
+    "files_changed": [
+      ".github/CODEOWNERS"
+    ]
+  },
+  "43": {
+    "sha": "5e97e64a746049de3d7b66e60140664d353fbb2b",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5e97e64a746049de3d7b66e60140664d353fbb2b",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency sift to v7 (#106)",
+    "commit_date": "2019-01-18 12:33:59",
+    "files_changed": [
+      "services/web-server/package.json",
+      "yarn.lock"
+    ]
+  },
+  "44": {
+    "sha": "7716154f7b5a914bcd10d7390989178072370c97",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7716154f7b5a914bcd10d7390989178072370c97",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency deepmerge to v3 (#104)",
+    "commit_date": "2019-01-18 12:25:42",
+    "files_changed": [
+      "services/web-server/package.json",
+      "yarn.lock"
+    ]
+  },
+  "45": {
+    "sha": "c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency ramda to ^0.26.0 (#103)",
+    "commit_date": "2019-01-18 12:25:19",
+    "files_changed": [
+      "services/web-server/package.json",
+      "yarn.lock"
+    ]
+  },
+  "46": {
+    "sha": "3de3082db222232d9c420c88305140d8c0bff305",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3de3082db222232d9c420c88305140d8c0bff305",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #109 from djmitche/write-docs-all  All services should have a write-docs target",
+    "commit_date": "2019-01-18 02:55:34",
+    "files_changed": [
+      "services/treeherder/Procfile",
+      "services/web-server/Procfile"
+    ]
+  },
+  "47": {
+    "sha": "25e72b7bb35df99f945718093e89ae71da95b429",
+    "url": "https://github.com/taskcluster/taskcluster/commit/25e72b7bb35df99f945718093e89ae71da95b429",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "All services should have a write-docs target",
+    "commit_date": "2019-01-18 00:32:23",
+    "files_changed": [
+      "services/treeherder/Procfile",
+      "services/web-server/Procfile"
+    ]
+  },
+  "48": {
+    "sha": "c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #105 from djmitche/bug1519849-b  Bug 1519849 - always show quarantined workers regardless of expiration",
+    "commit_date": "2019-01-17 23:55:03",
+    "files_changed": [
+      "services/queue/src/api.js",
+      "services/queue/test/workerinfo_test.js"
+    ]
+  },
+  "49": {
+    "sha": "8b64c9a9703f4191fe13111c5fea460a0123fbb1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/8b64c9a9703f4191fe13111c5fea460a0123fbb1",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Amend heroku script (#107)",
+    "commit_date": "2019-01-17 23:26:29",
+    "files_changed": [
+      "services/web-server/Procfile",
+      "services/web-server/package.json"
+    ]
+  },
+  "50": {
+    "sha": "63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
+    "url": "https://github.com/taskcluster/taskcluster/commit/63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Add web-server to monorepo: Fix linting (#97)    Fix linter problems after monorepoing      Rename a task's taskGroup to decisionTask      Change Procfile for deployment      Remove annotation linter from dependencies      Get rid of annotation for serializing",
+    "commit_date": "2019-01-17 22:56:13",
+    "files_changed": [
+      "package.json",
+      "services/web-server/.neutrinorc.js",
+      "services/web-server/Procfile",
+      "services/web-server/package.json",
+      "services/web-server/src/PulseEngine/index.js",
+      "services/web-server/src/graphql/Tasks.graphql",
+      "services/web-server/src/resolvers/Tasks.js",
+      "services/web-server/src/servers/createApp.js",
+      "yarn.lock"
+    ]
+  },
+  "51": {
+    "sha": "0e990186e69b9ea719bd7dbd703ca10359d9ace3",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0e990186e69b9ea719bd7dbd703ca10359d9ace3",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1260285 - publish legacy schemas with a rewritten $schema  This rewritten schema points to the metaschema, as enforced by other validation checks.",
+    "commit_date": "2019-01-17 16:27:33",
+    "files_changed": [
+      "libraries/validate/src/schemaset.js"
+    ]
+  },
+  "52": {
+    "sha": "cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
+    "url": "https://github.com/taskcluster/taskcluster/commit/cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1519849 - always show quarantined workers regardless of expiration",
+    "commit_date": "2019-01-17 20:45:40",
+    "files_changed": [
+      "services/queue/src/api.js",
+      "services/queue/test/workerinfo_test.js"
+    ]
+  },
+  "53": {
+    "sha": "38c7219dc1b6f1040e64518964d2257f6500d6e8",
+    "url": "https://github.com/taskcluster/taskcluster/commit/38c7219dc1b6f1040e64518964d2257f6500d6e8",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #74 from owlishDeveloper/bug1515156  Add tc-web-server to monorepo",
+    "commit_date": "2019-01-17 17:51:05",
+    "files_changed": [
+      ".gitignore",
+      ".taskcluster.yml",
+      "package.json",
+      "services/web-server/.gitignore",
+      "services/web-server/.neutrinorc.js",
+      "services/web-server/Procfile",
+      "services/web-server/README.md",
+      "services/web-server/config.yml",
+      "services/web-server/docs/authentication.md",
+      "services/web-server/mocha.config.js",
+      "services/web-server/package.json",
+      "services/web-server/src/ConnectionLoader.js",
+      "services/web-server/src/PulseEngine/EventIterator.js",
+      "services/web-server/src/PulseEngine/MessageIterator.js",
+      "services/web-server/src/PulseEngine/PulseIterator.js",
+      "services/web-server/src/PulseEngine/index.js",
+      "services/web-server/src/clients.js",
+      "services/web-server/src/createContext.js",
+      "services/web-server/src/createSchema.js",
+      "services/web-server/src/entities/Artifact.js",
+      "services/web-server/src/entities/Artifacts.js",
+      "services/web-server/src/entities/Task.js",
+      "services/web-server/src/entities/TaskRun.js",
+      "services/web-server/src/entities/TaskStatus.js",
+      "services/web-server/src/entities/WorkerCompact.js",
+      "services/web-server/src/graphql/Artifacts.graphql",
+      "services/web-server/src/graphql/AwsProvisionerWorkerTypes.graphql",
+      "services/web-server/src/graphql/CachePurges.graphql",
+      "services/web-server/src/graphql/Clients.graphql",
+      "services/web-server/src/graphql/Github.graphql",
+      "services/web-server/src/graphql/Hooks.graphql",
+      "services/web-server/src/graphql/Namespaces.graphql",
+      "services/web-server/src/graphql/Provisioners.graphql",
+      "services/web-server/src/graphql/PulseMessages.graphql",
+      "services/web-server/src/graphql/Roles.graphql",
+      "services/web-server/src/graphql/Root.graphql",
+      "services/web-server/src/graphql/Scopes.graphql",
+      "services/web-server/src/graphql/Secrets.graphql",
+      "services/web-server/src/graphql/TaskRuns.graphql",
+      "services/web-server/src/graphql/TaskStatuses.graphql",
+      "services/web-server/src/graphql/Tasks.graphql",
+      "services/web-server/src/graphql/WorkerTypes.graphql",
+      "services/web-server/src/graphql/Workers.graphql",
+      "services/web-server/src/graphql/index.js",
+      "services/web-server/src/index.js",
+      "services/web-server/src/loaders/artifacts.js",
+      "services/web-server/src/loaders/cachePurges.js",
+      "services/web-server/src/loaders/clients.js",
+      "services/web-server/src/loaders/github.js",
+      "services/web-server/src/loaders/hooks.js",
+      "services/web-server/src/loaders/index.js",
+      "services/web-server/src/loaders/namespaces.js",
+      "services/web-server/src/loaders/provisioners.js",
+      "services/web-server/src/loaders/roles.js",
+      "services/web-server/src/loaders/scopes.js",
+      "services/web-server/src/loaders/secrets.js",
+      "services/web-server/src/loaders/taskStatuses.js",
+      "services/web-server/src/loaders/tasks.js",
+      "services/web-server/src/loaders/workerTypes.js",
+      "services/web-server/src/loaders/workers.js",
+      "services/web-server/src/login/github.js",
+      "services/web-server/src/resolvers/Artifacts.js",
+      "services/web-server/src/resolvers/AwsProvisionerWorkerTypes.js",
+      "services/web-server/src/resolvers/CachePurges.js",
+      "services/web-server/src/resolvers/Clients.js",
+      "services/web-server/src/resolvers/Github.js",
+      "services/web-server/src/resolvers/Hooks.js",
+      "services/web-server/src/resolvers/Namespaces.js",
+      "services/web-server/src/resolvers/Provisioners.js",
+      "services/web-server/src/resolvers/PulseMessages.js",
+      "services/web-server/src/resolvers/Roles.js",
+      "services/web-server/src/resolvers/Root.js",
+      "services/web-server/src/resolvers/Scopes.js",
+      "services/web-server/src/resolvers/Secrets.js",
+      "services/web-server/src/resolvers/TaskRuns.js",
+      "services/web-server/src/resolvers/TaskStatuses.js",
+      "services/web-server/src/resolvers/Tasks.js",
+      "services/web-server/src/resolvers/WorkerTypes.js",
+      "services/web-server/src/resolvers/Workers.js",
+      "services/web-server/src/resolvers/index.js",
+      "services/web-server/src/servers/createApp.js",
+      "services/web-server/src/servers/createSubscriptionServer.js",
+      "services/web-server/src/servers/credentials.js",
+      "services/web-server/src/servers/formatError.js",
+      "services/web-server/src/utils/fetch.js",
+      "services/web-server/src/views/callback.ejs",
+      "services/web-server/test/fetch_test.js",
+      "services/web-server/user-config-template.yml",
+      "services/web-server/webpack.config.js",
+      "test/meta_test.js",
+      "yarn.lock"
+    ]
+  },
+  "54": {
+    "sha": "6920c209219ee2d28130f9d36e24507be86d7c28",
+    "url": "https://github.com/taskcluster/taskcluster/commit/6920c209219ee2d28130f9d36e24507be86d7c28",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #99 from djmitche/json-body-error-handling  Pass errors in body parsing to Express",
+    "commit_date": "2019-01-17 17:45:26",
+    "files_changed": [
+      "libraries/api/src/middleware/parse.js"
+    ]
+  },
+  "55": {
+    "sha": "70ad6b427043f69e28f9cb6aaef534151b13383c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/70ad6b427043f69e28f9cb6aaef534151b13383c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #95 from Biboswan/bug1496890  Bug1496890- show clientId of hook triggerer",
+    "commit_date": "2019-01-17 17:24:11",
+    "files_changed": [
+      "services/hooks/docs/firing-hooks.md",
+      "services/hooks/src/v1.js",
+      "services/hooks/test/api_test.js"
+    ]
+  },
+  "56": {
+    "sha": "f67c857131a9ef118b56c43d89f173dee62f2512",
+    "url": "https://github.com/taskcluster/taskcluster/commit/f67c857131a9ef118b56c43d89f173dee62f2512",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into bug1515156",
+    "commit_date": "2019-01-17 17:20:54",
+    "files_changed": [
+      ".github/CODEOWNERS",
+      "infrastructure/builder/package.json",
+      "infrastructure/builder/src/build/index.js",
+      "infrastructure/builder/src/formats/tf-json.js",
+      "infrastructure/builder/test/formats/tf_json_test.js",
+      "libraries/references/schemas/metadata-metaschema.yml",
+      "libraries/references/schemas/metaschema.yml",
+      "libraries/references/src/validate.js",
+      "libraries/references/test/metaschema_test.js",
+      "libraries/references/test/validate_test.js",
+      "libraries/validate/src/schemaset.js",
+      "libraries/validate/test/schemaset_test.js",
+      "services/auth/schemas/v1/authenticate-hawk-request.yml",
+      "services/auth/schemas/v1/authenticate-hawk-response.yml",
+      "services/auth/schemas/v1/aws-s3-credentials-response.yml",
+      "services/auth/schemas/v1/azure-account-list-response.yml",
+      "services/auth/schemas/v1/azure-container-list-response.yml",
+      "services/auth/schemas/v1/azure-container-response.yml",
+      "services/auth/schemas/v1/azure-table-access-response.yml",
+      "services/auth/schemas/v1/azure-table-list-response.yml",
+      "services/auth/schemas/v1/client-message.yml",
+      "services/auth/schemas/v1/create-client-request.yml",
+      "services/auth/schemas/v1/create-client-response.yml",
+      "services/auth/schemas/v1/create-role-request.yml",
+      "services/auth/schemas/v1/get-client-response.yml",
+      "services/auth/schemas/v1/get-role-response.yml",
+      "services/auth/schemas/v1/list-clients-response.yml",
+      "services/auth/schemas/v1/list-role-ids-response.yml",
+      "services/auth/schemas/v1/list-roles-response.yml",
+      "services/auth/schemas/v1/list-roles2-response.yml",
+      "services/auth/schemas/v1/role-message.yml",
+      "services/auth/schemas/v1/scopeset.yml",
+      "services/auth/schemas/v1/sentry-dsn-response.yml",
+      "services/auth/schemas/v1/statsum-token-response.yml",
+      "services/auth/schemas/v1/test-authenticate-request.yml",
+      "services/auth/schemas/v1/test-authenticate-response.yml",
+      "services/auth/schemas/v1/websocktunnel-token-response.yml",
+      "services/auth/src/main.js",
+      "services/github/schemas/v1/build-list.yml",
+      "services/github/schemas/v1/create-comment.yml",
+      "services/github/schemas/v1/create-status.yml",
+      "services/github/schemas/v1/github-pull-request-message.yml",
+      "services/github/schemas/v1/github-push-message.yml",
+      "services/github/schemas/v1/github-release-message.yml",
+      "services/github/schemas/v1/repository.yml",
+      "services/github/schemas/v1/task-group-creation-requested.yml",
+      "services/github/schemas/v1/taskcluster-github-config.v1.yml",
+      "services/github/schemas/v1/taskcluster-github-config.yml",
+      "services/github/src/handlers.js",
+      "services/github/test/handler_test.js",
+      "services/hooks/schemas/v1/bindings.yml",
+      "services/hooks/schemas/v1/create-hook-request.yml",
+      "services/hooks/schemas/v1/hook-definition.yml",
+      "services/hooks/schemas/v1/hook-metadata.yml",
+      "services/hooks/schemas/v1/hook-schedule.yml",
+      "services/hooks/schemas/v1/hook-status.yml",
+      "services/hooks/schemas/v1/list-hook-groups-response.yml",
+      "services/hooks/schemas/v1/list-hooks-response.yml",
+      "services/hooks/schemas/v1/list-lastFires-response.yml",
+      "services/hooks/schemas/v1/pulse-hook-changed-message.yml",
+      "services/hooks/schemas/v1/schedule.yml",
+      "services/hooks/schemas/v1/task-status.yml",
+      "services/hooks/schemas/v1/task-template.yml",
+      "services/hooks/schemas/v1/trigger-hook.yml",
+      "services/hooks/schemas/v1/trigger-token-response.yml",
+      "services/index/schemas/v1/indexed-task-response.yml",
+      "services/index/schemas/v1/insert-task-request.yml",
+      "services/index/schemas/v1/list-namespaces-request.yml",
+      "services/index/schemas/v1/list-namespaces-response.yml",
+      "services/index/schemas/v1/list-tasks-request.yml",
+      "services/index/schemas/v1/list-tasks-response.yml",
+      "services/login/schemas/v1/credentials-response.yml",
+      "services/login/schemas/v1/oidc-credentials-response.yml",
+      "services/notify/schemas/v1/email-request.yml",
+      "services/notify/schemas/v1/irc-request.yml",
+      "services/notify/schemas/v1/notification-message.yml",
+      "services/notify/schemas/v1/pulse-request.yml",
+      "services/purge-cache/schemas/v1/all-purge-cache-request-list.yml",
+      "services/purge-cache/schemas/v1/purge-cache-request-list.yml",
+      "services/purge-cache/schemas/v1/purge-cache-request.yml",
+      "services/purge-cache/schemas/v1/purge-cache-requests.yml",
+      "services/queue/schemas/v1/README.md",
+      "services/queue/schemas/v1/actions.yml",
+      "services/queue/schemas/v1/artifact-created-message.yml",
+      "services/queue/schemas/v1/claim-work-request.yml",
+      "services/queue/schemas/v1/claim-work-response.yml",
+      "services/queue/schemas/v1/create-task-request.yml",
+      "services/queue/schemas/v1/list-artifacts-response.yml",
+      "services/queue/schemas/v1/list-dependent-tasks-response.yml",
+      "services/queue/schemas/v1/list-provisioners-response.yml",
+      "services/queue/schemas/v1/list-task-group-response.yml",
+      "services/queue/schemas/v1/list-workers-response.yml",
+      "services/queue/schemas/v1/list-workertypes-response.yml",
+      "services/queue/schemas/v1/pending-tasks-response.yml",
+      "services/queue/schemas/v1/poll-task-urls-response.yml",
+      "services/queue/schemas/v1/post-artifact-request.yml",
+      "services/queue/schemas/v1/post-artifact-response.yml",
+      "services/queue/schemas/v1/provisioner-response.yml",
+      "services/queue/schemas/v1/put-artifact-request.yml",
+      "services/queue/schemas/v1/quarantine-worker-request.yml",
+      "services/queue/schemas/v1/task-claim-request.yml",
+      "services/queue/schemas/v1/task-claim-response.yml",
+      "services/queue/schemas/v1/task-completed-message.yml",
+      "services/queue/schemas/v1/task-credentials.yml",
+      "services/queue/schemas/v1/task-defined-message.yml",
+      "services/queue/schemas/v1/task-definition-and-status.yml",
+      "services/queue/schemas/v1/task-exception-message.yml",
+      "services/queue/schemas/v1/task-exception-request.yml",
+      "services/queue/schemas/v1/task-failed-message.yml",
+      "services/queue/schemas/v1/task-group-resolved.yml",
+      "services/queue/schemas/v1/task-metadata.yml",
+      "services/queue/schemas/v1/task-pending-message.yml",
+      "services/queue/schemas/v1/task-reclaim-response.yml",
+      "services/queue/schemas/v1/task-run.yml",
+      "services/queue/schemas/v1/task-running-message.yml",
+      "services/queue/schemas/v1/task-status-response.yml",
+      "services/queue/schemas/v1/task-status.yml",
+      "services/queue/schemas/v1/task.yml",
+      "services/queue/schemas/v1/update-provisioner-request.yml",
+      "services/queue/schemas/v1/update-worker-request.yml",
+      "services/queue/schemas/v1/update-workertype-request.yml",
+      "services/queue/schemas/v1/worker-response.yml",
+      "services/queue/schemas/v1/workertype-response.yml",
+      "services/secrets/schemas/v1/secret-list.yml",
+      "services/secrets/schemas/v1/secret.yml",
+      "services/treeherder/schemas/v1/pulse-job.yml",
+      "services/treeherder/schemas/v1/task-treeherder-config.yml"
+    ]
+  },
+  "57": {
+    "sha": "e02a86352038206d5a31a548c3dca8e3b5c0bc74",
+    "url": "https://github.com/taskcluster/taskcluster/commit/e02a86352038206d5a31a548c3dca8e3b5c0bc74",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #102 from djmitche/more-codeowners  move more CODEOWNERS to services-reviewers",
+    "commit_date": "2019-01-17 17:16:39",
+    "files_changed": [
+      ".github/CODEOWNERS"
+    ]
+  },
+  "58": {
+    "sha": "4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "move more CODEOWNERS to services-reviewers",
+    "commit_date": "2019-01-17 17:11:55",
+    "files_changed": [
+      ".github/CODEOWNERS"
+    ]
+  },
+  "59": {
+    "sha": "49b961bb95ce8671fd9a54543694acab9ef548d7",
+    "url": "https://github.com/taskcluster/taskcluster/commit/49b961bb95ce8671fd9a54543694acab9ef548d7",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #101 from djmitche/team-test  remove redundant comment",
+    "commit_date": "2019-01-17 17:12:24",
+    "files_changed": [
+      "services/auth/src/main.js"
+    ]
+  },
+  "60": {
+    "sha": "fb51924ff68018ba0d584eb79f4d7e255ec0887d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fb51924ff68018ba0d584eb79f4d7e255ec0887d",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Have a better task info in Checks (#77)    Have better task description in checks      Fix tests      Implement suggestions  Add comment for scoped and unscoped queue clients  Throw error in case we can't get tas definition from the queue      Fix typo in the logs      Rewrite checks with the same name    just as github does      Use scopes more carefully",
+    "commit_date": "2019-01-17 17:10:04",
+    "files_changed": [
+      "services/github/src/handlers.js",
+      "services/github/test/handler_test.js"
+    ]
+  },
+  "61": {
+    "sha": "98c16d0320d16f8d284a82d36c792e192e389664",
+    "url": "https://github.com/taskcluster/taskcluster/commit/98c16d0320d16f8d284a82d36c792e192e389664",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "remove redundant comment",
+    "commit_date": "2019-01-17 16:55:50",
+    "files_changed": [
+      "services/auth/src/main.js"
+    ]
+  },
+  "62": {
+    "sha": "d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Pass errors in body parsing to Express",
+    "commit_date": "2019-01-17 16:39:10",
+    "files_changed": [
+      "libraries/api/src/middleware/parse.js"
+    ]
+  },
+  "63": {
+    "sha": "1a224a54c17fe7871c39b56e185268082623760f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1a224a54c17fe7871c39b56e185268082623760f",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #91 from djmitche/bug1260285  Bug 1260285 - add a metaschema and validate against it",
+    "commit_date": "2019-01-17 16:18:41",
+    "files_changed": [
+      "libraries/references/schemas/metadata-metaschema.yml",
+      "libraries/references/schemas/metaschema.yml",
+      "libraries/references/src/validate.js",
+      "libraries/references/test/metaschema_test.js",
+      "libraries/references/test/validate_test.js",
+      "libraries/validate/src/schemaset.js",
+      "libraries/validate/test/schemaset_test.js",
+      "services/auth/schemas/v1/authenticate-hawk-request.yml",
+      "services/auth/schemas/v1/authenticate-hawk-response.yml",
+      "services/auth/schemas/v1/aws-s3-credentials-response.yml",
+      "services/auth/schemas/v1/azure-account-list-response.yml",
+      "services/auth/schemas/v1/azure-container-list-response.yml",
+      "services/auth/schemas/v1/azure-container-response.yml",
+      "services/auth/schemas/v1/azure-table-access-response.yml",
+      "services/auth/schemas/v1/azure-table-list-response.yml",
+      "services/auth/schemas/v1/client-message.yml",
+      "services/auth/schemas/v1/create-client-request.yml",
+      "services/auth/schemas/v1/create-client-response.yml",
+      "services/auth/schemas/v1/create-role-request.yml",
+      "services/auth/schemas/v1/get-client-response.yml",
+      "services/auth/schemas/v1/get-role-response.yml",
+      "services/auth/schemas/v1/list-clients-response.yml",
+      "services/auth/schemas/v1/list-role-ids-response.yml",
+      "services/auth/schemas/v1/list-roles-response.yml",
+      "services/auth/schemas/v1/list-roles2-response.yml",
+      "services/auth/schemas/v1/role-message.yml",
+      "services/auth/schemas/v1/scopeset.yml",
+      "services/auth/schemas/v1/sentry-dsn-response.yml",
+      "services/auth/schemas/v1/statsum-token-response.yml",
+      "services/auth/schemas/v1/test-authenticate-request.yml",
+      "services/auth/schemas/v1/test-authenticate-response.yml",
+      "services/auth/schemas/v1/websocktunnel-token-response.yml",
+      "services/github/schemas/v1/build-list.yml",
+      "services/github/schemas/v1/create-comment.yml",
+      "services/github/schemas/v1/create-status.yml",
+      "services/github/schemas/v1/github-pull-request-message.yml",
+      "services/github/schemas/v1/github-push-message.yml",
+      "services/github/schemas/v1/github-release-message.yml",
+      "services/github/schemas/v1/repository.yml",
+      "services/github/schemas/v1/task-group-creation-requested.yml",
+      "services/github/schemas/v1/taskcluster-github-config.v1.yml",
+      "services/github/schemas/v1/taskcluster-github-config.yml",
+      "services/hooks/schemas/v1/bindings.yml",
+      "services/hooks/schemas/v1/create-hook-request.yml",
+      "services/hooks/schemas/v1/hook-definition.yml",
+      "services/hooks/schemas/v1/hook-metadata.yml",
+      "services/hooks/schemas/v1/hook-schedule.yml",
+      "services/hooks/schemas/v1/hook-status.yml",
+      "services/hooks/schemas/v1/list-hook-groups-response.yml",
+      "services/hooks/schemas/v1/list-hooks-response.yml",
+      "services/hooks/schemas/v1/list-lastFires-response.yml",
+      "services/hooks/schemas/v1/pulse-hook-changed-message.yml",
+      "services/hooks/schemas/v1/schedule.yml",
+      "services/hooks/schemas/v1/task-status.yml",
+      "services/hooks/schemas/v1/task-template.yml",
+      "services/hooks/schemas/v1/trigger-hook.yml",
+      "services/hooks/schemas/v1/trigger-token-response.yml",
+      "services/index/schemas/v1/indexed-task-response.yml",
+      "services/index/schemas/v1/insert-task-request.yml",
+      "services/index/schemas/v1/list-namespaces-request.yml",
+      "services/index/schemas/v1/list-namespaces-response.yml",
+      "services/index/schemas/v1/list-tasks-request.yml",
+      "services/index/schemas/v1/list-tasks-response.yml",
+      "services/login/schemas/v1/credentials-response.yml",
+      "services/login/schemas/v1/oidc-credentials-response.yml",
+      "services/notify/schemas/v1/email-request.yml",
+      "services/notify/schemas/v1/irc-request.yml",
+      "services/notify/schemas/v1/notification-message.yml",
+      "services/notify/schemas/v1/pulse-request.yml",
+      "services/purge-cache/schemas/v1/all-purge-cache-request-list.yml",
+      "services/purge-cache/schemas/v1/purge-cache-request-list.yml",
+      "services/purge-cache/schemas/v1/purge-cache-request.yml",
+      "services/purge-cache/schemas/v1/purge-cache-requests.yml",
+      "services/queue/schemas/v1/README.md",
+      "services/queue/schemas/v1/actions.yml",
+      "services/queue/schemas/v1/artifact-created-message.yml",
+      "services/queue/schemas/v1/claim-work-request.yml",
+      "services/queue/schemas/v1/claim-work-response.yml",
+      "services/queue/schemas/v1/create-task-request.yml",
+      "services/queue/schemas/v1/list-artifacts-response.yml",
+      "services/queue/schemas/v1/list-dependent-tasks-response.yml",
+      "services/queue/schemas/v1/list-provisioners-response.yml",
+      "services/queue/schemas/v1/list-task-group-response.yml",
+      "services/queue/schemas/v1/list-workers-response.yml",
+      "services/queue/schemas/v1/list-workertypes-response.yml",
+      "services/queue/schemas/v1/pending-tasks-response.yml",
+      "services/queue/schemas/v1/poll-task-urls-response.yml",
+      "services/queue/schemas/v1/post-artifact-request.yml",
+      "services/queue/schemas/v1/post-artifact-response.yml",
+      "services/queue/schemas/v1/provisioner-response.yml",
+      "services/queue/schemas/v1/put-artifact-request.yml",
+      "services/queue/schemas/v1/quarantine-worker-request.yml",
+      "services/queue/schemas/v1/task-claim-request.yml",
+      "services/queue/schemas/v1/task-claim-response.yml",
+      "services/queue/schemas/v1/task-completed-message.yml",
+      "services/queue/schemas/v1/task-credentials.yml",
+      "services/queue/schemas/v1/task-defined-message.yml",
+      "services/queue/schemas/v1/task-definition-and-status.yml",
+      "services/queue/schemas/v1/task-exception-message.yml",
+      "services/queue/schemas/v1/task-exception-request.yml",
+      "services/queue/schemas/v1/task-failed-message.yml",
+      "services/queue/schemas/v1/task-group-resolved.yml",
+      "services/queue/schemas/v1/task-metadata.yml",
+      "services/queue/schemas/v1/task-pending-message.yml",
+      "services/queue/schemas/v1/task-reclaim-response.yml",
+      "services/queue/schemas/v1/task-run.yml",
+      "services/queue/schemas/v1/task-running-message.yml",
+      "services/queue/schemas/v1/task-status-response.yml",
+      "services/queue/schemas/v1/task-status.yml",
+      "services/queue/schemas/v1/task.yml",
+      "services/queue/schemas/v1/update-provisioner-request.yml",
+      "services/queue/schemas/v1/update-worker-request.yml",
+      "services/queue/schemas/v1/update-workertype-request.yml",
+      "services/queue/schemas/v1/worker-response.yml",
+      "services/queue/schemas/v1/workertype-response.yml",
+      "services/secrets/schemas/v1/secret-list.yml",
+      "services/secrets/schemas/v1/secret.yml",
+      "services/treeherder/schemas/v1/pulse-job.yml",
+      "services/treeherder/schemas/v1/task-treeherder-config.yml"
+    ]
+  },
+  "64": {
+    "sha": "3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1260285 - validate that API method schemas are the metaschema",
+    "commit_date": "2019-01-16 01:08:45",
+    "files_changed": [
+      "libraries/references/src/validate.js",
+      "libraries/references/test/validate_test.js"
+    ]
+  },
+  "65": {
+    "sha": "6aa8854f327904242e695dd5c2af3812e6c5c14c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/6aa8854f327904242e695dd5c2af3812e6c5c14c",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1260285 - use metaschema for all services' schemas",
+    "commit_date": "2019-01-16 00:48:33",
+    "files_changed": [
+      "libraries/validate/src/schemaset.js",
+      "libraries/validate/test/schemaset_test.js",
+      "services/auth/schemas/v1/authenticate-hawk-request.yml",
+      "services/auth/schemas/v1/authenticate-hawk-response.yml",
+      "services/auth/schemas/v1/aws-s3-credentials-response.yml",
+      "services/auth/schemas/v1/azure-account-list-response.yml",
+      "services/auth/schemas/v1/azure-container-list-response.yml",
+      "services/auth/schemas/v1/azure-container-response.yml",
+      "services/auth/schemas/v1/azure-table-access-response.yml",
+      "services/auth/schemas/v1/azure-table-list-response.yml",
+      "services/auth/schemas/v1/client-message.yml",
+      "services/auth/schemas/v1/create-client-request.yml",
+      "services/auth/schemas/v1/create-client-response.yml",
+      "services/auth/schemas/v1/create-role-request.yml",
+      "services/auth/schemas/v1/get-client-response.yml",
+      "services/auth/schemas/v1/get-role-response.yml",
+      "services/auth/schemas/v1/list-clients-response.yml",
+      "services/auth/schemas/v1/list-role-ids-response.yml",
+      "services/auth/schemas/v1/list-roles-response.yml",
+      "services/auth/schemas/v1/list-roles2-response.yml",
+      "services/auth/schemas/v1/role-message.yml",
+      "services/auth/schemas/v1/scopeset.yml",
+      "services/auth/schemas/v1/sentry-dsn-response.yml",
+      "services/auth/schemas/v1/statsum-token-response.yml",
+      "services/auth/schemas/v1/test-authenticate-request.yml",
+      "services/auth/schemas/v1/test-authenticate-response.yml",
+      "services/auth/schemas/v1/websocktunnel-token-response.yml",
+      "services/github/schemas/v1/build-list.yml",
+      "services/github/schemas/v1/create-comment.yml",
+      "services/github/schemas/v1/create-status.yml",
+      "services/github/schemas/v1/github-pull-request-message.yml",
+      "services/github/schemas/v1/github-push-message.yml",
+      "services/github/schemas/v1/github-release-message.yml",
+      "services/github/schemas/v1/repository.yml",
+      "services/github/schemas/v1/task-group-creation-requested.yml",
+      "services/github/schemas/v1/taskcluster-github-config.v1.yml",
+      "services/github/schemas/v1/taskcluster-github-config.yml",
+      "services/hooks/schemas/v1/bindings.yml",
+      "services/hooks/schemas/v1/create-hook-request.yml",
+      "services/hooks/schemas/v1/hook-definition.yml",
+      "services/hooks/schemas/v1/hook-metadata.yml",
+      "services/hooks/schemas/v1/hook-schedule.yml",
+      "services/hooks/schemas/v1/hook-status.yml",
+      "services/hooks/schemas/v1/list-hook-groups-response.yml",
+      "services/hooks/schemas/v1/list-hooks-response.yml",
+      "services/hooks/schemas/v1/list-lastFires-response.yml",
+      "services/hooks/schemas/v1/pulse-hook-changed-message.yml",
+      "services/hooks/schemas/v1/schedule.yml",
+      "services/hooks/schemas/v1/task-status.yml",
+      "services/hooks/schemas/v1/task-template.yml",
+      "services/hooks/schemas/v1/trigger-hook.yml",
+      "services/hooks/schemas/v1/trigger-token-response.yml",
+      "services/index/schemas/v1/indexed-task-response.yml",
+      "services/index/schemas/v1/insert-task-request.yml",
+      "services/index/schemas/v1/list-namespaces-request.yml",
+      "services/index/schemas/v1/list-namespaces-response.yml",
+      "services/index/schemas/v1/list-tasks-request.yml",
+      "services/index/schemas/v1/list-tasks-response.yml",
+      "services/login/schemas/v1/credentials-response.yml",
+      "services/login/schemas/v1/oidc-credentials-response.yml",
+      "services/notify/schemas/v1/email-request.yml",
+      "services/notify/schemas/v1/irc-request.yml",
+      "services/notify/schemas/v1/notification-message.yml",
+      "services/notify/schemas/v1/pulse-request.yml",
+      "services/purge-cache/schemas/v1/all-purge-cache-request-list.yml",
+      "services/purge-cache/schemas/v1/purge-cache-request-list.yml",
+      "services/purge-cache/schemas/v1/purge-cache-request.yml",
+      "services/purge-cache/schemas/v1/purge-cache-requests.yml",
+      "services/queue/schemas/v1/README.md",
+      "services/queue/schemas/v1/actions.yml",
+      "services/queue/schemas/v1/artifact-created-message.yml",
+      "services/queue/schemas/v1/claim-work-request.yml",
+      "services/queue/schemas/v1/claim-work-response.yml",
+      "services/queue/schemas/v1/create-task-request.yml",
+      "services/queue/schemas/v1/list-artifacts-response.yml",
+      "services/queue/schemas/v1/list-dependent-tasks-response.yml",
+      "services/queue/schemas/v1/list-provisioners-response.yml",
+      "services/queue/schemas/v1/list-task-group-response.yml",
+      "services/queue/schemas/v1/list-workers-response.yml",
+      "services/queue/schemas/v1/list-workertypes-response.yml",
+      "services/queue/schemas/v1/pending-tasks-response.yml",
+      "services/queue/schemas/v1/poll-task-urls-response.yml",
+      "services/queue/schemas/v1/post-artifact-request.yml",
+      "services/queue/schemas/v1/post-artifact-response.yml",
+      "services/queue/schemas/v1/provisioner-response.yml",
+      "services/queue/schemas/v1/put-artifact-request.yml",
+      "services/queue/schemas/v1/quarantine-worker-request.yml",
+      "services/queue/schemas/v1/task-claim-request.yml",
+      "services/queue/schemas/v1/task-claim-response.yml",
+      "services/queue/schemas/v1/task-completed-message.yml",
+      "services/queue/schemas/v1/task-credentials.yml",
+      "services/queue/schemas/v1/task-defined-message.yml",
+      "services/queue/schemas/v1/task-definition-and-status.yml",
+      "services/queue/schemas/v1/task-exception-message.yml",
+      "services/queue/schemas/v1/task-exception-request.yml",
+      "services/queue/schemas/v1/task-failed-message.yml",
+      "services/queue/schemas/v1/task-group-resolved.yml",
+      "services/queue/schemas/v1/task-metadata.yml",
+      "services/queue/schemas/v1/task-pending-message.yml",
+      "services/queue/schemas/v1/task-reclaim-response.yml",
+      "services/queue/schemas/v1/task-run.yml",
+      "services/queue/schemas/v1/task-running-message.yml",
+      "services/queue/schemas/v1/task-status-response.yml",
+      "services/queue/schemas/v1/task-status.yml",
+      "services/queue/schemas/v1/task.yml",
+      "services/queue/schemas/v1/update-provisioner-request.yml",
+      "services/queue/schemas/v1/update-worker-request.yml",
+      "services/queue/schemas/v1/update-workertype-request.yml",
+      "services/queue/schemas/v1/worker-response.yml",
+      "services/queue/schemas/v1/workertype-response.yml",
+      "services/secrets/schemas/v1/secret-list.yml",
+      "services/secrets/schemas/v1/secret.yml",
+      "services/treeherder/schemas/v1/pulse-job.yml",
+      "services/treeherder/schemas/v1/task-treeherder-config.yml"
+    ]
+  },
+  "66": {
+    "sha": "4ba20f722a21e3a18df36eb4ea0f5046baac081a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/4ba20f722a21e3a18df36eb4ea0f5046baac081a",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1260285 - add a metaschema that enforces some basic sanity  This factors out a new '/schemas/common/metaschema.json#' that enforces some basic things on our schemas.  This is strictly  more  restrictive than vanilla draft-06 json-schema, so a compliant schema remains usable by any other schema-handling tools.",
+    "commit_date": "2018-12-17 21:14:58",
+    "files_changed": [
+      "libraries/references/schemas/metadata-metaschema.yml",
+      "libraries/references/schemas/metaschema.yml",
+      "libraries/references/src/validate.js",
+      "libraries/references/test/metaschema_test.js"
+    ]
+  },
+  "67": {
+    "sha": "d3c23e9011f15f1efbf82fb86f19015991a4cf84",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d3c23e9011f15f1efbf82fb86f19015991a4cf84",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "Include clientId in docs and remove client default as null",
+    "commit_date": "2019-01-17 14:44:10",
+    "files_changed": [
+      "services/hooks/docs/firing-hooks.md",
+      "services/hooks/src/v1.js",
+      "services/hooks/test/api_test.js"
+    ]
+  },
+  "68": {
+    "sha": "70b67fe0f3fc6b120e9538a10289104da7ec2ede",
+    "url": "https://github.com/taskcluster/taskcluster/commit/70b67fe0f3fc6b120e9538a10289104da7ec2ede",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #88 from djmitche/codeowners-services-reviewers  Make services-reviewers responsible for some services, libraries",
+    "commit_date": "2019-01-17 14:23:49",
+    "files_changed": [
+      ".github/CODEOWNERS"
+    ]
+  },
+  "69": {
+    "sha": "4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #90 from djmitche/bug1520007  Bug 1520007 - output service images at completion",
+    "commit_date": "2019-01-17 14:23:15",
+    "files_changed": [
+      "infrastructure/builder/package.json",
+      "infrastructure/builder/src/build/index.js",
+      "infrastructure/builder/src/formats/tf-json.js",
+      "infrastructure/builder/test/formats/tf_json_test.js"
+    ]
+  },
+  "70": {
     "sha": "fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "commiter_name": "djmitche",
@@ -13,7 +1782,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "2": {
+  "71": {
     "sha": "49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "url": "https://github.com/taskcluster/taskcluster/commit/49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "commiter_name": "djmitche",
@@ -27,7 +1796,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "3": {
+  "72": {
     "sha": "65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "url": "https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "commiter_name": "djmitche",
@@ -38,7 +1807,7 @@
       "package.json"
     ]
   },
-  "4": {
+  "73": {
     "sha": "cb01a41a19567239c3796b541111cff500117927",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb01a41a19567239c3796b541111cff500117927",
     "commiter_name": "imbstack",
@@ -49,7 +1818,7 @@
       "package.json"
     ]
   },
-  "5": {
+  "74": {
     "sha": "837bc03478191928c019b36b2cd1a8360c242427",
     "url": "https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427",
     "commiter_name": "djmitche",
@@ -61,7 +1830,7 @@
       "yarn.lock"
     ]
   },
-  "6": {
+  "75": {
     "sha": "d3336686210d98db119e5640c574dc62f2ca0237",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237",
     "commiter_name": "djmitche",
@@ -72,7 +1841,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "7": {
+  "76": {
     "sha": "fcfa98088751a39ddc8707445a476158f2f118e3",
     "url": "https://github.com/taskcluster/taskcluster/commit/fcfa98088751a39ddc8707445a476158f2f118e3",
     "commiter_name": "arshadkazmi42",
@@ -85,7 +1854,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "8": {
+  "77": {
     "sha": "e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "url": "https://github.com/taskcluster/taskcluster/commit/e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "commiter_name": "renovate-bot",
@@ -97,7 +1866,7 @@
       "yarn.lock"
     ]
   },
-  "9": {
+  "78": {
     "sha": "68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "url": "https://github.com/taskcluster/taskcluster/commit/68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "commiter_name": "djmitche",
@@ -108,7 +1877,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "10": {
+  "79": {
     "sha": "7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "commiter_name": "imbstack",
@@ -119,7 +1888,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "11": {
+  "80": {
     "sha": "01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "url": "https://github.com/taskcluster/taskcluster/commit/01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "commiter_name": "imbstack",
@@ -130,7 +1899,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "12": {
+  "81": {
     "sha": "83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "commiter_name": "imbstack",
@@ -141,7 +1910,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "13": {
+  "82": {
     "sha": "13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "url": "https://github.com/taskcluster/taskcluster/commit/13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "commiter_name": "imbstack",
@@ -152,7 +1921,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "14": {
+  "83": {
     "sha": "05c9871d6131e99147e0874dfe1de8f19541ace4",
     "url": "https://github.com/taskcluster/taskcluster/commit/05c9871d6131e99147e0874dfe1de8f19541ace4",
     "commiter_name": "owlishDeveloper",
@@ -163,7 +1932,7 @@
       "README.md"
     ]
   },
-  "15": {
+  "84": {
     "sha": "7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "commiter_name": "imbstack",
@@ -184,7 +1953,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "16": {
+  "85": {
     "sha": "756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "url": "https://github.com/taskcluster/taskcluster/commit/756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "commiter_name": "djmitche",
@@ -195,7 +1964,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "17": {
+  "86": {
     "sha": "265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "url": "https://github.com/taskcluster/taskcluster/commit/265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "commiter_name": "djmitche",
@@ -206,7 +1975,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "18": {
+  "87": {
     "sha": "0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "commiter_name": "Biboswan",
@@ -237,7 +2006,7 @@
       "yarn.lock"
     ]
   },
-  "19": {
+  "88": {
     "sha": "0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "url": "https://github.com/taskcluster/taskcluster/commit/0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "commiter_name": "Biboswan",
@@ -250,7 +2019,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "20": {
+  "89": {
     "sha": "ac25a3592f5b81a50ea2c320662e38f122af5697",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac25a3592f5b81a50ea2c320662e38f122af5697",
     "commiter_name": "djmitche",
@@ -261,7 +2030,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "21": {
+  "90": {
     "sha": "c2046d13643624bf7463f990c243c7c2dc54d827",
     "url": "https://github.com/taskcluster/taskcluster/commit/c2046d13643624bf7463f990c243c7c2dc54d827",
     "commiter_name": "djmitche",
@@ -273,7 +2042,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "22": {
+  "91": {
     "sha": "57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "url": "https://github.com/taskcluster/taskcluster/commit/57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "commiter_name": "djmitche",
@@ -285,7 +2054,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "23": {
+  "92": {
     "sha": "a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "url": "https://github.com/taskcluster/taskcluster/commit/a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "commiter_name": "djmitche",
@@ -296,7 +2065,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "24": {
+  "93": {
     "sha": "e881636d369651eefc7ef242ecf93a228f142e91",
     "url": "https://github.com/taskcluster/taskcluster/commit/e881636d369651eefc7ef242ecf93a228f142e91",
     "commiter_name": "Biboswan",
@@ -312,7 +2081,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "25": {
+  "94": {
     "sha": "6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "commiter_name": "djmitche",
@@ -323,7 +2092,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "26": {
+  "95": {
     "sha": "914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "commiter_name": "djmitche",
@@ -335,7 +2104,7 @@
       "yarn.lock"
     ]
   },
-  "27": {
+  "96": {
     "sha": "74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "url": "https://github.com/taskcluster/taskcluster/commit/74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "commiter_name": "djmitche",
@@ -346,7 +2115,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "28": {
+  "97": {
     "sha": "e25fd44af389cd820261c921ca2f496b82220f75",
     "url": "https://github.com/taskcluster/taskcluster/commit/e25fd44af389cd820261c921ca2f496b82220f75",
     "commiter_name": "renovate-bot",
@@ -358,7 +2127,7 @@
       "yarn.lock"
     ]
   },
-  "29": {
+  "98": {
     "sha": "90279639ab138faa9351d7182c6b54f9fe5614f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90279639ab138faa9351d7182c6b54f9fe5614f7",
     "commiter_name": "djmitche",
@@ -385,7 +2154,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "30": {
+  "99": {
     "sha": "90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "commiter_name": "renovate-bot",
@@ -412,7 +2181,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "31": {
+  "100": {
     "sha": "37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "url": "https://github.com/taskcluster/taskcluster/commit/37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "commiter_name": "djmitche",
@@ -426,7 +2195,7 @@
       "yarn.lock"
     ]
   },
-  "32": {
+  "101": {
     "sha": "f621c39d08983099fdd627d53762c3aef7863efc",
     "url": "https://github.com/taskcluster/taskcluster/commit/f621c39d08983099fdd627d53762c3aef7863efc",
     "commiter_name": "djmitche",
@@ -437,7 +2206,7 @@
       "services/queue/schemas/v1/post-artifact-request.yml"
     ]
   },
-  "33": {
+  "102": {
     "sha": "e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "url": "https://github.com/taskcluster/taskcluster/commit/e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "commiter_name": "renovate-bot",
@@ -451,7 +2220,7 @@
       "yarn.lock"
     ]
   },
-  "34": {
+  "103": {
     "sha": "c6216c727c43c975fe278c71fd019f537c914665",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6216c727c43c975fe278c71fd019f537c914665",
     "commiter_name": "djmitche",
@@ -463,7 +2232,7 @@
       "yarn.lock"
     ]
   },
-  "35": {
+  "104": {
     "sha": "d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "url": "https://github.com/taskcluster/taskcluster/commit/d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "commiter_name": "djmitche",
@@ -474,7 +2243,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "36": {
+  "105": {
     "sha": "24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "url": "https://github.com/taskcluster/taskcluster/commit/24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "commiter_name": "djmitche",
@@ -485,7 +2254,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "37": {
+  "106": {
     "sha": "c15284770e22b39e9d916cd61b6de053c975a33d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c15284770e22b39e9d916cd61b6de053c975a33d",
     "commiter_name": "arshadkazmi42",
@@ -498,7 +2267,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "38": {
+  "107": {
     "sha": "2b50ddc441741b9914af1a039ff81980760a3930",
     "url": "https://github.com/taskcluster/taskcluster/commit/2b50ddc441741b9914af1a039ff81980760a3930",
     "commiter_name": "arshadkazmi42",
@@ -510,7 +2279,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "39": {
+  "108": {
     "sha": "c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "url": "https://github.com/taskcluster/taskcluster/commit/c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "commiter_name": "djmitche",
@@ -521,7 +2290,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "40": {
+  "109": {
     "sha": "47401a78f1e276fca5c890701e5f2c2432888bdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/47401a78f1e276fca5c890701e5f2c2432888bdb",
     "commiter_name": "djmitche",
@@ -532,7 +2301,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "41": {
+  "110": {
     "sha": "ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "url": "https://github.com/taskcluster/taskcluster/commit/ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "commiter_name": "renovate-bot",
@@ -544,7 +2313,7 @@
       "yarn.lock"
     ]
   },
-  "42": {
+  "111": {
     "sha": "3f0f772cdf633ee65c11b041293cf7281afa8295",
     "url": "https://github.com/taskcluster/taskcluster/commit/3f0f772cdf633ee65c11b041293cf7281afa8295",
     "commiter_name": "Biboswan",
@@ -555,7 +2324,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "43": {
+  "112": {
     "sha": "d999fad02b641985f96a60d6c114fb46d56a6629",
     "url": "https://github.com/taskcluster/taskcluster/commit/d999fad02b641985f96a60d6c114fb46d56a6629",
     "commiter_name": "Biboswan",
@@ -568,7 +2337,7 @@
       "libraries/monitor/test/uncaught_test.js"
     ]
   },
-  "44": {
+  "113": {
     "sha": "7464c610cd46f6a330090e05fb76c215bf2c1205",
     "url": "https://github.com/taskcluster/taskcluster/commit/7464c610cd46f6a330090e05fb76c215bf2c1205",
     "commiter_name": "Biboswan",
@@ -586,7 +2355,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "45": {
+  "114": {
     "sha": "aa822ad2500f47ef295e490856f8c2e28359c512",
     "url": "https://github.com/taskcluster/taskcluster/commit/aa822ad2500f47ef295e490856f8c2e28359c512",
     "commiter_name": "imbstack",
@@ -602,7 +2371,7 @@
       "yarn.lock"
     ]
   },
-  "46": {
+  "115": {
     "sha": "2937f63065701ffa391121d08d566e35c2b220bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/2937f63065701ffa391121d08d566e35c2b220bb",
     "commiter_name": "renovate-bot",
@@ -618,7 +2387,7 @@
       "yarn.lock"
     ]
   },
-  "47": {
+  "116": {
     "sha": "d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "url": "https://github.com/taskcluster/taskcluster/commit/d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "commiter_name": "imbstack",
@@ -632,7 +2401,7 @@
       "yarn.lock"
     ]
   },
-  "48": {
+  "117": {
     "sha": "29c398016463c7b50703cd3224ecde4794703f15",
     "url": "https://github.com/taskcluster/taskcluster/commit/29c398016463c7b50703cd3224ecde4794703f15",
     "commiter_name": "imbstack",
@@ -644,7 +2413,7 @@
       "yarn.lock"
     ]
   },
-  "49": {
+  "118": {
     "sha": "b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "commiter_name": "imbstack",
@@ -658,7 +2427,7 @@
       "yarn.lock"
     ]
   },
-  "50": {
+  "119": {
     "sha": "bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "url": "https://github.com/taskcluster/taskcluster/commit/bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "commiter_name": "renovate-bot",
@@ -672,7 +2441,7 @@
       "yarn.lock"
     ]
   },
-  "51": {
+  "120": {
     "sha": "9159c878868282fad3f75122efed0475649d5441",
     "url": "https://github.com/taskcluster/taskcluster/commit/9159c878868282fad3f75122efed0475649d5441",
     "commiter_name": "renovate-bot",
@@ -684,7 +2453,7 @@
       "yarn.lock"
     ]
   },
-  "52": {
+  "121": {
     "sha": "0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "commiter_name": "imbstack",
@@ -696,7 +2465,7 @@
       "yarn.lock"
     ]
   },
-  "53": {
+  "122": {
     "sha": "75fdbf91d771bce53951a92c666ff4b439152f22",
     "url": "https://github.com/taskcluster/taskcluster/commit/75fdbf91d771bce53951a92c666ff4b439152f22",
     "commiter_name": "renovate-bot",
@@ -708,7 +2477,7 @@
       "yarn.lock"
     ]
   },
-  "54": {
+  "123": {
     "sha": "1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "url": "https://github.com/taskcluster/taskcluster/commit/1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "commiter_name": "imbstack",
@@ -720,7 +2489,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "55": {
+  "124": {
     "sha": "32874aa462882888bbdba94854e8d8b6edc01dcf",
     "url": "https://github.com/taskcluster/taskcluster/commit/32874aa462882888bbdba94854e8d8b6edc01dcf",
     "commiter_name": "imbstack",
@@ -732,7 +2501,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "56": {
+  "125": {
     "sha": "acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "url": "https://github.com/taskcluster/taskcluster/commit/acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "commiter_name": "imbstack",
@@ -743,7 +2512,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "57": {
+  "126": {
     "sha": "13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "commiter_name": "petemoore",
@@ -754,7 +2523,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "58": {
+  "127": {
     "sha": "69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "url": "https://github.com/taskcluster/taskcluster/commit/69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "commiter_name": "imbstack",
@@ -766,7 +2535,7 @@
       "yarn.lock"
     ]
   },
-  "59": {
+  "128": {
     "sha": "67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "url": "https://github.com/taskcluster/taskcluster/commit/67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "commiter_name": "imbstack",
@@ -778,7 +2547,7 @@
       "yarn.lock"
     ]
   },
-  "60": {
+  "129": {
     "sha": "5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "commiter_name": "imbstack",
@@ -789,7 +2558,7 @@
       "libraries/scopes/src/expressions.js"
     ]
   },
-  "61": {
+  "130": {
     "sha": "c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "commiter_name": "imbstack",
@@ -802,7 +2571,7 @@
       "yarn.lock"
     ]
   },
-  "62": {
+  "131": {
     "sha": "92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "url": "https://github.com/taskcluster/taskcluster/commit/92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "commiter_name": "imbstack",
@@ -814,7 +2583,7 @@
       "yarn.lock"
     ]
   },
-  "63": {
+  "132": {
     "sha": "1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "url": "https://github.com/taskcluster/taskcluster/commit/1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "commiter_name": "renovate-bot",

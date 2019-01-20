@@ -1,8 +1,10 @@
 ## REPOSITORY NAME: CI-ADMIN
- CURRENT PUSH ID: 32
+ CURRENT PUSH ID: 34
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|34|2019-01-18 23:36:42|Tom Prince <mozilla@hocat.ca>|Fix typo from flake8 run; r=me|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=8fe80858db7f
+|33|2019-01-18 23:21:58|Tom Prince <mozilla@hocat.ca>|Fix flake8 errors; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D16769|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=65b3e50a57e4
 |32|2019-01-17 00:47:14|Tom Prince <mozilla@hocat.ca>|Fix ci-admin tests; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D16756|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=ae0505b4301c
 |31|2019-01-02 22:26:29|Aki Sasaki <asasaki@mozilla.com>|Bug 1485680 - if we modify the action hook task logic, we need to update scriptworker. r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D15482|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=b2d0f7af52d2
 |30|2018-12-18 21:48:17|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1515137 - pass environment rootUrl to cron context r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D14882|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=0f4b1e9e03cd
