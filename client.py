@@ -995,6 +995,6 @@ if __name__ == "__main__":
         clear_file("main_md_table.md", generate_for_x_days)
         generate_main_md_table("hg_files", generate_for_x_days)
         generate_main_md_table("git_files", generate_for_x_days)
-        # push_files_to_git()
+        push_files_to_git()
 
 
