@@ -1,15 +1,17 @@
 import os
 import re
+import sys
 import json
 import time
 import requests
+import subprocess
 from os import listdir
 from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
-import sys
 from dateutil.parser import parse
-import timestring
+from fic_modules import configuration
+
 
 lastWeek = datetime.now() - timedelta(days=14)
 lastMonth = datetime.utcnow() - timedelta(days=31)
@@ -347,7 +349,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
                     new_commit_dict.update(each_commit)
-            json_writer_git(repository_name, new_commit_dict)
+        json_writer_git(repository_name, new_commit_dict)
         return True
     # TYPE = TAG
     if repository_type == "tag" and repository_name == "build-puppet":
@@ -372,7 +374,11 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                         if entry in pathway[scriptworkers]:
                             print(scriptworkers, " needs to be checked.")
                             scriptworker_repo = scriptworkers
-                            version_path = repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check").get(scriptworker_repo)
+                            version_path = repositories.get("Github")\
+                                                       .get("build-puppet")\
+                                                       .get("configuration")\
+                                                       .get("files-to-check")\
+                                                       .get(scriptworker_repo)
                             latest_releases = get_version(scriptworker_repo, repository_team)
                             version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
                             print("version is puppet is: ", version_in_puppet)
@@ -383,7 +389,9 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                 if version_in_puppet != last_local_version:
                                     switch = True
                                     last_local_date = get_date_from_json(scriptworker_repo)
-                                    new_version_commit_date = datetime.strptime(latest_releases.get("latest_release").get("date"), "%Y-%m-%d %H:%M:%S")
+                                    new_version_commit_date = datetime.strptime(latest_releases
+                                                                                .get("latest_release")
+                                                                                .get("date"), "%Y-%m-%d %H:%M:%S")
                                     new_scriptworker_dict = {(int(number2)): {"lastChecked": str(datetime.utcnow()),
                                                                               "last_releases": latest_releases}}
                                     new_repo_path = repository_team + scriptworker_repo
@@ -405,7 +413,9 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                             else:
                                 switch = True
                                 last_commit_date = get_date_from_json(scriptworker_repo)
-                                new_version_commit_date = datetime.strptime(latest_releases.get("latest_release").get("date"), "%Y-%m-%d %H:%M:%S")
+                                new_version_commit_date = datetime.strptime(latest_releases
+                                                                            .get("latest_release")
+                                                                            .get("date"), "%Y-%m-%d %H:%M:%S")
                                 new_scriptworker_dict = {(int(number2)): {"lastChecked": str(datetime.utcnow()),
                                                                           "last_releases": latest_releases}}
                                 new_repo_path = repository_team + scriptworker_repo
@@ -430,11 +440,14 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
     elif repository_type == "tag" and repository_name != "build-puppet":
         version_path = repositories.get("Github").get(repository_name).get("configuration").get("version-path")
         latest_releases = get_version(repository_name, repository_team)
-        if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release").get("version"):
+        if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release")\
+                                                                                          .get("version"):
             print("No new changes entered production")
         else:
             last_commit_date = get_date_from_json(repository_name)
-            new_version_commit_date = datetime.strptime(latest_releases.get("latest_release").get("date"), "%Y-%m-%d %H:%M:%S")
+            new_version_commit_date = datetime.strptime(latest_releases
+                                                        .get("latest_release")
+                                                        .get("date"), "%Y-%m-%d %H:%M:%S")
             new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
                                      "last_releases": latest_releases}}
             for commit in git.get_repo(repository_path).get_commits(since=last_commit_date):
@@ -621,6 +634,7 @@ def create_hg_md_table(repository_name):
                 "Repository name: {}\n Current push id: {}".format(repository_name, last_push_id)]
 
         except:
+            #TODO Missing exceptions and if this try-except fails, the last_push_id will be empty (probably)
             md_title = ["{} commit markdown table since push id: {}".format(repository_name, last_push_id)]
 
         for repo in md_title:
@@ -669,22 +683,30 @@ def create_hg_md_table(repository_name):
         print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def clear_file(file_name):
+def clear_file(file_name, generated_for_days = 1):
     """
     This function takes a file that clears the content and output's a base table header for a markdown file.
     :param file_name: Name of the file to be written. (should also contain the path)
     :return: A file should be created and should contain base table.
     """
     file = open(file_name, "w")
-    heading = "##  Commits in production. \n"
+    if generated_for_days == 1:
+        heading = "##  Commits in production - for one day" + ", generated on: " \
+                  + str(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")) + " UTC."
+    else:
+        heading = "##  Commits in production - for " + \
+                  str(generated_for_days) + " days" + ", generated on: " \
+                  + str(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")) + " UTC."
     file.write(heading)
     file.close()
 
 
-def generate_main_md_table(path_to_files):
+def generate_main_md_table(path_to_files, days_to_generate=1):
     """
     Looks into repositories folders (hg_files & git files), filters the files to load the json's using a passfilter and
     calls after extraction functions.
+    :param days_to_generate: just a pass by parameter, used in extract json from git/hg and generates for the specified
+    days.
     :param path_to_files: Folder to json files
     """
     # Get current folder path.
@@ -693,16 +715,18 @@ def generate_main_md_table(path_to_files):
     # Look into repositories folder and list all of the files
     only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
                   isfile(join(dir_path + "/{}".format(path_to_files), f))]
-
-    print("only files: ", only_files)
-
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]
-
     # Extract data from json_files and writes to main markdown table.
-    extract_json(json_files, path_to_files)
+    if path_to_files is "git_files":
+        extract_json_from_git(json_files, path_to_files, days_to_generate)
+        print("GIT part from main markdown table was successfully generated.")
+    elif path_to_files is "hg_files":
+        extract_json_from_hg(json_files, path_to_files, days_to_generate)
+        print("HG part from main markdown table was successfully generated.")
 
-    print("Table successfully generated.")
+    else:
+        print("No table was generated!")
 
 
 def extract_reviewer(string):
@@ -732,19 +756,105 @@ def extract_reviewer(string):
         return reviewer
 
 
-def extract_json(json_files, path_to_files):
+def write_date_header(file_name, datetime_object):
+    file = open(file_name, "a")
+
+    base_table = "|            | \n" + \
+                 "|:----------:| \n"
+    date_header = "| Generated on: " + str(datetime.utcnow()) + " and contains modifications from: " + str(datetime_object) + " |"
+    file.write("\n" + base_table + date_header + "\n")
+    file.close()
+
+
+def remove_chars(string, char):
+    """
+    Helper function!
+    Removes a specific character from a string
+    :param string: string that contains a special char
+    :param char: char to be removed from string
+    :return: returns a string without char.
+    """
+    return re.sub(char, " ", string)
+
+
+def extract_json_from_git(json_files, path_to_files, days_to_generate):
     """
     Extracts the json data from json files and writes the data to the main markdown table file. The function looks
     into json files after the last commit, extracts it and calls the write_main_md_table function.
-    :param commits_per_repo: number of commits to be used in the main markdown file
+    :param days_to_generate:
     :param json_files: List of files to extract commits from.
     :param path_to_files: Folder to json files
     :return: none
     """
-    time_24h_ago = datetime.utcnow() - timedelta(days=1)
+
+    time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
     test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
     time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
 
+    for file in json_files:
+        file_path = "{}/".format(path_to_files) + file
+        count_pushes = 0
+        with open(file_path) as json_files:
+            data = json.load(json_files)
+            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
+            repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
+            repository_json = base_link + file.rstrip().replace(" ", "%20")
+            repository_title = file.replace(".json", "")
+            try:
+                generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
+                if "0" in data:
+                    del data["0"]
+                for commit_iterator in data:
+                    commit_number = str(commit_iterator)
+                    commit_date = data.get(commit_number).get("commit_date")
+                    is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+                    if is_it_under_24 > time_24h_ago:
+                        count_pushes = count_pushes + 1
+                        commit_description = data.get(commit_number).get("commit_message")
+                        commit_description = remove_chars(commit_description, "\U0001f60b")
+                        commit_url = data.get(commit_number).get("url")
+                        commit_url = "[Link](" + commit_url + ")"
+                        author = data.get(commit_number).get("commiter_name")
+                        review = "N/A"
+                        write_main_md_table("main_md_table.md",
+                                            commit_url,
+                                            commit_description,
+                                            author,
+                                            review,
+                                            commit_date)
+                if count_pushes == 0:
+                    commit_url = " "
+                    if days_to_generate == 1:
+                        commit_description = "No push in the last day.."
+                    else:
+                        commit_description = "No push in the last " + str(days_to_generate) + " days.."
+                    author = "FIC - BOT"
+                    review = "Self Generated"
+                    commit_date = " - "
+                    write_main_md_table("main_md_table.md",
+                                        commit_url,
+                                        commit_description,
+                                        author,
+                                        review,
+                                        commit_date)
+            except KeyError:
+                print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
+                pass
+
+
+def extract_json_from_hg(json_files, path_to_files, days_to_generate):
+    """
+    Extracts the json data from json files and writes the data to the main markdown table file. The function looks
+    into json files after the last commit, extracts it and calls the write_main_md_table function.
+    :param days_to_generate:
+    :param json_files: List of files to extract commits from.
+    :param path_to_files: Folder to json files
+    :return: none
+    """
+    time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
+    test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
+    time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
+    count_pushes = 0
     for file in json_files:
         file_path = "{}/".format(path_to_files) + file
         with open(file_path) as json_files:
@@ -753,57 +863,56 @@ def extract_json(json_files, path_to_files):
             repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
             repository_json = base_link + file.rstrip().replace(" ", "%20")
             repository_title = file.replace(".json", "")
-            try:
-                # Generates the markdown header for a specific repository
-                generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
-                # Write the commits from json files into the main markdown table
-                if path_to_files == "git_files":
-                    if "0" in data:
-                        del data["0"]
-                        print("0 deleted")
-                    for commit_iterator in data:
-                        commit_number = str(commit_iterator)
-                        commit_date = data.get(commit_number).get("commit_date")
-                        is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
-                        print(is_it_under_24, "vs ", time_24h_ago)
-                        if is_it_under_24 > time_24h_ago:
-                            commit_description = data.get(commit_number).get("commit_message")
-                            commit_url = data.get(commit_number).get("url")
-                            commit_url = "[Link](" + commit_url + ")"
-                            author = data.get(commit_number).get("commiter_name")
-                            review = "Placeholder"  # TODO git handler for getting the reviewer.
 
+            try:
+                generate_markdown_header("main_md_table.md", repository_title, repository_url, repository_json)
+                if "0" in data:
+                    del data["0"]
+                for changeset_iterator in data:
+                    for commit_iterator in data.get(changeset_iterator).get("changeset_commits"):
+                        commit_date = data.get(changeset_iterator).get("date_of_push")
+                        is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+                        if is_it_under_24 > time_24h_ago:
+                            count_pushes = count_pushes + 1
+                            commit_description = data.get(changeset_iterator)\
+                                                     .get("changeset_commits")\
+                                                     .get(commit_iterator)\
+                                                     .get("commit_message")
+                            commit_description = remove_chars(commit_description, "\n")
+                            commit_url = data.get(changeset_iterator)\
+                                             .get("changeset_commits")\
+                                             .get(commit_iterator)\
+                                             .get("url")
+                            commit_url = "[Link](" + commit_url + ")"
+                            author = data.get(changeset_iterator).get("pusher")
+                            review = extract_reviewer(commit_description)
                             write_main_md_table("main_md_table.md",
                                                 commit_url,
                                                 commit_description,
                                                 author,
                                                 review,
                                                 commit_date)
-                elif path_to_files is "hg_files":
-                    if "0" in data:
-                        del data["0"]
+                if count_pushes == 0:
+                    commit_url = " "
+                    if days_to_generate == 1:
+                        commit_description = "No push in the last day.."
                     else:
-                        for changeset_iterator in data:
-                            for commit_iterator in data.get(changeset_iterator).get("changeset_commits"):
-                                commit_number = str(commit_iterator)
-                                commit_date = data.get(changeset_iterator).get("date_of_push")
-                                is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
-                                if is_it_under_24 > time_24h_ago:
-                                    commit_description = commit_iterator.get("commit_message")
-                                    commit_url = commit_iterator.get("url")
-                                    commit_url = "[Link](" + commit_url + ")"
-                                    author = data.get(changeset_iterator).get("pusher")
-                                    review = extract_reviewer(commit_description)
-                                    write_main_md_table("main_md_table.md",
-                                                        commit_url,
-                                                        commit_description,
-                                                        author,
-                                                        review,
-                                                        commit_date)
+                        commit_description = "No push in the last " + str(days_to_generate) + " days.."
+                    author = "FIC - BOT"
+                    review = "Self Generated"
+                    commit_date = " - "
+                    write_main_md_table("main_md_table.md",
+                                        commit_url,
+                                        commit_description,
+                                        author,
+                                        review,
+                                        commit_date)
+            except AttributeError:
+                print("Atribute Error!! \n "
+                      "Probabile issue is an malfunctioned json file.. "
+                      "Please check the following file:", file)
             except KeyError:
                 print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
-                pass
-            except AttributeError:
                 pass
 
 
@@ -851,13 +960,40 @@ def write_main_md_table(file_name, repository_url, last_commit, author, reviewer
     write_file.write(row)
 
 
+def push_files_to_git():
+    prname = "Git/Hg_files_update"
+    subprocess.call(["git", "checkout", prname])
+    #subprocess.call(["git", "push", "--set-upstream", "origin", prname])
+    subprocess.call(["git", "add", "git_files/"])
+    subprocess.call(["git", "add", "hg_files/"])
+    subprocess.call(["git", "commit", "-m", "git/hg files update {}".format(datetime.now())])
+    subprocess.call(["git", "push"])
+
+
 if __name__ == "__main__":
-    TOKEN = os.environ.get("GIT_TOKEN")
-    git = Github(TOKEN)
-    repositories_data = open("./repositories.json").read()
-    repositories = json.loads(repositories_data)
-    # create_files_for_git(repositories)
-    # create_files_for_hg(repositories)
-    # clear_file("main_md_table.md")
-    generate_main_md_table("hg_files")
-    generate_main_md_table("git_files")
+    if "-dev" in sys.argv:
+        if "-help" in sys.argv:
+            configuration.HELP = True
+        if "-hg" in sys.argv:
+            configuration.HG = True
+        if "-git" in sys.argv:
+            configuration.GIT = True
+        if "-l" in sys.argv:
+            configuration.LOG = True
+        if "-r" in sys.argv:
+            runrepos = sys.argv.index("-r") + 1
+            configuration.REPO_CHOICE = list(sys.argv[runrepos])
+    else:
+        #Modifiy the "generate_for_x_days" variable to generate for a specific day.
+        generate_for_x_days = 1
+        TOKEN = os.environ.get("GIT_TOKEN")
+        git = Github(TOKEN)
+        repositories_data = open("./repositories.json").read()
+        repositories = json.loads(repositories_data)
+        create_files_for_git(repositories)
+        create_files_for_hg(repositories)
+        clear_file("main_md_table.md", generate_for_x_days)
+        generate_main_md_table("hg_files", generate_for_x_days)
+        generate_main_md_table("git_files", generate_for_x_days)
+        push_files_to_git()
+

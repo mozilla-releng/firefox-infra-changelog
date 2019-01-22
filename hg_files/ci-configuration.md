@@ -21,6 +21,6 @@
 |34|2018-10-02 19:42:41|Rok Garbas <rok@garbas.si>|Bug 1471987 - assign tooltool/mapper/tokens releng scopes to ldap groups r=dustin,tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D6701|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=9e898f79dbea
 |33|2018-09-18 19:34:05|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1220705 - remove scope for taskclusterprivate/upload_symbols image r=ted,bstackted for confirmation this is dead, brian for r? from the taskgraph module.Differential Revision: https://phabricator.services.mozilla.com/D6095|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=9000e725de95
 |32|2018-09-13 19:10:48|Wander Lairson Costa <wcosta@mozilla.com>|Bug 1490962: access to all sizes of gce/gecko-t-linux workers for gecko repos r=dustin,tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D5757|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=6a0d56dea5c4
-|31|2018-09-12 23:04:46|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1489181: add input_schema to actions.yml r=akiDifferential Revision: https://phabricator.services.mozilla.com/D5684|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=dea5d65a07aa
+|31|2019-01-19 23:04:46|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1489181: add input_schema to actions.yml r=akiDifferential Revision: https://phabricator.services.mozilla.com/D5684|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=dea5d65a07aa
 
 
