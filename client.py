@@ -3,16 +3,15 @@ import re
 import sys
 import json
 import time
+import click
 import requests
-import subprocess
 from os import listdir
 from github import Github
 from os.path import isfile, join
 from datetime import datetime, timedelta
 from dateutil.parser import parse
-from fic_modules import configuration
 
-
+repoList = []
 lastWeek = datetime.now() - timedelta(days=14)
 lastMonth = datetime.utcnow() - timedelta(days=31)
 current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -45,7 +44,7 @@ def limit_checker():
             print("The requests limit is reset to:" + str(reset_time))
 
 
-def create_files_for_git(repositories_holder):
+def create_files_for_git(repositories_holder, onerepo):
     """
     Main GIT function. Takes every Git repo from a .json file which is populated with repositories and writes all
     the commit data of each repo in a.
@@ -53,19 +52,41 @@ def create_files_for_git(repositories_holder):
     :param: repositories_holder: Expects a .json file that contains a list of repositories
     :return: The end result is a .json and a .md file for every git repository. can be found inside git_files/
     """
-    for repo in repositories_holder["Github"]:
-        repository_name = repo
-        repository_team = repositories_holder.get("Github").get(repo).get("team")
-        repository_type = repositories_holder.get("Github").get(repo).get("configuration").get("type")
-        print("\nWorking on repo: {}".format(repository_name))
-        folders_to_check = [x for x in repositories_holder.get("Github").get(repo).get("configuration").get("folders-to-check")]
-        filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
+    if onerepo:
+        repository_team = repositories.get("Github").get(repositories_holder).get("team")
+        repository_type = repositories.get("Github").get(repositories_holder).get("configuration").get("type")
+        if logger:
+            print("\nWorking on repo: {}".format(repositories_holder))
+        folders_to_check = [x for x in
+                            repositories.get("Github").get(repositories_holder).get("configuration").get("folders-to-check")]
+        filter_git_commit_data(repositories_holder, repository_team, repository_type, folders_to_check)
         try:
-            create_md_table(repository_name, "git_files")
-            print("MD table generated successfully")
+            create_md_table(repositories_holder, "git_files")
+            if logger:
+                print("MD table generated successfully")
         except:
             pass
-        print("Finished working on {}".format(repository_name))
+        if logger:
+            print("Finished working on {}".format(repositories_holder))
+
+    else:
+
+        for repo in repositories_holder["Github"]:
+            repository_name = repo
+            repository_team = repositories_holder.get("Github").get(repo).get("team")
+            repository_type = repositories_holder.get("Github").get(repo).get("configuration").get("type")
+            if logger:
+                print("\nWorking on repo: {}".format(repository_name))
+            folders_to_check = [x for x in repositories_holder.get("Github").get(repo).get("configuration").get("folders-to-check")]
+            filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check)
+            try:
+                create_md_table(repository_name, "git_files")
+                if logger:
+                    print("MD table generated successfully")
+            except:
+                pass
+            if logger:
+                print("Finished working on {}".format(repository_name))
 
 
 def get_version(repo_name, repo_team):
@@ -133,7 +154,7 @@ def get_commit_details(commit):
     except ValueError:
         commit_sha = "null"
     try:
-        commiter_name = commit.author.login
+        commiter_name = commit.author.loggerin
     except ValueError:
         commiter_name = "null"
     try:
@@ -237,10 +258,12 @@ def last_check(repository_name):
             json_content = json.load(commit_json)  # loads the content of existing json into a variable
             try:
                 last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S")
-                print("Repo last updated on:", last_checked)
+                if logger:
+                    print("Repo last updated on:", last_checked)
             except ValueError:
                 last_checked = datetime.strptime(json_content.get("0").get("lastChecked"), "%Y-%m-%d %H:%M:%S.%f")
-                print("Repo last updated on:", last_checked)
+                if logger:
+                    print("Repo last updated on:", last_checked)
     except:
         last_checked = lastMonth
     return last_checked
@@ -269,7 +292,8 @@ def get_date_from_json(repo_name):
     last_stored_date = json_content.get("0").get("last_releases").get("latest_release").get("date")
     date_format = parse(last_stored_date)
     last_stored_date = datetime.strptime(str(date_format), "%Y-%m-%d %H:%M:%S")
-    print("last local date was: ", last_stored_date)
+    if logger:
+        print("last local date was: ", last_stored_date)
     return last_stored_date
 
 
@@ -278,7 +302,8 @@ def get_last_local_push_id(repo_name):
     with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
         json_content = json.load(commit_json)  # loads the content of existing json into a variable
     last_stored_push_id = json_content.get("0").get("last_push_id")
-    print("Last local push id is : ", last_stored_push_id)
+    if logger:
+        print("Last local push id is : ", last_stored_push_id)
     return last_stored_push_id
 
 
@@ -358,21 +383,26 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
             for commit in new_commits:
                 each_commit = {}
                 switch = False
-                print("this is commit number: ", commit_number_tracker)
+                if logger:
+                    print("this is commit number: ", commit_number_tracker)
                 commit_number_tracker += 1
                 files_changed_by_commit = [x.filename for x in commit.files]
-                print(files_changed_by_commit)
-                print(len(files_changed_by_commit))
+                if logger:
+                    print(files_changed_by_commit)
+                    print(len(files_changed_by_commit))
                 changed_file_number = 1
                 for entry in files_changed_by_commit:
-                    print("changed file number:  ", changed_file_number)
+                    if logger:
+                        print("changed file number:  ", changed_file_number)
+                        print(entry)
                     changed_file_number += 1
-                    print(entry)
                     for scriptworkers in pathway:
-                        print("checking repo: ", scriptworkers)
+                        if logger:
+                            print("checking repo: ", scriptworkers)
                         number2 = 0
                         if entry in pathway[scriptworkers]:
-                            print(scriptworkers, " needs to be checked.")
+                            if logger:
+                                print(scriptworkers, " needs to be checked.")
                             scriptworker_repo = scriptworkers
                             version_path = repositories.get("Github")\
                                                        .get("build-puppet")\
@@ -381,11 +411,13 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                                        .get(scriptworker_repo)
                             latest_releases = get_version(scriptworker_repo, repository_team)
                             version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
-                            print("version is puppet is: ", version_in_puppet)
+                            if logger:
+                                print("version is puppet is: ", version_in_puppet)
                             if version_in_puppet == latest_releases.get("latest_release").get("version"):
                                 last_local_version = get_version_from_json(scriptworker_repo)
-                                print(last_local_version)
-                                # if build-puppet and scriptworker repo changelog have the same version after an update
+                                if logger:
+                                    print(last_local_version)
+                                # if build-puppet and scriptworker repo changelogger have the same version after an update
                                 if version_in_puppet != last_local_version:
                                     switch = True
                                     last_local_date = get_date_from_json(scriptworker_repo)
@@ -396,11 +428,10 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                                                               "last_releases": latest_releases}}
                                     new_repo_path = repository_team + scriptworker_repo
                                     for commit2 in git.get_repo(new_repo_path).get_commits(since=last_local_date):
-                                        print("modified date: ", commit2.last_modified)
+                                        if logger:
+                                            print("modified date: ", commit2.last_modified)
                                         last_modified = datetime.strftime(parse(commit2.last_modified), "%Y-%m-%d %H:%M:%S")
-                                        print(last_modified)
                                         last_modified = datetime.strptime(last_modified, "%Y-%m-%d %H:%M:%S")
-                                        print(last_modified)
                                         if last_modified <= new_version_commit_date:
                                             each_commit2 = {}
                                             number2 += 1
@@ -409,7 +440,8 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                     json_writer_git(scriptworker_repo, new_scriptworker_dict)
                                     create_md_table(scriptworker_repo, "git_files")
                                 else:
-                                    print("No new changes entered production")
+                                    if logger:
+                                        print("No new changes entered production")
                             else:
                                 switch = True
                                 last_commit_date = get_date_from_json(scriptworker_repo)
@@ -420,11 +452,10 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
                                                                           "last_releases": latest_releases}}
                                 new_repo_path = repository_team + scriptworker_repo
                                 for commit2 in git.get_repo(new_repo_path).get_commits(since=last_commit_date):
-                                    print("modified date: ", commit2.last_modified)
+                                    if logger:
+                                        print("modified date: ", commit2.last_modified)
                                     last_modified = datetime.strftime(parse(commit2.last_modified), "%Y-%m-%d %H:%M:%S")
-                                    print(last_modified)
                                     last_modified = datetime.strptime(last_modified, "%Y-%m-%d %H:%M:%S")
-                                    print(last_modified)
                                     if last_modified <= new_version_commit_date:
                                         each_commit2 = {}
                                         number2 += 1
@@ -442,7 +473,8 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
         latest_releases = get_version(repository_name, repository_team)
         if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get("latest_release")\
                                                                                           .get("version"):
-            print("No new changes entered production")
+            if logger:
+                print("No new changes entered production")
         else:
             last_commit_date = get_date_from_json(repository_name)
             new_version_commit_date = datetime.strptime(latest_releases
@@ -462,7 +494,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
             return True
 
 
-def create_files_for_hg(repositories_holder):
+def create_files_for_hg(repositories_holder, onerepo):
     """
     Main HG function. Takes every Mercurial repo from a .json file which is populated with repositories and writes all
      the commit data of each repo in a.
@@ -470,12 +502,19 @@ def create_files_for_hg(repositories_holder):
     :param: repositories_holder: Expects a .json file that contains a list of repositories
     :return: The end result is a .json and a .md file for every git repository. can be found inside hg_files/
     """
-    for repo in repositories_holder["Mercurial"]:
-        repository_name = repo
-        repository_url = repositories_holder.get("Mercurial").get(repo).get("url")
-        folders_to_check = [x for x in repositories_holder.get("Mercurial").get(repo).get("configuration").get("folders-to-check")]
-        filter_hg_commit_data(repository_name, folders_to_check, repository_url)
-        create_hg_md_table(repository_name)
+    if onerepo:
+        repository_url = repositories.get("Mercurial").get(repositories_holder).get("url")
+        folders_to_check = [x for x in
+                            repositories.get("Mercurial").get(repositories_holder).get("configuration").get("folders-to-check")]
+        filter_hg_commit_data(repositories_holder, folders_to_check, repository_url)
+        create_hg_md_table(repositories_holder)
+    else:
+        for repo in repositories_holder["Mercurial"]:
+            repository_name = repo
+            repository_url = repositories_holder.get("Mercurial").get(repo).get("url")
+            folders_to_check = [x for x in repositories_holder.get("Mercurial").get(repo).get("configuration").get("folders-to-check")]
+            filter_hg_commit_data(repository_name, folders_to_check, repository_url)
+            create_hg_md_table(repository_name)
 
 
 def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
@@ -489,7 +528,8 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     last_push_id = data.get("lastpushid")
     hg_repo_data = {}
     number = 0
-    print("\nWorking on repo:", repository_name)
+    if logger:
+        print("\nWorking on repo:", repository_name)
     hg_repo_data.update({"0": {"last_push_id": last_push_id}})
     for key in data.get("pushes"):
         number += 1
@@ -506,7 +546,7 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
         for keys in data.get("pushes").get(key).get("changesets"):
             counter = [x + 1 for x in range(len(data.get("pushes").get(key).get("changesets")))]
             node = keys.get("node")
-            url = repository_url + "pushloghtml?changeset=" + node[:12]
+            url = repository_url + "pushloggerhtml?changeset=" + node[:12]
             author = keys.get("author")
             desc = keys.get("desc")
             files_changed = []
@@ -611,7 +651,8 @@ def create_md_table(repository_name, path_to_files):
 
         md_file.close()
     except FileNotFoundError:
-        print("Json for {} is empty! Skipping!".format(repository_name))
+        if logger:
+            print("Json for {} is empty! Skipping!".format(repository_name))
 
 
 def create_hg_md_table(repository_name):
@@ -680,7 +721,8 @@ def create_hg_md_table(repository_name):
 
         md_file.close()
     except FileNotFoundError:
-        print("Json for {} is empty! Skipping!".format(repository_name))
+        if logger:
+            print("Json for {} is empty! Skipping!".format(repository_name))
 
 
 def clear_file(file_name, generated_for_days = 1):
@@ -720,13 +762,16 @@ def generate_main_md_table(path_to_files, days_to_generate=1):
     # Extract data from json_files and writes to main markdown table.
     if path_to_files is "git_files":
         extract_json_from_git(json_files, path_to_files, days_to_generate)
-        print("GIT part from main markdown table was successfully generated.")
+        if logger:
+            print("GIT part from main markdown table was successfully generated.")
     elif path_to_files is "hg_files":
         extract_json_from_hg(json_files, path_to_files, days_to_generate)
-        print("HG part from main markdown table was successfully generated.")
+        if logger:
+            print("HG part from main markdown table was successfully generated.")
 
     else:
-        print("No table was generated!")
+        if logger:
+            print("No table was generated!")
 
 
 def extract_reviewer(string):
@@ -795,7 +840,7 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
         count_pushes = 0
         with open(file_path) as json_files:
             data = json.load(json_files)
-            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
+            base_link = "https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/{}/".format(path_to_files)
             repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
             repository_json = base_link + file.rstrip().replace(" ", "%20")
             repository_title = file.replace(".json", "")
@@ -837,7 +882,8 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                                         review,
                                         commit_date)
             except KeyError:
-                print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
+                if logger:
+                    print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
                 pass
 
 
@@ -858,7 +904,7 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
         file_path = "{}/".format(path_to_files) + file
         with open(file_path) as json_files:
             data = json.load(json_files)
-            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/{}/".format(path_to_files)
+            base_link = "https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/{}/".format(path_to_files)
             repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json", ".md")
             repository_json = base_link + file.rstrip().replace(" ", "%20")
             repository_title = file.replace(".json", "")
@@ -907,11 +953,13 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                                         review,
                                         commit_date)
             except AttributeError:
-                print("Atribute Error!! \n "
-                      "Probabile issue is an malfunctioned json file.. "
+                if logger:
+                    print("Attribute Error!! \n "
+                      "Probable issue is an malfunctioned json file.. "
                       "Please check the following file:", file)
             except KeyError:
-                print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
+                if logger:
+                    print("File " + file + " is empty. \nPlease check:" + repository_url + " for more details.\n")
                 pass
 
 
@@ -959,42 +1007,71 @@ def write_main_md_table(file_name, repository_url, last_commit, author, reviewer
     write_file.write(row)
 
 
-def push_files_to_git():
-    prname = "Git/Hg_files_update"
-    subprocess.call(["git", "checkout", prname])
-    #subprocess.call(["git", "push", "--set-upstream", "origin", prname])
-    subprocess.call(["git", "add", "git_files/"])
-    subprocess.call(["git", "add", "hg_files/"])
-    subprocess.call(["git", "commit", "-m", "git/hg files update {}".format(datetime.now())])
-    subprocess.call(["git", "push"])
+def get_keys(name):
+    for key in repositories.get("{}".format(name)):
+        repoList.append(key)
+    return repoList
 
 
-if __name__ == "__main__":
-
-    if "-dev" in sys.argv:
-        if "-help" in sys.argv:
-            configuration.HELP = True
-        if "-hg" in sys.argv:
-            configuration.HG = True
-        if "-git" in sys.argv:
-            configuration.GIT = True
-        if "-l" in sys.argv:
-            configuration.LOG = True
-        if "-r" in sys.argv:
-            runrepos = sys.argv.index("-r") + 1
-            configuration.REPO_CHOICE = list(sys.argv[runrepos])
-    else:
-        #Modifiy the "generate_for_x_days" variable to generate for a specific day.
-        generate_for_x_days = 1
-        TOKEN = os.environ.get("GIT_TOKEN")
-        git = Github(TOKEN)
-        repositories_data = open("./repositories.json").read()
-        repositories = json.loads(repositories_data)
-        create_files_for_git(repositories)
-        create_files_for_hg(repositories)
-        clear_file("main_md_table.md", generate_for_x_days)
-        generate_main_md_table("hg_files", generate_for_x_days)
+@click.command()
+@click.option('--git', flag_value='git', help='Run script only for GIT repositories')
+@click.option('--hg', flag_value='hg', help='Run script only for HG repositories')
+@click.option('--l', flag_value='l', help='Display logger')
+@click.option('--r', flag_value='r', help='Let you choose for which repositories the script will run')
+def cli(git, hg, l, r):
+    if git:
+        create_files_for_git(repositories, onerepo=False)
         generate_main_md_table("git_files", generate_for_x_days)
-        push_files_to_git()
+        click.echo("Script ran in GIT Only mode")
+    if hg:
+        create_files_for_hg(repositories, onerepo=False)
+        # generate_main_md_table("hg_files", generate_for_x_days) TODO change the code to get the commit infos from hg json files (lines 754-761)
+        click.echo("Script ran in HG Only mode")
+    if l:
+        logger = True
+    if r:
+        get_keys("Github")
+        get_keys("Mercurial")
+        new_list = []
+        while input != "q":
+            print("You have selected : ", new_list)
+            for keys in repoList:
+                print(repoList.index(keys) + 1, keys)
+
+            w = input("Select a repo by typing it's corespunding number, type q when you are done: ")
+            if str(w) == "q":
+                print('Finished')
+                for repository in new_list:
+                    if repository in repositories.get("Github"):
+                        create_files_for_git(repository, onerepo=True)
+                        generate_main_md_table("git_files", generate_for_x_days)
+                    elif repository in repositories.get("Mercurial"):
+                        create_files_for_hg(repository, onerepo=True)
+                        generate_main_md_table("hg_files", generate_for_x_days)
+
+            new_entry = int(w) - 1
+
+            if new_entry < 0 and new_entry >= len(repoList):
+                print('Not Valid')
+            else:
+                new_list.append(repoList[int(new_entry)])
+                repoList.pop(int(new_entry))
+    else:
+        create_files_for_git(repositories, onerepo=False)
+        create_files_for_hg(repositories, onerepo=False)
+        clear_file("main_md_table.md", generate_for_x_days)
+        # generate_main_md_table("hg_files", generate_for_x_days) TODO change the code to get the commit infos from hg json files (lines 754-761)
+        generate_main_md_table("git_files", generate_for_x_days)
+if __name__ == "__main__":
+    #Modifiy the "generate_for_x_days" variable to generate for a specific day.
+    logger = True
+    generate_for_x_days = 50
+    TOKEN = os.environ.get("GIT_TOKEN")
+    git = Github(TOKEN)
+    repositories_data = open("./repositories.json").read()
+    repositories = json.loads(repositories_data)
+    cli()
+
+
 
 
