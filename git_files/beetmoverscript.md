@@ -1,0 +1,28 @@
+## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-01-12 03:01:10.646039
+
+| Commit Number | Commiter | Commit Message | Commit Url | Date | 
+|:---:|:----:|:----------------------------------:|:------:|:----:| 
+|22|mitchhentges|Merge pull request #206 from mozilla-releng/bug-1522581  Bug 1522581 - Bump max size of zip file to 300MB|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0)|2019-01-25 18:29:36
+|21|JohanLorenzo|8.3.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/b74438929aaa119dd6ca3def99cadfb39d6a4559)|2019-01-25 13:25:55
+|20|JohanLorenzo|Bug 1522581 - Bump max size of zip file to 300MB|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/002b073054a74e3f7dd2fcf0faf282e50ab4a942)|2019-01-25 13:11:21
+|19|mitchhentges|Merge pull request #203 from mitchhentges/release-8.3.0  8.3.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/7ee86337210f78bea022243da1c84253c65a1e94)|2019-01-03 18:30:51
+|18|mitchhentges|Merge pull request #203 from mitchhentges/release-8.3.0  8.3.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/7ee86337210f78bea022243da1c84253c65a1e94)|2019-01-03 18:30:51
+|17|mitchhentges|8.3.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/11be66989b2fe50e9fe2c7e7337c5abdf05a0ff1)|2019-01-03 17:06:41
+|16|mitchhentges|Adds changelog entry for 8.2.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/9424a33ecc5a6abbe4f9d1cca84e0bac3c686415)|2019-01-03 17:06:18
+|15|mitchhentges|Merge pull request #201 from mitchhentges/remove-schema-from-config  Removes task schema from example config, adds to default config|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/21a801a934b714316ea475b3cc312048ba9cdc2b)|2019-01-02 17:11:16
+|14|mitchhentges|Removes task schema from example config, adds to default config|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/a721342ccd6b3eda02f836f5d7da91a930925a30)|2018-12-24 21:45:34
+|13|rail|Merge pull request #200 from rail/fix_url2  Fix buildhub.json download.url, take 2|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/fcd64e07eb80d0a4622d4d25e5e82a44f1c9a1ca)|2018-12-19 16:03:52
+|12|rail|Version bump|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/fd9b3a3e5c284564cc4fcf47fcf8e9d53dfc6bcd)|2018-12-19 02:14:22
+|11|rail|Fix buildhub.json download.url, take 2  Unfortunately the previous fix didn't work properly. Instead of generating the full URL, it generates only the part after the hostname. Adding `s3_bucket_path` should fix the issue.  This should also fix the issue, where we try to quote after generating the full URL when `artifact_map` is specified, so we don't get the `https%3A//` prefix.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/2e8af40bbf3853e6962543e2fd6c556b8a085119)|2018-12-19 01:38:19
+|10|tomprince|Merge pull request #197 from tp-tc/win64-aarch64  Add win64-aarch64 support.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/7f9dd1018de4a98f410838fad927fb387bb3d3b4)|2018-12-18 22:44:55
+|9|rail|Fix buildhub.json's download.url (#198)    Fix buildhub.json's download.url    Fixes #195      Version bump|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/5b155c33b7032ccbced4f1df31ae63632d88cce5)|2018-12-18 22:09:21
+|8|tomprince|8.2.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/307b14c0a0e81046768c55805fd1f8637b77aacc)|2018-12-18 17:53:38
+|7|MihaiTabara|8.1.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/9a347b4b38437364fb545d6c9d1c80ebd1a1b9b9)|2018-12-18 13:45:36
+|6|MihaiTabara|Fix geckoview tasks after snapshots enabled. (#199)    Fix geckoview tasks after snapshots enabled.      Add newsfragment file.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/22ce904fdd5bdd1f697d3d2e5169272f4f1fb5bd)|2018-12-18 13:45:01
+|5|MihaiTabara|8.1.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/be92c31cbb186d934ed227081277b87fdc69e2a6)|2018-12-17 16:04:55
+|4|MihaiTabara|Add snapshots support for maven push. (#194)    Initial work to support snapshot behavior in beetmoverscript.      Solve the expected files logic with jsone.      Overwrite manifest      Refactoring before running staging releases.      Add maven-production      Fix all failing tests.      100% coverage on utils.py      100% coverage in zip.py      s,jsone,jinja      Refactor in utils.py      Fix review comments in zip.py      Add newsfragments file.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/1f1401540d559d998983651400056f3c2392560d)|2018-12-17 16:01:21
+|3|tomprince|Add win64-aarch64 support.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/71f5e20f8dc20845e182f4a15764d2673a5b1f08)|2018-12-07 14:48:57
+|2|MihaiTabara|8.0.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/883524121b34c630533fbec8db73c08797dcc7be)|2018-11-28 01:08:55
+|1|srfraser|Declarative artifacts, reworking lguo's PR (#185)    Declarative artifacts, reworking lguo's PR      Remove debugging      unused import, for debugging      Adjust for new artifactMap format.    I'm not too happy about the way taskId is currently handled,  I'd like to improve on that before production deploys.      Support for artifact map within push-to-maven      Improve test coverage      Adjust key for artifacts_to_beetmove for maven with map      Update comment for clarity      Add test for cot in taskId|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/240e7a6cf19f7e56c003e51a09e11f29c6696580)|2018-11-28 01:04:36
+
+
