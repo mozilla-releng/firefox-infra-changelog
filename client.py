@@ -154,7 +154,7 @@ def get_commit_details(commit):
     except ValueError:
         commit_sha = "null"
     try:
-        commiter_name = commit.author.loggerin
+        commiter_name = commit.author.login
     except ValueError:
         commiter_name = "null"
     try:
@@ -1021,11 +1021,15 @@ def get_keys(name):
 def cli(git, hg, l, r):
     if git:
         create_files_for_git(repositories, onerepo=False)
+        clear_file("main_md_table.md", generate_for_x_days)
+        generate_main_md_table("hg_files", generate_for_x_days)  # TODO change the code to get the commit infos from hg json files (lines 754-761)
         generate_main_md_table("git_files", generate_for_x_days)
         click.echo("Script ran in GIT Only mode")
     if hg:
         create_files_for_hg(repositories, onerepo=False)
-        # generate_main_md_table("hg_files", generate_for_x_days) TODO change the code to get the commit infos from hg json files (lines 754-761)
+        clear_file("main_md_table.md", generate_for_x_days)
+        generate_main_md_table("hg_files", generate_for_x_days)# TODO change the code to get the commit infos from hg json files (lines 754-761)
+        generate_main_md_table("git_files", generate_for_x_days)
         click.echo("Script ran in HG Only mode")
     if l:
         logger = True
@@ -1047,7 +1051,9 @@ def cli(git, hg, l, r):
                         generate_main_md_table("git_files", generate_for_x_days)
                     elif repository in repositories.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
+                        clear_file("main_md_table.md", generate_for_x_days)
                         generate_main_md_table("hg_files", generate_for_x_days)
+                        generate_main_md_table("git_files", generate_for_x_days)
 
             new_entry = int(w) - 1
 
@@ -1060,12 +1066,14 @@ def cli(git, hg, l, r):
         create_files_for_git(repositories, onerepo=False)
         create_files_for_hg(repositories, onerepo=False)
         clear_file("main_md_table.md", generate_for_x_days)
-        # generate_main_md_table("hg_files", generate_for_x_days) TODO change the code to get the commit infos from hg json files (lines 754-761)
+        generate_main_md_table("hg_files", generate_for_x_days)
         generate_main_md_table("git_files", generate_for_x_days)
+
+
 if __name__ == "__main__":
     #Modifiy the "generate_for_x_days" variable to generate for a specific day.
     logger = True
-    generate_for_x_days = 50
+    generate_for_x_days = 5
     TOKEN = os.environ.get("GIT_TOKEN")
     git = Github(TOKEN)
     repositories_data = open("./repositories.json").read()
