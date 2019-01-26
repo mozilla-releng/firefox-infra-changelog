@@ -1,7 +1,9 @@
-## OPENCLOUDCONFIG COMMIT MARKDOWN TABLE SINCE 2019-01-06 15:57:08.062721
+## OPENCLOUDCONFIG COMMIT MARKDOWN TABLE SINCE 2019-01-12 06:41:34.589639
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|66|grenade|Bug 1493688 - rebase against vac ami  deploy: gecko-t-win10-64-alpha gecko-t-win10-64-gpu-a|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/57d62edf39a2ae4c9c0bad55de335b479a8837ec)|2019-01-23 15:15:34
+|65|grenade|Bug 1493688 - update generic worker to 11.1.0  deploy: gecko-t-win10-64-alpha gecko-t-win10-64-gpu-a|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/3bbaa1c888be00fc307eae5d0ee718d5ec6675e3)|2019-01-22 18:24:40
 |64|grenade|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|2018-11-28 17:08:20
 |63|grenade|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|2018-11-28 17:08:20
 |62|grenade|Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f)|2018-11-28 17:08:20

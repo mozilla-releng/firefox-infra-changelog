@@ -1,8 +1,2174 @@
 {
   "0": {
-    "lastChecked": "2019-01-20 13:57:09.439756"
+    "lastChecked": "2019-01-26 04:41:35.905575"
   },
   "1": {
+    "sha": "1469bc7c6d19e11792657ec9f1734f65241cdd92",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1469bc7c6d19e11792657ec9f1734f65241cdd92",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #151 from taskcluster/update-readme  Update READMEs",
+    "commit_date": "2019-01-25 21:49:30",
+    "files_changed": [
+      "README.md",
+      "infrastructure/README.md",
+      "libraries/README.md",
+      "libraries/azure/README.md",
+      "libraries/client/README.md",
+      "libraries/docs/README.md",
+      "libraries/iterate/README.md",
+      "libraries/monitor/README.md",
+      "libraries/references/README.md",
+      "libraries/testing/README.md",
+      "libraries/validate/README.md",
+      "services/README.md",
+      "services/auth/README.md",
+      "services/github/README.md",
+      "services/index/README.md",
+      "services/notify/README.md",
+      "services/purge-cache/README.md",
+      "services/queue/README.md",
+      "services/secrets/README.md",
+      "services/treeherder/README.md"
+    ]
+  },
+  "2": {
+    "sha": "15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
+    "url": "https://github.com/taskcluster/taskcluster/commit/15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Bug 1522913 - Update \"Extra\" section when changing taskIds (#153)",
+    "commit_date": "2019-01-25 18:54:56",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "3": {
+    "sha": "912e0d6f0a86335871bb742436ee74a9eac69d4c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/912e0d6f0a86335871bb742436ee74a9eac69d4c",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - new images",
+    "commit_date": "2019-01-25 18:27:38",
+    "files_changed": [
+      "infrastructure/terraform/taskcluster.tf.json"
+    ]
+  },
+  "4": {
+    "sha": "ac6ad8e8de17ce623e34cf816ee952a0be37383f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ac6ad8e8de17ce623e34cf816ee952a0be37383f",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #129 from djmitche/bug1516347  Bug 1516347 - monoimage",
+    "commit_date": "2019-01-25 18:13:46",
+    "files_changed": [
+      ".taskcluster.yml",
+      "infrastructure/builder/docs/build-implementation.md",
+      "infrastructure/builder/src/build/index.js",
+      "infrastructure/builder/src/build/monoimage.js",
+      "infrastructure/builder/src/build/repo.js",
+      "infrastructure/builder/src/build/service.js",
+      "infrastructure/builder/src/build/service/docs.js",
+      "infrastructure/builder/src/build/service/references.js",
+      "infrastructure/builder/src/build/utils.js",
+      "infrastructure/builder/src/formats/tf-json.js",
+      "infrastructure/builder/src/main.js",
+      "infrastructure/builder/taskcluster-spec/build.yml",
+      "infrastructure/references/README.md",
+      "infrastructure/references/nginx.conf",
+      "infrastructure/references/references.sh",
+      "infrastructure/references/relativize.js",
+      "infrastructure/terraform/auth-service.tf",
+      "infrastructure/terraform/docs-service.tf",
+      "infrastructure/terraform/events-service.tf",
+      "infrastructure/terraform/gce-provider-service.tf",
+      "infrastructure/terraform/github-service.tf",
+      "infrastructure/terraform/hooks-service.tf",
+      "infrastructure/terraform/index-service.tf",
+      "infrastructure/terraform/modules/deployment/deployment.yaml",
+      "infrastructure/terraform/modules/deployment/main.tf",
+      "infrastructure/terraform/modules/deployment/variables.tf",
+      "infrastructure/terraform/modules/scheduled-job/cron.yaml",
+      "infrastructure/terraform/modules/scheduled-job/main.tf",
+      "infrastructure/terraform/modules/scheduled-job/variables.tf",
+      "infrastructure/terraform/notify-service.tf",
+      "infrastructure/terraform/queue-service.tf",
+      "infrastructure/terraform/references-service.tf",
+      "infrastructure/terraform/secrets-service.tf",
+      "infrastructure/terraform/taskcluster.tf.json",
+      "libraries/docs/README.md",
+      "libraries/docs/src/documenter.js",
+      "libraries/docs/test/main_test.js",
+      "libraries/references/src/built-services.js",
+      "package.json",
+      "services/auth/src/main.js",
+      "services/built-in-workers/src/main.js",
+      "services/github/src/main.js",
+      "services/hooks/src/main.js",
+      "services/index/src/main.js",
+      "services/login/src/main.js",
+      "services/notify/src/main.js",
+      "services/purge-cache/src/main.js",
+      "services/queue/src/main.js",
+      "services/references/.gitignore",
+      "services/references/Dockerfile",
+      "services/references/README.md",
+      "services/references/package.json",
+      "services/secrets/src/main.js",
+      "services/treeherder/Procfile",
+      "services/treeherder/src/main.js",
+      "services/web-server/.neutrinorc.js",
+      "services/web-server/Procfile",
+      "services/web-server/package.json",
+      "services/web-server/src/index.js"
+    ]
+  },
+  "5": {
+    "sha": "fdff4fa703c2d0652021ebad577d5723537db0bb",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fdff4fa703c2d0652021ebad577d5723537db0bb",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #150 from taskcluster/add-pr-template  Create pull_request_template.md",
+    "commit_date": "2019-01-25 18:04:40",
+    "files_changed": [
+      ".github/pull_request_template.md"
+    ]
+  },
+  "6": {
+    "sha": "22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
+    "url": "https://github.com/taskcluster/taskcluster/commit/22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Update pull_request_template.md",
+    "commit_date": "2019-01-25 18:04:25",
+    "files_changed": [
+      ".github/pull_request_template.md"
+    ]
+  },
+  "7": {
+    "sha": "f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
+    "url": "https://github.com/taskcluster/taskcluster/commit/f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Update READMEs",
+    "commit_date": "2019-01-25 17:43:37",
+    "files_changed": [
+      "README.md",
+      "infrastructure/README.md",
+      "libraries/README.md",
+      "libraries/azure/README.md",
+      "libraries/client/README.md",
+      "libraries/docs/README.md",
+      "libraries/iterate/README.md",
+      "libraries/monitor/README.md",
+      "libraries/references/README.md",
+      "libraries/testing/README.md",
+      "libraries/validate/README.md",
+      "services/README.md",
+      "services/auth/README.md",
+      "services/github/README.md",
+      "services/index/README.md",
+      "services/notify/README.md",
+      "services/purge-cache/README.md",
+      "services/queue/README.md",
+      "services/secrets/README.md",
+      "services/treeherder/README.md"
+    ]
+  },
+  "8": {
+    "sha": "36553b808fddf55a15b5739fa2912787a65af83a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/36553b808fddf55a15b5739fa2912787a65af83a",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency karma-cli to v2 (#138)",
+    "commit_date": "2019-01-25 18:00:15",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "9": {
+    "sha": "ada68546df8335a30352ec9970c3c62b4cd471fc",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ada68546df8335a30352ec9970c3c62b4cd471fc",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Create pull_request_template.md  This is pretty simple. We can get more complex later if we want",
+    "commit_date": "2019-01-25 17:20:26",
+    "files_changed": [
+      ".github/pull_request_template.md"
+    ]
+  },
+  "10": {
+    "sha": "45acc854a52475540703d99dfd2aa45d95381c60",
+    "url": "https://github.com/taskcluster/taskcluster/commit/45acc854a52475540703d99dfd2aa45d95381c60",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - set up web-server to run in dev mode too",
+    "commit_date": "2019-01-25 16:52:54",
+    "files_changed": [
+      "services/web-server/.neutrinorc.js",
+      "services/web-server/package.json",
+      "services/web-server/src/index.js"
+    ]
+  },
+  "11": {
+    "sha": "5c85f2f76f457deeec62afff57b82c79e5204ed6",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5c85f2f76f457deeec62afff57b82c79e5204ed6",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - enable pushing the monoimage",
+    "commit_date": "2019-01-24 01:21:15",
+    "files_changed": [
+      "infrastructure/builder/src/build/monoimage.js"
+    ]
+  },
+  "12": {
+    "sha": "62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
+    "url": "https://github.com/taskcluster/taskcluster/commit/62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - use the monoimage  This adds an is_monoimage variable that will go away once everything is in the monoimage.   NOTE : this renames the references kubernetes object (taskcluster-references-static -> taskcluster-references-web), so to avoid confusing the terraform provider it also renames the terraform module from references_ui to references_service.  Even so, this may not apply cleanly to previous deployments.",
+    "commit_date": "2019-01-24 01:07:55",
+    "files_changed": [
+      "infrastructure/terraform/auth-service.tf",
+      "infrastructure/terraform/docs-service.tf",
+      "infrastructure/terraform/events-service.tf",
+      "infrastructure/terraform/gce-provider-service.tf",
+      "infrastructure/terraform/github-service.tf",
+      "infrastructure/terraform/hooks-service.tf",
+      "infrastructure/terraform/index-service.tf",
+      "infrastructure/terraform/modules/deployment/deployment.yaml",
+      "infrastructure/terraform/modules/deployment/main.tf",
+      "infrastructure/terraform/modules/deployment/variables.tf",
+      "infrastructure/terraform/modules/scheduled-job/cron.yaml",
+      "infrastructure/terraform/modules/scheduled-job/main.tf",
+      "infrastructure/terraform/modules/scheduled-job/variables.tf",
+      "infrastructure/terraform/notify-service.tf",
+      "infrastructure/terraform/queue-service.tf",
+      "infrastructure/terraform/references-service.tf",
+      "infrastructure/terraform/secrets-service.tf",
+      "infrastructure/terraform/taskcluster.tf.json"
+    ]
+  },
+  "13": {
+    "sha": "4c050d72d92196389a2532915e88544b27017250",
+    "url": "https://github.com/taskcluster/taskcluster/commit/4c050d72d92196389a2532915e88544b27017250",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - run 'yarn build' for web-server as part of build",
+    "commit_date": "2019-01-24 00:11:20",
+    "files_changed": [
+      "infrastructure/builder/src/build/monoimage.js"
+    ]
+  },
+  "14": {
+    "sha": "460632187c319073ded53b5149b0d411a1bbef2c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/460632187c319073ded53b5149b0d411a1bbef2c",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - writeDocs for tc-treeherder and tc-web-server  ..and always pass projectName to Documenter, since automatic detection no longer works.",
+    "commit_date": "2019-01-21 23:54:47",
+    "files_changed": [
+      "infrastructure/builder/src/build/repo.js",
+      "libraries/docs/README.md",
+      "libraries/docs/src/documenter.js",
+      "libraries/docs/test/main_test.js",
+      "services/auth/src/main.js",
+      "services/built-in-workers/src/main.js",
+      "services/github/src/main.js",
+      "services/hooks/src/main.js",
+      "services/index/src/main.js",
+      "services/login/src/main.js",
+      "services/notify/src/main.js",
+      "services/purge-cache/src/main.js",
+      "services/queue/src/main.js",
+      "services/secrets/src/main.js",
+      "services/treeherder/Procfile",
+      "services/treeherder/src/main.js",
+      "services/web-server/Procfile",
+      "services/web-server/src/index.js"
+    ]
+  },
+  "15": {
+    "sha": "5f87606f06675d40ae98abb564452aa208699f7d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5f87606f06675d40ae98abb564452aa208699f7d",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - ignore dotfiles in built-services  In particular, the build process drops `.sources.json` into this directory.",
+    "commit_date": "2019-01-21 23:51:17",
+    "files_changed": [
+      "libraries/references/src/built-services.js"
+    ]
+  },
+  "16": {
+    "sha": "56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
+    "url": "https://github.com/taskcluster/taskcluster/commit/56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - build references into the monoimage  Move the references \"service\" (which was never really a service) to `infrastructure/references`, and include an entrypoint for it.",
+    "commit_date": "2019-01-18 21:22:34",
+    "files_changed": [
+      ".taskcluster.yml",
+      "infrastructure/builder/src/build/monoimage.js",
+      "infrastructure/builder/src/build/service.js",
+      "infrastructure/builder/src/build/service/references.js",
+      "infrastructure/builder/taskcluster-spec/build.yml",
+      "infrastructure/references/README.md",
+      "infrastructure/references/nginx.conf",
+      "infrastructure/references/references.sh",
+      "infrastructure/references/relativize.js",
+      "services/references/.gitignore",
+      "services/references/Dockerfile",
+      "services/references/README.md",
+      "services/references/package.json"
+    ]
+  },
+  "17": {
+    "sha": "1114d1da509fcec06fe96172cb200c8a3339d946",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1114d1da509fcec06fe96172cb200c8a3339d946",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - refactor monoimage building, using hooks  We have a number of \"things\" that aren't API services that we need to take care of -- references, tc-web, docs, etc. -- so this sets up the build process to isolate those nicely in \"hooks\".  Maybe someday we won't need this, but for the moment it will be helpful.",
+    "commit_date": "2019-01-23 23:38:59",
+    "files_changed": [
+      "infrastructure/builder/src/build/monoimage.js"
+    ]
+  },
+  "18": {
+    "sha": "65fd82b6468c4f68e8e4771054e85526c060eb90",
+    "url": "https://github.com/taskcluster/taskcluster/commit/65fd82b6468c4f68e8e4771054e85526c060eb90",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - clone the local working copy, with warning for a dirty repo",
+    "commit_date": "2019-01-21 22:42:22",
+    "files_changed": [
+      "infrastructure/builder/src/build/monoimage.js",
+      "infrastructure/builder/src/build/utils.js",
+      "infrastructure/builder/src/main.js",
+      "infrastructure/builder/taskcluster-spec/build.yml"
+    ]
+  },
+  "19": {
+    "sha": "1bf86a71b9c073653eb9ea52ff0355c630793a1f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1bf86a71b9c073653eb9ea52ff0355c630793a1f",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1516347 - build a monoimage  With this change, we build a \"monoimage\" containing all of the services defined in services/ .  Several \"oddball\" services are omitted here, to be handled in subsequent commits.  This removes documentation of the task dependency names, as the list was out of date and is changing rapidly.",
+    "commit_date": "2019-01-16 22:44:53",
+    "files_changed": [
+      "infrastructure/builder/docs/build-implementation.md",
+      "infrastructure/builder/src/build/index.js",
+      "infrastructure/builder/src/build/monoimage.js",
+      "infrastructure/builder/src/build/repo.js",
+      "infrastructure/builder/src/build/service/docs.js",
+      "infrastructure/builder/src/build/utils.js",
+      "infrastructure/builder/src/formats/tf-json.js",
+      "infrastructure/builder/taskcluster-spec/build.yml",
+      "package.json"
+    ]
+  },
+  "20": {
+    "sha": "ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Configure renovate to send PRs on a weekly basis (#149)",
+    "commit_date": "2019-01-25 16:14:16",
+    "files_changed": [
+      "package.json"
+    ]
+  },
+  "21": {
+    "sha": "dfee9af2438503514b00b0df8dbbfb8032bda517",
+    "url": "https://github.com/taskcluster/taskcluster/commit/dfee9af2438503514b00b0df8dbbfb8032bda517",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency karma to v4 (#137)",
+    "commit_date": "2019-01-25 15:56:08",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "22": {
+    "sha": "cb3a73b9ac39953eb1ce878da97febb6be7291e1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/cb3a73b9ac39953eb1ce878da97febb6be7291e1",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency bufferutil to v4 (#136)",
+    "commit_date": "2019-01-25 15:53:22",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "23": {
+    "sha": "41d9a1944543cc7234fa34ce98d1d0571a8984e1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/41d9a1944543cc7234fa34ce98d1d0571a8984e1",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency taskcluster-lib-urls to v12 (#144)",
+    "commit_date": "2019-01-25 15:51:59",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "24": {
+    "sha": "7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency lint-staged to v8 (#139)",
+    "commit_date": "2019-01-25 14:55:42",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "25": {
+    "sha": "433e8cde5340ae4c98bded7e3a246550ed7c04d8",
+    "url": "https://github.com/taskcluster/taskcluster/commit/433e8cde5340ae4c98bded7e3a246550ed7c04d8",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency resolve-pathname to v3 (#143)",
+    "commit_date": "2019-01-25 14:11:22",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "26": {
+    "sha": "3d916d45912e2ad902a2887a88caf41e0d0bff20",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3d916d45912e2ad902a2887a88caf41e0d0bff20",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Fix: Worker types view modal not opening (#148)",
+    "commit_date": "2019-01-25 14:05:09",
+    "files_changed": [
+      "ui/src/components/Button/index.jsx",
+      "ui/src/components/WorkerTypesTable/index.jsx"
+    ]
+  },
+  "27": {
+    "sha": "aca0d33455922bbcea325d597bf54d3991e77ada",
+    "url": "https://github.com/taskcluster/taskcluster/commit/aca0d33455922bbcea325d597bf54d3991e77ada",
+    "commiter_name": "Biboswan",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "[web-server] Include hooks listlastFire api support (#121)",
+    "commit_date": "2019-01-25 13:42:05",
+    "files_changed": [
+      "services/hooks/schemas/v1/list-lastFires-response.yml",
+      "services/web-server/src/graphql/Hooks.graphql",
+      "services/web-server/src/loaders/hooks.js",
+      "services/web-server/src/resolvers/Hooks.js"
+    ]
+  },
+  "28": {
+    "sha": "1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
+    "commiter_name": "renovate[bot]",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Update dependency utf-8-validate to v5 (#145)",
+    "commit_date": "2019-01-25 13:18:34",
+    "files_changed": [
+      "ui/package.json",
+      "ui/yarn.lock"
+    ]
+  },
+  "29": {
+    "sha": "5a0e8af004921efe7b08847d598ea8ad207ca04b",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5a0e8af004921efe7b08847d598ea8ad207ca04b",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Update yarn.lock for the ui (#147)",
+    "commit_date": "2019-01-25 12:32:53",
+    "files_changed": [
+      "netlify.toml",
+      "ui/yarn.lock"
+    ]
+  },
+  "30": {
+    "sha": "79ec514d9392094d89d31fe98e1a412d56ac04c5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/79ec514d9392094d89d31fe98e1a412d56ac04c5",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Update netlify node version (#146)",
+    "commit_date": "2019-01-25 12:17:40",
+    "files_changed": [
+      "netlify.toml"
+    ]
+  },
+  "31": {
+    "sha": "a60f57c3215c46022a3f0d6f59834bb9134359c1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a60f57c3215c46022a3f0d6f59834bb9134359c1",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #126 from owlishDeveloper/bug1521638  Add tc-web FE to monorepo",
+    "commit_date": "2019-01-24 20:59:36",
+    "files_changed": [
+      ".github/CODEOWNERS",
+      ".taskcluster.yml",
+      "netlify.toml",
+      "test/meta_test.js",
+      "ui/.eslintrc.js",
+      "ui/.gitignore",
+      "ui/.neutrinorc.js",
+      "ui/README.md",
+      "ui/karma.conf.js",
+      "ui/package.json",
+      "ui/src/App/Main.jsx",
+      "ui/src/App/docsRoutes.jsx",
+      "ui/src/App/index.jsx",
+      "ui/src/App/routes.jsx",
+      "ui/src/autogenerated/docsTableOfContents.json",
+      "ui/src/components/AwsProvisionerErrorsTable/index.jsx",
+      "ui/src/components/AwsProvisionerHealthTable/index.jsx",
+      "ui/src/components/AwsProvisionerWorkerTypeEditor/index.jsx",
+      "ui/src/components/AwsProvisionerWorkerTypeStatus/index.jsx",
+      "ui/src/components/AwsProvisionerWorkerTypeTable/index.jsx",
+      "ui/src/components/Button/index.jsx",
+      "ui/src/components/CachePurgesTable/index.jsx",
+      "ui/src/components/ClientForm/index.jsx",
+      "ui/src/components/ClientScopesTable/index.jsx",
+      "ui/src/components/ClientsTable/index.jsx",
+      "ui/src/components/ConnectionDataTable/index.jsx",
+      "ui/src/components/Dashboard/DocsSidebarList.jsx",
+      "ui/src/components/Dashboard/SidebarList.jsx",
+      "ui/src/components/Dashboard/SidebarListGroup.jsx",
+      "ui/src/components/Dashboard/SidebarListItem.jsx",
+      "ui/src/components/Dashboard/UserMenu.jsx",
+      "ui/src/components/Dashboard/index.jsx",
+      "ui/src/components/DataTable/index.jsx",
+      "ui/src/components/DateDistance/README.md",
+      "ui/src/components/DateDistance/index.jsx",
+      "ui/src/components/DatePicker/index.jsx",
+      "ui/src/components/DialogAction/index.jsx",
+      "ui/src/components/Ec2ResourcesTable/index.jsx",
+      "ui/src/components/ErrorPanel/index.jsx",
+      "ui/src/components/FontStager/index.css",
+      "ui/src/components/FontStager/index.jsx",
+      "ui/src/components/Helmet/index.jsx",
+      "ui/src/components/HelpView/index.jsx",
+      "ui/src/components/HookForm/index.jsx",
+      "ui/src/components/IndexNamespacesTable/index.jsx",
+      "ui/src/components/IndexTaskNamespaceTable/index.jsx",
+      "ui/src/components/IndexedEntry/index.jsx",
+      "ui/src/components/JsonInspector/index.jsx",
+      "ui/src/components/Landing/index.jsx",
+      "ui/src/components/Log/GoToLineButton.jsx",
+      "ui/src/components/Log/Loading.jsx",
+      "ui/src/components/Log/index.jsx",
+      "ui/src/components/Markdown/AnchorOrLink.jsx",
+      "ui/src/components/Markdown/README.md",
+      "ui/src/components/Markdown/index.jsx",
+      "ui/src/components/NotFound/Emoticon.jsx",
+      "ui/src/components/NotFound/index.jsx",
+      "ui/src/components/PageNavigation/index.jsx",
+      "ui/src/components/PageTitle/index.jsx",
+      "ui/src/components/ProvisionerDetailsCard/index.jsx",
+      "ui/src/components/RoleForm/index.jsx",
+      "ui/src/components/RoleScopesTable/index.jsx",
+      "ui/src/components/RolesTable/index.jsx",
+      "ui/src/components/RouteWithProps/index.jsx",
+      "ui/src/components/Search/README.md",
+      "ui/src/components/Search/index.jsx",
+      "ui/src/components/SecretForm/index.jsx",
+      "ui/src/components/SecretsTable/index.jsx",
+      "ui/src/components/Shell/index.jsx",
+      "ui/src/components/SignInDialog/CredentialsDialog.jsx",
+      "ui/src/components/SignInDialog/index.jsx",
+      "ui/src/components/Snackbar/README.md",
+      "ui/src/components/Snackbar/index.jsx",
+      "ui/src/components/SpeedDial/README.md",
+      "ui/src/components/SpeedDial/index.jsx",
+      "ui/src/components/SpeedDialAction/index.jsx",
+      "ui/src/components/StatusLabel/README.md",
+      "ui/src/components/StatusLabel/index.jsx",
+      "ui/src/components/TableCellListItem/index.jsx",
+      "ui/src/components/TaskActionForm/index.jsx",
+      "ui/src/components/TaskDetailsCard/index.jsx",
+      "ui/src/components/TaskGroupProgress/index.jsx",
+      "ui/src/components/TaskGroupTable/index.jsx",
+      "ui/src/components/TaskRunsCard/NoRunsIcon.jsx",
+      "ui/src/components/TaskRunsCard/index.jsx",
+      "ui/src/components/VncDisplay/index.jsx",
+      "ui/src/components/WorkerDetailsCard/index.jsx",
+      "ui/src/components/WorkerTable/index.jsx",
+      "ui/src/components/WorkerTypesTable/index.jsx",
+      "ui/src/components/WorkersTable/index.jsx",
+      "ui/src/docs.jsx",
+      "ui/src/docs/error.md",
+      "ui/src/docs/index.md",
+      "ui/src/docs/manual/design/apis/errors.md",
+      "ui/src/docs/manual/design/apis/hawk/authn.md",
+      "ui/src/docs/manual/design/apis/hawk/authorized-scopes.md",
+      "ui/src/docs/manual/design/apis/hawk/clients.md",
+      "ui/src/docs/manual/design/apis/hawk/index.md",
+      "ui/src/docs/manual/design/apis/hawk/roles.md",
+      "ui/src/docs/manual/design/apis/hawk/scopes.md",
+      "ui/src/docs/manual/design/apis/hawk/signed-urls.md",
+      "ui/src/docs/manual/design/apis/hawk/temporary-credentials.md",
+      "ui/src/docs/manual/design/apis/hawk/troubleshooting.md",
+      "ui/src/docs/manual/design/apis/index.md",
+      "ui/src/docs/manual/design/apis/pulse.md",
+      "ui/src/docs/manual/design/apis/reference-format.md",
+      "ui/src/docs/manual/design/devel/best-practices/commits.md",
+      "ui/src/docs/manual/design/devel/best-practices/index.md",
+      "ui/src/docs/manual/design/devel/best-practices/libraries.md",
+      "ui/src/docs/manual/design/devel/best-practices/microservices.md",
+      "ui/src/docs/manual/design/devel/best-practices/scopes.md",
+      "ui/src/docs/manual/design/devel/best-practices/testing.md",
+      "ui/src/docs/manual/design/devel/idempotency.md",
+      "ui/src/docs/manual/design/devel/index.md",
+      "ui/src/docs/manual/design/devel/principles.md",
+      "ui/src/docs/manual/design/devel/rfcs.md",
+      "ui/src/docs/manual/design/index.md",
+      "ui/src/docs/manual/design/namespaces.md",
+      "ui/src/docs/manual/index.md",
+      "ui/src/docs/manual/task-execution/index.md",
+      "ui/src/docs/manual/task-execution/provisioning.md",
+      "ui/src/docs/manual/task-execution/queues.md",
+      "ui/src/docs/manual/task-execution/worker-types.md",
+      "ui/src/docs/manual/task-execution/workers.md",
+      "ui/src/docs/manual/tasks/artifacts.md",
+      "ui/src/docs/manual/tasks/dependencies.md",
+      "ui/src/docs/manual/tasks/index.md",
+      "ui/src/docs/manual/tasks/manipulating.md",
+      "ui/src/docs/manual/tasks/messages.md",
+      "ui/src/docs/manual/tasks/priority.md",
+      "ui/src/docs/manual/tasks/runs.md",
+      "ui/src/docs/manual/tasks/scopes.md",
+      "ui/src/docs/manual/tasks/taskgroupid-schedulerid.md",
+      "ui/src/docs/manual/tasks/times.md",
+      "ui/src/docs/manual/tasks/workertypes.md",
+      "ui/src/docs/manual/using/actions/guidelines.md",
+      "ui/src/docs/manual/using/actions/index.md",
+      "ui/src/docs/manual/using/actions/spec.md",
+      "ui/src/docs/manual/using/actions/ui.md",
+      "ui/src/docs/manual/using/administration.md",
+      "ui/src/docs/manual/using/artifacts.md",
+      "ui/src/docs/manual/using/caching.md",
+      "ui/src/docs/manual/using/github.md",
+      "ui/src/docs/manual/using/handling-high-load.md",
+      "ui/src/docs/manual/using/index.md",
+      "ui/src/docs/manual/using/indexing.md",
+      "ui/src/docs/manual/using/integration/backend.md",
+      "ui/src/docs/manual/using/integration/frontend.md",
+      "ui/src/docs/manual/using/integration/guidelines.md",
+      "ui/src/docs/manual/using/integration/index.md",
+      "ui/src/docs/manual/using/integration/libraries.md",
+      "ui/src/docs/manual/using/integration/pulse.md",
+      "ui/src/docs/manual/using/s3-uploads.md",
+      "ui/src/docs/manual/using/scheduled-tasks.md",
+      "ui/src/docs/manual/using/secrets.md",
+      "ui/src/docs/manual/using/task-graph.md",
+      "ui/src/docs/manual/using/task-notifications.md",
+      "ui/src/docs/reference/core/index.md",
+      "ui/src/docs/reference/guide.md",
+      "ui/src/docs/reference/index.md",
+      "ui/src/docs/reference/integrations/index.md",
+      "ui/src/docs/reference/libraries/index.md",
+      "ui/src/docs/reference/operations/index.md",
+      "ui/src/docs/reference/platform/index.md",
+      "ui/src/docs/reference/workers/index.md",
+      "ui/src/docs/resources.md",
+      "ui/src/docs/tutorial/apis.md",
+      "ui/src/docs/tutorial/authenticate.md",
+      "ui/src/docs/tutorial/create-task-via-api.md",
+      "ui/src/docs/tutorial/debug-task.md",
+      "ui/src/docs/tutorial/download-task-artifacts.md",
+      "ui/src/docs/tutorial/finding-tasks.md",
+      "ui/src/docs/tutorial/gecko-decision-task.md",
+      "ui/src/docs/tutorial/gecko-docker-images.md",
+      "ui/src/docs/tutorial/gecko-new-job.md",
+      "ui/src/docs/tutorial/gecko-task-graph-howto.md",
+      "ui/src/docs/tutorial/gecko-task-graph.md",
+      "ui/src/docs/tutorial/gecko-tasks.md",
+      "ui/src/docs/tutorial/hack-tc.md",
+      "ui/src/docs/tutorial/hello-world.md",
+      "ui/src/docs/tutorial/index.md",
+      "ui/src/docs/tutorial/monitor-task-status.md",
+      "ui/src/docs/tutorial/reviews.md",
+      "ui/src/docs/tutorial/what-is-tc.md",
+      "ui/src/fragments/artifacts.graphql",
+      "ui/src/fragments/fragmentTypes.json",
+      "ui/src/images/logo.png",
+      "ui/src/images/logoCompleted.png",
+      "ui/src/images/logoFailed.png",
+      "ui/src/images/logoRunning.png",
+      "ui/src/index.jsx",
+      "ui/src/scripts/generateToc.js",
+      "ui/src/scripts/queryServer.js",
+      "ui/src/styleguide/StyleGuideRenderer.jsx",
+      "ui/src/styleguide/ThemeWrapper.jsx",
+      "ui/src/theme.js",
+      "ui/src/utils/Auth.jsx",
+      "ui/src/utils/Loading.jsx",
+      "ui/src/utils/ToggleTheme.jsx",
+      "ui/src/utils/ajv.js",
+      "ui/src/utils/buildArtifactUrl.js",
+      "ui/src/utils/constants.js",
+      "ui/src/utils/db.js",
+      "ui/src/utils/formatError.js",
+      "ui/src/utils/fromNow.js",
+      "ui/src/utils/fromNowJSON.js",
+      "ui/src/utils/getIconFromMime.js",
+      "ui/src/utils/isWorkerTypeNameValid.js",
+      "ui/src/utils/labels.js",
+      "ui/src/utils/normalizeWorkerTypes.js",
+      "ui/src/utils/parameterizeTask.js",
+      "ui/src/utils/parseTime.js",
+      "ui/src/utils/prop-types.js",
+      "ui/src/utils/removeKeys.js",
+      "ui/src/utils/reportError.js",
+      "ui/src/utils/slugid.js",
+      "ui/src/utils/sort.js",
+      "ui/src/utils/splitLines.js",
+      "ui/src/utils/urls.js",
+      "ui/src/utils/validateActionsJson.js",
+      "ui/src/utils/withAlertOnClose.jsx",
+      "ui/src/utils/withPageTracker.jsx",
+      "ui/src/views/AwsProvisioner/ViewAwsHealth/awsHealth.graphql",
+      "ui/src/views/AwsProvisioner/ViewAwsHealth/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewRecentErrors/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewRecentErrors/recentErrors.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/terminateInstance.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/terminateWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/workerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/createAwsProvisionerWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/deleteAwsProvisionerWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/updateAwsProvisionerWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/workerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypes/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypes/workerTypes.graphql",
+      "ui/src/views/AwsProvisioner/index.jsx",
+      "ui/src/views/CachePurges/CreatePurgeCacheRequest/index.jsx",
+      "ui/src/views/CachePurges/CreatePurgeCacheRequest/purgeCache.graphql",
+      "ui/src/views/CachePurges/ViewCachePurges/cachePurges.graphql",
+      "ui/src/views/CachePurges/ViewCachePurges/index.jsx",
+      "ui/src/views/CachePurges/index.jsx",
+      "ui/src/views/Clients/ViewClient/client.graphql",
+      "ui/src/views/Clients/ViewClient/createClient.graphql",
+      "ui/src/views/Clients/ViewClient/deleteClient.graphql",
+      "ui/src/views/Clients/ViewClient/disableClient.graphql",
+      "ui/src/views/Clients/ViewClient/enableClient.graphql",
+      "ui/src/views/Clients/ViewClient/index.jsx",
+      "ui/src/views/Clients/ViewClient/resetAccessToken.graphql",
+      "ui/src/views/Clients/ViewClient/updateClient.graphql",
+      "ui/src/views/Clients/ViewClients/clients.graphql",
+      "ui/src/views/Clients/ViewClients/index.jsx",
+      "ui/src/views/Clients/index.jsx",
+      "ui/src/views/Dashboard/index.jsx",
+      "ui/src/views/Display/index.jsx",
+      "ui/src/views/Documentation/PageMeta.jsx",
+      "ui/src/views/Documentation/index.jsx",
+      "ui/src/views/Home/index.jsx",
+      "ui/src/views/HomeOrDashboard/index.jsx",
+      "ui/src/views/Hooks/ListHooks/hooks.graphql",
+      "ui/src/views/Hooks/ListHooks/index.jsx",
+      "ui/src/views/Hooks/ViewHook/createHook.graphql",
+      "ui/src/views/Hooks/ViewHook/deleteHook.graphql",
+      "ui/src/views/Hooks/ViewHook/hook.graphql",
+      "ui/src/views/Hooks/ViewHook/index.jsx",
+      "ui/src/views/Hooks/ViewHook/triggerHook.graphql",
+      "ui/src/views/Hooks/ViewHook/updateHook.graphql",
+      "ui/src/views/Hooks/index.jsx",
+      "ui/src/views/NotFound/index.jsx",
+      "ui/src/views/Profile/index.jsx",
+      "ui/src/views/Profile/profile.graphql",
+      "ui/src/views/Provisioners/ViewProvisioners/index.jsx",
+      "ui/src/views/Provisioners/ViewProvisioners/provisioners.graphql",
+      "ui/src/views/Provisioners/ViewWorker/index.jsx",
+      "ui/src/views/Provisioners/ViewWorker/quarantineWorker.graphql",
+      "ui/src/views/Provisioners/ViewWorker/worker.graphql",
+      "ui/src/views/Provisioners/ViewWorkerTypes/index.jsx",
+      "ui/src/views/Provisioners/ViewWorkerTypes/workerTypes.graphql",
+      "ui/src/views/Provisioners/ViewWorkers/index.jsx",
+      "ui/src/views/Provisioners/ViewWorkers/workers.graphql",
+      "ui/src/views/Provisioners/index.jsx",
+      "ui/src/views/PulseMessages/index.jsx",
+      "ui/src/views/PulseMessages/pulseMessages.graphql",
+      "ui/src/views/Quickstart/github.graphql",
+      "ui/src/views/Quickstart/index.jsx",
+      "ui/src/views/Roles/ViewRole/createRole.graphql",
+      "ui/src/views/Roles/ViewRole/deleteRole.graphql",
+      "ui/src/views/Roles/ViewRole/index.jsx",
+      "ui/src/views/Roles/ViewRole/role.graphql",
+      "ui/src/views/Roles/ViewRole/updateRole.graphql",
+      "ui/src/views/Roles/ViewRoles/Roles.jsx",
+      "ui/src/views/Roles/ViewRoles/index.jsx",
+      "ui/src/views/Roles/ViewRoles/roles.graphql",
+      "ui/src/views/Roles/index.jsx",
+      "ui/src/views/Scopes/ListScopes/index.jsx",
+      "ui/src/views/Scopes/ScopesetComparison/index.jsx",
+      "ui/src/views/Scopes/ScopesetExpander/index.jsx",
+      "ui/src/views/Scopes/ScopesetExpander/scopeset.graphql",
+      "ui/src/views/Scopes/ViewScope/index.jsx"
+    ]
+  },
+  "32": {
+    "sha": "59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
+    "url": "https://github.com/taskcluster/taskcluster/commit/59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Update README with team mentions (#130)",
+    "commit_date": "2019-01-24 14:44:44",
+    "files_changed": [
+      "README.md"
+    ]
+  },
+  "33": {
+    "sha": "ab7a4381b84cf003bc951d1f84c660425b53db91",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ab7a4381b84cf003bc951d1f84c660425b53db91",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #128 from djmitche/bug1441625  Bug 1441625 - add built-in-workers service",
+    "commit_date": "2019-01-24 01:28:29",
+    "files_changed": [
+      ".taskcluster.yml",
+      "services/built-in-workers/.gitignore",
+      "services/built-in-workers/Procfile",
+      "services/built-in-workers/README.md",
+      "services/built-in-workers/config.yml",
+      "services/built-in-workers/package.json",
+      "services/built-in-workers/src/TaskQueue.js",
+      "services/built-in-workers/src/main.js",
+      "services/built-in-workers/test/helper.js",
+      "services/built-in-workers/test/index_test.js",
+      "services/built-in-workers/test/mocha.opts"
+    ]
+  },
+  "34": {
+    "sha": "1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1441625 - post-import fixes, lint",
+    "commit_date": "2019-01-23 22:24:58",
+    "files_changed": [
+      ".taskcluster.yml",
+      "services/built-in-workers/.eslintrc",
+      "services/built-in-workers/.github/CODEOWNERS",
+      "services/built-in-workers/.taskcluster.yml",
+      "services/built-in-workers/CODE_OF_CONDUCT.md",
+      "services/built-in-workers/CONTRIBUTING.md",
+      "services/built-in-workers/LICENSE",
+      "services/built-in-workers/Procfile",
+      "services/built-in-workers/README.md",
+      "services/built-in-workers/config.yml",
+      "services/built-in-workers/package.json",
+      "services/built-in-workers/src/TaskQueue.js",
+      "services/built-in-workers/src/main.js",
+      "services/built-in-workers/test/helper.js",
+      "services/built-in-workers/test/index_test.js",
+      "services/built-in-workers/yarn.lock"
+    ]
+  },
+  "35": {
+    "sha": "db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
+    "url": "https://github.com/taskcluster/taskcluster/commit/db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
+    "commiter_name": "hybrid1999",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Implement Builtin Worker (#1)    Basic Resolver    Make a new file for class    change structure of config vars    change structure of config vars    change structure of config vars    Add tests    Some fix bug preventing reading from config file    write tests    resolve error in test partially    SOme more tests    Passing tests    Passing more tests    Sequentially run tests    more tests    Change taskQueue to TaskQueue    Update packages to use Node 10.14.0    Remove Unused variables and commented code    Remove lodash    Remove redundant variables and methods    Change indexing of tasks to array from object    branch for testing maybe broken    fixed taskqueue sanity-check    Fix Issues in tests    Remove deprecated files    Delete TaskQueue_test.js     Resolve config issues    remove executable bits from files    remove unused config option 'queue'    remove unused code    define unique taskId for each test    remove debugging console.log    fix more permissions    remove unused import    use task definition",
+    "commit_date": "2019-01-23 22:15:21",
+    "files_changed": [
+      "services/built-in-workers/config.yml",
+      "services/built-in-workers/package.json",
+      "services/built-in-workers/src/TaskQueue.js",
+      "services/built-in-workers/src/main.js",
+      "services/built-in-workers/test/helper.js",
+      "services/built-in-workers/test/index_test.js"
+    ]
+  },
+  "36": {
+    "sha": "4f749b9ad5275107a6a4524d78eda9e1eee00425",
+    "url": "https://github.com/taskcluster/taskcluster/commit/4f749b9ad5275107a6a4524d78eda9e1eee00425",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "use node 10",
+    "commit_date": "2018-12-13 20:24:31",
+    "files_changed": [
+      "services/built-in-workers/.taskcluster.yml",
+      "services/built-in-workers/package.json"
+    ]
+  },
+  "37": {
+    "sha": "8544811bbcf1413f35f7392e9c41a791a4f59e00",
+    "url": "https://github.com/taskcluster/taskcluster/commit/8544811bbcf1413f35f7392e9c41a791a4f59e00",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Skeleton project  This was based on taskcluster-secrets.",
+    "commit_date": "2018-12-13 20:20:57",
+    "files_changed": [
+      "services/built-in-workers/.eslintrc",
+      "services/built-in-workers/.github/CODEOWNERS",
+      "services/built-in-workers/.gitignore",
+      "services/built-in-workers/.taskcluster.yml",
+      "services/built-in-workers/CODE_OF_CONDUCT.md",
+      "services/built-in-workers/CONTRIBUTING.md",
+      "services/built-in-workers/LICENSE",
+      "services/built-in-workers/Procfile",
+      "services/built-in-workers/README.md",
+      "services/built-in-workers/config.yml",
+      "services/built-in-workers/package.json",
+      "services/built-in-workers/src/main.js",
+      "services/built-in-workers/test/helper.js",
+      "services/built-in-workers/test/mocha.opts",
+      "services/built-in-workers/yarn.lock"
+    ]
+  },
+  "38": {
+    "sha": "3a41717b455f83cf1abeb16485f0067cf5a51b63",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3a41717b455f83cf1abeb16485f0067cf5a51b63",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Make sure we use the same Node",
+    "commit_date": "2019-01-23 19:39:54",
+    "files_changed": [
+      ".taskcluster.yml",
+      "test/meta_test.js",
+      "ui/package.json",
+      "ui/taskcluster-web-tests/Dockerfile"
+    ]
+  },
+  "39": {
+    "sha": "4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
+    "url": "https://github.com/taskcluster/taskcluster/commit/4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #116 from djmitche/bug1519870  Bug 1519870 - drop Hoek dependency",
+    "commit_date": "2019-01-23 20:44:47",
+    "files_changed": [
+      "services/auth/package.json",
+      "services/auth/src/signaturevalidator.js",
+      "services/auth/test/signaturevalidator_test.js",
+      "yarn.lock"
+    ]
+  },
+  "40": {
+    "sha": "fc4b259c1361cafa470870dc140b507104a28e6a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fc4b259c1361cafa470870dc140b507104a28e6a",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into bug1519870",
+    "commit_date": "2019-01-23 20:32:54",
+    "files_changed": [
+      ".eslintrc.yml",
+      "libraries/api/package.json",
+      "libraries/api/src/middleware/auth.js",
+      "libraries/api/test/auth_test.js",
+      "libraries/client/package.json",
+      "libraries/client/src/client.js",
+      "libraries/pulse/src/publisher.js",
+      "libraries/pulse/test/client_test.js",
+      "libraries/pulse/test/consumer_test.js",
+      "libraries/testing/package.json",
+      "libraries/testing/src/fakeauth.js",
+      "libraries/testing/test/fakeauth_test.js",
+      "package.json",
+      "services/auth/package.json",
+      "services/auth/src/signaturevalidator.js",
+      "services/auth/test/signaturevalidator_test.js",
+      "services/github/src/handlers.js",
+      "services/github/src/pr-allowed.js",
+      "services/github/src/tc-yaml.js",
+      "services/github/test/github-auth.js",
+      "services/queue/src/queueservice.js",
+      "services/queue/test/azure-blob-uploader-sas.js",
+      "services/queue/test/queueservice_test.js",
+      "services/references/package.json",
+      "services/references/src/main.js",
+      "yarn.lock"
+    ]
+  },
+  "41": {
+    "sha": "ff9efef8504e46a92b1153413907bddb4672dc72",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ff9efef8504e46a92b1153413907bddb4672dc72",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #125 from djmitche/bug1426512  Bug 1426512 - update all hawks to ^7.0.10",
+    "commit_date": "2019-01-23 20:32:23",
+    "files_changed": [
+      "libraries/api/package.json",
+      "libraries/api/test/auth_test.js",
+      "libraries/client/package.json",
+      "libraries/client/src/client.js",
+      "libraries/testing/package.json",
+      "libraries/testing/test/fakeauth_test.js",
+      "package.json",
+      "services/auth/package.json",
+      "services/auth/src/signaturevalidator.js",
+      "services/auth/test/signaturevalidator_test.js",
+      "services/references/src/main.js",
+      "yarn.lock"
+    ]
+  },
+  "42": {
+    "sha": "7ced9f86720f654ad055ebab914c02f7ed7869d4",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7ced9f86720f654ad055ebab914c02f7ed7869d4",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Change netlify.toml and use local files of our libraries",
+    "commit_date": "2019-01-23 19:30:06",
+    "files_changed": [
+      "netlify.toml",
+      "ui/package.json"
+    ]
+  },
+  "43": {
+    "sha": "a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Change dir name and .taskcluster.yml",
+    "commit_date": "2019-01-23 19:18:01",
+    "files_changed": [
+      ".github/CODEOWNERS",
+      ".taskcluster.yml",
+      "taskcluster-web/.taskcluster.yml",
+      "ui/.eslintrc.js",
+      "ui/.gitignore",
+      "ui/.neutrinorc.js",
+      "ui/README.md",
+      "ui/karma.conf.js",
+      "ui/netlify.toml",
+      "ui/package.json",
+      "ui/src/App/Main.jsx",
+      "ui/src/App/docsRoutes.jsx",
+      "ui/src/App/index.jsx",
+      "ui/src/App/routes.jsx",
+      "ui/src/autogenerated/docsTableOfContents.json",
+      "ui/src/components/AwsProvisionerErrorsTable/index.jsx",
+      "ui/src/components/AwsProvisionerHealthTable/index.jsx",
+      "ui/src/components/AwsProvisionerWorkerTypeEditor/index.jsx",
+      "ui/src/components/AwsProvisionerWorkerTypeStatus/index.jsx",
+      "ui/src/components/AwsProvisionerWorkerTypeTable/index.jsx",
+      "ui/src/components/Button/index.jsx",
+      "ui/src/components/CachePurgesTable/index.jsx",
+      "ui/src/components/ClientForm/index.jsx",
+      "ui/src/components/ClientScopesTable/index.jsx",
+      "ui/src/components/ClientsTable/index.jsx",
+      "ui/src/components/ConnectionDataTable/index.jsx",
+      "ui/src/components/Dashboard/DocsSidebarList.jsx",
+      "ui/src/components/Dashboard/SidebarList.jsx",
+      "ui/src/components/Dashboard/SidebarListGroup.jsx",
+      "ui/src/components/Dashboard/SidebarListItem.jsx",
+      "ui/src/components/Dashboard/UserMenu.jsx",
+      "ui/src/components/Dashboard/index.jsx",
+      "ui/src/components/DataTable/index.jsx",
+      "ui/src/components/DateDistance/README.md",
+      "ui/src/components/DateDistance/index.jsx",
+      "ui/src/components/DatePicker/index.jsx",
+      "ui/src/components/DialogAction/index.jsx",
+      "ui/src/components/Ec2ResourcesTable/index.jsx",
+      "ui/src/components/ErrorPanel/index.jsx",
+      "ui/src/components/FontStager/index.css",
+      "ui/src/components/FontStager/index.jsx",
+      "ui/src/components/Helmet/index.jsx",
+      "ui/src/components/HelpView/index.jsx",
+      "ui/src/components/HookForm/index.jsx",
+      "ui/src/components/IndexNamespacesTable/index.jsx",
+      "ui/src/components/IndexTaskNamespaceTable/index.jsx",
+      "ui/src/components/IndexedEntry/index.jsx",
+      "ui/src/components/JsonInspector/index.jsx",
+      "ui/src/components/Landing/index.jsx",
+      "ui/src/components/Log/GoToLineButton.jsx",
+      "ui/src/components/Log/Loading.jsx",
+      "ui/src/components/Log/index.jsx",
+      "ui/src/components/Markdown/AnchorOrLink.jsx",
+      "ui/src/components/Markdown/README.md",
+      "ui/src/components/Markdown/index.jsx",
+      "ui/src/components/NotFound/Emoticon.jsx",
+      "ui/src/components/NotFound/index.jsx",
+      "ui/src/components/PageNavigation/index.jsx",
+      "ui/src/components/PageTitle/index.jsx",
+      "ui/src/components/ProvisionerDetailsCard/index.jsx",
+      "ui/src/components/RoleForm/index.jsx",
+      "ui/src/components/RoleScopesTable/index.jsx",
+      "ui/src/components/RolesTable/index.jsx",
+      "ui/src/components/RouteWithProps/index.jsx",
+      "ui/src/components/Search/README.md",
+      "ui/src/components/Search/index.jsx",
+      "ui/src/components/SecretForm/index.jsx",
+      "ui/src/components/SecretsTable/index.jsx",
+      "ui/src/components/Shell/index.jsx",
+      "ui/src/components/SignInDialog/CredentialsDialog.jsx",
+      "ui/src/components/SignInDialog/index.jsx",
+      "ui/src/components/Snackbar/README.md",
+      "ui/src/components/Snackbar/index.jsx",
+      "ui/src/components/SpeedDial/README.md",
+      "ui/src/components/SpeedDial/index.jsx",
+      "ui/src/components/SpeedDialAction/index.jsx",
+      "ui/src/components/StatusLabel/README.md",
+      "ui/src/components/StatusLabel/index.jsx",
+      "ui/src/components/TableCellListItem/index.jsx",
+      "ui/src/components/TaskActionForm/index.jsx",
+      "ui/src/components/TaskDetailsCard/index.jsx",
+      "ui/src/components/TaskGroupProgress/index.jsx",
+      "ui/src/components/TaskGroupTable/index.jsx",
+      "ui/src/components/TaskRunsCard/NoRunsIcon.jsx",
+      "ui/src/components/TaskRunsCard/index.jsx",
+      "ui/src/components/VncDisplay/index.jsx",
+      "ui/src/components/WorkerDetailsCard/index.jsx",
+      "ui/src/components/WorkerTable/index.jsx",
+      "ui/src/components/WorkerTypesTable/index.jsx",
+      "ui/src/components/WorkersTable/index.jsx",
+      "ui/src/docs.jsx",
+      "ui/src/docs/error.md",
+      "ui/src/docs/index.md",
+      "ui/src/docs/manual/design/apis/errors.md",
+      "ui/src/docs/manual/design/apis/hawk/authn.md",
+      "ui/src/docs/manual/design/apis/hawk/authorized-scopes.md",
+      "ui/src/docs/manual/design/apis/hawk/clients.md",
+      "ui/src/docs/manual/design/apis/hawk/index.md",
+      "ui/src/docs/manual/design/apis/hawk/roles.md",
+      "ui/src/docs/manual/design/apis/hawk/scopes.md",
+      "ui/src/docs/manual/design/apis/hawk/signed-urls.md",
+      "ui/src/docs/manual/design/apis/hawk/temporary-credentials.md",
+      "ui/src/docs/manual/design/apis/hawk/troubleshooting.md",
+      "ui/src/docs/manual/design/apis/index.md",
+      "ui/src/docs/manual/design/apis/pulse.md",
+      "ui/src/docs/manual/design/apis/reference-format.md",
+      "ui/src/docs/manual/design/devel/best-practices/commits.md",
+      "ui/src/docs/manual/design/devel/best-practices/index.md",
+      "ui/src/docs/manual/design/devel/best-practices/libraries.md",
+      "ui/src/docs/manual/design/devel/best-practices/microservices.md",
+      "ui/src/docs/manual/design/devel/best-practices/scopes.md",
+      "ui/src/docs/manual/design/devel/best-practices/testing.md",
+      "ui/src/docs/manual/design/devel/idempotency.md",
+      "ui/src/docs/manual/design/devel/index.md",
+      "ui/src/docs/manual/design/devel/principles.md",
+      "ui/src/docs/manual/design/devel/rfcs.md",
+      "ui/src/docs/manual/design/index.md",
+      "ui/src/docs/manual/design/namespaces.md",
+      "ui/src/docs/manual/index.md",
+      "ui/src/docs/manual/task-execution/index.md",
+      "ui/src/docs/manual/task-execution/provisioning.md",
+      "ui/src/docs/manual/task-execution/queues.md",
+      "ui/src/docs/manual/task-execution/worker-types.md",
+      "ui/src/docs/manual/task-execution/workers.md",
+      "ui/src/docs/manual/tasks/artifacts.md",
+      "ui/src/docs/manual/tasks/dependencies.md",
+      "ui/src/docs/manual/tasks/index.md",
+      "ui/src/docs/manual/tasks/manipulating.md",
+      "ui/src/docs/manual/tasks/messages.md",
+      "ui/src/docs/manual/tasks/priority.md",
+      "ui/src/docs/manual/tasks/runs.md",
+      "ui/src/docs/manual/tasks/scopes.md",
+      "ui/src/docs/manual/tasks/taskgroupid-schedulerid.md",
+      "ui/src/docs/manual/tasks/times.md",
+      "ui/src/docs/manual/tasks/workertypes.md",
+      "ui/src/docs/manual/using/actions/guidelines.md",
+      "ui/src/docs/manual/using/actions/index.md",
+      "ui/src/docs/manual/using/actions/spec.md",
+      "ui/src/docs/manual/using/actions/ui.md",
+      "ui/src/docs/manual/using/administration.md",
+      "ui/src/docs/manual/using/artifacts.md",
+      "ui/src/docs/manual/using/caching.md",
+      "ui/src/docs/manual/using/github.md",
+      "ui/src/docs/manual/using/handling-high-load.md",
+      "ui/src/docs/manual/using/index.md",
+      "ui/src/docs/manual/using/indexing.md",
+      "ui/src/docs/manual/using/integration/backend.md",
+      "ui/src/docs/manual/using/integration/frontend.md",
+      "ui/src/docs/manual/using/integration/guidelines.md",
+      "ui/src/docs/manual/using/integration/index.md",
+      "ui/src/docs/manual/using/integration/libraries.md",
+      "ui/src/docs/manual/using/integration/pulse.md",
+      "ui/src/docs/manual/using/s3-uploads.md",
+      "ui/src/docs/manual/using/scheduled-tasks.md",
+      "ui/src/docs/manual/using/secrets.md",
+      "ui/src/docs/manual/using/task-graph.md",
+      "ui/src/docs/manual/using/task-notifications.md",
+      "ui/src/docs/reference/core/index.md",
+      "ui/src/docs/reference/guide.md",
+      "ui/src/docs/reference/index.md",
+      "ui/src/docs/reference/integrations/index.md",
+      "ui/src/docs/reference/libraries/index.md",
+      "ui/src/docs/reference/operations/index.md",
+      "ui/src/docs/reference/platform/index.md",
+      "ui/src/docs/reference/workers/index.md",
+      "ui/src/docs/resources.md",
+      "ui/src/docs/tutorial/apis.md",
+      "ui/src/docs/tutorial/authenticate.md",
+      "ui/src/docs/tutorial/create-task-via-api.md",
+      "ui/src/docs/tutorial/debug-task.md",
+      "ui/src/docs/tutorial/download-task-artifacts.md",
+      "ui/src/docs/tutorial/finding-tasks.md",
+      "ui/src/docs/tutorial/gecko-decision-task.md",
+      "ui/src/docs/tutorial/gecko-docker-images.md",
+      "ui/src/docs/tutorial/gecko-new-job.md",
+      "ui/src/docs/tutorial/gecko-task-graph-howto.md",
+      "ui/src/docs/tutorial/gecko-task-graph.md",
+      "ui/src/docs/tutorial/gecko-tasks.md",
+      "ui/src/docs/tutorial/hack-tc.md",
+      "ui/src/docs/tutorial/hello-world.md",
+      "ui/src/docs/tutorial/index.md",
+      "ui/src/docs/tutorial/monitor-task-status.md",
+      "ui/src/docs/tutorial/reviews.md",
+      "ui/src/docs/tutorial/what-is-tc.md",
+      "ui/src/fragments/artifacts.graphql",
+      "ui/src/fragments/fragmentTypes.json",
+      "ui/src/images/logo.png",
+      "ui/src/images/logoCompleted.png",
+      "ui/src/images/logoFailed.png",
+      "ui/src/images/logoRunning.png",
+      "ui/src/index.jsx",
+      "ui/src/scripts/generateToc.js",
+      "ui/src/scripts/queryServer.js",
+      "ui/src/styleguide/StyleGuideRenderer.jsx",
+      "ui/src/styleguide/ThemeWrapper.jsx",
+      "ui/src/theme.js",
+      "ui/src/utils/Auth.jsx",
+      "ui/src/utils/Loading.jsx",
+      "ui/src/utils/ToggleTheme.jsx",
+      "ui/src/utils/ajv.js",
+      "ui/src/utils/buildArtifactUrl.js",
+      "ui/src/utils/constants.js",
+      "ui/src/utils/db.js",
+      "ui/src/utils/formatError.js",
+      "ui/src/utils/fromNow.js",
+      "ui/src/utils/fromNowJSON.js",
+      "ui/src/utils/getIconFromMime.js",
+      "ui/src/utils/isWorkerTypeNameValid.js",
+      "ui/src/utils/labels.js",
+      "ui/src/utils/normalizeWorkerTypes.js",
+      "ui/src/utils/parameterizeTask.js",
+      "ui/src/utils/parseTime.js",
+      "ui/src/utils/prop-types.js",
+      "ui/src/utils/removeKeys.js",
+      "ui/src/utils/reportError.js",
+      "ui/src/utils/slugid.js",
+      "ui/src/utils/sort.js",
+      "ui/src/utils/splitLines.js",
+      "ui/src/utils/urls.js",
+      "ui/src/utils/validateActionsJson.js",
+      "ui/src/utils/withAlertOnClose.jsx",
+      "ui/src/utils/withPageTracker.jsx",
+      "ui/src/views/AwsProvisioner/ViewAwsHealth/awsHealth.graphql",
+      "ui/src/views/AwsProvisioner/ViewAwsHealth/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewRecentErrors/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewRecentErrors/recentErrors.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/terminateInstance.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/terminateWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/workerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/createAwsProvisionerWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/deleteAwsProvisionerWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/updateAwsProvisionerWorkerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/workerType.graphql",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypes/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypes/workerTypes.graphql",
+      "ui/src/views/AwsProvisioner/index.jsx",
+      "ui/src/views/CachePurges/CreatePurgeCacheRequest/index.jsx",
+      "ui/src/views/CachePurges/CreatePurgeCacheRequest/purgeCache.graphql",
+      "ui/src/views/CachePurges/ViewCachePurges/cachePurges.graphql",
+      "ui/src/views/CachePurges/ViewCachePurges/index.jsx",
+      "ui/src/views/CachePurges/index.jsx",
+      "ui/src/views/Clients/ViewClient/client.graphql",
+      "ui/src/views/Clients/ViewClient/createClient.graphql",
+      "ui/src/views/Clients/ViewClient/deleteClient.graphql",
+      "ui/src/views/Clients/ViewClient/disableClient.graphql",
+      "ui/src/views/Clients/ViewClient/enableClient.graphql",
+      "ui/src/views/Clients/ViewClient/index.jsx",
+      "ui/src/views/Clients/ViewClient/resetAccessToken.graphql",
+      "ui/src/views/Clients/ViewClient/updateClient.graphql",
+      "ui/src/views/Clients/ViewClients/clients.graphql",
+      "ui/src/views/Clients/ViewClients/index.jsx",
+      "ui/src/views/Clients/index.jsx",
+      "ui/src/views/Dashboard/index.jsx",
+      "ui/src/views/Display/index.jsx",
+      "ui/src/views/Documentation/PageMeta.jsx",
+      "ui/src/views/Documentation/index.jsx",
+      "ui/src/views/Home/index.jsx",
+      "ui/src/views/HomeOrDashboard/index.jsx",
+      "ui/src/views/Hooks/ListHooks/hooks.graphql",
+      "ui/src/views/Hooks/ListHooks/index.jsx",
+      "ui/src/views/Hooks/ViewHook/createHook.graphql",
+      "ui/src/views/Hooks/ViewHook/deleteHook.graphql",
+      "ui/src/views/Hooks/ViewHook/hook.graphql",
+      "ui/src/views/Hooks/ViewHook/index.jsx",
+      "ui/src/views/Hooks/ViewHook/triggerHook.graphql",
+      "ui/src/views/Hooks/ViewHook/updateHook.graphql",
+      "ui/src/views/Hooks/index.jsx",
+      "ui/src/views/NotFound/index.jsx",
+      "ui/src/views/Profile/index.jsx",
+      "ui/src/views/Profile/profile.graphql",
+      "ui/src/views/Provisioners/ViewProvisioners/index.jsx",
+      "ui/src/views/Provisioners/ViewProvisioners/provisioners.graphql",
+      "ui/src/views/Provisioners/ViewWorker/index.jsx",
+      "ui/src/views/Provisioners/ViewWorker/quarantineWorker.graphql",
+      "ui/src/views/Provisioners/ViewWorker/worker.graphql",
+      "ui/src/views/Provisioners/ViewWorkerTypes/index.jsx",
+      "ui/src/views/Provisioners/ViewWorkerTypes/workerTypes.graphql",
+      "ui/src/views/Provisioners/ViewWorkers/index.jsx",
+      "ui/src/views/Provisioners/ViewWorkers/workers.graphql",
+      "ui/src/views/Provisioners/index.jsx",
+      "ui/src/views/PulseMessages/index.jsx",
+      "ui/src/views/PulseMessages/pulseMessages.graphql",
+      "ui/src/views/Quickstart/github.graphql",
+      "ui/src/views/Quickstart/index.jsx",
+      "ui/src/views/Roles/ViewRole/createRole.graphql",
+      "ui/src/views/Roles/ViewRole/deleteRole.graphql",
+      "ui/src/views/Roles/ViewRole/index.jsx",
+      "ui/src/views/Roles/ViewRole/role.graphql",
+      "ui/src/views/Roles/ViewRole/updateRole.graphql",
+      "ui/src/views/Roles/ViewRoles/Roles.jsx",
+      "ui/src/views/Roles/ViewRoles/index.jsx",
+      "ui/src/views/Roles/ViewRoles/roles.graphql",
+      "ui/src/views/Roles/index.jsx",
+      "ui/src/views/Scopes/ListScopes/index.jsx",
+      "ui/src/views/Scopes/ScopesetComparison/index.jsx",
+      "ui/src/views/Scopes/ScopesetExpander/index.jsx",
+      "ui/src/views/Scopes/ScopesetExpander/scopeset.graphql",
+      "ui/src/views/Scopes/ViewScope/index.jsx"
+    ]
+  },
+  "44": {
+    "sha": "e1e741d51416b622a15222c177d9c8b5e3f4185c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/e1e741d51416b622a15222c177d9c8b5e3f4185c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #124 from djmitche/references-no-main  remove stuff that makes yarn think main.js should be executable",
+    "commit_date": "2019-01-23 03:57:45",
+    "files_changed": [
+      "services/references/package.json"
+    ]
+  },
+  "45": {
+    "sha": "ac6f65834888d30bf280a8b93d02291e9f6f1729",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ac6f65834888d30bf280a8b93d02291e9f6f1729",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1426512 - remove superagent-hawk",
+    "commit_date": "2019-01-23 03:35:56",
+    "files_changed": [
+      "libraries/api/test/auth_test.js",
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "46": {
+    "sha": "98f8e77b11a18960fb64556f92cdcb34208a6c6f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/98f8e77b11a18960fb64556f92cdcb34208a6c6f",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Post-import fixes",
+    "commit_date": "2019-01-23 01:21:11",
+    "files_changed": [
+      ".github/CODEOWNERS",
+      "taskcluster-web/.github/CODEOWNERS",
+      "taskcluster-web/CODE_OF_CONDUCT.md",
+      "taskcluster-web/CONTRIBUTING.md",
+      "taskcluster-web/LICENSE"
+    ]
+  },
+  "47": {
+    "sha": "7470efa73fb6d495eb968041da28e581ada1debd",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7470efa73fb6d495eb968041da28e581ada1debd",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Merge branch 'tc-web' into bug1521638",
+    "commit_date": "2019-01-23 01:11:13",
+    "files_changed": [
+      "taskcluster-web/.eslintrc.js",
+      "taskcluster-web/.github/CODEOWNERS",
+      "taskcluster-web/.gitignore",
+      "taskcluster-web/.neutrinorc.js",
+      "taskcluster-web/.taskcluster.yml",
+      "taskcluster-web/CODE_OF_CONDUCT.md",
+      "taskcluster-web/CONTRIBUTING.md",
+      "taskcluster-web/LICENSE",
+      "taskcluster-web/README.md",
+      "taskcluster-web/karma.conf.js",
+      "taskcluster-web/netlify.toml",
+      "taskcluster-web/package.json",
+      "taskcluster-web/src/App/Main.jsx",
+      "taskcluster-web/src/App/docsRoutes.jsx",
+      "taskcluster-web/src/App/index.jsx",
+      "taskcluster-web/src/App/routes.jsx",
+      "taskcluster-web/src/autogenerated/docsTableOfContents.json",
+      "taskcluster-web/src/components/AwsProvisionerErrorsTable/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerHealthTable/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerWorkerTypeEditor/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerWorkerTypeStatus/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerWorkerTypeTable/index.jsx",
+      "taskcluster-web/src/components/Button/index.jsx",
+      "taskcluster-web/src/components/CachePurgesTable/index.jsx",
+      "taskcluster-web/src/components/ClientForm/index.jsx",
+      "taskcluster-web/src/components/ClientScopesTable/index.jsx",
+      "taskcluster-web/src/components/ClientsTable/index.jsx",
+      "taskcluster-web/src/components/ConnectionDataTable/index.jsx",
+      "taskcluster-web/src/components/Dashboard/DocsSidebarList.jsx",
+      "taskcluster-web/src/components/Dashboard/SidebarList.jsx",
+      "taskcluster-web/src/components/Dashboard/SidebarListGroup.jsx",
+      "taskcluster-web/src/components/Dashboard/SidebarListItem.jsx",
+      "taskcluster-web/src/components/Dashboard/UserMenu.jsx",
+      "taskcluster-web/src/components/Dashboard/index.jsx",
+      "taskcluster-web/src/components/DataTable/index.jsx",
+      "taskcluster-web/src/components/DateDistance/README.md",
+      "taskcluster-web/src/components/DateDistance/index.jsx",
+      "taskcluster-web/src/components/DatePicker/index.jsx",
+      "taskcluster-web/src/components/DialogAction/index.jsx",
+      "taskcluster-web/src/components/Ec2ResourcesTable/index.jsx",
+      "taskcluster-web/src/components/ErrorPanel/index.jsx",
+      "taskcluster-web/src/components/FontStager/index.css",
+      "taskcluster-web/src/components/FontStager/index.jsx",
+      "taskcluster-web/src/components/Helmet/index.jsx",
+      "taskcluster-web/src/components/HelpView/index.jsx",
+      "taskcluster-web/src/components/HookForm/index.jsx",
+      "taskcluster-web/src/components/IndexNamespacesTable/index.jsx",
+      "taskcluster-web/src/components/IndexTaskNamespaceTable/index.jsx",
+      "taskcluster-web/src/components/IndexedEntry/index.jsx",
+      "taskcluster-web/src/components/JsonInspector/index.jsx",
+      "taskcluster-web/src/components/Landing/index.jsx",
+      "taskcluster-web/src/components/Log/GoToLineButton.jsx",
+      "taskcluster-web/src/components/Log/Loading.jsx",
+      "taskcluster-web/src/components/Log/index.jsx",
+      "taskcluster-web/src/components/Markdown/AnchorOrLink.jsx",
+      "taskcluster-web/src/components/Markdown/README.md",
+      "taskcluster-web/src/components/Markdown/index.jsx",
+      "taskcluster-web/src/components/NotFound/Emoticon.jsx",
+      "taskcluster-web/src/components/NotFound/index.jsx",
+      "taskcluster-web/src/components/PageNavigation/index.jsx",
+      "taskcluster-web/src/components/PageTitle/index.jsx",
+      "taskcluster-web/src/components/ProvisionerDetailsCard/index.jsx",
+      "taskcluster-web/src/components/RoleForm/index.jsx",
+      "taskcluster-web/src/components/RoleScopesTable/index.jsx",
+      "taskcluster-web/src/components/RolesTable/index.jsx",
+      "taskcluster-web/src/components/RouteWithProps/index.jsx",
+      "taskcluster-web/src/components/Search/README.md",
+      "taskcluster-web/src/components/Search/index.jsx",
+      "taskcluster-web/src/components/SecretForm/index.jsx",
+      "taskcluster-web/src/components/SecretsTable/index.jsx",
+      "taskcluster-web/src/components/Shell/index.jsx",
+      "taskcluster-web/src/components/SignInDialog/CredentialsDialog.jsx",
+      "taskcluster-web/src/components/SignInDialog/index.jsx",
+      "taskcluster-web/src/components/Snackbar/README.md",
+      "taskcluster-web/src/components/Snackbar/index.jsx",
+      "taskcluster-web/src/components/SpeedDial/README.md",
+      "taskcluster-web/src/components/SpeedDial/index.jsx",
+      "taskcluster-web/src/components/SpeedDialAction/index.jsx",
+      "taskcluster-web/src/components/StatusLabel/README.md",
+      "taskcluster-web/src/components/StatusLabel/index.jsx",
+      "taskcluster-web/src/components/TableCellListItem/index.jsx",
+      "taskcluster-web/src/components/TaskActionForm/index.jsx",
+      "taskcluster-web/src/components/TaskDetailsCard/index.jsx",
+      "taskcluster-web/src/components/TaskGroupProgress/index.jsx",
+      "taskcluster-web/src/components/TaskGroupTable/index.jsx",
+      "taskcluster-web/src/components/TaskRunsCard/NoRunsIcon.jsx",
+      "taskcluster-web/src/components/TaskRunsCard/index.jsx",
+      "taskcluster-web/src/components/VncDisplay/index.jsx",
+      "taskcluster-web/src/components/WorkerDetailsCard/index.jsx",
+      "taskcluster-web/src/components/WorkerTable/index.jsx",
+      "taskcluster-web/src/components/WorkerTypesTable/index.jsx",
+      "taskcluster-web/src/components/WorkersTable/index.jsx",
+      "taskcluster-web/src/docs.jsx",
+      "taskcluster-web/src/docs/error.md",
+      "taskcluster-web/src/docs/index.md",
+      "taskcluster-web/src/docs/manual/design/apis/errors.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/authn.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/authorized-scopes.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/clients.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/index.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/roles.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/scopes.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/signed-urls.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/temporary-credentials.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/troubleshooting.md",
+      "taskcluster-web/src/docs/manual/design/apis/index.md",
+      "taskcluster-web/src/docs/manual/design/apis/pulse.md",
+      "taskcluster-web/src/docs/manual/design/apis/reference-format.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/commits.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/index.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/libraries.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/microservices.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/scopes.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/testing.md",
+      "taskcluster-web/src/docs/manual/design/devel/idempotency.md",
+      "taskcluster-web/src/docs/manual/design/devel/index.md",
+      "taskcluster-web/src/docs/manual/design/devel/principles.md",
+      "taskcluster-web/src/docs/manual/design/devel/rfcs.md",
+      "taskcluster-web/src/docs/manual/design/index.md",
+      "taskcluster-web/src/docs/manual/design/namespaces.md",
+      "taskcluster-web/src/docs/manual/index.md",
+      "taskcluster-web/src/docs/manual/task-execution/index.md",
+      "taskcluster-web/src/docs/manual/task-execution/provisioning.md",
+      "taskcluster-web/src/docs/manual/task-execution/queues.md",
+      "taskcluster-web/src/docs/manual/task-execution/worker-types.md",
+      "taskcluster-web/src/docs/manual/task-execution/workers.md",
+      "taskcluster-web/src/docs/manual/tasks/artifacts.md",
+      "taskcluster-web/src/docs/manual/tasks/dependencies.md",
+      "taskcluster-web/src/docs/manual/tasks/index.md",
+      "taskcluster-web/src/docs/manual/tasks/manipulating.md",
+      "taskcluster-web/src/docs/manual/tasks/messages.md",
+      "taskcluster-web/src/docs/manual/tasks/priority.md",
+      "taskcluster-web/src/docs/manual/tasks/runs.md",
+      "taskcluster-web/src/docs/manual/tasks/scopes.md",
+      "taskcluster-web/src/docs/manual/tasks/taskgroupid-schedulerid.md",
+      "taskcluster-web/src/docs/manual/tasks/times.md",
+      "taskcluster-web/src/docs/manual/tasks/workertypes.md",
+      "taskcluster-web/src/docs/manual/using/actions/guidelines.md",
+      "taskcluster-web/src/docs/manual/using/actions/index.md",
+      "taskcluster-web/src/docs/manual/using/actions/spec.md",
+      "taskcluster-web/src/docs/manual/using/actions/ui.md",
+      "taskcluster-web/src/docs/manual/using/administration.md",
+      "taskcluster-web/src/docs/manual/using/artifacts.md",
+      "taskcluster-web/src/docs/manual/using/caching.md",
+      "taskcluster-web/src/docs/manual/using/github.md",
+      "taskcluster-web/src/docs/manual/using/handling-high-load.md",
+      "taskcluster-web/src/docs/manual/using/index.md",
+      "taskcluster-web/src/docs/manual/using/indexing.md",
+      "taskcluster-web/src/docs/manual/using/integration/backend.md",
+      "taskcluster-web/src/docs/manual/using/integration/frontend.md",
+      "taskcluster-web/src/docs/manual/using/integration/guidelines.md",
+      "taskcluster-web/src/docs/manual/using/integration/index.md",
+      "taskcluster-web/src/docs/manual/using/integration/libraries.md",
+      "taskcluster-web/src/docs/manual/using/integration/pulse.md",
+      "taskcluster-web/src/docs/manual/using/s3-uploads.md",
+      "taskcluster-web/src/docs/manual/using/scheduled-tasks.md",
+      "taskcluster-web/src/docs/manual/using/secrets.md",
+      "taskcluster-web/src/docs/manual/using/task-graph.md",
+      "taskcluster-web/src/docs/manual/using/task-notifications.md",
+      "taskcluster-web/src/docs/reference/core/index.md",
+      "taskcluster-web/src/docs/reference/guide.md",
+      "taskcluster-web/src/docs/reference/index.md",
+      "taskcluster-web/src/docs/reference/integrations/index.md",
+      "taskcluster-web/src/docs/reference/libraries/index.md",
+      "taskcluster-web/src/docs/reference/operations/index.md",
+      "taskcluster-web/src/docs/reference/platform/index.md",
+      "taskcluster-web/src/docs/reference/workers/index.md",
+      "taskcluster-web/src/docs/resources.md",
+      "taskcluster-web/src/docs/tutorial/apis.md",
+      "taskcluster-web/src/docs/tutorial/authenticate.md",
+      "taskcluster-web/src/docs/tutorial/create-task-via-api.md",
+      "taskcluster-web/src/docs/tutorial/debug-task.md",
+      "taskcluster-web/src/docs/tutorial/download-task-artifacts.md",
+      "taskcluster-web/src/docs/tutorial/finding-tasks.md",
+      "taskcluster-web/src/docs/tutorial/gecko-decision-task.md",
+      "taskcluster-web/src/docs/tutorial/gecko-docker-images.md",
+      "taskcluster-web/src/docs/tutorial/gecko-new-job.md",
+      "taskcluster-web/src/docs/tutorial/gecko-task-graph-howto.md",
+      "taskcluster-web/src/docs/tutorial/gecko-task-graph.md",
+      "taskcluster-web/src/docs/tutorial/gecko-tasks.md",
+      "taskcluster-web/src/docs/tutorial/hack-tc.md",
+      "taskcluster-web/src/docs/tutorial/hello-world.md",
+      "taskcluster-web/src/docs/tutorial/index.md",
+      "taskcluster-web/src/docs/tutorial/monitor-task-status.md",
+      "taskcluster-web/src/docs/tutorial/reviews.md",
+      "taskcluster-web/src/docs/tutorial/what-is-tc.md",
+      "taskcluster-web/src/fragments/artifacts.graphql",
+      "taskcluster-web/src/fragments/fragmentTypes.json",
+      "taskcluster-web/src/images/logo.png",
+      "taskcluster-web/src/images/logoCompleted.png",
+      "taskcluster-web/src/images/logoFailed.png",
+      "taskcluster-web/src/images/logoRunning.png",
+      "taskcluster-web/src/index.jsx",
+      "taskcluster-web/src/scripts/generateToc.js",
+      "taskcluster-web/src/scripts/queryServer.js",
+      "taskcluster-web/src/styleguide/StyleGuideRenderer.jsx",
+      "taskcluster-web/src/styleguide/ThemeWrapper.jsx",
+      "taskcluster-web/src/theme.js",
+      "taskcluster-web/src/utils/Auth.jsx",
+      "taskcluster-web/src/utils/Loading.jsx",
+      "taskcluster-web/src/utils/ToggleTheme.jsx",
+      "taskcluster-web/src/utils/ajv.js",
+      "taskcluster-web/src/utils/buildArtifactUrl.js",
+      "taskcluster-web/src/utils/constants.js",
+      "taskcluster-web/src/utils/db.js",
+      "taskcluster-web/src/utils/formatError.js",
+      "taskcluster-web/src/utils/fromNow.js",
+      "taskcluster-web/src/utils/fromNowJSON.js",
+      "taskcluster-web/src/utils/getIconFromMime.js",
+      "taskcluster-web/src/utils/isWorkerTypeNameValid.js",
+      "taskcluster-web/src/utils/labels.js",
+      "taskcluster-web/src/utils/normalizeWorkerTypes.js",
+      "taskcluster-web/src/utils/parameterizeTask.js",
+      "taskcluster-web/src/utils/parseTime.js",
+      "taskcluster-web/src/utils/prop-types.js",
+      "taskcluster-web/src/utils/removeKeys.js",
+      "taskcluster-web/src/utils/reportError.js",
+      "taskcluster-web/src/utils/slugid.js",
+      "taskcluster-web/src/utils/sort.js",
+      "taskcluster-web/src/utils/splitLines.js",
+      "taskcluster-web/src/utils/urls.js",
+      "taskcluster-web/src/utils/validateActionsJson.js",
+      "taskcluster-web/src/utils/withAlertOnClose.jsx",
+      "taskcluster-web/src/utils/withPageTracker.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewAwsHealth/awsHealth.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewAwsHealth/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewRecentErrors/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewRecentErrors/recentErrors.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/terminateInstance.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/terminateWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/workerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/createAwsProvisionerWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/deleteAwsProvisionerWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/updateAwsProvisionerWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/workerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypes/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypes/workerTypes.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/index.jsx",
+      "taskcluster-web/src/views/CachePurges/CreatePurgeCacheRequest/index.jsx",
+      "taskcluster-web/src/views/CachePurges/CreatePurgeCacheRequest/purgeCache.graphql",
+      "taskcluster-web/src/views/CachePurges/ViewCachePurges/cachePurges.graphql",
+      "taskcluster-web/src/views/CachePurges/ViewCachePurges/index.jsx",
+      "taskcluster-web/src/views/CachePurges/index.jsx",
+      "taskcluster-web/src/views/Clients/ViewClient/client.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/createClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/deleteClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/disableClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/enableClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/index.jsx",
+      "taskcluster-web/src/views/Clients/ViewClient/resetAccessToken.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/updateClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClients/clients.graphql",
+      "taskcluster-web/src/views/Clients/ViewClients/index.jsx",
+      "taskcluster-web/src/views/Clients/index.jsx",
+      "taskcluster-web/src/views/Dashboard/index.jsx",
+      "taskcluster-web/src/views/Display/index.jsx",
+      "taskcluster-web/src/views/Documentation/PageMeta.jsx",
+      "taskcluster-web/src/views/Documentation/index.jsx",
+      "taskcluster-web/src/views/Home/index.jsx",
+      "taskcluster-web/src/views/HomeOrDashboard/index.jsx",
+      "taskcluster-web/src/views/Hooks/ListHooks/hooks.graphql",
+      "taskcluster-web/src/views/Hooks/ListHooks/index.jsx",
+      "taskcluster-web/src/views/Hooks/ViewHook/createHook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/deleteHook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/hook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/index.jsx",
+      "taskcluster-web/src/views/Hooks/ViewHook/triggerHook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/updateHook.graphql",
+      "taskcluster-web/src/views/Hooks/index.jsx",
+      "taskcluster-web/src/views/NotFound/index.jsx",
+      "taskcluster-web/src/views/Profile/index.jsx",
+      "taskcluster-web/src/views/Profile/profile.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewProvisioners/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewProvisioners/provisioners.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorker/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewWorker/quarantineWorker.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorker/worker.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorkerTypes/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewWorkerTypes/workerTypes.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorkers/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewWorkers/workers.graphql",
+      "taskcluster-web/src/views/Provisioners/index.jsx",
+      "taskcluster-web/src/views/PulseMessages/index.jsx",
+      "taskcluster-web/src/views/PulseMessages/pulseMessages.graphql",
+      "taskcluster-web/src/views/Quickstart/github.graphql",
+      "taskcluster-web/src/views/Quickstart/index.jsx",
+      "taskcluster-web/src/views/Roles/ViewRole/createRole.graphql",
+      "taskcluster-web/src/views/Roles/ViewRole/deleteRole.graphql",
+      "taskcluster-web/src/views/Roles/ViewRole/index.jsx",
+      "taskcluster-web/src/views/Roles/ViewRole/role.graphql",
+      "taskcluster-web/src/views/Roles/ViewRole/updateRole.graphql",
+      "taskcluster-web/src/views/Roles/ViewRoles/Roles.jsx",
+      "taskcluster-web/src/views/Roles/ViewRoles/index.jsx",
+      "taskcluster-web/src/views/Roles/ViewRoles/roles.graphql",
+      "taskcluster-web/src/views/Roles/index.jsx",
+      "taskcluster-web/src/views/Scopes/ListScopes/index.jsx",
+      "taskcluster-web/src/views/Scopes/ScopesetComparison/index.jsx",
+      "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
+    ]
+  },
+  "48": {
+    "sha": "408dcaa88953e36544f215946b2ce4e4e504e3df",
+    "url": "https://github.com/taskcluster/taskcluster/commit/408dcaa88953e36544f215946b2ce4e4e504e3df",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Move tc-web to its own dir",
+    "commit_date": "2019-01-23 01:09:53",
+    "files_changed": [
+      "taskcluster-web/.eslintrc.js",
+      "taskcluster-web/.github/CODEOWNERS",
+      "taskcluster-web/.gitignore",
+      "taskcluster-web/.neutrinorc.js",
+      "taskcluster-web/.taskcluster.yml",
+      "taskcluster-web/CODE_OF_CONDUCT.md",
+      "taskcluster-web/CONTRIBUTING.md",
+      "taskcluster-web/LICENSE",
+      "taskcluster-web/README.md",
+      "taskcluster-web/karma.conf.js",
+      "taskcluster-web/netlify.toml",
+      "taskcluster-web/package.json",
+      "taskcluster-web/src/App/Main.jsx",
+      "taskcluster-web/src/App/docsRoutes.jsx",
+      "taskcluster-web/src/App/index.jsx",
+      "taskcluster-web/src/App/routes.jsx",
+      "taskcluster-web/src/autogenerated/docsTableOfContents.json",
+      "taskcluster-web/src/components/AwsProvisionerErrorsTable/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerHealthTable/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerWorkerTypeEditor/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerWorkerTypeStatus/index.jsx",
+      "taskcluster-web/src/components/AwsProvisionerWorkerTypeTable/index.jsx",
+      "taskcluster-web/src/components/Button/index.jsx",
+      "taskcluster-web/src/components/CachePurgesTable/index.jsx",
+      "taskcluster-web/src/components/ClientForm/index.jsx",
+      "taskcluster-web/src/components/ClientScopesTable/index.jsx",
+      "taskcluster-web/src/components/ClientsTable/index.jsx",
+      "taskcluster-web/src/components/ConnectionDataTable/index.jsx",
+      "taskcluster-web/src/components/Dashboard/DocsSidebarList.jsx",
+      "taskcluster-web/src/components/Dashboard/SidebarList.jsx",
+      "taskcluster-web/src/components/Dashboard/SidebarListGroup.jsx",
+      "taskcluster-web/src/components/Dashboard/SidebarListItem.jsx",
+      "taskcluster-web/src/components/Dashboard/UserMenu.jsx",
+      "taskcluster-web/src/components/Dashboard/index.jsx",
+      "taskcluster-web/src/components/DataTable/index.jsx",
+      "taskcluster-web/src/components/DateDistance/README.md",
+      "taskcluster-web/src/components/DateDistance/index.jsx",
+      "taskcluster-web/src/components/DatePicker/index.jsx",
+      "taskcluster-web/src/components/DialogAction/index.jsx",
+      "taskcluster-web/src/components/Ec2ResourcesTable/index.jsx",
+      "taskcluster-web/src/components/ErrorPanel/index.jsx",
+      "taskcluster-web/src/components/FontStager/index.css",
+      "taskcluster-web/src/components/FontStager/index.jsx",
+      "taskcluster-web/src/components/Helmet/index.jsx",
+      "taskcluster-web/src/components/HelpView/index.jsx",
+      "taskcluster-web/src/components/HookForm/index.jsx",
+      "taskcluster-web/src/components/IndexNamespacesTable/index.jsx",
+      "taskcluster-web/src/components/IndexTaskNamespaceTable/index.jsx",
+      "taskcluster-web/src/components/IndexedEntry/index.jsx",
+      "taskcluster-web/src/components/JsonInspector/index.jsx",
+      "taskcluster-web/src/components/Landing/index.jsx",
+      "taskcluster-web/src/components/Log/GoToLineButton.jsx",
+      "taskcluster-web/src/components/Log/Loading.jsx",
+      "taskcluster-web/src/components/Log/index.jsx",
+      "taskcluster-web/src/components/Markdown/AnchorOrLink.jsx",
+      "taskcluster-web/src/components/Markdown/README.md",
+      "taskcluster-web/src/components/Markdown/index.jsx",
+      "taskcluster-web/src/components/NotFound/Emoticon.jsx",
+      "taskcluster-web/src/components/NotFound/index.jsx",
+      "taskcluster-web/src/components/PageNavigation/index.jsx",
+      "taskcluster-web/src/components/PageTitle/index.jsx",
+      "taskcluster-web/src/components/ProvisionerDetailsCard/index.jsx",
+      "taskcluster-web/src/components/RoleForm/index.jsx",
+      "taskcluster-web/src/components/RoleScopesTable/index.jsx",
+      "taskcluster-web/src/components/RolesTable/index.jsx",
+      "taskcluster-web/src/components/RouteWithProps/index.jsx",
+      "taskcluster-web/src/components/Search/README.md",
+      "taskcluster-web/src/components/Search/index.jsx",
+      "taskcluster-web/src/components/SecretForm/index.jsx",
+      "taskcluster-web/src/components/SecretsTable/index.jsx",
+      "taskcluster-web/src/components/Shell/index.jsx",
+      "taskcluster-web/src/components/SignInDialog/CredentialsDialog.jsx",
+      "taskcluster-web/src/components/SignInDialog/index.jsx",
+      "taskcluster-web/src/components/Snackbar/README.md",
+      "taskcluster-web/src/components/Snackbar/index.jsx",
+      "taskcluster-web/src/components/SpeedDial/README.md",
+      "taskcluster-web/src/components/SpeedDial/index.jsx",
+      "taskcluster-web/src/components/SpeedDialAction/index.jsx",
+      "taskcluster-web/src/components/StatusLabel/README.md",
+      "taskcluster-web/src/components/StatusLabel/index.jsx",
+      "taskcluster-web/src/components/TableCellListItem/index.jsx",
+      "taskcluster-web/src/components/TaskActionForm/index.jsx",
+      "taskcluster-web/src/components/TaskDetailsCard/index.jsx",
+      "taskcluster-web/src/components/TaskGroupProgress/index.jsx",
+      "taskcluster-web/src/components/TaskGroupTable/index.jsx",
+      "taskcluster-web/src/components/TaskRunsCard/NoRunsIcon.jsx",
+      "taskcluster-web/src/components/TaskRunsCard/index.jsx",
+      "taskcluster-web/src/components/VncDisplay/index.jsx",
+      "taskcluster-web/src/components/WorkerDetailsCard/index.jsx",
+      "taskcluster-web/src/components/WorkerTable/index.jsx",
+      "taskcluster-web/src/components/WorkerTypesTable/index.jsx",
+      "taskcluster-web/src/components/WorkersTable/index.jsx",
+      "taskcluster-web/src/docs.jsx",
+      "taskcluster-web/src/docs/error.md",
+      "taskcluster-web/src/docs/index.md",
+      "taskcluster-web/src/docs/manual/design/apis/errors.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/authn.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/authorized-scopes.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/clients.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/index.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/roles.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/scopes.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/signed-urls.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/temporary-credentials.md",
+      "taskcluster-web/src/docs/manual/design/apis/hawk/troubleshooting.md",
+      "taskcluster-web/src/docs/manual/design/apis/index.md",
+      "taskcluster-web/src/docs/manual/design/apis/pulse.md",
+      "taskcluster-web/src/docs/manual/design/apis/reference-format.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/commits.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/index.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/libraries.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/microservices.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/scopes.md",
+      "taskcluster-web/src/docs/manual/design/devel/best-practices/testing.md",
+      "taskcluster-web/src/docs/manual/design/devel/idempotency.md",
+      "taskcluster-web/src/docs/manual/design/devel/index.md",
+      "taskcluster-web/src/docs/manual/design/devel/principles.md",
+      "taskcluster-web/src/docs/manual/design/devel/rfcs.md",
+      "taskcluster-web/src/docs/manual/design/index.md",
+      "taskcluster-web/src/docs/manual/design/namespaces.md",
+      "taskcluster-web/src/docs/manual/index.md",
+      "taskcluster-web/src/docs/manual/task-execution/index.md",
+      "taskcluster-web/src/docs/manual/task-execution/provisioning.md",
+      "taskcluster-web/src/docs/manual/task-execution/queues.md",
+      "taskcluster-web/src/docs/manual/task-execution/worker-types.md",
+      "taskcluster-web/src/docs/manual/task-execution/workers.md",
+      "taskcluster-web/src/docs/manual/tasks/artifacts.md",
+      "taskcluster-web/src/docs/manual/tasks/dependencies.md",
+      "taskcluster-web/src/docs/manual/tasks/index.md",
+      "taskcluster-web/src/docs/manual/tasks/manipulating.md",
+      "taskcluster-web/src/docs/manual/tasks/messages.md",
+      "taskcluster-web/src/docs/manual/tasks/priority.md",
+      "taskcluster-web/src/docs/manual/tasks/runs.md",
+      "taskcluster-web/src/docs/manual/tasks/scopes.md",
+      "taskcluster-web/src/docs/manual/tasks/taskgroupid-schedulerid.md",
+      "taskcluster-web/src/docs/manual/tasks/times.md",
+      "taskcluster-web/src/docs/manual/tasks/workertypes.md",
+      "taskcluster-web/src/docs/manual/using/actions/guidelines.md",
+      "taskcluster-web/src/docs/manual/using/actions/index.md",
+      "taskcluster-web/src/docs/manual/using/actions/spec.md",
+      "taskcluster-web/src/docs/manual/using/actions/ui.md",
+      "taskcluster-web/src/docs/manual/using/administration.md",
+      "taskcluster-web/src/docs/manual/using/artifacts.md",
+      "taskcluster-web/src/docs/manual/using/caching.md",
+      "taskcluster-web/src/docs/manual/using/github.md",
+      "taskcluster-web/src/docs/manual/using/handling-high-load.md",
+      "taskcluster-web/src/docs/manual/using/index.md",
+      "taskcluster-web/src/docs/manual/using/indexing.md",
+      "taskcluster-web/src/docs/manual/using/integration/backend.md",
+      "taskcluster-web/src/docs/manual/using/integration/frontend.md",
+      "taskcluster-web/src/docs/manual/using/integration/guidelines.md",
+      "taskcluster-web/src/docs/manual/using/integration/index.md",
+      "taskcluster-web/src/docs/manual/using/integration/libraries.md",
+      "taskcluster-web/src/docs/manual/using/integration/pulse.md",
+      "taskcluster-web/src/docs/manual/using/s3-uploads.md",
+      "taskcluster-web/src/docs/manual/using/scheduled-tasks.md",
+      "taskcluster-web/src/docs/manual/using/secrets.md",
+      "taskcluster-web/src/docs/manual/using/task-graph.md",
+      "taskcluster-web/src/docs/manual/using/task-notifications.md",
+      "taskcluster-web/src/docs/reference/core/index.md",
+      "taskcluster-web/src/docs/reference/guide.md",
+      "taskcluster-web/src/docs/reference/index.md",
+      "taskcluster-web/src/docs/reference/integrations/index.md",
+      "taskcluster-web/src/docs/reference/libraries/index.md",
+      "taskcluster-web/src/docs/reference/operations/index.md",
+      "taskcluster-web/src/docs/reference/platform/index.md",
+      "taskcluster-web/src/docs/reference/workers/index.md",
+      "taskcluster-web/src/docs/resources.md",
+      "taskcluster-web/src/docs/tutorial/apis.md",
+      "taskcluster-web/src/docs/tutorial/authenticate.md",
+      "taskcluster-web/src/docs/tutorial/create-task-via-api.md",
+      "taskcluster-web/src/docs/tutorial/debug-task.md",
+      "taskcluster-web/src/docs/tutorial/download-task-artifacts.md",
+      "taskcluster-web/src/docs/tutorial/finding-tasks.md",
+      "taskcluster-web/src/docs/tutorial/gecko-decision-task.md",
+      "taskcluster-web/src/docs/tutorial/gecko-docker-images.md",
+      "taskcluster-web/src/docs/tutorial/gecko-new-job.md",
+      "taskcluster-web/src/docs/tutorial/gecko-task-graph-howto.md",
+      "taskcluster-web/src/docs/tutorial/gecko-task-graph.md",
+      "taskcluster-web/src/docs/tutorial/gecko-tasks.md",
+      "taskcluster-web/src/docs/tutorial/hack-tc.md",
+      "taskcluster-web/src/docs/tutorial/hello-world.md",
+      "taskcluster-web/src/docs/tutorial/index.md",
+      "taskcluster-web/src/docs/tutorial/monitor-task-status.md",
+      "taskcluster-web/src/docs/tutorial/reviews.md",
+      "taskcluster-web/src/docs/tutorial/what-is-tc.md",
+      "taskcluster-web/src/fragments/artifacts.graphql",
+      "taskcluster-web/src/fragments/fragmentTypes.json",
+      "taskcluster-web/src/images/logo.png",
+      "taskcluster-web/src/images/logoCompleted.png",
+      "taskcluster-web/src/images/logoFailed.png",
+      "taskcluster-web/src/images/logoRunning.png",
+      "taskcluster-web/src/index.jsx",
+      "taskcluster-web/src/scripts/generateToc.js",
+      "taskcluster-web/src/scripts/queryServer.js",
+      "taskcluster-web/src/styleguide/StyleGuideRenderer.jsx",
+      "taskcluster-web/src/styleguide/ThemeWrapper.jsx",
+      "taskcluster-web/src/theme.js",
+      "taskcluster-web/src/utils/Auth.jsx",
+      "taskcluster-web/src/utils/Loading.jsx",
+      "taskcluster-web/src/utils/ToggleTheme.jsx",
+      "taskcluster-web/src/utils/ajv.js",
+      "taskcluster-web/src/utils/buildArtifactUrl.js",
+      "taskcluster-web/src/utils/constants.js",
+      "taskcluster-web/src/utils/db.js",
+      "taskcluster-web/src/utils/formatError.js",
+      "taskcluster-web/src/utils/fromNow.js",
+      "taskcluster-web/src/utils/fromNowJSON.js",
+      "taskcluster-web/src/utils/getIconFromMime.js",
+      "taskcluster-web/src/utils/isWorkerTypeNameValid.js",
+      "taskcluster-web/src/utils/labels.js",
+      "taskcluster-web/src/utils/normalizeWorkerTypes.js",
+      "taskcluster-web/src/utils/parameterizeTask.js",
+      "taskcluster-web/src/utils/parseTime.js",
+      "taskcluster-web/src/utils/prop-types.js",
+      "taskcluster-web/src/utils/removeKeys.js",
+      "taskcluster-web/src/utils/reportError.js",
+      "taskcluster-web/src/utils/slugid.js",
+      "taskcluster-web/src/utils/sort.js",
+      "taskcluster-web/src/utils/splitLines.js",
+      "taskcluster-web/src/utils/urls.js",
+      "taskcluster-web/src/utils/validateActionsJson.js",
+      "taskcluster-web/src/utils/withAlertOnClose.jsx",
+      "taskcluster-web/src/utils/withPageTracker.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewAwsHealth/awsHealth.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewAwsHealth/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewRecentErrors/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewRecentErrors/recentErrors.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/terminateInstance.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/terminateWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerType/workerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/createAwsProvisionerWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/deleteAwsProvisionerWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/updateAwsProvisionerWorkerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypeDefinition/workerType.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypes/index.jsx",
+      "taskcluster-web/src/views/AwsProvisioner/ViewWorkerTypes/workerTypes.graphql",
+      "taskcluster-web/src/views/AwsProvisioner/index.jsx",
+      "taskcluster-web/src/views/CachePurges/CreatePurgeCacheRequest/index.jsx",
+      "taskcluster-web/src/views/CachePurges/CreatePurgeCacheRequest/purgeCache.graphql",
+      "taskcluster-web/src/views/CachePurges/ViewCachePurges/cachePurges.graphql",
+      "taskcluster-web/src/views/CachePurges/ViewCachePurges/index.jsx",
+      "taskcluster-web/src/views/CachePurges/index.jsx",
+      "taskcluster-web/src/views/Clients/ViewClient/client.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/createClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/deleteClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/disableClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/enableClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/index.jsx",
+      "taskcluster-web/src/views/Clients/ViewClient/resetAccessToken.graphql",
+      "taskcluster-web/src/views/Clients/ViewClient/updateClient.graphql",
+      "taskcluster-web/src/views/Clients/ViewClients/clients.graphql",
+      "taskcluster-web/src/views/Clients/ViewClients/index.jsx",
+      "taskcluster-web/src/views/Clients/index.jsx",
+      "taskcluster-web/src/views/Dashboard/index.jsx",
+      "taskcluster-web/src/views/Display/index.jsx",
+      "taskcluster-web/src/views/Documentation/PageMeta.jsx",
+      "taskcluster-web/src/views/Documentation/index.jsx",
+      "taskcluster-web/src/views/Home/index.jsx",
+      "taskcluster-web/src/views/HomeOrDashboard/index.jsx",
+      "taskcluster-web/src/views/Hooks/ListHooks/hooks.graphql",
+      "taskcluster-web/src/views/Hooks/ListHooks/index.jsx",
+      "taskcluster-web/src/views/Hooks/ViewHook/createHook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/deleteHook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/hook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/index.jsx",
+      "taskcluster-web/src/views/Hooks/ViewHook/triggerHook.graphql",
+      "taskcluster-web/src/views/Hooks/ViewHook/updateHook.graphql",
+      "taskcluster-web/src/views/Hooks/index.jsx",
+      "taskcluster-web/src/views/NotFound/index.jsx",
+      "taskcluster-web/src/views/Profile/index.jsx",
+      "taskcluster-web/src/views/Profile/profile.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewProvisioners/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewProvisioners/provisioners.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorker/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewWorker/quarantineWorker.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorker/worker.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorkerTypes/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewWorkerTypes/workerTypes.graphql",
+      "taskcluster-web/src/views/Provisioners/ViewWorkers/index.jsx",
+      "taskcluster-web/src/views/Provisioners/ViewWorkers/workers.graphql",
+      "taskcluster-web/src/views/Provisioners/index.jsx",
+      "taskcluster-web/src/views/PulseMessages/index.jsx",
+      "taskcluster-web/src/views/PulseMessages/pulseMessages.graphql",
+      "taskcluster-web/src/views/Quickstart/github.graphql",
+      "taskcluster-web/src/views/Quickstart/index.jsx",
+      "taskcluster-web/src/views/Roles/ViewRole/createRole.graphql",
+      "taskcluster-web/src/views/Roles/ViewRole/deleteRole.graphql",
+      "taskcluster-web/src/views/Roles/ViewRole/index.jsx",
+      "taskcluster-web/src/views/Roles/ViewRole/role.graphql",
+      "taskcluster-web/src/views/Roles/ViewRole/updateRole.graphql",
+      "taskcluster-web/src/views/Roles/ViewRoles/Roles.jsx",
+      "taskcluster-web/src/views/Roles/ViewRoles/index.jsx",
+      "taskcluster-web/src/views/Roles/ViewRoles/roles.graphql",
+      "taskcluster-web/src/views/Roles/index.jsx",
+      "taskcluster-web/src/views/Scopes/ListScopes/index.jsx",
+      "taskcluster-web/src/views/Scopes/ScopesetComparison/index.jsx",
+      "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
+    ]
+  },
+  "49": {
+    "sha": "ef4c5fa323d705d6df617da24f0ee88027df4dd6",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ef4c5fa323d705d6df617da24f0ee88027df4dd6",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1426512 - update all hawks to ^7.0.10",
+    "commit_date": "2019-01-18 23:03:50",
+    "files_changed": [
+      "libraries/api/package.json",
+      "libraries/client/package.json",
+      "libraries/client/src/client.js",
+      "libraries/testing/package.json",
+      "libraries/testing/test/fakeauth_test.js",
+      "services/auth/package.json",
+      "services/auth/src/signaturevalidator.js",
+      "services/auth/test/signaturevalidator_test.js",
+      "services/references/src/main.js",
+      "yarn.lock"
+    ]
+  },
+  "50": {
+    "sha": "0fe0639a979a4e03e1228490fe667bba3cc06a19",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0fe0639a979a4e03e1228490fe667bba3cc06a19",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "remove stuff that makes yarn think main.js should be executable",
+    "commit_date": "2019-01-22 22:34:40",
+    "files_changed": [
+      "services/references/package.json"
+    ]
+  },
+  "51": {
+    "sha": "33ff9db6fd8f9a1eddfb249872916292ee53a12a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/33ff9db6fd8f9a1eddfb249872916292ee53a12a",
+    "commiter_name": "ededals",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Nit (#408)",
+    "commit_date": "2019-01-22 19:35:56",
+    "files_changed": [
+      "src/views/Tasks/CreateTask/index.jsx"
+    ]
+  },
+  "52": {
+    "sha": "575665a45bed1e450481f98941532b436250ed89",
+    "url": "https://github.com/taskcluster/taskcluster/commit/575665a45bed1e450481f98941532b436250ed89",
+    "commiter_name": "ededals",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Pulse message view has no 'Start Listening' button (#403)",
+    "commit_date": "2019-01-22 18:30:04",
+    "files_changed": [
+      "src/views/PulseMessages/index.jsx"
+    ]
+  },
+  "53": {
+    "sha": "d28fe09d78b072dd125882f4792964648a59a2b4",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d28fe09d78b072dd125882f4792964648a59a2b4",
+    "commiter_name": "varundey",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Move log action buttons to bottom right (previously top right) (#407)",
+    "commit_date": "2019-01-22 18:26:18",
+    "files_changed": [
+      "src/components/Log/GoToLineButton.jsx",
+      "src/components/Log/index.jsx",
+      "src/views/Tasks/LiveTaskLog/index.jsx",
+      "src/views/Tasks/TaskLog/index.jsx"
+    ]
+  },
+  "54": {
+    "sha": "32bf21dccf8ae4582f5da833c8db76214709ae9a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/32bf21dccf8ae4582f5da833c8db76214709ae9a",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Revert \"Expire queues after 4 days of not being used\" (#122)    Revert \"Disallow buffer constructors\"    This reverts commit 9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d.      Revert \"Expire queues after 4 days of not being used (#119)\"    This reverts commit f2f86653dc1c587509ee9cba7366b02ab949a07d.",
+    "commit_date": "2019-01-21 20:44:50",
+    "files_changed": [
+      "libraries/pulse/README.md",
+      "libraries/pulse/src/consumer.js"
+    ]
+  },
+  "55": {
+    "sha": "9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
+    "commiter_name": "imbstack",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Disallow buffer constructors",
+    "commit_date": "2019-01-18 23:13:07",
+    "files_changed": [
+      ".eslintrc.yml",
+      "libraries/api/src/middleware/auth.js",
+      "libraries/api/test/auth_test.js",
+      "libraries/client/src/client.js",
+      "libraries/pulse/src/publisher.js",
+      "libraries/pulse/test/client_test.js",
+      "libraries/pulse/test/consumer_test.js",
+      "libraries/testing/src/fakeauth.js",
+      "libraries/testing/test/fakeauth_test.js",
+      "services/auth/src/signaturevalidator.js",
+      "services/auth/test/signaturevalidator_test.js",
+      "services/github/src/handlers.js",
+      "services/github/src/pr-allowed.js",
+      "services/github/test/github-auth.js",
+      "services/queue/src/queueservice.js",
+      "services/queue/test/azure-blob-uploader-sas.js",
+      "services/queue/test/queueservice_test.js"
+    ]
+  },
+  "56": {
+    "sha": "f2f86653dc1c587509ee9cba7366b02ab949a07d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/f2f86653dc1c587509ee9cba7366b02ab949a07d",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Expire queues after 4 days of not being used (#119)    Expire queues after 4 days of not being used      Add TTL explanation to the README",
+    "commit_date": "2019-01-21 18:27:30",
+    "files_changed": [
+      "libraries/pulse/README.md",
+      "libraries/pulse/src/consumer.js"
+    ]
+  },
+  "57": {
+    "sha": "c8e302d0be612ca3644b77e2e391c11507542f12",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c8e302d0be612ca3644b77e2e391c11507542f12",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Bug in checks: creates a checkrun for the whole group (#118)    Minor refactors      Avoid reporting status for taskGroup in Checks API      Add logging. Break out of both loops",
+    "commit_date": "2019-01-21 17:21:51",
+    "files_changed": [
+      "services/github/src/handlers.js",
+      "services/github/src/tc-yaml.js"
+    ]
+  },
+  "58": {
+    "sha": "8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
+    "commiter_name": "arshadkazmi42",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Updates quickstart version to 1 (#404)",
+    "commit_date": "2019-01-21 16:02:30",
+    "files_changed": [
+      "src/views/Quickstart/index.jsx"
+    ]
+  },
+  "59": {
+    "sha": "af8d50fed466b5bdaed1c1a3f27a1cd193655599",
+    "url": "https://github.com/taskcluster/taskcluster/commit/af8d50fed466b5bdaed1c1a3f27a1cd193655599",
+    "commiter_name": "vivekRaj10",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Show a tooltip when hovering on the copy icon (#406)",
+    "commit_date": "2019-01-21 15:36:47",
+    "files_changed": [
+      "src/components/TaskDetailsCard/index.jsx",
+      "src/components/TaskRunsCard/index.jsx",
+      "src/components/WorkerTypesTable/index.jsx",
+      "src/components/WorkersTable/index.jsx"
+    ]
+  },
+  "60": {
+    "sha": "aeba2adac1fa34609700beaa304fcdb9e0b910cf",
+    "url": "https://github.com/taskcluster/taskcluster/commit/aeba2adac1fa34609700beaa304fcdb9e0b910cf",
+    "commiter_name": "varundey",
+    "commiter_email": "helfi92@gmail.com",
+    "commit_message": "Show Task ID in search box (#398)",
+    "commit_date": "2019-01-21 14:04:11",
+    "files_changed": [
+      "src/views/Tasks/ViewTask/index.jsx"
+    ]
+  },
+  "61": {
+    "sha": "60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
+    "url": "https://github.com/taskcluster/taskcluster/commit/60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1519870 - drop Hoek dependency",
+    "commit_date": "2019-01-18 22:31:33",
+    "files_changed": [
+      "services/auth/package.json",
+      "services/auth/src/signaturevalidator.js",
+      "services/auth/test/signaturevalidator_test.js",
+      "yarn.lock"
+    ]
+  },
+  "62": {
     "sha": "30372ec731730592a7bf22d4b349a61f75663883",
     "url": "https://github.com/taskcluster/taskcluster/commit/30372ec731730592a7bf22d4b349a61f75663883",
     "commiter_name": "djmitche",
@@ -13,7 +2179,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "2": {
+  "63": {
     "sha": "58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "url": "https://github.com/taskcluster/taskcluster/commit/58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "commiter_name": "Biboswan",
@@ -24,7 +2190,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "3": {
+  "64": {
     "sha": "910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "url": "https://github.com/taskcluster/taskcluster/commit/910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "commiter_name": "djmitche",
@@ -74,7 +2240,7 @@
       "test/meta_test.js"
     ]
   },
-  "4": {
+  "65": {
     "sha": "73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "url": "https://github.com/taskcluster/taskcluster/commit/73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "commiter_name": "imbstack",
@@ -86,7 +2252,7 @@
       "yarn.lock"
     ]
   },
-  "5": {
+  "66": {
     "sha": "a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "url": "https://github.com/taskcluster/taskcluster/commit/a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "commiter_name": "renovate-bot",
@@ -98,7 +2264,7 @@
       "yarn.lock"
     ]
   },
-  "6": {
+  "67": {
     "sha": "eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "url": "https://github.com/taskcluster/taskcluster/commit/eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "commiter_name": "djmitche",
@@ -116,7 +2282,7 @@
       "services/references/src/main.js"
     ]
   },
-  "7": {
+  "68": {
     "sha": "2926da3c9b179899ce1f4b084cb80d29359bccde",
     "url": "https://github.com/taskcluster/taskcluster/commit/2926da3c9b179899ce1f4b084cb80d29359bccde",
     "commiter_name": "djmitche",
@@ -128,7 +2294,7 @@
       "test/meta_test.js"
     ]
   },
-  "8": {
+  "69": {
     "sha": "a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "url": "https://github.com/taskcluster/taskcluster/commit/a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "commiter_name": "djmitche",
@@ -176,7 +2342,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "9": {
+  "70": {
     "sha": "b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "url": "https://github.com/taskcluster/taskcluster/commit/b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "commiter_name": "djmitche",
@@ -190,7 +2356,7 @@
       "infrastructure/terraform/LICENSE"
     ]
   },
-  "10": {
+  "71": {
     "sha": "a263ab914e5684c0ea3a538040e4814515c90329",
     "url": "https://github.com/taskcluster/taskcluster/commit/a263ab914e5684c0ea3a538040e4814515c90329",
     "commiter_name": "djmitche",
@@ -242,7 +2408,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "11": {
+  "72": {
     "sha": "39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "url": "https://github.com/taskcluster/taskcluster/commit/39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "commiter_name": "djmitche",
@@ -253,7 +2419,7 @@
       ".taskcluster.yml"
     ]
   },
-  "12": {
+  "73": {
     "sha": "1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "url": "https://github.com/taskcluster/taskcluster/commit/1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "commiter_name": "djmitche",
@@ -264,7 +2430,7 @@
       "services/references/package.json"
     ]
   },
-  "13": {
+  "74": {
     "sha": "158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "url": "https://github.com/taskcluster/taskcluster/commit/158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "commiter_name": "djmitche",
@@ -441,7 +2607,7 @@
       "services/references/test/mocha.opts"
     ]
   },
-  "14": {
+  "75": {
     "sha": "8da6f9a0a314111d1bfa71428f1175920679dce9",
     "url": "https://github.com/taskcluster/taskcluster/commit/8da6f9a0a314111d1bfa71428f1175920679dce9",
     "commiter_name": "djmitche",
@@ -458,7 +2624,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "15": {
+  "76": {
     "sha": "7073e919271708b5394c2abb42382306c928e63a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7073e919271708b5394c2abb42382306c928e63a",
     "commiter_name": "djmitche",
@@ -470,7 +2636,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "16": {
+  "77": {
     "sha": "61bb37c2ce4648aa0534037caf968ba1897c4919",
     "url": "https://github.com/taskcluster/taskcluster/commit/61bb37c2ce4648aa0534037caf968ba1897c4919",
     "commiter_name": "djmitche",
@@ -482,7 +2648,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "17": {
+  "78": {
     "sha": "38504daf3872070523aac7abce819b4eeb928b87",
     "url": "https://github.com/taskcluster/taskcluster/commit/38504daf3872070523aac7abce819b4eeb928b87",
     "commiter_name": "imbstack",
@@ -497,7 +2663,7 @@
       "services/references/schemas/manifest-v2.yml"
     ]
   },
-  "18": {
+  "79": {
     "sha": "0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "commiter_name": "djmitche",
@@ -683,7 +2849,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "19": {
+  "80": {
     "sha": "998899df571454e9de69f902a17daf36a3144618",
     "url": "https://github.com/taskcluster/taskcluster/commit/998899df571454e9de69f902a17daf36a3144618",
     "commiter_name": "djmitche",
@@ -694,7 +2860,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "20": {
+  "81": {
     "sha": "c57689bf42a4cf06dba531ae86e35224219803c6",
     "url": "https://github.com/taskcluster/taskcluster/commit/c57689bf42a4cf06dba531ae86e35224219803c6",
     "commiter_name": "djmitche",
@@ -705,7 +2871,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "21": {
+  "82": {
     "sha": "190f0dc3c179383b0298fc552f237df4d45f42aa",
     "url": "https://github.com/taskcluster/taskcluster/commit/190f0dc3c179383b0298fc552f237df4d45f42aa",
     "commiter_name": "ccooper",
@@ -718,7 +2884,7 @@
       "services/references/LICENSE"
     ]
   },
-  "22": {
+  "83": {
     "sha": "f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "url": "https://github.com/taskcluster/taskcluster/commit/f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "commiter_name": "djmitche",
@@ -733,7 +2899,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "23": {
+  "84": {
     "sha": "3237de63cef974dfb4ec21735411e81a173469da",
     "url": "https://github.com/taskcluster/taskcluster/commit/3237de63cef974dfb4ec21735411e81a173469da",
     "commiter_name": "djmitche",
@@ -745,7 +2911,7 @@
       "services/references/README.md"
     ]
   },
-  "24": {
+  "85": {
     "sha": "9d4639e02eea9a27a70664db50da3d6c39dff742",
     "url": "https://github.com/taskcluster/taskcluster/commit/9d4639e02eea9a27a70664db50da3d6c39dff742",
     "commiter_name": "djmitche",
@@ -759,7 +2925,7 @@
       "services/references/test/load_test.js"
     ]
   },
-  "25": {
+  "86": {
     "sha": "3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "url": "https://github.com/taskcluster/taskcluster/commit/3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "commiter_name": "djmitche",
@@ -778,7 +2944,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "26": {
+  "87": {
     "sha": "b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "commiter_name": "djmitche",
@@ -789,7 +2955,7 @@
       "services/references/schemas/manifest.yml"
     ]
   },
-  "27": {
+  "88": {
     "sha": "e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "url": "https://github.com/taskcluster/taskcluster/commit/e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "commiter_name": "djmitche",
@@ -804,7 +2970,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "28": {
+  "89": {
     "sha": "0490184a91391efa3f01c5dbace65e87db9c8f20",
     "url": "https://github.com/taskcluster/taskcluster/commit/0490184a91391efa3f01c5dbace65e87db9c8f20",
     "commiter_name": "djmitche",
@@ -815,7 +2981,7 @@
       "services/references/Dockerfile"
     ]
   },
-  "29": {
+  "90": {
     "sha": "a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "url": "https://github.com/taskcluster/taskcluster/commit/a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "commiter_name": "djmitche",
@@ -827,7 +2993,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "30": {
+  "91": {
     "sha": "1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "url": "https://github.com/taskcluster/taskcluster/commit/1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "commiter_name": "djmitche",
@@ -840,7 +3006,7 @@
       "services/references/nginx-site.conf"
     ]
   },
-  "31": {
+  "92": {
     "sha": "67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "url": "https://github.com/taskcluster/taskcluster/commit/67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "commiter_name": "djmitche",
@@ -851,7 +3017,7 @@
       "services/references/.taskcluster.yml"
     ]
   },
-  "32": {
+  "93": {
     "sha": "7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "commiter_name": "djmitche",
@@ -862,7 +3028,7 @@
       "services/references/README.md"
     ]
   },
-  "33": {
+  "94": {
     "sha": "30401b64459da526c3ce11def5fc93d50035094e",
     "url": "https://github.com/taskcluster/taskcluster/commit/30401b64459da526c3ce11def5fc93d50035094e",
     "commiter_name": "djmitche",
@@ -876,7 +3042,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "34": {
+  "95": {
     "sha": "e84021107115016d5c0023fb18ea7726b5f8beab",
     "url": "https://github.com/taskcluster/taskcluster/commit/e84021107115016d5c0023fb18ea7726b5f8beab",
     "commiter_name": "djmitche",
@@ -893,7 +3059,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "35": {
+  "96": {
     "sha": "d6402324224cd7173edbd87c51a2e310930268df",
     "url": "https://github.com/taskcluster/taskcluster/commit/d6402324224cd7173edbd87c51a2e310930268df",
     "commiter_name": "djmitche",
@@ -906,7 +3072,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "36": {
+  "97": {
     "sha": "fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "url": "https://github.com/taskcluster/taskcluster/commit/fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "commiter_name": "djmitche",
@@ -924,7 +3090,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "37": {
+  "98": {
     "sha": "8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "commiter_name": "djmitche",
@@ -944,7 +3110,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "38": {
+  "99": {
     "sha": "9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "url": "https://github.com/taskcluster/taskcluster/commit/9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "commiter_name": "owlishDeveloper",
@@ -955,7 +3121,7 @@
       "services/github/src/handlers.js"
     ]
   },
-  "39": {
+  "100": {
     "sha": "fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "commiter_name": "djmitche",
@@ -966,7 +3132,7 @@
       "libraries/references/package.json"
     ]
   },
-  "40": {
+  "101": {
     "sha": "6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "url": "https://github.com/taskcluster/taskcluster/commit/6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "commiter_name": "djmitche",
@@ -977,7 +3143,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "41": {
+  "102": {
     "sha": "2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "url": "https://github.com/taskcluster/taskcluster/commit/2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "commiter_name": "djmitche",
@@ -988,7 +3154,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "42": {
+  "103": {
     "sha": "ce1c231b06efceebebeda268a127d73a4333b987",
     "url": "https://github.com/taskcluster/taskcluster/commit/ce1c231b06efceebebeda268a127d73a4333b987",
     "commiter_name": "djmitche",
@@ -999,7 +3165,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "43": {
+  "104": {
     "sha": "5e97e64a746049de3d7b66e60140664d353fbb2b",
     "url": "https://github.com/taskcluster/taskcluster/commit/5e97e64a746049de3d7b66e60140664d353fbb2b",
     "commiter_name": "renovate[bot]",
@@ -1011,7 +3177,7 @@
       "yarn.lock"
     ]
   },
-  "44": {
+  "105": {
     "sha": "7716154f7b5a914bcd10d7390989178072370c97",
     "url": "https://github.com/taskcluster/taskcluster/commit/7716154f7b5a914bcd10d7390989178072370c97",
     "commiter_name": "renovate[bot]",
@@ -1023,7 +3189,7 @@
       "yarn.lock"
     ]
   },
-  "45": {
+  "106": {
     "sha": "c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "url": "https://github.com/taskcluster/taskcluster/commit/c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "commiter_name": "renovate[bot]",
@@ -1035,7 +3201,7 @@
       "yarn.lock"
     ]
   },
-  "46": {
+  "107": {
     "sha": "3de3082db222232d9c420c88305140d8c0bff305",
     "url": "https://github.com/taskcluster/taskcluster/commit/3de3082db222232d9c420c88305140d8c0bff305",
     "commiter_name": "djmitche",
@@ -1047,7 +3213,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "47": {
+  "108": {
     "sha": "25e72b7bb35df99f945718093e89ae71da95b429",
     "url": "https://github.com/taskcluster/taskcluster/commit/25e72b7bb35df99f945718093e89ae71da95b429",
     "commiter_name": "djmitche",
@@ -1059,7 +3225,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "48": {
+  "109": {
     "sha": "c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "url": "https://github.com/taskcluster/taskcluster/commit/c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "commiter_name": "djmitche",
@@ -1071,7 +3237,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "49": {
+  "110": {
     "sha": "8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "commiter_name": "owlishDeveloper",
@@ -1083,7 +3249,7 @@
       "services/web-server/package.json"
     ]
   },
-  "50": {
+  "111": {
     "sha": "63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "url": "https://github.com/taskcluster/taskcluster/commit/63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "commiter_name": "owlishDeveloper",
@@ -1102,7 +3268,7 @@
       "yarn.lock"
     ]
   },
-  "51": {
+  "112": {
     "sha": "0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "url": "https://github.com/taskcluster/taskcluster/commit/0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "commiter_name": "djmitche",
@@ -1113,7 +3279,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "52": {
+  "113": {
     "sha": "cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "url": "https://github.com/taskcluster/taskcluster/commit/cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "commiter_name": "djmitche",
@@ -1125,7 +3291,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "53": {
+  "114": {
     "sha": "38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "url": "https://github.com/taskcluster/taskcluster/commit/38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "commiter_name": "owlishDeveloper",
@@ -1226,7 +3392,7 @@
       "yarn.lock"
     ]
   },
-  "54": {
+  "115": {
     "sha": "6920c209219ee2d28130f9d36e24507be86d7c28",
     "url": "https://github.com/taskcluster/taskcluster/commit/6920c209219ee2d28130f9d36e24507be86d7c28",
     "commiter_name": "djmitche",
@@ -1237,7 +3403,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "55": {
+  "116": {
     "sha": "70ad6b427043f69e28f9cb6aaef534151b13383c",
     "url": "https://github.com/taskcluster/taskcluster/commit/70ad6b427043f69e28f9cb6aaef534151b13383c",
     "commiter_name": "djmitche",
@@ -1250,7 +3416,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "56": {
+  "117": {
     "sha": "f67c857131a9ef118b56c43d89f173dee62f2512",
     "url": "https://github.com/taskcluster/taskcluster/commit/f67c857131a9ef118b56c43d89f173dee62f2512",
     "commiter_name": "owlishDeveloper",
@@ -1387,7 +3553,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "57": {
+  "118": {
     "sha": "e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "url": "https://github.com/taskcluster/taskcluster/commit/e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "commiter_name": "djmitche",
@@ -1398,7 +3564,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "58": {
+  "119": {
     "sha": "4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "url": "https://github.com/taskcluster/taskcluster/commit/4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "commiter_name": "djmitche",
@@ -1409,7 +3575,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "59": {
+  "120": {
     "sha": "49b961bb95ce8671fd9a54543694acab9ef548d7",
     "url": "https://github.com/taskcluster/taskcluster/commit/49b961bb95ce8671fd9a54543694acab9ef548d7",
     "commiter_name": "djmitche",
@@ -1420,7 +3586,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "60": {
+  "121": {
     "sha": "fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "url": "https://github.com/taskcluster/taskcluster/commit/fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "commiter_name": "owlishDeveloper",
@@ -1432,7 +3598,7 @@
       "services/github/test/handler_test.js"
     ]
   },
-  "61": {
+  "122": {
     "sha": "98c16d0320d16f8d284a82d36c792e192e389664",
     "url": "https://github.com/taskcluster/taskcluster/commit/98c16d0320d16f8d284a82d36c792e192e389664",
     "commiter_name": "djmitche",
@@ -1443,7 +3609,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "62": {
+  "123": {
     "sha": "d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "url": "https://github.com/taskcluster/taskcluster/commit/d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "commiter_name": "djmitche",
@@ -1454,7 +3620,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "63": {
+  "124": {
     "sha": "1a224a54c17fe7871c39b56e185268082623760f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1a224a54c17fe7871c39b56e185268082623760f",
     "commiter_name": "djmitche",
@@ -1583,7 +3749,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "64": {
+  "125": {
     "sha": "3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "url": "https://github.com/taskcluster/taskcluster/commit/3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "commiter_name": "djmitche",
@@ -1595,7 +3761,7 @@
       "libraries/references/test/validate_test.js"
     ]
   },
-  "65": {
+  "126": {
     "sha": "6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "url": "https://github.com/taskcluster/taskcluster/commit/6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "commiter_name": "djmitche",
@@ -1719,7 +3885,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "66": {
+  "127": {
     "sha": "4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "url": "https://github.com/taskcluster/taskcluster/commit/4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "commiter_name": "djmitche",
@@ -1733,7 +3899,7 @@
       "libraries/references/test/metaschema_test.js"
     ]
   },
-  "67": {
+  "128": {
     "sha": "d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "commiter_name": "Biboswan",
@@ -1746,7 +3912,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "68": {
+  "129": {
     "sha": "70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "url": "https://github.com/taskcluster/taskcluster/commit/70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "commiter_name": "djmitche",
@@ -1757,7 +3923,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "69": {
+  "130": {
     "sha": "4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "url": "https://github.com/taskcluster/taskcluster/commit/4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "commiter_name": "djmitche",
@@ -1771,7 +3937,7 @@
       "infrastructure/builder/test/formats/tf_json_test.js"
     ]
   },
-  "70": {
+  "131": {
     "sha": "fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "commiter_name": "djmitche",
@@ -1782,7 +3948,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "71": {
+  "132": {
     "sha": "49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "url": "https://github.com/taskcluster/taskcluster/commit/49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "commiter_name": "djmitche",
@@ -1796,7 +3962,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "72": {
+  "133": {
     "sha": "65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "url": "https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "commiter_name": "djmitche",
@@ -1807,7 +3973,7 @@
       "package.json"
     ]
   },
-  "73": {
+  "134": {
     "sha": "cb01a41a19567239c3796b541111cff500117927",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb01a41a19567239c3796b541111cff500117927",
     "commiter_name": "imbstack",
@@ -1818,7 +3984,7 @@
       "package.json"
     ]
   },
-  "74": {
+  "135": {
     "sha": "837bc03478191928c019b36b2cd1a8360c242427",
     "url": "https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427",
     "commiter_name": "djmitche",
@@ -1830,7 +3996,7 @@
       "yarn.lock"
     ]
   },
-  "75": {
+  "136": {
     "sha": "d3336686210d98db119e5640c574dc62f2ca0237",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237",
     "commiter_name": "djmitche",
@@ -1841,7 +4007,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "76": {
+  "137": {
     "sha": "fcfa98088751a39ddc8707445a476158f2f118e3",
     "url": "https://github.com/taskcluster/taskcluster/commit/fcfa98088751a39ddc8707445a476158f2f118e3",
     "commiter_name": "arshadkazmi42",
@@ -1854,7 +4020,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "77": {
+  "138": {
     "sha": "e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "url": "https://github.com/taskcluster/taskcluster/commit/e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "commiter_name": "renovate-bot",
@@ -1866,7 +4032,7 @@
       "yarn.lock"
     ]
   },
-  "78": {
+  "139": {
     "sha": "68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "url": "https://github.com/taskcluster/taskcluster/commit/68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "commiter_name": "djmitche",
@@ -1877,7 +4043,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "79": {
+  "140": {
     "sha": "7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "commiter_name": "imbstack",
@@ -1888,7 +4054,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "80": {
+  "141": {
     "sha": "01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "url": "https://github.com/taskcluster/taskcluster/commit/01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "commiter_name": "imbstack",
@@ -1899,7 +4065,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "81": {
+  "142": {
     "sha": "83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "commiter_name": "imbstack",
@@ -1910,7 +4076,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "82": {
+  "143": {
     "sha": "13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "url": "https://github.com/taskcluster/taskcluster/commit/13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "commiter_name": "imbstack",
@@ -1921,7 +4087,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "83": {
+  "144": {
     "sha": "05c9871d6131e99147e0874dfe1de8f19541ace4",
     "url": "https://github.com/taskcluster/taskcluster/commit/05c9871d6131e99147e0874dfe1de8f19541ace4",
     "commiter_name": "owlishDeveloper",
@@ -1932,7 +4098,7 @@
       "README.md"
     ]
   },
-  "84": {
+  "145": {
     "sha": "7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "commiter_name": "imbstack",
@@ -1953,7 +4119,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "85": {
+  "146": {
     "sha": "756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "url": "https://github.com/taskcluster/taskcluster/commit/756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "commiter_name": "djmitche",
@@ -1964,7 +4130,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "86": {
+  "147": {
     "sha": "265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "url": "https://github.com/taskcluster/taskcluster/commit/265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "commiter_name": "djmitche",
@@ -1975,7 +4141,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "87": {
+  "148": {
     "sha": "0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "commiter_name": "Biboswan",
@@ -2006,7 +4172,7 @@
       "yarn.lock"
     ]
   },
-  "88": {
+  "149": {
     "sha": "0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "url": "https://github.com/taskcluster/taskcluster/commit/0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "commiter_name": "Biboswan",
@@ -2019,7 +4185,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "89": {
+  "150": {
     "sha": "ac25a3592f5b81a50ea2c320662e38f122af5697",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac25a3592f5b81a50ea2c320662e38f122af5697",
     "commiter_name": "djmitche",
@@ -2030,7 +4196,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "90": {
+  "151": {
     "sha": "c2046d13643624bf7463f990c243c7c2dc54d827",
     "url": "https://github.com/taskcluster/taskcluster/commit/c2046d13643624bf7463f990c243c7c2dc54d827",
     "commiter_name": "djmitche",
@@ -2042,7 +4208,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "91": {
+  "152": {
     "sha": "57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "url": "https://github.com/taskcluster/taskcluster/commit/57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "commiter_name": "djmitche",
@@ -2054,7 +4220,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "92": {
+  "153": {
     "sha": "a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "url": "https://github.com/taskcluster/taskcluster/commit/a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "commiter_name": "djmitche",
@@ -2065,7 +4231,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "93": {
+  "154": {
     "sha": "e881636d369651eefc7ef242ecf93a228f142e91",
     "url": "https://github.com/taskcluster/taskcluster/commit/e881636d369651eefc7ef242ecf93a228f142e91",
     "commiter_name": "Biboswan",
@@ -2081,7 +4247,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "94": {
+  "155": {
     "sha": "6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "commiter_name": "djmitche",
@@ -2092,7 +4258,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "95": {
+  "156": {
     "sha": "914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "commiter_name": "djmitche",
@@ -2104,7 +4270,7 @@
       "yarn.lock"
     ]
   },
-  "96": {
+  "157": {
     "sha": "74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "url": "https://github.com/taskcluster/taskcluster/commit/74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "commiter_name": "djmitche",
@@ -2115,7 +4281,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "97": {
+  "158": {
     "sha": "e25fd44af389cd820261c921ca2f496b82220f75",
     "url": "https://github.com/taskcluster/taskcluster/commit/e25fd44af389cd820261c921ca2f496b82220f75",
     "commiter_name": "renovate-bot",
@@ -2127,7 +4293,7 @@
       "yarn.lock"
     ]
   },
-  "98": {
+  "159": {
     "sha": "90279639ab138faa9351d7182c6b54f9fe5614f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90279639ab138faa9351d7182c6b54f9fe5614f7",
     "commiter_name": "djmitche",
@@ -2154,7 +4320,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "99": {
+  "160": {
     "sha": "90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "commiter_name": "renovate-bot",
@@ -2181,7 +4347,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "100": {
+  "161": {
     "sha": "37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "url": "https://github.com/taskcluster/taskcluster/commit/37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "commiter_name": "djmitche",
@@ -2195,7 +4361,7 @@
       "yarn.lock"
     ]
   },
-  "101": {
+  "162": {
     "sha": "f621c39d08983099fdd627d53762c3aef7863efc",
     "url": "https://github.com/taskcluster/taskcluster/commit/f621c39d08983099fdd627d53762c3aef7863efc",
     "commiter_name": "djmitche",
@@ -2206,7 +4372,7 @@
       "services/queue/schemas/v1/post-artifact-request.yml"
     ]
   },
-  "102": {
+  "163": {
     "sha": "e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "url": "https://github.com/taskcluster/taskcluster/commit/e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "commiter_name": "renovate-bot",
@@ -2220,7 +4386,7 @@
       "yarn.lock"
     ]
   },
-  "103": {
+  "164": {
     "sha": "c6216c727c43c975fe278c71fd019f537c914665",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6216c727c43c975fe278c71fd019f537c914665",
     "commiter_name": "djmitche",
@@ -2232,7 +4398,7 @@
       "yarn.lock"
     ]
   },
-  "104": {
+  "165": {
     "sha": "d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "url": "https://github.com/taskcluster/taskcluster/commit/d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "commiter_name": "djmitche",
@@ -2243,7 +4409,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "105": {
+  "166": {
     "sha": "24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "url": "https://github.com/taskcluster/taskcluster/commit/24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "commiter_name": "djmitche",
@@ -2254,7 +4420,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "106": {
+  "167": {
     "sha": "c15284770e22b39e9d916cd61b6de053c975a33d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c15284770e22b39e9d916cd61b6de053c975a33d",
     "commiter_name": "arshadkazmi42",
@@ -2267,7 +4433,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "107": {
+  "168": {
     "sha": "2b50ddc441741b9914af1a039ff81980760a3930",
     "url": "https://github.com/taskcluster/taskcluster/commit/2b50ddc441741b9914af1a039ff81980760a3930",
     "commiter_name": "arshadkazmi42",
@@ -2279,7 +4445,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "108": {
+  "169": {
     "sha": "c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "url": "https://github.com/taskcluster/taskcluster/commit/c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "commiter_name": "djmitche",
@@ -2290,7 +4456,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "109": {
+  "170": {
     "sha": "47401a78f1e276fca5c890701e5f2c2432888bdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/47401a78f1e276fca5c890701e5f2c2432888bdb",
     "commiter_name": "djmitche",
@@ -2301,7 +4467,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "110": {
+  "171": {
     "sha": "ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "url": "https://github.com/taskcluster/taskcluster/commit/ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "commiter_name": "renovate-bot",
@@ -2313,7 +4479,7 @@
       "yarn.lock"
     ]
   },
-  "111": {
+  "172": {
     "sha": "3f0f772cdf633ee65c11b041293cf7281afa8295",
     "url": "https://github.com/taskcluster/taskcluster/commit/3f0f772cdf633ee65c11b041293cf7281afa8295",
     "commiter_name": "Biboswan",
@@ -2324,7 +4490,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "112": {
+  "173": {
     "sha": "d999fad02b641985f96a60d6c114fb46d56a6629",
     "url": "https://github.com/taskcluster/taskcluster/commit/d999fad02b641985f96a60d6c114fb46d56a6629",
     "commiter_name": "Biboswan",
@@ -2337,7 +4503,7 @@
       "libraries/monitor/test/uncaught_test.js"
     ]
   },
-  "113": {
+  "174": {
     "sha": "7464c610cd46f6a330090e05fb76c215bf2c1205",
     "url": "https://github.com/taskcluster/taskcluster/commit/7464c610cd46f6a330090e05fb76c215bf2c1205",
     "commiter_name": "Biboswan",
@@ -2355,7 +4521,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "114": {
+  "175": {
     "sha": "aa822ad2500f47ef295e490856f8c2e28359c512",
     "url": "https://github.com/taskcluster/taskcluster/commit/aa822ad2500f47ef295e490856f8c2e28359c512",
     "commiter_name": "imbstack",
@@ -2371,7 +4537,7 @@
       "yarn.lock"
     ]
   },
-  "115": {
+  "176": {
     "sha": "2937f63065701ffa391121d08d566e35c2b220bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/2937f63065701ffa391121d08d566e35c2b220bb",
     "commiter_name": "renovate-bot",
@@ -2387,7 +4553,7 @@
       "yarn.lock"
     ]
   },
-  "116": {
+  "177": {
     "sha": "d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "url": "https://github.com/taskcluster/taskcluster/commit/d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "commiter_name": "imbstack",
@@ -2401,7 +4567,7 @@
       "yarn.lock"
     ]
   },
-  "117": {
+  "178": {
     "sha": "29c398016463c7b50703cd3224ecde4794703f15",
     "url": "https://github.com/taskcluster/taskcluster/commit/29c398016463c7b50703cd3224ecde4794703f15",
     "commiter_name": "imbstack",
@@ -2413,7 +4579,7 @@
       "yarn.lock"
     ]
   },
-  "118": {
+  "179": {
     "sha": "b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "commiter_name": "imbstack",
@@ -2427,7 +4593,7 @@
       "yarn.lock"
     ]
   },
-  "119": {
+  "180": {
     "sha": "bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "url": "https://github.com/taskcluster/taskcluster/commit/bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "commiter_name": "renovate-bot",
@@ -2441,7 +4607,7 @@
       "yarn.lock"
     ]
   },
-  "120": {
+  "181": {
     "sha": "9159c878868282fad3f75122efed0475649d5441",
     "url": "https://github.com/taskcluster/taskcluster/commit/9159c878868282fad3f75122efed0475649d5441",
     "commiter_name": "renovate-bot",
@@ -2453,7 +4619,7 @@
       "yarn.lock"
     ]
   },
-  "121": {
+  "182": {
     "sha": "0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "commiter_name": "imbstack",
@@ -2465,7 +4631,7 @@
       "yarn.lock"
     ]
   },
-  "122": {
+  "183": {
     "sha": "75fdbf91d771bce53951a92c666ff4b439152f22",
     "url": "https://github.com/taskcluster/taskcluster/commit/75fdbf91d771bce53951a92c666ff4b439152f22",
     "commiter_name": "renovate-bot",
@@ -2477,7 +4643,7 @@
       "yarn.lock"
     ]
   },
-  "123": {
+  "184": {
     "sha": "1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "url": "https://github.com/taskcluster/taskcluster/commit/1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "commiter_name": "imbstack",
@@ -2489,7 +4655,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "124": {
+  "185": {
     "sha": "32874aa462882888bbdba94854e8d8b6edc01dcf",
     "url": "https://github.com/taskcluster/taskcluster/commit/32874aa462882888bbdba94854e8d8b6edc01dcf",
     "commiter_name": "imbstack",
@@ -2501,7 +4667,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "125": {
+  "186": {
     "sha": "acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "url": "https://github.com/taskcluster/taskcluster/commit/acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "commiter_name": "imbstack",
@@ -2512,7 +4678,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "126": {
+  "187": {
     "sha": "13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "commiter_name": "petemoore",
@@ -2523,7 +4689,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "127": {
+  "188": {
     "sha": "69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "url": "https://github.com/taskcluster/taskcluster/commit/69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "commiter_name": "imbstack",
@@ -2535,7 +4701,7 @@
       "yarn.lock"
     ]
   },
-  "128": {
+  "189": {
     "sha": "67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "url": "https://github.com/taskcluster/taskcluster/commit/67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "commiter_name": "imbstack",
@@ -2547,7 +4713,7 @@
       "yarn.lock"
     ]
   },
-  "129": {
+  "190": {
     "sha": "5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "commiter_name": "imbstack",
@@ -2558,7 +4724,7 @@
       "libraries/scopes/src/expressions.js"
     ]
   },
-  "130": {
+  "191": {
     "sha": "c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "commiter_name": "imbstack",
@@ -2571,7 +4737,7 @@
       "yarn.lock"
     ]
   },
-  "131": {
+  "192": {
     "sha": "92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "url": "https://github.com/taskcluster/taskcluster/commit/92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "commiter_name": "imbstack",
@@ -2583,7 +4749,7 @@
       "yarn.lock"
     ]
   },
-  "132": {
+  "193": {
     "sha": "1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "url": "https://github.com/taskcluster/taskcluster/commit/1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "commiter_name": "renovate-bot",

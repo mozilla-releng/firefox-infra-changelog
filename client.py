@@ -3,6 +3,8 @@ import re
 import sys
 import json
 import time
+from urllib.request import urlopen
+
 import click
 import requests
 from os import listdir
@@ -154,7 +156,7 @@ def get_commit_details(commit):
     except ValueError:
         commit_sha = "null"
     try:
-        commiter_name = commit.author.loggerin
+        commiter_name = commit.author.login
     except ValueError:
         commiter_name = "null"
     try:
@@ -299,29 +301,36 @@ def get_date_from_json(repo_name):
 
 def get_last_local_push_id(repo_name):
     hg_json_filename = "{}.json".format(repo_name)
-    with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
-        json_content = json.load(commit_json)  # loads the content of existing json into a variable
-    last_stored_push_id = json_content.get("0").get("last_push_id")
+    try:
+        with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
+            json_content = json.load(commit_json)  # loads the content of existing json into a variable
+        last_stored_push_id = json_content.get("0").get("last_push_id")
+    except FileNotFoundError:
+        if logger:
+            print("No file was found!")
+        data = {"0": {"last_push_id": "0"}}
+        json_data = json.dumps(data)
+        data = json.loads(json_data)
+        last_stored_push_id = data.get("0").get("last_push_id")
+
     if logger:
         print("Last local push id is : ", last_stored_push_id)
     return last_stored_push_id
 
 
-def generate_hg_pushes_link(repo_name):
+def generate_hg_pushes_link(repo_name, repository_url):
     start_id = get_last_local_push_id(repo_name)
-    if repo_name == "mozilla-central":
-        data = json.loads(
-            requests.get("https://hg.mozilla.org/mozilla-central/json-pushes?version=2&full=1&startID=15&endID=16").text)
-        end_id = data.get("lastpushid")
-        generate_pushes_link = "https://hg.mozilla.org/mozilla-central/json-pushes?version=2&full=1&startID={}&endID={}".format(
-            start_id, end_id)
-    else:
-        data = json.loads(
-            requests.get(
-                "https://hg.mozilla.org/build/{}/json-pushes?version=2&full=1&startID=15&endID=16".format(repo_name)).text)
-        end_id = data.get("lastpushid")
-        generate_pushes_link = "https://hg.mozilla.org/build/{}/json-pushes?version=2&full=1&startID={}&endID={}".format(repo_name,
-            start_id, end_id)
+    url = repository_url + "json-pushes?version=2"
+    response = urlopen(url)
+    data = json.loads(response.read())
+    if logger:
+        print("Output data:", data)
+    end_id = data.get("lastpushid")
+    if start_id == 0 :
+        start_id = end_id - 1000
+    start_id = str(start_id)
+    end_id = str(end_id)
+    generate_pushes_link = repository_url + "json-pushes?version=2&full=1&startID={}&endID={}".format(start_id, end_id)
     return generate_pushes_link
 
 
@@ -369,7 +378,8 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
             files_changed_by_commit = [x.filename for x in commit.files]
             if len(files_changed_by_commit) > 0:
                 each_commit = {}
-                print(commit.commit.message)
+                if logger:
+                    print(commit.commit.message)
                 if "deploy" in commit.commit.message:
                     number += 1
                     each_commit.update({int(number): get_commit_details(commit)})
@@ -523,13 +533,13 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     :param repository_name: name of the repository
     :return: Writes data in hg json files
     """
-    link = generate_hg_pushes_link(repository_name)
+    if logger:
+        print("Repo url:", repository_url)
+    link = generate_hg_pushes_link(repository_name, repository_url)
     data = json.loads(requests.get(link).text)
     last_push_id = data.get("lastpushid")
     hg_repo_data = {}
     number = 0
-    if logger:
-        print("\nWorking on repo:", repository_name)
     hg_repo_data.update({"0": {"last_push_id": last_push_id}})
     for key in data.get("pushes"):
         number += 1
@@ -691,8 +701,27 @@ def create_hg_md_table(repository_name):
                         try:
                             commit_author = data.get(key).get("changeset_commits").get(entry).get("commiter_name")
                             commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
+                            commit_author = remove_chars(commit_author, "\u30c4")
+                            commit_author = remove_chars(commit_author, "\u00c1")
+                            commit_author = remove_chars(commit_author, "\u00ee")
+                            commit_author = remove_chars(commit_author, "\u0103")
+                            commit_author = remove_chars(commit_author, "\u00e4")
+                            commit_author = remove_chars(commit_author, "\u00e8")
+                            commit_author = remove_chars(commit_author, "\u2013")
+                            commit_author = remove_chars(commit_author, "\u00af")
+
                             message = data.get(key).get("changeset_commits").get(entry).get("commit_message")
                             message = re.sub("\n|", "", message)
+                            message = remove_chars(message, "\u0131")
+                            message = remove_chars(message, "\u30c4")
+                            message = remove_chars(message, "\u00c1")
+                            message = remove_chars(message, "\u00ee")
+                            message = remove_chars(message, "\u0103")
+                            message = remove_chars(message, "\u00e4")
+                            message = remove_chars(message, "\u00e8")
+                            message = remove_chars(message, "\u2013")
+                            message = remove_chars(message, "\u00af")
+
                             url = data.get(key).get("changeset_commits").get(entry).get("url")
 
                             row = "|" + changeset_id + \
@@ -727,7 +756,9 @@ def create_hg_md_table(repository_name):
 
 def clear_file(file_name, generated_for_days = 1):
     """
+    Helper function.
     This function takes a file that clears the content and output's a base table header for a markdown file.
+    :param generated_for_days: used for generate the title (default being set for one day)
     :param file_name: Name of the file to be written. (should also contain the path)
     :return: A file should be created and should contain base table.
     """
@@ -802,6 +833,12 @@ def extract_reviewer(string):
 
 
 def write_date_header(file_name, datetime_object):
+    """
+    This function writes a date from a specific datetime object into a file as a date header.
+    :param file_name: name of the file to be written to.
+    :param datetime_object: datetime object used for write to file.
+    :return:
+    """
     file = open(file_name, "a")
 
     base_table = "|            | \n" + \
@@ -809,6 +846,8 @@ def write_date_header(file_name, datetime_object):
     date_header = "| Generated on: " + str(datetime.utcnow()) + " and contains modifications from: " + str(datetime_object) + " |"
     file.write("\n" + base_table + date_header + "\n")
     file.close()
+    if logger:
+        print("Generated date header for file:", file_name, " with datestamp", str(datetime.utcnow()))
 
 
 def remove_chars(string, char):
@@ -991,6 +1030,8 @@ def write_main_md_table(file_name, repository_url, last_commit, author, reviewer
     """
     This function opens a file (that file should be already created and appends to it a row that will contain the
     repository, the last commit and the deploy time.
+    :param reviewer: Reviewer name
+    :param author: Author name for the push/commit
     :param file_name: Name of the file in which the content is appended. (should also contain the path)
     :param repository_url: Repository url for the first element of the table.
     :param last_commit: Description of the last commit used as the 2nd element of the table
@@ -1008,8 +1049,14 @@ def write_main_md_table(file_name, repository_url, last_commit, author, reviewer
 
 
 def get_keys(name):
+    """
+
+    :param name:
+    :return:
+    """
     for key in repositories.get("{}".format(name)):
         repoList.append(key)
+    print(repoList)
     return repoList
 
 
@@ -1021,11 +1068,15 @@ def get_keys(name):
 def cli(git, hg, l, r):
     if git:
         create_files_for_git(repositories, onerepo=False)
+        clear_file("main_md_table.md", generate_for_x_days)
+        generate_main_md_table("hg_files", generate_for_x_days)  # TODO change the code to get the commit infos from hg json files (lines 754-761)
         generate_main_md_table("git_files", generate_for_x_days)
         click.echo("Script ran in GIT Only mode")
     if hg:
         create_files_for_hg(repositories, onerepo=False)
-        # generate_main_md_table("hg_files", generate_for_x_days) TODO change the code to get the commit infos from hg json files (lines 754-761)
+        clear_file("main_md_table.md", generate_for_x_days)
+        generate_main_md_table("hg_files", generate_for_x_days)# TODO change the code to get the commit infos from hg json files (lines 754-761)
+        generate_main_md_table("git_files", generate_for_x_days)
         click.echo("Script ran in HG Only mode")
     if l:
         logger = True
@@ -1047,7 +1098,9 @@ def cli(git, hg, l, r):
                         generate_main_md_table("git_files", generate_for_x_days)
                     elif repository in repositories.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
+                        clear_file("main_md_table.md", generate_for_x_days)
                         generate_main_md_table("hg_files", generate_for_x_days)
+                        generate_main_md_table("git_files", generate_for_x_days)
 
             new_entry = int(w) - 1
 
@@ -1060,12 +1113,14 @@ def cli(git, hg, l, r):
         create_files_for_git(repositories, onerepo=False)
         create_files_for_hg(repositories, onerepo=False)
         clear_file("main_md_table.md", generate_for_x_days)
-        # generate_main_md_table("hg_files", generate_for_x_days) TODO change the code to get the commit infos from hg json files (lines 754-761)
+        generate_main_md_table("hg_files", generate_for_x_days)
         generate_main_md_table("git_files", generate_for_x_days)
+
+
 if __name__ == "__main__":
     #Modifiy the "generate_for_x_days" variable to generate for a specific day.
     logger = True
-    generate_for_x_days = 50
+    generate_for_x_days = 1
     TOKEN = os.environ.get("GIT_TOKEN")
     git = Github(TOKEN)
     repositories_data = open("./repositories.json").read()
