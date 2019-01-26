@@ -95,6 +95,70 @@
         "push_type": "json-log"
       }
     },
+    "mozilla-inbound": {
+      "name": "Mozilla Inbound",
+      "url": "https://hg.mozilla.org/integration/mozilla-inbound/",
+      "team": "",
+      "top-contributors": [
+        " ",
+        " "
+      ],
+      "configuration": {
+        "folders-to-check": [
+          "testing/mozharness",
+          "taskcluster"
+        ],
+        "push_type": "json-log"
+      }
+    },
+    "autoland": {
+      "name": "Autoland",
+      "url": "https://hg.mozilla.org/integration/autoland/",
+      "team": "",
+      "top-contributors": [
+        " ",
+        " "
+      ],
+      "configuration": {
+        "folders-to-check": [
+          "testing/mozharness",
+          "taskcluster"
+        ],
+        "push_type": "json-log"
+      }
+    },
+    "mozilla-beta": {
+      "name": "Mozilla Beta",
+      "url": "https://hg.mozilla.org/releases/mozilla-beta/",
+      "team": "",
+      "top-contributors": [
+        " ",
+        " "
+      ],
+      "configuration": {
+        "folders-to-check": [
+          "testing/mozharness",
+          "taskcluster"
+        ],
+        "push_type": "json-log"
+      }
+    },
+    "mozilla-release": {
+      "name": "Mozilla Release",
+      "url": "https://hg.mozilla.org/releases/mozilla-release/",
+      "team": "",
+      "top-contributors": [
+        " ",
+        " "
+      ],
+      "configuration": {
+        "folders-to-check": [
+          "testing/mozharness",
+          "taskcluster"
+        ],
+        "push_type": "json-log"
+      }
+    },
     "ci-configuration": {
       "name": "CI Configuration",
       "url": "https://hg.mozilla.org/build/ci-configuration/",
