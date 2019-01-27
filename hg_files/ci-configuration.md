@@ -1,8 +1,11 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 49
+ CURRENT PUSH ID: 52
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|52|2019-01-25 19:31:53|Mike de Boer <mdeboer@mozilla.com>|Bug 1522143 - Enable taskcluster for the cedar project branch. r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17608|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=2b9e4ff2aa09
+|51|2019-01-25 17:25:45|Dustin J. Mitchell <dustin@mozilla.com>|Backed out changeset de779760a956|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=0905dd1fbcbb
+|50|2019-01-25 16:26:22|Mike de Boer <mdeboer@mozilla.com>|Bug 1522143 - Enable buildbot and taskcluster for the cedar project branch. r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17608|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=de779760a956
 |49|2018-12-18 21:48:21|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1515137 - set TASKCLUSTER_ROOT_URL for cron hooks r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D14883|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=e7c0152d0dc4
 |48|2018-11-30 18:35:24|Tom Prince <mozilla@hocat.ca>|Bug 1510441: Use sparse profile in cron tasks; r=gpsDifferential Revision: https://phabricator.services.mozilla.com/D13141|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=e9634d8942ca
 |47|2018-11-06 23:44:48|Rob Lemley <rob@thunderbird.net>|Bug 1503894 - reenable taskcluster-cron for comm-central repo. r=tomprinceThis goes along with a .cron.yml update in comm-central that removes theperiodic-file-update cron configuration. (Bug 1499590 comment 15)This will get comm-central nightly builds working again.Differential Revision: https://phabricator.services.mozilla.com/D10959|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=13cbc18135d2

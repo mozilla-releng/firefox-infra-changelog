@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 49
+    "last_push_id": 52
   },
   "1": {
     "changeset_number": "31",
@@ -283,6 +283,51 @@
         "commit_message": "Bug 1515137 - set TASKCLUSTER_ROOT_URL for cron hooks r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D14883",
         "files_changed": [
           "cron-task-template.yml"
+        ]
+      }
+    }
+  },
+  "20": {
+    "changeset_number": "50",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-01-25 16:26:22",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=de779760a956",
+        "commiter_name": "Mike de Boer <mdeboer@mozilla.com>",
+        "commit_message": "Bug 1522143 - Enable buildbot and taskcluster for the cedar project branch. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17608",
+        "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "21": {
+    "changeset_number": "51",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-01-25 17:25:45",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=0905dd1fbcbb",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Backed out changeset de779760a956",
+        "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "22": {
+    "changeset_number": "52",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-25 19:31:53",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=2b9e4ff2aa09",
+        "commiter_name": "Mike de Boer <mdeboer@mozilla.com>",
+        "commit_message": "Bug 1522143 - Enable taskcluster for the cedar project branch. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17608",
+        "files_changed": [
+          "projects.yml"
         ]
       }
     }

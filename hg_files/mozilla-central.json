@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35402
+    "last_push_id": 35438
   },
   "1": {
     "changeset_number": "35344",
@@ -488,6 +488,554 @@
         "commit_message": "Bug 1520374 - follow-up - remove unused import; r=me,a=test-only on a CLOSED TREE",
         "files_changed": [
           "testing/mozharness/mozharness/base/python.py"
+        ]
+      }
+    }
+  },
+  "21": {
+    "changeset_number": "35411",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-01-22 05:53:40",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=cbbf07c28138",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17107",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=1cccd0ed64c3",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1517738 - Set Raptor speedometer fennec job to tier3 due to failure on beta; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17126",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      }
+    }
+  },
+  "22": {
+    "changeset_number": "35417",
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-01-22 23:53:49",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=b707a2928093",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1521099 - Promote raptor pageload geckoview tp6m-1 to tier 2; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17147",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=d9e1039ecab0",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1520523 - Update Chromium version running with Raptor in production; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16724",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/testing/raptor.py",
+          "testing/raptor/raptor/raptor.py"
+        ]
+      }
+    }
+  },
+  "23": {
+    "changeset_number": "35418",
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-01-23 11:28:26",
+    "changeset_commits": {
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=cef0a23a3849",
+        "commiter_name": "Peter Moore <pmoore@mozilla.com>",
+        "commit_message": "Bug 1399401 - enable coalescing on Windows 7 and Windows 10 worker types,r=jmaher",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/coalesce.py"
+        ]
+      }
+    }
+  },
+  "24": {
+    "changeset_number": "35419",
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-01-23 18:31:25",
+    "changeset_commits": {
+      "30": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=ef7f2df97310",
+        "commiter_name": "Matt Howell <mhowell@mozilla.com>",
+        "commit_message": "Bug 1514806 Part 5 - Select the appropriate 7-zip SFX stub binary for the build target. r=firefox-build-system-reviewers,mshal#firefox-build-system-reviewers\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15983",
+        "files_changed": [
+          "browser/installer/windows/Makefile.in",
+          "browser/locales/Makefile.in",
+          "taskcluster/ci/release-eme-free-repack-repackage/kind.yml",
+          "taskcluster/ci/release-partner-repack-repackage/kind.yml",
+          "taskcluster/ci/repackage-l10n/kind.yml",
+          "taskcluster/ci/repackage-msi/kind.yml",
+          "taskcluster/ci/repackage/kind.yml",
+          "testing/mozharness/configs/repackage/base.py",
+          "testing/mozharness/configs/repackage/win32_sfx_stub.py",
+          "testing/mozharness/configs/repackage/win64-aarch64_sfx_stub.py",
+          "testing/mozharness/scripts/repackage.py"
+        ]
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=11a6b0fbd289",
+        "commiter_name": "Matt Howell <mhowell@mozilla.com>",
+        "commit_message": "Bug 1514806 Part 6 - Disable running UPX in the installer package for targets it doesn't support. r=firefox-build-system-reviewers,mshal#firefox-build-system-reviewers\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15984",
+        "files_changed": [
+          "python/mozbuild/mozbuild/action/exe_7z_archive.py",
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "python/mozbuild/mozbuild/repackaging/installer.py",
+          "taskcluster/taskgraph/transforms/repackage.py",
+          "toolkit/mozapps/installer/windows/nsis/makensis.mk"
+        ]
+      },
+      "41": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=b1390bf41f67",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520874: [mozharness] Don't set `nightly_build` in per-project configs, since it is set by `taskcluster_nightly.py` config file; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15859",
+        "files_changed": [
+          "testing/mozharness/configs/single_locale/alder.py",
+          "testing/mozharness/configs/single_locale/ash.py",
+          "testing/mozharness/configs/single_locale/ash_android-api-16.py",
+          "testing/mozharness/configs/single_locale/autoland.py",
+          "testing/mozharness/configs/single_locale/autoland_android-api-16.py",
+          "testing/mozharness/configs/single_locale/jamun.py",
+          "testing/mozharness/configs/single_locale/jamun_android-api-16.py",
+          "testing/mozharness/configs/single_locale/maple_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_devedition.py",
+          "testing/mozharness/configs/single_locale/mozilla-central.py",
+          "testing/mozharness/configs/single_locale/mozilla-central_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-esr60.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-release.py",
+          "testing/mozharness/configs/single_locale/try.py",
+          "testing/mozharness/configs/single_locale/try_android-api-16.py"
+        ]
+      },
+      "42": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=3c3a5c19f715",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520874: [mozharness] Set L10n update channel based on build update channel; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15860",
+        "files_changed": [
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/taskgraph/transforms/build.py",
+          "taskcluster/taskgraph/transforms/l10n.py",
+          "taskcluster/taskgraph/util/attributes.py",
+          "testing/mozharness/configs/single_locale/alder.py",
+          "testing/mozharness/configs/single_locale/ash.py",
+          "testing/mozharness/configs/single_locale/ash_android-api-16.py",
+          "testing/mozharness/configs/single_locale/autoland.py",
+          "testing/mozharness/configs/single_locale/autoland_android-api-16.py",
+          "testing/mozharness/configs/single_locale/jamun.py",
+          "testing/mozharness/configs/single_locale/jamun_android-api-16.py",
+          "testing/mozharness/configs/single_locale/linux64_devedition.py",
+          "testing/mozharness/configs/single_locale/linux_devedition.py",
+          "testing/mozharness/configs/single_locale/macosx64_devedition.py",
+          "testing/mozharness/configs/single_locale/maple_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_devedition.py",
+          "testing/mozharness/configs/single_locale/mozilla-central.py",
+          "testing/mozharness/configs/single_locale/mozilla-central_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-esr60.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-release.py",
+          "testing/mozharness/configs/single_locale/mozilla-release_android-api-16.py",
+          "testing/mozharness/configs/single_locale/onchange.py",
+          "testing/mozharness/configs/single_locale/tc_linux32.py",
+          "testing/mozharness/configs/single_locale/tc_linux64.py",
+          "testing/mozharness/configs/single_locale/tc_macosx64.py",
+          "testing/mozharness/configs/single_locale/tc_win32.py",
+          "testing/mozharness/configs/single_locale/tc_win64.py",
+          "testing/mozharness/configs/single_locale/try.py",
+          "testing/mozharness/configs/single_locale/try_android-api-16.py",
+          "testing/mozharness/configs/single_locale/win32_devedition.py",
+          "testing/mozharness/configs/single_locale/win64_devedition.py",
+          "testing/mozharness/scripts/desktop_l10n.py",
+          "testing/mozharness/scripts/mobile_l10n.py"
+        ]
+      },
+      "43": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=1b1278cd1299",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520874: [mozharness] Remove desktop per-project l10n config; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15861",
+        "files_changed": [
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "taskcluster/taskgraph/transforms/l10n.py",
+          "testing/mozharness/configs/single_locale/alder.py",
+          "testing/mozharness/configs/single_locale/ash.py",
+          "testing/mozharness/configs/single_locale/ash_android-api-16.py",
+          "testing/mozharness/configs/single_locale/autoland.py",
+          "testing/mozharness/configs/single_locale/autoland_android-api-16.py",
+          "testing/mozharness/configs/single_locale/jamun.py",
+          "testing/mozharness/configs/single_locale/jamun_android-api-16.py",
+          "testing/mozharness/configs/single_locale/maple_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_devedition.py",
+          "testing/mozharness/configs/single_locale/mozilla-central.py",
+          "testing/mozharness/configs/single_locale/mozilla-central_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-esr60.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-release.py",
+          "testing/mozharness/configs/single_locale/mozilla-release_android-api-16.py",
+          "testing/mozharness/configs/single_locale/try.py",
+          "testing/mozharness/configs/single_locale/try_android-api-16.py",
+          "testing/mozharness/mozharness/mozilla/mar.py",
+          "testing/mozharness/scripts/desktop_l10n.py",
+          "testing/mozharness/scripts/mobile_l10n.py"
+        ]
+      },
+      "44": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=df831d2de506",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520874: [mozharness] Remove some obsolete comments in l10n mozharness configs; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15862",
+        "files_changed": [
+          "testing/mozharness/configs/builds/releng_base_android_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_32_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_mac_64_cross_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_32_mingw_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_64_mingw_builds.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/32_artifact.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/32_debug_artifact.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/64_artifact.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/64_debug_artifact.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/64_searchfox_and_debug.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/64_stat_and_debug.py",
+          "testing/mozharness/configs/builds/releng_sub_mac_configs/64_artifact.py",
+          "testing/mozharness/configs/builds/releng_sub_mac_configs/64_debug_artifact.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "45": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=281df8f9dd9e",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520874: [mozharness] Remove mobile per-project l10n config; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15863",
+        "files_changed": [
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "taskcluster/taskgraph/transforms/l10n.py",
+          "testing/mozharness/configs/single_locale/ash_android-api-16.py",
+          "testing/mozharness/configs/single_locale/autoland_android-api-16.py",
+          "testing/mozharness/configs/single_locale/jamun_android-api-16.py",
+          "testing/mozharness/configs/single_locale/linux.py",
+          "testing/mozharness/configs/single_locale/linux64.py",
+          "testing/mozharness/configs/single_locale/linux64_devedition.py",
+          "testing/mozharness/configs/single_locale/linux_devedition.py",
+          "testing/mozharness/configs/single_locale/macosx64.py",
+          "testing/mozharness/configs/single_locale/macosx64_devedition.py",
+          "testing/mozharness/configs/single_locale/maple_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-central_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-release_android-api-16.py",
+          "testing/mozharness/configs/single_locale/tc_android-api-16.py",
+          "testing/mozharness/configs/single_locale/try_android-api-16.py",
+          "testing/mozharness/configs/single_locale/win32.py",
+          "testing/mozharness/configs/single_locale/win32_devedition.py",
+          "testing/mozharness/configs/single_locale/win64.py",
+          "testing/mozharness/configs/single_locale/win64_devedition.py",
+          "testing/mozharness/scripts/mobile_l10n.py"
+        ]
+      },
+      "46": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=b7fbc1847aa0",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520874: [mozharness] Remove duplication in desktop l10n config; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15864",
+        "files_changed": [
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "testing/mozharness/configs/single_locale/devedition.py",
+          "testing/mozharness/configs/single_locale/firefox.py",
+          "testing/mozharness/configs/single_locale/linux.py",
+          "testing/mozharness/configs/single_locale/linux32.py",
+          "testing/mozharness/configs/single_locale/linux32_devedition.py",
+          "testing/mozharness/configs/single_locale/linux64.py",
+          "testing/mozharness/configs/single_locale/linux64_devedition.py",
+          "testing/mozharness/configs/single_locale/linux_devedition.py",
+          "testing/mozharness/configs/single_locale/macosx64.py",
+          "testing/mozharness/configs/single_locale/macosx64_devedition.py",
+          "testing/mozharness/configs/single_locale/tc_linux64.py",
+          "testing/mozharness/configs/single_locale/tc_linux_common.py",
+          "testing/mozharness/configs/single_locale/tc_macosx64.py",
+          "testing/mozharness/configs/single_locale/tc_win32.py",
+          "testing/mozharness/configs/single_locale/tc_win64.py",
+          "testing/mozharness/configs/single_locale/win32.py",
+          "testing/mozharness/configs/single_locale/win32_devedition.py",
+          "testing/mozharness/configs/single_locale/win64.py",
+          "testing/mozharness/configs/single_locale/win64_devedition.py"
+        ]
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=9518bb3856da",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520874: [mozharness] Remove unneeded mar code from L10n jobs; r=Callek\n\nMars are now generated by separate repackage tasks, so we don't need mar tools\nin L10n builds.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17161",
+        "files_changed": [
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "testing/mozharness/configs/single_locale/linux32.py",
+          "testing/mozharness/configs/single_locale/linux64.py",
+          "testing/mozharness/configs/single_locale/tc_linux_common.py",
+          "testing/mozharness/configs/single_locale/tc_macosx64.py",
+          "testing/mozharness/configs/single_locale/tc_win32.py",
+          "testing/mozharness/configs/single_locale/tc_win64.py",
+          "testing/mozharness/configs/single_locale/win32.py",
+          "testing/mozharness/mozharness/mozilla/mar.py",
+          "testing/mozharness/scripts/desktop_l10n.py"
+        ]
+      },
+      "48": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=24310d684cca",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520686: Add win64-aarch64 l10n mozconfig; r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16890",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/l10n-mozconfig",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "testing/mozharness/configs/merge_day/central_to_beta.py",
+          "testing/mozharness/configs/single_locale/win64-aarch64.py"
+        ]
+      },
+      "54": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=714ae096d76e",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1517738 - Have Raptor use the correct binary name when running on android in production; r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17251",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/testing/raptor.py",
+          "testing/raptor/raptor/raptor.py"
+        ]
+      }
+    }
+  },
+  "25": {
+    "changeset_number": "35420",
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-01-23 18:57:04",
+    "changeset_commits": {
+      "101": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=f7f763f7c5b4",
+        "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+        "commit_message": "Bug 1519862 - Handle unstructured lines in mozlog output better in mozharness, r=ahal\n\nInstead of printing one log message per line about the fact the output\nwas unstructured, just print one per group of unstructured lines.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16834",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/structuredlog.py"
+        ]
+      },
+      "102": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=765ec7f39243",
+        "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+        "commit_message": "Bug 1519862 - Give mozharness output to indicate why a job failed, r=ahal\n\nSometimes it's unclear which of the errors are leading to a\nfailure. For example wpt sometimes has PROCESS-CRASH lines that don't\ncontribute to a failure. To make this easier to understand record the\nreason for the failure in the log so it appears in the summaries.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16835",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/structuredlog.py"
+        ]
+      },
+      "103": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=add585284f4e",
+        "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+        "commit_message": "Bug 1519862 - Allow ignoring process_crash in determing mozharness job status, r=ahal\n\nFor shutdown crashes in wpt wse need to ignore the crashes for now\nuntil we have a way of allowing specific ones. So just have a global\nflag that permits this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16836",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/structuredlog.py",
+          "testing/mozharness/scripts/web_platform_tests.py"
+        ]
+      }
+    }
+  },
+  "26": {
+    "changeset_number": "35422",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-01-24 05:45:05",
+    "changeset_commits": {
+      "22": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=309abca54dae",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
+        "files_changed": [
+          "browser/components/urlbar/tests/unit/test_QueryContext.js",
+          "devtools/server/tests/mochitest/animation-data.html",
+          "devtools/server/tests/mochitest/test_animation_actor-lifetime.html",
+          "devtools/server/tests/mochitest/test_inspector-anonymous.html",
+          "devtools/server/tests/mochitest/test_inspector-insert.html",
+          "devtools/server/tests/mochitest/test_inspector-mutations-childlist.html",
+          "devtools/server/tests/mochitest/test_inspector-mutations-frameload.html",
+          "devtools/server/tests/mochitest/test_inspector-release.html",
+          "devtools/server/tests/mochitest/test_inspector-remove.html",
+          "devtools/server/tests/mochitest/test_inspector-retain.html",
+          "devtools/server/tests/mochitest/test_inspector-search.html",
+          "devtools/server/tests/mochitest/test_inspector-traversal.html",
+          "devtools/server/tests/mochitest/test_memory_allocations_01.html",
+          "devtools/shared/webconsole/test/test_commands_registration.html",
+          "devtools/shared/webconsole/test/test_network_longstring.html",
+          "js/xpconnect/public/nsTArrayHelpers.h",
+          "netwerk/cookie/nsCookieService.cpp",
+          "old-configure.in",
+          "other-licenses/7zstub/firefox/7zSD.manifest",
+          "other-licenses/7zstub/firefox/7zSD.sfx",
+          "testing/mozharness/configs/single_locale/alder.py",
+          "testing/mozharness/configs/single_locale/ash.py",
+          "testing/mozharness/configs/single_locale/ash_android-api-16.py",
+          "testing/mozharness/configs/single_locale/autoland.py",
+          "testing/mozharness/configs/single_locale/autoland_android-api-16.py",
+          "testing/mozharness/configs/single_locale/jamun.py",
+          "testing/mozharness/configs/single_locale/jamun_android-api-16.py",
+          "testing/mozharness/configs/single_locale/linux.py",
+          "testing/mozharness/configs/single_locale/linux32.py",
+          "testing/mozharness/configs/single_locale/linux32_devedition.py",
+          "testing/mozharness/configs/single_locale/linux64_devedition.py",
+          "testing/mozharness/configs/single_locale/linux_devedition.py",
+          "testing/mozharness/configs/single_locale/macosx64_devedition.py",
+          "testing/mozharness/configs/single_locale/maple_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora.py",
+          "testing/mozharness/configs/single_locale/mozilla-aurora_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-beta_devedition.py",
+          "testing/mozharness/configs/single_locale/mozilla-central.py",
+          "testing/mozharness/configs/single_locale/mozilla-central_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-esr60.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound.py",
+          "testing/mozharness/configs/single_locale/mozilla-inbound_android-api-16.py",
+          "testing/mozharness/configs/single_locale/mozilla-release.py",
+          "testing/mozharness/configs/single_locale/mozilla-release_android-api-16.py",
+          "testing/mozharness/configs/single_locale/onchange.py",
+          "testing/mozharness/configs/single_locale/tc_linux64.py",
+          "testing/mozharness/configs/single_locale/try.py",
+          "testing/mozharness/configs/single_locale/try_android-api-16.py",
+          "testing/mozharness/configs/single_locale/win32_devedition.py",
+          "testing/mozharness/configs/single_locale/win64_devedition.py",
+          "testing/mozharness/mozharness/mozilla/mar.py"
+        ]
+      }
+    }
+  },
+  "27": {
+    "changeset_number": "35428",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-01-24 23:42:11",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=54afac5c0bb5",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1495903 - Promote Raptor chromium tp6 linux64 jobs to tier 2 now that they are green; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17240",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      },
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=fdceb5ba6e8c",
+        "commiter_name": "David Major <dmajor@mozilla.com>",
+        "commit_message": "Bug 1512822 - Remove \"MSVC\" from the name of AArch64 builds r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17024",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/debug",
+          "browser/config/mozconfigs/win64-aarch64/debug-msvc",
+          "browser/locales/l10n-changesets.json",
+          "browser/locales/l10n-onchange-changesets.json",
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover-l10n/kind.yml",
+          "taskcluster/ci/beetmover-repackage/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/mar-signing-l10n/kind.yml",
+          "taskcluster/ci/mar-signing/kind.yml",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "taskcluster/ci/partials/kind.yml",
+          "taskcluster/ci/repackage-l10n/kind.yml",
+          "taskcluster/ci/repackage-signing-l10n/kind.yml",
+          "taskcluster/ci/repackage-signing/kind.yml",
+          "taskcluster/ci/repackage/kind.yml",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/beetmover.py",
+          "taskcluster/taskgraph/transforms/beetmover_repackage.py",
+          "taskcluster/taskgraph/util/partials.py",
+          "testing/mozharness/configs/l10n_bumper/mozilla-beta.py",
+          "testing/mozharness/configs/l10n_bumper/mozilla-central.py"
+        ]
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=242c2992fd17",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Remove usused tools checkout from migration scripts; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17525",
+        "files_changed": [
+          "testing/mozharness/configs/merge_day/beta_to_release.py",
+          "testing/mozharness/configs/merge_day/bump_central.py",
+          "testing/mozharness/configs/merge_day/bump_esr.py",
+          "testing/mozharness/configs/merge_day/central_to_beta.py",
+          "testing/mozharness/configs/merge_day/release_to_esr.py",
+          "testing/mozharness/configs/merge_day/staging_beta_migration.py",
+          "testing/mozharness/scripts/merge_day/gecko_migration.py"
+        ]
+      }
+    }
+  },
+  "28": {
+    "changeset_number": "35429",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-01-24 23:44:15",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=f6659c725cba",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1522144 - fix auth issues in bumping behaviors of mergeduty. r=tomprince a=release",
+        "files_changed": [
+          "testing/mozharness/configs/merge_day/bump_central.py",
+          "testing/mozharness/configs/merge_day/bump_esr.py",
+          "testing/mozharness/scripts/merge_day/gecko_migration.py"
+        ]
+      },
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=b55ddb97722a",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Merge inbound to mozilla-central. a=merge",
+        "files_changed": [
+          "testing/mozharness/configs/merge_day/bump_central.py",
+          "testing/mozharness/configs/merge_day/bump_esr.py",
+          "testing/mozharness/scripts/merge_day/gecko_migration.py"
+        ]
+      }
+    }
+  },
+  "29": {
+    "changeset_number": "35437",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-01-25 23:48:48",
+    "changeset_commits": {
+      "37": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=871d54b791a3",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1518570 - Update task cluster configuration for oak. r=tomprince\n\nThe intent is to land this on central, to minimize the merge conflicts on oak\n\nOak is going to be used for Updater testing so needs release keys and such, and does not need android.\nThis approach is different than the previous oak approach in that it amends how we calculate 'trunk' and 'release'\nprojects to include 'oak', and then makes full nightlies produced on each push.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17440",
+        "files_changed": [
+          "taskcluster/ci/balrog/kind.yml",
+          "taskcluster/ci/build/kind.yml",
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/util/attributes.py",
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      }
+    }
+  },
+  "30": {
+    "changeset_number": "35438",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-01-25 23:50:13",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=1bb6959a6990",
+        "commiter_name": "Benjamin Bouvier <benj@benj.me>",
+        "commit_message": " Bug 1522803: Use a stable Rust version for the aarch64 Windows repack; r=froydnj",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/toolchain/windows.yml"
         ]
       }
     }
