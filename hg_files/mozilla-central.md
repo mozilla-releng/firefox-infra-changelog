@@ -1,8 +1,11 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35438
+ CURRENT PUSH ID: 35445
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|35439|2019-01-26 11:35:29|Rob Wood <rwood@mozilla.com>|Bug 1522631 - Expand existing Raptor profiling jobs to include tp6-7, tp6-8, tp6-9, and tp6-10; r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D17538|https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=da2115631f1b
+|35439|2019-01-26 11:35:29|Justin Wood <Callek@gmail.com>|Bug 1518570 - Missed followup item, no need to mark oak as a trunk project. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D17685|https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=4c4c607eebde
+|35439|2019-01-26 11:35:29|Tom Prince <mozilla@hocat.ca>|Bug 1514806: Point partner repack repackage tasks at partner repackage configs. r=akiThey were incorrectly pointed at the non-partner configs in 2e27f3f1ebc6f38d98ddd42b6955083f637e2b1b.Differential Revision: https://phabricator.services.mozilla.com/D17716|https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=ad292914ca7e
 |35438|2019-01-25 23:50:13|Benjamin Bouvier <benj@benj.me>| Bug 1522803: Use a stable Rust version for the aarch64 Windows repack; r=froydnj|https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=1bb6959a6990
 |35437|2019-01-25 23:48:48|Justin Wood <Callek@gmail.com>|Bug 1518570 - Update task cluster configuration for oak. r=tomprinceThe intent is to land this on central, to minimize the merge conflicts on oakOak is going to be used for Updater testing so needs release keys and such, and does not need android.This approach is different than the previous oak approach in that it amends how we calculate 'trunk' and 'release'projects to include 'oak', and then makes full nightlies produced on each push.Differential Revision: https://phabricator.services.mozilla.com/D17440|https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=871d54b791a3
 |35429|2019-01-24 23:44:15|Mihai Tabara <mtabara@mozilla.com>|Bug 1522144 - fix auth issues in bumping behaviors of mergeduty. r=tomprince a=release|https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=f6659c725cba
