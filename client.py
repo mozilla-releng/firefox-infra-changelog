@@ -4,7 +4,7 @@ import sys
 import json
 import time
 from urllib.request import urlopen
-
+from fic_modules import configuration
 import click
 import requests
 from os import listdir
@@ -1066,7 +1066,10 @@ def get_keys(name):
 @click.option('--hg', flag_value='hg', help='Run script only for HG repositories')
 @click.option('--l', flag_value='l', help='Display logger')
 @click.option('--r', flag_value='r', help='Let you choose for which repositories the script will run')
-def cli(git, hg, l, r):
+@click.option('--d', default=1, help='Let you choose the amount of days the main markdown file will contain')
+def cli(git, hg, l, r, d):
+    configuration.GENERATE_FOR_X_DAYS = d
+
     if git:
         create_files_for_git(repositories, onerepo=False)
         clear_file("main_md_table.md", generate_for_x_days)
@@ -1110,6 +1113,7 @@ def cli(git, hg, l, r):
             else:
                 new_list.append(repoList[int(new_entry)])
                 repoList.pop(int(new_entry))
+
     else:
         create_files_for_git(repositories, onerepo=False)
         create_files_for_hg(repositories, onerepo=False)
@@ -1121,7 +1125,7 @@ def cli(git, hg, l, r):
 if __name__ == "__main__":
     #Modifiy the "generate_for_x_days" variable to generate for a specific day.
     logger = True
-    generate_for_x_days = 1
+    generate_for_x_days = configuration.GENERATE_FOR_X_DAYS
     TOKEN = os.environ.get("GIT_TOKEN")
     git = Github(TOKEN)
     repositories_data = open("./repositories.json").read()
