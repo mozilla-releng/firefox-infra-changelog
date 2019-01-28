@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35438
+    "last_push_id": 35445
   },
   "1": {
     "changeset_number": "35344",
@@ -1036,6 +1036,39 @@
         "files_changed": [
           "taskcluster/ci/build/windows.yml",
           "taskcluster/ci/toolchain/windows.yml"
+        ]
+      }
+    }
+  },
+  "31": {
+    "changeset_number": "35439",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-01-26 11:35:29",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=da2115631f1b",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1522631 - Expand existing Raptor profiling jobs to include tp6-7, tp6-8, tp6-9, and tp6-10; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17538",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      },
+      "25": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=4c4c607eebde",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1518570 - Missed followup item, no need to mark oak as a trunk project. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17685",
+        "files_changed": [
+          "taskcluster/taskgraph/util/attributes.py"
+        ]
+      },
+      "41": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloggerhtml?changeset=ad292914ca7e",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1514806: Point partner repack repackage tasks at partner repackage configs. r=aki\n\nThey were incorrectly pointed at the non-partner configs in 2e27f3f1ebc6f38d98ddd42b6955083f637e2b1b.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17716",
+        "files_changed": [
+          "taskcluster/ci/release-eme-free-repack-repackage/kind.yml",
+          "taskcluster/ci/release-partner-repack-repackage/kind.yml"
         ]
       }
     }
