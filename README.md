@@ -12,6 +12,13 @@ Pick whichever you find fancy and make a PullRequest.
 
 **PLEASE** don't forget to select "`Allow edits from maintainers`" so we can have quicker merges!
 
+# Flags
+* --git - Runs script only for repos that are on GitHub
+* --hg - Runs script only for repos that are on Mercurial
+* --r - Let the user choose for which repositories the script will run
+* --d - Let the user choose the amount of days the main markdown file will contain
+
+
 ## I have an issue I like, now what?
 Fork the project (always make sure to be up-to-date) and start implementing, once done simply make a pull requests and add @Akhliskun for review. 
 
