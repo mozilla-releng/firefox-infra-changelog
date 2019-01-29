@@ -858,19 +858,18 @@ def remove_chars(string, char):
 
 def filter_strings(string):
     """
-    This filter removes chars that can't be written to the markdown file (since the encoding of those is not supportted).
+    Filters the provided string and removes specific words/characters from it that are stored in unwanted_chars variable.
+    This filter removes chars that can't be written to the markdown file (since the encoding of those is not supported).
     :param string: string to be filtered
     :return:
     """
-    string = remove_chars(string, "\u0131")
-    string = remove_chars(string, "\u30c4")
-    string = remove_chars(string, "\u00c1")
-    string = remove_chars(string, "\u00ee")
-    string = remove_chars(string, "\u0103")
-    string = remove_chars(string, "\u00e4")
-    string = remove_chars(string, "\u00e8")
-    string = remove_chars(string, "\u2013")
-    string = remove_chars(string, "\u00af")
+    unwanted_chars = ["\u0131", "\u30c4", "\u00c1", "\u00ee", "\u0103", "\u0103", "\u00e4", "\u00e8", "\u2013",
+                      "\u00af"]
+
+    for word in string:
+        if word in unwanted_chars:
+            string = remove_chars(string, word)
+
     return string
 
 
