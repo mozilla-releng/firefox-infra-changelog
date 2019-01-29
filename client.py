@@ -135,6 +135,7 @@ def compare_files(first_list, second_list):
 
 def get_version_from_build_puppet(version_path, repo_name):
     """
+
     :param: version_path: Path to the requierments.txt where the version number is stored
     :param: repo_name: The repo for which we are checking the version.
     :return: Returns the version number that is stored in build-puppet for each *scriptworker
@@ -149,6 +150,13 @@ def get_version_from_build_puppet(version_path, repo_name):
 
 
 def get_commit_details(commit):
+    """
+    Helper function.
+    Extracts sha, url, commiter name, commiter email, commiter message, commit date and files_changed from a commit
+    object and stores them in a dictionary that gets returned at the end.
+    :param commit: commit object that should contain information about commit.
+    :return: a dictionary with extracted data, properly formatted.
+    """
     author_info = {}
     files_changed = []
     try:
@@ -203,7 +211,7 @@ def json_writer_git(repository_name, new_commits):
     try:
         with open(current_dir + "/git_files/" + git_json_filename, "r") as commit_json:
             json_content = json.load(commit_json)  # loads the content of existing json into a variable
-    except:
+    except FileNotFoundError:
         json_content = ""
     if len(json_content) > 1:
         number = len(new_commits) - 1
@@ -221,15 +229,15 @@ def json_writer_git(repository_name, new_commits):
 
 def json_writer_hg(repository_name, new_commits):
     """
-        :param repository_name:
-        :param new_commits: a dictionary with the new commits
-        :return: write the json file with the old and the new commits
-        """
+    :param repository_name:
+    :param new_commits: a dictionary with the new commits
+    :return: write the json file with the old and the new commits
+    """
     hg_json_filename = "{}.json".format(repository_name)
     try:
         with open(current_dir + "/hg_files/" + hg_json_filename, "r") as commit_json:
             json_content = json.load(commit_json)  # loads the content of existing json into a variable
-    except:
+    except FileNotFoundError:
         json_content = ""
     # if len(json_content) > 0:
     number = len(json_content) - 1
@@ -700,28 +708,15 @@ def create_hg_md_table(repository_name):
                     for entry in data.get(key).get("changeset_commits"):
                         try:
                             commit_author = data.get(key).get("changeset_commits").get(entry).get("commiter_name")
-                            commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
-                            commit_author = remove_chars(commit_author, "\u30c4")
-                            commit_author = remove_chars(commit_author, "\u00c1")
-                            commit_author = remove_chars(commit_author, "\u00ee")
-                            commit_author = remove_chars(commit_author, "\u0103")
-                            commit_author = remove_chars(commit_author, "\u00e4")
-                            commit_author = remove_chars(commit_author, "\u00e8")
-                            commit_author = remove_chars(commit_author, "\u2013")
-                            commit_author = remove_chars(commit_author, "\u00af")
+                            # This replaces a char that can't be encoded but there is a need for another char
+                            commit_author = re.sub("\u0131", "i", commit_author)
+                            # This removes unwanted char's
+                            commit_author = filter_strings(commit_author)
 
                             message = data.get(key).get("changeset_commits").get(entry).get("commit_message")
                             message = re.sub("\n|", "", message)
-                            message = remove_chars(message, "\u0131")
-                            message = remove_chars(message, "\u30c4")
-                            message = remove_chars(message, "\u00c1")
-                            message = remove_chars(message, "\u00ee")
-                            message = remove_chars(message, "\u0103")
-                            message = remove_chars(message, "\u00e4")
-                            message = remove_chars(message, "\u00e8")
-                            message = remove_chars(message, "\u2013")
-                            message = remove_chars(message, "\u00af")
 
+                            message = filter_strings(message)
                             url = data.get(key).get("changeset_commits").get(entry).get("url")
 
                             row = "|" + changeset_id + \
@@ -859,6 +854,23 @@ def remove_chars(string, char):
     :return: returns a string without char.
     """
     return re.sub(char, " ", string)
+
+
+def filter_strings(string):
+    """
+    Filters the provided string and removes specific words/characters from it that are stored in unwanted_chars variable.
+    This filter removes chars that can't be written to the markdown file (since the encoding of those is not supported).
+    :param string: string to be filtered
+    :return:
+    """
+    unwanted_chars = ["\u0131", "\u30c4", "\u00c1", "\u00ee", "\u0103", "\u0103", "\u00e4", "\u00e8", "\u2013",
+                      "\u00af"]
+
+    for word in string:
+        if word in unwanted_chars:
+            string = remove_chars(string, word)
+
+    return string
 
 
 def extract_json_from_git(json_files, path_to_files, days_to_generate):
@@ -1051,7 +1063,6 @@ def write_main_md_table(file_name, repository_url, last_commit, author, reviewer
 
 def get_keys(name):
     """
-
     :param name:
     :return:
     """
@@ -1068,6 +1079,15 @@ def get_keys(name):
 @click.option('--r', flag_value='r', help='Let you choose for which repositories the script will run')
 @click.option('--d', default=1, help='Let you choose the amount of days the main markdown file will contain')
 def cli(git, hg, l, r, d):
+    """
+
+    :param git: Runs the script only for GIT repositories
+    :param hg: Runs the script only for HG repositories
+    :param l: Display logger
+    :param r: Let you choose for which repositories the script will run
+    :param d: Let you choose the amount of days the main markdown file will contain
+    :return:
+    """
     configuration.GENERATE_FOR_X_DAYS = d
 
     if git:
