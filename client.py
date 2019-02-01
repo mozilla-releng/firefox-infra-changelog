@@ -55,21 +55,39 @@ def create_files_for_git(repositories_holder, onerepo):
     :return: The end result is a .json and a .md file for every git repository. can be found inside git_files/
     """
     if onerepo:
-        repository_team = repositories.get("Github").get(repositories_holder).get("team")
-        repository_type = repositories.get("Github").get(repositories_holder).get("configuration").get("type")
-        if logger:
-            print("\nWorking on repo: {}".format(repositories_holder))
-        folders_to_check = [x for x in
-                            repositories.get("Github").get(repositories_holder).get("configuration").get("folders-to-check")]
-        filter_git_commit_data(repositories_holder, repository_team, repository_type, folders_to_check)
-        try:
-            create_md_table(repositories_holder, "git_files")
+        if "script" in repositories_holder or "signtool" in repositories_holder:
+            repository_team = repositories.get("Github").get("build-puppet").get("team")
+            repository_type = repositories.get("Github").get("build-puppet").get("configuration").get("type")
             if logger:
-                print("MD table generated successfully")
-        except:
-            pass
-        if logger:
-            print("Finished working on {}".format(repositories_holder))
+                print("\nWorking on repo: {}".format(repositories_holder))
+            folders_to_check = []
+            filter_git_commit_data(repositories_holder, repository_team, repository_type, folders_to_check)
+            try:
+                create_md_table(repositories_holder, "git_files")
+                if logger:
+                    print("MD table generated successfully")
+            except:
+                pass
+            if logger:
+                print("Finished working on {}".format(repositories_holder))
+        else:
+            repository_team = repositories.get("Github").get(repositories_holder).get("team")
+            repository_type = repositories.get("Github").get(repositories_holder).get("configuration").get("type")
+            if logger:
+                print("\nWorking on repo: {}".format(repositories_holder))
+            folders_to_check = [x for x in
+                                repositories.get("Github").get(repositories_holder).get("configuration").get(
+                                    "folders-to-check")]
+
+            filter_git_commit_data(repositories_holder, repository_team, repository_type, folders_to_check)
+            try:
+                create_md_table(repositories_holder, "git_files")
+                if logger:
+                    print("MD table generated successfully")
+            except:
+                pass
+            if logger:
+                print("Finished working on {}".format(repositories_holder))
 
     else:
 
@@ -1189,12 +1207,13 @@ def cli(git, hg, l, r, d):
                 for repository in new_list:
                     if repository in repositories.get("Github"):
                         create_files_for_git(repository, onerepo=True)
-                        generate_main_md_table("git_files", generate_for_x_days)
                     elif repository in repositories.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
-                        clear_file("main_md_table.md", generate_for_x_days)
-                        generate_main_md_table("hg_files", generate_for_x_days)
-                        generate_main_md_table("git_files", generate_for_x_days)
+                    else:
+                        create_files_for_git(repository, onerepo=True)
+                clear_file("main_md_table.md",generate_for_x_days)
+                generate_main_md_table("git_files", generate_for_x_days)
+                generate_main_md_table("hg_files", generate_for_x_days)
 
             new_entry = int(w) - 1
 
