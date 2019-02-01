@@ -1,8 +1,9 @@
 ## REPOSITORY NAME: CI-ADMIN
- CURRENT PUSH ID: 34
+ CURRENT PUSH ID: 35
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|35|2019-01-31 22:30:54|Tom Prince <mozilla@hocat.ca>|Run black over ci-admin; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17166|https://hg.mozilla.org/build/ci-admin/pushloggerhtml?changeset=de24b6b4d2d6
 |34|2019-01-18 23:36:42|Tom Prince <mozilla@hocat.ca>|Fix typo from flake8 run; r=me|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=8fe80858db7f
 |33|2019-01-18 23:21:58|Tom Prince <mozilla@hocat.ca>|Fix flake8 errors; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D16769|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=65b3e50a57e4
 |32|2019-01-17 00:47:14|Tom Prince <mozilla@hocat.ca>|Fix ci-admin tests; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D16756|https://hg.mozilla.org/build/ci-admin/pushloghtml?changeset=ae0505b4301c

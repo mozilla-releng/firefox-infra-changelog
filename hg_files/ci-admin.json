@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 34
+    "last_push_id": 35
   },
   "1": {
     "changeset_number": "21",
@@ -248,6 +248,69 @@
         "commit_message": "Fix typo from flake8 run; r=me",
         "files_changed": [
           "tests/test_generate_ciconfig_grants.py"
+        ]
+      }
+    }
+  },
+  "15": {
+    "changeset_number": "35",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-31 22:30:54",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-admin/pushloggerhtml?changeset=de24b6b4d2d6",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Run black over ci-admin; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17166",
+        "files_changed": [
+          ".flake8",
+          "ciadmin/apply/__init__.py",
+          "ciadmin/check/__init__.py",
+          "ciadmin/check/test_signing_scopes.py",
+          "ciadmin/current/__init__.py",
+          "ciadmin/current/hooks.py",
+          "ciadmin/diff.py",
+          "ciadmin/generate/__init__.py",
+          "ciadmin/generate/ciconfig/__init__.py",
+          "ciadmin/generate/ciconfig/actions.py",
+          "ciadmin/generate/ciconfig/environments.py",
+          "ciadmin/generate/ciconfig/get.py",
+          "ciadmin/generate/ciconfig/grants.py",
+          "ciadmin/generate/ciconfig/projects.py",
+          "ciadmin/generate/cron_tasks.py",
+          "ciadmin/generate/grants.py",
+          "ciadmin/generate/in_tree_actions.py",
+          "ciadmin/generate/modify.py",
+          "ciadmin/generate/scm_group_roles.py",
+          "ciadmin/generate/tcyml.py",
+          "ciadmin/main.py",
+          "ciadmin/options.py",
+          "ciadmin/output.py",
+          "ciadmin/resources/__init__.py",
+          "ciadmin/resources/hook.py",
+          "ciadmin/resources/resources.py",
+          "ciadmin/resources/role.py",
+          "ciadmin/resources/util.py",
+          "ciadmin/util/ansi.py",
+          "ciadmin/util/json.py",
+          "ciadmin/util/matchlist.py",
+          "ciadmin/util/scopes.py",
+          "ciadmin/util/sessions.py",
+          "setup.py",
+          "tests/conftest.py",
+          "tests/test_current_hooks.py",
+          "tests/test_current_roles.py",
+          "tests/test_generate_ciconfig_actions.py",
+          "tests/test_generate_ciconfig_environment.py",
+          "tests/test_generate_ciconfig_get.py",
+          "tests/test_generate_ciconfig_grants.py",
+          "tests/test_generate_ciconfig_projects.py",
+          "tests/test_generate_grants.py",
+          "tests/test_generate_tcyml.py",
+          "tests/test_resources_hook.py",
+          "tests/test_resources_resources.py",
+          "tests/test_resources_role.py",
+          "tests/test_util_matchlist.py",
+          "tests/test_util_scopes.py"
         ]
       }
     }

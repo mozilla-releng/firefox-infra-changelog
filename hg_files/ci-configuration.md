@@ -1,8 +1,13 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 52
+ CURRENT PUSH ID: 57
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|57|2019-01-31 22:24:51|Tom Prince <mozilla@hocat.ca>|Bug 1524088: Remove esr52 scopes; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D18149|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=9b3364164354
+|56|2019-01-31 02:06:27|Tom Prince <mozilla@hocat.ca>|Bug 1252144: Add trust-domain scoped caches, scheduer-id and hgfingerprint to taskgraph repositories; r=bstackDifferential Revision: https://phabricator.services.mozilla.com/D18141|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=86c7d6e02a79
+|55|2019-01-30 19:08:35|Tom Prince <mozilla@hocat.ca>|Bug 1252144: Add taskgraph repository and scopes; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17980|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=2faaa69f6810
+|54|2019-01-29 20:19:22|Rail Aliiev <rail@mozilla.com>|Bug 1523694 - Use shipit-dev* to cover individual instances. r=aki|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=e5a2a62f42f3
+|53|2019-01-29 00:13:32|Tom Prince <mozilla@hocat.ca>|Bug 1518570: Give oak scopes to build nightly jobs on push; r=CallekDifferential Revision: https://phabricator.services.mozilla.com/D17868|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=0e3cac252c62
 |52|2019-01-25 19:31:53|Mike de Boer <mdeboer@mozilla.com>|Bug 1522143 - Enable taskcluster for the cedar project branch. r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17608|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=2b9e4ff2aa09
 |51|2019-01-25 17:25:45|Dustin J. Mitchell <dustin@mozilla.com>|Backed out changeset de779760a956|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=0905dd1fbcbb
 |50|2019-01-25 16:26:22|Mike de Boer <mdeboer@mozilla.com>|Bug 1522143 - Enable buildbot and taskcluster for the cedar project branch. r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17608|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=de779760a956
