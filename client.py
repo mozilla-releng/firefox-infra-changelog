@@ -224,7 +224,6 @@ def json_writer_git(repository_name, new_commits):
         json_file = open(current_dir + "/git_files/" + git_json_filename, "w")
         json.dump(new_commits, json_file, indent=2)
         json_file.close()
-    return True
 
 
 def json_writer_hg(repository_name, new_commits):
@@ -253,7 +252,6 @@ def json_writer_hg(repository_name, new_commits):
         json_file = open(current_dir + "/hg_files/" + hg_json_filename, "w")
         json.dump(json_content, json_file, indent=2)
         json_file.close()
-    return True
 
 
 def last_check(repository_name):
