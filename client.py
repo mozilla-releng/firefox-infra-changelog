@@ -1175,6 +1175,8 @@ def cli(git, hg, l, r, d):
     if r:
         get_keys("Github")
         get_keys("Mercurial")
+        for scriptrepo in repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check"):
+            repoList.append(scriptrepo)
         new_list = []
         while input != "q":
             print("You have selected : ", new_list)
