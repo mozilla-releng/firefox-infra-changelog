@@ -1,8 +1,34 @@
 {
   "0": {
-    "lastChecked": "2019-01-27 16:17:04.449910"
+    "lastChecked": "2019-02-01 16:13:17.950635"
   },
   "1": {
+    "sha": "a9194956d6dc1be57503a3dff3aa3255e242dd61",
+    "url": "https://github.com/mozilla/release-services/commit/a9194956d6dc1be57503a3dff3aa3255e242dd61",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": " : adding `-s flit` to pypi2nix call since it is required by six->entrypoints (#1833)",
+    "commit_date": "2019-01-31 11:22:02",
+    "files_changed": [
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/shipit/api/default.nix",
+      "src/shipit/api/requirements.nix",
+      "src/shipit/api/requirements_frozen.txt",
+      "src/staticanalysis/bot/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "2": {
     "sha": "981d853ccfa054bac79247bca4e5aedc81d1ab14",
     "url": "https://github.com/mozilla/release-services/commit/981d853ccfa054bac79247bca4e5aedc81d1ab14",
     "commiter_name": "garbas",
@@ -21,7 +47,7 @@
       "src/tooltool/api/tooltool_api/cli.py"
     ]
   },
-  "2": {
+  "3": {
     "sha": "4687eb1f889e07c84249cd2bf6bc888fd803b528",
     "url": "https://github.com/mozilla/release-services/commit/4687eb1f889e07c84249cd2bf6bc888fd803b528",
     "commiter_name": "garbas",
@@ -73,7 +99,7 @@
       "src/uplift/bot/requirements_frozen.txt"
     ]
   },
-  "3": {
+  "4": {
     "sha": "9a1f48c56dd6e007a0131147a19c4a883a0f8a45",
     "url": "https://github.com/mozilla/release-services/commit/9a1f48c56dd6e007a0131147a19c4a883a0f8a45",
     "commiter_name": "garbas",

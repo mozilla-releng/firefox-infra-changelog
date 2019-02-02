@@ -1,8 +1,1108 @@
 {
   "0": {
-    "lastChecked": "2019-01-27 16:17:03.841171"
+    "lastChecked": "2019-02-01 16:13:17.511050"
   },
   "1": {
+    "sha": "42c49d26137c95387d1ebb937188d42dfac0a3bb",
+    "url": "https://github.com/taskcluster/taskcluster/commit/42c49d26137c95387d1ebb937188d42dfac0a3bb",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #170 from djmitche/remove-unused-notify-hacks  remove unused file services/notify/src/hack.js",
+    "commit_date": "2019-02-01 05:20:50",
+    "files_changed": [
+      "services/notify/src/hack.js"
+    ]
+  },
+  "2": {
+    "sha": "c1b316c6d05223b216511eb56676db1eec2e099a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c1b316c6d05223b216511eb56676db1eec2e099a",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #168 from djmitche/bug1522888  Bug 1522888 - add docs of pulse-message json-e context",
+    "commit_date": "2019-02-01 05:20:13",
+    "files_changed": [
+      "services/hooks/docs/firing-hooks.md"
+    ]
+  },
+  "3": {
+    "sha": "5c3a5a7ad6492e26f70c1918852131c41e72eceb",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5c3a5a7ad6492e26f70c1918852131c41e72eceb",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "remove unused file",
+    "commit_date": "2019-01-31 21:43:24",
+    "files_changed": [
+      "services/notify/src/hack.js"
+    ]
+  },
+  "4": {
+    "sha": "deda11492ba1d6dd701260ea673947b2015ab5b0",
+    "url": "https://github.com/taskcluster/taskcluster/commit/deda11492ba1d6dd701260ea673947b2015ab5b0",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) add expires to tc-hooks Procfile",
+    "commit_date": "2019-01-31 21:04:12",
+    "files_changed": [
+      "services/hooks/Procfile"
+    ]
+  },
+  "5": {
+    "sha": "d72282940526d6f40eea8d6b9f803b8b28153445",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d72282940526d6f40eea8d6b9f803b8b28153445",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #157 from Biboswan/bug1491551-expiretables  [Bug 1491551] continue - expire limit lastfires to 100 per hookId",
+    "commit_date": "2019-01-31 20:59:35",
+    "files_changed": [
+      "services/hooks/config.yml",
+      "services/hooks/src/data.js",
+      "services/hooks/src/main.js",
+      "services/hooks/src/v1.js",
+      "services/hooks/test/api_test.js",
+      "services/hooks/test/expires_test.js"
+    ]
+  },
+  "6": {
+    "sha": "083c426115fde118105ec64340ab5b1a61b94677",
+    "url": "https://github.com/taskcluster/taskcluster/commit/083c426115fde118105ec64340ab5b1a61b94677",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "Remove try catch unwanted from in removeHook",
+    "commit_date": "2019-01-31 20:42:54",
+    "files_changed": [
+      "services/hooks/src/v1.js"
+    ]
+  },
+  "7": {
+    "sha": "eefa559995352f1a89b237870103332eed07a33f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/eefa559995352f1a89b237870103332eed07a33f",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "Minor fixex",
+    "commit_date": "2019-01-31 20:24:22",
+    "files_changed": [
+      "services/hooks/package.json",
+      "services/hooks/src/v1.js"
+    ]
+  },
+  "8": {
+    "sha": "d2e45acd2c808edafe37f515dbda77ff2593b80e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d2e45acd2c808edafe37f515dbda77ff2593b80e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522888 - add docs of pulse-message json-e context",
+    "commit_date": "2019-01-31 19:17:50",
+    "files_changed": [
+      "services/hooks/docs/firing-hooks.md"
+    ]
+  },
+  "9": {
+    "sha": "ab72731037f1a61ca7424c72c6d4f3596805c715",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ab72731037f1a61ca7424c72c6d4f3596805c715",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "Use hookGroupId as well",
+    "commit_date": "2019-01-31 13:51:24",
+    "files_changed": [
+      "services/hooks/package.json",
+      "services/hooks/src/data.js"
+    ]
+  },
+  "10": {
+    "sha": "fbe7c9cb69a2e7346222d8ec839aceebeeb83eb8",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fbe7c9cb69a2e7346222d8ec839aceebeeb83eb8",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #166 from djmitche/bug1521796  Bug 1521796 - use promisepipe to capture errors writing out docs",
+    "commit_date": "2019-01-30 20:27:45",
+    "files_changed": [
+      "libraries/docs/package.json",
+      "libraries/docs/src/documenter.js",
+      "yarn.lock"
+    ]
+  },
+  "11": {
+    "sha": "cfebbfde630bcaca5ce7fb06ff025db003fb93f3",
+    "url": "https://github.com/taskcluster/taskcluster/commit/cfebbfde630bcaca5ce7fb06ff025db003fb93f3",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1521796 - use promisepipe to capture errors writing out docs",
+    "commit_date": "2019-01-30 19:15:22",
+    "files_changed": [
+      "libraries/docs/package.json",
+      "libraries/docs/src/documenter.js",
+      "yarn.lock"
+    ]
+  },
+  "12": {
+    "sha": "3c494f36eb3544785c1dd59ac2b6562527e6fbf5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3c494f36eb3544785c1dd59ac2b6562527e6fbf5",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "Expires lastfires by loading per hookId",
+    "commit_date": "2019-01-30 13:20:24",
+    "files_changed": [
+      "services/hooks/src/data.js",
+      "services/hooks/src/main.js",
+      "services/hooks/test/expires_test.js"
+    ]
+  },
+  "13": {
+    "sha": "015e1202ffb20bcefcaabff1f8ddb0f3a7079a23",
+    "url": "https://github.com/taskcluster/taskcluster/commit/015e1202ffb20bcefcaabff1f8ddb0f3a7079a23",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #123 from taskcluster/add-worker-manager  Add worker manager to Mono Repo",
+    "commit_date": "2019-01-30 09:24:28",
+    "files_changed": [
+      ".github/CODEOWNERS",
+      ".taskcluster.yml",
+      "package.json",
+      "services/worker-manager/.gitignore",
+      "services/worker-manager/Procfile",
+      "services/worker-manager/bin/convert.js",
+      "services/worker-manager/config.yml",
+      "services/worker-manager/lib/api.js",
+      "services/worker-manager/lib/base.js",
+      "services/worker-manager/lib/bid.js",
+      "services/worker-manager/lib/bidding-strategies/queuepending.js",
+      "services/worker-manager/lib/bidding-strategy.js",
+      "services/worker-manager/lib/data-storage.js",
+      "services/worker-manager/lib/main.js",
+      "services/worker-manager/lib/provider.js",
+      "services/worker-manager/lib/provisioner.js",
+      "services/worker-manager/lib/rules.js",
+      "services/worker-manager/lib/shims.js",
+      "services/worker-manager/lib/worker-config.js",
+      "services/worker-manager/lib/worker.js",
+      "services/worker-manager/package.json",
+      "services/worker-manager/schemas/v1/anything.yml",
+      "services/worker-manager/schemas/v1/ruleset.yml",
+      "services/worker-manager/schemas/v1/satisfiers.yml",
+      "services/worker-manager/schemas/v1/test-worker-configuration.yml",
+      "services/worker-manager/schemas/v1/worker-configuration-result.yml",
+      "services/worker-manager/schemas/v1/worker-configuration.yml",
+      "services/worker-manager/test/api_test.js",
+      "services/worker-manager/test/bid_test.js",
+      "services/worker-manager/test/bidding-strategies/bidding-strategies_test.js",
+      "services/worker-manager/test/bidding-strategies/queuepending_test.js",
+      "services/worker-manager/test/convert-eval-expected.json",
+      "services/worker-manager/test/convert-expected.json",
+      "services/worker-manager/test/convert-input.json",
+      "services/worker-manager/test/convert_test.js",
+      "services/worker-manager/test/data-storage_test.js",
+      "services/worker-manager/test/errors_test.js",
+      "services/worker-manager/test/helper.js",
+      "services/worker-manager/test/mocha.opts",
+      "services/worker-manager/test/object_test.js",
+      "services/worker-manager/test/providers/provider_test.js",
+      "services/worker-manager/test/provisioner-example-worker-configuration.json",
+      "services/worker-manager/test/provisioner_test.js",
+      "services/worker-manager/test/rules_test.js",
+      "services/worker-manager/test/worker-config_test.js",
+      "yarn.lock"
+    ]
+  },
+  "14": {
+    "sha": "57cc73c465bcd7d53b9473a205669e6b08bfdb56",
+    "url": "https://github.com/taskcluster/taskcluster/commit/57cc73c465bcd7d53b9473a205669e6b08bfdb56",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Add Procfile, with writeDocs target",
+    "commit_date": "2019-01-28 21:50:00",
+    "files_changed": [
+      "services/worker-manager/Procfile",
+      "services/worker-manager/lib/main.js"
+    ]
+  },
+  "15": {
+    "sha": "a461188ea7b599af8fe52ff4a46a2b3523534cf5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a461188ea7b599af8fe52ff4a46a2b3523534cf5",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "use apiVersion",
+    "commit_date": "2019-01-28 21:44:23",
+    "files_changed": [
+      "services/worker-manager/lib/api.js"
+    ]
+  },
+  "16": {
+    "sha": "d0bbffb69f49472799b978986e8f9d74cf2dd689",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d0bbffb69f49472799b978986e8f9d74cf2dd689",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Update $schema for all schemas",
+    "commit_date": "2019-01-28 21:36:32",
+    "files_changed": [
+      "services/worker-manager/.github/CODEOWNERS",
+      "services/worker-manager/schemas/v1/anything.yml",
+      "services/worker-manager/schemas/v1/ruleset.yml",
+      "services/worker-manager/schemas/v1/satisfiers.yml",
+      "services/worker-manager/schemas/v1/test-worker-configuration.yml",
+      "services/worker-manager/schemas/v1/worker-configuration-result.yml",
+      "services/worker-manager/schemas/v1/worker-configuration.yml"
+    ]
+  },
+  "17": {
+    "sha": "ba29e08f0b0a7e82c07fe7c4082be7aba4cd56aa",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ba29e08f0b0a7e82c07fe7c4082be7aba4cd56aa",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Add memory-streams devDependency to monorepo package.json",
+    "commit_date": "2019-01-23 13:27:21",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "18": {
+    "sha": "19a04d0197e1e91eebae586bbdf03a10f57fa9da",
+    "url": "https://github.com/taskcluster/taskcluster/commit/19a04d0197e1e91eebae586bbdf03a10f57fa9da",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Fix CI failures",
+    "commit_date": "2019-01-22 15:06:06",
+    "files_changed": [
+      ".taskcluster.yml",
+      "services/worker-manager/package.json"
+    ]
+  },
+  "19": {
+    "sha": "e78dfedee5d0d305588c5936faa5923ba9b4f1a3",
+    "url": "https://github.com/taskcluster/taskcluster/commit/e78dfedee5d0d305588c5936faa5923ba9b4f1a3",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Lint fixes from monorepo eslintrc",
+    "commit_date": "2019-01-22 15:02:03",
+    "files_changed": [
+      "services/worker-manager/bin/convert.js",
+      "services/worker-manager/lib/api.js",
+      "services/worker-manager/lib/base.js",
+      "services/worker-manager/lib/bid.js",
+      "services/worker-manager/lib/bidding-strategies/queuepending.js",
+      "services/worker-manager/lib/bidding-strategy.js",
+      "services/worker-manager/lib/data-storage.js",
+      "services/worker-manager/lib/main.js",
+      "services/worker-manager/lib/provider.js",
+      "services/worker-manager/lib/provisioner.js",
+      "services/worker-manager/lib/rules.js",
+      "services/worker-manager/lib/worker-config.js",
+      "services/worker-manager/lib/worker.js",
+      "services/worker-manager/package.json",
+      "services/worker-manager/test/api_test.js",
+      "services/worker-manager/test/bid_test.js",
+      "services/worker-manager/test/bidding-strategies/bidding-strategies_test.js",
+      "services/worker-manager/test/bidding-strategies/queuepending_test.js",
+      "services/worker-manager/test/data-storage_test.js",
+      "services/worker-manager/test/helper.js",
+      "services/worker-manager/test/object_test.js",
+      "services/worker-manager/test/providers/provider_test.js",
+      "services/worker-manager/test/provisioner_test.js",
+      "services/worker-manager/test/rules_test.js",
+      "services/worker-manager/test/worker-config_test.js",
+      "yarn.lock"
+    ]
+  },
+  "20": {
+    "sha": "a0a38eb325684e21aa753ef14db2cad61892d0ab",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a0a38eb325684e21aa753ef14db2cad61892d0ab",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Perform post-import steps on worker-manager  See https://github.com/imbstack/taskcluster-repoifier/blob/master/scripts/post-import.sh",
+    "commit_date": "2019-01-22 14:37:49",
+    "files_changed": [
+      "services/worker-manager/.eslintrc",
+      "services/worker-manager/.travis.yml",
+      "services/worker-manager/CODE_OF_CONDUCT.md",
+      "services/worker-manager/CONTRIBUTING.md",
+      "services/worker-manager/LICENSE",
+      "services/worker-manager/package.json",
+      "services/worker-manager/yarn.lock"
+    ]
+  },
+  "21": {
+    "sha": "a4fd6e18fc913d10a488eff4473e3d916c84941a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a4fd6e18fc913d10a488eff4473e3d916c84941a",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Add worker-manager to codeowners file",
+    "commit_date": "2019-01-22 14:36:00",
+    "files_changed": [
+      ".github/CODEOWNERS",
+      "services/worker-manager/.eslintrc",
+      "services/worker-manager/.github/CODEOWNERS",
+      "services/worker-manager/.gitignore",
+      "services/worker-manager/.travis.yml",
+      "services/worker-manager/CODE_OF_CONDUCT.md",
+      "services/worker-manager/CONTRIBUTING.md",
+      "services/worker-manager/LICENSE",
+      "services/worker-manager/bin/convert.js",
+      "services/worker-manager/config.yml",
+      "services/worker-manager/lib/api.js",
+      "services/worker-manager/lib/base.js",
+      "services/worker-manager/lib/bid.js",
+      "services/worker-manager/lib/bidding-strategies/queuepending.js",
+      "services/worker-manager/lib/bidding-strategy.js",
+      "services/worker-manager/lib/data-storage.js",
+      "services/worker-manager/lib/main.js",
+      "services/worker-manager/lib/provider.js",
+      "services/worker-manager/lib/provisioner.js",
+      "services/worker-manager/lib/rules.js",
+      "services/worker-manager/lib/shims.js",
+      "services/worker-manager/lib/worker-config.js",
+      "services/worker-manager/lib/worker.js",
+      "services/worker-manager/package.json",
+      "services/worker-manager/schemas/v1/anything.yml",
+      "services/worker-manager/schemas/v1/ruleset.yml",
+      "services/worker-manager/schemas/v1/satisfiers.yml",
+      "services/worker-manager/schemas/v1/test-worker-configuration.yml",
+      "services/worker-manager/schemas/v1/worker-configuration-result.yml",
+      "services/worker-manager/schemas/v1/worker-configuration.yml",
+      "services/worker-manager/test/api_test.js",
+      "services/worker-manager/test/bid_test.js",
+      "services/worker-manager/test/bidding-strategies/bidding-strategies_test.js",
+      "services/worker-manager/test/bidding-strategies/queuepending_test.js",
+      "services/worker-manager/test/convert-eval-expected.json",
+      "services/worker-manager/test/convert-expected.json",
+      "services/worker-manager/test/convert-input.json",
+      "services/worker-manager/test/convert_test.js",
+      "services/worker-manager/test/data-storage_test.js",
+      "services/worker-manager/test/errors_test.js",
+      "services/worker-manager/test/helper.js",
+      "services/worker-manager/test/mocha.opts",
+      "services/worker-manager/test/object_test.js",
+      "services/worker-manager/test/providers/provider_test.js",
+      "services/worker-manager/test/provisioner-example-worker-configuration.json",
+      "services/worker-manager/test/provisioner_test.js",
+      "services/worker-manager/test/rules_test.js",
+      "services/worker-manager/test/worker-config_test.js",
+      "services/worker-manager/yarn.lock"
+    ]
+  },
+  "22": {
+    "sha": "c4f7ae5a0c9b154dcfdb3057ef23853e1efbaf0d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c4f7ae5a0c9b154dcfdb3057ef23853e1efbaf0d",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Address review feedback",
+    "commit_date": "2018-12-19 15:45:29",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/bidding-strategies/queuepending.js",
+      "services/taskcluster-worker-manager/test/bidding-strategies/bidding-strategies_test.js",
+      "services/taskcluster-worker-manager/test/bidding-strategies/queuepending_test.js"
+    ]
+  },
+  "23": {
+    "sha": "8c97c620c707e01695795119841b14591635fd93",
+    "url": "https://github.com/taskcluster/taskcluster/commit/8c97c620c707e01695795119841b14591635fd93",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487674 - [worker-manager] Write a test-suite-generator for unit testing providers",
+    "commit_date": "2018-12-18 14:23:31",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/provider.js",
+      "services/taskcluster-worker-manager/test/bidding-strategies/bidding-strategies_test.js",
+      "services/taskcluster-worker-manager/test/providers/provider_test.js"
+    ]
+  },
+  "24": {
+    "sha": "7804fd4cbf0e19554438113c506f38b612669704",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7804fd4cbf0e19554438113c506f38b612669704",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bugs 1487683, 1487679, 1487684, 1487680  Bug 1487683 - Write bidding strategy for current provisioner behaviour Bug 1487679 - Write a test-suite-generator for unit testing bidding-strategies Bug 1487684 - Write unit tests for bidding strategy for current provisioner behaviour Bug 1487680 - Implement bidding strategy initiation logic",
+    "commit_date": "2018-12-17 19:44:19",
+    "files_changed": [
+      "services/taskcluster-worker-manager/config.yml",
+      "services/taskcluster-worker-manager/lib/bidding-strategies/queuepending.js",
+      "services/taskcluster-worker-manager/lib/bidding-strategy.js",
+      "services/taskcluster-worker-manager/lib/main.js",
+      "services/taskcluster-worker-manager/lib/provisioner.js",
+      "services/taskcluster-worker-manager/lib/worker.js",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/test/bidding-strategies/bidding-strategies_test.js",
+      "services/taskcluster-worker-manager/test/bidding-strategies/queuepending_test.js",
+      "services/taskcluster-worker-manager/test/provisioner_test.js"
+    ]
+  },
+  "25": {
+    "sha": "fddc21e6085c2d6b548fd401cb5114f85813aad0",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fddc21e6085c2d6b548fd401cb5114f85813aad0",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Bug 1508395 - upgrade tc-lib-validate  ..and add .gitignore for node_modules/  This should only affect writeDocs",
+    "commit_date": "2018-11-20 20:38:03",
+    "files_changed": [
+      "services/taskcluster-worker-manager/.gitignore",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "26": {
+    "sha": "1e0c6cd3e33d5d38509cc8de40522e1fd96177da",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1e0c6cd3e33d5d38509cc8de40522e1fd96177da",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Address review feedback",
+    "commit_date": "2018-12-07 11:10:12",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js",
+      "services/taskcluster-worker-manager/lib/base.js",
+      "services/taskcluster-worker-manager/lib/provider.js",
+      "services/taskcluster-worker-manager/lib/provisioner.js",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/schemas/v1/worker-configuration-result.yml",
+      "services/taskcluster-worker-manager/schemas/v1/worker-configuration.yml",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "27": {
+    "sha": "fbe7817f584626659c653f6950fb2d5d621d8c70",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fbe7817f584626659c653f6950fb2d5d621d8c70",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Because OS X has a case preserving and not case sensitive filesystem",
+    "commit_date": "2018-11-05 20:58:13",
+    "files_changed": [
+      "services/taskcluster-worker-manager/test/provisioner_test.js"
+    ]
+  },
+  "28": {
+    "sha": "cadffb40d8d3a4a8b3fe0367bafa43d04b73a271",
+    "url": "https://github.com/taskcluster/taskcluster/commit/cadffb40d8d3a4a8b3fe0367bafa43d04b73a271",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "use node 8.12 in travis",
+    "commit_date": "2018-11-05 20:55:45",
+    "files_changed": [
+      "services/taskcluster-worker-manager/.travis.yml"
+    ]
+  },
+  "29": {
+    "sha": "3af5de24f6434f9a9ed5fa8b96259d2de06d460f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3af5de24f6434f9a9ed5fa8b96259d2de06d460f",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Update dependencies",
+    "commit_date": "2018-11-05 20:22:27",
+    "files_changed": [
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "30": {
+    "sha": "d89ff6d34b663b4155ec7b4a145675754becff26",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d89ff6d34b663b4155ec7b4a145675754becff26",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Implement a Worker class",
+    "commit_date": "2018-11-05 20:06:17",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/worker.js"
+    ]
+  },
+  "31": {
+    "sha": "680ddd640f99160b83fec6c53e82d0fd563639a8",
+    "url": "https://github.com/taskcluster/taskcluster/commit/680ddd640f99160b83fec6c53e82d0fd563639a8",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Implement a Bid class",
+    "commit_date": "2018-11-05 20:05:56",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/bid.js",
+      "services/taskcluster-worker-manager/test/bid_test.js"
+    ]
+  },
+  "32": {
+    "sha": "1446267b72a29f78c3b91ae73d0a029712da802f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1446267b72a29f78c3b91ae73d0a029712da802f",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "1487682: Write tests for driver code",
+    "commit_date": "2018-11-05 20:04:55",
+    "files_changed": [
+      "services/taskcluster-worker-manager/test/provisioner-example-worker-configuration.json",
+      "services/taskcluster-worker-manager/test/provisioner_test.js"
+    ]
+  },
+  "33": {
+    "sha": "6ddc1ad85c58db6be8a61799b1e167350099e98a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/6ddc1ad85c58db6be8a61799b1e167350099e98a",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "1487681: Write driver for code which communicates with Bidding Strategies and Providers",
+    "commit_date": "2018-11-05 20:04:30",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/provisioner.js"
+    ]
+  },
+  "34": {
+    "sha": "94f9b277381a5bc3a75ac85e9feae0b1a00b757d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/94f9b277381a5bc3a75ac85e9feae0b1a00b757d",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487678: Write base bidding strategy implementation",
+    "commit_date": "2018-11-05 20:02:55",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/bidding-strategy.js"
+    ]
+  },
+  "35": {
+    "sha": "532a6b4076a94ee96b8fddf80ef436197a21d510",
+    "url": "https://github.com/taskcluster/taskcluster/commit/532a6b4076a94ee96b8fddf80ef436197a21d510",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487672: Write base provider implementation",
+    "commit_date": "2018-11-05 20:02:17",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/base.js",
+      "services/taskcluster-worker-manager/lib/data-storage.js",
+      "services/taskcluster-worker-manager/lib/provider.js",
+      "services/taskcluster-worker-manager/lib/worker-config.js",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "36": {
+    "sha": "491d91bbd9a226512b6e162a57aeea24fb52e986",
+    "url": "https://github.com/taskcluster/taskcluster/commit/491d91bbd9a226512b6e162a57aeea24fb52e986",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Use a shim to provide Array.prototype.flat[Map]",
+    "commit_date": "2018-11-05 20:00:02",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/shims.js",
+      "services/taskcluster-worker-manager/package.json"
+    ]
+  },
+  "37": {
+    "sha": "663c40e132d5cbbeaec4c1a4e7a883654717196c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/663c40e132d5cbbeaec4c1a4e7a883654717196c",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Merge object.js and errors.js  Usually when you need one, you probably need the other.  Let's not bother seperating them so that we can destructure the import as needed to access both properties",
+    "commit_date": "2018-10-17 14:38:30",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js",
+      "services/taskcluster-worker-manager/lib/base.js",
+      "services/taskcluster-worker-manager/lib/data-storage.js",
+      "services/taskcluster-worker-manager/lib/object.js",
+      "services/taskcluster-worker-manager/lib/rules.js",
+      "services/taskcluster-worker-manager/lib/worker-config.js",
+      "services/taskcluster-worker-manager/test/errors_test.js",
+      "services/taskcluster-worker-manager/test/object_test.js",
+      "services/taskcluster-worker-manager/test/rules_test.js",
+      "services/taskcluster-worker-manager/test/worker-config_test.js"
+    ]
+  },
+  "38": {
+    "sha": "327b77b36c07052fffd72a43157b31268a5b2565",
+    "url": "https://github.com/taskcluster/taskcluster/commit/327b77b36c07052fffd72a43157b31268a5b2565",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1499718 - JSON Schemas for Worker Manager",
+    "commit_date": "2018-10-17 14:17:16",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js",
+      "services/taskcluster-worker-manager/schemas/v1/ruleset.yml",
+      "services/taskcluster-worker-manager/schemas/v1/satisfiers.yml",
+      "services/taskcluster-worker-manager/schemas/v1/test-worker-configuration.yml",
+      "services/taskcluster-worker-manager/schemas/v1/worker-configuration-result.yml",
+      "services/taskcluster-worker-manager/schemas/v1/worker-configuration.yml",
+      "services/taskcluster-worker-manager/test/api_test.js",
+      "services/taskcluster-worker-manager/test/convert-expected.json"
+    ]
+  },
+  "39": {
+    "sha": "0ad65419d6b501a5edabc17474c808fe72a10b0c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0ad65419d6b501a5edabc17474c808fe72a10b0c",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1499698 - Write unit tests for worker configuration management endpoints",
+    "commit_date": "2018-10-17 13:15:48",
+    "files_changed": [
+      "services/taskcluster-worker-manager/schemas/v1/anything.yml",
+      "services/taskcluster-worker-manager/test/api_test.js",
+      "services/taskcluster-worker-manager/test/helper.js"
+    ]
+  },
+  "40": {
+    "sha": "728cc72d4c5787712c9cd5acdd10aa1b8f285abf",
+    "url": "https://github.com/taskcluster/taskcluster/commit/728cc72d4c5787712c9cd5acdd10aa1b8f285abf",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1499696 - Implement endpoints for testing worker configuration evaluation",
+    "commit_date": "2018-10-17 13:09:21",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js"
+    ]
+  },
+  "41": {
+    "sha": "e46f3bbb4e05060ed4a6b34f29a6f5258d0d88ff",
+    "url": "https://github.com/taskcluster/taskcluster/commit/e46f3bbb4e05060ed4a6b34f29a6f5258d0d88ff",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487689 - Implement List Worker Configurations endpoint",
+    "commit_date": "2018-10-17 13:08:21",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js"
+    ]
+  },
+  "42": {
+    "sha": "eb77935fcb48146cb62984b186e6a9bea2305b85",
+    "url": "https://github.com/taskcluster/taskcluster/commit/eb77935fcb48146cb62984b186e6a9bea2305b85",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487688 - Implement Delete Worker Configuration endpoint",
+    "commit_date": "2018-10-17 13:07:42",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js"
+    ]
+  },
+  "43": {
+    "sha": "77c400eac18374c6ebca3f3ea76e7009671665e4",
+    "url": "https://github.com/taskcluster/taskcluster/commit/77c400eac18374c6ebca3f3ea76e7009671665e4",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1499695 - Implement Get Worker Configuration endpoint",
+    "commit_date": "2018-10-17 13:06:59",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js"
+    ]
+  },
+  "44": {
+    "sha": "50f45dbad0b6bad2a8ebaa40ccdc7f47c3b5c050",
+    "url": "https://github.com/taskcluster/taskcluster/commit/50f45dbad0b6bad2a8ebaa40ccdc7f47c3b5c050",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487690 - Implement Update Worker Configuration endpoint",
+    "commit_date": "2018-10-17 13:04:47",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js"
+    ]
+  },
+  "45": {
+    "sha": "fcc97d00c5589f2b8fa59176ef3b8c23298388db",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fcc97d00c5589f2b8fa59176ef3b8c23298388db",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487687 - Implement Create Worker Configuration endpoint",
+    "commit_date": "2018-10-17 13:03:03",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js"
+    ]
+  },
+  "46": {
+    "sha": "06dc973fd5473db89bdf90d01652cd111eb50d42",
+    "url": "https://github.com/taskcluster/taskcluster/commit/06dc973fd5473db89bdf90d01652cd111eb50d42",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487686 - Implement API builder",
+    "commit_date": "2018-10-17 13:02:01",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/api.js"
+    ]
+  },
+  "47": {
+    "sha": "3454fc42d819770c8739e302f0a12942741efbfe",
+    "url": "https://github.com/taskcluster/taskcluster/commit/3454fc42d819770c8739e302f0a12942741efbfe",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487686 - Implement API builder",
+    "commit_date": "2018-10-17 12:59:40",
+    "files_changed": [
+      "services/taskcluster-worker-manager/config.yml",
+      "services/taskcluster-worker-manager/lib/api.js",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/test/api_test.js",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "48": {
+    "sha": "21ca49e1a47bd3a8e83e4690012bb8e919a078f7",
+    "url": "https://github.com/taskcluster/taskcluster/commit/21ca49e1a47bd3a8e83e4690012bb8e919a078f7",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Fix small bug in conversion",
+    "commit_date": "2018-10-17 12:56:10",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/worker-config.js",
+      "services/taskcluster-worker-manager/test/convert-eval-expected.json",
+      "services/taskcluster-worker-manager/test/convert_test.js"
+    ]
+  },
+  "49": {
+    "sha": "7bf888fd8fbe7453a1a21253045f70e44a54839d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7bf888fd8fbe7453a1a21253045f70e44a54839d",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1488220 - [worker-manager] Implement in-memory persistence for worker configurations",
+    "commit_date": "2018-10-17 12:54:26",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/data-storage.js",
+      "services/taskcluster-worker-manager/lib/errors.js",
+      "services/taskcluster-worker-manager/lib/main.js",
+      "services/taskcluster-worker-manager/test/data-storage_test.js"
+    ]
+  },
+  "50": {
+    "sha": "333f3afb52c76f1c40db4b7419c45192c0b5cd95",
+    "url": "https://github.com/taskcluster/taskcluster/commit/333f3afb52c76f1c40db4b7419c45192c0b5cd95",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Fix slight issue with conversion script",
+    "commit_date": "2018-10-16 15:49:02",
+    "files_changed": [
+      "services/taskcluster-worker-manager/bin/convert.js",
+      "services/taskcluster-worker-manager/test/convert-eval-expected.json",
+      "services/taskcluster-worker-manager/test/convert-expected.json",
+      "services/taskcluster-worker-manager/test/convert_test.js"
+    ]
+  },
+  "51": {
+    "sha": "0d0e15bca0c1ba111f6430922ad8f2dddcbb5c58",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0d0e15bca0c1ba111f6430922ad8f2dddcbb5c58",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487685 - Implement lib-loader",
+    "commit_date": "2018-10-12 16:27:55",
+    "files_changed": [
+      "services/taskcluster-worker-manager/config.yml",
+      "services/taskcluster-worker-manager/lib/main.js"
+    ]
+  },
+  "52": {
+    "sha": "d776695acdc6a40546007562bb7dc8235f292471",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d776695acdc6a40546007562bb7dc8235f292471",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1488220 - [worker-manager] Implement in-memory persistence for worker configurations",
+    "commit_date": "2018-10-12 16:21:19",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/data-storage.js",
+      "services/taskcluster-worker-manager/lib/errors.js",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/test/data-storage_test.js",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "53": {
+    "sha": "d2928acdbe061f2c1d7104dcc0dab744b37387d8",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d2928acdbe061f2c1d7104dcc0dab744b37387d8",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1498580 - [worker-manager] implement a common base class for concept-objects",
+    "commit_date": "2018-10-12 14:01:14",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/errors.js",
+      "services/taskcluster-worker-manager/lib/object.js",
+      "services/taskcluster-worker-manager/lib/rules.js",
+      "services/taskcluster-worker-manager/lib/worker-config.js",
+      "services/taskcluster-worker-manager/test/object_test.js",
+      "services/taskcluster-worker-manager/test/rules_test.js",
+      "services/taskcluster-worker-manager/test/worker-config_test.js"
+    ]
+  },
+  "54": {
+    "sha": "f768c6fdfcfde12f9b7839de94c747a21f6c79ed",
+    "url": "https://github.com/taskcluster/taskcluster/commit/f768c6fdfcfde12f9b7839de94c747a21f6c79ed",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1498264 - [worker-manager] implement functionality to convert aws-provisioner worker type definition to a worker configuration",
+    "commit_date": "2018-10-11 15:26:25",
+    "files_changed": [
+      "services/taskcluster-worker-manager/bin/convert.js",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/test/convert-expected.json",
+      "services/taskcluster-worker-manager/test/convert-input.json",
+      "services/taskcluster-worker-manager/test/convert_test.js",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "55": {
+    "sha": "529b19ae0c84bf62da5fb201d0c59c4baea72cdb",
+    "url": "https://github.com/taskcluster/taskcluster/commit/529b19ae0c84bf62da5fb201d0c59c4baea72cdb",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487671 - [worker-manager] Implement internal configuration for worker types",
+    "commit_date": "2018-10-11 15:16:15",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/rules.js",
+      "services/taskcluster-worker-manager/lib/worker-config.js",
+      "services/taskcluster-worker-manager/test/rules_test.js",
+      "services/taskcluster-worker-manager/test/worker-config_test.js"
+    ]
+  },
+  "56": {
+    "sha": "1be0e365cb7e1e1a938c965de9a43c0e51533d11",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1be0e365cb7e1e1a938c965de9a43c0e51533d11",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "use matching node versions in package.json and .travis.yml",
+    "commit_date": "2018-10-09 21:48:13",
+    "files_changed": [
+      "services/taskcluster-worker-manager/.travis.yml"
+    ]
+  },
+  "57": {
+    "sha": "267aaaba77391ecf5e17a770b853bac0961214e3",
+    "url": "https://github.com/taskcluster/taskcluster/commit/267aaaba77391ecf5e17a770b853bac0961214e3",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Convert code to use standard errors",
+    "commit_date": "2018-10-09 21:36:06",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/errors.js",
+      "services/taskcluster-worker-manager/lib/rules.js",
+      "services/taskcluster-worker-manager/lib/worker-config.js",
+      "services/taskcluster-worker-manager/test/errors_test.js",
+      "services/taskcluster-worker-manager/test/rules_test.js",
+      "services/taskcluster-worker-manager/test/worker-config_test.js"
+    ]
+  },
+  "58": {
+    "sha": "ff5ac92c5dc547865409735b97a68af91e4ad257",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ff5ac92c5dc547865409735b97a68af91e4ad257",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1497688 - Implement standardised error handling",
+    "commit_date": "2018-10-09 21:12:20",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/errors.js",
+      "services/taskcluster-worker-manager/test/errors_test.js"
+    ]
+  },
+  "59": {
+    "sha": "84744e189ebd6e151cd535ef152381e488c09c3e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/84744e189ebd6e151cd535ef152381e488c09c3e",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487668 - [worker-manager] Implement Worker Configuration",
+    "commit_date": "2018-10-09 19:30:33",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/rules.js",
+      "services/taskcluster-worker-manager/lib/worker-config.js",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/test/worker-config_test.js",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "60": {
+    "sha": "6a44db1d751d49a239cee2cda0b883df892b947e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/6a44db1d751d49a239cee2cda0b883df892b947e",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Fix small bug in Array handling for deep assignments",
+    "commit_date": "2018-09-03 14:09:40",
+    "files_changed": [
+      "services/taskcluster-worker-manager/lib/rules.js"
+    ]
+  },
+  "61": {
+    "sha": "aa30eb5862e0a74ef5083eab97582292902c80cf",
+    "url": "https://github.com/taskcluster/taskcluster/commit/aa30eb5862e0a74ef5083eab97582292902c80cf",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Add github code owners file",
+    "commit_date": "2018-09-03 12:46:55",
+    "files_changed": [
+      "services/taskcluster-worker-manager/.github/CODEOWNERS"
+    ]
+  },
+  "62": {
+    "sha": "8661441bb0c52478968e1f4248ca9267c24e59b9",
+    "url": "https://github.com/taskcluster/taskcluster/commit/8661441bb0c52478968e1f4248ca9267c24e59b9",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Setup travis",
+    "commit_date": "2018-09-03 12:28:28",
+    "files_changed": [
+      "services/taskcluster-worker-manager/.travis.yml"
+    ]
+  },
+  "63": {
+    "sha": "5080bf767c4464b073a6a36e1b0d3653e57eae04",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5080bf767c4464b073a6a36e1b0d3653e57eae04",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Bug 1487651 - [worker-manager] Implement Ruleset",
+    "commit_date": "2018-09-03 10:53:59",
+    "files_changed": [
+      "services/taskcluster-worker-manager/.eslintrc",
+      "services/taskcluster-worker-manager/lib/rules.js",
+      "services/taskcluster-worker-manager/package.json",
+      "services/taskcluster-worker-manager/test/mocha.opts",
+      "services/taskcluster-worker-manager/test/rules_test.js",
+      "services/taskcluster-worker-manager/yarn.lock"
+    ]
+  },
+  "64": {
+    "sha": "bc3548a834f3a95f365ae83d3580233c620921b1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/bc3548a834f3a95f365ae83d3580233c620921b1",
+    "commiter_name": "ccooper",
+    "commiter_email": null,
+    "commit_message": "Add documentation to bring taskcluster repos closer to the Github recommended community standards  Added licensing info (MPL2), contribution suggestions, and a link to the Mozilla Community Participation Guidelines.  Addresses https://bugzil.la/1408073 for this repo.  Carrying-over review from https://github.com/taskcluster/taskcluster-tools/pull/546",
+    "commit_date": "2018-09-13 15:08:37",
+    "files_changed": [
+      "services/taskcluster-worker-manager/CODE_OF_CONDUCT.md",
+      "services/taskcluster-worker-manager/CONTRIBUTING.md",
+      "services/taskcluster-worker-manager/LICENSE"
+    ]
+  },
+  "65": {
+    "sha": "0a2f10a33caac6dea91225fe32c8c4f9418c85e0",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0a2f10a33caac6dea91225fe32c8c4f9418c85e0",
+    "commiter_name": "jhford",
+    "commiter_email": null,
+    "commit_message": "Initial Commit",
+    "commit_date": "2018-08-07 10:28:34",
+    "files_changed": [
+      "services/taskcluster-worker-manager/package.json"
+    ]
+  },
+  "66": {
+    "sha": "0fb9798adffe2f8ae91650f46fde1547e1b31ca2",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0fb9798adffe2f8ae91650f46fde1547e1b31ca2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) set this.debug on consumers",
+    "commit_date": "2019-01-29 21:02:31",
+    "files_changed": [
+      "libraries/pulse/src/consumer.js"
+    ]
+  },
+  "67": {
+    "sha": "1f88a4df0a7c9ff99789e52c5446b6bd11b5463f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1f88a4df0a7c9ff99789e52c5446b6bd11b5463f",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "Deletes all lastifires on removeHook",
+    "commit_date": "2019-01-29 20:26:48",
+    "files_changed": [
+      "services/hooks/src/v1.js",
+      "services/hooks/test/api_test.js"
+    ]
+  },
+  "68": {
+    "sha": "2fdbf0415eff2d35eb43659a9074a465e7adbd26",
+    "url": "https://github.com/taskcluster/taskcluster/commit/2fdbf0415eff2d35eb43659a9074a465e7adbd26",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #155 from djmitche/bug1522914  Bug 1522914, 1522917 - improvements to reconciliation",
+    "commit_date": "2019-01-29 19:29:51",
+    "files_changed": [
+      "libraries/pulse/src/client.js",
+      "libraries/pulse/src/consumer.js",
+      "services/hooks/src/listeners.js",
+      "services/hooks/src/main.js"
+    ]
+  },
+  "69": {
+    "sha": "2736c6d52c501bfeb6e46918c0827a1d4e39b76e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/2736c6d52c501bfeb6e46918c0827a1d4e39b76e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #163 from djmitche/bug1521798  Bug 1521798 - run auth tests more quickly",
+    "commit_date": "2019-01-28 22:46:21",
+    "files_changed": [
+      "services/auth/test/trie_test.js"
+    ]
+  },
+  "70": {
+    "sha": "83b56f179ed0ae0986e28830552f31e3b98102be",
+    "url": "https://github.com/taskcluster/taskcluster/commit/83b56f179ed0ae0986e28830552f31e3b98102be",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1521798 - run auth tests more quickly",
+    "commit_date": "2019-01-28 22:27:11",
+    "files_changed": [
+      "services/auth/test/trie_test.js"
+    ]
+  },
+  "71": {
+    "sha": "187349873ca9c70a04602b54c91f383b6c097a36",
+    "url": "https://github.com/taskcluster/taskcluster/commit/187349873ca9c70a04602b54c91f383b6c097a36",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522914 - handle reconciliation errors on a per-hook basis",
+    "commit_date": "2019-01-28 18:50:32",
+    "files_changed": [
+      "services/hooks/src/listeners.js"
+    ]
+  },
+  "72": {
+    "sha": "02d172063a46a58b82491944ddbd5711ac6ef992",
+    "url": "https://github.com/taskcluster/taskcluster/commit/02d172063a46a58b82491944ddbd5711ac6ef992",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522914 - allow multiple failures on a channel to only mark one connection failed",
+    "commit_date": "2019-01-28 18:35:09",
+    "files_changed": [
+      "libraries/pulse/src/client.js"
+    ]
+  },
+  "73": {
+    "sha": "62e141c83dd0e36bde5a1620f7c2bada789dbf4c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/62e141c83dd0e36bde5a1620f7c2bada789dbf4c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #161 from taskcluster/renovate/temporary-1.x  Update dependency temporary to v1",
+    "commit_date": "2019-01-28 14:09:08",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "74": {
+    "sha": "df8bc52516b5202313007a8c521756e77ddd8970",
+    "url": "https://github.com/taskcluster/taskcluster/commit/df8bc52516b5202313007a8c521756e77ddd8970",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency temporary to v1",
+    "commit_date": "2019-01-28 02:28:47",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "75": {
+    "sha": "79ffd0525d71619d91abacc8508ef1004524fce0",
+    "url": "https://github.com/taskcluster/taskcluster/commit/79ffd0525d71619d91abacc8508ef1004524fce0",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #159 from taskcluster/renovate/depcheck-0.x  Update dependency depcheck to ^0.7.0",
+    "commit_date": "2019-01-28 02:27:19",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "76": {
+    "sha": "926d592eeb0ccf7b8bff17813095fb2cff218300",
+    "url": "https://github.com/taskcluster/taskcluster/commit/926d592eeb0ccf7b8bff17813095fb2cff218300",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency depcheck to ^0.7.0",
+    "commit_date": "2019-01-28 01:49:06",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "77": {
+    "sha": "b2d25fd054671c33090ca6fea12f6cf435967ced",
+    "url": "https://github.com/taskcluster/taskcluster/commit/b2d25fd054671c33090ca6fea12f6cf435967ced",
+    "commiter_name": "Biboswan",
+    "commiter_email": "biboswan98@gmail.com",
+    "commit_message": "continue fix bug1491551 - expire limit lastfires to 100 per hookId",
+    "commit_date": "2019-01-27 22:00:39",
+    "files_changed": [
+      "services/hooks/config.yml",
+      "services/hooks/src/data.js",
+      "services/hooks/src/main.js",
+      "services/hooks/test/expires_test.js"
+    ]
+  },
+  "78": {
     "sha": "1469bc7c6d19e11792657ec9f1734f65241cdd92",
     "url": "https://github.com/taskcluster/taskcluster/commit/1469bc7c6d19e11792657ec9f1734f65241cdd92",
     "commiter_name": "imbstack",
@@ -32,7 +1132,7 @@
       "services/treeherder/README.md"
     ]
   },
-  "2": {
+  "79": {
     "sha": "15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
     "url": "https://github.com/taskcluster/taskcluster/commit/15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
     "commiter_name": "helfi92",
@@ -44,7 +1144,7 @@
       "ui/yarn.lock"
     ]
   },
-  "3": {
+  "80": {
     "sha": "912e0d6f0a86335871bb742436ee74a9eac69d4c",
     "url": "https://github.com/taskcluster/taskcluster/commit/912e0d6f0a86335871bb742436ee74a9eac69d4c",
     "commiter_name": "djmitche",
@@ -55,7 +1155,7 @@
       "infrastructure/terraform/taskcluster.tf.json"
     ]
   },
-  "4": {
+  "81": {
     "sha": "ac6ad8e8de17ce623e34cf816ee952a0be37383f",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac6ad8e8de17ce623e34cf816ee952a0be37383f",
     "commiter_name": "djmitche",
@@ -124,7 +1224,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "5": {
+  "82": {
     "sha": "fdff4fa703c2d0652021ebad577d5723537db0bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/fdff4fa703c2d0652021ebad577d5723537db0bb",
     "commiter_name": "imbstack",
@@ -135,7 +1235,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "6": {
+  "83": {
     "sha": "22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
     "url": "https://github.com/taskcluster/taskcluster/commit/22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
     "commiter_name": "imbstack",
@@ -146,7 +1246,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "7": {
+  "84": {
     "sha": "f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
     "url": "https://github.com/taskcluster/taskcluster/commit/f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
     "commiter_name": "imbstack",
@@ -176,7 +1276,7 @@
       "services/treeherder/README.md"
     ]
   },
-  "8": {
+  "85": {
     "sha": "36553b808fddf55a15b5739fa2912787a65af83a",
     "url": "https://github.com/taskcluster/taskcluster/commit/36553b808fddf55a15b5739fa2912787a65af83a",
     "commiter_name": "renovate[bot]",
@@ -188,7 +1288,7 @@
       "ui/yarn.lock"
     ]
   },
-  "9": {
+  "86": {
     "sha": "ada68546df8335a30352ec9970c3c62b4cd471fc",
     "url": "https://github.com/taskcluster/taskcluster/commit/ada68546df8335a30352ec9970c3c62b4cd471fc",
     "commiter_name": "imbstack",
@@ -199,7 +1299,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "10": {
+  "87": {
     "sha": "45acc854a52475540703d99dfd2aa45d95381c60",
     "url": "https://github.com/taskcluster/taskcluster/commit/45acc854a52475540703d99dfd2aa45d95381c60",
     "commiter_name": "djmitche",
@@ -212,7 +1312,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "11": {
+  "88": {
     "sha": "5c85f2f76f457deeec62afff57b82c79e5204ed6",
     "url": "https://github.com/taskcluster/taskcluster/commit/5c85f2f76f457deeec62afff57b82c79e5204ed6",
     "commiter_name": "djmitche",
@@ -223,7 +1323,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "12": {
+  "89": {
     "sha": "62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
     "url": "https://github.com/taskcluster/taskcluster/commit/62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
     "commiter_name": "djmitche",
@@ -251,7 +1351,7 @@
       "infrastructure/terraform/taskcluster.tf.json"
     ]
   },
-  "13": {
+  "90": {
     "sha": "4c050d72d92196389a2532915e88544b27017250",
     "url": "https://github.com/taskcluster/taskcluster/commit/4c050d72d92196389a2532915e88544b27017250",
     "commiter_name": "djmitche",
@@ -262,7 +1362,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "14": {
+  "91": {
     "sha": "460632187c319073ded53b5149b0d411a1bbef2c",
     "url": "https://github.com/taskcluster/taskcluster/commit/460632187c319073ded53b5149b0d411a1bbef2c",
     "commiter_name": "djmitche",
@@ -290,7 +1390,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "15": {
+  "92": {
     "sha": "5f87606f06675d40ae98abb564452aa208699f7d",
     "url": "https://github.com/taskcluster/taskcluster/commit/5f87606f06675d40ae98abb564452aa208699f7d",
     "commiter_name": "djmitche",
@@ -301,7 +1401,7 @@
       "libraries/references/src/built-services.js"
     ]
   },
-  "16": {
+  "93": {
     "sha": "56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
     "url": "https://github.com/taskcluster/taskcluster/commit/56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
     "commiter_name": "djmitche",
@@ -324,7 +1424,7 @@
       "services/references/package.json"
     ]
   },
-  "17": {
+  "94": {
     "sha": "1114d1da509fcec06fe96172cb200c8a3339d946",
     "url": "https://github.com/taskcluster/taskcluster/commit/1114d1da509fcec06fe96172cb200c8a3339d946",
     "commiter_name": "djmitche",
@@ -335,7 +1435,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "18": {
+  "95": {
     "sha": "65fd82b6468c4f68e8e4771054e85526c060eb90",
     "url": "https://github.com/taskcluster/taskcluster/commit/65fd82b6468c4f68e8e4771054e85526c060eb90",
     "commiter_name": "djmitche",
@@ -349,7 +1449,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "19": {
+  "96": {
     "sha": "1bf86a71b9c073653eb9ea52ff0355c630793a1f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1bf86a71b9c073653eb9ea52ff0355c630793a1f",
     "commiter_name": "djmitche",
@@ -368,7 +1468,7 @@
       "package.json"
     ]
   },
-  "20": {
+  "97": {
     "sha": "ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
     "url": "https://github.com/taskcluster/taskcluster/commit/ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
     "commiter_name": "helfi92",
@@ -379,7 +1479,7 @@
       "package.json"
     ]
   },
-  "21": {
+  "98": {
     "sha": "dfee9af2438503514b00b0df8dbbfb8032bda517",
     "url": "https://github.com/taskcluster/taskcluster/commit/dfee9af2438503514b00b0df8dbbfb8032bda517",
     "commiter_name": "renovate[bot]",
@@ -391,7 +1491,7 @@
       "ui/yarn.lock"
     ]
   },
-  "22": {
+  "99": {
     "sha": "cb3a73b9ac39953eb1ce878da97febb6be7291e1",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb3a73b9ac39953eb1ce878da97febb6be7291e1",
     "commiter_name": "renovate[bot]",
@@ -403,7 +1503,7 @@
       "ui/yarn.lock"
     ]
   },
-  "23": {
+  "100": {
     "sha": "41d9a1944543cc7234fa34ce98d1d0571a8984e1",
     "url": "https://github.com/taskcluster/taskcluster/commit/41d9a1944543cc7234fa34ce98d1d0571a8984e1",
     "commiter_name": "renovate[bot]",
@@ -415,7 +1515,7 @@
       "ui/yarn.lock"
     ]
   },
-  "24": {
+  "101": {
     "sha": "7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
     "url": "https://github.com/taskcluster/taskcluster/commit/7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
     "commiter_name": "renovate[bot]",
@@ -427,7 +1527,7 @@
       "ui/yarn.lock"
     ]
   },
-  "25": {
+  "102": {
     "sha": "433e8cde5340ae4c98bded7e3a246550ed7c04d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/433e8cde5340ae4c98bded7e3a246550ed7c04d8",
     "commiter_name": "renovate[bot]",
@@ -439,7 +1539,7 @@
       "ui/yarn.lock"
     ]
   },
-  "26": {
+  "103": {
     "sha": "3d916d45912e2ad902a2887a88caf41e0d0bff20",
     "url": "https://github.com/taskcluster/taskcluster/commit/3d916d45912e2ad902a2887a88caf41e0d0bff20",
     "commiter_name": "helfi92",
@@ -451,7 +1551,7 @@
       "ui/src/components/WorkerTypesTable/index.jsx"
     ]
   },
-  "27": {
+  "104": {
     "sha": "aca0d33455922bbcea325d597bf54d3991e77ada",
     "url": "https://github.com/taskcluster/taskcluster/commit/aca0d33455922bbcea325d597bf54d3991e77ada",
     "commiter_name": "Biboswan",
@@ -465,7 +1565,7 @@
       "services/web-server/src/resolvers/Hooks.js"
     ]
   },
-  "28": {
+  "105": {
     "sha": "1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
     "url": "https://github.com/taskcluster/taskcluster/commit/1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
     "commiter_name": "renovate[bot]",
@@ -477,7 +1577,7 @@
       "ui/yarn.lock"
     ]
   },
-  "29": {
+  "106": {
     "sha": "5a0e8af004921efe7b08847d598ea8ad207ca04b",
     "url": "https://github.com/taskcluster/taskcluster/commit/5a0e8af004921efe7b08847d598ea8ad207ca04b",
     "commiter_name": "helfi92",
@@ -489,7 +1589,7 @@
       "ui/yarn.lock"
     ]
   },
-  "30": {
+  "107": {
     "sha": "79ec514d9392094d89d31fe98e1a412d56ac04c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/79ec514d9392094d89d31fe98e1a412d56ac04c5",
     "commiter_name": "helfi92",
@@ -500,7 +1600,7 @@
       "netlify.toml"
     ]
   },
-  "31": {
+  "108": {
     "sha": "a60f57c3215c46022a3f0d6f59834bb9134359c1",
     "url": "https://github.com/taskcluster/taskcluster/commit/a60f57c3215c46022a3f0d6f59834bb9134359c1",
     "commiter_name": "owlishDeveloper",
@@ -810,7 +1910,7 @@
       "ui/src/views/Scopes/ViewScope/index.jsx"
     ]
   },
-  "32": {
+  "109": {
     "sha": "59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
     "url": "https://github.com/taskcluster/taskcluster/commit/59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
     "commiter_name": "helfi92",
@@ -821,7 +1921,7 @@
       "README.md"
     ]
   },
-  "33": {
+  "110": {
     "sha": "ab7a4381b84cf003bc951d1f84c660425b53db91",
     "url": "https://github.com/taskcluster/taskcluster/commit/ab7a4381b84cf003bc951d1f84c660425b53db91",
     "commiter_name": "djmitche",
@@ -842,7 +1942,7 @@
       "services/built-in-workers/test/mocha.opts"
     ]
   },
-  "34": {
+  "111": {
     "sha": "1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
     "url": "https://github.com/taskcluster/taskcluster/commit/1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
     "commiter_name": "djmitche",
@@ -868,7 +1968,7 @@
       "services/built-in-workers/yarn.lock"
     ]
   },
-  "35": {
+  "112": {
     "sha": "db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
     "url": "https://github.com/taskcluster/taskcluster/commit/db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
     "commiter_name": "hybrid1999",
@@ -884,7 +1984,7 @@
       "services/built-in-workers/test/index_test.js"
     ]
   },
-  "36": {
+  "113": {
     "sha": "4f749b9ad5275107a6a4524d78eda9e1eee00425",
     "url": "https://github.com/taskcluster/taskcluster/commit/4f749b9ad5275107a6a4524d78eda9e1eee00425",
     "commiter_name": "djmitche",
@@ -896,7 +1996,7 @@
       "services/built-in-workers/package.json"
     ]
   },
-  "37": {
+  "114": {
     "sha": "8544811bbcf1413f35f7392e9c41a791a4f59e00",
     "url": "https://github.com/taskcluster/taskcluster/commit/8544811bbcf1413f35f7392e9c41a791a4f59e00",
     "commiter_name": "djmitche",
@@ -921,7 +2021,7 @@
       "services/built-in-workers/yarn.lock"
     ]
   },
-  "38": {
+  "115": {
     "sha": "3a41717b455f83cf1abeb16485f0067cf5a51b63",
     "url": "https://github.com/taskcluster/taskcluster/commit/3a41717b455f83cf1abeb16485f0067cf5a51b63",
     "commiter_name": "owlishDeveloper",
@@ -935,7 +2035,7 @@
       "ui/taskcluster-web-tests/Dockerfile"
     ]
   },
-  "39": {
+  "116": {
     "sha": "4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
     "url": "https://github.com/taskcluster/taskcluster/commit/4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
     "commiter_name": "djmitche",
@@ -949,7 +2049,7 @@
       "yarn.lock"
     ]
   },
-  "40": {
+  "117": {
     "sha": "fc4b259c1361cafa470870dc140b507104a28e6a",
     "url": "https://github.com/taskcluster/taskcluster/commit/fc4b259c1361cafa470870dc140b507104a28e6a",
     "commiter_name": "djmitche",
@@ -985,7 +2085,7 @@
       "yarn.lock"
     ]
   },
-  "41": {
+  "118": {
     "sha": "ff9efef8504e46a92b1153413907bddb4672dc72",
     "url": "https://github.com/taskcluster/taskcluster/commit/ff9efef8504e46a92b1153413907bddb4672dc72",
     "commiter_name": "djmitche",
@@ -1007,7 +2107,7 @@
       "yarn.lock"
     ]
   },
-  "42": {
+  "119": {
     "sha": "7ced9f86720f654ad055ebab914c02f7ed7869d4",
     "url": "https://github.com/taskcluster/taskcluster/commit/7ced9f86720f654ad055ebab914c02f7ed7869d4",
     "commiter_name": "owlishDeveloper",
@@ -1019,7 +2119,7 @@
       "ui/package.json"
     ]
   },
-  "43": {
+  "120": {
     "sha": "a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
     "url": "https://github.com/taskcluster/taskcluster/commit/a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
     "commiter_name": "owlishDeveloper",
@@ -1329,7 +2429,7 @@
       "ui/src/views/Scopes/ViewScope/index.jsx"
     ]
   },
-  "44": {
+  "121": {
     "sha": "e1e741d51416b622a15222c177d9c8b5e3f4185c",
     "url": "https://github.com/taskcluster/taskcluster/commit/e1e741d51416b622a15222c177d9c8b5e3f4185c",
     "commiter_name": "djmitche",
@@ -1340,7 +2440,7 @@
       "services/references/package.json"
     ]
   },
-  "45": {
+  "122": {
     "sha": "ac6f65834888d30bf280a8b93d02291e9f6f1729",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac6f65834888d30bf280a8b93d02291e9f6f1729",
     "commiter_name": "djmitche",
@@ -1353,7 +2453,7 @@
       "yarn.lock"
     ]
   },
-  "46": {
+  "123": {
     "sha": "98f8e77b11a18960fb64556f92cdcb34208a6c6f",
     "url": "https://github.com/taskcluster/taskcluster/commit/98f8e77b11a18960fb64556f92cdcb34208a6c6f",
     "commiter_name": "owlishDeveloper",
@@ -1368,7 +2468,7 @@
       "taskcluster-web/LICENSE"
     ]
   },
-  "47": {
+  "124": {
     "sha": "7470efa73fb6d495eb968041da28e581ada1debd",
     "url": "https://github.com/taskcluster/taskcluster/commit/7470efa73fb6d495eb968041da28e581ada1debd",
     "commiter_name": "owlishDeveloper",
@@ -1678,7 +2778,7 @@
       "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
     ]
   },
-  "48": {
+  "125": {
     "sha": "408dcaa88953e36544f215946b2ce4e4e504e3df",
     "url": "https://github.com/taskcluster/taskcluster/commit/408dcaa88953e36544f215946b2ce4e4e504e3df",
     "commiter_name": "owlishDeveloper",
@@ -1988,7 +3088,7 @@
       "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
     ]
   },
-  "49": {
+  "126": {
     "sha": "ef4c5fa323d705d6df617da24f0ee88027df4dd6",
     "url": "https://github.com/taskcluster/taskcluster/commit/ef4c5fa323d705d6df617da24f0ee88027df4dd6",
     "commiter_name": "djmitche",
@@ -2008,7 +3108,7 @@
       "yarn.lock"
     ]
   },
-  "50": {
+  "127": {
     "sha": "0fe0639a979a4e03e1228490fe667bba3cc06a19",
     "url": "https://github.com/taskcluster/taskcluster/commit/0fe0639a979a4e03e1228490fe667bba3cc06a19",
     "commiter_name": "djmitche",
@@ -2019,7 +3119,7 @@
       "services/references/package.json"
     ]
   },
-  "51": {
+  "128": {
     "sha": "33ff9db6fd8f9a1eddfb249872916292ee53a12a",
     "url": "https://github.com/taskcluster/taskcluster/commit/33ff9db6fd8f9a1eddfb249872916292ee53a12a",
     "commiter_name": "ededals",
@@ -2030,7 +3130,7 @@
       "src/views/Tasks/CreateTask/index.jsx"
     ]
   },
-  "52": {
+  "129": {
     "sha": "575665a45bed1e450481f98941532b436250ed89",
     "url": "https://github.com/taskcluster/taskcluster/commit/575665a45bed1e450481f98941532b436250ed89",
     "commiter_name": "ededals",
@@ -2041,7 +3141,7 @@
       "src/views/PulseMessages/index.jsx"
     ]
   },
-  "53": {
+  "130": {
     "sha": "d28fe09d78b072dd125882f4792964648a59a2b4",
     "url": "https://github.com/taskcluster/taskcluster/commit/d28fe09d78b072dd125882f4792964648a59a2b4",
     "commiter_name": "varundey",
@@ -2055,7 +3155,7 @@
       "src/views/Tasks/TaskLog/index.jsx"
     ]
   },
-  "54": {
+  "131": {
     "sha": "32bf21dccf8ae4582f5da833c8db76214709ae9a",
     "url": "https://github.com/taskcluster/taskcluster/commit/32bf21dccf8ae4582f5da833c8db76214709ae9a",
     "commiter_name": "owlishDeveloper",
@@ -2067,7 +3167,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "55": {
+  "132": {
     "sha": "9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
     "url": "https://github.com/taskcluster/taskcluster/commit/9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
     "commiter_name": "imbstack",
@@ -2094,7 +3194,7 @@
       "services/queue/test/queueservice_test.js"
     ]
   },
-  "56": {
+  "133": {
     "sha": "f2f86653dc1c587509ee9cba7366b02ab949a07d",
     "url": "https://github.com/taskcluster/taskcluster/commit/f2f86653dc1c587509ee9cba7366b02ab949a07d",
     "commiter_name": "owlishDeveloper",
@@ -2106,7 +3206,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "57": {
+  "134": {
     "sha": "c8e302d0be612ca3644b77e2e391c11507542f12",
     "url": "https://github.com/taskcluster/taskcluster/commit/c8e302d0be612ca3644b77e2e391c11507542f12",
     "commiter_name": "owlishDeveloper",
@@ -2118,7 +3218,7 @@
       "services/github/src/tc-yaml.js"
     ]
   },
-  "58": {
+  "135": {
     "sha": "8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
     "url": "https://github.com/taskcluster/taskcluster/commit/8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
     "commiter_name": "arshadkazmi42",
@@ -2129,7 +3229,7 @@
       "src/views/Quickstart/index.jsx"
     ]
   },
-  "59": {
+  "136": {
     "sha": "af8d50fed466b5bdaed1c1a3f27a1cd193655599",
     "url": "https://github.com/taskcluster/taskcluster/commit/af8d50fed466b5bdaed1c1a3f27a1cd193655599",
     "commiter_name": "vivekRaj10",
@@ -2143,7 +3243,7 @@
       "src/components/WorkersTable/index.jsx"
     ]
   },
-  "60": {
+  "137": {
     "sha": "aeba2adac1fa34609700beaa304fcdb9e0b910cf",
     "url": "https://github.com/taskcluster/taskcluster/commit/aeba2adac1fa34609700beaa304fcdb9e0b910cf",
     "commiter_name": "varundey",
@@ -2154,7 +3254,7 @@
       "src/views/Tasks/ViewTask/index.jsx"
     ]
   },
-  "61": {
+  "138": {
     "sha": "60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
     "url": "https://github.com/taskcluster/taskcluster/commit/60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
     "commiter_name": "djmitche",
@@ -2168,7 +3268,7 @@
       "yarn.lock"
     ]
   },
-  "62": {
+  "139": {
     "sha": "30372ec731730592a7bf22d4b349a61f75663883",
     "url": "https://github.com/taskcluster/taskcluster/commit/30372ec731730592a7bf22d4b349a61f75663883",
     "commiter_name": "djmitche",
@@ -2179,7 +3279,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "63": {
+  "140": {
     "sha": "58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "url": "https://github.com/taskcluster/taskcluster/commit/58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "commiter_name": "Biboswan",
@@ -2190,7 +3290,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "64": {
+  "141": {
     "sha": "910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "url": "https://github.com/taskcluster/taskcluster/commit/910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "commiter_name": "djmitche",
@@ -2240,7 +3340,7 @@
       "test/meta_test.js"
     ]
   },
-  "65": {
+  "142": {
     "sha": "73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "url": "https://github.com/taskcluster/taskcluster/commit/73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "commiter_name": "imbstack",
@@ -2252,7 +3352,7 @@
       "yarn.lock"
     ]
   },
-  "66": {
+  "143": {
     "sha": "a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "url": "https://github.com/taskcluster/taskcluster/commit/a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "commiter_name": "renovate-bot",
@@ -2264,7 +3364,7 @@
       "yarn.lock"
     ]
   },
-  "67": {
+  "144": {
     "sha": "eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "url": "https://github.com/taskcluster/taskcluster/commit/eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "commiter_name": "djmitche",
@@ -2282,7 +3382,7 @@
       "services/references/src/main.js"
     ]
   },
-  "68": {
+  "145": {
     "sha": "2926da3c9b179899ce1f4b084cb80d29359bccde",
     "url": "https://github.com/taskcluster/taskcluster/commit/2926da3c9b179899ce1f4b084cb80d29359bccde",
     "commiter_name": "djmitche",
@@ -2294,7 +3394,7 @@
       "test/meta_test.js"
     ]
   },
-  "69": {
+  "146": {
     "sha": "a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "url": "https://github.com/taskcluster/taskcluster/commit/a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "commiter_name": "djmitche",
@@ -2342,7 +3442,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "70": {
+  "147": {
     "sha": "b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "url": "https://github.com/taskcluster/taskcluster/commit/b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "commiter_name": "djmitche",
@@ -2356,7 +3456,7 @@
       "infrastructure/terraform/LICENSE"
     ]
   },
-  "71": {
+  "148": {
     "sha": "a263ab914e5684c0ea3a538040e4814515c90329",
     "url": "https://github.com/taskcluster/taskcluster/commit/a263ab914e5684c0ea3a538040e4814515c90329",
     "commiter_name": "djmitche",
@@ -2408,7 +3508,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "72": {
+  "149": {
     "sha": "39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "url": "https://github.com/taskcluster/taskcluster/commit/39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "commiter_name": "djmitche",
@@ -2419,7 +3519,7 @@
       ".taskcluster.yml"
     ]
   },
-  "73": {
+  "150": {
     "sha": "1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "url": "https://github.com/taskcluster/taskcluster/commit/1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "commiter_name": "djmitche",
@@ -2430,7 +3530,7 @@
       "services/references/package.json"
     ]
   },
-  "74": {
+  "151": {
     "sha": "158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "url": "https://github.com/taskcluster/taskcluster/commit/158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "commiter_name": "djmitche",
@@ -2607,7 +3707,7 @@
       "services/references/test/mocha.opts"
     ]
   },
-  "75": {
+  "152": {
     "sha": "8da6f9a0a314111d1bfa71428f1175920679dce9",
     "url": "https://github.com/taskcluster/taskcluster/commit/8da6f9a0a314111d1bfa71428f1175920679dce9",
     "commiter_name": "djmitche",
@@ -2624,7 +3724,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "76": {
+  "153": {
     "sha": "7073e919271708b5394c2abb42382306c928e63a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7073e919271708b5394c2abb42382306c928e63a",
     "commiter_name": "djmitche",
@@ -2636,7 +3736,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "77": {
+  "154": {
     "sha": "61bb37c2ce4648aa0534037caf968ba1897c4919",
     "url": "https://github.com/taskcluster/taskcluster/commit/61bb37c2ce4648aa0534037caf968ba1897c4919",
     "commiter_name": "djmitche",
@@ -2648,7 +3748,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "78": {
+  "155": {
     "sha": "38504daf3872070523aac7abce819b4eeb928b87",
     "url": "https://github.com/taskcluster/taskcluster/commit/38504daf3872070523aac7abce819b4eeb928b87",
     "commiter_name": "imbstack",
@@ -2663,7 +3763,7 @@
       "services/references/schemas/manifest-v2.yml"
     ]
   },
-  "79": {
+  "156": {
     "sha": "0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "commiter_name": "djmitche",
@@ -2849,7 +3949,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "80": {
+  "157": {
     "sha": "998899df571454e9de69f902a17daf36a3144618",
     "url": "https://github.com/taskcluster/taskcluster/commit/998899df571454e9de69f902a17daf36a3144618",
     "commiter_name": "djmitche",
@@ -2860,7 +3960,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "81": {
+  "158": {
     "sha": "c57689bf42a4cf06dba531ae86e35224219803c6",
     "url": "https://github.com/taskcluster/taskcluster/commit/c57689bf42a4cf06dba531ae86e35224219803c6",
     "commiter_name": "djmitche",
@@ -2871,7 +3971,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "82": {
+  "159": {
     "sha": "190f0dc3c179383b0298fc552f237df4d45f42aa",
     "url": "https://github.com/taskcluster/taskcluster/commit/190f0dc3c179383b0298fc552f237df4d45f42aa",
     "commiter_name": "ccooper",
@@ -2884,7 +3984,7 @@
       "services/references/LICENSE"
     ]
   },
-  "83": {
+  "160": {
     "sha": "f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "url": "https://github.com/taskcluster/taskcluster/commit/f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "commiter_name": "djmitche",
@@ -2899,7 +3999,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "84": {
+  "161": {
     "sha": "3237de63cef974dfb4ec21735411e81a173469da",
     "url": "https://github.com/taskcluster/taskcluster/commit/3237de63cef974dfb4ec21735411e81a173469da",
     "commiter_name": "djmitche",
@@ -2911,7 +4011,7 @@
       "services/references/README.md"
     ]
   },
-  "85": {
+  "162": {
     "sha": "9d4639e02eea9a27a70664db50da3d6c39dff742",
     "url": "https://github.com/taskcluster/taskcluster/commit/9d4639e02eea9a27a70664db50da3d6c39dff742",
     "commiter_name": "djmitche",
@@ -2925,7 +4025,7 @@
       "services/references/test/load_test.js"
     ]
   },
-  "86": {
+  "163": {
     "sha": "3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "url": "https://github.com/taskcluster/taskcluster/commit/3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "commiter_name": "djmitche",
@@ -2944,7 +4044,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "87": {
+  "164": {
     "sha": "b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "commiter_name": "djmitche",
@@ -2955,7 +4055,7 @@
       "services/references/schemas/manifest.yml"
     ]
   },
-  "88": {
+  "165": {
     "sha": "e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "url": "https://github.com/taskcluster/taskcluster/commit/e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "commiter_name": "djmitche",
@@ -2970,7 +4070,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "89": {
+  "166": {
     "sha": "0490184a91391efa3f01c5dbace65e87db9c8f20",
     "url": "https://github.com/taskcluster/taskcluster/commit/0490184a91391efa3f01c5dbace65e87db9c8f20",
     "commiter_name": "djmitche",
@@ -2981,7 +4081,7 @@
       "services/references/Dockerfile"
     ]
   },
-  "90": {
+  "167": {
     "sha": "a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "url": "https://github.com/taskcluster/taskcluster/commit/a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "commiter_name": "djmitche",
@@ -2993,7 +4093,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "91": {
+  "168": {
     "sha": "1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "url": "https://github.com/taskcluster/taskcluster/commit/1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "commiter_name": "djmitche",
@@ -3006,7 +4106,7 @@
       "services/references/nginx-site.conf"
     ]
   },
-  "92": {
+  "169": {
     "sha": "67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "url": "https://github.com/taskcluster/taskcluster/commit/67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "commiter_name": "djmitche",
@@ -3017,7 +4117,7 @@
       "services/references/.taskcluster.yml"
     ]
   },
-  "93": {
+  "170": {
     "sha": "7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "commiter_name": "djmitche",
@@ -3028,7 +4128,7 @@
       "services/references/README.md"
     ]
   },
-  "94": {
+  "171": {
     "sha": "30401b64459da526c3ce11def5fc93d50035094e",
     "url": "https://github.com/taskcluster/taskcluster/commit/30401b64459da526c3ce11def5fc93d50035094e",
     "commiter_name": "djmitche",
@@ -3042,7 +4142,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "95": {
+  "172": {
     "sha": "e84021107115016d5c0023fb18ea7726b5f8beab",
     "url": "https://github.com/taskcluster/taskcluster/commit/e84021107115016d5c0023fb18ea7726b5f8beab",
     "commiter_name": "djmitche",
@@ -3059,7 +4159,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "96": {
+  "173": {
     "sha": "d6402324224cd7173edbd87c51a2e310930268df",
     "url": "https://github.com/taskcluster/taskcluster/commit/d6402324224cd7173edbd87c51a2e310930268df",
     "commiter_name": "djmitche",
@@ -3072,7 +4172,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "97": {
+  "174": {
     "sha": "fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "url": "https://github.com/taskcluster/taskcluster/commit/fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "commiter_name": "djmitche",
@@ -3090,7 +4190,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "98": {
+  "175": {
     "sha": "8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "commiter_name": "djmitche",
@@ -3110,7 +4210,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "99": {
+  "176": {
     "sha": "9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "url": "https://github.com/taskcluster/taskcluster/commit/9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "commiter_name": "owlishDeveloper",
@@ -3121,7 +4221,7 @@
       "services/github/src/handlers.js"
     ]
   },
-  "100": {
+  "177": {
     "sha": "fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "commiter_name": "djmitche",
@@ -3132,7 +4232,7 @@
       "libraries/references/package.json"
     ]
   },
-  "101": {
+  "178": {
     "sha": "6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "url": "https://github.com/taskcluster/taskcluster/commit/6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "commiter_name": "djmitche",
@@ -3143,7 +4243,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "102": {
+  "179": {
     "sha": "2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "url": "https://github.com/taskcluster/taskcluster/commit/2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "commiter_name": "djmitche",
@@ -3154,7 +4254,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "103": {
+  "180": {
     "sha": "ce1c231b06efceebebeda268a127d73a4333b987",
     "url": "https://github.com/taskcluster/taskcluster/commit/ce1c231b06efceebebeda268a127d73a4333b987",
     "commiter_name": "djmitche",
@@ -3165,7 +4265,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "104": {
+  "181": {
     "sha": "5e97e64a746049de3d7b66e60140664d353fbb2b",
     "url": "https://github.com/taskcluster/taskcluster/commit/5e97e64a746049de3d7b66e60140664d353fbb2b",
     "commiter_name": "renovate[bot]",
@@ -3177,7 +4277,7 @@
       "yarn.lock"
     ]
   },
-  "105": {
+  "182": {
     "sha": "7716154f7b5a914bcd10d7390989178072370c97",
     "url": "https://github.com/taskcluster/taskcluster/commit/7716154f7b5a914bcd10d7390989178072370c97",
     "commiter_name": "renovate[bot]",
@@ -3189,7 +4289,7 @@
       "yarn.lock"
     ]
   },
-  "106": {
+  "183": {
     "sha": "c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "url": "https://github.com/taskcluster/taskcluster/commit/c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "commiter_name": "renovate[bot]",
@@ -3201,7 +4301,7 @@
       "yarn.lock"
     ]
   },
-  "107": {
+  "184": {
     "sha": "3de3082db222232d9c420c88305140d8c0bff305",
     "url": "https://github.com/taskcluster/taskcluster/commit/3de3082db222232d9c420c88305140d8c0bff305",
     "commiter_name": "djmitche",
@@ -3213,7 +4313,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "108": {
+  "185": {
     "sha": "25e72b7bb35df99f945718093e89ae71da95b429",
     "url": "https://github.com/taskcluster/taskcluster/commit/25e72b7bb35df99f945718093e89ae71da95b429",
     "commiter_name": "djmitche",
@@ -3225,7 +4325,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "109": {
+  "186": {
     "sha": "c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "url": "https://github.com/taskcluster/taskcluster/commit/c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "commiter_name": "djmitche",
@@ -3237,7 +4337,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "110": {
+  "187": {
     "sha": "8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "commiter_name": "owlishDeveloper",
@@ -3249,7 +4349,7 @@
       "services/web-server/package.json"
     ]
   },
-  "111": {
+  "188": {
     "sha": "63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "url": "https://github.com/taskcluster/taskcluster/commit/63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "commiter_name": "owlishDeveloper",
@@ -3268,7 +4368,7 @@
       "yarn.lock"
     ]
   },
-  "112": {
+  "189": {
     "sha": "0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "url": "https://github.com/taskcluster/taskcluster/commit/0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "commiter_name": "djmitche",
@@ -3279,7 +4379,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "113": {
+  "190": {
     "sha": "cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "url": "https://github.com/taskcluster/taskcluster/commit/cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "commiter_name": "djmitche",
@@ -3291,7 +4391,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "114": {
+  "191": {
     "sha": "38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "url": "https://github.com/taskcluster/taskcluster/commit/38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "commiter_name": "owlishDeveloper",
@@ -3392,7 +4492,7 @@
       "yarn.lock"
     ]
   },
-  "115": {
+  "192": {
     "sha": "6920c209219ee2d28130f9d36e24507be86d7c28",
     "url": "https://github.com/taskcluster/taskcluster/commit/6920c209219ee2d28130f9d36e24507be86d7c28",
     "commiter_name": "djmitche",
@@ -3403,7 +4503,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "116": {
+  "193": {
     "sha": "70ad6b427043f69e28f9cb6aaef534151b13383c",
     "url": "https://github.com/taskcluster/taskcluster/commit/70ad6b427043f69e28f9cb6aaef534151b13383c",
     "commiter_name": "djmitche",
@@ -3416,7 +4516,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "117": {
+  "194": {
     "sha": "f67c857131a9ef118b56c43d89f173dee62f2512",
     "url": "https://github.com/taskcluster/taskcluster/commit/f67c857131a9ef118b56c43d89f173dee62f2512",
     "commiter_name": "owlishDeveloper",
@@ -3553,7 +4653,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "118": {
+  "195": {
     "sha": "e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "url": "https://github.com/taskcluster/taskcluster/commit/e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "commiter_name": "djmitche",
@@ -3564,7 +4664,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "119": {
+  "196": {
     "sha": "4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "url": "https://github.com/taskcluster/taskcluster/commit/4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "commiter_name": "djmitche",
@@ -3575,7 +4675,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "120": {
+  "197": {
     "sha": "49b961bb95ce8671fd9a54543694acab9ef548d7",
     "url": "https://github.com/taskcluster/taskcluster/commit/49b961bb95ce8671fd9a54543694acab9ef548d7",
     "commiter_name": "djmitche",
@@ -3586,7 +4686,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "121": {
+  "198": {
     "sha": "fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "url": "https://github.com/taskcluster/taskcluster/commit/fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "commiter_name": "owlishDeveloper",
@@ -3598,7 +4698,7 @@
       "services/github/test/handler_test.js"
     ]
   },
-  "122": {
+  "199": {
     "sha": "98c16d0320d16f8d284a82d36c792e192e389664",
     "url": "https://github.com/taskcluster/taskcluster/commit/98c16d0320d16f8d284a82d36c792e192e389664",
     "commiter_name": "djmitche",
@@ -3609,7 +4709,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "123": {
+  "200": {
     "sha": "d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "url": "https://github.com/taskcluster/taskcluster/commit/d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "commiter_name": "djmitche",
@@ -3620,7 +4720,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "124": {
+  "201": {
     "sha": "1a224a54c17fe7871c39b56e185268082623760f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1a224a54c17fe7871c39b56e185268082623760f",
     "commiter_name": "djmitche",
@@ -3749,7 +4849,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "125": {
+  "202": {
     "sha": "3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "url": "https://github.com/taskcluster/taskcluster/commit/3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "commiter_name": "djmitche",
@@ -3761,7 +4861,7 @@
       "libraries/references/test/validate_test.js"
     ]
   },
-  "126": {
+  "203": {
     "sha": "6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "url": "https://github.com/taskcluster/taskcluster/commit/6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "commiter_name": "djmitche",
@@ -3885,7 +4985,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "127": {
+  "204": {
     "sha": "4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "url": "https://github.com/taskcluster/taskcluster/commit/4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "commiter_name": "djmitche",
@@ -3899,7 +4999,7 @@
       "libraries/references/test/metaschema_test.js"
     ]
   },
-  "128": {
+  "205": {
     "sha": "d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "commiter_name": "Biboswan",
@@ -3912,7 +5012,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "129": {
+  "206": {
     "sha": "70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "url": "https://github.com/taskcluster/taskcluster/commit/70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "commiter_name": "djmitche",
@@ -3923,7 +5023,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "130": {
+  "207": {
     "sha": "4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "url": "https://github.com/taskcluster/taskcluster/commit/4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "commiter_name": "djmitche",
@@ -3937,7 +5037,7 @@
       "infrastructure/builder/test/formats/tf_json_test.js"
     ]
   },
-  "131": {
+  "208": {
     "sha": "fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "commiter_name": "djmitche",
@@ -3948,7 +5048,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "132": {
+  "209": {
     "sha": "49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "url": "https://github.com/taskcluster/taskcluster/commit/49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "commiter_name": "djmitche",
@@ -3962,7 +5062,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "133": {
+  "210": {
     "sha": "65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "url": "https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "commiter_name": "djmitche",
@@ -3973,7 +5073,7 @@
       "package.json"
     ]
   },
-  "134": {
+  "211": {
     "sha": "cb01a41a19567239c3796b541111cff500117927",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb01a41a19567239c3796b541111cff500117927",
     "commiter_name": "imbstack",
@@ -3984,7 +5084,7 @@
       "package.json"
     ]
   },
-  "135": {
+  "212": {
     "sha": "837bc03478191928c019b36b2cd1a8360c242427",
     "url": "https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427",
     "commiter_name": "djmitche",
@@ -3996,7 +5096,7 @@
       "yarn.lock"
     ]
   },
-  "136": {
+  "213": {
     "sha": "d3336686210d98db119e5640c574dc62f2ca0237",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237",
     "commiter_name": "djmitche",
@@ -4007,7 +5107,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "137": {
+  "214": {
     "sha": "fcfa98088751a39ddc8707445a476158f2f118e3",
     "url": "https://github.com/taskcluster/taskcluster/commit/fcfa98088751a39ddc8707445a476158f2f118e3",
     "commiter_name": "arshadkazmi42",
@@ -4020,7 +5120,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "138": {
+  "215": {
     "sha": "e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "url": "https://github.com/taskcluster/taskcluster/commit/e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "commiter_name": "renovate-bot",
@@ -4032,7 +5132,7 @@
       "yarn.lock"
     ]
   },
-  "139": {
+  "216": {
     "sha": "68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "url": "https://github.com/taskcluster/taskcluster/commit/68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "commiter_name": "djmitche",
@@ -4043,7 +5143,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "140": {
+  "217": {
     "sha": "7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "commiter_name": "imbstack",
@@ -4054,7 +5154,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "141": {
+  "218": {
     "sha": "01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "url": "https://github.com/taskcluster/taskcluster/commit/01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "commiter_name": "imbstack",
@@ -4065,7 +5165,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "142": {
+  "219": {
     "sha": "83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "commiter_name": "imbstack",
@@ -4076,7 +5176,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "143": {
+  "220": {
     "sha": "13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "url": "https://github.com/taskcluster/taskcluster/commit/13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "commiter_name": "imbstack",
@@ -4087,7 +5187,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "144": {
+  "221": {
     "sha": "05c9871d6131e99147e0874dfe1de8f19541ace4",
     "url": "https://github.com/taskcluster/taskcluster/commit/05c9871d6131e99147e0874dfe1de8f19541ace4",
     "commiter_name": "owlishDeveloper",
@@ -4098,7 +5198,7 @@
       "README.md"
     ]
   },
-  "145": {
+  "222": {
     "sha": "7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "commiter_name": "imbstack",
@@ -4119,7 +5219,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "146": {
+  "223": {
     "sha": "756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "url": "https://github.com/taskcluster/taskcluster/commit/756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "commiter_name": "djmitche",
@@ -4130,7 +5230,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "147": {
+  "224": {
     "sha": "265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "url": "https://github.com/taskcluster/taskcluster/commit/265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "commiter_name": "djmitche",
@@ -4141,7 +5241,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "148": {
+  "225": {
     "sha": "0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "commiter_name": "Biboswan",
@@ -4172,7 +5272,7 @@
       "yarn.lock"
     ]
   },
-  "149": {
+  "226": {
     "sha": "0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "url": "https://github.com/taskcluster/taskcluster/commit/0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "commiter_name": "Biboswan",
@@ -4185,7 +5285,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "150": {
+  "227": {
     "sha": "ac25a3592f5b81a50ea2c320662e38f122af5697",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac25a3592f5b81a50ea2c320662e38f122af5697",
     "commiter_name": "djmitche",
@@ -4196,7 +5296,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "151": {
+  "228": {
     "sha": "c2046d13643624bf7463f990c243c7c2dc54d827",
     "url": "https://github.com/taskcluster/taskcluster/commit/c2046d13643624bf7463f990c243c7c2dc54d827",
     "commiter_name": "djmitche",
@@ -4208,7 +5308,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "152": {
+  "229": {
     "sha": "57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "url": "https://github.com/taskcluster/taskcluster/commit/57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "commiter_name": "djmitche",
@@ -4220,7 +5320,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "153": {
+  "230": {
     "sha": "a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "url": "https://github.com/taskcluster/taskcluster/commit/a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "commiter_name": "djmitche",
@@ -4231,7 +5331,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "154": {
+  "231": {
     "sha": "e881636d369651eefc7ef242ecf93a228f142e91",
     "url": "https://github.com/taskcluster/taskcluster/commit/e881636d369651eefc7ef242ecf93a228f142e91",
     "commiter_name": "Biboswan",
@@ -4247,7 +5347,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "155": {
+  "232": {
     "sha": "6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "commiter_name": "djmitche",
@@ -4258,7 +5358,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "156": {
+  "233": {
     "sha": "914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "commiter_name": "djmitche",
@@ -4270,7 +5370,7 @@
       "yarn.lock"
     ]
   },
-  "157": {
+  "234": {
     "sha": "74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "url": "https://github.com/taskcluster/taskcluster/commit/74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "commiter_name": "djmitche",
@@ -4281,7 +5381,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "158": {
+  "235": {
     "sha": "e25fd44af389cd820261c921ca2f496b82220f75",
     "url": "https://github.com/taskcluster/taskcluster/commit/e25fd44af389cd820261c921ca2f496b82220f75",
     "commiter_name": "renovate-bot",
@@ -4293,7 +5393,7 @@
       "yarn.lock"
     ]
   },
-  "159": {
+  "236": {
     "sha": "90279639ab138faa9351d7182c6b54f9fe5614f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90279639ab138faa9351d7182c6b54f9fe5614f7",
     "commiter_name": "djmitche",
@@ -4320,7 +5420,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "160": {
+  "237": {
     "sha": "90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "commiter_name": "renovate-bot",
@@ -4347,7 +5447,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "161": {
+  "238": {
     "sha": "37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "url": "https://github.com/taskcluster/taskcluster/commit/37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "commiter_name": "djmitche",
@@ -4361,7 +5461,7 @@
       "yarn.lock"
     ]
   },
-  "162": {
+  "239": {
     "sha": "f621c39d08983099fdd627d53762c3aef7863efc",
     "url": "https://github.com/taskcluster/taskcluster/commit/f621c39d08983099fdd627d53762c3aef7863efc",
     "commiter_name": "djmitche",
@@ -4372,7 +5472,7 @@
       "services/queue/schemas/v1/post-artifact-request.yml"
     ]
   },
-  "163": {
+  "240": {
     "sha": "e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "url": "https://github.com/taskcluster/taskcluster/commit/e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "commiter_name": "renovate-bot",
@@ -4386,7 +5486,7 @@
       "yarn.lock"
     ]
   },
-  "164": {
+  "241": {
     "sha": "c6216c727c43c975fe278c71fd019f537c914665",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6216c727c43c975fe278c71fd019f537c914665",
     "commiter_name": "djmitche",
@@ -4398,7 +5498,7 @@
       "yarn.lock"
     ]
   },
-  "165": {
+  "242": {
     "sha": "d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "url": "https://github.com/taskcluster/taskcluster/commit/d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "commiter_name": "djmitche",
@@ -4409,7 +5509,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "166": {
+  "243": {
     "sha": "24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "url": "https://github.com/taskcluster/taskcluster/commit/24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "commiter_name": "djmitche",
@@ -4420,7 +5520,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "167": {
+  "244": {
     "sha": "c15284770e22b39e9d916cd61b6de053c975a33d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c15284770e22b39e9d916cd61b6de053c975a33d",
     "commiter_name": "arshadkazmi42",
@@ -4433,7 +5533,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "168": {
+  "245": {
     "sha": "2b50ddc441741b9914af1a039ff81980760a3930",
     "url": "https://github.com/taskcluster/taskcluster/commit/2b50ddc441741b9914af1a039ff81980760a3930",
     "commiter_name": "arshadkazmi42",
@@ -4445,7 +5545,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "169": {
+  "246": {
     "sha": "c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "url": "https://github.com/taskcluster/taskcluster/commit/c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "commiter_name": "djmitche",
@@ -4456,7 +5556,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "170": {
+  "247": {
     "sha": "47401a78f1e276fca5c890701e5f2c2432888bdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/47401a78f1e276fca5c890701e5f2c2432888bdb",
     "commiter_name": "djmitche",
@@ -4467,7 +5567,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "171": {
+  "248": {
     "sha": "ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "url": "https://github.com/taskcluster/taskcluster/commit/ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "commiter_name": "renovate-bot",
@@ -4479,7 +5579,7 @@
       "yarn.lock"
     ]
   },
-  "172": {
+  "249": {
     "sha": "3f0f772cdf633ee65c11b041293cf7281afa8295",
     "url": "https://github.com/taskcluster/taskcluster/commit/3f0f772cdf633ee65c11b041293cf7281afa8295",
     "commiter_name": "Biboswan",
@@ -4490,7 +5590,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "173": {
+  "250": {
     "sha": "d999fad02b641985f96a60d6c114fb46d56a6629",
     "url": "https://github.com/taskcluster/taskcluster/commit/d999fad02b641985f96a60d6c114fb46d56a6629",
     "commiter_name": "Biboswan",
@@ -4503,7 +5603,7 @@
       "libraries/monitor/test/uncaught_test.js"
     ]
   },
-  "174": {
+  "251": {
     "sha": "7464c610cd46f6a330090e05fb76c215bf2c1205",
     "url": "https://github.com/taskcluster/taskcluster/commit/7464c610cd46f6a330090e05fb76c215bf2c1205",
     "commiter_name": "Biboswan",
@@ -4521,7 +5621,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "175": {
+  "252": {
     "sha": "aa822ad2500f47ef295e490856f8c2e28359c512",
     "url": "https://github.com/taskcluster/taskcluster/commit/aa822ad2500f47ef295e490856f8c2e28359c512",
     "commiter_name": "imbstack",
@@ -4537,7 +5637,7 @@
       "yarn.lock"
     ]
   },
-  "176": {
+  "253": {
     "sha": "2937f63065701ffa391121d08d566e35c2b220bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/2937f63065701ffa391121d08d566e35c2b220bb",
     "commiter_name": "renovate-bot",
@@ -4553,7 +5653,7 @@
       "yarn.lock"
     ]
   },
-  "177": {
+  "254": {
     "sha": "d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "url": "https://github.com/taskcluster/taskcluster/commit/d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "commiter_name": "imbstack",
@@ -4567,7 +5667,7 @@
       "yarn.lock"
     ]
   },
-  "178": {
+  "255": {
     "sha": "29c398016463c7b50703cd3224ecde4794703f15",
     "url": "https://github.com/taskcluster/taskcluster/commit/29c398016463c7b50703cd3224ecde4794703f15",
     "commiter_name": "imbstack",
@@ -4579,7 +5679,7 @@
       "yarn.lock"
     ]
   },
-  "179": {
+  "256": {
     "sha": "b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "commiter_name": "imbstack",
@@ -4593,7 +5693,7 @@
       "yarn.lock"
     ]
   },
-  "180": {
+  "257": {
     "sha": "bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "url": "https://github.com/taskcluster/taskcluster/commit/bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "commiter_name": "renovate-bot",
@@ -4607,7 +5707,7 @@
       "yarn.lock"
     ]
   },
-  "181": {
+  "258": {
     "sha": "9159c878868282fad3f75122efed0475649d5441",
     "url": "https://github.com/taskcluster/taskcluster/commit/9159c878868282fad3f75122efed0475649d5441",
     "commiter_name": "renovate-bot",
@@ -4619,7 +5719,7 @@
       "yarn.lock"
     ]
   },
-  "182": {
+  "259": {
     "sha": "0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "commiter_name": "imbstack",
@@ -4631,7 +5731,7 @@
       "yarn.lock"
     ]
   },
-  "183": {
+  "260": {
     "sha": "75fdbf91d771bce53951a92c666ff4b439152f22",
     "url": "https://github.com/taskcluster/taskcluster/commit/75fdbf91d771bce53951a92c666ff4b439152f22",
     "commiter_name": "renovate-bot",
@@ -4643,7 +5743,7 @@
       "yarn.lock"
     ]
   },
-  "184": {
+  "261": {
     "sha": "1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "url": "https://github.com/taskcluster/taskcluster/commit/1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "commiter_name": "imbstack",
@@ -4655,7 +5755,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "185": {
+  "262": {
     "sha": "32874aa462882888bbdba94854e8d8b6edc01dcf",
     "url": "https://github.com/taskcluster/taskcluster/commit/32874aa462882888bbdba94854e8d8b6edc01dcf",
     "commiter_name": "imbstack",
@@ -4667,7 +5767,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "186": {
+  "263": {
     "sha": "acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "url": "https://github.com/taskcluster/taskcluster/commit/acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "commiter_name": "imbstack",
@@ -4678,7 +5778,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "187": {
+  "264": {
     "sha": "13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "commiter_name": "petemoore",
@@ -4689,7 +5789,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "188": {
+  "265": {
     "sha": "69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "url": "https://github.com/taskcluster/taskcluster/commit/69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "commiter_name": "imbstack",
@@ -4701,7 +5801,7 @@
       "yarn.lock"
     ]
   },
-  "189": {
+  "266": {
     "sha": "67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "url": "https://github.com/taskcluster/taskcluster/commit/67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "commiter_name": "imbstack",
@@ -4713,7 +5813,7 @@
       "yarn.lock"
     ]
   },
-  "190": {
+  "267": {
     "sha": "5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "commiter_name": "imbstack",
@@ -4724,7 +5824,7 @@
       "libraries/scopes/src/expressions.js"
     ]
   },
-  "191": {
+  "268": {
     "sha": "c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "commiter_name": "imbstack",
@@ -4737,7 +5837,7 @@
       "yarn.lock"
     ]
   },
-  "192": {
+  "269": {
     "sha": "92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "url": "https://github.com/taskcluster/taskcluster/commit/92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "commiter_name": "imbstack",
@@ -4749,7 +5849,7 @@
       "yarn.lock"
     ]
   },
-  "193": {
+  "270": {
     "sha": "1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "url": "https://github.com/taskcluster/taskcluster/commit/1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "commiter_name": "renovate-bot",
