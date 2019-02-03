@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 52
+    "last_push_id": 57
   },
   "1": {
     "changeset_number": "31",
@@ -327,6 +327,84 @@
         "commiter_name": "Mike de Boer <mdeboer@mozilla.com>",
         "commit_message": "Bug 1522143 - Enable taskcluster for the cedar project branch. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17608",
         "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "23": {
+    "changeset_number": "53",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-29 00:13:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=0e3cac252c62",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1518570: Give oak scopes to build nightly jobs on push; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17868",
+        "files_changed": [
+          "grants.yml",
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "24": {
+    "changeset_number": "54",
+    "pusher": "raliiev@mozilla.com",
+    "date_of_push": "2019-01-29 20:19:22",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=e5a2a62f42f3",
+        "commiter_name": "Rail Aliiev <rail@mozilla.com>",
+        "commit_message": "Bug 1523694 - Use shipit-dev* to cover individual instances. r=aki",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "25": {
+    "changeset_number": "55",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-30 19:08:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=2faaa69f6810",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1252144: Add taskgraph repository and scopes; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17980",
+        "files_changed": [
+          "grants.yml",
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "26": {
+    "changeset_number": "56",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-31 02:06:27",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=86c7d6e02a79",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1252144: Add trust-domain scoped caches, scheduer-id and hgfingerprint to taskgraph repositories; r=bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18141",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "27": {
+    "changeset_number": "57",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-31 22:24:51",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=9b3364164354",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1524088: Remove esr52 scopes; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18149",
+        "files_changed": [
+          "grants.yml",
           "projects.yml"
         ]
       }

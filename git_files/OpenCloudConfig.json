@@ -1,12 +1,12 @@
 {
   "0": {
-    "lastChecked": "2019-02-01 05:23:17.762672"
+    "lastChecked": "2019-02-01 16:13:16.255948"
   },
   "1": {
     "sha": "bb88114133e1a6e826e06e1d6180e0dda244be61",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/bb88114133e1a6e826e06e1d6180e0dda244be61",
     "commiter_name": "petemoore",
-    "commiter_email": null,
+    "commiter_email": "pmoore@mozilla.com",
     "commit_message": "Testing generic-worker 12.0.0 / taskcluster-proxy 5.1.0 on  -cu worker types  This change does _not_ affect any production/staging workers for gecko. It only affects generic-worker CI tasks. Commit made with:      ./gecko-try.sh 12.0.0 5.1.0  See https://github.com/taskcluster/generic-worker/blob/e900b0b2ba82ddc793dcd04770e2ed4cad1c3ade/mozilla-try-scripts/gecko-try.sh  deploy: gecko-t-win10-64-cu gecko-t-win7-32-cu",
     "commit_date": "2019-01-31 14:03:11",
     "files_changed": [
@@ -18,7 +18,7 @@
     "sha": "82dfd25bad67536a1a1e0ea4b4c883c4de6935d0",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/82dfd25bad67536a1a1e0ea4b4c883c4de6935d0",
     "commiter_name": "petemoore",
-    "commiter_email": null,
+    "commiter_email": "pmoore@mozilla.com",
     "commit_message": "Testing generic-worker 12.0.0 / taskcluster-proxy 5.1.0 on  -cu worker types  This change does _not_ affect any production/staging workers for gecko. It only affects generic-worker CI tasks. Commit made with:      ./gecko-try.sh 12.0.0 5.1.0  See https://github.com/taskcluster/generic-worker/blob/e900b0b2ba82ddc793dcd04770e2ed4cad1c3ade/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b",
     "commit_date": "2019-01-31 13:57:12",
     "files_changed": [
