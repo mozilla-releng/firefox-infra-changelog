@@ -630,7 +630,7 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
         for keys in data.get("pushes").get(key).get("changesets"):
             counter = [x + 1 for x in range(len(data.get("pushes").get(key).get("changesets")))]
             node = keys.get("node")
-            url = repository_url + "pushloggerhtml?changeset=" + node[:12]
+            url = repository_url + "pushloghtml?changeset=" + node[:12]
             author = keys.get("author")
             desc = keys.get("desc")
             files_changed = []
