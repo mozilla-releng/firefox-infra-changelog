@@ -436,7 +436,7 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
         """
     number = 0
     commit_number_tracker = 1
-    pathway = repositories.get("Github").get(repository_name).get("configuration").get("files-to-check")
+    scriptworker_repos = repositories.get("Github").get(repository_name).get("configuration").get("files-to-check")
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     new_commits = git.get_repo(repository_path).get_commits(since=last_checked)
@@ -448,19 +448,34 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
         commit_number_tracker += 1
         files_changed_by_commit = [x.filename for x in commit.files]
         if logger:
-            print(files_changed_by_commit)
-            print(len(files_changed_by_commit))
-        changed_file_number = 1
-        for entry in files_changed_by_commit:
+            print(len(files_changed_by_commit), " files changed: ", files_changed_by_commit)
+        for scriptworkers in scriptworker_repos:
             if logger:
-                print("changed file number:  ", changed_file_number)
-                print(entry)
-            changed_file_number += 1
-            for scriptworkers in pathway:
-                if logger:
-                    print("checking repo: ", scriptworkers)
+                print("checking repo: ", scriptworkers)
+            scriptworker_checker = scriptworker_repos[scriptworkers].split("master/")[-1]
+            # check if the checker is in the list of files changed belonging to current commit
+            for entry in files_changed_by_commit:
+                if scriptworker_checker in entry:
+                    print(scriptworkers, " needs to be checked.")
+           # check if versions have changed (compare version in build puppet vs local vs scriptworker)
+                if build-puppet version == scriptworker:
+                    check if puppet version is different from local version:
+                        if yes check script repo
+                else:
+                  check script repo
+           # if yes switch = true, and check scriptworker repo and save commit of build-puppet
+
+
+        # changed_file_number = 1
+        # for entry in files_changed_by_commit:
+        #     if logger:
+        #         print("changed file number:  ", changed_file_number)
+        #         print(entry)
+        #     changed_file_number += 1
+        #     for scriptworkers in scriptworker_repos:
+
                 number2 = 0
-                if entry in pathway[scriptworkers]:
+                if entry in scriptworker_repos[scriptworkers]:
                     if logger:
                         print(scriptworkers, " needs to be checked.")
                     scriptworker_repo = scriptworkers
