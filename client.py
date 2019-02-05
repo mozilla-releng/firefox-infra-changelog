@@ -422,6 +422,27 @@ def filter_git_commit_keyword(repository_name, repository_path):
     return True
 
 
+def compare_versions(version_path, scriptworker_repo, latest_releases):
+    """
+    checks the version of a scriptworker repo from its changelog, build-puppet and locally saved one against each other
+    :param version_path:
+    :param scriptworker_repo:
+    :param repo_team:
+    :return:
+    """
+
+    version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
+    last_local_version = get_version_from_json(scriptworker_repo)
+    if version_in_puppet == latest_releases.get("latest_release").get("version"):
+        if version_in_puppet != last_local_version:
+            return True
+        else:
+            return False
+    else:
+        return True
+
+
+
 def filter_git_tag_bp(repository_name, repository_team, repository_path):
     """
         Filters out only the data that we need from a commit
@@ -457,42 +478,25 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
             for entry in files_changed_by_commit:
                 if scriptworker_checker in entry:
                     print(scriptworkers, " needs to be checked.")
-           # check if versions have changed (compare version in build puppet vs local vs scriptworker)
-                if build-puppet version == scriptworker:
-                    check if puppet version is different from local version:
-                        if yes check script repo
-                else:
-                  check script repo
-           # if yes switch = true, and check scriptworker repo and save commit of build-puppet
+                    version_path = repositories.get("Github") \
+                        .get("build-puppet") \
+                        .get("configuration") \
+                        .get("files-to-check") \
+                        .get(scriptworkers)
+                    latest_releases = get_version(scriptworkers, repository_team)
+                    need_to_check = compare_versions(version_path, scriptworkers, repository_team)
+                    if need_to_check:
+                        filter_scriptworker(scriptworkers, latest_releases, repository_team)
+                        switch = True
+                    else:
+                        print("No new changes entered production")
 
 
-        # changed_file_number = 1
-        # for entry in files_changed_by_commit:
-        #     if logger:
-        #         print("changed file number:  ", changed_file_number)
-        #         print(entry)
-        #     changed_file_number += 1
-        #     for scriptworkers in scriptworker_repos:
+
 
                 number2 = 0
                 if entry in scriptworker_repos[scriptworkers]:
-                    if logger:
-                        print(scriptworkers, " needs to be checked.")
-                    scriptworker_repo = scriptworkers
-                    version_path = repositories.get("Github")\
-                                               .get("build-puppet")\
-                                               .get("configuration")\
-                                               .get("files-to-check")\
-                                               .get(scriptworker_repo)
-                    latest_releases = get_version(scriptworker_repo, repository_team)
-                    version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
-                    if logger:
-                        print("version is puppet is: ", version_in_puppet)
-                    if version_in_puppet == latest_releases.get("latest_release").get("version"):
-                        last_local_version = get_version_from_json(scriptworker_repo)
-                        if logger:
-                            print(last_local_version)
-                        # if build-puppet and scriptworker repo changelogger have the same version after an update
+
                         if version_in_puppet != last_local_version:
                             switch = True
                             last_local_date = get_date_from_json(scriptworker_repo)
@@ -543,6 +547,30 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
             each_commit.update({int(number): get_commit_details(commit)})
             new_commit_dict.update(each_commit)
     json_writer_git(repository_name, new_commit_dict)
+
+
+def filter_scriptworker(scriptworker_repo, latest_releases, repository_team):
+    """"""
+    number2 = 0
+    last_local_date = get_date_from_json(scriptworker_repo)
+    new_version_commit_date = datetime.strptime(latest_releases
+                                                .get("latest_release")
+                                                .get("date"), "%Y-%m-%d %H:%M:%S")
+    new_scriptworker_dict = {(int(number2)): {"lastChecked": str(datetime.utcnow()),
+                                              "last_releases": latest_releases}}
+    new_repo_path = repository_team + scriptworker_repo
+    for commit2 in git.get_repo(new_repo_path).get_commits(since=last_local_date):
+        if logger:
+            print("modified date: ", commit2.last_modified)
+        last_modified = datetime.strftime(parse(commit2.last_modified), "%Y-%m-%d %H:%M:%S")
+        last_modified = datetime.strptime(last_modified, "%Y-%m-%d %H:%M:%S")
+        if last_modified <= new_version_commit_date:
+            each_commit2 = {}
+            number2 += 1
+            each_commit2.update({int(number2): get_commit_details(commit2)})
+            new_scriptworker_dict.update(each_commit2)
+    json_writer_git(scriptworker_repo, new_scriptworker_dict)
+    create_md_table(scriptworker_repo, "git_files")
 
 
 def filter_git_tag(repository_name, repository_team, repository_path):
