@@ -1,5 +1,5 @@
-##  Commits in production - for one day, generated on: 2019-02-06 14:48:05 UTC.
-|	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/autoland.json)	| 
+##  Commits in production - for one day, generated on: 2019-02-06 14:51:55 UTC.
+|	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -26,28 +26,28 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e35136a50450)|Bug 1524639: [taksgraph] Simplify dependency creation in single_dep transforms; r=aki  Differential Revision: https://phabricator.services.mozilla.com/D18747|mozilla@hocat.ca|aki|2019-02-06 03:16:31|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ce5026b27e78)|Bug 1525069 - part 1 - add a node repack task for 32-bit Windows; r=nalexander  We don't use this in automation, but people who develop on AArch64 Windows will be happy we're providing Node for them.|opoprus@mozilla.com|nalexander|2019-02-06 12:08:00|
 
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-admin.json)	| 
+|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-admin.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)|FIC - BOT|Self Generated| - |
 
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-configuration.json)	| 
+|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-configuration.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)|FIC - BOT|Self Generated| - |
 
-|	mozilla-beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-beta.json)	| 
+|	mozilla-beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-beta.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)|FIC - BOT|Self Generated| - |
 
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-central.json)	| 
+|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -86,7 +86,7 @@
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e35136a50450)|Bug 1524639: [taksgraph] Simplify dependency creation in single_dep transforms; r=aki  Differential Revision: https://phabricator.services.mozilla.com/D18747|opoprus@mozilla.com|aki|2019-02-06 11:47:29|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ce5026b27e78)|Bug 1525069 - part 1 - add a node repack task for 32-bit Windows; r=nalexander  We don't use this in automation, but people who develop on AArch64 Windows will be happy we're providing Node for them.|opoprus@mozilla.com|nalexander|2019-02-06 11:54:31|
 
-|	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-inbound.json)	| 
+|	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -119,7 +119,7 @@
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e35136a50450)|Bug 1524639: [taksgraph] Simplify dependency creation in single_dep transforms; r=aki  Differential Revision: https://phabricator.services.mozilla.com/D18747|opoprus@mozilla.com|aki|2019-02-06 12:10:24|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1fef2c79b6de)|Merge mozilla-central to inbound.  a=merge CLOSED TREE|opoprus@mozilla.com|merge|2019-02-06 12:10:24|
 
-|	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-release.json)	| 
+|	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -128,112 +128,112 @@
 |[Link](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=ad0d9539cc64)|Bug 1524358 - Use ownTaskId, instead of as_slugid('decision'), in .taskcluster.yml. r=Callek,tomprince, a=RyanVM  This is a forward-looking change to allow evaluation of .taskcluster.yml in situations where as_slugid is not defined -- such as in the Taskcluster hooks service.  Differential Revision: https://phabricator.services.mozilla.com/D18269|ryanvm@gmail.com|Callek,tomprince,|2019-02-05 20:23:21|
 |[Link](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=b04e2261e4c9)|Bug 1524358 - Get commit message locally, rather than from task parameters. r=tomprince, a=RyanVM  Differential Revision: https://phabricator.services.mozilla.com/D18288|ryanvm@gmail.com|tomprince,|2019-02-05 20:23:21|
 
-|	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/addonscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/addonscript.json)	| 
+|	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/addonscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)|FIC - BOT|Self Generated| - |
 
-|	balrogscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/balrogscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/balrogscript.json)	| 
+|	balrogscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/balrogscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.md)|FIC - BOT|Self Generated| - |
 
-|	beetmoverscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/beetmoverscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/beetmoverscript.json)	| 
+|	beetmoverscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/beetmoverscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.md)|FIC - BOT|Self Generated| - |
 
-|	bouncerscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/bouncerscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/bouncerscript.json)	| 
+|	bouncerscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/bouncerscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.md)|FIC - BOT|Self Generated| - |
 
-|	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-cloud-tools.json)	| 
+|	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-cloud-tools.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)|FIC - BOT|Self Generated| - |
 
-|	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-puppet.json)	| 
+|	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-puppet.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)|FIC - BOT|Self Generated| - |
 
-|	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/mozapkpublisher.json)	| 
+|	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/mozapkpublisher.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)|FIC - BOT|Self Generated| - |
 
-|	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/OpenCloudConfig.json)	| 
+|	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/OpenCloudConfig.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)|FIC - BOT|Self Generated| - |
 
-|	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushapkscript.json)	| 
+|	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushapkscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)|FIC - BOT|Self Generated| - |
 
-|	pushsnapscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushsnapscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushsnapscript.json)	| 
+|	pushsnapscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushsnapscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)|FIC - BOT|Self Generated| - |
 
-|	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/scriptworker.json)	| 
+|	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/scriptworker.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)|FIC - BOT|Self Generated| - |
 
-|	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/services.json)	| 
+|	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/services.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)|FIC - BOT|Self Generated| - |
 
-|	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/shipitscript.json)	| 
+|	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/shipitscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)|FIC - BOT|Self Generated| - |
 
-|	signingscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signingscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signingscript.json)	| 
+|	signingscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signingscript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.md)|FIC - BOT|Self Generated| - |
 
-|	signtool	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signtool.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signtool.json)	| 
+|	signtool	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signtool.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.md)|FIC - BOT|Self Generated| - |
 
-|	taskcluster	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/taskcluster.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/taskcluster.json)	| 
+|	taskcluster	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
@@ -244,9 +244,9 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/ef7e1b4b64e55c0cfe7e967674407d3038a04695)|Add link to readme anchor|imbstack|N/A|2019-02-05 20:12:29|
 |[Link](https://github.com/taskcluster/taskcluster/commit/071fb3c016b36d45e65de5dbe77c0006401f94b2)|(hotfix) update generated output  This was missed when several PRs, including the yarn-generate PR, landed at about the same time.|djmitche|N/A|2019-02-05 15:59:59|
 
-|	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/treescript.json)	| 
+|	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/treescript.md)|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)|FIC - BOT|Self Generated| - |
