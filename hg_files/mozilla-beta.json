@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 10601
+    "last_push_id": 10632
   },
   "1": {
     "changeset_number": "10002",
@@ -41358,6 +41358,58 @@
           "taskcluster/ci/release-partner-repack/kind.yml",
           "taskcluster/taskgraph/transforms/partner_repack.py",
           "taskcluster/taskgraph/util/partners.py"
+        ]
+      }
+    }
+  },
+  "61": {
+    "changeset_number": "10612",
+    "pusher": "ryanvm@gmail.com",
+    "date_of_push": "2019-02-04 16:23:16",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=ecaa5a9d6e3f",
+        "commiter_name": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1522223 - Set UPLOAD_PATH during make check to avoid re-running configure. r=Callek, a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18140",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      }
+    }
+  },
+  "62": {
+    "changeset_number": "10616",
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-02-04 18:57:19",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=af516292be1c",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1524358 - document inputs to .taskcluster.yml more deeply r=tomprince a=lizzard\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18287",
+        "files_changed": [
+          ".taskcluster.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=bbbacf423bdc",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1524358 - use ownTaskId, instead of as_slugid('decision'), in .taskcluster.yml r=Callek,tomprince a=lizzard\n\nThis is a forward-looking change to allow evaluation of .taskcluster.yml in\nsituations where as_slugid is not defined -- such as in the Taskcluster hooks\nservice.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18269",
+        "files_changed": [
+          ".taskcluster.yml",
+          "taskcluster/taskgraph/cron/decision.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a142aefab93a",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1524358 - get commit message locally, rather than from task parameters r=tomprince a=lizzard\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18288",
+        "files_changed": [
+          ".taskcluster.yml",
+          "taskcluster/mach_commands.py",
+          "taskcluster/taskgraph/cron/decision.py",
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/test/test_decision.py",
+          "taskcluster/taskgraph/util/hg.py"
         ]
       }
     }
