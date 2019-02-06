@@ -1,7 +1,9 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-01-18 18:13:16.249114
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-01-23 16:17:01.323900
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|37|MihaiTabara|Merge pull request #388 from MihaiTabara/bump  Bump beetmoverscript in beetmoverworkers.|[URL](https://github.com/mozilla-releng/build-puppet/commit/8a197915f937c26cba1db00573faf78e6393b96e)|2019-02-04 22:25:08
+|36|escapewindow|bug 1524358 - scriptworker 18.1.0 (#386)|[URL](https://github.com/mozilla-releng/build-puppet/commit/fe11b7c03049acfe6137ab88907c0ede41b714cb)|2019-02-01 23:59:20
 |35|mutterroland|Merge pull request #380 from mozilla-releng/pyup-scheduled-update-2019-01-30  Scheduled weekly dependency update for week 04|[URL](https://github.com/mozilla-releng/build-puppet/commit/c633e22e4eae046dd85c0468b1b53f1f18f7dc84)|2019-01-30 15:30:03
 |34|mutterroland|Revert mohawk to 0.3.4|[URL](https://github.com/mozilla-releng/build-puppet/commit/337f08b6695302ee76cf743f34e4e1221ad43f95)|2019-01-30 14:47:32
 |33|mutterroland|Revert mohawk to 0.3.4|[URL](https://github.com/mozilla-releng/build-puppet/commit/34f30af11501dd47e75c24f1024e47640ef6e655)|2019-01-30 14:47:21
