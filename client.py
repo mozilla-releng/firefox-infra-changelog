@@ -8,12 +8,14 @@ from os import listdir
 from os.path import isfile, join
 from datetime import datetime, timedelta
 from github import Github, GithubException
+import git
+from git import Repo
 from dateutil.parser import parse
 import click
 import requests
 from fic_modules import configuration
-from fic_modules.helper_functions import compare_files, clear_file, get_commit_details, \
-    extract_reviewer, remove_chars, filter_strings
+from fic_modules.helper_functions import compare_files, clear_file, \
+    get_commit_details, extract_reviewer, remove_chars, filter_strings
 from fic_modules.HandleArguments import HandleArgs
 
 REPO_LIST = []
@@ -25,8 +27,9 @@ CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 def limit_checker():
     """
     This function checks if your limit requests is not exceeded.
-    Every time when this function is called, it returns 1 in case of your requests limit is not
-    exceeded, otherwise it will wait for the reset time to pass.
+    Every time when this function is called, it returns 1 in case of your
+    requests limit is not exceeded, otherwise it will wait for the reset time
+    to pass.
     :return: returns 1 if your limit requests is not exceeded
     """
     rate_limit = GIT.rate_limiting[0]
@@ -56,7 +59,8 @@ def create_md_table_for_scriptworkers(repository_name):
     """
     This function creates the markdown table for the scriptworker repositories.
     :param: repositories_name: Expects the name of the repository
-    :return: a call to 'create_md_table' function for each scriptworker repositories
+    :return: a call to 'create_md_table' function for each scriptworker
+    repositories
     """
     files_to_check = [x for x in REPOSITORIES
                       .get("Github")
@@ -69,15 +73,20 @@ def create_md_table_for_scriptworkers(repository_name):
 
 def create_files_for_git(repositories_holder, onerepo):
     """
-    Main GIT function. Takes every Git repo from a .json file which is populated with repositories
-    and writes all the commit data of each repo in a.
-    creates a json and MD file for each repo as well.
-    :param: repositories_holder: Expects a .json file that contains a list of repositories
-    :return: The end result is a .json and a .md file for every git repository. can be found inside
-    git_files/
+    Main GIT function. Takes every Git repo from a .json file which is
+    populated with repositories and writes all the commit data of each repo in
+    a. creates a json and MD file for each repo as well.
+    :param: repositories_holder: Expects a .json file that contains a list of
+    repositories.
+    :return: The end result is a .json and a .md file for every git repository.
+    Can be found inside git_files/
     """
     if onerepo:
-        repository_team = REPOSITORIES.get("Github").get(repositories_holder).get("team")
+        # Not in use, needs further debugging
+        repository_team = REPOSITORIES\
+            .get("Github")\
+            .get(repositories_holder)\
+            .get("team")
         repository_type = REPOSITORIES \
             .get("Github") \
             .get(repositories_holder) \
@@ -85,7 +94,7 @@ def create_files_for_git(repositories_holder, onerepo):
             .get("type")
         if LOGGER:
             print("\nWorking on repo: {}".format(repositories_holder))
-        folders_to_check = [x for x in REPOSITORIES
+        folders_to_check = [folder for folder in REPOSITORIES
                             .get("Github")
                             .get(repositories_holder)
                             .get("configuration")
@@ -94,18 +103,21 @@ def create_files_for_git(repositories_holder, onerepo):
                                repository_team,
                                repository_type,
                                folders_to_check)
-        if repositories_holder == "build-puppet":
-            create_md_table(repository_name, "git_files")
-            create_md_table_for_scriptworkers(repositories_holder)
-        else:
-            create_md_table(repositories_holder, "git_files")
+        # if repositories_holder == "build-puppet":
+        #     create_md_table(repository_name, "git_files")
+        #     create_md_table_for_scriptworkers(repositories_holder)
+        # else:
+        #     create_md_table(repositories_holder, "git_files")
         if LOGGER:
             print("MD table generated successfully")
             print("Finished working on {}".format(repositories_holder))
     else:
         for repo in repositories_holder["Github"]:
             repository_name = repo
-            repository_team = repositories_holder.get("Github").get(repo).get("team")
+            repository_team = repositories_holder\
+                .get("Github")\
+                .get(repo)\
+                .get("team")
             repository_type = repositories_holder \
                 .get("Github") \
                 .get(repo) \
@@ -113,7 +125,7 @@ def create_files_for_git(repositories_holder, onerepo):
                 .get("type")
             if LOGGER:
                 print("\nWorking on repo: {}".format(repository_name))
-            folders_to_check = [x for x in repositories_holder
+            folders_to_check = [folder for folder in repositories_holder
                                 .get("Github")
                                 .get(repo)
                                 .get("configuration")
@@ -136,8 +148,8 @@ def get_version(repo_name, repo_team):
     """
     :param repo_name: repository name
     :param repo_team: repository team
-    :return: a dictionary with information from the last two release version: latestRelease and
-    previousRelease
+    :return: a dictionary with information from the last two release version:
+     latestRelease and previousRelease
     """
     repo_path = repo_team + repo_name
     iteration = 0
@@ -162,19 +174,20 @@ def get_version(repo_name, repo_team):
 
 def get_version_from_build_puppet(version_path, repo_name):
     """
-    :param: version_path: Path to the requierments.txt where the version number is stored
+    :param: version_path: Path to the requierments.txt where the version number
+     is stored
     :param: repo_name: The repo for which we are checking the version.
-    :return: Returns the version number that is stored in build-puppet for each *scriptworker
+    :return: Returns the version number that is stored in build-puppet for
+    each *scriptworker
     """
     file_to_string = requests.get(version_path).text.split()
     for word in file_to_string:
         if repo_name in word:
             version_in_puppet = re.split("\\b==\\b", word)[-1]
-            # the next check makes sure to only return the version in case the repo name
-            #  appears multiple times
+            # the next check makes sure to only return the version in case
+            # the repo name appears multiple times
             if version_in_puppet != repo_name:
                 return version_in_puppet
-
 
 
 def json_writer_git(repository_name, new_commits):
@@ -185,7 +198,8 @@ def json_writer_git(repository_name, new_commits):
     """
     git_json_filename = "{}.json".format(repository_name)
     try:
-        with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as commit_json:
+        with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
+                commit_json:
             # loads the content of existing json into a variable
             json_content = json.load(commit_json)
     except FileNotFoundError:
@@ -211,7 +225,8 @@ def json_writer_hg(repository_name, new_commits):
     """
     hg_json_filename = "{}.json".format(repository_name)
     try:
-        with open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "r") as commit_json:
+        with open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "r") as\
+                commit_json:
             # loads the content of existing json into a variable
             json_content = json.load(commit_json)
     except FileNotFoundError:
@@ -242,16 +257,21 @@ def last_check(repository_name):
     """
     git_json_filename = "{}.json".format(repository_name)
     try:
-        with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as commit_json:
+        with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as\
+                commit_json:
             # loads the content of existing json into a variable
             json_content = json.load(commit_json)
             try:
-                last_checked = datetime.strptime(json_content.get("0").get("lastChecked"),
+                last_checked = datetime.strptime(json_content
+                                                 .get("0")
+                                                 .get("lastChecked"),
                                                  "%Y-%m-%d %H:%M:%S")
                 if LOGGER:
                     print("Repo last updated on:", last_checked)
             except ValueError:
-                last_checked = datetime.strptime(json_content.get("0").get("lastChecked"),
+                last_checked = datetime.strptime(json_content
+                                                 .get("0")
+                                                 .get("lastChecked"),
                                                  "%Y-%m-%d %H:%M:%S.%f")
                 if LOGGER:
                     print("Repo last updated on:", last_checked)
@@ -266,7 +286,8 @@ def get_version_from_json(repo_name):
     :return: version our repo was bumped to by the last local commit that we have
     """
     git_json_filename = "{}.json".format(repo_name)
-    with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as commit_json:
+    with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
+            commit_json:
         # loads the content of existing json into a variable
         json_content = json.load(commit_json)
     last_stored_version = json_content \
@@ -283,7 +304,8 @@ def get_date_from_json(repo_name):
     :return: date of the last commit that we have locally in our json
     """
     git_json_filename = "{}.json".format(repo_name)
-    with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as commit_json:
+    with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
+            commit_json:
         json_content = json.load(commit_json)
     last_stored_date = json_content \
         .get("0") \
@@ -304,7 +326,8 @@ def get_last_local_push_id(repo_name):
     """
     hg_json_filename = "{}.json".format(repo_name)
     try:
-        with open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "r") as commit_json:
+        with open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "r") as \
+                commit_json:
             json_content = json.load(commit_json)
         last_stored_push_id = json_content.get("0").get("last_push_id")
     except FileNotFoundError:
@@ -337,22 +360,25 @@ def generate_hg_pushes_link(repo_name, repository_url):
         start_id = end_id - 1000
     start_id = str(start_id)
     end_id = str(end_id)
-    generate_pushes_link = repository_url + "json-pushes?version=2&full=1&startID={}&endID={}" \
-        .format(start_id, end_id)
+    generate_pushes_link = repository_url + "json-pushes?version=2&" \
+                                            "full=1&startID={}&endID={}" \
+                                            .format(start_id, end_id)
     return generate_pushes_link
 
 
 def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     """
     Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function from 're' library
+    Substitute the special characters from commit message using 'sub' function
+     from 're' library
     :param repository_name: name of the given repo
     :param repository_path:
     :param folders_to_check: the folders we care about
     :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    TODO: please add the exception blocks since the script fails when it
+    can't pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
-            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     number = 0
     last_checked = last_check(repository_name)
@@ -360,8 +386,8 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
     for commit in new_commits:
         each_commit = {}
-        # if len(folders_to_check) > 0:  # if greater than 0 compare a list of what files changed
-        if folders_to_check:  # if greater than 0 compare a list of what files changed
+        # if greater than 0 compare a list of what files changed
+        if folders_to_check:
             files_changed = []
             for entry in commit.files:
                 files_changed.append(entry.filename)
@@ -382,13 +408,15 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
 def filter_git_commit_keyword(repository_name, repository_path):
     """
     Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function from 're' library
+    Substitute the special characters from commit message using 'sub' function
+    from 're' library
     :param repository_name: name of the given repo
     :param repository_path:
     :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    TODO: please add the exception blocks since the script fails when it can't
+    pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
-            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     number = 0
     last_checked = last_check(repository_name)
@@ -412,14 +440,16 @@ def filter_git_commit_keyword(repository_name, repository_path):
 def filter_git_tag_bp(repository_name, repository_team, repository_path):
     """
     Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function from 're' library
+    Substitute the special characters from commit message using 'sub' function
+    from 're' library
     :param repository_team: the team of the given repo
     :param repository_name: name of the given repo
     :param repository_path:
     :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    TODO: please add the exception blocks since the script fails when it can't
+    pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
-            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     number = 0
     commit_number_tracker = 1
@@ -459,36 +489,44 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
                         .get("configuration") \
                         .get("files-to-check") \
                         .get(scriptworker_repo)
-                    latest_releases = get_version(scriptworker_repo, repository_team)
-                    version_in_puppet = get_version_from_build_puppet(version_path,
-                                                                      scriptworker_repo)
+                    latest_releases = get_version(scriptworker_repo,
+                                                  repository_team)
+                    version_in_puppet = \
+                        get_version_from_build_puppet(version_path,
+                                                      scriptworker_repo)
                     if LOGGER:
                         print("version is puppet is: ", version_in_puppet)
-                    if version_in_puppet == latest_releases.get("latest_release").get("version"):
-                        last_local_version = get_version_from_json(scriptworker_repo)
+                    if version_in_puppet == latest_releases\
+                            .get("latest_release").get("version"):
+                        last_local_version = \
+                            get_version_from_json(scriptworker_repo)
                         if LOGGER:
                             print(last_local_version)
-                        # if build-puppet and scriptworker repo changelogger have the same version
-                        # after an update
+                        # if build-puppet and scriptworker repo changelogger
+                        # have the same version after an update
                         if version_in_puppet != last_local_version:
                             switch = True
-                            last_local_date = get_date_from_json(scriptworker_repo)
-                            new_version_commit_date = datetime.strptime(latest_releases
-                                                                        .get("latest_release")
-                                                                        .get("date"),
-                                                                        "%Y-%m-%d %H:%M:%S")
+                            last_local_date = \
+                                get_date_from_json(scriptworker_repo)
+                            new_version_commit_date = \
+                                datetime.strptime(latest_releases
+                                                  .get("latest_release")
+                                                  .get("date"),
+                                                  "%Y-%m-%d %H:%M:%S")
                             new_scriptworker_dict = {
                                 (int(number2)): {"lastChecked": str(datetime.utcnow()),
                                                  "last_releases": latest_releases}}
                             new_repo_path = repository_team + scriptworker_repo
-                            for commit2 in GIT.get_repo(new_repo_path).get_commits(
-                                    since=last_local_date):
+                            for commit2 in GIT\
+                                    .get_repo(new_repo_path)\
+                                    .get_commits(since=last_local_date):
                                 if LOGGER:
                                     print("modified date: ", commit2.last_modified)
-                                last_modified = datetime.strftime(parse(commit2.last_modified),
-                                                                  "%Y-%m-%d %H:%M:%S")
+                                last_modified = \
+                                    datetime.strftime(parse(commit2.last_modified),
+                                                      "%Y-%m-%d %H:%M:%S")
                                 last_modified = datetime.strptime(last_modified,
-                                                                  "%Y-%m-%d %H:%M:%S")
+                                    "%Y-%m-%d %H:%M:%S")
                                 if last_modified <= new_version_commit_date:
                                     each_commit2 = {}
                                     number2 += 1
@@ -532,34 +570,43 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
 def filter_git_tag(repository_name, repository_team, repository_path):
     """
     Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function from 're' library
+    Substitute the special characters from commit message using 'sub' function
+    from 're' library
     :param repository_team: the team of the given repo
     :param repository_name: name of the given repo
     :param repository_path:
     :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    TODO: please add the exception blocks since the script fails when it can't
+    pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
-            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+     github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     number = 0
-    version_path = REPOSITORIES.get("Github").get(repository_name).get("configuration").get(
-        "version-path")
+    version_path = REPOSITORIES\
+        .get("Github")\
+        .get(repository_name)\
+        .get("configuration")\
+        .get("version-path")
     latest_releases = get_version(repository_name, repository_team)
-    if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get(
-            "latest_release") \
-            .get("version"):
+    if get_version_from_build_puppet(version_path, repository_name) == \
+            latest_releases.get("latest_release").get("version"):
         if LOGGER:
             print("No new changes entered production")
     else:
         last_commit_date = get_date_from_json(repository_name)
         new_version_commit_date = datetime.strptime(latest_releases
                                                     .get("latest_release")
-                                                    .get("date"), "%Y-%m-%d %H:%M:%S")
+                                                    .get("date"),
+                                                    "%Y-%m-%d %H:%M:%S")
         new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
                                  "last_releases": latest_releases}}
-        for commit in GIT.get_repo(repository_path).get_commits(since=last_commit_date):
-            last_modified = datetime.strftime(parse(commit.last_modified), "%Y-%m-%d %H:%M:%S")
-            last_modified = datetime.strptime(last_modified, "%Y-%m-%d %H:%M:%S")
+        for commit in GIT\
+                .get_repo(repository_path)\
+                .get_commits(since=last_commit_date):
+            last_modified = datetime.strftime(parse(commit.last_modified),
+                                              "%Y-%m-%d %H:%M:%S")
+            last_modified = datetime.strptime(last_modified,
+                                              "%Y-%m-%d %H:%M:%S")
             if last_modified <= new_version_commit_date:
                 each_commit = {}
                 number += 1
@@ -569,18 +616,22 @@ def filter_git_tag(repository_name, repository_team, repository_path):
         return True
 
 
-def filter_git_commit_data(repository_name, repository_team, repository_type, folders_to_check):
+def filter_git_commit_data(repository_name, repository_team, repository_type,
+                           folders_to_check):
     """
     Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function from 're' library
+    Substitute the special characters from commit message using 'sub' function
+    from 're' library
     :param repository_team:
     :param repository_name: name of the given repo
-    :param repository_type: returns the type of a repo we are going to work with
-    :param folders_to_check: list that contains every folder we care about from given repo
+    :param repository_type: type of a repo we are going to work with
+    :param folders_to_check: list that contains every folder we care about
+    from given repo
     :return: Filtered json data
-    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    TODO: please add the exception blocks since the script fails when it can't
+    pull a data:
     (e.g raise self.__createException(status, responseHeaders, output)
-            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     repository_path = repository_team + repository_name
     # TYPE = NO-TAG
@@ -592,7 +643,9 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
     # TYPE = TAG
     if repository_type == "tag":
         if repository_name == "build-puppet":
-            filter_git_tag_bp(repository_name, repository_team, repository_path)
+            filter_git_tag_bp(repository_name,
+                              repository_team,
+                              repository_path)
         elif repository_name != "build-puppet":
             filter_git_tag(repository_name, repository_team, repository_path)
 
@@ -600,27 +653,41 @@ def filter_git_commit_data(repository_name, repository_team, repository_type, fo
 def create_files_for_hg(repositories_holder, onerepo):
     """
     Main HG function.
-    Takes every Mercurial repo from a .json file which is populated with repositories and writes all
-     the commit data of each repo in a.
+    Takes every Mercurial repo from a .json file which is populated with
+    repositories and writes all the commit data of each repo in a.
     creates a json and MD file for each repo as well.
-    :param: repositories_holder: Expects a .json file that contains a list of repositories
+    :param: repositories_holder: Expects a .json file that contains a list of
+    repositories
     :return: The end result is a .json and a .md file for every git repository.
     Can be found inside hg_files/
     """
     if onerepo:
-        repository_url = REPOSITORIES.get("Mercurial").get(repositories_holder).get("url")
-        folders_to_check = [x for x in
-                            REPOSITORIES.get("Mercurial").get(repositories_holder).get(
-                                "configuration").get("folders-to-check")]
-        filter_hg_commit_data(repositories_holder, folders_to_check, repository_url)
+        repository_url = REPOSITORIES\
+            .get("Mercurial")\
+            .get(repositories_holder)\
+            .get("url")
+        folders_to_check = [folder for folder in REPOSITORIES
+                            .get("Mercurial")
+                            .get(repositories_holder)
+                            .get("configuration")
+                            .get("folders-to-check")]
+        filter_hg_commit_data(repositories_holder,
+                              folders_to_check,
+                              repository_url)
         create_hg_md_table(repositories_holder)
     else:
         for repo in repositories_holder["Mercurial"]:
             repository_name = repo
-            repository_url = repositories_holder.get("Mercurial").get(repo).get("url")
-            folders_to_check = [x for x in repositories_holder.get("Mercurial").get(repo).get(
-                "configuration").get("folders-to-check")]
-            filter_hg_commit_data(repository_name, folders_to_check, repository_url)
+            repository_url = repositories_holder\
+                .get("Mercurial")\
+                .get(repo).get("url")
+            folders_to_check = [folder for folder in repositories_holder
+                                .get("Mercurial")
+                                .get(repo).get("configuration")
+                                .get("folders-to-check")]
+            filter_hg_commit_data(repository_name,
+                                  folders_to_check,
+                                  repository_url)
             create_hg_md_table(repository_name)
 
 
@@ -648,12 +715,15 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
         hg_repo_data.update({number: {
             "changeset_number": changeset_number,
             "pusher": changeset_pusher,
-            "date_of_push": time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(date_of_push)),
+            "date_of_push": time.strftime('%Y-%m-%d %H:%M:%S', time.
+                                          localtime(date_of_push)),
             "changeset_commits": {}
         }})
         counter, counter2, counter3 = 0, 0, 0
         for keys in data.get("pushes").get(key).get("changesets"):
-            counter = [x + 1 for x in range(len(data.get("pushes").get(key).get("changesets")))]
+            counter = [x + 1 for x in range(len(data.get("pushes")
+                                                .get(key)
+                                                .get("changesets")))]
             node = keys.get("node")
             url = repository_url + "pushloghtml?changeset=" + node[:12]
             author = keys.get("author")
@@ -687,30 +757,46 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
 
 def create_md_table(repository_name, path_to_files):
     """
-    Uses 'repository_name' parameter to generate markdown tables for every json file inside
-    path_to_files parameter.
-    :param repository_name: Used to display the repo name in the title row of the MD table
-    :param path_to_files: Used to store path to json files (git_files, hg_files)
+    Uses 'repository_name' parameter to generate markdown tables for every
+    json file inside path_to_files parameter.
+    :param repository_name: Used to display the repo name in the title row of
+    the MD table
+    :param path_to_files: Used to store path to json files (git_files,
+    hg_files)
     :return: MD tables for every json file inside the git_files dir.
     """
 
     try:
         json_data = open(
-            CURRENT_DIR + "/{}/".format(path_to_files) + "{}.json".format(repository_name)).read()
+            CURRENT_DIR + "/{}/"
+            .format(path_to_files) + "{}.json"
+            .format(repository_name))\
+            .read()
         # print("JSON: ", json_data)
         data = json.loads(json_data)
         # print("JSON Data: ", data)
-        base_table = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
-                     "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
+        base_table = "| Commit Number | Commiter | Commit " \
+                     "Message | Commit Url | Date | \n" + \
+                     "|:---:|:----:|:---------------------" \
+                     "-------------:|:------:|:----:| \n"
         tables = {}
         try:
-            version = data.get('0').get("last_two_releases").get("LatestRelease").get("version")
-            date = data.get('0').get("last_two_releases").get("LatestRelease").get("date")
+            version = data\
+                .get('0')\
+                .get("last_two_releases")\
+                .get("LatestRelease")\
+                .get("version")
+            date = data\
+                .get('0')\
+                .get("last_two_releases")\
+                .get("LatestRelease")\
+                .get("date")
             md_title = [
-                "Repository name: {}\n Current version: {} released on {}".format(repository_name,
-                                                                                  version, date)]
+                "Repository name: {}\n Current version: {} released on {}"
+                .format(repository_name, version, date)]
         except AttributeError:
-            md_title = ["{} commit markdown table since {}".format(repository_name, LAST_WEEK)]
+            md_title = ["{} commit markdown table since {}"
+                        .format(repository_name, LAST_WEEK)]
 
         commit_number_list = [key for key in data]
 
@@ -721,7 +807,7 @@ def create_md_table(repository_name, path_to_files):
             commit_number = commit_number_list[-1]
             try:
                 commit_author = data.get(key).get("commiter_name")
-                commit_author = re.sub("\u0131", "i", commit_author)  # this is temporary
+                commit_author = re.sub("\u0131", "i", commit_author)
                 date = data.get(key).get("commit_date")
                 message = data.get(key).get("commit_message")
                 message = remove_chars(message, "\U0001f60b")
@@ -741,7 +827,8 @@ def create_md_table(repository_name, path_to_files):
                 pass
 
         md_file_name = "{}.md".format(repository_name)
-        md_file = open(CURRENT_DIR + "/{}/".format(path_to_files) + md_file_name, "w")
+        md_file = open(CURRENT_DIR + "/{}/".format(path_to_files) +
+                       md_file_name, "w")
 
         try:
             for key, value in tables.items():
@@ -759,25 +846,30 @@ def create_md_table(repository_name, path_to_files):
 
 def create_hg_md_table(repository_name):
     """
-    Uses 'repository_name' parameter to generate markdown tables for every json file inside
-    path_to_files parameter.
-    :param repository_name: Used to display the repo name in the title row of the MD table
-    :param path_to_files: Used to store path to json files (git_files, hg_files)
+    Uses 'repository_name' parameter to generate markdown tables for every
+    json file inside path_to_files parameter.
+    :param repository_name: Used to display the repo name in the title row of
+    the MD table
     :return: MD tables for every json file inside the git_files dir.
     """
 
     try:
-        json_data = open(CURRENT_DIR + "/hg_files/" + "{}.json".format(repository_name)).read()
+        json_data = open(CURRENT_DIR + "/hg_files/" + "{}.json"
+                         .format(repository_name)).read()
         data = json.loads(json_data)
-        base_table = "| Changeset | Date | Commiter | Commit Message | Commit URL | \n" + \
-                     "|:---:|:---:|:----:|:----------------------------------:|:-----:| \n"
+        base_table = "| Changeset | Date | Commiter | " \
+                     "Commit Message | Commit URL | \n" + \
+                     "|:---:|:---:|:----:|:---------------" \
+                     "-------------------:|:-----:| \n"
         tables = {}
         try:
             last_push_id = data.get('0').get("last_push_id")
             md_title = [
-                "Repository name: {}\n Current push id: {}".format(repository_name, last_push_id)]
+                "Repository name: {}\n Current push id: {}"
+                .format(repository_name, last_push_id)]
         except KeyError:
-            md_title = ["Error while accessing the " + str(repository_name) + "file."]
+            md_title = ["Error while accessing the " +
+                        str(repository_name) + "file."]
 
         for repo in md_title:
             tables[repo] = base_table
@@ -790,25 +882,30 @@ def create_hg_md_table(repository_name):
                 try:
                     for entry in data.get(key).get("changeset_commits"):
                         try:
-                            commit_author = data\
-                                .get(key)\
-                                .get("changeset_commits")\
-                                .get(entry)\
+                            commit_author = data \
+                                .get(key) \
+                                .get("changeset_commits") \
+                                .get(entry) \
                                 .get("commiter_name")
-                            # This replaces a char that can't be encoded but there is
-                            # a need for another char
-                            commit_author = re.sub("\u0131", "i", commit_author)
+                            # This replaces a char that can't be encoded but
+                            # there is a need for another char
+                            commit_author = re.sub("\u0131", "i",
+                                                   commit_author)
                             # This removes unwanted char's
                             commit_author = filter_strings(commit_author)
 
-                            message = data\
-                                .get(key)\
-                                .get("changeset_commits")\
+                            message = data \
+                                .get(key) \
+                                .get("changeset_commits") \
                                 .get(entry).get("commit_message")
                             message = re.sub("\n|", "", message)
 
                             message = filter_strings(message)
-                            url = data.get(key).get("changeset_commits").get(entry).get("url")
+                            url = data\
+                                .get(key)\
+                                .get("changeset_commits")\
+                                .get(entry)\
+                                .get("url")
 
                             row = "|" + changeset_id + \
                                   "|" + date_of_push + \
@@ -842,12 +939,15 @@ def create_hg_md_table(repository_name):
 
 def generate_main_md_table(path_to_files, days_to_generate=1):
     """
-    Looks into repositories folders (hg_files & git files), filters the files to load the json's
-    using a passfilter and calls after extraction functions.
-    :param days_to_generate: just a pass by parameter, used in extract json from git/hg and
-    generates for the specified days.
+    Looks into repositories folders (hg_files & git files),
+    filters the files to load the json's using a passfilter and calls after
+    extraction functions.
+    :param days_to_generate: just a pass by parameter, used in extract json
+    from git/hg and generates for the specified days.
     :param path_to_files: Folder to json files
     """
+    successfully_generated = "part from main markdown table was " \
+                             "successfully generated."
     # Get current folder path.
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -860,23 +960,21 @@ def generate_main_md_table(path_to_files, days_to_generate=1):
     if path_to_files == "git_files":
         extract_json_from_git(json_files, path_to_files, days_to_generate)
         if LOGGER:
-            print("GIT part from main markdown table was successfully generated.")
+            print("GIT" + successfully_generated)
     elif path_to_files == "hg_files":
         extract_json_from_hg(json_files, path_to_files, days_to_generate)
         if LOGGER:
-            print("HG part from main markdown table was successfully generated.")
+            print("HG" + successfully_generated)
 
     else:
         if LOGGER:
             print("No table was generated!")
 
 
-
-
-
 def write_date_header(file_name, datetime_object):
     """
-    This function writes a date from a specific datetime object into a file as a date header.
+    This function writes a date from a specific datetime object into a file as
+     a date header.
     :param file_name: name of the file to be written to.
     :param datetime_object: datetime object used for write to file.
     :return:
@@ -885,8 +983,11 @@ def write_date_header(file_name, datetime_object):
 
     base_table = "|            | \n" + \
                  "|:----------:| \n"
-    date_header = "| Generated on: " + str(
-        datetime.utcnow()) + " and contains modifications from: " + str(datetime_object) + " |"
+    date_header = "| Generated on: " + \
+                  str(datetime.utcnow()) + \
+                  " and contains modifications from: " + \
+                  str(datetime_object) + \
+                  " |"
     file.write("\n" + base_table + date_header + "\n")
     file.close()
     if LOGGER:
@@ -896,9 +997,10 @@ def write_date_header(file_name, datetime_object):
 
 def extract_json_from_git(json_files, path_to_files, days_to_generate):
     """
-    Extracts the json data from json files and writes the data to the main markdown table file.
-    The function looks into json files after the last commit, extracts it and calls the
-    write_main_md_table function.
+    Extracts the json data from json files and writes the data to the main
+    markdown table file.
+    The function looks into json files after the last commit, extracts it and
+    calls the write_main_md_table function.
     :param days_to_generate:
     :param json_files: List of files to extract commits from.
     :param path_to_files: Folder to json files
@@ -913,25 +1015,37 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
         count_pushes = 0
         with open(file_path) as json_file:
             data = json.load(json_file)
-            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/" \
-                        "blob/master/{}/".format(path_to_files)
-            repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json",
-                                                                                            ".md")
-            repository_json = base_link + file.rstrip().replace(" ", "%20")
+            base_link = "https://github.com/mozilla-releng/firefox-infra-" \
+                        "changelog/blob/master/{}/"\
+                        .format(path_to_files)
+            repository_url = base_link + file\
+                .rstrip()\
+                .replace(" ", "%20")\
+                .rstrip()\
+                .replace(".json", ".md")
+            repository_json = base_link + file\
+                .rstrip()\
+                .replace(" ", "%20")
             repository_title = file.replace(".json", "")
             try:
-                generate_markdown_header("main_md_table.md", repository_title, repository_url,
+                generate_markdown_header("main_md_table.md",
+                                         repository_title,
+                                         repository_url,
                                          repository_json)
                 if "0" in data:
                     del data["0"]
                 for commit_iterator in data:
                     commit_number = str(commit_iterator)
                     commit_date = data.get(commit_number).get("commit_date")
-                    is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+                    is_it_under_24 = datetime.strptime(commit_date,
+                                                       "%Y-%m-%d %H:%M:%S")
                     if is_it_under_24 > time_24h_ago:
                         count_pushes = count_pushes + 1
-                        commit_description = data.get(commit_number).get("commit_message")
-                        commit_description = remove_chars(commit_description, "\U0001f60b")
+                        commit_description = data\
+                            .get(commit_number)\
+                            .get("commit_message")
+                        commit_description = remove_chars(commit_description,
+                                                          "\U0001f60b")
                         commit_url = data.get(commit_number).get("url")
                         commit_url = "[Link](" + commit_url + ")"
                         author = data.get(commit_number).get("commiter_name")
@@ -945,12 +1059,18 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                 if count_pushes == 0:
                     commit_url = " "
                     if days_to_generate == 1:
-                        commit_description = "No push in the last day.. [see the history of MD " \
-                                             "commits](" + repository_url + ")"
+                        commit_description = "No push in the last day.. " \
+                                             "[see the history of MD " \
+                                             "commits](" + \
+                                             repository_url + \
+                                             ")"
                     else:
-                        commit_description = "No push in the last " + str(
-                            days_to_generate) + " days.. [see the history of MD " \
-                                             "commits](" + repository_url + ")"
+                        commit_description = "No push in the last " + \
+                                             str(days_to_generate) + \
+                                             " days.. [see the history of MD" \
+                                             " commits](" + \
+                                             repository_url + \
+                                             ")"
                     author = "FIC - BOT"
                     review = "Self Generated"
                     commit_date = " - "
@@ -963,14 +1083,17 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
             except KeyError:
                 if LOGGER:
                     print("File ", file, " is empty. \n",
-                          "Please check:", repository_url, " for more details.\n")
+                          "Please check:",
+                          repository_url,
+                          " for more details.\n")
 
 
 def extract_json_from_hg(json_files, path_to_files, days_to_generate):
     """
-    Extracts the json data from json files and writes the data to the main markdown table file.
-    The function looks into json files after the last commit, extracts it and calls the
-    write_main_md_table function.
+    Extracts the json data from json files and writes the data to the main
+    markdown table file.
+    The function looks into json files after the last commit, extracts it and
+    calls the write_main_md_table function.
     :param days_to_generate:
     :param json_files: List of files to extract commits from.
     :param path_to_files: Folder to json files
@@ -985,8 +1108,9 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
         file_path = "{}/".format(path_to_files) + file
         with open(file_path) as json_file:
             data = json.load(json_file)
-            base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/" \
-                        "blob/master/{}/".format(path_to_files)
+            base_link = "https://github.com/mozilla-releng/firefox-infra-" \
+                        "changelog/blob/master/{}/"\
+                        .format(path_to_files)
             repository_url = base_link + file \
                 .rstrip() \
                 .replace(" ", "%20") \
@@ -1005,16 +1129,22 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                 if "0" in data:
                     del data["0"]
                 for changeset_iterator in data:
-                    for commit_iterator in data.get(changeset_iterator).get("changeset_commits"):
-                        commit_date = data.get(changeset_iterator).get("date_of_push")
-                        is_it_under_24 = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+                    for commit_iterator in data\
+                            .get(changeset_iterator)\
+                            .get("changeset_commits"):
+                        commit_date = data\
+                            .get(changeset_iterator)\
+                            .get("date_of_push")
+                        is_it_under_24 = datetime.strptime(commit_date,
+                                                           "%Y-%m-%d %H:%M:%S")
                         if is_it_under_24 > time_24h_ago:
                             count_pushes = count_pushes + 1
                             commit_description = data.get(changeset_iterator) \
                                 .get("changeset_commits") \
                                 .get(commit_iterator) \
                                 .get("commit_message")
-                            commit_description = remove_chars(commit_description, "\n")
+                            commit_description = \
+                                remove_chars(commit_description, "\n")
                             commit_url = data.get(changeset_iterator) \
                                 .get("changeset_commits") \
                                 .get(commit_iterator) \
@@ -1031,12 +1161,18 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                 if count_pushes == 0:
                     commit_url = " "
                     if days_to_generate == 1:
-                        commit_description = "No push in the last day.. [see the history of MD " \
-                                             "commits](" + repository_url + ")"
+                        commit_description = "No push in the last day.. " \
+                                             "[see the history of MD " \
+                                             "commits](" + \
+                                             repository_url + \
+                                             ")"
                     else:
-                        commit_description = "No push in the last " + str(
-                            days_to_generate) + " days.. [see the history of MD " \
-                                             "commits](" + repository_url + ")"
+                        commit_description = "No push in the last " + \
+                                             str(days_to_generate) + \
+                                             " days.. [see the history of MD" \
+                                             " commits](" + \
+                                             repository_url + \
+                                             ")"
                     author = "FIC - BOT"
                     review = "Self Generated"
                     commit_date = " - "
@@ -1054,13 +1190,17 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
             except KeyError:
                 if LOGGER:
                     print("File ", file, " is empty. \n",
-                          "Please check:", repository_url, " for more details.\n")
+                          "Please check:",
+                          repository_url,
+                          " for more details.\n")
 
 
-def generate_markdown_header(file_name, repository_name, markdown_link, json_link):
+def generate_markdown_header(file_name, repository_name, markdown_link,
+                             json_link):
     """
     This function appends the markdown header to the main markdown table.
-    It includes the repository title (name), the markdown link and the json link.
+    It includes the repository title (name), the markdown link and the json
+    link.
     :param file_name: name of the file in which the content it's added.
     :param repository_name: name of the repository for the generated table.
     :param markdown_link: markdown link for the header table.
@@ -1074,26 +1214,36 @@ def generate_markdown_header(file_name, repository_name, markdown_link, json_lin
                        "\t|\t" + "[Json](" + \
                        json_link + ")" + "\t| \n"
 
-    title_table_formation = "|:----------:|:-----------------------:|:--------:| \n "
+    title_table_formation = "|:----------:|:-----------" \
+                            "------------:|:--------:| \n "
 
-    base_table = "| Link | Last commit | Author | Reviewer | Deploy time | \n" + \
-                 "|:----------:|:-----------:|:------:|:--------:|:-----------:| \n"
+    base_table = "| Link | Last commit | Author | " \
+                 "Reviewer | Deploy time | \n" + \
+                 "|:----------:|:-----------:|:---" \
+                 "---:|:--------:|:-----------:| \n"
 
-    file.write("\n" + repository_title + title_table_formation + "\n" + base_table)
+    file.write("\n" +
+               repository_title +
+               title_table_formation +
+               "\n" + base_table)
     file.close()
 
 
-def write_main_md_table(file_name, repository_url, last_commit, author, reviewer, deploy_time):
+def write_main_md_table(file_name, repository_url, last_commit, author,
+                        reviewer, deploy_time):
     """
-    This function opens a file (that file should be already created and appends to it a row that
-    will contain the repository, the last commit and the deploy time.
+    This function opens a file (that file should be already created and
+    appends to it a row that will contain the repository, the last commit and
+    the deploy time.
     :param reviewer: Reviewer name
     :param author: Author name for the push/commit
-    :param file_name: Name of the file in which the content is appended. (should also contain the
-     path)
+    :param file_name: Name of the file in which the content is appended.
+    (should also contain the path)
     :param repository_url: Repository url for the first element of the table.
-    :param last_commit: Description of the last commit used as the 2nd element of the table
-    :param deploy_time: Time and Time designator used as the 3rd element of the table
+    :param last_commit: Description of the last commit used as the 2nd element
+     of the table
+    :param deploy_time: Time and Time designator used as the 3rd element of
+    the table
     :return:
     """
     row = "|" + repository_url + \
@@ -1118,13 +1268,13 @@ def get_keys(name):
 
 
 @click.command()
-@click.option('--git', flag_value='git', help='Run script only for GIT repositories')
-@click.option('--hg', flag_value='hg', help='Run script only for HG repositories')
+@click.option('--git', flag_value='git', help='Run script only for GIT repos')
+@click.option('--hg', flag_value='hg', help='Run script only for HG repos')
 @click.option('--l', flag_value='l', help='Display logger')
 @click.option('--r', flag_value='r',
               help='Let you choose for which repositories the script will run')
-@click.option('--d', default=1,
-              help='Let you choose the amount of days the main markdown file will contain')
+@click.option('--d', default=1, help='Let you choose the amount of days the '
+                                     'main markdown file will contain')
 def cli(git, hg, l, r, d):
     """
 
@@ -1132,7 +1282,8 @@ def cli(git, hg, l, r, d):
     :param hg: Runs the script only for HG repositories
     :param l: Display logger
     :param r: Let you choose for which repositories the script will run
-    :param d: Let you choose the amount of days the main markdown file will contain
+    :param d: Let you choose the amount of days the main markdown file will
+    contain
     :return:
     """
     configuration.GENERATE_FOR_X_DAYS = d
@@ -1160,19 +1311,25 @@ def cli(git, hg, l, r, d):
             for keys in REPO_LIST:
                 print(REPO_LIST.index(keys) + 1, keys)
 
-            user_choice = input("Select a repo by typing it's corespunding number, "
-                      "type q when you are done: ")
+            user_choice = input("Select a repo by typing it's "
+                                "corespunding number, "
+                                "type q when you are done: ")
             if str(user_choice) == "q":
-                print('Running script for {}'.format(str(new_list).strip('[]')))
+                print('Running script for {}'
+                      .format(str(new_list).strip('[]')))
                 for repository in new_list:
                     if repository in REPOSITORIES.get("Github"):
                         create_files_for_git(repository, onerepo=True)
-                        generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+                        generate_main_md_table("git_files",
+                                               GENERATE_FOR_X_DAYS)
                     elif repository in REPOSITORIES.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
-                        clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
-                        generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-                        generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+                        clear_file("main_md_table.md",
+                                   GENERATE_FOR_X_DAYS)
+                        generate_main_md_table("hg_files",
+                                               GENERATE_FOR_X_DAYS)
+                        generate_main_md_table("git_files",
+                                               GENERATE_FOR_X_DAYS)
             try:
                 new_entry = int(user_choice) - 1
                 if new_entry < 0 or new_entry >= len(REPO_LIST):
@@ -1192,7 +1349,7 @@ def cli(git, hg, l, r, d):
 
 
 if __name__ == "__main__":
-    LOGGER = False
+    LOGGER = True
     GENERATE_FOR_X_DAYS = configuration.GENERATE_FOR_X_DAYS
     TOKEN = os.environ.get("GIT_TOKEN")
     GIT = Github(TOKEN)
@@ -1205,4 +1362,5 @@ if __name__ == "__main__":
     #     test_obj.input_argument(sys.argv[1])
     # except IndexError:
     #     test_obj.input_argument("default")
+    # do_commit()
 
