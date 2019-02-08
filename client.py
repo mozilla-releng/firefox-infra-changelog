@@ -35,7 +35,7 @@ def limit_checker():
     if rate_limit >= 5:
         sys.stdout.write("\rRate limit is: " + str(rate_limit))
         sys.stdout.flush()
-        return 1
+        return True
     else:
         try:
             print("You have reached the requests limit!")
@@ -44,7 +44,7 @@ def limit_checker():
                 unix_reset_time = GIT.rate_limiting_resettime
                 reset_time = datetime.fromtimestamp(unix_reset_time)
             print("\nThe requests limit has been reset!")
-            return 1
+            return True
 
         except GithubException.status == 403:
             print("The requests limit is reset to: " + str(reset_time))
@@ -62,15 +62,15 @@ def create_files_for_git(repositories_holder, onerepo):
     git_files/
     """
     if onerepo:
-        repository_team = repositories.get("Github").get(repositories_holder).get("team")
-        repository_type = repositories \
+        repository_team = REPOSITORIES.get("Github").get(repositories_holder).get("team")
+        repository_type = REPOSITORIES \
             .get("Github") \
             .get(repositories_holder) \
             .get("configuration") \
             .get("type")
         if LOGGER:
             print("\nWorking on repo: {}".format(repositories_holder))
-        folders_to_check = [x for x in repositories
+        folders_to_check = [x for x in REPOSITORIES
                             .get("Github")
                             .get(repositories_holder)
                             .get("configuration")
@@ -147,7 +147,6 @@ def get_version(repo_name, repo_team):
 
 def get_version_from_build_puppet(version_path, repo_name):
     """
-
     :param: version_path: Path to the requierments.txt where the version number is stored
     :param: repo_name: The repo for which we are checking the version.
     :return: Returns the version number that is stored in build-puppet for each *scriptworker
@@ -284,6 +283,10 @@ def get_date_from_json(repo_name):
 
 
 def get_last_local_push_id(repo_name):
+    """
+    :param repo_name: name of the repo we are currently working on
+    :return: last_stored_push_id: last push id that is currently stored locally
+    """
     hg_json_filename = "{}.json".format(repo_name)
     try:
         with open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "r") as commit_json:
@@ -303,6 +306,11 @@ def get_last_local_push_id(repo_name):
 
 
 def generate_hg_pushes_link(repo_name, repository_url):
+    """
+    :param repo_name: name of the repo we are currently working on
+    :param repository_url: base repository url stored in repositories.json
+    :return: generate_pushes_link: a link used for bringing data from HG
+    """
     start_id = get_last_local_push_id(repo_name)
     url = repository_url + "json-pushes?version=2"
     response = urlopen(url)
@@ -321,16 +329,16 @@ def generate_hg_pushes_link(repo_name, repository_url):
 
 def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     """
-        Filters out only the data that we need from a commit
-        Substitute the special characters from commit message using 'sub' function from 're' library
-        :param repository_name: name of the given repo
-        :param repository_path:
-        :param folders_to_check: the folders we care about
-        :return: the commits into a dictionary
-        TODO: please add the exception blocks since the script fails when it can't pull a data:
-        (e.g raise self.__createException(status, responseHeaders, output)
-                github.GithubException.GithubException: 502 {'message': 'Server Error'}
-        """
+    Filters out only the data that we need from a commit
+    Substitute the special characters from commit message using 'sub' function from 're' library
+    :param repository_name: name of the given repo
+    :param repository_path:
+    :param folders_to_check: the folders we care about
+    :return: the commits into a dictionary
+    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    (e.g raise self.__createException(status, responseHeaders, output)
+            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    """
     number = 0
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
@@ -358,15 +366,15 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
 
 def filter_git_commit_keyword(repository_name, repository_path):
     """
-        Filters out only the data that we need from a commit
-        Substitute the special characters from commit message using 'sub' function from 're' library
-        :param repository_name: name of the given repo
-        :param repository_path:
-        :return: the commits into a dictionary
-        TODO: please add the exception blocks since the script fails when it can't pull a data:
-        (e.g raise self.__createException(status, responseHeaders, output)
-                github.GithubException.GithubException: 502 {'message': 'Server Error'}
-        """
+    Filters out only the data that we need from a commit
+    Substitute the special characters from commit message using 'sub' function from 're' library
+    :param repository_name: name of the given repo
+    :param repository_path:
+    :return: the commits into a dictionary
+    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    (e.g raise self.__createException(status, responseHeaders, output)
+            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    """
     number = 0
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
@@ -388,19 +396,19 @@ def filter_git_commit_keyword(repository_name, repository_path):
 
 def filter_git_tag_bp(repository_name, repository_team, repository_path):
     """
-        Filters out only the data that we need from a commit
-        Substitute the special characters from commit message using 'sub' function from 're' library
-        :param repository_team: the team of the given repo
-        :param repository_name: name of the given repo
-        :param repository_path:
-        :return: the commits into a dictionary
-        TODO: please add the exception blocks since the script fails when it can't pull a data:
-        (e.g raise self.__createException(status, responseHeaders, output)
-                github.GithubException.GithubException: 502 {'message': 'Server Error'}
-        """
+    Filters out only the data that we need from a commit
+    Substitute the special characters from commit message using 'sub' function from 're' library
+    :param repository_team: the team of the given repo
+    :param repository_name: name of the given repo
+    :param repository_path:
+    :return: the commits into a dictionary
+    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    (e.g raise self.__createException(status, responseHeaders, output)
+            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    """
     number = 0
     commit_number_tracker = 1
-    pathway = repositories.get("Github") \
+    pathway = REPOSITORIES.get("Github") \
         .get(repository_name) \
         .get("configuration") \
         .get("files-to-check")
@@ -431,7 +439,7 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
                     if LOGGER:
                         print(scriptworkers, " needs to be checked.")
                     scriptworker_repo = scriptworkers
-                    version_path = repositories.get("Github") \
+                    version_path = REPOSITORIES.get("Github") \
                         .get("build-puppet") \
                         .get("configuration") \
                         .get("files-to-check") \
@@ -510,18 +518,18 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
 
 def filter_git_tag(repository_name, repository_team, repository_path):
     """
-        Filters out only the data that we need from a commit
-        Substitute the special characters from commit message using 'sub' function from 're' library
-        :param repository_team: the team of the given repo
-        :param repository_name: name of the given repo
-        :param repository_path:
-        :return: the commits into a dictionary
-        TODO: please add the exception blocks since the script fails when it can't pull a data:
-        (e.g raise self.__createException(status, responseHeaders, output)
-                github.GithubException.GithubException: 502 {'message': 'Server Error'}
-        """
+    Filters out only the data that we need from a commit
+    Substitute the special characters from commit message using 'sub' function from 're' library
+    :param repository_team: the team of the given repo
+    :param repository_name: name of the given repo
+    :param repository_path:
+    :return: the commits into a dictionary
+    TODO: please add the exception blocks since the script fails when it can't pull a data:
+    (e.g raise self.__createException(status, responseHeaders, output)
+            github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    """
     number = 0
-    version_path = repositories.get("Github").get(repository_name).get("configuration").get(
+    version_path = REPOSITORIES.get("Github").get(repository_name).get("configuration").get(
         "version-path")
     latest_releases = get_version(repository_name, repository_team)
     if get_version_from_build_puppet(version_path, repository_name) == latest_releases.get(
@@ -587,9 +595,9 @@ def create_files_for_hg(repositories_holder, onerepo):
     Can be found inside hg_files/
     """
     if onerepo:
-        repository_url = repositories.get("Mercurial").get(repositories_holder).get("url")
+        repository_url = REPOSITORIES.get("Mercurial").get(repositories_holder).get("url")
         folders_to_check = [x for x in
-                            repositories.get("Mercurial").get(repositories_holder).get(
+                            REPOSITORIES.get("Mercurial").get(repositories_holder).get(
                                 "configuration").get("folders-to-check")]
         filter_hg_commit_data(repositories_holder, folders_to_check, repository_url)
         create_hg_md_table(repositories_holder)
@@ -683,13 +691,12 @@ def create_md_table(repository_name, path_to_files):
                      "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
         tables = {}
         try:
-            print(type(data))
             version = data.get('0').get("last_two_releases").get("LatestRelease").get("version")
             date = data.get('0').get("last_two_releases").get("LatestRelease").get("date")
             md_title = [
                 "Repository name: {}\n Current version: {} released on {}".format(repository_name,
                                                                                   version, date)]
-        except :
+        except AttributeError:
             md_title = ["{} commit markdown table since {}".format(repository_name, LAST_WEEK)]
 
         commit_number_list = [key for key in data]
@@ -891,8 +898,8 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
     for file in json_files:
         file_path = "{}/".format(path_to_files) + file
         count_pushes = 0
-        with open(file_path) as json_files:
-            data = json.load(json_files)
+        with open(file_path) as json_file:
+            data = json.load(json_file)
             base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/" \
                         "blob/master/{}/".format(path_to_files)
             repository_url = base_link + file.rstrip().replace(" ", "%20").rstrip().replace(".json",
@@ -963,8 +970,8 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
     for file in json_files:
         count_pushes = 0
         file_path = "{}/".format(path_to_files) + file
-        with open(file_path) as json_files:
-            data = json.load(json_files)
+        with open(file_path) as json_file:
+            data = json.load(json_file)
             base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/" \
                         "blob/master/{}/".format(path_to_files)
             repository_url = base_link + file \
@@ -1091,7 +1098,7 @@ def get_keys(name):
     :param name:
     :return:
     """
-    for key in repositories.get("{}".format(name)):
+    for key in REPOSITORIES.get("{}".format(name)):
         REPO_LIST.append(key)
     print(REPO_LIST)
     return REPO_LIST
@@ -1118,13 +1125,13 @@ def cli(git, hg, l, r, d):
     configuration.GENERATE_FOR_X_DAYS = d
 
     if git:
-        create_files_for_git(repositories, onerepo=False)
+        create_files_for_git(REPOSITORIES, onerepo=False)
         clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
         click.echo("Script ran in GIT Only mode")
     if hg:
-        create_files_for_hg(repositories, onerepo=False)
+        create_files_for_hg(REPOSITORIES, onerepo=False)
         clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
@@ -1140,31 +1147,32 @@ def cli(git, hg, l, r, d):
             for keys in REPO_LIST:
                 print(REPO_LIST.index(keys) + 1, keys)
 
-            w = input("Select a repo by typing it's corespunding number, "
+            user_choice = input("Select a repo by typing it's corespunding number, "
                       "type q when you are done: ")
-            if str(w) == "q":
-                print('Finished')
+            if str(user_choice) == "q":
+                print('Running script for {}'.format(str(new_list).strip('[]')))
                 for repository in new_list:
-                    if repository in repositories.get("Github"):
+                    if repository in REPOSITORIES.get("Github"):
                         create_files_for_git(repository, onerepo=True)
                         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
-                    elif repository in repositories.get("Mercurial"):
+                    elif repository in REPOSITORIES.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
                         clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
                         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
                         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
-
-            new_entry = int(w) - 1
-
-            if not len(REPO_LIST) > 0 > new_entry:
-                print('Not Valid')
-            else:
-                new_list.append(REPO_LIST[int(new_entry)])
-                REPO_LIST.pop(int(new_entry))
+            try:
+                new_entry = int(user_choice) - 1
+                if new_entry < 0 or new_entry >= len(REPO_LIST):
+                    print('Not Valid')
+                else:
+                    new_list.append(REPO_LIST[int(new_entry)])
+                    REPO_LIST.pop(int(new_entry))
+            except ValueError:
+                exit(0)
 
     else:
-        create_files_for_git(repositories, onerepo=False)
-        create_files_for_hg(repositories, onerepo=False)
+        create_files_for_git(REPOSITORIES, onerepo=False)
+        create_files_for_hg(REPOSITORIES, onerepo=False)
         clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
@@ -1175,8 +1183,8 @@ if __name__ == "__main__":
     GENERATE_FOR_X_DAYS = configuration.GENERATE_FOR_X_DAYS
     TOKEN = os.environ.get("GIT_TOKEN")
     GIT = Github(TOKEN)
-    repositories_data = open("./repositories.json").read()
-    repositories = json.loads(repositories_data)
+    REPOSITORIES_DATA = open("./repositories.json").read()
+    REPOSITORIES = json.loads(REPOSITORIES_DATA)
     cli()
 
     # test_obj = HandleArgs()
