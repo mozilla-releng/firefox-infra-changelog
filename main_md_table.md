@@ -1,4 +1,4 @@
-##  Commits in production - for one day, generated on: 2019-02-08 13:28:40 UTC.
+##  Commits in production - for one day, generated on: 2019-02-08 14:29:09 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -203,7 +203,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/faf54692367a4eda3934ce95b4bbbad258c9efd6)|Bug 1522307 - fix startup of built-in-workers|djmitche|N/A|2019-02-07 21:28:59|
 |[Link](https://github.com/taskcluster/taskcluster/commit/79ee65e91d30f813285c8425a906a56368b3ba0e)|Merge pull request #189 from djmitche/bug1523807  Bug 1523807 - bring tc-client-web into the monorepo|djmitche|N/A|2019-02-07 16:26:51|
 |[Link](https://github.com/taskcluster/taskcluster/commit/0f16280bf569ae5757cc940830a99bb4bc93baec)|Update README (#190)|helfi92|N/A|2019-02-07 16:06:10|
-|[Link](https://github.com/taskcluster/taskcluster/commit/5a88bd8fa50883aefa3ab19dcee7f5f0c0a1b17c)|Bug 1523807 - include subdirectory in the repository links for clients|djmitche|N/A|2019-02-07 14:16:48|
 
 |	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
