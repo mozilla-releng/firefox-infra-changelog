@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 77561
+    "last_push_id": 77755
   },
   "1": {
     "changeset_number": "35344",
@@ -31578,6 +31578,310 @@
         "files_changed": [
           "taskcluster/ci/toolchain/node.yml",
           "taskcluster/scripts/misc/repack-node.sh"
+        ]
+      }
+    }
+  },
+  "566": {
+    "changeset_number": "77568",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-02-06 18:40:39",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1fef2c79b6de",
+        "commiter_name": "Oana Pop Rus <opoprus@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+        "files_changed": [
+          "testing/mozharness/configs/unittests/thunderbird_buildbot.py",
+          "testing/mozharness/configs/unittests/thunderbird_extra.py"
+        ]
+      }
+    }
+  },
+  "567": {
+    "changeset_number": "77590",
+    "pusher": "wkocher@mozilla.com",
+    "date_of_push": "2019-02-06 23:06:55",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8df3511d76e0",
+        "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+        "commit_message": "Bug 1524912 - Add a 'times' value to add-new-jobs action r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18773",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/add_new_jobs.py"
+        ]
+      }
+    }
+  },
+  "568": {
+    "changeset_number": "77595",
+    "pusher": "thunderbird@calypsoblue.org",
+    "date_of_push": "2019-02-06 23:10:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1aadea60432f",
+        "commiter_name": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "Bug 1489405 - Followup: Allow for thunderbird as shipping_product. r=tomprince\n\nChanges to the desktop_nightly filter chain selected only tasks with no\nshipping_product attribute set or tasks where it is  set to \"firefox\".\n\nThis led to the decision task optimizer removing a large portion of the tasks\nthat run as part of Thunderbird's nightly builds.\n\nThis update adds \"thunderbird\" to the list of shipping_product's whose tasks\nare kept in the task graph.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18872",
+        "files_changed": [
+          "taskcluster/taskgraph/target_tasks.py"
+        ]
+      }
+    }
+  },
+  "569": {
+    "changeset_number": "77596",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-06 23:10:55",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29833e13d654",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1525703 - remove repetitive debugging line r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18871",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/beetmover_repackage.py"
+        ]
+      }
+    }
+  },
+  "570": {
+    "changeset_number": "77616",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-07 04:00:51",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1b0547c09b35",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1525421 - parse out just the try syntax from the commit message r=tomprince\n\nThis mirrors what mozilla-taskcluster does in\nhttps://github.com/taskcluster/mozilla-taskcluster/blob/cb3de4c31e418f7dc1d89cffeeb28ad6a9dae610/src/jobs/taskcluster_graph.js#L46-L58\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18748",
+        "files_changed": [
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/test/test_decision.py",
+          "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      }
+    }
+  },
+  "571": {
+    "changeset_number": "77618",
+    "pusher": "btara@mozilla.com",
+    "date_of_push": "2019-02-07 04:07:54",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d09706f38e5e",
+        "commiter_name": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out changeset 1b0547c09b35 (bug 1525421) for geko decision task bustage CLOSED TREE",
+        "files_changed": [
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/test/test_decision.py",
+          "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      }
+    }
+  },
+  "572": {
+    "changeset_number": "77619",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-07 04:19:33",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7d289fe21aec",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1525421 - parse out just the try syntax from the commit message r=tomprince\n\nThis mirrors what mozilla-taskcluster does in\nhttps://github.com/taskcluster/mozilla-taskcluster/blob/cb3de4c31e418f7dc1d89cffeeb28ad6a9dae610/src/jobs/taskcluster_graph.js#L46-L58\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18748",
+        "files_changed": [
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/test/test_decision.py",
+          "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      }
+    }
+  },
+  "573": {
+    "changeset_number": "77684",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-07 23:50:14",
+    "changeset_commits": {
+      "21": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e8dc8aa65fbb",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1525731 - Cleanup taskcluster config for Android tests; r=me,a=test-only\n\nRemoving skipped test suites that we have no immediate plans to run, and adding\ncomments and bug pointers for remaining skipped suites.",
+        "files_changed": [
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      }
+    }
+  },
+  "574": {
+    "changeset_number": "77709",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-02-08 04:46:38",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3c7c50fba283",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1515746 - [flake8] Upgrade flake8 and dependencies, r=egao\n\nThis bumps flake8 to version 3.7.5.\n\nThis also ignores the new lint rules that were added in the new versions.\nThese rules are de-marked via comment so we know that they should be enabled at\nsome point (as opposed to the other rules that are (presumably) ignored\nintentionally.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18353",
+        "files_changed": [
+          ".flake8",
+          "ipc/ipdl/.flake8",
+          "security/manager/.flake8",
+          "testing/mozharness/configs/.flake8",
+          "tools/lint/python/flake8_requirements.txt"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f96c1460ffc0",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1515746 - [flake8] Unsupport subdir .flake8 files and use new 'per-file-ignores' config instead, r=egao\n\nThis removes all .flake8 files except for the one at the root of the repo.\nInstead we use the new 'per-file-ignores' config introduced in 3.7. To ignore\nspecific errors in a subdirectory, add a line like this to the root .flake8:\n\n[per-file-ignores]\n    path/to/subdir/*: E100, F200, ...\n\nThe reasons for this change are:\n\n1. Unblock flake8 blacklist (bug 1367092).\n2. Simplify configuration and code.\n3. Encourage more consistent styling.\n4. Improve performance.\n5. Greater editor consistency.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18354",
+        "files_changed": [
+          ".flake8",
+          "build/moz.configure/.flake8",
+          "ipc/ipdl/.flake8",
+          "security/manager/.flake8",
+          "testing/firefox-ui/.flake8",
+          "testing/marionette/client/.flake8",
+          "testing/marionette/harness/.flake8",
+          "testing/marionette/puppeteer/.flake8",
+          "testing/mozharness/configs/.flake8",
+          "tools/lint/python/flake8.py",
+          "tools/lint/test/test_flake8.py"
+        ]
+      }
+    }
+  },
+  "575": {
+    "changeset_number": "77711",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-02-08 04:48:10",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0b8097689bb5",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [taskgraph] Factor logic for adding a cache in job.common to a new function, r=tomprince\n\nWe add caches at various places in common.py. This consolidates the logic into\na re-useable function. This is in preparation for adding generic-worker cache\nsupport.\n\nThis also adds a test. The test is not terribly useful, but I've been looking\nfor an excuse to lay some groundwork for further tests in the 'job' submodule.\nThis will do.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17689",
+        "files_changed": [
+          "taskcluster/taskgraph/test/python.ini",
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/job/common.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b6e19a5b0ab9",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [ci] Opt out of caching for generic-worker based Windows builds, r=tomprince\n\nThe hosts don't have enough disk space to cache mozilla-central.\n\nDepends on D17689\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18738",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2ceeee1915ae",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [taskgraph] Support generic-worker caches in run_task, r=tomprince\n\nThis implements support for adding generic-worker caches. As a consequence this\nalso turns on caching for the gecko checkout if present.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17690",
+        "files_changed": [
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/job/common.py"
+        ]
+      }
+    }
+  },
+  "576": {
+    "changeset_number": "77714",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-08 04:50:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0e6997e8f365",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525987: [taskgraph] Allow docker images to not be cached; r=dustin\n\nThis allows images to be built on every commit. This is useful for the\nout-of-tree taskgraph, that builds a docker image with the taskgraph code\ninstalled.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19031",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/cached_tasks.py",
+          "taskcluster/taskgraph/transforms/docker_image.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0b0101621dcf",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525987: [taskgraph] Allow docker images to be indexed as build products; r=dustin\n\nThis is useful for the out-of-tree taskgraph code. Downstream products can\npin the generated decision task image by revision, rather than contents.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19032",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/docker_image.py"
+        ]
+      }
+    }
+  },
+  "577": {
+    "changeset_number": "77743",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-02-08 12:13:44",
+    "changeset_commits": {
+      "416": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6df68ae82295",
+        "commiter_name": "Henrik Skupin <mail@hskupin.info>",
+        "commit_message": "Bug 1523562 [wpt PR 14981] - Use fluxbox as window manager for xvfb in CI (14938), a=testonly\n\nAutomatic update from web-platform-tests\nUse fluxbox as window manager for xvfb in CI (#14981)\n\n--\n\nwpt-commits: 8b4c3d8215517554199d7f35f686be12e69473d5\nwpt-pr: 14981\n",
+        "files_changed": [
+          "testing/web-platform/tests/.taskcluster.yml",
+          "testing/web-platform/tests/tools/ci/start.sh",
+          "testing/web-platform/tests/tools/docker/Dockerfile"
+        ]
+      },
+      "461": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48e765f7795c",
+        "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+        "commit_message": "Bug 1523562 [wpt PR 15073] - Add a retry to the initial git checkout, a=testonly\n\nAutomatic update from web-platform-tests\nAdd a retry to the initial git checkout\n\n--\nUpdate docker image\n\n--\n\nwpt-commits: aa94ec995bdf6de55dca6dc51fc83dc0a66c31e9, 68f47dfce55536c861d4e28220de4d296a5472c7\nwpt-pr: 15073\n",
+        "files_changed": [
+          "testing/web-platform/tests/.taskcluster.yml",
+          "testing/web-platform/tests/tools/docker/Dockerfile",
+          "testing/web-platform/tests/tools/docker/retry.py",
+          "testing/web-platform/tests/tools/docker/start.sh"
+        ]
+      },
+      "464": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c55f99389f89",
+        "commiter_name": "James Graham <james@hoppipolla.co.uk>",
+        "commit_message": "Bug 1523562 [wpt PR 15074] - Enable full logging for verify runs on taskcluster, a=testonly\n\nAutomatic update from web-platform-tests\nEnable full logging for verify runs on taskcluster\n\n--\n\nwpt-commits: c456b7df5d0978d1036399dbb50cdcbc2517c825\nwpt-pr: 15074\n",
+        "files_changed": [
+          "testing/web-platform/tests/tools/ci/taskcluster-run.py"
+        ]
+      }
+    }
+  },
+  "578": {
+    "changeset_number": "77744",
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-02-08 12:29:55",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=22ca3a5f976f",
+        "commiter_name": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Backed out changeset 8d7c099bbe0d (bug 1522111) for breaking SETA job schedule optimization. a=backout",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      }
+    }
+  },
+  "579": {
+    "changeset_number": "77746",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-02-08 13:29:38",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4bc31addf415",
+        "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Backed out 3 changesets (bug 1519472) for causing wrench bustages and as requested by pmoore. a=backout\n\nBacked out changeset 2ceeee1915ae (bug 1519472)\nBacked out changeset b6e19a5b0ab9 (bug 1519472)\nBacked out changeset 0b8097689bb5 (bug 1519472)",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/taskgraph/test/python.ini",
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1b7218a030c6",
+        "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland.",
+        "files_changed": [
+          "taskcluster/taskgraph/test/test_transforms_job.py"
         ]
       }
     }

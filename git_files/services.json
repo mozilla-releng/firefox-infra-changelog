@@ -1,8 +1,54 @@
 {
   "0": {
-    "lastChecked": "2019-02-06 15:37:37.573753"
+    "lastChecked": "2019-02-08 14:28:28.655249"
   },
   "1": {
+    "sha": "334bfb59a9cb55a92022f600bee1e4ed41dc485f",
+    "url": "https://github.com/mozilla/release-services/commit/334bfb59a9cb55a92022f600bee1e4ed41dc485f",
+    "commiter_name": "rail",
+    "commiter_email": "rok@garbas.si",
+    "commit_message": "tooltool/api: fix all flask subcommands",
+    "commit_date": "2019-02-07 20:21:33",
+    "files_changed": [
+      "src/tooltool/api/tooltool_api/cli.py"
+    ]
+  },
+  "2": {
+    "sha": "60bc6fbdf7dcee8afa20d3e5ae7193a1d0e95873",
+    "url": "https://github.com/mozilla/release-services/commit/60bc6fbdf7dcee8afa20d3e5ae7193a1d0e95873",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "setup: fixing update hooks due to intreehooks needed as setup require (#1854)",
+    "commit_date": "2019-02-07 19:35:50",
+    "files_changed": [
+      "src/codecoverage/backend/default.nix",
+      "src/codecoverage/crawler/default.nix",
+      "src/common/naming/default.nix",
+      "src/mapper/api/default.nix",
+      "src/notification/identity/default.nix",
+      "src/notification/policy/default.nix",
+      "src/pulselistener/default.nix",
+      "src/shipit/api/default.nix",
+      "src/staticanalysis/bot/default.nix",
+      "src/tokens/api/default.nix",
+      "src/tooltool/api/default.nix",
+      "src/treestatus/api/default.nix",
+      "src/uplift/backend/default.nix",
+      "src/uplift/bot/default.nix"
+    ]
+  },
+  "3": {
+    "sha": "ccf864e32ddf8b462450082d1859b2bb5d93d1d7",
+    "url": "https://github.com/mozilla/release-services/commit/ccf864e32ddf8b462450082d1859b2bb5d93d1d7",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "tooltool/api: remove redundant workerType specification (#1855)",
+    "commit_date": "2019-02-07 17:09:07",
+    "files_changed": [
+      "src/tooltool/api/default.nix"
+    ]
+  },
+  "4": {
     "sha": "a9194956d6dc1be57503a3dff3aa3255e242dd61",
     "url": "https://github.com/mozilla/release-services/commit/a9194956d6dc1be57503a3dff3aa3255e242dd61",
     "commiter_name": "garbas",
@@ -28,7 +74,7 @@
       "src/uplift/bot/default.nix"
     ]
   },
-  "2": {
+  "5": {
     "sha": "981d853ccfa054bac79247bca4e5aedc81d1ab14",
     "url": "https://github.com/mozilla/release-services/commit/981d853ccfa054bac79247bca4e5aedc81d1ab14",
     "commiter_name": "garbas",
@@ -47,7 +93,7 @@
       "src/tooltool/api/tooltool_api/cli.py"
     ]
   },
-  "3": {
+  "6": {
     "sha": "4687eb1f889e07c84249cd2bf6bc888fd803b528",
     "url": "https://github.com/mozilla/release-services/commit/4687eb1f889e07c84249cd2bf6bc888fd803b528",
     "commiter_name": "garbas",
@@ -99,7 +145,7 @@
       "src/uplift/bot/requirements_frozen.txt"
     ]
   },
-  "4": {
+  "7": {
     "sha": "9a1f48c56dd6e007a0131147a19c4a883a0f8a45",
     "url": "https://github.com/mozilla/release-services/commit/9a1f48c56dd6e007a0131147a19c4a883a0f8a45",
     "commiter_name": "garbas",

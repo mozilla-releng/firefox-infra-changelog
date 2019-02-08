@@ -1,7 +1,25 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-23 17:37:34.103933
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-25 16:28:26.737752
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|317|djmitche|Merge pull request #191 from djmitche/fix-built-in-workers-startup  Bug 1522307 - fix startup of built-in-workers|[URL](https://github.com/taskcluster/taskcluster/commit/150b40d50c35f9e05685fe72a7ce1774bb173acb)|2019-02-07 23:19:40
+|316|djmitche|Bug 1522307 - fix startup of built-in-workers|[URL](https://github.com/taskcluster/taskcluster/commit/faf54692367a4eda3934ce95b4bbbad258c9efd6)|2019-02-07 21:28:59
+|315|djmitche|Merge pull request #189 from djmitche/bug1523807  Bug 1523807 - bring tc-client-web into the monorepo|[URL](https://github.com/taskcluster/taskcluster/commit/79ee65e91d30f813285c8425a906a56368b3ba0e)|2019-02-07 16:26:51
+|314|helfi92|Update README (#190)|[URL](https://github.com/taskcluster/taskcluster/commit/0f16280bf569ae5757cc940830a99bb4bc93baec)|2019-02-07 16:06:10
+|313|djmitche|Bug 1523807 - include subdirectory in the repository links for clients|[URL](https://github.com/taskcluster/taskcluster/commit/5a88bd8fa50883aefa3ab19dcee7f5f0c0a1b17c)|2019-02-07 14:16:48
+|312|djmitche|Bug 1523807 - update CODEOWNERS|[URL](https://github.com/taskcluster/taskcluster/commit/65edb1b94aa6dc270e657fda0883d5cb0d5b72bf)|2019-02-07 00:59:35
+|311|djmitche|Bug 1523807 - set up testing for taskcluster-client-web|[URL](https://github.com/taskcluster/taskcluster/commit/508ac4260b67d161c605a5ef6e4d19052d8b897f)|2019-02-07 00:55:45
+|310|djmitche|Bug 1523807 - disable 'neutrino stage' behavior (precommit hook)|[URL](https://github.com/taskcluster/taskcluster/commit/67c148c2b9a5f7f4868018d6766cdd9419e6c52e)|2019-02-06 23:22:19
+|309|djmitche|Bug 1523807 - handle README dir subdirectories correctly  Because "clients/client" is a prefix of "clients/client-web", the TOC generation was treating the latter as a subdirectory of former. Appending `/` fixes this, at the cost of special-casing the root.|[URL](https://github.com/taskcluster/taskcluster/commit/1eb1720f5bd9babbd2529667be42fdd32d00a2bc)|2019-02-06 22:35:48
+|308|djmitche|Bug 1523807 - check that published taskcluster-client can be used|[URL](https://github.com/taskcluster/taskcluster/commit/fe47c0be5d8c3727e3393381e0737b4822a45d5d)|2019-02-06 22:12:24
+|307|djmitche|Bug 1523807 - move taskcluster-client to clients/client|[URL](https://github.com/taskcluster/taskcluster/commit/d583b4489ffcc04c1611b649f175eb0c79b5abc3)|2019-02-04 22:53:28
+|306|djmitche|Bug 1523807 - post-merge cleanup|[URL](https://github.com/taskcluster/taskcluster/commit/9d09a2f3b2e5983695f726b27b59f8031855be37)|2019-02-06 23:00:12
+|305|djmitche|Merge taskcluster-client-web into monorepo|[URL](https://github.com/taskcluster/taskcluster/commit/21404ad8e3d45610264a524bddfe5d6a728889b8)|2019-02-06 23:01:39
+|304|djmitche|Move taskcluster-client-web to clients/client-web|[URL](https://github.com/taskcluster/taskcluster/commit/2ce141d383eaa1b37e8ccd524da0f0beac9ea1b0)|2019-02-06 22:50:09
+|303|djmitche|Merge pull request #188 from djmitche/sort-generate-readmes  Sort README tables of contents|[URL](https://github.com/taskcluster/taskcluster/commit/669ec8cec2e2cf12016cc52fc23d3574584af802)|2019-02-06 22:35:16
+|302|djmitche|Sort README tables of contents|[URL](https://github.com/taskcluster/taskcluster/commit/7298991af4b32de74e899bc4c1dd1f1ef90ac45a)|2019-02-06 22:21:46
+|301|owlishDeveloper|Update web-ui-nginx-site.conf|[URL](https://github.com/taskcluster/taskcluster/commit/7add1810b11a97dd9c090272a93f521feb8ca526)|2019-02-06 22:00:52
+|300|owlishDeveloper|Add configuration file for web-ui (#154)    Add configuration file for web-ui      Turn tools dockerfile into web-ui dockerfile  Turn tools-ui.js into web-ui.js      Add nginx configuration for web-ui. Remove one for tools-ui      Change Ingress config to use web-ui instead of tools      Remove tc-tools from the build config, and add web-ui      Rename variables and things to be about web instead of tools      Remove tools from the terraform, add web      Replace tc-docs with the web-ui's docs section|[URL](https://github.com/taskcluster/taskcluster/commit/76736812e90d5276ffb230505e3204b1012af14a)|2019-02-06 20:32:36
 |299|djmitche|Merge pull request #186 from djmitche/fix-generate-more  only show a diff when generate produces one, and don't use a pager|[URL](https://github.com/taskcluster/taskcluster/commit/ce5777f4e82bf9559f480c98479fd34124f3d1a9)|2019-02-05 22:47:52
 |298|djmitche|only show a diff when generate produces one, and don't use a pager|[URL](https://github.com/taskcluster/taskcluster/commit/ce7cfe7e15b5a131de974626e9052666f88f98f6)|2019-02-05 20:58:45
 |297|djmitche|Merge pull request #185 from taskcluster/link-direct-to-readme  Add link to readme anchor|[URL](https://github.com/taskcluster/taskcluster/commit/577372b7bb5cae7d2406742b1cef2a34e184e92c)|2019-02-05 20:37:48

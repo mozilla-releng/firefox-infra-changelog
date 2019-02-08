@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 10632
+    "last_push_id": 10651
   },
   "1": {
     "changeset_number": "10002",
@@ -41410,6 +41410,21 @@
           "taskcluster/taskgraph/decision.py",
           "taskcluster/taskgraph/test/test_decision.py",
           "taskcluster/taskgraph/util/hg.py"
+        ]
+      }
+    }
+  },
+  "63": {
+    "changeset_number": "10634",
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-02-06 22:31:43",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=88cabcb8f0bc",
+        "commiter_name": "Wes Kocher <wkocher@mozilla.com>",
+        "commit_message": "Bug 1524911 - Increase the upper limit of retrigger 'times' value from 6 to 100 r=dustin a=NPOTB\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18623",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/retrigger.py"
         ]
       }
     }
