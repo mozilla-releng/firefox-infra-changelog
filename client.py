@@ -52,6 +52,21 @@ def limit_checker():
             print("Github is down!\n Please try again later...")
 
 
+def create_md_table_for_scriptworkers(repository_name):
+    """
+    This function creates the markdown table for the scriptworker repositories.
+    :param: repositories_name: Expects the name of the repository
+    :return: a call to 'create_md_table' function for each scriptworker repositories
+    """
+    files_to_check = [x for x in REPOSITORIES
+                      .get("Github")
+                      .get(repository_name)
+                      .get("configuration")
+                      .get("files-to-check")]
+    for scriptworker_repo in files_to_check:
+        create_md_table(scriptworker_repo, "git_files")
+
+
 def create_files_for_git(repositories_holder, onerepo):
     """
     Main GIT function. Takes every Git repo from a .json file which is populated with repositories
@@ -79,16 +94,15 @@ def create_files_for_git(repositories_holder, onerepo):
                                repository_team,
                                repository_type,
                                folders_to_check)
-
-        create_md_table(repositories_holder, "git_files")
+        if repositories_holder == "build-puppet":
+            create_md_table(repository_name, "git_files")
+            create_md_table_for_scriptworkers(repositories_holder)
+        else:
+            create_md_table(repositories_holder, "git_files")
         if LOGGER:
             print("MD table generated successfully")
-
-        if LOGGER:
             print("Finished working on {}".format(repositories_holder))
-
     else:
-
         for repo in repositories_holder["Github"]:
             repository_name = repo
             repository_team = repositories_holder.get("Github").get(repo).get("team")
@@ -108,12 +122,13 @@ def create_files_for_git(repositories_holder, onerepo):
                                    repository_team,
                                    repository_type,
                                    folders_to_check)
-
-            create_md_table(repository_name, "git_files")
+            if repository_name == "build-puppet":
+                create_md_table(repository_name, "git_files")
+                create_md_table_for_scriptworkers(repository_name)
+            else:
+                create_md_table(repository_name, "git_files")
             if LOGGER:
                 print("MD table generated successfully")
-
-            if LOGGER:
                 print("Finished working on {}".format(repository_name))
 
 
@@ -480,7 +495,6 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
                                     each_commit2.update({int(number2): get_commit_details(commit2)})
                                     new_scriptworker_dict.update(each_commit2)
                             json_writer_git(scriptworker_repo, new_scriptworker_dict)
-                            create_md_table(scriptworker_repo, "git_files")
                         else:
                             if LOGGER:
                                 print("No new changes entered production")
@@ -508,7 +522,6 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
                                 each_commit2.update({int(number2): get_commit_details(commit2)})
                                 new_scriptworker_dict.update(each_commit2)
                         json_writer_git(scriptworker_repo, new_scriptworker_dict)
-                        create_md_table(scriptworker_repo, "git_files")
         if switch:
             number += 1
             each_commit.update({int(number): get_commit_details(commit)})
