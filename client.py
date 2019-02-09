@@ -82,7 +82,6 @@ def create_files_for_git(repositories_holder, onerepo):
     Can be found inside git_files/
     """
     if onerepo:
-        # Not in use, needs further debugging
         repository_team = REPOSITORIES\
             .get("Github")\
             .get(repositories_holder)\
@@ -437,6 +436,26 @@ def filter_git_commit_keyword(repository_name, repository_path):
     return True
 
 
+def compare_versions(version_path, scriptworker_repo, latest_releases):
+    """
+    checks the version of a scriptworker repo from its changelog, build-puppet and locally saved one against each other
+    :param version_path:
+    :param scriptworker_repo:
+    :param repo_team:
+    :return:
+    """
+
+    version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
+    last_local_version = get_version_from_json(scriptworker_repo)
+    if version_in_puppet == latest_releases.get("latest_release").get("version"):
+        if version_in_puppet != last_local_version:
+            return True
+        else:
+            return False
+    else:
+        return True
+
+
 def filter_git_tag_bp(repository_name, repository_team, repository_path):
     """
     Filters out only the data that we need from a commit
@@ -588,7 +607,7 @@ def filter_git_tag(repository_name, repository_team, repository_path):
         .get("configuration")\
         .get("version-path")
     latest_releases = get_version(repository_name, repository_team)
-    if get_version_from_build_puppet(version_path, repository_name) == \
+    if get_version_from_json(repository_name) == \
             latest_releases.get("latest_release").get("version"):
         if LOGGER:
             print("No new changes entered production")
@@ -1006,6 +1025,7 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
     :param path_to_files: Folder to json files
     :return: none
     """
+
     time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
     test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
     time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
@@ -1305,6 +1325,8 @@ def cli(git, hg, l, r, d):
     if r:
         get_keys("Github")
         get_keys("Mercurial")
+        # for scriptrepo in repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check"):
+        #     repoList.append(scriptrepo)
         new_list = []
         while input != "q":
             print("You have selected : ", new_list)
