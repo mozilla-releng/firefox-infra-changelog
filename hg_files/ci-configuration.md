@@ -1,8 +1,10 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 57
+ CURRENT PUSH ID: 59
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|59|2019-02-04 20:00:17|Tom Prince <mozilla@hocat.ca>|Bug 1520867: Fix incorrect syntax; r=me|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=021cd870c7a4
+|58|2019-02-04 19:49:42|Tom Prince <mozilla@hocat.ca>|Bug 1520867: Add temporary scope for testing bitbar win64-aarch64 worker; r=dustinIf this works, we should change the worker-type to something more permanent.This is using a worker-group intened for testing generic-worker itself.Differential Revision: https://phabricator.services.mozilla.com/D18574|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=838b13621fc0
 |57|2019-01-31 22:24:51|Tom Prince <mozilla@hocat.ca>|Bug 1524088: Remove esr52 scopes; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D18149|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=9b3364164354
 |56|2019-01-31 02:06:27|Tom Prince <mozilla@hocat.ca>|Bug 1252144: Add trust-domain scoped caches, scheduer-id and hgfingerprint to taskgraph repositories; r=bstackDifferential Revision: https://phabricator.services.mozilla.com/D18141|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=86c7d6e02a79
 |55|2019-01-30 19:08:35|Tom Prince <mozilla@hocat.ca>|Bug 1252144: Add taskgraph repository and scopes; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D17980|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=2faaa69f6810

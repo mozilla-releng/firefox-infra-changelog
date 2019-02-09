@@ -1,8 +1,1358 @@
 {
   "0": {
-    "lastChecked": "2019-02-01 16:13:17.511050"
+    "lastChecked": "2019-02-08 14:28:28.069840"
   },
   "1": {
+    "sha": "150b40d50c35f9e05685fe72a7ce1774bb173acb",
+    "url": "https://github.com/taskcluster/taskcluster/commit/150b40d50c35f9e05685fe72a7ce1774bb173acb",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #191 from djmitche/fix-built-in-workers-startup  Bug 1522307 - fix startup of built-in-workers",
+    "commit_date": "2019-02-07 23:19:40",
+    "files_changed": [
+      "services/built-in-workers/src/main.js"
+    ]
+  },
+  "2": {
+    "sha": "faf54692367a4eda3934ce95b4bbbad258c9efd6",
+    "url": "https://github.com/taskcluster/taskcluster/commit/faf54692367a4eda3934ce95b4bbbad258c9efd6",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522307 - fix startup of built-in-workers",
+    "commit_date": "2019-02-07 21:28:59",
+    "files_changed": [
+      "services/built-in-workers/src/main.js"
+    ]
+  },
+  "3": {
+    "sha": "79ee65e91d30f813285c8425a906a56368b3ba0e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/79ee65e91d30f813285c8425a906a56368b3ba0e",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #189 from djmitche/bug1523807  Bug 1523807 - bring tc-client-web into the monorepo",
+    "commit_date": "2019-02-07 16:26:51",
+    "files_changed": [
+      ".github/CODEOWNERS",
+      ".taskcluster.yml",
+      "README.md",
+      "clients/README.md",
+      "clients/client-web/.gitignore",
+      "clients/client-web/.neutrinorc.js",
+      "clients/client-web/README.md",
+      "clients/client-web/bin/compile-clients",
+      "clients/client-web/bin/fetch-apis.js",
+      "clients/client-web/bin/generate-docs",
+      "clients/client-web/bin/list-clients",
+      "clients/client-web/bin/show-client",
+      "clients/client-web/docs/README.md",
+      "clients/client-web/docs/auth.md",
+      "clients/client-web/docs/authevents.md",
+      "clients/client-web/docs/awsprovisioner.md",
+      "clients/client-web/docs/awsprovisionerevents.md",
+      "clients/client-web/docs/ec2manager.md",
+      "clients/client-web/docs/github.md",
+      "clients/client-web/docs/githubevents.md",
+      "clients/client-web/docs/hooks.md",
+      "clients/client-web/docs/index.md",
+      "clients/client-web/docs/login.md",
+      "clients/client-web/docs/notify.md",
+      "clients/client-web/docs/purgecache.md",
+      "clients/client-web/docs/queue.md",
+      "clients/client-web/docs/queueevents.md",
+      "clients/client-web/docs/secrets.md",
+      "clients/client-web/docs/treeherderevents.md",
+      "clients/client-web/package.json",
+      "clients/client-web/src/Client.js",
+      "clients/client-web/src/WebListener.js",
+      "clients/client-web/src/agents/OIDCCredentialAgent.js",
+      "clients/client-web/src/clients/Auth.js",
+      "clients/client-web/src/clients/AuthEvents.js",
+      "clients/client-web/src/clients/AwsProvisioner.js",
+      "clients/client-web/src/clients/AwsProvisionerEvents.js",
+      "clients/client-web/src/clients/EC2Manager.js",
+      "clients/client-web/src/clients/Github.js",
+      "clients/client-web/src/clients/GithubEvents.js",
+      "clients/client-web/src/clients/Hooks.js",
+      "clients/client-web/src/clients/Index.js",
+      "clients/client-web/src/clients/Login.js",
+      "clients/client-web/src/clients/Notify.js",
+      "clients/client-web/src/clients/PurgeCache.js",
+      "clients/client-web/src/clients/Queue.js",
+      "clients/client-web/src/clients/QueueEvents.js",
+      "clients/client-web/src/clients/Secrets.js",
+      "clients/client-web/src/clients/TreeherderEvents.js",
+      "clients/client-web/src/credentials.js",
+      "clients/client-web/src/emitter.js",
+      "clients/client-web/src/fetch.js",
+      "clients/client-web/src/index.js",
+      "clients/client-web/src/utils.js",
+      "clients/client-web/templates/client.ejs",
+      "clients/client-web/test/Auth_test.js",
+      "clients/client-web/test/Queue_test.js",
+      "clients/client-web/test/WebListener_test.js",
+      "clients/client-web/test/buildUrl_test.js",
+      "clients/client-web/test/fromNow_test.js",
+      "clients/client-web/test/parseTime_test.js",
+      "clients/client-web/test/reference-harness.js",
+      "clients/client-web/test/slugid_test.js",
+      "clients/client-web/test/utils.js",
+      "clients/client-web/yarn.lock",
+      "clients/client/.gitignore",
+      "clients/client/README.md",
+      "clients/client/bin/update-apis.js",
+      "clients/client/package.json",
+      "clients/client/package_test.sh",
+      "clients/client/src/apis.js",
+      "clients/client/src/client.js",
+      "clients/client/src/index.js",
+      "clients/client/src/parsetime.js",
+      "clients/client/src/utils.js",
+      "clients/client/test/client_test.js",
+      "clients/client/test/credinfo_test.js",
+      "clients/client/test/creds_test.js",
+      "clients/client/test/mocha.opts",
+      "clients/client/test/retry_test.js",
+      "clients/client/test/schemas/test-schema.json",
+      "clients/client/test/utils_test.js",
+      "infrastructure/browser-test/README.md",
+      "infrastructure/browser-test/build.sh",
+      "infrastructure/builder/src/generate/generators/node-version.js",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js",
+      "infrastructure/builder/src/generate/generators/tc-client.js",
+      "libraries/README.md",
+      "package.json",
+      "test/meta_test.js",
+      "ui/taskcluster-web-tests/Dockerfile",
+      "yarn.lock"
+    ]
+  },
+  "4": {
+    "sha": "0f16280bf569ae5757cc940830a99bb4bc93baec",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0f16280bf569ae5757cc940830a99bb4bc93baec",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Update README (#190)",
+    "commit_date": "2019-02-07 16:06:10",
+    "files_changed": [
+      "ui/README.md"
+    ]
+  },
+  "5": {
+    "sha": "5a88bd8fa50883aefa3ab19dcee7f5f0c0a1b17c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5a88bd8fa50883aefa3ab19dcee7f5f0c0a1b17c",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - include subdirectory in the repository links for clients",
+    "commit_date": "2019-02-07 14:16:48",
+    "files_changed": [
+      "clients/client-web/package.json",
+      "clients/client/package.json"
+    ]
+  },
+  "6": {
+    "sha": "65edb1b94aa6dc270e657fda0883d5cb0d5b72bf",
+    "url": "https://github.com/taskcluster/taskcluster/commit/65edb1b94aa6dc270e657fda0883d5cb0d5b72bf",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - update CODEOWNERS",
+    "commit_date": "2019-02-07 00:59:35",
+    "files_changed": [
+      ".github/CODEOWNERS"
+    ]
+  },
+  "7": {
+    "sha": "508ac4260b67d161c605a5ef6e4d19052d8b897f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/508ac4260b67d161c605a5ef6e4d19052d8b897f",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - set up testing for taskcluster-client-web",
+    "commit_date": "2019-02-07 00:55:45",
+    "files_changed": [
+      ".taskcluster.yml",
+      "README.md",
+      "clients/client-web/test/WebListener_test.js",
+      "infrastructure/browser-test/README.md",
+      "infrastructure/browser-test/build.sh",
+      "infrastructure/builder/src/generate/generators/node-version.js",
+      "test/meta_test.js",
+      "ui/taskcluster-web-tests/Dockerfile"
+    ]
+  },
+  "8": {
+    "sha": "67c148c2b9a5f7f4868018d6766cdd9419e6c52e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/67c148c2b9a5f7f4868018d6766cdd9419e6c52e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - disable 'neutrino stage' behavior (precommit hook)",
+    "commit_date": "2019-02-06 23:22:19",
+    "files_changed": [
+      "clients/client-web/.neutrinorc.js",
+      "clients/client-web/package.json"
+    ]
+  },
+  "9": {
+    "sha": "1eb1720f5bd9babbd2529667be42fdd32d00a2bc",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1eb1720f5bd9babbd2529667be42fdd32d00a2bc",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - handle README dir subdirectories correctly  Because \"clients/client\" is a prefix of \"clients/client-web\", the TOC generation was treating the latter as a subdirectory of former. Appending `/` fixes this, at the cost of special-casing the root.",
+    "commit_date": "2019-02-06 22:35:48",
+    "files_changed": [
+      "README.md",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js"
+    ]
+  },
+  "10": {
+    "sha": "fe47c0be5d8c3727e3393381e0737b4822a45d5d",
+    "url": "https://github.com/taskcluster/taskcluster/commit/fe47c0be5d8c3727e3393381e0737b4822a45d5d",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - check that published taskcluster-client can be used",
+    "commit_date": "2019-02-06 22:12:24",
+    "files_changed": [
+      ".taskcluster.yml",
+      "clients/client/package.json",
+      "clients/client/package_test.sh"
+    ]
+  },
+  "11": {
+    "sha": "d583b4489ffcc04c1611b649f175eb0c79b5abc3",
+    "url": "https://github.com/taskcluster/taskcluster/commit/d583b4489ffcc04c1611b649f175eb0c79b5abc3",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - move taskcluster-client to clients/client",
+    "commit_date": "2019-02-04 22:53:28",
+    "files_changed": [
+      ".taskcluster.yml",
+      "README.md",
+      "clients/README.md",
+      "clients/client/.gitignore",
+      "clients/client/README.md",
+      "clients/client/bin/update-apis.js",
+      "clients/client/package.json",
+      "clients/client/src/apis.js",
+      "clients/client/src/client.js",
+      "clients/client/src/index.js",
+      "clients/client/src/parsetime.js",
+      "clients/client/src/utils.js",
+      "clients/client/test/client_test.js",
+      "clients/client/test/credinfo_test.js",
+      "clients/client/test/creds_test.js",
+      "clients/client/test/mocha.opts",
+      "clients/client/test/retry_test.js",
+      "clients/client/test/schemas/test-schema.json",
+      "clients/client/test/utils_test.js",
+      "infrastructure/builder/src/generate/generators/tc-client.js",
+      "libraries/README.md",
+      "libraries/client/package.json",
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "12": {
+    "sha": "9d09a2f3b2e5983695f726b27b59f8031855be37",
+    "url": "https://github.com/taskcluster/taskcluster/commit/9d09a2f3b2e5983695f726b27b59f8031855be37",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523807 - post-merge cleanup",
+    "commit_date": "2019-02-06 23:00:12",
+    "files_changed": [
+      "clients/client-web/.env",
+      "clients/client-web/.taskcluster.yml",
+      "clients/client-web/.travis.yml",
+      "clients/client-web/CODE_OF_CONDUCT.md",
+      "clients/client-web/CONTRIBUTING.md",
+      "clients/client-web/LICENSE",
+      "clients/client-web/package.json"
+    ]
+  },
+  "13": {
+    "sha": "21404ad8e3d45610264a524bddfe5d6a728889b8",
+    "url": "https://github.com/taskcluster/taskcluster/commit/21404ad8e3d45610264a524bddfe5d6a728889b8",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Merge taskcluster-client-web into monorepo",
+    "commit_date": "2019-02-06 23:01:39",
+    "files_changed": [
+      "clients/client-web/.env",
+      "clients/client-web/.gitignore",
+      "clients/client-web/.neutrinorc.js",
+      "clients/client-web/.taskcluster.yml",
+      "clients/client-web/.travis.yml",
+      "clients/client-web/CODE_OF_CONDUCT.md",
+      "clients/client-web/CONTRIBUTING.md",
+      "clients/client-web/LICENSE",
+      "clients/client-web/README.md",
+      "clients/client-web/bin/compile-clients",
+      "clients/client-web/bin/fetch-apis.js",
+      "clients/client-web/bin/generate-docs",
+      "clients/client-web/bin/list-clients",
+      "clients/client-web/bin/show-client",
+      "clients/client-web/docs/README.md",
+      "clients/client-web/docs/auth.md",
+      "clients/client-web/docs/authevents.md",
+      "clients/client-web/docs/awsprovisioner.md",
+      "clients/client-web/docs/awsprovisionerevents.md",
+      "clients/client-web/docs/ec2manager.md",
+      "clients/client-web/docs/github.md",
+      "clients/client-web/docs/githubevents.md",
+      "clients/client-web/docs/hooks.md",
+      "clients/client-web/docs/index.md",
+      "clients/client-web/docs/login.md",
+      "clients/client-web/docs/notify.md",
+      "clients/client-web/docs/purgecache.md",
+      "clients/client-web/docs/queue.md",
+      "clients/client-web/docs/queueevents.md",
+      "clients/client-web/docs/secrets.md",
+      "clients/client-web/docs/treeherderevents.md",
+      "clients/client-web/package.json",
+      "clients/client-web/src/Client.js",
+      "clients/client-web/src/WebListener.js",
+      "clients/client-web/src/agents/OIDCCredentialAgent.js",
+      "clients/client-web/src/clients/Auth.js",
+      "clients/client-web/src/clients/AuthEvents.js",
+      "clients/client-web/src/clients/AwsProvisioner.js",
+      "clients/client-web/src/clients/AwsProvisionerEvents.js",
+      "clients/client-web/src/clients/EC2Manager.js",
+      "clients/client-web/src/clients/Github.js",
+      "clients/client-web/src/clients/GithubEvents.js",
+      "clients/client-web/src/clients/Hooks.js",
+      "clients/client-web/src/clients/Index.js",
+      "clients/client-web/src/clients/Login.js",
+      "clients/client-web/src/clients/Notify.js",
+      "clients/client-web/src/clients/PurgeCache.js",
+      "clients/client-web/src/clients/Queue.js",
+      "clients/client-web/src/clients/QueueEvents.js",
+      "clients/client-web/src/clients/Secrets.js",
+      "clients/client-web/src/clients/TreeherderEvents.js",
+      "clients/client-web/src/credentials.js",
+      "clients/client-web/src/emitter.js",
+      "clients/client-web/src/fetch.js",
+      "clients/client-web/src/index.js",
+      "clients/client-web/src/utils.js",
+      "clients/client-web/templates/client.ejs",
+      "clients/client-web/test/Auth_test.js",
+      "clients/client-web/test/Queue_test.js",
+      "clients/client-web/test/WebListener_test.js",
+      "clients/client-web/test/buildUrl_test.js",
+      "clients/client-web/test/fromNow_test.js",
+      "clients/client-web/test/parseTime_test.js",
+      "clients/client-web/test/reference-harness.js",
+      "clients/client-web/test/slugid_test.js",
+      "clients/client-web/test/utils.js",
+      "clients/client-web/yarn.lock"
+    ]
+  },
+  "14": {
+    "sha": "2ce141d383eaa1b37e8ccd524da0f0beac9ea1b0",
+    "url": "https://github.com/taskcluster/taskcluster/commit/2ce141d383eaa1b37e8ccd524da0f0beac9ea1b0",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Move taskcluster-client-web to clients/client-web",
+    "commit_date": "2019-02-06 22:50:09",
+    "files_changed": [
+      "clients/client-web/.env",
+      "clients/client-web/.gitignore",
+      "clients/client-web/.neutrinorc.js",
+      "clients/client-web/.taskcluster.yml",
+      "clients/client-web/.travis.yml",
+      "clients/client-web/CODE_OF_CONDUCT.md",
+      "clients/client-web/CONTRIBUTING.md",
+      "clients/client-web/LICENSE",
+      "clients/client-web/README.md",
+      "clients/client-web/bin/compile-clients",
+      "clients/client-web/bin/fetch-apis.js",
+      "clients/client-web/bin/generate-docs",
+      "clients/client-web/bin/list-clients",
+      "clients/client-web/bin/show-client",
+      "clients/client-web/docs/README.md",
+      "clients/client-web/docs/auth.md",
+      "clients/client-web/docs/authevents.md",
+      "clients/client-web/docs/awsprovisioner.md",
+      "clients/client-web/docs/awsprovisionerevents.md",
+      "clients/client-web/docs/ec2manager.md",
+      "clients/client-web/docs/github.md",
+      "clients/client-web/docs/githubevents.md",
+      "clients/client-web/docs/hooks.md",
+      "clients/client-web/docs/index.md",
+      "clients/client-web/docs/login.md",
+      "clients/client-web/docs/notify.md",
+      "clients/client-web/docs/purgecache.md",
+      "clients/client-web/docs/queue.md",
+      "clients/client-web/docs/queueevents.md",
+      "clients/client-web/docs/secrets.md",
+      "clients/client-web/docs/treeherderevents.md",
+      "clients/client-web/package.json",
+      "clients/client-web/src/Client.js",
+      "clients/client-web/src/WebListener.js",
+      "clients/client-web/src/agents/OIDCCredentialAgent.js",
+      "clients/client-web/src/clients/Auth.js",
+      "clients/client-web/src/clients/AuthEvents.js",
+      "clients/client-web/src/clients/AwsProvisioner.js",
+      "clients/client-web/src/clients/AwsProvisionerEvents.js",
+      "clients/client-web/src/clients/EC2Manager.js",
+      "clients/client-web/src/clients/Github.js",
+      "clients/client-web/src/clients/GithubEvents.js",
+      "clients/client-web/src/clients/Hooks.js",
+      "clients/client-web/src/clients/Index.js",
+      "clients/client-web/src/clients/Login.js",
+      "clients/client-web/src/clients/Notify.js",
+      "clients/client-web/src/clients/PurgeCache.js",
+      "clients/client-web/src/clients/Queue.js",
+      "clients/client-web/src/clients/QueueEvents.js",
+      "clients/client-web/src/clients/Secrets.js",
+      "clients/client-web/src/clients/TreeherderEvents.js",
+      "clients/client-web/src/credentials.js",
+      "clients/client-web/src/emitter.js",
+      "clients/client-web/src/fetch.js",
+      "clients/client-web/src/index.js",
+      "clients/client-web/src/utils.js",
+      "clients/client-web/templates/client.ejs",
+      "clients/client-web/test/Auth_test.js",
+      "clients/client-web/test/Queue_test.js",
+      "clients/client-web/test/WebListener_test.js",
+      "clients/client-web/test/buildUrl_test.js",
+      "clients/client-web/test/fromNow_test.js",
+      "clients/client-web/test/parseTime_test.js",
+      "clients/client-web/test/reference-harness.js",
+      "clients/client-web/test/slugid_test.js",
+      "clients/client-web/test/utils.js",
+      "clients/client-web/yarn.lock"
+    ]
+  },
+  "15": {
+    "sha": "669ec8cec2e2cf12016cc52fc23d3574584af802",
+    "url": "https://github.com/taskcluster/taskcluster/commit/669ec8cec2e2cf12016cc52fc23d3574584af802",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #188 from djmitche/sort-generate-readmes  Sort README tables of contents",
+    "commit_date": "2019-02-06 22:35:16",
+    "files_changed": [
+      "README.md",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js",
+      "libraries/README.md",
+      "services/README.md",
+      "ui/README.md"
+    ]
+  },
+  "16": {
+    "sha": "7298991af4b32de74e899bc4c1dd1f1ef90ac45a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7298991af4b32de74e899bc4c1dd1f1ef90ac45a",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Sort README tables of contents",
+    "commit_date": "2019-02-06 22:21:46",
+    "files_changed": [
+      "README.md",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js",
+      "libraries/README.md",
+      "services/README.md",
+      "ui/README.md"
+    ]
+  },
+  "17": {
+    "sha": "7add1810b11a97dd9c090272a93f521feb8ca526",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7add1810b11a97dd9c090272a93f521feb8ca526",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": "bugzeeeeee@gmail.com",
+    "commit_message": "Update web-ui-nginx-site.conf",
+    "commit_date": "2019-02-06 22:00:52",
+    "files_changed": [
+      "infrastructure/builder/src/build/service/web-ui-nginx-site.conf"
+    ]
+  },
+  "18": {
+    "sha": "76736812e90d5276ffb230505e3204b1012af14a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/76736812e90d5276ffb230505e3204b1012af14a",
+    "commiter_name": "owlishDeveloper",
+    "commiter_email": null,
+    "commit_message": "Add configuration file for web-ui (#154)    Add configuration file for web-ui      Turn tools dockerfile into web-ui dockerfile  Turn tools-ui.js into web-ui.js      Add nginx configuration for web-ui. Remove one for tools-ui      Change Ingress config to use web-ui instead of tools      Remove tc-tools from the build config, and add web-ui      Rename variables and things to be about web instead of tools      Remove tools from the terraform, add web      Replace tc-docs with the web-ui's docs section",
+    "commit_date": "2019-02-06 20:32:36",
+    "files_changed": [
+      "infrastructure/builder/docs/cluster-spec.md",
+      "infrastructure/builder/src/build/monoimage.js",
+      "infrastructure/builder/src/build/service.js",
+      "infrastructure/builder/src/build/service/web-ui-dockerfile.dot",
+      "infrastructure/builder/src/build/service/web-ui-nginx-site.conf",
+      "infrastructure/builder/src/build/service/web-ui.js",
+      "infrastructure/builder/taskcluster-spec/build.yml",
+      "infrastructure/terraform/ingress.yaml",
+      "infrastructure/terraform/taskcluster.tf.json",
+      "infrastructure/terraform/tools-ui.tf",
+      "infrastructure/terraform/web-ui.tf"
+    ]
+  },
+  "19": {
+    "sha": "ce5777f4e82bf9559f480c98479fd34124f3d1a9",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ce5777f4e82bf9559f480c98479fd34124f3d1a9",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #186 from djmitche/fix-generate-more  only show a diff when generate produces one, and don't use a pager",
+    "commit_date": "2019-02-05 22:47:52",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "20": {
+    "sha": "ce7cfe7e15b5a131de974626e9052666f88f98f6",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ce7cfe7e15b5a131de974626e9052666f88f98f6",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "only show a diff when generate produces one, and don't use a pager",
+    "commit_date": "2019-02-05 20:58:45",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "21": {
+    "sha": "577372b7bb5cae7d2406742b1cef2a34e184e92c",
+    "url": "https://github.com/taskcluster/taskcluster/commit/577372b7bb5cae7d2406742b1cef2a34e184e92c",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #185 from taskcluster/link-direct-to-readme  Add link to readme anchor",
+    "commit_date": "2019-02-05 20:37:48",
+    "files_changed": [
+      "README.md",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js",
+      "libraries/README.md",
+      "services/README.md",
+      "ui/README.md"
+    ]
+  },
+  "22": {
+    "sha": "ef7e1b4b64e55c0cfe7e967674407d3038a04695",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ef7e1b4b64e55c0cfe7e967674407d3038a04695",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Add link to readme anchor",
+    "commit_date": "2019-02-05 20:12:29",
+    "files_changed": [
+      "README.md",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js",
+      "libraries/README.md",
+      "services/README.md",
+      "ui/README.md"
+    ]
+  },
+  "23": {
+    "sha": "071fb3c016b36d45e65de5dbe77c0006401f94b2",
+    "url": "https://github.com/taskcluster/taskcluster/commit/071fb3c016b36d45e65de5dbe77c0006401f94b2",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "(hotfix) update generated output  This was missed when several PRs, including the yarn-generate PR, landed at about the same time.",
+    "commit_date": "2019-02-05 15:59:59",
+    "files_changed": [
+      "generated/docs/hooks/references/api.json",
+      "generated/docs/hooks/schemas/v1/trigger-hook-response.json",
+      "generated/docs/hooks/schemas/v1/trigger-response.json",
+      "generated/references.json",
+      "libraries/client/src/apis.js"
+    ]
+  },
+  "24": {
+    "sha": "32673bfefcb072fecce052d814a2d1738f5be5df",
+    "url": "https://github.com/taskcluster/taskcluster/commit/32673bfefcb072fecce052d814a2d1738f5be5df",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "[UI] Update Material UI version (#182)    Update material ui      Update material-ui/lab and material-ui/icons      Add necessary font changes",
+    "commit_date": "2019-02-05 14:00:57",
+    "files_changed": [
+      "ui/package.json",
+      "ui/src/components/ClientForm/index.jsx",
+      "ui/src/components/WorkerTypesTable/index.jsx",
+      "ui/src/theme.js",
+      "ui/src/views/PulseMessages/index.jsx",
+      "ui/src/views/Tasks/NoTask/index.jsx",
+      "ui/yarn.lock"
+    ]
+  },
+  "25": {
+    "sha": "78177c05bd2a28b849ae6141711676384e99a014",
+    "url": "https://github.com/taskcluster/taskcluster/commit/78177c05bd2a28b849ae6141711676384e99a014",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #181 from djmitche/bug1522992  Bug 1522992 - generate README tables of contents",
+    "commit_date": "2019-02-05 03:30:50",
+    "files_changed": [
+      "README.md",
+      "generated/docs/auth/README.md",
+      "generated/docs/built-in-workers/README.md",
+      "generated/docs/github/README.md",
+      "generated/docs/hooks/README.md",
+      "generated/docs/index/README.md",
+      "generated/docs/login/README.md",
+      "generated/docs/notify/README.md",
+      "generated/docs/purge-cache/README.md",
+      "generated/docs/queue/README.md",
+      "generated/docs/secrets/README.md",
+      "generated/docs/treeherder/README.md",
+      "infrastructure/README.md",
+      "infrastructure/builder/README.md",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js",
+      "infrastructure/builder/src/generate/util.js",
+      "infrastructure/terraform/README.md",
+      "libraries/README.md",
+      "libraries/api/README.md",
+      "libraries/app/README.md",
+      "libraries/azure/README.md",
+      "libraries/client/README.md",
+      "libraries/docs/README.md",
+      "libraries/iterate/README.md",
+      "libraries/loader/README.md",
+      "libraries/monitor/README.md",
+      "libraries/pulse/README.md",
+      "libraries/references/README.md",
+      "libraries/scopes/README.md",
+      "libraries/testing/README.md",
+      "libraries/typed-env-config/README.md",
+      "libraries/validate/README.md",
+      "services/README.md",
+      "services/auth/README.md",
+      "services/built-in-workers/README.md",
+      "services/github/README.md",
+      "services/hooks/README.md",
+      "services/index/README.md",
+      "services/login/README.md",
+      "services/notify/README.md",
+      "services/purge-cache/README.md",
+      "services/queue/README.md",
+      "services/secrets/README.md",
+      "services/treeherder/README.md",
+      "services/web-server/README.md",
+      "ui/README.md"
+    ]
+  },
+  "26": {
+    "sha": "87d04e8bd19b9dabaeb308b140722d1d7841b94a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/87d04e8bd19b9dabaeb308b140722d1d7841b94a",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #165 from djmitche/bug1522477  Bug 1522477 - introduce yarn generate",
+    "commit_date": "2019-02-05 03:28:19",
+    "files_changed": [
+      ".taskcluster.yml",
+      "README.md",
+      "generated/docs/auth/README.md",
+      "generated/docs/auth/docs/clients.md",
+      "generated/docs/auth/docs/roles.md",
+      "generated/docs/auth/docs/scopes.md",
+      "generated/docs/auth/metadata.json",
+      "generated/docs/auth/references/api.json",
+      "generated/docs/auth/references/events.json",
+      "generated/docs/auth/schemas/v1/authenticate-hawk-request.json",
+      "generated/docs/auth/schemas/v1/authenticate-hawk-response.json",
+      "generated/docs/auth/schemas/v1/aws-s3-credentials-response.json",
+      "generated/docs/auth/schemas/v1/azure-account-list-response.json",
+      "generated/docs/auth/schemas/v1/azure-container-list-response.json",
+      "generated/docs/auth/schemas/v1/azure-container-response.json",
+      "generated/docs/auth/schemas/v1/azure-table-access-response.json",
+      "generated/docs/auth/schemas/v1/azure-table-list-response.json",
+      "generated/docs/auth/schemas/v1/client-message.json",
+      "generated/docs/auth/schemas/v1/create-client-request.json",
+      "generated/docs/auth/schemas/v1/create-client-response.json",
+      "generated/docs/auth/schemas/v1/create-role-request.json",
+      "generated/docs/auth/schemas/v1/get-client-response.json",
+      "generated/docs/auth/schemas/v1/get-role-response.json",
+      "generated/docs/auth/schemas/v1/list-clients-response.json",
+      "generated/docs/auth/schemas/v1/list-role-ids-response.json",
+      "generated/docs/auth/schemas/v1/list-roles-response.json",
+      "generated/docs/auth/schemas/v1/list-roles2-response.json",
+      "generated/docs/auth/schemas/v1/role-message.json",
+      "generated/docs/auth/schemas/v1/scopeset.json",
+      "generated/docs/auth/schemas/v1/sentry-dsn-response.json",
+      "generated/docs/auth/schemas/v1/statsum-token-response.json",
+      "generated/docs/auth/schemas/v1/test-authenticate-request.json",
+      "generated/docs/auth/schemas/v1/test-authenticate-response.json",
+      "generated/docs/auth/schemas/v1/websocktunnel-token-response.json",
+      "generated/docs/built-in-workers/README.md",
+      "generated/docs/built-in-workers/metadata.json",
+      "generated/docs/github/README.md",
+      "generated/docs/github/docs/intro.md",
+      "generated/docs/github/docs/taskcluster-yml-v0.md",
+      "generated/docs/github/docs/taskcluster-yml-v1.md",
+      "generated/docs/github/metadata.json",
+      "generated/docs/github/references/api.json",
+      "generated/docs/github/references/events.json",
+      "generated/docs/github/schemas/v1/build-list.json",
+      "generated/docs/github/schemas/v1/create-comment.json",
+      "generated/docs/github/schemas/v1/create-status.json",
+      "generated/docs/github/schemas/v1/github-pull-request-message.json",
+      "generated/docs/github/schemas/v1/github-push-message.json",
+      "generated/docs/github/schemas/v1/github-release-message.json",
+      "generated/docs/github/schemas/v1/repository.json",
+      "generated/docs/github/schemas/v1/task-group-creation-requested.json",
+      "generated/docs/github/schemas/v1/taskcluster-github-config.json",
+      "generated/docs/github/schemas/v1/taskcluster-github-config.v1.json",
+      "generated/docs/hooks/README.md",
+      "generated/docs/hooks/docs/firing-hooks.md",
+      "generated/docs/hooks/metadata.json",
+      "generated/docs/hooks/references/api.json",
+      "generated/docs/hooks/references/events.json",
+      "generated/docs/hooks/schemas/v1/bindings.json",
+      "generated/docs/hooks/schemas/v1/create-hook-request.json",
+      "generated/docs/hooks/schemas/v1/hook-definition.json",
+      "generated/docs/hooks/schemas/v1/hook-metadata.json",
+      "generated/docs/hooks/schemas/v1/hook-schedule.json",
+      "generated/docs/hooks/schemas/v1/hook-status.json",
+      "generated/docs/hooks/schemas/v1/list-hook-groups-response.json",
+      "generated/docs/hooks/schemas/v1/list-hooks-response.json",
+      "generated/docs/hooks/schemas/v1/list-lastFires-response.json",
+      "generated/docs/hooks/schemas/v1/pulse-hook-changed-message.json",
+      "generated/docs/hooks/schemas/v1/schedule.json",
+      "generated/docs/hooks/schemas/v1/task-status.json",
+      "generated/docs/hooks/schemas/v1/task-template.json",
+      "generated/docs/hooks/schemas/v1/trigger-hook.json",
+      "generated/docs/hooks/schemas/v1/trigger-token-response.json",
+      "generated/docs/index/README.md",
+      "generated/docs/index/metadata.json",
+      "generated/docs/index/references/api.json",
+      "generated/docs/index/schemas/v1/indexed-task-response.json",
+      "generated/docs/index/schemas/v1/insert-task-request.json",
+      "generated/docs/index/schemas/v1/list-namespaces-request.json",
+      "generated/docs/index/schemas/v1/list-namespaces-response.json",
+      "generated/docs/index/schemas/v1/list-tasks-request.json",
+      "generated/docs/index/schemas/v1/list-tasks-response.json",
+      "generated/docs/login/README.md",
+      "generated/docs/login/docs/getting-user-creds.md",
+      "generated/docs/login/docs/mozilla-auth0.md",
+      "generated/docs/login/metadata.json",
+      "generated/docs/login/references/api.json",
+      "generated/docs/login/schemas/v1/credentials-response.json",
+      "generated/docs/login/schemas/v1/oidc-credentials-response.json",
+      "generated/docs/notify/README.md",
+      "generated/docs/notify/docs/usage.md",
+      "generated/docs/notify/metadata.json",
+      "generated/docs/notify/references/api.json",
+      "generated/docs/notify/references/events.json",
+      "generated/docs/notify/schemas/v1/email-request.json",
+      "generated/docs/notify/schemas/v1/irc-request.json",
+      "generated/docs/notify/schemas/v1/notification-message.json",
+      "generated/docs/notify/schemas/v1/pulse-request.json",
+      "generated/docs/purge-cache/README.md",
+      "generated/docs/purge-cache/metadata.json",
+      "generated/docs/purge-cache/references/api.json",
+      "generated/docs/purge-cache/schemas/v1/all-purge-cache-request-list.json",
+      "generated/docs/purge-cache/schemas/v1/purge-cache-request-list.json",
+      "generated/docs/purge-cache/schemas/v1/purge-cache-request.json",
+      "generated/docs/purge-cache/schemas/v1/purge-cache-requests.json",
+      "generated/docs/queue/README.md",
+      "generated/docs/queue/docs/actions.md",
+      "generated/docs/queue/docs/queue-worker-interaction.svg",
+      "generated/docs/queue/docs/superseding.md",
+      "generated/docs/queue/docs/task-life-cycle.md",
+      "generated/docs/queue/docs/task-life-cycle.svg",
+      "generated/docs/queue/docs/task-schema.md",
+      "generated/docs/queue/docs/worker-hierarchy.md",
+      "generated/docs/queue/docs/worker-interaction.md",
+      "generated/docs/queue/metadata.json",
+      "generated/docs/queue/references/api.json",
+      "generated/docs/queue/references/events.json",
+      "generated/docs/queue/schemas/v1/actions.json",
+      "generated/docs/queue/schemas/v1/artifact-created-message.json",
+      "generated/docs/queue/schemas/v1/claim-work-request.json",
+      "generated/docs/queue/schemas/v1/claim-work-response.json",
+      "generated/docs/queue/schemas/v1/create-task-request.json",
+      "generated/docs/queue/schemas/v1/list-artifacts-response.json",
+      "generated/docs/queue/schemas/v1/list-dependent-tasks-response.json",
+      "generated/docs/queue/schemas/v1/list-provisioners-response.json",
+      "generated/docs/queue/schemas/v1/list-task-group-response.json",
+      "generated/docs/queue/schemas/v1/list-workers-response.json",
+      "generated/docs/queue/schemas/v1/list-workertypes-response.json",
+      "generated/docs/queue/schemas/v1/pending-tasks-response.json",
+      "generated/docs/queue/schemas/v1/poll-task-urls-response.json",
+      "generated/docs/queue/schemas/v1/post-artifact-request.json",
+      "generated/docs/queue/schemas/v1/post-artifact-response.json",
+      "generated/docs/queue/schemas/v1/provisioner-response.json",
+      "generated/docs/queue/schemas/v1/put-artifact-request.json",
+      "generated/docs/queue/schemas/v1/quarantine-worker-request.json",
+      "generated/docs/queue/schemas/v1/task-claim-request.json",
+      "generated/docs/queue/schemas/v1/task-claim-response.json",
+      "generated/docs/queue/schemas/v1/task-completed-message.json",
+      "generated/docs/queue/schemas/v1/task-credentials.json",
+      "generated/docs/queue/schemas/v1/task-defined-message.json",
+      "generated/docs/queue/schemas/v1/task-definition-and-status.json",
+      "generated/docs/queue/schemas/v1/task-exception-message.json",
+      "generated/docs/queue/schemas/v1/task-exception-request.json",
+      "generated/docs/queue/schemas/v1/task-failed-message.json",
+      "generated/docs/queue/schemas/v1/task-group-resolved.json",
+      "generated/docs/queue/schemas/v1/task-metadata.json",
+      "generated/docs/queue/schemas/v1/task-pending-message.json",
+      "generated/docs/queue/schemas/v1/task-reclaim-response.json",
+      "generated/docs/queue/schemas/v1/task-run.json",
+      "generated/docs/queue/schemas/v1/task-running-message.json",
+      "generated/docs/queue/schemas/v1/task-status-response.json",
+      "generated/docs/queue/schemas/v1/task-status.json",
+      "generated/docs/queue/schemas/v1/task.json",
+      "generated/docs/queue/schemas/v1/update-provisioner-request.json",
+      "generated/docs/queue/schemas/v1/update-worker-request.json",
+      "generated/docs/queue/schemas/v1/update-workertype-request.json",
+      "generated/docs/queue/schemas/v1/worker-response.json",
+      "generated/docs/queue/schemas/v1/workertype-response.json",
+      "generated/docs/secrets/README.md",
+      "generated/docs/secrets/metadata.json",
+      "generated/docs/secrets/references/api.json",
+      "generated/docs/secrets/schemas/v1/secret-list.json",
+      "generated/docs/secrets/schemas/v1/secret.json",
+      "generated/docs/treeherder/README.md",
+      "generated/docs/treeherder/docs/task-treeherder-config.md",
+      "generated/docs/treeherder/metadata.json",
+      "generated/docs/treeherder/references/events.json",
+      "generated/docs/treeherder/schemas/v1/pulse-job.json",
+      "generated/docs/treeherder/schemas/v1/task-treeherder-config.json",
+      "generated/docs/worker-manager/metadata.json",
+      "generated/docs/worker-manager/references/api.json",
+      "generated/docs/worker-manager/schemas/v1/anything.json",
+      "generated/docs/worker-manager/schemas/v1/ruleset.json",
+      "generated/docs/worker-manager/schemas/v1/satisfiers.json",
+      "generated/docs/worker-manager/schemas/v1/test-worker-configuration.json",
+      "generated/docs/worker-manager/schemas/v1/worker-configuration-result.json",
+      "generated/docs/worker-manager/schemas/v1/worker-configuration.json",
+      "generated/references.json",
+      "infrastructure/builder/README.md",
+      "infrastructure/builder/package.json",
+      "infrastructure/builder/src/build/monoimage.js",
+      "infrastructure/builder/src/build/service/docs.js",
+      "infrastructure/builder/src/generate/generators/deprecated-services.json",
+      "infrastructure/builder/src/generate/generators/index.js",
+      "infrastructure/builder/src/generate/generators/node-version.js",
+      "infrastructure/builder/src/generate/generators/service-docs.js",
+      "infrastructure/builder/src/generate/generators/tc-client.js",
+      "infrastructure/builder/src/generate/index.js",
+      "infrastructure/builder/src/generate/util.js",
+      "infrastructure/builder/src/main.js",
+      "infrastructure/references/references.sh",
+      "infrastructure/references/relativize.js",
+      "libraries/client/src/apis.js",
+      "package.json",
+      "services/worker-manager/lib/api.js",
+      "services/worker-manager/schemas/v1/ruleset.yml",
+      "services/worker-manager/schemas/v1/test-worker-configuration.yml",
+      "services/worker-manager/schemas/v1/worker-configuration-result.yml",
+      "services/worker-manager/schemas/v1/worker-configuration.yml",
+      "taskcluster-builder"
+    ]
+  },
+  "27": {
+    "sha": "2f12eefabe380f15a2e2b30bdd4b664707eb435e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/2f12eefabe380f15a2e2b30bdd4b664707eb435e",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Remove prettier, eslint-{config, plugin}-prettier (#179)  Now that we make use of @mozilla-frontend-infra/react-lint we won't neeed the prettier dependencies here.",
+    "commit_date": "2019-02-04 21:23:15",
+    "files_changed": [
+      "package.json",
+      "ui/package.json",
+      "ui/src/components/AwsProvisionerHealthTable/index.jsx",
+      "ui/src/utils/getIconFromMime.js",
+      "ui/src/views/AwsProvisioner/ViewWorkerType/index.jsx",
+      "ui/src/views/AwsProvisioner/ViewWorkerTypeDefinition/index.jsx",
+      "ui/src/views/Clients/ViewClient/index.jsx",
+      "ui/src/views/Display/index.jsx",
+      "ui/src/views/Documentation/PageMeta.jsx",
+      "ui/src/views/Profile/index.jsx",
+      "ui/src/views/Provisioners/ViewWorkerTypes/index.jsx",
+      "ui/src/views/Provisioners/ViewWorkers/index.jsx",
+      "ui/src/views/Roles/ViewRole/index.jsx",
+      "ui/src/views/Scopes/ListScopes/index.jsx",
+      "ui/src/views/Scopes/ScopesetComparison/index.jsx",
+      "ui/src/views/Scopes/ViewScope/index.jsx",
+      "ui/src/views/Secrets/ViewSecret/index.jsx",
+      "ui/src/views/Tasks/NoTask/index.jsx",
+      "ui/src/views/Tasks/NoTaskGroup/index.jsx",
+      "ui/src/views/Tasks/TaskGroup/index.jsx",
+      "ui/src/views/Tasks/TaskIndex/IndexedTask/index.jsx",
+      "ui/src/views/Tasks/TaskIndex/ListNamespaces/index.jsx",
+      "ui/src/views/Tasks/TaskRedirect/index.jsx",
+      "ui/yarn.lock",
+      "yarn.lock"
+    ]
+  },
+  "28": {
+    "sha": "075edd86274104dec08a0f517b724e76e610cb45",
+    "url": "https://github.com/taskcluster/taskcluster/commit/075edd86274104dec08a0f517b724e76e610cb45",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #180 from taskcluster/upgrade-to-newer-mock-fs  Use newer mock-fs to allow us to upgrade node",
+    "commit_date": "2019-02-04 21:17:42",
+    "files_changed": [
+      "libraries/references/test/built-services_test.js",
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "29": {
+    "sha": "6841b530f4c63bcd98851a94d63cdf8db4604de9",
+    "url": "https://github.com/taskcluster/taskcluster/commit/6841b530f4c63bcd98851a94d63cdf8db4604de9",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522992 - generate TOC's in READMEs",
+    "commit_date": "2019-02-04 17:26:43",
+    "files_changed": [
+      "README.md",
+      "generated/docs/auth/README.md",
+      "generated/docs/built-in-workers/README.md",
+      "generated/docs/github/README.md",
+      "generated/docs/hooks/README.md",
+      "generated/docs/index/README.md",
+      "generated/docs/login/README.md",
+      "generated/docs/notify/README.md",
+      "generated/docs/purge-cache/README.md",
+      "generated/docs/queue/README.md",
+      "generated/docs/secrets/README.md",
+      "generated/docs/treeherder/README.md",
+      "infrastructure/README.md",
+      "infrastructure/builder/README.md",
+      "infrastructure/builder/src/generate/generators/readme-tocs.js",
+      "infrastructure/builder/src/generate/util.js",
+      "infrastructure/terraform/README.md",
+      "libraries/README.md",
+      "libraries/api/README.md",
+      "libraries/app/README.md",
+      "libraries/azure/README.md",
+      "libraries/client/README.md",
+      "libraries/docs/README.md",
+      "libraries/iterate/README.md",
+      "libraries/loader/README.md",
+      "libraries/monitor/README.md",
+      "libraries/pulse/README.md",
+      "libraries/references/README.md",
+      "libraries/scopes/README.md",
+      "libraries/testing/README.md",
+      "libraries/typed-env-config/README.md",
+      "libraries/validate/README.md",
+      "services/README.md",
+      "services/auth/README.md",
+      "services/built-in-workers/README.md",
+      "services/github/README.md",
+      "services/hooks/README.md",
+      "services/index/README.md",
+      "services/login/README.md",
+      "services/notify/README.md",
+      "services/purge-cache/README.md",
+      "services/queue/README.md",
+      "services/secrets/README.md",
+      "services/treeherder/README.md",
+      "services/web-server/README.md",
+      "ui/README.md"
+    ]
+  },
+  "30": {
+    "sha": "9eaee5f9308451f3d09c9108dc49f0aa826085fe",
+    "url": "https://github.com/taskcluster/taskcluster/commit/9eaee5f9308451f3d09c9108dc49f0aa826085fe",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522477 - check yarn generate in CI",
+    "commit_date": "2019-02-04 17:31:39",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "31": {
+    "sha": "f7b971da5a9c7fceab9d601f52531db9e020887e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/f7b971da5a9c7fceab9d601f52531db9e020887e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522477 - generate the TC client",
+    "commit_date": "2019-01-30 00:05:19",
+    "files_changed": [
+      "infrastructure/builder/src/generate/generators/deprecated-services.json",
+      "infrastructure/builder/src/generate/generators/tc-client.js",
+      "infrastructure/builder/src/generate/util.js",
+      "libraries/client/src/apis.js"
+    ]
+  },
+  "32": {
+    "sha": "69527b42111471e24a7720735920a0955678844a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/69527b42111471e24a7720735920a0955678844a",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522477 - build based on generated data",
+    "commit_date": "2019-01-29 23:08:26",
+    "files_changed": [
+      "infrastructure/builder/src/build/monoimage.js",
+      "infrastructure/builder/src/build/service/docs.js",
+      "infrastructure/references/references.sh",
+      "infrastructure/references/relativize.js"
+    ]
+  },
+  "33": {
+    "sha": "343b00f1b9760dbd182eb5367b3317be2ded537e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/343b00f1b9760dbd182eb5367b3317be2ded537e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522477 - generate references and docs",
+    "commit_date": "2019-01-29 22:51:14",
+    "files_changed": [
+      "generated/docs/auth/README.md",
+      "generated/docs/auth/docs/clients.md",
+      "generated/docs/auth/docs/roles.md",
+      "generated/docs/auth/docs/scopes.md",
+      "generated/docs/auth/metadata.json",
+      "generated/docs/auth/references/api.json",
+      "generated/docs/auth/references/events.json",
+      "generated/docs/auth/schemas/v1/authenticate-hawk-request.json",
+      "generated/docs/auth/schemas/v1/authenticate-hawk-response.json",
+      "generated/docs/auth/schemas/v1/aws-s3-credentials-response.json",
+      "generated/docs/auth/schemas/v1/azure-account-list-response.json",
+      "generated/docs/auth/schemas/v1/azure-container-list-response.json",
+      "generated/docs/auth/schemas/v1/azure-container-response.json",
+      "generated/docs/auth/schemas/v1/azure-table-access-response.json",
+      "generated/docs/auth/schemas/v1/azure-table-list-response.json",
+      "generated/docs/auth/schemas/v1/client-message.json",
+      "generated/docs/auth/schemas/v1/create-client-request.json",
+      "generated/docs/auth/schemas/v1/create-client-response.json",
+      "generated/docs/auth/schemas/v1/create-role-request.json",
+      "generated/docs/auth/schemas/v1/get-client-response.json",
+      "generated/docs/auth/schemas/v1/get-role-response.json",
+      "generated/docs/auth/schemas/v1/list-clients-response.json",
+      "generated/docs/auth/schemas/v1/list-role-ids-response.json",
+      "generated/docs/auth/schemas/v1/list-roles-response.json",
+      "generated/docs/auth/schemas/v1/list-roles2-response.json",
+      "generated/docs/auth/schemas/v1/role-message.json",
+      "generated/docs/auth/schemas/v1/scopeset.json",
+      "generated/docs/auth/schemas/v1/sentry-dsn-response.json",
+      "generated/docs/auth/schemas/v1/statsum-token-response.json",
+      "generated/docs/auth/schemas/v1/test-authenticate-request.json",
+      "generated/docs/auth/schemas/v1/test-authenticate-response.json",
+      "generated/docs/auth/schemas/v1/websocktunnel-token-response.json",
+      "generated/docs/built-in-workers/README.md",
+      "generated/docs/built-in-workers/metadata.json",
+      "generated/docs/github/README.md",
+      "generated/docs/github/docs/intro.md",
+      "generated/docs/github/docs/taskcluster-yml-v0.md",
+      "generated/docs/github/docs/taskcluster-yml-v1.md",
+      "generated/docs/github/metadata.json",
+      "generated/docs/github/references/api.json",
+      "generated/docs/github/references/events.json",
+      "generated/docs/github/schemas/v1/build-list.json",
+      "generated/docs/github/schemas/v1/create-comment.json",
+      "generated/docs/github/schemas/v1/create-status.json",
+      "generated/docs/github/schemas/v1/github-pull-request-message.json",
+      "generated/docs/github/schemas/v1/github-push-message.json",
+      "generated/docs/github/schemas/v1/github-release-message.json",
+      "generated/docs/github/schemas/v1/repository.json",
+      "generated/docs/github/schemas/v1/task-group-creation-requested.json",
+      "generated/docs/github/schemas/v1/taskcluster-github-config.json",
+      "generated/docs/github/schemas/v1/taskcluster-github-config.v1.json",
+      "generated/docs/hooks/README.md",
+      "generated/docs/hooks/docs/firing-hooks.md",
+      "generated/docs/hooks/metadata.json",
+      "generated/docs/hooks/references/api.json",
+      "generated/docs/hooks/references/events.json",
+      "generated/docs/hooks/schemas/v1/bindings.json",
+      "generated/docs/hooks/schemas/v1/create-hook-request.json",
+      "generated/docs/hooks/schemas/v1/hook-definition.json",
+      "generated/docs/hooks/schemas/v1/hook-metadata.json",
+      "generated/docs/hooks/schemas/v1/hook-schedule.json",
+      "generated/docs/hooks/schemas/v1/hook-status.json",
+      "generated/docs/hooks/schemas/v1/list-hook-groups-response.json",
+      "generated/docs/hooks/schemas/v1/list-hooks-response.json",
+      "generated/docs/hooks/schemas/v1/list-lastFires-response.json",
+      "generated/docs/hooks/schemas/v1/pulse-hook-changed-message.json",
+      "generated/docs/hooks/schemas/v1/schedule.json",
+      "generated/docs/hooks/schemas/v1/task-status.json",
+      "generated/docs/hooks/schemas/v1/task-template.json",
+      "generated/docs/hooks/schemas/v1/trigger-hook.json",
+      "generated/docs/hooks/schemas/v1/trigger-token-response.json",
+      "generated/docs/index/README.md",
+      "generated/docs/index/metadata.json",
+      "generated/docs/index/references/api.json",
+      "generated/docs/index/schemas/v1/indexed-task-response.json",
+      "generated/docs/index/schemas/v1/insert-task-request.json",
+      "generated/docs/index/schemas/v1/list-namespaces-request.json",
+      "generated/docs/index/schemas/v1/list-namespaces-response.json",
+      "generated/docs/index/schemas/v1/list-tasks-request.json",
+      "generated/docs/index/schemas/v1/list-tasks-response.json",
+      "generated/docs/login/README.md",
+      "generated/docs/login/docs/getting-user-creds.md",
+      "generated/docs/login/docs/mozilla-auth0.md",
+      "generated/docs/login/metadata.json",
+      "generated/docs/login/references/api.json",
+      "generated/docs/login/schemas/v1/credentials-response.json",
+      "generated/docs/login/schemas/v1/oidc-credentials-response.json",
+      "generated/docs/notify/README.md",
+      "generated/docs/notify/docs/usage.md",
+      "generated/docs/notify/metadata.json",
+      "generated/docs/notify/references/api.json",
+      "generated/docs/notify/references/events.json",
+      "generated/docs/notify/schemas/v1/email-request.json",
+      "generated/docs/notify/schemas/v1/irc-request.json",
+      "generated/docs/notify/schemas/v1/notification-message.json",
+      "generated/docs/notify/schemas/v1/pulse-request.json",
+      "generated/docs/purge-cache/README.md",
+      "generated/docs/purge-cache/metadata.json",
+      "generated/docs/purge-cache/references/api.json",
+      "generated/docs/purge-cache/schemas/v1/all-purge-cache-request-list.json",
+      "generated/docs/purge-cache/schemas/v1/purge-cache-request-list.json",
+      "generated/docs/purge-cache/schemas/v1/purge-cache-request.json",
+      "generated/docs/purge-cache/schemas/v1/purge-cache-requests.json",
+      "generated/docs/queue/README.md",
+      "generated/docs/queue/docs/actions.md",
+      "generated/docs/queue/docs/queue-worker-interaction.svg",
+      "generated/docs/queue/docs/superseding.md",
+      "generated/docs/queue/docs/task-life-cycle.md",
+      "generated/docs/queue/docs/task-life-cycle.svg",
+      "generated/docs/queue/docs/task-schema.md",
+      "generated/docs/queue/docs/worker-hierarchy.md",
+      "generated/docs/queue/docs/worker-interaction.md",
+      "generated/docs/queue/metadata.json",
+      "generated/docs/queue/references/api.json",
+      "generated/docs/queue/references/events.json",
+      "generated/docs/queue/schemas/v1/actions.json",
+      "generated/docs/queue/schemas/v1/artifact-created-message.json",
+      "generated/docs/queue/schemas/v1/claim-work-request.json",
+      "generated/docs/queue/schemas/v1/claim-work-response.json",
+      "generated/docs/queue/schemas/v1/create-task-request.json",
+      "generated/docs/queue/schemas/v1/list-artifacts-response.json",
+      "generated/docs/queue/schemas/v1/list-dependent-tasks-response.json",
+      "generated/docs/queue/schemas/v1/list-provisioners-response.json",
+      "generated/docs/queue/schemas/v1/list-task-group-response.json",
+      "generated/docs/queue/schemas/v1/list-workers-response.json",
+      "generated/docs/queue/schemas/v1/list-workertypes-response.json",
+      "generated/docs/queue/schemas/v1/pending-tasks-response.json",
+      "generated/docs/queue/schemas/v1/poll-task-urls-response.json",
+      "generated/docs/queue/schemas/v1/post-artifact-request.json",
+      "generated/docs/queue/schemas/v1/post-artifact-response.json",
+      "generated/docs/queue/schemas/v1/provisioner-response.json",
+      "generated/docs/queue/schemas/v1/put-artifact-request.json",
+      "generated/docs/queue/schemas/v1/quarantine-worker-request.json",
+      "generated/docs/queue/schemas/v1/task-claim-request.json",
+      "generated/docs/queue/schemas/v1/task-claim-response.json",
+      "generated/docs/queue/schemas/v1/task-completed-message.json",
+      "generated/docs/queue/schemas/v1/task-credentials.json",
+      "generated/docs/queue/schemas/v1/task-defined-message.json",
+      "generated/docs/queue/schemas/v1/task-definition-and-status.json",
+      "generated/docs/queue/schemas/v1/task-exception-message.json",
+      "generated/docs/queue/schemas/v1/task-exception-request.json",
+      "generated/docs/queue/schemas/v1/task-failed-message.json",
+      "generated/docs/queue/schemas/v1/task-group-resolved.json",
+      "generated/docs/queue/schemas/v1/task-metadata.json",
+      "generated/docs/queue/schemas/v1/task-pending-message.json",
+      "generated/docs/queue/schemas/v1/task-reclaim-response.json",
+      "generated/docs/queue/schemas/v1/task-run.json",
+      "generated/docs/queue/schemas/v1/task-running-message.json",
+      "generated/docs/queue/schemas/v1/task-status-response.json",
+      "generated/docs/queue/schemas/v1/task-status.json",
+      "generated/docs/queue/schemas/v1/task.json",
+      "generated/docs/queue/schemas/v1/update-provisioner-request.json",
+      "generated/docs/queue/schemas/v1/update-worker-request.json",
+      "generated/docs/queue/schemas/v1/update-workertype-request.json",
+      "generated/docs/queue/schemas/v1/worker-response.json",
+      "generated/docs/queue/schemas/v1/workertype-response.json",
+      "generated/docs/secrets/README.md",
+      "generated/docs/secrets/metadata.json",
+      "generated/docs/secrets/references/api.json",
+      "generated/docs/secrets/schemas/v1/secret-list.json",
+      "generated/docs/secrets/schemas/v1/secret.json",
+      "generated/docs/treeherder/README.md",
+      "generated/docs/treeherder/docs/task-treeherder-config.md",
+      "generated/docs/treeherder/metadata.json",
+      "generated/docs/treeherder/references/events.json",
+      "generated/docs/treeherder/schemas/v1/pulse-job.json",
+      "generated/docs/treeherder/schemas/v1/task-treeherder-config.json",
+      "generated/docs/worker-manager/metadata.json",
+      "generated/docs/worker-manager/references/api.json",
+      "generated/docs/worker-manager/schemas/v1/anything.json",
+      "generated/docs/worker-manager/schemas/v1/ruleset.json",
+      "generated/docs/worker-manager/schemas/v1/satisfiers.json",
+      "generated/docs/worker-manager/schemas/v1/test-worker-configuration.json",
+      "generated/docs/worker-manager/schemas/v1/worker-configuration-result.json",
+      "generated/docs/worker-manager/schemas/v1/worker-configuration.json",
+      "generated/references.json",
+      "infrastructure/builder/src/generate/generators/service-docs.js",
+      "infrastructure/builder/src/generate/util.js",
+      "yarn.lock"
+    ]
+  },
+  "34": {
+    "sha": "183fccf5c4b8b03a6647396f03ebcb6fd7c2cff5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/183fccf5c4b8b03a6647396f03ebcb6fd7c2cff5",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": " Bug 1522477 - make worker-manager schemas valid against metaschema",
+    "commit_date": "2019-02-04 17:41:05",
+    "files_changed": [
+      "services/worker-manager/lib/api.js",
+      "services/worker-manager/schemas/v1/ruleset.yml",
+      "services/worker-manager/schemas/v1/test-worker-configuration.yml",
+      "services/worker-manager/schemas/v1/worker-configuration-result.yml",
+      "services/worker-manager/schemas/v1/worker-configuration.yml"
+    ]
+  },
+  "35": {
+    "sha": "b1c5dec02e887e2140b8a164cc7ebf2cd7a277fc",
+    "url": "https://github.com/taskcluster/taskcluster/commit/b1c5dec02e887e2140b8a164cc7ebf2cd7a277fc",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522477 - implement yarn generate and generate node version",
+    "commit_date": "2019-01-29 18:34:56",
+    "files_changed": [
+      "infrastructure/builder/README.md",
+      "infrastructure/builder/src/generate/generators/index.js",
+      "infrastructure/builder/src/generate/generators/node-version.js",
+      "infrastructure/builder/src/generate/index.js",
+      "infrastructure/builder/src/generate/util.js",
+      "infrastructure/builder/src/main.js",
+      "package.json"
+    ]
+  },
+  "36": {
+    "sha": "6ac34273fd14c4d1b98795d6e342874e1aab378f",
+    "url": "https://github.com/taskcluster/taskcluster/commit/6ac34273fd14c4d1b98795d6e342874e1aab378f",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522477 - make 'yarn build' do the thing",
+    "commit_date": "2019-01-29 18:21:01",
+    "files_changed": [
+      "README.md",
+      "infrastructure/builder/README.md",
+      "infrastructure/builder/package.json",
+      "package.json",
+      "taskcluster-builder"
+    ]
+  },
+  "37": {
+    "sha": "0c7345200cee11b70fa99ebbc077bbd292ae676a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0c7345200cee11b70fa99ebbc077bbd292ae676a",
+    "commiter_name": "imbstack",
+    "commiter_email": "bstack@mozilla.com",
+    "commit_message": "Use newer mock-fs to allow us to upgrade node",
+    "commit_date": "2019-02-04 18:20:26",
+    "files_changed": [
+      "libraries/references/test/built-services_test.js",
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "38": {
+    "sha": "19fa22719f028780a83bd31e281c71a516cba65a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/19fa22719f028780a83bd31e281c71a516cba65a",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #174 from djmitche/bug1522891-b  Bug 1522891 - update triggerHook output to allow no task creation",
+    "commit_date": "2019-02-04 16:47:59",
+    "files_changed": [
+      "libraries/api/src/middleware/express-error.js",
+      "services/hooks/schemas/v1/trigger-hook-response.yml",
+      "services/hooks/schemas/v1/trigger-response.yml",
+      "services/hooks/src/taskcreator.js",
+      "services/hooks/src/v1.js",
+      "services/hooks/test/api_test.js",
+      "services/hooks/test/helper.js"
+    ]
+  },
+  "39": {
+    "sha": "0cf5e0a10cf07320df94ea1e5eff715c99e72a79",
+    "url": "https://github.com/taskcluster/taskcluster/commit/0cf5e0a10cf07320df94ea1e5eff715c99e72a79",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #176 from taskcluster/renovate/ajv-6.x  Update dependency ajv to v6.8.1",
+    "commit_date": "2019-02-04 16:42:45",
+    "files_changed": [
+      "services/hooks/package.json",
+      "yarn.lock"
+    ]
+  },
+  "40": {
+    "sha": "c723fce1b7fc2bf70a883f886e12d20825625ed4",
+    "url": "https://github.com/taskcluster/taskcluster/commit/c723fce1b7fc2bf70a883f886e12d20825625ed4",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency ajv to v6.8.1",
+    "commit_date": "2019-02-04 14:54:49",
+    "files_changed": [
+      "services/hooks/package.json",
+      "yarn.lock"
+    ]
+  },
+  "41": {
+    "sha": "5ac1d162938572eefc785d93b913d5a7f267859a",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5ac1d162938572eefc785d93b913d5a7f267859a",
+    "commiter_name": "helfi92",
+    "commiter_email": null,
+    "commit_message": "Add default sort to AWS provisioning recent errors (#178)",
+    "commit_date": "2019-02-04 14:53:04",
+    "files_changed": [
+      "ui/src/components/AwsProvisionerErrorsTable/index.jsx"
+    ]
+  },
+  "42": {
+    "sha": "ce2f069688a5042716bdd487383871bbafc49a11",
+    "url": "https://github.com/taskcluster/taskcluster/commit/ce2f069688a5042716bdd487383871bbafc49a11",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #177 from taskcluster/renovate/eslint-5.x  Update dependency eslint to v5.13.0",
+    "commit_date": "2019-02-04 01:03:03",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "43": {
+    "sha": "142f77a64f4dc511cdf77874fc3e9f01416e65a5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/142f77a64f4dc511cdf77874fc3e9f01416e65a5",
+    "commiter_name": "renovate-bot",
+    "commiter_email": "bot@renovateapp.com",
+    "commit_message": "Update dependency eslint to v5.13.0",
+    "commit_date": "2019-02-04 00:48:42",
+    "files_changed": [
+      "package.json",
+      "yarn.lock"
+    ]
+  },
+  "44": {
+    "sha": "1ed7a0a609d253863ba4a7c3a9443df820982a2e",
+    "url": "https://github.com/taskcluster/taskcluster/commit/1ed7a0a609d253863ba4a7c3a9443df820982a2e",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1522891 - update triggerHook output to allow no task creation",
+    "commit_date": "2019-02-01 21:08:53",
+    "files_changed": [
+      "libraries/api/src/middleware/express-error.js",
+      "services/hooks/schemas/v1/trigger-hook-response.yml",
+      "services/hooks/schemas/v1/trigger-response.yml",
+      "services/hooks/src/taskcreator.js",
+      "services/hooks/src/v1.js",
+      "services/hooks/test/api_test.js",
+      "services/hooks/test/helper.js"
+    ]
+  },
+  "45": {
+    "sha": "be83f00c46a3658155feb0a65453e055988468c5",
+    "url": "https://github.com/taskcluster/taskcluster/commit/be83f00c46a3658155feb0a65453e055988468c5",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #169 from djmitche/bug1522891  Bug 1522891 - allow task template to render to null",
+    "commit_date": "2019-02-01 20:28:54",
+    "files_changed": [
+      "services/hooks/docs/firing-hooks.md",
+      "services/hooks/src/taskcreator.js",
+      "services/hooks/test/taskcreator_test.js"
+    ]
+  },
+  "46": {
+    "sha": "f97150b1da9456f7491ee7b18fa8b6ba4b39df64",
+    "url": "https://github.com/taskcluster/taskcluster/commit/f97150b1da9456f7491ee7b18fa8b6ba4b39df64",
+    "commiter_name": "imbstack",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #173 from djmitche/bug1517754  Bug 1517754 - allow public PRs",
+    "commit_date": "2019-02-01 20:27:58",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "47": {
+    "sha": "7febd1791ec5d930b7550f20ea33dd06004bb1e1",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7febd1791ec5d930b7550f20ea33dd06004bb1e1",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1517754 - allow public PRs",
+    "commit_date": "2019-02-01 20:12:56",
+    "files_changed": [
+      ".taskcluster.yml"
+    ]
+  },
+  "48": {
     "sha": "42c49d26137c95387d1ebb937188d42dfac0a3bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/42c49d26137c95387d1ebb937188d42dfac0a3bb",
     "commiter_name": "djmitche",
@@ -13,7 +1363,7 @@
       "services/notify/src/hack.js"
     ]
   },
-  "2": {
+  "49": {
     "sha": "c1b316c6d05223b216511eb56676db1eec2e099a",
     "url": "https://github.com/taskcluster/taskcluster/commit/c1b316c6d05223b216511eb56676db1eec2e099a",
     "commiter_name": "djmitche",
@@ -24,7 +1374,7 @@
       "services/hooks/docs/firing-hooks.md"
     ]
   },
-  "3": {
+  "50": {
     "sha": "5c3a5a7ad6492e26f70c1918852131c41e72eceb",
     "url": "https://github.com/taskcluster/taskcluster/commit/5c3a5a7ad6492e26f70c1918852131c41e72eceb",
     "commiter_name": "djmitche",
@@ -35,7 +1385,7 @@
       "services/notify/src/hack.js"
     ]
   },
-  "4": {
+  "51": {
     "sha": "deda11492ba1d6dd701260ea673947b2015ab5b0",
     "url": "https://github.com/taskcluster/taskcluster/commit/deda11492ba1d6dd701260ea673947b2015ab5b0",
     "commiter_name": "djmitche",
@@ -46,7 +1396,7 @@
       "services/hooks/Procfile"
     ]
   },
-  "5": {
+  "52": {
     "sha": "d72282940526d6f40eea8d6b9f803b8b28153445",
     "url": "https://github.com/taskcluster/taskcluster/commit/d72282940526d6f40eea8d6b9f803b8b28153445",
     "commiter_name": "djmitche",
@@ -62,7 +1412,7 @@
       "services/hooks/test/expires_test.js"
     ]
   },
-  "6": {
+  "53": {
     "sha": "083c426115fde118105ec64340ab5b1a61b94677",
     "url": "https://github.com/taskcluster/taskcluster/commit/083c426115fde118105ec64340ab5b1a61b94677",
     "commiter_name": "Biboswan",
@@ -73,7 +1423,7 @@
       "services/hooks/src/v1.js"
     ]
   },
-  "7": {
+  "54": {
     "sha": "eefa559995352f1a89b237870103332eed07a33f",
     "url": "https://github.com/taskcluster/taskcluster/commit/eefa559995352f1a89b237870103332eed07a33f",
     "commiter_name": "Biboswan",
@@ -85,7 +1435,7 @@
       "services/hooks/src/v1.js"
     ]
   },
-  "8": {
+  "55": {
     "sha": "d2e45acd2c808edafe37f515dbda77ff2593b80e",
     "url": "https://github.com/taskcluster/taskcluster/commit/d2e45acd2c808edafe37f515dbda77ff2593b80e",
     "commiter_name": "djmitche",
@@ -96,7 +1446,7 @@
       "services/hooks/docs/firing-hooks.md"
     ]
   },
-  "9": {
+  "56": {
     "sha": "ab72731037f1a61ca7424c72c6d4f3596805c715",
     "url": "https://github.com/taskcluster/taskcluster/commit/ab72731037f1a61ca7424c72c6d4f3596805c715",
     "commiter_name": "Biboswan",
@@ -108,7 +1458,7 @@
       "services/hooks/src/data.js"
     ]
   },
-  "10": {
+  "57": {
     "sha": "fbe7c9cb69a2e7346222d8ec839aceebeeb83eb8",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe7c9cb69a2e7346222d8ec839aceebeeb83eb8",
     "commiter_name": "djmitche",
@@ -121,7 +1471,7 @@
       "yarn.lock"
     ]
   },
-  "11": {
+  "58": {
     "sha": "cfebbfde630bcaca5ce7fb06ff025db003fb93f3",
     "url": "https://github.com/taskcluster/taskcluster/commit/cfebbfde630bcaca5ce7fb06ff025db003fb93f3",
     "commiter_name": "djmitche",
@@ -134,7 +1484,7 @@
       "yarn.lock"
     ]
   },
-  "12": {
+  "59": {
     "sha": "3c494f36eb3544785c1dd59ac2b6562527e6fbf5",
     "url": "https://github.com/taskcluster/taskcluster/commit/3c494f36eb3544785c1dd59ac2b6562527e6fbf5",
     "commiter_name": "Biboswan",
@@ -147,7 +1497,7 @@
       "services/hooks/test/expires_test.js"
     ]
   },
-  "13": {
+  "60": {
     "sha": "015e1202ffb20bcefcaabff1f8ddb0f3a7079a23",
     "url": "https://github.com/taskcluster/taskcluster/commit/015e1202ffb20bcefcaabff1f8ddb0f3a7079a23",
     "commiter_name": "jhford",
@@ -203,7 +1553,7 @@
       "yarn.lock"
     ]
   },
-  "14": {
+  "61": {
     "sha": "57cc73c465bcd7d53b9473a205669e6b08bfdb56",
     "url": "https://github.com/taskcluster/taskcluster/commit/57cc73c465bcd7d53b9473a205669e6b08bfdb56",
     "commiter_name": "djmitche",
@@ -215,7 +1565,7 @@
       "services/worker-manager/lib/main.js"
     ]
   },
-  "15": {
+  "62": {
     "sha": "a461188ea7b599af8fe52ff4a46a2b3523534cf5",
     "url": "https://github.com/taskcluster/taskcluster/commit/a461188ea7b599af8fe52ff4a46a2b3523534cf5",
     "commiter_name": "djmitche",
@@ -226,7 +1576,7 @@
       "services/worker-manager/lib/api.js"
     ]
   },
-  "16": {
+  "63": {
     "sha": "d0bbffb69f49472799b978986e8f9d74cf2dd689",
     "url": "https://github.com/taskcluster/taskcluster/commit/d0bbffb69f49472799b978986e8f9d74cf2dd689",
     "commiter_name": "djmitche",
@@ -243,7 +1593,7 @@
       "services/worker-manager/schemas/v1/worker-configuration.yml"
     ]
   },
-  "17": {
+  "64": {
     "sha": "ba29e08f0b0a7e82c07fe7c4082be7aba4cd56aa",
     "url": "https://github.com/taskcluster/taskcluster/commit/ba29e08f0b0a7e82c07fe7c4082be7aba4cd56aa",
     "commiter_name": "jhford",
@@ -255,7 +1605,7 @@
       "yarn.lock"
     ]
   },
-  "18": {
+  "65": {
     "sha": "19a04d0197e1e91eebae586bbdf03a10f57fa9da",
     "url": "https://github.com/taskcluster/taskcluster/commit/19a04d0197e1e91eebae586bbdf03a10f57fa9da",
     "commiter_name": "jhford",
@@ -267,7 +1617,7 @@
       "services/worker-manager/package.json"
     ]
   },
-  "19": {
+  "66": {
     "sha": "e78dfedee5d0d305588c5936faa5923ba9b4f1a3",
     "url": "https://github.com/taskcluster/taskcluster/commit/e78dfedee5d0d305588c5936faa5923ba9b4f1a3",
     "commiter_name": "jhford",
@@ -303,7 +1653,7 @@
       "yarn.lock"
     ]
   },
-  "20": {
+  "67": {
     "sha": "a0a38eb325684e21aa753ef14db2cad61892d0ab",
     "url": "https://github.com/taskcluster/taskcluster/commit/a0a38eb325684e21aa753ef14db2cad61892d0ab",
     "commiter_name": "jhford",
@@ -320,7 +1670,7 @@
       "services/worker-manager/yarn.lock"
     ]
   },
-  "21": {
+  "68": {
     "sha": "a4fd6e18fc913d10a488eff4473e3d916c84941a",
     "url": "https://github.com/taskcluster/taskcluster/commit/a4fd6e18fc913d10a488eff4473e3d916c84941a",
     "commiter_name": "jhford",
@@ -379,7 +1729,7 @@
       "services/worker-manager/yarn.lock"
     ]
   },
-  "22": {
+  "69": {
     "sha": "c4f7ae5a0c9b154dcfdb3057ef23853e1efbaf0d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c4f7ae5a0c9b154dcfdb3057ef23853e1efbaf0d",
     "commiter_name": "jhford",
@@ -392,7 +1742,7 @@
       "services/taskcluster-worker-manager/test/bidding-strategies/queuepending_test.js"
     ]
   },
-  "23": {
+  "70": {
     "sha": "8c97c620c707e01695795119841b14591635fd93",
     "url": "https://github.com/taskcluster/taskcluster/commit/8c97c620c707e01695795119841b14591635fd93",
     "commiter_name": "jhford",
@@ -405,7 +1755,7 @@
       "services/taskcluster-worker-manager/test/providers/provider_test.js"
     ]
   },
-  "24": {
+  "71": {
     "sha": "7804fd4cbf0e19554438113c506f38b612669704",
     "url": "https://github.com/taskcluster/taskcluster/commit/7804fd4cbf0e19554438113c506f38b612669704",
     "commiter_name": "jhford",
@@ -425,7 +1775,7 @@
       "services/taskcluster-worker-manager/test/provisioner_test.js"
     ]
   },
-  "25": {
+  "72": {
     "sha": "fddc21e6085c2d6b548fd401cb5114f85813aad0",
     "url": "https://github.com/taskcluster/taskcluster/commit/fddc21e6085c2d6b548fd401cb5114f85813aad0",
     "commiter_name": "djmitche",
@@ -438,7 +1788,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "26": {
+  "73": {
     "sha": "1e0c6cd3e33d5d38509cc8de40522e1fd96177da",
     "url": "https://github.com/taskcluster/taskcluster/commit/1e0c6cd3e33d5d38509cc8de40522e1fd96177da",
     "commiter_name": "jhford",
@@ -456,7 +1806,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "27": {
+  "74": {
     "sha": "fbe7817f584626659c653f6950fb2d5d621d8c70",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe7817f584626659c653f6950fb2d5d621d8c70",
     "commiter_name": "jhford",
@@ -467,7 +1817,7 @@
       "services/taskcluster-worker-manager/test/provisioner_test.js"
     ]
   },
-  "28": {
+  "75": {
     "sha": "cadffb40d8d3a4a8b3fe0367bafa43d04b73a271",
     "url": "https://github.com/taskcluster/taskcluster/commit/cadffb40d8d3a4a8b3fe0367bafa43d04b73a271",
     "commiter_name": "jhford",
@@ -478,7 +1828,7 @@
       "services/taskcluster-worker-manager/.travis.yml"
     ]
   },
-  "29": {
+  "76": {
     "sha": "3af5de24f6434f9a9ed5fa8b96259d2de06d460f",
     "url": "https://github.com/taskcluster/taskcluster/commit/3af5de24f6434f9a9ed5fa8b96259d2de06d460f",
     "commiter_name": "jhford",
@@ -490,7 +1840,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "30": {
+  "77": {
     "sha": "d89ff6d34b663b4155ec7b4a145675754becff26",
     "url": "https://github.com/taskcluster/taskcluster/commit/d89ff6d34b663b4155ec7b4a145675754becff26",
     "commiter_name": "jhford",
@@ -501,7 +1851,7 @@
       "services/taskcluster-worker-manager/lib/worker.js"
     ]
   },
-  "31": {
+  "78": {
     "sha": "680ddd640f99160b83fec6c53e82d0fd563639a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/680ddd640f99160b83fec6c53e82d0fd563639a8",
     "commiter_name": "jhford",
@@ -513,7 +1863,7 @@
       "services/taskcluster-worker-manager/test/bid_test.js"
     ]
   },
-  "32": {
+  "79": {
     "sha": "1446267b72a29f78c3b91ae73d0a029712da802f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1446267b72a29f78c3b91ae73d0a029712da802f",
     "commiter_name": "jhford",
@@ -525,7 +1875,7 @@
       "services/taskcluster-worker-manager/test/provisioner_test.js"
     ]
   },
-  "33": {
+  "80": {
     "sha": "6ddc1ad85c58db6be8a61799b1e167350099e98a",
     "url": "https://github.com/taskcluster/taskcluster/commit/6ddc1ad85c58db6be8a61799b1e167350099e98a",
     "commiter_name": "jhford",
@@ -536,7 +1886,7 @@
       "services/taskcluster-worker-manager/lib/provisioner.js"
     ]
   },
-  "34": {
+  "81": {
     "sha": "94f9b277381a5bc3a75ac85e9feae0b1a00b757d",
     "url": "https://github.com/taskcluster/taskcluster/commit/94f9b277381a5bc3a75ac85e9feae0b1a00b757d",
     "commiter_name": "jhford",
@@ -547,7 +1897,7 @@
       "services/taskcluster-worker-manager/lib/bidding-strategy.js"
     ]
   },
-  "35": {
+  "82": {
     "sha": "532a6b4076a94ee96b8fddf80ef436197a21d510",
     "url": "https://github.com/taskcluster/taskcluster/commit/532a6b4076a94ee96b8fddf80ef436197a21d510",
     "commiter_name": "jhford",
@@ -562,7 +1912,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "36": {
+  "83": {
     "sha": "491d91bbd9a226512b6e162a57aeea24fb52e986",
     "url": "https://github.com/taskcluster/taskcluster/commit/491d91bbd9a226512b6e162a57aeea24fb52e986",
     "commiter_name": "jhford",
@@ -574,7 +1924,7 @@
       "services/taskcluster-worker-manager/package.json"
     ]
   },
-  "37": {
+  "84": {
     "sha": "663c40e132d5cbbeaec4c1a4e7a883654717196c",
     "url": "https://github.com/taskcluster/taskcluster/commit/663c40e132d5cbbeaec4c1a4e7a883654717196c",
     "commiter_name": "jhford",
@@ -594,7 +1944,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "38": {
+  "85": {
     "sha": "327b77b36c07052fffd72a43157b31268a5b2565",
     "url": "https://github.com/taskcluster/taskcluster/commit/327b77b36c07052fffd72a43157b31268a5b2565",
     "commiter_name": "jhford",
@@ -612,7 +1962,7 @@
       "services/taskcluster-worker-manager/test/convert-expected.json"
     ]
   },
-  "39": {
+  "86": {
     "sha": "0ad65419d6b501a5edabc17474c808fe72a10b0c",
     "url": "https://github.com/taskcluster/taskcluster/commit/0ad65419d6b501a5edabc17474c808fe72a10b0c",
     "commiter_name": "jhford",
@@ -625,7 +1975,7 @@
       "services/taskcluster-worker-manager/test/helper.js"
     ]
   },
-  "40": {
+  "87": {
     "sha": "728cc72d4c5787712c9cd5acdd10aa1b8f285abf",
     "url": "https://github.com/taskcluster/taskcluster/commit/728cc72d4c5787712c9cd5acdd10aa1b8f285abf",
     "commiter_name": "jhford",
@@ -636,7 +1986,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "41": {
+  "88": {
     "sha": "e46f3bbb4e05060ed4a6b34f29a6f5258d0d88ff",
     "url": "https://github.com/taskcluster/taskcluster/commit/e46f3bbb4e05060ed4a6b34f29a6f5258d0d88ff",
     "commiter_name": "jhford",
@@ -647,7 +1997,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "42": {
+  "89": {
     "sha": "eb77935fcb48146cb62984b186e6a9bea2305b85",
     "url": "https://github.com/taskcluster/taskcluster/commit/eb77935fcb48146cb62984b186e6a9bea2305b85",
     "commiter_name": "jhford",
@@ -658,7 +2008,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "43": {
+  "90": {
     "sha": "77c400eac18374c6ebca3f3ea76e7009671665e4",
     "url": "https://github.com/taskcluster/taskcluster/commit/77c400eac18374c6ebca3f3ea76e7009671665e4",
     "commiter_name": "jhford",
@@ -669,7 +2019,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "44": {
+  "91": {
     "sha": "50f45dbad0b6bad2a8ebaa40ccdc7f47c3b5c050",
     "url": "https://github.com/taskcluster/taskcluster/commit/50f45dbad0b6bad2a8ebaa40ccdc7f47c3b5c050",
     "commiter_name": "jhford",
@@ -680,7 +2030,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "45": {
+  "92": {
     "sha": "fcc97d00c5589f2b8fa59176ef3b8c23298388db",
     "url": "https://github.com/taskcluster/taskcluster/commit/fcc97d00c5589f2b8fa59176ef3b8c23298388db",
     "commiter_name": "jhford",
@@ -691,7 +2041,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "46": {
+  "93": {
     "sha": "06dc973fd5473db89bdf90d01652cd111eb50d42",
     "url": "https://github.com/taskcluster/taskcluster/commit/06dc973fd5473db89bdf90d01652cd111eb50d42",
     "commiter_name": "jhford",
@@ -702,7 +2052,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "47": {
+  "94": {
     "sha": "3454fc42d819770c8739e302f0a12942741efbfe",
     "url": "https://github.com/taskcluster/taskcluster/commit/3454fc42d819770c8739e302f0a12942741efbfe",
     "commiter_name": "jhford",
@@ -717,7 +2067,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "48": {
+  "95": {
     "sha": "21ca49e1a47bd3a8e83e4690012bb8e919a078f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/21ca49e1a47bd3a8e83e4690012bb8e919a078f7",
     "commiter_name": "jhford",
@@ -730,7 +2080,7 @@
       "services/taskcluster-worker-manager/test/convert_test.js"
     ]
   },
-  "49": {
+  "96": {
     "sha": "7bf888fd8fbe7453a1a21253045f70e44a54839d",
     "url": "https://github.com/taskcluster/taskcluster/commit/7bf888fd8fbe7453a1a21253045f70e44a54839d",
     "commiter_name": "jhford",
@@ -744,7 +2094,7 @@
       "services/taskcluster-worker-manager/test/data-storage_test.js"
     ]
   },
-  "50": {
+  "97": {
     "sha": "333f3afb52c76f1c40db4b7419c45192c0b5cd95",
     "url": "https://github.com/taskcluster/taskcluster/commit/333f3afb52c76f1c40db4b7419c45192c0b5cd95",
     "commiter_name": "jhford",
@@ -758,7 +2108,7 @@
       "services/taskcluster-worker-manager/test/convert_test.js"
     ]
   },
-  "51": {
+  "98": {
     "sha": "0d0e15bca0c1ba111f6430922ad8f2dddcbb5c58",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d0e15bca0c1ba111f6430922ad8f2dddcbb5c58",
     "commiter_name": "jhford",
@@ -770,7 +2120,7 @@
       "services/taskcluster-worker-manager/lib/main.js"
     ]
   },
-  "52": {
+  "99": {
     "sha": "d776695acdc6a40546007562bb7dc8235f292471",
     "url": "https://github.com/taskcluster/taskcluster/commit/d776695acdc6a40546007562bb7dc8235f292471",
     "commiter_name": "jhford",
@@ -785,7 +2135,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "53": {
+  "100": {
     "sha": "d2928acdbe061f2c1d7104dcc0dab744b37387d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/d2928acdbe061f2c1d7104dcc0dab744b37387d8",
     "commiter_name": "jhford",
@@ -802,7 +2152,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "54": {
+  "101": {
     "sha": "f768c6fdfcfde12f9b7839de94c747a21f6c79ed",
     "url": "https://github.com/taskcluster/taskcluster/commit/f768c6fdfcfde12f9b7839de94c747a21f6c79ed",
     "commiter_name": "jhford",
@@ -818,7 +2168,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "55": {
+  "102": {
     "sha": "529b19ae0c84bf62da5fb201d0c59c4baea72cdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/529b19ae0c84bf62da5fb201d0c59c4baea72cdb",
     "commiter_name": "jhford",
@@ -832,7 +2182,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "56": {
+  "103": {
     "sha": "1be0e365cb7e1e1a938c965de9a43c0e51533d11",
     "url": "https://github.com/taskcluster/taskcluster/commit/1be0e365cb7e1e1a938c965de9a43c0e51533d11",
     "commiter_name": "jhford",
@@ -843,7 +2193,7 @@
       "services/taskcluster-worker-manager/.travis.yml"
     ]
   },
-  "57": {
+  "104": {
     "sha": "267aaaba77391ecf5e17a770b853bac0961214e3",
     "url": "https://github.com/taskcluster/taskcluster/commit/267aaaba77391ecf5e17a770b853bac0961214e3",
     "commiter_name": "jhford",
@@ -859,7 +2209,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "58": {
+  "105": {
     "sha": "ff5ac92c5dc547865409735b97a68af91e4ad257",
     "url": "https://github.com/taskcluster/taskcluster/commit/ff5ac92c5dc547865409735b97a68af91e4ad257",
     "commiter_name": "jhford",
@@ -871,7 +2221,7 @@
       "services/taskcluster-worker-manager/test/errors_test.js"
     ]
   },
-  "59": {
+  "106": {
     "sha": "84744e189ebd6e151cd535ef152381e488c09c3e",
     "url": "https://github.com/taskcluster/taskcluster/commit/84744e189ebd6e151cd535ef152381e488c09c3e",
     "commiter_name": "jhford",
@@ -886,7 +2236,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "60": {
+  "107": {
     "sha": "6a44db1d751d49a239cee2cda0b883df892b947e",
     "url": "https://github.com/taskcluster/taskcluster/commit/6a44db1d751d49a239cee2cda0b883df892b947e",
     "commiter_name": "jhford",
@@ -897,7 +2247,7 @@
       "services/taskcluster-worker-manager/lib/rules.js"
     ]
   },
-  "61": {
+  "108": {
     "sha": "aa30eb5862e0a74ef5083eab97582292902c80cf",
     "url": "https://github.com/taskcluster/taskcluster/commit/aa30eb5862e0a74ef5083eab97582292902c80cf",
     "commiter_name": "jhford",
@@ -908,7 +2258,7 @@
       "services/taskcluster-worker-manager/.github/CODEOWNERS"
     ]
   },
-  "62": {
+  "109": {
     "sha": "8661441bb0c52478968e1f4248ca9267c24e59b9",
     "url": "https://github.com/taskcluster/taskcluster/commit/8661441bb0c52478968e1f4248ca9267c24e59b9",
     "commiter_name": "jhford",
@@ -919,7 +2269,7 @@
       "services/taskcluster-worker-manager/.travis.yml"
     ]
   },
-  "63": {
+  "110": {
     "sha": "5080bf767c4464b073a6a36e1b0d3653e57eae04",
     "url": "https://github.com/taskcluster/taskcluster/commit/5080bf767c4464b073a6a36e1b0d3653e57eae04",
     "commiter_name": "jhford",
@@ -935,7 +2285,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "64": {
+  "111": {
     "sha": "bc3548a834f3a95f365ae83d3580233c620921b1",
     "url": "https://github.com/taskcluster/taskcluster/commit/bc3548a834f3a95f365ae83d3580233c620921b1",
     "commiter_name": "ccooper",
@@ -948,7 +2298,7 @@
       "services/taskcluster-worker-manager/LICENSE"
     ]
   },
-  "65": {
+  "112": {
     "sha": "0a2f10a33caac6dea91225fe32c8c4f9418c85e0",
     "url": "https://github.com/taskcluster/taskcluster/commit/0a2f10a33caac6dea91225fe32c8c4f9418c85e0",
     "commiter_name": "jhford",
@@ -959,7 +2309,7 @@
       "services/taskcluster-worker-manager/package.json"
     ]
   },
-  "66": {
+  "113": {
     "sha": "0fb9798adffe2f8ae91650f46fde1547e1b31ca2",
     "url": "https://github.com/taskcluster/taskcluster/commit/0fb9798adffe2f8ae91650f46fde1547e1b31ca2",
     "commiter_name": "djmitche",
@@ -970,7 +2320,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "67": {
+  "114": {
     "sha": "1f88a4df0a7c9ff99789e52c5446b6bd11b5463f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1f88a4df0a7c9ff99789e52c5446b6bd11b5463f",
     "commiter_name": "Biboswan",
@@ -982,7 +2332,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "68": {
+  "115": {
     "sha": "2fdbf0415eff2d35eb43659a9074a465e7adbd26",
     "url": "https://github.com/taskcluster/taskcluster/commit/2fdbf0415eff2d35eb43659a9074a465e7adbd26",
     "commiter_name": "djmitche",
@@ -996,7 +2346,7 @@
       "services/hooks/src/main.js"
     ]
   },
-  "69": {
+  "116": {
     "sha": "2736c6d52c501bfeb6e46918c0827a1d4e39b76e",
     "url": "https://github.com/taskcluster/taskcluster/commit/2736c6d52c501bfeb6e46918c0827a1d4e39b76e",
     "commiter_name": "djmitche",
@@ -1007,7 +2357,7 @@
       "services/auth/test/trie_test.js"
     ]
   },
-  "70": {
+  "117": {
     "sha": "83b56f179ed0ae0986e28830552f31e3b98102be",
     "url": "https://github.com/taskcluster/taskcluster/commit/83b56f179ed0ae0986e28830552f31e3b98102be",
     "commiter_name": "djmitche",
@@ -1018,7 +2368,7 @@
       "services/auth/test/trie_test.js"
     ]
   },
-  "71": {
+  "118": {
     "sha": "187349873ca9c70a04602b54c91f383b6c097a36",
     "url": "https://github.com/taskcluster/taskcluster/commit/187349873ca9c70a04602b54c91f383b6c097a36",
     "commiter_name": "djmitche",
@@ -1029,7 +2379,7 @@
       "services/hooks/src/listeners.js"
     ]
   },
-  "72": {
+  "119": {
     "sha": "02d172063a46a58b82491944ddbd5711ac6ef992",
     "url": "https://github.com/taskcluster/taskcluster/commit/02d172063a46a58b82491944ddbd5711ac6ef992",
     "commiter_name": "djmitche",
@@ -1040,7 +2390,7 @@
       "libraries/pulse/src/client.js"
     ]
   },
-  "73": {
+  "120": {
     "sha": "62e141c83dd0e36bde5a1620f7c2bada789dbf4c",
     "url": "https://github.com/taskcluster/taskcluster/commit/62e141c83dd0e36bde5a1620f7c2bada789dbf4c",
     "commiter_name": "djmitche",
@@ -1052,7 +2402,7 @@
       "yarn.lock"
     ]
   },
-  "74": {
+  "121": {
     "sha": "df8bc52516b5202313007a8c521756e77ddd8970",
     "url": "https://github.com/taskcluster/taskcluster/commit/df8bc52516b5202313007a8c521756e77ddd8970",
     "commiter_name": "renovate-bot",
@@ -1064,7 +2414,7 @@
       "yarn.lock"
     ]
   },
-  "75": {
+  "122": {
     "sha": "79ffd0525d71619d91abacc8508ef1004524fce0",
     "url": "https://github.com/taskcluster/taskcluster/commit/79ffd0525d71619d91abacc8508ef1004524fce0",
     "commiter_name": "djmitche",
@@ -1076,7 +2426,7 @@
       "yarn.lock"
     ]
   },
-  "76": {
+  "123": {
     "sha": "926d592eeb0ccf7b8bff17813095fb2cff218300",
     "url": "https://github.com/taskcluster/taskcluster/commit/926d592eeb0ccf7b8bff17813095fb2cff218300",
     "commiter_name": "renovate-bot",
@@ -1088,7 +2438,7 @@
       "yarn.lock"
     ]
   },
-  "77": {
+  "124": {
     "sha": "b2d25fd054671c33090ca6fea12f6cf435967ced",
     "url": "https://github.com/taskcluster/taskcluster/commit/b2d25fd054671c33090ca6fea12f6cf435967ced",
     "commiter_name": "Biboswan",
@@ -1102,7 +2452,7 @@
       "services/hooks/test/expires_test.js"
     ]
   },
-  "78": {
+  "125": {
     "sha": "1469bc7c6d19e11792657ec9f1734f65241cdd92",
     "url": "https://github.com/taskcluster/taskcluster/commit/1469bc7c6d19e11792657ec9f1734f65241cdd92",
     "commiter_name": "imbstack",
@@ -1132,7 +2482,7 @@
       "services/treeherder/README.md"
     ]
   },
-  "79": {
+  "126": {
     "sha": "15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
     "url": "https://github.com/taskcluster/taskcluster/commit/15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
     "commiter_name": "helfi92",
@@ -1144,7 +2494,7 @@
       "ui/yarn.lock"
     ]
   },
-  "80": {
+  "127": {
     "sha": "912e0d6f0a86335871bb742436ee74a9eac69d4c",
     "url": "https://github.com/taskcluster/taskcluster/commit/912e0d6f0a86335871bb742436ee74a9eac69d4c",
     "commiter_name": "djmitche",
@@ -1155,7 +2505,7 @@
       "infrastructure/terraform/taskcluster.tf.json"
     ]
   },
-  "81": {
+  "128": {
     "sha": "ac6ad8e8de17ce623e34cf816ee952a0be37383f",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac6ad8e8de17ce623e34cf816ee952a0be37383f",
     "commiter_name": "djmitche",
@@ -1224,7 +2574,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "82": {
+  "129": {
     "sha": "fdff4fa703c2d0652021ebad577d5723537db0bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/fdff4fa703c2d0652021ebad577d5723537db0bb",
     "commiter_name": "imbstack",
@@ -1235,7 +2585,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "83": {
+  "130": {
     "sha": "22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
     "url": "https://github.com/taskcluster/taskcluster/commit/22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
     "commiter_name": "imbstack",
@@ -1246,7 +2596,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "84": {
+  "131": {
     "sha": "f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
     "url": "https://github.com/taskcluster/taskcluster/commit/f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
     "commiter_name": "imbstack",
@@ -1276,7 +2626,7 @@
       "services/treeherder/README.md"
     ]
   },
-  "85": {
+  "132": {
     "sha": "36553b808fddf55a15b5739fa2912787a65af83a",
     "url": "https://github.com/taskcluster/taskcluster/commit/36553b808fddf55a15b5739fa2912787a65af83a",
     "commiter_name": "renovate[bot]",
@@ -1288,7 +2638,7 @@
       "ui/yarn.lock"
     ]
   },
-  "86": {
+  "133": {
     "sha": "ada68546df8335a30352ec9970c3c62b4cd471fc",
     "url": "https://github.com/taskcluster/taskcluster/commit/ada68546df8335a30352ec9970c3c62b4cd471fc",
     "commiter_name": "imbstack",
@@ -1299,7 +2649,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "87": {
+  "134": {
     "sha": "45acc854a52475540703d99dfd2aa45d95381c60",
     "url": "https://github.com/taskcluster/taskcluster/commit/45acc854a52475540703d99dfd2aa45d95381c60",
     "commiter_name": "djmitche",
@@ -1312,7 +2662,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "88": {
+  "135": {
     "sha": "5c85f2f76f457deeec62afff57b82c79e5204ed6",
     "url": "https://github.com/taskcluster/taskcluster/commit/5c85f2f76f457deeec62afff57b82c79e5204ed6",
     "commiter_name": "djmitche",
@@ -1323,7 +2673,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "89": {
+  "136": {
     "sha": "62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
     "url": "https://github.com/taskcluster/taskcluster/commit/62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
     "commiter_name": "djmitche",
@@ -1351,7 +2701,7 @@
       "infrastructure/terraform/taskcluster.tf.json"
     ]
   },
-  "90": {
+  "137": {
     "sha": "4c050d72d92196389a2532915e88544b27017250",
     "url": "https://github.com/taskcluster/taskcluster/commit/4c050d72d92196389a2532915e88544b27017250",
     "commiter_name": "djmitche",
@@ -1362,7 +2712,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "91": {
+  "138": {
     "sha": "460632187c319073ded53b5149b0d411a1bbef2c",
     "url": "https://github.com/taskcluster/taskcluster/commit/460632187c319073ded53b5149b0d411a1bbef2c",
     "commiter_name": "djmitche",
@@ -1390,7 +2740,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "92": {
+  "139": {
     "sha": "5f87606f06675d40ae98abb564452aa208699f7d",
     "url": "https://github.com/taskcluster/taskcluster/commit/5f87606f06675d40ae98abb564452aa208699f7d",
     "commiter_name": "djmitche",
@@ -1401,7 +2751,7 @@
       "libraries/references/src/built-services.js"
     ]
   },
-  "93": {
+  "140": {
     "sha": "56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
     "url": "https://github.com/taskcluster/taskcluster/commit/56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
     "commiter_name": "djmitche",
@@ -1424,7 +2774,7 @@
       "services/references/package.json"
     ]
   },
-  "94": {
+  "141": {
     "sha": "1114d1da509fcec06fe96172cb200c8a3339d946",
     "url": "https://github.com/taskcluster/taskcluster/commit/1114d1da509fcec06fe96172cb200c8a3339d946",
     "commiter_name": "djmitche",
@@ -1435,7 +2785,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "95": {
+  "142": {
     "sha": "65fd82b6468c4f68e8e4771054e85526c060eb90",
     "url": "https://github.com/taskcluster/taskcluster/commit/65fd82b6468c4f68e8e4771054e85526c060eb90",
     "commiter_name": "djmitche",
@@ -1449,7 +2799,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "96": {
+  "143": {
     "sha": "1bf86a71b9c073653eb9ea52ff0355c630793a1f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1bf86a71b9c073653eb9ea52ff0355c630793a1f",
     "commiter_name": "djmitche",
@@ -1468,7 +2818,7 @@
       "package.json"
     ]
   },
-  "97": {
+  "144": {
     "sha": "ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
     "url": "https://github.com/taskcluster/taskcluster/commit/ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
     "commiter_name": "helfi92",
@@ -1479,7 +2829,7 @@
       "package.json"
     ]
   },
-  "98": {
+  "145": {
     "sha": "dfee9af2438503514b00b0df8dbbfb8032bda517",
     "url": "https://github.com/taskcluster/taskcluster/commit/dfee9af2438503514b00b0df8dbbfb8032bda517",
     "commiter_name": "renovate[bot]",
@@ -1491,7 +2841,7 @@
       "ui/yarn.lock"
     ]
   },
-  "99": {
+  "146": {
     "sha": "cb3a73b9ac39953eb1ce878da97febb6be7291e1",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb3a73b9ac39953eb1ce878da97febb6be7291e1",
     "commiter_name": "renovate[bot]",
@@ -1503,7 +2853,7 @@
       "ui/yarn.lock"
     ]
   },
-  "100": {
+  "147": {
     "sha": "41d9a1944543cc7234fa34ce98d1d0571a8984e1",
     "url": "https://github.com/taskcluster/taskcluster/commit/41d9a1944543cc7234fa34ce98d1d0571a8984e1",
     "commiter_name": "renovate[bot]",
@@ -1515,7 +2865,7 @@
       "ui/yarn.lock"
     ]
   },
-  "101": {
+  "148": {
     "sha": "7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
     "url": "https://github.com/taskcluster/taskcluster/commit/7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
     "commiter_name": "renovate[bot]",
@@ -1527,7 +2877,7 @@
       "ui/yarn.lock"
     ]
   },
-  "102": {
+  "149": {
     "sha": "433e8cde5340ae4c98bded7e3a246550ed7c04d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/433e8cde5340ae4c98bded7e3a246550ed7c04d8",
     "commiter_name": "renovate[bot]",
@@ -1539,7 +2889,7 @@
       "ui/yarn.lock"
     ]
   },
-  "103": {
+  "150": {
     "sha": "3d916d45912e2ad902a2887a88caf41e0d0bff20",
     "url": "https://github.com/taskcluster/taskcluster/commit/3d916d45912e2ad902a2887a88caf41e0d0bff20",
     "commiter_name": "helfi92",
@@ -1551,7 +2901,7 @@
       "ui/src/components/WorkerTypesTable/index.jsx"
     ]
   },
-  "104": {
+  "151": {
     "sha": "aca0d33455922bbcea325d597bf54d3991e77ada",
     "url": "https://github.com/taskcluster/taskcluster/commit/aca0d33455922bbcea325d597bf54d3991e77ada",
     "commiter_name": "Biboswan",
@@ -1565,7 +2915,7 @@
       "services/web-server/src/resolvers/Hooks.js"
     ]
   },
-  "105": {
+  "152": {
     "sha": "1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
     "url": "https://github.com/taskcluster/taskcluster/commit/1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
     "commiter_name": "renovate[bot]",
@@ -1577,7 +2927,7 @@
       "ui/yarn.lock"
     ]
   },
-  "106": {
+  "153": {
     "sha": "5a0e8af004921efe7b08847d598ea8ad207ca04b",
     "url": "https://github.com/taskcluster/taskcluster/commit/5a0e8af004921efe7b08847d598ea8ad207ca04b",
     "commiter_name": "helfi92",
@@ -1589,7 +2939,7 @@
       "ui/yarn.lock"
     ]
   },
-  "107": {
+  "154": {
     "sha": "79ec514d9392094d89d31fe98e1a412d56ac04c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/79ec514d9392094d89d31fe98e1a412d56ac04c5",
     "commiter_name": "helfi92",
@@ -1600,7 +2950,7 @@
       "netlify.toml"
     ]
   },
-  "108": {
+  "155": {
     "sha": "a60f57c3215c46022a3f0d6f59834bb9134359c1",
     "url": "https://github.com/taskcluster/taskcluster/commit/a60f57c3215c46022a3f0d6f59834bb9134359c1",
     "commiter_name": "owlishDeveloper",
@@ -1910,7 +3260,7 @@
       "ui/src/views/Scopes/ViewScope/index.jsx"
     ]
   },
-  "109": {
+  "156": {
     "sha": "59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
     "url": "https://github.com/taskcluster/taskcluster/commit/59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
     "commiter_name": "helfi92",
@@ -1921,7 +3271,7 @@
       "README.md"
     ]
   },
-  "110": {
+  "157": {
     "sha": "ab7a4381b84cf003bc951d1f84c660425b53db91",
     "url": "https://github.com/taskcluster/taskcluster/commit/ab7a4381b84cf003bc951d1f84c660425b53db91",
     "commiter_name": "djmitche",
@@ -1942,7 +3292,7 @@
       "services/built-in-workers/test/mocha.opts"
     ]
   },
-  "111": {
+  "158": {
     "sha": "1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
     "url": "https://github.com/taskcluster/taskcluster/commit/1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
     "commiter_name": "djmitche",
@@ -1968,7 +3318,7 @@
       "services/built-in-workers/yarn.lock"
     ]
   },
-  "112": {
+  "159": {
     "sha": "db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
     "url": "https://github.com/taskcluster/taskcluster/commit/db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
     "commiter_name": "hybrid1999",
@@ -1984,7 +3334,7 @@
       "services/built-in-workers/test/index_test.js"
     ]
   },
-  "113": {
+  "160": {
     "sha": "4f749b9ad5275107a6a4524d78eda9e1eee00425",
     "url": "https://github.com/taskcluster/taskcluster/commit/4f749b9ad5275107a6a4524d78eda9e1eee00425",
     "commiter_name": "djmitche",
@@ -1996,7 +3346,7 @@
       "services/built-in-workers/package.json"
     ]
   },
-  "114": {
+  "161": {
     "sha": "8544811bbcf1413f35f7392e9c41a791a4f59e00",
     "url": "https://github.com/taskcluster/taskcluster/commit/8544811bbcf1413f35f7392e9c41a791a4f59e00",
     "commiter_name": "djmitche",
@@ -2021,7 +3371,7 @@
       "services/built-in-workers/yarn.lock"
     ]
   },
-  "115": {
+  "162": {
     "sha": "3a41717b455f83cf1abeb16485f0067cf5a51b63",
     "url": "https://github.com/taskcluster/taskcluster/commit/3a41717b455f83cf1abeb16485f0067cf5a51b63",
     "commiter_name": "owlishDeveloper",
@@ -2035,7 +3385,7 @@
       "ui/taskcluster-web-tests/Dockerfile"
     ]
   },
-  "116": {
+  "163": {
     "sha": "4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
     "url": "https://github.com/taskcluster/taskcluster/commit/4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
     "commiter_name": "djmitche",
@@ -2049,7 +3399,7 @@
       "yarn.lock"
     ]
   },
-  "117": {
+  "164": {
     "sha": "fc4b259c1361cafa470870dc140b507104a28e6a",
     "url": "https://github.com/taskcluster/taskcluster/commit/fc4b259c1361cafa470870dc140b507104a28e6a",
     "commiter_name": "djmitche",
@@ -2085,7 +3435,7 @@
       "yarn.lock"
     ]
   },
-  "118": {
+  "165": {
     "sha": "ff9efef8504e46a92b1153413907bddb4672dc72",
     "url": "https://github.com/taskcluster/taskcluster/commit/ff9efef8504e46a92b1153413907bddb4672dc72",
     "commiter_name": "djmitche",
@@ -2107,7 +3457,7 @@
       "yarn.lock"
     ]
   },
-  "119": {
+  "166": {
     "sha": "7ced9f86720f654ad055ebab914c02f7ed7869d4",
     "url": "https://github.com/taskcluster/taskcluster/commit/7ced9f86720f654ad055ebab914c02f7ed7869d4",
     "commiter_name": "owlishDeveloper",
@@ -2119,7 +3469,7 @@
       "ui/package.json"
     ]
   },
-  "120": {
+  "167": {
     "sha": "a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
     "url": "https://github.com/taskcluster/taskcluster/commit/a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
     "commiter_name": "owlishDeveloper",
@@ -2429,7 +3779,7 @@
       "ui/src/views/Scopes/ViewScope/index.jsx"
     ]
   },
-  "121": {
+  "168": {
     "sha": "e1e741d51416b622a15222c177d9c8b5e3f4185c",
     "url": "https://github.com/taskcluster/taskcluster/commit/e1e741d51416b622a15222c177d9c8b5e3f4185c",
     "commiter_name": "djmitche",
@@ -2440,7 +3790,7 @@
       "services/references/package.json"
     ]
   },
-  "122": {
+  "169": {
     "sha": "ac6f65834888d30bf280a8b93d02291e9f6f1729",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac6f65834888d30bf280a8b93d02291e9f6f1729",
     "commiter_name": "djmitche",
@@ -2453,7 +3803,7 @@
       "yarn.lock"
     ]
   },
-  "123": {
+  "170": {
     "sha": "98f8e77b11a18960fb64556f92cdcb34208a6c6f",
     "url": "https://github.com/taskcluster/taskcluster/commit/98f8e77b11a18960fb64556f92cdcb34208a6c6f",
     "commiter_name": "owlishDeveloper",
@@ -2468,7 +3818,7 @@
       "taskcluster-web/LICENSE"
     ]
   },
-  "124": {
+  "171": {
     "sha": "7470efa73fb6d495eb968041da28e581ada1debd",
     "url": "https://github.com/taskcluster/taskcluster/commit/7470efa73fb6d495eb968041da28e581ada1debd",
     "commiter_name": "owlishDeveloper",
@@ -2778,7 +4128,7 @@
       "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
     ]
   },
-  "125": {
+  "172": {
     "sha": "408dcaa88953e36544f215946b2ce4e4e504e3df",
     "url": "https://github.com/taskcluster/taskcluster/commit/408dcaa88953e36544f215946b2ce4e4e504e3df",
     "commiter_name": "owlishDeveloper",
@@ -3088,7 +4438,7 @@
       "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
     ]
   },
-  "126": {
+  "173": {
     "sha": "ef4c5fa323d705d6df617da24f0ee88027df4dd6",
     "url": "https://github.com/taskcluster/taskcluster/commit/ef4c5fa323d705d6df617da24f0ee88027df4dd6",
     "commiter_name": "djmitche",
@@ -3108,7 +4458,7 @@
       "yarn.lock"
     ]
   },
-  "127": {
+  "174": {
     "sha": "0fe0639a979a4e03e1228490fe667bba3cc06a19",
     "url": "https://github.com/taskcluster/taskcluster/commit/0fe0639a979a4e03e1228490fe667bba3cc06a19",
     "commiter_name": "djmitche",
@@ -3119,7 +4469,7 @@
       "services/references/package.json"
     ]
   },
-  "128": {
+  "175": {
     "sha": "33ff9db6fd8f9a1eddfb249872916292ee53a12a",
     "url": "https://github.com/taskcluster/taskcluster/commit/33ff9db6fd8f9a1eddfb249872916292ee53a12a",
     "commiter_name": "ededals",
@@ -3130,7 +4480,7 @@
       "src/views/Tasks/CreateTask/index.jsx"
     ]
   },
-  "129": {
+  "176": {
     "sha": "575665a45bed1e450481f98941532b436250ed89",
     "url": "https://github.com/taskcluster/taskcluster/commit/575665a45bed1e450481f98941532b436250ed89",
     "commiter_name": "ededals",
@@ -3141,7 +4491,7 @@
       "src/views/PulseMessages/index.jsx"
     ]
   },
-  "130": {
+  "177": {
     "sha": "d28fe09d78b072dd125882f4792964648a59a2b4",
     "url": "https://github.com/taskcluster/taskcluster/commit/d28fe09d78b072dd125882f4792964648a59a2b4",
     "commiter_name": "varundey",
@@ -3155,7 +4505,7 @@
       "src/views/Tasks/TaskLog/index.jsx"
     ]
   },
-  "131": {
+  "178": {
     "sha": "32bf21dccf8ae4582f5da833c8db76214709ae9a",
     "url": "https://github.com/taskcluster/taskcluster/commit/32bf21dccf8ae4582f5da833c8db76214709ae9a",
     "commiter_name": "owlishDeveloper",
@@ -3167,7 +4517,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "132": {
+  "179": {
     "sha": "9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
     "url": "https://github.com/taskcluster/taskcluster/commit/9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
     "commiter_name": "imbstack",
@@ -3194,7 +4544,7 @@
       "services/queue/test/queueservice_test.js"
     ]
   },
-  "133": {
+  "180": {
     "sha": "f2f86653dc1c587509ee9cba7366b02ab949a07d",
     "url": "https://github.com/taskcluster/taskcluster/commit/f2f86653dc1c587509ee9cba7366b02ab949a07d",
     "commiter_name": "owlishDeveloper",
@@ -3206,7 +4556,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "134": {
+  "181": {
     "sha": "c8e302d0be612ca3644b77e2e391c11507542f12",
     "url": "https://github.com/taskcluster/taskcluster/commit/c8e302d0be612ca3644b77e2e391c11507542f12",
     "commiter_name": "owlishDeveloper",
@@ -3218,7 +4568,7 @@
       "services/github/src/tc-yaml.js"
     ]
   },
-  "135": {
+  "182": {
     "sha": "8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
     "url": "https://github.com/taskcluster/taskcluster/commit/8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
     "commiter_name": "arshadkazmi42",
@@ -3229,7 +4579,7 @@
       "src/views/Quickstart/index.jsx"
     ]
   },
-  "136": {
+  "183": {
     "sha": "af8d50fed466b5bdaed1c1a3f27a1cd193655599",
     "url": "https://github.com/taskcluster/taskcluster/commit/af8d50fed466b5bdaed1c1a3f27a1cd193655599",
     "commiter_name": "vivekRaj10",
@@ -3243,7 +4593,7 @@
       "src/components/WorkersTable/index.jsx"
     ]
   },
-  "137": {
+  "184": {
     "sha": "aeba2adac1fa34609700beaa304fcdb9e0b910cf",
     "url": "https://github.com/taskcluster/taskcluster/commit/aeba2adac1fa34609700beaa304fcdb9e0b910cf",
     "commiter_name": "varundey",
@@ -3254,7 +4604,7 @@
       "src/views/Tasks/ViewTask/index.jsx"
     ]
   },
-  "138": {
+  "185": {
     "sha": "60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
     "url": "https://github.com/taskcluster/taskcluster/commit/60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
     "commiter_name": "djmitche",
@@ -3268,7 +4618,7 @@
       "yarn.lock"
     ]
   },
-  "139": {
+  "186": {
     "sha": "30372ec731730592a7bf22d4b349a61f75663883",
     "url": "https://github.com/taskcluster/taskcluster/commit/30372ec731730592a7bf22d4b349a61f75663883",
     "commiter_name": "djmitche",
@@ -3279,7 +4629,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "140": {
+  "187": {
     "sha": "58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "url": "https://github.com/taskcluster/taskcluster/commit/58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "commiter_name": "Biboswan",
@@ -3290,7 +4640,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "141": {
+  "188": {
     "sha": "910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "url": "https://github.com/taskcluster/taskcluster/commit/910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "commiter_name": "djmitche",
@@ -3340,7 +4690,7 @@
       "test/meta_test.js"
     ]
   },
-  "142": {
+  "189": {
     "sha": "73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "url": "https://github.com/taskcluster/taskcluster/commit/73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "commiter_name": "imbstack",
@@ -3352,7 +4702,7 @@
       "yarn.lock"
     ]
   },
-  "143": {
+  "190": {
     "sha": "a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "url": "https://github.com/taskcluster/taskcluster/commit/a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "commiter_name": "renovate-bot",
@@ -3364,7 +4714,7 @@
       "yarn.lock"
     ]
   },
-  "144": {
+  "191": {
     "sha": "eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "url": "https://github.com/taskcluster/taskcluster/commit/eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "commiter_name": "djmitche",
@@ -3382,7 +4732,7 @@
       "services/references/src/main.js"
     ]
   },
-  "145": {
+  "192": {
     "sha": "2926da3c9b179899ce1f4b084cb80d29359bccde",
     "url": "https://github.com/taskcluster/taskcluster/commit/2926da3c9b179899ce1f4b084cb80d29359bccde",
     "commiter_name": "djmitche",
@@ -3394,7 +4744,7 @@
       "test/meta_test.js"
     ]
   },
-  "146": {
+  "193": {
     "sha": "a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "url": "https://github.com/taskcluster/taskcluster/commit/a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "commiter_name": "djmitche",
@@ -3442,7 +4792,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "147": {
+  "194": {
     "sha": "b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "url": "https://github.com/taskcluster/taskcluster/commit/b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "commiter_name": "djmitche",
@@ -3456,7 +4806,7 @@
       "infrastructure/terraform/LICENSE"
     ]
   },
-  "148": {
+  "195": {
     "sha": "a263ab914e5684c0ea3a538040e4814515c90329",
     "url": "https://github.com/taskcluster/taskcluster/commit/a263ab914e5684c0ea3a538040e4814515c90329",
     "commiter_name": "djmitche",
@@ -3508,7 +4858,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "149": {
+  "196": {
     "sha": "39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "url": "https://github.com/taskcluster/taskcluster/commit/39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "commiter_name": "djmitche",
@@ -3519,7 +4869,7 @@
       ".taskcluster.yml"
     ]
   },
-  "150": {
+  "197": {
     "sha": "1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "url": "https://github.com/taskcluster/taskcluster/commit/1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "commiter_name": "djmitche",
@@ -3530,7 +4880,7 @@
       "services/references/package.json"
     ]
   },
-  "151": {
+  "198": {
     "sha": "158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "url": "https://github.com/taskcluster/taskcluster/commit/158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "commiter_name": "djmitche",
@@ -3707,7 +5057,7 @@
       "services/references/test/mocha.opts"
     ]
   },
-  "152": {
+  "199": {
     "sha": "8da6f9a0a314111d1bfa71428f1175920679dce9",
     "url": "https://github.com/taskcluster/taskcluster/commit/8da6f9a0a314111d1bfa71428f1175920679dce9",
     "commiter_name": "djmitche",
@@ -3724,7 +5074,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "153": {
+  "200": {
     "sha": "7073e919271708b5394c2abb42382306c928e63a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7073e919271708b5394c2abb42382306c928e63a",
     "commiter_name": "djmitche",
@@ -3736,7 +5086,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "154": {
+  "201": {
     "sha": "61bb37c2ce4648aa0534037caf968ba1897c4919",
     "url": "https://github.com/taskcluster/taskcluster/commit/61bb37c2ce4648aa0534037caf968ba1897c4919",
     "commiter_name": "djmitche",
@@ -3748,7 +5098,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "155": {
+  "202": {
     "sha": "38504daf3872070523aac7abce819b4eeb928b87",
     "url": "https://github.com/taskcluster/taskcluster/commit/38504daf3872070523aac7abce819b4eeb928b87",
     "commiter_name": "imbstack",
@@ -3763,7 +5113,7 @@
       "services/references/schemas/manifest-v2.yml"
     ]
   },
-  "156": {
+  "203": {
     "sha": "0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "commiter_name": "djmitche",
@@ -3949,7 +5299,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "157": {
+  "204": {
     "sha": "998899df571454e9de69f902a17daf36a3144618",
     "url": "https://github.com/taskcluster/taskcluster/commit/998899df571454e9de69f902a17daf36a3144618",
     "commiter_name": "djmitche",
@@ -3960,7 +5310,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "158": {
+  "205": {
     "sha": "c57689bf42a4cf06dba531ae86e35224219803c6",
     "url": "https://github.com/taskcluster/taskcluster/commit/c57689bf42a4cf06dba531ae86e35224219803c6",
     "commiter_name": "djmitche",
@@ -3971,7 +5321,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "159": {
+  "206": {
     "sha": "190f0dc3c179383b0298fc552f237df4d45f42aa",
     "url": "https://github.com/taskcluster/taskcluster/commit/190f0dc3c179383b0298fc552f237df4d45f42aa",
     "commiter_name": "ccooper",
@@ -3984,7 +5334,7 @@
       "services/references/LICENSE"
     ]
   },
-  "160": {
+  "207": {
     "sha": "f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "url": "https://github.com/taskcluster/taskcluster/commit/f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "commiter_name": "djmitche",
@@ -3999,7 +5349,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "161": {
+  "208": {
     "sha": "3237de63cef974dfb4ec21735411e81a173469da",
     "url": "https://github.com/taskcluster/taskcluster/commit/3237de63cef974dfb4ec21735411e81a173469da",
     "commiter_name": "djmitche",
@@ -4011,7 +5361,7 @@
       "services/references/README.md"
     ]
   },
-  "162": {
+  "209": {
     "sha": "9d4639e02eea9a27a70664db50da3d6c39dff742",
     "url": "https://github.com/taskcluster/taskcluster/commit/9d4639e02eea9a27a70664db50da3d6c39dff742",
     "commiter_name": "djmitche",
@@ -4025,7 +5375,7 @@
       "services/references/test/load_test.js"
     ]
   },
-  "163": {
+  "210": {
     "sha": "3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "url": "https://github.com/taskcluster/taskcluster/commit/3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "commiter_name": "djmitche",
@@ -4044,7 +5394,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "164": {
+  "211": {
     "sha": "b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "commiter_name": "djmitche",
@@ -4055,7 +5405,7 @@
       "services/references/schemas/manifest.yml"
     ]
   },
-  "165": {
+  "212": {
     "sha": "e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "url": "https://github.com/taskcluster/taskcluster/commit/e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "commiter_name": "djmitche",
@@ -4070,7 +5420,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "166": {
+  "213": {
     "sha": "0490184a91391efa3f01c5dbace65e87db9c8f20",
     "url": "https://github.com/taskcluster/taskcluster/commit/0490184a91391efa3f01c5dbace65e87db9c8f20",
     "commiter_name": "djmitche",
@@ -4081,7 +5431,7 @@
       "services/references/Dockerfile"
     ]
   },
-  "167": {
+  "214": {
     "sha": "a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "url": "https://github.com/taskcluster/taskcluster/commit/a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "commiter_name": "djmitche",
@@ -4093,7 +5443,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "168": {
+  "215": {
     "sha": "1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "url": "https://github.com/taskcluster/taskcluster/commit/1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "commiter_name": "djmitche",
@@ -4106,7 +5456,7 @@
       "services/references/nginx-site.conf"
     ]
   },
-  "169": {
+  "216": {
     "sha": "67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "url": "https://github.com/taskcluster/taskcluster/commit/67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "commiter_name": "djmitche",
@@ -4117,7 +5467,7 @@
       "services/references/.taskcluster.yml"
     ]
   },
-  "170": {
+  "217": {
     "sha": "7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "commiter_name": "djmitche",
@@ -4128,7 +5478,7 @@
       "services/references/README.md"
     ]
   },
-  "171": {
+  "218": {
     "sha": "30401b64459da526c3ce11def5fc93d50035094e",
     "url": "https://github.com/taskcluster/taskcluster/commit/30401b64459da526c3ce11def5fc93d50035094e",
     "commiter_name": "djmitche",
@@ -4142,7 +5492,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "172": {
+  "219": {
     "sha": "e84021107115016d5c0023fb18ea7726b5f8beab",
     "url": "https://github.com/taskcluster/taskcluster/commit/e84021107115016d5c0023fb18ea7726b5f8beab",
     "commiter_name": "djmitche",
@@ -4159,7 +5509,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "173": {
+  "220": {
     "sha": "d6402324224cd7173edbd87c51a2e310930268df",
     "url": "https://github.com/taskcluster/taskcluster/commit/d6402324224cd7173edbd87c51a2e310930268df",
     "commiter_name": "djmitche",
@@ -4172,7 +5522,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "174": {
+  "221": {
     "sha": "fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "url": "https://github.com/taskcluster/taskcluster/commit/fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "commiter_name": "djmitche",
@@ -4190,7 +5540,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "175": {
+  "222": {
     "sha": "8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "commiter_name": "djmitche",
@@ -4210,7 +5560,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "176": {
+  "223": {
     "sha": "9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "url": "https://github.com/taskcluster/taskcluster/commit/9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "commiter_name": "owlishDeveloper",
@@ -4221,7 +5571,7 @@
       "services/github/src/handlers.js"
     ]
   },
-  "177": {
+  "224": {
     "sha": "fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "commiter_name": "djmitche",
@@ -4232,7 +5582,7 @@
       "libraries/references/package.json"
     ]
   },
-  "178": {
+  "225": {
     "sha": "6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "url": "https://github.com/taskcluster/taskcluster/commit/6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "commiter_name": "djmitche",
@@ -4243,7 +5593,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "179": {
+  "226": {
     "sha": "2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "url": "https://github.com/taskcluster/taskcluster/commit/2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "commiter_name": "djmitche",
@@ -4254,7 +5604,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "180": {
+  "227": {
     "sha": "ce1c231b06efceebebeda268a127d73a4333b987",
     "url": "https://github.com/taskcluster/taskcluster/commit/ce1c231b06efceebebeda268a127d73a4333b987",
     "commiter_name": "djmitche",
@@ -4265,7 +5615,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "181": {
+  "228": {
     "sha": "5e97e64a746049de3d7b66e60140664d353fbb2b",
     "url": "https://github.com/taskcluster/taskcluster/commit/5e97e64a746049de3d7b66e60140664d353fbb2b",
     "commiter_name": "renovate[bot]",
@@ -4277,7 +5627,7 @@
       "yarn.lock"
     ]
   },
-  "182": {
+  "229": {
     "sha": "7716154f7b5a914bcd10d7390989178072370c97",
     "url": "https://github.com/taskcluster/taskcluster/commit/7716154f7b5a914bcd10d7390989178072370c97",
     "commiter_name": "renovate[bot]",
@@ -4289,7 +5639,7 @@
       "yarn.lock"
     ]
   },
-  "183": {
+  "230": {
     "sha": "c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "url": "https://github.com/taskcluster/taskcluster/commit/c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "commiter_name": "renovate[bot]",
@@ -4301,7 +5651,7 @@
       "yarn.lock"
     ]
   },
-  "184": {
+  "231": {
     "sha": "3de3082db222232d9c420c88305140d8c0bff305",
     "url": "https://github.com/taskcluster/taskcluster/commit/3de3082db222232d9c420c88305140d8c0bff305",
     "commiter_name": "djmitche",
@@ -4313,7 +5663,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "185": {
+  "232": {
     "sha": "25e72b7bb35df99f945718093e89ae71da95b429",
     "url": "https://github.com/taskcluster/taskcluster/commit/25e72b7bb35df99f945718093e89ae71da95b429",
     "commiter_name": "djmitche",
@@ -4325,7 +5675,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "186": {
+  "233": {
     "sha": "c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "url": "https://github.com/taskcluster/taskcluster/commit/c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "commiter_name": "djmitche",
@@ -4337,7 +5687,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "187": {
+  "234": {
     "sha": "8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "commiter_name": "owlishDeveloper",
@@ -4349,7 +5699,7 @@
       "services/web-server/package.json"
     ]
   },
-  "188": {
+  "235": {
     "sha": "63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "url": "https://github.com/taskcluster/taskcluster/commit/63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "commiter_name": "owlishDeveloper",
@@ -4368,7 +5718,7 @@
       "yarn.lock"
     ]
   },
-  "189": {
+  "236": {
     "sha": "0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "url": "https://github.com/taskcluster/taskcluster/commit/0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "commiter_name": "djmitche",
@@ -4379,7 +5729,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "190": {
+  "237": {
     "sha": "cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "url": "https://github.com/taskcluster/taskcluster/commit/cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "commiter_name": "djmitche",
@@ -4391,7 +5741,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "191": {
+  "238": {
     "sha": "38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "url": "https://github.com/taskcluster/taskcluster/commit/38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "commiter_name": "owlishDeveloper",
@@ -4492,7 +5842,7 @@
       "yarn.lock"
     ]
   },
-  "192": {
+  "239": {
     "sha": "6920c209219ee2d28130f9d36e24507be86d7c28",
     "url": "https://github.com/taskcluster/taskcluster/commit/6920c209219ee2d28130f9d36e24507be86d7c28",
     "commiter_name": "djmitche",
@@ -4503,7 +5853,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "193": {
+  "240": {
     "sha": "70ad6b427043f69e28f9cb6aaef534151b13383c",
     "url": "https://github.com/taskcluster/taskcluster/commit/70ad6b427043f69e28f9cb6aaef534151b13383c",
     "commiter_name": "djmitche",
@@ -4516,7 +5866,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "194": {
+  "241": {
     "sha": "f67c857131a9ef118b56c43d89f173dee62f2512",
     "url": "https://github.com/taskcluster/taskcluster/commit/f67c857131a9ef118b56c43d89f173dee62f2512",
     "commiter_name": "owlishDeveloper",
@@ -4653,7 +6003,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "195": {
+  "242": {
     "sha": "e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "url": "https://github.com/taskcluster/taskcluster/commit/e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "commiter_name": "djmitche",
@@ -4664,7 +6014,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "196": {
+  "243": {
     "sha": "4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "url": "https://github.com/taskcluster/taskcluster/commit/4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "commiter_name": "djmitche",
@@ -4675,7 +6025,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "197": {
+  "244": {
     "sha": "49b961bb95ce8671fd9a54543694acab9ef548d7",
     "url": "https://github.com/taskcluster/taskcluster/commit/49b961bb95ce8671fd9a54543694acab9ef548d7",
     "commiter_name": "djmitche",
@@ -4686,7 +6036,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "198": {
+  "245": {
     "sha": "fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "url": "https://github.com/taskcluster/taskcluster/commit/fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "commiter_name": "owlishDeveloper",
@@ -4698,7 +6048,7 @@
       "services/github/test/handler_test.js"
     ]
   },
-  "199": {
+  "246": {
     "sha": "98c16d0320d16f8d284a82d36c792e192e389664",
     "url": "https://github.com/taskcluster/taskcluster/commit/98c16d0320d16f8d284a82d36c792e192e389664",
     "commiter_name": "djmitche",
@@ -4709,7 +6059,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "200": {
+  "247": {
     "sha": "d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "url": "https://github.com/taskcluster/taskcluster/commit/d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "commiter_name": "djmitche",
@@ -4720,7 +6070,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "201": {
+  "248": {
     "sha": "1a224a54c17fe7871c39b56e185268082623760f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1a224a54c17fe7871c39b56e185268082623760f",
     "commiter_name": "djmitche",
@@ -4849,7 +6199,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "202": {
+  "249": {
     "sha": "3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "url": "https://github.com/taskcluster/taskcluster/commit/3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "commiter_name": "djmitche",
@@ -4861,7 +6211,7 @@
       "libraries/references/test/validate_test.js"
     ]
   },
-  "203": {
+  "250": {
     "sha": "6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "url": "https://github.com/taskcluster/taskcluster/commit/6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "commiter_name": "djmitche",
@@ -4985,7 +6335,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "204": {
+  "251": {
     "sha": "4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "url": "https://github.com/taskcluster/taskcluster/commit/4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "commiter_name": "djmitche",
@@ -4999,7 +6349,7 @@
       "libraries/references/test/metaschema_test.js"
     ]
   },
-  "205": {
+  "252": {
     "sha": "d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "commiter_name": "Biboswan",
@@ -5012,7 +6362,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "206": {
+  "253": {
     "sha": "70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "url": "https://github.com/taskcluster/taskcluster/commit/70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "commiter_name": "djmitche",
@@ -5023,7 +6373,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "207": {
+  "254": {
     "sha": "4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "url": "https://github.com/taskcluster/taskcluster/commit/4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "commiter_name": "djmitche",
@@ -5037,7 +6387,7 @@
       "infrastructure/builder/test/formats/tf_json_test.js"
     ]
   },
-  "208": {
+  "255": {
     "sha": "fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "commiter_name": "djmitche",
@@ -5048,7 +6398,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "209": {
+  "256": {
     "sha": "49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "url": "https://github.com/taskcluster/taskcluster/commit/49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "commiter_name": "djmitche",
@@ -5062,7 +6412,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "210": {
+  "257": {
     "sha": "65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "url": "https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "commiter_name": "djmitche",
@@ -5073,7 +6423,7 @@
       "package.json"
     ]
   },
-  "211": {
+  "258": {
     "sha": "cb01a41a19567239c3796b541111cff500117927",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb01a41a19567239c3796b541111cff500117927",
     "commiter_name": "imbstack",
@@ -5084,7 +6434,7 @@
       "package.json"
     ]
   },
-  "212": {
+  "259": {
     "sha": "837bc03478191928c019b36b2cd1a8360c242427",
     "url": "https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427",
     "commiter_name": "djmitche",
@@ -5096,7 +6446,7 @@
       "yarn.lock"
     ]
   },
-  "213": {
+  "260": {
     "sha": "d3336686210d98db119e5640c574dc62f2ca0237",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237",
     "commiter_name": "djmitche",
@@ -5107,7 +6457,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "214": {
+  "261": {
     "sha": "fcfa98088751a39ddc8707445a476158f2f118e3",
     "url": "https://github.com/taskcluster/taskcluster/commit/fcfa98088751a39ddc8707445a476158f2f118e3",
     "commiter_name": "arshadkazmi42",
@@ -5120,7 +6470,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "215": {
+  "262": {
     "sha": "e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "url": "https://github.com/taskcluster/taskcluster/commit/e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "commiter_name": "renovate-bot",
@@ -5132,7 +6482,7 @@
       "yarn.lock"
     ]
   },
-  "216": {
+  "263": {
     "sha": "68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "url": "https://github.com/taskcluster/taskcluster/commit/68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "commiter_name": "djmitche",
@@ -5143,7 +6493,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "217": {
+  "264": {
     "sha": "7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "commiter_name": "imbstack",
@@ -5154,7 +6504,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "218": {
+  "265": {
     "sha": "01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "url": "https://github.com/taskcluster/taskcluster/commit/01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "commiter_name": "imbstack",
@@ -5165,7 +6515,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "219": {
+  "266": {
     "sha": "83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "commiter_name": "imbstack",
@@ -5176,7 +6526,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "220": {
+  "267": {
     "sha": "13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "url": "https://github.com/taskcluster/taskcluster/commit/13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "commiter_name": "imbstack",
@@ -5187,7 +6537,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "221": {
+  "268": {
     "sha": "05c9871d6131e99147e0874dfe1de8f19541ace4",
     "url": "https://github.com/taskcluster/taskcluster/commit/05c9871d6131e99147e0874dfe1de8f19541ace4",
     "commiter_name": "owlishDeveloper",
@@ -5198,7 +6548,7 @@
       "README.md"
     ]
   },
-  "222": {
+  "269": {
     "sha": "7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "commiter_name": "imbstack",
@@ -5219,7 +6569,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "223": {
+  "270": {
     "sha": "756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "url": "https://github.com/taskcluster/taskcluster/commit/756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "commiter_name": "djmitche",
@@ -5230,7 +6580,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "224": {
+  "271": {
     "sha": "265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "url": "https://github.com/taskcluster/taskcluster/commit/265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "commiter_name": "djmitche",
@@ -5241,7 +6591,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "225": {
+  "272": {
     "sha": "0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "commiter_name": "Biboswan",
@@ -5272,7 +6622,7 @@
       "yarn.lock"
     ]
   },
-  "226": {
+  "273": {
     "sha": "0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "url": "https://github.com/taskcluster/taskcluster/commit/0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "commiter_name": "Biboswan",
@@ -5285,7 +6635,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "227": {
+  "274": {
     "sha": "ac25a3592f5b81a50ea2c320662e38f122af5697",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac25a3592f5b81a50ea2c320662e38f122af5697",
     "commiter_name": "djmitche",
@@ -5296,7 +6646,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "228": {
+  "275": {
     "sha": "c2046d13643624bf7463f990c243c7c2dc54d827",
     "url": "https://github.com/taskcluster/taskcluster/commit/c2046d13643624bf7463f990c243c7c2dc54d827",
     "commiter_name": "djmitche",
@@ -5308,7 +6658,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "229": {
+  "276": {
     "sha": "57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "url": "https://github.com/taskcluster/taskcluster/commit/57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "commiter_name": "djmitche",
@@ -5320,7 +6670,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "230": {
+  "277": {
     "sha": "a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "url": "https://github.com/taskcluster/taskcluster/commit/a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "commiter_name": "djmitche",
@@ -5331,7 +6681,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "231": {
+  "278": {
     "sha": "e881636d369651eefc7ef242ecf93a228f142e91",
     "url": "https://github.com/taskcluster/taskcluster/commit/e881636d369651eefc7ef242ecf93a228f142e91",
     "commiter_name": "Biboswan",
@@ -5347,7 +6697,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "232": {
+  "279": {
     "sha": "6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "commiter_name": "djmitche",
@@ -5358,7 +6708,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "233": {
+  "280": {
     "sha": "914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "commiter_name": "djmitche",
@@ -5370,7 +6720,7 @@
       "yarn.lock"
     ]
   },
-  "234": {
+  "281": {
     "sha": "74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "url": "https://github.com/taskcluster/taskcluster/commit/74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "commiter_name": "djmitche",
@@ -5381,7 +6731,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "235": {
+  "282": {
     "sha": "e25fd44af389cd820261c921ca2f496b82220f75",
     "url": "https://github.com/taskcluster/taskcluster/commit/e25fd44af389cd820261c921ca2f496b82220f75",
     "commiter_name": "renovate-bot",
@@ -5393,7 +6743,7 @@
       "yarn.lock"
     ]
   },
-  "236": {
+  "283": {
     "sha": "90279639ab138faa9351d7182c6b54f9fe5614f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90279639ab138faa9351d7182c6b54f9fe5614f7",
     "commiter_name": "djmitche",
@@ -5420,7 +6770,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "237": {
+  "284": {
     "sha": "90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "commiter_name": "renovate-bot",
@@ -5447,7 +6797,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "238": {
+  "285": {
     "sha": "37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "url": "https://github.com/taskcluster/taskcluster/commit/37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "commiter_name": "djmitche",
@@ -5461,7 +6811,7 @@
       "yarn.lock"
     ]
   },
-  "239": {
+  "286": {
     "sha": "f621c39d08983099fdd627d53762c3aef7863efc",
     "url": "https://github.com/taskcluster/taskcluster/commit/f621c39d08983099fdd627d53762c3aef7863efc",
     "commiter_name": "djmitche",
@@ -5472,7 +6822,7 @@
       "services/queue/schemas/v1/post-artifact-request.yml"
     ]
   },
-  "240": {
+  "287": {
     "sha": "e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "url": "https://github.com/taskcluster/taskcluster/commit/e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "commiter_name": "renovate-bot",
@@ -5486,7 +6836,7 @@
       "yarn.lock"
     ]
   },
-  "241": {
+  "288": {
     "sha": "c6216c727c43c975fe278c71fd019f537c914665",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6216c727c43c975fe278c71fd019f537c914665",
     "commiter_name": "djmitche",
@@ -5498,7 +6848,7 @@
       "yarn.lock"
     ]
   },
-  "242": {
+  "289": {
     "sha": "d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "url": "https://github.com/taskcluster/taskcluster/commit/d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "commiter_name": "djmitche",
@@ -5509,7 +6859,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "243": {
+  "290": {
     "sha": "24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "url": "https://github.com/taskcluster/taskcluster/commit/24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "commiter_name": "djmitche",
@@ -5520,7 +6870,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "244": {
+  "291": {
     "sha": "c15284770e22b39e9d916cd61b6de053c975a33d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c15284770e22b39e9d916cd61b6de053c975a33d",
     "commiter_name": "arshadkazmi42",
@@ -5533,7 +6883,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "245": {
+  "292": {
     "sha": "2b50ddc441741b9914af1a039ff81980760a3930",
     "url": "https://github.com/taskcluster/taskcluster/commit/2b50ddc441741b9914af1a039ff81980760a3930",
     "commiter_name": "arshadkazmi42",
@@ -5545,7 +6895,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "246": {
+  "293": {
     "sha": "c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "url": "https://github.com/taskcluster/taskcluster/commit/c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "commiter_name": "djmitche",
@@ -5556,7 +6906,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "247": {
+  "294": {
     "sha": "47401a78f1e276fca5c890701e5f2c2432888bdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/47401a78f1e276fca5c890701e5f2c2432888bdb",
     "commiter_name": "djmitche",
@@ -5567,7 +6917,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "248": {
+  "295": {
     "sha": "ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "url": "https://github.com/taskcluster/taskcluster/commit/ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "commiter_name": "renovate-bot",
@@ -5579,7 +6929,7 @@
       "yarn.lock"
     ]
   },
-  "249": {
+  "296": {
     "sha": "3f0f772cdf633ee65c11b041293cf7281afa8295",
     "url": "https://github.com/taskcluster/taskcluster/commit/3f0f772cdf633ee65c11b041293cf7281afa8295",
     "commiter_name": "Biboswan",
@@ -5590,7 +6940,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "250": {
+  "297": {
     "sha": "d999fad02b641985f96a60d6c114fb46d56a6629",
     "url": "https://github.com/taskcluster/taskcluster/commit/d999fad02b641985f96a60d6c114fb46d56a6629",
     "commiter_name": "Biboswan",
@@ -5603,7 +6953,7 @@
       "libraries/monitor/test/uncaught_test.js"
     ]
   },
-  "251": {
+  "298": {
     "sha": "7464c610cd46f6a330090e05fb76c215bf2c1205",
     "url": "https://github.com/taskcluster/taskcluster/commit/7464c610cd46f6a330090e05fb76c215bf2c1205",
     "commiter_name": "Biboswan",
@@ -5621,7 +6971,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "252": {
+  "299": {
     "sha": "aa822ad2500f47ef295e490856f8c2e28359c512",
     "url": "https://github.com/taskcluster/taskcluster/commit/aa822ad2500f47ef295e490856f8c2e28359c512",
     "commiter_name": "imbstack",
@@ -5637,7 +6987,7 @@
       "yarn.lock"
     ]
   },
-  "253": {
+  "300": {
     "sha": "2937f63065701ffa391121d08d566e35c2b220bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/2937f63065701ffa391121d08d566e35c2b220bb",
     "commiter_name": "renovate-bot",
@@ -5653,7 +7003,7 @@
       "yarn.lock"
     ]
   },
-  "254": {
+  "301": {
     "sha": "d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "url": "https://github.com/taskcluster/taskcluster/commit/d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "commiter_name": "imbstack",
@@ -5667,7 +7017,7 @@
       "yarn.lock"
     ]
   },
-  "255": {
+  "302": {
     "sha": "29c398016463c7b50703cd3224ecde4794703f15",
     "url": "https://github.com/taskcluster/taskcluster/commit/29c398016463c7b50703cd3224ecde4794703f15",
     "commiter_name": "imbstack",
@@ -5679,7 +7029,7 @@
       "yarn.lock"
     ]
   },
-  "256": {
+  "303": {
     "sha": "b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "commiter_name": "imbstack",
@@ -5693,7 +7043,7 @@
       "yarn.lock"
     ]
   },
-  "257": {
+  "304": {
     "sha": "bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "url": "https://github.com/taskcluster/taskcluster/commit/bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "commiter_name": "renovate-bot",
@@ -5707,7 +7057,7 @@
       "yarn.lock"
     ]
   },
-  "258": {
+  "305": {
     "sha": "9159c878868282fad3f75122efed0475649d5441",
     "url": "https://github.com/taskcluster/taskcluster/commit/9159c878868282fad3f75122efed0475649d5441",
     "commiter_name": "renovate-bot",
@@ -5719,7 +7069,7 @@
       "yarn.lock"
     ]
   },
-  "259": {
+  "306": {
     "sha": "0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "commiter_name": "imbstack",
@@ -5731,7 +7081,7 @@
       "yarn.lock"
     ]
   },
-  "260": {
+  "307": {
     "sha": "75fdbf91d771bce53951a92c666ff4b439152f22",
     "url": "https://github.com/taskcluster/taskcluster/commit/75fdbf91d771bce53951a92c666ff4b439152f22",
     "commiter_name": "renovate-bot",
@@ -5743,7 +7093,7 @@
       "yarn.lock"
     ]
   },
-  "261": {
+  "308": {
     "sha": "1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "url": "https://github.com/taskcluster/taskcluster/commit/1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "commiter_name": "imbstack",
@@ -5755,7 +7105,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "262": {
+  "309": {
     "sha": "32874aa462882888bbdba94854e8d8b6edc01dcf",
     "url": "https://github.com/taskcluster/taskcluster/commit/32874aa462882888bbdba94854e8d8b6edc01dcf",
     "commiter_name": "imbstack",
@@ -5767,7 +7117,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "263": {
+  "310": {
     "sha": "acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "url": "https://github.com/taskcluster/taskcluster/commit/acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "commiter_name": "imbstack",
@@ -5778,7 +7128,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "264": {
+  "311": {
     "sha": "13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "commiter_name": "petemoore",
@@ -5789,7 +7139,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "265": {
+  "312": {
     "sha": "69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "url": "https://github.com/taskcluster/taskcluster/commit/69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "commiter_name": "imbstack",
@@ -5801,7 +7151,7 @@
       "yarn.lock"
     ]
   },
-  "266": {
+  "313": {
     "sha": "67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "url": "https://github.com/taskcluster/taskcluster/commit/67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "commiter_name": "imbstack",
@@ -5813,7 +7163,7 @@
       "yarn.lock"
     ]
   },
-  "267": {
+  "314": {
     "sha": "5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "commiter_name": "imbstack",
@@ -5824,7 +7174,7 @@
       "libraries/scopes/src/expressions.js"
     ]
   },
-  "268": {
+  "315": {
     "sha": "c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "commiter_name": "imbstack",
@@ -5837,7 +7187,7 @@
       "yarn.lock"
     ]
   },
-  "269": {
+  "316": {
     "sha": "92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "url": "https://github.com/taskcluster/taskcluster/commit/92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "commiter_name": "imbstack",
@@ -5849,7 +7199,7 @@
       "yarn.lock"
     ]
   },
-  "270": {
+  "317": {
     "sha": "1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "url": "https://github.com/taskcluster/taskcluster/commit/1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "commiter_name": "renovate-bot",

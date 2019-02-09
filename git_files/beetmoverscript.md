@@ -1,7 +1,12 @@
-## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-01-18 16:45:17.996415
+## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-01-25 16:28:26.737752
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|27|MihaiTabara|8.4.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/b26a8dcb800dcf85c7a6c6583ba88307822f1c7e)|2019-02-04 22:07:07
+|26|jfx2006|Bug 1516542 - Add support for .msi to Thunderbird templates (#202)    Bug 1516542 - Add support for .msi to Thunderbird templates    Thunderbird version of bug 1475512      Bug 1516542 - Add support .msi support for Thunderbird    Incorporating suggested changes from pull request #202.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/a10494cbde3cc5509a83d15ec4ff0811d5958c4f)|2019-02-04 18:04:01
+|25|tomprince|Merge pull request #205 from tp-tc/win64-aarch64  Add win64-aarch64 support for partner repacks.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/c1e20a9a233f2095f967875f741ced491bef0528)|2019-01-28 07:00:43
+|24|tomprince|8.4.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/730ebae416b6614ff07d275957d0ddcebc72bf1f)|2019-01-25 22:13:56
+|23|mitchhentges|Merge pull request #206 from mozilla-releng/bug-1522581  Bug 1522581 - Bump max size of zip file to 300MB|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0)|2019-01-25 18:29:36
 |22|mitchhentges|Merge pull request #206 from mozilla-releng/bug-1522581  Bug 1522581 - Bump max size of zip file to 300MB|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0)|2019-01-25 18:29:36
 |21|JohanLorenzo|8.3.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/b74438929aaa119dd6ca3def99cadfb39d6a4559)|2019-01-25 13:25:55
 |20|JohanLorenzo|Bug 1522581 - Bump max size of zip file to 300MB|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/002b073054a74e3f7dd2fcf0faf282e50ab4a942)|2019-01-25 13:11:21

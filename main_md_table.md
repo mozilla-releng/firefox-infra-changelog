@@ -1,167 +1,214 @@
-##  Commits in production - for one day, generated on: 2019-02-04 14:44:10 UTC.
-|	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/autoland.json)	| 
+##  Commits in production - for one day, generated on: 2019-02-08 14:29:09 UTC.
+|	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b7a0772936d3)|Bug 1524358 - document inputs to .taskcluster.yml more deeply r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D18287|dmitchell@mozilla.com|tomprince|2019-02-04 16:01:10|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7fb53ad56f85)|Bug 1524358 - use ownTaskId, instead of as_slugid('decision'), in .taskcluster.yml r=Callek,tomprince  This is a forward-looking change to allow evaluation of .taskcluster.yml in situations where as_slugid is not defined -- such as in the Taskcluster hooks service.  Differential Revision: https://phabricator.services.mozilla.com/D18269|dmitchell@mozilla.com|Callek,tomprince|2019-02-04 16:01:10|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5b3dfdf70126)|Bug 1524358 - get commit message locally, rather than from task parameters r=tomprince  Differential Revision: https://phabricator.services.mozilla.com/D18288|dmitchell@mozilla.com|tomprince|2019-02-04 16:01:10|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e8dc8aa65fbb)|Bug 1525731 - Cleanup taskcluster config for Android tests; r=me,a=test-only  Removing skipped test suites that we have no immediate plans to run, and adding comments and bug pointers for remaining skipped suites.|rmaries@mozilla.com|me,a=test-only|2019-02-07 23:50:14|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3c7c50fba283)|Bug 1515746 - [flake8] Upgrade flake8 and dependencies, r=egao  This bumps flake8 to version 3.7.5.  This also ignores the new lint rules that were added in the new versions. These rules are de-marked via comment so we know that they should be enabled at some point (as opposed to the other rules that are (presumably) ignored intentionally.  Differential Revision: https://phabricator.services.mozilla.com/D18353|ahalberstadt@mozilla.com|egao|2019-02-08 04:46:38|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f96c1460ffc0)|Bug 1515746 - [flake8] Unsupport subdir .flake8 files and use new 'per-file-ignores' config instead, r=egao  This removes all .flake8 files except for the one at the root of the repo. Instead we use the new 'per-file-ignores' config introduced in 3.7. To ignore specific errors in a subdirectory, add a line like this to the root .flake8:  [per-file-ignores]     path/to/subdir/*: E100, F200, ...  The reasons for this change are:  1. Unblock flake8 blacklist (bug 1367092). 2. Simplify configuration and code. 3. Encourage more consistent styling. 4. Improve performance. 5. Greater editor consistency.  Differential Revision: https://phabricator.services.mozilla.com/D18354|ahalberstadt@mozilla.com|egao|2019-02-08 04:46:38|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0b8097689bb5)|Bug 1519472 - [taskgraph] Factor logic for adding a cache in job.common to a new function, r=tomprince  We add caches at various places in common.py. This consolidates the logic into a re-useable function. This is in preparation for adding generic-worker cache support.  This also adds a test. The test is not terribly useful, but I've been looking for an excuse to lay some groundwork for further tests in the 'job' submodule. This will do.  Differential Revision: https://phabricator.services.mozilla.com/D17689|ahalberstadt@mozilla.com|tomprince|2019-02-08 04:48:10|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b6e19a5b0ab9)|Bug 1519472 - [ci] Opt out of caching for generic-worker based Windows builds, r=tomprince  The hosts don't have enough disk space to cache mozilla-central.  Depends on D17689  Differential Revision: https://phabricator.services.mozilla.com/D18738|ahalberstadt@mozilla.com|tomprince|2019-02-08 04:48:10|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2ceeee1915ae)|Bug 1519472 - [taskgraph] Support generic-worker caches in run_task, r=tomprince  This implements support for adding generic-worker caches. As a consequence this also turns on caching for the gecko checkout if present.  Differential Revision: https://phabricator.services.mozilla.com/D17690|ahalberstadt@mozilla.com|tomprince|2019-02-08 04:48:10|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0e6997e8f365)|Bug 1525987: [taskgraph] Allow docker images to not be cached; r=dustin  This allows images to be built on every commit. This is useful for the out-of-tree taskgraph, that builds a docker image with the taskgraph code installed.  Differential Revision: https://phabricator.services.mozilla.com/D19031|mozilla@hocat.ca|dustin|2019-02-08 04:50:35|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0b0101621dcf)|Bug 1525987: [taskgraph] Allow docker images to be indexed as build products; r=dustin  This is useful for the out-of-tree taskgraph code. Downstream products can pin the generated decision task image by revision, rather than contents.  Differential Revision: https://phabricator.services.mozilla.com/D19032|mozilla@hocat.ca|dustin|2019-02-08 04:50:35|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6df68ae82295)|Bug 1523562 [wpt PR 14981] - Use fluxbox as window manager for xvfb in CI (14938), a=testonly  Automatic update from web-platform-tests Use fluxbox as window manager for xvfb in CI (#14981)  --  wpt-commits: 8b4c3d8215517554199d7f35f686be12e69473d5 wpt-pr: 14981 |opoprus@mozilla.com|testonly|2019-02-08 12:13:44|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48e765f7795c)|Bug 1523562 [wpt PR 15073] - Add a retry to the initial git checkout, a=testonly  Automatic update from web-platform-tests Add a retry to the initial git checkout  -- Update docker image  --  wpt-commits: aa94ec995bdf6de55dca6dc51fc83dc0a66c31e9, 68f47dfce55536c861d4e28220de4d296a5472c7 wpt-pr: 15073 |opoprus@mozilla.com|testonly|2019-02-08 12:13:44|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c55f99389f89)|Bug 1523562 [wpt PR 15074] - Enable full logging for verify runs on taskcluster, a=testonly  Automatic update from web-platform-tests Enable full logging for verify runs on taskcluster  --  wpt-commits: c456b7df5d0978d1036399dbb50cdcbc2517c825 wpt-pr: 15074 |opoprus@mozilla.com|testonly|2019-02-08 12:13:44|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=22ca3a5f976f)|Backed out changeset 8d7c099bbe0d (bug 1522111) for breaking SETA job schedule optimization. a=backout|archaeopteryx@coole-files.de|backout|2019-02-08 12:29:55|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4bc31addf415)|Backed out 3 changesets (bug 1519472) for causing wrench bustages and as requested by pmoore. a=backout  Backed out changeset 2ceeee1915ae (bug 1519472) Backed out changeset b6e19a5b0ab9 (bug 1519472) Backed out changeset 0b8097689bb5 (bug 1519472)|csabou@mozilla.com|backout|2019-02-08 13:29:38|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1b7218a030c6)|Merge mozilla-central to autoland.|csabou@mozilla.com||2019-02-08 13:29:38|
 
-|	balrogscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/balrogscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/balrogscript.json)	| 
+|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)|FIC - BOT|Self Generated| - |
+
+|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)|FIC - BOT|Self Generated| - |
+
+|	mozilla-beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)|FIC - BOT|Self Generated| - |
+
+|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e8dc8aa65fbb)|Bug 1525731 - Cleanup taskcluster config for Android tests; r=me,a=test-only  Removing skipped test suites that we have no immediate plans to run, and adding comments and bug pointers for remaining skipped suites.|rmaries@mozilla.com|me,a=test-only|2019-02-07 23:44:23|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3c7c50fba283)|Bug 1515746 - [flake8] Upgrade flake8 and dependencies, r=egao  This bumps flake8 to version 3.7.5.  This also ignores the new lint rules that were added in the new versions. These rules are de-marked via comment so we know that they should be enabled at some point (as opposed to the other rules that are (presumably) ignored intentionally.  Differential Revision: https://phabricator.services.mozilla.com/D18353|opoprus@mozilla.com|egao|2019-02-08 11:49:17|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f96c1460ffc0)|Bug 1515746 - [flake8] Unsupport subdir .flake8 files and use new 'per-file-ignores' config instead, r=egao  This removes all .flake8 files except for the one at the root of the repo. Instead we use the new 'per-file-ignores' config introduced in 3.7. To ignore specific errors in a subdirectory, add a line like this to the root .flake8:  [per-file-ignores]     path/to/subdir/*: E100, F200, ...  The reasons for this change are:  1. Unblock flake8 blacklist (bug 1367092). 2. Simplify configuration and code. 3. Encourage more consistent styling. 4. Improve performance. 5. Greater editor consistency.  Differential Revision: https://phabricator.services.mozilla.com/D18354|opoprus@mozilla.com|egao|2019-02-08 11:49:17|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0b8097689bb5)|Bug 1519472 - [taskgraph] Factor logic for adding a cache in job.common to a new function, r=tomprince  We add caches at various places in common.py. This consolidates the logic into a re-useable function. This is in preparation for adding generic-worker cache support.  This also adds a test. The test is not terribly useful, but I've been looking for an excuse to lay some groundwork for further tests in the 'job' submodule. This will do.  Differential Revision: https://phabricator.services.mozilla.com/D17689|opoprus@mozilla.com|tomprince|2019-02-08 11:49:17|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b6e19a5b0ab9)|Bug 1519472 - [ci] Opt out of caching for generic-worker based Windows builds, r=tomprince  The hosts don't have enough disk space to cache mozilla-central.  Depends on D17689  Differential Revision: https://phabricator.services.mozilla.com/D18738|opoprus@mozilla.com|tomprince|2019-02-08 11:49:17|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2ceeee1915ae)|Bug 1519472 - [taskgraph] Support generic-worker caches in run_task, r=tomprince  This implements support for adding generic-worker caches. As a consequence this also turns on caching for the gecko checkout if present.  Differential Revision: https://phabricator.services.mozilla.com/D17690|opoprus@mozilla.com|tomprince|2019-02-08 11:49:17|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0e6997e8f365)|Bug 1525987: [taskgraph] Allow docker images to not be cached; r=dustin  This allows images to be built on every commit. This is useful for the out-of-tree taskgraph, that builds a docker image with the taskgraph code installed.  Differential Revision: https://phabricator.services.mozilla.com/D19031|opoprus@mozilla.com|dustin|2019-02-08 11:49:17|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0b0101621dcf)|Bug 1525987: [taskgraph] Allow docker images to be indexed as build products; r=dustin  This is useful for the out-of-tree taskgraph code. Downstream products can pin the generated decision task image by revision, rather than contents.  Differential Revision: https://phabricator.services.mozilla.com/D19032|opoprus@mozilla.com|dustin|2019-02-08 11:49:17|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6df68ae82295)|Bug 1523562 [wpt PR 14981] - Use fluxbox as window manager for xvfb in CI (14938), a=testonly  Automatic update from web-platform-tests Use fluxbox as window manager for xvfb in CI (#14981)  --  wpt-commits: 8b4c3d8215517554199d7f35f686be12e69473d5 wpt-pr: 14981 |opoprus@mozilla.com|testonly|2019-02-08 11:55:14|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=48e765f7795c)|Bug 1523562 [wpt PR 15073] - Add a retry to the initial git checkout, a=testonly  Automatic update from web-platform-tests Add a retry to the initial git checkout  -- Update docker image  --  wpt-commits: aa94ec995bdf6de55dca6dc51fc83dc0a66c31e9, 68f47dfce55536c861d4e28220de4d296a5472c7 wpt-pr: 15073 |opoprus@mozilla.com|testonly|2019-02-08 11:55:14|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c55f99389f89)|Bug 1523562 [wpt PR 15074] - Enable full logging for verify runs on taskcluster, a=testonly  Automatic update from web-platform-tests Enable full logging for verify runs on taskcluster  --  wpt-commits: c456b7df5d0978d1036399dbb50cdcbc2517c825 wpt-pr: 15074 |opoprus@mozilla.com|testonly|2019-02-08 11:55:14|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=22ca3a5f976f)|Backed out changeset 8d7c099bbe0d (bug 1522111) for breaking SETA job schedule optimization. a=backout|archaeopteryx@coole-files.de|backout|2019-02-08 12:26:32|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4bc31addf415)|Backed out 3 changesets (bug 1519472) for causing wrench bustages and as requested by pmoore. a=backout  Backed out changeset 2ceeee1915ae (bug 1519472) Backed out changeset b6e19a5b0ab9 (bug 1519472) Backed out changeset 0b8097689bb5 (bug 1519472)|csabou@mozilla.com|backout|2019-02-08 13:27:42|
+
+|	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e8dc8aa65fbb)|Bug 1525731 - Cleanup taskcluster config for Android tests; r=me,a=test-only  Removing skipped test suites that we have no immediate plans to run, and adding comments and bug pointers for remaining skipped suites.|gbrown@mozilla.com|me,a=test-only|2019-02-07 18:32:50|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6df68ae82295)|Bug 1523562 [wpt PR 14981] - Use fluxbox as window manager for xvfb in CI (14938), a=testonly  Automatic update from web-platform-tests Use fluxbox as window manager for xvfb in CI (#14981)  --  wpt-commits: 8b4c3d8215517554199d7f35f686be12e69473d5 wpt-pr: 14981 |james@hoppipolla.co.uk|testonly|2019-02-08 00:12:57|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=48e765f7795c)|Bug 1523562 [wpt PR 15073] - Add a retry to the initial git checkout, a=testonly  Automatic update from web-platform-tests Add a retry to the initial git checkout  -- Update docker image  --  wpt-commits: aa94ec995bdf6de55dca6dc51fc83dc0a66c31e9, 68f47dfce55536c861d4e28220de4d296a5472c7 wpt-pr: 15073 |james@hoppipolla.co.uk|testonly|2019-02-08 00:12:57|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=c55f99389f89)|Bug 1523562 [wpt PR 15074] - Enable full logging for verify runs on taskcluster, a=testonly  Automatic update from web-platform-tests Enable full logging for verify runs on taskcluster  --  wpt-commits: c456b7df5d0978d1036399dbb50cdcbc2517c825 wpt-pr: 15074 |james@hoppipolla.co.uk|testonly|2019-02-08 00:12:57|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3c7c50fba283)|Bug 1515746 - [flake8] Upgrade flake8 and dependencies, r=egao  This bumps flake8 to version 3.7.5.  This also ignores the new lint rules that were added in the new versions. These rules are de-marked via comment so we know that they should be enabled at some point (as opposed to the other rules that are (presumably) ignored intentionally.  Differential Revision: https://phabricator.services.mozilla.com/D18353|opoprus@mozilla.com|egao|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f96c1460ffc0)|Bug 1515746 - [flake8] Unsupport subdir .flake8 files and use new 'per-file-ignores' config instead, r=egao  This removes all .flake8 files except for the one at the root of the repo. Instead we use the new 'per-file-ignores' config introduced in 3.7. To ignore specific errors in a subdirectory, add a line like this to the root .flake8:  [per-file-ignores]     path/to/subdir/*: E100, F200, ...  The reasons for this change are:  1. Unblock flake8 blacklist (bug 1367092). 2. Simplify configuration and code. 3. Encourage more consistent styling. 4. Improve performance. 5. Greater editor consistency.  Differential Revision: https://phabricator.services.mozilla.com/D18354|opoprus@mozilla.com|egao|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0b8097689bb5)|Bug 1519472 - [taskgraph] Factor logic for adding a cache in job.common to a new function, r=tomprince  We add caches at various places in common.py. This consolidates the logic into a re-useable function. This is in preparation for adding generic-worker cache support.  This also adds a test. The test is not terribly useful, but I've been looking for an excuse to lay some groundwork for further tests in the 'job' submodule. This will do.  Differential Revision: https://phabricator.services.mozilla.com/D17689|opoprus@mozilla.com|tomprince|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b6e19a5b0ab9)|Bug 1519472 - [ci] Opt out of caching for generic-worker based Windows builds, r=tomprince  The hosts don't have enough disk space to cache mozilla-central.  Depends on D17689  Differential Revision: https://phabricator.services.mozilla.com/D18738|opoprus@mozilla.com|tomprince|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2ceeee1915ae)|Bug 1519472 - [taskgraph] Support generic-worker caches in run_task, r=tomprince  This implements support for adding generic-worker caches. As a consequence this also turns on caching for the gecko checkout if present.  Differential Revision: https://phabricator.services.mozilla.com/D17690|opoprus@mozilla.com|tomprince|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0e6997e8f365)|Bug 1525987: [taskgraph] Allow docker images to not be cached; r=dustin  This allows images to be built on every commit. This is useful for the out-of-tree taskgraph, that builds a docker image with the taskgraph code installed.  Differential Revision: https://phabricator.services.mozilla.com/D19031|opoprus@mozilla.com|dustin|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0b0101621dcf)|Bug 1525987: [taskgraph] Allow docker images to be indexed as build products; r=dustin  This is useful for the out-of-tree taskgraph code. Downstream products can pin the generated decision task image by revision, rather than contents.  Differential Revision: https://phabricator.services.mozilla.com/D19032|opoprus@mozilla.com|dustin|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fe34a6921349)|Merge mozilla-central to inbound.  a=merge CLOSED TREE|opoprus@mozilla.com|merge|2019-02-08 12:16:11|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=22ca3a5f976f)|Backed out changeset 8d7c099bbe0d (bug 1522111) for breaking SETA job schedule optimization. a=backout|archaeopteryx@coole-files.de|backout|2019-02-08 12:32:18|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4bc31addf415)|Backed out 3 changesets (bug 1519472) for causing wrench bustages and as requested by pmoore. a=backout  Backed out changeset 2ceeee1915ae (bug 1519472) Backed out changeset b6e19a5b0ab9 (bug 1519472) Backed out changeset 0b8097689bb5 (bug 1519472)|csabou@mozilla.com|backout|2019-02-08 13:30:38|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e3f24df9bdce)|Merge mozilla-central to mozilla-inbound.|csabou@mozilla.com||2019-02-08 13:30:38|
+
+|	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
+|:----------:|:-----------------------:|:--------:| 
+ 
+| Link | Last commit | Author | Reviewer | Deploy time | 
+|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)|FIC - BOT|Self Generated| - |
+
+|	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 
-|	beetmoverscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/beetmoverscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/beetmoverscript.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)|FIC - BOT|Self Generated| - |
 
-|	bouncerscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/bouncerscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/bouncerscript.json)	| 
+|	balrogscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=ecaa5a9d6e3f)|Bug 1522223 - Set UPLOAD_PATH during make check to avoid re-running configure. r=Callek, a=test-only  Differential Revision: https://phabricator.services.mozilla.com/D18140|ryanvm@gmail.com|Callek,|2019-02-04 16:23:16|
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/balrogscript.md)|FIC - BOT|Self Generated| - |
 
-|	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-cloud-tools.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
 
-|	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/build-puppet.json)	| 
+|	beetmoverscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/beetmoverscript.md)|FIC - BOT|Self Generated| - |
 
-|	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/mozapkpublisher.json)	| 
+|	bouncerscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/bouncerscript.md)|FIC - BOT|Self Generated| - |
 
-|	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/OpenCloudConfig.json)	| 
+|	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/bb88114133e1a6e826e06e1d6180e0dda244be61)|Testing generic-worker 12.0.0 / taskcluster-proxy 5.1.0 on  -cu worker types  This change does _not_ affect any production/staging workers for gecko. It only affects generic-worker CI tasks. Commit made with:      ./gecko-try.sh 12.0.0 5.1.0  See https://github.com/taskcluster/generic-worker/blob/e900b0b2ba82ddc793dcd04770e2ed4cad1c3ade/mozilla-try-scripts/gecko-try.sh  deploy: gecko-t-win10-64-cu gecko-t-win7-32-cu|petemoore|N/A|2019-01-31 14:03:11|
-|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/82dfd25bad67536a1a1e0ea4b4c883c4de6935d0)|Testing generic-worker 12.0.0 / taskcluster-proxy 5.1.0 on  -cu worker types  This change does _not_ affect any production/staging workers for gecko. It only affects generic-worker CI tasks. Commit made with:      ./gecko-try.sh 12.0.0 5.1.0  See https://github.com/taskcluster/generic-worker/blob/e900b0b2ba82ddc793dcd04770e2ed4cad1c3ade/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-01-31 13:57:12|
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)|FIC - BOT|Self Generated| - |
 
-|	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushapkscript.json)	| 
+|	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)|FIC - BOT|Self Generated| - |
 
-|	pushsnapscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushsnapscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/pushsnapscript.json)	| 
+|	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)|FIC - BOT|Self Generated| - |
 
-|	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/scriptworker.json)	| 
+|	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)|FIC - BOT|Self Generated| - |
 
-|	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/services.json)	| 
+|	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)|FIC - BOT|Self Generated| - |
 
-|	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/shipitscript.json)	| 
+|	pushsnapscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)|FIC - BOT|Self Generated| - |
 
-|	signingscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signingscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signingscript.json)	| 
+|	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)|FIC - BOT|Self Generated| - |
 
-|	signtool	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signtool.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/signtool.json)	| 
+|	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/mozilla/release-services/commit/334bfb59a9cb55a92022f600bee1e4ed41dc485f)|tooltool/api: fix all flask subcommands|rail|N/A|2019-02-07 20:21:33|
+|[Link](https://github.com/mozilla/release-services/commit/60bc6fbdf7dcee8afa20d3e5ae7193a1d0e95873)|setup: fixing update hooks due to intreehooks needed as setup require (#1854)|garbas|N/A|2019-02-07 19:35:50|
+|[Link](https://github.com/mozilla/release-services/commit/ccf864e32ddf8b462450082d1859b2bb5d93d1d7)|tooltool/api: remove redundant workerType specification (#1855)|garbas|N/A|2019-02-07 17:09:07|
 
-|	taskcluster	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/taskcluster.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/taskcluster.json)	| 
+|	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)|FIC - BOT|Self Generated| - |
 
-|	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/git_files/treescript.json)	| 
+|	signingscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signingscript.md)|FIC - BOT|Self Generated| - |
 
-|	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/autoland.json)	| 
+|	signtool	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/signtool.md)|FIC - BOT|Self Generated| - |
 
-|	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-admin.json)	| 
+|	taskcluster	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/taskcluster/taskcluster/commit/150b40d50c35f9e05685fe72a7ce1774bb173acb)|Merge pull request #191 from djmitche/fix-built-in-workers-startup  Bug 1522307 - fix startup of built-in-workers|djmitche|N/A|2019-02-07 23:19:40|
+|[Link](https://github.com/taskcluster/taskcluster/commit/faf54692367a4eda3934ce95b4bbbad258c9efd6)|Bug 1522307 - fix startup of built-in-workers|djmitche|N/A|2019-02-07 21:28:59|
+|[Link](https://github.com/taskcluster/taskcluster/commit/79ee65e91d30f813285c8425a906a56368b3ba0e)|Merge pull request #189 from djmitche/bug1523807  Bug 1523807 - bring tc-client-web into the monorepo|djmitche|N/A|2019-02-07 16:26:51|
+|[Link](https://github.com/taskcluster/taskcluster/commit/0f16280bf569ae5757cc940830a99bb4bc93baec)|Update README (#190)|helfi92|N/A|2019-02-07 16:06:10|
 
-|	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/ci-configuration.json)	| 
+|	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
-
-|	mozilla-beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-beta.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
-
-|	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-central.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
-
-|	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-inbound.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/taskcluster/taskcluster/commit/ce2f069688a5042716bdd487383871bbafc49a11)|Merge pull request #177 from taskcluster/renovate/eslint-5.x  Update dependency eslint to v5.13.0|djmitche|N/A|2019-02-04 01:03:03|
-|[Link](https://github.com/taskcluster/taskcluster/commit/142f77a64f4dc511cdf77874fc3e9f01416e65a5)|Update dependency eslint to v5.13.0|renovate-bot|N/A|2019-02-04 00:48:42|
-
-|	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelogger/blob/master/hg_files/mozilla-release.json)	| 
-|:----------:|:-----------------------:|:--------:| 
- 
-| Link | Last commit | Author | Reviewer | Deploy time | 
-|:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day..|FIC - BOT|Self Generated| - |
+| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)|FIC - BOT|Self Generated| - |

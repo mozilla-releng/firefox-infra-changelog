@@ -1,8 +1,11 @@
-## REPOSITORY NAME: SHIPITSCRIPT
- CURRENT VERSION: 3.0.0 RELEASED ON WED, 21 NOV 2018 16:33:53 GMT
+## SHIPITSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-01-25 16:28:26.737752
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|15|mitchhentges|Merge pull request #19 from mitchhentges/release-3.1.0  3.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/b7762c589dde16808d83296009f017010264839f)|2019-01-03 19:56:09
+|14|mitchhentges|3.1.0|[URL](https://github.com/mozilla-releng/shipitscript/commit/e1019db21833ca4356101436c6cf4d50d37ac81f)|2019-01-02 18:11:03
+|13|mitchhentges|Merge pull request #18 from mitchhentges/remove-schema-from-config  Removes task schema from example config, adds to default config|[URL](https://github.com/mozilla-releng/shipitscript/commit/af894d0590b12b0b5b76f7e2285eeeef69c5ef30)|2019-01-02 17:11:44
+|12|mitchhentges|Removes task schema from example config, adds to default config|[URL](https://github.com/mozilla-releng/shipitscript/commit/456ce8f3797c22f4a449baa4db76c11b7cd86fa7)|2018-12-24 21:37:25
 |11|rail|Merge pull request #17 from garbas/fix-default-nix-argument  nix: use pkgs as a parameter, use layered docker image|[URL](https://github.com/mozilla-releng/shipitscript/commit/7c5698e73369eaaadeb03e17ab763e3635d7f47f)|2018-12-11 14:08:55
 |10|garbas|nix: use pkgs as a parameter, use layered docker image|[URL](https://github.com/mozilla-releng/shipitscript/commit/121f4dadb55daf3a19eaebbba364d5dbb89e1df1)|2018-12-11 09:49:02
 |9|rail|Merge pull request #16 from rail/nix|[URL](https://github.com/mozilla-releng/shipitscript/commit/348311c6289c13257415a07ac8924798f0fa1826)|2018-12-11 02:05:15
