@@ -1,8 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-BETA
- CURRENT PUSH ID: 10632
+ CURRENT PUSH ID: 10651
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|10634|2019-02-06 22:31:43|Wes Kocher <wkocher@mozilla.com>|Bug 1524911 - Increase the upper limit of retrigger 'times' value from 6 to 100 r=dustin a=NPOTBDifferential Revision: https://phabricator.services.mozilla.com/D18623|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=88cabcb8f0bc
 |10616|2019-02-04 18:57:19|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1524358 - document inputs to .taskcluster.yml more deeply r=tomprince a=lizzardDifferential Revision: https://phabricator.services.mozilla.com/D18287|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=af516292be1c
 |10616|2019-02-04 18:57:19|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1524358 - use ownTaskId, instead of as_slugid('decision'), in .taskcluster.yml r=Callek,tomprince a=lizzardThis is a forward-looking change to allow evaluation of .taskcluster.yml insituations where as_slugid is not defined -- such as in the Taskcluster hooksservice.Differential Revision: https://phabricator.services.mozilla.com/D18269|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=bbbacf423bdc
 |10616|2019-02-04 18:57:19|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1524358 - get commit message locally, rather than from task parameters r=tomprince a=lizzardDifferential Revision: https://phabricator.services.mozilla.com/D18288|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a142aefab93a
