@@ -456,7 +456,6 @@ def compare_versions(version_path, scriptworker_repo, latest_releases):
         return True
 
 
-
 def filter_git_tag_bp(repository_name, repository_team, repository_path):
     """
     Filters out only the data that we need from a commit
@@ -608,7 +607,7 @@ def filter_git_tag(repository_name, repository_team, repository_path):
         .get("configuration")\
         .get("version-path")
     latest_releases = get_version(repository_name, repository_team)
-    if get_version_from_build_puppet(version_path, repository_name) == \
+    if get_version_from_json(repository_name) == \
             latest_releases.get("latest_release").get("version"):
         if LOGGER:
             print("No new changes entered production")
