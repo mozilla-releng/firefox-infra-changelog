@@ -102,11 +102,11 @@ def create_files_for_git(repositories_holder, onerepo):
                                repository_team,
                                repository_type,
                                folders_to_check)
-        # if repositories_holder == "build-puppet":
-        #     create_md_table(repository_name, "git_files")
-        #     create_md_table_for_scriptworkers(repositories_holder)
-        # else:
-        #     create_md_table(repositories_holder, "git_files")
+        if repositories_holder == "build-puppet":
+            create_md_table(repositories_holder, "git_files")
+            create_md_table_for_scriptworkers(repositories_holder)
+        else:
+            create_md_table(repositories_holder, "git_files")
         if LOGGER:
             print("MD table generated successfully")
             print("Finished working on {}".format(repositories_holder))
