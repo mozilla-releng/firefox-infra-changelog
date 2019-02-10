@@ -1,6 +1,7 @@
 import subprocess
 import datetime
 
+subprocess.call(['git', 'checkout', 'auto-generated-files'])
 subprocess.call(['git', 'add', 'git_files/*'])
 subprocess.call(['git', 'add', 'hg_files/*'])
 subprocess.call(['git', 'add', 'main_md_table.md'])
