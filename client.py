@@ -102,11 +102,11 @@ def create_files_for_git(repositories_holder, onerepo):
                                repository_team,
                                repository_type,
                                folders_to_check)
-        # if repositories_holder == "build-puppet":
-        #     create_md_table(repository_name, "git_files")
-        #     create_md_table_for_scriptworkers(repositories_holder)
-        # else:
-        #     create_md_table(repositories_holder, "git_files")
+        if repositories_holder == "build-puppet":
+            create_md_table(repositories_holder, "git_files")
+            create_md_table_for_scriptworkers(repositories_holder)
+        else:
+            create_md_table(repositories_holder, "git_files")
         if LOGGER:
             print("MD table generated successfully")
             print("Finished working on {}".format(repositories_holder))
@@ -382,7 +382,8 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     number = 0
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
-    new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
+    if limit_checker():
+        new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
     for commit in new_commits:
         each_commit = {}
         # if greater than 0 compare a list of what files changed
@@ -420,7 +421,8 @@ def filter_git_commit_keyword(repository_name, repository_path):
     number = 0
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
-    new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
+    if limit_checker():
+        new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
     for commit in new_commits:
         files_changed_by_commit = [x.filename for x in commit.files]
         # if len(files_changed_by_commit) > 0:
@@ -478,7 +480,8 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
         .get("files-to-check")
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
-    new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
+    if limit_checker():
+        new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
     for commit in new_commits:
         each_commit = {}
         switch = False
