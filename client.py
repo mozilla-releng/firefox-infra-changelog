@@ -12,10 +12,12 @@ import requests
 from fic_modules import configuration
 from fic_modules.helper_functions import compare_files, clear_file, \
     get_commit_details, extract_reviewer, remove_chars, filter_strings
+
 from fic_modules.handle_markdowns import create_md_table, \
-    create_md_table_for_scriptworkers, \
+    create_md_for_scriptworkers, \
     generate_markdown_header, \
-    write_main_md_table, generate_main_md_table
+    write_main_md_table, \
+    generate_main_md_table
 
 
 REPO_LIST = []
@@ -92,11 +94,11 @@ def create_files_for_git(repositories_holder, onerepo):
                             CURRENT_DIR,
                             LAST_WEEK,
                             LOGGER)
-            create_md_table_for_scriptworkers(repositories_holder,
-                                              REPOSITORIES,
-                                              CURRENT_DIR,
-                                              LAST_WEEK,
-                                              LOGGER)
+            create_md_for_scriptworkers(repositories_holder,
+                                        REPOSITORIES,
+                                        CURRENT_DIR,
+                                        LAST_WEEK,
+                                        LOGGER)
         else:
             create_md_table(repositories_holder,
                             "git_files",
@@ -135,11 +137,11 @@ def create_files_for_git(repositories_holder, onerepo):
                                 CURRENT_DIR,
                                 LAST_WEEK,
                                 LOGGER)
-                create_md_table_for_scriptworkers(repositories_holder,
-                                                  REPOSITORIES,
-                                                  CURRENT_DIR,
-                                                  LAST_WEEK,
-                                                  LOGGER)
+                create_md_for_scriptworkers(repositories_holder,
+                                            REPOSITORIES,
+                                            CURRENT_DIR,
+                                            LAST_WEEK,
+                                            LOGGER)
             else:
                 create_md_table(repositories_holder,
                                 "git_files",

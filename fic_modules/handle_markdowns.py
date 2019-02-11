@@ -104,11 +104,11 @@ def create_md_table(repository_name,
             print("Json for {} is empty! Skipping!".format(repository_name))
 
 
-def create_md_table_for_scriptworkers(repository_name,
-                                      repositories,
-                                      current_dir,
-                                      last_week,
-                                      logger):
+def create_md_for_scriptworkers(repository_name,
+                                repositories,
+                                current_dir,
+                                last_week,
+                                logger):
     """
     This function creates the markdown table for the scriptworker repositories.
     :param: repositories_name: Expects the name of the repository
