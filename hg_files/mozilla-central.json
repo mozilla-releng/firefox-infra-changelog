@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35520
+    "last_push_id": 35533
   },
   "1": {
     "changeset_number": "35344",
@@ -8777,6 +8777,210 @@
           "taskcluster/taskgraph/test/test_transforms_job.py",
           "taskcluster/taskgraph/transforms/job/common.py",
           "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      }
+    }
+  },
+  "64": {
+    "changeset_number": "35521",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-02-08 18:15:59",
+    "changeset_commits": {
+      "14": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1b7218a030c6",
+        "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland.",
+        "files_changed": [
+          "taskcluster/taskgraph/test/test_transforms_job.py"
+        ]
+      }
+    }
+  },
+  "65": {
+    "changeset_number": "35522",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-02-09 05:34:29",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=45d561eacd00",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1524845 - download data about previous crons, actions in parallel r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19086",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/util.py"
+        ]
+      },
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=93a36a130fec",
+        "commiter_name": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1526205 - set new serviceworkers mochitests (M-sw-e10s) to tier 2 because they don't run on integration (autoland and inbound) r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19119",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      }
+    }
+  },
+  "66": {
+    "changeset_number": "35523",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-02-09 05:36:09",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fe34a6921349",
+        "commiter_name": "Oana Pop Rus <opoprus@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+        "files_changed": [
+          "browser/components/extensions/ParseBreakpadSymbols-worker.js",
+          "browser/components/extensions/ParseNMSymbols-worker.js",
+          "browser/components/extensions/ParseSymbols.jsm",
+          "build/moz.configure/.flake8",
+          "gfx/wr/wrench/reftests/blend/canvas-ref.yaml",
+          "gfx/wr/wrench/reftests/blend/canvas.yaml",
+          "ipc/ipdl/.flake8",
+          "mobile/android/modules/DelayedInit.jsm",
+          "security/manager/.flake8",
+          "testing/firefox-ui/.flake8",
+          "testing/marionette/client/.flake8",
+          "testing/marionette/harness/.flake8",
+          "testing/marionette/puppeteer/.flake8",
+          "testing/mozharness/configs/.flake8"
+        ]
+      },
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e3f24df9bdce",
+        "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound.",
+        "files_changed": [
+          "taskcluster/taskgraph/test/test_transforms_job.py"
+        ]
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=65ed3025c271",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1526113 - Use new treeherder label for Android 7.0 x86_64 tests; r=aryx",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "42": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ff0379deb22c",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Merge inbound to mozilla-central. a=merge",
+        "files_changed": [
+          "js/src/vm/JSScript.cpp",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      }
+    }
+  },
+  "67": {
+    "changeset_number": "35524",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-02-09 11:40:21",
+    "changeset_commits": {
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=439db957d3e2",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525760 - Add a clang-based base toolchains task. r=froydnj\n\nThese are copies of the corresponding gcc-based base toolchain tasks,\nwith FORCE_GCC and the gcc dependency removed.\n\nWe also tweak things a little for those builds to actually end up green.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18903",
+        "files_changed": [
+          "browser/app/no-pie/moz.build",
+          "build/unix/mozconfig.unix",
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6d6ab46f6428",
+        "commiter_name": "shindli <shindli@mozilla.com>",
+        "commit_message": "Backed out changeset 439db957d3e2 (bug 1525760) for linux64 toolchains bustages in toolkit/library/gtest/target CLOSED TREE",
+        "files_changed": [
+          "browser/app/no-pie/moz.build",
+          "build/unix/mozconfig.unix",
+          "taskcluster/ci/build/linux.yml"
+        ]
+      }
+    }
+  },
+  "68": {
+    "changeset_number": "35528",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-10 11:41:47",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cdcbd5b13210",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525760 - Add a clang-based base toolchains task. r=froydnj\n\nThese are copies of the corresponding gcc-based base toolchain tasks,\nwith FORCE_GCC and the gcc dependency removed.\n\nWe also tweak things a little for those builds to actually end up green.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18903",
+        "files_changed": [
+          "browser/app/no-pie/moz.build",
+          "build/unix/mozconfig.unix",
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d6a025216838",
+        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+        "commit_message": "Bug 1394825 - Update minimum clang version to 4.0. r=glandium\n\nlibclang 3.9 has a bug that makes bindgen unable to distinguish some typedefs\nfrom the underlying type, which matters for bug 1523071.\n\nWe have had quite a few workarounds for this bug and I don't really want to add\nmore, since in this case it is non-trivial. I think requiring libclang 4.0+ is\nreasonable at this point.\n\nOf the distros that can't build Firefox out of the box with clang, dropping support\nfor clang 3.9 would only break Ubuntu 14.04 LTS, which support ends April 2019,\nright before we release 67.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18889",
+        "files_changed": [
+          "build/build-clang/clang-3.9-linux64.json",
+          "build/build-clang/clang-4.0-linux64.json",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/scripts/misc/build-clang-3.9-linux.sh",
+          "taskcluster/scripts/misc/build-clang-4.0-linux.sh"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=be2938cc03f3",
+        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+        "commit_message": "Bug 1523071 - Update cbindgen. r=glandium,jwatt\n\nGonna need it to use https://github.com/eqrion/cbindgen/pull/275.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17736\n",
+        "files_changed": [
+          "build/moz.configure/bindgen.configure",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/scripts/misc/build-cbindgen.sh"
+        ]
+      }
+    }
+  },
+  "69": {
+    "changeset_number": "35530",
+    "pusher": "emilio@crisal.io",
+    "date_of_push": "2019-02-10 15:21:33",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1b147d9934f1",
+        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+        "commit_message": "Bug 1525760 - Disable base-toolchains-clang jobs for now. a=ccoroiu r=bustage\n\nFor failing in ways I cannot reason about.\n\nIt hits linker errors sometimes, and in two revisions without any single source\ncode change between them it's green:\n\n  https://treeherder.mozilla.org/#/jobs?repo=mozilla-central&revision=952b928f1605ad5676ae4ccfd41612b34523bae5\n\nAnd red:\n\n  https://treeherder.mozilla.org/#/jobs?repo=autoland&revision=952b928f1605ad5676ae4ccfd41612b34523bae5\n\nAt the same time. Which is quite baffling.\n\nDisable the new jobs on CI for now in order to avoid backing out the whole stack\nof dependent patches (bug 1394825, bug 1523071 and bug 1523140) that landed\nafterwards.\n",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      }
+    }
+  },
+  "70": {
+    "changeset_number": "35531",
+    "pusher": "emilio@crisal.io",
+    "date_of_push": "2019-02-10 15:34:03",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=50309e384ceb",
+        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+        "commit_message": "Bug 1525760 - followup: Make linters happy about a comment. a=ccoroiu r=bustage-fix-bustage\n",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      }
+    }
+  },
+  "71": {
+    "changeset_number": "35533",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-02-10 23:38:44",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=674fa918ee39",
+        "commiter_name": "Razvan Maries <rmaries@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound. a=merge on a CLOSED TREE",
+        "files_changed": [
+          "build/build-clang/clang-3.9-linux64.json",
+          "taskcluster/scripts/misc/build-clang-3.9-linux.sh"
         ]
       }
     }
