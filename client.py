@@ -4,19 +4,19 @@ import json
 import time
 from urllib.request import urlopen
 import os
-from os import listdir
-from os.path import isfile, join
 from datetime import datetime, timedelta
 from github import Github, GithubException
-import git
-from git import Repo
 from dateutil.parser import parse
 import click
 import requests
 from fic_modules import configuration
 from fic_modules.helper_functions import compare_files, clear_file, \
     get_commit_details, extract_reviewer, remove_chars, filter_strings
-from fic_modules.HandleArguments import HandleArgs
+from fic_modules.handle_markdowns import create_md_table, \
+    create_md_table_for_scriptworkers, \
+    generate_markdown_header, \
+    write_main_md_table, generate_main_md_table
+
 
 REPO_LIST = []
 LAST_WEEK = datetime.now() - timedelta(days=14)
@@ -55,22 +55,6 @@ def limit_checker():
             print("Github is down!\n Please try again later...")
 
 
-def create_md_table_for_scriptworkers(repository_name):
-    """
-    This function creates the markdown table for the scriptworker repositories.
-    :param: repositories_name: Expects the name of the repository
-    :return: a call to 'create_md_table' function for each scriptworker
-    repositories
-    """
-    files_to_check = [x for x in REPOSITORIES
-                      .get("Github")
-                      .get(repository_name)
-                      .get("configuration")
-                      .get("files-to-check")]
-    for scriptworker_repo in files_to_check:
-        create_md_table(scriptworker_repo, "git_files")
-
-
 def create_files_for_git(repositories_holder, onerepo):
     """
     Main GIT function. Takes every Git repo from a .json file which is
@@ -103,10 +87,22 @@ def create_files_for_git(repositories_holder, onerepo):
                                repository_type,
                                folders_to_check)
         if repositories_holder == "build-puppet":
-            create_md_table(repositories_holder, "git_files")
-            create_md_table_for_scriptworkers(repositories_holder)
+            create_md_table(repositories_holder,
+                            "git_files",
+                            CURRENT_DIR,
+                            LAST_WEEK,
+                            LOGGER)
+            create_md_table_for_scriptworkers(repositories_holder,
+                                              REPOSITORIES,
+                                              CURRENT_DIR,
+                                              LAST_WEEK,
+                                              LOGGER)
         else:
-            create_md_table(repositories_holder, "git_files")
+            create_md_table(repositories_holder,
+                            "git_files",
+                            CURRENT_DIR,
+                            LAST_WEEK,
+                            LOGGER)
         if LOGGER:
             print("MD table generated successfully")
             print("Finished working on {}".format(repositories_holder))
@@ -134,10 +130,22 @@ def create_files_for_git(repositories_holder, onerepo):
                                    repository_type,
                                    folders_to_check)
             if repository_name == "build-puppet":
-                create_md_table(repository_name, "git_files")
-                create_md_table_for_scriptworkers(repository_name)
+                create_md_table(repositories_holder,
+                                "git_files",
+                                CURRENT_DIR,
+                                LAST_WEEK,
+                                LOGGER)
+                create_md_table_for_scriptworkers(repositories_holder,
+                                                  REPOSITORIES,
+                                                  CURRENT_DIR,
+                                                  LAST_WEEK,
+                                                  LOGGER)
             else:
-                create_md_table(repository_name, "git_files")
+                create_md_table(repositories_holder,
+                                "git_files",
+                                CURRENT_DIR,
+                                LAST_WEEK,
+                                LOGGER)
             if LOGGER:
                 print("MD table generated successfully")
                 print("Finished working on {}".format(repository_name))
@@ -383,7 +391,9 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     if limit_checker():
-        new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
+        new_commits = GIT\
+            .get_repo(repository_path)\
+            .get_commits(since=last_checked)
     for commit in new_commits:
         each_commit = {}
         # if greater than 0 compare a list of what files changed
@@ -422,7 +432,9 @@ def filter_git_commit_keyword(repository_name, repository_path):
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     if limit_checker():
-        new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
+        new_commits = GIT\
+            .get_repo(repository_path)\
+            .get_commits(since=last_checked)
     for commit in new_commits:
         files_changed_by_commit = [x.filename for x in commit.files]
         # if len(files_changed_by_commit) > 0:
@@ -440,16 +452,21 @@ def filter_git_commit_keyword(repository_name, repository_path):
 
 def compare_versions(version_path, scriptworker_repo, latest_releases):
     """
-    checks the version of a scriptworker repo from its changelog, build-puppet and locally saved one against each other
+    Checks the version of a scriptworker repo from its changelog, build-puppet
+    and locally saved one against each other
     :param version_path:
     :param scriptworker_repo:
     :param latest_releases:
     :return:
     """
 
-    version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
+    version_in_puppet = get_version_from_build_puppet(version_path,
+                                                      scriptworker_repo)
+
     last_local_version = get_version_from_json(scriptworker_repo)
-    if version_in_puppet == latest_releases.get("latest_release").get("version"):
+    if version_in_puppet == latest_releases\
+            .get("latest_release")\
+            .get("version"):
         if version_in_puppet != last_local_version:
             return True
         else:
@@ -481,7 +498,8 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     if limit_checker():
-        new_commits = GIT.get_repo(repository_path).get_commits(since=last_checked)
+        new_commits = GIT.get_repo(repository_path)\
+            .get_commits(since=last_checked)
     for commit in new_commits:
         each_commit = {}
         switch = False
@@ -501,7 +519,6 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
             for scriptworkers in pathway:
                 if LOGGER:
                     print("checking repo: ", scriptworkers)
-                number2 = 0
                 if entry in pathway[scriptworkers]:
                     if LOGGER:
                         print(scriptworkers, " needs to be checked.")
@@ -514,11 +531,17 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
                     latest_releases = get_version(scriptworker_repo,
                                                   repository_team)
                     version_comparison_result = \
-                        compare_versions(version_path, scriptworker_repo, latest_releases)
+                        compare_versions(version_path,
+                                         scriptworker_repo,
+                                         latest_releases)
                     if version_comparison_result:
                         switch = True
-                        new_scriptworker_dict = filter_git_scriptworkers(latest_releases, repository_team, scriptworker_repo)
-                        json_writer_git(scriptworker_repo, new_scriptworker_dict)
+                        new_scriptworker_dict = filter_git_scriptworkers(
+                            latest_releases,
+                            repository_team,
+                            scriptworker_repo)
+                        json_writer_git(scriptworker_repo,
+                                        new_scriptworker_dict)
                     else:
                         print("No new changes entered production")
         if switch:
@@ -543,9 +566,9 @@ def filter_git_scriptworkers(latest_releases, repo_team, script_repo):
                           .get("date"),
                           "%Y-%m-%d %H:%M:%S")
     commit_number = 0
-    new_scriptworker_dict = {
-        (int(commit_number)): {"lastChecked": str(datetime.utcnow()),
-                         "last_releases": latest_releases}}
+
+    new_scriptworker_dict = {(int(commit_number)): {"lastChecked": str(datetime.utcnow()), "last_releases": latest_releases}}
+
     new_repo_path = repo_team + script_repo
     for commit2 in GIT.get_repo(new_repo_path).get_commits(
             since=last_local_date):
@@ -577,11 +600,6 @@ def filter_git_tag(repository_name, repository_team, repository_path):
      github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     number = 0
-    version_path = REPOSITORIES\
-        .get("Github")\
-        .get(repository_name)\
-        .get("configuration")\
-        .get("version-path")
     latest_releases = get_version(repository_name, repository_team)
     if get_version_from_json(repository_name) == \
             latest_releases.get("latest_release").get("version"):
@@ -750,95 +768,6 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     json_writer_hg(repository_name, hg_repo_data)
 
 
-def create_md_table(repository_name, path_to_files):
-    """
-    Uses 'repository_name' parameter to generate markdown tables for every
-    json file inside path_to_files parameter.
-    :param repository_name: Used to display the repo name in the title row of
-    the MD table
-    :param path_to_files: Used to store path to json files (git_files,
-    hg_files)
-    :return: MD tables for every json file inside the git_files dir.
-    """
-
-    try:
-        json_data = open(
-            CURRENT_DIR + "/{}/"
-            .format(path_to_files) + "{}.json"
-            .format(repository_name))\
-            .read()
-        # print("JSON: ", json_data)
-        data = json.loads(json_data)
-        # print("JSON Data: ", data)
-        base_table = "| Commit Number | Commiter | Commit " \
-                     "Message | Commit Url | Date | \n" + \
-                     "|:---:|:----:|:---------------------" \
-                     "-------------:|:------:|:----:| \n"
-        tables = {}
-        try:
-            version = data\
-                .get('0')\
-                .get("last_two_releases")\
-                .get("LatestRelease")\
-                .get("version")
-            date = data\
-                .get('0')\
-                .get("last_two_releases")\
-                .get("LatestRelease")\
-                .get("date")
-            md_title = [
-                "Repository name: {}\n Current version: {} released on {}"
-                .format(repository_name, version, date)]
-        except AttributeError:
-            md_title = ["{} commit markdown table since {}"
-                        .format(repository_name, LAST_WEEK)]
-
-        commit_number_list = [key for key in data]
-
-        for repo in md_title:
-            tables[repo] = base_table
-
-        for key in data:
-            commit_number = commit_number_list[-1]
-            try:
-                commit_author = data.get(key).get("commiter_name")
-                commit_author = re.sub("\u0131", "i", commit_author)
-                date = data.get(key).get("commit_date")
-                message = data.get(key).get("commit_message")
-                message = remove_chars(message, "\U0001f60b")
-                message = re.sub("\|", "\|", message)
-                url = data.get(key).get("url")
-
-                row = "|" + commit_number + \
-                      "|" + commit_author + \
-                      "|" + message + \
-                      "|" + "[URL](" + url + ")" + \
-                      "|" + date + "\n"
-
-                del commit_number_list[-1]
-                for repo in tables.keys():
-                    tables[repo] = tables[repo] + row
-            except TypeError:
-                pass
-
-        md_file_name = "{}.md".format(repository_name)
-        md_file = open(CURRENT_DIR + "/{}/".format(path_to_files) +
-                       md_file_name, "w")
-
-        try:
-            for key, value in tables.items():
-                if value != base_table:
-                    md_file.write("## " + key.upper() + "\n\n")
-                    md_file.write(value + "\n\n")
-        except KeyError:
-            pass
-
-        md_file.close()
-    except FileNotFoundError:
-        if LOGGER:
-            print("Json for {} is empty! Skipping!".format(repository_name))
-
-
 def create_hg_md_table(repository_name):
     """
     Uses 'repository_name' parameter to generate markdown tables for every
@@ -930,64 +859,6 @@ def create_hg_md_table(repository_name):
     except FileNotFoundError:
         if LOGGER:
             print("Json for {} is empty! Skipping!".format(repository_name))
-
-
-def generate_main_md_table(path_to_files, days_to_generate=1):
-    """
-    Looks into repositories folders (hg_files & git files),
-    filters the files to load the json's using a passfilter and calls after
-    extraction functions.
-    :param days_to_generate: just a pass by parameter, used in extract json
-    from git/hg and generates for the specified days.
-    :param path_to_files: Folder to json files
-    """
-    successfully_generated = "part from main markdown table was " \
-                             "successfully generated."
-    # Get current folder path.
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-
-    # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(dir_path + "/{}".format(path_to_files)) if
-                  isfile(join(dir_path + "/{}".format(path_to_files), f))]
-    # Pass filter only the ".json" objects
-    json_files = [jf for jf in only_files if ".json" in jf]
-    # Extract data from json_files and writes to main markdown table.
-    if path_to_files == "git_files":
-        extract_json_from_git(json_files, path_to_files, days_to_generate)
-        if LOGGER:
-            print("GIT" + successfully_generated)
-    elif path_to_files == "hg_files":
-        extract_json_from_hg(json_files, path_to_files, days_to_generate)
-        if LOGGER:
-            print("HG" + successfully_generated)
-
-    else:
-        if LOGGER:
-            print("No table was generated!")
-
-
-def write_date_header(file_name, datetime_object):
-    """
-    This function writes a date from a specific datetime object into a file as
-     a date header.
-    :param file_name: name of the file to be written to.
-    :param datetime_object: datetime object used for write to file.
-    :return:
-    """
-    file = open(file_name, "a")
-
-    base_table = "|            | \n" + \
-                 "|:----------:| \n"
-    date_header = "| Generated on: " + \
-                  str(datetime.utcnow()) + \
-                  " and contains modifications from: " + \
-                  str(datetime_object) + \
-                  " |"
-    file.write("\n" + base_table + date_header + "\n")
-    file.close()
-    if LOGGER:
-        print("Generated date header for file:", file_name, " with datestamp",
-              str(datetime.utcnow()))
 
 
 def extract_json_from_git(json_files, path_to_files, days_to_generate):
@@ -1191,67 +1062,6 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                           " for more details.\n")
 
 
-def generate_markdown_header(file_name, repository_name, markdown_link,
-                             json_link):
-    """
-    This function appends the markdown header to the main markdown table.
-    It includes the repository title (name), the markdown link and the json
-    link.
-    :param file_name: name of the file in which the content it's added.
-    :param repository_name: name of the repository for the generated table.
-    :param markdown_link: markdown link for the header table.
-    :param json_link: json link for the header table.
-    :return: none, expected to write to file_name.
-    """
-    file = open(file_name, "a")
-
-    repository_title = "|\t" + repository_name + "\t|\t" + \
-                       "[MarkDown](" + markdown_link + ")" + \
-                       "\t|\t" + "[Json](" + \
-                       json_link + ")" + "\t| \n"
-
-    title_table_formation = "|:----------:|:-----------" \
-                            "------------:|:--------:| \n "
-
-    base_table = "| Link | Last commit | Author | " \
-                 "Reviewer | Deploy time | \n" + \
-                 "|:----------:|:-----------:|:---" \
-                 "---:|:--------:|:-----------:| \n"
-
-    file.write("\n" +
-               repository_title +
-               title_table_formation +
-               "\n" + base_table)
-    file.close()
-
-
-def write_main_md_table(file_name, repository_url, last_commit, author,
-                        reviewer, deploy_time):
-    """
-    This function opens a file (that file should be already created and
-    appends to it a row that will contain the repository, the last commit and
-    the deploy time.
-    :param reviewer: Reviewer name
-    :param author: Author name for the push/commit
-    :param file_name: Name of the file in which the content is appended.
-    (should also contain the path)
-    :param repository_url: Repository url for the first element of the table.
-    :param last_commit: Description of the last commit used as the 2nd element
-     of the table
-    :param deploy_time: Time and Time designator used as the 3rd element of
-    the table
-    :return:
-    """
-    row = "|" + repository_url + \
-          "|" + last_commit + \
-          "|" + author + \
-          "|" + reviewer + \
-          "|" + deploy_time + \
-          "|" + "\n"
-    write_file = open(file_name, "a")
-    write_file.write(row)
-
-
 def get_keys(name):
     """
     :param name:
@@ -1286,22 +1096,26 @@ def cli(git, hg, l, r, d):
 
     if git:
         create_files_for_git(REPOSITORIES, onerepo=False)
-        clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+        clear_file("main_md_table.md", LOGGER, GENERATE_FOR_X_DAYS)
+        generate_main_md_table("hg_files", LOGGER, GENERATE_FOR_X_DAYS)
+        generate_main_md_table("git_files", LOGGER, GENERATE_FOR_X_DAYS)
         click.echo("Script ran in GIT Only mode")
     if hg:
         create_files_for_hg(REPOSITORIES, onerepo=False)
         clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+        generate_main_md_table("hg_files", LOGGER, GENERATE_FOR_X_DAYS)
+        generate_main_md_table("git_files", LOGGER, GENERATE_FOR_X_DAYS)
         click.echo("Script ran in HG Only mode")
     if l:
         logger = True
     if r:
         get_keys("Github")
         get_keys("Mercurial")
-        # for scriptrepo in repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check"):
+        # for scriptrepo in repositories
+        # .get("Github")
+        # .get("build-puppet")
+        # .get("configuration")
+        # .get("files-to-check"):
         #     repoList.append(scriptrepo)
         new_list = []
         while input != "q":
@@ -1319,14 +1133,17 @@ def cli(git, hg, l, r, d):
                     if repository in REPOSITORIES.get("Github"):
                         create_files_for_git(repository, onerepo=True)
                         generate_main_md_table("git_files",
+                                               LOGGER,
                                                GENERATE_FOR_X_DAYS)
                     elif repository in REPOSITORIES.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
                         clear_file("main_md_table.md",
                                    GENERATE_FOR_X_DAYS)
                         generate_main_md_table("hg_files",
+                                               LOGGER,
                                                GENERATE_FOR_X_DAYS)
                         generate_main_md_table("git_files",
+                                               LOGGER,
                                                GENERATE_FOR_X_DAYS)
             try:
                 new_entry = int(user_choice) - 1
@@ -1342,8 +1159,8 @@ def cli(git, hg, l, r, d):
         create_files_for_git(REPOSITORIES, onerepo=False)
         create_files_for_hg(REPOSITORIES, onerepo=False)
         clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+        generate_main_md_table("hg_files", LOGGER, GENERATE_FOR_X_DAYS)
+        generate_main_md_table("git_files", LOGGER, GENERATE_FOR_X_DAYS)
 
 
 if __name__ == "__main__":
@@ -1354,11 +1171,3 @@ if __name__ == "__main__":
     REPOSITORIES_DATA = open("./repositories.json").read()
     REPOSITORIES = json.loads(REPOSITORIES_DATA)
     cli()
-
-    # test_obj = HandleArgs()
-    # try:
-    #     test_obj.input_argument(sys.argv[1])
-    # except IndexError:
-    #     test_obj.input_argument("default")
-    # do_commit()
-

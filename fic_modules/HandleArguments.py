@@ -1,4 +1,15 @@
 class HandleArgs(object):
+    """
+    This class takes an input argument and calls the methods based on the
+    choose argument.
+    UseCase:
+    # test_obj = HandleArgs()
+    # try:
+    #     test_obj.input_argument(sys.argv[1])
+    # except IndexError:
+    #     test_obj.input_argument("default")
+
+    """
     def input_argument(self, argument):
         method_name = "method_" + str(argument).replace("-", "")
         print("Method name is: ", method_name)
