@@ -1,7 +1,20 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-25 16:28:26.737752
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-28 05:23:45.126517
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|330|djmitche|Merge pull request #205 from taskcluster/renovate/got-9.x  Update dependency got to v9|[URL](https://github.com/taskcluster/taskcluster/commit/68c9b94fa94bdf197664520767572f5a40e1eed8)|2019-02-11 03:13:48
+|329|renovate-bot|Update dependency got to v9|[URL](https://github.com/taskcluster/taskcluster/commit/e07c158dd1084ebe3c5b04f7a76a6fdb9ac40215)|2019-02-11 03:11:45
+|328|djmitche|Merge pull request #206 from taskcluster/renovate/tar-fs-2.x  Update dependency tar-fs to v2|[URL](https://github.com/taskcluster/taskcluster/commit/1ec65c9abdde8d03ae869036f6a73e812bd49cdb)|2019-02-11 03:10:21
+|327|renovate-bot|Update dependency tar-fs to v2|[URL](https://github.com/taskcluster/taskcluster/commit/1c6663518f0ec697b52f6fba03c0c0b26519adaa)|2019-02-11 02:49:22
+|326|djmitche|Merge pull request #196 from djmitche/bug1523215  Bug 1523215 - improve index tests|[URL](https://github.com/taskcluster/taskcluster/commit/2546fbda6ab01d3d15870343b13ea26227d2f923)|2019-02-09 14:38:15
+|325|djmitche|Bug 1523215 - parallelize the setup for listing things tests|[URL](https://github.com/taskcluster/taskcluster/commit/c2bde6082450abeed3021bb815d35383f76d6e2d)|2019-02-09 03:01:21
+|324|djmitche|Bug 1523215 - remove race condition in index_test.js|[URL](https://github.com/taskcluster/taskcluster/commit/c3721407c778f8e432cacfd5077a5b440142e650)|2019-02-09 02:52:29
+|323|djmitche|Merge pull request #193 from djmitche/bug1517000  Bug 1517000 - add counts of all fires|[URL](https://github.com/taskcluster/taskcluster/commit/aca7d8de7fb76a880e3473e5c393b1d2b5823591)|2019-02-08 18:44:32
+|322|djmitche|Merge pull request #192 from djmitche/bug1519943  Bug 1519943 - remove utility to display user profiles|[URL](https://github.com/taskcluster/taskcluster/commit/017cb6b9dbc566c6a4e5e79d659315cd12990de6)|2019-02-08 18:27:05
+|321|djmitche|Bug 1517000 - add counts of all fires  This separates the different firedBy options, and also distinguishes task-creation that results in a task from that which results in no task ("declined").  This should allow us to see any spikes in task-creation if, for example, there is abuse of the pulse bindings option.|[URL](https://github.com/taskcluster/taskcluster/commit/2a8b5752f551c49b08518b5aa474de182caf91a7)|2019-02-08 17:56:20
+|320|djmitche|Bug 1519943 - remove utility to display user profiles  This requires "production" auth0 credentials which are easy to leak. There are better ways to determine this information, anyway.|[URL](https://github.com/taskcluster/taskcluster/commit/1d2feff0e94132914987dd533f15585c37077223)|2019-02-08 17:50:30
+|319|djmitche|Merge iFlameing/taskcluster:TaskCluster (PR #183)|[URL](https://github.com/taskcluster/taskcluster/commit/887b4d9ce952992edb734a34208965d8558b29b1)|2019-02-08 15:31:12
+|318|iFlameing|adding test for Task Cluster and Task cluster|[URL](https://github.com/taskcluster/taskcluster/commit/e6582511e34456e381b5c8b3ac3c62f2c8a57b2c)|2019-02-07 20:16:00
 |317|djmitche|Merge pull request #191 from djmitche/fix-built-in-workers-startup  Bug 1522307 - fix startup of built-in-workers|[URL](https://github.com/taskcluster/taskcluster/commit/150b40d50c35f9e05685fe72a7ce1774bb173acb)|2019-02-07 23:19:40
 |316|djmitche|Bug 1522307 - fix startup of built-in-workers|[URL](https://github.com/taskcluster/taskcluster/commit/faf54692367a4eda3934ce95b4bbbad258c9efd6)|2019-02-07 21:28:59
 |315|djmitche|Merge pull request #189 from djmitche/bug1523807  Bug 1523807 - bring tc-client-web into the monorepo|[URL](https://github.com/taskcluster/taskcluster/commit/79ee65e91d30f813285c8425a906a56368b3ba0e)|2019-02-07 16:26:51
