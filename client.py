@@ -1024,7 +1024,7 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                 .replace(" ", "%20")
             repository_title = file.replace(".json", "")
             try:
-                generate_markdown_header("main_md_table.md",
+                generate_markdown_header("changelog.md",
                                          repository_title,
                                          repository_url,
                                          repository_json)
@@ -1046,7 +1046,7 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                         commit_url = "[Link](" + commit_url + ")"
                         author = data.get(commit_number).get("commiter_name")
                         review = "N/A"
-                        write_main_md_table("main_md_table.md",
+                        write_main_md_table("changelog.md",
                                             commit_url,
                                             commit_description,
                                             author,
@@ -1070,7 +1070,7 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                     author = "FIC - BOT"
                     review = "Self Generated"
                     commit_date = " - "
-                    write_main_md_table("main_md_table.md",
+                    write_main_md_table("changelog.md",
                                         commit_url,
                                         commit_description,
                                         author,
@@ -1118,7 +1118,7 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
             repository_title = file.replace(".json", "")
 
             try:
-                generate_markdown_header("main_md_table.md",
+                generate_markdown_header("changelog.md",
                                          repository_title,
                                          repository_url,
                                          repository_json)
@@ -1148,7 +1148,7 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                             commit_url = "[Link](" + commit_url + ")"
                             author = data.get(changeset_iterator).get("pusher")
                             review = extract_reviewer(commit_description)
-                            write_main_md_table("main_md_table.md",
+                            write_main_md_table("changelog.md",
                                                 commit_url,
                                                 commit_description,
                                                 author,
@@ -1172,7 +1172,7 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                     author = "FIC - BOT"
                     review = "Self Generated"
                     commit_date = " - "
-                    write_main_md_table("main_md_table.md",
+                    write_main_md_table("changelog.md",
                                         commit_url,
                                         commit_description,
                                         author,
@@ -1286,13 +1286,13 @@ def cli(git, hg, l, r, d):
 
     if git:
         create_files_for_git(REPOSITORIES, onerepo=False)
-        clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
+        clear_file("changelog.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
         click.echo("Script ran in GIT Only mode")
     if hg:
         create_files_for_hg(REPOSITORIES, onerepo=False)
-        clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
+        clear_file("changelog.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
         click.echo("Script ran in HG Only mode")
@@ -1322,7 +1322,7 @@ def cli(git, hg, l, r, d):
                                                GENERATE_FOR_X_DAYS)
                     elif repository in REPOSITORIES.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
-                        clear_file("main_md_table.md",
+                        clear_file("changelog.md",
                                    GENERATE_FOR_X_DAYS)
                         generate_main_md_table("hg_files",
                                                GENERATE_FOR_X_DAYS)
@@ -1341,7 +1341,7 @@ def cli(git, hg, l, r, d):
     else:
         create_files_for_git(REPOSITORIES, onerepo=False)
         create_files_for_hg(REPOSITORIES, onerepo=False)
-        clear_file("main_md_table.md", GENERATE_FOR_X_DAYS)
+        clear_file("changelog.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
 
