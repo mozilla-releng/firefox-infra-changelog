@@ -1,8 +1,54 @@
 {
   "0": {
-    "lastChecked": "2019-02-11 03:23:45.126517"
+    "lastChecked": "2019-02-12 08:14:20.298325"
   },
   "1": {
+    "sha": "b7c71acd64d624882248f088e83ad8a8a8130add",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/b7c71acd64d624882248f088e83ad8a8a8130add",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1527134 - disable windows update (again)  deploy: gecko-t-win10-64",
+    "commit_date": "2019-02-12 07:52:33",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "2": {
+    "sha": "56d247d42d33af2d3fc9b69dfcb13a30e980e6b5",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/56d247d42d33af2d3fc9b69dfcb13a30e980e6b5",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1522896 - use update gw 11.1.0 with 1803 patch  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2019-02-11 11:12:16",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "3": {
+    "sha": "8353604b9cdff902749945fa1ab2d797a54d1cc8",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/8353604b9cdff902749945fa1ab2d797a54d1cc8",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1522896 - use update gw 11.1.0 with 1803 patch  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2019-02-11 10:38:32",
+    "files_changed": [
+      "ci/update-workertype.sh"
+    ]
+  },
+  "4": {
+    "sha": "933438f76cdb07af6b4f7fd3b8fc034195a66312",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/933438f76cdb07af6b4f7fd3b8fc034195a66312",
+    "commiter_name": "grenade",
+    "commiter_email": "rthijssen@gmail.com",
+    "commit_message": "Bug 1522896 - use update gw 11.1.0 with 1803 patch  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2019-02-11 10:32:15",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "5": {
     "sha": "bb88114133e1a6e826e06e1d6180e0dda244be61",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/bb88114133e1a6e826e06e1d6180e0dda244be61",
     "commiter_name": "petemoore",
@@ -14,7 +60,7 @@
       "userdata/Manifest/gecko-t-win7-32-cu.json"
     ]
   },
-  "2": {
+  "6": {
     "sha": "82dfd25bad67536a1a1e0ea4b4c883c4de6935d0",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/82dfd25bad67536a1a1e0ea4b4c883c4de6935d0",
     "commiter_name": "petemoore",
@@ -34,7 +80,7 @@
       "userdata/Manifest/gecko-t-win7-32-gpu-b.json"
     ]
   },
-  "3": {
+  "7": {
     "sha": "57d62edf39a2ae4c9c0bad55de335b479a8837ec",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/57d62edf39a2ae4c9c0bad55de335b479a8837ec",
     "commiter_name": "grenade",
@@ -45,7 +91,7 @@
       "ci/update-workertype.sh"
     ]
   },
-  "4": {
+  "8": {
     "sha": "3bbaa1c888be00fc307eae5d0ee718d5ec6675e3",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3bbaa1c888be00fc307eae5d0ee718d5ec6675e3",
     "commiter_name": "grenade",
@@ -55,74 +101,6 @@
     "files_changed": [
       "userdata/Manifest/gecko-t-win10-64-alpha.json",
       "userdata/Manifest/gecko-t-win10-64-gpu-a.json"
-    ]
-  },
-  "5": {
-    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "commiter_name": "grenade",
-    "commiter_email": null,
-    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
-    "commit_date": "2018-11-28 17:08:20",
-    "files_changed": [
-      "userdata/Manifest/gecko-t-win10-64-beta.json",
-      "userdata/Manifest/gecko-t-win10-64-cu.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu.json",
-      "userdata/Manifest/gecko-t-win10-64-hw.json",
-      "userdata/Manifest/gecko-t-win10-64-ux.json",
-      "userdata/Manifest/gecko-t-win10-64.json"
-    ]
-  },
-  "6": {
-    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "commiter_name": "grenade",
-    "commiter_email": null,
-    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
-    "commit_date": "2018-11-28 17:08:20",
-    "files_changed": [
-      "userdata/Manifest/gecko-t-win10-64-beta.json",
-      "userdata/Manifest/gecko-t-win10-64-cu.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu.json",
-      "userdata/Manifest/gecko-t-win10-64-hw.json",
-      "userdata/Manifest/gecko-t-win10-64-ux.json",
-      "userdata/Manifest/gecko-t-win10-64.json"
-    ]
-  },
-  "7": {
-    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "commiter_name": "grenade",
-    "commiter_email": null,
-    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
-    "commit_date": "2018-11-28 17:08:20",
-    "files_changed": [
-      "userdata/Manifest/gecko-t-win10-64-beta.json",
-      "userdata/Manifest/gecko-t-win10-64-cu.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu.json",
-      "userdata/Manifest/gecko-t-win10-64-hw.json",
-      "userdata/Manifest/gecko-t-win10-64-ux.json",
-      "userdata/Manifest/gecko-t-win10-64.json"
-    ]
-  },
-  "8": {
-    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "commiter_name": "grenade",
-    "commiter_email": null,
-    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
-    "commit_date": "2018-11-28 17:08:20",
-    "files_changed": [
-      "userdata/Manifest/gecko-t-win10-64-beta.json",
-      "userdata/Manifest/gecko-t-win10-64-cu.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu.json",
-      "userdata/Manifest/gecko-t-win10-64-hw.json",
-      "userdata/Manifest/gecko-t-win10-64-ux.json",
-      "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
   "9": {
@@ -1129,6 +1107,74 @@
     ]
   },
   "68": {
+    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-28 17:08:20",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "69": {
+    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-28 17:08:20",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "70": {
+    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-28 17:08:20",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "71": {
+    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-28 17:08:20",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "72": {
     "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
     "commiter_name": "grenade",
