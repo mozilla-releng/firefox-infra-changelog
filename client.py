@@ -8,8 +8,6 @@ from os import listdir
 from os.path import isfile, join
 from datetime import datetime, timedelta
 from github import Github, GithubException
-import git
-from git import Repo
 from dateutil.parser import parse
 import click
 import requests
@@ -809,6 +807,9 @@ def create_md_table(repository_name, path_to_files):
                 message = re.sub("\|", "\|", message)
                 url = data.get(key).get("url")
 
+                commit_author = filter_strings(commit_author)
+                message = filter_strings(message)
+
                 row = "|" + commit_number + \
                       "|" + commit_author + \
                       "|" + message + \
@@ -1242,6 +1243,10 @@ def write_main_md_table(file_name, repository_url, last_commit, author,
     the table
     :return:
     """
+    last_commit = filter_strings(last_commit)
+    author = filter_strings(author)
+    reviewer = filter_strings(reviewer)
+
     row = "|" + repository_url + \
           "|" + last_commit + \
           "|" + author + \
