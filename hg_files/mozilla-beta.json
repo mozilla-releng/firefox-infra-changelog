@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 10666
+    "last_push_id": 10679
   },
   "1": {
     "changeset_number": "10002",
@@ -41425,6 +41425,21 @@
         "commit_message": "Bug 1524911 - Increase the upper limit of retrigger 'times' value from 6 to 100 r=dustin a=NPOTB\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18623",
         "files_changed": [
           "taskcluster/taskgraph/actions/retrigger.py"
+        ]
+      }
+    }
+  },
+  "64": {
+    "changeset_number": "10671",
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-02-11 16:59:48",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=66570654c0f2",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1525931 - Don't run Raptor on mozilla-release; r=jmaher a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19216",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
         ]
       }
     }

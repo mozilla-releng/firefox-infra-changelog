@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 77848
+    "last_push_id": 77957
   },
   "1": {
     "changeset_number": "35344",
@@ -32101,6 +32101,135 @@
         "files_changed": [
           "taskcluster/ci/test/test-sets.yml",
           "toolkit/content/tests/chrome/chrome.ini"
+        ]
+      }
+    }
+  },
+  "590": {
+    "changeset_number": "77858",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-02-11 12:15:52",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f7716de1fce5",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19338",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      }
+    }
+  },
+  "591": {
+    "changeset_number": "77871",
+    "pusher": "rwood@mozilla.com",
+    "date_of_push": "2019-02-11 16:13:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=68526e6afbd2",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1525931 - Don't run Raptor on mozilla-release; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19216",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      }
+    }
+  },
+  "592": {
+    "changeset_number": "77905",
+    "pusher": "cmanchester@mozilla.com",
+    "date_of_push": "2019-02-11 21:44:56",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5041739e5a5b",
+        "commiter_name": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1525733 - Require rust 1.32 to build. r=firefox-build-system-reviewers,ted\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19244",
+        "files_changed": [
+          "build/moz.configure/rust.configure",
+          "python/mozboot/mozboot/base.py",
+          "taskcluster/ci/build/linux.yml"
+        ]
+      }
+    }
+  },
+  "593": {
+    "changeset_number": "77908",
+    "pusher": "cmanchester@mozilla.com",
+    "date_of_push": "2019-02-11 22:02:08",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9cc8cc20982c",
+        "commiter_name": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1526505 - Update mozharness stats parsing code for per-language stats. r=firefox-build-system-reviewers,ted\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19247",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      }
+    }
+  },
+  "594": {
+    "changeset_number": "77914",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-11 22:28:11",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bb243f4edd88",
+        "commiter_name": "Alok Kumar <ialokkumarsingh0@gmail.com>",
+        "commit_message": "Bug 1492279 - Only fetch target task for actions that require it r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19273",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/add_new_jobs.py",
+          "taskcluster/taskgraph/actions/add_talos.py",
+          "taskcluster/taskgraph/actions/backfill.py",
+          "taskcluster/taskgraph/actions/cancel.py",
+          "taskcluster/taskgraph/actions/cancel_all.py",
+          "taskcluster/taskgraph/actions/create_interactive.py",
+          "taskcluster/taskgraph/actions/gecko_profile.py",
+          "taskcluster/taskgraph/actions/purge_caches.py",
+          "taskcluster/taskgraph/actions/registry.py",
+          "taskcluster/taskgraph/actions/release_promotion.py",
+          "taskcluster/taskgraph/actions/rerun.py",
+          "taskcluster/taskgraph/actions/retrigger.py",
+          "taskcluster/taskgraph/actions/retrigger_mochitest.py",
+          "taskcluster/taskgraph/actions/run_missing_tests.py"
+        ]
+      }
+    }
+  },
+  "595": {
+    "changeset_number": "77930",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-02-12 01:36:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=036604abf1e5",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [taskgraph] Factor logic for adding a cache in job.common to a new function, r=tomprince\n\nWe add caches at various places in common.py. This consolidates the logic into\na re-useable function. This is in preparation for adding generic-worker cache\nsupport.\n\nThis also adds a test. The test is not terribly useful, but I've been looking\nfor an excuse to lay some groundwork for further tests in the 'job' submodule.\nThis will do.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17689",
+        "files_changed": [
+          "taskcluster/taskgraph/test/python.ini",
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/job/common.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2053a035eee6",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [ci] Opt out of caching for generic-worker based Windows builds, r=tomprince\n\nThe hosts don't have enough disk space to cache mozilla-central.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18738",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "taskcluster/taskgraph/transforms/job/run_task.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=887cc76ba189",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [taskgraph] Support generic-worker caches in run_task, r=tomprince\n\nThis implements support for adding generic-worker caches. As a consequence this\nalso turns on caching for the gecko checkout if present.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17690",
+        "files_changed": [
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/job/common.py"
         ]
       }
     }
