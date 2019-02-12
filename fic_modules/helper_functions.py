@@ -158,8 +158,8 @@ def filter_strings(string):
     :return:
     """
     unwanted_chars = ["\u0131", "\u30c4", "\u00c1", "\u00ee", "\u0103",
-                      "\u0103", "\u00e4", "\u00e8", "\u2013", "\U0001f60b"
-                      "\u00af", "\U0001f92a"]
+                      "\u00e4", "\u00e8", "\u2013", "\U0001f60b", "\u00af",
+                      "\U0001f92a"]
 
     for word in string:
         if word in unwanted_chars:
