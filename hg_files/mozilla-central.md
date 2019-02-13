@@ -1,8 +1,17 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35539
+ CURRENT PUSH ID: 35550
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|35548|2019-02-13 11:48:26|James Willcox <snorp@snorp.net>|Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D19015|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=33ea61c54aea
+|35548|2019-02-13 11:48:26|Andreea Pavel <apavel@mozilla.com>|Backed out 3 changesets (bug 1525959, bug 1526002) for failing androidBacked out changeset de0efca1118e (bug 1526002)Backed out changeset 503cbc86e442 (bug 1525959)Backed out changeset 33ea61c54aea (bug 1525959)|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=34f33ae5913e
+|35548|2019-02-13 11:48:26|Johan Lorenzo <jlorenzo@mozilla.com>|Bug 1505538 - Release x86_64 Fennec Nightly in the Google Play Store r=mtabaraRelease x86_64 Fennec Nightly in the Google Play StoreDifferential Revision: https://phabricator.services.mozilla.com/D19534|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=de25d2f1abef
+|35548|2019-02-13 11:48:26|Razvan Maries <rmaries@mozilla.com>|Merge mozilla-central to autoland. a=merge on a CLOSED TREE|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1af69c96ec5f
+|35548|2019-02-13 11:48:26|Chris AtLee <catlee@mozilla.com>|Bug 1527118: Ensure all tests are using tooltool caches r=akirespect TOOLTOOL_CACHE environment variable in mixinDifferential Revision: https://phabricator.services.mozilla.com/D19444|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e7603feb2252
+|35546|2019-02-13 06:27:59|Geoff Brown <gbrown@mozilla.com>|Bug 1525738 - Stop running Android 7.0 x86_64 geckoview-junit tests; r=mbrubeck|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a90e2dd8b1a5
+|35546|2019-02-13 06:27:59|Geoff Brown <gbrown@mozilla.com>|Bug 1527011 - Support win64-aarch64 artifact builds; r=nalexander|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=636d2c00234d
+|35544|2019-02-12 18:29:08|Mike Hommey <mh+mozilla@glandium.org>|Bug 1525760 - Followup: re-enable the tasks without sccache. r=meAnd refresh rust dependency after bug 1525733.|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8b2e8f177263
+|35542|2019-02-12 18:14:20|Marco Castelluccio <mcastelluccio@mozilla.com>|Bug 1527227 - Update Rust nightly version. r=chmanchester a=Aryx|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76639dcdef8f
 |35538|2019-02-12 07:25:24|Chris Manchester <cmanchester@mozilla.com>|Bug 1525733 - Require rust 1.32 to build. r=firefox-build-system-reviewers,tedDifferential Revision: https://phabricator.services.mozilla.com/D19244|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5041739e5a5b
 |35538|2019-02-12 07:25:24|Chris Manchester <cmanchester@mozilla.com>|Bug 1526505 - Update mozharness stats parsing code for per-language stats. r=firefox-build-system-reviewers,tedDifferential Revision: https://phabricator.services.mozilla.com/D19247|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9cc8cc20982c
 |35538|2019-02-12 07:25:24|Alok Kumar <ialokkumarsingh0@gmail.com>|Bug 1492279 - Only fetch target task for actions that require it r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19273|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bb243f4edd88
