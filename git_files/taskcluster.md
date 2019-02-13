@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-30 16:43:25.214877
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-30 21:15:19.796156
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|348|djmitche|Merge pull request #213 from djmitche/bug1527183  Bug 1527183 - fix schema for bindings|[URL](https://github.com/taskcluster/taskcluster/commit/658e6337ad59c3193387771d2eef35ce9a199e06)|2019-02-13 19:03:11
+|347|owlishDeveloper|Web server on kube (#194)    Exclude docs from build      Add configuration for web-server      Add ingress rule for web-server      Point web-ui to the web-server in Kube|[URL](https://github.com/taskcluster/taskcluster/commit/8d2cd6d94fc53c04cd79772e379cbce4775c67d6)|2019-02-13 16:51:03
 |346|djmitche|Merge pull request #212 from djmitche/bug1527416  Bug 1527416 - get a fresh copy of the hook before triggering|[URL](https://github.com/taskcluster/taskcluster/commit/7d712337608d7806bdd6d8632ed23bd349994cde)|2019-02-13 01:18:08
 |345|djmitche|Bug 1527416 - get a fresh copy of the hook before triggering|[URL](https://github.com/taskcluster/taskcluster/commit/a17d0f0b0a012049cb3023c6863c2c9be83a6b26)|2019-02-12 20:07:32
 |344|djmitche|Merge pull request #211 from djmitche/bug1523376  Bug 1523376 - use crypto-js instead of stealing Hawk's copy|[URL](https://github.com/taskcluster/taskcluster/commit/5da8dc490e6bb765de0825d9ac209b8af2fc5081)|2019-02-12 18:15:53
