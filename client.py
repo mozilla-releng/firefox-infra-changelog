@@ -14,7 +14,6 @@ import requests
 from fic_modules import configuration
 from fic_modules.helper_functions import compare_files, clear_file, \
     get_commit_details, extract_reviewer, remove_chars, filter_strings
-from fic_modules.HandleArguments import HandleArgs
 
 REPO_LIST = []
 LAST_WEEK = datetime.now() - timedelta(days=14)
@@ -66,14 +65,14 @@ def create_md_table_for_scriptworkers(repository_name):
                       .get("configuration")
                       .get("files-to-check")]
     for scriptworker_repo in files_to_check:
-        create_md_table(scriptworker_repo, "git_files")
+        create_git_md_table(scriptworker_repo, "git_files")
 
 
 def create_files_for_git(repositories_holder, onerepo):
     """
-    Main GIT function. Takes every Git repo from a .json file which is
-    populated with repositories and writes all the commit data of each repo in
-    a. creates a json and MD file for each repo as well.
+    Main GIT function. Takes every Git repo from the populated 'repositories'
+    json file and writes the formatted commit data of each repo in the
+    respective json and md files
     :param: repositories_holder: Expects a .json file that contains a list of
     repositories.
     :return: The end result is a .json and a .md file for every git repository.
@@ -101,10 +100,10 @@ def create_files_for_git(repositories_holder, onerepo):
                                repository_type,
                                folders_to_check)
         if repositories_holder == "build-puppet":
-            create_md_table(repositories_holder, "git_files")
+            create_git_md_table(repositories_holder, "git_files")
             create_md_table_for_scriptworkers(repositories_holder)
         else:
-            create_md_table(repositories_holder, "git_files")
+            create_git_md_table(repositories_holder, "git_files")
         if LOGGER:
             print("MD table generated successfully")
             print("Finished working on {}".format(repositories_holder))
@@ -132,10 +131,10 @@ def create_files_for_git(repositories_holder, onerepo):
                                    repository_type,
                                    folders_to_check)
             if repository_name == "build-puppet":
-                create_md_table(repository_name, "git_files")
+                create_git_md_table(repository_name, "git_files")
                 create_md_table_for_scriptworkers(repository_name)
             else:
-                create_md_table(repository_name, "git_files")
+                create_git_md_table(repository_name, "git_files")
             if LOGGER:
                 print("MD table generated successfully")
                 print("Finished working on {}".format(repository_name))
@@ -145,8 +144,7 @@ def get_version(repo_name, repo_team):
     """
     :param repo_name: repository name
     :param repo_team: repository team
-    :return: a dictionary with information from the last two release version:
-     latestRelease and previousRelease
+    :return: a dictionary with information about the last release version
     """
     repo_path = repo_team + repo_name
     iteration = 0
@@ -280,7 +278,7 @@ def last_check(repository_name):
 def get_version_from_json(repo_name):
     """
     :param repo_name: name of the repo we are working on
-    :return: version our repo was bumped to by the last local commit that we have
+    :return: the locally stored version of a repository
     """
     git_json_filename = "{}.json".format(repo_name)
     with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
@@ -298,7 +296,7 @@ def get_version_from_json(repo_name):
 def get_date_from_json(repo_name):
     """
     :param repo_name: name of the repo we are currently working on
-    :return: date of the last commit that we have locally in our json
+    :return: date of the last local commit
     """
     git_json_filename = "{}.json".format(repo_name)
     with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
@@ -365,17 +363,11 @@ def generate_hg_pushes_link(repo_name, repository_url):
 
 def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     """
-    Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function
-     from 're' library
     :param repository_name: name of the given repo
     :param repository_path:
     :param folders_to_check: the folders we care about
-    :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it
-    can't pull a data:
-    (e.g raise self.__createException(status, responseHeaders, output)
-    github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    :return: a dictionary containing infra-affecting commits. Will be called
+    on repos which aren't version defined.
     """
     number = 0
     last_checked = last_check(repository_name)
@@ -405,16 +397,9 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
 
 def filter_git_commit_keyword(repository_name, repository_path):
     """
-    Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function
-    from 're' library
     :param repository_name: name of the given repo
     :param repository_path:
-    :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
-    (e.g raise self.__createException(status, responseHeaders, output)
-    github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    :return: a dictionary containing infra-affecting commits of OCC
     """
     number = 0
     last_checked = last_check(repository_name)
@@ -438,11 +423,10 @@ def filter_git_commit_keyword(repository_name, repository_path):
 
 def compare_versions(version_path, scriptworker_repo, latest_releases):
     """
-    checks the version of a scriptworker repo from its changelog, build-puppet and locally saved one against each other
     :param version_path:
     :param scriptworker_repo:
     :param latest_releases:
-    :return:
+    :return: Return whether the scriptworker repo had a version bump or not
     """
 
     version_in_puppet = get_version_from_build_puppet(version_path, scriptworker_repo)
@@ -458,17 +442,11 @@ def compare_versions(version_path, scriptworker_repo, latest_releases):
 
 def filter_git_tag_bp(repository_name, repository_team, repository_path):
     """
-    Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function
-    from 're' library
     :param repository_team: the team of the given repo
     :param repository_name: name of the given repo
     :param repository_path:
-    :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
-    (e.g raise self.__createException(status, responseHeaders, output)
-    github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    :return: a dictionary containing infra-affecting commits. Will be called
+    on version defined repos, which are defined in build-puppet
     """
     number = 0
     commit_number_tracker = 1
@@ -562,24 +540,13 @@ def filter_git_scriptworkers(latest_releases, repo_team, script_repo):
 
 def filter_git_tag(repository_name, repository_team, repository_path):
     """
-    Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function
-    from 're' library
     :param repository_team: the team of the given repo
     :param repository_name: name of the given repo
     :param repository_path:
-    :return: the commits into a dictionary
-    TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
-    (e.g raise self.__createException(status, responseHeaders, output)
-     github.GithubException.GithubException: 502 {'message': 'Server Error'}
+    :return: a dictionary containing infra-affecting commits. Will be called
+    on version defined repos
     """
     number = 0
-    version_path = REPOSITORIES\
-        .get("Github")\
-        .get(repository_name)\
-        .get("configuration")\
-        .get("version-path")
     latest_releases = get_version(repository_name, repository_team)
     if get_version_from_json(repository_name) == \
             latest_releases.get("latest_release").get("version"):
@@ -612,19 +579,12 @@ def filter_git_tag(repository_name, repository_team, repository_path):
 def filter_git_commit_data(repository_name, repository_team, repository_type,
                            folders_to_check):
     """
-    Filters out only the data that we need from a commit
-    Substitute the special characters from commit message using 'sub' function
-    from 're' library
     :param repository_team:
     :param repository_name: name of the given repo
     :param repository_type: type of a repo we are going to work with
     :param folders_to_check: list that contains every folder we care about
     from given repo
     :return: Filtered json data
-    TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
-    (e.g raise self.__createException(status, responseHeaders, output)
-    github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     repository_path = repository_team + repository_name
     # TYPE = NO-TAG
@@ -690,7 +650,7 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     :param repository_url:
     :param folders_to_check:
     :param repository_name: name of the repository
-    :return: Writes data in hg json files
+    :return: Filter infra-affecting commits and writes data in hg json files
     """
     if LOGGER:
         print("Repo url:", repository_url)
@@ -748,7 +708,7 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     json_writer_hg(repository_name, hg_repo_data)
 
 
-def create_md_table(repository_name, path_to_files):
+def create_git_md_table(repository_name, path_to_files):
     """
     Uses 'repository_name' parameter to generate markdown tables for every
     json file inside path_to_files parameter.
@@ -973,7 +933,7 @@ def write_date_header(file_name, datetime_object):
      a date header.
     :param file_name: name of the file to be written to.
     :param datetime_object: datetime object used for write to file.
-    :return:
+    :return: None
     """
     file = open(file_name, "a")
 
