@@ -1,16 +1,22 @@
 # Firefox Infra Changelog
-Automated tool which builds a changelog of commits happening on git and hg that could affect Firefox CI Infra.
+CiDuty's tool which builds a changelog of commits happening on git and hg that could affect Firefox CI Infra.
 
 # How does it work?
-The tool listens via webhooks on all mozilla's Git/HG infra repositories and creates:
-* A central [changelog.md](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.md) in which data is preformated in a set way. Check [Issue #5](https://github.com/Akhliskun/firefox-infra-changelog/issues/5) for details on formating. 
-* A [changelog.json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.json) file containg the same data changelog.md contains.
+The tool uses py-github and github token and requests on all mozilla's Git/HG infra repositories and creates:
+* A central [changelog.md](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.md) in which data is formatted in a set way. 
+* A [changelog.json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.json) file which contains the same data changelog.md contains. TO-DE-ADDED [Issues 193](https://github.com/mozilla-releng/firefox-infra-changelog/issues/193)
 
 # Can I contribute?
 Yes! We have a couple of [Issues Open](https://github.com/Akhliskun/firefox-infra-changelog/issues). 
 Pick whichever you find fancy and make a PullRequest.
 
-**PLEASE** don't forget to select "`Allow edits from maintainers`" so we can have quicker merges!
+# Can I suggest edits and/or features? 
+Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox-infra-changelog/issues). 
+
+# Install process:
+1. After you clone the repository, please run `pip3 install -r requirements.txt`
+2. Generate a Github token via this page and add an environment variable called `GIT_TOKEN`.
+3. Run the script with `python3 client.py <optional-flags>`
 
 # Flags
 * --git - Runs script only for repos that are on GitHub
@@ -18,9 +24,6 @@ Pick whichever you find fancy and make a PullRequest.
 * --r - Let the user choose for which repositories the script will run
 * --d - Let the user choose the amount of days the main markdown file will contain
 
-
-## I have an issue I like, now what?
-Fork the project (always make sure to be up-to-date) and start implementing, once done simply make a pull requests and add @Akhliskun for review. 
 
 # Contributors
 * [Danut Labici](https://github.com/Akhliskun)
