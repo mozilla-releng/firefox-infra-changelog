@@ -1,7 +1,11 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-29 10:14:20.291344
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-01-30 15:32:06.952697
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|346|djmitche|Merge pull request #212 from djmitche/bug1527416  Bug 1527416 - get a fresh copy of the hook before triggering|[URL](https://github.com/taskcluster/taskcluster/commit/7d712337608d7806bdd6d8632ed23bd349994cde)|2019-02-13 01:18:08
+|345|djmitche|Bug 1527416 - get a fresh copy of the hook before triggering|[URL](https://github.com/taskcluster/taskcluster/commit/a17d0f0b0a012049cb3023c6863c2c9be83a6b26)|2019-02-12 20:07:32
+|344|djmitche|Merge pull request #211 from djmitche/bug1523376  Bug 1523376 - use crypto-js instead of stealing Hawk's copy|[URL](https://github.com/taskcluster/taskcluster/commit/5da8dc490e6bb765de0825d9ac209b8af2fc5081)|2019-02-12 18:15:53
+|343|djmitche|Bug 1523376 - include links to taskcluster-client|[URL](https://github.com/taskcluster/taskcluster/commit/a43655812caf70da8c4d0983b86c5d96193a48f9)|2019-02-12 17:24:46
 |342|djmitche|Merge pull request #207 from djmitche/omit-debug-testing-subprocess  Omit DEBUG when running a node subprocess|[URL](https://github.com/taskcluster/taskcluster/commit/732ff6c8cf8020335c2e7d170b3a6dbdb0387b2a)|2019-02-12 00:44:08
 |341|owlishDeveloper|Refactor   (#197)    Reduce amount of functions in the code    Improve clarity of boolean expressions    Fix tests      Fix tests      Make comments more sensical      Always check if user is active|[URL](https://github.com/taskcluster/taskcluster/commit/34f400ec4f68f24f5641e39bba9c4d929a944139)|2019-02-11 20:50:24
 |340|djmitche|Merge pull request #210 from djmitche/bug1524406  Bug 1524406 - Fix keys for LastFire table|[URL](https://github.com/taskcluster/taskcluster/commit/10a04e575cfd4e30d8d8fc1f53816a2408fe0cf7)|2019-02-11 19:50:31

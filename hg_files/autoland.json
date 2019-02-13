@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 77957
+    "last_push_id": 78087
   },
   "1": {
     "changeset_number": "35344",
@@ -32230,6 +32230,146 @@
         "files_changed": [
           "taskcluster/taskgraph/test/test_transforms_job.py",
           "taskcluster/taskgraph/transforms/job/common.py"
+        ]
+      }
+    }
+  },
+  "596": {
+    "changeset_number": "77996",
+    "pusher": "jwillcox@mozilla.com",
+    "date_of_push": "2019-02-12 18:27:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=33ea61c54aea",
+        "commiter_name": "James Willcox <snorp@snorp.net>",
+        "commit_message": "Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19015",
+        "files_changed": [
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      }
+    }
+  },
+  "597": {
+    "changeset_number": "77999",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-02-12 18:35:42",
+    "changeset_commits": {
+      "17": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8b2e8f177263",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525760 - Followup: re-enable the tasks without sccache. r=me\n\nAnd refresh rust dependency after bug 1525733.\n",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76639dcdef8f",
+        "commiter_name": "Marco Castelluccio <mcastelluccio@mozilla.com>",
+        "commit_message": "Bug 1527227 - Update Rust nightly version. r=chmanchester a=Aryx",
+        "files_changed": [
+          "taskcluster/ci/toolchain/rust.yml"
+        ]
+      }
+    }
+  },
+  "598": {
+    "changeset_number": "78028",
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-02-12 23:53:30",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=34f33ae5913e",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Backed out 3 changesets (bug 1525959, bug 1526002) for failing android\n\nBacked out changeset de0efca1118e (bug 1526002)\nBacked out changeset 503cbc86e442 (bug 1525959)\nBacked out changeset 33ea61c54aea (bug 1525959)",
+        "files_changed": [
+          "dom/animation/test/mochitest.ini",
+          "dom/base/test/mochitest.ini",
+          "dom/html/test/forms/mochitest.ini",
+          "dom/html/test/mochitest.ini",
+          "dom/ipc/tests/mochitest.ini",
+          "dom/performance/tests/mochitest.ini",
+          "dom/serviceworkers/test/mochitest.ini",
+          "dom/tests/mochitest/bugs/mochitest.ini",
+          "editor/libeditor/tests/mochitest.ini",
+          "gfx/layers/apz/test/mochitest/mochitest.ini",
+          "mobile/android/components/extensions/test/mochitest/mochitest.ini",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/mochitest/runtestsremote.py",
+          "toolkit/components/extensions/test/mochitest/mochitest-common.ini",
+          "toolkit/components/passwordmgr/test/mochitest/mochitest.ini",
+          "uriloader/exthandler/tests/mochitest/mochitest.ini"
+        ]
+      }
+    }
+  },
+  "599": {
+    "changeset_number": "78040",
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-02-13 01:00:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=de25d2f1abef",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1505538 - Release x86_64 Fennec Nightly in the Google Play Store r=mtabara\n\nRelease x86_64 Fennec Nightly in the Google Play Store\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19534",
+        "files_changed": [
+          "taskcluster/taskgraph/loader/push_apk.py",
+          "taskcluster/taskgraph/transforms/push_apk.py"
+        ]
+      }
+    }
+  },
+  "600": {
+    "changeset_number": "78060",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-13 07:24:43",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a90e2dd8b1a5",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1525738 - Stop running Android 7.0 x86_64 geckoview-junit tests; r=mbrubeck",
+        "files_changed": [
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=636d2c00234d",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1527011 - Support win64-aarch64 artifact builds; r=nalexander",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/artifact",
+          "browser/config/mozconfigs/win64-aarch64/debug-artifact",
+          "python/mozbuild/mozbuild/artifacts.py",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "28": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1af69c96ec5f",
+        "commiter_name": "Razvan Maries <rmaries@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+        "files_changed": [
+          "js/src/frontend/BytecodeEmitter.cpp",
+          "js/src/shell/js.cpp",
+          "taskcluster/ci/test/test-sets.yml",
+          "toolkit/xre/nsAppRunner.cpp"
+        ]
+      }
+    }
+  },
+  "601": {
+    "changeset_number": "78067",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-13 08:26:42",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e7603feb2252",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1527118: Ensure all tests are using tooltool caches r=aki\n\nrespect TOOLTOOL_CACHE environment variable in mixin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19444",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mozharness/mozharness/mozilla/tooltool.py"
         ]
       }
     }
