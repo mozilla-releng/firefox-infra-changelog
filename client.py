@@ -15,6 +15,7 @@ from fic_modules import configuration
 from fic_modules.helper_functions import compare_files, clear_file, \
     get_commit_details, extract_reviewer, remove_chars, filter_strings
 
+
 REPO_LIST = []
 LAST_WEEK = datetime.now() - timedelta(days=14)
 LAST_MONTH = datetime.utcnow() - timedelta(days=31)
@@ -1266,8 +1267,9 @@ def cli(git, hg, l, r, d):
     if r:
         get_keys("Github")
         get_keys("Mercurial")
-        # for scriptrepo in repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check"):
-        #     repoList.append(scriptrepo)
+        for scriptrepo in REPOSITORIES.get("Github").get("build-puppet")\
+                .get("configuration").get("files-to-check"):
+            REPO_LIST.append(scriptrepo)
         new_list = []
         while input != "q":
             print("You have selected : ", new_list)
@@ -1275,7 +1277,7 @@ def cli(git, hg, l, r, d):
                 print(REPO_LIST.index(keys) + 1, keys)
 
             user_choice = input("Select a repo by typing it's "
-                                "corespunding number, "
+                                "corresponding number, "
                                 "type q when you are done: ")
             if str(user_choice) == "q":
                 print('Running script for {}'
@@ -1319,11 +1321,3 @@ if __name__ == "__main__":
     REPOSITORIES_DATA = open("./repositories.json").read()
     REPOSITORIES = json.loads(REPOSITORIES_DATA)
     cli()
-
-    # test_obj = HandleArgs()
-    # try:
-    #     test_obj.input_argument(sys.argv[1])
-    # except IndexError:
-    #     test_obj.input_argument("default")
-    # do_commit()
-
