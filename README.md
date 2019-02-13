@@ -19,10 +19,12 @@ Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox
 3. Run the script with `python3 client.py <optional-flags>`
 
 # Flags
-* --git - Runs script only for repos that are on GitHub
-* --hg - Runs script only for repos that are on Mercurial
-* --r - Let the user choose for which repositories the script will run
-* --d - Let the user choose the amount of days the main markdown file will contain
+| | |
+|--------|----------------------------------------------------------------------------|
+| --git  | Runs script only for repos that are on GitHub                              |
+| --hg   | Runs script only for repos that are on Mercurial                           |
+| --r    | Let the user choose for which repositories the script will run             |
+| --d    | Let the user choose the amount of days the main markdown file will contain |
 
 
 # Contributors
