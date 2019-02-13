@@ -1,8 +1,55 @@
 {
   "0": {
-    "lastChecked": "2019-02-12 08:14:21.801442"
+    "lastChecked": "2019-02-13 14:43:26.258086"
   },
   "1": {
+    "sha": "7d712337608d7806bdd6d8632ed23bd349994cde",
+    "url": "https://github.com/taskcluster/taskcluster/commit/7d712337608d7806bdd6d8632ed23bd349994cde",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #212 from djmitche/bug1527416  Bug 1527416 - get a fresh copy of the hook before triggering",
+    "commit_date": "2019-02-13 01:18:08",
+    "files_changed": [
+      "services/hooks/src/listeners.js"
+    ]
+  },
+  "2": {
+    "sha": "a17d0f0b0a012049cb3023c6863c2c9be83a6b26",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a17d0f0b0a012049cb3023c6863c2c9be83a6b26",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1527416 - get a fresh copy of the hook before triggering",
+    "commit_date": "2019-02-12 20:07:32",
+    "files_changed": [
+      "services/hooks/src/listeners.js"
+    ]
+  },
+  "3": {
+    "sha": "5da8dc490e6bb765de0825d9ac209b8af2fc5081",
+    "url": "https://github.com/taskcluster/taskcluster/commit/5da8dc490e6bb765de0825d9ac209b8af2fc5081",
+    "commiter_name": "djmitche",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #211 from djmitche/bug1523376  Bug 1523376 - use crypto-js instead of stealing Hawk's copy",
+    "commit_date": "2019-02-12 18:15:53",
+    "files_changed": [
+      "clients/client-web/README.md",
+      "clients/client-web/package.json",
+      "clients/client-web/src/credentials.js",
+      "clients/client-web/yarn.lock"
+    ]
+  },
+  "4": {
+    "sha": "a43655812caf70da8c4d0983b86c5d96193a48f9",
+    "url": "https://github.com/taskcluster/taskcluster/commit/a43655812caf70da8c4d0983b86c5d96193a48f9",
+    "commiter_name": "djmitche",
+    "commiter_email": "dustin@v.igoro.us",
+    "commit_message": "Bug 1523376 - include links to taskcluster-client",
+    "commit_date": "2019-02-12 17:24:46",
+    "files_changed": [
+      "clients/client-web/README.md"
+    ]
+  },
+  "5": {
     "sha": "732ff6c8cf8020335c2e7d170b3a6dbdb0387b2a",
     "url": "https://github.com/taskcluster/taskcluster/commit/732ff6c8cf8020335c2e7d170b3a6dbdb0387b2a",
     "commiter_name": "djmitche",
@@ -13,7 +60,7 @@
       "libraries/monitor/test/uncaught_test.js"
     ]
   },
-  "2": {
+  "6": {
     "sha": "34f400ec4f68f24f5641e39bba9c4d929a944139",
     "url": "https://github.com/taskcluster/taskcluster/commit/34f400ec4f68f24f5641e39bba9c4d929a944139",
     "commiter_name": "owlishDeveloper",
@@ -25,7 +72,7 @@
       "services/login/test/handlers_mozilla_auth0_test.js"
     ]
   },
-  "3": {
+  "7": {
     "sha": "10a04e575cfd4e30d8d8fc1f53816a2408fe0cf7",
     "url": "https://github.com/taskcluster/taskcluster/commit/10a04e575cfd4e30d8d8fc1f53816a2408fe0cf7",
     "commiter_name": "djmitche",
@@ -37,7 +84,7 @@
       "services/hooks/src/data.js"
     ]
   },
-  "4": {
+  "8": {
     "sha": "e023b92968e1c49d70d773ed5993a63005cf69fb",
     "url": "https://github.com/taskcluster/taskcluster/commit/e023b92968e1c49d70d773ed5993a63005cf69fb",
     "commiter_name": "djmitche",
@@ -49,7 +96,7 @@
       "services/hooks/src/data.js"
     ]
   },
-  "5": {
+  "9": {
     "sha": "38a72f405d52068bd04fa294da43ef3788258531",
     "url": "https://github.com/taskcluster/taskcluster/commit/38a72f405d52068bd04fa294da43ef3788258531",
     "commiter_name": "djmitche",
@@ -60,7 +107,7 @@
       "libraries/monitor/test/uncaught_test.js"
     ]
   },
-  "6": {
+  "10": {
     "sha": "96cfee05116ea2931b6842dee297176d7582a0d4",
     "url": "https://github.com/taskcluster/taskcluster/commit/96cfee05116ea2931b6842dee297176d7582a0d4",
     "commiter_name": "djmitche",
@@ -120,7 +167,7 @@
       "package.json"
     ]
   },
-  "7": {
+  "11": {
     "sha": "c5325122eca07b9b4af3bee424ad09699a3dbe38",
     "url": "https://github.com/taskcluster/taskcluster/commit/c5325122eca07b9b4af3bee424ad09699a3dbe38",
     "commiter_name": "owlishDeveloper",
@@ -135,7 +182,7 @@
       "ui/package.json"
     ]
   },
-  "8": {
+  "12": {
     "sha": "e3b13b828605b8a36eff11d7d19546ff14372770",
     "url": "https://github.com/taskcluster/taskcluster/commit/e3b13b828605b8a36eff11d7d19546ff14372770",
     "commiter_name": "djmitche",
@@ -195,7 +242,7 @@
       "package.json"
     ]
   },
-  "9": {
+  "13": {
     "sha": "8d1ec510060978b1cdc81e234ba1f1ad36a8875e",
     "url": "https://github.com/taskcluster/taskcluster/commit/8d1ec510060978b1cdc81e234ba1f1ad36a8875e",
     "commiter_name": "helfi92",
@@ -209,7 +256,7 @@
       "services/worker-manager/README.md"
     ]
   },
-  "10": {
+  "14": {
     "sha": "e3516eae173232065cb73d69636123feba08fcd1",
     "url": "https://github.com/taskcluster/taskcluster/commit/e3516eae173232065cb73d69636123feba08fcd1",
     "commiter_name": "ededals",
@@ -221,7 +268,7 @@
       "ui/src/views/Tasks/InteractiveConnect/index.jsx"
     ]
   },
-  "11": {
+  "15": {
     "sha": "f5cd4eef3b45e77e50ba37d6ff77ffdee6543bfe",
     "url": "https://github.com/taskcluster/taskcluster/commit/f5cd4eef3b45e77e50ba37d6ff77ffdee6543bfe",
     "commiter_name": "djmitche",
@@ -232,7 +279,7 @@
       "libraries/api/test/auth_test.js"
     ]
   },
-  "12": {
+  "16": {
     "sha": "ad2c00a991cf9048892f3172725eb8d26b1c7512",
     "url": "https://github.com/taskcluster/taskcluster/commit/ad2c00a991cf9048892f3172725eb8d26b1c7512",
     "commiter_name": "djmitche",
@@ -244,7 +291,7 @@
       "yarn.lock"
     ]
   },
-  "13": {
+  "17": {
     "sha": "68c9b94fa94bdf197664520767572f5a40e1eed8",
     "url": "https://github.com/taskcluster/taskcluster/commit/68c9b94fa94bdf197664520767572f5a40e1eed8",
     "commiter_name": "djmitche",
@@ -256,7 +303,7 @@
       "clients/client-web/yarn.lock"
     ]
   },
-  "14": {
+  "18": {
     "sha": "e07c158dd1084ebe3c5b04f7a76a6fdb9ac40215",
     "url": "https://github.com/taskcluster/taskcluster/commit/e07c158dd1084ebe3c5b04f7a76a6fdb9ac40215",
     "commiter_name": "renovate-bot",
@@ -268,7 +315,7 @@
       "clients/client-web/yarn.lock"
     ]
   },
-  "15": {
+  "19": {
     "sha": "1ec65c9abdde8d03ae869036f6a73e812bd49cdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/1ec65c9abdde8d03ae869036f6a73e812bd49cdb",
     "commiter_name": "djmitche",
@@ -280,7 +327,7 @@
       "yarn.lock"
     ]
   },
-  "16": {
+  "20": {
     "sha": "1c6663518f0ec697b52f6fba03c0c0b26519adaa",
     "url": "https://github.com/taskcluster/taskcluster/commit/1c6663518f0ec697b52f6fba03c0c0b26519adaa",
     "commiter_name": "renovate-bot",
@@ -292,7 +339,7 @@
       "yarn.lock"
     ]
   },
-  "17": {
+  "21": {
     "sha": "2546fbda6ab01d3d15870343b13ea26227d2f923",
     "url": "https://github.com/taskcluster/taskcluster/commit/2546fbda6ab01d3d15870343b13ea26227d2f923",
     "commiter_name": "djmitche",
@@ -306,7 +353,7 @@
       "services/index/test/index_test.js"
     ]
   },
-  "18": {
+  "22": {
     "sha": "c2bde6082450abeed3021bb815d35383f76d6e2d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c2bde6082450abeed3021bb815d35383f76d6e2d",
     "commiter_name": "djmitche",
@@ -319,7 +366,7 @@
       "services/index/test/helper.js"
     ]
   },
-  "19": {
+  "23": {
     "sha": "c3721407c778f8e432cacfd5077a5b440142e650",
     "url": "https://github.com/taskcluster/taskcluster/commit/c3721407c778f8e432cacfd5077a5b440142e650",
     "commiter_name": "djmitche",
@@ -331,7 +378,7 @@
       "services/index/test/index_test.js"
     ]
   },
-  "20": {
+  "24": {
     "sha": "aca7d8de7fb76a880e3473e5c393b1d2b5823591",
     "url": "https://github.com/taskcluster/taskcluster/commit/aca7d8de7fb76a880e3473e5c393b1d2b5823591",
     "commiter_name": "djmitche",
@@ -342,7 +389,7 @@
       "services/hooks/src/taskcreator.js"
     ]
   },
-  "21": {
+  "25": {
     "sha": "017cb6b9dbc566c6a4e5e79d659315cd12990de6",
     "url": "https://github.com/taskcluster/taskcluster/commit/017cb6b9dbc566c6a4e5e79d659315cd12990de6",
     "commiter_name": "djmitche",
@@ -353,7 +400,7 @@
       "services/login/src/main.js"
     ]
   },
-  "22": {
+  "26": {
     "sha": "2a8b5752f551c49b08518b5aa474de182caf91a7",
     "url": "https://github.com/taskcluster/taskcluster/commit/2a8b5752f551c49b08518b5aa474de182caf91a7",
     "commiter_name": "djmitche",
@@ -364,7 +411,7 @@
       "services/hooks/src/taskcreator.js"
     ]
   },
-  "23": {
+  "27": {
     "sha": "1d2feff0e94132914987dd533f15585c37077223",
     "url": "https://github.com/taskcluster/taskcluster/commit/1d2feff0e94132914987dd533f15585c37077223",
     "commiter_name": "djmitche",
@@ -375,7 +422,7 @@
       "services/login/src/main.js"
     ]
   },
-  "24": {
+  "28": {
     "sha": "887b4d9ce952992edb734a34208965d8558b29b1",
     "url": "https://github.com/taskcluster/taskcluster/commit/887b4d9ce952992edb734a34208965d8558b29b1",
     "commiter_name": "djmitche",
@@ -433,7 +480,7 @@
       "test/meta_test.js"
     ]
   },
-  "25": {
+  "29": {
     "sha": "e6582511e34456e381b5c8b3ac3c62f2c8a57b2c",
     "url": "https://github.com/taskcluster/taskcluster/commit/e6582511e34456e381b5c8b3ac3c62f2c8a57b2c",
     "commiter_name": "iFlameing",
@@ -467,7 +514,7 @@
       "test/meta_test.js"
     ]
   },
-  "26": {
+  "30": {
     "sha": "150b40d50c35f9e05685fe72a7ce1774bb173acb",
     "url": "https://github.com/taskcluster/taskcluster/commit/150b40d50c35f9e05685fe72a7ce1774bb173acb",
     "commiter_name": "djmitche",
@@ -478,7 +525,7 @@
       "services/built-in-workers/src/main.js"
     ]
   },
-  "27": {
+  "31": {
     "sha": "faf54692367a4eda3934ce95b4bbbad258c9efd6",
     "url": "https://github.com/taskcluster/taskcluster/commit/faf54692367a4eda3934ce95b4bbbad258c9efd6",
     "commiter_name": "djmitche",
@@ -489,7 +536,7 @@
       "services/built-in-workers/src/main.js"
     ]
   },
-  "28": {
+  "32": {
     "sha": "79ee65e91d30f813285c8425a906a56368b3ba0e",
     "url": "https://github.com/taskcluster/taskcluster/commit/79ee65e91d30f813285c8425a906a56368b3ba0e",
     "commiter_name": "djmitche",
@@ -591,7 +638,7 @@
       "yarn.lock"
     ]
   },
-  "29": {
+  "33": {
     "sha": "0f16280bf569ae5757cc940830a99bb4bc93baec",
     "url": "https://github.com/taskcluster/taskcluster/commit/0f16280bf569ae5757cc940830a99bb4bc93baec",
     "commiter_name": "helfi92",
@@ -602,7 +649,7 @@
       "ui/README.md"
     ]
   },
-  "30": {
+  "34": {
     "sha": "5a88bd8fa50883aefa3ab19dcee7f5f0c0a1b17c",
     "url": "https://github.com/taskcluster/taskcluster/commit/5a88bd8fa50883aefa3ab19dcee7f5f0c0a1b17c",
     "commiter_name": "djmitche",
@@ -614,7 +661,7 @@
       "clients/client/package.json"
     ]
   },
-  "31": {
+  "35": {
     "sha": "65edb1b94aa6dc270e657fda0883d5cb0d5b72bf",
     "url": "https://github.com/taskcluster/taskcluster/commit/65edb1b94aa6dc270e657fda0883d5cb0d5b72bf",
     "commiter_name": "djmitche",
@@ -625,7 +672,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "32": {
+  "36": {
     "sha": "508ac4260b67d161c605a5ef6e4d19052d8b897f",
     "url": "https://github.com/taskcluster/taskcluster/commit/508ac4260b67d161c605a5ef6e4d19052d8b897f",
     "commiter_name": "djmitche",
@@ -643,7 +690,7 @@
       "ui/taskcluster-web-tests/Dockerfile"
     ]
   },
-  "33": {
+  "37": {
     "sha": "67c148c2b9a5f7f4868018d6766cdd9419e6c52e",
     "url": "https://github.com/taskcluster/taskcluster/commit/67c148c2b9a5f7f4868018d6766cdd9419e6c52e",
     "commiter_name": "djmitche",
@@ -655,7 +702,7 @@
       "clients/client-web/package.json"
     ]
   },
-  "34": {
+  "38": {
     "sha": "1eb1720f5bd9babbd2529667be42fdd32d00a2bc",
     "url": "https://github.com/taskcluster/taskcluster/commit/1eb1720f5bd9babbd2529667be42fdd32d00a2bc",
     "commiter_name": "djmitche",
@@ -667,7 +714,7 @@
       "infrastructure/builder/src/generate/generators/readme-tocs.js"
     ]
   },
-  "35": {
+  "39": {
     "sha": "fe47c0be5d8c3727e3393381e0737b4822a45d5d",
     "url": "https://github.com/taskcluster/taskcluster/commit/fe47c0be5d8c3727e3393381e0737b4822a45d5d",
     "commiter_name": "djmitche",
@@ -680,7 +727,7 @@
       "clients/client/package_test.sh"
     ]
   },
-  "36": {
+  "40": {
     "sha": "d583b4489ffcc04c1611b649f175eb0c79b5abc3",
     "url": "https://github.com/taskcluster/taskcluster/commit/d583b4489ffcc04c1611b649f175eb0c79b5abc3",
     "commiter_name": "djmitche",
@@ -714,7 +761,7 @@
       "yarn.lock"
     ]
   },
-  "37": {
+  "41": {
     "sha": "9d09a2f3b2e5983695f726b27b59f8031855be37",
     "url": "https://github.com/taskcluster/taskcluster/commit/9d09a2f3b2e5983695f726b27b59f8031855be37",
     "commiter_name": "djmitche",
@@ -731,7 +778,7 @@
       "clients/client-web/package.json"
     ]
   },
-  "38": {
+  "42": {
     "sha": "21404ad8e3d45610264a524bddfe5d6a728889b8",
     "url": "https://github.com/taskcluster/taskcluster/commit/21404ad8e3d45610264a524bddfe5d6a728889b8",
     "commiter_name": "djmitche",
@@ -808,7 +855,7 @@
       "clients/client-web/yarn.lock"
     ]
   },
-  "39": {
+  "43": {
     "sha": "2ce141d383eaa1b37e8ccd524da0f0beac9ea1b0",
     "url": "https://github.com/taskcluster/taskcluster/commit/2ce141d383eaa1b37e8ccd524da0f0beac9ea1b0",
     "commiter_name": "djmitche",
@@ -885,7 +932,7 @@
       "clients/client-web/yarn.lock"
     ]
   },
-  "40": {
+  "44": {
     "sha": "669ec8cec2e2cf12016cc52fc23d3574584af802",
     "url": "https://github.com/taskcluster/taskcluster/commit/669ec8cec2e2cf12016cc52fc23d3574584af802",
     "commiter_name": "djmitche",
@@ -900,7 +947,7 @@
       "ui/README.md"
     ]
   },
-  "41": {
+  "45": {
     "sha": "7298991af4b32de74e899bc4c1dd1f1ef90ac45a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7298991af4b32de74e899bc4c1dd1f1ef90ac45a",
     "commiter_name": "djmitche",
@@ -915,7 +962,7 @@
       "ui/README.md"
     ]
   },
-  "42": {
+  "46": {
     "sha": "7add1810b11a97dd9c090272a93f521feb8ca526",
     "url": "https://github.com/taskcluster/taskcluster/commit/7add1810b11a97dd9c090272a93f521feb8ca526",
     "commiter_name": "owlishDeveloper",
@@ -926,7 +973,7 @@
       "infrastructure/builder/src/build/service/web-ui-nginx-site.conf"
     ]
   },
-  "43": {
+  "47": {
     "sha": "76736812e90d5276ffb230505e3204b1012af14a",
     "url": "https://github.com/taskcluster/taskcluster/commit/76736812e90d5276ffb230505e3204b1012af14a",
     "commiter_name": "owlishDeveloper",
@@ -947,7 +994,7 @@
       "infrastructure/terraform/web-ui.tf"
     ]
   },
-  "44": {
+  "48": {
     "sha": "ce5777f4e82bf9559f480c98479fd34124f3d1a9",
     "url": "https://github.com/taskcluster/taskcluster/commit/ce5777f4e82bf9559f480c98479fd34124f3d1a9",
     "commiter_name": "djmitche",
@@ -958,7 +1005,7 @@
       ".taskcluster.yml"
     ]
   },
-  "45": {
+  "49": {
     "sha": "ce7cfe7e15b5a131de974626e9052666f88f98f6",
     "url": "https://github.com/taskcluster/taskcluster/commit/ce7cfe7e15b5a131de974626e9052666f88f98f6",
     "commiter_name": "djmitche",
@@ -969,7 +1016,7 @@
       ".taskcluster.yml"
     ]
   },
-  "46": {
+  "50": {
     "sha": "577372b7bb5cae7d2406742b1cef2a34e184e92c",
     "url": "https://github.com/taskcluster/taskcluster/commit/577372b7bb5cae7d2406742b1cef2a34e184e92c",
     "commiter_name": "djmitche",
@@ -984,7 +1031,7 @@
       "ui/README.md"
     ]
   },
-  "47": {
+  "51": {
     "sha": "ef7e1b4b64e55c0cfe7e967674407d3038a04695",
     "url": "https://github.com/taskcluster/taskcluster/commit/ef7e1b4b64e55c0cfe7e967674407d3038a04695",
     "commiter_name": "imbstack",
@@ -999,7 +1046,7 @@
       "ui/README.md"
     ]
   },
-  "48": {
+  "52": {
     "sha": "071fb3c016b36d45e65de5dbe77c0006401f94b2",
     "url": "https://github.com/taskcluster/taskcluster/commit/071fb3c016b36d45e65de5dbe77c0006401f94b2",
     "commiter_name": "djmitche",
@@ -1014,7 +1061,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "49": {
+  "53": {
     "sha": "32673bfefcb072fecce052d814a2d1738f5be5df",
     "url": "https://github.com/taskcluster/taskcluster/commit/32673bfefcb072fecce052d814a2d1738f5be5df",
     "commiter_name": "helfi92",
@@ -1031,7 +1078,7 @@
       "ui/yarn.lock"
     ]
   },
-  "50": {
+  "54": {
     "sha": "78177c05bd2a28b849ae6141711676384e99a014",
     "url": "https://github.com/taskcluster/taskcluster/commit/78177c05bd2a28b849ae6141711676384e99a014",
     "commiter_name": "djmitche",
@@ -1087,7 +1134,7 @@
       "ui/README.md"
     ]
   },
-  "51": {
+  "55": {
     "sha": "87d04e8bd19b9dabaeb308b140722d1d7841b94a",
     "url": "https://github.com/taskcluster/taskcluster/commit/87d04e8bd19b9dabaeb308b140722d1d7841b94a",
     "commiter_name": "djmitche",
@@ -1297,7 +1344,7 @@
       "taskcluster-builder"
     ]
   },
-  "52": {
+  "56": {
     "sha": "2f12eefabe380f15a2e2b30bdd4b664707eb435e",
     "url": "https://github.com/taskcluster/taskcluster/commit/2f12eefabe380f15a2e2b30bdd4b664707eb435e",
     "commiter_name": "helfi92",
@@ -1332,7 +1379,7 @@
       "yarn.lock"
     ]
   },
-  "53": {
+  "57": {
     "sha": "075edd86274104dec08a0f517b724e76e610cb45",
     "url": "https://github.com/taskcluster/taskcluster/commit/075edd86274104dec08a0f517b724e76e610cb45",
     "commiter_name": "imbstack",
@@ -1345,7 +1392,7 @@
       "yarn.lock"
     ]
   },
-  "54": {
+  "58": {
     "sha": "6841b530f4c63bcd98851a94d63cdf8db4604de9",
     "url": "https://github.com/taskcluster/taskcluster/commit/6841b530f4c63bcd98851a94d63cdf8db4604de9",
     "commiter_name": "djmitche",
@@ -1401,7 +1448,7 @@
       "ui/README.md"
     ]
   },
-  "55": {
+  "59": {
     "sha": "9eaee5f9308451f3d09c9108dc49f0aa826085fe",
     "url": "https://github.com/taskcluster/taskcluster/commit/9eaee5f9308451f3d09c9108dc49f0aa826085fe",
     "commiter_name": "djmitche",
@@ -1412,7 +1459,7 @@
       ".taskcluster.yml"
     ]
   },
-  "56": {
+  "60": {
     "sha": "f7b971da5a9c7fceab9d601f52531db9e020887e",
     "url": "https://github.com/taskcluster/taskcluster/commit/f7b971da5a9c7fceab9d601f52531db9e020887e",
     "commiter_name": "djmitche",
@@ -1426,7 +1473,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "57": {
+  "61": {
     "sha": "69527b42111471e24a7720735920a0955678844a",
     "url": "https://github.com/taskcluster/taskcluster/commit/69527b42111471e24a7720735920a0955678844a",
     "commiter_name": "djmitche",
@@ -1440,7 +1487,7 @@
       "infrastructure/references/relativize.js"
     ]
   },
-  "58": {
+  "62": {
     "sha": "343b00f1b9760dbd182eb5367b3317be2ded537e",
     "url": "https://github.com/taskcluster/taskcluster/commit/343b00f1b9760dbd182eb5367b3317be2ded537e",
     "commiter_name": "djmitche",
@@ -1629,7 +1676,7 @@
       "yarn.lock"
     ]
   },
-  "59": {
+  "63": {
     "sha": "183fccf5c4b8b03a6647396f03ebcb6fd7c2cff5",
     "url": "https://github.com/taskcluster/taskcluster/commit/183fccf5c4b8b03a6647396f03ebcb6fd7c2cff5",
     "commiter_name": "djmitche",
@@ -1644,7 +1691,7 @@
       "services/worker-manager/schemas/v1/worker-configuration.yml"
     ]
   },
-  "60": {
+  "64": {
     "sha": "b1c5dec02e887e2140b8a164cc7ebf2cd7a277fc",
     "url": "https://github.com/taskcluster/taskcluster/commit/b1c5dec02e887e2140b8a164cc7ebf2cd7a277fc",
     "commiter_name": "djmitche",
@@ -1661,7 +1708,7 @@
       "package.json"
     ]
   },
-  "61": {
+  "65": {
     "sha": "6ac34273fd14c4d1b98795d6e342874e1aab378f",
     "url": "https://github.com/taskcluster/taskcluster/commit/6ac34273fd14c4d1b98795d6e342874e1aab378f",
     "commiter_name": "djmitche",
@@ -1676,7 +1723,7 @@
       "taskcluster-builder"
     ]
   },
-  "62": {
+  "66": {
     "sha": "0c7345200cee11b70fa99ebbc077bbd292ae676a",
     "url": "https://github.com/taskcluster/taskcluster/commit/0c7345200cee11b70fa99ebbc077bbd292ae676a",
     "commiter_name": "imbstack",
@@ -1689,7 +1736,7 @@
       "yarn.lock"
     ]
   },
-  "63": {
+  "67": {
     "sha": "19fa22719f028780a83bd31e281c71a516cba65a",
     "url": "https://github.com/taskcluster/taskcluster/commit/19fa22719f028780a83bd31e281c71a516cba65a",
     "commiter_name": "djmitche",
@@ -1706,7 +1753,7 @@
       "services/hooks/test/helper.js"
     ]
   },
-  "64": {
+  "68": {
     "sha": "0cf5e0a10cf07320df94ea1e5eff715c99e72a79",
     "url": "https://github.com/taskcluster/taskcluster/commit/0cf5e0a10cf07320df94ea1e5eff715c99e72a79",
     "commiter_name": "djmitche",
@@ -1718,7 +1765,7 @@
       "yarn.lock"
     ]
   },
-  "65": {
+  "69": {
     "sha": "c723fce1b7fc2bf70a883f886e12d20825625ed4",
     "url": "https://github.com/taskcluster/taskcluster/commit/c723fce1b7fc2bf70a883f886e12d20825625ed4",
     "commiter_name": "renovate-bot",
@@ -1730,7 +1777,7 @@
       "yarn.lock"
     ]
   },
-  "66": {
+  "70": {
     "sha": "5ac1d162938572eefc785d93b913d5a7f267859a",
     "url": "https://github.com/taskcluster/taskcluster/commit/5ac1d162938572eefc785d93b913d5a7f267859a",
     "commiter_name": "helfi92",
@@ -1741,7 +1788,7 @@
       "ui/src/components/AwsProvisionerErrorsTable/index.jsx"
     ]
   },
-  "67": {
+  "71": {
     "sha": "ce2f069688a5042716bdd487383871bbafc49a11",
     "url": "https://github.com/taskcluster/taskcluster/commit/ce2f069688a5042716bdd487383871bbafc49a11",
     "commiter_name": "djmitche",
@@ -1753,7 +1800,7 @@
       "yarn.lock"
     ]
   },
-  "68": {
+  "72": {
     "sha": "142f77a64f4dc511cdf77874fc3e9f01416e65a5",
     "url": "https://github.com/taskcluster/taskcluster/commit/142f77a64f4dc511cdf77874fc3e9f01416e65a5",
     "commiter_name": "renovate-bot",
@@ -1765,7 +1812,7 @@
       "yarn.lock"
     ]
   },
-  "69": {
+  "73": {
     "sha": "1ed7a0a609d253863ba4a7c3a9443df820982a2e",
     "url": "https://github.com/taskcluster/taskcluster/commit/1ed7a0a609d253863ba4a7c3a9443df820982a2e",
     "commiter_name": "djmitche",
@@ -1782,7 +1829,7 @@
       "services/hooks/test/helper.js"
     ]
   },
-  "70": {
+  "74": {
     "sha": "be83f00c46a3658155feb0a65453e055988468c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/be83f00c46a3658155feb0a65453e055988468c5",
     "commiter_name": "djmitche",
@@ -1795,7 +1842,7 @@
       "services/hooks/test/taskcreator_test.js"
     ]
   },
-  "71": {
+  "75": {
     "sha": "f97150b1da9456f7491ee7b18fa8b6ba4b39df64",
     "url": "https://github.com/taskcluster/taskcluster/commit/f97150b1da9456f7491ee7b18fa8b6ba4b39df64",
     "commiter_name": "imbstack",
@@ -1806,7 +1853,7 @@
       ".taskcluster.yml"
     ]
   },
-  "72": {
+  "76": {
     "sha": "7febd1791ec5d930b7550f20ea33dd06004bb1e1",
     "url": "https://github.com/taskcluster/taskcluster/commit/7febd1791ec5d930b7550f20ea33dd06004bb1e1",
     "commiter_name": "djmitche",
@@ -1817,7 +1864,7 @@
       ".taskcluster.yml"
     ]
   },
-  "73": {
+  "77": {
     "sha": "42c49d26137c95387d1ebb937188d42dfac0a3bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/42c49d26137c95387d1ebb937188d42dfac0a3bb",
     "commiter_name": "djmitche",
@@ -1828,7 +1875,7 @@
       "services/notify/src/hack.js"
     ]
   },
-  "74": {
+  "78": {
     "sha": "c1b316c6d05223b216511eb56676db1eec2e099a",
     "url": "https://github.com/taskcluster/taskcluster/commit/c1b316c6d05223b216511eb56676db1eec2e099a",
     "commiter_name": "djmitche",
@@ -1839,7 +1886,7 @@
       "services/hooks/docs/firing-hooks.md"
     ]
   },
-  "75": {
+  "79": {
     "sha": "5c3a5a7ad6492e26f70c1918852131c41e72eceb",
     "url": "https://github.com/taskcluster/taskcluster/commit/5c3a5a7ad6492e26f70c1918852131c41e72eceb",
     "commiter_name": "djmitche",
@@ -1850,7 +1897,7 @@
       "services/notify/src/hack.js"
     ]
   },
-  "76": {
+  "80": {
     "sha": "deda11492ba1d6dd701260ea673947b2015ab5b0",
     "url": "https://github.com/taskcluster/taskcluster/commit/deda11492ba1d6dd701260ea673947b2015ab5b0",
     "commiter_name": "djmitche",
@@ -1861,7 +1908,7 @@
       "services/hooks/Procfile"
     ]
   },
-  "77": {
+  "81": {
     "sha": "d72282940526d6f40eea8d6b9f803b8b28153445",
     "url": "https://github.com/taskcluster/taskcluster/commit/d72282940526d6f40eea8d6b9f803b8b28153445",
     "commiter_name": "djmitche",
@@ -1877,7 +1924,7 @@
       "services/hooks/test/expires_test.js"
     ]
   },
-  "78": {
+  "82": {
     "sha": "083c426115fde118105ec64340ab5b1a61b94677",
     "url": "https://github.com/taskcluster/taskcluster/commit/083c426115fde118105ec64340ab5b1a61b94677",
     "commiter_name": "Biboswan",
@@ -1888,7 +1935,7 @@
       "services/hooks/src/v1.js"
     ]
   },
-  "79": {
+  "83": {
     "sha": "eefa559995352f1a89b237870103332eed07a33f",
     "url": "https://github.com/taskcluster/taskcluster/commit/eefa559995352f1a89b237870103332eed07a33f",
     "commiter_name": "Biboswan",
@@ -1900,7 +1947,7 @@
       "services/hooks/src/v1.js"
     ]
   },
-  "80": {
+  "84": {
     "sha": "d2e45acd2c808edafe37f515dbda77ff2593b80e",
     "url": "https://github.com/taskcluster/taskcluster/commit/d2e45acd2c808edafe37f515dbda77ff2593b80e",
     "commiter_name": "djmitche",
@@ -1911,7 +1958,7 @@
       "services/hooks/docs/firing-hooks.md"
     ]
   },
-  "81": {
+  "85": {
     "sha": "ab72731037f1a61ca7424c72c6d4f3596805c715",
     "url": "https://github.com/taskcluster/taskcluster/commit/ab72731037f1a61ca7424c72c6d4f3596805c715",
     "commiter_name": "Biboswan",
@@ -1923,7 +1970,7 @@
       "services/hooks/src/data.js"
     ]
   },
-  "82": {
+  "86": {
     "sha": "fbe7c9cb69a2e7346222d8ec839aceebeeb83eb8",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe7c9cb69a2e7346222d8ec839aceebeeb83eb8",
     "commiter_name": "djmitche",
@@ -1936,7 +1983,7 @@
       "yarn.lock"
     ]
   },
-  "83": {
+  "87": {
     "sha": "cfebbfde630bcaca5ce7fb06ff025db003fb93f3",
     "url": "https://github.com/taskcluster/taskcluster/commit/cfebbfde630bcaca5ce7fb06ff025db003fb93f3",
     "commiter_name": "djmitche",
@@ -1949,7 +1996,7 @@
       "yarn.lock"
     ]
   },
-  "84": {
+  "88": {
     "sha": "3c494f36eb3544785c1dd59ac2b6562527e6fbf5",
     "url": "https://github.com/taskcluster/taskcluster/commit/3c494f36eb3544785c1dd59ac2b6562527e6fbf5",
     "commiter_name": "Biboswan",
@@ -1962,7 +2009,7 @@
       "services/hooks/test/expires_test.js"
     ]
   },
-  "85": {
+  "89": {
     "sha": "015e1202ffb20bcefcaabff1f8ddb0f3a7079a23",
     "url": "https://github.com/taskcluster/taskcluster/commit/015e1202ffb20bcefcaabff1f8ddb0f3a7079a23",
     "commiter_name": "jhford",
@@ -2018,7 +2065,7 @@
       "yarn.lock"
     ]
   },
-  "86": {
+  "90": {
     "sha": "57cc73c465bcd7d53b9473a205669e6b08bfdb56",
     "url": "https://github.com/taskcluster/taskcluster/commit/57cc73c465bcd7d53b9473a205669e6b08bfdb56",
     "commiter_name": "djmitche",
@@ -2030,7 +2077,7 @@
       "services/worker-manager/lib/main.js"
     ]
   },
-  "87": {
+  "91": {
     "sha": "a461188ea7b599af8fe52ff4a46a2b3523534cf5",
     "url": "https://github.com/taskcluster/taskcluster/commit/a461188ea7b599af8fe52ff4a46a2b3523534cf5",
     "commiter_name": "djmitche",
@@ -2041,7 +2088,7 @@
       "services/worker-manager/lib/api.js"
     ]
   },
-  "88": {
+  "92": {
     "sha": "d0bbffb69f49472799b978986e8f9d74cf2dd689",
     "url": "https://github.com/taskcluster/taskcluster/commit/d0bbffb69f49472799b978986e8f9d74cf2dd689",
     "commiter_name": "djmitche",
@@ -2058,7 +2105,7 @@
       "services/worker-manager/schemas/v1/worker-configuration.yml"
     ]
   },
-  "89": {
+  "93": {
     "sha": "ba29e08f0b0a7e82c07fe7c4082be7aba4cd56aa",
     "url": "https://github.com/taskcluster/taskcluster/commit/ba29e08f0b0a7e82c07fe7c4082be7aba4cd56aa",
     "commiter_name": "jhford",
@@ -2070,7 +2117,7 @@
       "yarn.lock"
     ]
   },
-  "90": {
+  "94": {
     "sha": "19a04d0197e1e91eebae586bbdf03a10f57fa9da",
     "url": "https://github.com/taskcluster/taskcluster/commit/19a04d0197e1e91eebae586bbdf03a10f57fa9da",
     "commiter_name": "jhford",
@@ -2082,7 +2129,7 @@
       "services/worker-manager/package.json"
     ]
   },
-  "91": {
+  "95": {
     "sha": "e78dfedee5d0d305588c5936faa5923ba9b4f1a3",
     "url": "https://github.com/taskcluster/taskcluster/commit/e78dfedee5d0d305588c5936faa5923ba9b4f1a3",
     "commiter_name": "jhford",
@@ -2118,7 +2165,7 @@
       "yarn.lock"
     ]
   },
-  "92": {
+  "96": {
     "sha": "a0a38eb325684e21aa753ef14db2cad61892d0ab",
     "url": "https://github.com/taskcluster/taskcluster/commit/a0a38eb325684e21aa753ef14db2cad61892d0ab",
     "commiter_name": "jhford",
@@ -2135,7 +2182,7 @@
       "services/worker-manager/yarn.lock"
     ]
   },
-  "93": {
+  "97": {
     "sha": "a4fd6e18fc913d10a488eff4473e3d916c84941a",
     "url": "https://github.com/taskcluster/taskcluster/commit/a4fd6e18fc913d10a488eff4473e3d916c84941a",
     "commiter_name": "jhford",
@@ -2194,7 +2241,7 @@
       "services/worker-manager/yarn.lock"
     ]
   },
-  "94": {
+  "98": {
     "sha": "c4f7ae5a0c9b154dcfdb3057ef23853e1efbaf0d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c4f7ae5a0c9b154dcfdb3057ef23853e1efbaf0d",
     "commiter_name": "jhford",
@@ -2207,7 +2254,7 @@
       "services/taskcluster-worker-manager/test/bidding-strategies/queuepending_test.js"
     ]
   },
-  "95": {
+  "99": {
     "sha": "8c97c620c707e01695795119841b14591635fd93",
     "url": "https://github.com/taskcluster/taskcluster/commit/8c97c620c707e01695795119841b14591635fd93",
     "commiter_name": "jhford",
@@ -2220,7 +2267,7 @@
       "services/taskcluster-worker-manager/test/providers/provider_test.js"
     ]
   },
-  "96": {
+  "100": {
     "sha": "7804fd4cbf0e19554438113c506f38b612669704",
     "url": "https://github.com/taskcluster/taskcluster/commit/7804fd4cbf0e19554438113c506f38b612669704",
     "commiter_name": "jhford",
@@ -2240,7 +2287,7 @@
       "services/taskcluster-worker-manager/test/provisioner_test.js"
     ]
   },
-  "97": {
+  "101": {
     "sha": "fddc21e6085c2d6b548fd401cb5114f85813aad0",
     "url": "https://github.com/taskcluster/taskcluster/commit/fddc21e6085c2d6b548fd401cb5114f85813aad0",
     "commiter_name": "djmitche",
@@ -2253,7 +2300,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "98": {
+  "102": {
     "sha": "1e0c6cd3e33d5d38509cc8de40522e1fd96177da",
     "url": "https://github.com/taskcluster/taskcluster/commit/1e0c6cd3e33d5d38509cc8de40522e1fd96177da",
     "commiter_name": "jhford",
@@ -2271,7 +2318,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "99": {
+  "103": {
     "sha": "fbe7817f584626659c653f6950fb2d5d621d8c70",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe7817f584626659c653f6950fb2d5d621d8c70",
     "commiter_name": "jhford",
@@ -2282,7 +2329,7 @@
       "services/taskcluster-worker-manager/test/provisioner_test.js"
     ]
   },
-  "100": {
+  "104": {
     "sha": "cadffb40d8d3a4a8b3fe0367bafa43d04b73a271",
     "url": "https://github.com/taskcluster/taskcluster/commit/cadffb40d8d3a4a8b3fe0367bafa43d04b73a271",
     "commiter_name": "jhford",
@@ -2293,7 +2340,7 @@
       "services/taskcluster-worker-manager/.travis.yml"
     ]
   },
-  "101": {
+  "105": {
     "sha": "3af5de24f6434f9a9ed5fa8b96259d2de06d460f",
     "url": "https://github.com/taskcluster/taskcluster/commit/3af5de24f6434f9a9ed5fa8b96259d2de06d460f",
     "commiter_name": "jhford",
@@ -2305,7 +2352,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "102": {
+  "106": {
     "sha": "d89ff6d34b663b4155ec7b4a145675754becff26",
     "url": "https://github.com/taskcluster/taskcluster/commit/d89ff6d34b663b4155ec7b4a145675754becff26",
     "commiter_name": "jhford",
@@ -2316,7 +2363,7 @@
       "services/taskcluster-worker-manager/lib/worker.js"
     ]
   },
-  "103": {
+  "107": {
     "sha": "680ddd640f99160b83fec6c53e82d0fd563639a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/680ddd640f99160b83fec6c53e82d0fd563639a8",
     "commiter_name": "jhford",
@@ -2328,7 +2375,7 @@
       "services/taskcluster-worker-manager/test/bid_test.js"
     ]
   },
-  "104": {
+  "108": {
     "sha": "1446267b72a29f78c3b91ae73d0a029712da802f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1446267b72a29f78c3b91ae73d0a029712da802f",
     "commiter_name": "jhford",
@@ -2340,7 +2387,7 @@
       "services/taskcluster-worker-manager/test/provisioner_test.js"
     ]
   },
-  "105": {
+  "109": {
     "sha": "6ddc1ad85c58db6be8a61799b1e167350099e98a",
     "url": "https://github.com/taskcluster/taskcluster/commit/6ddc1ad85c58db6be8a61799b1e167350099e98a",
     "commiter_name": "jhford",
@@ -2351,7 +2398,7 @@
       "services/taskcluster-worker-manager/lib/provisioner.js"
     ]
   },
-  "106": {
+  "110": {
     "sha": "94f9b277381a5bc3a75ac85e9feae0b1a00b757d",
     "url": "https://github.com/taskcluster/taskcluster/commit/94f9b277381a5bc3a75ac85e9feae0b1a00b757d",
     "commiter_name": "jhford",
@@ -2362,7 +2409,7 @@
       "services/taskcluster-worker-manager/lib/bidding-strategy.js"
     ]
   },
-  "107": {
+  "111": {
     "sha": "532a6b4076a94ee96b8fddf80ef436197a21d510",
     "url": "https://github.com/taskcluster/taskcluster/commit/532a6b4076a94ee96b8fddf80ef436197a21d510",
     "commiter_name": "jhford",
@@ -2377,7 +2424,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "108": {
+  "112": {
     "sha": "491d91bbd9a226512b6e162a57aeea24fb52e986",
     "url": "https://github.com/taskcluster/taskcluster/commit/491d91bbd9a226512b6e162a57aeea24fb52e986",
     "commiter_name": "jhford",
@@ -2389,7 +2436,7 @@
       "services/taskcluster-worker-manager/package.json"
     ]
   },
-  "109": {
+  "113": {
     "sha": "663c40e132d5cbbeaec4c1a4e7a883654717196c",
     "url": "https://github.com/taskcluster/taskcluster/commit/663c40e132d5cbbeaec4c1a4e7a883654717196c",
     "commiter_name": "jhford",
@@ -2409,7 +2456,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "110": {
+  "114": {
     "sha": "327b77b36c07052fffd72a43157b31268a5b2565",
     "url": "https://github.com/taskcluster/taskcluster/commit/327b77b36c07052fffd72a43157b31268a5b2565",
     "commiter_name": "jhford",
@@ -2427,7 +2474,7 @@
       "services/taskcluster-worker-manager/test/convert-expected.json"
     ]
   },
-  "111": {
+  "115": {
     "sha": "0ad65419d6b501a5edabc17474c808fe72a10b0c",
     "url": "https://github.com/taskcluster/taskcluster/commit/0ad65419d6b501a5edabc17474c808fe72a10b0c",
     "commiter_name": "jhford",
@@ -2440,7 +2487,7 @@
       "services/taskcluster-worker-manager/test/helper.js"
     ]
   },
-  "112": {
+  "116": {
     "sha": "728cc72d4c5787712c9cd5acdd10aa1b8f285abf",
     "url": "https://github.com/taskcluster/taskcluster/commit/728cc72d4c5787712c9cd5acdd10aa1b8f285abf",
     "commiter_name": "jhford",
@@ -2451,7 +2498,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "113": {
+  "117": {
     "sha": "e46f3bbb4e05060ed4a6b34f29a6f5258d0d88ff",
     "url": "https://github.com/taskcluster/taskcluster/commit/e46f3bbb4e05060ed4a6b34f29a6f5258d0d88ff",
     "commiter_name": "jhford",
@@ -2462,7 +2509,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "114": {
+  "118": {
     "sha": "eb77935fcb48146cb62984b186e6a9bea2305b85",
     "url": "https://github.com/taskcluster/taskcluster/commit/eb77935fcb48146cb62984b186e6a9bea2305b85",
     "commiter_name": "jhford",
@@ -2473,7 +2520,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "115": {
+  "119": {
     "sha": "77c400eac18374c6ebca3f3ea76e7009671665e4",
     "url": "https://github.com/taskcluster/taskcluster/commit/77c400eac18374c6ebca3f3ea76e7009671665e4",
     "commiter_name": "jhford",
@@ -2484,7 +2531,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "116": {
+  "120": {
     "sha": "50f45dbad0b6bad2a8ebaa40ccdc7f47c3b5c050",
     "url": "https://github.com/taskcluster/taskcluster/commit/50f45dbad0b6bad2a8ebaa40ccdc7f47c3b5c050",
     "commiter_name": "jhford",
@@ -2495,7 +2542,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "117": {
+  "121": {
     "sha": "fcc97d00c5589f2b8fa59176ef3b8c23298388db",
     "url": "https://github.com/taskcluster/taskcluster/commit/fcc97d00c5589f2b8fa59176ef3b8c23298388db",
     "commiter_name": "jhford",
@@ -2506,7 +2553,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "118": {
+  "122": {
     "sha": "06dc973fd5473db89bdf90d01652cd111eb50d42",
     "url": "https://github.com/taskcluster/taskcluster/commit/06dc973fd5473db89bdf90d01652cd111eb50d42",
     "commiter_name": "jhford",
@@ -2517,7 +2564,7 @@
       "services/taskcluster-worker-manager/lib/api.js"
     ]
   },
-  "119": {
+  "123": {
     "sha": "3454fc42d819770c8739e302f0a12942741efbfe",
     "url": "https://github.com/taskcluster/taskcluster/commit/3454fc42d819770c8739e302f0a12942741efbfe",
     "commiter_name": "jhford",
@@ -2532,7 +2579,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "120": {
+  "124": {
     "sha": "21ca49e1a47bd3a8e83e4690012bb8e919a078f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/21ca49e1a47bd3a8e83e4690012bb8e919a078f7",
     "commiter_name": "jhford",
@@ -2545,7 +2592,7 @@
       "services/taskcluster-worker-manager/test/convert_test.js"
     ]
   },
-  "121": {
+  "125": {
     "sha": "7bf888fd8fbe7453a1a21253045f70e44a54839d",
     "url": "https://github.com/taskcluster/taskcluster/commit/7bf888fd8fbe7453a1a21253045f70e44a54839d",
     "commiter_name": "jhford",
@@ -2559,7 +2606,7 @@
       "services/taskcluster-worker-manager/test/data-storage_test.js"
     ]
   },
-  "122": {
+  "126": {
     "sha": "333f3afb52c76f1c40db4b7419c45192c0b5cd95",
     "url": "https://github.com/taskcluster/taskcluster/commit/333f3afb52c76f1c40db4b7419c45192c0b5cd95",
     "commiter_name": "jhford",
@@ -2573,7 +2620,7 @@
       "services/taskcluster-worker-manager/test/convert_test.js"
     ]
   },
-  "123": {
+  "127": {
     "sha": "0d0e15bca0c1ba111f6430922ad8f2dddcbb5c58",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d0e15bca0c1ba111f6430922ad8f2dddcbb5c58",
     "commiter_name": "jhford",
@@ -2585,7 +2632,7 @@
       "services/taskcluster-worker-manager/lib/main.js"
     ]
   },
-  "124": {
+  "128": {
     "sha": "d776695acdc6a40546007562bb7dc8235f292471",
     "url": "https://github.com/taskcluster/taskcluster/commit/d776695acdc6a40546007562bb7dc8235f292471",
     "commiter_name": "jhford",
@@ -2600,7 +2647,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "125": {
+  "129": {
     "sha": "d2928acdbe061f2c1d7104dcc0dab744b37387d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/d2928acdbe061f2c1d7104dcc0dab744b37387d8",
     "commiter_name": "jhford",
@@ -2617,7 +2664,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "126": {
+  "130": {
     "sha": "f768c6fdfcfde12f9b7839de94c747a21f6c79ed",
     "url": "https://github.com/taskcluster/taskcluster/commit/f768c6fdfcfde12f9b7839de94c747a21f6c79ed",
     "commiter_name": "jhford",
@@ -2633,7 +2680,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "127": {
+  "131": {
     "sha": "529b19ae0c84bf62da5fb201d0c59c4baea72cdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/529b19ae0c84bf62da5fb201d0c59c4baea72cdb",
     "commiter_name": "jhford",
@@ -2647,7 +2694,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "128": {
+  "132": {
     "sha": "1be0e365cb7e1e1a938c965de9a43c0e51533d11",
     "url": "https://github.com/taskcluster/taskcluster/commit/1be0e365cb7e1e1a938c965de9a43c0e51533d11",
     "commiter_name": "jhford",
@@ -2658,7 +2705,7 @@
       "services/taskcluster-worker-manager/.travis.yml"
     ]
   },
-  "129": {
+  "133": {
     "sha": "267aaaba77391ecf5e17a770b853bac0961214e3",
     "url": "https://github.com/taskcluster/taskcluster/commit/267aaaba77391ecf5e17a770b853bac0961214e3",
     "commiter_name": "jhford",
@@ -2674,7 +2721,7 @@
       "services/taskcluster-worker-manager/test/worker-config_test.js"
     ]
   },
-  "130": {
+  "134": {
     "sha": "ff5ac92c5dc547865409735b97a68af91e4ad257",
     "url": "https://github.com/taskcluster/taskcluster/commit/ff5ac92c5dc547865409735b97a68af91e4ad257",
     "commiter_name": "jhford",
@@ -2686,7 +2733,7 @@
       "services/taskcluster-worker-manager/test/errors_test.js"
     ]
   },
-  "131": {
+  "135": {
     "sha": "84744e189ebd6e151cd535ef152381e488c09c3e",
     "url": "https://github.com/taskcluster/taskcluster/commit/84744e189ebd6e151cd535ef152381e488c09c3e",
     "commiter_name": "jhford",
@@ -2701,7 +2748,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "132": {
+  "136": {
     "sha": "6a44db1d751d49a239cee2cda0b883df892b947e",
     "url": "https://github.com/taskcluster/taskcluster/commit/6a44db1d751d49a239cee2cda0b883df892b947e",
     "commiter_name": "jhford",
@@ -2712,7 +2759,7 @@
       "services/taskcluster-worker-manager/lib/rules.js"
     ]
   },
-  "133": {
+  "137": {
     "sha": "aa30eb5862e0a74ef5083eab97582292902c80cf",
     "url": "https://github.com/taskcluster/taskcluster/commit/aa30eb5862e0a74ef5083eab97582292902c80cf",
     "commiter_name": "jhford",
@@ -2723,7 +2770,7 @@
       "services/taskcluster-worker-manager/.github/CODEOWNERS"
     ]
   },
-  "134": {
+  "138": {
     "sha": "8661441bb0c52478968e1f4248ca9267c24e59b9",
     "url": "https://github.com/taskcluster/taskcluster/commit/8661441bb0c52478968e1f4248ca9267c24e59b9",
     "commiter_name": "jhford",
@@ -2734,7 +2781,7 @@
       "services/taskcluster-worker-manager/.travis.yml"
     ]
   },
-  "135": {
+  "139": {
     "sha": "5080bf767c4464b073a6a36e1b0d3653e57eae04",
     "url": "https://github.com/taskcluster/taskcluster/commit/5080bf767c4464b073a6a36e1b0d3653e57eae04",
     "commiter_name": "jhford",
@@ -2750,7 +2797,7 @@
       "services/taskcluster-worker-manager/yarn.lock"
     ]
   },
-  "136": {
+  "140": {
     "sha": "bc3548a834f3a95f365ae83d3580233c620921b1",
     "url": "https://github.com/taskcluster/taskcluster/commit/bc3548a834f3a95f365ae83d3580233c620921b1",
     "commiter_name": "ccooper",
@@ -2763,7 +2810,7 @@
       "services/taskcluster-worker-manager/LICENSE"
     ]
   },
-  "137": {
+  "141": {
     "sha": "0a2f10a33caac6dea91225fe32c8c4f9418c85e0",
     "url": "https://github.com/taskcluster/taskcluster/commit/0a2f10a33caac6dea91225fe32c8c4f9418c85e0",
     "commiter_name": "jhford",
@@ -2774,7 +2821,7 @@
       "services/taskcluster-worker-manager/package.json"
     ]
   },
-  "138": {
+  "142": {
     "sha": "0fb9798adffe2f8ae91650f46fde1547e1b31ca2",
     "url": "https://github.com/taskcluster/taskcluster/commit/0fb9798adffe2f8ae91650f46fde1547e1b31ca2",
     "commiter_name": "djmitche",
@@ -2785,7 +2832,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "139": {
+  "143": {
     "sha": "1f88a4df0a7c9ff99789e52c5446b6bd11b5463f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1f88a4df0a7c9ff99789e52c5446b6bd11b5463f",
     "commiter_name": "Biboswan",
@@ -2797,7 +2844,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "140": {
+  "144": {
     "sha": "2fdbf0415eff2d35eb43659a9074a465e7adbd26",
     "url": "https://github.com/taskcluster/taskcluster/commit/2fdbf0415eff2d35eb43659a9074a465e7adbd26",
     "commiter_name": "djmitche",
@@ -2811,7 +2858,7 @@
       "services/hooks/src/main.js"
     ]
   },
-  "141": {
+  "145": {
     "sha": "2736c6d52c501bfeb6e46918c0827a1d4e39b76e",
     "url": "https://github.com/taskcluster/taskcluster/commit/2736c6d52c501bfeb6e46918c0827a1d4e39b76e",
     "commiter_name": "djmitche",
@@ -2822,7 +2869,7 @@
       "services/auth/test/trie_test.js"
     ]
   },
-  "142": {
+  "146": {
     "sha": "83b56f179ed0ae0986e28830552f31e3b98102be",
     "url": "https://github.com/taskcluster/taskcluster/commit/83b56f179ed0ae0986e28830552f31e3b98102be",
     "commiter_name": "djmitche",
@@ -2833,7 +2880,7 @@
       "services/auth/test/trie_test.js"
     ]
   },
-  "143": {
+  "147": {
     "sha": "187349873ca9c70a04602b54c91f383b6c097a36",
     "url": "https://github.com/taskcluster/taskcluster/commit/187349873ca9c70a04602b54c91f383b6c097a36",
     "commiter_name": "djmitche",
@@ -2844,7 +2891,7 @@
       "services/hooks/src/listeners.js"
     ]
   },
-  "144": {
+  "148": {
     "sha": "02d172063a46a58b82491944ddbd5711ac6ef992",
     "url": "https://github.com/taskcluster/taskcluster/commit/02d172063a46a58b82491944ddbd5711ac6ef992",
     "commiter_name": "djmitche",
@@ -2855,7 +2902,7 @@
       "libraries/pulse/src/client.js"
     ]
   },
-  "145": {
+  "149": {
     "sha": "62e141c83dd0e36bde5a1620f7c2bada789dbf4c",
     "url": "https://github.com/taskcluster/taskcluster/commit/62e141c83dd0e36bde5a1620f7c2bada789dbf4c",
     "commiter_name": "djmitche",
@@ -2867,7 +2914,7 @@
       "yarn.lock"
     ]
   },
-  "146": {
+  "150": {
     "sha": "df8bc52516b5202313007a8c521756e77ddd8970",
     "url": "https://github.com/taskcluster/taskcluster/commit/df8bc52516b5202313007a8c521756e77ddd8970",
     "commiter_name": "renovate-bot",
@@ -2879,7 +2926,7 @@
       "yarn.lock"
     ]
   },
-  "147": {
+  "151": {
     "sha": "79ffd0525d71619d91abacc8508ef1004524fce0",
     "url": "https://github.com/taskcluster/taskcluster/commit/79ffd0525d71619d91abacc8508ef1004524fce0",
     "commiter_name": "djmitche",
@@ -2891,7 +2938,7 @@
       "yarn.lock"
     ]
   },
-  "148": {
+  "152": {
     "sha": "926d592eeb0ccf7b8bff17813095fb2cff218300",
     "url": "https://github.com/taskcluster/taskcluster/commit/926d592eeb0ccf7b8bff17813095fb2cff218300",
     "commiter_name": "renovate-bot",
@@ -2903,7 +2950,7 @@
       "yarn.lock"
     ]
   },
-  "149": {
+  "153": {
     "sha": "b2d25fd054671c33090ca6fea12f6cf435967ced",
     "url": "https://github.com/taskcluster/taskcluster/commit/b2d25fd054671c33090ca6fea12f6cf435967ced",
     "commiter_name": "Biboswan",
@@ -2917,7 +2964,7 @@
       "services/hooks/test/expires_test.js"
     ]
   },
-  "150": {
+  "154": {
     "sha": "1469bc7c6d19e11792657ec9f1734f65241cdd92",
     "url": "https://github.com/taskcluster/taskcluster/commit/1469bc7c6d19e11792657ec9f1734f65241cdd92",
     "commiter_name": "imbstack",
@@ -2947,7 +2994,7 @@
       "services/treeherder/README.md"
     ]
   },
-  "151": {
+  "155": {
     "sha": "15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
     "url": "https://github.com/taskcluster/taskcluster/commit/15ea79a78cc21068b9fe8f5f3c9bfc7a8d02b798",
     "commiter_name": "helfi92",
@@ -2959,7 +3006,7 @@
       "ui/yarn.lock"
     ]
   },
-  "152": {
+  "156": {
     "sha": "912e0d6f0a86335871bb742436ee74a9eac69d4c",
     "url": "https://github.com/taskcluster/taskcluster/commit/912e0d6f0a86335871bb742436ee74a9eac69d4c",
     "commiter_name": "djmitche",
@@ -2970,7 +3017,7 @@
       "infrastructure/terraform/taskcluster.tf.json"
     ]
   },
-  "153": {
+  "157": {
     "sha": "ac6ad8e8de17ce623e34cf816ee952a0be37383f",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac6ad8e8de17ce623e34cf816ee952a0be37383f",
     "commiter_name": "djmitche",
@@ -3039,7 +3086,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "154": {
+  "158": {
     "sha": "fdff4fa703c2d0652021ebad577d5723537db0bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/fdff4fa703c2d0652021ebad577d5723537db0bb",
     "commiter_name": "imbstack",
@@ -3050,7 +3097,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "155": {
+  "159": {
     "sha": "22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
     "url": "https://github.com/taskcluster/taskcluster/commit/22a956fa3ea04d34ee0bbef5b06fa056e9d8ec84",
     "commiter_name": "imbstack",
@@ -3061,7 +3108,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "156": {
+  "160": {
     "sha": "f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
     "url": "https://github.com/taskcluster/taskcluster/commit/f4e4fc80a26c30af7d69c51ff2a5b6063b4bbb44",
     "commiter_name": "imbstack",
@@ -3091,7 +3138,7 @@
       "services/treeherder/README.md"
     ]
   },
-  "157": {
+  "161": {
     "sha": "36553b808fddf55a15b5739fa2912787a65af83a",
     "url": "https://github.com/taskcluster/taskcluster/commit/36553b808fddf55a15b5739fa2912787a65af83a",
     "commiter_name": "renovate[bot]",
@@ -3103,7 +3150,7 @@
       "ui/yarn.lock"
     ]
   },
-  "158": {
+  "162": {
     "sha": "ada68546df8335a30352ec9970c3c62b4cd471fc",
     "url": "https://github.com/taskcluster/taskcluster/commit/ada68546df8335a30352ec9970c3c62b4cd471fc",
     "commiter_name": "imbstack",
@@ -3114,7 +3161,7 @@
       ".github/pull_request_template.md"
     ]
   },
-  "159": {
+  "163": {
     "sha": "45acc854a52475540703d99dfd2aa45d95381c60",
     "url": "https://github.com/taskcluster/taskcluster/commit/45acc854a52475540703d99dfd2aa45d95381c60",
     "commiter_name": "djmitche",
@@ -3127,7 +3174,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "160": {
+  "164": {
     "sha": "5c85f2f76f457deeec62afff57b82c79e5204ed6",
     "url": "https://github.com/taskcluster/taskcluster/commit/5c85f2f76f457deeec62afff57b82c79e5204ed6",
     "commiter_name": "djmitche",
@@ -3138,7 +3185,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "161": {
+  "165": {
     "sha": "62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
     "url": "https://github.com/taskcluster/taskcluster/commit/62eb0bfc74d94c43d67e9aad2801bc2aacacaf63",
     "commiter_name": "djmitche",
@@ -3166,7 +3213,7 @@
       "infrastructure/terraform/taskcluster.tf.json"
     ]
   },
-  "162": {
+  "166": {
     "sha": "4c050d72d92196389a2532915e88544b27017250",
     "url": "https://github.com/taskcluster/taskcluster/commit/4c050d72d92196389a2532915e88544b27017250",
     "commiter_name": "djmitche",
@@ -3177,7 +3224,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "163": {
+  "167": {
     "sha": "460632187c319073ded53b5149b0d411a1bbef2c",
     "url": "https://github.com/taskcluster/taskcluster/commit/460632187c319073ded53b5149b0d411a1bbef2c",
     "commiter_name": "djmitche",
@@ -3205,7 +3252,7 @@
       "services/web-server/src/index.js"
     ]
   },
-  "164": {
+  "168": {
     "sha": "5f87606f06675d40ae98abb564452aa208699f7d",
     "url": "https://github.com/taskcluster/taskcluster/commit/5f87606f06675d40ae98abb564452aa208699f7d",
     "commiter_name": "djmitche",
@@ -3216,7 +3263,7 @@
       "libraries/references/src/built-services.js"
     ]
   },
-  "165": {
+  "169": {
     "sha": "56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
     "url": "https://github.com/taskcluster/taskcluster/commit/56b03dea3f0c3bc04b7d2d6da35ac9ef9fa96058",
     "commiter_name": "djmitche",
@@ -3239,7 +3286,7 @@
       "services/references/package.json"
     ]
   },
-  "166": {
+  "170": {
     "sha": "1114d1da509fcec06fe96172cb200c8a3339d946",
     "url": "https://github.com/taskcluster/taskcluster/commit/1114d1da509fcec06fe96172cb200c8a3339d946",
     "commiter_name": "djmitche",
@@ -3250,7 +3297,7 @@
       "infrastructure/builder/src/build/monoimage.js"
     ]
   },
-  "167": {
+  "171": {
     "sha": "65fd82b6468c4f68e8e4771054e85526c060eb90",
     "url": "https://github.com/taskcluster/taskcluster/commit/65fd82b6468c4f68e8e4771054e85526c060eb90",
     "commiter_name": "djmitche",
@@ -3264,7 +3311,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "168": {
+  "172": {
     "sha": "1bf86a71b9c073653eb9ea52ff0355c630793a1f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1bf86a71b9c073653eb9ea52ff0355c630793a1f",
     "commiter_name": "djmitche",
@@ -3283,7 +3330,7 @@
       "package.json"
     ]
   },
-  "169": {
+  "173": {
     "sha": "ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
     "url": "https://github.com/taskcluster/taskcluster/commit/ef86a1d1d05522a60a6292d8a4f30f9cd9d69515",
     "commiter_name": "helfi92",
@@ -3294,7 +3341,7 @@
       "package.json"
     ]
   },
-  "170": {
+  "174": {
     "sha": "dfee9af2438503514b00b0df8dbbfb8032bda517",
     "url": "https://github.com/taskcluster/taskcluster/commit/dfee9af2438503514b00b0df8dbbfb8032bda517",
     "commiter_name": "renovate[bot]",
@@ -3306,7 +3353,7 @@
       "ui/yarn.lock"
     ]
   },
-  "171": {
+  "175": {
     "sha": "cb3a73b9ac39953eb1ce878da97febb6be7291e1",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb3a73b9ac39953eb1ce878da97febb6be7291e1",
     "commiter_name": "renovate[bot]",
@@ -3318,7 +3365,7 @@
       "ui/yarn.lock"
     ]
   },
-  "172": {
+  "176": {
     "sha": "41d9a1944543cc7234fa34ce98d1d0571a8984e1",
     "url": "https://github.com/taskcluster/taskcluster/commit/41d9a1944543cc7234fa34ce98d1d0571a8984e1",
     "commiter_name": "renovate[bot]",
@@ -3330,7 +3377,7 @@
       "ui/yarn.lock"
     ]
   },
-  "173": {
+  "177": {
     "sha": "7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
     "url": "https://github.com/taskcluster/taskcluster/commit/7e2a677dd624bacd1ea70c4ebb4e313407df27b6",
     "commiter_name": "renovate[bot]",
@@ -3342,7 +3389,7 @@
       "ui/yarn.lock"
     ]
   },
-  "174": {
+  "178": {
     "sha": "433e8cde5340ae4c98bded7e3a246550ed7c04d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/433e8cde5340ae4c98bded7e3a246550ed7c04d8",
     "commiter_name": "renovate[bot]",
@@ -3354,7 +3401,7 @@
       "ui/yarn.lock"
     ]
   },
-  "175": {
+  "179": {
     "sha": "3d916d45912e2ad902a2887a88caf41e0d0bff20",
     "url": "https://github.com/taskcluster/taskcluster/commit/3d916d45912e2ad902a2887a88caf41e0d0bff20",
     "commiter_name": "helfi92",
@@ -3366,7 +3413,7 @@
       "ui/src/components/WorkerTypesTable/index.jsx"
     ]
   },
-  "176": {
+  "180": {
     "sha": "aca0d33455922bbcea325d597bf54d3991e77ada",
     "url": "https://github.com/taskcluster/taskcluster/commit/aca0d33455922bbcea325d597bf54d3991e77ada",
     "commiter_name": "Biboswan",
@@ -3380,7 +3427,7 @@
       "services/web-server/src/resolvers/Hooks.js"
     ]
   },
-  "177": {
+  "181": {
     "sha": "1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
     "url": "https://github.com/taskcluster/taskcluster/commit/1338ad83d3ae63a1c1c992481253f626bdd2c3a1",
     "commiter_name": "renovate[bot]",
@@ -3392,7 +3439,7 @@
       "ui/yarn.lock"
     ]
   },
-  "178": {
+  "182": {
     "sha": "5a0e8af004921efe7b08847d598ea8ad207ca04b",
     "url": "https://github.com/taskcluster/taskcluster/commit/5a0e8af004921efe7b08847d598ea8ad207ca04b",
     "commiter_name": "helfi92",
@@ -3404,7 +3451,7 @@
       "ui/yarn.lock"
     ]
   },
-  "179": {
+  "183": {
     "sha": "79ec514d9392094d89d31fe98e1a412d56ac04c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/79ec514d9392094d89d31fe98e1a412d56ac04c5",
     "commiter_name": "helfi92",
@@ -3415,7 +3462,7 @@
       "netlify.toml"
     ]
   },
-  "180": {
+  "184": {
     "sha": "a60f57c3215c46022a3f0d6f59834bb9134359c1",
     "url": "https://github.com/taskcluster/taskcluster/commit/a60f57c3215c46022a3f0d6f59834bb9134359c1",
     "commiter_name": "owlishDeveloper",
@@ -3725,7 +3772,7 @@
       "ui/src/views/Scopes/ViewScope/index.jsx"
     ]
   },
-  "181": {
+  "185": {
     "sha": "59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
     "url": "https://github.com/taskcluster/taskcluster/commit/59e7d17f4f29699498a7b3b0392e3a9aba0cdd83",
     "commiter_name": "helfi92",
@@ -3736,7 +3783,7 @@
       "README.md"
     ]
   },
-  "182": {
+  "186": {
     "sha": "ab7a4381b84cf003bc951d1f84c660425b53db91",
     "url": "https://github.com/taskcluster/taskcluster/commit/ab7a4381b84cf003bc951d1f84c660425b53db91",
     "commiter_name": "djmitche",
@@ -3757,7 +3804,7 @@
       "services/built-in-workers/test/mocha.opts"
     ]
   },
-  "183": {
+  "187": {
     "sha": "1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
     "url": "https://github.com/taskcluster/taskcluster/commit/1035ed547cd4a1712186fb5a4a2a6af0c6e244b0",
     "commiter_name": "djmitche",
@@ -3783,7 +3830,7 @@
       "services/built-in-workers/yarn.lock"
     ]
   },
-  "184": {
+  "188": {
     "sha": "db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
     "url": "https://github.com/taskcluster/taskcluster/commit/db59ef726e1bdd0c7e1cc64ff6749d11c85bc567",
     "commiter_name": "hybrid1999",
@@ -3799,7 +3846,7 @@
       "services/built-in-workers/test/index_test.js"
     ]
   },
-  "185": {
+  "189": {
     "sha": "4f749b9ad5275107a6a4524d78eda9e1eee00425",
     "url": "https://github.com/taskcluster/taskcluster/commit/4f749b9ad5275107a6a4524d78eda9e1eee00425",
     "commiter_name": "djmitche",
@@ -3811,7 +3858,7 @@
       "services/built-in-workers/package.json"
     ]
   },
-  "186": {
+  "190": {
     "sha": "8544811bbcf1413f35f7392e9c41a791a4f59e00",
     "url": "https://github.com/taskcluster/taskcluster/commit/8544811bbcf1413f35f7392e9c41a791a4f59e00",
     "commiter_name": "djmitche",
@@ -3836,7 +3883,7 @@
       "services/built-in-workers/yarn.lock"
     ]
   },
-  "187": {
+  "191": {
     "sha": "3a41717b455f83cf1abeb16485f0067cf5a51b63",
     "url": "https://github.com/taskcluster/taskcluster/commit/3a41717b455f83cf1abeb16485f0067cf5a51b63",
     "commiter_name": "owlishDeveloper",
@@ -3850,7 +3897,7 @@
       "ui/taskcluster-web-tests/Dockerfile"
     ]
   },
-  "188": {
+  "192": {
     "sha": "4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
     "url": "https://github.com/taskcluster/taskcluster/commit/4920d1d20848a0a3aaf9f0c34729d78a9806cbb6",
     "commiter_name": "djmitche",
@@ -3864,7 +3911,7 @@
       "yarn.lock"
     ]
   },
-  "189": {
+  "193": {
     "sha": "fc4b259c1361cafa470870dc140b507104a28e6a",
     "url": "https://github.com/taskcluster/taskcluster/commit/fc4b259c1361cafa470870dc140b507104a28e6a",
     "commiter_name": "djmitche",
@@ -3900,7 +3947,7 @@
       "yarn.lock"
     ]
   },
-  "190": {
+  "194": {
     "sha": "ff9efef8504e46a92b1153413907bddb4672dc72",
     "url": "https://github.com/taskcluster/taskcluster/commit/ff9efef8504e46a92b1153413907bddb4672dc72",
     "commiter_name": "djmitche",
@@ -3922,7 +3969,7 @@
       "yarn.lock"
     ]
   },
-  "191": {
+  "195": {
     "sha": "7ced9f86720f654ad055ebab914c02f7ed7869d4",
     "url": "https://github.com/taskcluster/taskcluster/commit/7ced9f86720f654ad055ebab914c02f7ed7869d4",
     "commiter_name": "owlishDeveloper",
@@ -3934,7 +3981,7 @@
       "ui/package.json"
     ]
   },
-  "192": {
+  "196": {
     "sha": "a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
     "url": "https://github.com/taskcluster/taskcluster/commit/a00fed63ef2dd37a25c3c7d6083c831b84a814ad",
     "commiter_name": "owlishDeveloper",
@@ -4244,7 +4291,7 @@
       "ui/src/views/Scopes/ViewScope/index.jsx"
     ]
   },
-  "193": {
+  "197": {
     "sha": "e1e741d51416b622a15222c177d9c8b5e3f4185c",
     "url": "https://github.com/taskcluster/taskcluster/commit/e1e741d51416b622a15222c177d9c8b5e3f4185c",
     "commiter_name": "djmitche",
@@ -4255,7 +4302,7 @@
       "services/references/package.json"
     ]
   },
-  "194": {
+  "198": {
     "sha": "ac6f65834888d30bf280a8b93d02291e9f6f1729",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac6f65834888d30bf280a8b93d02291e9f6f1729",
     "commiter_name": "djmitche",
@@ -4268,7 +4315,7 @@
       "yarn.lock"
     ]
   },
-  "195": {
+  "199": {
     "sha": "98f8e77b11a18960fb64556f92cdcb34208a6c6f",
     "url": "https://github.com/taskcluster/taskcluster/commit/98f8e77b11a18960fb64556f92cdcb34208a6c6f",
     "commiter_name": "owlishDeveloper",
@@ -4283,7 +4330,7 @@
       "taskcluster-web/LICENSE"
     ]
   },
-  "196": {
+  "200": {
     "sha": "7470efa73fb6d495eb968041da28e581ada1debd",
     "url": "https://github.com/taskcluster/taskcluster/commit/7470efa73fb6d495eb968041da28e581ada1debd",
     "commiter_name": "owlishDeveloper",
@@ -4593,7 +4640,7 @@
       "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
     ]
   },
-  "197": {
+  "201": {
     "sha": "408dcaa88953e36544f215946b2ce4e4e504e3df",
     "url": "https://github.com/taskcluster/taskcluster/commit/408dcaa88953e36544f215946b2ce4e4e504e3df",
     "commiter_name": "owlishDeveloper",
@@ -4903,7 +4950,7 @@
       "taskcluster-web/src/views/Scopes/ScopesetExpander/index.jsx"
     ]
   },
-  "198": {
+  "202": {
     "sha": "ef4c5fa323d705d6df617da24f0ee88027df4dd6",
     "url": "https://github.com/taskcluster/taskcluster/commit/ef4c5fa323d705d6df617da24f0ee88027df4dd6",
     "commiter_name": "djmitche",
@@ -4923,7 +4970,7 @@
       "yarn.lock"
     ]
   },
-  "199": {
+  "203": {
     "sha": "0fe0639a979a4e03e1228490fe667bba3cc06a19",
     "url": "https://github.com/taskcluster/taskcluster/commit/0fe0639a979a4e03e1228490fe667bba3cc06a19",
     "commiter_name": "djmitche",
@@ -4934,7 +4981,7 @@
       "services/references/package.json"
     ]
   },
-  "200": {
+  "204": {
     "sha": "33ff9db6fd8f9a1eddfb249872916292ee53a12a",
     "url": "https://github.com/taskcluster/taskcluster/commit/33ff9db6fd8f9a1eddfb249872916292ee53a12a",
     "commiter_name": "ededals",
@@ -4945,7 +4992,7 @@
       "src/views/Tasks/CreateTask/index.jsx"
     ]
   },
-  "201": {
+  "205": {
     "sha": "575665a45bed1e450481f98941532b436250ed89",
     "url": "https://github.com/taskcluster/taskcluster/commit/575665a45bed1e450481f98941532b436250ed89",
     "commiter_name": "ededals",
@@ -4956,7 +5003,7 @@
       "src/views/PulseMessages/index.jsx"
     ]
   },
-  "202": {
+  "206": {
     "sha": "d28fe09d78b072dd125882f4792964648a59a2b4",
     "url": "https://github.com/taskcluster/taskcluster/commit/d28fe09d78b072dd125882f4792964648a59a2b4",
     "commiter_name": "varundey",
@@ -4970,7 +5017,7 @@
       "src/views/Tasks/TaskLog/index.jsx"
     ]
   },
-  "203": {
+  "207": {
     "sha": "32bf21dccf8ae4582f5da833c8db76214709ae9a",
     "url": "https://github.com/taskcluster/taskcluster/commit/32bf21dccf8ae4582f5da833c8db76214709ae9a",
     "commiter_name": "owlishDeveloper",
@@ -4982,7 +5029,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "204": {
+  "208": {
     "sha": "9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
     "url": "https://github.com/taskcluster/taskcluster/commit/9dfa220eb25ffcb0e3a4987b3ea18e37ee38445d",
     "commiter_name": "imbstack",
@@ -5009,7 +5056,7 @@
       "services/queue/test/queueservice_test.js"
     ]
   },
-  "205": {
+  "209": {
     "sha": "f2f86653dc1c587509ee9cba7366b02ab949a07d",
     "url": "https://github.com/taskcluster/taskcluster/commit/f2f86653dc1c587509ee9cba7366b02ab949a07d",
     "commiter_name": "owlishDeveloper",
@@ -5021,7 +5068,7 @@
       "libraries/pulse/src/consumer.js"
     ]
   },
-  "206": {
+  "210": {
     "sha": "c8e302d0be612ca3644b77e2e391c11507542f12",
     "url": "https://github.com/taskcluster/taskcluster/commit/c8e302d0be612ca3644b77e2e391c11507542f12",
     "commiter_name": "owlishDeveloper",
@@ -5033,7 +5080,7 @@
       "services/github/src/tc-yaml.js"
     ]
   },
-  "207": {
+  "211": {
     "sha": "8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
     "url": "https://github.com/taskcluster/taskcluster/commit/8337b2bdfd735cb7d1caa37d1ccc1cc62880f11d",
     "commiter_name": "arshadkazmi42",
@@ -5044,7 +5091,7 @@
       "src/views/Quickstart/index.jsx"
     ]
   },
-  "208": {
+  "212": {
     "sha": "af8d50fed466b5bdaed1c1a3f27a1cd193655599",
     "url": "https://github.com/taskcluster/taskcluster/commit/af8d50fed466b5bdaed1c1a3f27a1cd193655599",
     "commiter_name": "vivekRaj10",
@@ -5058,7 +5105,7 @@
       "src/components/WorkersTable/index.jsx"
     ]
   },
-  "209": {
+  "213": {
     "sha": "aeba2adac1fa34609700beaa304fcdb9e0b910cf",
     "url": "https://github.com/taskcluster/taskcluster/commit/aeba2adac1fa34609700beaa304fcdb9e0b910cf",
     "commiter_name": "varundey",
@@ -5069,7 +5116,7 @@
       "src/views/Tasks/ViewTask/index.jsx"
     ]
   },
-  "210": {
+  "214": {
     "sha": "60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
     "url": "https://github.com/taskcluster/taskcluster/commit/60dc95bc936b4cefe1dc2bd920ca83116d1f3b93",
     "commiter_name": "djmitche",
@@ -5083,7 +5130,7 @@
       "yarn.lock"
     ]
   },
-  "211": {
+  "215": {
     "sha": "30372ec731730592a7bf22d4b349a61f75663883",
     "url": "https://github.com/taskcluster/taskcluster/commit/30372ec731730592a7bf22d4b349a61f75663883",
     "commiter_name": "djmitche",
@@ -5094,7 +5141,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "212": {
+  "216": {
     "sha": "58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "url": "https://github.com/taskcluster/taskcluster/commit/58681e3b6aaa2dc55ae12f9cebf051c0ca525337",
     "commiter_name": "Biboswan",
@@ -5105,7 +5152,7 @@
       "libraries/client/src/apis.js"
     ]
   },
-  "213": {
+  "217": {
     "sha": "910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "url": "https://github.com/taskcluster/taskcluster/commit/910ebcdc980e1dc8c1e87403f316aa83ce78747f",
     "commiter_name": "djmitche",
@@ -5155,7 +5202,7 @@
       "test/meta_test.js"
     ]
   },
-  "214": {
+  "218": {
     "sha": "73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "url": "https://github.com/taskcluster/taskcluster/commit/73e7191cd95704f5e61c3e744d38e57570bccbc7",
     "commiter_name": "imbstack",
@@ -5167,7 +5214,7 @@
       "yarn.lock"
     ]
   },
-  "215": {
+  "219": {
     "sha": "a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "url": "https://github.com/taskcluster/taskcluster/commit/a16e568b5c5a07cde18ffaeb7d27e11fc9dd8595",
     "commiter_name": "renovate-bot",
@@ -5179,7 +5226,7 @@
       "yarn.lock"
     ]
   },
-  "216": {
+  "220": {
     "sha": "eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "url": "https://github.com/taskcluster/taskcluster/commit/eede6e9e15cdab0874b6a7e72cda2f81ffea606f",
     "commiter_name": "djmitche",
@@ -5197,7 +5244,7 @@
       "services/references/src/main.js"
     ]
   },
-  "217": {
+  "221": {
     "sha": "2926da3c9b179899ce1f4b084cb80d29359bccde",
     "url": "https://github.com/taskcluster/taskcluster/commit/2926da3c9b179899ce1f4b084cb80d29359bccde",
     "commiter_name": "djmitche",
@@ -5209,7 +5256,7 @@
       "test/meta_test.js"
     ]
   },
-  "218": {
+  "222": {
     "sha": "a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "url": "https://github.com/taskcluster/taskcluster/commit/a8c66e8d5749c41a75bd0dc2a776cf0eab5637ae",
     "commiter_name": "djmitche",
@@ -5257,7 +5304,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "219": {
+  "223": {
     "sha": "b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "url": "https://github.com/taskcluster/taskcluster/commit/b0eaeb20fb985df25a71ba4ab8246dbd2b3b7067",
     "commiter_name": "djmitche",
@@ -5271,7 +5318,7 @@
       "infrastructure/terraform/LICENSE"
     ]
   },
-  "220": {
+  "224": {
     "sha": "a263ab914e5684c0ea3a538040e4814515c90329",
     "url": "https://github.com/taskcluster/taskcluster/commit/a263ab914e5684c0ea3a538040e4814515c90329",
     "commiter_name": "djmitche",
@@ -5323,7 +5370,7 @@
       "infrastructure/terraform/variables.tf"
     ]
   },
-  "221": {
+  "225": {
     "sha": "39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "url": "https://github.com/taskcluster/taskcluster/commit/39239a8f766fe304c9e4bd6544f02cc661dc162e",
     "commiter_name": "djmitche",
@@ -5334,7 +5381,7 @@
       ".taskcluster.yml"
     ]
   },
-  "222": {
+  "226": {
     "sha": "1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "url": "https://github.com/taskcluster/taskcluster/commit/1839eecdd38cf1f44e43db02f7aac8dd14756622",
     "commiter_name": "djmitche",
@@ -5345,7 +5392,7 @@
       "services/references/package.json"
     ]
   },
-  "223": {
+  "227": {
     "sha": "158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "url": "https://github.com/taskcluster/taskcluster/commit/158a3ac6001023ac2f6fb8f99c37f4690fc47515",
     "commiter_name": "djmitche",
@@ -5522,7 +5569,7 @@
       "services/references/test/mocha.opts"
     ]
   },
-  "224": {
+  "228": {
     "sha": "8da6f9a0a314111d1bfa71428f1175920679dce9",
     "url": "https://github.com/taskcluster/taskcluster/commit/8da6f9a0a314111d1bfa71428f1175920679dce9",
     "commiter_name": "djmitche",
@@ -5539,7 +5586,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "225": {
+  "229": {
     "sha": "7073e919271708b5394c2abb42382306c928e63a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7073e919271708b5394c2abb42382306c928e63a",
     "commiter_name": "djmitche",
@@ -5551,7 +5598,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "226": {
+  "230": {
     "sha": "61bb37c2ce4648aa0534037caf968ba1897c4919",
     "url": "https://github.com/taskcluster/taskcluster/commit/61bb37c2ce4648aa0534037caf968ba1897c4919",
     "commiter_name": "djmitche",
@@ -5563,7 +5610,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "227": {
+  "231": {
     "sha": "38504daf3872070523aac7abce819b4eeb928b87",
     "url": "https://github.com/taskcluster/taskcluster/commit/38504daf3872070523aac7abce819b4eeb928b87",
     "commiter_name": "imbstack",
@@ -5578,7 +5625,7 @@
       "services/references/schemas/manifest-v2.yml"
     ]
   },
-  "228": {
+  "232": {
     "sha": "0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d801e69658b6b60582ae5726cd57b6d4fd527a9",
     "commiter_name": "djmitche",
@@ -5764,7 +5811,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "229": {
+  "233": {
     "sha": "998899df571454e9de69f902a17daf36a3144618",
     "url": "https://github.com/taskcluster/taskcluster/commit/998899df571454e9de69f902a17daf36a3144618",
     "commiter_name": "djmitche",
@@ -5775,7 +5822,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "230": {
+  "234": {
     "sha": "c57689bf42a4cf06dba531ae86e35224219803c6",
     "url": "https://github.com/taskcluster/taskcluster/commit/c57689bf42a4cf06dba531ae86e35224219803c6",
     "commiter_name": "djmitche",
@@ -5786,7 +5833,7 @@
       "services/references/schemas/api-reference-v0.yml"
     ]
   },
-  "231": {
+  "235": {
     "sha": "190f0dc3c179383b0298fc552f237df4d45f42aa",
     "url": "https://github.com/taskcluster/taskcluster/commit/190f0dc3c179383b0298fc552f237df4d45f42aa",
     "commiter_name": "ccooper",
@@ -5799,7 +5846,7 @@
       "services/references/LICENSE"
     ]
   },
-  "232": {
+  "236": {
     "sha": "f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "url": "https://github.com/taskcluster/taskcluster/commit/f9a740763ceb8611efdb2ee54c90bb9a095f28d1",
     "commiter_name": "djmitche",
@@ -5814,7 +5861,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "233": {
+  "237": {
     "sha": "3237de63cef974dfb4ec21735411e81a173469da",
     "url": "https://github.com/taskcluster/taskcluster/commit/3237de63cef974dfb4ec21735411e81a173469da",
     "commiter_name": "djmitche",
@@ -5826,7 +5873,7 @@
       "services/references/README.md"
     ]
   },
-  "234": {
+  "238": {
     "sha": "9d4639e02eea9a27a70664db50da3d6c39dff742",
     "url": "https://github.com/taskcluster/taskcluster/commit/9d4639e02eea9a27a70664db50da3d6c39dff742",
     "commiter_name": "djmitche",
@@ -5840,7 +5887,7 @@
       "services/references/test/load_test.js"
     ]
   },
-  "235": {
+  "239": {
     "sha": "3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "url": "https://github.com/taskcluster/taskcluster/commit/3fe87500e22d6e7c9721275dd66321d6f6b2720e",
     "commiter_name": "djmitche",
@@ -5859,7 +5906,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "236": {
+  "240": {
     "sha": "b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6139b4c6c383eb998b57a52e064efe1b4f0ba46",
     "commiter_name": "djmitche",
@@ -5870,7 +5917,7 @@
       "services/references/schemas/manifest.yml"
     ]
   },
-  "237": {
+  "241": {
     "sha": "e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "url": "https://github.com/taskcluster/taskcluster/commit/e65e25056ecd69d44f18fddd3893f6b1702d5bb8",
     "commiter_name": "djmitche",
@@ -5885,7 +5932,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "238": {
+  "242": {
     "sha": "0490184a91391efa3f01c5dbace65e87db9c8f20",
     "url": "https://github.com/taskcluster/taskcluster/commit/0490184a91391efa3f01c5dbace65e87db9c8f20",
     "commiter_name": "djmitche",
@@ -5896,7 +5943,7 @@
       "services/references/Dockerfile"
     ]
   },
-  "239": {
+  "243": {
     "sha": "a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "url": "https://github.com/taskcluster/taskcluster/commit/a218297e236dfe2f964b2f96ccef04cc0c321d7f",
     "commiter_name": "djmitche",
@@ -5908,7 +5955,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "240": {
+  "244": {
     "sha": "1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "url": "https://github.com/taskcluster/taskcluster/commit/1577fa0e95c8a5eeaaa1905d23209f57f1d902d2",
     "commiter_name": "djmitche",
@@ -5921,7 +5968,7 @@
       "services/references/nginx-site.conf"
     ]
   },
-  "241": {
+  "245": {
     "sha": "67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "url": "https://github.com/taskcluster/taskcluster/commit/67da8d11f50ae68142fdb13ab50c9f183e52456f",
     "commiter_name": "djmitche",
@@ -5932,7 +5979,7 @@
       "services/references/.taskcluster.yml"
     ]
   },
-  "242": {
+  "246": {
     "sha": "7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7d8de4b43d88b18303e062a52b2a19cb72fc6e5e",
     "commiter_name": "djmitche",
@@ -5943,7 +5990,7 @@
       "services/references/README.md"
     ]
   },
-  "243": {
+  "247": {
     "sha": "30401b64459da526c3ce11def5fc93d50035094e",
     "url": "https://github.com/taskcluster/taskcluster/commit/30401b64459da526c3ce11def5fc93d50035094e",
     "commiter_name": "djmitche",
@@ -5957,7 +6004,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "244": {
+  "248": {
     "sha": "e84021107115016d5c0023fb18ea7726b5f8beab",
     "url": "https://github.com/taskcluster/taskcluster/commit/e84021107115016d5c0023fb18ea7726b5f8beab",
     "commiter_name": "djmitche",
@@ -5974,7 +6021,7 @@
       "services/references/test/update_test.js"
     ]
   },
-  "245": {
+  "249": {
     "sha": "d6402324224cd7173edbd87c51a2e310930268df",
     "url": "https://github.com/taskcluster/taskcluster/commit/d6402324224cd7173edbd87c51a2e310930268df",
     "commiter_name": "djmitche",
@@ -5987,7 +6034,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "246": {
+  "250": {
     "sha": "fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "url": "https://github.com/taskcluster/taskcluster/commit/fa1ec9aff63e44bacbb7c9100a9c4c5c44966704",
     "commiter_name": "djmitche",
@@ -6005,7 +6052,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "247": {
+  "251": {
     "sha": "8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b54435a93bef2f6a3ba5b5568aeaf91652d43da",
     "commiter_name": "djmitche",
@@ -6025,7 +6072,7 @@
       "services/references/yarn.lock"
     ]
   },
-  "248": {
+  "252": {
     "sha": "9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "url": "https://github.com/taskcluster/taskcluster/commit/9eddfef3a1ad3ddaf0fd6c8654e1d2650e72975f",
     "commiter_name": "owlishDeveloper",
@@ -6036,7 +6083,7 @@
       "services/github/src/handlers.js"
     ]
   },
-  "249": {
+  "253": {
     "sha": "fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbe6dcd253f5ef4e8cfa4cf17fb0c34a76c1f408",
     "commiter_name": "djmitche",
@@ -6047,7 +6094,7 @@
       "libraries/references/package.json"
     ]
   },
-  "250": {
+  "254": {
     "sha": "6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "url": "https://github.com/taskcluster/taskcluster/commit/6b3e34dd7c5df9cf32d3bcedd34a36182cd3f850",
     "commiter_name": "djmitche",
@@ -6058,7 +6105,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "251": {
+  "255": {
     "sha": "2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "url": "https://github.com/taskcluster/taskcluster/commit/2fa217d09c9a7b2349659cc9ccbbbc102e20908a",
     "commiter_name": "djmitche",
@@ -6069,7 +6116,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "252": {
+  "256": {
     "sha": "ce1c231b06efceebebeda268a127d73a4333b987",
     "url": "https://github.com/taskcluster/taskcluster/commit/ce1c231b06efceebebeda268a127d73a4333b987",
     "commiter_name": "djmitche",
@@ -6080,7 +6127,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "253": {
+  "257": {
     "sha": "5e97e64a746049de3d7b66e60140664d353fbb2b",
     "url": "https://github.com/taskcluster/taskcluster/commit/5e97e64a746049de3d7b66e60140664d353fbb2b",
     "commiter_name": "renovate[bot]",
@@ -6092,7 +6139,7 @@
       "yarn.lock"
     ]
   },
-  "254": {
+  "258": {
     "sha": "7716154f7b5a914bcd10d7390989178072370c97",
     "url": "https://github.com/taskcluster/taskcluster/commit/7716154f7b5a914bcd10d7390989178072370c97",
     "commiter_name": "renovate[bot]",
@@ -6104,7 +6151,7 @@
       "yarn.lock"
     ]
   },
-  "255": {
+  "259": {
     "sha": "c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "url": "https://github.com/taskcluster/taskcluster/commit/c7e2ec4d8ae6643d7128a578d223fb4ff84a9f1b",
     "commiter_name": "renovate[bot]",
@@ -6116,7 +6163,7 @@
       "yarn.lock"
     ]
   },
-  "256": {
+  "260": {
     "sha": "3de3082db222232d9c420c88305140d8c0bff305",
     "url": "https://github.com/taskcluster/taskcluster/commit/3de3082db222232d9c420c88305140d8c0bff305",
     "commiter_name": "djmitche",
@@ -6128,7 +6175,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "257": {
+  "261": {
     "sha": "25e72b7bb35df99f945718093e89ae71da95b429",
     "url": "https://github.com/taskcluster/taskcluster/commit/25e72b7bb35df99f945718093e89ae71da95b429",
     "commiter_name": "djmitche",
@@ -6140,7 +6187,7 @@
       "services/web-server/Procfile"
     ]
   },
-  "258": {
+  "262": {
     "sha": "c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "url": "https://github.com/taskcluster/taskcluster/commit/c9d6c8fb4e0477a817a984f19084d1ec42b48ebc",
     "commiter_name": "djmitche",
@@ -6152,7 +6199,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "259": {
+  "263": {
     "sha": "8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "url": "https://github.com/taskcluster/taskcluster/commit/8b64c9a9703f4191fe13111c5fea460a0123fbb1",
     "commiter_name": "owlishDeveloper",
@@ -6164,7 +6211,7 @@
       "services/web-server/package.json"
     ]
   },
-  "260": {
+  "264": {
     "sha": "63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "url": "https://github.com/taskcluster/taskcluster/commit/63fa65acfdac7e92600cfdbf7854b050cd7cfe08",
     "commiter_name": "owlishDeveloper",
@@ -6183,7 +6230,7 @@
       "yarn.lock"
     ]
   },
-  "261": {
+  "265": {
     "sha": "0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "url": "https://github.com/taskcluster/taskcluster/commit/0e990186e69b9ea719bd7dbd703ca10359d9ace3",
     "commiter_name": "djmitche",
@@ -6194,7 +6241,7 @@
       "libraries/validate/src/schemaset.js"
     ]
   },
-  "262": {
+  "266": {
     "sha": "cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "url": "https://github.com/taskcluster/taskcluster/commit/cd0fb8d463aa4a57960b6c76adccf6a239bf5b31",
     "commiter_name": "djmitche",
@@ -6206,7 +6253,7 @@
       "services/queue/test/workerinfo_test.js"
     ]
   },
-  "263": {
+  "267": {
     "sha": "38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "url": "https://github.com/taskcluster/taskcluster/commit/38c7219dc1b6f1040e64518964d2257f6500d6e8",
     "commiter_name": "owlishDeveloper",
@@ -6307,7 +6354,7 @@
       "yarn.lock"
     ]
   },
-  "264": {
+  "268": {
     "sha": "6920c209219ee2d28130f9d36e24507be86d7c28",
     "url": "https://github.com/taskcluster/taskcluster/commit/6920c209219ee2d28130f9d36e24507be86d7c28",
     "commiter_name": "djmitche",
@@ -6318,7 +6365,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "265": {
+  "269": {
     "sha": "70ad6b427043f69e28f9cb6aaef534151b13383c",
     "url": "https://github.com/taskcluster/taskcluster/commit/70ad6b427043f69e28f9cb6aaef534151b13383c",
     "commiter_name": "djmitche",
@@ -6331,7 +6378,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "266": {
+  "270": {
     "sha": "f67c857131a9ef118b56c43d89f173dee62f2512",
     "url": "https://github.com/taskcluster/taskcluster/commit/f67c857131a9ef118b56c43d89f173dee62f2512",
     "commiter_name": "owlishDeveloper",
@@ -6468,7 +6515,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "267": {
+  "271": {
     "sha": "e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "url": "https://github.com/taskcluster/taskcluster/commit/e02a86352038206d5a31a548c3dca8e3b5c0bc74",
     "commiter_name": "djmitche",
@@ -6479,7 +6526,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "268": {
+  "272": {
     "sha": "4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "url": "https://github.com/taskcluster/taskcluster/commit/4bb5d40b16b6b5aa0dc54431c2c9416c2a54db6c",
     "commiter_name": "djmitche",
@@ -6490,7 +6537,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "269": {
+  "273": {
     "sha": "49b961bb95ce8671fd9a54543694acab9ef548d7",
     "url": "https://github.com/taskcluster/taskcluster/commit/49b961bb95ce8671fd9a54543694acab9ef548d7",
     "commiter_name": "djmitche",
@@ -6501,7 +6548,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "270": {
+  "274": {
     "sha": "fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "url": "https://github.com/taskcluster/taskcluster/commit/fb51924ff68018ba0d584eb79f4d7e255ec0887d",
     "commiter_name": "owlishDeveloper",
@@ -6513,7 +6560,7 @@
       "services/github/test/handler_test.js"
     ]
   },
-  "271": {
+  "275": {
     "sha": "98c16d0320d16f8d284a82d36c792e192e389664",
     "url": "https://github.com/taskcluster/taskcluster/commit/98c16d0320d16f8d284a82d36c792e192e389664",
     "commiter_name": "djmitche",
@@ -6524,7 +6571,7 @@
       "services/auth/src/main.js"
     ]
   },
-  "272": {
+  "276": {
     "sha": "d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "url": "https://github.com/taskcluster/taskcluster/commit/d5bbcc9776c5e8e9653afb7a8657989dbf967db5",
     "commiter_name": "djmitche",
@@ -6535,7 +6582,7 @@
       "libraries/api/src/middleware/parse.js"
     ]
   },
-  "273": {
+  "277": {
     "sha": "1a224a54c17fe7871c39b56e185268082623760f",
     "url": "https://github.com/taskcluster/taskcluster/commit/1a224a54c17fe7871c39b56e185268082623760f",
     "commiter_name": "djmitche",
@@ -6664,7 +6711,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "274": {
+  "278": {
     "sha": "3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "url": "https://github.com/taskcluster/taskcluster/commit/3b2a79b9ce2ccba51ac8d1bb1c028cf3fc789478",
     "commiter_name": "djmitche",
@@ -6676,7 +6723,7 @@
       "libraries/references/test/validate_test.js"
     ]
   },
-  "275": {
+  "279": {
     "sha": "6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "url": "https://github.com/taskcluster/taskcluster/commit/6aa8854f327904242e695dd5c2af3812e6c5c14c",
     "commiter_name": "djmitche",
@@ -6800,7 +6847,7 @@
       "services/treeherder/schemas/v1/task-treeherder-config.yml"
     ]
   },
-  "276": {
+  "280": {
     "sha": "4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "url": "https://github.com/taskcluster/taskcluster/commit/4ba20f722a21e3a18df36eb4ea0f5046baac081a",
     "commiter_name": "djmitche",
@@ -6814,7 +6861,7 @@
       "libraries/references/test/metaschema_test.js"
     ]
   },
-  "277": {
+  "281": {
     "sha": "d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3c23e9011f15f1efbf82fb86f19015991a4cf84",
     "commiter_name": "Biboswan",
@@ -6827,7 +6874,7 @@
       "services/hooks/test/api_test.js"
     ]
   },
-  "278": {
+  "282": {
     "sha": "70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "url": "https://github.com/taskcluster/taskcluster/commit/70b67fe0f3fc6b120e9538a10289104da7ec2ede",
     "commiter_name": "djmitche",
@@ -6838,7 +6885,7 @@
       ".github/CODEOWNERS"
     ]
   },
-  "279": {
+  "283": {
     "sha": "4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "url": "https://github.com/taskcluster/taskcluster/commit/4f1ff994ba976e64ddc6b48cb75d40663d88cb9e",
     "commiter_name": "djmitche",
@@ -6852,7 +6899,7 @@
       "infrastructure/builder/test/formats/tf_json_test.js"
     ]
   },
-  "280": {
+  "284": {
     "sha": "fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "url": "https://github.com/taskcluster/taskcluster/commit/fbd7cdabb424f2eaadc82d4f7095a42b94fa7d53",
     "commiter_name": "djmitche",
@@ -6863,7 +6910,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "281": {
+  "285": {
     "sha": "49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "url": "https://github.com/taskcluster/taskcluster/commit/49cae3a99d6f994d3857c8b9d719216aa8f1685b",
     "commiter_name": "djmitche",
@@ -6877,7 +6924,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "282": {
+  "286": {
     "sha": "65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "url": "https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28",
     "commiter_name": "djmitche",
@@ -6888,7 +6935,7 @@
       "package.json"
     ]
   },
-  "283": {
+  "287": {
     "sha": "cb01a41a19567239c3796b541111cff500117927",
     "url": "https://github.com/taskcluster/taskcluster/commit/cb01a41a19567239c3796b541111cff500117927",
     "commiter_name": "imbstack",
@@ -6899,7 +6946,7 @@
       "package.json"
     ]
   },
-  "284": {
+  "288": {
     "sha": "837bc03478191928c019b36b2cd1a8360c242427",
     "url": "https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427",
     "commiter_name": "djmitche",
@@ -6911,7 +6958,7 @@
       "yarn.lock"
     ]
   },
-  "285": {
+  "289": {
     "sha": "d3336686210d98db119e5640c574dc62f2ca0237",
     "url": "https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237",
     "commiter_name": "djmitche",
@@ -6922,7 +6969,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "286": {
+  "290": {
     "sha": "fcfa98088751a39ddc8707445a476158f2f118e3",
     "url": "https://github.com/taskcluster/taskcluster/commit/fcfa98088751a39ddc8707445a476158f2f118e3",
     "commiter_name": "arshadkazmi42",
@@ -6935,7 +6982,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "287": {
+  "291": {
     "sha": "e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "url": "https://github.com/taskcluster/taskcluster/commit/e2da9b7a1a974987f5911380aa22e94a47de6fff",
     "commiter_name": "renovate-bot",
@@ -6947,7 +6994,7 @@
       "yarn.lock"
     ]
   },
-  "288": {
+  "292": {
     "sha": "68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "url": "https://github.com/taskcluster/taskcluster/commit/68802b9e4c109da06206bd9362f6bb43a44b79d9",
     "commiter_name": "djmitche",
@@ -6958,7 +7005,7 @@
       "services/queue/src/api.js"
     ]
   },
-  "289": {
+  "293": {
     "sha": "7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "url": "https://github.com/taskcluster/taskcluster/commit/7cd57e272515b32dbe85df52f0055f2a3dbdf49a",
     "commiter_name": "imbstack",
@@ -6969,7 +7016,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "290": {
+  "294": {
     "sha": "01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "url": "https://github.com/taskcluster/taskcluster/commit/01445ffe9aa9c68cf5802d30af8307b78e5bd95b",
     "commiter_name": "imbstack",
@@ -6980,7 +7027,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "291": {
+  "295": {
     "sha": "83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/83600c5b4b1f8cb5b56140491f54514aa89847a8",
     "commiter_name": "imbstack",
@@ -6991,7 +7038,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "292": {
+  "296": {
     "sha": "13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "url": "https://github.com/taskcluster/taskcluster/commit/13ffb7111b03738ef6816c0de3aa74bec0d4ccd9",
     "commiter_name": "imbstack",
@@ -7002,7 +7049,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "293": {
+  "297": {
     "sha": "05c9871d6131e99147e0874dfe1de8f19541ace4",
     "url": "https://github.com/taskcluster/taskcluster/commit/05c9871d6131e99147e0874dfe1de8f19541ace4",
     "commiter_name": "owlishDeveloper",
@@ -7013,7 +7060,7 @@
       "README.md"
     ]
   },
-  "294": {
+  "298": {
     "sha": "7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "url": "https://github.com/taskcluster/taskcluster/commit/7b1f5c41c2a8c4c04be32960dc1493e7c2dcf45e",
     "commiter_name": "imbstack",
@@ -7034,7 +7081,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "295": {
+  "299": {
     "sha": "756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "url": "https://github.com/taskcluster/taskcluster/commit/756552d037ea5ebfc4a70ae72e8227fcef2dcf69",
     "commiter_name": "djmitche",
@@ -7045,7 +7092,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "296": {
+  "300": {
     "sha": "265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "url": "https://github.com/taskcluster/taskcluster/commit/265bdeb2352e67bcf57df87d9f560b66d3c96816",
     "commiter_name": "djmitche",
@@ -7056,7 +7103,7 @@
       "libraries/api/src/middleware/auth.js"
     ]
   },
-  "297": {
+  "301": {
     "sha": "0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "url": "https://github.com/taskcluster/taskcluster/commit/0d01f68c7677b01e1ef442baf2c8737becdd08fa",
     "commiter_name": "Biboswan",
@@ -7087,7 +7134,7 @@
       "yarn.lock"
     ]
   },
-  "298": {
+  "302": {
     "sha": "0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "url": "https://github.com/taskcluster/taskcluster/commit/0ed045fc6ae7a9051d8dabb43072b9a6fc651ff1",
     "commiter_name": "Biboswan",
@@ -7100,7 +7147,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "299": {
+  "303": {
     "sha": "ac25a3592f5b81a50ea2c320662e38f122af5697",
     "url": "https://github.com/taskcluster/taskcluster/commit/ac25a3592f5b81a50ea2c320662e38f122af5697",
     "commiter_name": "djmitche",
@@ -7111,7 +7158,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "300": {
+  "304": {
     "sha": "c2046d13643624bf7463f990c243c7c2dc54d827",
     "url": "https://github.com/taskcluster/taskcluster/commit/c2046d13643624bf7463f990c243c7c2dc54d827",
     "commiter_name": "djmitche",
@@ -7123,7 +7170,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "301": {
+  "305": {
     "sha": "57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "url": "https://github.com/taskcluster/taskcluster/commit/57db28f2a68aaa4389ee110a8a17bffa8fda640d",
     "commiter_name": "djmitche",
@@ -7135,7 +7182,7 @@
       "infrastructure/builder/taskcluster-spec/build.yml"
     ]
   },
-  "302": {
+  "306": {
     "sha": "a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "url": "https://github.com/taskcluster/taskcluster/commit/a7e19c8ce2c227d12cbe62a04f68e4573615088b",
     "commiter_name": "djmitche",
@@ -7146,7 +7193,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "303": {
+  "307": {
     "sha": "e881636d369651eefc7ef242ecf93a228f142e91",
     "url": "https://github.com/taskcluster/taskcluster/commit/e881636d369651eefc7ef242ecf93a228f142e91",
     "commiter_name": "Biboswan",
@@ -7162,7 +7209,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "304": {
+  "308": {
     "sha": "6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "url": "https://github.com/taskcluster/taskcluster/commit/6c742b66c6fec9192e94566eaac3548b3db8b6d8",
     "commiter_name": "djmitche",
@@ -7173,7 +7220,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "305": {
+  "309": {
     "sha": "914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "url": "https://github.com/taskcluster/taskcluster/commit/914ee6ebbc5bc74790a4822029784c3d23ad47a8",
     "commiter_name": "djmitche",
@@ -7185,7 +7232,7 @@
       "yarn.lock"
     ]
   },
-  "306": {
+  "310": {
     "sha": "74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "url": "https://github.com/taskcluster/taskcluster/commit/74939c049f75dfefe7f6379dcdbb34e32b6e4cf8",
     "commiter_name": "djmitche",
@@ -7196,7 +7243,7 @@
       "infrastructure/builder/src/build/service/heroku-buildpack.js"
     ]
   },
-  "307": {
+  "311": {
     "sha": "e25fd44af389cd820261c921ca2f496b82220f75",
     "url": "https://github.com/taskcluster/taskcluster/commit/e25fd44af389cd820261c921ca2f496b82220f75",
     "commiter_name": "renovate-bot",
@@ -7208,7 +7255,7 @@
       "yarn.lock"
     ]
   },
-  "308": {
+  "312": {
     "sha": "90279639ab138faa9351d7182c6b54f9fe5614f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90279639ab138faa9351d7182c6b54f9fe5614f7",
     "commiter_name": "djmitche",
@@ -7235,7 +7282,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "309": {
+  "313": {
     "sha": "90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "url": "https://github.com/taskcluster/taskcluster/commit/90108e4c53a339272f470a1cbbdfcd377fc042f7",
     "commiter_name": "renovate-bot",
@@ -7262,7 +7309,7 @@
       "services/treeherder/package.json"
     ]
   },
-  "310": {
+  "314": {
     "sha": "37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "url": "https://github.com/taskcluster/taskcluster/commit/37641eb11bd008000f4ed67798d22ea04f7c13c8",
     "commiter_name": "djmitche",
@@ -7276,7 +7323,7 @@
       "yarn.lock"
     ]
   },
-  "311": {
+  "315": {
     "sha": "f621c39d08983099fdd627d53762c3aef7863efc",
     "url": "https://github.com/taskcluster/taskcluster/commit/f621c39d08983099fdd627d53762c3aef7863efc",
     "commiter_name": "djmitche",
@@ -7287,7 +7334,7 @@
       "services/queue/schemas/v1/post-artifact-request.yml"
     ]
   },
-  "312": {
+  "316": {
     "sha": "e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "url": "https://github.com/taskcluster/taskcluster/commit/e8f89895e8ba3004a7b9a4c46993356a9ca89618",
     "commiter_name": "renovate-bot",
@@ -7301,7 +7348,7 @@
       "yarn.lock"
     ]
   },
-  "313": {
+  "317": {
     "sha": "c6216c727c43c975fe278c71fd019f537c914665",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6216c727c43c975fe278c71fd019f537c914665",
     "commiter_name": "djmitche",
@@ -7313,7 +7360,7 @@
       "yarn.lock"
     ]
   },
-  "314": {
+  "318": {
     "sha": "d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "url": "https://github.com/taskcluster/taskcluster/commit/d7657574d7669530a4d3a7a5fe947c02ff2c54c3",
     "commiter_name": "djmitche",
@@ -7324,7 +7371,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "315": {
+  "319": {
     "sha": "24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "url": "https://github.com/taskcluster/taskcluster/commit/24a176194f1bb2e4338a0fb067cd9d6030c67c8e",
     "commiter_name": "djmitche",
@@ -7335,7 +7382,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "316": {
+  "320": {
     "sha": "c15284770e22b39e9d916cd61b6de053c975a33d",
     "url": "https://github.com/taskcluster/taskcluster/commit/c15284770e22b39e9d916cd61b6de053c975a33d",
     "commiter_name": "arshadkazmi42",
@@ -7348,7 +7395,7 @@
       "services/auth/test/role_test.js"
     ]
   },
-  "317": {
+  "321": {
     "sha": "2b50ddc441741b9914af1a039ff81980760a3930",
     "url": "https://github.com/taskcluster/taskcluster/commit/2b50ddc441741b9914af1a039ff81980760a3930",
     "commiter_name": "arshadkazmi42",
@@ -7360,7 +7407,7 @@
       "services/auth/src/v1.js"
     ]
   },
-  "318": {
+  "322": {
     "sha": "c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "url": "https://github.com/taskcluster/taskcluster/commit/c20995978e73b2c5ddbdfe1bff85a2d263ff35b8",
     "commiter_name": "djmitche",
@@ -7371,7 +7418,7 @@
       "services/purge-cache/test/helper.js"
     ]
   },
-  "319": {
+  "323": {
     "sha": "47401a78f1e276fca5c890701e5f2c2432888bdb",
     "url": "https://github.com/taskcluster/taskcluster/commit/47401a78f1e276fca5c890701e5f2c2432888bdb",
     "commiter_name": "djmitche",
@@ -7382,7 +7429,7 @@
       "libraries/references/src/store.js"
     ]
   },
-  "320": {
+  "324": {
     "sha": "ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "url": "https://github.com/taskcluster/taskcluster/commit/ea34d22a89acf5af73d18550f9aa4c4172288fc4",
     "commiter_name": "renovate-bot",
@@ -7394,7 +7441,7 @@
       "yarn.lock"
     ]
   },
-  "321": {
+  "325": {
     "sha": "3f0f772cdf633ee65c11b041293cf7281afa8295",
     "url": "https://github.com/taskcluster/taskcluster/commit/3f0f772cdf633ee65c11b041293cf7281afa8295",
     "commiter_name": "Biboswan",
@@ -7405,7 +7452,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "322": {
+  "326": {
     "sha": "d999fad02b641985f96a60d6c114fb46d56a6629",
     "url": "https://github.com/taskcluster/taskcluster/commit/d999fad02b641985f96a60d6c114fb46d56a6629",
     "commiter_name": "Biboswan",
@@ -7418,7 +7465,7 @@
       "libraries/monitor/test/uncaught_test.js"
     ]
   },
-  "323": {
+  "327": {
     "sha": "7464c610cd46f6a330090e05fb76c215bf2c1205",
     "url": "https://github.com/taskcluster/taskcluster/commit/7464c610cd46f6a330090e05fb76c215bf2c1205",
     "commiter_name": "Biboswan",
@@ -7436,7 +7483,7 @@
       "services/notify/src/irc.js"
     ]
   },
-  "324": {
+  "328": {
     "sha": "aa822ad2500f47ef295e490856f8c2e28359c512",
     "url": "https://github.com/taskcluster/taskcluster/commit/aa822ad2500f47ef295e490856f8c2e28359c512",
     "commiter_name": "imbstack",
@@ -7452,7 +7499,7 @@
       "yarn.lock"
     ]
   },
-  "325": {
+  "329": {
     "sha": "2937f63065701ffa391121d08d566e35c2b220bb",
     "url": "https://github.com/taskcluster/taskcluster/commit/2937f63065701ffa391121d08d566e35c2b220bb",
     "commiter_name": "renovate-bot",
@@ -7468,7 +7515,7 @@
       "yarn.lock"
     ]
   },
-  "326": {
+  "330": {
     "sha": "d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "url": "https://github.com/taskcluster/taskcluster/commit/d4fa2cb3605336e27f38a8f2271f1f685073dc93",
     "commiter_name": "imbstack",
@@ -7482,7 +7529,7 @@
       "yarn.lock"
     ]
   },
-  "327": {
+  "331": {
     "sha": "29c398016463c7b50703cd3224ecde4794703f15",
     "url": "https://github.com/taskcluster/taskcluster/commit/29c398016463c7b50703cd3224ecde4794703f15",
     "commiter_name": "imbstack",
@@ -7494,7 +7541,7 @@
       "yarn.lock"
     ]
   },
-  "328": {
+  "332": {
     "sha": "b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "url": "https://github.com/taskcluster/taskcluster/commit/b6ec572fe0c9cc8538b7814d3bd1a591a49fefb3",
     "commiter_name": "imbstack",
@@ -7508,7 +7555,7 @@
       "yarn.lock"
     ]
   },
-  "329": {
+  "333": {
     "sha": "bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "url": "https://github.com/taskcluster/taskcluster/commit/bf2ea3b95df04ab5f32facac44b3b10f354f7620",
     "commiter_name": "renovate-bot",
@@ -7522,7 +7569,7 @@
       "yarn.lock"
     ]
   },
-  "330": {
+  "334": {
     "sha": "9159c878868282fad3f75122efed0475649d5441",
     "url": "https://github.com/taskcluster/taskcluster/commit/9159c878868282fad3f75122efed0475649d5441",
     "commiter_name": "renovate-bot",
@@ -7534,7 +7581,7 @@
       "yarn.lock"
     ]
   },
-  "331": {
+  "335": {
     "sha": "0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "url": "https://github.com/taskcluster/taskcluster/commit/0129356a3b44c862cbc502685aa1aacb9840f6c9",
     "commiter_name": "imbstack",
@@ -7546,7 +7593,7 @@
       "yarn.lock"
     ]
   },
-  "332": {
+  "336": {
     "sha": "75fdbf91d771bce53951a92c666ff4b439152f22",
     "url": "https://github.com/taskcluster/taskcluster/commit/75fdbf91d771bce53951a92c666ff4b439152f22",
     "commiter_name": "renovate-bot",
@@ -7558,7 +7605,7 @@
       "yarn.lock"
     ]
   },
-  "333": {
+  "337": {
     "sha": "1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "url": "https://github.com/taskcluster/taskcluster/commit/1796f63ff43513bbdb4a862fbbd9416e3ce9f1de",
     "commiter_name": "imbstack",
@@ -7570,7 +7617,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "334": {
+  "338": {
     "sha": "32874aa462882888bbdba94854e8d8b6edc01dcf",
     "url": "https://github.com/taskcluster/taskcluster/commit/32874aa462882888bbdba94854e8d8b6edc01dcf",
     "commiter_name": "imbstack",
@@ -7582,7 +7629,7 @@
       "services/auth/test/azure_test.js"
     ]
   },
-  "335": {
+  "339": {
     "sha": "acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "url": "https://github.com/taskcluster/taskcluster/commit/acbcdad43f306f7db0462d6eccee3a986394e2ba",
     "commiter_name": "imbstack",
@@ -7593,7 +7640,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "336": {
+  "340": {
     "sha": "13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/13de75dc26f120e3b2887bcfc8cdac367f54c7c5",
     "commiter_name": "petemoore",
@@ -7604,7 +7651,7 @@
       "infrastructure/builder/docs/building-taskcluster.md"
     ]
   },
-  "337": {
+  "341": {
     "sha": "69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "url": "https://github.com/taskcluster/taskcluster/commit/69f1a144ccd1a3d175be9910cc5c47fb79a052eb",
     "commiter_name": "imbstack",
@@ -7616,7 +7663,7 @@
       "yarn.lock"
     ]
   },
-  "338": {
+  "342": {
     "sha": "67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "url": "https://github.com/taskcluster/taskcluster/commit/67162e5512c9f90c9c632226a9761b6e3a9e518d",
     "commiter_name": "imbstack",
@@ -7628,7 +7675,7 @@
       "yarn.lock"
     ]
   },
-  "339": {
+  "343": {
     "sha": "5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "url": "https://github.com/taskcluster/taskcluster/commit/5077562bf7a44cedc6f195c396291f8bc88be2c5",
     "commiter_name": "imbstack",
@@ -7639,7 +7686,7 @@
       "libraries/scopes/src/expressions.js"
     ]
   },
-  "340": {
+  "344": {
     "sha": "c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "url": "https://github.com/taskcluster/taskcluster/commit/c6efcceab30d1ccbccf55501a3ffb57a003e143c",
     "commiter_name": "imbstack",
@@ -7652,7 +7699,7 @@
       "yarn.lock"
     ]
   },
-  "341": {
+  "345": {
     "sha": "92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "url": "https://github.com/taskcluster/taskcluster/commit/92f1c98eb0b522ec83bd55b55b1d0b286d43ced4",
     "commiter_name": "imbstack",
@@ -7664,7 +7711,7 @@
       "yarn.lock"
     ]
   },
-  "342": {
+  "346": {
     "sha": "1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "url": "https://github.com/taskcluster/taskcluster/commit/1ce83bd248b6be3735245e0844d4b2ecf3850695",
     "commiter_name": "renovate-bot",
