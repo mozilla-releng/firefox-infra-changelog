@@ -965,8 +965,8 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
     """
 
     time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
-    test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
-    time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
+    _time_24h_ago = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
+    time_24h_ago = datetime.strptime(_time_24h_ago, "%Y-%m-%d %H:%M:%S")
 
     for file in json_files:
         file_path = "{}/".format(path_to_files) + file
