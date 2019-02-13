@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: MOZILLA-RELEASE
- CURRENT PUSH ID: 1942
+ CURRENT PUSH ID: 1940
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -5779,8 +5779,8 @@
 |1468|2017-06-05 22:31:07|Madeleine Chercover <madeleinechercover@me.com>|Bug 1338385 - Add cron job for nightly coverage tests run; r=jmaherMozReview-Commit-ID: GiL4LZgHmqW|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=55dfa1cb4a75
 |1468|2017-06-05 22:31:07|Sebastian Hengst <archaeopteryx@coole-files.de>|Bug 1338385 - Add cron job for nightly coverage tests run. Follow-up: Use two blank lines after definitions. r=flake8-fix|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=16e5b52a9a68
 |1468|2017-06-05 22:31:07|Wes Kocher <wkocher@mozilla.com>|Merge m-c to autoland, a=mergeMozReview-Commit-ID: 4z9MXOzghI7|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=779d10ed78f5
-|1468|2017-06-05 22:31:07|Gregory Szorc <gps@mozilla.com>|Bug 1336607 - Remove dummy geckolib and taskgraph filter; r=froydnjNow that we use the real geckolib and have all dependencies vendored,the dummy geckolib is no longer required, so we remove it.Also, the taskgraph code for testing for Servo's presence alwayspasses and is no longer needed, so we remove it.Pushed on a CLOSED TREE because  \_( )_/ MozReview-Commit-ID: ITAqArK4Bks|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=4db2b9c21878
-|1468|2017-06-05 22:31:07|Gregory Szorc <gps@mozilla.com>|Bug 1336607 - Fix lint failure on a CLOSED TREE; a= \_( )_/ |https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=d2ec43037c70
+|1468|2017-06-05 22:31:07|Gregory Szorc <gps@mozilla.com>|Bug 1336607 - Remove dummy geckolib and taskgraph filter; r=froydnjNow that we use the real geckolib and have all dependencies vendored,the dummy geckolib is no longer required, so we remove it.Also, the taskgraph code for testing for Servo's presence alwayspasses and is no longer needed, so we remove it.Pushed on a CLOSED TREE because ¯\_( )_/¯MozReview-Commit-ID: ITAqArK4Bks|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=4db2b9c21878
+|1468|2017-06-05 22:31:07|Gregory Szorc <gps@mozilla.com>|Bug 1336607 - Fix lint failure on a CLOSED TREE; a=¯\_( )_/¯|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=d2ec43037c70
 |1468|2017-06-05 22:31:07|Phil Ringnalda <philringnalda@gmail.com>|Merge autoland to m-c, a=merge|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=43e17d5a1492
 |1468|2017-06-05 22:31:07|Phil Ringnalda <philringnalda@gmail.com>|Merge m-c to m-i|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=aa57bb701206
 |1468|2017-06-05 22:31:07|Geoff Brown <gbrown@mozilla.com>|Bug 1332084 - Allow alternate apk in android_emulator_unittest.py; r=jmaher|https://hg.mozilla.org/releases/mozilla-release/pushloggerhtml?changeset=50321440abee
