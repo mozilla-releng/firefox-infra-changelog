@@ -15,7 +15,7 @@ Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox
 
 # Install process:
 1. After you clone the repository, please run `pip3 install -r requirements.txt`
-2. Generate a Github token via this page and add an environment variable called `GIT_TOKEN`.
+2. Generate a Github [Personal access token](https://github.com/settings/tokens) and add an environment variable called `GIT_TOKEN`containing the generated token.
 3. Run the script with `python3 client.py <optional-flags>`
 
 # Flags
