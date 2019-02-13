@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35539
+    "last_push_id": 35546
   },
   "1": {
     "changeset_number": "35344",
@@ -9098,6 +9098,62 @@
         "files_changed": [
           "taskcluster/taskgraph/test/test_transforms_job.py",
           "taskcluster/taskgraph/transforms/job/common.py"
+        ]
+      }
+    }
+  },
+  "75": {
+    "changeset_number": "35542",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-02-12 18:14:20",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76639dcdef8f",
+        "commiter_name": "Marco Castelluccio <mcastelluccio@mozilla.com>",
+        "commit_message": "Bug 1527227 - Update Rust nightly version. r=chmanchester a=Aryx",
+        "files_changed": [
+          "taskcluster/ci/toolchain/rust.yml"
+        ]
+      }
+    }
+  },
+  "76": {
+    "changeset_number": "35544",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-02-12 18:29:08",
+    "changeset_commits": {
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8b2e8f177263",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525760 - Followup: re-enable the tasks without sccache. r=me\n\nAnd refresh rust dependency after bug 1525733.\n",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      }
+    }
+  },
+  "77": {
+    "changeset_number": "35546",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-13 06:27:59",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a90e2dd8b1a5",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1525738 - Stop running Android 7.0 x86_64 geckoview-junit tests; r=mbrubeck",
+        "files_changed": [
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=636d2c00234d",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1527011 - Support win64-aarch64 artifact builds; r=nalexander",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/artifact",
+          "browser/config/mozconfigs/win64-aarch64/debug-artifact",
+          "python/mozbuild/mozbuild/artifacts.py",
+          "taskcluster/ci/build/windows.yml"
         ]
       }
     }
