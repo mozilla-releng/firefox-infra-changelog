@@ -19,7 +19,7 @@ from fic_modules.helper_functions import (
     get_commit_details,
     compare_files
 )
-from markdown_modules import (
+from fic_modules.markdown_modules import (
     generate_markdown_header,
     write_main_md_table,
     create_git_md_table,

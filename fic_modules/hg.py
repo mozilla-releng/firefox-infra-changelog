@@ -68,7 +68,7 @@ def create_files_for_hg(repositories_holder, onerepo):
     :return: The end result is a .json and a .md file for every git repository.
     Can be found inside hg_files/
     """
-    from markdown_modules import create_hg_md_table
+    from fic_modules.markdown_modules import create_hg_md_table
     if onerepo:
         repository_url = REPOSITORIES\
             .get("Mercurial")\
@@ -180,12 +180,12 @@ def json_writer_hg(repository_name, new_commits):
     number = len(json_content) - 1
     for new_commit in new_commits:
         if new_commit == "0":
-            json_content = new_commits
+            json_content["0"] = new_commits[new_commit]
         else:
             # if len(new_commits[new_commit].get("changeset_commits")) != 0:
-            new_commits[new_commit].get("changeset_commits")
-            number += 1
-            json_content.update({int(number): new_commits[new_commit]})
+            if new_commits[new_commit].get("changeset_commits"):
+                number += 1
+                json_content.update({int(number): new_commits[new_commit]})
 
     # if len(new_commits) > 0:
     if new_commits:
@@ -205,7 +205,7 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
     :param path_to_files: Folder to json files
     :return: none
     """
-    from markdown_modules import generate_markdown_header, write_main_md_table
+    from fic_modules.markdown_modules import generate_markdown_header, write_main_md_table
     time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
     test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
     time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")

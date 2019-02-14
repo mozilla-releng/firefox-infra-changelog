@@ -10,7 +10,7 @@ from fic_modules.configuration import (
     GENERATE_FOR_X_DAYS,
     REPOSITORIES
 )
-from markdown_modules import generate_main_md_table
+from fic_modules.markdown_modules import generate_main_md_table
 
 
 @click.command()

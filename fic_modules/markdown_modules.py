@@ -11,13 +11,12 @@ from fic_modules.helper_functions import (
     remove_chars
 )
 from fic_modules.configuration import (
-    CURRENT_DIR,
     LAST_WEEK,
     REPOSITORIES,
-    LOGGER
+    LOGGER,
+    WORKING_DIR
 )
-from hg import extract_json_from_hg
-
+from fic_modules.hg import extract_json_from_hg
 
 
 def create_git_md_table(repository_name, path_to_files):
@@ -33,7 +32,7 @@ def create_git_md_table(repository_name, path_to_files):
 
     try:
         json_data = open(
-            CURRENT_DIR + "/{}/"
+            WORKING_DIR + "/{}/"
             .format(path_to_files) + "{}.json"
             .format(repository_name))\
             .read()
@@ -93,7 +92,7 @@ def create_git_md_table(repository_name, path_to_files):
                 pass
 
         md_file_name = "{}.md".format(repository_name)
-        md_file = open(CURRENT_DIR + "/{}/".format(path_to_files) +
+        md_file = open(WORKING_DIR + "/{}/".format(path_to_files) +
                        md_file_name, "w")
 
         try:
@@ -135,13 +134,13 @@ def generate_main_md_table(path_to_files, days_to_generate=1):
     from git/hg and generates for the specified days.
     :param path_to_files: Folder to json files
     """
-    from git import extract_json_from_git
+    from fic_modules.git import extract_json_from_git
     successfully_generated = "part from main markdown table was " \
                              "successfully generated."
 
     # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(CURRENT_DIR + "/{}".format(path_to_files)) if
-                  isfile(join(CURRENT_DIR + "/{}".format(path_to_files), f))]
+    only_files = [f for f in listdir(WORKING_DIR + "/{}".format(path_to_files)) if
+                  isfile(join(WORKING_DIR + "/{}".format(path_to_files), f))]
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]
     # Extract data from json_files and writes to main markdown table.
@@ -193,7 +192,7 @@ def create_hg_md_table(repository_name):
     """
 
     try:
-        json_data = open(CURRENT_DIR + "/hg_files/" + "{}.json"
+        json_data = open(WORKING_DIR + "/hg_files/" + "{}.json"
                          .format(repository_name)).read()
         data = json.loads(json_data)
         base_table = "| Changeset | Date | Commiter | " \
@@ -206,7 +205,7 @@ def create_hg_md_table(repository_name):
             md_title = [
                 "Repository name: {}\n Current push id: {}"
                 .format(repository_name, last_push_id)]
-        except KeyError:
+        except AttributeError:
             md_title = ["Error while accessing the " +
                         str(repository_name) + "file."]
 
@@ -257,7 +256,7 @@ def create_hg_md_table(repository_name):
                     pass
 
         md_file_name = "{}.md".format(repository_name)
-        md_file = open(CURRENT_DIR + "/hg_files/" + md_file_name, "w")
+        md_file = open(WORKING_DIR + "/hg_files/" + md_file_name, "w")
 
         try:
             for key, value in tables.items():
