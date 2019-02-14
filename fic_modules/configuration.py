@@ -17,4 +17,5 @@ GENERATE_FOR_X_DAYS = int(1)
 REPO_LIST = []
 LAST_WEEK = datetime.now() - timedelta(days=14)
 LAST_MONTH = datetime.utcnow() - timedelta(days=31)
-CURRENT_DIR = r'C:/Users/roland.mutter/Desktop/FFCI/firefox-infra-changelog'
+CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
+WORKING_DIR = CURRENT_DIR.strip("/fic_modules")

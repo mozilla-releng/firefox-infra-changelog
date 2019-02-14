@@ -7,11 +7,11 @@ from datetime import (
     timedelta
 )
 from fic_modules.configuration import (
-    CURRENT_DIR,
     LAST_MONTH,
     GIT,
     REPOSITORIES,
-    LOGGER
+    LOGGER,
+    WORKING_DIR
 )
 from fic_modules.helper_functions import (
     remove_chars,
@@ -341,7 +341,7 @@ def json_writer_git(repository_name, new_commits):
     """
     git_json_filename = "{}.json".format(repository_name)
     try:
-        with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
+        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as \
                 commit_json:
             json_content = json.load(commit_json)
     except FileNotFoundError:
@@ -354,7 +354,7 @@ def json_writer_git(repository_name, new_commits):
                 new_commits.update({int(number): json_content[old_commit]})
 
     if new_commits:
-        json_file = open(CURRENT_DIR + "/git_files/" + git_json_filename, "w")
+        json_file = open(WORKING_DIR + "/git_files/" + git_json_filename, "w")
         json.dump(new_commits, json_file, indent=2)
         json_file.close()
 
@@ -367,7 +367,7 @@ def last_check(repository_name):
     """
     git_json_filename = "{}.json".format(repository_name)
     try:
-        with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as\
+        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as\
                 commit_json:
             json_content = json.load(commit_json)
             try:
@@ -395,14 +395,17 @@ def get_version_from_json(repo_name):
     :return: version our repo was bumped to by the last local commit that we have
     """
     git_json_filename = "{}.json".format(repo_name)
-    with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
-            commit_json:
-        json_content = json.load(commit_json)
-    last_stored_version = json_content \
-        .get("0") \
-        .get("last_releases") \
-        .get("latest_release") \
-        .get("version")
+    try:
+        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as \
+                commit_json:
+            json_content = json.load(commit_json)
+        last_stored_version = json_content \
+            .get("0") \
+            .get("last_releases") \
+            .get("latest_release") \
+            .get("version")
+    except FileNotFoundError:
+        last_stored_version = ""
     return last_stored_version
 
 
@@ -412,16 +415,19 @@ def get_date_from_json(repo_name):
     :return: date of the last commit that we have locally in our json
     """
     git_json_filename = "{}.json".format(repo_name)
-    with open(CURRENT_DIR + "/git_files/" + git_json_filename, "r") as \
-            commit_json:
-        json_content = json.load(commit_json)
-    last_stored_date = json_content \
-        .get("0") \
-        .get("last_releases") \
-        .get("latest_release") \
-        .get("date")
-    date_format = parse(last_stored_date)
-    last_stored_date = datetime.strptime(str(date_format), "%Y-%m-%d %H:%M:%S")
+    try:
+        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as \
+                commit_json:
+            json_content = json.load(commit_json)
+        last_stored_date = json_content \
+            .get("0") \
+            .get("last_releases") \
+            .get("latest_release") \
+            .get("date")
+        date_format = parse(last_stored_date)
+        last_stored_date = datetime.strptime(str(date_format), "%Y-%m-%d %H:%M:%S")
+    except FileNotFoundError:
+        last_stored_date = datetime.strptime("2019-01-01 01:00:00", "%Y-%m-%d %H:%M:%S")
     if LOGGER:
         print("last local date was: ", last_stored_date)
     return last_stored_date

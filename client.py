@@ -1,6 +1,6 @@
 import click
-from git import create_files_for_git
-from hg import create_files_for_hg
+from fic_modules.git import create_files_for_git
+from fic_modules.hg import create_files_for_hg
 from fic_modules.helper_functions import (
     clear_file,
     get_keys
@@ -19,7 +19,6 @@ from markdown_modules import generate_main_md_table
 @click.option('--l', flag_value='l', help='Display logger')
 @click.option('--r', flag_value='r',
               help='Let you choose for which repositories the script will run')
-
 def cli(git, hg, l, r):
     """
 

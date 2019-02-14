@@ -7,43 +7,15 @@ from datetime import (
     timedelta
 )
 from fic_modules.configuration import (
-    CURRENT_DIR,
     REPOSITORIES,
-    LOGGER
+    LOGGER,
+    WORKING_DIR
 )
 from fic_modules.helper_functions import (
     remove_chars,
     compare_files,
     extract_reviewer
 )
-
-
-def json_writer_hg(repository_name, new_commits):
-    """
-    :param repository_name:
-    :param new_commits: a dictionary with the new commits
-    :return: write the json file with the old and the new commits
-    """
-    hg_json_filename = "{}.json".format(repository_name)
-    try:
-        with open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "r") as\
-                commit_json:
-            json_content = json.load(commit_json)
-    except FileNotFoundError:
-        json_content = ""
-    number = len(json_content) - 1
-    for new_commit in new_commits:
-        if new_commit == "0":
-            json_content["0"] = new_commits[new_commit]
-        else:
-            if new_commits[new_commit].get("changeset_commits"):
-                number += 1
-                json_content.update({int(number): new_commits[new_commit]})
-
-    if new_commits:
-        json_file = open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "w")
-        json.dump(json_content, json_file, indent=2)
-        json_file.close()
 
 
 def get_last_local_push_id(repo_name):
@@ -53,17 +25,12 @@ def get_last_local_push_id(repo_name):
     """
     hg_json_filename = "{}.json".format(repo_name)
     try:
-        with open(CURRENT_DIR + "/hg_files/" + hg_json_filename, "r") as \
+        with open(WORKING_DIR + "/hg_files/" + hg_json_filename, "r") as \
                 commit_json:
             json_content = json.load(commit_json)
         last_stored_push_id = json_content.get("0").get("last_push_id")
     except FileNotFoundError:
-        if LOGGER:
-            print("No file was found!")
-        data = {"0": {"last_push_id": "0"}}
-        json_data = json.dumps(data)
-        data = json.loads(json_data)
-        last_stored_push_id = data.get("0").get("last_push_id")
+        last_stored_push_id = 0
     if LOGGER:
         print("Last local push id is : ", last_stored_push_id)
     return last_stored_push_id
@@ -79,11 +46,9 @@ def generate_hg_pushes_link(repo_name, repository_url):
     url = repository_url + "json-pushes?version=2"
     response = urlopen(url)
     data = json.loads(response.read())
-    if LOGGER:
-        print("Output data:", data)
     end_id = data.get("lastpushid")
     if start_id == 0:
-        start_id = end_id - 1000
+        start_id = end_id - 100
     start_id = str(start_id)
     end_id = str(end_id)
     generate_pushes_link = repository_url + "json-pushes?version=2&" \
@@ -195,6 +160,38 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
                         "commit_message": desc,
                         "files_changed": files_changed}})
     json_writer_hg(repository_name, hg_repo_data)
+
+
+def json_writer_hg(repository_name, new_commits):
+    """
+    :param repository_name:
+    :param new_commits: a dictionary with the new commits
+    :return: write the json file with the old and the new commits
+    """
+    hg_json_filename = "{}.json".format(repository_name)
+    try:
+        with open(WORKING_DIR + "/hg_files/" + hg_json_filename, "r") as\
+                commit_json:
+            # loads the content of existing json into a variable
+            json_content = json.load(commit_json)
+    except FileNotFoundError:
+        json_content = ""
+    # if len(json_content) > 0:
+    number = len(json_content) - 1
+    for new_commit in new_commits:
+        if new_commit == "0":
+            json_content = new_commits
+        else:
+            # if len(new_commits[new_commit].get("changeset_commits")) != 0:
+            new_commits[new_commit].get("changeset_commits")
+            number += 1
+            json_content.update({int(number): new_commits[new_commit]})
+
+    # if len(new_commits) > 0:
+    if new_commits:
+        json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
+        json.dump(json_content, json_file, indent=2)
+        json_file.close()
 
 
 def extract_json_from_hg(json_files, path_to_files, days_to_generate):
