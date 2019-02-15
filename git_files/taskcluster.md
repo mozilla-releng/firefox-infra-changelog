@@ -292,7 +292,7 @@
 |61|djmitche|Merge pull request #96 from taskcluster/no-more-resolutions  Remove outdated resolution|[URL](https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28)|2019-01-16 19:46:20
 |60|imbstack|Remove outdated resolution|[URL](https://github.com/taskcluster/taskcluster/commit/cb01a41a19567239c3796b541111cff500117927)|2019-01-16 18:34:16
 |59|djmitche|Merge pull request #94 from taskcluster/renovate/remotely-signed-s3-4.x  Update dependency remotely-signed-s3 to v4|[URL](https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427)|2019-01-16 18:26:16
-|58|djmitche|Merge pull request #93 from djmitche/bug1519849  Bug 1519849 - sleep 20 seconds, and record the worker being seen, whe…|[URL](https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237)|2019-01-16 18:05:38
+|58|djmitche|Merge pull request #93 from djmitche/bug1519849  Bug 1519849 - sleep 20 seconds, and record the worker being seen, wheï¿½|[URL](https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237)|2019-01-16 18:05:38
 |57|arshadkazmi42|expandedScopes added in listRoles2 api response using roleToJSon. Fixes testss|[URL](https://github.com/taskcluster/taskcluster/commit/fcfa98088751a39ddc8707445a476158f2f118e3)|2019-01-16 16:28:05
 |56|renovate-bot|Update dependency remotely-signed-s3 to v4|[URL](https://github.com/taskcluster/taskcluster/commit/e2da9b7a1a974987f5911380aa22e94a47de6fff)|2019-01-16 11:36:25
 |55|djmitche|Bug 1519849 - sleep 20 seconds, and record the worker being seen, when quarantined|[URL](https://github.com/taskcluster/taskcluster/commit/68802b9e4c109da06206bd9362f6bb43a44b79d9)|2019-01-16 05:24:24
