@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35
+    "last_push_id": 41
   },
   "1": {
     "changeset_number": "21",
@@ -311,6 +311,167 @@
           "tests/test_resources_role.py",
           "tests/test_util_matchlist.py",
           "tests/test_util_scopes.py"
+        ]
+      }
+    }
+  },
+  "16": {
+    "changeset_number": "36",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-07 22:08:59",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=99df1c34dbc0",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525368: Update path to ci-config; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18866",
+        "files_changed": [
+          ".taskcluster.yml",
+          "ciadmin/generate/ciconfig/__init__.py",
+          "ciadmin/generate/grants.py",
+          "ciadmin/resources/util.py",
+          "run-task.py",
+          "setup.py",
+          "tests/test_generate_ciconfig_get.py",
+          "tests/test_resources_hook.py",
+          "tests/test_resources_role.py"
+        ]
+      }
+    }
+  },
+  "17": {
+    "changeset_number": "37",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-08 04:32:23",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=7cccaaf6c74b",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525368: Make ci-admin authorative for all repositories on hg.mozilla.org; r=dustin\n\nI noticed this when I didn't see the build/ci-{admin,configuration} roles being removed.\n\nThis removes roles for:\n- integration/b2g-inbound\n- integration/fx-team\n- projects/alder\n- projects/fig\n- projects/gum\n- projects/holly\n- users/mozilla_hocat.ca/comm-taskcluster\nall of which are not currently in use.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19063",
+        "files_changed": [
+          "ciadmin/generate/grants.py"
+        ]
+      }
+    }
+  },
+  "18": {
+    "changeset_number": "38",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-11 23:30:33",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f4aed57a506c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1492562: Add intial taskgraph configuration; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17165",
+        "files_changed": [
+          "run-task.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/ci/tests/kind.yml",
+          "taskcluster/docker/REGISTRY",
+          "taskcluster/docker/python/Dockerfile"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=3bb58ac34682",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1492562: Update taskcluster.yml to use taskgraph; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19100",
+        "files_changed": [
+          ".taskcluster.yml",
+          "taskcluster/ci/config.yml"
+        ]
+      }
+    }
+  },
+  "19": {
+    "changeset_number": "39",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-11 23:51:13",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=36e7c76919c0",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Run yamllint against the taskgraph configuration; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19101",
+        "files_changed": [
+          ".yamllint",
+          "taskcluster/ci/tests/kind.yml"
+        ]
+      }
+    }
+  },
+  "20": {
+    "changeset_number": "40",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-12 01:11:13",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=a65176bd0ec4",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1492562: Remove unused graph config entry; r=me",
+        "files_changed": [
+          "taskcluster/ci/config.yml"
+        ]
+      }
+    }
+  },
+  "21": {
+    "changeset_number": "41",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-12 05:51:03",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6afd709457e5",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Make `run_async` and `with_aiohttp_session` decorators preserve the return value; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19395",
+        "files_changed": [
+          "ciadmin/main.py",
+          "ciadmin/util/sessions.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=39be30e3992c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Import pytest-asyncio's `event_loop` fixture as session scope; r=dustin\n\npytest-asyncio's `event_loop` is function scoped, to provide good isolation\nbetween tests. ci-admin's checks aren't code tests (so the isolation isn't\nrelevant), and it is useful to be able to write session scoped fixture for\nthem.\n\nhttps://github.com/pytest-dev/pytest-asyncio/issues/75\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19396",
+        "files_changed": [
+          "ciadmin/check/conftest.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=5ca0a3b818bf",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Stop invoking pytest in `ci-admin check` with an event loop running; r=dustin\n\nThis allows the tests themselves to use pytest-asyncio, which doesn't\nwork with a running event loop.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19397",
+        "files_changed": [
+          "ciadmin/check/__init__.py",
+          "ciadmin/check/conftest.py",
+          "ciadmin/main.py",
+          "requirements.txt",
+          "setup.py"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=336043f64e85",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Make `ci-admin check` command-line more useful; r=dustin\n\nThis allows:\n- running `ci-admin check` from outside the ci-admin repository.\n- specifying checks to run with just the bare filename, rather than full path.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19398",
+        "files_changed": [
+          "ciadmin/check/__init__.py",
+          "ciadmin/check/pytest.ini"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6af4c3fa6a44",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Use `check_` prefixes for `ci-admin check` tests; r=dustin\n\nThis makes it obvious that the tests are related to `ci-admin check` rather\nthan typical unit tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19399",
+        "files_changed": [
+          "ciadmin/check/check_signing_scopes.py",
+          "ciadmin/check/pytest.ini",
+          "ciadmin/check/test_signing_scopes.py"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=3111e4fe89c4",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Check project levels in projects.yml match hg.mozilla.org; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19400",
+        "files_changed": [
+          "ciadmin/check/check_levels.py"
         ]
       }
     }

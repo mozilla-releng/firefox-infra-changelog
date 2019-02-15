@@ -1,8 +1,13 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 78059
+ CURRENT PUSH ID: 78126
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|78107|2019-02-13 18:08:25|Jed Davis <jld@mozilla.com>|Bug 1472589 - Fix parent process crash reporting in the Snap package environment. r=ted,jlorenzo1. The unsetting of LD_LIBRARY_PATH is removed, because it's no longernecessary and interferes with environments where it's necessary to find"system" libraries like GTK; see bug 1472589 comment #1 through #4.2. The Snap package manifest adds a dependency on the libcurl package,so that the crash reporter can send the report.  This uses the GnuTLSvariant because we're already pulling in GnuTLS as a dependency of someother packages (FFmpeg and CUPS, but also the non-GnuTLS cURL packagesdepend on it anyway via OpenLDAP).Differential Revision: https://phabricator.services.mozilla.com/D18625|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dbf72abf5597
+|78067|2019-02-13 08:26:42|Chris AtLee <catlee@mozilla.com>|Bug 1527118: Ensure all tests are using tooltool caches r=akirespect TOOLTOOL_CACHE environment variable in mixinDifferential Revision: https://phabricator.services.mozilla.com/D19444|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e7603feb2252
+|78060|2019-02-13 07:24:43|Geoff Brown <gbrown@mozilla.com>|Bug 1525738 - Stop running Android 7.0 x86_64 geckoview-junit tests; r=mbrubeck|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a90e2dd8b1a5
+|78060|2019-02-13 07:24:43|Geoff Brown <gbrown@mozilla.com>|Bug 1527011 - Support win64-aarch64 artifact builds; r=nalexander|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=636d2c00234d
+|78060|2019-02-13 07:24:43|Razvan Maries <rmaries@mozilla.com>|Merge mozilla-central to autoland. a=merge on a CLOSED TREE|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1af69c96ec5f
 |78040|2019-02-13 01:00:25|Johan Lorenzo <jlorenzo@mozilla.com>|Bug 1505538 - Release x86_64 Fennec Nightly in the Google Play Store r=mtabaraRelease x86_64 Fennec Nightly in the Google Play StoreDifferential Revision: https://phabricator.services.mozilla.com/D19534|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=de25d2f1abef
 |78028|2019-02-12 23:53:30|Andreea Pavel <apavel@mozilla.com>|Backed out 3 changesets (bug 1525959, bug 1526002) for failing androidBacked out changeset de0efca1118e (bug 1526002)Backed out changeset 503cbc86e442 (bug 1525959)Backed out changeset 33ea61c54aea (bug 1525959)|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=34f33ae5913e
 |77999|2019-02-12 18:35:42|Mike Hommey <mh+mozilla@glandium.org>|Bug 1525760 - Followup: re-enable the tasks without sccache. r=meAnd refresh rust dependency after bug 1525733.|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8b2e8f177263

@@ -48,8 +48,9 @@ def cli(git, hg, l, r):
     if r:
         get_keys("Github")
         get_keys("Mercurial")
-        # for scriptrepo in repositories.get("Github").get("build-puppet").get("configuration").get("files-to-check"):
-        #     repoList.append(scriptrepo)
+        for scriptrepo in REPOSITORIES.get("Github").get("build-puppet")\
+                .get("configuration").get("files-to-check"):
+            REPO_LIST.append(scriptrepo)
         new_list = []
         while input != "q":
             print("You have selected : ", new_list)
@@ -95,5 +96,4 @@ def cli(git, hg, l, r):
 
 if __name__ == "__main__":
     cli()
-
 

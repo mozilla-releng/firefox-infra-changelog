@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 78059
+    "last_push_id": 78126
   },
   "1": {
     "changeset_number": "35344",
@@ -32316,6 +32316,76 @@
         "files_changed": [
           "taskcluster/taskgraph/loader/push_apk.py",
           "taskcluster/taskgraph/transforms/push_apk.py"
+        ]
+      }
+    }
+  },
+  "600": {
+    "changeset_number": "78060",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-13 07:24:43",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a90e2dd8b1a5",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1525738 - Stop running Android 7.0 x86_64 geckoview-junit tests; r=mbrubeck",
+        "files_changed": [
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=636d2c00234d",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1527011 - Support win64-aarch64 artifact builds; r=nalexander",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/artifact",
+          "browser/config/mozconfigs/win64-aarch64/debug-artifact",
+          "python/mozbuild/mozbuild/artifacts.py",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "28": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1af69c96ec5f",
+        "commiter_name": "Razvan Maries <rmaries@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+        "files_changed": [
+          "js/src/frontend/BytecodeEmitter.cpp",
+          "js/src/shell/js.cpp",
+          "taskcluster/ci/test/test-sets.yml",
+          "toolkit/xre/nsAppRunner.cpp"
+        ]
+      }
+    }
+  },
+  "601": {
+    "changeset_number": "78067",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-13 08:26:42",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e7603feb2252",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1527118: Ensure all tests are using tooltool caches r=aki\n\nrespect TOOLTOOL_CACHE environment variable in mixin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19444",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mozharness/mozharness/mozilla/tooltool.py"
+        ]
+      }
+    }
+  },
+  "602": {
+    "changeset_number": "78107",
+    "pusher": "jedavis@mozilla.com",
+    "date_of_push": "2019-02-13 18:08:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dbf72abf5597",
+        "commiter_name": "Jed Davis <jld@mozilla.com>",
+        "commit_message": "Bug 1472589 - Fix parent process crash reporting in the Snap package environment. r=ted,jlorenzo\n\n1. The unsetting of LD_LIBRARY_PATH is removed, because it's no longer\nnecessary and interferes with environments where it's necessary to find\n\"system\" libraries like GTK; see bug 1472589 comment #1 through #4.\n\n2. The Snap package manifest adds a dependency on the libcurl package,\nso that the crash reporter can send the report.  This uses the GnuTLS\nvariant because we're already pulling in GnuTLS as a dependency of some\nother packages (FFmpeg and CUPS, but also the non-GnuTLS cURL packages\ndepend on it anyway via OpenLDAP).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18625",
+        "files_changed": [
+          "taskcluster/docker/firefox-snap/snapcraft.yaml.in",
+          "toolkit/crashreporter/nsExceptionHandler.cpp"
         ]
       }
     }
