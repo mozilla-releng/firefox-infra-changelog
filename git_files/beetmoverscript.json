@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2019-02-06 12:03:43.159741",
+    "lastChecked": "2019-02-17 05:27:49.109510",
     "last_releases": {
       "latest_release": {
         "version": "8.4.1",
@@ -78,19 +78,6 @@
     ]
   },
   "6": {
-    "sha": "f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #206 from mozilla-releng/bug-1522581  Bug 1522581 - Bump max size of zip file to 300MB",
-    "commit_date": "2019-01-25 18:29:36",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py",
-      "beetmoverscript/constants.py"
-    ]
-  },
-  "7": {
     "sha": "b74438929aaa119dd6ca3def99cadfb39d6a4559",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/b74438929aaa119dd6ca3def99cadfb39d6a4559",
     "commiter_name": "JohanLorenzo",
@@ -102,7 +89,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "8": {
+  "7": {
     "sha": "002b073054a74e3f7dd2fcf0faf282e50ab4a942",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/002b073054a74e3f7dd2fcf0faf282e50ab4a942",
     "commiter_name": "JohanLorenzo",
@@ -111,6 +98,18 @@
     "commit_date": "2019-01-25 13:11:21",
     "files_changed": [
       "beetmoverscript/constants.py"
+    ]
+  },
+  "8": {
+    "sha": "ded178f26baf867111369382f91cd5a78e9c261e",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/ded178f26baf867111369382f91cd5a78e9c261e",
+    "commiter_name": "tomprince",
+    "commiter_email": "tom.prince@twistedmatrix.com",
+    "commit_message": "Add win64-aarch64 support for partner repacks.",
+    "commit_date": "2019-01-22 22:30:00",
+    "files_changed": [
+      "beetmoverscript/constants.py",
+      "beetmoverscript/newsfragments/1522380.added"
     ]
   },
   "9": {
@@ -126,18 +125,6 @@
     ]
   },
   "10": {
-    "sha": "7ee86337210f78bea022243da1c84253c65a1e94",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/7ee86337210f78bea022243da1c84253c65a1e94",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #203 from mitchhentges/release-8.3.0  8.3.0",
-    "commit_date": "2019-01-03 18:30:51",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py"
-    ]
-  },
-  "11": {
     "sha": "11be66989b2fe50e9fe2c7e7337c5abdf05a0ff1",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/11be66989b2fe50e9fe2c7e7337c5abdf05a0ff1",
     "commiter_name": "mitchhentges",
@@ -149,7 +136,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "12": {
+  "11": {
     "sha": "9424a33ecc5a6abbe4f9d1cca84e0bac3c686415",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/9424a33ecc5a6abbe4f9d1cca84e0bac3c686415",
     "commiter_name": "mitchhentges",
@@ -160,7 +147,7 @@
       "CHANGELOG.rst"
     ]
   },
-  "13": {
+  "12": {
     "sha": "21a801a934b714316ea475b3cc312048ba9cdc2b",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/21a801a934b714316ea475b3cc312048ba9cdc2b",
     "commiter_name": "mitchhentges",
@@ -173,208 +160,6 @@
       "beetmoverscript/test/__init__.py",
       "beetmoverscript/test/fake_config.json",
       "config_example.json"
-    ]
-  },
-  "14": {
-    "sha": "a721342ccd6b3eda02f836f5d7da91a930925a30",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/a721342ccd6b3eda02f836f5d7da91a930925a30",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "Removes task schema from example config, adds to default config",
-    "commit_date": "2018-12-24 21:45:34",
-    "files_changed": [
-      "README.md",
-      "beetmoverscript/script.py",
-      "beetmoverscript/test/__init__.py",
-      "beetmoverscript/test/fake_config.json",
-      "config_example.json"
-    ]
-  },
-  "15": {
-    "sha": "fcd64e07eb80d0a4622d4d25e5e82a44f1c9a1ca",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/fcd64e07eb80d0a4622d4d25e5e82a44f1c9a1ca",
-    "commiter_name": "rail",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #200 from rail/fix_url2  Fix buildhub.json download.url, take 2",
-    "commit_date": "2018-12-19 16:03:52",
-    "files_changed": [
-      "beetmoverscript/_version.py",
-      "beetmoverscript/task.py"
-    ]
-  },
-  "16": {
-    "sha": "fd9b3a3e5c284564cc4fcf47fcf8e9d53dfc6bcd",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/fd9b3a3e5c284564cc4fcf47fcf8e9d53dfc6bcd",
-    "commiter_name": "rail",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "Version bump",
-    "commit_date": "2018-12-19 02:14:22",
-    "files_changed": [
-      "beetmoverscript/_version.py"
-    ]
-  },
-  "17": {
-    "sha": "2e8af40bbf3853e6962543e2fd6c556b8a085119",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/2e8af40bbf3853e6962543e2fd6c556b8a085119",
-    "commiter_name": "rail",
-    "commiter_email": "rail@mozilla.com",
-    "commit_message": "Fix buildhub.json download.url, take 2  Unfortunately the previous fix didn't work properly. Instead of generating the full URL, it generates only the part after the hostname. Adding `s3_bucket_path` should fix the issue.  This should also fix the issue, where we try to quote after generating the full URL when `artifact_map` is specified, so we don't get the `https%3A//` prefix.",
-    "commit_date": "2018-12-19 01:38:19",
-    "files_changed": [
-      "beetmoverscript/task.py"
-    ]
-  },
-  "18": {
-    "sha": "7f9dd1018de4a98f410838fad927fb387bb3d3b4",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/7f9dd1018de4a98f410838fad927fb387bb3d3b4",
-    "commiter_name": "tomprince",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #197 from tp-tc/win64-aarch64  Add win64-aarch64 support.",
-    "commit_date": "2018-12-18 22:44:55",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py",
-      "beetmoverscript/constants.py",
-      "beetmoverscript/templates/devedition_candidates.yml",
-      "beetmoverscript/templates/devedition_candidates_repacks.yml",
-      "beetmoverscript/templates/firefox_candidates.yml",
-      "beetmoverscript/templates/firefox_candidates_repacks.yml",
-      "beetmoverscript/templates/firefox_nightly.yml",
-      "beetmoverscript/templates/firefox_nightly_repacks.yml"
-    ]
-  },
-  "19": {
-    "sha": "5b155c33b7032ccbced4f1df31ae63632d88cce5",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/5b155c33b7032ccbced4f1df31ae63632d88cce5",
-    "commiter_name": "rail",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "Fix buildhub.json's download.url (#198)    Fix buildhub.json's download.url    Fixes #195      Version bump",
-    "commit_date": "2018-12-18 22:09:21",
-    "files_changed": [
-      "beetmoverscript/task.py"
-    ]
-  },
-  "20": {
-    "sha": "307b14c0a0e81046768c55805fd1f8637b77aacc",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/307b14c0a0e81046768c55805fd1f8637b77aacc",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "8.2.0",
-    "commit_date": "2018-12-18 17:53:38",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py"
-    ]
-  },
-  "21": {
-    "sha": "9a347b4b38437364fb545d6c9d1c80ebd1a1b9b9",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/9a347b4b38437364fb545d6c9d1c80ebd1a1b9b9",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "8.1.1",
-    "commit_date": "2018-12-18 13:45:36",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py",
-      "beetmoverscript/newsfragments/1493942.fixed"
-    ]
-  },
-  "22": {
-    "sha": "22ce904fdd5bdd1f697d3d2e5169272f4f1fb5bd",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/22ce904fdd5bdd1f697d3d2e5169272f4f1fb5bd",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": null,
-    "commit_message": "Fix geckoview tasks after snapshots enabled. (#199)    Fix geckoview tasks after snapshots enabled.      Add newsfragment file.",
-    "commit_date": "2018-12-18 13:45:01",
-    "files_changed": [
-      "beetmoverscript/newsfragments/1493942.fixed",
-      "beetmoverscript/zip.py"
-    ]
-  },
-  "23": {
-    "sha": "be92c31cbb186d934ed227081277b87fdc69e2a6",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/be92c31cbb186d934ed227081277b87fdc69e2a6",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "8.1.0",
-    "commit_date": "2018-12-17 16:04:55",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py",
-      "beetmoverscript/newsfragments/1493942.added"
-    ]
-  },
-  "24": {
-    "sha": "1f1401540d559d998983651400056f3c2392560d",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/1f1401540d559d998983651400056f3c2392560d",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": null,
-    "commit_message": "Add snapshots support for maven push. (#194)    Initial work to support snapshot behavior in beetmoverscript.      Solve the expected files logic with jsone.      Overwrite manifest      Refactoring before running staging releases.      Add maven-production      Fix all failing tests.      100% coverage on utils.py      100% coverage in zip.py      s,jsone,jinja      Refactor in utils.py      Fix review comments in zip.py      Add newsfragments file.",
-    "commit_date": "2018-12-17 16:01:21",
-    "files_changed": [
-      "beetmoverscript/constants.py",
-      "beetmoverscript/newsfragments/1493942.added",
-      "beetmoverscript/script.py",
-      "beetmoverscript/templates/maven_snapshot_components.yml",
-      "beetmoverscript/test/test_script.py",
-      "beetmoverscript/test/test_utils.py",
-      "beetmoverscript/test/test_zip.py",
-      "beetmoverscript/utils.py",
-      "beetmoverscript/zip.py"
-    ]
-  },
-  "25": {
-    "sha": "71f5e20f8dc20845e182f4a15764d2673a5b1f08",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/71f5e20f8dc20845e182f4a15764d2673a5b1f08",
-    "commiter_name": "tomprince",
-    "commiter_email": "tom.prince@twistedmatrix.com",
-    "commit_message": "Add win64-aarch64 support.",
-    "commit_date": "2018-12-07 14:48:57",
-    "files_changed": [
-      "beetmoverscript/constants.py",
-      "beetmoverscript/templates/devedition_candidates.yml",
-      "beetmoverscript/templates/devedition_candidates_repacks.yml",
-      "beetmoverscript/templates/firefox_candidates.yml",
-      "beetmoverscript/templates/firefox_candidates_repacks.yml",
-      "beetmoverscript/templates/firefox_nightly.yml",
-      "beetmoverscript/templates/firefox_nightly_repacks.yml"
-    ]
-  },
-  "26": {
-    "sha": "883524121b34c630533fbec8db73c08797dcc7be",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/883524121b34c630533fbec8db73c08797dcc7be",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "8.0.0",
-    "commit_date": "2018-11-28 01:08:55",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py"
-    ]
-  },
-  "27": {
-    "sha": "240e7a6cf19f7e56c003e51a09e11f29c6696580",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/240e7a6cf19f7e56c003e51a09e11f29c6696580",
-    "commiter_name": "srfraser",
-    "commiter_email": "tabara.mihai@gmail.com",
-    "commit_message": "Declarative artifacts, reworking lguo's PR (#185)    Declarative artifacts, reworking lguo's PR      Remove debugging      unused import, for debugging      Adjust for new artifactMap format.    I'm not too happy about the way taskId is currently handled,  I'd like to improve on that before production deploys.      Support for artifact map within push-to-maven      Improve test coverage      Adjust key for artifacts_to_beetmove for maven with map      Update comment for clarity      Add test for cot in taskId",
-    "commit_date": "2018-11-28 01:04:36",
-    "files_changed": [
-      "beetmoverscript/data/artifactMap_beetmover_task_schema.json",
-      "beetmoverscript/maven_utils.py",
-      "beetmoverscript/script.py",
-      "beetmoverscript/task.py",
-      "beetmoverscript/test/templates/fake_nightly.yml",
-      "beetmoverscript/test/test_maven_utils.py",
-      "beetmoverscript/test/test_script.py",
-      "beetmoverscript/test/test_task.py",
-      "beetmoverscript/test/test_utils.py",
-      "beetmoverscript/test/test_work_dir/cot/eSzfNqMZT_mSiQQXu8hyqg/public/build/buildhub.json",
-      "beetmoverscript/test/test_work_dir/task.json",
-      "beetmoverscript/test/test_work_dir/task_artifact_map.json",
-      "beetmoverscript/test/test_work_dir/task_missing_installer.json",
-      "beetmoverscript/test/test_work_dir/task_missing_relprops.json",
-      "beetmoverscript/utils.py"
     ]
   }
 }

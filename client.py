@@ -13,24 +13,33 @@ from fic_modules.configuration import (
 from fic_modules.markdown_modules import generate_main_md_table
 
 
-@click.command()
-@click.option('--git', flag_value='git', help='Run script only for GIT repos')
-@click.option('--hg', flag_value='hg', help='Run script only for HG repos')
+@click.group()
+def cli():
+    """Firefox-Infra-Changelog: tool which build a
+    changelog of commits happening on git or hg that
+    could affect Firefox CI Infra"""
+    pass
+
+
+@cli.command()
+@click.option('--all', flag_value='a',
+              help='Run for all currently available repositories')
+@click.option('--git', flag_value='git', help='Run only for GIT repos')
+@click.option('--hg', flag_value='hg', help='Run only for HG repos')
 @click.option('--l', flag_value='l', help='Display logger')
 @click.option('--r', flag_value='r',
               help='Let you choose for which repositories the script will run')
-def cli(git, hg, l, r):
+def cli(all, git, hg, l, r):
     """
-
-    :param git: Runs the script only for GIT repositories
-    :param hg: Runs the script only for HG repositories
-    :param l: Display logger
-    :param r: Let you choose for which repositories the script will run
-    :param d: Let you choose the amount of days the main markdown file will
-    contain
-    :return:
-    """
-
+    Firefox-Infra-Changelog: tool which build a
+    changelog of commits happening on git or hg that
+    could affect Firefox CI Infra"""
+    if all:
+        create_files_for_git(REPOSITORIES, onerepo=False)
+        create_files_for_hg(REPOSITORIES, onerepo=False)
+        clear_file("changelog.md", GENERATE_FOR_X_DAYS)
+        generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
+        generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
     if git:
         create_files_for_git(REPOSITORIES, onerepo=False)
         clear_file("changelog.md", GENERATE_FOR_X_DAYS)
@@ -85,13 +94,6 @@ def cli(git, hg, l, r):
                     REPO_LIST.pop(int(new_entry))
             except ValueError:
                 exit(0)
-
-    else:
-        create_files_for_git(REPOSITORIES, onerepo=False)
-        create_files_for_hg(REPOSITORIES, onerepo=False)
-        clear_file("changelog.md", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-        generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
 
 
 if __name__ == "__main__":

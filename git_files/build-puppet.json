@@ -1,8 +1,45 @@
 {
   "0": {
-    "lastChecked": "2019-02-13 19:15:23.469883"
+    "lastChecked": "2019-02-17 05:27:36.470369"
   },
   "1": {
+    "sha": "73829e6cac2d7a70ebb0aeeb1e7e95835ce12188",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/73829e6cac2d7a70ebb0aeeb1e7e95835ce12188",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #369 from mitchhentges/rfc-6-publish-apk-options  Moves mozapkpublisher options to puppet",
+    "commit_date": "2019-02-13 23:32:09",
+    "files_changed": [
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/pushapk_scriptworker/manifests/settings.pp"
+    ]
+  },
+  "2": {
+    "sha": "3c85403bd0a0f3df00d5ce207e1aedc19bb352a3",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/3c85403bd0a0f3df00d5ce207e1aedc19bb352a3",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Merge remote-tracking branch 'upstream/master' into rfc-6-publish-apk-options",
+    "commit_date": "2019-02-13 23:16:58",
+    "files_changed": [
+      "modules/addon_scriptworker/files/requirements.txt",
+      "modules/balrog_scriptworker/files/requirements-27.txt",
+      "modules/balrog_scriptworker/files/requirements-3.txt",
+      "modules/beetmover_scriptworker/files/requirements.txt",
+      "modules/bouncer_scriptworker/files/requirements.txt",
+      "modules/mercurial/templates/hgrc.erb",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/releaserunner3/files/requirements.txt",
+      "modules/shipit_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/templates/dep-passwords.json.erb",
+      "modules/signingserver/files/linux_requirements.txt",
+      "modules/signingserver/files/mac_requirements.txt",
+      "modules/transparency_scriptworker/files/requirements.txt",
+      "modules/tree_scriptworker/files/requirements.txt"
+    ]
+  },
+  "3": {
     "sha": "f839f7ec5d2b7ba0889c423f014a722e98dcfb95",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/f839f7ec5d2b7ba0889c423f014a722e98dcfb95",
     "commiter_name": "pyup-bot",
@@ -22,7 +59,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "2": {
+  "4": {
     "sha": "17981cc54d4c8e5afd8c5d1ade0e8876284b8810",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/17981cc54d4c8e5afd8c5d1ade0e8876284b8810",
     "commiter_name": "mutterroland",
@@ -45,7 +82,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "3": {
+  "5": {
     "sha": "747a3f900aa31fcbe229232311388277e848f255",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/747a3f900aa31fcbe229232311388277e848f255",
     "commiter_name": "mutterroland",
@@ -56,18 +93,84 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "4": {
-    "sha": "8a197915f937c26cba1db00573faf78e6393b96e",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/8a197915f937c26cba1db00573faf78e6393b96e",
-    "commiter_name": "MihaiTabara",
+  "6": {
+    "sha": "754bb354128cb85000c7af6726d1ace2f8b3243b",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/754bb354128cb85000c7af6726d1ace2f8b3243b",
+    "commiter_name": "mutterroland",
     "commiter_email": null,
-    "commit_message": "Merge pull request #388 from MihaiTabara/bump  Bump beetmoverscript in beetmoverworkers.",
-    "commit_date": "2019-02-04 22:25:08",
+    "commit_message": "Revert mohawk from 1.0.0 to 0.3.4 and pin it  Revert mohawk from 1.0.0 to 0.3.4 and pin it as the same errors occurred in #380",
+    "commit_date": "2019-02-06 18:35:36",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "5": {
+  "7": {
+    "sha": "473e4c7369b9485d0c4a37384ba49fcb2a45a866",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/473e4c7369b9485d0c4a37384ba49fcb2a45a866",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update typing-extensions from 3.6.5 to 3.7.2",
+    "commit_date": "2019-02-06 13:05:11",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
+  },
+  "8": {
+    "sha": "fb97de599eca9d45d5a40dda9235f2f154b55949",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/fb97de599eca9d45d5a40dda9235f2f154b55949",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update typing-extensions from 3.6.5 to 3.7.2",
+    "commit_date": "2019-02-06 13:05:06",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
+  },
+  "9": {
+    "sha": "82116fee7bc8d38c064f39c594a85232b4ffbcc6",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/82116fee7bc8d38c064f39c594a85232b4ffbcc6",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update python-dateutil from 2.7.5 to 2.8.0",
+    "commit_date": "2019-02-06 13:04:55",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
+  },
+  "10": {
+    "sha": "7984a990b6e96879d95cc041ef3573fe7fd76127",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/7984a990b6e96879d95cc041ef3573fe7fd76127",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update python-dateutil from 2.7.5 to 2.8.0",
+    "commit_date": "2019-02-06 13:04:50",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
+  },
+  "11": {
+    "sha": "b8f79601d3f98d6e0a310c45389d6da7f6af0da9",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/b8f79601d3f98d6e0a310c45389d6da7f6af0da9",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update mohawk from 0.3.4 to 1.0.0",
+    "commit_date": "2019-02-06 13:04:39",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
+  },
+  "12": {
+    "sha": "4044eefdde5ca5e1499bd6ea6f0675162ad1adc8",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/4044eefdde5ca5e1499bd6ea6f0675162ad1adc8",
+    "commiter_name": "pyup-bot",
+    "commiter_email": null,
+    "commit_message": "Update mohawk from 0.3.4 to 1.0.0",
+    "commit_date": "2019-02-06 13:04:32",
+    "files_changed": [
+      "modules/bouncer_scriptworker/files/requirements.txt"
+    ]
+  },
+  "13": {
     "sha": "fe11b7c03049acfe6137ab88907c0ede41b714cb",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/fe11b7c03049acfe6137ab88907c0ede41b714cb",
     "commiter_name": "escapewindow",
@@ -87,7 +190,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "6": {
+  "14": {
     "sha": "c633e22e4eae046dd85c0468b1b53f1f18f7dc84",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/c633e22e4eae046dd85c0468b1b53f1f18f7dc84",
     "commiter_name": "mutterroland",
@@ -108,7 +211,18 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "7": {
+  "15": {
+    "sha": "739c76edc1f966cd92c3f94cbb354dbc57485d3f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/739c76edc1f966cd92c3f94cbb354dbc57485d3f",
+    "commiter_name": "mutterroland",
+    "commiter_email": null,
+    "commit_message": "Revert mohawk to 0.3.4",
+    "commit_date": "2019-01-30 14:48:18",
+    "files_changed": [
+      "modules/signing_scriptworker/files/requirements.txt"
+    ]
+  },
+  "16": {
     "sha": "337f08b6695302ee76cf743f34e4e1221ad43f95",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/337f08b6695302ee76cf743f34e4e1221ad43f95",
     "commiter_name": "mutterroland",
@@ -119,29 +233,18 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "8": {
-    "sha": "34f30af11501dd47e75c24f1024e47640ef6e655",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/34f30af11501dd47e75c24f1024e47640ef6e655",
-    "commiter_name": "mutterroland",
-    "commiter_email": null,
-    "commit_message": "Revert mohawk to 0.3.4",
-    "commit_date": "2019-01-30 14:47:21",
-    "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
-  "9": {
-    "sha": "267d7776d7a3b92d2265b8cca4bc839f9161f187",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/267d7776d7a3b92d2265b8cca4bc839f9161f187",
+  "17": {
+    "sha": "804c8a60d9939f7109f4158d33bf4c8944ea53d0",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/804c8a60d9939f7109f4158d33bf4c8944ea53d0",
     "commiter_name": "mutterroland",
     "commiter_email": null,
     "commit_message": "Add typing-extensions to requirements.txt",
-    "commit_date": "2019-01-30 14:28:32",
+    "commit_date": "2019-01-30 14:27:53",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "10": {
+  "18": {
     "sha": "c5f257001a965dbf622726e9df2bc6e005929fcd",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/c5f257001a965dbf622726e9df2bc6e005929fcd",
     "commiter_name": "mutterroland",
@@ -152,29 +255,29 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "11": {
-    "sha": "fe43b0226bb4127e52a1c304a6e5707d2aeefc4b",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/fe43b0226bb4127e52a1c304a6e5707d2aeefc4b",
+  "19": {
+    "sha": "e9f3d0972f3859879634258e68c5e7603665ca82",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/e9f3d0972f3859879634258e68c5e7603665ca82",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update botocore from 1.12.83 to 1.12.86",
-    "commit_date": "2019-01-30 13:05:22",
+    "commit_message": "Update decorator from 4.3.0 to 4.3.2",
+    "commit_date": "2019-01-30 13:05:28",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "12": {
-    "sha": "47dfe3769dff1dcfd78227c300e8be39656518f7",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/47dfe3769dff1dcfd78227c300e8be39656518f7",
+  "20": {
+    "sha": "d270c9c237457c4db6334401c9eb9697121edc2f",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/d270c9c237457c4db6334401c9eb9697121edc2f",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update boto3 from 1.9.83 to 1.9.86",
-    "commit_date": "2019-01-30 13:05:20",
+    "commit_message": "Update virtualenv from 16.2.0 to 16.3.0",
+    "commit_date": "2019-01-30 13:05:14",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "13": {
+  "21": {
     "sha": "098cc457ffcc3779af8cc0412b5a3914788fb940",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/098cc457ffcc3779af8cc0412b5a3914788fb940",
     "commiter_name": "pyup-bot",
@@ -185,18 +288,18 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "14": {
-    "sha": "d8c40f3f4c78b3736e3b65b76c4b85d032a1c8c8",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/d8c40f3f4c78b3736e3b65b76c4b85d032a1c8c8",
+  "22": {
+    "sha": "72e20d9d9f074e0a6a921a6ecf5a88c9b7c1f3bd",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/72e20d9d9f074e0a6a921a6ecf5a88c9b7c1f3bd",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update virtualenv from 16.2.0 to 16.3.0",
-    "commit_date": "2019-01-30 13:05:07",
+    "commit_message": "Update python-gnupg from 0.4.3 to 0.4.4",
+    "commit_date": "2019-01-30 13:04:58",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "15": {
+  "23": {
     "sha": "914bad4f2ffaf0f068dd2247e30a4af60a5d32b3",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/914bad4f2ffaf0f068dd2247e30a4af60a5d32b3",
     "commiter_name": "pyup-bot",
@@ -207,18 +310,18 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "16": {
-    "sha": "61eb648a050123462f4f3dc286f2b6bee4c2ddbe",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/61eb648a050123462f4f3dc286f2b6bee4c2ddbe",
+  "24": {
+    "sha": "0b1cd0c2391eefc72edd217948e0a10a7bf8a7a7",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/0b1cd0c2391eefc72edd217948e0a10a7bf8a7a7",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update python-gnupg from 0.4.3 to 0.4.4",
-    "commit_date": "2019-01-30 13:04:51",
+    "commit_message": "Update mohawk from 0.3.4 to 1.0.0",
+    "commit_date": "2019-01-30 13:04:43",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "17": {
+  "25": {
     "sha": "118d7eac351c36eb8428b1367b3da96ccc9ae2b0",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/118d7eac351c36eb8428b1367b3da96ccc9ae2b0",
     "commiter_name": "pyup-bot",
@@ -229,18 +332,18 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "18": {
-    "sha": "6ce10b82821823866c0d4b735ff523aeda0f7942",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/6ce10b82821823866c0d4b735ff523aeda0f7942",
+  "26": {
+    "sha": "a180615bc9d3ba57e08dac547cc908247aeb70e1",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/a180615bc9d3ba57e08dac547cc908247aeb70e1",
     "commiter_name": "pyup-bot",
     "commiter_email": null,
-    "commit_message": "Update mohawk from 0.3.4 to 1.0.0",
-    "commit_date": "2019-01-30 13:04:36",
+    "commit_message": "Update aiohttp from 3.4.4 to 3.5.4",
+    "commit_date": "2019-01-30 13:04:28",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "modules/signing_scriptworker/files/requirements.txt"
     ]
   },
-  "19": {
+  "27": {
     "sha": "2793e36c906f83c7ec858a5f7399a535c170552c",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/2793e36c906f83c7ec858a5f7399a535c170552c",
     "commiter_name": "pyup-bot",
@@ -251,18 +354,37 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "20": {
-    "sha": "ba4e1cb92e97970ff55ef2713053ae1d264037cb",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/ba4e1cb92e97970ff55ef2713053ae1d264037cb",
-    "commiter_name": "pyup-bot",
+  "28": {
+    "sha": "7fbb6e39d3096e6c13618bc3520fb13dd8a27c70",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/7fbb6e39d3096e6c13618bc3520fb13dd8a27c70",
+    "commiter_name": "dragoscrisan",
     "commiter_email": null,
-    "commit_message": "Update aiohttp from 3.4.4 to 3.5.4",
-    "commit_date": "2019-01-30 13:04:21",
+    "commit_message": "Merge branch 'master' of https://github.com/mozilla-releng/build-puppet",
+    "commit_date": "2019-01-30 08:01:43",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
+      "manifests/moco-config.pp",
+      "modules/addon_scriptworker/files/requirements.txt",
+      "modules/balrog_scriptworker/files/requirements-3.txt",
+      "modules/beetmover_scriptworker/files/requirements.txt",
+      "modules/bouncer_scriptworker/files/requirements.txt",
+      "modules/buildduty_tools/files/requirements.txt",
+      "modules/hardware/manifests/apple_firmware.pp",
+      "modules/mig/manifests/agent/daemon.pp",
+      "modules/packages/manifests/mozilla/python3-dmg.sh",
+      "modules/packages/manifests/mozilla/python3.pp",
+      "modules/packages/manifests/mozilla/xz-dmg.sh",
+      "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/pushsnap_scriptworker/files/requirements.txt",
+      "modules/shipit_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/files/requirements.txt",
+      "modules/signingserver/files/linux_requirements.txt",
+      "modules/toplevel/manifests/worker.pp",
+      "modules/transparency_scriptworker/files/requirements.txt",
+      "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "21": {
+  "29": {
     "sha": "10941f7b3c9def6db83250a3baedc3e5cd2476cb",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/10941f7b3c9def6db83250a3baedc3e5cd2476cb",
     "commiter_name": "escapewindow",
@@ -282,7 +404,7 @@
       "modules/tree_scriptworker/files/requirements.txt"
     ]
   },
-  "22": {
+  "30": {
     "sha": "043e4f39f8742ed80d54d99697833729f024a9e2",
     "url": "https://github.com/mozilla-releng/build-puppet/commit/043e4f39f8742ed80d54d99697833729f024a9e2",
     "commiter_name": "tomprince",
@@ -294,259 +416,132 @@
       "modules/bouncer_scriptworker/files/requirements.txt"
     ]
   },
-  "23": {
-    "sha": "fcf7b1016d091b118ed747e2cda9082e19f29384",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/fcf7b1016d091b118ed747e2cda9082e19f29384",
-    "commiter_name": "mitchhentges",
+  "31": {
+    "sha": "4c4b69c5515d7a76fd7dcd672d39adf9595216d2",
+    "url": "https://github.com/mozilla-releng/build-puppet/commit/4c4b69c5515d7a76fd7dcd672d39adf9595216d2",
+    "commiter_name": "dragoscrisan",
     "commiter_email": null,
-    "commit_message": "Merge pull request #373 from mitchhentges/beetmoverscript-bump-file-size  Bumps beetmoverscript version",
-    "commit_date": "2019-01-25 18:50:04",
+    "commit_message": "Merge branch 'master' of https://github.com/mozilla-releng/build-puppet",
+    "commit_date": "2019-01-22 14:46:08",
     "files_changed": [
-      "modules/beetmover_scriptworker/files/requirements.txt"
-    ]
-  },
-  "24": {
-    "sha": "f674a5cc04c9217f944627e175edde864008c442",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/f674a5cc04c9217f944627e175edde864008c442",
-    "commiter_name": "MihaiTabara",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #363 from MihaiTabara/bump  Bug 1519054 - Bump bouncerscipt in beetmoverworkers",
-    "commit_date": "2019-01-15 13:33:03",
-    "files_changed": [
-      "modules/bouncer_scriptworker/files/requirements.txt"
-    ]
-  },
-  "25": {
-    "sha": "0399e01dd57abbf270c949fef95c31db17174235",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/0399e01dd57abbf270c949fef95c31db17174235",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Scheduled weekly dependency update for week 01 (#358)    Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update aiohttp from 3.4.4 to 3.5.2      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update arrow from 0.12.1 to 0.13.0      Update boto3 from 1.9.71 to 1.9.75      Update botocore from 1.12.71 to 1.12.75      Update androguard from 3.2.1 to 3.3.1      Update lxml from 4.2.5 to 4.3.0      Update pytz from 2018.7 to 2018.9      Update gevent from 1.3.7 to 1.4.0      Update gevent from 1.3.7 to 1.4.0      Update webob from 1.8.4 to 1.8.5      Update webob from 1.8.4 to 1.8.5      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Backout aiohttp update      Revert androguard back to 3.2.1",
-    "commit_date": "2019-01-09 16:55:30",
-    "files_changed": [
+      ".travis.yml",
+      "manifests/moco-config.pp",
       "modules/addon_scriptworker/files/requirements.txt",
       "modules/balrog_scriptworker/files/requirements-27.txt",
       "modules/balrog_scriptworker/files/requirements-3.txt",
-      "modules/beetmover_scriptworker/files/requirements.txt",
-      "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/shipit_scriptworker/files/requirements.txt",
-      "modules/signing_scriptworker/files/requirements.txt",
-      "modules/signingserver/files/linux_requirements.txt",
-      "modules/signingserver/files/mac_requirements.txt",
-      "modules/transparency_scriptworker/files/requirements.txt",
-      "modules/tree_scriptworker/files/requirements.txt"
-    ]
-  },
-  "26": {
-    "sha": "7c9d12db511547d4a379049a38281fc9a1148e8c",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/7c9d12db511547d4a379049a38281fc9a1148e8c",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Bug 1512631 - Bump scriptworker to 17.2.0 (#357)",
-    "commit_date": "2019-01-07 11:09:02",
-    "files_changed": [
-      "modules/addon_scriptworker/files/requirements.txt",
-      "modules/balrog_scriptworker/files/requirements-3.txt",
-      "modules/beetmover_scriptworker/files/requirements.txt",
-      "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/pushsnap_scriptworker/files/requirements.txt",
-      "modules/shipit_scriptworker/files/requirements.txt",
-      "modules/signing_scriptworker/files/requirements.txt",
-      "modules/transparency_scriptworker/files/requirements.txt",
-      "modules/tree_scriptworker/files/requirements.txt"
-    ]
-  },
-  "27": {
-    "sha": "e991974d2d5808fc086d974265145b0fe58ebeec",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/e991974d2d5808fc086d974265145b0fe58ebeec",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #348 from mitchhentges/remove-explicit-schema-file-config  Don't explicitly set \"schema_file\" for scriptworker scripts",
-    "commit_date": "2019-01-04 16:56:48",
-    "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-27.txt",
       "modules/balrog_scriptworker/templates/script_config.json.erb",
       "modules/beetmover_scriptworker/files/requirements.txt",
+      "modules/beetmover_scriptworker/manifests/init.pp",
       "modules/beetmover_scriptworker/manifests/settings.pp",
       "modules/beetmover_scriptworker/templates/script_config.json.erb",
       "modules/bouncer_scriptworker/files/requirements.txt",
       "modules/bouncer_scriptworker/templates/script_config.json.erb",
+      "modules/config/manifests/base.pp",
+      "modules/fw/manifests/profiles/linux_taskcluster_worker.pp",
+      "modules/generic_worker/templates/run-generic-worker.sh.erb",
+      "modules/nrpe/manifests/base.pp",
+      "modules/packages/manifests/nrpe.pp",
+      "modules/packages/manifests/setup.pp",
+      "modules/puppetmaster/templates/puppetmaster-pip-download.sh.erb",
+      "modules/pushapk_scriptworker/files/fenix_dep.pem",
+      "modules/pushapk_scriptworker/files/fenix_release.pem",
+      "modules/pushapk_scriptworker/files/focus_dep.pem",
+      "modules/pushapk_scriptworker/files/focus_release.pem",
       "modules/pushapk_scriptworker/files/requirements.txt",
+      "modules/pushapk_scriptworker/manifests/init.pp",
+      "modules/pushapk_scriptworker/manifests/jarsigner_init.pp",
       "modules/pushapk_scriptworker/manifests/settings.pp",
+      "modules/pushsnap_scriptworker/files/requirements.txt",
       "modules/pushsnap_scriptworker/manifests/settings.pp",
+      "modules/roller/templates/dev/env.erb",
+      "modules/roller/templates/dev/worker_config.json.erb",
+      "modules/roller/templates/prod/env.erb",
+      "modules/roller/templates/prod/worker_config.json.erb",
       "modules/shipit_scriptworker/files/requirements.txt",
       "modules/shipit_scriptworker/manifests/init.pp",
       "modules/shipit_scriptworker/manifests/settings.pp",
-      "modules/signing_scriptworker/templates/script_config.json.erb"
-    ]
-  },
-  "28": {
-    "sha": "3d09378acf76e837b2ab6d4842b885e9e7f0991b",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/3d09378acf76e837b2ab6d4842b885e9e7f0991b",
-    "commiter_name": "mitchhentges",
-    "commiter_email": "mitch9654@gmail.com",
-    "commit_message": "updates dependencies on scriptworker scriptsscripts",
-    "commit_date": "2019-01-03 20:01:20",
-    "files_changed": [
-      "modules/balrog_scriptworker/files/requirements-27.txt",
-      "modules/beetmover_scriptworker/files/requirements.txt",
-      "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/shipit_scriptworker/files/requirements.txt"
-    ]
-  },
-  "29": {
-    "sha": "a0510f366049d5e28ffc3d3d0490c396a5412f44",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a0510f366049d5e28ffc3d3d0490c396a5412f44",
-    "commiter_name": "escapewindow",
-    "commiter_email": null,
-    "commit_message": "scriptworker 17.1.1 (#352)",
-    "commit_date": "2019-01-03 00:53:04",
-    "files_changed": [
-      "modules/addon_scriptworker/files/requirements.txt",
-      "modules/balrog_scriptworker/files/requirements-3.txt",
-      "modules/beetmover_scriptworker/files/requirements.txt",
-      "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/pushsnap_scriptworker/files/requirements.txt",
-      "modules/shipit_scriptworker/files/requirements.txt",
       "modules/signing_scriptworker/files/requirements.txt",
+      "modules/signing_scriptworker/templates/dep-passwords-mobile.json.erb",
+      "modules/signing_scriptworker/templates/passwords-mobile.json.erb",
+      "modules/signing_scriptworker/templates/script_config.json.erb",
+      "modules/signingserver/files/linux_requirements.txt",
+      "modules/signingserver/files/mac_requirements.txt",
+      "modules/telegraf/AUTHORS",
+      "modules/telegraf/Gemfile",
+      "modules/telegraf/LICENSE",
+      "modules/telegraf/README.md",
+      "modules/telegraf/README_releng.md",
+      "modules/telegraf/Rakefile",
+      "modules/telegraf/checksums.json",
+      "modules/telegraf/log/default/2017-02-28_15_51_27/sut.log",
+      "modules/telegraf/log/default/2017-03-01_20_08_31/sut.log",
+      "modules/telegraf/log/default/2017-03-01_20_13_20/sut.log",
+      "modules/telegraf/log/default/2017-03-01_20_18_06/sut.log",
+      "modules/telegraf/log/default/2017-03-01_20_19_07/sut.log",
+      "modules/telegraf/log/default/2017-03-01_20_24_31/sut.log",
+      "modules/telegraf/log/default/2017-03-01_20_27_21/sut.log",
+      "modules/telegraf/log/default/2017-03-02_09_26_33/sut.log",
+      "modules/telegraf/log/default/2017-03-02_09_29_37/sut.log",
+      "modules/telegraf/log/default/2017-03-02_10_08_51/sut.log",
+      "modules/telegraf/log/default/2017-04-25_15_51_20/sut.log",
+      "modules/telegraf/log/default/2017-04-25_15_57_33/sut.log",
+      "modules/telegraf/log/default/2017-04-25_16_07_43/sut.log",
+      "modules/telegraf/log/default/2017-04-25_16_23_34/sut.log",
+      "modules/telegraf/log/default/2017-04-25_16_28_46/sut.log",
+      "modules/telegraf/log/default/2017-04-25_17_16_30/sut.log",
+      "modules/telegraf/log/default/2017-04-25_17_17_15/sut.log",
+      "modules/telegraf/log/default/2017-04-25_18_59_36/sut.log",
+      "modules/telegraf/log/default/2017-05-05_15_18_59/sut.log",
+      "modules/telegraf/log/default/2017-05-05_15_28_12/sut.log",
+      "modules/telegraf/log/default/2017-06-10_15_38_40/sut.log",
+      "modules/telegraf/log/default/2017-06-10_15_41_45/sut.log",
+      "modules/telegraf/log/default/2017-06-10_15_46_24/sut.log",
+      "modules/telegraf/log/default/2017-06-10_15_55_54/sut.log",
+      "modules/telegraf/log/default/2017-06-10_15_56_18/sut.log",
+      "modules/telegraf/log/default/2017-06-11_20_25_51/sut.log",
+      "modules/telegraf/log/default/2017-06-11_20_26_05/sut.log",
+      "modules/telegraf/log/default/2017-06-12_09_01_31/sut.log",
+      "modules/telegraf/log/default/2017-06-12_09_16_39/sut.log",
+      "modules/telegraf/log/default/2017-06-12_09_22_15/sut.log",
+      "modules/telegraf/log/default/2017-06-12_09_26_23/sut.log",
+      "modules/telegraf/log/default/2017-06-12_09_33_16/sut.log",
+      "modules/telegraf/log/default/2017-06-12_09_37_33/sut.log",
+      "modules/telegraf/log/default/2017-08-04_10_18_03/sut.log",
+      "modules/telegraf/log/default/2017-08-04_10_21_08/sut.log",
+      "modules/telegraf/log/default/2017-08-04_10_34_26/sut.log",
+      "modules/telegraf/log/default/2017-08-04_10_50_27/sut.log",
+      "modules/telegraf/manifests/config.pp",
+      "modules/telegraf/manifests/init.pp",
+      "modules/telegraf/manifests/input.pp",
+      "modules/telegraf/manifests/install.pp",
+      "modules/telegraf/manifests/output.pp",
+      "modules/telegraf/manifests/params.pp",
+      "modules/telegraf/manifests/service.pp",
+      "modules/telegraf/metadata.json",
+      "modules/telegraf/scripts/generate_authors.sh",
+      "modules/telegraf/spec/acceptance/default_spec.rb",
+      "modules/telegraf/spec/acceptance/nodesets/centos-7-x86_64_docker.yml",
+      "modules/telegraf/spec/acceptance/nodesets/centos7.yml",
+      "modules/telegraf/spec/acceptance/nodesets/debian-8-x86_64_docker.yml",
+      "modules/telegraf/spec/acceptance/nodesets/debian.yml",
+      "modules/telegraf/spec/acceptance/nodesets/default.yml",
+      "modules/telegraf/spec/acceptance/nodesets/openstack-ubuntu.yml",
+      "modules/telegraf/spec/acceptance/nodesets/ubuntu1404.yml",
+      "modules/telegraf/spec/acceptance/nodesets/ubuntu1604.yml",
+      "modules/telegraf/spec/classes/coverage_spec.rb",
+      "modules/telegraf/spec/classes/telegraf_spec.rb",
+      "modules/telegraf/spec/defines/input_spec.rb",
+      "modules/telegraf/spec/hiera.yaml",
+      "modules/telegraf/spec/hieradata/test/telegraf.yaml",
+      "modules/telegraf/spec/spec_helper.rb",
+      "modules/telegraf/spec/spec_helper_acceptance.rb",
+      "modules/telegraf/templates/input.conf.erb",
+      "modules/telegraf/templates/output.conf.erb",
+      "modules/telegraf/templates/telegraf.conf.erb",
+      "modules/telegraf/tests/init.pp",
+      "modules/toplevel/manifests/worker/releng/generic_worker/test.pp",
       "modules/transparency_scriptworker/files/requirements.txt",
       "modules/tree_scriptworker/files/requirements.txt"
-    ]
-  },
-  "30": {
-    "sha": "a1e280bb4fe9e4e9554abc3bf0068042ce91412d",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/a1e280bb4fe9e4e9554abc3bf0068042ce91412d",
-    "commiter_name": "bccrisan",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #349 from mozilla-releng/pyup-scheduled-update-2019-01-02  Scheduled weekly dependency update for week 00",
-    "commit_date": "2019-01-02 16:57:42",
-    "files_changed": [
-      "modules/addon_scriptworker/files/requirements.txt",
-      "modules/balrog_scriptworker/files/requirements-27.txt",
-      "modules/balrog_scriptworker/files/requirements-3.txt",
-      "modules/beetmover_scriptworker/files/requirements.txt",
-      "modules/bouncer_scriptworker/files/requirements.txt",
-      "modules/buildduty_tools/files/requirements.txt",
-      "modules/pushapk_scriptworker/files/requirements.txt",
-      "modules/selfserve_agent/files/requirements.txt",
-      "modules/shipit_scriptworker/files/requirements.txt",
-      "modules/signing_scriptworker/files/requirements.txt",
-      "modules/transparency_scriptworker/files/requirements.txt",
-      "modules/tree_scriptworker/files/requirements.txt"
-    ]
-  },
-  "31": {
-    "sha": "95b3a2b8bd054e7e9449b850382705c6f45abbf5",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/95b3a2b8bd054e7e9449b850382705c6f45abbf5",
-    "commiter_name": "bccrisan",
-    "commiter_email": null,
-    "commit_message": "Reverted aiohttp from 3.5.1 to 3.4.4",
-    "commit_date": "2019-01-02 14:11:07",
-    "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
-    ]
-  },
-  "32": {
-    "sha": "0abde4bc6dd50f006242a4f04025c0eafe3b196d",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/0abde4bc6dd50f006242a4f04025c0eafe3b196d",
-    "commiter_name": "bccrisan",
-    "commiter_email": null,
-    "commit_message": "Reverted aiohttp from 3.5.1 to 3.4.4",
-    "commit_date": "2019-01-02 14:10:37",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "33": {
-    "sha": "b1aa8bc464d9657d033e39357ed6287e7006875d",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/b1aa8bc464d9657d033e39357ed6287e7006875d",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update pyasn1-modules from 0.2.2 to 0.2.3",
-    "commit_date": "2019-01-02 13:04:55",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "34": {
-    "sha": "af854a81630fad825f5d35c313bd6bc337fcf1b8",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/af854a81630fad825f5d35c313bd6bc337fcf1b8",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update google-api-python-client from 1.7.6 to 1.7.7",
-    "commit_date": "2019-01-02 13:04:54",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "35": {
-    "sha": "1ee447736e9e26da3506566fe3fc1a4677ccae71",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/1ee447736e9e26da3506566fe3fc1a4677ccae71",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update virtualenv from 16.1.0 to 16.2.0",
-    "commit_date": "2019-01-02 13:04:46",
-    "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
-    ]
-  },
-  "36": {
-    "sha": "c25116292759700703dd5c6d575bdbc4c839371f",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/c25116292759700703dd5c6d575bdbc4c839371f",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update virtualenv from 16.1.0 to 16.2.0",
-    "commit_date": "2019-01-02 13:04:43",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "37": {
-    "sha": "df58f5cfa4f0121c2b24ac97b9d96d84a122b641",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/df58f5cfa4f0121c2b24ac97b9d96d84a122b641",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update pyasn1 from 0.4.4 to 0.4.5",
-    "commit_date": "2019-01-02 13:04:36",
-    "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
-    ]
-  },
-  "38": {
-    "sha": "e0409802689ca0b8a838d42a5e9ee974b56d6a95",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/e0409802689ca0b8a838d42a5e9ee974b56d6a95",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update pyasn1 from 0.4.4 to 0.4.5",
-    "commit_date": "2019-01-02 13:04:34",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
-    ]
-  },
-  "39": {
-    "sha": "5bf60919375becdddaab897021265df57bcbed54",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/5bf60919375becdddaab897021265df57bcbed54",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update aiohttp from 3.4.4 to 3.5.1",
-    "commit_date": "2019-01-02 13:04:25",
-    "files_changed": [
-      "modules/signing_scriptworker/files/requirements.txt"
-    ]
-  },
-  "40": {
-    "sha": "0a72b8f6cec5bd07eeca62a37ccaff2d4067e561",
-    "url": "https://github.com/mozilla-releng/build-puppet/commit/0a72b8f6cec5bd07eeca62a37ccaff2d4067e561",
-    "commiter_name": "pyup-bot",
-    "commiter_email": null,
-    "commit_message": "Update aiohttp from 3.4.4 to 3.5.1",
-    "commit_date": "2019-01-02 13:04:22",
-    "files_changed": [
-      "modules/pushapk_scriptworker/files/requirements.txt"
     ]
   }
 }

@@ -1,43 +1,287 @@
 {
   "0": {
-    "lastChecked": "2019-02-06 12:03:59.534186",
+    "lastChecked": "2019-02-17 05:31:31.342337",
     "last_releases": {
       "latest_release": {
-        "version": "18.1.0",
-        "sha": "f7cba2fe3c98b764e3bb60d62e7146185f2f0e90",
-        "date": "2019-02-01 23:14:37",
+        "version": "19.0.0",
+        "sha": "5ed62ab9fa21f455bca4af158a0948ce137de93e",
+        "date": "2019-02-14 00:59:01",
         "author": "escapewindow"
       }
     }
   },
   "1": {
-    "sha": "b6c1f101819d6f73059b935d4e2b46403bf07efa",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/b6c1f101819d6f73059b935d4e2b46403bf07efa",
-    "commiter_name": "JohanLorenzo",
-    "commiter_email": null,
-    "commit_message": "Enable mozilla-mobile staging release from Github forks",
-    "commit_date": "2018-11-09 14:59:11",
+    "sha": "1092e3cff36073e085e934551630a81971e8d306",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/1092e3cff36073e085e934551630a81971e8d306",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "Makes mimetypes tests more portable",
+    "commit_date": "2019-01-28 22:52:58",
     "files_changed": [
-      "scriptworker/constants.py",
-      "scriptworker/cot/verify.py",
-      "scriptworker/test/test_cot_verify.py",
-      "scriptworker/test/test_task.py"
+      "scriptworker/test/test_artifacts.py"
     ]
   },
   "2": {
-    "sha": "1492109d31f3075d27b44cd321b9cd267e1f8709",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/1492109d31f3075d27b44cd321b9cd267e1f8709",
-    "commiter_name": "escapewindow",
+    "sha": "aabe69e99b7db248991bb43d1bfb12f25a368e41",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/aabe69e99b7db248991bb43d1bfb12f25a368e41",
+    "commiter_name": "rail",
     "commiter_email": null,
-    "commit_message": "17.1.1",
-    "commit_date": "2019-01-03 00:21:43",
+    "commit_message": "Use `git_path` for git binary (#304)    Use `git_path` for git binary      Address comments      Fix",
+    "commit_date": "2019-01-28 19:41:58",
     "files_changed": [
-      "CHANGELOG.md",
+      "scriptworker.yaml.tmpl",
+      "scriptworker/constants.py",
+      "scriptworker/gpg.py",
+      "scriptworker/test/test_gpg.py",
       "scriptworker/version.py",
       "version.json"
     ]
   },
   "3": {
+    "sha": "0e08bdbe3a5ab67b989c9416ba00949df8fcd8b6",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/0e08bdbe3a5ab67b989c9416ba00949df8fcd8b6",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #303 from rail/no_virtualenv  Do not explicitly depend on virtualenv",
+    "commit_date": "2019-01-25 19:44:41",
+    "files_changed": [
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.txt",
+      "scriptworker/version.py",
+      "setup.py",
+      "version.json"
+    ]
+  },
+  "4": {
+    "sha": "04c940afd4bd5cf0bb08689076928c228a327116",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/04c940afd4bd5cf0bb08689076928c228a327116",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "17.2.2",
+    "commit_date": "2019-01-25 19:38:47",
+    "files_changed": [
+      "requirements/base.txt",
+      "requirements/test.txt",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "5": {
+    "sha": "5a16ed1d78c24f9ec028b9345e7d30bf4275b69e",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/5a16ed1d78c24f9ec028b9345e7d30bf4275b69e",
+    "commiter_name": "rail",
+    "commiter_email": "rail@mozilla.com",
+    "commit_message": "Do not explicitly depend on virtualenv",
+    "commit_date": "2019-01-25 18:37:14",
+    "files_changed": [
+      "requirements/base.in",
+      "requirements/base.txt",
+      "setup.py"
+    ]
+  },
+  "6": {
+    "sha": "be5ca9647f40c9ea9910e578c63293ee9990f8a1",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/be5ca9647f40c9ea9910e578c63293ee9990f8a1",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #301 from MihaiTabara/fix  Syntax consistency.",
+    "commit_date": "2019-01-15 21:47:14",
+    "files_changed": [
+      "docs/new_instance.md"
+    ]
+  },
+  "7": {
+    "sha": "b5262f589ac2780139a52fa4db414136f8df1d36",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/b5262f589ac2780139a52fa4db414136f8df1d36",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": null,
+    "commit_message": "Merge branch 'master' into fix",
+    "commit_date": "2019-01-15 19:11:37",
+    "files_changed": [
+      "scriptworker/artifacts.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/exceptions.py",
+      "scriptworker/test/__init__.py",
+      "scriptworker/test/test_utils.py",
+      "scriptworker/utils.py"
+    ]
+  },
+  "8": {
+    "sha": "70253547d7765879fb371c43557fcec61a615111",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/70253547d7765879fb371c43557fcec61a615111",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "Syntax consistency.",
+    "commit_date": "2019-01-15 19:10:51",
+    "files_changed": [
+      "docs/new_instance.md"
+    ]
+  },
+  "9": {
+    "sha": "981e971b710b64fbcef450a7eb1d3c0258999254",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/981e971b710b64fbcef450a7eb1d3c0258999254",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #300 from escapewindow/Download404  Don't retry on 404s.",
+    "commit_date": "2019-01-15 19:09:16",
+    "files_changed": [
+      "scriptworker/artifacts.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/exceptions.py",
+      "scriptworker/test/__init__.py",
+      "scriptworker/test/test_utils.py",
+      "scriptworker/utils.py"
+    ]
+  },
+  "10": {
+    "sha": "2f72b66adfbedd83412b119e377e4a340f238aca",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/2f72b66adfbedd83412b119e377e4a340f238aca",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Don't retry on 404s.",
+    "commit_date": "2019-01-11 22:59:56",
+    "files_changed": [
+      "scriptworker/artifacts.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/exceptions.py",
+      "scriptworker/test/__init__.py",
+      "scriptworker/test/test_utils.py",
+      "scriptworker/utils.py"
+    ]
+  },
+  "11": {
+    "sha": "276f4a091eae704e896156084194c50e5f86640c",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/276f4a091eae704e896156084194c50e5f86640c",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #297 from escapewindow/aiohttp-warnings  Aiohttp warnings",
+    "commit_date": "2019-01-11 19:31:23",
+    "files_changed": [
+      "scriptworker/cot/verify.py",
+      "scriptworker/test/__init__.py",
+      "tox.ini"
+    ]
+  },
+  "12": {
+    "sha": "8f52e6eb6713b81fed0c03bdd779554fb435431f",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/8f52e6eb6713b81fed0c03bdd779554fb435431f",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "add slowest 10 test measurement",
+    "commit_date": "2019-01-05 02:02:25",
+    "files_changed": [
+      "tox.ini"
+    ]
+  },
+  "13": {
+    "sha": "de0404d8ead86383d6fc234ef7f3a3b33a394c9b",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/de0404d8ead86383d6fc234ef7f3a3b33a394c9b",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "fix pytest random order",
+    "commit_date": "2018-12-29 01:35:25",
+    "files_changed": [
+      "tox.ini"
+    ]
+  },
+  "14": {
+    "sha": "22d2ec42a824cf54a842967c479e9c06698f67ee",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/22d2ec42a824cf54a842967c479e9c06698f67ee",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "kill a bunch of test aiohttp warnings",
+    "commit_date": "2019-01-07 23:28:19",
+    "files_changed": [
+      "scriptworker/test/__init__.py"
+    ]
+  },
+  "15": {
+    "sha": "405d0970ade2d8df9571d9f3963f2b89a6ad85cc",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/405d0970ade2d8df9571d9f3963f2b89a6ad85cc",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "move bulk of verify_cot_cmdln into an async function  this allows us to use `await` more naturally than using `loop.run_until_complete`. It also works around the aiohttp deprecation warnings about creating the session in a coroutine.",
+    "commit_date": "2019-01-07 22:54:31",
+    "files_changed": [
+      "scriptworker/cot/verify.py"
+    ]
+  },
+  "16": {
+    "sha": "5cbbdab3d0136da9f7c55dd487647951725ee65a",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/5cbbdab3d0136da9f7c55dd487647951725ee65a",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #299 from mitchhentges/release-17.2.1  17.2.1",
+    "commit_date": "2019-01-11 19:02:31",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "17": {
+    "sha": "19152890c7a8e9c42437d10fda6afe8b2c6a5da3",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/19152890c7a8e9c42437d10fda6afe8b2c6a5da3",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "17.2.1",
+    "commit_date": "2019-01-11 17:22:07",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "18": {
+    "sha": "ab5daa9cbac2d357a550455977f734bee03aebd7",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/ab5daa9cbac2d357a550455977f734bee03aebd7",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #298 from mitchhentges/fenix  Adds fenix to the list of approved repositories",
+    "commit_date": "2019-01-11 17:20:06",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/constants.py"
+    ]
+  },
+  "19": {
+    "sha": "ce4ceae9ca0c82446a2ac10541e4367f932aec97",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/ce4ceae9ca0c82446a2ac10541e4367f932aec97",
+    "commiter_name": "mitchhentges",
+    "commiter_email": "mitch9654@gmail.com",
+    "commit_message": "adds fenix to the list of approved repositories",
+    "commit_date": "2019-01-11 00:46:26",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/constants.py"
+    ]
+  },
+  "20": {
+    "sha": "3aa117b973f1b5570085dbcd3b34002925d3b034",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/3aa117b973f1b5570085dbcd3b34002925d3b034",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Temporarily pin pytest because of breakage (#296)  Fixes https://travis-ci.org/mozilla-releng/scriptworker/jobs/476285599#L683",
+    "commit_date": "2019-01-07 14:26:47",
+    "files_changed": [
+      "tox.ini"
+    ]
+  },
+  "21": {
+    "sha": "35e717bf42ef6543d26a2c8e043459f4cb147778",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/35e717bf42ef6543d26a2c8e043459f4cb147778",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "17.2.0",
+    "commit_date": "2019-01-03 14:44:34",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "22": {
     "sha": "b6c1f101819d6f73059b935d4e2b46403bf07efa",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/b6c1f101819d6f73059b935d4e2b46403bf07efa",
     "commiter_name": "JohanLorenzo",
@@ -51,7 +295,20 @@
       "scriptworker/test/test_task.py"
     ]
   },
-  "4": {
+  "23": {
+    "sha": "85aba2479878329ce96fe75a422a364759d8bb5c",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/85aba2479878329ce96fe75a422a364759d8bb5c",
+    "commiter_name": "escapewindow",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #292 from escapewindow/sw-17.1.1  17.1.1",
+    "commit_date": "2019-01-03 00:30:00",
+    "files_changed": [
+      "CHANGELOG.md",
+      "scriptworker/version.py",
+      "version.json"
+    ]
+  },
+  "24": {
     "sha": "1492109d31f3075d27b44cd321b9cd267e1f8709",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/1492109d31f3075d27b44cd321b9cd267e1f8709",
     "commiter_name": "escapewindow",
@@ -64,7 +321,7 @@
       "version.json"
     ]
   },
-  "5": {
+  "25": {
     "sha": "453af4e8c6b243058cc29ef9e85b4c450715489e",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/453af4e8c6b243058cc29ef9e85b4c450715489e",
     "commiter_name": "escapewindow",
@@ -75,7 +332,7 @@
       "scriptworker/cot/verify.py"
     ]
   },
-  "6": {
+  "26": {
     "sha": "a5f8d14be2f56daa39d8d3518cf18e3d7ac95792",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/a5f8d14be2f56daa39d8d3518cf18e3d7ac95792",
     "commiter_name": "djmitche",
@@ -84,70 +341,6 @@
     "commit_date": "2019-01-02 23:48:05",
     "files_changed": [
       "scriptworker/cot/verify.py"
-    ]
-  },
-  "7": {
-    "sha": "a86e056c8526238d690bd31a323d7adec6d13cb7",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/a86e056c8526238d690bd31a323d7adec6d13cb7",
-    "commiter_name": "escapewindow",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #286 from escapewindow/action-hook4  bug 1485680 - convert release-promotion to an action hook",
-    "commit_date": "2018-12-28 19:36:44",
-    "files_changed": [
-      "CHANGELOG.md",
-      "requirements/base.txt",
-      "requirements/test.txt",
-      "scriptworker/cot/verify.py",
-      "scriptworker/test/data/cotv2/actions.json",
-      "scriptworker/test/data/cotv2/cotv4_relpro_context.json",
-      "scriptworker/test/data/cotv2/cotv4_relpro_template.json",
-      "scriptworker/test/data/cotv3/.taskcluster.yml",
-      "scriptworker/test/data/cotv3/action_retrigger.json",
-      "scriptworker/test/data/cotv3/actions.json",
-      "scriptworker/test/data/cotv3/decision_try.json",
-      "scriptworker/test/data/cotv3/parameters.yml",
-      "scriptworker/test/data/cotv3/pushlog.json",
-      "scriptworker/test/data/cotv4/.taskcluster.yml",
-      "scriptworker/test/data/cotv4/action_relpro.json",
-      "scriptworker/test/data/cotv4/action_retrigger.json",
-      "scriptworker/test/data/cotv4/actions.json",
-      "scriptworker/test/data/cotv4/decision_try.json",
-      "scriptworker/test/data/cotv4/parameters.yml",
-      "scriptworker/test/data/cotv4/projects.yml",
-      "scriptworker/test/data/cotv4/pushlog.json",
-      "scriptworker/test/data/cotv4/retrigger_context.json",
-      "scriptworker/test/data/cotv4/retrigger_template.json",
-      "scriptworker/test/test_cot_verify.py",
-      "scriptworker/version.py",
-      "version.json"
-    ]
-  },
-  "8": {
-    "sha": "c8c416e70e3e796449c639876a9dd12307829512",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/c8c416e70e3e796449c639876a9dd12307829512",
-    "commiter_name": "escapewindow",
-    "commiter_email": null,
-    "commit_message": "17.1.0",
-    "commit_date": "2018-12-28 19:29:07",
-    "files_changed": [
-      "CHANGELOG.md",
-      "requirements/base.txt",
-      "requirements/test.txt",
-      "scriptworker/version.py",
-      "version.json"
-    ]
-  },
-  "9": {
-    "sha": "b71d1aafd9db05f3ee8e917af7faba5c92ae6881",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/b71d1aafd9db05f3ee8e917af7faba5c92ae6881",
-    "commiter_name": "escapewindow",
-    "commiter_email": null,
-    "commit_message": "address tomprince's review comments",
-    "commit_date": "2018-12-28 18:54:11",
-    "files_changed": [
-      "scriptworker/cot/verify.py",
-      "scriptworker/test/data/cotv4/broken_actions.json",
-      "scriptworker/test/test_cot_verify.py"
     ]
   }
 }
