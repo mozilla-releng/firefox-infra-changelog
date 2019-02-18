@@ -168,7 +168,10 @@
         " "
       ],
       "configuration": {
-        "folders-to-check": [],
+        "folders-to-check": [
+          "projects.yml",
+          "grants.yml"
+      ],
         "push_type": "json-log"
       }
     },
@@ -181,7 +184,10 @@
         " "
       ],
       "configuration": {
-        "folders-to-check": [],
+        "folders-to-check": [
+          "ciadmin/",
+          "tests"
+      ],
         "push_type": "json-log"
       }
      }

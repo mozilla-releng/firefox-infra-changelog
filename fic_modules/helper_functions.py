@@ -1,10 +1,11 @@
 import re
 import sys
-import os
-from github import Github, GithubException
+from github import GithubException
 from fic_modules.configuration import (
     REPOSITORIES,
-    REPO_LIST
+    REPO_LIST,
+    TOKEN,
+    GIT
 )
 from datetime import datetime
 
@@ -22,7 +23,6 @@ def compare_files(first_list, second_list):
         for element_s in range(len(second_list)):
             if str(second_list[element_s]) in str(first_list[element_f]):
                 return True
-    return False
 
 
 def clear_file(file_name, generated_for_days=1):
@@ -183,8 +183,6 @@ def limit_checker():
     to pass.
     :return: returns 1 if your limit requests is not exceeded
     """
-    TOKEN = os.environ.get("GIT_TOKEN")
-    GIT = Github(TOKEN)
     rate_limit = GIT.rate_limiting[0]
     unix_reset_time = GIT.rate_limiting_resettime
     reset_time = datetime.fromtimestamp(unix_reset_time)
@@ -210,12 +208,11 @@ def limit_checker():
 
 def get_keys(name):
     """
-    :param name:
-    :return:
+    :param name: Name of the platform
+    :return: A list with all available repositories
     """
     for key in REPOSITORIES.get("{}".format(name)):
         REPO_LIST.append(key)
-    print(REPO_LIST)
     return REPO_LIST
 
 
