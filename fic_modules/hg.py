@@ -9,7 +9,8 @@ from datetime import (
 from fic_modules.configuration import (
     REPOSITORIES,
     LOGGER,
-    WORKING_DIR
+    WORKING_DIR,
+    NUMBER_OF_CHANGESETS
 )
 from fic_modules.helper_functions import (
     remove_chars,
@@ -48,7 +49,9 @@ def generate_hg_pushes_link(repo_name, repository_url):
     data = json.loads(response.read())
     end_id = data.get("lastpushid")
     if start_id == 0:
-        start_id = end_id - 100
+        start_id = end_id - NUMBER_OF_CHANGESETS
+        if end_id < 100:
+            start_id = 1
     start_id = str(start_id)
     end_id = str(end_id)
     generate_pushes_link = repository_url + "json-pushes?version=2&" \
@@ -152,13 +155,8 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
                             "commiter_name": author,
                             "commit_message": desc,
                             "files_changed": files_changed}})
-            else:
-                hg_repo_data[number]["changeset_commits"].update({
-                    counter2: {
-                        "url": url,
-                        "commiter_name": author,
-                        "commit_message": desc,
-                        "files_changed": files_changed}})
+        if hg_repo_data[number].get('changeset_commits') == {}:
+            hg_repo_data.pop(number)
     json_writer_hg(repository_name, hg_repo_data)
 
 
@@ -174,21 +172,23 @@ def json_writer_hg(repository_name, new_commits):
                 commit_json:
             # loads the content of existing json into a variable
             json_content = json.load(commit_json)
+            number = len(json_content) - 1
+            if json_content['0']:
+                json_content['0'].update(new_commits['0'])
+            if len(new_commits) > 1:
+                for commit in new_commits:
+                    if commit != '0':
+                        json_content.update({int(number): new_commits[commit]})
+                        number += 1
+            json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
+            json.dump(json_content, json_file, indent=2)
+            json_file.close()
     except FileNotFoundError:
-        json_content = ""
-    # if len(json_content) > 0:
-    number = len(json_content) - 1
-    for new_commit in new_commits:
-        if new_commit == "0":
-            json_content["0"] = new_commits[new_commit]
-        else:
-            # if len(new_commits[new_commit].get("changeset_commits")) != 0:
-            if new_commits[new_commit].get("changeset_commits"):
-                number += 1
-                json_content.update({int(number): new_commits[new_commit]})
-
-    # if len(new_commits) > 0:
-    if new_commits:
+        json_content = {}
+        number = 0
+        for commit in new_commits:
+            json_content.update({int(number): new_commits[commit]})
+            number += 1
         json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
         json.dump(json_content, json_file, indent=2)
         json_file.close()
