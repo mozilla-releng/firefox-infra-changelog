@@ -194,7 +194,6 @@ def json_writer_hg(repository_name, new_commits):
         json_file.close()
 
 
-
 def extract_json_from_hg(json_files, path_to_files, days_to_generate):
     """
     Extracts the json data from json files and writes the data to the main
