@@ -177,8 +177,8 @@ def json_writer_hg(repository_name, new_commits):
                 json_content['0'].update(new_commits['0'])
             if len(new_commits) > 1:
                 for commit in new_commits:
-                    if commit != new_commits[0]:
-                        json_content.update({int(number): commit})
+                    if commit != '0':
+                        json_content.update({int(number): new_commits[commit]})
                         number += 1
             json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
             json.dump(json_content, json_file, indent=2)
