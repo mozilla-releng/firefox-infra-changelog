@@ -8,9 +8,9 @@ from datetime import (
 )
 from fic_modules.configuration import (
     REPOSITORIES,
-    LOGGER,
     WORKING_DIR,
-    NUMBER_OF_CHANGESETS
+    NUMBER_OF_CHANGESETS,
+    logger
 )
 from fic_modules.helper_functions import (
     remove_chars,
@@ -30,10 +30,10 @@ def get_last_local_push_id(repo_name):
                 commit_json:
             json_content = json.load(commit_json)
         last_stored_push_id = json_content.get("0").get("last_push_id")
+        logger.info("Last local push id is : {}".format(last_stored_push_id))
     except FileNotFoundError:
         last_stored_push_id = 0
-    if LOGGER:
-        print("Last local push id is : ", last_stored_push_id)
+        logger.info("No last local push id found, starting from 0 ")
     return last_stored_push_id
 
 
@@ -57,6 +57,8 @@ def generate_hg_pushes_link(repo_name, repository_url):
     generate_pushes_link = repository_url + "json-pushes?version=2&" \
                                             "full=1&startID={}&endID={}" \
                                             .format(start_id, end_id)
+    logger.info("Generated link for {} is {}".format(repo_name,
+                                                     generate_pushes_link))
     return generate_pushes_link
 
 
@@ -110,8 +112,7 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     :param repository_name: name of the repository
     :return: Writes data in hg json files
     """
-    if LOGGER:
-        print("Repo url:", repository_url)
+    logger.info("Repo url:{}".format(repository_url))
     link = generate_hg_pushes_link(repository_name, repository_url)
     data = json.loads(requests.get(link).text)
     last_push_id = data.get("lastpushid")
@@ -180,7 +181,8 @@ def json_writer_hg(repository_name, new_commits):
                     if commit != '0':
                         json_content.update({int(number): new_commits[commit]})
                         number += 1
-            json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
+            json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename,
+                             "w")
             json.dump(json_content, json_file, indent=2)
             json_file.close()
     except FileNotFoundError:
@@ -192,6 +194,15 @@ def json_writer_hg(repository_name, new_commits):
         json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
         json.dump(json_content, json_file, indent=2)
         json_file.close()
+        try:
+            del json_content["0"]
+        except KeyError:
+            pass
+        with open("changelog.json", "r") as f:
+            data = json.load(f)
+        data[repository_name] = json_content
+        with open("changelog.json", "w") as f:
+            json.dump(data, f, indent=2)
 
 
 def extract_json_from_hg(json_files, path_to_files, days_to_generate):
@@ -205,7 +216,8 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
     :param path_to_files: Folder to json files
     :return: none
     """
-    from fic_modules.markdown_modules import generate_markdown_header, write_main_md_table
+    from fic_modules.markdown_modules import generate_markdown_header,\
+        write_main_md_table
     time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
     test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
     time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
@@ -290,13 +302,10 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                                         review,
                                         commit_date)
             except AttributeError:
-                if LOGGER:
-                    print("Attribute Error!! \n "
-                          "Probable issue is an malfunctioned json file.. "
-                          "Please check the following file:", file)
+                logger.info("Attribute Error!! \n "
+                            "Probable issue is an malfunctioned json file.. "
+                            "Please check the following file:{}".format(file))
             except KeyError:
-                if LOGGER:
-                    print("File ", file, " is empty. \n",
-                          "Please check:",
-                          repository_url,
-                          " for more details.\n")
+                print("File {}is empty. \n",
+                      "Please check:{}",
+                      " for more details.\n".format(file, repository_url))
