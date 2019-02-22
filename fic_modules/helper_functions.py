@@ -1,4 +1,12 @@
 import re
+import sys
+from github import GithubException
+from fic_modules.configuration import (
+    REPOSITORIES,
+    REPO_LIST,
+    TOKEN,
+    GIT
+)
 from datetime import datetime
 
 
@@ -15,7 +23,6 @@ def compare_files(first_list, second_list):
         for element_s in range(len(second_list)):
             if str(second_list[element_s]) in str(first_list[element_f]):
                 return True
-    return False
 
 
 def clear_file(file_name, generated_for_days=1):
@@ -157,13 +164,55 @@ def filter_strings(string):
     :param string: string to be filtered
     :return:
     """
-    unwanted_chars = ["\u0131", "\u30c4", "\u00c1", "\u00ee", "\u0103", "\u0103", "\u00e4",
-                      "\u00e8", "\u2013", "\U0001f60b"
-                      "\u00af"]
+    unwanted_chars = ["\u0131", "\u30c4", "\u00c1", "\u00ee", "\u0103",
+                      "\u00e4", "\u00e8", "\u2013", "\U0001f60b", "\u00af",
+                      "\U0001f92a"]
 
     for word in string:
         if word in unwanted_chars:
             string = remove_chars(string, word)
 
     return string
+
+
+def limit_checker():
+    """
+    This function checks if your limit requests is not exceeded.
+    Every time when this function is called, it returns 1 in case of your
+    requests limit is not exceeded, otherwise it will wait for the reset time
+    to pass.
+    :return: returns 1 if your limit requests is not exceeded
+    """
+    rate_limit = GIT.rate_limiting[0]
+    unix_reset_time = GIT.rate_limiting_resettime
+    reset_time = datetime.fromtimestamp(unix_reset_time)
+    if rate_limit >= 5:
+        sys.stdout.write("\rRate limit is: " + str(rate_limit))
+        sys.stdout.flush()
+        return True
+    else:
+        try:
+            print("You have reached the requests limit!")
+            print("The requests limit will reset at:" + str(reset_time))
+            while rate_limit < 5000 and reset_time >= datetime.now():
+                unix_reset_time = GIT.rate_limiting_resettime
+                reset_time = datetime.fromtimestamp(unix_reset_time)
+            print("\nThe requests limit has been reset!")
+            return True
+
+        except GithubException.status == 403:
+            print("The requests limit is reset to: " + str(reset_time))
+        except GithubException.status == 404:
+            print("Github is down!\n Please try again later...")
+
+
+def get_keys(name):
+    """
+    :param name: Name of the platform
+    :return: A list with all available repositories
+    """
+    for key in REPOSITORIES.get("{}".format(name)):
+        REPO_LIST.append(key)
+    return REPO_LIST
+
 

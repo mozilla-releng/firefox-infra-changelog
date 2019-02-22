@@ -1,8 +1,17 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 59
+ CURRENT PUSH ID: 66
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
+|66|2019-02-13 08:06:03|Tom Prince <mozilla@hocat.ca>|Backed out changeset c6dddbdcedb6 (bug 1465844) for breaking mozilla-taskcluster|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=529fc3665945
+|65|2019-02-12 05:54:42|Tom Prince <mozilla@hocat.ca>|Bug 1465844: Set autoland to scm_autoland to match hg.mozilla.org; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19401|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c6dddbdcedb6
+|64|2019-02-11 20:15:00|Tom Prince <mozilla@hocat.ca>|Bug 1527031: Set jamun to level 2 to match hg.mozilla.org access level; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19392|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1c98ea3ef1a9
+|63|2019-02-08 23:01:53|Tom Prince <mozilla@hocat.ca>|Bug 1526356: Centralize granting of run-as-administrator roles for gecko trees; r=akiDifferential Revision: https://phabricator.services.mozilla.com/D19168|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=d2761c19be49
+|63|2019-02-08 23:01:53|Tom Prince <mozilla@hocat.ca>|Bug 1526356: Grant all level of gecko trees run-as-administrator on gecko-t-win10-64-alpha workers; r=akiDifferential Revision: https://phabricator.services.mozilla.com/D19169|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=09be1684d54d
+|62|2019-02-08 22:30:25|Tom Prince <mozilla@hocat.ca>|Update ci-config `.taskcluster.yml` to support ci-configuration-try repository; r=dustinThis doesn't use taskgraph, as it doesn't have multi-repo support yet.Differential Revision: https://phabricator.services.mozilla.com/D19102|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=602b0ecd8f88
+|62|2019-02-08 22:30:25|Tom Prince <mozilla@hocat.ca>|Simplify grants to ci repos; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19103|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=637119f7a04a
+|61|2019-02-08 02:04:32|Tom Prince <mozilla@hocat.ca>|Bug 1525368: Add try repos for ci-admin/config, and trust-domain scopes; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19079|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=9bc1fe300c1a
+|60|2019-02-08 00:06:15|Tom Prince <mozilla@hocat.ca>|Bug 1525368: Update path to ci-config; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D18867|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=d3570c7dae77
 |59|2019-02-04 20:00:17|Tom Prince <mozilla@hocat.ca>|Bug 1520867: Fix incorrect syntax; r=me|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=021cd870c7a4
 |58|2019-02-04 19:49:42|Tom Prince <mozilla@hocat.ca>|Bug 1520867: Add temporary scope for testing bitbar win64-aarch64 worker; r=dustinIf this works, we should change the worker-type to something more permanent.This is using a worker-group intened for testing generic-worker itself.Differential Revision: https://phabricator.services.mozilla.com/D18574|https://hg.mozilla.org/build/ci-configuration/pushloghtml?changeset=838b13621fc0
 |57|2019-01-31 22:24:51|Tom Prince <mozilla@hocat.ca>|Bug 1524088: Remove esr52 scopes; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D18149|https://hg.mozilla.org/build/ci-configuration/pushloggerhtml?changeset=9b3364164354

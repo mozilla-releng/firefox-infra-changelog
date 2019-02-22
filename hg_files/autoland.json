@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 77848
+    "last_push_id": 78126
   },
   "1": {
     "changeset_number": "35344",
@@ -32101,6 +32101,291 @@
         "files_changed": [
           "taskcluster/ci/test/test-sets.yml",
           "toolkit/content/tests/chrome/chrome.ini"
+        ]
+      }
+    }
+  },
+  "590": {
+    "changeset_number": "77858",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-02-11 12:15:52",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f7716de1fce5",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19338",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      }
+    }
+  },
+  "591": {
+    "changeset_number": "77871",
+    "pusher": "rwood@mozilla.com",
+    "date_of_push": "2019-02-11 16:13:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=68526e6afbd2",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1525931 - Don't run Raptor on mozilla-release; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19216",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      }
+    }
+  },
+  "592": {
+    "changeset_number": "77905",
+    "pusher": "cmanchester@mozilla.com",
+    "date_of_push": "2019-02-11 21:44:56",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5041739e5a5b",
+        "commiter_name": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1525733 - Require rust 1.32 to build. r=firefox-build-system-reviewers,ted\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19244",
+        "files_changed": [
+          "build/moz.configure/rust.configure",
+          "python/mozboot/mozboot/base.py",
+          "taskcluster/ci/build/linux.yml"
+        ]
+      }
+    }
+  },
+  "593": {
+    "changeset_number": "77908",
+    "pusher": "cmanchester@mozilla.com",
+    "date_of_push": "2019-02-11 22:02:08",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9cc8cc20982c",
+        "commiter_name": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1526505 - Update mozharness stats parsing code for per-language stats. r=firefox-build-system-reviewers,ted\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19247",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      }
+    }
+  },
+  "594": {
+    "changeset_number": "77914",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-11 22:28:11",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bb243f4edd88",
+        "commiter_name": "Alok Kumar <ialokkumarsingh0@gmail.com>",
+        "commit_message": "Bug 1492279 - Only fetch target task for actions that require it r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19273",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/add_new_jobs.py",
+          "taskcluster/taskgraph/actions/add_talos.py",
+          "taskcluster/taskgraph/actions/backfill.py",
+          "taskcluster/taskgraph/actions/cancel.py",
+          "taskcluster/taskgraph/actions/cancel_all.py",
+          "taskcluster/taskgraph/actions/create_interactive.py",
+          "taskcluster/taskgraph/actions/gecko_profile.py",
+          "taskcluster/taskgraph/actions/purge_caches.py",
+          "taskcluster/taskgraph/actions/registry.py",
+          "taskcluster/taskgraph/actions/release_promotion.py",
+          "taskcluster/taskgraph/actions/rerun.py",
+          "taskcluster/taskgraph/actions/retrigger.py",
+          "taskcluster/taskgraph/actions/retrigger_mochitest.py",
+          "taskcluster/taskgraph/actions/run_missing_tests.py"
+        ]
+      }
+    }
+  },
+  "595": {
+    "changeset_number": "77930",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-02-12 01:36:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=036604abf1e5",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [taskgraph] Factor logic for adding a cache in job.common to a new function, r=tomprince\n\nWe add caches at various places in common.py. This consolidates the logic into\na re-useable function. This is in preparation for adding generic-worker cache\nsupport.\n\nThis also adds a test. The test is not terribly useful, but I've been looking\nfor an excuse to lay some groundwork for further tests in the 'job' submodule.\nThis will do.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17689",
+        "files_changed": [
+          "taskcluster/taskgraph/test/python.ini",
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/job/common.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2053a035eee6",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [ci] Opt out of caching for generic-worker based Windows builds, r=tomprince\n\nThe hosts don't have enough disk space to cache mozilla-central.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18738",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "taskcluster/taskgraph/transforms/job/run_task.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=887cc76ba189",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1519472 - [taskgraph] Support generic-worker caches in run_task, r=tomprince\n\nThis implements support for adding generic-worker caches. As a consequence this\nalso turns on caching for the gecko checkout if present.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17690",
+        "files_changed": [
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/job/common.py"
+        ]
+      }
+    }
+  },
+  "596": {
+    "changeset_number": "77996",
+    "pusher": "jwillcox@mozilla.com",
+    "date_of_push": "2019-02-12 18:27:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=33ea61c54aea",
+        "commiter_name": "James Willcox <snorp@snorp.net>",
+        "commit_message": "Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19015",
+        "files_changed": [
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      }
+    }
+  },
+  "597": {
+    "changeset_number": "77999",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-02-12 18:35:42",
+    "changeset_commits": {
+      "17": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8b2e8f177263",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525760 - Followup: re-enable the tasks without sccache. r=me\n\nAnd refresh rust dependency after bug 1525733.\n",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76639dcdef8f",
+        "commiter_name": "Marco Castelluccio <mcastelluccio@mozilla.com>",
+        "commit_message": "Bug 1527227 - Update Rust nightly version. r=chmanchester a=Aryx",
+        "files_changed": [
+          "taskcluster/ci/toolchain/rust.yml"
+        ]
+      }
+    }
+  },
+  "598": {
+    "changeset_number": "78028",
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-02-12 23:53:30",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=34f33ae5913e",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Backed out 3 changesets (bug 1525959, bug 1526002) for failing android\n\nBacked out changeset de0efca1118e (bug 1526002)\nBacked out changeset 503cbc86e442 (bug 1525959)\nBacked out changeset 33ea61c54aea (bug 1525959)",
+        "files_changed": [
+          "dom/animation/test/mochitest.ini",
+          "dom/base/test/mochitest.ini",
+          "dom/html/test/forms/mochitest.ini",
+          "dom/html/test/mochitest.ini",
+          "dom/ipc/tests/mochitest.ini",
+          "dom/performance/tests/mochitest.ini",
+          "dom/serviceworkers/test/mochitest.ini",
+          "dom/tests/mochitest/bugs/mochitest.ini",
+          "editor/libeditor/tests/mochitest.ini",
+          "gfx/layers/apz/test/mochitest/mochitest.ini",
+          "mobile/android/components/extensions/test/mochitest/mochitest.ini",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/mochitest/runtestsremote.py",
+          "toolkit/components/extensions/test/mochitest/mochitest-common.ini",
+          "toolkit/components/passwordmgr/test/mochitest/mochitest.ini",
+          "uriloader/exthandler/tests/mochitest/mochitest.ini"
+        ]
+      }
+    }
+  },
+  "599": {
+    "changeset_number": "78040",
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-02-13 01:00:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=de25d2f1abef",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1505538 - Release x86_64 Fennec Nightly in the Google Play Store r=mtabara\n\nRelease x86_64 Fennec Nightly in the Google Play Store\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19534",
+        "files_changed": [
+          "taskcluster/taskgraph/loader/push_apk.py",
+          "taskcluster/taskgraph/transforms/push_apk.py"
+        ]
+      }
+    }
+  },
+  "600": {
+    "changeset_number": "78060",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-13 07:24:43",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a90e2dd8b1a5",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1525738 - Stop running Android 7.0 x86_64 geckoview-junit tests; r=mbrubeck",
+        "files_changed": [
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=636d2c00234d",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1527011 - Support win64-aarch64 artifact builds; r=nalexander",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/artifact",
+          "browser/config/mozconfigs/win64-aarch64/debug-artifact",
+          "python/mozbuild/mozbuild/artifacts.py",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "28": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1af69c96ec5f",
+        "commiter_name": "Razvan Maries <rmaries@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+        "files_changed": [
+          "js/src/frontend/BytecodeEmitter.cpp",
+          "js/src/shell/js.cpp",
+          "taskcluster/ci/test/test-sets.yml",
+          "toolkit/xre/nsAppRunner.cpp"
+        ]
+      }
+    }
+  },
+  "601": {
+    "changeset_number": "78067",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-13 08:26:42",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e7603feb2252",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1527118: Ensure all tests are using tooltool caches r=aki\n\nrespect TOOLTOOL_CACHE environment variable in mixin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19444",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mozharness/mozharness/mozilla/tooltool.py"
+        ]
+      }
+    }
+  },
+  "602": {
+    "changeset_number": "78107",
+    "pusher": "jedavis@mozilla.com",
+    "date_of_push": "2019-02-13 18:08:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dbf72abf5597",
+        "commiter_name": "Jed Davis <jld@mozilla.com>",
+        "commit_message": "Bug 1472589 - Fix parent process crash reporting in the Snap package environment. r=ted,jlorenzo\n\n1. The unsetting of LD_LIBRARY_PATH is removed, because it's no longer\nnecessary and interferes with environments where it's necessary to find\n\"system\" libraries like GTK; see bug 1472589 comment #1 through #4.\n\n2. The Snap package manifest adds a dependency on the libcurl package,\nso that the crash reporter can send the report.  This uses the GnuTLS\nvariant because we're already pulling in GnuTLS as a dependency of some\nother packages (FFmpeg and CUPS, but also the non-GnuTLS cURL packages\ndepend on it anyway via OpenLDAP).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18625",
+        "files_changed": [
+          "taskcluster/docker/firefox-snap/snapcraft.yaml.in",
+          "toolkit/crashreporter/nsExceptionHandler.cpp"
         ]
       }
     }

@@ -161,27 +161,33 @@
     },
     "ci-configuration": {
       "name": "CI Configuration",
-      "url": "https://hg.mozilla.org/build/ci-configuration/",
+      "url": "https://hg.mozilla.org/ci/ci-configuration/",
       "team": "",
       "top-contributors": [
         " ",
         " "
       ],
       "configuration": {
-        "folders-to-check": [],
+        "folders-to-check": [
+          "projects.yml",
+          "grants.yml"
+      ],
         "push_type": "json-log"
       }
     },
     "ci-admin": {
       "name": "CI Admin",
-      "url": "https://hg.mozilla.org/build/ci-admin/",
+      "url": "https://hg.mozilla.org/ci/ci-admin/",
       "team": "",
       "top-contributors": [
         " ",
         " "
       ],
       "configuration": {
-        "folders-to-check": [],
+        "folders-to-check": [
+          "ciadmin/",
+          "tests"
+      ],
         "push_type": "json-log"
       }
      }

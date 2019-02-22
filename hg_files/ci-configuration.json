@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 59
+    "last_push_id": 66
   },
   "1": {
     "changeset_number": "31",
@@ -436,6 +436,130 @@
         "commit_message": "Bug 1520867: Fix incorrect syntax; r=me",
         "files_changed": [
           "grants.yml"
+        ]
+      }
+    }
+  },
+  "30": {
+    "changeset_number": "60",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-08 00:06:15",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=d3570c7dae77",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525368: Update path to ci-config; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18867",
+        "files_changed": [
+          ".taskcluster.yml",
+          "grants.yml",
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "31": {
+    "changeset_number": "61",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-08 02:04:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=9bc1fe300c1a",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525368: Add try repos for ci-admin/config, and trust-domain scopes; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19079",
+        "files_changed": [
+          "grants.yml",
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "32": {
+    "changeset_number": "62",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-08 22:30:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=602b0ecd8f88",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Update ci-config `.taskcluster.yml` to support ci-configuration-try repository; r=dustin\n\nThis doesn't use taskgraph, as it doesn't have multi-repo support yet.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19102",
+        "files_changed": [
+          ".taskcluster.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=637119f7a04a",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Simplify grants to ci repos; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19103",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "33": {
+    "changeset_number": "63",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-08 23:01:53",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=d2761c19be49",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1526356: Centralize granting of run-as-administrator roles for gecko trees; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19168",
+        "files_changed": [
+          "grants.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=09be1684d54d",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1526356: Grant all level of gecko trees run-as-administrator on gecko-t-win10-64-alpha workers; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19169",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "34": {
+    "changeset_number": "64",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-11 20:15:00",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1c98ea3ef1a9",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1527031: Set jamun to level 2 to match hg.mozilla.org access level; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19392",
+        "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "35": {
+    "changeset_number": "65",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-12 05:54:42",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c6dddbdcedb6",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Set autoland to scm_autoland to match hg.mozilla.org; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19401",
+        "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "36": {
+    "changeset_number": "66",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-13 08:06:03",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=529fc3665945",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Backed out changeset c6dddbdcedb6 (bug 1465844) for breaking mozilla-taskcluster",
+        "files_changed": [
+          "projects.yml"
         ]
       }
     }
