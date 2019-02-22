@@ -8,8 +8,6 @@ from datetime import (
     timedelta
 )
 
-LOGGER = False
-
 REPOSITORIES_DATA = open("./repositories.json").read()
 REPOSITORIES = json.loads(REPOSITORIES_DATA)
 TOKEN = os.environ.get("GIT_TOKEN")
