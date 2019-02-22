@@ -10,7 +10,6 @@ from fic_modules.configuration import (
     LAST_MONTH,
     GIT,
     REPOSITORIES,
-    LOGGER,
     WORKING_DIR,
     logger
 )
