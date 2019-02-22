@@ -88,17 +88,14 @@ def cli(all, git, hg, l, m):
                     if repository in REPOSITORIES.get("Github"):
                         create_files_for_git(repository, onerepo=True)
                         generate_main_md_table("git_files",
-                                               LOGGER,
                                                GENERATE_FOR_X_DAYS)
                     elif repository in REPOSITORIES.get("Mercurial"):
                         create_files_for_hg(repository, onerepo=True)
                         clear_file("changelog.md",
                                    GENERATE_FOR_X_DAYS)
                         generate_main_md_table("hg_files",
-                                               LOGGER,
                                                GENERATE_FOR_X_DAYS)
                         generate_main_md_table("git_files",
-                                               LOGGER,
                                                GENERATE_FOR_X_DAYS)
             try:
                 new_entry = int(user_choice) - 1
@@ -113,3 +110,4 @@ def cli(all, git, hg, l, m):
 
 if __name__ == "__main__":
     cli()
+
