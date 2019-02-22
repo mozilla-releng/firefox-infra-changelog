@@ -1,4 +1,7 @@
-# FIC Configuration file
+"""
+This file holds every static information regarding the script configuration.
+"""
+
 import os
 import json
 import logging
@@ -27,6 +30,6 @@ logging.basicConfig(level=logging.INFO,
                     datefmt="%H:%M:%S",
                     filename="LOG.log"
                     )
-logger = logging.getLogger(__name__)
+LOGGER = logging.getLogger(__name__)
 
 

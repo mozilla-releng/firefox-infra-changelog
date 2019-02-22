@@ -1,3 +1,7 @@
+"""
+This module handles the mercurial generation, filtering and other mercurial
+related stuff.
+"""
 import json
 import requests
 import time
@@ -10,7 +14,7 @@ from fic_modules.configuration import (
     REPOSITORIES,
     WORKING_DIR,
     NUMBER_OF_CHANGESETS,
-    logger
+    LOGGER
 )
 from fic_modules.helper_functions import (
     remove_chars,
@@ -30,10 +34,10 @@ def get_last_local_push_id(repo_name):
                 commit_json:
             json_content = json.load(commit_json)
         last_stored_push_id = json_content.get("0").get("last_push_id")
-        logger.info("Last local push id is : {}".format(last_stored_push_id))
+        LOGGER.info("Last local push id is : {}".format(last_stored_push_id))
     except FileNotFoundError:
         last_stored_push_id = 0
-        logger.info("No last local push id found, starting from 0 ")
+        LOGGER.info("No last local push id found, starting from 0 ")
     return last_stored_push_id
 
 
@@ -57,7 +61,7 @@ def generate_hg_pushes_link(repo_name, repository_url):
     generate_pushes_link = repository_url + "json-pushes?version=2&" \
                                             "full=1&startID={}&endID={}" \
                                             .format(start_id, end_id)
-    logger.info("Generated link for {} is {}".format(repo_name,
+    LOGGER.info("Generated link for {} is {}".format(repo_name,
                                                      generate_pushes_link))
     return generate_pushes_link
 
@@ -112,7 +116,7 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     :param repository_name: name of the repository
     :return: Writes data in hg json files
     """
-    logger.info("Repo url:{}".format(repository_url))
+    LOGGER.info("Repo url:{}".format(repository_url))
     link = generate_hg_pushes_link(repository_name, repository_url)
     data = json.loads(requests.get(link).text)
     last_push_id = data.get("lastpushid")
@@ -302,10 +306,12 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                                         review,
                                         commit_date)
             except AttributeError:
-                logger.info("Attribute Error!! \n "
-                            "Probable issue is an malfunctioned json file.. "
-                            "Please check the following file:{}".format(file))
+                LOGGER.exception("Attribute Error!! \n Probable issue is an "
+                                 "malfunctioned json file.. Please check the "
+                                 "following file:{}".format(file))
             except KeyError:
-                print("File {}is empty. \n",
-                      "Please check:{}",
-                      " for more details.\n".format(file, repository_url))
+                LOGGER.exception("File {} is empty. Please check: {} for more "
+                                 "details.".format(file, repository_url))
+                # print("File {}is empty. \n",
+                #       "Please check:{}",
+                #       " for more details.\n".format(file, repository_url))
