@@ -24,7 +24,7 @@ def cli():
 
 
 @cli.command()
-@click.option('--all', multiple=True, flag_value='a',
+@click.option('--all', flag_value='a',
               help='Run for all currently available repositories')
 @click.option('--git', is_flag=True, flag_value='git', help='Run only for GIT'
                                                             'repos')
