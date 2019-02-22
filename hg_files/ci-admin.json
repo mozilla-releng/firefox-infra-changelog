@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 41
+    "last_push_id": 43
   },
   "1": {
     "changeset_number": "21",
@@ -414,62 +414,29 @@
     }
   },
   "21": {
-    "changeset_number": "41",
+    "changeset_number": "42",
     "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-02-12 05:51:03",
+    "date_of_push": "2019-02-13 23:21:08",
     "changeset_commits": {
       "1": {
-        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6afd709457e5",
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=616e7df21c86",
         "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1465844: Make `run_async` and `with_aiohttp_session` decorators preserve the return value; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19395",
+        "commit_message": "No bug: Remove duplicate code for making ci-admin authorative for some hg.mozilla.org repositories; r=dustin\n\nSince ci-admin is authorative for all hg.mozilla.org repositories\n(7cccaaf6c74b), we don't need additionally make it authorative for just some of\nthem.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19706",
         "files_changed": [
-          "ciadmin/main.py",
-          "ciadmin/util/sessions.py"
+          "ciadmin/generate/__init__.py"
         ]
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=39be30e3992c",
+      }
+    }
+  },
+  "22": {
+    "changeset_number": "43",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-13 23:23:04",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e3bff21ba760",
         "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1465844: Import pytest-asyncio's `event_loop` fixture as session scope; r=dustin\n\npytest-asyncio's `event_loop` is function scoped, to provide good isolation\nbetween tests. ci-admin's checks aren't code tests (so the isolation isn't\nrelevant), and it is useful to be able to write session scoped fixture for\nthem.\n\nhttps://github.com/pytest-dev/pytest-asyncio/issues/75\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19396",
-        "files_changed": [
-          "ciadmin/check/conftest.py"
-        ]
-      },
-      "3": {
-        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=5ca0a3b818bf",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1465844: Stop invoking pytest in `ci-admin check` with an event loop running; r=dustin\n\nThis allows the tests themselves to use pytest-asyncio, which doesn't\nwork with a running event loop.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19397",
-        "files_changed": [
-          "ciadmin/check/__init__.py",
-          "ciadmin/check/conftest.py",
-          "ciadmin/main.py",
-          "requirements.txt",
-          "setup.py"
-        ]
-      },
-      "4": {
-        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=336043f64e85",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1465844: Make `ci-admin check` command-line more useful; r=dustin\n\nThis allows:\n- running `ci-admin check` from outside the ci-admin repository.\n- specifying checks to run with just the bare filename, rather than full path.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19398",
-        "files_changed": [
-          "ciadmin/check/__init__.py",
-          "ciadmin/check/pytest.ini"
-        ]
-      },
-      "5": {
-        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6af4c3fa6a44",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1465844: Use `check_` prefixes for `ci-admin check` tests; r=dustin\n\nThis makes it obvious that the tests are related to `ci-admin check` rather\nthan typical unit tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19399",
-        "files_changed": [
-          "ciadmin/check/check_signing_scopes.py",
-          "ciadmin/check/pytest.ini",
-          "ciadmin/check/test_signing_scopes.py"
-        ]
-      },
-      "6": {
-        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=3111e4fe89c4",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1465844: Check project levels in projects.yml match hg.mozilla.org; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19400",
+        "commit_message": "Bug 1465844: Special case `scm_autoland in checking levels; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19705",
         "files_changed": [
           "ciadmin/check/check_levels.py"
         ]

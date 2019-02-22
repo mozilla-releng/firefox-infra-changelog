@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 66
+    "last_push_id": 71
   },
   "1": {
     "changeset_number": "31",
@@ -550,16 +550,118 @@
     }
   },
   "36": {
-    "changeset_number": "66",
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-02-13 08:06:03",
+    "changeset_number": "67",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-14 18:06:57",
     "changeset_commits": {
       "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=529fc3665945",
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ddd26b84223c",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1527644 - Add secret and index scopes to code review bot in CI, r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19800",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "37": {
+    "changeset_number": "68",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-16 01:50:52",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=6e2fc929b334",
         "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Backed out changeset c6dddbdcedb6 (bug 1465844) for breaking mozilla-taskcluster",
+        "commit_message": "Bug 1528362: Remove obsolete `buildbot` and `docker-route` features; r=mtabara\n\n- buildbot has been decomissioned\n- the docker routes have been replaced by `gecko.cache.*` routes.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19986",
+        "files_changed": [
+          "grants.yml",
+          "projects.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=8abd1401b820",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: Re-use generic trust-domain and treeherder features for gecko; r=dustin\n\nThere are two main changes:\n- trees get `{trust-domain}` prefixed caches\n- trees  no longer get access to lower level caches\n\nThis leaves some historic roles around, so we can transition:\n- unprefixed caches\n- comm using `gecko-level-{level}`\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19987",
+        "files_changed": [
+          "grants.yml",
+          "projects.yml"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f9232d17d1a8",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: Remove deprecated coalesce route; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19988",
+        "files_changed": [
+          "grants.yml"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=42000751bb84",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: Remove unused releases index; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19989",
+        "files_changed": [
+          "grants.yml"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e6c0608b8a83",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: Remove obsolete buildbot worker types; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19990",
+        "files_changed": [
+          "grants.yml"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f4f8c9554001",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: Remove mozilla-esr52 comm-esr52 repos; r=mtabara\n\nThese repos have reached end-of-life, so don't need any roles associated to them.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19991",
         "files_changed": [
           "projects.yml"
+        ]
+      }
+    }
+  },
+  "38": {
+    "changeset_number": "69",
+    "pusher": "jwood@mozilla.com",
+    "date_of_push": "2019-02-19 20:23:36",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=dfee8c81edaa",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1513000 - Add private/openh264/* artifact access scopes to Decision task for level1+ repos. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20202",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "39": {
+    "changeset_number": "70",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-19 22:21:04",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=cf809c97d1bf",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1528216: Add scope to create task on gce/opt-linux64 r=wcosta,tomprince\n\nThis worker type runs on GCP for build tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19938",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "40": {
+    "changeset_number": "71",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-19 22:24:45",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f023d6814623",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528350: Add scopes for bitbar workers; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19976",
+        "files_changed": [
+          "grants.yml"
         ]
       }
     }
