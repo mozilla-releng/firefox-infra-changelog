@@ -24,15 +24,16 @@ def cli():
 
 
 @cli.command()
-@click.option('--all', flag_value='a',
-              help='Run for all currently available repositories')
-@click.option('--git', is_flag=True, flag_value='git', help='Run only for GIT'
-                                                            'repos')
-@click.option('--hg', is_flag=True, flag_value='hg', help='Run only for HG'
-                                                          ' repos')
-@click.option('--l', is_flag=True, flag_value='l', help='Display logger')
-@click.option('--m', is_flag=True, flag_value='m',
-              help='Let you choose for which repositories the script will run')
+@click.option("--all", flag_value="a",
+              help="Run for all currently available repositories")
+@click.option("--git", is_flag=True, flag_value='git',
+              help="Run only for GIT repos")
+@click.option("--hg", is_flag=True, flag_value='hg',
+              help="Run only for HG repos")
+@click.option("--l", is_flag=True, flag_value="l",
+              help="Display logger")
+@click.option("--m", is_flag=True, flag_value="m",
+              help="Let you choose for which repositories the script will run")
 def cli(all, git, hg, l, m):
     from fic_modules.configuration import LOGGER
     """
@@ -81,7 +82,7 @@ def cli(all, git, hg, l, m):
                                 "number, "
                                 "type q when you are done: ")
             if str(user_choice) == "q":
-                LOGGER.info('========Logging for %s on %s ========',
+                LOGGER.info("========Logging for %s on %s ========",
                             str(new_list).strip('[]'), datetime.now())
                 for repository in new_list:
                     if repository in REPOSITORIES.get("Github"):
@@ -109,4 +110,3 @@ def cli(all, git, hg, l, m):
 
 if __name__ == "__main__":
     cli()
-
