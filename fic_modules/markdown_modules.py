@@ -1,11 +1,14 @@
+"""
+This module contains all of the markdown generation and writing to the files.
+"""
 import json
 import re
 from os import listdir
-from datetime import datetime
 from os.path import (
     isfile,
     join
 )
+from datetime import datetime
 from fic_modules.helper_functions import (
     filter_strings,
     remove_chars
@@ -106,8 +109,7 @@ def create_git_md_table(repository_name, path_to_files):
         md_file.close()
     except FileNotFoundError:
         if LOGGER:
-            LOGGER.info("Json for {} is empty! Skipping!".format(repository_name))
-            # print("Json for {} is empty! Skipping!".format(repository_name))
+            LOGGER.info("Json for %s is empty! Skipping!", repository_name)
 
 
 def create_md_table_for_scriptworkers(repository_name):
@@ -140,26 +142,24 @@ def generate_main_md_table(path_to_files, days_to_generate=1):
                              "successfully generated."
 
     # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(WORKING_DIR + "/{}".format(path_to_files)) if
-                  isfile(join(WORKING_DIR + "/{}".format(path_to_files), f))]
+    only_files = [f for f in listdir(WORKING_DIR + "/{}".format(path_to_files))
+                  if isfile(join(WORKING_DIR + "/{}"
+                                 .format(path_to_files), f))]
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]
     # Extract data from json_files and writes to main markdown table.
     if path_to_files == "git_files":
         extract_json_from_git(json_files, path_to_files, days_to_generate)
         if LOGGER:
-            LOGGER.info("GIT" + successfully_generated)
-            # print("GIT" + successfully_generated)
+            LOGGER.info("GIT %s", successfully_generated)
     elif path_to_files == "hg_files":
         extract_json_from_hg(json_files, path_to_files, days_to_generate)
         if LOGGER:
-            LOGGER.info("HG" + successfully_generated)
-            # print("HG" + successfully_generated)
+            LOGGER.info("HG %s", successfully_generated)
 
     else:
         if LOGGER:
             LOGGER.error("No table was generated!")
-            # print("No table was generated!")
 
 
 def write_date_header(file_name, datetime_object):
@@ -182,10 +182,8 @@ def write_date_header(file_name, datetime_object):
     file.write("\n" + base_table + date_header + "\n")
     file.close()
     if LOGGER:
-        LOGGER.info("Generated date header for file:" + str(file_name) +
-                    " with datestamp" + str(datetime.utcnow()))
-        # print("Generated date header for file:", file_name, " with datestamp",
-        #       str(datetime.utcnow()))
+        LOGGER.info("Generated date header for file: %s with datestamp %s",
+                    str(file_name), str(datetime.utcnow()))
 
 
 def create_hg_md_table(repository_name):
@@ -220,7 +218,6 @@ def create_hg_md_table(repository_name):
 
         for key in data:
             if key > "0":
-                #key = str(len(data) - int(key))
                 changeset_id = data.get(key).get("changeset_number")
                 date_of_push = data.get(key).get("date_of_push")
                 try:
@@ -275,8 +272,7 @@ def create_hg_md_table(repository_name):
         md_file.close()
     except FileNotFoundError:
         if LOGGER:
-            LOGGER.error("Json for {} is empty! Skipping!".format(repository_name))
-            # print("Json for {} is empty! Skipping!".format(repository_name))
+            LOGGER.error("Json for %s is empty! Skipping!", repository_name)
 
 
 def generate_markdown_header(file_name, repository_name, markdown_link,
@@ -342,3 +338,4 @@ def write_main_md_table(file_name, repository_url, last_commit, author,
           "|" + "\n"
     write_file = open(file_name, "a")
     write_file.write(row)
+

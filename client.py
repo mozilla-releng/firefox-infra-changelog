@@ -42,24 +42,24 @@ def cli(all, git, hg, l, m):
     if l:
         logging.getLogger().addHandler(logging.StreamHandler())
     if all:
-        LOGGER.info("========Logging in ALL mode on {}========"
-                    .format(datetime.now()))
+        LOGGER.info("========Logging in ALL mode on %s ========",
+                    datetime.now())
         create_files_for_git(REPOSITORIES, onerepo=False)
         create_files_for_hg(REPOSITORIES, onerepo=False)
         clear_file("changelog.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
     if git:
-        LOGGER.info("========Logging in GIT mode on {}========"
-                    .format(datetime.now()))
+        LOGGER.info("========Logging in GIT mode on %s ========",
+                    datetime.now())
         create_files_for_git(REPOSITORIES, onerepo=False)
         clear_file("changelog.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
         generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
         click.echo("Script ran in GIT Only mode")
     if hg:
-        LOGGER.info("========Logging in HG mode on {} ========"
-                    .format(datetime.now()))
+        LOGGER.info("========Logging in HG mode on %s ========",
+                    datetime.now())
         create_files_for_hg(REPOSITORIES, onerepo=False)
         clear_file("changelog.md", GENERATE_FOR_X_DAYS)
         generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
@@ -81,9 +81,8 @@ def cli(all, git, hg, l, m):
                                 "number, "
                                 "type q when you are done: ")
             if str(user_choice) == "q":
-                LOGGER.info('========Logging for {} on {} ========'
-                            .format(str(new_list).strip('[]'), datetime
-                                    .now()))
+                LOGGER.info('========Logging for %s on %s ========',
+                            str(new_list).strip('[]'), datetime.now())
                 for repository in new_list:
                     if repository in REPOSITORIES.get("Github"):
                         create_files_for_git(repository, onerepo=True)

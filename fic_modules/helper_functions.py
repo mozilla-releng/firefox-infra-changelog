@@ -1,6 +1,6 @@
 """
-This module contains functions that are for other scopes wich aim to get better
- functionality out of the code and not directly related to the script.
+This module contains functions that are for other scopes which aim to get
+better functionality out of the code and not directly related to the script.
 """
 import re
 import sys
@@ -121,8 +121,8 @@ def extract_email(commit_email):
     :param commit_email: String that contains an email
     :return: String that contains only the email
     """
-    return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(
-        ">")]
+    return commit_email[commit_email.find("<") +
+                        len("<"):commit_email.rfind(">")]
 
 
 def extract_reviewer(string):

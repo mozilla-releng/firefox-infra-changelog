@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35594
+    "last_push_id": 35600
   },
   "1": {
     "changeset_number": "35344",
@@ -10482,16 +10482,246 @@
     }
   },
   "100": {
-    "changeset_number": "35593",
-    "pusher": "ccoroiu@mozilla.com",
-    "date_of_push": "2019-02-22 18:25:14",
+    "changeset_number": "35596",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-23 06:13:22",
     "changeset_commits": {
-      "72": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d57907127de",
-        "commiter_name": "Edwin Gao <egao@mozilla.com>",
-        "commit_message": "Bug 1529848 - increase maximum length for task identifiers to 38 r=tomprince\n\nChanges:\n\n- increase maximum length for task identifiers to 38 from 22\n- update documentation to state the same\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20785",
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=abcb8be12adf",
+        "commiter_name": "Byron Campen [:bwc] <docfaraday@gmail.com>",
+        "commit_message": "Bug 1521879 - Part 7: Create new CI jobs for media mochitests with socket process enabled. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17942",
         "files_changed": [
-          "taskcluster/taskgraph/transforms/task.py"
+          "dom/media/tests/mochitest/mochitest.ini",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mochitest/runtests.py"
+        ]
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d73453c15f88",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1529781 - Increase test chunks for linux64 jsreftests; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20777",
+        "files_changed": [
+          "taskcluster/ci/test/reftest.yml"
+        ]
+      },
+      "61": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a19e904c615c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Switch default for actions from `task` to `hook`; r=Callek\n\nSupport for `kind='task'` is still around to support Thunderbird release\npromotion, which uses releaserunner3. Other actions shouldn't be using it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20842",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/add_new_jobs.py",
+          "taskcluster/taskgraph/actions/add_talos.py",
+          "taskcluster/taskgraph/actions/backfill.py",
+          "taskcluster/taskgraph/actions/cancel.py",
+          "taskcluster/taskgraph/actions/cancel_all.py",
+          "taskcluster/taskgraph/actions/create_interactive.py",
+          "taskcluster/taskgraph/actions/gecko_profile.py",
+          "taskcluster/taskgraph/actions/purge_caches.py",
+          "taskcluster/taskgraph/actions/registry.py",
+          "taskcluster/taskgraph/actions/release_promotion.py",
+          "taskcluster/taskgraph/actions/rerun.py",
+          "taskcluster/taskgraph/actions/retrigger.py",
+          "taskcluster/taskgraph/actions/retrigger_mochitest.py",
+          "taskcluster/taskgraph/actions/run_missing_tests.py"
+        ]
+      },
+      "62": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2238d806904d",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Remove obsolete documetation about action tasks; r=Callek\n\nSupport for them was removed in Bug 1415868 (a891a10ca4d9).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20843",
+        "files_changed": [
+          "taskcluster/docs/actions.rst"
+        ]
+      },
+      "63": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=be65446f94a5",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Update action documentation to have correct imports; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20845",
+        "files_changed": [
+          "taskcluster/docs/actions.rst"
+        ]
+      },
+      "64": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d62b974d529c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Fix refernce to `mach test-action-callback`; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20846",
+        "files_changed": [
+          "taskcluster/docs/actions.rst"
+        ]
+      },
+      "82": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b892c1e3909f",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1520523 - Update Raptor Chromium rev; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20814",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/testing/raptor.py",
+          "testing/raptor/raptor/raptor.py",
+          "testing/raptor/raptor/tests/raptor-tp6-3.ini"
+        ]
+      },
+      "87": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e89b6e3d3de8",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1520163 - Add linux64-nasm toolchain. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20037",
+        "files_changed": [
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "96": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4978133d6226",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out changeset e89b6e3d3de8 (bug 1520163) for profile-guided optimization builds bustage CLOSED TREE",
+        "files_changed": [
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "102": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e9e880f7aee4",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1520163 - Add linux64-nasm toolchain. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20037",
+        "files_changed": [
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "110": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bd636f4cd2a4",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1528405 - Increase max-run-time for some linux builds; r=jmaher\n\nIncrease max-run-time to avoid intermittent task timeouts.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20882",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "113": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5612534374b4",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: Use secrets from taskcluster for windows builds; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20849",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "125": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=136df62ef081",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out changeset 5612534374b4 (bug 1529921) for causing build bustages CLOSED TREE",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "127": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fea99e80e861",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: Use secrets from taskcluster for windows builds; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20849",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "128": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1c9d01a6fbb8",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: Pass `scm_level` to mozharness tasks on windows; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20893",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "140": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7a18c5eda62a",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1529921) due to a high probability of breaking nightlies CLOSED TREE\n\nBacked out changeset 1c9d01a6fbb8 (bug 1529921)\nBacked out changeset fea99e80e861 (bug 1529921)",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      }
+    }
+  },
+  "101": {
+    "changeset_number": "35599",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-02-23 23:38:35",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6e669b1b1835",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1500941 - Add searchfox task for Android (ARMv7/API16). r=nalexander\n\nThe bulk of this is copy/pasted from a standard android-api-16 debug\nbuild. The only changes are a few extra environment variables in the\ntaskcluster config, the subconfig file, and the mozconfig, as well as\nthe --enable-mozsearch-plugin flag in the mozconfig.\n\nDepends on D20766\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20767",
+        "files_changed": [
+          "mobile/android/config/mozconfigs/android-api-16/debug-searchfox",
+          "taskcluster/ci/searchfox/kind.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_debug_searchfox.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10ffd49d0adf",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1500941 - Enable Android searchfox job as part of the daily cron. r=emilio\n\nDepends on D20767\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20768",
+        "files_changed": [
+          "taskcluster/taskgraph/target_tasks.py"
         ]
       }
     }

@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 71
+ CURRENT PUSH ID: 72
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -49,6 +49,6 @@
 |68|2019-02-16 01:50:52|Tom Prince <mozilla@hocat.ca>|Bug 1528362: Remove mozilla-esr52 comm-esr52 repos; r=mtabaraThese repos have reached end-of-life, so don't need any roles associated to them.Differential Revision: https://phabricator.services.mozilla.com/D19991|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f4f8c9554001
 |69|2019-02-19 20:23:36|Justin Wood <Callek@gmail.com>|Bug 1513000 - Add private/openh264/* artifact access scopes to Decision task for level1+ repos. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20202|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=dfee8c81edaa
 |70|2019-02-19 22:21:04|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1528216: Add scope to create task on gce/opt-linux64 r=wcosta,tomprinceThis worker type runs on GCP for build tests.Differential Revision: https://phabricator.services.mozilla.com/D19938|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=cf809c97d1bf
-|71|2019-02-19 22:24:45|Tom Prince <mozilla@hocat.ca>|Bug 1528350: Add scopes for bitbar workers; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19976|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f023d6814623
+|72|2019-02-22 23:23:40|Tom Prince <mozilla@hocat.ca>|Bug 1529958: Grant `queue:cancel-task:<scheduler-id>` as part of trust-domain-scopes; r=akiDifferential Revision: https://phabricator.services.mozilla.com/D20867|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=fb877fe687a1
 
 

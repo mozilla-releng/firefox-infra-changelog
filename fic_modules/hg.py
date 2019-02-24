@@ -3,13 +3,13 @@ This module handles the mercurial generation, filtering and other mercurial
 related stuff.
 """
 import json
-import requests
-import time
-from urllib.request import urlopen
 from datetime import (
     datetime,
     timedelta
 )
+from urllib.request import urlopen
+import time
+import requests
 from fic_modules.configuration import (
     REPOSITORIES,
     WORKING_DIR,
@@ -34,7 +34,7 @@ def get_last_local_push_id(repo_name):
                 commit_json:
             json_content = json.load(commit_json)
         last_stored_push_id = json_content.get("0").get("last_push_id")
-        LOGGER.info("Last local push id is : {}".format(last_stored_push_id))
+        LOGGER.info("Last local push id is: %s", last_stored_push_id)
     except FileNotFoundError:
         last_stored_push_id = 0
         LOGGER.info("No last local push id found, starting from 0 ")
@@ -61,8 +61,7 @@ def generate_hg_pushes_link(repo_name, repository_url):
     generate_pushes_link = repository_url + "json-pushes?version=2&" \
                                             "full=1&startID={}&endID={}" \
                                             .format(start_id, end_id)
-    LOGGER.info("Generated link for {} is {}".format(repo_name,
-                                                     generate_pushes_link))
+    LOGGER.info("Generated link for %s is %s", repo_name, generate_pushes_link)
     return generate_pushes_link
 
 
@@ -116,7 +115,7 @@ def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
     :param repository_name: name of the repository
     :return: Writes data in hg json files
     """
-    LOGGER.info("Repo url:{}".format(repository_url))
+    LOGGER.info("Repo url: %s", repository_url)
     link = generate_hg_pushes_link(repository_name, repository_url)
     data = json.loads(requests.get(link).text)
     last_push_id = data.get("lastpushid")
@@ -202,11 +201,11 @@ def json_writer_hg(repository_name, new_commits):
             del json_content["0"]
         except KeyError:
             pass
-        with open("changelog.json", "r") as f:
-            data = json.load(f)
+        with open("changelog.json", "r") as file:
+            data = json.load(file)
         data[repository_name] = json_content
-        with open("changelog.json", "w") as f:
-            json.dump(data, f, indent=2)
+        with open("changelog.json", "w") as file:
+            json.dump(data, file, indent=2)
 
 
 def extract_json_from_hg(json_files, path_to_files, days_to_generate):
@@ -306,12 +305,9 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                                         review,
                                         commit_date)
             except AttributeError:
-                LOGGER.exception("Attribute Error!! \n Probable issue is an "
+                LOGGER.exception("Attribute Error!! \n Probable issue is a "
                                  "malfunctioned json file.. Please check the "
-                                 "following file:{}".format(file))
+                                 "following file: %s", file)
             except KeyError:
-                LOGGER.exception("File {} is empty. Please check: {} for more "
-                                 "details.".format(file, repository_url))
-                # print("File {}is empty. \n",
-                #       "Please check:{}",
-                #       " for more details.\n".format(file, repository_url))
+                LOGGER.exception("File %s is empty. Please check: %s for more "
+                                 "details.", file, repository_url)
