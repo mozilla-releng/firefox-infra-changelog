@@ -1,7 +1,11 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-08 19:08:50.095872
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-10 05:21:34.053897
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|463|owlishDeveloper|Deploy tc-web-ui from monoimage (#279)    Add hooks for web-ui in monoimage build process      Delete the nginx dockerfile      Clean up unused imports and modules      Change tasks      Remove web-ui from the build config      Fixes      Remove web-ui - related      More fixes      Add nginx config      Fix      Fix nginx config      Run yarn build during deploy      Let => const      Remove commeneted out lines from nginx.conf|[URL](https://github.com/taskcluster/taskcluster/commit/b34aacc27c4e96565b598abf7c638e8fa3ce5530)|2019-02-23 01:05:45
+|462|helfi92|Add maximum page width (#290)|[URL](https://github.com/taskcluster/taskcluster/commit/2170af00c551e1bc9f7f9c5027287a46aa6a5758)|2019-02-23 00:11:13
+|461|helfi92|Merge pull request #216 from helfi92/generated-docs  Documentation|[URL](https://github.com/taskcluster/taskcluster/commit/4082eb09e976b3521bc1b0685659f4e91f6ffa9b)|2019-02-22 18:47:07
+|460|imbstack|Merge pull request #281 from taskcluster/update-clients  Update clients and publish them|[URL](https://github.com/taskcluster/taskcluster/commit/d51591efc88941706de9322e5053e4a4d083e2f1)|2019-02-22 18:32:02
 |459|imbstack|Merge pull request #152 from taskcluster/bug-1307271  [Bug 1307271] Move to structured logging|[URL](https://github.com/taskcluster/taskcluster/commit/c7670d403092259fe67ac1010e95275a09088e92)|2019-02-21 21:59:00
 |458|imbstack|Turn down default process reporting freq|[URL](https://github.com/taskcluster/taskcluster/commit/7787589899ee23fdd955e3a389510af1bab96365)|2019-02-21 17:27:08
 |457|imbstack|Update logging format to work with more gke tooling|[URL](https://github.com/taskcluster/taskcluster/commit/5b6a39db2786c90f3da50dc688939cedbe0cf359)|2019-02-21 05:48:03
