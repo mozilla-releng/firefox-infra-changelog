@@ -436,11 +436,11 @@ def get_date_from_json(repo_name):
             .get("latest_release") \
             .get("date")
         date_format = parse(last_stored_date)
-        last_stored_date = datetime \
-            .strptime(str(date_format), "%Y-%m-%d %H:%M:%S")
+        last_stored_date = datetime.strptime(str(date_format),
+                                             "%Y-%m-%d %H:%M:%S")
     except FileNotFoundError:
-        last_stored_date = datetime \
-            .strptime("2019-01-01 01:00:00", "%Y-%m-%d %H:%M:%S")
+        last_stored_date = datetime.strptime("2019-01-01 01:00:00",
+                                             "%Y-%m-%d %H:%M:%S")
         LOGGER.info("last local date was: {} ".format(last_stored_date))
     return last_stored_date
 
