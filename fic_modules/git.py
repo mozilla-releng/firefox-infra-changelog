@@ -158,9 +158,8 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
 
     if limit_checker():
-        new_commits = GIT \
-            .get_repo(repository_path) \
-            .get_commits(since=last_checked)
+        new_commits = GIT.get_repo(repository_path) \
+                         .get_commits(since=last_checked)
 
     for commit in new_commits:
         each_commit = {}
@@ -239,8 +238,8 @@ def filter_git_scriptworkers(latest_releases, repo_team, script_repo):
         if last_modified <= new_commit_version_date:
             each_commit2 = {}
             commit_number += 1
-            each_commit2 \
-                .update({int(commit_number): get_commit_details(commit2)})
+            commit_details = get_commit_details(commit2)
+            each_commit2.update({int(commit_number): commit_details})
             new_scriptworker_dict.update(each_commit2)
     return new_scriptworker_dict
 
@@ -273,9 +272,8 @@ def filter_git_tag(repository_name, repository_team, repository_path):
                                                     "%Y-%m-%d %H:%M:%S")
         new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
                                  "last_releases": latest_releases}}
-        for commit in GIT \
-                .get_repo(repository_path) \
-                .get_commits(since=last_commit_date):
+        for commit in GIT.get_repo(repository_path) \
+                         .get_commits(since=last_commit_date):
             last_modified = datetime.strftime(parse(commit.last_modified),
                                               "%Y-%m-%d %H:%M:%S")
             last_modified = datetime.strptime(last_modified,
@@ -387,16 +385,14 @@ def last_check(repository_name):
                                                  .get("0")
                                                  .get("lastChecked"),
                                                  "%Y-%m-%d %H:%M:%S")
-                if LOGGER:
-                    LOGGER.info("Repo last updated on: " + str(last_checked))
+                LOGGER.info("Repo last updated on: " + str(last_checked))
 
             except ValueError:
                 last_checked = datetime.strptime(json_content
                                                  .get("0")
                                                  .get("lastChecked"),
                                                  "%Y-%m-%d %H:%M:%S.%f")
-                if LOGGER:
-                    LOGGER.info("Repo last updated on: " + str(last_checked))
+                LOGGER.info("Repo last updated on: " + str(last_checked))
 
     except IOError:
         last_checked = LAST_MONTH
@@ -467,9 +463,9 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     if limit_checker():
-        new_commits = GIT \
-            .get_repo(repository_path) \
-            .get_commits(since=last_checked)
+        new_commits = GIT.get_repo(repository_path) \
+                         .get_commits(since=last_checked)
+
     for commit in new_commits:
         each_commit = {}
         if folders_to_check:
@@ -505,15 +501,14 @@ def filter_git_commit_keyword(repository_name, repository_path):
     last_checked = last_check(repository_name)
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     if limit_checker():
-        new_commits = GIT \
-            .get_repo(repository_path) \
-            .get_commits(since=last_checked)
+        new_commits = GIT.get_repo(repository_path) \
+                         .get_commits(since=last_checked)
+
     for commit in new_commits:
         files_changed_by_commit = [x.filename for x in commit.files]
         if files_changed_by_commit:
             each_commit = {}
-            if LOGGER:
-                LOGGER.info(commit.commit.message)
+            LOGGER.info(commit.commit.message)
             if "deploy" in commit.commit.message:
                 number += 1
                 each_commit.update({int(number): get_commit_details(commit)})
@@ -531,11 +526,11 @@ def compare_versions(version_path, scriptworker_repo, latest_releases):
     :return:
     """
 
-    version_in_puppet = \
-        get_version_from_build_puppet(version_path, scriptworker_repo)
+    version_in_puppet = get_version_from_build_puppet(version_path,
+                                                      scriptworker_repo)
     last_local_version = get_version_from_json(scriptworker_repo)
-    if version_in_puppet == latest_releases \
-            .get("latest_release") \
+
+    if version_in_puppet == latest_releases.get("latest_release") \
             .get("version"):
         if version_in_puppet != last_local_version:
             return True
@@ -568,7 +563,7 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
             data = json.load(json_file)
             base_link = "https://github.com/mozilla-releng/firefox-infra-" \
                         "changelog/blob/master/{}/" \
-                .format(path_to_files)
+                        .format(path_to_files)
             repository_url = base_link + file \
                 .rstrip() \
                 .replace(" ", "%20") \
@@ -632,6 +627,5 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                                         review,
                                         commit_date)
             except KeyError:
-                if LOGGER:
-                    LOGGER.info("File " + file + " is empty. \nPlease check:" +
-                                str(repository_url) + " for more details.\n")
+                LOGGER.info("File " + file + " is empty. \nPlease check:" +
+                            str(repository_url) + " for more details.\n")
