@@ -9,7 +9,7 @@ try:
     subprocess.call(['git', 'checkout', '-b', branch_name])
     subprocess.call(['python', 'client.py', '-a', '-l'])
     subprocess.call(['git', 'add', 'git_files/', 'hg_files/', 'LOG.log',
-                     'changelog.md'])
+                     'changelog.md', 'changelog.json'])
     commit_message = "Changelog:  " + str(datetime.utcnow()) + \
                      "\n - updated git files \n - updated hg files \n " \
                      "- updated main_md_table"
