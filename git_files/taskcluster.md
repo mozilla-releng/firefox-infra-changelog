@@ -1,7 +1,30 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-10 05:21:34.053897
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-13 18:55:13.544186
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|486|helfi92|Add default value for the search component in task group view (#318)|[URL](https://github.com/taskcluster/taskcluster/commit/4bf3a507412c08ed5d3887600481ce3589664d81)|2019-02-27 16:11:13
+|485|helfi92|UX enhances to docs sidebar (#316)|[URL](https://github.com/taskcluster/taskcluster/commit/3e09d292f0474a604ff804cfac7a3643036a6df8)|2019-02-26 21:32:20
+|484|helfi92|Adjust line length for docs (#315)|[URL](https://github.com/taskcluster/taskcluster/commit/414c770c4cea3d93b2f8b165c88f19cc03dff174)|2019-02-26 21:31:16
+|483|helfi92|Merge pull request #312 from helfi92/copy-paste-task-definition  [UI] Fix task definition mutation validation|[URL](https://github.com/taskcluster/taskcluster/commit/c85e4e4fbc395e4212452a1dfce70afb4451d331)|2019-02-26 19:27:48
+|482|djmitche|Merge pull request #309 from djmitche/stop-rebasing-stale-prs  Stop renovate from rebasing stale PRs|[URL](https://github.com/taskcluster/taskcluster/commit/8337129654f156161ab339e9474edbd26a671469)|2019-02-26 18:48:02
+|481|djmitche|Merge pull request #299 from djmitche/upgrade-azure-entities  Upgrade azure-entities to drop buffertools dep|[URL](https://github.com/taskcluster/taskcluster/commit/fbfc41fbdfe6a9acc9633f96e96767e08476858a)|2019-02-26 18:46:39
+|480|helfi92|Satisfy graphql enums format  The convention is to use capitals for enums. https://graphql.org/learn/schema/#enumeration-types|[URL](https://github.com/taskcluster/taskcluster/commit/f1a007d581ef3620136d69b000c14aa7204b9e28)|2019-02-26 15:56:26
+|479|helfi92|Bump client-web version (#310)|[URL](https://github.com/taskcluster/taskcluster/commit/ac737e36eb8ec4ac7260cd8a68802ac4ef393fbc)|2019-02-26 18:07:45
+|478|helfi92|Add actionButton mixin  This was previously done in https://github.com/taskcluster/taskcluster-web/pull/384/commits/f80fb8e213e0bac64b241d0d61be316129f1e4e7 but seems to have been overwritten while rebasing the Documentation pr.|[URL](https://github.com/taskcluster/taskcluster/commit/a3d7512a238bf60da49facb59a0fc7ce236caf9d)|2019-02-26 14:53:29
+|477|helfi92|Fix ordering of recent task definitions|[URL](https://github.com/taskcluster/taskcluster/commit/6eece11fbebeba52906b9ee2ec2bea0251ec131d)|2019-02-26 14:36:59
+|476|helfi92|Merge pull request #288 from helfi92/tc-client-web-bundle-size  Add crypto-js to webpack's externals|[URL](https://github.com/taskcluster/taskcluster/commit/6f881ee1fc0ac547189cd2982cea1649f910f159)|2019-02-26 13:31:25
+|475|varundey|[UI] Remove redundant sign-in chooser (#302)|[URL](https://github.com/taskcluster/taskcluster/commit/771c78c6d6606591e51c1576e4555defc31894e9)|2019-02-26 12:54:37
+|474|owlishDeveloper|Merge pull request #308 from taskcluster/monoimage-fixes  Change terraform to deploy ui from the monoimage|[URL](https://github.com/taskcluster/taskcluster/commit/d9b9d3f9856c4d3034039ba946e189483a20848e)|2019-02-26 00:56:57
+|473|djmitche|Merge pull request #293 from taskcluster/renovate/eslint-5.x  Update dependency eslint to v5.14.1|[URL](https://github.com/taskcluster/taskcluster/commit/2070e32d194e749442cffc8b079ee4a2f5a449da)|2019-02-25 23:15:28
+|472|djmitche|Stop renovate from rebasing stale PRs|[URL](https://github.com/taskcluster/taskcluster/commit/00b45f8630ba949c47abd681d49752d866a5a91c)|2019-02-25 23:02:42
+|471|renovate-bot|Update dependency eslint to v5.14.1|[URL](https://github.com/taskcluster/taskcluster/commit/643ee0399129516b37111b4e007a81c96ca1ef8d)|2019-02-25 22:52:18
+|470|owlishDeveloper|Change terraform to deploy ui from the monoimage|[URL](https://github.com/taskcluster/taskcluster/commit/7de820634e6f4ecd234d63fbcd32f23a967d7630)|2019-02-25 22:24:57
+|469|helfi92|Update README|[URL](https://github.com/taskcluster/taskcluster/commit/66570502bf5bd5d657da610c11891d1762b2b740)|2019-02-25 20:56:09
+|468|helfi92|Bug 1520579: Increase allowed length of worker-types in aws-provisoner UI (#303)|[URL](https://github.com/taskcluster/taskcluster/commit/19479633df854a343f4f9b74cec13d0b2e035dc7)|2019-02-25 20:16:53
+|467|helfi92|[UI] Add ability to prefetch components (hover/keyboard focus) (#278)    Add ability to prefetch components      Convert Link to a React Hook      Convert Links to use the new Link component|[URL](https://github.com/taskcluster/taskcluster/commit/7b058a76c4a92305c85083cfbcf19effcb53603a)|2019-02-25 19:37:06
+|466|djmitche|Merge pull request #292 from taskcluster/renovate/ajv-6.x  Update dependency ajv to v6.9.2|[URL](https://github.com/taskcluster/taskcluster/commit/fe161aea55d70d1ca7b76713507058db24de7485)|2019-02-25 17:30:54
+|465|djmitche|Upgrade azure-entities to drop buffertools dep|[URL](https://github.com/taskcluster/taskcluster/commit/a80a5d2e56899859a1e7ff0eff7f4b7dce5aa644)|2019-02-25 17:02:18
+|464|renovate-bot|Update dependency ajv to v6.9.2|[URL](https://github.com/taskcluster/taskcluster/commit/2cb04cb5843f2bcbd79c1e7d251f85c01857e498)|2019-02-25 00:54:11
 |463|owlishDeveloper|Deploy tc-web-ui from monoimage (#279)    Add hooks for web-ui in monoimage build process      Delete the nginx dockerfile      Clean up unused imports and modules      Change tasks      Remove web-ui from the build config      Fixes      Remove web-ui - related      More fixes      Add nginx config      Fix      Fix nginx config      Run yarn build during deploy      Let => const      Remove commeneted out lines from nginx.conf|[URL](https://github.com/taskcluster/taskcluster/commit/b34aacc27c4e96565b598abf7c638e8fa3ce5530)|2019-02-23 01:05:45
 |462|helfi92|Add maximum page width (#290)|[URL](https://github.com/taskcluster/taskcluster/commit/2170af00c551e1bc9f7f9c5027287a46aa6a5758)|2019-02-23 00:11:13
 |461|helfi92|Merge pull request #216 from helfi92/generated-docs  Documentation|[URL](https://github.com/taskcluster/taskcluster/commit/4082eb09e976b3521bc1b0685659f4e91f6ffa9b)|2019-02-22 18:47:07
