@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: CI-ADMIN
- CURRENT PUSH ID: 43
+ CURRENT PUSH ID: 44
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -26,6 +26,6 @@
 |39|2019-02-11 23:51:13|Tom Prince <mozilla@hocat.ca>|Run yamllint against the taskgraph configuration; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19101|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=36e7c76919c0
 |40|2019-02-12 01:11:13|Tom Prince <mozilla@hocat.ca>|Bug 1492562: Remove unused graph config entry; r=me|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=a65176bd0ec4
 |42|2019-02-13 23:21:08|Tom Prince <mozilla@hocat.ca>|No bug: Remove duplicate code for making ci-admin authorative for some hg.mozilla.org repositories; r=dustinSince ci-admin is authorative for all hg.mozilla.org repositories(7cccaaf6c74b), we don't need additionally make it authorative for just some ofthem.Differential Revision: https://phabricator.services.mozilla.com/D19706|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=616e7df21c86
-|43|2019-02-13 23:23:04|Tom Prince <mozilla@hocat.ca>|Bug 1465844: Special case `scm_autoland in checking levels; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19705|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e3bff21ba760
+|44|2019-02-25 18:49:25|Tom Prince <mozilla@hocat.ca>|No bug: Include `ci-admin check`'s `pytest.ini` in the installed package; r=dustinAlso stop using `--develop` (i.e. `-e`) when installing ci-admin in the check job.The addition of `pyproject.toml` triggers a pip bug[1], and we don't have a needto have an editable install.[1] https://github.com/pypa/setuptools/issues/1405Differential Revision: https://phabricator.services.mozilla.com/D20790|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=933ac2604add
 
 

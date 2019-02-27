@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: MOZILLA-RELEASE
- CURRENT PUSH ID: 1945
+ CURRENT PUSH ID: 1947
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -8549,6 +8549,7 @@
 |1927|2019-02-05 20:23:21|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1524358 - Use ownTaskId, instead of as_slugid('decision'), in .taskcluster.yml. r=Callek,tomprince, a=RyanVMThis is a forward-looking change to allow evaluation of .taskcluster.yml insituations where as_slugid is not defined -- such as in the Taskcluster hooksservice.Differential Revision: https://phabricator.services.mozilla.com/D18269|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=ad0d9539cc64
 |1927|2019-02-05 20:23:21|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1524358 - Get commit message locally, rather than from task parameters. r=tomprince, a=RyanVMDifferential Revision: https://phabricator.services.mozilla.com/D18288|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=b04e2261e4c9
 |1928|2019-02-06 23:11:14|Wes Kocher <wkocher@mozilla.com>|Bug 1524911 - Increase the upper limit of retrigger 'times' value from 6 to 100 r=dustin a=NPOTBDifferential Revision: https://phabricator.services.mozilla.com/D18623|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=b3320a1afdc4
-|1943|2019-02-14 12:43:51|Gurzau Raul <rgurzau@mozilla.com>|Bug 1524912 - Add a 'times' value to add-new-jobs action r=dustin a=NPOTBReviewers: dustinReviewed By: dustinBug #: 1524912Differential Revision: https://phabricator.services.mozilla.com/D18773|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=1e8cfaa99484
+|1946|2019-02-25 07:18:16|Tom Prince <mozilla@hocat.ca>|Bug 1529921: Use secrets from taskcluster for windows builds; r=akiDifferential Revision: https://phabricator.services.mozilla.com/D20849|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=3feed900b297
+|1946|2019-02-25 07:18:16|Tom Prince <mozilla@hocat.ca>|Bug 1529921: [mozharness] Calculate scm_level for secrets directly from MOZ_SCM_LEVEL; r=aki a=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20893|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=9f12c4ed7d9e
 
 

@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 72
+ CURRENT PUSH ID: 75
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -49,6 +49,8 @@
 |68|2019-02-16 01:50:52|Tom Prince <mozilla@hocat.ca>|Bug 1528362: Remove mozilla-esr52 comm-esr52 repos; r=mtabaraThese repos have reached end-of-life, so don't need any roles associated to them.Differential Revision: https://phabricator.services.mozilla.com/D19991|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f4f8c9554001
 |69|2019-02-19 20:23:36|Justin Wood <Callek@gmail.com>|Bug 1513000 - Add private/openh264/* artifact access scopes to Decision task for level1+ repos. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20202|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=dfee8c81edaa
 |70|2019-02-19 22:21:04|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1528216: Add scope to create task on gce/opt-linux64 r=wcosta,tomprinceThis worker type runs on GCP for build tests.Differential Revision: https://phabricator.services.mozilla.com/D19938|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=cf809c97d1bf
-|72|2019-02-22 23:23:40|Tom Prince <mozilla@hocat.ca>|Bug 1529958: Grant `queue:cancel-task:<scheduler-id>` as part of trust-domain-scopes; r=akiDifferential Revision: https://phabricator.services.mozilla.com/D20867|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=fb877fe687a1
+|73|2019-02-25 18:46:56|Tom Prince <mozilla@hocat.ca>|Bug 1520867: Remove scopes for temporary bitbar worker; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D20788|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a4184058abae
+|74|2019-02-25 19:12:16|Bastien Abadie <bastien@mozilla.com>|Bug 1530376 - Update ci grants for code review task, r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21022|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=18d5ea174bab
+|75|2019-02-25 22:41:46|Rob Lemley <rob@thunderbird.net>|Bug 1530170 - Grant 'queue:rerun-task:scheduler-id' as part of trust-domain-scopes; r=tomprinceEnables rerunning tasks from the taskcluster CLI client for Thunderbirddevelopers.Differential Revision: https://phabricator.services.mozilla.com/D21038|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ffbd916086f9
 
 

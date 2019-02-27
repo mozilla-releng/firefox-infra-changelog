@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 78842
+    "last_push_id": 79146
   },
   "1": {
     "changeset_number": "35344",
@@ -34329,6 +34329,287 @@
           "taskcluster/docker/image_builder/requirements/py3.txt",
           "taskcluster/docker/image_builder/setup.sh",
           "taskcluster/taskgraph/transforms/docker_image.py"
+        ]
+      }
+    }
+  },
+  "661": {
+    "changeset_number": "78848",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-24 11:29:07",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dac57a397973",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: Use secrets from taskcluster for windows builds; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20849",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=94e616a3a7a0",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: [mozharness] Calculate scm_level for secrets directly from MOZ_SCM_LEVEL; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20893",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/secrets.py"
+        ]
+      }
+    }
+  },
+  "662": {
+    "changeset_number": "78864",
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-02-25 04:14:02",
+    "changeset_commits": {
+      "10": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=588497dfa9c0",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1530115 - Add nasm to searchfox builds. r=me\n",
+        "files_changed": [
+          "taskcluster/ci/searchfox/kind.yml"
+        ]
+      },
+      "17": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5727cf4eeb37",
+        "commiter_name": "Dorel Luca <dluca@mozilla.com>",
+        "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+        "files_changed": [
+          "browser/base/content/browser.js",
+          "taskcluster/ci/searchfox/kind.yml"
+        ]
+      }
+    }
+  },
+  "663": {
+    "changeset_number": "78873",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-02-25 12:31:07",
+    "changeset_commits": {
+      "13": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a238fb5cc415",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out changeset e9e880f7aee4 (bug 1520163) for failing nightly builds a=backout",
+        "files_changed": [
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "14": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a5673a480930",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out changeset 588497dfa9c0 (bug 1530115) as a dependency for Bug 1520163 a=backout",
+        "files_changed": [
+          "taskcluster/ci/searchfox/kind.yml"
+        ]
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=445315bbfbf9",
+        "commiter_name": "Gurzau Raul <rgurzau@mozilla.com>",
+        "commit_message": "Backed out 10 changesets (bug 1521879) for causing bug 1530107. a=backout\n\nBacked out changeset f597a73a6eac (bug 1521879)\nBacked out changeset 0bb76534f207 (bug 1521879)\nBacked out changeset abcb8be12adf (bug 1521879)\nBacked out changeset ed6c8d3bbfde (bug 1521879)\nBacked out changeset 1addf1e15b55 (bug 1521879)\nBacked out changeset 6b709cd9a479 (bug 1521879)\nBacked out changeset 07747027c59c (bug 1521879)\nBacked out changeset a6105ccc188c (bug 1521879)\nBacked out changeset 48c9c643e7bb (bug 1521879)\nBacked out changeset d4004105a04a (bug 1521879)",
+        "files_changed": [
+          "CLOBBER",
+          "dom/media/moz.build",
+          "dom/media/tests/mochitest/mochitest.ini",
+          "dom/media/webrtc/MediaTransportChild.h",
+          "dom/media/webrtc/MediaTransportParent.h",
+          "dom/media/webrtc/PMediaTransport.ipdl",
+          "dom/media/webrtc/RTCCertificate.cpp",
+          "dom/media/webrtc/RTCCertificate.h",
+          "dom/media/webrtc/WebrtcGlobal.h",
+          "dom/media/webrtc/WebrtcIPCTraits.h",
+          "dom/media/webrtc/moz.build",
+          "gfx/vr/ipc/PVR.ipdl",
+          "media/mtransport/dtlsidentity.cpp",
+          "media/mtransport/dtlsidentity.h",
+          "media/mtransport/mediapacket.cpp",
+          "media/mtransport/mediapacket.h",
+          "media/mtransport/nr_socket_prsock.cpp",
+          "media/mtransport/nr_socket_prsock.h",
+          "media/mtransport/third_party/nICEr/src/ice/ice_candidate_pair.c",
+          "media/mtransport/third_party/nICEr/src/ice/ice_ctx.c",
+          "media/mtransport/third_party/nICEr/src/net/transport_addr.h",
+          "media/webrtc/signaling/gtest/mediapipeline_unittest.cpp",
+          "media/webrtc/signaling/src/common/moz.build",
+          "media/webrtc/signaling/src/mediapipeline/MediaPipeline.cpp",
+          "media/webrtc/signaling/src/mediapipeline/MediaPipeline.h",
+          "media/webrtc/signaling/src/peerconnection/MediaTransportHandler.cpp",
+          "media/webrtc/signaling/src/peerconnection/MediaTransportHandler.h",
+          "media/webrtc/signaling/src/peerconnection/MediaTransportHandlerIPC.cpp",
+          "media/webrtc/signaling/src/peerconnection/MediaTransportHandlerIPC.h",
+          "media/webrtc/signaling/src/peerconnection/MediaTransportParent.cpp",
+          "media/webrtc/signaling/src/peerconnection/PeerConnectionCtx.h",
+          "media/webrtc/signaling/src/peerconnection/PeerConnectionImpl.cpp",
+          "media/webrtc/signaling/src/peerconnection/moz.build",
+          "modules/libpref/components.conf",
+          "netwerk/ipc/NeckoChild.cpp",
+          "netwerk/ipc/PSocketProcessBridge.ipdl",
+          "netwerk/ipc/SocketProcessBridgeChild.cpp",
+          "netwerk/ipc/SocketProcessBridgeChild.h",
+          "netwerk/ipc/SocketProcessBridgeParent.cpp",
+          "netwerk/ipc/SocketProcessBridgeParent.h",
+          "netwerk/ipc/moz.build",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mochitest/runtests.py"
+        ]
+      }
+    }
+  },
+  "664": {
+    "changeset_number": "78945",
+    "pusher": "sfink@mozilla.com",
+    "date_of_push": "2019-02-25 22:08:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=293617cdb29d",
+        "commiter_name": "Steve Fink <sfink@mozilla.com>",
+        "commit_message": "Bug 1527777 - Move spidermonkey jobs from win32 to win64 r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20619",
+        "files_changed": [
+          "taskcluster/ci/spidermonkey/windows.yml",
+          "taskcluster/scripts/builder/build-sm.sh",
+          "taskcluster/taskgraph/transforms/job/spidermonkey.py"
+        ]
+      }
+    }
+  },
+  "665": {
+    "changeset_number": "78950",
+    "pusher": "tdaede@mozilla.com",
+    "date_of_push": "2019-02-25 23:11:28",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fae88bb4c6da",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1520163 - Add linux64-nasm toolchain. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20037",
+        "files_changed": [
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      }
+    }
+  },
+  "666": {
+    "changeset_number": "78964",
+    "pusher": "bcampen@mozilla.com",
+    "date_of_push": "2019-02-26 00:55:42",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=634949dfc792",
+        "commiter_name": "Byron Campen [:bwc] <docfaraday@gmail.com>",
+        "commit_message": "Bug 1521879 - Part 7: Create new CI jobs for media mochitests with socket process enabled. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17942",
+        "files_changed": [
+          "dom/media/tests/mochitest/mochitest.ini",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mochitest/runtests.py"
+        ]
+      }
+    }
+  },
+  "667": {
+    "changeset_number": "78968",
+    "pusher": "tdaede@mozilla.com",
+    "date_of_push": "2019-02-26 01:16:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=575da58a58c7",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1520163 - Add linux64-nasm to android-armv7-searchfox. r=kats\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21098",
+        "files_changed": [
+          "taskcluster/ci/searchfox/kind.yml"
+        ]
+      }
+    }
+  },
+  "668": {
+    "changeset_number": "79027",
+    "pusher": "rwood@mozilla.com",
+    "date_of_push": "2019-02-26 18:14:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a6f2f28d8d67",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1529081 - Promote Raptor speedometer fennec to tier 2; r=Bebe\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21013",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      }
+    }
+  },
+  "669": {
+    "changeset_number": "79101",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-02-27 06:36:23",
+    "changeset_commits": {
+      "105": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8fcd04c595a9",
+        "commiter_name": "Bob Clary <bclary@bclary.com>",
+        "commit_message": "Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.",
+        "files_changed": [
+          "testing/mozharness/configs/android/android_common.py"
+        ]
+      }
+    }
+  },
+  "670": {
+    "changeset_number": "79116",
+    "pusher": "catlee@mozilla.com",
+    "date_of_push": "2019-02-27 14:16:41",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bec37c9a80b9",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1527394: Remove unneeded packages/files in the test image r=jmaher\n\nDepends on D19541\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19542",
+        "files_changed": [
+          "taskcluster/docker/recipes/ubuntu1604-test-system-setup.sh"
+        ]
+      }
+    }
+  },
+  "671": {
+    "changeset_number": "79134",
+    "pusher": "jwillcox@mozilla.com",
+    "date_of_push": "2019-02-27 17:24:56",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=51efc5e08cee",
+        "commiter_name": "James Willcox <snorp@snorp.net>",
+        "commit_message": "Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19015",
+        "files_changed": [
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/test-sets.yml"
         ]
       }
     }

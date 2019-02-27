@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 72
+    "last_push_id": 75
   },
   "1": {
     "changeset_number": "31",
@@ -660,6 +660,51 @@
         "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=fb877fe687a1",
         "commiter_name": "Tom Prince <mozilla@hocat.ca>",
         "commit_message": "Bug 1529958: Grant `queue:cancel-task:<scheduler-id>` as part of trust-domain-scopes; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20867",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "40": {
+    "changeset_number": "73",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-25 18:46:56",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a4184058abae",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1520867: Remove scopes for temporary bitbar worker; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20788",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "41": {
+    "changeset_number": "74",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-02-25 19:12:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=18d5ea174bab",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1530376 - Update ci grants for code review task, r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21022",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "42": {
+    "changeset_number": "75",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-25 22:41:46",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ffbd916086f9",
+        "commiter_name": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "Bug 1530170 - Grant 'queue:rerun-task:scheduler-id' as part of trust-domain-scopes; r=tomprince\n\nEnables rerunning tasks from the taskcluster CLI client for Thunderbird\ndevelopers.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21038",
         "files_changed": [
           "grants.yml"
         ]
