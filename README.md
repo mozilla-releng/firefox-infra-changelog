@@ -24,7 +24,7 @@ Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox
 | --all  | Runs script for all available repositories
 | --git  | Runs script only for repos that are on GitHub                              |
 | --hg   | Runs script only for repos that are on Mercurial                           |
-| --r    | Let the user choose for which repositories the script will run             |
+| --m    | Let the user choose for which repositories the script will run             |
 | --d    | Let the user choose the amount of days the main markdown file will contain |
 
 

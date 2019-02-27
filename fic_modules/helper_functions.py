@@ -1,10 +1,13 @@
+"""
+This module contains functions that are for other scopes which aim to get
+better functionality out of the code and not directly related to the script.
+"""
 import re
 import sys
 from github import GithubException
 from fic_modules.configuration import (
     REPOSITORIES,
     REPO_LIST,
-    TOKEN,
     GIT
 )
 from datetime import datetime
@@ -13,8 +16,8 @@ from datetime import datetime
 def compare_files(first_list, second_list):
     """
     Helper Function!
-    Compares two lists that should contain the path + filename of the modified files. The two lists
-    are mutable.
+    Compares two lists that should contain the path + filename of the modified
+    files. The two lists are mutable.
     :param first_list: First lists.
     :param second_list:  Second list
     :return: returns boolean value in case a match is found.
@@ -28,20 +31,24 @@ def compare_files(first_list, second_list):
 def clear_file(file_name, generated_for_days=1):
     """
     Helper function.
-    This function takes a file that clears the content and output's a base table header for a
-    markdown file.
-    :param generated_for_days: used for generate the title (default being set for one day)
-    :param file_name: Name of the file to be written. (should also contain the path)
+    This function takes a file that clears the content and output's a base
+    table header for a markdown file.
+    :param generated_for_days: used for generate the title (default being set
+    for one day)
+    :param file_name: Name of the file to be written. (should also contain the
+    path)
     :return: A file should be created and should contain base table.
     """
     file = open(file_name, "w")
     if generated_for_days == 1:
-        heading = "##  Commits in production - for one day" + ", generated on: " \
-                  + str(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")) + " UTC."
+        heading = "##  Commits in production - for one day, generated on: " \
+                  + str(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")) + \
+                  " UTC."
     else:
         heading = "##  Commits in production - for " + \
                   str(generated_for_days) + " days" + ", generated on: " \
-                  + str(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")) + " UTC."
+                  + str(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")) + \
+                  " UTC."
     file.write(heading)
     file.close()
 
@@ -49,9 +56,9 @@ def clear_file(file_name, generated_for_days=1):
 def get_commit_details(commit):
     """
     Helper function.
-    Extracts sha, url, commiter name, commiter email, commiter message, commit date and
-    files_changed from a commit object and stores them in a dictionary that gets returned at the
-    end.
+    Extracts sha, url, commiter name, commiter email, commiter message, commit
+    date and files_changed from a commit object and stores them in a dictionary
+     that gets returned at the end.
     :param commit: commit object that should contain information about commit.
     :return: a dictionary with extracted data, properly formatted.
     """
@@ -102,26 +109,30 @@ def get_commit_details(commit):
 def extract_email(commit_email):
     """
     Helper function!
-    Takes as parameter a string that contains between "<" and ">" an email that needs to be
-    extracted.
-    The function uses find to search for the beginning of the email (that starts with "<") and adds
-    the lengths of the "<" so that returned email doesn't contain the "<" symbol and rfind to find
-    the ending character ">".
-    Both find and rfind return the index where the carachters "<" and ">" are placed so when you do
-    return commit_email with [start_char_index:ending_char_index] the string shrinks to what's
+    Takes as parameter a string that contains between "<" and ">" an email
+    that needs to be extracted.
+    The function uses find to search for the beginning of the email (that
+    starts with "<") and adds the lengths of the "<" so that returned email
+    doesn't contain the "<" symbol and rfind to find the ending character ">".
+    Both find and rfind return the index where the carachters "<" and ">" are
+    placed so when you do return commit_email with
+    [start_char_index:ending_char_index] the string shrinks to what's
     between the characters.
     :param commit_email: String that contains an email
     :return: String that contains only the email
     """
-    return commit_email[commit_email.find("<") + len("<"):commit_email.rfind(">")]
+    return commit_email[commit_email.find("<") +
+                        len("<"):commit_email.rfind(">")]
 
 
 def extract_reviewer(string):
     """
     Helper function!
-    Takes the string on the input and looks for a specific set of characters (either "r=" or "a=").
-    If at least one of them are present (most of the times they are in the mercurial world) then
-    this function will return the reviewer/approved by names.
+    Takes the string on the input and looks for a specific set of characters
+    (either "r=" or "a=").
+    If at least one of them are present (most of the times they are in the
+    mercurial world) then this function will return the reviewer/approved by
+    names.
     If none of them are present, the function will return an empty string.
     :param string: usually the commit message.
     :return: a string that may contain the author name (if "r=" or "a=" exists)
@@ -157,10 +168,10 @@ def remove_chars(string, char):
 def filter_strings(string):
     """
     Helper function!
-    Filters the provided string and removes specific words/characters from it that are stored in
-    unwanted_chars variable.
-    This filter removes chars that can't be written to the markdown file (since the encoding of
-    those is not supported).
+    Filters the provided string and removes specific words/characters from it
+    that are stored in unwanted_chars variable.
+    This filter removes chars that can't be written to the markdown file
+    (since the encoding of those is not supported).
     :param string: string to be filtered
     :return:
     """
@@ -214,5 +225,4 @@ def get_keys(name):
     for key in REPOSITORIES.get("{}".format(name)):
         REPO_LIST.append(key)
     return REPO_LIST
-
 

@@ -1,7 +1,8 @@
-## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-01-30 21:15:19.796156
+## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-02-10 05:21:34.053897
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|8|garbas|shipit/api: authorization (#1870)|[URL](https://github.com/mozilla/release-services/commit/c7ef9d9adb87f924545efd60a51e823a7f1a2743)|2019-02-15 22:06:14
 |7|rail|tooltool/api: fix all flask subcommands|[URL](https://github.com/mozilla/release-services/commit/334bfb59a9cb55a92022f600bee1e4ed41dc485f)|2019-02-07 20:21:33
 |6|garbas|setup: fixing update hooks due to intreehooks needed as setup require (#1854)|[URL](https://github.com/mozilla/release-services/commit/60bc6fbdf7dcee8afa20d3e5ae7193a1d0e95873)|2019-02-07 19:35:50
 |5|garbas|tooltool/api: remove redundant workerType specification (#1855)|[URL](https://github.com/mozilla/release-services/commit/ccf864e32ddf8b462450082d1859b2bb5d93d1d7)|2019-02-07 17:09:07

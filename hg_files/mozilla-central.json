@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35550
+    "last_push_id": 35600
   },
   "1": {
     "changeset_number": "35344",
@@ -9159,71 +9159,1569 @@
     }
   },
   "78": {
-    "changeset_number": "35548",
-    "pusher": "opoprus@mozilla.com",
-    "date_of_push": "2019-02-13 11:48:26",
+    "changeset_number": "35551",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-02-13 23:34:09",
     "changeset_commits": {
-      "24": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=33ea61c54aea",
-        "commiter_name": "James Willcox <snorp@snorp.net>",
-        "commit_message": "Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19015",
+      "52": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dbf72abf5597",
+        "commiter_name": "Jed Davis <jld@mozilla.com>",
+        "commit_message": "Bug 1472589 - Fix parent process crash reporting in the Snap package environment. r=ted,jlorenzo\n\n1. The unsetting of LD_LIBRARY_PATH is removed, because it's no longer\nnecessary and interferes with environments where it's necessary to find\n\"system\" libraries like GTK; see bug 1472589 comment #1 through #4.\n\n2. The Snap package manifest adds a dependency on the libcurl package,\nso that the crash reporter can send the report.  This uses the GnuTLS\nvariant because we're already pulling in GnuTLS as a dependency of some\nother packages (FFmpeg and CUPS, but also the non-GnuTLS cURL packages\ndepend on it anyway via OpenLDAP).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18625",
+        "files_changed": [
+          "taskcluster/docker/firefox-snap/snapcraft.yaml.in",
+          "toolkit/crashreporter/nsExceptionHandler.cpp"
+        ]
+      }
+    }
+  },
+  "79": {
+    "changeset_number": "35552",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-02-14 06:39:44",
+    "changeset_commits": {
+      "30": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=788e4338d31f",
+        "commiter_name": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1527469 - add necessary piping to enable windows10-aarch64 build and tests on try r=jmaher,gbrown\n\n- makes changes to various configuration files, thanks jmaher\n- for the time being, disable tests via `taskcluster/ci/test/test-platforms.yml` to prevent overwhelming the hardware at Bitbar\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19581",
         "files_changed": [
           "taskcluster/ci/test/mochitest.yml",
-          "taskcluster/ci/test/test-sets.yml"
+          "taskcluster/ci/test/talos.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/web-platform.yml",
+          "taskcluster/ci/test/xpcshell.yml",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "taskcluster/taskgraph/util/workertypes.py"
+        ]
+      }
+    }
+  },
+  "80": {
+    "changeset_number": "35553",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-02-14 06:41:18",
+    "changeset_commits": {
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=89fc662c01ee",
+        "commiter_name": "Steve Fink <sfink@mozilla.com>",
+        "commit_message": "Bug 1500247 - Add a mechanism to embed known hazards into test files and verify that they are caught, r=jonco\n\nUse it to verify that MOZ_INHERIT_ATTRIBUTE_FROM_TEMPLATE_PARAM works.",
+        "files_changed": [
+          "js/public/GCAnnotations.h",
+          "js/src/devtools/rootAnalysis/analyzeRoots.js",
+          "js/src/devtools/rootAnalysis/explain.py",
+          "js/src/jsapi-tests/testGCExactRooting.cpp",
+          "js/src/jsapi-tests/tests.h",
+          "taskcluster/scripts/builder/hazard-analysis.sh"
+        ]
+      }
+    }
+  },
+  "81": {
+    "changeset_number": "35555",
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-02-14 19:02:25",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8f7958c7d3e5",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1431523 - Use docker images for debian package tasks. r=dustin\n\nWe however leave moving the packages building to a script for another\nday.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19624\n",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/docker/debian-packages/Dockerfile",
+          "taskcluster/docker/debian-raw/Dockerfile",
+          "taskcluster/docker/debian-raw/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-raw/setup_packages.sh",
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
         ]
       },
-      "73": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=34f33ae5913e",
-        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-        "commit_message": "Backed out 3 changesets (bug 1525959, bug 1526002) for failing android\n\nBacked out changeset de0efca1118e (bug 1526002)\nBacked out changeset 503cbc86e442 (bug 1525959)\nBacked out changeset 33ea61c54aea (bug 1525959)",
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6ad8d2be5c2c",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Backout changeset 8f7958c7d3e5 (bug 1431523) to give time to docker images, etc. to build without blocking other landings.\n",
         "files_changed": [
-          "dom/animation/test/mochitest.ini",
-          "dom/base/test/mochitest.ini",
-          "dom/html/test/forms/mochitest.ini",
-          "dom/html/test/mochitest.ini",
-          "dom/ipc/tests/mochitest.ini",
-          "dom/performance/tests/mochitest.ini",
-          "dom/serviceworkers/test/mochitest.ini",
-          "dom/tests/mochitest/bugs/mochitest.ini",
-          "editor/libeditor/tests/mochitest.ini",
-          "gfx/layers/apz/test/mochitest/mochitest.ini",
-          "mobile/android/components/extensions/test/mochitest/mochitest.ini",
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/docker/debian-packages/Dockerfile",
+          "taskcluster/docker/debian-raw/Dockerfile",
+          "taskcluster/docker/debian-raw/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-raw/setup_packages.sh",
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
+        ]
+      },
+      "88": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dbbadd12f849",
+        "commiter_name": "Gurzau Raul <rgurzau@mozilla.com>",
+        "commit_message": "Merge inbound to mozilla-central.  a=merge",
+        "files_changed": [
+          "browser/components/build/nsModule.cpp",
+          "browser/components/migration/360seProfileMigrator.js",
+          "browser/components/migration/BrowserProfileMigrators.manifest",
+          "browser/components/migration/ChromeProfileMigrator.js",
+          "browser/components/migration/EdgeProfileMigrator.js",
+          "browser/components/migration/FirefoxProfileMigrator.js",
+          "browser/components/migration/IEProfileMigrator.js",
+          "browser/components/migration/ProfileMigrator.js",
+          "browser/components/migration/SafariProfileMigrator.js",
+          "browser/components/newtab/NewTabComponents.manifest",
+          "browser/components/newtab/aboutNewTabService.js",
+          "browser/components/nsBrowserContentHandler.js",
+          "browser/components/nsBrowserGlue.js",
+          "browser/components/payments/paymentUIService.js",
+          "browser/components/payments/payments.manifest",
+          "browser/components/protocolhandler/WebProtocolHandlerRegistrar.js",
+          "browser/extensions/formautofill/content/formautofill.xml",
+          "devtools/startup/aboutdebugging-new-registration.js",
+          "devtools/startup/aboutdebugging-registration.js",
+          "devtools/startup/aboutdebugging.manifest",
+          "devtools/startup/aboutdevtools/aboutdevtools-registration.js",
+          "devtools/startup/aboutdevtools/aboutdevtools.manifest",
+          "devtools/startup/aboutdevtoolstoolbox-registration.js",
+          "devtools/startup/aboutdevtoolstoolbox.manifest",
+          "devtools/startup/devtools-startup.js",
+          "devtools/startup/devtools-startup.manifest",
+          "dom/base/ProcessSelector.js",
+          "dom/base/ProcessSelector.manifest",
+          "dom/base/SlowScriptDebug.js",
+          "dom/base/contentAreaDropListener.js",
+          "dom/base/contentAreaDropListener.manifest",
+          "dom/browser-element/BrowserElementParent.js",
+          "dom/browser-element/BrowserElementParent.manifest",
+          "dom/console/ConsoleAPI.manifest",
+          "dom/console/ConsoleAPIStorage.js",
+          "dom/html/htmlMenuBuilder.js",
+          "dom/media/PeerConnection.js",
+          "dom/media/PeerConnection.manifest",
+          "dom/media/webspeech/synth/speechd/SpeechDispatcherModule.cpp",
+          "dom/media/webspeech/synth/test/FakeSynthModule.cpp",
+          "dom/notification/NotificationStorage.js",
+          "dom/notification/NotificationStorage.manifest",
+          "dom/payments/PaymentRequestModule.cpp",
+          "dom/plugins/base/nsPluginModule.cpp",
+          "dom/presentation/PresentationDataChannelSessionTransport.js",
+          "dom/presentation/PresentationNetworkHelper.js",
+          "dom/presentation/provider/AndroidCastDeviceProvider.js",
+          "dom/presentation/provider/BuiltinProviders.manifest",
+          "dom/presentation/provider/PresentationControlService.js",
+          "dom/presentation/provider/PresentationDeviceProviderModule.cpp",
+          "dom/push/Push.js",
+          "dom/push/PushComponents.js",
+          "dom/script/ScriptLoader.cpp",
+          "dom/system/NetworkGeolocationProvider.js",
+          "dom/system/NetworkGeolocationProvider.manifest",
+          "extensions/permissions/nsModuleFactory.cpp",
+          "extensions/pref/autoconfig/src/nsConfigFactory.cpp",
+          "extensions/spellcheck/src/mozSpellCheckerFactory.cpp",
+          "gfx/src/nsThebesGfxFactory.cpp",
+          "image/decoders/icon/nsIconModule.cpp",
+          "intl/build/nsI18nModule.cpp",
+          "intl/uconv/nsUConvModule.cpp",
+          "layout/tools/recording/recording-cmdline.js",
+          "modules/libjar/nsJARFactory.cpp",
+          "modules/libjar/zipwriter/ZipWriterModule.cpp",
+          "netwerk/cache/nsDiskCacheBinding.cpp",
+          "netwerk/cache/nsDiskCacheBinding.h",
+          "netwerk/cache/nsDiskCacheBlockFile.cpp",
+          "netwerk/cache/nsDiskCacheBlockFile.h",
+          "netwerk/cache/nsDiskCacheDevice.cpp",
+          "netwerk/cache/nsDiskCacheDevice.h",
+          "netwerk/cache/nsDiskCacheEntry.cpp",
+          "netwerk/cache/nsDiskCacheEntry.h",
+          "netwerk/cache/nsDiskCacheMap.cpp",
+          "netwerk/cache/nsDiskCacheMap.h",
+          "netwerk/cache/nsDiskCacheStreams.cpp",
+          "netwerk/cache/nsDiskCacheStreams.h",
+          "netwerk/cache/nsMemoryCacheDevice.cpp",
+          "netwerk/cache/nsMemoryCacheDevice.h",
+          "netwerk/dns/mdns/libmdns/nsDNSServiceDiscovery.js",
+          "netwerk/dns/mdns/libmdns/nsMulticastDNSModule.cpp",
+          "netwerk/protocol/http/UAOverridesBootstrapper.js",
+          "netwerk/protocol/http/WellKnownOpportunisticUtils.js",
+          "security/manager/pki/nsPKIModule.cpp",
+          "services/fxaccounts/FxAccountsComponents.manifest",
+          "services/fxaccounts/FxAccountsPush.js",
+          "services/settings/RemoteSettingsComponents.js",
+          "services/sync/Weave.js",
+          "storage/build/mozStorageModule.cpp",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "toolkit/components/asyncshutdown/nsAsyncShutdown.js",
+          "toolkit/components/backgroundhangmonitor/BHRTelemetryService.js",
+          "toolkit/components/backgroundhangmonitor/BHRTelemetryService.manifest",
+          "toolkit/components/browser/build/nsWebBrowserModule.cpp",
+          "toolkit/components/captivedetect/captivedetect.js",
+          "toolkit/components/cleardata/ClearDataService.js",
+          "toolkit/components/contentprefs/ContentPrefService2.js",
+          "toolkit/components/contentprefs/ContentPrefService2.manifest",
+          "toolkit/components/crashes/CrashService.js",
+          "toolkit/components/crashmonitor/nsCrashMonitor.js",
+          "toolkit/components/downloads/DownloadLegacy.js",
+          "toolkit/components/downloads/Downloads.manifest",
+          "toolkit/components/gfx/SanityTest.js",
+          "toolkit/components/mediasniffer/nsMediaSnifferModule.cpp",
+          "toolkit/components/mozintl/mozIntl.js",
+          "toolkit/components/mozprotocol/mozProtocolHandler.js",
+          "toolkit/components/normandy/shield-content-process.js",
+          "toolkit/components/nsDefaultCLH.js",
+          "toolkit/components/passwordmgr/nsLoginInfo.js",
+          "toolkit/components/passwordmgr/nsLoginManager.js",
+          "toolkit/components/passwordmgr/nsLoginManagerPrompter.js",
+          "toolkit/components/passwordmgr/passwordmgr.manifest",
+          "toolkit/components/places/ColorAnalyzer.js",
+          "toolkit/components/places/PageIconProtocolHandler.js",
+          "toolkit/components/places/PlacesCategoriesStarter.js",
+          "toolkit/components/places/UnifiedComplete.js",
+          "toolkit/components/places/nsPlacesExpiration.js",
+          "toolkit/components/places/nsPlacesModule.cpp",
+          "toolkit/components/places/nsTaggingService.js",
+          "toolkit/components/places/toolkitplaces.manifest",
+          "toolkit/components/processsingleton/ContentProcessSingleton.js",
+          "toolkit/components/processsingleton/MainProcessSingleton.js",
+          "toolkit/components/prompts/src/nsPrompter.js",
+          "toolkit/components/remotebrowserutils/RemoteWebNavigation.js",
+          "toolkit/components/satchel/FormHistoryStartup.js",
+          "toolkit/components/satchel/nsFormAutoComplete.js",
+          "toolkit/components/satchel/nsInputListAutoComplete.js",
+          "toolkit/components/satchel/satchel.manifest",
+          "toolkit/components/search/nsSearchService.js",
+          "toolkit/components/search/nsSearchSuggestions.js",
+          "toolkit/components/search/nsSidebar.js",
+          "toolkit/components/telemetry/TelemetryStartup.js",
+          "toolkit/components/telemetry/TelemetryStartup.manifest",
+          "toolkit/components/terminator/nsTerminatorTelemetry.js",
+          "toolkit/components/thumbnails/PageThumbsStorageService.js",
+          "toolkit/components/thumbnails/nsPageThumbsModule.cpp",
+          "toolkit/components/timermanager/nsUpdateTimerManager.js",
+          "toolkit/components/timermanager/nsUpdateTimerManager.manifest",
+          "toolkit/components/tooltiptext/TooltipTextProvider.js",
+          "toolkit/components/url-classifier/nsURLClassifier.manifest",
+          "toolkit/components/url-classifier/nsUrlClassifierHashCompleter.js",
+          "toolkit/components/url-classifier/nsUrlClassifierLib.js",
+          "toolkit/components/url-classifier/nsUrlClassifierListManager.js",
+          "toolkit/components/urlformatter/nsURLFormatter.js",
+          "toolkit/components/urlformatter/nsURLFormatter.manifest",
+          "toolkit/components/utils/simpleServices.js",
+          "toolkit/components/utils/utils.manifest",
+          "toolkit/components/xulstore/XULStore.js",
+          "toolkit/mozapps/downloads/nsHelperAppDlg.js",
+          "toolkit/mozapps/extensions/amContentHandler.js",
+          "toolkit/mozapps/extensions/amInstallTrigger.js",
+          "toolkit/mozapps/extensions/amWebAPI.js",
+          "toolkit/mozapps/handling/nsContentDispatchChooser.js",
+          "toolkit/mozapps/update/nsUpdateService.js",
+          "toolkit/mozapps/update/nsUpdateServiceStub.js",
+          "tools/profiler/gecko/nsProfilerFactory.cpp",
+          "uriloader/exthandler/nsWebHandlerApp.js",
+          "xpfe/appshell/nsAppShellFactory.cpp"
+        ]
+      }
+    }
+  },
+  "82": {
+    "changeset_number": "35556",
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-02-15 03:38:24",
+    "changeset_commits": {
+      "43": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fe264afc03aa",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1511224 - Add win64-nasm toolchain. r=ted,jya,glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D13875",
+        "files_changed": [
+          "build/mozconfig.common",
+          "build/mozconfig.nasm",
+          "media/ffvpx/config_win64.asm",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "54": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=179d3ee81e2d",
+        "commiter_name": "Dorel Luca <dluca@mozilla.com>",
+        "commit_message": "Backed out changeset fe264afc03aa (bug 1511224) for Fetch failures. CLOSED TREE",
+        "files_changed": [
+          "build/mozconfig.common",
+          "build/mozconfig.nasm",
+          "media/ffvpx/config_win64.asm",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "80": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7723ab72d506",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1511224 - Add win64-nasm toolchain. r=ted,jya,glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D13875",
+        "files_changed": [
+          "build/mozconfig.common",
+          "build/mozconfig.nasm",
+          "media/ffvpx/config_win64.asm",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "81": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c9ea3a7176aa",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525736: [taskgraph] Allow looking up parameters by project for trust-domains other than `gecko`; r=dustin\n\nPreviously, this code looked parameters under `gecko.v2`, but that doesn't work\nfor projects using the out-of-tree taskgraph code, or Thunderbird. This moves\nthe parameter loading slightly later to vary the index used based on trust domain.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19028",
+        "files_changed": [
+          "taskcluster/mach_commands.py",
+          "taskcluster/taskgraph/parameters.py",
+          "tools/tryselect/tasks.py"
+        ]
+      },
+      "82": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a47861d74f11",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1512504 - Remove automated msvc builds. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19614",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/debug-msvc",
+          "browser/config/mozconfigs/win32/opt-msvc",
+          "browser/config/mozconfigs/win64/debug-msvc",
+          "browser/config/mozconfigs/win64/opt-msvc",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      }
+    }
+  },
+  "83": {
+    "changeset_number": "35557",
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-02-15 03:42:08",
+    "changeset_commits": {
+      "121": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=084f5a952f04",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1527798 - Upgrade toolchain tasks using MSVC to 15.8.4. r=froydnj\n\nIt turns out version 15.4.2 spawns a vctip process that sticks after the\nbuild, and since bug 1527798, that breaks unmounting caches because the\nprocess has a handle on msvcp140.dll, which lies in the source\ndirectory. The problem goes away with 15.8.4, so upgrade all toolchain\ntasks to that.\n\nThat's the same version as we're using on x86/x86-64 MSVC builds.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19752\n",
+        "files_changed": [
+          "browser/config/tooltool-manifests/win32/build-clang-cl.manifest",
+          "browser/config/tooltool-manifests/win32/gn-build.manifest",
+          "browser/config/tooltool-manifests/win64/sccache-build.manifest",
+          "taskcluster/scripts/misc/build-cbindgen.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper64.sh",
+          "taskcluster/scripts/misc/build-gn-win32.sh",
+          "taskcluster/scripts/misc/build-grcov.sh",
+          "taskcluster/scripts/misc/build-rust-size.sh",
+          "taskcluster/scripts/misc/build-sccache.sh"
+        ]
+      },
+      "123": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f8738cf7a4ae",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1431523 - Use docker images for debian package tasks. r=dustin\n\nWe however leave moving the packages building to a script for another\nday.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19624\n",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/docker/debian-packages/Dockerfile",
+          "taskcluster/docker/debian-raw/Dockerfile",
+          "taskcluster/docker/debian-raw/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-raw/setup_packages.sh",
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
+        ]
+      },
+      "124": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9b65e012f192",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Backout changesets 084f5a952f04 (bug 1527798) and f8738cf7a4ae (bug 1431523) to give time to docker images, etc. to build without blocking other landings.\n",
+        "files_changed": [
+          "browser/config/tooltool-manifests/win32/build-clang-cl.manifest",
+          "browser/config/tooltool-manifests/win32/gn-build.manifest",
+          "browser/config/tooltool-manifests/win64/sccache-build.manifest",
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/docker/debian-packages/Dockerfile",
+          "taskcluster/docker/debian-raw/Dockerfile",
+          "taskcluster/docker/debian-raw/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-raw/setup_packages.sh",
+          "taskcluster/scripts/misc/build-cbindgen.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper64.sh",
+          "taskcluster/scripts/misc/build-gn-win32.sh",
+          "taskcluster/scripts/misc/build-grcov.sh",
+          "taskcluster/scripts/misc/build-rust-size.sh",
+          "taskcluster/scripts/misc/build-sccache.sh",
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
+        ]
+      },
+      "129": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=426ca85d2303",
+        "commiter_name": "Daniel Varga <dvarga@mozilla.com>",
+        "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+        "files_changed": [
+          "build/moz.configure/rust.configure",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "testing/web-platform/meta/js/builtins/__dir__.ini",
+          "testing/web-platform/meta/performance-timeline/case-sensitivity.any.html.ini",
+          "testing/web-platform/meta/wasm/serialization/broadcastchannel-success-and-failure.html.ini",
+          "testing/web-platform/meta/wasm/serialization/broadcastchannel-success.html.ini",
+          "testing/web-platform/meta/wasm/serialization/window-messagechannel-success.html.ini",
+          "testing/web-platform/meta/wasm/serialization/window-serviceworker-failure.https.html.ini",
+          "testing/web-platform/meta/wasm/serialization/window-sharedworker-failure.html.ini",
+          "testing/web-platform/tests/infrastructure/metadata/infrastructure/testdriver/actions/elementTiming.html.ini",
+          "testing/web-platform/tests/portals/resources/portal-activate-event-window.html",
+          "testing/web-platform/tests/wasm/serialization/broadcastchannel-success-and-failure.html",
+          "testing/web-platform/tests/wasm/serialization/broadcastchannel-success.html",
+          "testing/web-platform/tests/wasm/serialization/identity-not-preserved.html",
+          "testing/web-platform/tests/wasm/serialization/incrementer.wasm",
+          "testing/web-platform/tests/wasm/serialization/nested-worker-success.any.js",
+          "testing/web-platform/tests/wasm/serialization/no-transferring.html",
+          "testing/web-platform/tests/wasm/serialization/resources/blank.html",
+          "testing/web-platform/tests/wasm/serialization/resources/broadcastchannel-iframe.html",
+          "testing/web-platform/tests/wasm/serialization/resources/broadcastchannel-sharedworker.js",
+          "testing/web-platform/tests/wasm/serialization/resources/broadcastchannel-worker.js",
+          "testing/web-platform/tests/wasm/serialization/resources/create-empty-wasm-module.js",
+          "testing/web-platform/tests/wasm/serialization/resources/echo-iframe.html",
+          "testing/web-platform/tests/wasm/serialization/resources/echo-worker.js",
+          "testing/web-platform/tests/wasm/serialization/resources/incrementer-iframe-domain.sub.html",
+          "testing/web-platform/tests/wasm/serialization/resources/incrementer-iframe.html",
+          "testing/web-platform/tests/wasm/serialization/resources/incrementer-popup.html",
+          "testing/web-platform/tests/wasm/serialization/resources/incrementer-worker-with-channel.js",
+          "testing/web-platform/tests/wasm/serialization/resources/incrementer-worker.js",
+          "testing/web-platform/tests/wasm/serialization/resources/incrementer.wasm",
+          "testing/web-platform/tests/wasm/serialization/resources/nested-iframe-1.html",
+          "testing/web-platform/tests/wasm/serialization/resources/nested-iframe-2.html",
+          "testing/web-platform/tests/wasm/serialization/resources/nested-iframe-3.html",
+          "testing/web-platform/tests/wasm/serialization/resources/nested-iframe-4-incrementer.html",
+          "testing/web-platform/tests/wasm/serialization/resources/serviceworker-failure.js",
+          "testing/web-platform/tests/wasm/serialization/resources/sharedworker-failure.js",
+          "testing/web-platform/tests/wasm/serialization/resources/test-incrementer.js",
+          "testing/web-platform/tests/wasm/serialization/serialization-via-history.html",
+          "testing/web-platform/tests/wasm/serialization/serialization-via-idb.any.js",
+          "testing/web-platform/tests/wasm/serialization/serialization-via-notifications-api.any.js",
+          "testing/web-platform/tests/wasm/serialization/window-domain-success.sub.html",
+          "testing/web-platform/tests/wasm/serialization/window-messagechannel-success.html",
+          "testing/web-platform/tests/wasm/serialization/window-serviceworker-failure.https.html",
+          "testing/web-platform/tests/wasm/serialization/window-sharedworker-failure.html",
+          "testing/web-platform/tests/wasm/serialization/window-similar-but-cross-origin-success.sub.html",
+          "testing/web-platform/tests/wasm/serialization/window-simple-success.html"
+        ]
+      }
+    }
+  },
+  "84": {
+    "changeset_number": "35559",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-15 11:55:16",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=eca98c0cad2d",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1528077 - Add win64-nasm to static-analysis-autotest. r=glandium\n\nThe configure check was failing, breaking this test.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19866",
+        "files_changed": [
+          "taskcluster/ci/static-analysis-autotest/kind.yml"
+        ]
+      },
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dc1e0338526e",
+        "commiter_name": "Steve Fink <sfink@mozilla.com>",
+        "commit_message": "Bug 1526676 - demote SM(msan) back to tier 3; it is getting run via ridealongs, r=catlee\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19698",
+        "files_changed": [
+          "taskcluster/ci/spidermonkey/linux.yml"
+        ]
+      },
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e9f887f489e5",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Allow run-task jobs on docker-worker to use internal tooltool downloads. r=ahal\n\nThis code already exists for other (non-run-task jobs) on docker worker,\nso this patch just reuses the existing code but adds a bit to the\nrun-task schema to allow the task to opt in.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19365",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/run_task.py"
+        ]
+      },
+      "25": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f6413e576a21",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Provide path to python executable when invoking fetch-content script. r=ahal\n\nThe shebang at the top of fetch-content doesn't work on macOS because\nthe path to python3 is not /usr/bin. Using /usr/bin/env doesn't work\nproperly on all platforms either so instead we invoke the script using\nthe currently running python executable.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19744",
+        "files_changed": [
+          "taskcluster/scripts/run-task"
+        ]
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=028c0ed368b8",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Add jobs to cross-compile wrench and use the resulting binaries. r=glandium\n\nOne job (which runs on a Linux docker worker) cross compiles wrench in\ntwo configurations (regular and headless) and publishes artifacts with\nthe binaries. The other job (which runs on macOS) downloads the\nartifacts and uses them to run the WebRender macOS CI release-mode\nscripts, which basically consists of running the WebRender reftest\nsuite.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19369",
+        "files_changed": [
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/scripts/misc/wr-macos-cross-build-setup.sh",
+          "taskcluster/scripts/misc/wrench-macos-build.sh"
+        ]
+      },
+      "30": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=79120d13e713",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Add jobs to cross-compile cargo test binaries and run them on macOS. r=glandium\n\nSimilar to the previous patch, this adds two jobs. One that\ncross-compiles the binaries produced by `cargo test` and publishes them\nas an artifact. The other job downloads the artifact and runs the\nresulting binaries.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19370",
+        "files_changed": [
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/scripts/misc/wr-cargotest-macos-build.sh"
+        ]
+      },
+      "34": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=182057bee133",
+        "commiter_name": "Dorel Luca <dluca@mozilla.com>",
+        "commit_message": "Backed out 7 changesets (bug 1516568) for Docker and Toolchain failures. CLOSED TREE\n\nBacked out changeset 79120d13e713 (bug 1516568)\nBacked out changeset 028c0ed368b8 (bug 1516568)\nBacked out changeset f06721b552a8 (bug 1516568)\nBacked out changeset ee403c79877e (bug 1516568)\nBacked out changeset 8990eef6c31e (bug 1516568)\nBacked out changeset f6413e576a21 (bug 1516568)\nBacked out changeset e9f887f489e5 (bug 1516568)",
+        "files_changed": [
+          "gfx/wr/Cargo.lock",
+          "gfx/wr/ci-scripts/macos-debug-tests.sh",
+          "gfx/wr/ci-scripts/macos-release-tests.sh",
+          "gfx/wr/wrench/reftests/text/reftest.list",
+          "gfx/wr/wrench/script/headless.py",
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/scripts/misc/wr-cargotest-macos-build.sh",
+          "taskcluster/scripts/misc/wr-macos-cross-build-setup.sh",
+          "taskcluster/scripts/misc/wrench-macos-build.sh",
+          "taskcluster/scripts/run-task",
+          "taskcluster/taskgraph/transforms/job/run_task.py"
+        ]
+      },
+      "35": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=66b4b0400dfd",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Allow run-task jobs on docker-worker to use internal tooltool downloads. r=ahal\n\nThis code already exists for other (non-run-task jobs) on docker worker,\nso this patch just reuses the existing code but adds a bit to the\nrun-task schema to allow the task to opt in.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19365",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/run_task.py"
+        ]
+      },
+      "36": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a7506a49e09b",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Provide path to python executable when invoking fetch-content script. r=ahal\n\nThe shebang at the top of fetch-content doesn't work on macOS because\nthe path to python3 is not /usr/bin. Using /usr/bin/env doesn't work\nproperly on all platforms either so instead we invoke the script using\nthe currently running python executable.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19744",
+        "files_changed": [
+          "taskcluster/scripts/run-task"
+        ]
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9c70d8c9a318",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Add jobs to cross-compile wrench and use the resulting binaries. r=glandium\n\nOne job (which runs on a Linux docker worker) cross compiles wrench in\ntwo configurations (regular and headless) and publishes artifacts with\nthe binaries. The other job (which runs on macOS) downloads the\nartifacts and uses them to run the WebRender macOS CI release-mode\nscripts, which basically consists of running the WebRender reftest\nsuite.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19369",
+        "files_changed": [
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/scripts/misc/wr-macos-cross-build-setup.sh",
+          "taskcluster/scripts/misc/wrench-macos-build.sh"
+        ]
+      },
+      "41": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5118be1ae898",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1516568 - Add jobs to cross-compile cargo test binaries and run them on macOS. r=glandium\n\nSimilar to the previous patch, this adds two jobs. One that\ncross-compiles the binaries produced by `cargo test` and publishes them\nas an artifact. The other job downloads the artifact and runs the\nresulting binaries.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19370",
+        "files_changed": [
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/scripts/misc/wr-cargotest-macos-build.sh"
+        ]
+      }
+    }
+  },
+  "85": {
+    "changeset_number": "35561",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-02-15 20:37:54",
+    "changeset_commits": {
+      "16": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2e6a0be2fb27",
+        "commiter_name": "Henrik Skupin <mail@hskupin.info>",
+        "commit_message": "Bug 1520175 - [marionette] Use \"preflight_run_cmd_suites\" in mozharness config. r=jmaher,gbrown\n\nWhen running Marionette tests in Taskcluster a default window size\nper platform has to be set. Further no screen saver, nor notifications\nshould be active which could interfere with the focus of the\napplication. Further there is no need to display the taskbar too.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17156",
+        "files_changed": [
+          "testing/mozharness/configs/marionette/mac_taskcluster_config.py",
+          "testing/mozharness/configs/marionette/prod_config.py",
+          "testing/mozharness/configs/marionette/windows_taskcluster_config.py"
+        ]
+      },
+      "51": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ac36d71cc317",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1527138: Remove references to old taskcluster worker types r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19445",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/mach.py",
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/job/run_task.py",
+          "taskcluster/taskgraph/transforms/task.py",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      }
+    }
+  },
+  "86": {
+    "changeset_number": "35562",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-02-15 20:40:35",
+    "changeset_commits": {
+      "76": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ac41d41f0494",
+        "commiter_name": "J.C. Jones <jc@mozilla.com>",
+        "commit_message": "Bug 1523175 - land NSS b7713856ebf2 UPGRADE_NSS_RELEASE, r=me",
+        "files_changed": [
+          "old-configure.in",
+          "security/nss/.taskcluster.yml",
+          "security/nss/TAG-INFO",
+          "security/nss/automation/abi-check/expected-report-libnss3.so.txt",
+          "security/nss/automation/release/nspr-version.txt",
+          "security/nss/automation/taskcluster/docker-decision/Dockerfile",
+          "security/nss/automation/taskcluster/graph/npm-shrinkwrap.json",
+          "security/nss/automation/taskcluster/graph/src/index.js",
+          "security/nss/automation/taskcluster/graph/src/try_syntax.js",
+          "security/nss/coreconf/coreconf.dep",
+          "security/nss/gtests/ssl_gtest/ssl_recordsize_unittest.cc",
+          "security/nss/lib/cryptohi/sechash.c",
+          "security/nss/lib/cryptohi/sechash.h",
+          "security/nss/lib/nss/nss.def",
+          "security/nss/lib/ssl/ssl3exthandle.c"
+        ]
+      }
+    }
+  },
+  "87": {
+    "changeset_number": "35563",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-02-16 11:36:04",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6fbfc8bc2388",
+        "commiter_name": "jmaher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1522111 - disable opt builds/tests when we have pgo builds/tests for integration branches. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18104",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cc97d772a8db",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Make -qr tests depend on -pgo where applicable, leaving old -qr sets in place. r=gbrown\n\nAlso set the run-on-projects for various tests to be central/try when opt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19742",
+        "files_changed": [
+          "taskcluster/ci/source-test/kind.yml",
+          "taskcluster/ci/test/misc.yml",
           "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/talos.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/web-platform.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c10783ea070b",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - fix SETA to account for new tests, so we still filter them out even if SETA data doesn't include them. r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19838",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=14e9ed41b8be",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Make l10n kind depend on -pgo where available instead of opt. r=tomprince\n\nThis avoids opt being pulled in even when l10n is optimized out\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19840",
+        "files_changed": [
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/repackage-signing/kind.yml",
+          "taskcluster/ci/repackage/kind.yml",
+          "taskcluster/taskgraph/loader/build_signing.py",
+          "taskcluster/taskgraph/transforms/l10n.py",
+          "taskcluster/taskgraph/transforms/repackage.py",
+          "taskcluster/taskgraph/transforms/repackage_signing.py"
+        ]
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b64fc884fc84",
+        "commiter_name": "Florin Strugariu <bebe@mozilla.ro>",
+        "commit_message": "Bug 1508379 Add BinAST version of Instagram to tp6 r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18824",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
           "taskcluster/ci/test/test-sets.yml",
-          "testing/mochitest/runtestsremote.py",
-          "toolkit/components/extensions/test/mochitest/mochitest-common.ini",
-          "toolkit/components/passwordmgr/test/mochitest/mochitest.ini",
-          "uriloader/exthandler/tests/mochitest/mochitest.ini"
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-binast-instagram.manifest",
+          "testing/raptor/raptor/raptor.ini",
+          "testing/raptor/raptor/tests/raptor-tp6-binast-1.ini"
+        ]
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aa6103c8ef0f",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Followup, ensure test sets align between opt and pgo. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19968",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml"
+        ]
+      },
+      "65": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6a145b0bf8e4",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out 5 changesets (bug 1522111) for breaking windows opt wpts\n\nBacked out changeset aa6103c8ef0f (bug 1522111)\nBacked out changeset 14e9ed41b8be (bug 1522111)\nBacked out changeset c10783ea070b (bug 1522111)\nBacked out changeset cc97d772a8db (bug 1522111)\nBacked out changeset 6fbfc8bc2388 (bug 1522111)",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/repackage-signing/kind.yml",
+          "taskcluster/ci/repackage/kind.yml",
+          "taskcluster/ci/source-test/kind.yml",
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/talos.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/web-platform.yml",
+          "taskcluster/taskgraph/loader/build_signing.py",
+          "taskcluster/taskgraph/transforms/l10n.py",
+          "taskcluster/taskgraph/transforms/repackage.py",
+          "taskcluster/taskgraph/transforms/repackage_signing.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      }
+    }
+  },
+  "88": {
+    "changeset_number": "35564",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-02-16 11:37:16",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cdefcc66972a",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1527798 - Upgrade toolchain tasks using MSVC to 15.8.4. r=froydnj\n\nIt turns out version 15.4.2 spawns a vctip process that sticks after the\nbuild, and since bug 1527798, that breaks unmounting caches because the\nprocess has a handle on msvcp140.dll, which lies in the source\ndirectory. The problem goes away with 15.8.4, so upgrade all toolchain\ntasks to that.\n\nThat's the same version as we're using on x86/x86-64 MSVC builds.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19752\n",
+        "files_changed": [
+          "browser/config/tooltool-manifests/win32/build-clang-cl.manifest",
+          "browser/config/tooltool-manifests/win32/gn-build.manifest",
+          "browser/config/tooltool-manifests/win64/sccache-build.manifest",
+          "taskcluster/scripts/misc/build-cbindgen.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper64.sh",
+          "taskcluster/scripts/misc/build-gn-win32.sh",
+          "taskcluster/scripts/misc/build-grcov.sh",
+          "taskcluster/scripts/misc/build-rust-size.sh",
+          "taskcluster/scripts/misc/build-sccache.sh"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1527e2d84ff9",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1527798 - Kill mspdbsrv at the end of gn build. r=froydnj\n\nIt keeps running and prevents the worker from unmounting, failing the\ntask.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19910\n",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-gn-win32.sh"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ac565cc75295",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1431523 - Use docker images for debian package tasks. r=dustin\n\nWe however leave moving the packages building to a script for another\nday.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19624",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/docker/debian-packages/Dockerfile",
+          "taskcluster/docker/debian-raw/Dockerfile",
+          "taskcluster/docker/debian-raw/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-raw/setup_packages.sh",
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0605b508a2c6",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528150 - Build gn from https://gn.googlesource.com/gn/. r=froydnj\n\nMake some adjustments to make the build work:\n- On Linux, a newer GCC is needed, and -lrt is missing for\n  clock_gettime.\n- On Mac, ninja expect AR be accept ar arguments, which clang doesn't,\n  so use llvm-ar.\n- On Windows, remove the /WX flag that upstream sets (warnings as\n  errors) because there _are_ warnings in the code, and remove the\n  explicit /MACHINE:x64 linker flag because we're building for x86.\n  (we could build for x64, but I'd rather leave that to a followup)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19911\n",
+        "files_changed": [
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/scripts/misc/build-gn-common.sh",
+          "taskcluster/scripts/misc/build-gn-linux.sh",
+          "taskcluster/scripts/misc/build-gn-macosx.sh",
+          "taskcluster/scripts/misc/gn.patch"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=02bef0e09a3c",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Backout changesets cdefcc66972a, 1527e2d84ff9 (bug 1527798), ac565cc75295 (bug 1431523) and 0605b508a2c6 (bug 1528150)\n\nto give time to docker images and toolchains to build.\n",
+        "files_changed": [
+          "browser/config/tooltool-manifests/win32/build-clang-cl.manifest",
+          "browser/config/tooltool-manifests/win32/gn-build.manifest",
+          "browser/config/tooltool-manifests/win64/sccache-build.manifest",
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/docker/debian-packages/Dockerfile",
+          "taskcluster/docker/debian-raw/Dockerfile",
+          "taskcluster/docker/debian-raw/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-raw/setup_packages.sh",
+          "taskcluster/scripts/misc/build-cbindgen.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper64.sh",
+          "taskcluster/scripts/misc/build-gn-common.sh",
+          "taskcluster/scripts/misc/build-gn-linux.sh",
+          "taskcluster/scripts/misc/build-gn-macosx.sh",
+          "taskcluster/scripts/misc/build-gn-win32.sh",
+          "taskcluster/scripts/misc/build-grcov.sh",
+          "taskcluster/scripts/misc/build-rust-size.sh",
+          "taskcluster/scripts/misc/build-sccache.sh",
+          "taskcluster/scripts/misc/gn.patch",
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
+        ]
+      },
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=09ba3e3539e8",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1527798 - Upgrade toolchain tasks using MSVC to 15.8.4. r=froydnj\n\nIt turns out version 15.4.2 spawns a vctip process that sticks after the\nbuild, and since bug 1527798, that breaks unmounting caches because the\nprocess has a handle on msvcp140.dll, which lies in the source\ndirectory. The problem goes away with 15.8.4, so upgrade all toolchain\ntasks to that.\n\nThat's the same version as we're using on x86/x86-64 MSVC builds.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19752\n",
+        "files_changed": [
+          "browser/config/tooltool-manifests/win32/build-clang-cl.manifest",
+          "browser/config/tooltool-manifests/win32/gn-build.manifest",
+          "browser/config/tooltool-manifests/win64/sccache-build.manifest",
+          "taskcluster/scripts/misc/build-cbindgen.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper64.sh",
+          "taskcluster/scripts/misc/build-gn-win32.sh",
+          "taskcluster/scripts/misc/build-grcov.sh",
+          "taskcluster/scripts/misc/build-rust-size.sh",
+          "taskcluster/scripts/misc/build-sccache.sh"
+        ]
+      },
+      "25": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=446683e9ed32",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1527798 - Kill mspdbsrv at the end of gn build. r=froydnj\n\nIt keeps running and prevents the worker from unmounting, failing the\ntask.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19910\n",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-gn-win32.sh"
+        ]
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fd0b6ef065d0",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1431523 - Use docker images for debian package tasks. r=dustin\n\nWe however leave moving the packages building to a script for another\nday.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19624",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/docker/debian-packages/Dockerfile",
+          "taskcluster/docker/debian-raw/Dockerfile",
+          "taskcluster/docker/debian-raw/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-raw/setup_packages.sh",
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
+        ]
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e7698adc8e90",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528150 - Build gn from https://gn.googlesource.com/gn/. r=froydnj\n\nMake some adjustments to make the build work:\n- On Linux, a newer GCC is needed, and -lrt is missing for\n  clock_gettime.\n- On Mac, ninja expect AR be accept ar arguments, which clang doesn't,\n  so use llvm-ar.\n- On Windows, remove the /WX flag that upstream sets (warnings as\n  errors) because there _are_ warnings in the code, and remove the\n  explicit /MACHINE:x64 linker flag because we're building for x86.\n  (we could build for x64, but I'd rather leave that to a followup)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19911\n",
+        "files_changed": [
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/scripts/misc/build-gn-common.sh",
+          "taskcluster/scripts/misc/build-gn-linux.sh",
+          "taskcluster/scripts/misc/build-gn-macosx.sh",
+          "taskcluster/scripts/misc/gn.patch"
+        ]
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d9b2f663c85b",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528155 - Use sparse profiles in Windows toolchain tasks. r=tomprince\n\nAlso fix support_vcs_checkout call for docker-image based toolchain\ntasks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19912\n",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/toolchain.py"
+        ]
+      },
+      "32": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c5cddbea80c9",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Backout changeset d9b2f663c85b (bug 1528155) to leave time to toolchain jobs to run.\n",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/toolchain.py"
+        ]
+      },
+      "37": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7ab4a0c9980f",
+        "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
+        "commit_message": "Merge inbound to mozilla-central a=merge",
+        "files_changed": [
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/scripts/misc/gn.patch",
+          "testing/web-platform/meta/css/css-scroll-anchoring/ancestor-change-heuristic.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/anchoring-with-bounds-clamping.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/basic.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/descend-into-container-with-float.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/descend-into-container-with-overflow.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/exclude-fixed-position.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/inline-block.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/position-change-heuristic.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/start-edge-in-block-layout-direction.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/subtree-exclusion.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/wrapped-text.html.ini",
+          "testing/web-platform/meta/css/mediaqueries/prefers-color-scheme.html.ini"
+        ]
+      }
+    }
+  },
+  "89": {
+    "changeset_number": "35565",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-02-16 23:45:13",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=939d6ac72fed",
+        "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland a=merge",
+        "files_changed": [
+          "taskcluster/docker/debian-base/cloud-mirror-workaround.sh",
+          "taskcluster/docker/debian-base/setup_packages.sh",
+          "taskcluster/scripts/misc/gn.patch",
+          "testing/web-platform/meta/css/css-scroll-anchoring/ancestor-change-heuristic.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/anchoring-with-bounds-clamping.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/basic.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/descend-into-container-with-float.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/descend-into-container-with-overflow.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/exclude-fixed-position.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/inline-block.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/position-change-heuristic.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/start-edge-in-block-layout-direction.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/subtree-exclusion.html.ini",
+          "testing/web-platform/meta/css/css-scroll-anchoring/wrapped-text.html.ini",
+          "testing/web-platform/meta/css/mediaqueries/prefers-color-scheme.html.ini"
+        ]
+      }
+    }
+  },
+  "90": {
+    "changeset_number": "35566",
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-02-17 12:48:12",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0daaa7d0b092",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1528380 - Add nasm dependency to searchfox Windows jobs. r=TD-Linux\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20003",
+        "files_changed": [
+          "taskcluster/ci/searchfox/kind.yml"
+        ]
+      }
+    }
+  },
+  "91": {
+    "changeset_number": "35568",
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-02-17 23:45:56",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b759c45d1f01",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "No bug - Disable caches on Windows toolchain tasks\n",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/toolchain.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=834d38825814",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528155 - Use sparse profiles in Windows toolchain tasks. r=tomprince\n\nAlso fix support_vcs_checkout call for docker-image based toolchain\ntasks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19912\n",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/toolchain.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d6a48567ce7f",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Backout changeset 834d38825814 (bug 1528155) and b759c45d1f01 to give time to toolchains to build.\n",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/toolchain.py"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f3f129f835f1",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "No bug - Disable caches on Windows toolchain tasks. r=me\n",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/toolchain.py"
+        ]
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a4d10484972a",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528155 - Use sparse profiles in Windows toolchain tasks. r=tomprince\n\nAlso fix support_vcs_checkout call for docker-image based toolchain\ntasks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19912\n",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/toolchain.py"
+        ]
+      }
+    }
+  },
+  "92": {
+    "changeset_number": "35572",
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-02-18 23:43:34",
+    "changeset_commits": {
+      "43": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4432cc596377",
+        "commiter_name": "Joey <joseph.bomber@gmail.com>",
+        "commit_message": "Bug 1504339 - Use tarfile context manager in extract_tarball. r=marco\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20116",
+        "files_changed": [
+          "testing/mozharness/mozfile/mozfile.py"
+        ]
+      },
+      "48": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c590fd06f7cb",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20131",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      }
+    }
+  },
+  "93": {
+    "changeset_number": "35574",
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-02-19 06:38:09",
+    "changeset_commits": {
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0734f7d57cd8",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1526584: [win64-aarch64] Add paths to balrog for win64-aarch64 release builds; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19993",
+        "files_changed": [
+          "taskcluster/ci/release-balrog-submit-toplevel/kind.yml",
+          "taskcluster/ci/release-secondary-balrog-submit-toplevel/kind.yml"
+        ]
+      }
+    }
+  },
+  "94": {
+    "changeset_number": "35580",
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-02-20 06:03:23",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4d3c12d6fd14",
+        "commiter_name": "jmaher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1522111 - disable opt builds/tests when we have pgo builds/tests for integration branches. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18104",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=85456690910d",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Make -qr tests depend on -pgo where applicable, leaving old -qr sets in place. r=gbrown,jmaher,kats\n\nAlso set the run-on-projects for various tests to be central/try when opt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19742",
+        "files_changed": [
+          "taskcluster/ci/source-test/kind.yml",
+          "taskcluster/ci/test/awsy.yml",
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/talos.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/web-platform.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=96f074966007",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - fix SETA to account for new tests, so we still filter them out even if SETA data doesn't include them. r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19838",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=176bccfac2c7",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Make l10n kind depend on -pgo where available instead of opt. r=tomprince\n\nThis avoids opt being pulled in even when l10n is optimized out\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19840",
+        "files_changed": [
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/repackage-signing/kind.yml",
+          "taskcluster/ci/repackage/kind.yml",
+          "taskcluster/taskgraph/loader/build_signing.py",
+          "taskcluster/taskgraph/transforms/l10n.py",
+          "taskcluster/taskgraph/transforms/repackage.py",
+          "taskcluster/taskgraph/transforms/repackage_signing.py"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d3e2e32d61ea",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Followup, ensure test sets align between opt and pgo. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19968",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml"
+        ]
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e2c779112d08",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Followup, Use better SETA transformation which reads high value list and applies opt high value tests to heuristics to prevent them from being optimized out on pgo. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20045",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2b107d251cf5",
+        "commiter_name": "Henrik Skupin <mail@hskupin.info>",
+        "commit_message": "Bug 1527842 - [web-platform-tests] Use \"preflight_run_cmd_suites\" in mozharness config. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20320",
+        "files_changed": [
+          "taskcluster/ci/test/web-platform.yml",
+          "testing/mozharness/configs/web_platform_tests/prod_config.py",
+          "testing/mozharness/configs/web_platform_tests/prod_config_mac.py",
+          "testing/mozharness/configs/web_platform_tests/prod_config_windows.py",
+          "testing/mozharness/configs/web_platform_tests/prod_config_windows_taskcluster.py"
+        ]
+      }
+    }
+  },
+  "95": {
+    "changeset_number": "35581",
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-02-20 06:05:40",
+    "changeset_commits": {
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c0dc998686a9",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1519816 - Simplify build-custom-v8 script and avoid installing packages during build. r=sparky\n\nThe build script currently is doing some unnecessary steps:\n- Running `gclient` only prints out an help message. It is a step\nindicated in various documentations, but is only necessary to keep\ndepot-tools up-to-date, which they are, since we just cloned it.\n- The `fetch v8` command creates a v8 directory, no need to create\nanother layer.\n- `gclient sync` is run as part of `fetch`. Same as `gclient`, this step\nis only given in documentations to keep things up-to-date on an existing\nclone, but we just freshly got one.\n- Same goes for `git pull && gclient sync`\n- `git checkout master` is not necessary, as `fetch` gets us there\nalready (albeit, in a detached head state)\n- install-build-deps.sh installs build dependencies for chrome or\nwhatever. That's way too much for v8, that barely needs pkg-config and\nglib, which we now install in the docker image.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20082\n",
+        "files_changed": [
+          "taskcluster/docker/custom-v8/Dockerfile",
+          "taskcluster/scripts/misc/build-custom-v8.sh"
+        ]
+      },
+      "32": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ffb4365dbec5",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528123 - Allow artifact builds to pull from a specific taskid. r=chmanchester\n\nCurrently, artifact builds pull from some task they determine from the\njob type, and finding a pushhead.\n\nSometimes that latter fails, most notably on automation. But automation\ncan already know the right task to use without guesswork.\n\nThis change allows artifact builds to pull from a specific taskid given\nthrough an environment variable, and make tasks from the artifact-build\nkind (not the --artifact builds from try) use that.\n\nRemove the workaround from bug 1382982 because it's now dead code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19881\n",
+        "files_changed": [
+          "python/mozbuild/mozbuild/artifacts.py",
+          "taskcluster/ci/artifact-build/kind.yml"
+        ]
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=926507b65050",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528900 - Remove sccache dependencies from nightly builds. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20299\n",
+        "files_changed": [
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "41": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2a74c17e7363",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1528900 - Actively prevent nightly tasks from depending on sccache. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20300\n",
+        "files_changed": [
+          "taskcluster/taskgraph/util/verify.py"
+        ]
+      },
+      "42": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bf3951daded0",
+        "commiter_name": "Daniel Varga <dvarga@mozilla.com>",
+        "commit_message": "Merge mozilla-inbound to mozilla-central. a=merge",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      }
+    }
+  },
+  "96": {
+    "changeset_number": "35582",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-02-21 05:41:50",
+    "changeset_commits": {
+      "35": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=872914c3d0b9",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1527066: Add new ConsoleLogger type, and make it the default r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19408",
+        "files_changed": [
+          "testing/mozharness/configs/l10n_bumper/jamun.py",
+          "testing/mozharness/configs/l10n_bumper/mozilla-beta.py",
+          "testing/mozharness/configs/l10n_bumper/mozilla-central.py",
+          "testing/mozharness/mozharness/base/log.py",
+          "testing/mozharness/mozharness/base/script.py"
+        ]
+      },
+      "54": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fe259096e7ed",
+        "commiter_name": "David Major <dmajor@mozilla.com>",
+        "commit_message": "Bug 1529033 - Update gn build to pick up MSVC /WX fix r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20375",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-gn-common.sh"
+        ]
+      },
+      "56": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5f8330e12825",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Backed out changeset fe259096e7ed (bug 1529033) for failing toolchains on a CLOSED TREE",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-gn-common.sh"
+        ]
+      },
+      "71": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=eca15205ecb1",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1528427: Optimize tasks scheduled with try syntax r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20403",
+        "files_changed": [
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/test/test_decision.py"
+        ]
+      },
+      "75": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f4bd1f216081",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1522111 - Followup, improve SETA algorithm a bit more by treating opt low value as low value for pgo as well. Unless there is a high value task to override. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20390",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      }
+    }
+  },
+  "97": {
+    "changeset_number": "35584",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-02-21 11:28:57",
+    "changeset_commits": {
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6939a3b5e2e4",
+        "commiter_name": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1529339 - replace test-provisioner with permanent bitbar provisioner id r=jmaher\n\nChanges:\n\n- replaced existing references to `test-provisioner/bitbar` with `bitbar/gecko-t-win10-aarch64` (proposed permanent provisioner-id)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20536",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/tests.py",
+          "taskcluster/taskgraph/util/workertypes.py"
+        ]
+      }
+    }
+  },
+  "98": {
+    "changeset_number": "35587",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-02-21 17:56:54",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ddb817eed3bc",
+        "commiter_name": "Dan Minor <dminor@mozilla.com>",
+        "commit_message": "Bug 1513000 - Updates to mozharness openh264 scripts and configs; r=callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19817",
+        "files_changed": [
+          "testing/mozharness/configs/openh264/android-aarch64.py",
+          "testing/mozharness/configs/openh264/android-arm.py",
+          "testing/mozharness/configs/openh264/android-x86.py",
+          "testing/mozharness/configs/openh264/android-x86_64.py",
+          "testing/mozharness/configs/openh264/linux32.py",
+          "testing/mozharness/configs/openh264/linux64.py",
+          "testing/mozharness/configs/openh264/macosx64.py",
+          "testing/mozharness/configs/openh264/tooltool-manifests/android.manifest",
+          "testing/mozharness/configs/openh264/tooltool-manifests/osx.manifest",
+          "testing/mozharness/configs/openh264/tooltool-manifests/win.manifest",
+          "testing/mozharness/configs/openh264/win32.py",
+          "testing/mozharness/configs/openh264/win64.py",
+          "testing/mozharness/scripts/openh264_build.py"
+        ]
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=471db22054e7",
+        "commiter_name": "Dan Minor <dminor@mozilla.com>",
+        "commit_message": "Bug 1513000 - Add taskcluster configuration for building openh264 plugin; r=callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19818",
+        "files_changed": [
+          "taskcluster/ci/openh264-plugin/kind.yml",
+          "taskcluster/docs/kinds.rst"
+        ]
+      }
+    }
+  },
+  "99": {
+    "changeset_number": "35588",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-02-21 17:59:59",
+    "changeset_commits": {
+      "20": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=897cb0bac95e",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: [taskgraph] Change scheduler-id to include the trust-domain; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20048",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/add_new_jobs.py",
+          "taskcluster/taskgraph/actions/add_talos.py",
+          "taskcluster/taskgraph/actions/backfill.py",
+          "taskcluster/taskgraph/actions/create_interactive.py",
+          "taskcluster/taskgraph/actions/gecko_profile.py",
+          "taskcluster/taskgraph/actions/retrigger.py",
+          "taskcluster/taskgraph/actions/run_missing_tests.py",
+          "taskcluster/taskgraph/actions/util.py",
+          "taskcluster/taskgraph/create.py",
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/test/test_create.py"
+        ]
+      },
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=424f97dc01db",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: [taskgraph] Use trust-domain prefixed caches; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20049",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/docker_image.py",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/run_task.py",
+          "taskcluster/taskgraph/transforms/job/spidermonkey.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
+  },
+  "100": {
+    "changeset_number": "35596",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-02-23 06:13:22",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=abcb8be12adf",
+        "commiter_name": "Byron Campen [:bwc] <docfaraday@gmail.com>",
+        "commit_message": "Bug 1521879 - Part 7: Create new CI jobs for media mochitests with socket process enabled. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17942",
+        "files_changed": [
+          "dom/media/tests/mochitest/mochitest.ini",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mochitest/runtests.py"
+        ]
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d73453c15f88",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1529781 - Increase test chunks for linux64 jsreftests; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20777",
+        "files_changed": [
+          "taskcluster/ci/test/reftest.yml"
+        ]
+      },
+      "61": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a19e904c615c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Switch default for actions from `task` to `hook`; r=Callek\n\nSupport for `kind='task'` is still around to support Thunderbird release\npromotion, which uses releaserunner3. Other actions shouldn't be using it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20842",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/add_new_jobs.py",
+          "taskcluster/taskgraph/actions/add_talos.py",
+          "taskcluster/taskgraph/actions/backfill.py",
+          "taskcluster/taskgraph/actions/cancel.py",
+          "taskcluster/taskgraph/actions/cancel_all.py",
+          "taskcluster/taskgraph/actions/create_interactive.py",
+          "taskcluster/taskgraph/actions/gecko_profile.py",
+          "taskcluster/taskgraph/actions/purge_caches.py",
+          "taskcluster/taskgraph/actions/registry.py",
+          "taskcluster/taskgraph/actions/release_promotion.py",
+          "taskcluster/taskgraph/actions/rerun.py",
+          "taskcluster/taskgraph/actions/retrigger.py",
+          "taskcluster/taskgraph/actions/retrigger_mochitest.py",
+          "taskcluster/taskgraph/actions/run_missing_tests.py"
+        ]
+      },
+      "62": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2238d806904d",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Remove obsolete documetation about action tasks; r=Callek\n\nSupport for them was removed in Bug 1415868 (a891a10ca4d9).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20843",
+        "files_changed": [
+          "taskcluster/docs/actions.rst"
+        ]
+      },
+      "63": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=be65446f94a5",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Update action documentation to have correct imports; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20845",
+        "files_changed": [
+          "taskcluster/docs/actions.rst"
+        ]
+      },
+      "64": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d62b974d529c",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529948: Fix refernce to `mach test-action-callback`; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20846",
+        "files_changed": [
+          "taskcluster/docs/actions.rst"
+        ]
+      },
+      "82": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b892c1e3909f",
+        "commiter_name": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1520523 - Update Raptor Chromium rev; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20814",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/testing/raptor.py",
+          "testing/raptor/raptor/raptor.py",
+          "testing/raptor/raptor/tests/raptor-tp6-3.ini"
         ]
       },
       "87": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=de25d2f1abef",
-        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1505538 - Release x86_64 Fennec Nightly in the Google Play Store r=mtabara\n\nRelease x86_64 Fennec Nightly in the Google Play Store\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19534",
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e89b6e3d3de8",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1520163 - Add linux64-nasm toolchain. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20037",
         "files_changed": [
-          "taskcluster/taskgraph/loader/push_apk.py",
-          "taskcluster/taskgraph/transforms/push_apk.py"
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
         ]
       },
-      "109": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1af69c96ec5f",
-        "commiter_name": "Razvan Maries <rmaries@mozilla.com>",
-        "commit_message": "Merge mozilla-central to autoland. a=merge on a CLOSED TREE",
+      "96": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4978133d6226",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out changeset e89b6e3d3de8 (bug 1520163) for profile-guided optimization builds bustage CLOSED TREE",
         "files_changed": [
-          "js/src/frontend/BytecodeEmitter.cpp",
-          "js/src/shell/js.cpp",
-          "taskcluster/ci/test/test-sets.yml",
-          "toolkit/xre/nsAppRunner.cpp"
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
         ]
       },
-      "119": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e7603feb2252",
-        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
-        "commit_message": "Bug 1527118: Ensure all tests are using tooltool caches r=aki\n\nrespect TOOLTOOL_CACHE environment variable in mixin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19444",
+      "102": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e9e880f7aee4",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1520163 - Add linux64-nasm toolchain. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20037",
         "files_changed": [
-          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
-          "taskcluster/taskgraph/transforms/tests.py",
-          "testing/mozharness/mozharness/mozilla/tooltool.py"
+          "build/mozconfig.nasm",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/static-analysis-autotest/kind.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/ci/valgrind/kind.yml",
+          "taskcluster/scripts/misc/build-nasm.sh"
+        ]
+      },
+      "110": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bd636f4cd2a4",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1528405 - Increase max-run-time for some linux builds; r=jmaher\n\nIncrease max-run-time to avoid intermittent task timeouts.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20882",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "113": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5612534374b4",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: Use secrets from taskcluster for windows builds; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20849",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "125": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=136df62ef081",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out changeset 5612534374b4 (bug 1529921) for causing build bustages CLOSED TREE",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "127": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fea99e80e861",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: Use secrets from taskcluster for windows builds; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20849",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      },
+      "128": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1c9d01a6fbb8",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1529921: Pass `scm_level` to mozharness tasks on windows; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20893",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "140": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7a18c5eda62a",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1529921) due to a high probability of breaking nightlies CLOSED TREE\n\nBacked out changeset 1c9d01a6fbb8 (bug 1529921)\nBacked out changeset fea99e80e861 (bug 1529921)",
+        "files_changed": [
+          "browser/config/mozconfigs/win32/common-opt",
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "browser/config/mozconfigs/win64/common-opt",
+          "browser/config/mozconfigs/win64/nightly-asan-reporter",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/taskgraph/transforms/job/common.py",
+          "taskcluster/taskgraph/transforms/job/hazard.py",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py"
+        ]
+      }
+    }
+  },
+  "101": {
+    "changeset_number": "35599",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-02-23 23:38:35",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6e669b1b1835",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1500941 - Add searchfox task for Android (ARMv7/API16). r=nalexander\n\nThe bulk of this is copy/pasted from a standard android-api-16 debug\nbuild. The only changes are a few extra environment variables in the\ntaskcluster config, the subconfig file, and the mozconfig, as well as\nthe --enable-mozsearch-plugin flag in the mozconfig.\n\nDepends on D20766\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20767",
+        "files_changed": [
+          "mobile/android/config/mozconfigs/android-api-16/debug-searchfox",
+          "taskcluster/ci/searchfox/kind.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_debug_searchfox.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10ffd49d0adf",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1500941 - Enable Android searchfox job as part of the daily cron. r=emilio\n\nDepends on D20767\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20768",
+        "files_changed": [
+          "taskcluster/taskgraph/target_tasks.py"
         ]
       }
     }
