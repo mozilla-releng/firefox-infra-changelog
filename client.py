@@ -18,11 +18,11 @@ from fic_modules.markdown_modules import generate_main_md_table
 @click.command()
 @click.option('-g', '--git', is_flag=True, flag_value='git',
               help='Run only for GIT repos')
-@click.option('-hg', '--hg', is_flag=True, flag_value='hg',
+@click.option('-hg', '--mercurial', is_flag=True, flag_value='hg',
               help='Run only for HG repos')
 @click.option('-l', '--logger', is_flag=True, flag_value='logger',
               help='Display logger')
-@click.option('-m', '--multiple', is_flag=True, flag_value='multiple',
+@click.option('-m', '--manual', is_flag=True, flag_value='multiple',
               help='Let you choose for which repositories the script will run')
 @click.option('-a', '--all', is_flag=True, flag_value='all',
               help='Run for all currently available repositories')
