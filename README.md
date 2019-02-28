@@ -25,7 +25,7 @@ Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox
 | -g | --git  | Runs script only for repos that are on GitHub                              |
 | -hg | --mercurial   | Runs script only for repos that are on Mercurial                           |
 | -m | --manual    | Let the user choose for which repositories the script will run             |
-
+| -l | --logger    | Activate logger output in the console             |
 
 
 # Contributors
