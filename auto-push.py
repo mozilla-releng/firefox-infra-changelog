@@ -11,8 +11,8 @@ try:
     subprocess.call(['git', 'add', 'git_files/', 'hg_files/', 'LOG.log',
                      'changelog.md', 'changelog.json'])
     commit_message = "Changelog:  " + str(datetime.utcnow()) + \
-                     "\n - updated git files \n - updated hg files \n " \
-                     "- updated main_md_table"
+                     "\n- updated git files \n- updated hg files" \
+                     "\n- updated changelog.md \n- updated changelog.json"
     subprocess.call(['git', 'commit', '-m', commit_message])
     subprocess.call(['git', 'push', '--set-upstream', 'origin', branch_name])
     subprocess.call(['git', 'push'])
