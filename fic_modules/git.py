@@ -178,30 +178,9 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
             for scriptworkers in pathway:
                 LOGGER.info("checking repo:{} ".format(scriptworkers))
                 if entry in pathway[scriptworkers]:
-                    LOGGER.debug(scriptworkers, " needs to be checked.")
-                    scriptworker_repo = scriptworkers
-                    version_path = REPOSITORIES.get("Github") \
-                        .get("build-puppet") \
-                        .get("configuration") \
-                        .get("files-to-check") \
-                        .get(scriptworker_repo)
-                    latest_releases = get_version(scriptworker_repo,
-                                                  repository_team)
-                    version_comparison_result = compare_versions(
-                        version_path,
-                        scriptworker_repo,
-                        latest_releases)
-
-                    if version_comparison_result:
-                        switch = True
-                        new_scriptworker_dict = filter_git_scriptworkers(
-                            latest_releases,
-                            repository_team,
-                            scriptworker_repo)
-                        json_writer_git(scriptworker_repo,
-                                        new_scriptworker_dict)
-                    else:
-                        LOGGER.info("No new changes entered production")
+                    LOGGER.debug("This commit needs to be saved")
+                    switch = True
+                    break
         if switch:
             number += 1
             each_commit.update({int(number): get_commit_details(commit)})
