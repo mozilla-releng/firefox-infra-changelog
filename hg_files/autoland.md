@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 79146
+ CURRENT PUSH ID: 79226
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -1123,6 +1123,7 @@
 |79027|2019-02-26 18:14:35|Rob Wood <rwood@mozilla.com>|Bug 1529081 - Promote Raptor speedometer fennec to tier 2; r=BebeDifferential Revision: https://phabricator.services.mozilla.com/D21013|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a6f2f28d8d67
 |79101|2019-02-27 06:36:23|Bob Clary <bclary@bclary.com>|Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8fcd04c595a9
 |79116|2019-02-27 14:16:41|Chris AtLee <catlee@mozilla.com>|Bug 1527394: Remove unneeded packages/files in the test image r=jmaherDepends on D19541Differential Revision: https://phabricator.services.mozilla.com/D19542|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bec37c9a80b9
-|79134|2019-02-27 17:24:56|James Willcox <snorp@snorp.net>|Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D19015|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=51efc5e08cee
+|79163|2019-02-27 21:18:45|James Willcox <snorp@snorp.net>|Bug 1525959 - Only run mochitest-e10s on GeckoView opt builds r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D21405|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e767399d23cc
+|79191|2019-02-28 01:01:21|Steve Fink <sfink@mozilla.com>|Bug 1527777 - Apply change to Windows jobs too r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D21299|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=87929b2bb5d1
 
 

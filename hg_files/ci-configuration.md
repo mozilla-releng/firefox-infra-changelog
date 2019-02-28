@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 75
+ CURRENT PUSH ID: 78
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -51,6 +51,9 @@
 |70|2019-02-19 22:21:04|Dustin J. Mitchell <dustin@mozilla.com>|Bug 1528216: Add scope to create task on gce/opt-linux64 r=wcosta,tomprinceThis worker type runs on GCP for build tests.Differential Revision: https://phabricator.services.mozilla.com/D19938|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=cf809c97d1bf
 |73|2019-02-25 18:46:56|Tom Prince <mozilla@hocat.ca>|Bug 1520867: Remove scopes for temporary bitbar worker; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D20788|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a4184058abae
 |74|2019-02-25 19:12:16|Bastien Abadie <bastien@mozilla.com>|Bug 1530376 - Update ci grants for code review task, r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21022|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=18d5ea174bab
-|75|2019-02-25 22:41:46|Rob Lemley <rob@thunderbird.net>|Bug 1530170 - Grant 'queue:rerun-task:scheduler-id' as part of trust-domain-scopes; r=tomprinceEnables rerunning tasks from the taskcluster CLI client for Thunderbirddevelopers.Differential Revision: https://phabricator.services.mozilla.com/D21038|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ffbd916086f9
+|76|2019-02-27 23:54:34|Tom Prince <mozilla@hocat.ca>|Bug 1515990: Add scopes for mozillaonline; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21290|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=50baaee916f0
+|77|2019-02-27 23:56:42|Tom Prince <mozilla@hocat.ca>|Bug 1527571: Grant cloudops the ability to manage product-details secrets; r=railDifferential Revision: https://phabricator.services.mozilla.com/D21409|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=20d6c4afa77c
+|78|2019-02-28 01:16:24|Tom Prince <mozilla@hocat.ca>|Bug 1515990: Don't grant `assume:project-admin:*` scopes, as that creates a dependency loop; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21455|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3379ba9de92e
+|78|2019-02-28 01:16:24|Tom Prince <mozilla@hocat.ca>|Bug 1515990: Grant mozillaonline access to public tooltool artifacts via the proxy; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21456|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=2e1ac95698b8
 
 

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 10785
+    "last_push_id": 10794
   },
   "1": {
     "changeset_number": "10002",
@@ -41471,22 +41471,6 @@
         "files_changed": [
           "taskcluster/ci/release-balrog-submit-toplevel/kind.yml",
           "taskcluster/ci/release-secondary-balrog-submit-toplevel/kind.yml"
-        ]
-      }
-    }
-  },
-  "67": {
-    "changeset_number": "10743",
-    "pusher": "aiakab@mozilla.com",
-    "date_of_push": "2019-02-21 04:38:27",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=866b41f7bb69",
-        "commiter_name": "Jed Davis <jld@mozilla.com>",
-        "commit_message": "Bug 1472589 - Fix parent process crash reporting in the Snap package environment. r=ted,jlorenzo a=lizzard\n\n1. The unsetting of LD_LIBRARY_PATH is removed, because it's no longer\nnecessary and interferes with environments where it's necessary to find\n\"system\" libraries like GTK; see bug 1472589 comment #1 through #4.\n\n2. The Snap package manifest adds a dependency on the libcurl package,\nso that the crash reporter can send the report.  This uses the GnuTLS\nvariant because we're already pulling in GnuTLS as a dependency of some\nother packages (FFmpeg and CUPS, but also the non-GnuTLS cURL packages\ndepend on it anyway via OpenLDAP).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18625",
-        "files_changed": [
-          "taskcluster/docker/firefox-snap/snapcraft.yaml.in",
-          "toolkit/crashreporter/nsExceptionHandler.cpp"
         ]
       }
     }
