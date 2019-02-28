@@ -10701,32 +10701,6 @@
     }
   },
   "101": {
-    "changeset_number": "35599",
-    "pusher": "csabou@mozilla.com",
-    "date_of_push": "2019-02-23 23:38:35",
-    "changeset_commits": {
-      "9": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6e669b1b1835",
-        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
-        "commit_message": "Bug 1500941 - Add searchfox task for Android (ARMv7/API16). r=nalexander\n\nThe bulk of this is copy/pasted from a standard android-api-16 debug\nbuild. The only changes are a few extra environment variables in the\ntaskcluster config, the subconfig file, and the mozconfig, as well as\nthe --enable-mozsearch-plugin flag in the mozconfig.\n\nDepends on D20766\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20767",
-        "files_changed": [
-          "mobile/android/config/mozconfigs/android-api-16/debug-searchfox",
-          "taskcluster/ci/searchfox/kind.yml",
-          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_debug_searchfox.py",
-          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
-        ]
-      },
-      "10": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=10ffd49d0adf",
-        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
-        "commit_message": "Bug 1500941 - Enable Android searchfox job as part of the daily cron. r=emilio\n\nDepends on D20767\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20768",
-        "files_changed": [
-          "taskcluster/taskgraph/target_tasks.py"
-        ]
-      }
-    }
-  },
-  "101": {
     "changeset_number": "35601",
     "pusher": "ncsoregi@mozilla.com",
     "date_of_push": "2019-02-24 11:23:57",

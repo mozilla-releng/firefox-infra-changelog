@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79146
+    "last_push_id": 79226
   },
   "1": {
     "changeset_number": "35344",
@@ -34312,28 +34312,6 @@
     }
   },
   "661": {
-    "changeset_number": "78839",
-    "pusher": "nbeleuzu@mozilla.com",
-    "date_of_push": "2019-02-24 00:49:34",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=07c7cd57cc90",
-        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
-        "commit_message": "Bug 1527394: Squash docker images before exporting/compressing them r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19541",
-        "files_changed": [
-          "taskcluster/docker/image_builder/Dockerfile",
-          "taskcluster/docker/image_builder/build-image.sh",
-          "taskcluster/docker/image_builder/requirements/py2.in",
-          "taskcluster/docker/image_builder/requirements/py2.txt",
-          "taskcluster/docker/image_builder/requirements/py3.in",
-          "taskcluster/docker/image_builder/requirements/py3.txt",
-          "taskcluster/docker/image_builder/setup.sh",
-          "taskcluster/taskgraph/transforms/docker_image.py"
-        ]
-      }
-    }
-  },
-  "661": {
     "changeset_number": "78848",
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-24 11:29:07",
@@ -34610,6 +34588,36 @@
         "files_changed": [
           "taskcluster/ci/test/mochitest.yml",
           "taskcluster/ci/test/test-sets.yml"
+        ]
+      }
+    }
+  },
+  "671": {
+    "changeset_number": "79163",
+    "pusher": "jwillcox@mozilla.com",
+    "date_of_push": "2019-02-27 21:18:45",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e767399d23cc",
+        "commiter_name": "James Willcox <snorp@snorp.net>",
+        "commit_message": "Bug 1525959 - Only run mochitest-e10s on GeckoView opt builds r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21405",
+        "files_changed": [
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      }
+    }
+  },
+  "672": {
+    "changeset_number": "79191",
+    "pusher": "sfink@mozilla.com",
+    "date_of_push": "2019-02-28 01:01:21",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=87929b2bb5d1",
+        "commiter_name": "Steve Fink <sfink@mozilla.com>",
+        "commit_message": "Bug 1527777 - Apply change to Windows jobs too r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21299",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/spidermonkey.py"
         ]
       }
     }

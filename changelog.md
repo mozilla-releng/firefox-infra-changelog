@@ -1,13 +1,13 @@
-##  Commits in production - for one day, generated on: 2019-02-27 16:56:20 UTC.
+##  Commits in production - for one day, generated on: 2019-02-28 04:50:08 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a6f2f28d8d67)|Bug 1529081 - Promote Raptor speedometer fennec to tier 2; r=Bebe  Differential Revision: https://phabricator.services.mozilla.com/D21013|rwood@mozilla.com|Bebe|2019-02-26 18:14:35|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8fcd04c595a9)|Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.|ncsoregi@mozilla.com|gbrown.|2019-02-27 06:36:23|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bec37c9a80b9)|Bug 1527394: Remove unneeded packages/files in the test image r=jmaher  Depends on D19541  Differential Revision: https://phabricator.services.mozilla.com/D19542|catlee@mozilla.com|jmaher|2019-02-27 14:16:41|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=51efc5e08cee)|Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrown  Differential Revision: https://phabricator.services.mozilla.com/D19015|jwillcox@mozilla.com|gbrown|2019-02-27 17:24:56|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e767399d23cc)|Bug 1525959 - Only run mochitest-e10s on GeckoView opt builds r=gbrown  Differential Revision: https://phabricator.services.mozilla.com/D21405|jwillcox@mozilla.com|gbrown|2019-02-27 21:18:45|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=87929b2bb5d1)|Bug 1527777 - Apply change to Windows jobs too r=jmaher  Differential Revision: https://phabricator.services.mozilla.com/D21299|sfink@mozilla.com|jmaher|2019-02-28 01:01:21|
 
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -21,7 +21,10 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)|FIC - BOT|Self Generated| - |
+|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=50baaee916f0)|Bug 1515990: Add scopes for mozillaonline; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D21290|mozilla@hocat.ca|dustin|2019-02-27 23:54:34|
+|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=20d6c4afa77c)|Bug 1527571: Grant cloudops the ability to manage product-details secrets; r=rail  Differential Revision: https://phabricator.services.mozilla.com/D21409|mozilla@hocat.ca|rail|2019-02-27 23:56:42|
+|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3379ba9de92e)|Bug 1515990: Don't grant `assume:project-admin:*` scopes, as that creates a dependency loop; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D21455|mozilla@hocat.ca|dustin|2019-02-28 01:16:24|
+|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=2e1ac95698b8)|Bug 1515990: Grant mozillaonline access to public tooltool artifacts via the proxy; r=dustin  Differential Revision: https://phabricator.services.mozilla.com/D21456|mozilla@hocat.ca|dustin|2019-02-28 01:16:24|
 
 |	mozilla-beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -35,7 +38,6 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a6f2f28d8d67)|Bug 1529081 - Promote Raptor speedometer fennec to tier 2; r=Bebe  Differential Revision: https://phabricator.services.mozilla.com/D21013|ncsoregi@mozilla.com|Bebe|2019-02-26 23:51:06|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8fcd04c595a9)|Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.|ncsoregi@mozilla.com|gbrown.|2019-02-27 06:32:15|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bec37c9a80b9)|Bug 1527394: Remove unneeded packages/files in the test image r=jmaher  Depends on D19541  Differential Revision: https://phabricator.services.mozilla.com/D19542|dvarga@mozilla.com|jmaher|2019-02-27 18:31:04|
 
@@ -44,8 +46,6 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8fcd04c595a9)|Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.|bclary@mozilla.com|gbrown.|2019-02-26 23:35:38|
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a6f2f28d8d67)|Bug 1529081 - Promote Raptor speedometer fennec to tier 2; r=Bebe  Differential Revision: https://phabricator.services.mozilla.com/D21013|ncsoregi@mozilla.com|Bebe|2019-02-26 23:53:47|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bec37c9a80b9)|Bug 1527394: Remove unneeded packages/files in the test image r=jmaher  Depends on D19541  Differential Revision: https://phabricator.services.mozilla.com/D19542|dvarga@mozilla.com|jmaher|2019-02-27 18:38:35|
 
 |	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
@@ -165,13 +165,10 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/f6ed2f3819e4cbaabc8c422852113803b103058f)|Merge pull request #214 from djmitche/metaschema-items-not-entries  Fix metaschema to require array fields when 'items' is present, not '…|djmitche|N/A|2019-02-28 00:31:32|
+|[Link](https://github.com/taskcluster/taskcluster/commit/2be0bb82a08ec4ebb338635f390387643d022a32)|Merge pull request #297 from taskcluster/renovate/mocha-6.x  Update dependency mocha to v6|djmitche|N/A|2019-02-27 20:15:55|
+|[Link](https://github.com/taskcluster/taskcluster/commit/49ddf8eb30d9dc4e7d44a4a3aeff334fe458dd1f)|Merge pull request #272 from djmitche/upgrade-octokit  Upgrade octokit, tc-github auth stuff|djmitche|N/A|2019-02-27 18:34:19|
 |[Link](https://github.com/taskcluster/taskcluster/commit/4bf3a507412c08ed5d3887600481ce3589664d81)|Add default value for the search component in task group view (#318)|helfi92|N/A|2019-02-27 16:11:13|
-|[Link](https://github.com/taskcluster/taskcluster/commit/3e09d292f0474a604ff804cfac7a3643036a6df8)|UX enhances to docs sidebar (#316)|helfi92|N/A|2019-02-26 21:32:20|
-|[Link](https://github.com/taskcluster/taskcluster/commit/414c770c4cea3d93b2f8b165c88f19cc03dff174)|Adjust line length for docs (#315)|helfi92|N/A|2019-02-26 21:31:16|
-|[Link](https://github.com/taskcluster/taskcluster/commit/c85e4e4fbc395e4212452a1dfce70afb4451d331)|Merge pull request #312 from helfi92/copy-paste-task-definition  [UI] Fix task definition mutation validation|helfi92|N/A|2019-02-26 19:27:48|
-|[Link](https://github.com/taskcluster/taskcluster/commit/8337129654f156161ab339e9474edbd26a671469)|Merge pull request #309 from djmitche/stop-rebasing-stale-prs  Stop renovate from rebasing stale PRs|djmitche|N/A|2019-02-26 18:48:02|
-|[Link](https://github.com/taskcluster/taskcluster/commit/fbfc41fbdfe6a9acc9633f96e96767e08476858a)|Merge pull request #299 from djmitche/upgrade-azure-entities  Upgrade azure-entities to drop buffertools dep|djmitche|N/A|2019-02-26 18:46:39|
-|[Link](https://github.com/taskcluster/taskcluster/commit/ac737e36eb8ec4ac7260cd8a68802ac4ef393fbc)|Bump client-web version (#310)|helfi92|N/A|2019-02-26 18:07:45|
 
 |	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 

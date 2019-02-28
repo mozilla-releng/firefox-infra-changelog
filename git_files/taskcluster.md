@@ -1,7 +1,12 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-13 18:55:13.544186
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-14 06:49:24.691776
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|491|djmitche|Merge pull request #214 from djmitche/metaschema-items-not-entries  Fix metaschema to require array fields when 'items' is present, not '…|[URL](https://github.com/taskcluster/taskcluster/commit/f6ed2f3819e4cbaabc8c422852113803b103058f)|2019-02-28 00:31:32
+|490|djmitche|Prevent creation of duplicate roles with the same name|[URL](https://github.com/taskcluster/taskcluster/commit/9e20df153d2111972fbb318a5f8e4b91f1892618)|2019-02-13 01:30:36
+|489|djmitche|Fix metaschema to require array fields when 'items' is present, not 'entries'|[URL](https://github.com/taskcluster/taskcluster/commit/6282ebbcf0ddd00d5b3f7ac4b718247d615739f3)|2019-02-12 21:29:59
+|488|djmitche|Merge pull request #297 from taskcluster/renovate/mocha-6.x  Update dependency mocha to v6|[URL](https://github.com/taskcluster/taskcluster/commit/2be0bb82a08ec4ebb338635f390387643d022a32)|2019-02-27 20:15:55
+|487|djmitche|Merge pull request #272 from djmitche/upgrade-octokit  Upgrade octokit, tc-github auth stuff|[URL](https://github.com/taskcluster/taskcluster/commit/49ddf8eb30d9dc4e7d44a4a3aeff334fe458dd1f)|2019-02-27 18:34:19
 |486|helfi92|Add default value for the search component in task group view (#318)|[URL](https://github.com/taskcluster/taskcluster/commit/4bf3a507412c08ed5d3887600481ce3589664d81)|2019-02-27 16:11:13
 |485|helfi92|UX enhances to docs sidebar (#316)|[URL](https://github.com/taskcluster/taskcluster/commit/3e09d292f0474a604ff804cfac7a3643036a6df8)|2019-02-26 21:32:20
 |484|helfi92|Adjust line length for docs (#315)|[URL](https://github.com/taskcluster/taskcluster/commit/414c770c4cea3d93b2f8b165c88f19cc03dff174)|2019-02-26 21:31:16
