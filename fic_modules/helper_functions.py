@@ -198,7 +198,7 @@ def limit_checker():
     unix_reset_time = GIT.rate_limiting_resettime
     reset_time = datetime.fromtimestamp(unix_reset_time)
     if rate_limit >= 5:
-        sys.stdout.write("\rRate limit is: " + str(rate_limit))
+        sys.stdout.write("\rRate limit is: " + str(rate_limit) + "\n")
         sys.stdout.flush()
         return True
     else:
