@@ -121,6 +121,20 @@ def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
     generated for
     :return:
     """
+    valid_args = ['-d', '--days', '-g', '--git', '-h', '--mercurial', '-l',
+                  '--logger', '-m', '--manual', '-c', '--complete']
+    run_arguments = list(click.get_current_context().args)
+    len_args = 0
+    list_args = []
+    for arg in run_arguments:
+        if arg not in valid_args:
+            len_args += 1
+            list_args.append(arg)
+    if len(list_args) >= 1:
+        print("The following Arguments " + str(
+            list_args) + " are not available.\n"
+                         "Please type python client.py -h for a list of"
+                         " available arguments.")
     from fic_modules.configuration import LOGGER
     if days:
         run_days(LOGGER, days)
