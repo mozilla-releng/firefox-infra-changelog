@@ -97,17 +97,17 @@ def run_multiple(logger):
               help='Display logger')
 @click.option('-m', '--manual', is_flag=True, flag_value='multiple',
               help='Let you choose for which repositories the script will run')
-@click.option('-a', '--all', is_flag=True, flag_value='all',
+@click.option('-c', '--complete', is_flag=True, flag_value='complete',
               help='Run for all currently available repositories')
 @click.help_option('-h', '--help')
-def cli(all=False, git=False, hg=False, logger=False, multiple=False):
+def cli(complete=False, git=False, hg=False, logger=False, multiple=False):
     from fic_modules.configuration import LOGGER
     """Firefox-Infra-Changelog: tool which build a
     changelog of commits happening on git or hg that
     could affect Firefox CI Infra"""
     if logger:
         logging.getLogger().addHandler(logging.StreamHandler())
-    if all:
+    if complete:
         run_all(LOGGER)
     if git:
         run_git(LOGGER)
