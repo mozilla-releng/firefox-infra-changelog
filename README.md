@@ -6,13 +6,6 @@ The tool uses py-github and github token and requests on all mozilla's Git/HG in
 * A central [changelog.md](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.md) in which data is formatted in a set way. 
 * A [changelog.json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.json) file which contains the same data changelog.md contains. TO-DE-ADDED [Issues 193](https://github.com/mozilla-releng/firefox-infra-changelog/issues/193)
 
-# Can I contribute?
-Yes! We have a couple of [Issues Open](https://github.com/Akhliskun/firefox-infra-changelog/issues). 
-Pick whichever you find fancy and make a PullRequest.
-
-# Can I suggest edits and/or features? 
-Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox-infra-changelog/issues). 
-
 # Install process:
 1. After you clone the repository, please run `pip3 install -r requirements.txt`
 2. Generate a Github [Personal access token](https://github.com/settings/tokens) and add an environment variable called `GIT_TOKEN`containing the generated token.
@@ -21,11 +14,26 @@ Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox
 # Flags
 | Short Flag | Long Flag | Description |
 |-----|-----|----------------------------------------------------------------------------|
-| -a | --all  | Runs script for all available repositories
+| -c | --complete  | Runs script for all available repositories
 | -g | --git  | Runs script only for repos that are on GitHub                              |
 | -hg | --mercurial   | Runs script only for repos that are on Mercurial                           |
 | -m | --manual    | Let the user choose for which repositories the script will run             |
 | -l | --logger    | Activate logger output in the console             |
+| -d | --days | Generate the **changelog.md** for `<int>` amount of days. |
+
+# Release schedule
+Starting with 1st of March 2018, every **Friday** Firefox-Infra-Changelog will have a new release. 
+
+You can treat the releases as our current stable version, were using the code from `master` is treated as night releases.
+
+# Can I contribute?
+Yes! We have a couple of [Issues Open](https://github.com/Akhliskun/firefox-infra-changelog/issues). 
+Pick whichever you find fancy and make a PullRequest.
+
+# Can I suggest edits and/or features? 
+Absolutely! Please [Open an Issue, or more](https://github.com/Akhliskun/firefox-infra-changelog/issues). 
+
+
 
 
 # Contributors
