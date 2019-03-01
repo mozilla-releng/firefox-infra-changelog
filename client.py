@@ -35,7 +35,7 @@ from fic_modules.markdown_modules import generate_main_md_table
 def cli(all, git, hg, logger, multiple):
     """
     Main function of the script that handles how the script runs
-    :param all: Used to run the script for all of the repositories.
+    :param complete: Used to run the script for all of the repositories.
     :param git: Used to run the script in git mode only
     :param hg: Used to run the script in mercurial mode only
     :param logger: used for displaying the logger while running the script
