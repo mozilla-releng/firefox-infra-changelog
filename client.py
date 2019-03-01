@@ -1,6 +1,6 @@
-import click
 import logging
 from datetime import datetime
+import click
 from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
 from fic_modules.helper_functions import (
