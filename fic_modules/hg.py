@@ -7,7 +7,6 @@ from datetime import (
     datetime,
     timedelta
 )
-from urllib.request import urlopen
 import time
 import requests
 from fic_modules.configuration import (
@@ -49,8 +48,8 @@ def generate_hg_pushes_link(repo_name, repository_url):
     """
     start_id = get_last_local_push_id(repo_name)
     url = repository_url + "json-pushes?version=2"
-    response = urlopen(url)
-    data = json.loads(response.read())
+    response = requests.get(url).text
+    data = json.loads(response)
     end_id = data.get("lastpushid")
     if start_id == 0:
         start_id = end_id - NUMBER_OF_CHANGESETS
