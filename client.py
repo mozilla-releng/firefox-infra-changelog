@@ -96,24 +96,24 @@ def run_multiple(logger):
 @click.command()
 @click.option('-g', '--git', is_flag=True, flag_value='git',
               help='Run only for GIT repos')
-@click.option('-hg', '--mercurial', is_flag=True, flag_value='hg',
+@click.option('-hg', '--mercurial', is_flag=True, flag_value='mercurial',
               help='Run only for HG repos')
 @click.option('-l', '--logger', is_flag=True, flag_value='logger',
               help='Display logger')
-@click.option('-m', '--manual', is_flag=True, flag_value='multiple',
+@click.option('-m', '--manual', is_flag=True, flag_value='manual',
               help='Let you choose for which repositories the script will run')
 @click.option('-c', '--complete', is_flag=True, flag_value='complete',
               help='Run for all currently available repositories')
 @click.help_option('-h', '--help')
-def cli(complete=False, git=False, hg=False, logger=False, multiple=False):
+def cli(complete=False, git=False, mercurial=False, logger=False, manual=False):
     """
     Main function of the script that handles how the script runs
     :param complete: Used to run the script for all of the repositories.
     :param git: Used to run the script in git mode only
-    :param hg: Used to run the script in mercurial mode only
+    :param mercurial: Used to run the script in mercurial mode only
     :param logger: used for displaying the logger while running the script
     manually from terminal.
-    :param multiple: Used for running the script for specific repositories.
+    :param manual: Used for running the script for specific repositories.
     :return:
     """
     from fic_modules.configuration import LOGGER
@@ -124,9 +124,9 @@ def cli(complete=False, git=False, hg=False, logger=False, multiple=False):
         run_all(LOGGER)
     if git:
         run_git(LOGGER)
-    if hg:
+    if mercurial:
         run_hg(LOGGER)
-    if multiple:
+    if manual:
         run_multiple(LOGGER)
 
 
