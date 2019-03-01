@@ -27,7 +27,7 @@ from fic_modules.markdown_modules import generate_main_md_table
 @click.option('-a', '--all', is_flag=True, flag_value='all',
               help='Run for all currently available repositories')
 @click.help_option('-h', '--help')
-def cli(all, git, hg, logger, multiple):
+def cli(all=False, git=False, hg=False, logger=False, multiple=False):
     from fic_modules.configuration import LOGGER
     """Firefox-Infra-Changelog: tool which build a
     changelog of commits happening on git or hg that
