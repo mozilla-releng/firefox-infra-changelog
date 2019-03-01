@@ -121,7 +121,7 @@ def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
     generated for
     :return:
     """
-    valid_args = ['-d', '--days', '-g', '--git', '-h', '--hg', '-l',
+    valid_args = ['-d', '--days', '-g', '--git', '-h', '--mercurial', '-l',
                   '--logger', '-m', '--manual', '-c', '--complete']
     run_arguments = list(click.get_current_context().args)
     len_args = 0
