@@ -3,12 +3,12 @@ This module contains functions that are for other scopes which aim to get
 better functionality out of the code and not directly related to the script.
 """
 import re
-import sys
 from github import GithubException
 from fic_modules.configuration import (
     REPOSITORIES,
     REPO_LIST,
-    GIT
+    GIT,
+    LOGGER
 )
 from datetime import datetime
 
@@ -198,23 +198,22 @@ def limit_checker():
     unix_reset_time = GIT.rate_limiting_resettime
     reset_time = datetime.fromtimestamp(unix_reset_time)
     if rate_limit >= 5:
-        sys.stdout.write("\rRate limit is: " + str(rate_limit) + "\n")
-        sys.stdout.flush()
+        LOGGER.info("Rate limit is: %s", str(rate_limit))
         return True
     else:
         try:
-            print("You have reached the requests limit!")
-            print("The requests limit will reset at:" + str(reset_time))
+            LOGGER.info("You have reached the requests limit!")
+            LOGGER.info("The requests limit will reset at: %s", str(reset_time))
             while rate_limit < 5000 and reset_time >= datetime.now():
                 unix_reset_time = GIT.rate_limiting_resettime
                 reset_time = datetime.fromtimestamp(unix_reset_time)
-            print("\nThe requests limit has been reset!")
+            LOGGER.info("The requests limit has been reset!")
             return True
 
         except GithubException.status == 403:
-            print("The requests limit is reset to: " + str(reset_time))
+            LOGGER.info("The requests limit is reset to: %s", str(reset_time))
         except GithubException.status == 404:
-            print("Github is down!\n Please try again later...")
+            LOGGER.info("Github is down!\n Please try again later...")
 
 
 def get_keys(name):
