@@ -225,3 +225,34 @@ def get_keys(name):
         REPO_LIST.append(key)
     return REPO_LIST
 
+
+def replace_bug_with_url(message, LOGGER):
+    commit_text = message.split()
+    try:
+        position_bug = re.search("Bug", message, re.IGNORECASE).regs[0]
+    except AttributeError:
+        position_bug = False
+
+
+    if position_bug:
+        control_number = len(position_bug)
+        for bug in position_bug:
+            LOGGER.info("%s Bug links left to generate.", control_number)
+            control_number -= 1
+            integer_position = bug + 1
+            result = commit_text[integer_position]
+            generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" +\
+                             str(result)
+            for entry in position_bug:
+                replace = re.sub(str("Bug {}".format(result)), str(generated_link),
+                                 message)
+                replace2 = re.sub(str(generated_link), "[Bug {}]({})".format(result, generated_link), replace)
+                message = replace2
+
+    position_bug = None
+    commit_text = None
+    control_number = None
+    integer_position = None
+    result = None
+    replace = None
+    return message

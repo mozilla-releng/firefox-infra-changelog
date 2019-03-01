@@ -11,7 +11,8 @@ from os.path import (
 from datetime import datetime
 from fic_modules.helper_functions import (
     filter_strings,
-    remove_chars
+    remove_chars,
+    replace_bug_with_url
 )
 from fic_modules.configuration import (
     LAST_WEEK,
@@ -81,6 +82,7 @@ def create_git_md_table(repository_name, path_to_files):
 
                 commit_author = filter_strings(commit_author)
                 message = filter_strings(message)
+                message = replace_bug_with_url(message, LOGGER)
 
                 row = "|" + commit_number + \
                       "|" + commit_author + \
@@ -239,6 +241,7 @@ def create_hg_md_table(repository_name):
                             message = re.sub("\n|", "", message)
 
                             message = filter_strings(message)
+                            message = replace_bug_with_url(message, LOGGER)
                             url = data\
                                 .get(key)\
                                 .get("changeset_commits")\
