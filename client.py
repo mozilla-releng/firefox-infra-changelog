@@ -24,17 +24,17 @@ from fic_modules.markdown_modules import generate_main_md_table
               help='Display logger')
 @click.option('-m', '--manual', is_flag=True, flag_value='multiple',
               help='Let you choose for which repositories the script will run')
-@click.option('-a', '--all', is_flag=True, flag_value='all',
+@click.option('-c', '--complete', is_flag=True, flag_value='complete',
               help='Run for all currently available repositories')
 @click.help_option('-h', '--help')
-def cli(all, git, hg, logger, multiple):
+def cli(complete, git, hg, logger, multiple):
     from fic_modules.configuration import LOGGER
     """Firefox-Infra-Changelog: tool which build a
     changelog of commits happening on git or hg that
     could affect Firefox CI Infra"""
     if logger:
         logging.getLogger().addHandler(logging.StreamHandler())
-    if all:
+    if complete:
         LOGGER.info("======== Logging in ALL mode on %s ========", datetime
                     .now())
         create_files_for_git(REPOSITORIES, onerepo=False)
