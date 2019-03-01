@@ -1,3 +1,8 @@
+"""
+Firefox-Infra-Changelog: tool which build a
+changelog of commits happening on git or hg that
+could affect Firefox CI Infra
+"""
 import click
 import logging
 from datetime import datetime
@@ -28,10 +33,18 @@ from fic_modules.markdown_modules import generate_main_md_table
               help='Run for all currently available repositories')
 @click.help_option('-h', '--help')
 def cli(all, git, hg, logger, multiple):
+    """
+    Main function of the script that handles how the script runs
+    :param all: Used to run the script for all of the repositories.
+    :param git: Used to run the script in git mode only
+    :param hg: Used to run the script in mercurial mode only
+    :param logger: used for displaying the logger while running the script
+    manually from terminal.
+    :param multiple: Used for running the script for specific repositories.
+    :return:
+    """
     from fic_modules.configuration import LOGGER
-    """Firefox-Infra-Changelog: tool which build a
-    changelog of commits happening on git or hg that
-    could affect Firefox CI Infra"""
+
     if logger:
         logging.getLogger().addHandler(logging.StreamHandler())
     if all:
