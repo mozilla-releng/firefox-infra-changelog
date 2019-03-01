@@ -16,7 +16,6 @@ REPOSITORIES = json.loads(REPOSITORIES_DATA)
 TOKEN = os.environ.get("GIT_TOKEN")
 GIT = Github(TOKEN)
 REPO_CHOICE = "ALL"
-GENERATE_FOR_X_DAYS = int(1)
 NUMBER_OF_CHANGESETS = int(100)
 REPO_LIST = []
 LAST_WEEK = datetime.now() - timedelta(days=14)

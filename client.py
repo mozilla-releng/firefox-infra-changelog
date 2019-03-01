@@ -14,43 +14,42 @@ from fic_modules.helper_functions import (
 )
 from fic_modules.configuration import (
     REPO_LIST,
-    GENERATE_FOR_X_DAYS,
     REPOSITORIES
 )
 from fic_modules.markdown_modules import generate_main_md_table
 
 
-def run_all(logger):
+def run_all(logger, days):
     logger.info("======== Logging in ALL mode on %s ========", datetime
                 .now())
     create_files_for_git(REPOSITORIES, onerepo=False)
     create_files_for_hg(REPOSITORIES, onerepo=False)
-    clear_file("changelog.md", GENERATE_FOR_X_DAYS)
-    generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-    generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+    clear_file("changelog.md", int(days))
+    generate_main_md_table("hg_files", int(days))
+    generate_main_md_table("git_files", int(days))
 
 
-def run_git(logger):
+def run_git(logger, days):
     logger.info("======== Logging in GIT mode on %s ========", datetime
                 .now())
     create_files_for_git(REPOSITORIES, onerepo=False)
-    clear_file("changelog.md", GENERATE_FOR_X_DAYS)
-    generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-    generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+    clear_file("changelog.md", int(days))
+    generate_main_md_table("hg_files", int(days))
+    generate_main_md_table("git_files", int(days))
     click.echo("Script ran in GIT Only mode")
 
 
-def run_hg(logger):
+def run_hg(logger, days):
     logger.info("======== Logging in HG mode on %s ========", datetime
                 .now())
     create_files_for_hg(REPOSITORIES, onerepo=False)
-    clear_file("changelog.md", GENERATE_FOR_X_DAYS)
-    generate_main_md_table("hg_files", GENERATE_FOR_X_DAYS)
-    generate_main_md_table("git_files", GENERATE_FOR_X_DAYS)
+    clear_file("changelog.md", int(days))
+    generate_main_md_table("hg_files", int(days))
+    generate_main_md_table("git_files", int(days))
     click.echo("Script ran in HG Only mode")
 
 
-def run_multiple(logger):
+def run_multiple(logger, days):
     get_keys("Github")
     get_keys("Mercurial")
     for scriptrepo in REPOSITORIES.get("Github").get("build-puppet") \
@@ -72,16 +71,12 @@ def run_multiple(logger):
             for repository in new_list:
                 if repository in REPOSITORIES.get("Github"):
                     create_files_for_git(repository, onerepo=True)
-                    generate_main_md_table("git_files",
-                                           GENERATE_FOR_X_DAYS)
+                    generate_main_md_table("git_files", int(days))
                 elif repository in REPOSITORIES.get("Mercurial"):
                     create_files_for_hg(repository, onerepo=True)
-                    clear_file("changelog.md",
-                               GENERATE_FOR_X_DAYS)
-                    generate_main_md_table("hg_files",
-                                           GENERATE_FOR_X_DAYS)
-                    generate_main_md_table("git_files",
-                                           GENERATE_FOR_X_DAYS)
+                    clear_file("changelog.md", int(days))
+                    generate_main_md_table("hg_files", int(days))
+                    generate_main_md_table("git_files", int(days))
         try:
             new_entry = int(user_choice) - 1
             if new_entry < 0 or new_entry >= len(REPO_LIST):
@@ -91,6 +86,10 @@ def run_multiple(logger):
                 REPO_LIST.pop(int(new_entry))
         except ValueError:
             exit(0)
+
+
+def run_days(logger, days):
+    logger.info('Generating changelog for %s days', days)
 
 
 @click.command()
@@ -104,8 +103,12 @@ def run_multiple(logger):
               help='Let you choose for which repositories the script will run')
 @click.option('-c', '--complete', is_flag=True, flag_value='complete',
               help='Run for all currently available repositories')
+@click.option('-d', '--days', default=1, help='Let user decide for how many '
+                                              'days changelog.md will '
+                                              'be generated')
 @click.help_option('-h', '--help')
-def cli(complete=False, git=False, mercurial=False, logger=False, manual=False):
+def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
+        days=False):
     """
     Main function of the script that handles how the script runs
     :param complete: Used to run the script for all of the repositories.
@@ -114,20 +117,23 @@ def cli(complete=False, git=False, mercurial=False, logger=False, manual=False):
     :param logger: used for displaying the logger while running the script
     manually from terminal.
     :param manual: Used for running the script for specific repositories.
+    :param days: Used to change the amount of days the changelog will be
+    generated for
     :return:
     """
     from fic_modules.configuration import LOGGER
-
+    if days:
+        run_days(LOGGER, days)
     if logger:
         logging.getLogger().addHandler(logging.StreamHandler())
     if complete:
-        run_all(LOGGER)
+        run_all(LOGGER, days)
     if git:
-        run_git(LOGGER)
+        run_git(LOGGER, days)
     if mercurial:
-        run_hg(LOGGER)
+        run_hg(LOGGER, days)
     if manual:
-        run_multiple(LOGGER)
+        run_multiple(LOGGER, days)
 
 
 if __name__ == "__main__":
