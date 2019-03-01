@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: MOZILLA-INBOUND
- CURRENT PUSH ID: 112198
+ CURRENT PUSH ID: 112243
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -8334,6 +8334,16 @@
 |112146|2019-02-26 06:26:08|Thomas Daede <tdaede@mozilla.com>|Bug 1520163 - Add linux64-nasm to android-armv7-searchfox. r=katsDifferential Revision: https://phabricator.services.mozilla.com/D21098|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=575da58a58c7
 |112167|2019-02-26 23:35:38|Bob Clary <bclary@bclary.com>|Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8fcd04c595a9
 |112169|2019-02-26 23:53:47|Rob Wood <rwood@mozilla.com>|Bug 1529081 - Promote Raptor speedometer fennec to tier 2; r=BebeDifferential Revision: https://phabricator.services.mozilla.com/D21013|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a6f2f28d8d67
-|112180|2019-02-27 18:38:35|Chris AtLee <catlee@mozilla.com>|Bug 1527394: Remove unneeded packages/files in the test image r=jmaherDepends on D19541Differential Revision: https://phabricator.services.mozilla.com/D19542|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bec37c9a80b9
+|112205|2019-02-28 13:44:16|James Willcox <snorp@snorp.net>|Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D19015|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=51efc5e08cee
+|112205|2019-02-28 13:44:16|James Willcox <snorp@snorp.net>|Bug 1525959 - Only run mochitest-e10s on GeckoView opt builds r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D21405|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e767399d23cc
+|112205|2019-02-28 13:44:16|Steve Fink <sfink@mozilla.com>|Bug 1527777 - Apply change to Windows jobs too r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D21299|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=87929b2bb5d1
+|112218|2019-03-01 00:09:07|championshuttler <shivams2799@gmail.com>|Bug 1451860 - Rename the tps Talos test to tabswitch. r=mconley,davehuntDifferential Revision: https://phabricator.services.mozilla.com/D20096|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fb0ffd7766a2
+|112218|2019-03-01 00:09:07|Florin Strugariu <bebe@mozilla.ro>|Bug 1523877 Add Instagram and bing to tp6-m r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D18072|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4024f3814d18
+|112218|2019-03-01 00:09:07|Tom Prince <mozilla@hocat.ca>|Bug 1526584: [win64-aarch64] Only add win64-aarch64 platform to balrog blog for firefox; r=mtabaraThis reverts the refactoring in 0734f7d57cd81464053e7ffacc8897fce1a27d61 so only the firefox blobgets the new platform. This was causing failure in the subsequent release promotion task, as it madeassumptions about the structure of the balrog blob.Differential Revision: https://phabricator.services.mozilla.com/D21494|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=694837e25cc6
+|112218|2019-03-01 00:09:07|Jason Laster <jlaster@mozilla.com>|Bug 1496341 - Run debugger tests on try. r=loganfsmyth,ahalDifferential Revision: https://phabricator.services.mozilla.com/D21217|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=73298bafb7ae
+|112218|2019-03-01 00:09:07|Oana Pop Rus <opoprus@mozilla.com>|Merge mozilla-central to inbound.  a=merge CLOSED TREE|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=08157bb630a6
+|112233|2019-03-01 15:23:13|Justin Wood <Callek@gmail.com>|Bug 1513000 - expose revision as an attribute on the openh264 jobs. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D21606|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9ce8f26f311b
+|112233|2019-03-01 15:23:13|Justin Wood <Callek@gmail.com>|Bug 1513000 - Sign openh264 binaries. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20763|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=81a50b35b482
+|112233|2019-03-01 15:23:13|Justin Wood <Callek@gmail.com>|Bug 1513000 - Create action to trigger Openh264. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20850|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=26021d8ebb27
 
 

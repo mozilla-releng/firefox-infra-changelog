@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 79226
+ CURRENT PUSH ID: 79395
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -1124,6 +1124,16 @@
 |79101|2019-02-27 06:36:23|Bob Clary <bclary@bclary.com>|Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8fcd04c595a9
 |79116|2019-02-27 14:16:41|Chris AtLee <catlee@mozilla.com>|Bug 1527394: Remove unneeded packages/files in the test image r=jmaherDepends on D19541Differential Revision: https://phabricator.services.mozilla.com/D19542|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bec37c9a80b9
 |79163|2019-02-27 21:18:45|James Willcox <snorp@snorp.net>|Bug 1525959 - Only run mochitest-e10s on GeckoView opt builds r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D21405|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e767399d23cc
-|79191|2019-02-28 01:01:21|Steve Fink <sfink@mozilla.com>|Bug 1527777 - Apply change to Windows jobs too r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D21299|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=87929b2bb5d1
+|79237|2019-02-28 10:43:57|championshuttler <shivams2799@gmail.com>|Bug 1451860 - Rename the tps Talos test to tabswitch. r=mconley,davehuntDifferential Revision: https://phabricator.services.mozilla.com/D20096|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fb0ffd7766a2
+|79239|2019-02-28 10:47:15|Florin Strugariu <bebe@mozilla.ro>|Bug 1523877 Add Instagram and bing to tp6-m r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D18072|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4024f3814d18
+|79245|2019-02-28 13:12:38|Tom Prince <mozilla@hocat.ca>|Bug 1526584: [win64-aarch64] Only add win64-aarch64 platform to balrog blog for firefox; r=mtabaraThis reverts the refactoring in 0734f7d57cd81464053e7ffacc8897fce1a27d61 so only the firefox blobgets the new platform. This was causing failure in the subsequent release promotion task, as it madeassumptions about the structure of the balrog blob.Differential Revision: https://phabricator.services.mozilla.com/D21494|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=694837e25cc6
+|79259|2019-02-28 16:52:07|Jason Laster <jlaster@mozilla.com>|Bug 1496341 - Run debugger tests on try. r=loganfsmyth,ahalDifferential Revision: https://phabricator.services.mozilla.com/D21217|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=73298bafb7ae
+|79281|2019-02-28 22:14:35|Justin Wood <Callek@gmail.com>|Bug 1531072 - Use better timeout for l10n. r=RyanVMDifferential Revision: https://phabricator.services.mozilla.com/D21586|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b37ec76ca307
+|79288|2019-02-28 22:21:31|Rob Wood <rwood@mozilla.com>|Bug 1524495 - Disble Raptor ugl geckoview job b/c of permafail; r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D21572|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1a272d807e84
+|79302|2019-03-01 02:26:28|Geoff Brown <gbrown@mozilla.com>|Bug 1530737 - Run windows10-aarch64 talos/raptor tasks on bitbar laptops; r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D21574|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=cdd251b5b7f1
+|79339|2019-03-01 05:06:23|Justin Wood <Callek@gmail.com>|Bug 1513000 - expose revision as an attribute on the openh264 jobs. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D21606|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9ce8f26f311b
+|79339|2019-03-01 05:06:23|Justin Wood <Callek@gmail.com>|Bug 1513000 - Sign openh264 binaries. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20763|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=81a50b35b482
+|79339|2019-03-01 05:06:23|Justin Wood <Callek@gmail.com>|Bug 1513000 - Create action to trigger Openh264. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20850|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=26021d8ebb27
+|79393|2019-03-01 20:00:32|Rob Wood <rwood@mozilla.com>|Bug 1531441 - Re-enable Raptor android ugl temporarily as tier 3, pending benchmark upgrade; r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D21713|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dcfebc36f75c
 
 

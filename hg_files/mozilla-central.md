@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35624
+ CURRENT PUSH ID: 35631
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -291,6 +291,19 @@
 |35613|2019-02-26 05:52:35|Thomas Daede <tdaede@mozilla.com>|Bug 1520163 - Add linux64-nasm to android-armv7-searchfox. r=katsDifferential Revision: https://phabricator.services.mozilla.com/D21098|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=575da58a58c7
 |35620|2019-02-26 23:51:06|Rob Wood <rwood@mozilla.com>|Bug 1529081 - Promote Raptor speedometer fennec to tier 2; r=BebeDifferential Revision: https://phabricator.services.mozilla.com/D21013|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a6f2f28d8d67
 |35622|2019-02-27 06:32:15|Bob Clary <bclary@bclary.com>|Bug 1530710 - sync --log-raw, --log-raw-level, --log-errorsummary configs for android crashtest, jsreftest, cppunittest, geckoview-junit, r=gbrown.|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8fcd04c595a9
-|35624|2019-02-27 18:31:04|Chris AtLee <catlee@mozilla.com>|Bug 1527394: Remove unneeded packages/files in the test image r=jmaherDepends on D19541Differential Revision: https://phabricator.services.mozilla.com/D19542|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bec37c9a80b9
+|35625|2019-02-28 12:55:23|James Willcox <snorp@snorp.net>|Bug 1525959 - Run GeckoView mochitests on x86_64 emulators in automation r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D19015|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=51efc5e08cee
+|35625|2019-02-28 12:55:23|James Willcox <snorp@snorp.net>|Bug 1525959 - Only run mochitest-e10s on GeckoView opt builds r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D21405|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e767399d23cc
+|35625|2019-02-28 12:55:23|Steve Fink <sfink@mozilla.com>|Bug 1527777 - Apply change to Windows jobs too r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D21299|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=87929b2bb5d1
+|35627|2019-02-28 23:44:07|championshuttler <shivams2799@gmail.com>|Bug 1451860 - Rename the tps Talos test to tabswitch. r=mconley,davehuntDifferential Revision: https://phabricator.services.mozilla.com/D20096|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fb0ffd7766a2
+|35627|2019-02-28 23:44:07|Florin Strugariu <bebe@mozilla.ro>|Bug 1523877 Add Instagram and bing to tp6-m r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D18072|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4024f3814d18
+|35627|2019-02-28 23:44:07|Tom Prince <mozilla@hocat.ca>|Bug 1526584: [win64-aarch64] Only add win64-aarch64 platform to balrog blog for firefox; r=mtabaraThis reverts the refactoring in 0734f7d57cd81464053e7ffacc8897fce1a27d61 so only the firefox blobgets the new platform. This was causing failure in the subsequent release promotion task, as it madeassumptions about the structure of the balrog blob.Differential Revision: https://phabricator.services.mozilla.com/D21494|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=694837e25cc6
+|35627|2019-02-28 23:44:07|Jason Laster <jlaster@mozilla.com>|Bug 1496341 - Run debugger tests on try. r=loganfsmyth,ahalDifferential Revision: https://phabricator.services.mozilla.com/D21217|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=73298bafb7ae
+|35629|2019-03-01 07:20:57|Justin Wood <Callek@gmail.com>|Bug 1531072 - Use better timeout for l10n. r=RyanVMDifferential Revision: https://phabricator.services.mozilla.com/D21586|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b37ec76ca307
+|35629|2019-03-01 07:20:57|Rob Wood <rwood@mozilla.com>|Bug 1524495 - Disble Raptor ugl geckoview job b/c of permafail; r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D21572|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1a272d807e84
+|35629|2019-03-01 07:20:57|Geoff Brown <gbrown@mozilla.com>|Bug 1530737 - Run windows10-aarch64 talos/raptor tasks on bitbar laptops; r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D21574|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cdd251b5b7f1
+|35630|2019-03-01 14:56:42|Justin Wood <Callek@gmail.com>|Bug 1513000 - expose revision as an attribute on the openh264 jobs. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D21606|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9ce8f26f311b
+|35630|2019-03-01 14:56:42|Justin Wood <Callek@gmail.com>|Bug 1513000 - Sign openh264 binaries. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20763|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=81a50b35b482
+|35630|2019-03-01 14:56:42|Justin Wood <Callek@gmail.com>|Bug 1513000 - Create action to trigger Openh264. r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D20850|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=26021d8ebb27
+|35631|2019-03-01 15:06:03|Oana Pop Rus <opoprus@mozilla.com>|Merge mozilla-central to inbound.  a=merge CLOSED TREE|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=08157bb630a6
 
 

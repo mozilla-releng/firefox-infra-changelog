@@ -1,5 +1,5 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 78
+ CURRENT PUSH ID: 79
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
@@ -53,7 +53,6 @@
 |74|2019-02-25 19:12:16|Bastien Abadie <bastien@mozilla.com>|Bug 1530376 - Update ci grants for code review task, r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21022|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=18d5ea174bab
 |76|2019-02-27 23:54:34|Tom Prince <mozilla@hocat.ca>|Bug 1515990: Add scopes for mozillaonline; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21290|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=50baaee916f0
 |77|2019-02-27 23:56:42|Tom Prince <mozilla@hocat.ca>|Bug 1527571: Grant cloudops the ability to manage product-details secrets; r=railDifferential Revision: https://phabricator.services.mozilla.com/D21409|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=20d6c4afa77c
-|78|2019-02-28 01:16:24|Tom Prince <mozilla@hocat.ca>|Bug 1515990: Don't grant `assume:project-admin:*` scopes, as that creates a dependency loop; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21455|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3379ba9de92e
-|78|2019-02-28 01:16:24|Tom Prince <mozilla@hocat.ca>|Bug 1515990: Grant mozillaonline access to public tooltool artifacts via the proxy; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21456|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=2e1ac95698b8
+|79|2019-03-01 19:13:48|Tom Prince <mozilla@hocat.ca>|Bug 1515990: Grant access to all `aws-provisioner/mozillaonline-L-*` to MozillaOnline; r=me|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f4552aaf7083
 
 

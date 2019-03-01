@@ -1,7 +1,13 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-14 06:49:24.691776
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-15 20:14:56.700053
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|497|helfi92|Update @mozilla-frontend-infra/components (#333)  Also remove global background color on pre elements. elements with pre  tags should be formatted with highlight.js|[URL](https://github.com/taskcluster/taskcluster/commit/43dbf66e7573a9685345d3af8b520ecbdb180d33)|2019-03-01 16:28:44
+|496|helfi92|Make docs theme consistent with site (#332)|[URL](https://github.com/taskcluster/taskcluster/commit/340f496f1c7afdffd8d17c623875148c6d77ed34)|2019-03-01 16:00:29
+|495|sudipt1999|[UI] Reopen docs section menu when clicking "next" (#331)|[URL](https://github.com/taskcluster/taskcluster/commit/2e5ea8038ce24b771d398bb2c64c3d7118675319)|2019-03-01 13:19:42
+|494|djmitche|Merge pull request #323 from djmitche/bug1527424  Bug 1527424 - clean up error handling in TaskCreator|[URL](https://github.com/taskcluster/taskcluster/commit/f295cb3302140cfe163763bea2f9d798a6d68144)|2019-02-28 18:55:17
+|493|djmitche|Bug 1527424 - clean up error handling in TaskCreator  This refactors TaskCreator.fire to do a better job of error handling, consistently updating LastFire and returning an API response or an error.  This also drops an unused schema file and deletes some additional (now moot) modifications of the lastFire field in the Hooks table.|[URL](https://github.com/taskcluster/taskcluster/commit/8484e114721ec2d7da8eca21dfce93cec72a6fe4)|2019-02-28 18:04:37
+|492|djmitche|Merge pull request #320 from djmitche/bug1530849  Bug 1530849 - make getHookStatus return last-fire information again|[URL](https://github.com/taskcluster/taskcluster/commit/62b3395be04cbb608be9fc84e3d69e6d60e85157)|2019-02-28 17:26:07
 |491|djmitche|Merge pull request #214 from djmitche/metaschema-items-not-entries  Fix metaschema to require array fields when 'items' is present, not '…|[URL](https://github.com/taskcluster/taskcluster/commit/f6ed2f3819e4cbaabc8c422852113803b103058f)|2019-02-28 00:31:32
 |490|djmitche|Prevent creation of duplicate roles with the same name|[URL](https://github.com/taskcluster/taskcluster/commit/9e20df153d2111972fbb318a5f8e4b91f1892618)|2019-02-13 01:30:36
 |489|djmitche|Fix metaschema to require array fields when 'items' is present, not 'entries'|[URL](https://github.com/taskcluster/taskcluster/commit/6282ebbcf0ddd00d5b3f7ac4b718247d615739f3)|2019-02-12 21:29:59

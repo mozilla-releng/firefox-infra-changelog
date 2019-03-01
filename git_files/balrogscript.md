@@ -1,7 +1,19 @@
-## BALROGSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-14 06:49:24.691776
+## BALROGSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-15 20:14:56.700053
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|22|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|21|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|20|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|19|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|18|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|17|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|16|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|15|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|14|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|13|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|12|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
+|11|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
 |10|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0  3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
 |9|mitchhentges|3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/875537fc60b40ecd3ae72c833b88f933f2b6c7b7)|2019-01-02 18:02:59
 |8|mitchhentges|Merge pull request #46 from mitchhentges/remove-schema-from-config  Removes task schema from example config, adds to default config|[URL](https://github.com/mozilla-releng/balrogscript/commit/9c10524c6565320b1a0d318d056f7fd303376a29)|2019-01-02 17:14:42
