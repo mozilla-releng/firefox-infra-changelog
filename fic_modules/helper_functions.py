@@ -237,7 +237,8 @@ def replace_bug_with_url(message, LOGGER):
     if position_bug:
         control_number = len(position_bug)
         for bug in position_bug:
-            LOGGER.info("%s Bug links left to generate.", control_number)
+            if len(position_bug) > 9:
+                LOGGER.info("%s Bug links left to generate.", control_number)
             control_number -= 1
             integer_position = bug + 1
             result = commit_text[integer_position]
