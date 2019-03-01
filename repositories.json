@@ -76,6 +76,127 @@
         "folders-to-check": [],
         "version-path": "https://raw.githubusercontent.com/mozilla-releng/mozapkpublisher/master/version.txt"
       }
+    },
+    "beetmoverscript": {
+      "name": "Beetmover Script",
+      "url": "https://github.com/mozilla-releng/beetmoverscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/beetmover_scriptworker/files/requirements.txt"
+      }
+    },
+    "addonscript": {
+      "name": "Addon Script",
+      "url": "https://github.com/mozilla-releng/addonscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/addon_scriptworker/files/requirements.txt"
+      }
+    },
+    "shipitscript": {
+      "name": "Shipit Script",
+      "url": "https://github.com/mozilla-releng/shipitscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/shipit_scriptworker/files/requirements.txt"
+      }
+    },
+    "bouncerscript": {
+      "name": "Bouncer Script",
+      "url": "https://github.com/mozilla-releng/bouncerscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/bouncer_scriptworker/files/requirements.txt"
+      }
+    },
+    "treescript": {
+      "name": "Tree Script",
+      "url": "https://github.com/mozilla-releng/treescript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/tree_scriptworker/files/requirements.txt"
+      }
+    },
+    "scriptworker": {
+      "name": "Script Worker",
+      "url": "https://github.com/mozilla-releng/scriptworker",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt"
+      }
+    },
+    "pushsnapscript": {
+      "name": "Pushsnap Script",
+      "url": "https://github.com/mozilla-releng/pushsnapscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushsnap_scriptworker/files/requirements.txt"
+      }
+    },
+    "signingscript": {
+      "name": "Signing Script",
+      "url": "https://github.com/mozilla-releng/signingscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt"
+      }
+    },
+    "pushapkscript": {
+      "name": "Pushapk Script",
+      "url": "https://github.com/mozilla-releng/pushapkscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/pushapk_scriptworker/files/requirements.txt"
+      }
+    },
+    "balrogscript": {
+      "name": "Balrog Script",
+      "url": "https://github.com/mozilla-releng/balrogscript",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/balrog_scriptworker/files/requirements.txt"
+      }
+    },
+    "signtool": {
+      "name": "Signtool",
+      "url": "https://github.com/mozilla-releng/signtool",
+      "team": "mozilla-releng/",
+      "top-contributors": [" ", " "],
+      "configuration": {
+        "type": "tag",
+        "folders-to-check": [],
+        "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt"
+      }
     }
   },
   "Mercurial": {

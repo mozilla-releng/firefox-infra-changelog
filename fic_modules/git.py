@@ -60,7 +60,6 @@ def filter_git_commit_data(repository_name, repository_team, repository_type,
     if repository_type == "tag":
         if repository_name == "build-puppet":
             filter_git_tag_bp(repository_name,
-                              repository_team,
                               repository_path)
         elif repository_name != "build-puppet":
             filter_git_tag(repository_name, repository_team, repository_path)
@@ -134,7 +133,7 @@ def create_files_for_git(repositories_holder, onerepo):
             LOGGER.info("Finished working on {}".format(repository_name))
 
 
-def filter_git_tag_bp(repository_name, repository_team, repository_path):
+def filter_git_tag_bp(repository_name, repository_path):
     """
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function
@@ -178,30 +177,9 @@ def filter_git_tag_bp(repository_name, repository_team, repository_path):
             for scriptworkers in pathway:
                 LOGGER.info("checking repo:{} ".format(scriptworkers))
                 if entry in pathway[scriptworkers]:
-                    LOGGER.debug(scriptworkers, " needs to be checked.")
-                    scriptworker_repo = scriptworkers
-                    version_path = REPOSITORIES.get("Github") \
-                        .get("build-puppet") \
-                        .get("configuration") \
-                        .get("files-to-check") \
-                        .get(scriptworker_repo)
-                    latest_releases = get_version(scriptworker_repo,
-                                                  repository_team)
-                    version_comparison_result = compare_versions(
-                        version_path,
-                        scriptworker_repo,
-                        latest_releases)
-
-                    if version_comparison_result:
-                        switch = True
-                        new_scriptworker_dict = filter_git_scriptworkers(
-                            latest_releases,
-                            repository_team,
-                            scriptworker_repo)
-                        json_writer_git(scriptworker_repo,
-                                        new_scriptworker_dict)
-                    else:
-                        LOGGER.info("No new changes entered production")
+                    LOGGER.debug("This commit needs to be saved")
+                    switch = True
+                    break
         if switch:
             number += 1
             each_commit.update({int(number): get_commit_details(commit)})
@@ -259,12 +237,13 @@ def filter_git_tag(repository_name, repository_team, repository_path):
      github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
     number = 0
-
     latest_releases = get_version(repository_name, repository_team)
-    if get_version_from_json(repository_name) == \
-            latest_releases.get("latest_release").get("version"):
-        LOGGER.info("No new changes entered production")
-    else:
+    with open("repositories.json", "r") as file:
+        json_content = json.load(file)
+        version_path = json_content.get("Github").get(repository_name) \
+            .get("configuration").get("version-path")
+    checker = compare_versions(version_path, repository_name, latest_releases)
+    if checker:
         last_commit_date = get_date_from_json(repository_name)
         new_version_commit_date = datetime.strptime(latest_releases
                                                     .get("latest_release")
@@ -273,7 +252,7 @@ def filter_git_tag(repository_name, repository_team, repository_path):
         new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow()),
                                  "last_releases": latest_releases}}
         for commit in GIT.get_repo(repository_path) \
-                         .get_commits(since=last_commit_date):
+                .get_commits(since=last_commit_date):
             last_modified = datetime.strftime(parse(commit.last_modified),
                                               "%Y-%m-%d %H:%M:%S")
             last_modified = datetime.strptime(last_modified,
@@ -284,6 +263,8 @@ def filter_git_tag(repository_name, repository_team, repository_path):
                 each_commit.update({int(number): get_commit_details(commit)})
                 new_commit_dict.update(each_commit)
         json_writer_git(repository_name, new_commit_dict)
+    else:
+        LOGGER.info("No new changes entered production")
 
 
 def get_version(repo_name, repo_team):
@@ -529,13 +510,13 @@ def compare_versions(version_path, scriptworker_repo, latest_releases):
     version_in_puppet = get_version_from_build_puppet(version_path,
                                                       scriptworker_repo)
     last_local_version = get_version_from_json(scriptworker_repo)
+    check_release = latest_releases.get("latest_release").get("version")
 
-    if version_in_puppet == latest_releases.get("latest_release") \
-            .get("version"):
-        if version_in_puppet != last_local_version:
-            return True
-        else:
-            return False
+    if version_in_puppet == check_release:
+        expr1 = bool(version_in_puppet != last_local_version)
+        expr2 = bool(last_local_version != check_release)
+
+        return True if (expr1 or expr2) else False
     else:
         return True
 
