@@ -227,33 +227,27 @@ def get_keys(name):
 
 
 def replace_bug_with_url(message, LOGGER):
+    """
+    This function generate and replace bug numbers with bugzilla links in commit messages.
+    Supports MD format.
+    :param message: commit message
+    :param LOGGER: used for displaying the logger while running the script
+    manually from terminal
+    :return: the commit message with the bug link
+    """
     commit_text = message.split()
-    try:
-        position_bug = re.search("Bug", message, re.IGNORECASE).regs[0]
-    except AttributeError:
-        position_bug = False
+    for element in range(len(commit_text)):
+        if commit_text[element].lower() == "bug" and element < len(commit_text) - 1:
+            bug_number = re.sub("[(:,.;)]", "", commit_text[element + 1])
+            try:
+                bug_number = int(bug_number)
+                generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + \
+                                 str(bug_number)
+                LOGGER.info("Link generated for Bug {} - {}".format(bug_number, generated_link))
+                commit_text[element] = '[' + 'Bug' + ' ' + str(bug_number)
+                commit_text[element + 1] = '](' + generated_link + ')'
+            except ValueError:
+                LOGGER.info("Invalid bug number: > {} < in message: {}".format(commit_text[element + 1], message))
+    commit_text = ' '.join(commit_text)
+    return commit_text
 
-
-    if position_bug:
-        control_number = len(position_bug)
-        for bug in position_bug:
-            if len(position_bug) > 9:
-                LOGGER.info("%s Bug links left to generate.", control_number)
-            control_number -= 1
-            integer_position = bug + 1
-            result = commit_text[integer_position]
-            generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" +\
-                             str(result)
-            for entry in position_bug:
-                replace = re.sub(str("Bug {}".format(result)), str(generated_link),
-                                 message)
-                replace2 = re.sub(str(generated_link), "[Bug {}]({})".format(result, generated_link), replace)
-                message = replace2
-
-    position_bug = None
-    commit_text = None
-    control_number = None
-    integer_position = None
-    result = None
-    replace = None
-    return message
