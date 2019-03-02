@@ -18,7 +18,8 @@ from fic_modules.configuration import (
 from fic_modules.helper_functions import (
     remove_chars,
     compare_files,
-    extract_reviewer
+    extract_reviewer,
+    replace_bug_with_url
 )
 
 
@@ -266,6 +267,8 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                                 .get("commit_message")
                             commit_description = \
                                 remove_chars(commit_description, "\n")
+                            commit_description = \
+                                replace_bug_with_url(commit_description, LOGGER)
                             commit_url = data.get(changeset_iterator) \
                                 .get("changeset_commits") \
                                 .get(commit_iterator) \
