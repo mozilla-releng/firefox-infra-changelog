@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79452
+    "last_push_id": 79470
   },
   "1": {
     "changeset_number": "35344",
@@ -34757,21 +34757,6 @@
         "commit_message": "Bug 1513000 - Create action to trigger Openh264. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20850",
         "files_changed": [
           "taskcluster/taskgraph/actions/openh264.py"
-        ]
-      }
-    }
-  },
-  "680": {
-    "changeset_number": "79393",
-    "pusher": "rwood@mozilla.com",
-    "date_of_push": "2019-03-01 20:00:32",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dcfebc36f75c",
-        "commiter_name": "Rob Wood <rwood@mozilla.com>",
-        "commit_message": "Bug 1531441 - Re-enable Raptor android ugl temporarily as tier 3, pending benchmark upgrade; r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21713",
-        "files_changed": [
-          "taskcluster/ci/test/raptor.yml"
         ]
       }
     }
