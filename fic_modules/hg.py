@@ -249,7 +249,7 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                                          repository_json)
                 if "0" in data:
                     del data["0"]
-                for changeset_iterator in data:
+                for changeset_iterator in sorted(data, reverse=True):
                     for commit_iterator in data\
                             .get(changeset_iterator)\
                             .get("changeset_commits"):

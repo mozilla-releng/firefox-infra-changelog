@@ -218,6 +218,7 @@ def create_hg_md_table(repository_name):
 
         for key in data:
             if key > "0":
+                key = str(len(data) - int(key))
                 changeset_id = data.get(key).get("changeset_number")
                 date_of_push = data.get(key).get("date_of_push")
                 try:
