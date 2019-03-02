@@ -225,3 +225,29 @@ def get_keys(name):
         REPO_LIST.append(key)
     return REPO_LIST
 
+
+def replace_bug_with_url(message, LOGGER):
+    """
+    This function generate and replace bug numbers with bugzilla links in commit messages.
+    Supports MD format.
+    :param message: commit message
+    :param LOGGER: used for displaying the logger while running the script
+    manually from terminal
+    :return: the commit message with the bug link
+    """
+    commit_text = message.split()
+    for element in range(len(commit_text)):
+        if commit_text[element].lower() == "bug" and element < len(commit_text) - 1:
+            bug_number = re.sub("[(:,.;)]", "", commit_text[element + 1])
+            try:
+                bug_number = int(bug_number)
+                generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + \
+                                 str(bug_number)
+                LOGGER.info("Link generated for Bug {} - {}".format(bug_number, generated_link))
+                commit_text[element] = '[' + 'Bug' + ' ' + str(bug_number)
+                commit_text[element + 1] = '](' + generated_link + ')'
+            except ValueError:
+                LOGGER.info("Invalid bug number: > {} < in message: {}".format(commit_text[element + 1], message))
+    commit_text = ' '.join(commit_text)
+    return commit_text
+
