@@ -1,7 +1,18 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-15 20:14:56.700053
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-16 08:06:19.340981
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|508|owlishDeveloper|Merge pull request #335 from owlishDeveloper/bug1531606  DB migration: add a table|[URL](https://github.com/taskcluster/taskcluster/commit/73730cd7bf12b86df82d3dd17a46d2186b4cac9f)|2019-03-01 23:42:10
+|507|helfi92|Add font-size styling to code segments in docs (#339)|[URL](https://github.com/taskcluster/taskcluster/commit/6486c4c4acba85d0e57f44511c363227c18c424d)|2019-03-01 20:16:20
+|506|helfi92|Add table scrolling in docs (#338)|[URL](https://github.com/taskcluster/taskcluster/commit/6fe414fa39b78a07dadf03c60713becfb7f23d2c)|2019-03-01 20:14:28
+|505|owlishDeveloper|DB migration: add a table|[URL](https://github.com/taskcluster/taskcluster/commit/27702cf52dc04c9c62565be74072f4e8dbfbbe49)|2019-03-01 18:34:14
+|504|imbstack|Merge pull request #330 from taskcluster/bug-1531139  [Bug 1531139] Render log types in docs site|[URL](https://github.com/taskcluster/taskcluster/commit/98e68a279a83e1f11354d7552b857949ea586ead)|2019-03-01 19:58:46
+|503|imbstack|Merge pull request #326 from taskcluster/bug-1531121  [bug 1531121] Simplify what disabling monitoring does|[URL](https://github.com/taskcluster/taskcluster/commit/712c2b6fc24ec741840379dea787322dda4ffc03)|2019-03-01 19:57:52
+|502|helfi92|Adjust table margin for docs (#337)|[URL](https://github.com/taskcluster/taskcluster/commit/877558a1027d4a0beefd727a3e116b9eb7b4b4f1)|2019-03-01 19:35:36
+|501|imbstack|Update manual for logs|[URL](https://github.com/taskcluster/taskcluster/commit/f2cffc7ac7fc4d6e2b8480c3338a38f2a5311709)|2019-03-01 19:27:19
+|500|helfi92|Use Markdown component from @mozilla-frontend-infra/components (#334)    Use Markdown component from @mozilla-frontend-infra/components      Run `yarn generate`|[URL](https://github.com/taskcluster/taskcluster/commit/8141763ed8e54084842199bf76e120ebe7a1d739)|2019-03-01 18:59:04
+|499|imbstack|Cleanup old generated docs|[URL](https://github.com/taskcluster/taskcluster/commit/7cb34d9c01332a7efd659a8ce65efb9cf687a7b2)|2019-03-01 18:44:54
+|498|imbstack|Render log types in docs site|[URL](https://github.com/taskcluster/taskcluster/commit/22a552f0fc4c581ea42f30548fd64ff92f3443e8)|2019-03-01 04:52:56
 |497|helfi92|Update @mozilla-frontend-infra/components (#333)  Also remove global background color on pre elements. elements with pre  tags should be formatted with highlight.js|[URL](https://github.com/taskcluster/taskcluster/commit/43dbf66e7573a9685345d3af8b520ecbdb180d33)|2019-03-01 16:28:44
 |496|helfi92|Make docs theme consistent with site (#332)|[URL](https://github.com/taskcluster/taskcluster/commit/340f496f1c7afdffd8d17c623875148c6d77ed34)|2019-03-01 16:00:29
 |495|sudipt1999|[UI] Reopen docs section menu when clicking "next" (#331)|[URL](https://github.com/taskcluster/taskcluster/commit/2e5ea8038ce24b771d398bb2c64c3d7118675319)|2019-03-01 13:19:42
