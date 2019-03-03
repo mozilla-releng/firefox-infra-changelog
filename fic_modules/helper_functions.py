@@ -244,7 +244,6 @@ def replace_bug_with_url(message, LOGGER):
                 bug_number = int(bug_number)
                 generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + \
                                  str(bug_number)
-                LOGGER.info("Link generated for Bug {} - {}".format(bug_number, generated_link))
                 commit_text[element] = '[' + 'Bug' + ' ' + str(bug_number)
                 commit_text[element + 1] = '](' + generated_link + ')'
             except ValueError:
