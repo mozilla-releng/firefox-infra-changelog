@@ -229,12 +229,11 @@ def get_keys(name):
 
 def replace_bug_with_url(message, LOGGER):
     """
-    This function generate and replace bug numbers with bugzilla links in commit messages.
+    This function generates and replaces bug numbers with bugzilla links in commit messages.
     Supports MD format.
     :param message: commit message
-    :param LOGGER: used for displaying the logger while running the script
-    manually from terminal
-    :return: the commit message with the bug link
+    :param LOGGER: send the logger object
+    :return: the commit message with formatted bug link for MD files.
     """
     commit_text = message.split()
     for element in range(len(commit_text)):
