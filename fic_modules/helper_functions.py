@@ -3,6 +3,7 @@ This module contains functions that are for other scopes which aim to get
 better functionality out of the code and not directly related to the script.
 """
 import re
+import json
 from github import GithubException
 from fic_modules.configuration import (
     REPOSITORIES,
@@ -251,3 +252,20 @@ def replace_bug_with_url(message, LOGGER):
     commit_text = ' '.join(commit_text)
     return commit_text
 
+
+def populate_changelog_json(work_dir, repo_name):
+    """
+    Takes the data from within json files and prepares it for changelog.json
+    :param work_dir:
+    :param repo_name:
+    :return: returns all the data from a single json file
+    """
+    json_file = open(work_dir + repo_name + ".json", "r")
+    content = json.load(json_file)
+    try:
+        del content["0"]
+    except KeyError:
+        pass
+    data = {}
+    data.update({repo_name: content})
+    return data

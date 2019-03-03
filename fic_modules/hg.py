@@ -19,7 +19,8 @@ from fic_modules.helper_functions import (
     remove_chars,
     compare_files,
     extract_reviewer,
-    replace_bug_with_url
+    replace_bug_with_url,
+    populate_changelog_json
 )
 
 
@@ -78,6 +79,7 @@ def create_files_for_hg(repositories_holder, onerepo):
     """
     from fic_modules.markdown_modules import create_hg_md_table
     if onerepo:
+        complete_data = {}
         repository_url = REPOSITORIES\
             .get("Mercurial")\
             .get(repositories_holder)\
@@ -90,8 +92,12 @@ def create_files_for_hg(repositories_holder, onerepo):
         filter_hg_commit_data(repositories_holder,
                               folders_to_check,
                               repository_url)
+        work_path = WORKING_DIR + "/hg_files/"
+        repo_data = populate_changelog_json(work_path, repositories_holder)
+        complete_data.update(repo_data)
         create_hg_md_table(repositories_holder)
     else:
+        complete_data = {}
         for repo in repositories_holder["Mercurial"]:
             repository_name = repo
             repository_url = repositories_holder\
@@ -104,7 +110,11 @@ def create_files_for_hg(repositories_holder, onerepo):
             filter_hg_commit_data(repository_name,
                                   folders_to_check,
                                   repository_url)
+            work_path = WORKING_DIR + "/hg_files/"
+            repo_data = populate_changelog_json(work_path, repository_name)
+            complete_data.update(repo_data)
             create_hg_md_table(repository_name)
+    return complete_data
 
 
 def filter_hg_commit_data(repository_name, folders_to_check, repository_url):
@@ -197,15 +207,6 @@ def json_writer_hg(repository_name, new_commits):
         json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
         json.dump(json_content, json_file, indent=2)
         json_file.close()
-        try:
-            del json_content["0"]
-        except KeyError:
-            pass
-        with open("changelog.json", "r") as file:
-            data = json.load(file)
-        data[repository_name] = json_content
-        with open("changelog.json", "w") as file:
-            json.dump(data, file, indent=2)
 
 
 def extract_json_from_hg(json_files, path_to_files, days_to_generate):

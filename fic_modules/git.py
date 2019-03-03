@@ -21,7 +21,8 @@ from fic_modules.helper_functions import (
     remove_chars,
     limit_checker,
     get_commit_details,
-    compare_files
+    compare_files,
+    populate_changelog_json
 )
 from fic_modules.markdown_modules import (
     generate_markdown_header,
@@ -76,6 +77,7 @@ def create_files_for_git(repositories_holder, onerepo):
     Can be found inside git_files/
     """
     if onerepo:
+        complete_data = {}
         repository_team = REPOSITORIES \
             .get("Github") \
             .get(repositories_holder) \
@@ -100,9 +102,13 @@ def create_files_for_git(repositories_holder, onerepo):
             create_md_table_for_scriptworkers(repositories_holder)
         else:
             create_git_md_table(repositories_holder, "git_files")
+        work_path = WORKING_DIR + "/git_files/"
+        repo_data = populate_changelog_json(work_path, repositories_holder)
+        complete_data.update(repo_data)
         LOGGER.info("MD table generated successfully for {}"
                     .format(repositories_holder))
     else:
+        complete_data = {}
         for repo in repositories_holder["Github"]:
             repository_name = repo
             repository_team = repositories_holder \
@@ -129,8 +135,12 @@ def create_files_for_git(repositories_holder, onerepo):
                 create_md_table_for_scriptworkers(repository_name)
             else:
                 create_git_md_table(repository_name, "git_files")
+            work_path = WORKING_DIR + "/git_files/"
+            repo_data = populate_changelog_json(work_path, repository_name)
+            complete_data.update(repo_data)
             LOGGER.info("MD table generated successfully")
             LOGGER.info("Finished working on {}".format(repository_name))
+    return complete_data
 
 
 def filter_git_tag_bp(repository_name, repository_path):
@@ -335,24 +345,10 @@ def json_writer_git(repository_name, new_commits):
         json_file = open(WORKING_DIR + "/git_files/" + git_json_filename, "w")
         json.dump(new_commits, json_file, indent=2)
         json_file.close()
-        try:
-            del new_commits["0"]
-        except KeyError:
-            pass
-        try:
-            with open("changelog.json", "r") as file:
-                data = json.load(file)
-            data[repository_name] = new_commits
-        except json.decoder.JSONDecodeError:
-            data = {}
-            data.update({repository_name: new_commits})
-        with open("changelog.json", "w") as file:
-            json.dump(data, file, indent=2)
 
 
 def last_check(repository_name):
     """
-
     :param repository_name:
     :return: the last time when the repository was checked
     """

@@ -6,6 +6,7 @@ could affect Firefox CI Infra
 import logging
 from datetime import datetime
 import click
+import json
 from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
 from fic_modules.helper_functions import (
@@ -22,8 +23,12 @@ from fic_modules.markdown_modules import generate_main_md_table
 def run_all(logger, days):
     logger.info("======== Logging in ALL mode on %s ========", datetime
                 .now())
-    create_files_for_git(REPOSITORIES, onerepo=False)
-    create_files_for_hg(REPOSITORIES, onerepo=False)
+    git_data = create_files_for_git(REPOSITORIES, onerepo=False)
+    hg_data = create_files_for_hg(REPOSITORIES, onerepo=False)
+    data_file = open("changelog.json", "w")
+    json.dump(git_data, data_file, indent=2)
+    json.dump(hg_data, data_file, indent=2)
+    data_file.close()
     clear_file("changelog.md", int(days))
     generate_main_md_table("hg_files", int(days))
     generate_main_md_table("git_files", int(days))
@@ -32,7 +37,10 @@ def run_all(logger, days):
 def run_git(logger, days):
     logger.info("======== Logging in GIT mode on %s ========", datetime
                 .now())
-    create_files_for_git(REPOSITORIES, onerepo=False)
+    git_data = create_files_for_git(REPOSITORIES, onerepo=False)
+    data_file = open("changelog.json", "w")
+    json.dump(git_data, data_file, indent=2)
+    data_file.close()
     clear_file("changelog.md", int(days))
     generate_main_md_table("hg_files", int(days))
     generate_main_md_table("git_files", int(days))
@@ -42,7 +50,10 @@ def run_git(logger, days):
 def run_hg(logger, days):
     logger.info("======== Logging in HG mode on %s ========", datetime
                 .now())
-    create_files_for_hg(REPOSITORIES, onerepo=False)
+    hg_data = create_files_for_hg(REPOSITORIES, onerepo=False)
+    data_file = open("changelog.json", "w")
+    json.dump(hg_data, data_file, indent=2)
+    data_file.close()
     clear_file("changelog.md", int(days))
     generate_main_md_table("hg_files", int(days))
     generate_main_md_table("git_files", int(days))
