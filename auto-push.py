@@ -1,6 +1,3 @@
-# git push --set-upstream origin auto-push
-
-
 import subprocess
 from datetime import datetime
 from win10toast import ToastNotifier
