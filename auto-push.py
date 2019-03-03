@@ -15,7 +15,7 @@ try:
     # Run FIC
     subprocess.call(['python', 'client.py', '-c', '-l'])
     # Prepare commit
-    subprocess.call(['git', 'add', 'git_files/', 'hg_files/', 'LOG.log',
+    subprocess.call(['git', 'add', 'git_files/', 'hg_files/',
                      'changelog.md', 'changelog.json'])
     commit_message = "Changelog:  " + str(datetime.utcnow()) + \
                      "\n- updated git files \n- updated hg files" \
