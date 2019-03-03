@@ -246,7 +246,8 @@ def replace_bug_with_url(message, LOGGER):
                 commit_text[element] = '[' + 'Bug' + ' ' + str(bug_number)
                 commit_text[element + 1] = '](' + generated_link + ')'
             except ValueError:
-                pass
+                LOGGER.warning("Invalid bug number: > {} < in message: {}"
+                               .format(commit_text[element + 1], message))
     commit_text = ' '.join(commit_text)
     return commit_text
 
