@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 80
+ CURRENT PUSH ID: 82
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|80|2019-03-01 20:58:22|Tom Prince <mozilla@hocat.ca>|[Bug 1530732 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1530732) Grant access to level-3 pgo testers; r=dustinAdditionally, make sure that other levels can't access them.Differential Revision: https://phabricator.services.mozilla.com/D21754|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=44e7a91589a3
+|81|2019-03-04 19:18:20|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - Generate hg-push hooks. r=tomprinceThis includes a hook task template, as well as a small Python script embeddedin a Docker image that creates decision tasks based on `.taskcluster.yml`This is currently gated behind a temporary feature in projects.yml. We canslowly add this feature to various projects as we disable them inmozilla-taskcluster, until everything is moved over.Differential Revision: https://phabricator.services.mozilla.com/D21283|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=9fa866d730ee
 |77|2019-02-27 23:56:42|Tom Prince <mozilla@hocat.ca>|[Bug 1527571 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527571) Grant cloudops the ability to manage product-details secrets; r=railDifferential Revision: https://phabricator.services.mozilla.com/D21409|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=20d6c4afa77c
 |76|2019-02-27 23:54:34|Tom Prince <mozilla@hocat.ca>|[Bug 1515990 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1515990) Add scopes for mozillaonline; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21290|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=50baaee916f0
 |74|2019-02-25 19:12:16|Bastien Abadie <bastien@mozilla.com>|[Bug 1530376 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1530376) - Update ci grants for code review task, r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21022|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=18d5ea174bab

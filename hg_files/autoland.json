@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79503
+    "last_push_id": 79559
   },
   "1": {
     "changeset_number": "35344",
@@ -34881,24 +34881,6 @@
     }
   },
   "687": {
-    "changeset_number": "79445",
-    "pusher": "asasaki@mozilla.com",
-    "date_of_push": "2019-03-02 01:55:40",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=811caa480654",
-        "commiter_name": "Aki Sasaki <asasaki@mozilla.com>",
-        "commit_message": "Bug 1526419 - add mar-signing-autograph-stage task r=Callek\n\nWe use autograph-prod for our ci, nightly, and release signing. Autograph-stage doesn't have the same guarantees for availability, so pointing, say, dep-signing at autograph-stage would have resulted in occasional tree closures whenever autograph-stage changes configuration or is down.\n\nHowever, we also want a way to verify autograph-stage is still valid, after the autograph team makes changes. This task is meant to be add-task'ed; a green result means autograph-stage has signed the mar file correctly.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20749",
-        "files_changed": [
-          "taskcluster/ci/config.yml",
-          "taskcluster/ci/mar-signing-autograph-stage/kind.yml",
-          "taskcluster/docs/kinds.rst",
-          "taskcluster/taskgraph/transforms/mar_signing.py"
-        ]
-      }
-    }
-  },
-  "687": {
     "changeset_number": "79503",
     "pusher": "sfraser@mozilla.com",
     "date_of_push": "2019-03-04 12:19:05",
@@ -34909,6 +34891,143 @@
         "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21903",
         "files_changed": [
           "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      }
+    }
+  },
+  "687": {
+    "changeset_number": "79512",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-03-04 16:10:59",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=817014bcd372",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532236 Improve logging and timeouts in partials generation r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21909",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/scripts/funsize.py",
+          "taskcluster/taskgraph/transforms/partials.py"
+        ]
+      }
+    }
+  },
+  "688": {
+    "changeset_number": "79513",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-03-04 16:12:06",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ece01da444e",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532251 Add new xpcshell dependency to periodic updates r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21912",
+        "files_changed": [
+          "taskcluster/docker/periodic-updates/setup.sh"
+        ]
+      }
+    }
+  },
+  "689": {
+    "changeset_number": "79517",
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-03-04 18:57:18",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=aeee5b2fac0f",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1531178 - provide gls and safe browsing separate keys. r=tomprince\n\nProvide gls and safe browsine separate keys at build time.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21536",
+        "files_changed": [
+          "testing/mozharness/configs/builds/releng_base_android_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_32_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_mac_64_cross_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_32_mingw_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_64_mingw_builds.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/64_artifact.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py",
+          "testing/mozharness/configs/single_locale/tc_android-api-16.py"
+        ]
+      }
+    }
+  },
+  "690": {
+    "changeset_number": "79524",
+    "pusher": "babadie@mozilla.com",
+    "date_of_push": "2019-03-04 19:09:14",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5caf48a420eb",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1527895 - Add soft-dependencies to taskgraph, r=ahal,marco,tomprince,dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19791",
+        "files_changed": [
+          "taskcluster/docs/optimization-process.rst",
+          "taskcluster/docs/taskgraph.rst",
+          "taskcluster/taskgraph/generator.py",
+          "taskcluster/taskgraph/optimize.py",
+          "taskcluster/taskgraph/task.py",
+          "taskcluster/taskgraph/test/test_taskgraph.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
+  },
+  "691": {
+    "changeset_number": "79532",
+    "pusher": "babadie@mozilla.com",
+    "date_of_push": "2019-03-04 19:34:02",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7fdcccd878ad",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1527895 - Add code-review-issues task in CI, r=dustin,marco,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21348",
+        "files_changed": [
+          "taskcluster/ci/code-review/kind.yml",
+          "taskcluster/ci/source-test/mozlint.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/docs/parameters.rst",
+          "taskcluster/taskgraph/parameters.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/code_review.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      }
+    }
+  },
+  "692": {
+    "changeset_number": "79534",
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-03-04 19:41:57",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5cfbf5c1dbe7",
+        "commiter_name": "Dorel Luca <dluca@mozilla.com>",
+        "commit_message": "Backed out changeset 7fdcccd878ad (bug 1527895) for Gecko Decision Task failure. CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/code-review/kind.yml",
+          "taskcluster/ci/source-test/mozlint.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/docs/parameters.rst",
+          "taskcluster/taskgraph/parameters.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/code_review.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      }
+    }
+  },
+  "693": {
+    "changeset_number": "79537",
+    "pusher": "kgupta@mozilla.com",
+    "date_of_push": "2019-03-04 20:18:41",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8df68de51796",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1532336 - Turn off optimizations for searchfox jobs. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21964",
+        "files_changed": [
+          "taskcluster/ci/searchfox/kind.yml"
         ]
       }
     }

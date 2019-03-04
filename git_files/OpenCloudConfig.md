@@ -1,7 +1,10 @@
-## OPENCLOUDCONFIG COMMIT MARKDOWN TABLE SINCE 2019-02-18 12:48:49.185277
+## OPENCLOUDCONFIG COMMIT MARKDOWN TABLE SINCE 2019-02-18 23:23:02.664844
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|75|grenade|update to gw 13.0.2, tc-proxy 5.1.0 on win 7 deploy: gecko-t-win7-32 gecko-t-win7-32-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/f543df8c734142d7338190354da5cebd1d5a0b62)|2019-03-04 13:35:46
+|74|grenade|update to gw 13.0.2, tc-proxy 5.1.0 on win 7 deploy: gecko-t-win7-32 gecko-t-win7-32-gpu gecko-t-win7-32-cu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/5e17c70ece9815221ef92dbd9edba41818979806)|2019-03-04 13:13:20
+|73|grenade|update to gw 13.0.2, tc-proxy 5.1.0 on win 7 deploy: gecko-t-win7-32 gecko-t-win7-32-gpu gecko-t-win7-32-cu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/a86086a0d4a09e5155c64f150c9b67dfe0563bf4)|2019-03-04 12:54:22
 |72|grenade|[Bug 1527134 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527134) - disable windows update (again) deploy: gecko-t-win10-64|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/b7c71acd64d624882248f088e83ad8a8a8130add)|2019-02-12 07:52:33
 |71|grenade|[Bug 1522896 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1522896) - use update gw 11.1.0 with 1803 patch deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/56d247d42d33af2d3fc9b69dfcb13a30e980e6b5)|2019-02-11 11:12:16
 |70|grenade|[Bug 1522896 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1522896) - use update gw 11.1.0 with 1803 patch deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/8353604b9cdff902749945fa1ab2d797a54d1cc8)|2019-02-11 10:38:32

@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-18 12:48:49.185277
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-18 23:23:02.664844
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|510|djmitche|Merge pull request #349 from taskcluster/renovate/eslint-5.x Update dependency eslint to v5.15.0|[URL](https://github.com/taskcluster/taskcluster/commit/9dae677b5232a551eea3caeae8e8119150cb0529)|2019-03-04 20:40:39
+|509|djmitche|Merge pull request #348 from taskcluster/renovate/ajv-6.x Update dependency ajv to v6.10.0|[URL](https://github.com/taskcluster/taskcluster/commit/84a5d4efe47a8940fb80a8086c16a43695ebb9d1)|2019-03-04 19:40:37
 |508|owlishDeveloper|Merge pull request #335 from owlishDeveloper/bug1531606 DB migration: add a table|[URL](https://github.com/taskcluster/taskcluster/commit/73730cd7bf12b86df82d3dd17a46d2186b4cac9f)|2019-03-01 23:42:10
 |507|helfi92|Add font-size styling to code segments in docs (#339)|[URL](https://github.com/taskcluster/taskcluster/commit/6486c4c4acba85d0e57f44511c363227c18c424d)|2019-03-01 20:16:20
 |506|helfi92|Add table scrolling in docs (#338)|[URL](https://github.com/taskcluster/taskcluster/commit/6fe414fa39b78a07dadf03c60713becfb7f23d2c)|2019-03-01 20:14:28
