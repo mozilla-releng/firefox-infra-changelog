@@ -45,7 +45,7 @@ def filter_git_commit_data(repository_name, repository_team, repository_type,
     from given repo
     :return: Filtered json data
     TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
+    pull data:
     (e.g raise self.__createException(status, responseHeaders, output)
     github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
@@ -70,7 +70,7 @@ def create_files_for_git(repositories_holder, onerepo):
     """
     Main GIT function. Takes every Git repo from a .json file which is
     populated with repositories and writes all the commit data of each repo in
-    a. creates a json and MD file for each repo as well.
+    a json and MD file formats.
     :param: repositories_holder: Expects a .json file that contains a list of
     repositories.
     :return: The end result is a .json and a .md file for every git repository.
@@ -148,12 +148,11 @@ def filter_git_tag_bp(repository_name, repository_path):
     Filters out only the data that we need from a commit
     Substitute the special characters from commit message using 'sub' function
     from 're' library
-    :param repository_team: the team of the given repo
     :param repository_name: name of the given repo
     :param repository_path:
     :return: the commits into a dictionary
     TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
+    pull data:
     (e.g raise self.__createException(status, responseHeaders, output)
     github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
@@ -199,7 +198,7 @@ def filter_git_tag_bp(repository_name, repository_path):
 
 def filter_git_scriptworkers(latest_releases, repo_team, script_repo):
     """
-    filters the scriptworker repos that are under build-puppet
+    Filters the scriptworker repos that are under build-puppet
     :param latest_releases: data about last release
     :param repo_team: team name as a string
     :param script_repo: scriptworker repo we are working on
@@ -242,7 +241,7 @@ def filter_git_tag(repository_name, repository_team, repository_path):
     :param repository_path:
     :return: the commits into a dictionary
     TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
+    pull data:
     (e.g raise self.__createException(status, responseHeaders, output)
      github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
@@ -279,9 +278,10 @@ def filter_git_tag(repository_name, repository_team, repository_path):
 
 def get_version(repo_name, repo_team):
     """
+    Gets the latest 2 versions released for a repository on github.
     :param repo_name: repository name
     :param repo_team: repository team
-    :return: a dictionary with information from the last two release version:
+    :return: a dictionary with information from the last two release versions:
      latestRelease and previousRelease
     """
     repo_path = repo_team + repo_name
@@ -307,11 +307,12 @@ def get_version(repo_name, repo_team):
 
 def get_version_from_build_puppet(version_path, repo_name):
     """
-    :param: version_path: Path to the requierments.txt where the version number
+    Gets the latest version released for a scriptworker repository on github.
+    :param: version_path: Path to the requirements.txt where the version number
      is stored
     :param: repo_name: The repo for which we are checking the version.
     :return: Returns the version number that is stored in build-puppet for
-    each *scriptworker
+    each scriptworker
     """
     file_to_string = requests.get(version_path).text.split()
     for word in file_to_string:
@@ -323,7 +324,7 @@ def get_version_from_build_puppet(version_path, repo_name):
 
 def json_writer_git(repository_name, new_commits):
     """
-    :param repository_name:
+    :param repository_name: repository name
     :param new_commits: a dictionary with the new commits
     :return: write the json file with the old and the new commits
     """
@@ -349,7 +350,7 @@ def json_writer_git(repository_name, new_commits):
 
 def last_check(repository_name):
     """
-    :param repository_name:
+    :param repository_name: Repository name to be checked.
     :return: the last time when the repository was checked
     """
     git_json_filename = "{}.json".format(repository_name)
@@ -432,7 +433,7 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     :param folders_to_check: the folders we care about
     :return: the commits into a dictionary
     TODO: please add the exception blocks since the script fails when it
-    can't pull a data:
+    can't pull data:
     (e.g raise self.__createException(status, responseHeaders, output)
     github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
@@ -470,7 +471,7 @@ def filter_git_commit_keyword(repository_name, repository_path):
     :param repository_path:
     :return: the commits into a dictionary
     TODO: please add the exception blocks since the script fails when it can't
-    pull a data:
+    pull data:
     (e.g raise self.__createException(status, responseHeaders, output)
     github.GithubException.GithubException: 502 {'message': 'Server Error'}
     """
@@ -495,7 +496,7 @@ def filter_git_commit_keyword(repository_name, repository_path):
 
 def compare_versions(version_path, scriptworker_repo, latest_releases):
     """
-    checks the version of a scriptworker repo from its changelog, build-puppet
+    Checks the version of a scriptworker repo from its changelog, build-puppet
     and locally saved one against each other
     :param version_path:
     :param scriptworker_repo:

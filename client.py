@@ -21,6 +21,12 @@ from fic_modules.markdown_modules import generate_main_md_table
 
 
 def run_all(logger, days):
+    """
+    Run the script for all currently tracked repositories.
+    :param logger: LOGGER object
+    :param days: Number of days (int) for which FIC will generate the
+    changelog.md data tables.
+    """
     logger.info("======== Logging in ALL mode on %s ========", datetime
                 .now())
     git_data = create_files_for_git(REPOSITORIES, onerepo=False)
@@ -35,6 +41,12 @@ def run_all(logger, days):
 
 
 def run_git(logger, days):
+    """
+    Run the script only for GIT repositories that are currently tracked.
+    :param logger: LOGGER object
+    :param days: Number of days (int) for which FIC will generate the
+    changelog.md data tables.
+    """
     logger.info("======== Logging in GIT mode on %s ========", datetime
                 .now())
     git_data = create_files_for_git(REPOSITORIES, onerepo=False)
@@ -48,6 +60,12 @@ def run_git(logger, days):
 
 
 def run_hg(logger, days):
+    """
+    Run the script only for HG repositories that are currently tracked.
+    :param logger: LOGGER object
+    :param days: Number of days (int) for which FIC will generate the
+    changelog.md data tables.
+    """
     logger.info("======== Logging in HG mode on %s ========", datetime
                 .now())
     hg_data = create_files_for_hg(REPOSITORIES, onerepo=False)
@@ -61,6 +79,12 @@ def run_hg(logger, days):
 
 
 def run_multiple(logger, days):
+    """
+    Manually specify for which repositories you want to update the data.
+    :param logger: LOGGER object
+    :param days: Number of days (int) for which FIC will generate the
+    changelog.md data tables.
+    """
     get_keys("Github")
     get_keys("Mercurial")
     for scriptrepo in REPOSITORIES.get("Github").get("build-puppet") \
@@ -100,6 +124,9 @@ def run_multiple(logger, days):
 
 
 def run_days(logger, days):
+    """
+    Simple logger utility to track how many days we will generate data for.
+    """
     logger.info('Generating changelog for %s days', days)
 
 
@@ -130,7 +157,6 @@ def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
     :param manual: Used for running the script for specific repositories.
     :param days: Used to change the amount of days the changelog will be
     generated for
-    :return:
     """
     valid_args = ['-d', '--days', '-g', '--git', '-h', '--mercurial', '-l',
                   '--logger', '-m', '--manual', '-c', '--complete']
