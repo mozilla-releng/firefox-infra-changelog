@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 79490
+ CURRENT PUSH ID: 79503
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|79445|2019-03-02 01:55:40|Aki Sasaki <asasaki@mozilla.com>|[Bug 1526419 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526419) - add mar-signing-autograph-stage task r=CallekWe use autograph-prod for our ci, nightly, and release signing. Autograph-stage doesn't have the same guarantees for availability, so pointing, say, dep-signing at autograph-stage would have resulted in occasional tree closures whenever autograph-stage changes configuration or is down.However, we also want a way to verify autograph-stage is still valid, after the autograph team makes changes. This task is meant to be add-task'ed; a green result means autograph-stage has signed the mar file correctly.Differential Revision: https://phabricator.services.mozilla.com/D20749|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=811caa480654
+|79503|2019-03-04 12:19:05|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D21903|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee0735447f25
 |79442|2019-03-02 01:24:21|Tom Prince <mozilla@hocat.ca>|[Bug 1519472 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519472) Disable caches on windows repackage builds; r=aki a=tomprinceThey appear to be causing tasks to take several hours to complete.Differential Revision: https://phabricator.services.mozilla.com/D21775|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3b08a133c893
 |79442|2019-03-02 01:24:21|Dorel Luca <dluca@mozilla.com>|Merge mozilla-central to autoland|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2bd9674d85a1
 |79433|2019-03-02 00:20:58|Tom Prince <mozilla@hocat.ca>|[Bug 1513000 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1513000) [openh264] Adjust `create_tasks` call in openh264 action for [Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) r=CallekDifferential Revision: https://phabricator.services.mozilla.com/D21794|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a88b39ffb1f1
