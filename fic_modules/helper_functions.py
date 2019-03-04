@@ -16,7 +16,6 @@ from datetime import datetime
 
 def compare_files(first_list, second_list):
     """
-    Helper Function!
     Compares two lists that should contain the path + filename of the modified
     files. The two lists are mutable.
     :param first_list: First lists.
@@ -31,7 +30,6 @@ def compare_files(first_list, second_list):
 
 def clear_file(file_name, generated_for_days=1):
     """
-    Helper function.
     This function takes a file that clears the content and output's a base
     table header for a markdown file.
     :param generated_for_days: used for generate the title (default being set
@@ -56,7 +54,6 @@ def clear_file(file_name, generated_for_days=1):
 
 def get_commit_details(commit):
     """
-    Helper function.
     Extracts sha, url, commiter name, commiter email, commiter message, commit
     date and files_changed from a commit object and stores them in a dictionary
      that gets returned at the end.
@@ -109,7 +106,6 @@ def get_commit_details(commit):
 
 def extract_email(commit_email):
     """
-    Helper function!
     Takes as parameter a string that contains between "<" and ">" an email
     that needs to be extracted.
     The function uses find to search for the beginning of the email (that
@@ -128,7 +124,6 @@ def extract_email(commit_email):
 
 def extract_reviewer(string):
     """
-    Helper function!
     Takes the string on the input and looks for a specific set of characters
     (either "r=" or "a=").
     If at least one of them are present (most of the times they are in the
@@ -157,7 +152,6 @@ def extract_reviewer(string):
 
 def remove_chars(string, char):
     """
-    Helper function!
     Removes a specific character from a string
     :param string: string that contains a special char
     :param char: char to be removed from string
@@ -168,7 +162,6 @@ def remove_chars(string, char):
 
 def filter_strings(string):
     """
-    Helper function!
     Filters the provided string and removes specific words/characters from it
     that are stored in unwanted_chars variable.
     This filter removes chars that can't be written to the markdown file
