@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80
+    "last_push_id": 82
   },
   "1": {
     "changeset_number": "31",
@@ -722,6 +722,23 @@
         "commit_message": "Bug 1530732: Grant access to level-3 pgo testers; r=dustin\n\nAdditionally, make sure that other levels can't access them.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21754",
         "files_changed": [
           "grants.yml"
+        ]
+      }
+    }
+  },
+  "44": {
+    "changeset_number": "81",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04 19:18:20",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=9fa866d730ee",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - Generate hg-push hooks. r=tomprince\n\nThis includes a hook task template, as well as a small Python script embedded\nin a Docker image that creates decision tasks based on `.taskcluster.yml`\n\nThis is currently gated behind a temporary feature in projects.yml.  We can\nslowly add this feature to various projects as we disable them in\nmozilla-taskcluster, until everything is moved over.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21283",
+        "files_changed": [
+          "cron-task-template.yml",
+          "hg-push-template.yml",
+          "projects.yml"
         ]
       }
     }

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 44
+    "last_push_id": 50
   },
   "1": {
     "changeset_number": "21",
@@ -440,6 +440,116 @@
         "files_changed": [
           "setup.py",
           "taskcluster/ci/tests/kind.yml"
+        ]
+      }
+    }
+  },
+  "22": {
+    "changeset_number": "45",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04 18:21:07",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=33d5ff352ae5",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - add support for hg-push tasks r=tomprince\n\nThis adds support for \"bindings\" in the Hooks API, and uses it to support hooks\nthat run when a push is generated, with the hook template based on a file in\nci-configuration.\n\nThe hooks run tasks on a dedicated `hg-push` workerType which *only* runs this\nsort of task, and can thus run them quickly.  The tasks themselves do not\nperform an hg clone or do anything terribly complicated, so once the docker\nimage is loaded they only take a few seconds to execute.\n\nThe docker image is generated on every push to the ci-admin repository.  That\ncould be attached to the ci-configuration repository, instead, but that\nrepository does not yet use ci-taskgraph.\n\nThis also adds some checks to be confident that nobody can trigger hg-push\nhooks, nor create tasks on the workerType.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21282",
+        "files_changed": [
+          "ciadmin/check/check_hg_push_scopes.py",
+          "ciadmin/check/check_signing_scopes.py",
+          "ciadmin/check/conftest.py",
+          "ciadmin/generate/__init__.py",
+          "ciadmin/generate/cron_tasks.py",
+          "ciadmin/generate/hg_pushes.py",
+          "ciadmin/generate/in_tree_actions.py",
+          "ciadmin/resources/__init__.py",
+          "ciadmin/resources/hook.py",
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/hg-push/Dockerfile",
+          "taskcluster/docker/hg-push/README.txt",
+          "taskcluster/docker/hg-push/make_decision.py",
+          "taskcluster/docker/hg-push/requirements.txt",
+          "tests/test_current_hooks.py",
+          "tests/test_resources_hook.py"
+        ]
+      }
+    }
+  },
+  "23": {
+    "changeset_number": "46",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04 18:58:44",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=a3f3c50c66ac",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: fix black and flake8 issues r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21951",
+        "files_changed": [
+          "ciadmin/check/check_hg_push_scopes.py",
+          "ciadmin/check/conftest.py",
+          "ciadmin/generate/hg_pushes.py",
+          "ciadmin/resources/hook.py",
+          "tests/test_resources_hook.py"
+        ]
+      }
+    }
+  },
+  "24": {
+    "changeset_number": "47",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04 19:42:19",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6a3895820e75",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: capture absolute path for --ci-configuration-directory r=tomprince\n\nThe `ci-admin check` command changes working directory, so it broke use of\n`--ci-configuration-directory`.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21959",
+        "files_changed": [
+          "ciadmin/generate/ciconfig/__init__.py"
+        ]
+      }
+    }
+  },
+  "25": {
+    "changeset_number": "48",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04 20:37:38",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e72a3935e409",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: fix use of bindings in 'ci-admin apply' r=tomprince\n\nI missed this when refactoring the `bindings` property to use an object instead\nof a tuple.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21963",
+        "files_changed": [
+          "ciadmin/resources/hook.py"
+        ]
+      }
+    }
+  },
+  "26": {
+    "changeset_number": "49",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04 20:38:07",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=60bc15b47919",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979: allow ignored payload.data.source, too, in triggering hook r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21969",
+        "files_changed": [
+          "ciadmin/generate/hg_pushes.py"
+        ]
+      }
+    }
+  },
+  "27": {
+    "changeset_number": "50",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04 22:17:26",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0e53fe692658",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: fix checks *without* --ci-configuration-directory, fix lint r=tomprince\n\nI have actually tested this one in a [try push](https://treeherder.mozilla.org/#/jobs?repo=ci-admin-try&revision=cf0bad5ab9271013f6920018e955daab76468957)!\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21985",
+        "files_changed": [
+          "ciadmin/generate/ciconfig/__init__.py",
+          "ciadmin/resources/hook.py"
         ]
       }
     }
