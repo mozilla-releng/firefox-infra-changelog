@@ -1,7 +1,33 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-18 23:23:02.664844
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-19 18:04:05.774016
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|536|djmitche|import Iterate for claim resolver|[URL](https://github.com/taskcluster/taskcluster/commit/6e5c4fda9eb46c9182c9d3921497b17f47e45c5e)|2019-03-05 15:29:01
+|535|djmitche|Merge pull request #229 from taskcluster/bug1527583 [Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - Queue doesn't take jobs from "unscheduled" to "pending"|[URL](https://github.com/taskcluster/taskcluster/commit/5487ee62b54e07425c6da8b56b2c82c3436141b7)|2019-03-05 15:21:35
+|534|djmitche|Merge pull request #358 from djmitche/new-images update to new monoimage, with fixes|[URL](https://github.com/taskcluster/taskcluster/commit/d206d0c1389276e8e59d477d08b5fbe92b676ce9)|2019-03-05 14:48:33
+|533|djmitche|update to new image|[URL](https://github.com/taskcluster/taskcluster/commit/bc7ebe63875b03d134db99e0d1ebed9bfc148f45)|2019-03-04 23:59:03
+|532|djmitche|write the contents of references.json, not the filename|[URL](https://github.com/taskcluster/taskcluster/commit/5e63ce8ebae938f8c8dae40cd6c9f9e896acc0d9)|2019-03-05 03:21:42
+|531|djmitche|set proc_name so that tc-ui runs properly|[URL](https://github.com/taskcluster/taskcluster/commit/f3c0741a6510d9719d880339b177aaa74228f448)|2019-03-05 03:20:22
+|530|djmitche|set FORCE_SSL for secrets service|[URL](https://github.com/taskcluster/taskcluster/commit/cca34f6bcefa14eada8d4cadbbce7d40de6b8727)|2019-03-05 03:19:51
+|529|owlishDeveloper|Merge pull request #356 from owlishDeveloper/scopes-fix Add Check-related Azure scopes to the terraform for Kube deployments|[URL](https://github.com/taskcluster/taskcluster/commit/9298ad24a9ee5bd7c44fb212b9288f6a4148ca45)|2019-03-05 01:32:00
+|528|owlishDeveloper|Add Check-related Azure scopes to the terraform for Kube deployments|[URL](https://github.com/taskcluster/taskcluster/commit/784f1a1a02c83b900762dea099973e3e8b6b6e4a)|2019-03-05 00:48:44
+|527|djmitche|Merge pull request #352 from djmitche/bug1523805 [Bug 1523805 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1523805) - rename typed-env-config to taskcluster-lib-config|[URL](https://github.com/taskcluster/taskcluster/commit/4a7e4531ba6ca57ad974171830237db5ab89a19a)|2019-03-04 23:43:57
+|526|djmitche|Merge pull request #341 from sudipt1999/bug1519969 [Bug 1519969 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519969) - Sending an email to an invalid address fails|[URL](https://github.com/taskcluster/taskcluster/commit/c2c774f6adcc5cd072c2731dbb45eb85928f6fc9)|2019-03-04 23:41:07
+|525|djmitche|[Bug 1523805 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1523805) - rename typed-env-config to taskcluster-lib-config|[URL](https://github.com/taskcluster/taskcluster/commit/940a2ddd3bd1ce6ad0c7836762c9133f369fd938)|2019-03-02 18:16:36
+|524|djmitche|Merge pull request #283 from sudipt1999/crashOnError [Bug 1527969 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527969) Add function to lib-loader that is for using when file is executed|[URL](https://github.com/taskcluster/taskcluster/commit/a070042c7f274ab7c27ba6211ed25e6c9801db52)|2019-03-04 23:34:37
+|523|djmitche|Merge pull request #342 from djmitche/eslint-for-test Run eslint over the meta-test directory, too|[URL](https://github.com/taskcluster/taskcluster/commit/e2b407b508422bab5837a90e438b1cbd8c11aad6)|2019-03-04 23:31:40
+|522|djmitche|Merge pull request #343 from djmitche/no-more-check-staging No more check staging|[URL](https://github.com/taskcluster/taskcluster/commit/72d42d787c401b2f16774f1a24516e9102e141c0)|2019-03-04 23:31:29
+|521|djmitche|Merge pull request #350 from djmitche/codeowners-jhford Remove use of single users in CODEOWNERS|[URL](https://github.com/taskcluster/taskcluster/commit/94df6451339c83399db6a332156039c57ee57ebd)|2019-03-04 23:29:26
+|520|djmitche|Merge pull request #351 from djmitche/remove-unused-schemas Validate that schemas are used, and remove unused schemas|[URL](https://github.com/taskcluster/taskcluster/commit/9d00159370c900cc0ddfe107c7c6d75e17862050)|2019-03-04 23:27:40
+|519|djmitche|Merge pull request #353 from djmitche/bug1525130 [Bug 1525130 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1525130) - write out 'references.json' for use by client builders|[URL](https://github.com/taskcluster/taskcluster/commit/aee25c65bad123bc82a441c05b28c90c04a6d983)|2019-03-04 23:26:21
+|518|djmitche|[Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - terminate polling services after each test, just to be safe|[URL](https://github.com/taskcluster/taskcluster/commit/410424da6e6a4ace93e537cfa65d33c546c0cc26)|2019-03-04 22:56:30
+|517|djmitche|[Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - use tc-lib-iterate for claim resolver|[URL](https://github.com/taskcluster/taskcluster/commit/0b4ef8ba4013967499e92617376e3151b1a73133)|2019-03-04 22:50:18
+|516|djmitche|[Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - use tc-lib-iterate for deadline resolver|[URL](https://github.com/taskcluster/taskcluster/commit/2140d4fd3509bcebf8e7a641b13076ab5bca3391)|2019-03-04 22:48:15
+|515|djmitche|[Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - fix logging of elapsed fake time|[URL](https://github.com/taskcluster/taskcluster/commit/ae58c44cd01f0c2b2c9179cc09f642dbeb3fc02c)|2019-03-04 22:42:30
+|514|djmitche|[Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - fix up times for dependency resolver|[URL](https://github.com/taskcluster/taskcluster/commit/ff274809b70232585e2aea2ad6a7692026f8b649)|2019-03-04 21:35:32
+|513|imbstack|Merge pull request #354 from taskcluster/fix-force-ssl Fix forceSSL for secrets|[URL](https://github.com/taskcluster/taskcluster/commit/9095dbcf7c3df2bb41582db5e2bb6718220c4c60)|2019-03-04 22:38:42
+|512|imbstack|Fix forceSSL for secrets|[URL](https://github.com/taskcluster/taskcluster/commit/fd5400d20208239e07176153f502b1d41194c419)|2019-03-04 22:15:30
+|511|sudipt1999|bug fix 1519969|[URL](https://github.com/taskcluster/taskcluster/commit/0a79f4efcc937620b849b83faae440b1e2334317)|2019-03-02 15:30:06
 |510|djmitche|Merge pull request #349 from taskcluster/renovate/eslint-5.x Update dependency eslint to v5.15.0|[URL](https://github.com/taskcluster/taskcluster/commit/9dae677b5232a551eea3caeae8e8119150cb0529)|2019-03-04 20:40:39
 |509|djmitche|Merge pull request #348 from taskcluster/renovate/ajv-6.x Update dependency ajv to v6.10.0|[URL](https://github.com/taskcluster/taskcluster/commit/84a5d4efe47a8940fb80a8086c16a43695ebb9d1)|2019-03-04 19:40:37
 |508|owlishDeveloper|Merge pull request #335 from owlishDeveloper/bug1531606 DB migration: add a table|[URL](https://github.com/taskcluster/taskcluster/commit/73730cd7bf12b86df82d3dd17a46d2186b4cac9f)|2019-03-01 23:42:10

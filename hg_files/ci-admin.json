@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 50
+    "last_push_id": 52
   },
   "1": {
     "changeset_number": "21",
@@ -429,22 +429,6 @@
     }
   },
   "22": {
-    "changeset_number": "44",
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-02-25 18:49:25",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=933ac2604add",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: Include `ci-admin check`'s `pytest.ini` in the installed package; r=dustin\n\nAlso stop using `--develop` (i.e. `-e`) when installing ci-admin in the check job.\nThe addition of `pyproject.toml` triggers a pip bug[1], and we don't have a need\nto have an editable install.\n\n[1] https://github.com/pypa/setuptools/issues/1405\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20790",
-        "files_changed": [
-          "setup.py",
-          "taskcluster/ci/tests/kind.yml"
-        ]
-      }
-    }
-  },
-  "22": {
     "changeset_number": "45",
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-04 18:21:07",
@@ -550,6 +534,37 @@
         "files_changed": [
           "ciadmin/generate/ciconfig/__init__.py",
           "ciadmin/resources/hook.py"
+        ]
+      }
+    }
+  },
+  "27": {
+    "changeset_number": "51",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-04 23:27:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0368a98315e9",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: Allow parameterizing based on priorties determined by level; r=dustin\n\nFor the moment, we hard-code the priorities by level based on those used in firefox.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21813",
+        "files_changed": [
+          "ciadmin/generate/grants.py",
+          "tests/test_generate_grants.py"
+        ]
+      }
+    }
+  },
+  "28": {
+    "changeset_number": "52",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-04 23:36:59",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f201447a5f65",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Fix black errors in tests; r=me",
+        "files_changed": [
+          "tests/test_generate_grants.py"
         ]
       }
     }

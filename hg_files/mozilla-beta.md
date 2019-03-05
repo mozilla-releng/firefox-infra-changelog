@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-BETA
- CURRENT PUSH ID: 10822
+ CURRENT PUSH ID: 10827
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|10795|2019-02-28 13:29:27|Tom Prince <mozilla@hocat.ca>|[Bug 1526584 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526584) [win64-aarch64] Only add win64-aarch64 platform to balrog blog for firefox; r=mtabara a=releaseThis reverts the refactoring in 0734f7d57cd81464053e7ffacc8897fce1a27d61 so only the firefox blobgets the new platform. This was causing failure in the subsequent release promotion task, as it madeassumptions about the structure of the balrog blob.Differential Revision: https://phabricator.services.mozilla.com/D21494|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=674dfdbb55e1
+|10827|2019-03-05 17:14:43|Mihai Tabara <mtabara@mozilla.com>|[Bug 1531178 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531178) - provide gls and safe browsing separate keys. r=tomprince a=test-onlyProvide gls and safe browsine separate keys at build time.Differential Revision: https://phabricator.services.mozilla.com/D21536|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=c4e950fe3fe6
 |10730|2019-02-19 02:25:55|Narcis Beleuzu <nbeleuzu@mozilla.com>|[Bug 1526584 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526584) [win64-aarch64] Add paths to balrog for win64-aarch64 release builds; r=nthomas a=tomprince|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=b2f4ec44d240
 |10699|2019-02-14 12:20:00|Gurzau Raul <rgurzau@mozilla.com>|[Bug 1524912 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1524912) - Add a 'times' value to add-new-jobs action r=dustin a=NPOTBReviewers: dustinReviewed By: dustinBug #: 1524912Differential Revision: https://phabricator.services.mozilla.com/D18773|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=d8098728a641
 |10695|2019-02-14 01:08:03|Ryan VanderMeulen <ryanvm@gmail.com>|No bug: Turn off staged rollout for Fennec 66.0b. a=release DONTBUILD|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=5bd55cb9bdd7
