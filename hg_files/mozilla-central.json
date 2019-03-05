@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35643
+    "last_push_id": 35649
   },
   "1": {
     "changeset_number": "35344",
@@ -11245,6 +11245,141 @@
           "taskcluster/ci/mar-signing-autograph-stage/kind.yml",
           "taskcluster/docs/kinds.rst",
           "taskcluster/taskgraph/transforms/mar_signing.py"
+        ]
+      }
+    }
+  },
+  "114": {
+    "changeset_number": "35644",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-03-04 23:48:23",
+    "changeset_commits": {
+      "15": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ee0735447f25",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21903",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      },
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=817014bcd372",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532236 Improve logging and timeouts in partials generation r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21909",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/scripts/funsize.py",
+          "taskcluster/taskgraph/transforms/partials.py"
+        ]
+      },
+      "25": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0ece01da444e",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532251 Add new xpcshell dependency to periodic updates r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21912",
+        "files_changed": [
+          "taskcluster/docker/periodic-updates/setup.sh"
+        ]
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aeee5b2fac0f",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1531178 - provide gls and safe browsing separate keys. r=tomprince\n\nProvide gls and safe browsine separate keys at build time.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21536",
+        "files_changed": [
+          "testing/mozharness/configs/builds/releng_base_android_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_32_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_mac_64_cross_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_32_mingw_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_64_mingw_builds.py",
+          "testing/mozharness/configs/builds/releng_sub_linux_configs/64_artifact.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py",
+          "testing/mozharness/configs/single_locale/tc_android-api-16.py"
+        ]
+      },
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5caf48a420eb",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1527895 - Add soft-dependencies to taskgraph, r=ahal,marco,tomprince,dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19791",
+        "files_changed": [
+          "taskcluster/docs/optimization-process.rst",
+          "taskcluster/docs/taskgraph.rst",
+          "taskcluster/taskgraph/generator.py",
+          "taskcluster/taskgraph/optimize.py",
+          "taskcluster/taskgraph/task.py",
+          "taskcluster/taskgraph/test/test_taskgraph.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7fdcccd878ad",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1527895 - Add code-review-issues task in CI, r=dustin,marco,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21348",
+        "files_changed": [
+          "taskcluster/ci/code-review/kind.yml",
+          "taskcluster/ci/source-test/mozlint.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/docs/parameters.rst",
+          "taskcluster/taskgraph/parameters.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/code_review.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      },
+      "49": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5cfbf5c1dbe7",
+        "commiter_name": "Dorel Luca <dluca@mozilla.com>",
+        "commit_message": "Backed out changeset 7fdcccd878ad (bug 1527895) for Gecko Decision Task failure. CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/code-review/kind.yml",
+          "taskcluster/ci/source-test/mozlint.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/docs/parameters.rst",
+          "taskcluster/taskgraph/parameters.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/code_review.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      },
+      "52": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8df68de51796",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1532336 - Turn off optimizations for searchfox jobs. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21964",
+        "files_changed": [
+          "taskcluster/ci/searchfox/kind.yml"
+        ]
+      }
+    }
+  },
+  "115": {
+    "changeset_number": "35646",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-03-05 06:19:19",
+    "changeset_commits": {
+      "22": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b58080db50e6",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1527895 - Add code-review-issues task in CI, r=dustin,marco,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21348",
+        "files_changed": [
+          "taskcluster/ci/code-review/kind.yml",
+          "taskcluster/ci/source-test/mozlint.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/docs/parameters.rst",
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/parameters.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/code_review.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      },
+      "44": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1cc8b60d8a6b",
+        "commiter_name": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1532236 - longer timeout for asan partial generation, r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22038",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/partials.py"
         ]
       }
     }

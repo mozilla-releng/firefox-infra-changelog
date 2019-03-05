@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: CI-ADMIN
- CURRENT PUSH ID: 50
+ CURRENT PUSH ID: 52
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|50|2019-03-04 22:17:26|Dustin J. Mitchell <dustin@mozilla.com>|No bug: fix checks *without* --ci-configuration-directory, fix lint r=tomprinceI have actually tested this one in a [try push](https://treeherder.mozilla.org/#/jobs?repo=ci-admin-try&revision=cf0bad5ab9271013f6920018e955daab76468957)!Differential Revision: https://phabricator.services.mozilla.com/D21985|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0e53fe692658
+|52|2019-03-04 23:36:59|Tom Prince <mozilla@hocat.ca>|No bug: Fix black errors in tests; r=me|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f201447a5f65
+|51|2019-03-04 23:27:16|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Allow parameterizing based on priorties determined by level; r=dustinFor the moment, we hard-code the priorities by level based on those used in firefox.Differential Revision: https://phabricator.services.mozilla.com/D21813|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0368a98315e9
 |49|2019-03-04 20:38:07|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) allow ignored payload.data.source, too, in triggering hook r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D21969|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=60bc15b47919
 |48|2019-03-04 20:37:38|Dustin J. Mitchell <dustin@mozilla.com>|No bug: fix use of bindings in 'ci-admin apply' r=tomprinceI missed this when refactoring the `bindings` property to use an object insteadof a tuple.Differential Revision: https://phabricator.services.mozilla.com/D21963|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e72a3935e409
 |47|2019-03-04 19:42:19|Dustin J. Mitchell <dustin@mozilla.com>|No bug: capture absolute path for --ci-configuration-directory r=tomprinceThe `ci-admin check` command changes working directory, so it broke use of`--ci-configuration-directory`.Differential Revision: https://phabricator.services.mozilla.com/D21959|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6a3895820e75
