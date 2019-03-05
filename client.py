@@ -7,6 +7,8 @@ import logging
 from datetime import datetime
 import click
 import json
+import subprocess
+import signal
 from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
 from fic_modules.helper_functions import (
@@ -187,5 +189,13 @@ def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
         run_multiple(LOGGER, days)
 
 
+def keyboardInterruptHandler(signal, frame):
+    print("KeyboardInterrupt (ID: {}) has been caught. Cleaning up...".format(signal))
+    subprocess.call(['git', 'checkout', 'git_files/', 'hg_files/',
+                     'changelog.md', 'changelog.json'])
+    exit(0)
+
+
 if __name__ == "__main__":
+    signal.signal(signal.SIGINT, keyboardInterruptHandler)
     cli()
