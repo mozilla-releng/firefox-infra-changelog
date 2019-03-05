@@ -10,7 +10,7 @@ The tool uses py-github and github token and requests on all mozilla's Git/HG in
 1. After you clone the repository, please run `pip3 install -r requirements.txt`
 2. Generate a Github [Personal access token](https://github.com/settings/tokens) and add an environment variable called `GIT_TOKEN` containing the generated token.
 3. Run the script with `python3 client.py <optional-flags>`
-4. **OPTIONAL**: You can add an optional environment variable called `LoggerLevel` to change the information which gets logged. Example: `LoggerLevel=logging.WARNING`. This will give you extra information such as: [e7c515](https://github.com/mozilla-releng/firefox-infra-changelog/pull/263/commits/e7c515cd1249c60921a22cb2876deef44b5fe7a4#diff-55a742f2aefb0ba0012723d8409292b3R249)
+4. **OPTIONAL**: You can add an optional environment variable called `LoggerLevel` to change the information which gets logged. Example: `LoggerLevel=WARNING`. This will give you extra information such as: [e7c515](https://github.com/mozilla-releng/firefox-infra-changelog/pull/263/commits/e7c515cd1249c60921a22cb2876deef44b5fe7a4#diff-55a742f2aefb0ba0012723d8409292b3R249)
 
 # Flags
 | Short Flag | Long Flag | Description |
