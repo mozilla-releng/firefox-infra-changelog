@@ -23,7 +23,7 @@ LAST_MONTH = datetime.utcnow() - timedelta(days=31)
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 WORKING_DIR = CURRENT_DIR.strip("/fic_modules")
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=os.environ.get("LoggerLevel", logging.INFO),
                     format="[%(asctime)s] %(levelname)s [%(name)s.%(funcName)\
                     s:%(lineno)d] %(message)s",
                     datefmt="%H:%M:%S",
