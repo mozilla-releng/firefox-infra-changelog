@@ -1,7 +1,8 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-19 18:04:05.774016
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-19 21:17:38.461422
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|537|djmitche|Revert "bug fix 1519969" This reverts commit 0a79f4efcc937620b849b83faae440b1e2334317.|[URL](https://github.com/taskcluster/taskcluster/commit/0c297baed0af93923572691f54f6868cb313cbbf)|2019-03-05 16:04:35
 |536|djmitche|import Iterate for claim resolver|[URL](https://github.com/taskcluster/taskcluster/commit/6e5c4fda9eb46c9182c9d3921497b17f47e45c5e)|2019-03-05 15:29:01
 |535|djmitche|Merge pull request #229 from taskcluster/bug1527583 [Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - Queue doesn't take jobs from "unscheduled" to "pending"|[URL](https://github.com/taskcluster/taskcluster/commit/5487ee62b54e07425c6da8b56b2c82c3436141b7)|2019-03-05 15:21:35
 |534|djmitche|Merge pull request #358 from djmitche/new-images update to new monoimage, with fixes|[URL](https://github.com/taskcluster/taskcluster/commit/d206d0c1389276e8e59d477d08b5fbe92b676ce9)|2019-03-05 14:48:33

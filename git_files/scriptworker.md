@@ -1,7 +1,9 @@
-## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-02-19 18:04:05.774016
+## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-02-19 21:17:38.461422
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|15|JohanLorenzo|21.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|2019-03-05 14:17:09
+|14|JohanLorenzo|[Bug 1529990 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529990) - Fix Mobile bustage|[URL](https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273)|2019-02-22 18:49:14
 |13|JohanLorenzo|21.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|2019-03-05 14:17:09
 |12|JohanLorenzo|[Bug 1529990 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529990) - Fix Mobile bustage|[URL](https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273)|2019-02-22 18:49:14
 |11|escapewindow|Merge pull request #312 from MihaiTabara/ciswitch Fix ci-{admin,configuration} new home in scriptworker.|[URL](https://github.com/mozilla-releng/scriptworker/commit/dc088bae7a6ec942969b1e4a7f1180698a399153)|2019-02-21 18:18:09

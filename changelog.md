@@ -1,19 +1,19 @@
-##  Commits in production - for one day, generated on: 2019-03-05 16:05:27 UTC.
+##  Commits in production - for one day, generated on: 2019-03-05 19:18:43 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6da1179f8eff)|[Bug 1531611 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531611) - Check for ANR and tombstone files in all android tests; r=bc The existing ANR and tombstone checks in remoteautomation are used by mochitests and reftests but are awkward for other harnesses like cppunit that do not use remoteautomation...and easily missed. This patch moves that code to the mozharness AndroidMixin, treating ANRs and tombstones like the logcat: Make sure any old logs are deleted when the mozharness script starts, then move any logs found at the end of the run to the upload directory. https://treeherder.mozilla.org/#/jobs?repo=try&tier=1%2C2%2C3&revision=f3de1e9836da2b0c9232f5d92c751b979459e19b demonstrates tombstone artifacts for the Android 7.0 cppunit tests. Differential Revision: https://phabricator.services.mozilla.com/D21774|gbrown@mozilla.com|bc|2019-03-05 16:40:31|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e5d97c93515)|[Bug 1508976 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1508976) - Produce a multi-architecture GeckoView "fat AAR". r=snorp,agi,froydnj Differential Revision: https://phabricator.services.mozilla.com/D15771|nalexander@mozilla.com|snorp,agi,froydnj|2019-03-05 20:40:48|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c47b37ac1775)|[Bug 1522581 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1522581) - Publish GeckoView multi-architecture fat AAR Nightly. r=jlorenzo Differential Revision: https://phabricator.services.mozilla.com/D15774|nalexander@mozilla.com|jlorenzo|2019-03-05 20:40:48|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7a6be593b0be)|[Bug 1522581 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1522581) - Post: Clean up Android TC artifacts. r=jlorenzo Differential Revision: https://phabricator.services.mozilla.com/D21479|nalexander@mozilla.com|jlorenzo|2019-03-05 20:40:48|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9fca85ee3084)|Backed out changeset ce3dfcdb5861 (bug 1532236) for linting opt failure in partials.py CLOSED TREE|nerli@mozilla.com||2019-03-05 18:54:35|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ce3dfcdb5861)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Convert level into integer in partials transform r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D22108|sfraser@mozilla.com|mtabara|2019-03-05 18:36:00|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bc4e03f4ea20)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Remove extra newlines from partials logging r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D22072|sfraser@mozilla.com|mtabara|2019-03-05 12:59:42|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1cc8b60d8a6b)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) - longer timeout for asan partial generation, r=tomprince Differential Revision: https://phabricator.services.mozilla.com/D22038|nthomas@mozilla.com|tomprince|2019-03-05 02:52:06|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b58080db50e6)|[Bug 1527895 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527895) - Add code-review-issues task in CI, r=dustin,marco,tomprince Differential Revision: https://phabricator.services.mozilla.com/D21348|babadie@mozilla.com|dustin,marco,tomprince|2019-03-04 23:26:54|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5cfbf5c1dbe7)|Backed out changeset 7fdcccd878ad (bug 1527895) for Gecko Decision Task failure. CLOSED TREE|dluca@mozilla.com||2019-03-04 19:41:57|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7fdcccd878ad)|[Bug 1527895 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527895) - Add code-review-issues task in CI, r=dustin,marco,tomprince Differential Revision: https://phabricator.services.mozilla.com/D21348|babadie@mozilla.com|dustin,marco,tomprince|2019-03-04 19:34:02|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5caf48a420eb)|[Bug 1527895 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527895) - Add soft-dependencies to taskgraph, r=ahal,marco,tomprince,dustin Differential Revision: https://phabricator.services.mozilla.com/D19791|babadie@mozilla.com|ahal,marco,tomprince,dustin|2019-03-04 19:09:14|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=aeee5b2fac0f)|[Bug 1531178 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531178) - provide gls and safe browsing separate keys. r=tomprince Provide gls and safe browsine separate keys at build time. Differential Revision: https://phabricator.services.mozilla.com/D21536|mtabara@mozilla.com|tomprince|2019-03-04 18:57:18|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ece01da444e)|[Bug 1532251 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532251) Add new xpcshell dependency to periodic updates r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D21912|sfraser@mozilla.com|mtabara|2019-03-04 16:12:06|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=817014bcd372)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Improve logging and timeouts in partials generation r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D21909|sfraser@mozilla.com|mtabara|2019-03-04 16:10:59|
 
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -25,8 +25,6 @@
 |[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=60bc15b47919)|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) allow ignored payload.data.source, too, in triggering hook r=tomprince Differential Revision: https://phabricator.services.mozilla.com/D21969|dmitchell@mozilla.com|tomprince|2019-03-04 20:38:07|
 |[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e72a3935e409)|No bug: fix use of bindings in 'ci-admin apply' r=tomprince I missed this when refactoring the `bindings` property to use an object instead of a tuple. Differential Revision: https://phabricator.services.mozilla.com/D21963|dmitchell@mozilla.com|tomprince|2019-03-04 20:37:38|
 |[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6a3895820e75)|No bug: capture absolute path for --ci-configuration-directory r=tomprince The `ci-admin check` command changes working directory, so it broke use of `--ci-configuration-directory`. Differential Revision: https://phabricator.services.mozilla.com/D21959|dmitchell@mozilla.com|tomprince|2019-03-04 19:42:19|
-|[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=a3f3c50c66ac)|No bug: fix black and flake8 issues r=tomprince Differential Revision: https://phabricator.services.mozilla.com/D21951|dmitchell@mozilla.com|tomprince|2019-03-04 18:58:44|
-|[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=33d5ff352ae5)|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - add support for hg-push tasks r=tomprince This adds support for "bindings" in the Hooks API, and uses it to support hooks that run when a push is generated, with the hook template based on a file in ci-configuration. The hooks run tasks on a dedicated `hg-push` workerType which *only* runs this sort of task, and can thus run them quickly. The tasks themselves do not perform an hg clone or do anything terribly complicated, so once the docker image is loaded they only take a few seconds to execute. The docker image is generated on every push to the ci-admin repository. That could be attached to the ci-configuration repository, instead, but that repository does not yet use ci-taskgraph. This also adds some checks to be confident that nobody can trigger hg-push hooks, nor create tasks on the workerType. Differential Revision: https://phabricator.services.mozilla.com/D21282|dmitchell@mozilla.com|tomprince|2019-03-04 18:21:07|
 
 |	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -155,13 +153,14 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/mozilla-releng/pushsnapscript/commit/48ded4332ef5acda5ab62db74ca926695175fff2)|0.2.5|JohanLorenzo|N/A|2019-03-05 16:43:28|
 
 |	scriptworker	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|21.0.0|JohanLorenzo|N/A|2019-03-05 14:17:09|
 |[Link](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|21.0.0|JohanLorenzo|N/A|2019-03-05 14:17:09|
 
 |	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	| 
@@ -197,6 +196,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/0c297baed0af93923572691f54f6868cb313cbbf)|Revert "bug fix 1519969"  This reverts commit 0a79f4efcc937620b849b83faae440b1e2334317.|djmitche|N/A|2019-03-05 16:04:35|
 |[Link](https://github.com/taskcluster/taskcluster/commit/6e5c4fda9eb46c9182c9d3921497b17f47e45c5e)|import Iterate for claim resolver|djmitche|N/A|2019-03-05 15:29:01|
 |[Link](https://github.com/taskcluster/taskcluster/commit/5487ee62b54e07425c6da8b56b2c82c3436141b7)|Merge pull request #229 from taskcluster/bug1527583  Bug 1527583 - Queue doesn't take jobs from "unscheduled" to "pending"|djmitche|N/A|2019-03-05 15:21:35|
 |[Link](https://github.com/taskcluster/taskcluster/commit/d206d0c1389276e8e59d477d08b5fbe92b676ce9)|Merge pull request #358 from djmitche/new-images  update to new monoimage, with fixes|djmitche|N/A|2019-03-05 14:48:33|
