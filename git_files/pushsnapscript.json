@@ -1,6 +1,6 @@
 {
   "0": {
-    "lastChecked": "2019-03-06 01:06:34.728235",
+    "lastChecked": "2019-03-06 05:33:13.862771",
     "last_releases": {
       "latest_release": {
         "version": "0.2.5",
@@ -59,6 +59,30 @@
     ]
   },
   "5": {
+    "sha": "48ded4332ef5acda5ab62db74ca926695175fff2",
+    "url": "https://github.com/mozilla-releng/pushsnapscript/commit/48ded4332ef5acda5ab62db74ca926695175fff2",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "0.2.5",
+    "commit_date": "2019-03-05 16:43:28",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.txt"
+    ]
+  },
+  "6": {
+    "sha": "497a4fa5efe1119fa679266b776deeacff3ad7f5",
+    "url": "https://github.com/mozilla-releng/pushsnapscript/commit/497a4fa5efe1119fa679266b776deeacff3ad7f5",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Bug 1459222 - Allow release version numbers on beta (for RCs)",
+    "commit_date": "2019-02-27 14:28:57",
+    "files_changed": [
+      "pushsnapscript/snap_store.py",
+      "pushsnapscript/test/test_snap_store.py"
+    ]
+  },
+  "7": {
     "sha": "73c3f57b56afa29a05188f70f653086713548af8",
     "url": "https://github.com/mozilla-releng/pushsnapscript/commit/73c3f57b56afa29a05188f70f653086713548af8",
     "commiter_name": "mitchhentges",
@@ -69,7 +93,7 @@
       "examples/config.example.json"
     ]
   },
-  "6": {
+  "8": {
     "sha": "d7dc8f27fbe7101102effba62f36bb5ce2fdc178",
     "url": "https://github.com/mozilla-releng/pushsnapscript/commit/d7dc8f27fbe7101102effba62f36bb5ce2fdc178",
     "commiter_name": "mitchhentges",
@@ -80,7 +104,7 @@
       "examples/config.example.json"
     ]
   },
-  "7": {
+  "9": {
     "sha": "1de161f0b36d3840806fecf41c5b84f30e1ac8df",
     "url": "https://github.com/mozilla-releng/pushsnapscript/commit/1de161f0b36d3840806fecf41c5b84f30e1ac8df",
     "commiter_name": "JohanLorenzo",
@@ -92,7 +116,7 @@
       "version.txt"
     ]
   },
-  "8": {
+  "10": {
     "sha": "45c2f94c2cfc0852f996c68a94549298ba9eb4a6",
     "url": "https://github.com/mozilla-releng/pushsnapscript/commit/45c2f94c2cfc0852f996c68a94549298ba9eb4a6",
     "commiter_name": "JohanLorenzo",
