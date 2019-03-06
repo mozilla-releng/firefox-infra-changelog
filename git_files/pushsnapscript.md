@@ -1,7 +1,9 @@
-## PUSHSNAPSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-19 21:17:38.461422
+## PUSHSNAPSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-20 03:06:21.264215
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|8|JohanLorenzo|0.2.5|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/48ded4332ef5acda5ab62db74ca926695175fff2)|2019-03-05 16:43:28
+|7|JohanLorenzo|[Bug 1459222 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1459222) - Allow release version numbers on beta (for RCs)|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/497a4fa5efe1119fa679266b776deeacff3ad7f5)|2019-02-27 14:28:57
 |6|JohanLorenzo|0.2.5|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/48ded4332ef5acda5ab62db74ca926695175fff2)|2019-03-05 16:43:28
 |5|JohanLorenzo|[Bug 1459222 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1459222) - Allow release version numbers on beta (for RCs)|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/497a4fa5efe1119fa679266b776deeacff3ad7f5)|2019-02-27 14:28:57
 |4|mitchhentges|Merge pull request #16 from mitchhentges/remove-schema-from-config Removes task schema from example config|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/73c3f57b56afa29a05188f70f653086713548af8)|2019-01-04 16:54:04

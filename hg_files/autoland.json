@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79641
+    "last_push_id": 79685
   },
   "1": {
     "changeset_number": "35344",
@@ -35057,25 +35057,6 @@
     }
   },
   "696": {
-    "changeset_number": "79615",
-    "pusher": "gbrown@mozilla.com",
-    "date_of_push": "2019-03-05 16:40:31",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6da1179f8eff",
-        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
-        "commit_message": "Bug 1531611 - Check for ANR and tombstone files in all android tests; r=bc\n\nThe existing ANR and tombstone checks in remoteautomation are used\nby mochitests and reftests but are awkward for other harnesses like cppunit\nthat do not use remoteautomation...and easily missed. This patch moves that\ncode to the mozharness AndroidMixin, treating ANRs and tombstones like the\nlogcat: Make sure any old logs are deleted when the mozharness script starts,\nthen move any logs found at the end of the run to the upload directory.\nhttps://treeherder.mozilla.org/#/jobs?repo=try&tier=1%2C2%2C3&revision=f3de1e9836da2b0c9232f5d92c751b979459e19b\ndemonstrates tombstone artifacts for the Android 7.0 cppunit tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21774",
-        "files_changed": [
-          "build/mobile/remoteautomation.py",
-          "layout/tools/reftest/remotereftest.py",
-          "testing/mochitest/runrobocop.py",
-          "testing/mochitest/runtestsremote.py",
-          "testing/mozharness/mozharness/mozilla/testing/android.py"
-        ]
-      }
-    }
-  },
-  "696": {
     "changeset_number": "79626",
     "pusher": "sfraser@mozilla.com",
     "date_of_push": "2019-03-05 18:36:00",
@@ -35142,6 +35123,47 @@
         "commit_message": "Bug 1522581 - Post: Clean up Android TC artifacts. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21479",
         "files_changed": [
           "taskcluster/ci/build/android.yml"
+        ]
+      }
+    }
+  },
+  "698": {
+    "changeset_number": "79645",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-03-05 21:49:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f6d891b25f43",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532236 Convert level into integer in partials transform r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22108",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/partials.py"
+        ]
+      }
+    }
+  },
+  "699": {
+    "changeset_number": "79653",
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-03-05 22:43:57",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=be4b780a7783",
+        "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
+        "commit_message": "Backed out 5 changesets (bug 1508976, bug 1522581) for android geckoview bustages at /usr/bin/python2.7. CLOSED TREE\n\nBacked out changeset 7a6be593b0be (bug 1522581)\nBacked out changeset c47b37ac1775 (bug 1522581)\nBacked out changeset 91c31d2a7706 (bug 1508976)\nBacked out changeset da57df805c56 (bug 1508976)\nBacked out changeset 4e5d97c93515 (bug 1508976)",
+        "files_changed": [
+          "build.gradle",
+          "mobile/android/geckoview/build.gradle",
+          "mobile/android/geckoview/fat_aar.gradle",
+          "mobile/android/moz.configure",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/taskgraph/loader/build_signing.py",
+          "taskcluster/taskgraph/loader/push_apk.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/beetmover_geckoview.py",
+          "toolkit/content/moz.build"
         ]
       }
     }
