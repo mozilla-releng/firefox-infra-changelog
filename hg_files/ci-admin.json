@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 53
+    "last_push_id": 54
   },
   "1": {
     "changeset_number": "21",
@@ -549,6 +549,27 @@
         "commit_message": "No bug: Fix black errors in tests; r=me",
         "files_changed": [
           "tests/test_generate_grants.py"
+        ]
+      }
+    }
+  },
+  "28": {
+    "changeset_number": "54",
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-03-06 23:49:39",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=bbe3fd67dda4",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1519493 - step 1 in automating permissions in mobile world. r=tomprince\n\nThis is a preliminary ask-for-feedback in adding support for git in the ciadmin repo.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19246",
+        "files_changed": [
+          "ciadmin/generate/ciconfig/projects.py",
+          "ciadmin/generate/cron_tasks.py",
+          "ciadmin/generate/grants.py",
+          "ciadmin/generate/hg_pushes.py",
+          "ciadmin/generate/in_tree_actions.py",
+          "ciadmin/generate/scm_group_roles.py",
+          "tests/test_generate_ciconfig_projects.py"
         ]
       }
     }

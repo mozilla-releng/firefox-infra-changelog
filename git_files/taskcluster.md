@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-20 22:24:31.503700
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-21 01:16:34.923265
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|539|imbstack|Merge pull request #355 from taskcluster/fix-oneshot-exit-in-test Fix oneshot exit in test|[URL](https://github.com/taskcluster/taskcluster/commit/c6f305c2eb5594a398282d1cf0f9371aa646844f)|2019-03-06 21:36:11
+|538|sudipt1999|[relanding] bug fix 1519969|[URL](https://github.com/taskcluster/taskcluster/commit/32862f1f3d82684a87049887613d4a35c1d22c5d)|2019-03-02 15:30:06
 |537|djmitche|Revert "bug fix 1519969" This reverts commit 0a79f4efcc937620b849b83faae440b1e2334317.|[URL](https://github.com/taskcluster/taskcluster/commit/0c297baed0af93923572691f54f6868cb313cbbf)|2019-03-05 16:04:35
 |536|djmitche|import Iterate for claim resolver|[URL](https://github.com/taskcluster/taskcluster/commit/6e5c4fda9eb46c9182c9d3921497b17f47e45c5e)|2019-03-05 15:29:01
 |535|djmitche|Merge pull request #229 from taskcluster/bug1527583 [Bug 1527583 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527583) - Queue doesn't take jobs from "unscheduled" to "pending"|[URL](https://github.com/taskcluster/taskcluster/commit/5487ee62b54e07425c6da8b56b2c82c3436141b7)|2019-03-05 15:21:35
