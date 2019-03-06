@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 79779
+ CURRENT PUSH ID: 79804
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|79779|2019-03-06 19:13:32|Dan Minor <dminor@mozilla.com>|[Bug 1515210 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1515210) - Build openh264 plugin for win64-aarch64; r=CallekDifferential Revision: https://phabricator.services.mozilla.com/D21782|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=af9d2cb592c5
+|79802|2019-03-06 22:07:57|Tarek Ziadé <tarek@mozilla.com>|[Bug 1528992 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528992) - extract raptor mitmproxy integration - r=rwood,Bebe,gbrownThis patch moves testing/raptor/raptor/playback into its own testing package in testing/mozbase/mozproxyso we can use the proxy in other places than Raptor.Differential Revision: https://phabricator.services.mozilla.com/D21200|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76b84ca9cfaa
 |79749|2019-03-06 15:53:12|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1459222 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1459222) - Firefox RC: push snaps onto the beta channel at ship_rc phase r=mtabaraFirefox RC: push snaps onto the beta channel at ship_rc phaseDifferential Revision: https://phabricator.services.mozilla.com/D21380|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b8e5c1d19e24
 |79722|2019-03-06 11:10:04|Geoff Brown <gbrown@mozilla.com>|[Bug 1500509 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1500509) - Move Android marionette tests to 7.0 x86_64; r=whimbooDifferential Revision: https://phabricator.services.mozilla.com/D22183|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4348e60c81ed
 |79645|2019-03-05 21:49:35|Simon Fraser <sfraser@mozilla.com>|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Convert level into integer in partials transform r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D22108|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f6d891b25f43

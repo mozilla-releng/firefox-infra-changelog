@@ -1,15 +1,13 @@
-##  Commits in production - for one day, generated on: 2019-03-06 17:17:26 UTC.
+##  Commits in production - for one day, generated on: 2019-03-06 20:25:35 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=af9d2cb592c5)|[Bug 1515210 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1515210) - Build openh264 plugin for win64-aarch64; r=Callek Differential Revision: https://phabricator.services.mozilla.com/D21782|dminor@mozilla.com|Callek|2019-03-06 19:13:32|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76b84ca9cfaa)|[Bug 1528992 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528992) - extract raptor mitmproxy integration - r=rwood,Bebe,gbrown This patch moves testing/raptor/raptor/playback into its own testing package in testing/mozbase/mozproxy so we can use the proxy in other places than Raptor. Differential Revision: https://phabricator.services.mozilla.com/D21200|tziade@mozilla.com|rwood,Bebe,gbrown|2019-03-06 22:07:57|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b8e5c1d19e24)|[Bug 1459222 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1459222) - Firefox RC: push snaps onto the beta channel at ship_rc phase r=mtabara Firefox RC: push snaps onto the beta channel at ship_rc phase Differential Revision: https://phabricator.services.mozilla.com/D21380|jlorenzo@mozilla.com|mtabara|2019-03-06 15:53:12|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4348e60c81ed)|[Bug 1500509 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1500509) - Move Android marionette tests to 7.0 x86_64; r=whimboo Differential Revision: https://phabricator.services.mozilla.com/D22183|hskupin@mozilla.com|whimboo|2019-03-06 11:10:04|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f6d891b25f43)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Convert level into integer in partials transform r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D22108|sfraser@mozilla.com|mtabara|2019-03-05 21:49:35|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9fca85ee3084)|Backed out changeset ce3dfcdb5861 (bug 1532236) for linting opt failure in partials.py CLOSED TREE|nerli@mozilla.com||2019-03-05 18:54:35|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ce3dfcdb5861)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Convert level into integer in partials transform r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D22108|sfraser@mozilla.com|mtabara|2019-03-05 18:36:00|
 
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
