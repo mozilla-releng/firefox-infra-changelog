@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79779
+    "last_push_id": 79804
   },
   "1": {
     "changeset_number": "35344",
@@ -35102,32 +35102,6 @@
     }
   },
   "699": {
-    "changeset_number": "79653",
-    "pusher": "cbrindusan@mozilla.com",
-    "date_of_push": "2019-03-05 22:43:57",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=be4b780a7783",
-        "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
-        "commit_message": "Backed out 5 changesets (bug 1508976, bug 1522581) for android geckoview bustages at /usr/bin/python2.7. CLOSED TREE\n\nBacked out changeset 7a6be593b0be (bug 1522581)\nBacked out changeset c47b37ac1775 (bug 1522581)\nBacked out changeset 91c31d2a7706 (bug 1508976)\nBacked out changeset da57df805c56 (bug 1508976)\nBacked out changeset 4e5d97c93515 (bug 1508976)",
-        "files_changed": [
-          "build.gradle",
-          "mobile/android/geckoview/build.gradle",
-          "mobile/android/geckoview/fat_aar.gradle",
-          "mobile/android/moz.configure",
-          "taskcluster/ci/beetmover/kind.yml",
-          "taskcluster/ci/build/android.yml",
-          "taskcluster/docs/attributes.rst",
-          "taskcluster/taskgraph/loader/build_signing.py",
-          "taskcluster/taskgraph/loader/push_apk.py",
-          "taskcluster/taskgraph/target_tasks.py",
-          "taskcluster/taskgraph/transforms/beetmover_geckoview.py",
-          "toolkit/content/moz.build"
-        ]
-      }
-    }
-  },
-  "699": {
     "changeset_number": "79722",
     "pusher": "hskupin@mozilla.com",
     "date_of_push": "2019-03-06 11:10:04",
@@ -35173,6 +35147,54 @@
           "testing/mozharness/configs/openh264/tooltool-manifests/win64-aarch64.manifest",
           "testing/mozharness/configs/openh264/win64-aarch64.py",
           "testing/mozharness/scripts/openh264_build.py"
+        ]
+      }
+    }
+  },
+  "701": {
+    "changeset_number": "79802",
+    "pusher": "tziade@mozilla.com",
+    "date_of_push": "2019-03-06 22:07:57",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76b84ca9cfaa",
+        "commiter_name": "Tarek Ziad\u00e9 <tarek@mozilla.com>",
+        "commit_message": "Bug 1528992 - extract raptor mitmproxy integration - r=rwood,Bebe,gbrown\n\nThis patch moves testing/raptor/raptor/playback into its own testing package in testing/mozbase/mozproxy\nso we can use the proxy in other places than Raptor.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21200",
+        "files_changed": [
+          "testing/config/mozbase_requirements.txt",
+          "testing/config/mozbase_source_requirements.txt",
+          "testing/mozbase/docs/mozproxy.rst",
+          "testing/mozbase/moz.build",
+          "testing/mozbase/mozproxy/MANIFEST.in",
+          "testing/mozbase/mozproxy/mozproxy/__init__.py",
+          "testing/mozbase/mozproxy/mozproxy/backends/__init__.py",
+          "testing/mozbase/mozproxy/mozproxy/backends/base.py",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-linux64.manifest",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-osx.manifest",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-win.manifest",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy_requirements.txt",
+          "testing/mozbase/mozproxy/mozproxy/server.py",
+          "testing/mozbase/mozproxy/mozproxy/utils.py",
+          "testing/mozbase/mozproxy/setup.py",
+          "testing/mozbase/mozproxy/tests/firefox",
+          "testing/mozbase/mozproxy/tests/manifest.ini",
+          "testing/mozbase/mozproxy/tests/paypal.mp",
+          "testing/mozbase/mozproxy/tests/test.py",
+          "testing/mozbase/packages.txt",
+          "testing/mozharness/mozharness/mozilla/mozbase.py",
+          "testing/raptor/raptor/manifest.py",
+          "testing/raptor/raptor/playback/__init__.py",
+          "testing/raptor/raptor/playback/base.py",
+          "testing/raptor/raptor/playback/mitmproxy-rel-bin-linux64.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-rel-bin-osx.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-rel-bin-win.manifest",
+          "testing/raptor/raptor/playback/mitmproxy.py",
+          "testing/raptor/raptor/playback/mitmproxy_requirements.txt",
+          "testing/raptor/raptor/raptor.py",
+          "testing/raptor/raptor/utils.py",
+          "testing/raptor/requirements.txt",
+          "testing/raptor/test/test_playback.py"
         ]
       }
     }
