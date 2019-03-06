@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: CI-ADMIN
- CURRENT PUSH ID: 53
+ CURRENT PUSH ID: 54
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|52|2019-03-04 23:36:59|Tom Prince <mozilla@hocat.ca>|No bug: Fix black errors in tests; r=me|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f201447a5f65
+|54|2019-03-06 23:49:39|Mihai Tabara <mtabara@mozilla.com>|[Bug 1519493 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519493) - step 1 in automating permissions in mobile world. r=tomprinceThis is a preliminary ask-for-feedback in adding support for git in the ciadmin repo.Differential Revision: https://phabricator.services.mozilla.com/D19246|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=bbe3fd67dda4
 |51|2019-03-04 23:27:16|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Allow parameterizing based on priorties determined by level; r=dustinFor the moment, we hard-code the priorities by level based on those used in firefox.Differential Revision: https://phabricator.services.mozilla.com/D21813|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0368a98315e9
 |49|2019-03-04 20:38:07|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) allow ignored payload.data.source, too, in triggering hook r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D21969|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=60bc15b47919
 |48|2019-03-04 20:37:38|Dustin J. Mitchell <dustin@mozilla.com>|No bug: fix use of bindings in 'ci-admin apply' r=tomprinceI missed this when refactoring the `bindings` property to use an object insteadof a tuple.Differential Revision: https://phabricator.services.mozilla.com/D21963|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e72a3935e409
