@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 85
+ CURRENT PUSH ID: 86
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|85|2019-03-05 02:04:42|Tom Prince <mozilla@hocat.ca>|[Bug 1532453 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532453) Add user repositories for experimenting with taskgraph and mobile; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D22031|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=9c33e3407330
+|86|2019-03-06 18:29:00|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) temporarily roll back to using mozilla-taskcluster for taskgraph-try|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1db05b8c290d
 |83|2019-03-04 23:44:32|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Remove some redundant and cross-level/trust-domain scope grants; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21805|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c1f008b66b74
 |83|2019-03-04 23:44:32|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Remove obsolete worker types; r=dustinMost of these have not been used for some time, or no longer exist.gecko-decision (not level constrained) is still used in somenon-mozilla-central nigthly hooks. I think they are unused, and otherwise theycan be updated as needed.Differential Revision: https://phabricator.services.mozilla.com/D21806|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=9593b1fcbf4e
 |83|2019-03-04 23:44:32|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Remove unused docker.images and project.releng.funsize routes; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21807|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0475eb0a0339

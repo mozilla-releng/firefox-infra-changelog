@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79706
+    "last_push_id": 79779
   },
   "1": {
     "changeset_number": "35344",
@@ -35123,6 +35123,56 @@
           "taskcluster/taskgraph/target_tasks.py",
           "taskcluster/taskgraph/transforms/beetmover_geckoview.py",
           "toolkit/content/moz.build"
+        ]
+      }
+    }
+  },
+  "699": {
+    "changeset_number": "79722",
+    "pusher": "hskupin@mozilla.com",
+    "date_of_push": "2019-03-06 11:10:04",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4348e60c81ed",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1500509 - Move Android marionette tests to 7.0 x86_64; r=whimboo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22183",
+        "files_changed": [
+          "taskcluster/ci/test/marionette.yml",
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      }
+    }
+  },
+  "700": {
+    "changeset_number": "79749",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-03-06 15:53:12",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b8e5c1d19e24",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1459222 - Firefox RC: push snaps onto the beta channel at ship_rc phase r=mtabara\n\nFirefox RC: push snaps onto the beta channel at ship_rc phase\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21380",
+        "files_changed": [
+          "taskcluster/ci/release-secondary-snap-push/kind.yml",
+          "taskcluster/docs/kinds.rst"
+        ]
+      }
+    }
+  },
+  "701": {
+    "changeset_number": "79779",
+    "pusher": "dminor@mozilla.com",
+    "date_of_push": "2019-03-06 19:13:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=af9d2cb592c5",
+        "commiter_name": "Dan Minor <dminor@mozilla.com>",
+        "commit_message": "Bug 1515210 - Build openh264 plugin for win64-aarch64; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21782",
+        "files_changed": [
+          "taskcluster/ci/openh264-plugin/kind.yml",
+          "testing/mozharness/configs/openh264/tooltool-manifests/win64-aarch64.manifest",
+          "testing/mozharness/configs/openh264/win64-aarch64.py",
+          "testing/mozharness/scripts/openh264_build.py"
         ]
       }
     }

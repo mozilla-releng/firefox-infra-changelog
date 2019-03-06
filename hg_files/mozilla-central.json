@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35652
+    "last_push_id": 35656
   },
   "1": {
     "changeset_number": "35344",
@@ -11236,49 +11236,6 @@
     }
   },
   "115": {
-    "changeset_number": "35650",
-    "pusher": "shindli@mozilla.com",
-    "date_of_push": "2019-03-05 23:40:07",
-    "changeset_commits": {
-      "13": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bc4e03f4ea20",
-        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
-        "commit_message": "Bug 1532236 Remove extra newlines from partials logging r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22072",
-        "files_changed": [
-          "taskcluster/docker/funsize-update-generator/scripts/funsize.py"
-        ]
-      },
-      "32": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6da1179f8eff",
-        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
-        "commit_message": "Bug 1531611 - Check for ANR and tombstone files in all android tests; r=bc\n\nThe existing ANR and tombstone checks in remoteautomation are used\nby mochitests and reftests but are awkward for other harnesses like cppunit\nthat do not use remoteautomation...and easily missed. This patch moves that\ncode to the mozharness AndroidMixin, treating ANRs and tombstones like the\nlogcat: Make sure any old logs are deleted when the mozharness script starts,\nthen move any logs found at the end of the run to the upload directory.\nhttps://treeherder.mozilla.org/#/jobs?repo=try&tier=1%2C2%2C3&revision=f3de1e9836da2b0c9232f5d92c751b979459e19b\ndemonstrates tombstone artifacts for the Android 7.0 cppunit tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21774",
-        "files_changed": [
-          "build/mobile/remoteautomation.py",
-          "layout/tools/reftest/remotereftest.py",
-          "testing/mochitest/runrobocop.py",
-          "testing/mochitest/runtestsremote.py",
-          "testing/mozharness/mozharness/mozilla/testing/android.py"
-        ]
-      },
-      "44": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ce3dfcdb5861",
-        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
-        "commit_message": "Bug 1532236 Convert level into integer in partials transform r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22108",
-        "files_changed": [
-          "taskcluster/taskgraph/transforms/partials.py"
-        ]
-      },
-      "47": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9fca85ee3084",
-        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
-        "commit_message": "Backed out changeset ce3dfcdb5861 (bug 1532236) for linting opt failure in partials.py CLOSED TREE",
-        "files_changed": [
-          "taskcluster/taskgraph/transforms/partials.py"
-        ]
-      }
-    }
-  },
-  "115": {
     "changeset_number": "35652",
     "pusher": "shindli@mozilla.com",
     "date_of_push": "2019-03-06 06:36:55",
@@ -11342,6 +11299,22 @@
           "taskcluster/taskgraph/target_tasks.py",
           "taskcluster/taskgraph/transforms/beetmover_geckoview.py",
           "toolkit/content/moz.build"
+        ]
+      }
+    }
+  },
+  "115": {
+    "changeset_number": "35655",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-03-06 18:12:01",
+    "changeset_commits": {
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4348e60c81ed",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1500509 - Move Android marionette tests to 7.0 x86_64; r=whimboo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22183",
+        "files_changed": [
+          "taskcluster/ci/test/marionette.yml",
+          "taskcluster/ci/test/test-sets.yml"
         ]
       }
     }
