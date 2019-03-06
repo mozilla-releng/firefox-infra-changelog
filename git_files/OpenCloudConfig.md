@@ -1,7 +1,10 @@
-## OPENCLOUDCONFIG COMMIT MARKDOWN TABLE SINCE 2019-02-20 07:33:00.844253
+## OPENCLOUDCONFIG COMMIT MARKDOWN TABLE SINCE 2019-02-20 19:16:12.881988
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|80|petemoore|Merge pull request #226 from mozilla-releng/align-cu-workertypes Align gecko-t-win{7-32,10-64}-cu manifests with gecko-t-win{7-32,10-64} manifests deploy: gecko-t-win7-32-cu gecko-t-win10-64-cu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/50444e63cfe249c70ac821db19b4ffdc685c1d4e)|2019-03-06 13:36:18
+|79|grenade|correction to cu device mapping deploy: gecko-t-win10-64-cu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/08f18c2999c7fa6e6947373caaec62c0c9586da0)|2019-03-06 12:43:29
+|78|grenade|[Bug 1524592 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1524592) - update to gw 13.0.2, tc-proxy 5.1.0 on l3 builder deploy: gecko-3-b-win2012 gecko-3-b-win2012-c4 gecko-3-b-win2012-c5|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/dbe5a1be807b62cb9c3dc21fc348d14257cec8cf)|2019-03-06 08:58:30
 |77|grenade|update to gw 13.0.2, tc-proxy 5.1.0 on l1 & l2 builders deploy: gecko-1-b-win2012 gecko-2-b-win2012|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/19d4f80e2fbb590c78628866fcf99be55ae2d0ed)|2019-03-05 09:42:40
 |76|grenade|update to gw 13.0.2, tc-proxy 5.1.0 on win 10 deploy: gecko-t-win10-64 gecko-t-win10-64-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/818d2412b9a0f1cdf90234b7724fb9ad2073c98e)|2019-03-05 07:25:59
 |75|grenade|update to gw 13.0.2, tc-proxy 5.1.0 on win 7 deploy: gecko-t-win7-32 gecko-t-win7-32-gpu|[URL](https://github.com/mozilla-releng/OpenCloudConfig/commit/f543df8c734142d7338190354da5cebd1d5a0b62)|2019-03-04 13:35:46

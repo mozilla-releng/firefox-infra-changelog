@@ -1,9 +1,11 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 79706
+ CURRENT PUSH ID: 79779
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|79653|2019-03-05 22:43:57|Brindusan Cristian <cbrindusan@mozilla.com>|Backed out 5 changesets (bug 1508976, [Bug 1522581 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1522581) for android geckoview bustages at /usr/bin/python2.7. CLOSED TREEBacked out changeset 7a6be593b0be (bug 1522581)Backed out changeset c47b37ac1775 (bug 1522581)Backed out changeset 91c31d2a7706 (bug 1508976)Backed out changeset da57df805c56 (bug 1508976)Backed out changeset 4e5d97c93515 (bug 1508976)|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=be4b780a7783
+|79779|2019-03-06 19:13:32|Dan Minor <dminor@mozilla.com>|[Bug 1515210 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1515210) - Build openh264 plugin for win64-aarch64; r=CallekDifferential Revision: https://phabricator.services.mozilla.com/D21782|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=af9d2cb592c5
+|79749|2019-03-06 15:53:12|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1459222 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1459222) - Firefox RC: push snaps onto the beta channel at ship_rc phase r=mtabaraFirefox RC: push snaps onto the beta channel at ship_rc phaseDifferential Revision: https://phabricator.services.mozilla.com/D21380|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b8e5c1d19e24
+|79722|2019-03-06 11:10:04|Geoff Brown <gbrown@mozilla.com>|[Bug 1500509 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1500509) - Move Android marionette tests to 7.0 x86_64; r=whimbooDifferential Revision: https://phabricator.services.mozilla.com/D22183|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4348e60c81ed
 |79645|2019-03-05 21:49:35|Simon Fraser <sfraser@mozilla.com>|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Convert level into integer in partials transform r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D22108|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f6d891b25f43
 |79629|2019-03-05 18:54:35|Noemi Erli <nerli@mozilla.com>|Backed out changeset ce3dfcdb5861 (bug 1532236) for linting opt failure in partials.py CLOSED TREE|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9fca85ee3084
 |79626|2019-03-05 18:36:00|Simon Fraser <sfraser@mozilla.com>|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Convert level into integer in partials transform r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D22108|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ce3dfcdb5861
