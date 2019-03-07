@@ -1,7 +1,8 @@
-## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-02-21 12:13:56.666521
+## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-02-21 16:50:01.279312
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|9|garbas|backend_common/auth: we shouldn't touch permissions in decorator (#1929)|[URL](https://github.com/mozilla/release-services/commit/688dd403d87226a42ac26b9fbec5e7111e198c00)|2019-03-07 11:36:09
 |8|garbas|shipit/api: authorization (#1870)|[URL](https://github.com/mozilla/release-services/commit/c7ef9d9adb87f924545efd60a51e823a7f1a2743)|2019-02-15 22:06:14
 |7|rail|tooltool/api: fix all flask subcommands|[URL](https://github.com/mozilla/release-services/commit/334bfb59a9cb55a92022f600bee1e4ed41dc485f)|2019-02-07 20:21:33
 |6|garbas|setup: fixing update hooks due to intreehooks needed as setup require (#1854)|[URL](https://github.com/mozilla/release-services/commit/60bc6fbdf7dcee8afa20d3e5ae7193a1d0e95873)|2019-02-07 19:35:50

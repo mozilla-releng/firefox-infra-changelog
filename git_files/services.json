@@ -1,8 +1,32 @@
 {
   "0": {
-    "lastChecked": "2019-03-07 10:13:59.395475"
+    "lastChecked": "2019-03-07 14:50:08.515006"
   },
   "1": {
+    "sha": "688dd403d87226a42ac26b9fbec5e7111e198c00",
+    "url": "https://github.com/mozilla/release-services/commit/688dd403d87226a42ac26b9fbec5e7111e198c00",
+    "commiter_name": "garbas",
+    "commiter_email": null,
+    "commit_message": "backend_common/auth: we shouldn't touch permissions in decorator (#1929)",
+    "commit_date": "2019-03-07 11:36:09",
+    "files_changed": [
+      "lib/backend_common/backend_common/auth.py",
+      "lib/backend_common/tests/conftest.py",
+      "src/docs/develop/authentication.rst",
+      "src/mapper/api/mapper_api/api.py",
+      "src/mapper/api/mapper_api/config.py",
+      "src/notification/identity/notification_identity/api.py",
+      "src/notification/policy/notification_policy/api.py",
+      "src/shipit/api/shipit_api/api.py",
+      "src/tooltool/api/tooltool_api/api.py",
+      "src/tooltool/api/tooltool_api/config.py",
+      "src/treestatus/api/treestatus_api/api.py",
+      "src/treestatus/api/treestatus_api/config.py",
+      "src/uplift/backend/tests/test_contributor.py",
+      "src/uplift/backend/uplift_backend/api.py"
+    ]
+  },
+  "2": {
     "sha": "c7ef9d9adb87f924545efd60a51e823a7f1a2743",
     "url": "https://github.com/mozilla/release-services/commit/c7ef9d9adb87f924545efd60a51e823a7f1a2743",
     "commiter_name": "garbas",
@@ -30,7 +54,7 @@
       "src/tooltool/api/settings.py"
     ]
   },
-  "2": {
+  "3": {
     "sha": "334bfb59a9cb55a92022f600bee1e4ed41dc485f",
     "url": "https://github.com/mozilla/release-services/commit/334bfb59a9cb55a92022f600bee1e4ed41dc485f",
     "commiter_name": "rail",
@@ -41,7 +65,7 @@
       "src/tooltool/api/tooltool_api/cli.py"
     ]
   },
-  "3": {
+  "4": {
     "sha": "60bc6fbdf7dcee8afa20d3e5ae7193a1d0e95873",
     "url": "https://github.com/mozilla/release-services/commit/60bc6fbdf7dcee8afa20d3e5ae7193a1d0e95873",
     "commiter_name": "garbas",
@@ -65,7 +89,7 @@
       "src/uplift/bot/default.nix"
     ]
   },
-  "4": {
+  "5": {
     "sha": "ccf864e32ddf8b462450082d1859b2bb5d93d1d7",
     "url": "https://github.com/mozilla/release-services/commit/ccf864e32ddf8b462450082d1859b2bb5d93d1d7",
     "commiter_name": "garbas",
@@ -76,7 +100,7 @@
       "src/tooltool/api/default.nix"
     ]
   },
-  "5": {
+  "6": {
     "sha": "a9194956d6dc1be57503a3dff3aa3255e242dd61",
     "url": "https://github.com/mozilla/release-services/commit/a9194956d6dc1be57503a3dff3aa3255e242dd61",
     "commiter_name": "garbas",
@@ -102,7 +126,7 @@
       "src/uplift/bot/default.nix"
     ]
   },
-  "6": {
+  "7": {
     "sha": "981d853ccfa054bac79247bca4e5aedc81d1ab14",
     "url": "https://github.com/mozilla/release-services/commit/981d853ccfa054bac79247bca4e5aedc81d1ab14",
     "commiter_name": "garbas",
@@ -121,7 +145,7 @@
       "src/tooltool/api/tooltool_api/cli.py"
     ]
   },
-  "7": {
+  "8": {
     "sha": "4687eb1f889e07c84249cd2bf6bc888fd803b528",
     "url": "https://github.com/mozilla/release-services/commit/4687eb1f889e07c84249cd2bf6bc888fd803b528",
     "commiter_name": "garbas",
@@ -173,7 +197,7 @@
       "src/uplift/bot/requirements_frozen.txt"
     ]
   },
-  "8": {
+  "9": {
     "sha": "9a1f48c56dd6e007a0131147a19c4a883a0f8a45",
     "url": "https://github.com/mozilla/release-services/commit/9a1f48c56dd6e007a0131147a19c4a883a0f8a45",
     "commiter_name": "garbas",
