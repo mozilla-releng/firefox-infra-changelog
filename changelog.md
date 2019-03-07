@@ -1,4 +1,4 @@
-##  Commits in production - for one day, generated on: 2019-03-06 23:17:33 UTC.
+##  Commits in production - for one day, generated on: 2019-03-07 03:11:25 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -18,7 +18,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=bbe3fd67dda4)|[Bug 1519493 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519493) - step 1 in automating permissions in mobile world. r=tomprince This is a preliminary ask-for-feedback in adding support for git in the ciadmin repo. Differential Revision: https://phabricator.services.mozilla.com/D19246|mtabara@mozilla.com|tomprince|2019-03-06 23:49:39|
+|[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=7a89e05b3e0c)|No bug: fix black errors in check tests. r=me|mtabara@mozilla.com|me|2019-03-07 01:51:58|
+|[Link](https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=c72e4cbea39c)|[Bug 1519493 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519493) - fix checker in ci-admin r=tomprince Fix checker which broke with D19246 Differential Revision: https://phabricator.services.mozilla.com/D22415|mtabara@mozilla.com|tomprince|2019-03-07 01:43:08|
 
 |	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 

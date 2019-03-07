@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79837
+    "last_push_id": 79858
   },
   "1": {
     "changeset_number": "35344",
@@ -35129,54 +35129,6 @@
         "files_changed": [
           "taskcluster/ci/release-secondary-snap-push/kind.yml",
           "taskcluster/docs/kinds.rst"
-        ]
-      }
-    }
-  },
-  "701": {
-    "changeset_number": "79802",
-    "pusher": "tziade@mozilla.com",
-    "date_of_push": "2019-03-06 22:07:57",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76b84ca9cfaa",
-        "commiter_name": "Tarek Ziad\u00e9 <tarek@mozilla.com>",
-        "commit_message": "Bug 1528992 - extract raptor mitmproxy integration - r=rwood,Bebe,gbrown\n\nThis patch moves testing/raptor/raptor/playback into its own testing package in testing/mozbase/mozproxy\nso we can use the proxy in other places than Raptor.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21200",
-        "files_changed": [
-          "testing/config/mozbase_requirements.txt",
-          "testing/config/mozbase_source_requirements.txt",
-          "testing/mozbase/docs/mozproxy.rst",
-          "testing/mozbase/moz.build",
-          "testing/mozbase/mozproxy/MANIFEST.in",
-          "testing/mozbase/mozproxy/mozproxy/__init__.py",
-          "testing/mozbase/mozproxy/mozproxy/backends/__init__.py",
-          "testing/mozbase/mozproxy/mozproxy/backends/base.py",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-linux64.manifest",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-osx.manifest",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-win.manifest",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy_requirements.txt",
-          "testing/mozbase/mozproxy/mozproxy/server.py",
-          "testing/mozbase/mozproxy/mozproxy/utils.py",
-          "testing/mozbase/mozproxy/setup.py",
-          "testing/mozbase/mozproxy/tests/firefox",
-          "testing/mozbase/mozproxy/tests/manifest.ini",
-          "testing/mozbase/mozproxy/tests/paypal.mp",
-          "testing/mozbase/mozproxy/tests/test.py",
-          "testing/mozbase/packages.txt",
-          "testing/mozharness/mozharness/mozilla/mozbase.py",
-          "testing/raptor/raptor/manifest.py",
-          "testing/raptor/raptor/playback/__init__.py",
-          "testing/raptor/raptor/playback/base.py",
-          "testing/raptor/raptor/playback/mitmproxy-rel-bin-linux64.manifest",
-          "testing/raptor/raptor/playback/mitmproxy-rel-bin-osx.manifest",
-          "testing/raptor/raptor/playback/mitmproxy-rel-bin-win.manifest",
-          "testing/raptor/raptor/playback/mitmproxy.py",
-          "testing/raptor/raptor/playback/mitmproxy_requirements.txt",
-          "testing/raptor/raptor/raptor.py",
-          "testing/raptor/raptor/utils.py",
-          "testing/raptor/requirements.txt",
-          "testing/raptor/test/test_playback.py"
         ]
       }
     }
