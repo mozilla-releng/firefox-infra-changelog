@@ -1,7 +1,9 @@
-## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-02-21 01:16:34.923265
+## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-02-21 05:10:24.980263
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|31|JohanLorenzo|21.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|2019-03-05 14:17:09
+|30|JohanLorenzo|[Bug 1529990 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529990) - Fix Mobile bustage|[URL](https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273)|2019-02-22 18:49:14
 |29|JohanLorenzo|21.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|2019-03-05 14:17:09
 |28|JohanLorenzo|[Bug 1529990 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529990) - Fix Mobile bustage|[URL](https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273)|2019-02-22 18:49:14
 |27|JohanLorenzo|21.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|2019-03-05 14:17:09
