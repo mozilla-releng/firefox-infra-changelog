@@ -1,7 +1,16 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-21 16:50:01.279312
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-21 22:18:37.444974
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|549|djmitche|Merge pull request #368 from djmitche/bug1531753 [Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - no more events, gce-provider, and delete lots of builder junk|[URL](https://github.com/taskcluster/taskcluster/commit/b5c6d9d5940f0ed1cbaa7fa76142c7c32633f76d)|2019-03-07 17:45:20
+|548|imbstack|Merge pull request #346 from taskcluster/renovate/node-10.x Update Node.js to v10.15.2|[URL](https://github.com/taskcluster/taskcluster/commit/9676ea1aee9c300a7a21f6c353e27f3d54330c01)|2019-03-07 17:24:13
+|547|djmitche|[Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - remove tc-builder as a workspace|[URL](https://github.com/taskcluster/taskcluster/commit/3473af1789a0e2dd1b77d3bb2dbf4999a0876bb5)|2019-03-07 17:08:44
+|546|djmitche|[Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - simply write out the monoimage docker image|[URL](https://github.com/taskcluster/taskcluster/commit/42aa36042114cec715e48538f13cba982a496091)|2019-03-07 16:59:27
+|545|djmitche|[Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - run 'yarn build --dry-run' in CI ..since what few tests there were are now gone|[URL](https://github.com/taskcluster/taskcluster/commit/c543eca6f8b54bc557ab9d551e849764330bb0a2)|2019-03-07 16:57:25
+|544|djmitche|[Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - remove use of ClusterSpec|[URL](https://github.com/taskcluster/taskcluster/commit/d1fe8291b586fbe8dd7b124b7f15af6b52c0903c)|2019-03-07 16:52:28
+|543|djmitche|[Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - remove --target-service since there is only one image now|[URL](https://github.com/taskcluster/taskcluster/commit/cfc2dd90704324a9c20d18d1c8167d0d5678cc6d)|2019-03-07 16:44:12
+|542|djmitche|[Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - stop building or deploying the events service|[URL](https://github.com/taskcluster/taskcluster/commit/16745c476570fe45d42ef1b7e341b37dae82726d)|2019-03-07 16:41:04
+|541|djmitche|[Bug 1532666 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532666) - stop building, deploying gce-provider|[URL](https://github.com/taskcluster/taskcluster/commit/03f47d52c7db9cb662b8a5805f75b4f1df4d8758)|2019-03-07 16:39:19
 |540|owlishDeveloper|Merge pull request #199 from arshadkazmi42/tc-v1-yml-quick [Bug 1515673 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1515673) - YML changed for v1 in QuickStart|[URL](https://github.com/taskcluster/taskcluster/commit/60d08da601b6d4ad1f7ee59f00b63da638bc8244)|2019-03-07 03:38:04
 |539|imbstack|Merge pull request #355 from taskcluster/fix-oneshot-exit-in-test Fix oneshot exit in test|[URL](https://github.com/taskcluster/taskcluster/commit/c6f305c2eb5594a398282d1cf0f9371aa646844f)|2019-03-06 21:36:11
 |538|sudipt1999|[relanding] bug fix 1519969|[URL](https://github.com/taskcluster/taskcluster/commit/32862f1f3d82684a87049887613d4a35c1d22c5d)|2019-03-02 15:30:06
