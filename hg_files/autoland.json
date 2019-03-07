@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79866
+    "last_push_id": 79879
   },
   "1": {
     "changeset_number": "35344",
@@ -35258,22 +35258,6 @@
           "testing/mozharness/configs/builds/taskcluster_sub_win64/searchfox_debug.py",
           "testing/mozharness/mozharness/mozilla/building/buildbase.py",
           "testing/mozharness/scripts/fx_desktop_build.py"
-        ]
-      }
-    }
-  },
-  "702": {
-    "changeset_number": "79832",
-    "pusher": "ealvarez@mozilla.com",
-    "date_of_push": "2019-03-07 01:02:06",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7b3b1bc4586f",
-        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-        "commit_message": "Bug 1533142 - Update min cbindgen version. r=jrmuizel,kats\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22381",
-        "files_changed": [
-          "build/moz.configure/bindgen.configure",
-          "taskcluster/scripts/misc/build-cbindgen.sh"
         ]
       }
     }
