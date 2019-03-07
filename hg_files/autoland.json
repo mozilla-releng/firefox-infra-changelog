@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79858
+    "last_push_id": 79866
   },
   "1": {
     "changeset_number": "35344",
@@ -35274,6 +35274,32 @@
         "files_changed": [
           "build/moz.configure/bindgen.configure",
           "taskcluster/scripts/misc/build-cbindgen.sh"
+        ]
+      }
+    }
+  },
+  "702": {
+    "changeset_number": "79863",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-07 06:23:27",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=281171d69172",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532710: [taskgraph] Provide a function version of `resolve_keyed_by` that doesn't mutate; r=dustin\n\nI'd like to use the same format for config values, that get evaluated in different contexts, so don't\nto mutate the config for that.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22126",
+        "files_changed": [
+          "taskcluster/taskgraph/util/keyed_by.py",
+          "taskcluster/taskgraph/util/schema.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0db48ebeac07",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532710: [taskgraph] Move default branch priorities to graph config; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22127",
+        "files_changed": [
+          "taskcluster/ci/config.yml",
+          "taskcluster/taskgraph/config.py",
+          "taskcluster/taskgraph/transforms/task.py"
         ]
       }
     }
