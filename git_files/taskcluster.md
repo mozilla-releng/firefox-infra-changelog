@@ -1,7 +1,8 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-21 05:10:24.980263
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-21 07:52:08.723794
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|540|owlishDeveloper|Merge pull request #199 from arshadkazmi42/tc-v1-yml-quick [Bug 1515673 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1515673) - YML changed for v1 in QuickStart|[URL](https://github.com/taskcluster/taskcluster/commit/60d08da601b6d4ad1f7ee59f00b63da638bc8244)|2019-03-07 03:38:04
 |539|imbstack|Merge pull request #355 from taskcluster/fix-oneshot-exit-in-test Fix oneshot exit in test|[URL](https://github.com/taskcluster/taskcluster/commit/c6f305c2eb5594a398282d1cf0f9371aa646844f)|2019-03-06 21:36:11
 |538|sudipt1999|[relanding] bug fix 1519969|[URL](https://github.com/taskcluster/taskcluster/commit/32862f1f3d82684a87049887613d4a35c1d22c5d)|2019-03-02 15:30:06
 |537|djmitche|Revert "bug fix 1519969" This reverts commit 0a79f4efcc937620b849b83faae440b1e2334317.|[URL](https://github.com/taskcluster/taskcluster/commit/0c297baed0af93923572691f54f6868cb313cbbf)|2019-03-05 16:04:35
