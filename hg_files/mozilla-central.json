@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35660
+    "last_push_id": 35662
   },
   "1": {
     "changeset_number": "35344",
@@ -11266,6 +11266,21 @@
           "taskcluster/ci/config.yml",
           "taskcluster/taskgraph/config.py",
           "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
+  },
+  "115": {
+    "changeset_number": "35662",
+    "pusher": "aiakab@mozilla.com",
+    "date_of_push": "2019-03-07 23:58:58",
+    "changeset_commits": {
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8e48fdd65475",
+        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+        "commit_message": "No bug - build cbindgen for macos using rust 1.32. r=froydnj\n\n1.32 includes https://github.com/rust-lang/rust/pull/49219, which means new\ncbindgen no longer depends on compiler internals, which fixes some reported\nbuild issues on IRC.\n",
+        "files_changed": [
+          "taskcluster/ci/toolchain/cbindgen.yml"
         ]
       }
     }

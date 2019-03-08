@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-21 22:18:37.444974
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-22 04:48:49.314990
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|551|djmitche|Merge pull request #364 from ydidwania/bug-1523801 [Bug 1523801] Blacklist listening to some specific exchanges|[URL](https://github.com/taskcluster/taskcluster/commit/0f81a6e4345ec7e13667dc15cc138b580ae0400a)|2019-03-07 23:00:34
+|550|ydidwania|refactor: rename denyList to denylist. simplify format of denylsit in config.yml|[URL](https://github.com/taskcluster/taskcluster/commit/dcd2e2c8c46dfe1934a69496629b4314b5d5d6cf)|2019-03-07 21:06:56
 |549|djmitche|Merge pull request #368 from djmitche/bug1531753 [Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - no more events, gce-provider, and delete lots of builder junk|[URL](https://github.com/taskcluster/taskcluster/commit/b5c6d9d5940f0ed1cbaa7fa76142c7c32633f76d)|2019-03-07 17:45:20
 |548|imbstack|Merge pull request #346 from taskcluster/renovate/node-10.x Update Node.js to v10.15.2|[URL](https://github.com/taskcluster/taskcluster/commit/9676ea1aee9c300a7a21f6c353e27f3d54330c01)|2019-03-07 17:24:13
 |547|djmitche|[Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - remove tc-builder as a workspace|[URL](https://github.com/taskcluster/taskcluster/commit/3473af1789a0e2dd1b77d3bb2dbf4999a0876bb5)|2019-03-07 17:08:44

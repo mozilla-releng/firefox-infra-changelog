@@ -1,11 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35660
+ CURRENT PUSH ID: 35662
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|35659|2019-03-07 11:47:53|Emilio Cobos  lvarez <emilio@crisal.io>|[Bug 1533142 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533142) - Update min cbindgen version. r=jrmuizel,katsDifferential Revision: https://phabricator.services.mozilla.com/D22381|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7b3b1bc4586f
-|35659|2019-03-07 11:47:53|Tom Prince <mozilla@hocat.ca>|[Bug 1532710 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532710) [taskgraph] Provide a function version of `resolve_keyed_by` that doesn't mutate; r=dustinI'd like to use the same format for config values, that get evaluated in different contexts, so don'tto mutate the config for that.Differential Revision: https://phabricator.services.mozilla.com/D22126|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=281171d69172
-|35659|2019-03-07 11:47:53|Tom Prince <mozilla@hocat.ca>|[Bug 1532710 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532710) [taskgraph] Move default branch priorities to graph config; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D22127|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0db48ebeac07
+|35662|2019-03-07 23:58:58|Emilio Cobos  lvarez <emilio@crisal.io>|No bug - build cbindgen for macos using rust 1.32. r=froydnj1.32 includes https://github.com/rust-lang/rust/pull/49219, which means newcbindgen no longer depends on compiler internals, which fixes some reportedbuild issues on IRC.|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8e48fdd65475
 |35644|2019-03-04 23:48:23|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D21903|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ee0735447f25
 |35644|2019-03-04 23:48:23|Simon Fraser <sfraser@mozilla.com>|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Improve logging and timeouts in partials generation r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D21909|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=817014bcd372
 |35644|2019-03-04 23:48:23|Simon Fraser <sfraser@mozilla.com>|[Bug 1532251 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532251) Add new xpcshell dependency to periodic updates r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D21912|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0ece01da444e
