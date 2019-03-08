@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79941
+    "last_push_id": 79984
   },
   "1": {
     "changeset_number": "35344",
@@ -35263,32 +35263,6 @@
     }
   },
   "702": {
-    "changeset_number": "79863",
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-03-07 06:23:27",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=281171d69172",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1532710: [taskgraph] Provide a function version of `resolve_keyed_by` that doesn't mutate; r=dustin\n\nI'd like to use the same format for config values, that get evaluated in different contexts, so don't\nto mutate the config for that.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22126",
-        "files_changed": [
-          "taskcluster/taskgraph/util/keyed_by.py",
-          "taskcluster/taskgraph/util/schema.py"
-        ]
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0db48ebeac07",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1532710: [taskgraph] Move default branch priorities to graph config; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22127",
-        "files_changed": [
-          "taskcluster/ci/config.yml",
-          "taskcluster/taskgraph/config.py",
-          "taskcluster/taskgraph/transforms/task.py"
-        ]
-      }
-    }
-  },
-  "702": {
     "changeset_number": "79928",
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-07 19:48:21",
@@ -35299,6 +35273,160 @@
         "commit_message": "Bug 1533398 - make wrong state for rerun action a soft error r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22538",
         "files_changed": [
           "taskcluster/taskgraph/actions/rerun.py"
+        ]
+      }
+    }
+  },
+  "702": {
+    "changeset_number": "79957",
+    "pusher": "aiakab@mozilla.com",
+    "date_of_push": "2019-03-08 00:14:58",
+    "changeset_commits": {
+      "21": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8e48fdd65475",
+        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+        "commit_message": "No bug - build cbindgen for macos using rust 1.32. r=froydnj\n\n1.32 includes https://github.com/rust-lang/rust/pull/49219, which means new\ncbindgen no longer depends on compiler internals, which fixes some reported\nbuild issues on IRC.\n",
+        "files_changed": [
+          "taskcluster/ci/toolchain/cbindgen.yml"
+        ]
+      }
+    }
+  },
+  "703": {
+    "changeset_number": "79965",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-08 00:30:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6c77b4a7cbd3",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Derive the diffoscope docker image from debian9-base. r=dustin\n\nBecause the debian9-base apt configuration doesn't install recommended\npackages, we end up needing to install more packages than before. We\ncould pass --install-recommended to apt-get, but that would make the\nimage larger than it already was after the upcoming changes, because\nnew versions of diffoscope come with more recommended dependencies.\n\nThe side effect is that this makes the image much smaller than it used\nto be, while preserving all the useful recommended packages (we don't\nactually need all of them).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22262",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/diffoscope/Dockerfile"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b1e1e1bba900",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Unbreak mach-o diffs after bug 1513798. r=dustin\n\nDepends on D22262\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22455",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/get_and_diffoscope"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=88e8b3f52329",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Ensure the base Debian docker image is up-to-date wrt the snapshot used. r=dustin\n\nWhen the apt snapshot is more recent than the docker image on the docker\nhub, some packages may not be up-to-date.\n\nDepends on D22455\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22263",
+        "files_changed": [
+          "taskcluster/docker/debian-raw/Dockerfile"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ed46ddfa23b7",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Update to a more recent snapshot for Debian stretch-based docker images. r=dustin\n\nThis has the side effect of addressing bug 1524723 for those images.\n\nDepends on D22263\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22264",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4a6cb39329d1",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Install diffoscope from stretch-backports. r=dustin\n\nAs of the update snapshot, stretch-backports contains version 112.\n\nDepends on D22264\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22265",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/Dockerfile"
+        ]
+      }
+    }
+  },
+  "704": {
+    "changeset_number": "79967",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-08 00:31:54",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d91c333553e4",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532883 - Add missing configuration for nasm on hazard and plain builds. r=dmajor\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22451",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/plain-opt",
+          "js/src/devtools/rootAnalysis/mozconfig.haz",
+          "taskcluster/ci/hazard/kind.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=707ec85ae54c",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532883 - Remove nasm Debian packages. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22257",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/ci/packages/kind.yml"
+        ]
+      }
+    }
+  },
+  "705": {
+    "changeset_number": "79977",
+    "pusher": "gmierz2@outlook.com",
+    "date_of_push": "2019-03-08 04:02:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3dc5de51e631",
+        "commiter_name": "Gregory Mierzwinski <gmierz2@outlook.com>",
+        "commit_message": "Bug 1476372 - Move Raptor chrome task definitions to separate file. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21371",
+        "files_changed": [
+          "taskcluster/ci/test/raptor-chrome.yml",
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=225dab563b6d",
+        "commiter_name": "Gregory Mierzwinski <gmierz2@outlook.com>",
+        "commit_message": "Bug 1476372 - Add fetch tasks for raptor chromium builds. r=rwood,glandium,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21372",
+        "files_changed": [
+          ".cron.yml",
+          "taskcluster/ci/fetch/chromium-fetch.yml",
+          "taskcluster/ci/fetch/kind.yml",
+          "taskcluster/ci/test/kind.yml",
+          "taskcluster/ci/test/raptor-chrome.yml",
+          "taskcluster/docker/fetch/Dockerfile",
+          "taskcluster/scripts/misc/fetch-chromium.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/fetch.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mozharness/mozharness/mozilla/testing/raptor.py"
+        ]
+      }
+    }
+  },
+  "706": {
+    "changeset_number": "79978",
+    "pusher": "gbrown@mozilla.com",
+    "date_of_push": "2019-03-08 04:03:43",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ea4a69b40a66",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1533565 - Increase max-run-time for osx ccov builds; r=marco\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22615",
+        "files_changed": [
+          "taskcluster/ci/build/macosx.yml"
+        ]
+      }
+    }
+  },
+  "707": {
+    "changeset_number": "79980",
+    "pusher": "gbrown@mozilla.com",
+    "date_of_push": "2019-03-08 04:05:01",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3fd4a7b0872e",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1533445 - Make android tests shutdown faster when device unresponsive; r=bc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22610",
+        "files_changed": [
+          "testing/mochitest/runjunit.py",
+          "testing/mozharness/mozharness/mozilla/testing/android.py"
         ]
       }
     }
