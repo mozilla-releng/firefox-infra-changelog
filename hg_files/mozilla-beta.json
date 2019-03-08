@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 10846
+    "last_push_id": 10849
   },
   "1": {
     "changeset_number": "10002",
@@ -41471,29 +41471,6 @@
         "files_changed": [
           "taskcluster/ci/release-balrog-submit-toplevel/kind.yml",
           "taskcluster/ci/release-secondary-balrog-submit-toplevel/kind.yml"
-        ]
-      }
-    }
-  },
-  "67": {
-    "changeset_number": "10827",
-    "pusher": "nerli@mozilla.com",
-    "date_of_push": "2019-03-05 17:14:43",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=c4e950fe3fe6",
-        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "Bug 1531178 - provide gls and safe browsing separate keys. r=tomprince a=test-only\n\nProvide gls and safe browsine separate keys at build time.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21536",
-        "files_changed": [
-          "testing/mozharness/configs/builds/releng_base_android_64_builds.py",
-          "testing/mozharness/configs/builds/releng_base_linux_32_builds.py",
-          "testing/mozharness/configs/builds/releng_base_linux_64_builds.py",
-          "testing/mozharness/configs/builds/releng_base_mac_64_cross_builds.py",
-          "testing/mozharness/configs/builds/releng_base_windows_32_mingw_builds.py",
-          "testing/mozharness/configs/builds/releng_base_windows_64_mingw_builds.py",
-          "testing/mozharness/configs/builds/releng_sub_linux_configs/64_artifact.py",
-          "testing/mozharness/configs/builds/taskcluster_base_windows.py",
-          "testing/mozharness/configs/single_locale/tc_android-api-16.py"
         ]
       }
     }

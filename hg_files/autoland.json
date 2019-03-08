@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80023
+    "last_push_id": 80036
   },
   "1": {
     "changeset_number": "35344",
@@ -35466,21 +35466,6 @@
     }
   },
   "710": {
-    "changeset_number": "80000",
-    "pusher": "mh@glandium.org",
-    "date_of_push": "2019-03-08 09:31:26",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=615a12a92768",
-        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-        "commit_message": "Bug 1532893 - Retry packages tasks when snapshot.debian.org doesn't respond. r=dustin\n\nBug 1486071 intended to fix this, but while the tasks are setup to\nrestart on exit status 100, there are multiple failure cases where\nsnapshot.debian.org doesn't respond and the exit status is not 100.\n\nOne is dget, when downloading package sources from snapshot.debian.org.\nEventually, those should move to fetch tasks, but in the meantime, we\nbubble up get errors with an exit code 100.\n\nmk-build-deps wraps a call to apt-get install, but doesn't return the\nexit code that apt-get returns when apt-get returns one. It makes it\nhard to distinguish the error modes, but mk-build-deps is unlikely to\nfail on anything else than apt-get. Not all apt-get failures would be\ndue to snapshot.debian.org availability, but that's a tradeoff we\ndecided was okay in bug 1486071.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22269",
-        "files_changed": [
-          "taskcluster/taskgraph/transforms/job/debian_package.py"
-        ]
-      }
-    }
-  },
-  "710": {
     "changeset_number": "80004",
     "pusher": "fstrugariu@mozilla.com",
     "date_of_push": "2019-03-08 11:40:59",
@@ -35515,6 +35500,21 @@
           "gfx/wr/ci-scripts/docker-image/setup.sh",
           "taskcluster/ci/webrender/kind.yml",
           "taskcluster/scripts/misc/wrench-deps-vendoring.sh"
+        ]
+      }
+    }
+  },
+  "711": {
+    "changeset_number": "80032",
+    "pusher": "nfroyd@mozilla.com",
+    "date_of_push": "2019-03-08 16:47:44",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9a08f46db419",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1533145 - move linux64-plain builds to debian9 base image; r=glandium\n\nMost of our builds use libstdc++ compat, so they don't care much what\nthe custom toolchains we use are compiled with.  The plain builds, on\nthe other hand, attempt to stick as closely as possible to a \"local\"\ndeveloper experience, and so don't set up libstdc++ compat.  Since we\nwant to transition to our clang binaries being compiled with gcc 6, we\nneed a base system image that contains gcc 6 runtime libraries by\ndefault.  Debian 9 is just such a system.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22393",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml"
         ]
       }
     }

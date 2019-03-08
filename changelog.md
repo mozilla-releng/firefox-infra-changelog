@@ -1,10 +1,10 @@
-##  Commits in production - for one day, generated on: 2019-03-08 13:58:13 UTC.
+##  Commits in production - for one day, generated on: 2019-03-08 16:35:11 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4efc7fb0eae7)|[Bug 1532284 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532284) - Build wrench on Android. r=glandium Depends on D22377 Differential Revision: https://phabricator.services.mozilla.com/D22378|kgupta@mozilla.com|glandium|2019-03-08 13:37:25|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9a08f46db419)|[Bug 1533145 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533145) - move linux64-plain builds to debian9 base image; r=glandium Most of our builds use libstdc++ compat, so they don't care much what the custom toolchains we use are compiled with. The plain builds, on the other hand, attempt to stick as closely as possible to a "local" developer experience, and so don't set up libstdc++ compat. Since we want to transition to our clang binaries being compiled with gcc 6, we need a base system image that contains gcc 6 runtime libraries by default. Debian 9 is just such a system. Differential Revision: https://phabricator.services.mozilla.com/D22393|nfroyd@mozilla.com|glandium|2019-03-08 16:47:44|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ef2b461b0a90)|[Bug 1529211 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529211) Add new Raptor tests in tp6m-6 r=davehunt Differential Revision: https://phabricator.services.mozilla.com/D20820|fstrugariu@mozilla.com|davehunt|2019-03-08 11:40:59|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6b1f78426763)|[Bug 1532783 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532783) [taskgraph] Set worker `os` and `implementation` earlier in job transform; r=dustin This slightly decreases the amount of code that needs to know how to determine this. Differential Revision: https://phabricator.services.mozilla.com/D22446|mozilla@hocat.ca|dustin|2019-03-08 09:01:52|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29168c60c4e6)|[Bug 1532783 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532783) [taskgraph] Move handling of windows scopes to taskgraph.transfroms.task; r=dustin Currently the scopes are handled in some test-specific code. However, there is logic not to be in generic code. Differential Revision: https://phabricator.services.mozilla.com/D22447|mozilla@hocat.ca|dustin|2019-03-08 09:01:52|
@@ -137,7 +137,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/c0cb221f878a7c26ffa02f35dd51f60fa8f85203)|Bug 1533563 - Bump pushsnapscript to 0.2.6 (#422)|JohanLorenzo|N/A|2019-03-08 14:29:45|
 
 |	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
