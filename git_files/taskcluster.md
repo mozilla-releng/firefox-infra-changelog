@@ -1,7 +1,10 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-22 18:34:01.627414
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-22 23:00:54.645159
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|554|imbstack|Merge pull request #369 from taskcluster/speed-back-up-q-test Speed back up queue tests|[URL](https://github.com/taskcluster/taskcluster/commit/ab22724a50f60c87c06abd99783597a7ecb78340)|2019-03-08 19:42:15
+|553|imbstack|Add comment as to why teardown needs to happen manually|[URL](https://github.com/taskcluster/taskcluster/commit/aa6695a81fc121f4b4f75eb39dec735fa6afa312)|2019-03-08 16:59:45
+|552|imbstack|Merge pull request #370 from taskcluster/bug-1533493 [Bug 1533493] Remove old auditlogs terraform|[URL](https://github.com/taskcluster/taskcluster/commit/8ab2ab3703d4f506bc61493e1a2544a6181b74c2)|2019-03-08 16:57:33
 |551|djmitche|Merge pull request #364 from ydidwania/bug-1523801 [Bug 1523801] Blacklist listening to some specific exchanges|[URL](https://github.com/taskcluster/taskcluster/commit/0f81a6e4345ec7e13667dc15cc138b580ae0400a)|2019-03-07 23:00:34
 |550|ydidwania|refactor: rename denyList to denylist. simplify format of denylsit in config.yml|[URL](https://github.com/taskcluster/taskcluster/commit/dcd2e2c8c46dfe1934a69496629b4314b5d5d6cf)|2019-03-07 21:06:56
 |549|djmitche|Merge pull request #368 from djmitche/bug1531753 [Bug 1531753 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531753) - no more events, gce-provider, and delete lots of builder junk|[URL](https://github.com/taskcluster/taskcluster/commit/b5c6d9d5940f0ed1cbaa7fa76142c7c32633f76d)|2019-03-07 17:45:20

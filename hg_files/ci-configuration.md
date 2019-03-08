@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 90
+ CURRENT PUSH ID: 91
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|90|2019-03-07 17:47:30|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable hg-hooks for inbound, autoland|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0c5a6ccbd8b9
+|91|2019-03-08 21:26:21|Mihai Tabara <mtabara@mozilla.com>|No bug: Cleanup in old fenix sentry secrets. r=jlorenzo|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1f02faf115f2
 |87|2019-03-07 00:06:27|Mihai Tabara <mtabara@mozilla.com>|[Bug 1519493 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519493) - step 1 in automating permissions in mobile world. r=tomprinceThis is a preliminary ask-for-feedback.* not to be merged until we perform the cleanup in bug 1526017* this is experimental to understand if the mapping logic can be optimizedDifferential Revision: https://phabricator.services.mozilla.com/D19240|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=eb561312b56f
 |83|2019-03-04 23:44:32|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Remove some redundant and cross-level/trust-domain scope grants; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21805|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c1f008b66b74
 |83|2019-03-04 23:44:32|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Remove obsolete worker types; r=dustinMost of these have not been used for some time, or no longer exist.gecko-decision (not level constrained) is still used in somenon-mozilla-central nigthly hooks. I think they are unused, and otherwise theycan be updated as needed.Differential Revision: https://phabricator.services.mozilla.com/D21806|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=9593b1fcbf4e

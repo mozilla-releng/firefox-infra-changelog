@@ -1,8 +1,48 @@
 {
   "0": {
-    "lastChecked": "2019-03-08 16:34:01.645964"
+    "lastChecked": "2019-03-08 21:00:54.766094"
   },
   "1": {
+    "sha": "9e723b573a91a60b1f5fb74154d1df7562d51886",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/9e723b573a91a60b1f5fb74154d1df7562d51886",
+    "commiter_name": "petemoore",
+    "commiter_email": "pmoore@mozilla.com",
+    "commit_message": "Testing generic-worker 13.0.4 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 13.0.4 5.1.0  See https://github.com/taskcluster/generic-worker/blob/08e68a24b3fa73f2dc43af3d19ac6b28f44c477c/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b",
+    "commit_date": "2019-03-08 19:06:58",
+    "files_changed": [
+      "userdata/Manifest/gecko-1-b-win2012-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-hw-b.json",
+      "userdata/Manifest/gecko-t-win10-64-ux-b.json",
+      "userdata/Manifest/gecko-t-win10-a64-beta.json",
+      "userdata/Manifest/gecko-t-win7-32-beta.json",
+      "userdata/Manifest/gecko-t-win7-32-cu.json",
+      "userdata/Manifest/gecko-t-win7-32-gpu-b.json"
+    ]
+  },
+  "2": {
+    "sha": "66f22171a3a1f2d0dab9aae1b86de350bf235e81",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/66f22171a3a1f2d0dab9aae1b86de350bf235e81",
+    "commiter_name": "petemoore",
+    "commiter_email": "pmoore@mozilla.com",
+    "commit_message": "Testing generic-worker 13.0.4 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 13.0.4 5.1.0  See https://github.com/taskcluster/generic-worker/blob/461c2fb847ecd28a59f7c8bf56d51e57d9fa5e90/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b",
+    "commit_date": "2019-03-08 16:48:50",
+    "files_changed": [
+      "userdata/Manifest/gecko-1-b-win2012-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-hw-b.json",
+      "userdata/Manifest/gecko-t-win10-64-ux-b.json",
+      "userdata/Manifest/gecko-t-win10-a64-beta.json",
+      "userdata/Manifest/gecko-t-win7-32-beta.json",
+      "userdata/Manifest/gecko-t-win7-32-cu.json",
+      "userdata/Manifest/gecko-t-win7-32-gpu-b.json"
+    ]
+  },
+  "3": {
     "sha": "50444e63cfe249c70ac821db19b4ffdc685c1d4e",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/50444e63cfe249c70ac821db19b4ffdc685c1d4e",
     "commiter_name": "petemoore",
@@ -14,7 +54,7 @@
       "userdata/Manifest/gecko-t-win7-32-cu.json"
     ]
   },
-  "2": {
+  "4": {
     "sha": "08f18c2999c7fa6e6947373caaec62c0c9586da0",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/08f18c2999c7fa6e6947373caaec62c0c9586da0",
     "commiter_name": "grenade",
@@ -25,7 +65,7 @@
       "userdata/Manifest/gecko-t-win10-64-cu.json"
     ]
   },
-  "3": {
+  "5": {
     "sha": "dbe5a1be807b62cb9c3dc21fc348d14257cec8cf",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/dbe5a1be807b62cb9c3dc21fc348d14257cec8cf",
     "commiter_name": "grenade",
@@ -38,7 +78,7 @@
       "userdata/Manifest/gecko-3-b-win2012.json"
     ]
   },
-  "4": {
+  "6": {
     "sha": "19d4f80e2fbb590c78628866fcf99be55ae2d0ed",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/19d4f80e2fbb590c78628866fcf99be55ae2d0ed",
     "commiter_name": "grenade",
@@ -50,7 +90,7 @@
       "userdata/Manifest/gecko-2-b-win2012.json"
     ]
   },
-  "5": {
+  "7": {
     "sha": "818d2412b9a0f1cdf90234b7724fb9ad2073c98e",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/818d2412b9a0f1cdf90234b7724fb9ad2073c98e",
     "commiter_name": "grenade",
@@ -65,7 +105,7 @@
       "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
-  "6": {
+  "8": {
     "sha": "f543df8c734142d7338190354da5cebd1d5a0b62",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/f543df8c734142d7338190354da5cebd1d5a0b62",
     "commiter_name": "grenade",
@@ -77,7 +117,7 @@
       "userdata/Manifest/gecko-t-win7-32.json"
     ]
   },
-  "7": {
+  "9": {
     "sha": "5e17c70ece9815221ef92dbd9edba41818979806",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/5e17c70ece9815221ef92dbd9edba41818979806",
     "commiter_name": "grenade",
@@ -90,7 +130,7 @@
       "userdata/Manifest/gecko-t-win7-32.json"
     ]
   },
-  "8": {
+  "10": {
     "sha": "a86086a0d4a09e5155c64f150c9b67dfe0563bf4",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/a86086a0d4a09e5155c64f150c9b67dfe0563bf4",
     "commiter_name": "grenade",
@@ -103,7 +143,7 @@
       "userdata/Manifest/gecko-t-win7-32.json"
     ]
   },
-  "9": {
+  "11": {
     "sha": "b7c71acd64d624882248f088e83ad8a8a8130add",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/b7c71acd64d624882248f088e83ad8a8a8130add",
     "commiter_name": "grenade",
@@ -114,7 +154,7 @@
       "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
-  "10": {
+  "12": {
     "sha": "56d247d42d33af2d3fc9b69dfcb13a30e980e6b5",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/56d247d42d33af2d3fc9b69dfcb13a30e980e6b5",
     "commiter_name": "grenade",
@@ -126,7 +166,7 @@
       "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
-  "11": {
+  "13": {
     "sha": "8353604b9cdff902749945fa1ab2d797a54d1cc8",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/8353604b9cdff902749945fa1ab2d797a54d1cc8",
     "commiter_name": "grenade",
@@ -137,7 +177,7 @@
       "ci/update-workertype.sh"
     ]
   },
-  "12": {
+  "14": {
     "sha": "933438f76cdb07af6b4f7fd3b8fc034195a66312",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/933438f76cdb07af6b4f7fd3b8fc034195a66312",
     "commiter_name": "grenade",
@@ -149,7 +189,7 @@
       "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
-  "13": {
+  "15": {
     "sha": "bb88114133e1a6e826e06e1d6180e0dda244be61",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/bb88114133e1a6e826e06e1d6180e0dda244be61",
     "commiter_name": "petemoore",
@@ -161,7 +201,7 @@
       "userdata/Manifest/gecko-t-win7-32-cu.json"
     ]
   },
-  "14": {
+  "16": {
     "sha": "82dfd25bad67536a1a1e0ea4b4c883c4de6935d0",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/82dfd25bad67536a1a1e0ea4b4c883c4de6935d0",
     "commiter_name": "petemoore",
@@ -181,7 +221,7 @@
       "userdata/Manifest/gecko-t-win7-32-gpu-b.json"
     ]
   },
-  "15": {
+  "17": {
     "sha": "57d62edf39a2ae4c9c0bad55de335b479a8837ec",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/57d62edf39a2ae4c9c0bad55de335b479a8837ec",
     "commiter_name": "grenade",
@@ -192,7 +232,7 @@
       "ci/update-workertype.sh"
     ]
   },
-  "16": {
+  "18": {
     "sha": "3bbaa1c888be00fc307eae5d0ee718d5ec6675e3",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3bbaa1c888be00fc307eae5d0ee718d5ec6675e3",
     "commiter_name": "grenade",
@@ -202,40 +242,6 @@
     "files_changed": [
       "userdata/Manifest/gecko-t-win10-64-alpha.json",
       "userdata/Manifest/gecko-t-win10-64-gpu-a.json"
-    ]
-  },
-  "17": {
-    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "commiter_name": "grenade",
-    "commiter_email": null,
-    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
-    "commit_date": "2018-11-28 17:08:20",
-    "files_changed": [
-      "userdata/Manifest/gecko-t-win10-64-beta.json",
-      "userdata/Manifest/gecko-t-win10-64-cu.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu.json",
-      "userdata/Manifest/gecko-t-win10-64-hw.json",
-      "userdata/Manifest/gecko-t-win10-64-ux.json",
-      "userdata/Manifest/gecko-t-win10-64.json"
-    ]
-  },
-  "18": {
-    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
-    "commiter_name": "grenade",
-    "commiter_email": null,
-    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
-    "commit_date": "2018-11-28 17:08:20",
-    "files_changed": [
-      "userdata/Manifest/gecko-t-win10-64-beta.json",
-      "userdata/Manifest/gecko-t-win10-64-cu.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
-      "userdata/Manifest/gecko-t-win10-64-gpu.json",
-      "userdata/Manifest/gecko-t-win10-64-hw.json",
-      "userdata/Manifest/gecko-t-win10-64-ux.json",
-      "userdata/Manifest/gecko-t-win10-64.json"
     ]
   },
   "19": {
@@ -1276,6 +1282,40 @@
     ]
   },
   "80": {
+    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-28 17:08:20",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "81": {
+    "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
+    "commiter_name": "grenade",
+    "commiter_email": null,
+    "commit_message": "Bug 1485628 - disable service pack updates & reboots (#216)  deploy: gecko-t-win10-64 gecko-t-win10-64-gpu",
+    "commit_date": "2018-11-28 17:08:20",
+    "files_changed": [
+      "userdata/Manifest/gecko-t-win10-64-beta.json",
+      "userdata/Manifest/gecko-t-win10-64-cu.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu-b.json",
+      "userdata/Manifest/gecko-t-win10-64-gpu.json",
+      "userdata/Manifest/gecko-t-win10-64-hw.json",
+      "userdata/Manifest/gecko-t-win10-64-ux.json",
+      "userdata/Manifest/gecko-t-win10-64.json"
+    ]
+  },
+  "82": {
     "sha": "3c874a7b7ab236ec1939728b43451e44eb50ff6f",
     "url": "https://github.com/mozilla-releng/OpenCloudConfig/commit/3c874a7b7ab236ec1939728b43451e44eb50ff6f",
     "commiter_name": "grenade",

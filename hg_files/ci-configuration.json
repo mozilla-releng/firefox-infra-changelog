@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 90
+    "last_push_id": 91
   },
   "1": {
     "changeset_number": "31",
@@ -786,6 +786,21 @@
         "commit_message": "Bug 1526979 - enable hg-hooks for inbound, autoland",
         "files_changed": [
           "projects.yml"
+        ]
+      }
+    }
+  },
+  "46": {
+    "changeset_number": "91",
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-03-08 21:26:21",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1f02faf115f2",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "No bug: Cleanup in old fenix sentry secrets. r=jlorenzo",
+        "files_changed": [
+          "grants.yml"
         ]
       }
     }
