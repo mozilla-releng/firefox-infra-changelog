@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35664
+    "last_push_id": 35667
   },
   "1": {
     "changeset_number": "35344",
@@ -11236,21 +11236,6 @@
     }
   },
   "115": {
-    "changeset_number": "35662",
-    "pusher": "aiakab@mozilla.com",
-    "date_of_push": "2019-03-07 23:58:58",
-    "changeset_commits": {
-      "21": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8e48fdd65475",
-        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-        "commit_message": "No bug - build cbindgen for macos using rust 1.32. r=froydnj\n\n1.32 includes https://github.com/rust-lang/rust/pull/49219, which means new\ncbindgen no longer depends on compiler internals, which fixes some reported\nbuild issues on IRC.\n",
-        "files_changed": [
-          "taskcluster/ci/toolchain/cbindgen.yml"
-        ]
-      }
-    }
-  },
-  "115": {
     "changeset_number": "35663",
     "pusher": "aiakab@mozilla.com",
     "date_of_push": "2019-03-08 06:38:30",
@@ -11261,6 +11246,176 @@
         "commit_message": "Bug 1533398 - make wrong state for rerun action a soft error r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22538",
         "files_changed": [
           "taskcluster/taskgraph/actions/rerun.py"
+        ]
+      }
+    }
+  },
+  "115": {
+    "changeset_number": "35665",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-03-08 11:39:15",
+    "changeset_commits": {
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6c77b4a7cbd3",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Derive the diffoscope docker image from debian9-base. r=dustin\n\nBecause the debian9-base apt configuration doesn't install recommended\npackages, we end up needing to install more packages than before. We\ncould pass --install-recommended to apt-get, but that would make the\nimage larger than it already was after the upcoming changes, because\nnew versions of diffoscope come with more recommended dependencies.\n\nThe side effect is that this makes the image much smaller than it used\nto be, while preserving all the useful recommended packages (we don't\nactually need all of them).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22262",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/docker/diffoscope/Dockerfile"
+        ]
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b1e1e1bba900",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Unbreak mach-o diffs after bug 1513798. r=dustin\n\nDepends on D22262\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22455",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/get_and_diffoscope"
+        ]
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=88e8b3f52329",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Ensure the base Debian docker image is up-to-date wrt the snapshot used. r=dustin\n\nWhen the apt snapshot is more recent than the docker image on the docker\nhub, some packages may not be up-to-date.\n\nDepends on D22455\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22263",
+        "files_changed": [
+          "taskcluster/docker/debian-raw/Dockerfile"
+        ]
+      },
+      "41": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ed46ddfa23b7",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Update to a more recent snapshot for Debian stretch-based docker images. r=dustin\n\nThis has the side effect of addressing bug 1524723 for those images.\n\nDepends on D22263\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22264",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml"
+        ]
+      },
+      "42": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4a6cb39329d1",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532878 - Install diffoscope from stretch-backports. r=dustin\n\nAs of the update snapshot, stretch-backports contains version 112.\n\nDepends on D22264\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22265",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/Dockerfile"
+        ]
+      },
+      "44": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d91c333553e4",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532883 - Add missing configuration for nasm on hazard and plain builds. r=dmajor\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22451",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/plain-opt",
+          "js/src/devtools/rootAnalysis/mozconfig.haz",
+          "taskcluster/ci/hazard/kind.yml"
+        ]
+      },
+      "45": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=707ec85ae54c",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532883 - Remove nasm Debian packages. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22257",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/ci/packages/kind.yml"
+        ]
+      },
+      "56": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3dc5de51e631",
+        "commiter_name": "Gregory Mierzwinski <gmierz2@outlook.com>",
+        "commit_message": "Bug 1476372 - Move Raptor chrome task definitions to separate file. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21371",
+        "files_changed": [
+          "taskcluster/ci/test/raptor-chrome.yml",
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      },
+      "57": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=225dab563b6d",
+        "commiter_name": "Gregory Mierzwinski <gmierz2@outlook.com>",
+        "commit_message": "Bug 1476372 - Add fetch tasks for raptor chromium builds. r=rwood,glandium,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21372",
+        "files_changed": [
+          ".cron.yml",
+          "taskcluster/ci/fetch/chromium-fetch.yml",
+          "taskcluster/ci/fetch/kind.yml",
+          "taskcluster/ci/test/kind.yml",
+          "taskcluster/ci/test/raptor-chrome.yml",
+          "taskcluster/docker/fetch/Dockerfile",
+          "taskcluster/scripts/misc/fetch-chromium.py",
+          "taskcluster/taskgraph/target_tasks.py",
+          "taskcluster/taskgraph/transforms/fetch.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mozharness/mozharness/mozilla/testing/raptor.py"
+        ]
+      },
+      "58": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ea4a69b40a66",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1533565 - Increase max-run-time for osx ccov builds; r=marco\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22615",
+        "files_changed": [
+          "taskcluster/ci/build/macosx.yml"
+        ]
+      },
+      "60": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3fd4a7b0872e",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1533445 - Make android tests shutdown faster when device unresponsive; r=bc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22610",
+        "files_changed": [
+          "testing/mochitest/runjunit.py",
+          "testing/mozharness/mozharness/mozilla/testing/android.py"
+        ]
+      },
+      "88": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=421bdcc103d3",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Set worker `os` and `implementation` earlier in job transform; r=dustin\n\nThis slightly decreases the amount of code that needs to know how to determine this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22446",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      },
+      "89": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=722b3915da31",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Move handling of windows scopes to taskgraph.transfroms.task; r=dustin\n\nCurrently the scopes are handled in some test-specific code. However, there is\nlogic not to be in generic code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22447",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      },
+      "93": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=54ed5eac2abc",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1532783) for causing Gecko Decision Task bustage. CLOSED TREE\n\nBacked out changeset 722b3915da31 (bug 1532783)\nBacked out changeset 421bdcc103d3 (bug 1532783)",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/__init__.py",
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
+  },
+  "116": {
+    "changeset_number": "35666",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-03-08 15:49:21",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6b1f78426763",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Set worker `os` and `implementation` earlier in job transform; r=dustin\n\nThis slightly decreases the amount of code that needs to know how to determine this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22446",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=29168c60c4e6",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Move handling of windows scopes to taskgraph.transfroms.task; r=dustin\n\nCurrently the scopes are handled in some test-specific code. However, there is\nlogic not to be in generic code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22447",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=615a12a92768",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532893 - Retry packages tasks when snapshot.debian.org doesn't respond. r=dustin\n\nBug 1486071 intended to fix this, but while the tasks are setup to\nrestart on exit status 100, there are multiple failure cases where\nsnapshot.debian.org doesn't respond and the exit status is not 100.\n\nOne is dget, when downloading package sources from snapshot.debian.org.\nEventually, those should move to fetch tasks, but in the meantime, we\nbubble up get errors with an exit code 100.\n\nmk-build-deps wraps a call to apt-get install, but doesn't return the\nexit code that apt-get returns when apt-get returns one. It makes it\nhard to distinguish the error modes, but mk-build-deps is unlikely to\nfail on anything else than apt-get. Not all apt-get failures would be\ndue to snapshot.debian.org availability, but that's a tradeoff we\ndecided was okay in bug 1486071.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22269",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
         ]
       }
     }

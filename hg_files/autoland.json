@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80000
+    "last_push_id": 80023
   },
   "1": {
     "changeset_number": "35344",
@@ -35401,22 +35401,6 @@
     }
   },
   "707": {
-    "changeset_number": "79980",
-    "pusher": "gbrown@mozilla.com",
-    "date_of_push": "2019-03-08 04:05:01",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3fd4a7b0872e",
-        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
-        "commit_message": "Bug 1533445 - Make android tests shutdown faster when device unresponsive; r=bc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22610",
-        "files_changed": [
-          "testing/mochitest/runjunit.py",
-          "testing/mozharness/mozharness/mozilla/testing/android.py"
-        ]
-      }
-    }
-  },
-  "707": {
     "changeset_number": "79993",
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-03-08 05:44:03",
@@ -35492,6 +35476,45 @@
         "commit_message": "Bug 1532893 - Retry packages tasks when snapshot.debian.org doesn't respond. r=dustin\n\nBug 1486071 intended to fix this, but while the tasks are setup to\nrestart on exit status 100, there are multiple failure cases where\nsnapshot.debian.org doesn't respond and the exit status is not 100.\n\nOne is dget, when downloading package sources from snapshot.debian.org.\nEventually, those should move to fetch tasks, but in the meantime, we\nbubble up get errors with an exit code 100.\n\nmk-build-deps wraps a call to apt-get install, but doesn't return the\nexit code that apt-get returns when apt-get returns one. It makes it\nhard to distinguish the error modes, but mk-build-deps is unlikely to\nfail on anything else than apt-get. Not all apt-get failures would be\ndue to snapshot.debian.org availability, but that's a tradeoff we\ndecided was okay in bug 1486071.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22269",
         "files_changed": [
           "taskcluster/taskgraph/transforms/job/debian_package.py"
+        ]
+      }
+    }
+  },
+  "710": {
+    "changeset_number": "80004",
+    "pusher": "fstrugariu@mozilla.com",
+    "date_of_push": "2019-03-08 11:40:59",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ef2b461b0a90",
+        "commiter_name": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1529211 Add new Raptor tests in tp6m-6 r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20820",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-bbc.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-reddit.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-stackoverflow.manifest",
+          "testing/raptor/raptor/raptor.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-6.ini",
+          "testing/raptor/webext/raptor/manifest.json"
+        ]
+      }
+    }
+  },
+  "711": {
+    "changeset_number": "80011",
+    "pusher": "kgupta@mozilla.com",
+    "date_of_push": "2019-03-08 13:37:25",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4efc7fb0eae7",
+        "commiter_name": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1532284 - Build wrench on Android. r=glandium\n\nDepends on D22377\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22378",
+        "files_changed": [
+          "gfx/wr/ci-scripts/docker-image/setup.sh",
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/scripts/misc/wrench-deps-vendoring.sh"
         ]
       }
     }

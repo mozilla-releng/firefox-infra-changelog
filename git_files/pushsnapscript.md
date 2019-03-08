@@ -1,7 +1,11 @@
-## PUSHSNAPSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-22 10:34:08.333008
+## PUSHSNAPSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-22 15:57:10.442319
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|14|JohanLorenzo|0.2.6|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/8ce4053fb2d1c25fe749a402056086755c0367c2)|2019-03-08 11:14:25
+|13|escapewindow|[Bug 1533563 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533563) - Unpin requests (#18) Restrict it to >=2,<3|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/efadd779e6dd63d4b58f14d373dbe6743c921d11)|2019-03-08 11:12:24
+|12|JohanLorenzo|0.2.5|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/48ded4332ef5acda5ab62db74ca926695175fff2)|2019-03-05 16:43:28
+|11|JohanLorenzo|[Bug 1459222 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1459222) - Allow release version numbers on beta (for RCs)|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/497a4fa5efe1119fa679266b776deeacff3ad7f5)|2019-02-27 14:28:57
 |10|JohanLorenzo|0.2.5|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/48ded4332ef5acda5ab62db74ca926695175fff2)|2019-03-05 16:43:28
 |9|JohanLorenzo|[Bug 1459222 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1459222) - Allow release version numbers on beta (for RCs)|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/497a4fa5efe1119fa679266b776deeacff3ad7f5)|2019-02-27 14:28:57
 |8|JohanLorenzo|0.2.5|[URL](https://github.com/mozilla-releng/pushsnapscript/commit/48ded4332ef5acda5ab62db74ca926695175fff2)|2019-03-05 16:43:28
