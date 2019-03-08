@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35662
+    "last_push_id": 35664
   },
   "1": {
     "changeset_number": "35344",
@@ -11236,41 +11236,6 @@
     }
   },
   "115": {
-    "changeset_number": "35659",
-    "pusher": "apavel@mozilla.com",
-    "date_of_push": "2019-03-07 11:47:53",
-    "changeset_commits": {
-      "2": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7b3b1bc4586f",
-        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-        "commit_message": "Bug 1533142 - Update min cbindgen version. r=jrmuizel,kats\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22381",
-        "files_changed": [
-          "build/moz.configure/bindgen.configure",
-          "taskcluster/scripts/misc/build-cbindgen.sh"
-        ]
-      },
-      "46": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=281171d69172",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1532710: [taskgraph] Provide a function version of `resolve_keyed_by` that doesn't mutate; r=dustin\n\nI'd like to use the same format for config values, that get evaluated in different contexts, so don't\nto mutate the config for that.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22126",
-        "files_changed": [
-          "taskcluster/taskgraph/util/keyed_by.py",
-          "taskcluster/taskgraph/util/schema.py"
-        ]
-      },
-      "47": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0db48ebeac07",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1532710: [taskgraph] Move default branch priorities to graph config; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22127",
-        "files_changed": [
-          "taskcluster/ci/config.yml",
-          "taskcluster/taskgraph/config.py",
-          "taskcluster/taskgraph/transforms/task.py"
-        ]
-      }
-    }
-  },
-  "115": {
     "changeset_number": "35662",
     "pusher": "aiakab@mozilla.com",
     "date_of_push": "2019-03-07 23:58:58",
@@ -11281,6 +11246,21 @@
         "commit_message": "No bug - build cbindgen for macos using rust 1.32. r=froydnj\n\n1.32 includes https://github.com/rust-lang/rust/pull/49219, which means new\ncbindgen no longer depends on compiler internals, which fixes some reported\nbuild issues on IRC.\n",
         "files_changed": [
           "taskcluster/ci/toolchain/cbindgen.yml"
+        ]
+      }
+    }
+  },
+  "115": {
+    "changeset_number": "35663",
+    "pusher": "aiakab@mozilla.com",
+    "date_of_push": "2019-03-08 06:38:30",
+    "changeset_commits": {
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7a1c873a21b2",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1533398 - make wrong state for rerun action a soft error r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22538",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/rerun.py"
         ]
       }
     }

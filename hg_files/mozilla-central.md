@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35662
+ CURRENT PUSH ID: 35664
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|35662|2019-03-07 23:58:58|Emilio Cobos  lvarez <emilio@crisal.io>|No bug - build cbindgen for macos using rust 1.32. r=froydnj1.32 includes https://github.com/rust-lang/rust/pull/49219, which means newcbindgen no longer depends on compiler internals, which fixes some reportedbuild issues on IRC.|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8e48fdd65475
+|35663|2019-03-08 06:38:30|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1533398 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533398) - make wrong state for rerun action a soft error r=CallekDifferential Revision: https://phabricator.services.mozilla.com/D22538|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7a1c873a21b2
 |35644|2019-03-04 23:48:23|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D21903|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ee0735447f25
 |35644|2019-03-04 23:48:23|Simon Fraser <sfraser@mozilla.com>|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Improve logging and timeouts in partials generation r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D21909|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=817014bcd372
 |35644|2019-03-04 23:48:23|Simon Fraser <sfraser@mozilla.com>|[Bug 1532251 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532251) Add new xpcshell dependency to periodic updates r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D21912|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0ece01da444e

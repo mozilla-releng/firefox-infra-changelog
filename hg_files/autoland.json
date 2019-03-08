@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 79984
+    "last_push_id": 80000
   },
   "1": {
     "changeset_number": "35344",
@@ -35263,21 +35263,6 @@
     }
   },
   "702": {
-    "changeset_number": "79928",
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-07 19:48:21",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7a1c873a21b2",
-        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1533398 - make wrong state for rerun action a soft error r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22538",
-        "files_changed": [
-          "taskcluster/taskgraph/actions/rerun.py"
-        ]
-      }
-    }
-  },
-  "702": {
     "changeset_number": "79957",
     "pusher": "aiakab@mozilla.com",
     "date_of_push": "2019-03-08 00:14:58",
@@ -35427,6 +35412,86 @@
         "files_changed": [
           "testing/mochitest/runjunit.py",
           "testing/mozharness/mozharness/mozilla/testing/android.py"
+        ]
+      }
+    }
+  },
+  "707": {
+    "changeset_number": "79993",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-08 05:44:03",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=421bdcc103d3",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Set worker `os` and `implementation` earlier in job transform; r=dustin\n\nThis slightly decreases the amount of code that needs to know how to determine this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22446",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=722b3915da31",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Move handling of windows scopes to taskgraph.transfroms.task; r=dustin\n\nCurrently the scopes are handled in some test-specific code. However, there is\nlogic not to be in generic code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22447",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
+  },
+  "708": {
+    "changeset_number": "79997",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-03-08 08:46:36",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=54ed5eac2abc",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1532783) for causing Gecko Decision Task bustage. CLOSED TREE\n\nBacked out changeset 722b3915da31 (bug 1532783)\nBacked out changeset 421bdcc103d3 (bug 1532783)",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/__init__.py",
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
+  },
+  "709": {
+    "changeset_number": "79999",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-08 09:01:52",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6b1f78426763",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Set worker `os` and `implementation` earlier in job transform; r=dustin\n\nThis slightly decreases the amount of code that needs to know how to determine this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22446",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/__init__.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29168c60c4e6",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: [taskgraph] Move handling of windows scopes to taskgraph.transfroms.task; r=dustin\n\nCurrently the scopes are handled in some test-specific code. However, there is\nlogic not to be in generic code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22447",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      }
+    }
+  },
+  "710": {
+    "changeset_number": "80000",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-08 09:31:26",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=615a12a92768",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1532893 - Retry packages tasks when snapshot.debian.org doesn't respond. r=dustin\n\nBug 1486071 intended to fix this, but while the tasks are setup to\nrestart on exit status 100, there are multiple failure cases where\nsnapshot.debian.org doesn't respond and the exit status is not 100.\n\nOne is dget, when downloading package sources from snapshot.debian.org.\nEventually, those should move to fetch tasks, but in the meantime, we\nbubble up get errors with an exit code 100.\n\nmk-build-deps wraps a call to apt-get install, but doesn't return the\nexit code that apt-get returns when apt-get returns one. It makes it\nhard to distinguish the error modes, but mk-build-deps is unlikely to\nfail on anything else than apt-get. Not all apt-get failures would be\ndue to snapshot.debian.org availability, but that's a tradeoff we\ndecided was okay in bug 1486071.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22269",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/debian_package.py"
         ]
       }
     }
