@@ -3,8 +3,8 @@ CiDuty's tool which builds a changelog of commits happening on git and hg that c
 
 # How does it work?
 The tool uses py-github and github token and requests on all mozilla's Git/HG infra repositories and creates:
-* A central [changelog.md](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.md) in which data is formatted in a set way. 
-* A [changelog.json](https://github.com/Akhliskun/firefox-infra-changelog/blob/master/changelog.json) file which contains the same data changelog.md contains. TO-DE-ADDED [Issues 193](https://github.com/mozilla-releng/firefox-infra-changelog/issues/193)
+* A central [changelog.md](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/changelog.md) in which data is formatted in a set way. 
+* A [changelog.json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/changelog.json) file which contains the entire commit data, starting from 1st December 2018.
 
 # Install process:
 1. After you clone the repository, please run `pip3 install -r requirements.txt`
