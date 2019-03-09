@@ -1,7 +1,8 @@
-## BALROGSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-23 10:31:01.159710
+## BALROGSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-02-23 13:19:16.364184
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|55|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0 3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
 |54|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0 3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
 |53|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0 3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
 |52|mitchhentges|Merge pull request #47 from mitchhentges/release-3.5.0 3.5.0|[URL](https://github.com/mozilla-releng/balrogscript/commit/2385c55447fad6264645db77368fbd4649a936ea)|2019-01-03 19:50:17
