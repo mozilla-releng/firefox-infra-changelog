@@ -1,10 +1,10 @@
-##  Commits in production - for one day, generated on: 2019-03-08 16:35:11 UTC.
+##  Commits in production - for one day, generated on: 2019-03-08 21:02:09 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9a08f46db419)|[Bug 1533145 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533145) - move linux64-plain builds to debian9 base image; r=glandium Most of our builds use libstdc++ compat, so they don't care much what the custom toolchains we use are compiled with. The plain builds, on the other hand, attempt to stick as closely as possible to a "local" developer experience, and so don't set up libstdc++ compat. Since we want to transition to our clang binaries being compiled with gcc 6, we need a base system image that contains gcc 6 runtime libraries by default. Debian 9 is just such a system. Differential Revision: https://phabricator.services.mozilla.com/D22393|nfroyd@mozilla.com|glandium|2019-03-08 16:47:44|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5d5db39b0497)|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalsh Differential Revision: https://phabricator.services.mozilla.com/D22503|jlaster@mozilla.com|davidwalsh|2019-03-08 22:06:17|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ef2b461b0a90)|[Bug 1529211 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529211) Add new Raptor tests in tp6m-6 r=davehunt Differential Revision: https://phabricator.services.mozilla.com/D20820|fstrugariu@mozilla.com|davehunt|2019-03-08 11:40:59|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6b1f78426763)|[Bug 1532783 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532783) [taskgraph] Set worker `os` and `implementation` earlier in job transform; r=dustin This slightly decreases the amount of code that needs to know how to determine this. Differential Revision: https://phabricator.services.mozilla.com/D22446|mozilla@hocat.ca|dustin|2019-03-08 09:01:52|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29168c60c4e6)|[Bug 1532783 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532783) [taskgraph] Move handling of windows scopes to taskgraph.transfroms.task; r=dustin Currently the scopes are handled in some test-specific code. However, there is logic not to be in generic code. Differential Revision: https://phabricator.services.mozilla.com/D22447|mozilla@hocat.ca|dustin|2019-03-08 09:01:52|
@@ -35,7 +35,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0c5a6ccbd8b9)|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable hg-hooks for inbound, autoland|dmitchell@mozilla.com||2019-03-07 17:47:30|
+|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1f02faf115f2)|No bug: Cleanup in old fenix sentry secrets. r=jlorenzo|mtabara@mozilla.com|jlorenzo|2019-03-08 21:26:21|
 
 |	mozilla-beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -137,6 +137,9 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/0d549acc0dcfd9358470c0612c5cf3b9feb6848c)|Merge pull request #420 from escapewindow/ed25519  roll out scriptworker 22 with ed25519|escapewindow|N/A|2019-03-08 18:00:53|
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/9b5adc5583df288c5c9b2ce949c0ff8b9dc78765)|pin click to 6.7|escapewindow|N/A|2019-03-08 17:43:26|
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/770357b36991409cdf3c5799e70d913b236a0d2b)|Merge branch 'master' into ed25519|escapewindow|N/A|2019-03-08 17:27:17|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/c0cb221f878a7c26ffa02f35dd51f60fa8f85203)|Bug 1533563 - Bump pushsnapscript to 0.2.6 (#422)|JohanLorenzo|N/A|2019-03-08 14:29:45|
 
 |	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
@@ -151,7 +154,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last day.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/9e723b573a91a60b1f5fb74154d1df7562d51886)|Testing generic-worker 13.0.4 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 13.0.4 5.1.0  See https://github.com/taskcluster/generic-worker/blob/08e68a24b3fa73f2dc43af3d19ac6b28f44c477c/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-03-08 19:06:58|
+|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/66f22171a3a1f2d0dab9aae1b86de350bf235e81)|Testing generic-worker 13.0.4 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 13.0.4 5.1.0  See https://github.com/taskcluster/generic-worker/blob/461c2fb847ecd28a59f7c8bf56d51e57d9fa5e90/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-03-08 16:48:50|
 
 |	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -208,17 +212,11 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/ab22724a50f60c87c06abd99783597a7ecb78340)|Merge pull request #369 from taskcluster/speed-back-up-q-test  Speed back up queue tests|imbstack|N/A|2019-03-08 19:42:15|
+|[Link](https://github.com/taskcluster/taskcluster/commit/aa6695a81fc121f4b4f75eb39dec735fa6afa312)|Add comment as to why teardown needs to happen manually|imbstack|N/A|2019-03-08 16:59:45|
+|[Link](https://github.com/taskcluster/taskcluster/commit/8ab2ab3703d4f506bc61493e1a2544a6181b74c2)|Merge pull request #370 from taskcluster/bug-1533493  [Bug 1533493] Remove old auditlogs terraform|imbstack|N/A|2019-03-08 16:57:33|
 |[Link](https://github.com/taskcluster/taskcluster/commit/0f81a6e4345ec7e13667dc15cc138b580ae0400a)|Merge pull request #364 from ydidwania/bug-1523801  [Bug 1523801] Blacklist listening to some specific exchanges|djmitche|N/A|2019-03-07 23:00:34|
 |[Link](https://github.com/taskcluster/taskcluster/commit/dcd2e2c8c46dfe1934a69496629b4314b5d5d6cf)|refactor: rename denyList to denylist. simplify format of denylsit in config.yml|ydidwania|N/A|2019-03-07 21:06:56|
-|[Link](https://github.com/taskcluster/taskcluster/commit/b5c6d9d5940f0ed1cbaa7fa76142c7c32633f76d)|Merge pull request #368 from djmitche/bug1531753  Bug 1531753 - no more events, gce-provider, and delete lots of builder junk|djmitche|N/A|2019-03-07 17:45:20|
-|[Link](https://github.com/taskcluster/taskcluster/commit/9676ea1aee9c300a7a21f6c353e27f3d54330c01)|Merge pull request #346 from taskcluster/renovate/node-10.x  Update Node.js to v10.15.2|imbstack|N/A|2019-03-07 17:24:13|
-|[Link](https://github.com/taskcluster/taskcluster/commit/3473af1789a0e2dd1b77d3bb2dbf4999a0876bb5)|Bug 1531753 - remove tc-builder as a workspace|djmitche|N/A|2019-03-07 17:08:44|
-|[Link](https://github.com/taskcluster/taskcluster/commit/42aa36042114cec715e48538f13cba982a496091)|Bug 1531753 - simply write out the monoimage docker image|djmitche|N/A|2019-03-07 16:59:27|
-|[Link](https://github.com/taskcluster/taskcluster/commit/c543eca6f8b54bc557ab9d551e849764330bb0a2)|Bug 1531753 - run 'yarn build --dry-run' in CI  ..since what few tests there were are now gone|djmitche|N/A|2019-03-07 16:57:25|
-|[Link](https://github.com/taskcluster/taskcluster/commit/d1fe8291b586fbe8dd7b124b7f15af6b52c0903c)|Bug 1531753 - remove use of ClusterSpec|djmitche|N/A|2019-03-07 16:52:28|
-|[Link](https://github.com/taskcluster/taskcluster/commit/cfc2dd90704324a9c20d18d1c8167d0d5678cc6d)|Bug 1531753 - remove --target-service since there is only one image now|djmitche|N/A|2019-03-07 16:44:12|
-|[Link](https://github.com/taskcluster/taskcluster/commit/16745c476570fe45d42ef1b7e341b37dae82726d)|Bug 1531753 - stop building or deploying the events service|djmitche|N/A|2019-03-07 16:41:04|
-|[Link](https://github.com/taskcluster/taskcluster/commit/03f47d52c7db9cb662b8a5805f75b4f1df4d8758)|Bug 1532666 - stop building, deploying gce-provider|djmitche|N/A|2019-03-07 16:39:19|
 
 |	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
