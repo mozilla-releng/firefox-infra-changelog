@@ -1,7 +1,8 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-23 16:07:48.921850
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-23 18:59:06.197673
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|568|djmitche|temporarily allow non-unique roles|[URL](https://github.com/taskcluster/taskcluster/commit/f5ffef72bf7f72fd99b54c7b56e6f7eff5a2b8fa)|2019-03-09 15:28:14
 |567|imbstack|Merge pull request #367 from taskcluster/bug-1518568 [Bug 1518568] Turn on more lint rules|[URL](https://github.com/taskcluster/taskcluster/commit/f7b2aa7e15b0c220f8fc3569bca78482456db7cf)|2019-03-08 23:23:23
 |566|imbstack|Fix changes that happened since this was created|[URL](https://github.com/taskcluster/taskcluster/commit/691bd54213d6e0f5bcb87ee700c5185782fbfb80)|2019-03-08 22:58:42
 |565|imbstack|Remove remaining vars|[URL](https://github.com/taskcluster/taskcluster/commit/9f67d2b2977b708b71a9b58bf71c061b52c1bf79)|2019-03-07 05:26:09
