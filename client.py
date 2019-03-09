@@ -143,7 +143,7 @@ def run_days(logger, days):
               help='Let you choose for which repositories the script will run')
 @click.option('-c', '--complete', is_flag=True, flag_value='complete',
               help='Run for all currently available repositories')
-@click.option('-d', '--days', default=1, help='Let user decide for how many '
+@click.option('-d', '--days', default=3, help='Let user decide for how many '
                                               'days changelog.md will '
                                               'be generated')
 @click.help_option('-h', '--help')
