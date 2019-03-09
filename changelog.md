@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-09 11:20:11 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-09 14:08:45 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -166,8 +166,6 @@
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/9e723b573a91a60b1f5fb74154d1df7562d51886)|Testing generic-worker 13.0.4 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 13.0.4 5.1.0  See https://github.com/taskcluster/generic-worker/blob/08e68a24b3fa73f2dc43af3d19ac6b28f44c477c/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-03-08 19:06:58|
 |[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/66f22171a3a1f2d0dab9aae1b86de350bf235e81)|Testing generic-worker 13.0.4 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 13.0.4 5.1.0  See https://github.com/taskcluster/generic-worker/blob/461c2fb847ecd28a59f7c8bf56d51e57d9fa5e90/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-03-08 16:48:50|
-|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/50444e63cfe249c70ac821db19b4ffdc685c1d4e)|Merge pull request #226 from mozilla-releng/align-cu-workertypes  Align gecko-t-win{7-32,10-64}-cu manifests with gecko-t-win{7-32,10-64} manifests    deploy: gecko-t-win7-32-cu gecko-t-win10-64-cu|petemoore|N/A|2019-03-06 13:36:18|
-|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/08f18c2999c7fa6e6947373caaec62c0c9586da0)|correction to cu device mapping  deploy: gecko-t-win10-64-cu|grenade|N/A|2019-03-06 12:43:29|
 
 |	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
