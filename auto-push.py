@@ -24,6 +24,9 @@ try:
     # Push commit to origin
     subprocess.call(['git', 'push', '--set-upstream', 'origin', branch_name])
     subprocess.call(['git', 'push'])
+    subprocess.call(['git', 'checkout', 'master'])
+    subprocess.call(['git', 'pull'])
+    print("\n\nAuto Update Process finished.")
     toaster.show_toast("FireFox Infra Changelog",
                        "Generated files have been updated")
 except Exception as e:
