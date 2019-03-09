@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 80062
+ CURRENT PUSH ID: 80093
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|80059|2019-03-08 22:06:17|Jason Laster <jlaster@mozilla.com>|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalshDifferential Revision: https://phabricator.services.mozilla.com/D22503|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5d5db39b0497
+|80084|2019-03-09 03:01:36|Chris Manchester <cmanchester@mozilla.com>|[Bug 1528374 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528374) - Set artifact name based on platform in pgo profile run transform. r=firefox-build-system-reviewers,mshalDifferential Revision: https://phabricator.services.mozilla.com/D20406|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=91c5e49bc1cb
+|80063|2019-03-08 23:07:44|Csoregi Natalia <ncsoregi@mozilla.com>|Backed out changeset 5d5db39b0497 (bug 1533391) for debugger failures. CLOSED TREE|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c84fd846abe1
 |80004|2019-03-08 11:40:59|alexandru.ionescu <alexandru.ionescu@softvision.ro>|[Bug 1529211 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529211) Add new Raptor tests in tp6m-6 r=davehuntDifferential Revision: https://phabricator.services.mozilla.com/D20820|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ef2b461b0a90
 |79999|2019-03-08 09:01:52|Tom Prince <mozilla@hocat.ca>|[Bug 1532783 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532783) [taskgraph] Set worker `os` and `implementation` earlier in job transform; r=dustinThis slightly decreases the amount of code that needs to know how to determine this.Differential Revision: https://phabricator.services.mozilla.com/D22446|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6b1f78426763
 |79999|2019-03-08 09:01:52|Tom Prince <mozilla@hocat.ca>|[Bug 1532783 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532783) [taskgraph] Move handling of windows scopes to taskgraph.transfroms.task; r=dustinCurrently the scopes are handled in some test-specific code. However, there islogic not to be in generic code.Differential Revision: https://phabricator.services.mozilla.com/D22447|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=29168c60c4e6

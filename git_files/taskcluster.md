@@ -1,7 +1,20 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-22 23:00:54.645159
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-23 03:22:14.866262
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|567|imbstack|Merge pull request #367 from taskcluster/bug-1518568 [Bug 1518568] Turn on more lint rules|[URL](https://github.com/taskcluster/taskcluster/commit/f7b2aa7e15b0c220f8fc3569bca78482456db7cf)|2019-03-08 23:23:23
+|566|imbstack|Fix changes that happened since this was created|[URL](https://github.com/taskcluster/taskcluster/commit/691bd54213d6e0f5bcb87ee700c5185782fbfb80)|2019-03-08 22:58:42
+|565|imbstack|Remove remaining vars|[URL](https://github.com/taskcluster/taskcluster/commit/9f67d2b2977b708b71a9b58bf71c061b52c1bf79)|2019-03-07 05:26:09
+|564|imbstack|Autofix most old vars|[URL](https://github.com/taskcluster/taskcluster/commit/6adbd909e1e4160f782a1bdf4925f54e512b4e99)|2019-03-07 05:25:05
+|563|imbstack|Enable block-scoped-vars rule|[URL](https://github.com/taskcluster/taskcluster/commit/73dce298f844a2fc000801c503bbd3fcb75b8228)|2019-03-07 05:23:26
+|562|imbstack|Add back in incorrecly detected unused vars|[URL](https://github.com/taskcluster/taskcluster/commit/7221f8b6317e9c0296bf352af72dd233918491df)|2019-03-07 04:57:35
+|561|imbstack|Update requirements after changes|[URL](https://github.com/taskcluster/taskcluster/commit/ac6db77e709042528d6136a525eeea2a0400a866)|2019-03-07 04:52:48
+|560|imbstack|Finish fixing unused vars|[URL](https://github.com/taskcluster/taskcluster/commit/d8f1936f723bf5746763113153eb23ffbe01e3ff)|2019-03-07 04:39:58
+|559|imbstack|Autmomatically remove unused imports|[URL](https://github.com/taskcluster/taskcluster/commit/7fb045e984d04f68e5d96073e2fbba408a4c12d6)|2019-03-07 04:01:17
+|558|imbstack|Halfway updated|[URL](https://github.com/taskcluster/taskcluster/commit/3fb28a88cd2f03e4218cb97063afcfeedcee3912)|2019-03-07 02:30:34
+|557|imbstack|Fix always-null reference|[URL](https://github.com/taskcluster/taskcluster/commit/6e9ce29b0d5f5e9999fa539d1438b8a3285b93f4)|2019-03-07 02:02:33
+|556|djmitche|Merge pull request #371 from djmitche/bug1532469 [Bug 1532469 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532469) - use a yarn cache|[URL](https://github.com/taskcluster/taskcluster/commit/4b92d2125ac42dad7afb455161b497bebee38327)|2019-03-08 21:56:04
+|555|djmitche|[Bug 1532469 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532469) - use a yarn cache|[URL](https://github.com/taskcluster/taskcluster/commit/2073300b9eda367a07aa90f1b76823e630615d9a)|2019-03-08 21:15:32
 |554|imbstack|Merge pull request #369 from taskcluster/speed-back-up-q-test Speed back up queue tests|[URL](https://github.com/taskcluster/taskcluster/commit/ab22724a50f60c87c06abd99783597a7ecb78340)|2019-03-08 19:42:15
 |553|imbstack|Add comment as to why teardown needs to happen manually|[URL](https://github.com/taskcluster/taskcluster/commit/aa6695a81fc121f4b4f75eb39dec735fa6afa312)|2019-03-08 16:59:45
 |552|imbstack|Merge pull request #370 from taskcluster/bug-1533493 [Bug 1533493] Remove old auditlogs terraform|[URL](https://github.com/taskcluster/taskcluster/commit/8ab2ab3703d4f506bc61493e1a2544a6181b74c2)|2019-03-08 16:57:33
