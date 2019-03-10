@@ -9,6 +9,8 @@ import click
 import json
 import subprocess
 import signal
+from fic_modules.github_errors import *
+from github import GithubException
 from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
 from fic_modules.helper_functions import (
@@ -17,7 +19,8 @@ from fic_modules.helper_functions import (
 )
 from fic_modules.configuration import (
     REPO_LIST,
-    REPOSITORIES
+    REPOSITORIES,
+    LOGGER
 )
 from fic_modules.markdown_modules import generate_main_md_table
 
@@ -196,6 +199,49 @@ def keyboardInterruptHandler(signal, frame):
     exit(0)
 
 
+def github_exception(error):
+    if error.status == 301:
+        LOGGER.info("Error code 301:")
+        handle_301()
+    elif error.status == 302:
+        LOGGER.info("Error code 302:")
+        handle_302()
+    elif error.status == 304:
+        LOGGER.info("Error code 304;")
+        handle_304()
+    elif error.status == 307:
+        LOGGER.info("Error code 307:")
+        handle_307()
+    elif error.status == 400:
+        LOGGER.info("Error code 400:")
+        handle_400()
+    elif error.status == 401:
+        LOGGER.info("Error code 401:")
+        handle_401()
+    elif error.status == 403:
+        LOGGER.info("Error code 403;")
+        handle_403()
+    elif error.status == 404:
+        LOGGER.info("Error code 404:")
+        handle_404()
+    elif error.status == 422:
+        LOGGER.info("Error code 422:")
+        handle_422()
+    elif error.status == 500:
+        LOGGER.info("Error code 500:")
+        handle_500()
+    elif error.status == 501:
+        LOGGER.info("Error code 501:")
+        handle_501()
+    elif error.status == 503:
+        LOGGER.info("Error code 503:")
+        handle_503()
+
+
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, keyboardInterruptHandler)
-    cli()
+    try:
+        cli()
+    except GithubException as error_code:
+        github_exception(error_code)
+
