@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 80182
+ CURRENT PUSH ID: 80202
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|80168|2019-03-11 17:11:18|alexandru.ionescu <alexandru.ionescu@softvision.ro>|[Bug 1529212 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529212) Add new Raptor tests in tp6m-7 r=rwoodDifferential Revision: https://phabricator.services.mozilla.com/D21000|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e37e74e923b9
+|80192|2019-03-11 20:45:21|Jason Laster <jlaster@mozilla.com>|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalshDifferential Revision: https://phabricator.services.mozilla.com/D22503|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=68834c8b15bd
 |80165|2019-03-11 17:04:14|Andreea Pavel <apavel@mozilla.com>|Backed out changeset 423f48c98230 (bug 1533391) for failing try test on a CLOSED TREE|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee2473319e97
 |80156|2019-03-11 15:49:52|Jason Laster <jlaster@mozilla.com>|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalshDifferential Revision: https://phabricator.services.mozilla.com/D22503|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=423f48c98230
 |80146|2019-03-11 12:47:36|Simon Fraser <sfraser@mozilla.com>|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Reinsert awscli, required for partials caching r=mtabaraReinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recordingDifferential Revision: https://phabricator.services.mozilla.com/D22942|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e108f9ad99a5

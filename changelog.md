@@ -1,10 +1,10 @@
-##  Commits in production - for 3 days, generated on: 2019-03-11 17:33:04 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-11 20:47:28 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e37e74e923b9)|[Bug 1529212 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529212) Add new Raptor tests in tp6m-7 r=rwood Differential Revision: https://phabricator.services.mozilla.com/D21000|fstrugariu@mozilla.com|rwood|2019-03-11 17:11:18|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=68834c8b15bd)|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalsh Differential Revision: https://phabricator.services.mozilla.com/D22503|jlaster@mozilla.com|davidwalsh|2019-03-11 20:45:21|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee2473319e97)|Backed out changeset 423f48c98230 (bug 1533391) for failing try test on a CLOSED TREE|apavel@mozilla.com||2019-03-11 17:04:14|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=423f48c98230)|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalsh Differential Revision: https://phabricator.services.mozilla.com/D22503|jlaster@mozilla.com|davidwalsh|2019-03-11 15:49:52|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e108f9ad99a5)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Reinsert awscli, required for partials caching r=mtabara Reinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording Differential Revision: https://phabricator.services.mozilla.com/D22942|sfraser@mozilla.com|mtabara|2019-03-11 12:47:36|
@@ -706,8 +706,6 @@
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/3cfc19e13a2e11bb3cc34084fefa6e8af65b9fdf)|Bump versions to enable shipit v2 submissions (#419)|rail|N/A|2019-03-11 16:16:08|
-|[Link](https://github.com/mozilla-releng/build-puppet/commit/0d549acc0dcfd9358470c0612c5cf3b9feb6848c)|Merge pull request #420 from escapewindow/ed25519  roll out scriptworker 22 with ed25519|escapewindow|N/A|2019-03-08 18:00:53|
-|[Link](https://github.com/mozilla-releng/build-puppet/commit/9b5adc5583df288c5c9b2ce949c0ff8b9dc78765)|pin click to 6.7|escapewindow|N/A|2019-03-08 17:43:26|
 
 |	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -721,7 +719,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/9e723b573a91a60b1f5fb74154d1df7562d51886)|Testing generic-worker 13.0.4 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 13.0.4 5.1.0  See https://github.com/taskcluster/generic-worker/blob/08e68a24b3fa73f2dc43af3d19ac6b28f44c477c/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-03-08 19:06:58|
+| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)|FIC - BOT|Self Generated| - |
 
 |	pushapkscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -777,6 +775,29 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/92f5da70672aa0c4ec92e909404032fe854438ee)|Allow users to scan task group progress faster (#390)|helfi92|N/A|2019-03-11 19:27:45|
+|[Link](https://github.com/taskcluster/taskcluster/commit/849447681e4ab2e44934ebf94494f5d1b4dde7af)|Fix: web-server usage of loader (#388)  https://github.com/taskcluster/taskcluster/commit/cea855021d349d20892bc554d1ee3b9ae7c9c269 overwrote the fix from https://github.com/taskcluster/taskcluster/commit/c8fa923a5be6d11c6b1d3d126d649406c50da348.|helfi92|N/A|2019-03-11 19:26:01|
+|[Link](https://github.com/taskcluster/taskcluster/commit/17b70a54ec657ffefe7cf35adc484821292c974c)|Merge pull request #380 from taskcluster/renovate/azure-blob-storage-4.x  Update dependency azure-blob-storage to v4|djmitche|N/A|2019-03-11 19:17:26|
+|[Link](https://github.com/taskcluster/taskcluster/commit/aa1fbb4f5aa6495d9b0761de07accf50f3722031)|Merge pull request #372 from taskcluster/bug-1518568-pt2  [Bug 1518568] Part 2: Enable remaining useful lints (other than 1)|imbstack|N/A|2019-03-11 18:58:38|
+|[Link](https://github.com/taskcluster/taskcluster/commit/99d96820131fad4d5d3ce8be9987fa15284d94d3)|Run generate after rebase|imbstack|N/A|2019-03-11 18:48:24|
+|[Link](https://github.com/taskcluster/taskcluster/commit/9758481fea195631da1196f01a3a0bf994e53dba)|Clean up after rebase|imbstack|N/A|2019-03-11 18:43:11|
+|[Link](https://github.com/taskcluster/taskcluster/commit/748cb0cca8e023485d00ec07d11cd7b5ca8741ca)|Remove now-unused comment|imbstack|N/A|2019-03-11 18:27:25|
+|[Link](https://github.com/taskcluster/taskcluster/commit/294eeff80c35ca1de33a8ea5779de732dc4cf2a0)|Actually fix loader test|imbstack|N/A|2019-03-09 02:06:32|
+|[Link](https://github.com/taskcluster/taskcluster/commit/0febbcdc082296944ccfe555ba7a08ef1c3b4711)|Remove ultimately not that useful plan for lint|imbstack|N/A|2019-03-09 01:57:19|
+|[Link](https://github.com/taskcluster/taskcluster/commit/a099076aa2d9c252b5a60c40a9cd9320a3728f48)|Remove now unused dep|imbstack|N/A|2019-03-09 01:57:03|
+|[Link](https://github.com/taskcluster/taskcluster/commit/0a5ca7c5ae455a73898a6890bd676e1eab31562f)|Turn on no-undef|imbstack|N/A|2019-03-09 01:41:33|
+|[Link](https://github.com/taskcluster/taskcluster/commit/fb23a7f6ed90eed01be1a6defec7669960d48e34)|Enable no-unreachable-code|imbstack|N/A|2019-03-08 23:32:26|
+|[Link](https://github.com/taskcluster/taskcluster/commit/29a7dca2a1fdc2471bbb83e6532e9557353b7bf7)|Turn on no-case-declarations|imbstack|N/A|2019-03-08 23:29:05|
+|[Link](https://github.com/taskcluster/taskcluster/commit/9837883c2335dc8a4c3a745d91534779309101d5)|Merge pull request #376 from djmitche/bug1533937  Bug 1533937 - centralize azure table setup in testing|djmitche|N/A|2019-03-11 18:39:10|
+|[Link](https://github.com/taskcluster/taskcluster/commit/f35c3d8543c8d3053f6897ed76fbae5350cf2091)|Merge pull request #375 from djmitche/bug1534022  Bug 1534022 - add more tests regarding duplicate roles|djmitche|N/A|2019-03-11 18:35:29|
+|[Link](https://github.com/taskcluster/taskcluster/commit/9eefb843c6e60a7227f90aea13f9db71fdd1d5cc)|Bug 1533937 - use a datestamp in the table suffix|djmitche|N/A|2019-03-11 15:40:58|
+|[Link](https://github.com/taskcluster/taskcluster/commit/51bd09d54985bfe70b5d25ca2a1f639ae95d94a8)|Bug 1533937 - Use testing.withEntity to create all test Entities  This centralizes management of all of the test entities, including generation of unique table names.|djmitche|N/A|2019-03-09 15:27:42|
+|[Link](https://github.com/taskcluster/taskcluster/commit/552d03533c00d064bd8ad62d89121671952df42f)|Merge pull request #387 from djmitche/allow-task-completed-hook  Allow listening to the queue's task-completed exchange|djmitche|N/A|2019-03-11 18:23:30|
+|[Link](https://github.com/taskcluster/taskcluster/commit/3c569149a9329a8fd7e3fd3eb42ec80ca66f74db)|Merge pull request #374 from taskcluster/bug-1533972  [Bug 1533972] Be more permissive with uncaught errors|imbstack|N/A|2019-03-11 18:21:04|
+|[Link](https://github.com/taskcluster/taskcluster/commit/f06e7e795a1435161e45fa740ae8f568662d44f9)|Merge pull request #373 from taskcluster/git-version-in-logs  Update how we do git version stuff|imbstack|N/A|2019-03-11 18:20:36|
+|[Link](https://github.com/taskcluster/taskcluster/commit/c591efe4b4c243760cf895bb7c3b2d8782cb59eb)|Allow listening to the queue's task-completed exchange|djmitche|N/A|2019-03-11 17:53:32|
+|[Link](https://github.com/taskcluster/taskcluster/commit/f2f92113d9dea33b469d72d95e93a92611431196)|Merge pull request #378 from taskcluster/renovate/cron-parser-2.x  Update dependency cron-parser to v2.9.0|imbstack|N/A|2019-03-11 18:18:23|
+|[Link](https://github.com/taskcluster/taskcluster/commit/7dbdba71173328ca66e0cf8327a47f8ced22b50e)|Merge pull request #381 from taskcluster/renovate/quick-lru-3.x  Update dependency quick-lru to v3|imbstack|N/A|2019-03-11 18:12:53|
 |[Link](https://github.com/taskcluster/taskcluster/commit/88adae6f4078ab578b22b79496949f0dc477b9fe)|Merge pull request #385 from djmitche/github-table-name  Fix table name in github tests|djmitche|N/A|2019-03-11 16:25:49|
 |[Link](https://github.com/taskcluster/taskcluster/commit/7f4bf9d01397ab73d3664f56bb047501516ed6ba)|Merge pull request #379 from taskcluster/renovate/eslint-5.x  Update dependency eslint to v5.15.1|imbstack|N/A|2019-03-11 16:02:11|
 |[Link](https://github.com/taskcluster/taskcluster/commit/e5583d8c83fbd2c95002f51c68da4edd652dc6bf)|Merge pull request #382 from taskcluster/renovate/xmlbuilder-11.x  Update dependency xmlbuilder to v11|imbstack|N/A|2019-03-11 16:01:10|
@@ -790,7 +811,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/691bd54213d6e0f5bcb87ee700c5185782fbfb80)|Fix changes that happened since this was created|imbstack|N/A|2019-03-08 22:58:42|
 |[Link](https://github.com/taskcluster/taskcluster/commit/4b92d2125ac42dad7afb455161b497bebee38327)|Merge pull request #371 from djmitche/bug1532469  Bug 1532469 - use a yarn cache|djmitche|N/A|2019-03-08 21:56:04|
 |[Link](https://github.com/taskcluster/taskcluster/commit/2073300b9eda367a07aa90f1b76823e630615d9a)|Bug 1532469 - use a yarn cache|djmitche|N/A|2019-03-08 21:15:32|
-|[Link](https://github.com/taskcluster/taskcluster/commit/ab22724a50f60c87c06abd99783597a7ecb78340)|Merge pull request #369 from taskcluster/speed-back-up-q-test  Speed back up queue tests|imbstack|N/A|2019-03-08 19:42:15|
 
 |	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
