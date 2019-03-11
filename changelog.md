@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-11 20:47:28 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-11 23:25:08 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -10,7 +10,6 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e108f9ad99a5)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Reinsert awscli, required for partials caching r=mtabara Reinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording Differential Revision: https://phabricator.services.mozilla.com/D22942|sfraser@mozilla.com|mtabara|2019-03-11 12:47:36|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8076b05b8631)|Backed out changeset 7b2ae2ea0495 (bug 1532236) for lint failure|apavel@mozilla.com||2019-03-11 12:18:57|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7b2ae2ea0495)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Reinsert awscli, required for partials caching r=mtabara Reinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording Differential Revision: https://phabricator.services.mozilla.com/D22942|sfraser@mozilla.com|mtabara|2019-03-11 12:04:55|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c84fd846abe1)|Backed out changeset 5d5db39b0497 (bug 1533391) for debugger failures. CLOSED TREE|ncsoregi@mozilla.com||2019-03-08 23:07:44|
 
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -775,6 +774,10 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/61250675552803a95a75da1c384cc804e18e59e7)|Merge pull request #389 from ydidwania/1523801  Bug 1523801 : Blacklist listening to some specific exchanges|djmitche|N/A|2019-03-11 23:01:33|
+|[Link](https://github.com/taskcluster/taskcluster/commit/3ad0448e2aaf977fb270c660aa395511f8075027)|Merge pull request #365 from djmitche/issue-template  Point bug-filers to Bugzilla|djmitche|N/A|2019-03-11 22:56:14|
+|[Link](https://github.com/taskcluster/taskcluster/commit/efb2aa62e52a6878b462b3ba249818435cd79387)|Revert "Update dependency azure-blob-storage to v4"  This reverts commit 428935f9be841735be8c48754ec49e5c9e52d41f.  see https://bugzilla.mozilla.org/show_bug.cgi?id=1531871|djmitche|N/A|2019-03-11 22:30:05|
+|[Link](https://github.com/taskcluster/taskcluster/commit/b014ec308f121209ca157da38694932603369fcd)|update monoimage|djmitche|N/A|2019-03-11 20:55:04|
 |[Link](https://github.com/taskcluster/taskcluster/commit/92f5da70672aa0c4ec92e909404032fe854438ee)|Allow users to scan task group progress faster (#390)|helfi92|N/A|2019-03-11 19:27:45|
 |[Link](https://github.com/taskcluster/taskcluster/commit/849447681e4ab2e44934ebf94494f5d1b4dde7af)|Fix: web-server usage of loader (#388)  https://github.com/taskcluster/taskcluster/commit/cea855021d349d20892bc554d1ee3b9ae7c9c269 overwrote the fix from https://github.com/taskcluster/taskcluster/commit/c8fa923a5be6d11c6b1d3d126d649406c50da348.|helfi92|N/A|2019-03-11 19:26:01|
 |[Link](https://github.com/taskcluster/taskcluster/commit/17b70a54ec657ffefe7cf35adc484821292c974c)|Merge pull request #380 from taskcluster/renovate/azure-blob-storage-4.x  Update dependency azure-blob-storage to v4|djmitche|N/A|2019-03-11 19:17:26|
@@ -807,10 +810,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/0803589d3678080dd80457166170b447af2d1c92)|fix yarn generate after hotfix this weekend|djmitche|N/A|2019-03-11 13:38:34|
 |[Link](https://github.com/taskcluster/taskcluster/commit/504a85a5a4e826627a1673cd7a7c9cc198ca1deb)|Update dependency @mdx-js/runtime to ^0.20.0 (#347)|renovate[bot]|N/A|2019-03-11 13:29:18|
 |[Link](https://github.com/taskcluster/taskcluster/commit/f5ffef72bf7f72fd99b54c7b56e6f7eff5a2b8fa)|temporarily allow non-unique roles|djmitche|N/A|2019-03-09 15:28:14|
-|[Link](https://github.com/taskcluster/taskcluster/commit/f7b2aa7e15b0c220f8fc3569bca78482456db7cf)|Merge pull request #367 from taskcluster/bug-1518568  [Bug 1518568] Turn on more lint rules|imbstack|N/A|2019-03-08 23:23:23|
-|[Link](https://github.com/taskcluster/taskcluster/commit/691bd54213d6e0f5bcb87ee700c5185782fbfb80)|Fix changes that happened since this was created|imbstack|N/A|2019-03-08 22:58:42|
-|[Link](https://github.com/taskcluster/taskcluster/commit/4b92d2125ac42dad7afb455161b497bebee38327)|Merge pull request #371 from djmitche/bug1532469  Bug 1532469 - use a yarn cache|djmitche|N/A|2019-03-08 21:56:04|
-|[Link](https://github.com/taskcluster/taskcluster/commit/2073300b9eda367a07aa90f1b76823e630615d9a)|Bug 1532469 - use a yarn cache|djmitche|N/A|2019-03-08 21:15:32|
 
 |	treescript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/treescript.json)	| 
 |:----------:|:-----------------------:|:--------:| 
