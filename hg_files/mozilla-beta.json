@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 10863
+    "last_push_id": 10864
   },
   "1": {
     "changeset_number": "10002",
@@ -41471,22 +41471,6 @@
         "files_changed": [
           "taskcluster/ci/release-balrog-submit-toplevel/kind.yml",
           "taskcluster/ci/release-secondary-balrog-submit-toplevel/kind.yml"
-        ]
-      }
-    }
-  },
-  "67": {
-    "changeset_number": "10846",
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-08 15:21:37",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=858a6e5a240a",
-        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1459222 - Firefox RC: push snaps onto the beta channel at ship_rc phase r=mtabara a=release\n\nFirefox RC: push snaps onto the beta channel at ship_rc phase\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21380",
-        "files_changed": [
-          "taskcluster/ci/release-secondary-snap-push/kind.yml",
-          "taskcluster/docs/kinds.rst"
         ]
       }
     }
