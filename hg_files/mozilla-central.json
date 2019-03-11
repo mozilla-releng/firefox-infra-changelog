@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35676
+    "last_push_id": 35683
   },
   "1": {
     "changeset_number": "35344",
@@ -11402,6 +11402,43 @@
         "commit_message": "Bug 1528374 - Set artifact name based on platform in pgo profile run transform. r=firefox-build-system-reviewers,mshal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20406",
         "files_changed": [
           "taskcluster/taskgraph/transforms/run_pgo_profile.py"
+        ]
+      }
+    }
+  },
+  "116": {
+    "changeset_number": "35682",
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-03-11 18:49:48",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7b2ae2ea0495",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532236 Reinsert awscli, required for partials caching r=mtabara\n\nReinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22942",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile",
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock",
+          "taskcluster/docker/funsize-update-generator/scripts/mbsdiff_hook.sh"
+        ]
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8076b05b8631",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Backed out changeset 7b2ae2ea0495 (bug 1532236) for lint failure",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile",
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock",
+          "taskcluster/docker/funsize-update-generator/scripts/mbsdiff_hook.sh"
+        ]
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e108f9ad99a5",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532236 Reinsert awscli, required for partials caching r=mtabara\n\nReinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22942",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile",
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock",
+          "taskcluster/docker/funsize-update-generator/scripts/mbsdiff_hook.sh"
         ]
       }
     }
