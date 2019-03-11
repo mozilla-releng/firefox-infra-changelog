@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80202
+    "last_push_id": 80222
   },
   "1": {
     "changeset_number": "35344",
@@ -35584,28 +35584,6 @@
           "devtools/client/debugger/new/src/components/SecondaryPanes/Scopes.css",
           "devtools/client/debugger/new/src/utils/editor/index.js",
           "taskcluster/ci/source-test/node.yml"
-        ]
-      }
-    }
-  },
-  "717": {
-    "changeset_number": "80168",
-    "pusher": "fstrugariu@mozilla.com",
-    "date_of_push": "2019-03-11 17:11:18",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e37e74e923b9",
-        "commiter_name": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
-        "commit_message": "Bug 1529212 Add new Raptor tests in tp6m-7 r=rwood\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21000",
-        "files_changed": [
-          "taskcluster/ci/test/raptor.yml",
-          "taskcluster/ci/test/test-sets.yml",
-          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-imdb.manifest",
-          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-jianshu.manifest",
-          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-microsoft-support.manifest",
-          "testing/raptor/raptor/raptor.ini",
-          "testing/raptor/raptor/tests/raptor-tp6m-7.ini",
-          "testing/raptor/webext/raptor/manifest.json"
         ]
       }
     }

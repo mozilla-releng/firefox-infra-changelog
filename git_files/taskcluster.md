@@ -1,7 +1,11 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-25 22:46:06.483719
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 01:24:03.190104
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|603|djmitche|Merge pull request #389 from ydidwania/1523801 [Bug 1523801 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1523801) : Blacklist listening to some specific exchanges|[URL](https://github.com/taskcluster/taskcluster/commit/61250675552803a95a75da1c384cc804e18e59e7)|2019-03-11 23:01:33
+|602|djmitche|Merge pull request #365 from djmitche/issue-template Point bug-filers to Bugzilla|[URL](https://github.com/taskcluster/taskcluster/commit/3ad0448e2aaf977fb270c660aa395511f8075027)|2019-03-11 22:56:14
+|601|djmitche|Revert "Update dependency azure-blob-storage to v4" This reverts commit 428935f9be841735be8c48754ec49e5c9e52d41f. see https://bugzilla.mozilla.org/show_bug.cgi?id=1531871|[URL](https://github.com/taskcluster/taskcluster/commit/efb2aa62e52a6878b462b3ba249818435cd79387)|2019-03-11 22:30:05
+|600|djmitche|update monoimage|[URL](https://github.com/taskcluster/taskcluster/commit/b014ec308f121209ca157da38694932603369fcd)|2019-03-11 20:55:04
 |599|helfi92|Allow users to scan task group progress faster (#390)|[URL](https://github.com/taskcluster/taskcluster/commit/92f5da70672aa0c4ec92e909404032fe854438ee)|2019-03-11 19:27:45
 |598|helfi92|Fix: web-server usage of loader (#388) https://github.com/taskcluster/taskcluster/commit/cea855021d349d20892bc554d1ee3b9ae7c9c269 overwrote the fix from https://github.com/taskcluster/taskcluster/commit/c8fa923a5be6d11c6b1d3d126d649406c50da348.|[URL](https://github.com/taskcluster/taskcluster/commit/849447681e4ab2e44934ebf94494f5d1b4dde7af)|2019-03-11 19:26:01
 |597|djmitche|Merge pull request #380 from taskcluster/renovate/azure-blob-storage-4.x Update dependency azure-blob-storage to v4|[URL](https://github.com/taskcluster/taskcluster/commit/17b70a54ec657ffefe7cf35adc484821292c974c)|2019-03-11 19:17:26
