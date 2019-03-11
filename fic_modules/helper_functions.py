@@ -262,3 +262,18 @@ def populate_changelog_json(work_dir, repo_name):
     data = {}
     data.update({repo_name: content})
     return data
+
+
+def write_to_changelog_json(dict_name, platform):
+    """
+    Update changelog.json with changes from only Git or Hg
+    :param dict_name: data that gets written to the json
+    :param platform: expects Hg or Github
+    :return:
+    """
+    with open("changelog.json", "r") as file:
+        file_content = json.load(file)
+    file_content.update({str(platform): dict_name})
+    data_file = open("changelog.json", "w")
+    json.dump(file_content, data_file, indent=2)
+    data_file.close()
