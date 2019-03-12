@@ -1,7 +1,11 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 01:24:03.190104
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 04:36:36.119670
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|607|djmitche|Merge pull request #377 from taskcluster/renovate/node-10.x Update Node.js to v10.15.3|[URL](https://github.com/taskcluster/taskcluster/commit/3a88ac825af04ea6962964ce61bbff730001a41e)|2019-03-12 01:09:48
+|606|djmitche|fix yarn generate to be one set of &&-connected strings|[URL](https://github.com/taskcluster/taskcluster/commit/addf57ad6df7eb3987be84a398fe5910e1ba5936)|2019-03-12 01:02:36
+|605|helfi92|Add WIP note to Worker Manager's README (#391)|[URL](https://github.com/taskcluster/taskcluster/commit/6faf5c52c35d83a04ed1a6b0d8bf65348d4e3b51)|2019-03-12 00:36:29
+|604|helfi92|Add List component in /docs and fix indentation (#384) re indentation: Copy pasting old docs messed up spacing in markdown.|[URL](https://github.com/taskcluster/taskcluster/commit/68d0b4cfde3c7a0e369208bba0d56b3388dc89cb)|2019-03-12 00:35:38
 |603|djmitche|Merge pull request #389 from ydidwania/1523801 [Bug 1523801 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1523801) : Blacklist listening to some specific exchanges|[URL](https://github.com/taskcluster/taskcluster/commit/61250675552803a95a75da1c384cc804e18e59e7)|2019-03-11 23:01:33
 |602|djmitche|Merge pull request #365 from djmitche/issue-template Point bug-filers to Bugzilla|[URL](https://github.com/taskcluster/taskcluster/commit/3ad0448e2aaf977fb270c660aa395511f8075027)|2019-03-11 22:56:14
 |601|djmitche|Revert "Update dependency azure-blob-storage to v4" This reverts commit 428935f9be841735be8c48754ec49e5c9e52d41f. see https://bugzilla.mozilla.org/show_bug.cgi?id=1531871|[URL](https://github.com/taskcluster/taskcluster/commit/efb2aa62e52a6878b462b3ba249818435cd79387)|2019-03-11 22:30:05
