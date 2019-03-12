@@ -128,33 +128,25 @@ def create_md_table_for_scriptworkers(repository_name):
         create_git_md_table(scriptworker_repo, "git_files")
 
 
-def generate_main_md_table(path_to_files, days_to_generate=1):
+def generate_main_md_table(repositories_holder, days_to_generate):
     """
     Looks into repositories folders (hg_files & git files),
     filters the files to load the json's using a passfilter and calls after
     extraction functions.
     :param days_to_generate: just a pass by parameter, used in extract json
     from git/hg and generates for the specified days.
-    :param path_to_files: Folder to json files
+    :param repositories_holder: repositories
     """
     from fic_modules.git import extract_json_from_git
     successfully_generated = "part from main markdown table was " \
                              "successfully generated."
 
-    # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(WORKING_DIR + "/{}".format(path_to_files))
-                  if isfile(join(WORKING_DIR + "/{}"
-                                 .format(path_to_files), f))]
-    # Pass filter only the ".json" objects
-    json_files = [jf for jf in only_files if ".json" in jf]
-    # Extract data from json_files and writes to main markdown table.
-    if path_to_files == "git_files":
-        extract_json_from_git(json_files, path_to_files, days_to_generate)
+    for repository in repositories_holder.get("Github"):
+        extract_json_from_git(repository, days_to_generate)
         LOGGER.info("GIT %s", successfully_generated)
-    elif path_to_files == "hg_files":
-        extract_json_from_hg(json_files, path_to_files, days_to_generate)
+    for repository in repositories_holder.get("Mercurial"):
+        extract_json_from_hg(repository, days_to_generate)
         LOGGER.info("HG %s", successfully_generated)
-
     else:
         LOGGER.error("No table was generated!")
 

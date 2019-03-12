@@ -38,8 +38,7 @@ def run_all(logger, days):
     json.dump(hg_data, data_file, indent=2)
     data_file.close()
     clear_file("changelog.md", int(days))
-    generate_main_md_table("hg_files", int(days))
-    generate_main_md_table("git_files", int(days))
+    generate_main_md_table(REPOSITORIES, int(days))
 
 
 def run_git(logger, days):
@@ -56,8 +55,7 @@ def run_git(logger, days):
     json.dump(git_data, data_file, indent=2)
     data_file.close()
     clear_file("changelog.md", int(days))
-    generate_main_md_table("hg_files", int(days))
-    generate_main_md_table("git_files", int(days))
+    generate_main_md_table(REPOSITORIES, int(days))
     click.echo("Script ran in GIT Only mode")
 
 
@@ -75,8 +73,7 @@ def run_hg(logger, days):
     json.dump(hg_data, data_file, indent=2)
     data_file.close()
     clear_file("changelog.md", int(days))
-    generate_main_md_table("hg_files", int(days))
-    generate_main_md_table("git_files", int(days))
+    generate_main_md_table(REPOSITORIES, int(days))
     click.echo("Script ran in HG Only mode")
 
 
@@ -108,12 +105,11 @@ def run_multiple(logger, days):
             for repository in new_list:
                 if repository in REPOSITORIES.get("Github"):
                     create_files_for_git(repository, onerepo=True)
-                    generate_main_md_table("git_files", int(days))
+                    generate_main_md_table(REPOSITORIES, int(days))
                 elif repository in REPOSITORIES.get("Mercurial"):
                     create_files_for_hg(repository, onerepo=True)
                     clear_file("changelog.md", int(days))
-                    generate_main_md_table("hg_files", int(days))
-                    generate_main_md_table("git_files", int(days))
+                    generate_main_md_table(REPOSITORIES, int(days))
         try:
             new_entry = int(user_choice) - 1
             if new_entry < 0 or new_entry >= len(REPO_LIST):
