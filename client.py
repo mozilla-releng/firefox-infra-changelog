@@ -9,6 +9,8 @@ import click
 import json
 import subprocess
 import signal
+from fic_modules.FICExceptions import FICExceptions
+from github import GithubException
 from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
 from fic_modules.helper_functions import (
@@ -199,4 +201,8 @@ def keyboardInterruptHandler(signal, frame):
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, keyboardInterruptHandler)
-    cli()
+    try:
+        cli()
+    except GithubException as error_code:
+        FICExceptions(error_code.status).handle_exception()
+
