@@ -36,6 +36,7 @@ def run_all(logger, days):
                 .now())
     git_data = create_files_for_git(REPOSITORIES, onerepo=False)
     hg_data = create_files_for_hg(REPOSITORIES, onerepo=False)
+    # Take git and hg data, write it to changelog.json
     changelog_data = {}
     changelog_data.update({"Github": git_data})
     changelog_data.update({"Hg": hg_data})
