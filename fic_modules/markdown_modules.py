@@ -83,7 +83,6 @@ def create_git_md_table(repository_name, path_to_files):
                 commit_author = filter_strings(commit_author)
                 message = filter_strings(message)
                 message = replace_bug_with_url(message, LOGGER)
-
                 row = "|" + commit_number + \
                       "|" + commit_author + \
                       "|" + message + \
@@ -110,8 +109,7 @@ def create_git_md_table(repository_name, path_to_files):
 
         md_file.close()
     except FileNotFoundError:
-        if LOGGER:
-            LOGGER.info("Json for %s is empty! Skipping!", repository_name)
+        LOGGER.info("Json for %s is empty! Skipping!", repository_name)
 
 
 def create_md_table_for_scriptworkers(repository_name):
@@ -152,16 +150,13 @@ def generate_main_md_table(path_to_files, days_to_generate=1):
     # Extract data from json_files and writes to main markdown table.
     if path_to_files == "git_files":
         extract_json_from_git(json_files, path_to_files, days_to_generate)
-        if LOGGER:
-            LOGGER.info("GIT %s", successfully_generated)
+        LOGGER.info("GIT %s", successfully_generated)
     elif path_to_files == "hg_files":
         extract_json_from_hg(json_files, path_to_files, days_to_generate)
-        if LOGGER:
-            LOGGER.info("HG %s", successfully_generated)
+        LOGGER.info("HG %s", successfully_generated)
 
     else:
-        if LOGGER:
-            LOGGER.error("No table was generated!")
+        LOGGER.error("No table was generated!")
 
 
 def write_date_header(file_name, datetime_object):
@@ -183,8 +178,7 @@ def write_date_header(file_name, datetime_object):
                   " |"
     file.write("\n" + base_table + date_header + "\n")
     file.close()
-    if LOGGER:
-        LOGGER.info("Generated date header for file: %s with datestamp %s",
+    LOGGER.info("Generated date header for file: %s with datestamp %s",
                     str(file_name), str(datetime.utcnow()))
 
 
@@ -275,8 +269,7 @@ def create_hg_md_table(repository_name):
 
         md_file.close()
     except FileNotFoundError:
-        if LOGGER:
-            LOGGER.error("Json for %s is empty! Skipping!", repository_name)
+        LOGGER.error("Json for %s is empty! Skipping!", repository_name)
 
 
 def generate_markdown_header(file_name, repository_name, markdown_link,

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80114
+    "last_push_id": 80246
   },
   "1": {
     "changeset_number": "35344",
@@ -35504,16 +35504,106 @@
     }
   },
   "712": {
-    "changeset_number": "80084",
-    "pusher": "cmanchester@mozilla.com",
-    "date_of_push": "2019-03-09 03:01:36",
+    "changeset_number": "80140",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-03-11 12:04:55",
     "changeset_commits": {
       "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=91c5e49bc1cb",
-        "commiter_name": "Chris Manchester <cmanchester@mozilla.com>",
-        "commit_message": "Bug 1528374 - Set artifact name based on platform in pgo profile run transform. r=firefox-build-system-reviewers,mshal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20406",
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7b2ae2ea0495",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532236 Reinsert awscli, required for partials caching r=mtabara\n\nReinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22942",
         "files_changed": [
-          "taskcluster/taskgraph/transforms/run_pgo_profile.py"
+          "taskcluster/docker/funsize-update-generator/Pipfile",
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock",
+          "taskcluster/docker/funsize-update-generator/scripts/mbsdiff_hook.sh"
+        ]
+      }
+    }
+  },
+  "713": {
+    "changeset_number": "80142",
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-03-11 12:18:57",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8076b05b8631",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Backed out changeset 7b2ae2ea0495 (bug 1532236) for lint failure",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile",
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock",
+          "taskcluster/docker/funsize-update-generator/scripts/mbsdiff_hook.sh"
+        ]
+      }
+    }
+  },
+  "714": {
+    "changeset_number": "80146",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-03-11 12:47:36",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e108f9ad99a5",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1532236 Reinsert awscli, required for partials caching r=mtabara\n\nReinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22942",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile",
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock",
+          "taskcluster/docker/funsize-update-generator/scripts/mbsdiff_hook.sh"
+        ]
+      }
+    }
+  },
+  "715": {
+    "changeset_number": "80156",
+    "pusher": "jlaster@mozilla.com",
+    "date_of_push": "2019-03-11 15:49:52",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=423f48c98230",
+        "commiter_name": "Jason Laster <jlaster@mozilla.com>",
+        "commit_message": "Bug 1533391 - Lint Debugger on try. r=davidwalsh\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22503",
+        "files_changed": [
+          "devtools/client/debugger/new/src/components/SecondaryPanes/Scopes.css",
+          "devtools/client/debugger/new/src/utils/editor/index.js",
+          "taskcluster/ci/source-test/node.yml"
+        ]
+      }
+    }
+  },
+  "716": {
+    "changeset_number": "80165",
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-03-11 17:04:14",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee2473319e97",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Backed out changeset 423f48c98230 (bug 1533391) for failing try test on a CLOSED TREE",
+        "files_changed": [
+          "devtools/client/debugger/new/src/components/SecondaryPanes/Scopes.css",
+          "devtools/client/debugger/new/src/utils/editor/index.js",
+          "taskcluster/ci/source-test/node.yml"
+        ]
+      }
+    }
+  },
+  "717": {
+    "changeset_number": "80232",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-12 02:40:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8ecd607b3d51",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1490573 - Use fetches for nsis and wine toolchain tasks. r=froydnj\n\nThese toolchain tasks are the last ones using the historical\ndownload-tools script from build/unix/build-gcc, which invokes gpg to\nvalidate the downloaded tarballs. The consequence is that gpg-agent is\nspawned and stays running, preventing a cleanup script from doing its\njob, making the tasks fail.\n\nFetches are the new way to download sources, and can also do gpg\nvalidation without those caveats.\n\nThe download-tools.sh script can then be removed as it's not used\nanymore.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22682",
+        "files_changed": [
+          "build/unix/build-gcc/build-gcc.sh",
+          "build/unix/build-gcc/download-tools.sh",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/scripts/misc/build-mingw32-nsis.sh",
+          "taskcluster/scripts/misc/build-wine.sh"
         ]
       }
     }

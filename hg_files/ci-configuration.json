@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 91
+    "last_push_id": 92
   },
   "1": {
     "changeset_number": "31",
@@ -776,16 +776,16 @@
     }
   },
   "46": {
-    "changeset_number": "91",
-    "pusher": "mtabara@mozilla.com",
-    "date_of_push": "2019-03-08 21:26:21",
+    "changeset_number": "92",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-11 16:33:15",
     "changeset_commits": {
       "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1f02faf115f2",
-        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "No bug: Cleanup in old fenix sentry secrets. r=jlorenzo",
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=52e46768ceeb",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - upgrade inbound, central, and all twigs to use hg-pushes; a=tomprince",
         "files_changed": [
-          "grants.yml"
+          "projects.yml"
         ]
       }
     }

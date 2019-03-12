@@ -1,7 +1,8 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-02-24 00:07:55.424776
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-02-26 07:29:25.350744
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|56|rail|Bump versions to enable shipit v2 submissions (#419)|[URL](https://github.com/mozilla-releng/build-puppet/commit/3cfc19e13a2e11bb3cc34084fefa6e8af65b9fdf)|2019-03-11 16:16:08
 |55|escapewindow|Merge pull request #420 from escapewindow/ed25519 roll out scriptworker 22 with ed25519|[URL](https://github.com/mozilla-releng/build-puppet/commit/0d549acc0dcfd9358470c0612c5cf3b9feb6848c)|2019-03-08 18:00:53
 |54|escapewindow|pin click to 6.7|[URL](https://github.com/mozilla-releng/build-puppet/commit/9b5adc5583df288c5c9b2ce949c0ff8b9dc78765)|2019-03-08 17:43:26
 |53|escapewindow|Merge branch 'master' into ed25519|[URL](https://github.com/mozilla-releng/build-puppet/commit/770357b36991409cdf3c5799e70d913b236a0d2b)|2019-03-08 17:27:17
