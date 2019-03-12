@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80222
+    "last_push_id": 80238
   },
   "1": {
     "changeset_number": "35344",
@@ -35601,6 +35601,26 @@
           "devtools/client/debugger/new/src/components/SecondaryPanes/Scopes.css",
           "devtools/client/debugger/new/src/utils/editor/index.js",
           "taskcluster/ci/source-test/node.yml"
+        ]
+      }
+    }
+  },
+  "717": {
+    "changeset_number": "80232",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-12 02:40:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8ecd607b3d51",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1490573 - Use fetches for nsis and wine toolchain tasks. r=froydnj\n\nThese toolchain tasks are the last ones using the historical\ndownload-tools script from build/unix/build-gcc, which invokes gpg to\nvalidate the downloaded tarballs. The consequence is that gpg-agent is\nspawned and stays running, preventing a cleanup script from doing its\njob, making the tasks fail.\n\nFetches are the new way to download sources, and can also do gpg\nvalidation without those caveats.\n\nThe download-tools.sh script can then be removed as it's not used\nanymore.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22682",
+        "files_changed": [
+          "build/unix/build-gcc/build-gcc.sh",
+          "build/unix/build-gcc/download-tools.sh",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/scripts/misc/build-mingw32-nsis.sh",
+          "taskcluster/scripts/misc/build-wine.sh"
         ]
       }
     }

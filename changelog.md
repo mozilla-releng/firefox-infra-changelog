@@ -1,10 +1,10 @@
-##  Commits in production - for 3 days, generated on: 2019-03-11 23:25:08 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-12 02:37:39 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=68834c8b15bd)|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalsh Differential Revision: https://phabricator.services.mozilla.com/D22503|jlaster@mozilla.com|davidwalsh|2019-03-11 20:45:21|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8ecd607b3d51)|[Bug 1490573 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1490573) - Use fetches for nsis and wine toolchain tasks. r=froydnj These toolchain tasks are the last ones using the historical download-tools script from build/unix/build-gcc, which invokes gpg to validate the downloaded tarballs. The consequence is that gpg-agent is spawned and stays running, preventing a cleanup script from doing its job, making the tasks fail. Fetches are the new way to download sources, and can also do gpg validation without those caveats. The download-tools.sh script can then be removed as it's not used anymore. Differential Revision: https://phabricator.services.mozilla.com/D22682|mh@glandium.org|froydnj|2019-03-12 02:40:16|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee2473319e97)|Backed out changeset 423f48c98230 (bug 1533391) for failing try test on a CLOSED TREE|apavel@mozilla.com||2019-03-11 17:04:14|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=423f48c98230)|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalsh Differential Revision: https://phabricator.services.mozilla.com/D22503|jlaster@mozilla.com|davidwalsh|2019-03-11 15:49:52|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e108f9ad99a5)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Reinsert awscli, required for partials caching r=mtabara Reinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording Differential Revision: https://phabricator.services.mozilla.com/D22942|sfraser@mozilla.com|mtabara|2019-03-11 12:47:36|
@@ -774,6 +774,10 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/3a88ac825af04ea6962964ce61bbff730001a41e)|Merge pull request #377 from taskcluster/renovate/node-10.x  Update Node.js to v10.15.3|djmitche|N/A|2019-03-12 01:09:48|
+|[Link](https://github.com/taskcluster/taskcluster/commit/addf57ad6df7eb3987be84a398fe5910e1ba5936)|fix yarn generate to be one set of &&-connected strings|djmitche|N/A|2019-03-12 01:02:36|
+|[Link](https://github.com/taskcluster/taskcluster/commit/6faf5c52c35d83a04ed1a6b0d8bf65348d4e3b51)|Add WIP note to Worker Manager's README (#391)|helfi92|N/A|2019-03-12 00:36:29|
+|[Link](https://github.com/taskcluster/taskcluster/commit/68d0b4cfde3c7a0e369208bba0d56b3388dc89cb)|Add List component in /docs and fix indentation (#384)  re indentation: Copy pasting old docs messed up spacing in markdown.|helfi92|N/A|2019-03-12 00:35:38|
 |[Link](https://github.com/taskcluster/taskcluster/commit/61250675552803a95a75da1c384cc804e18e59e7)|Merge pull request #389 from ydidwania/1523801  Bug 1523801 : Blacklist listening to some specific exchanges|djmitche|N/A|2019-03-11 23:01:33|
 |[Link](https://github.com/taskcluster/taskcluster/commit/3ad0448e2aaf977fb270c660aa395511f8075027)|Merge pull request #365 from djmitche/issue-template  Point bug-filers to Bugzilla|djmitche|N/A|2019-03-11 22:56:14|
 |[Link](https://github.com/taskcluster/taskcluster/commit/efb2aa62e52a6878b462b3ba249818435cd79387)|Revert "Update dependency azure-blob-storage to v4"  This reverts commit 428935f9be841735be8c48754ec49e5c9e52d41f.  see https://bugzilla.mozilla.org/show_bug.cgi?id=1531871|djmitche|N/A|2019-03-11 22:30:05|
@@ -785,12 +789,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/99d96820131fad4d5d3ce8be9987fa15284d94d3)|Run generate after rebase|imbstack|N/A|2019-03-11 18:48:24|
 |[Link](https://github.com/taskcluster/taskcluster/commit/9758481fea195631da1196f01a3a0bf994e53dba)|Clean up after rebase|imbstack|N/A|2019-03-11 18:43:11|
 |[Link](https://github.com/taskcluster/taskcluster/commit/748cb0cca8e023485d00ec07d11cd7b5ca8741ca)|Remove now-unused comment|imbstack|N/A|2019-03-11 18:27:25|
-|[Link](https://github.com/taskcluster/taskcluster/commit/294eeff80c35ca1de33a8ea5779de732dc4cf2a0)|Actually fix loader test|imbstack|N/A|2019-03-09 02:06:32|
-|[Link](https://github.com/taskcluster/taskcluster/commit/0febbcdc082296944ccfe555ba7a08ef1c3b4711)|Remove ultimately not that useful plan for lint|imbstack|N/A|2019-03-09 01:57:19|
-|[Link](https://github.com/taskcluster/taskcluster/commit/a099076aa2d9c252b5a60c40a9cd9320a3728f48)|Remove now unused dep|imbstack|N/A|2019-03-09 01:57:03|
-|[Link](https://github.com/taskcluster/taskcluster/commit/0a5ca7c5ae455a73898a6890bd676e1eab31562f)|Turn on no-undef|imbstack|N/A|2019-03-09 01:41:33|
-|[Link](https://github.com/taskcluster/taskcluster/commit/fb23a7f6ed90eed01be1a6defec7669960d48e34)|Enable no-unreachable-code|imbstack|N/A|2019-03-08 23:32:26|
-|[Link](https://github.com/taskcluster/taskcluster/commit/29a7dca2a1fdc2471bbb83e6532e9557353b7bf7)|Turn on no-case-declarations|imbstack|N/A|2019-03-08 23:29:05|
 |[Link](https://github.com/taskcluster/taskcluster/commit/9837883c2335dc8a4c3a745d91534779309101d5)|Merge pull request #376 from djmitche/bug1533937  Bug 1533937 - centralize azure table setup in testing|djmitche|N/A|2019-03-11 18:39:10|
 |[Link](https://github.com/taskcluster/taskcluster/commit/f35c3d8543c8d3053f6897ed76fbae5350cf2091)|Merge pull request #375 from djmitche/bug1534022  Bug 1534022 - add more tests regarding duplicate roles|djmitche|N/A|2019-03-11 18:35:29|
 |[Link](https://github.com/taskcluster/taskcluster/commit/9eefb843c6e60a7227f90aea13f9db71fdd1d5cc)|Bug 1533937 - use a datestamp in the table suffix|djmitche|N/A|2019-03-11 15:40:58|
