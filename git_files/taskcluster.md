@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 12:11:04.279409
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 18:46:50.591978
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|609|helfi92|[UI] Add proper theming to "Next Steps" section in docs (#396) Add proper theming to "Next Steps" section in docs Run `yarn generate`|[URL](https://github.com/taskcluster/taskcluster/commit/de83d81391d9f1ae446cb86b386bc0810998b830)|2019-03-12 15:29:07
+|608|helfi92|[UI] Remove reliance on url pathname in ScrollToTop (#393) Given that pages are loaded asynchronously, it doesn't make sense for the window to scroll to the the top once the pathname changes since it doesn't necessarily mean the next/previous page is fully loaded. It's better to rely on a key (scrollKey) and only change the latter when the page is successfuly loaded.|[URL](https://github.com/taskcluster/taskcluster/commit/e13cb4c9ac4971808f7e279b8cafb3c867c6d30a)|2019-03-12 12:30:01
 |607|djmitche|Merge pull request #377 from taskcluster/renovate/node-10.x Update Node.js to v10.15.3|[URL](https://github.com/taskcluster/taskcluster/commit/3a88ac825af04ea6962964ce61bbff730001a41e)|2019-03-12 01:09:48
 |606|djmitche|fix yarn generate to be one set of &&-connected strings|[URL](https://github.com/taskcluster/taskcluster/commit/addf57ad6df7eb3987be84a398fe5910e1ba5936)|2019-03-12 01:02:36
 |605|helfi92|Add WIP note to Worker Manager's README (#391)|[URL](https://github.com/taskcluster/taskcluster/commit/6faf5c52c35d83a04ed1a6b0d8bf65348d4e3b51)|2019-03-12 00:36:29
