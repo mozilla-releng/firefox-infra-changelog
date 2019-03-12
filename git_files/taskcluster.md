@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 18:46:50.591978
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 22:53:32.267911
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|611|helfi92|Remove nav from tutorial section (#398) Rely on "Next Steps" instead of next/previous pages. Also added a path property from root nodes (https://github.com/taskcluster/taskcluster/issues/397)|[URL](https://github.com/taskcluster/taskcluster/commit/8656c170c15d233736eda04c0f5b68c56c42bcb8)|2019-03-12 18:37:10
+|610|helfi92|Enhance fontSize for <pre /> element in docs (#399)|[URL](https://github.com/taskcluster/taskcluster/commit/7fafa6e5659f75688201ba36b5fdba614a976607)|2019-03-12 18:36:56
 |609|helfi92|[UI] Add proper theming to "Next Steps" section in docs (#396) Add proper theming to "Next Steps" section in docs Run `yarn generate`|[URL](https://github.com/taskcluster/taskcluster/commit/de83d81391d9f1ae446cb86b386bc0810998b830)|2019-03-12 15:29:07
 |608|helfi92|[UI] Remove reliance on url pathname in ScrollToTop (#393) Given that pages are loaded asynchronously, it doesn't make sense for the window to scroll to the the top once the pathname changes since it doesn't necessarily mean the next/previous page is fully loaded. It's better to rely on a key (scrollKey) and only change the latter when the page is successfuly loaded.|[URL](https://github.com/taskcluster/taskcluster/commit/e13cb4c9ac4971808f7e279b8cafb3c867c6d30a)|2019-03-12 12:30:01
 |607|djmitche|Merge pull request #377 from taskcluster/renovate/node-10.x Update Node.js to v10.15.3|[URL](https://github.com/taskcluster/taskcluster/commit/3a88ac825af04ea6962964ce61bbff730001a41e)|2019-03-12 01:09:48

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 92
+    "last_push_id": 94
   },
   "1": {
     "changeset_number": "31",
@@ -784,6 +784,44 @@
         "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=52e46768ceeb",
         "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
         "commit_message": "Bug 1526979 - upgrade inbound, central, and all twigs to use hg-pushes; a=tomprince",
+        "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "46": {
+    "changeset_number": "93",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-12 21:57:46",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=6bba4bde6429",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - enable push-via-hooks for mozilla-release, mozilla-esr60, mozilla-beta, comm-central; a=tomprince",
+        "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "47": {
+    "changeset_number": "94",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-12 22:44:36",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=48469cb61b69",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1534771 - disable pushes for stylo/stylo-try\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23209",
+        "files_changed": [
+          "projects.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a1615dd8b7c",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - enable push-via-hooks for version-control-tools; a=tomprince,sheehan",
         "files_changed": [
           "projects.yml"
         ]
