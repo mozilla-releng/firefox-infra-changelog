@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80257
+    "last_push_id": 80290
   },
   "1": {
     "changeset_number": "35344",
@@ -35604,6 +35604,64 @@
           "taskcluster/ci/toolchain/mingw.yml",
           "taskcluster/scripts/misc/build-mingw32-nsis.sh",
           "taskcluster/scripts/misc/build-wine.sh"
+        ]
+      }
+    }
+  },
+  "717": {
+    "changeset_number": "80261",
+    "pusher": "fstrugariu@mozilla.com",
+    "date_of_push": "2019-03-12 14:02:49",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=18fa4e4ce035",
+        "commiter_name": "marian.raiciof <marian.raiciof@softvision.ro>",
+        "commit_message": "Bug 1529207 - Add new Raptor tests in tp6m-4 r=davehunt,rwood\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20852",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-booking.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-cnn-ampstories.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-cnn.manifest",
+          "testing/raptor/raptor/raptor.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-4.ini",
+          "testing/raptor/webext/raptor/manifest.json"
+        ]
+      }
+    }
+  },
+  "718": {
+    "changeset_number": "80271",
+    "pusher": "jmaher@mozilla.com",
+    "date_of_push": "2019-03-12 16:43:44",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e5dbbdb10f3",
+        "commiter_name": "Joel Maher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1490048 - add cranelift to raptor wasm-misc and wasm-godot tests. r=bbouvier,rwood\n\nadd cranelift to raptor wasm-misc and wasm-godot tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23144",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/raptor/raptor/raptor.ini",
+          "testing/raptor/raptor/tests/raptor-wasm-godot-cranelift.ini",
+          "testing/raptor/raptor/tests/raptor-wasm-misc-cranelift.ini"
+        ]
+      }
+    }
+  },
+  "719": {
+    "changeset_number": "80284",
+    "pusher": "hskupin@mozilla.com",
+    "date_of_push": "2019-03-12 17:42:44",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=eba70db52fa5",
+        "commiter_name": "Henrik Skupin <mail@hskupin.info>",
+        "commit_message": "Bug 1493948 - Package binary of geckodriver into its own artifact. r=jlorenzo\n\nThis task extracts the binary of geckodriver from the\ncommon test package and stores it into its own artifact.\nFor now this task is only run after Nightly build tasks\non supported platforms..\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23094",
+        "files_changed": [
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/geckodriver-repack/kind.yml",
+          "taskcluster/docs/kinds.rst"
         ]
       }
     }
