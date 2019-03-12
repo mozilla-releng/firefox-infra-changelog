@@ -15,7 +15,8 @@ from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
 from fic_modules.helper_functions import (
     clear_file,
-    get_keys
+    get_keys,
+    write_to_changelog_json
 )
 from fic_modules.configuration import (
     REPO_LIST,
@@ -35,9 +36,12 @@ def run_all(logger, days):
                 .now())
     git_data = create_files_for_git(REPOSITORIES, onerepo=False)
     hg_data = create_files_for_hg(REPOSITORIES, onerepo=False)
+    # Take git and hg data, write it to changelog.json
+    changelog_data = {}
+    changelog_data.update({"Github": git_data})
+    changelog_data.update({"Hg": hg_data})
     data_file = open("changelog.json", "w")
-    json.dump(git_data, data_file, indent=2)
-    json.dump(hg_data, data_file, indent=2)
+    json.dump(changelog_data, data_file, indent=2)
     data_file.close()
     clear_file("changelog.md", int(days))
     generate_main_md_table("hg_files", int(days))
@@ -54,9 +58,8 @@ def run_git(logger, days):
     logger.info("======== Logging in GIT mode on %s ========", datetime
                 .now())
     git_data = create_files_for_git(REPOSITORIES, onerepo=False)
-    data_file = open("changelog.json", "w")
-    json.dump(git_data, data_file, indent=2)
-    data_file.close()
+    repo_name = "Github"
+    write_to_changelog_json(git_data, repo_name)
     clear_file("changelog.md", int(days))
     generate_main_md_table("hg_files", int(days))
     generate_main_md_table("git_files", int(days))
@@ -73,9 +76,8 @@ def run_hg(logger, days):
     logger.info("======== Logging in HG mode on %s ========", datetime
                 .now())
     hg_data = create_files_for_hg(REPOSITORIES, onerepo=False)
-    data_file = open("changelog.json", "w")
-    json.dump(hg_data, data_file, indent=2)
-    data_file.close()
+    repo_name = "Hg"
+    write_to_changelog_json(hg_data, repo_name)
     clear_file("changelog.md", int(days))
     generate_main_md_table("hg_files", int(days))
     generate_main_md_table("git_files", int(days))
