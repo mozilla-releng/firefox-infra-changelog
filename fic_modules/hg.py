@@ -209,108 +209,104 @@ def json_writer_hg(repository_name, new_commits):
         json_file.close()
 
 
-def extract_json_from_hg(json_files, path_to_files, days_to_generate):
+def extract_json_from_hg(repository, days_to_generate):
     """
     Extracts the json data from json files and writes the data to the main
     markdown table file.
     The function looks into json files after the last commit, extracts it and
     calls the write_main_md_table function.
     :param days_to_generate:
-    :param json_files: List of files to extract commits from.
-    :param path_to_files: Folder to json files
+    :param repository:
     :return: none
     """
     from fic_modules.markdown_modules import generate_markdown_header,\
         write_main_md_table
-    time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
-    test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
-    time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
 
-    for file in json_files:
-        count_pushes = 0
-        file_path = "{}/".format(path_to_files) + file
-        with open(file_path) as json_file:
-            data = json.load(json_file)
-            base_link = "https://github.com/mozilla-releng/firefox-infra-" \
-                        "changelog/blob/master/{}/"\
-                        .format(path_to_files)
-            repository_url = base_link + file \
-                .rstrip() \
-                .replace(" ", "%20") \
-                .rstrip() \
-                .replace(".json", ".md")
-            repository_json = base_link + file \
-                .rstrip() \
-                .replace(" ", "%20")
-            repository_title = file.replace(".json", "")
+    nr_days_ago = datetime.utcnow() - timedelta(days=days_to_generate)
+    nr_days_ago = datetime.strftime(nr_days_ago, "%Y-%m-%d %H:%M:%S")
 
-            try:
-                generate_markdown_header("changelog.md",
-                                         repository_title,
-                                         repository_url,
-                                         repository_json)
-                if "0" in data:
-                    del data["0"]
-                for changeset_iterator in sorted(data, reverse=True):
-                    for commit_iterator in data\
-                            .get(changeset_iterator)\
-                            .get("changeset_commits"):
-                        commit_date = data\
-                            .get(changeset_iterator)\
-                            .get("date_of_push")
-                        is_it_under_24 = datetime.strptime(commit_date,
-                                                           "%Y-%m-%d %H:%M:%S")
-                        if is_it_under_24 > time_24h_ago:
-                            count_pushes = count_pushes + 1
-                            commit_description = data.get(changeset_iterator) \
-                                .get("changeset_commits") \
-                                .get(commit_iterator) \
-                                .get("commit_message")
-                            commit_description = \
-                                remove_chars(commit_description, "\n")
-                            commit_description = \
-                                replace_bug_with_url(commit_description, LOGGER)
-                            commit_url = data.get(changeset_iterator) \
-                                .get("changeset_commits") \
-                                .get(commit_iterator) \
-                                .get("url")
-                            commit_url = "[Link](" + commit_url + ")"
-                            author = data.get(changeset_iterator).get("pusher")
-                            review = extract_reviewer(commit_description)
-                            write_main_md_table("changelog.md",
-                                                commit_url,
-                                                commit_description,
-                                                author,
-                                                review,
-                                                commit_date)
-                if count_pushes == 0:
-                    commit_url = " "
-                    if days_to_generate == 1:
-                        commit_description = "No push in the last day.. " \
-                                             "[see the history of MD " \
-                                             "commits](" + \
-                                             repository_url + \
-                                             ")"
-                    else:
-                        commit_description = "No push in the last " + \
-                                             str(days_to_generate) + \
-                                             " days.. [see the history of MD" \
-                                             " commits](" + \
-                                             repository_url + \
-                                             ")"
-                    author = "FIC - BOT"
-                    review = "Self Generated"
-                    commit_date = " - "
-                    write_main_md_table("changelog.md",
-                                        commit_url,
-                                        commit_description,
-                                        author,
-                                        review,
-                                        commit_date)
-            except AttributeError:
-                LOGGER.exception("Attribute Error!! \n Probable issue is a "
-                                 "malfunctioned json file.. Please check the "
-                                 "following file: %s", file)
-            except KeyError:
-                LOGGER.exception("File %s is empty. Please check: %s for more "
-                                 "details.", file, repository_url)
+    with open("./changelog.json") as json_file:
+        data = json.load(json_file)
+        base_link = "https://github.com/mozilla-releng/firefox-infra-" \
+                    "changelog/blob/master/{}/"\
+                    .format(repository)
+        repository_url = base_link + repository \
+            .rstrip() \
+            .replace(" ", "%20") \
+            .rstrip() \
+            .replace(".json", ".md")
+        repository_json = base_link + repository \
+            .rstrip() \
+            .replace(" ", "%20")
+        repository_title = repository.replace(".json", "")
+
+        try:
+            generate_markdown_header("changelog.md",
+                                     repository_title,
+                                     repository_url,
+                                     repository_json)
+            if "0" in data.get(repository):
+                del data.get(repository)["0"]
+            for changeset_iterator in data.get(repository):
+                for commit_iterator in data.get(repository) \
+                        .get(changeset_iterator)\
+                        .get("changeset_commits"):
+                    commit_date = data.get(repository) \
+                        .get(changeset_iterator)\
+                        .get("date_of_push")
+                    commit_date = datetime.strptime(commit_date,
+                                                       "%Y-%m-%d %H:%M:%S")
+                    if commit_date > nr_days_ago:
+                        count_pushes = count_pushes + 1
+                        commit_description = data.get(repository).get(changeset_iterator) \
+                            .get("changeset_commits") \
+                            .get(commit_iterator) \
+                            .get("commit_message")
+                        commit_description = \
+                            remove_chars(commit_description, "\n")
+                        commit_description = \
+                            replace_bug_with_url(commit_description, LOGGER)
+                        commit_url = data.get(repository).get(changeset_iterator) \
+                            .get("changeset_commits") \
+                            .get(commit_iterator) \
+                            .get("url")
+                        commit_url = "[Link](" + commit_url + ")"
+                        author = data.get(repository).get(changeset_iterator).get("pusher")
+                        review = extract_reviewer(commit_description)
+                        write_main_md_table("changelog.md",
+                                            commit_url,
+                                            commit_description,
+                                            author,
+                                            review,
+                                            commit_date)
+            if count_pushes == 0:
+                commit_url = " "
+                if days_to_generate == 1:
+                    commit_description = "No push in the last day.. " \
+                                         "[see the history of MD " \
+                                         "commits](" + \
+                                         repository_url + \
+                                         ")"
+                else:
+                    commit_description = "No push in the last " + \
+                                         str(days_to_generate) + \
+                                         " days.. [see the history of MD" \
+                                         " commits](" + \
+                                         repository_url + \
+                                         ")"
+                author = "FIC - BOT"
+                review = "Self Generated"
+                commit_date = " - "
+                write_main_md_table("changelog.md",
+                                    commit_url,
+                                    commit_description,
+                                    author,
+                                    review,
+                                    commit_date)
+        except AttributeError:
+            LOGGER.exception("Attribute Error!! \n Probable issue is a "
+                             "malfunctioned json file.. Please check the "
+                             "following file: %s", repository)
+        except KeyError:
+            LOGGER.exception("File %s is empty. Please check: %s for more "
+                             "details.", repository, repository_url)
