@@ -1,7 +1,8 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-02-26 22:53:32.267911
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-02-27 06:25:29.599225
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|57|tomprince|[Bug 1533589 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533589) [win64-aarch64] Add missing support for for win64-aarch64 devedition builds. (#426)|[URL](https://github.com/mozilla-releng/build-puppet/commit/b1ea7495d21c0bb6c6e8f097012cc6a33cc3cbd1)|2019-03-12 22:54:10
 |56|rail|Bump versions to enable shipit v2 submissions (#419)|[URL](https://github.com/mozilla-releng/build-puppet/commit/3cfc19e13a2e11bb3cc34084fefa6e8af65b9fdf)|2019-03-11 16:16:08
 |55|escapewindow|Merge pull request #420 from escapewindow/ed25519 roll out scriptworker 22 with ed25519|[URL](https://github.com/mozilla-releng/build-puppet/commit/0d549acc0dcfd9358470c0612c5cf3b9feb6848c)|2019-03-08 18:00:53
 |54|escapewindow|pin click to 6.7|[URL](https://github.com/mozilla-releng/build-puppet/commit/9b5adc5583df288c5c9b2ce949c0ff8b9dc78765)|2019-03-08 17:43:26
