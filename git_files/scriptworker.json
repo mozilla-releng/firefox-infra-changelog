@@ -1,106 +1,120 @@
 {
   "0": {
-    "lastChecked": "2019-03-08 16:34:20.859522",
+    "lastChecked": "2019-03-13 14:50:30.834896",
     "last_releases": {
       "latest_release": {
-        "version": "22.0.0",
-        "sha": "4a8f0b2c415117e59bf5e98debedd39fccb53b15",
-        "date": "2019-03-07 19:47:30",
-        "author": "escapewindow"
+        "version": "22.0.1",
+        "sha": "4e9b5817085acbd7c2d75292d9b6f84ef90f6561",
+        "date": "2019-03-13 13:01:39",
+        "author": "JohanLorenzo"
       }
     }
   },
   "1": {
-    "sha": "58768476d7b5eeef969e67eb42cb01ac0d9ee117",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117",
+    "sha": "4e9b5817085acbd7c2d75292d9b6f84ef90f6561",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/4e9b5817085acbd7c2d75292d9b6f84ef90f6561",
     "commiter_name": "JohanLorenzo",
     "commiter_email": null,
-    "commit_message": "21.0.0",
-    "commit_date": "2019-03-05 14:17:09",
+    "commit_message": "22.0.1",
+    "commit_date": "2019-03-13 12:57:58",
     "files_changed": [
       "CHANGELOG.md",
       "version.json"
     ]
   },
   "2": {
-    "sha": "c27296959436eaa43b2fe11dfffb07eac3ee1273",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273",
+    "sha": "f01e70d2649055f2fda310e68bf8a06f8410b4b5",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/f01e70d2649055f2fda310e68bf8a06f8410b4b5",
     "commiter_name": "JohanLorenzo",
     "commiter_email": null,
-    "commit_message": "Bug 1529990 - Fix Mobile bustage",
-    "commit_date": "2019-02-22 18:49:14",
+    "commit_message": "Bug 1534694 - Allow snapcraft beta scope on mozilla-release",
+    "commit_date": "2019-03-13 09:57:44",
     "files_changed": [
-      "scriptworker/constants.py",
-      "scriptworker/cot/verify.py",
-      "scriptworker/github.py",
-      "scriptworker/task.py",
-      "scriptworker/test/test_cot_verify.py",
-      "scriptworker/test/test_github.py",
-      "scriptworker/test/test_task.py",
-      "scriptworker/test/test_utils.py",
-      "scriptworker/utils.py"
+      "scriptworker/constants.py"
     ]
   },
   "3": {
-    "sha": "58768476d7b5eeef969e67eb42cb01ac0d9ee117",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117",
-    "commiter_name": "JohanLorenzo",
+    "sha": "83840ad6360d82346a9cca531c8c2e2b939d63c3",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/83840ad6360d82346a9cca531c8c2e2b939d63c3",
+    "commiter_name": "escapewindow",
     "commiter_email": null,
-    "commit_message": "21.0.0",
-    "commit_date": "2019-03-05 14:17:09",
+    "commit_message": "Merge pull request #314 from escapewindow/slugid-ascii  fix integration tests for taskcluster-client.py>=7.0.0 and slugid>=2.0.0",
+    "commit_date": "2019-03-08 22:28:55",
     "files_changed": [
-      "CHANGELOG.md",
-      "version.json"
+      "requirements/base.in",
+      "scriptworker/test/test_integration.py"
     ]
   },
   "4": {
-    "sha": "c27296959436eaa43b2fe11dfffb07eac3ee1273",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273",
-    "commiter_name": "JohanLorenzo",
+    "sha": "213d98bc222ba50c557eb16b2d3a49e17bddd17a",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/213d98bc222ba50c557eb16b2d3a49e17bddd17a",
+    "commiter_name": "escapewindow",
     "commiter_email": null,
-    "commit_message": "Bug 1529990 - Fix Mobile bustage",
-    "commit_date": "2019-02-22 18:49:14",
+    "commit_message": "fix integration tests for taskcluster-client.py>=7.0.0 and slugid>=2.0.0",
+    "commit_date": "2019-03-08 20:07:25",
     "files_changed": [
-      "scriptworker/constants.py",
-      "scriptworker/cot/verify.py",
-      "scriptworker/github.py",
-      "scriptworker/task.py",
-      "scriptworker/test/test_cot_verify.py",
-      "scriptworker/test/test_github.py",
-      "scriptworker/test/test_task.py",
-      "scriptworker/test/test_utils.py",
-      "scriptworker/utils.py"
+      "requirements/base.in",
+      "scriptworker/test/test_integration.py"
     ]
   },
   "5": {
-    "sha": "58768476d7b5eeef969e67eb42cb01ac0d9ee117",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117",
-    "commiter_name": "JohanLorenzo",
+    "sha": "d216c9d074385a457fe645dce996c369b25a1ef9",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/d216c9d074385a457fe645dce996c369b25a1ef9",
+    "commiter_name": "escapewindow",
     "commiter_email": null,
-    "commit_message": "21.0.0",
-    "commit_date": "2019-03-05 14:17:09",
+    "commit_message": "Merge pull request #294 from escapewindow/ed25519  bug 1492617 - Add ed25519 signature support to cot",
+    "commit_date": "2019-03-07 20:14:48",
     "files_changed": [
       "CHANGELOG.md",
+      "docs/cot_overview.rst",
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.txt",
+      "scripts/gen_ed25519_key.py",
+      "scriptworker.yaml.tmpl",
+      "scriptworker/constants.py",
+      "scriptworker/cot/generate.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/ed25519.py",
+      "scriptworker/exceptions.py",
+      "scriptworker/test/data/binary.zip",
+      "scriptworker/test/data/ed25519/docker-worker_private_key",
+      "scriptworker/test/data/ed25519/docker-worker_public_key",
+      "scriptworker/test/data/ed25519/foo.json",
+      "scriptworker/test/data/ed25519/foo.json.scriptworker.sig",
+      "scriptworker/test/data/ed25519/generic-worker_private_key",
+      "scriptworker/test/data/ed25519/generic-worker_public_key",
+      "scriptworker/test/data/ed25519/scriptworker_private_key",
+      "scriptworker/test/data/ed25519/scriptworker_public_key",
+      "scriptworker/test/data/good.json",
+      "scriptworker/test/data/no_creds.json",
+      "scriptworker/test/test_cot_generate.py",
+      "scriptworker/test/test_cot_verify.py",
+      "scriptworker/test/test_ed25519.py",
+      "scriptworker/test/test_integration.py",
+      "scriptworker/test/test_utils.py",
+      "scriptworker/test/test_worker.py",
+      "scriptworker/utils.py",
+      "scriptworker/version.py",
+      "setup.py",
       "version.json"
     ]
   },
   "6": {
-    "sha": "c27296959436eaa43b2fe11dfffb07eac3ee1273",
-    "url": "https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273",
-    "commiter_name": "JohanLorenzo",
+    "sha": "4a8f0b2c415117e59bf5e98debedd39fccb53b15",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/4a8f0b2c415117e59bf5e98debedd39fccb53b15",
+    "commiter_name": "escapewindow",
     "commiter_email": null,
-    "commit_message": "Bug 1529990 - Fix Mobile bustage",
-    "commit_date": "2019-02-22 18:49:14",
+    "commit_message": "22.0.0",
+    "commit_date": "2019-03-07 19:29:46",
     "files_changed": [
-      "scriptworker/constants.py",
-      "scriptworker/cot/verify.py",
-      "scriptworker/github.py",
-      "scriptworker/task.py",
-      "scriptworker/test/test_cot_verify.py",
-      "scriptworker/test/test_github.py",
-      "scriptworker/test/test_task.py",
-      "scriptworker/test/test_utils.py",
-      "scriptworker/utils.py"
+      "CHANGELOG.md",
+      "requirements/base.in",
+      "requirements/base.txt",
+      "requirements/test.txt",
+      "scriptworker/version.py",
+      "setup.py",
+      "version.json"
     ]
   },
   "7": {
@@ -414,6 +428,99 @@
     ]
   },
   "27": {
+    "sha": "58768476d7b5eeef969e67eb42cb01ac0d9ee117",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "21.0.0",
+    "commit_date": "2019-03-05 14:17:09",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.json"
+    ]
+  },
+  "28": {
+    "sha": "c27296959436eaa43b2fe11dfffb07eac3ee1273",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Bug 1529990 - Fix Mobile bustage",
+    "commit_date": "2019-02-22 18:49:14",
+    "files_changed": [
+      "scriptworker/constants.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/github.py",
+      "scriptworker/task.py",
+      "scriptworker/test/test_cot_verify.py",
+      "scriptworker/test/test_github.py",
+      "scriptworker/test/test_task.py",
+      "scriptworker/test/test_utils.py",
+      "scriptworker/utils.py"
+    ]
+  },
+  "29": {
+    "sha": "58768476d7b5eeef969e67eb42cb01ac0d9ee117",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "21.0.0",
+    "commit_date": "2019-03-05 14:17:09",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.json"
+    ]
+  },
+  "30": {
+    "sha": "c27296959436eaa43b2fe11dfffb07eac3ee1273",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Bug 1529990 - Fix Mobile bustage",
+    "commit_date": "2019-02-22 18:49:14",
+    "files_changed": [
+      "scriptworker/constants.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/github.py",
+      "scriptworker/task.py",
+      "scriptworker/test/test_cot_verify.py",
+      "scriptworker/test/test_github.py",
+      "scriptworker/test/test_task.py",
+      "scriptworker/test/test_utils.py",
+      "scriptworker/utils.py"
+    ]
+  },
+  "31": {
+    "sha": "58768476d7b5eeef969e67eb42cb01ac0d9ee117",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "21.0.0",
+    "commit_date": "2019-03-05 14:17:09",
+    "files_changed": [
+      "CHANGELOG.md",
+      "version.json"
+    ]
+  },
+  "32": {
+    "sha": "c27296959436eaa43b2fe11dfffb07eac3ee1273",
+    "url": "https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273",
+    "commiter_name": "JohanLorenzo",
+    "commiter_email": null,
+    "commit_message": "Bug 1529990 - Fix Mobile bustage",
+    "commit_date": "2019-02-22 18:49:14",
+    "files_changed": [
+      "scriptworker/constants.py",
+      "scriptworker/cot/verify.py",
+      "scriptworker/github.py",
+      "scriptworker/task.py",
+      "scriptworker/test/test_cot_verify.py",
+      "scriptworker/test/test_github.py",
+      "scriptworker/test/test_task.py",
+      "scriptworker/test/test_utils.py",
+      "scriptworker/utils.py"
+    ]
+  },
+  "33": {
     "sha": "dc088bae7a6ec942969b1e4a7f1180698a399153",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/dc088bae7a6ec942969b1e4a7f1180698a399153",
     "commiter_name": "escapewindow",
@@ -428,7 +535,7 @@
       "version.json"
     ]
   },
-  "28": {
+  "34": {
     "sha": "ef10d250243e4879ed481c12a97f8ffaa6ec301d",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/ef10d250243e4879ed481c12a97f8ffaa6ec301d",
     "commiter_name": "MihaiTabara",
@@ -440,7 +547,7 @@
       "version.json"
     ]
   },
-  "29": {
+  "35": {
     "sha": "b6c1f101819d6f73059b935d4e2b46403bf07efa",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/b6c1f101819d6f73059b935d4e2b46403bf07efa",
     "commiter_name": "JohanLorenzo",
@@ -454,7 +561,7 @@
       "scriptworker/test/test_task.py"
     ]
   },
-  "30": {
+  "36": {
     "sha": "1492109d31f3075d27b44cd321b9cd267e1f8709",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/1492109d31f3075d27b44cd321b9cd267e1f8709",
     "commiter_name": "escapewindow",
@@ -467,7 +574,7 @@
       "version.json"
     ]
   },
-  "31": {
+  "37": {
     "sha": "b6c1f101819d6f73059b935d4e2b46403bf07efa",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/b6c1f101819d6f73059b935d4e2b46403bf07efa",
     "commiter_name": "JohanLorenzo",
@@ -481,7 +588,7 @@
       "scriptworker/test/test_task.py"
     ]
   },
-  "32": {
+  "38": {
     "sha": "1492109d31f3075d27b44cd321b9cd267e1f8709",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/1492109d31f3075d27b44cd321b9cd267e1f8709",
     "commiter_name": "escapewindow",
@@ -494,7 +601,7 @@
       "version.json"
     ]
   },
-  "33": {
+  "39": {
     "sha": "453af4e8c6b243058cc29ef9e85b4c450715489e",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/453af4e8c6b243058cc29ef9e85b4c450715489e",
     "commiter_name": "escapewindow",
@@ -505,7 +612,7 @@
       "scriptworker/cot/verify.py"
     ]
   },
-  "34": {
+  "40": {
     "sha": "a5f8d14be2f56daa39d8d3518cf18e3d7ac95792",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/a5f8d14be2f56daa39d8d3518cf18e3d7ac95792",
     "commiter_name": "djmitche",
@@ -516,7 +623,7 @@
       "scriptworker/cot/verify.py"
     ]
   },
-  "35": {
+  "41": {
     "sha": "a86e056c8526238d690bd31a323d7adec6d13cb7",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/a86e056c8526238d690bd31a323d7adec6d13cb7",
     "commiter_name": "escapewindow",
@@ -552,7 +659,7 @@
       "version.json"
     ]
   },
-  "36": {
+  "42": {
     "sha": "c8c416e70e3e796449c639876a9dd12307829512",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/c8c416e70e3e796449c639876a9dd12307829512",
     "commiter_name": "escapewindow",
@@ -567,7 +674,7 @@
       "version.json"
     ]
   },
-  "37": {
+  "43": {
     "sha": "b71d1aafd9db05f3ee8e917af7faba5c92ae6881",
     "url": "https://github.com/mozilla-releng/scriptworker/commit/b71d1aafd9db05f3ee8e917af7faba5c92ae6881",
     "commiter_name": "escapewindow",

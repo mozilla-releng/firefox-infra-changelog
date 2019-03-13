@@ -1,7 +1,13 @@
-## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-02-27 06:25:29.599225
+## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-02-27 16:50:04.288622
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|43|JohanLorenzo|22.0.1|[URL](https://github.com/mozilla-releng/scriptworker/commit/4e9b5817085acbd7c2d75292d9b6f84ef90f6561)|2019-03-13 12:57:58
+|42|JohanLorenzo|[Bug 1534694 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534694) - Allow snapcraft beta scope on mozilla-release|[URL](https://github.com/mozilla-releng/scriptworker/commit/f01e70d2649055f2fda310e68bf8a06f8410b4b5)|2019-03-13 09:57:44
+|41|escapewindow|Merge pull request #314 from escapewindow/slugid-ascii fix integration tests for taskcluster-client.py>=7.0.0 and slugid>=2.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/83840ad6360d82346a9cca531c8c2e2b939d63c3)|2019-03-08 22:28:55
+|40|escapewindow|fix integration tests for taskcluster-client.py>=7.0.0 and slugid>=2.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/213d98bc222ba50c557eb16b2d3a49e17bddd17a)|2019-03-08 20:07:25
+|39|escapewindow|Merge pull request #294 from escapewindow/ed25519 [Bug 1492617 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1492617) - Add ed25519 signature support to cot|[URL](https://github.com/mozilla-releng/scriptworker/commit/d216c9d074385a457fe645dce996c369b25a1ef9)|2019-03-07 20:14:48
+|38|escapewindow|22.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/4a8f0b2c415117e59bf5e98debedd39fccb53b15)|2019-03-07 19:29:46
 |37|JohanLorenzo|21.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|2019-03-05 14:17:09
 |36|JohanLorenzo|[Bug 1529990 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529990) - Fix Mobile bustage|[URL](https://github.com/mozilla-releng/scriptworker/commit/c27296959436eaa43b2fe11dfffb07eac3ee1273)|2019-02-22 18:49:14
 |35|JohanLorenzo|21.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/58768476d7b5eeef969e67eb42cb01ac0d9ee117)|2019-03-05 14:17:09

@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-27 06:25:29.599225
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-27 16:50:04.288622
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|619|iFlameing|[UI] Add a sign-in button in the app bar (#280)|[URL](https://github.com/taskcluster/taskcluster/commit/6ada7a7519e5e8ff2b79199ca9635df795ff1d97)|2019-03-13 12:45:22
+|618|helfi92|[UI] Add ability to filter tasks in Task Group view (#402)|[URL](https://github.com/taskcluster/taskcluster/commit/30f608da6b986704254e06db98bef36c98bee2a8)|2019-03-13 12:07:31
 |617|imbstack|Merge pull request #403 from djmitche/fix-auth-with-entities Fix auth with entities|[URL](https://github.com/taskcluster/taskcluster/commit/77a29a619acc7911cb868ce5ec99656143348399)|2019-03-13 00:29:28
 |616|djmitche|Don't try to cleanup when skipping a suite|[URL](https://github.com/taskcluster/taskcluster/commit/b4bc6d18182edacf39d6ee9d3133f35b084fc336)|2019-03-12 23:58:14
 |615|djmitche|Await async `cleanup`|[URL](https://github.com/taskcluster/taskcluster/commit/4d8902739396cccc7dce1f67b8156bae12edaf54)|2019-03-12 23:57:59
