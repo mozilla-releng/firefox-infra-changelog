@@ -1,7 +1,13 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-26 22:53:32.267911
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-27 06:25:29.599225
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|617|imbstack|Merge pull request #403 from djmitche/fix-auth-with-entities Fix auth with entities|[URL](https://github.com/taskcluster/taskcluster/commit/77a29a619acc7911cb868ce5ec99656143348399)|2019-03-13 00:29:28
+|616|djmitche|Don't try to cleanup when skipping a suite|[URL](https://github.com/taskcluster/taskcluster/commit/b4bc6d18182edacf39d6ee9d3133f35b084fc336)|2019-03-12 23:58:14
+|615|djmitche|Await async `cleanup`|[URL](https://github.com/taskcluster/taskcluster/commit/4d8902739396cccc7dce1f67b8156bae12edaf54)|2019-03-12 23:57:59
+|614|djmitche|Fix logic for when to call ensureTable booleanz r hard|[URL](https://github.com/taskcluster/taskcluster/commit/3e1eb69c6ca7bfc900dc22359de266abdc44fafa)|2019-03-12 23:57:25
+|613|imbstack|Merge pull request #400 from taskcluster/email-on-failure-step-1 Send notification on failures/exceptions in master|[URL](https://github.com/taskcluster/taskcluster/commit/fc2bcb62405c316562836420a6ac27e7bf6731e6)|2019-03-12 21:57:20
+|612|imbstack|Send notification on failures/exceptions in master|[URL](https://github.com/taskcluster/taskcluster/commit/7cde0781b0280a87008540b9164a357416347c25)|2019-03-12 17:47:29
 |611|helfi92|Remove nav from tutorial section (#398) Rely on "Next Steps" instead of next/previous pages. Also added a path property from root nodes (https://github.com/taskcluster/taskcluster/issues/397)|[URL](https://github.com/taskcluster/taskcluster/commit/8656c170c15d233736eda04c0f5b68c56c42bcb8)|2019-03-12 18:37:10
 |610|helfi92|Enhance fontSize for <pre /> element in docs (#399)|[URL](https://github.com/taskcluster/taskcluster/commit/7fafa6e5659f75688201ba36b5fdba614a976607)|2019-03-12 18:36:56
 |609|helfi92|[UI] Add proper theming to "Next Steps" section in docs (#396) Add proper theming to "Next Steps" section in docs Run `yarn generate`|[URL](https://github.com/taskcluster/taskcluster/commit/de83d81391d9f1ae446cb86b386bc0810998b830)|2019-03-12 15:29:07

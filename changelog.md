@@ -1,10 +1,13 @@
-##  Commits in production - for 3 days, generated on: 2019-03-12 20:54:31 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-13 04:26:32 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=01aa96181b7b)|[Bug 1498721 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1498721) - Disable Java code coverage on Android r=gbrown This is due to an incompatability somewhere between JaCoCo and default interface methods. Depends on D23016 Differential Revision: https://phabricator.services.mozilla.com/D23017|jwillcox@mozilla.com|gbrown|2019-03-12 20:57:29|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d410e91f3699)|[Bug 1534500 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534500) - Allow to configure diffoscope tasks that fail when they detect differences. r=dustin Differential Revision: https://phabricator.services.mozilla.com/D23073|mh@glandium.org|dustin|2019-03-13 01:14:44|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fc4d0ac00822)|[Bug 1534500 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534500) - Allow diffoscope tasks to work on unpacked builds. r=dustin Depends on D23073 Differential Revision: https://phabricator.services.mozilla.com/D23074|mh@glandium.org|dustin|2019-03-13 01:14:44|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=01712a69cb39)|[Bug 1534500 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534500) - Allow diffoscope tasks to run commands before running the diff. r=dustin Depends on D23074 Differential Revision: https://phabricator.services.mozilla.com/D23075|mh@glandium.org|dustin|2019-03-13 01:14:44|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3d4efdb98e8a)|[Bug 1534500 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534500) - Run get_and_diffoscope with bash. r=dustin This will allow to use bash constructs in pre-diff-commands, like `{a,b}`. Depends on D23075 Differential Revision: https://phabricator.services.mozilla.com/D23076|mh@glandium.org|dustin|2019-03-13 01:14:44|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e5dbbdb10f3)|[Bug 1490048 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1490048) - add cranelift to raptor wasm-misc and wasm-godot tests. r=bbouvier,rwood add cranelift to raptor wasm-misc and wasm-godot tests. Differential Revision: https://phabricator.services.mozilla.com/D23144|jmaher@mozilla.com|bbouvier,rwood|2019-03-12 16:43:44|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=18fa4e4ce035)|[Bug 1529207 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529207) - Add new Raptor tests in tp6m-4 r=davehunt,rwood Differential Revision: https://phabricator.services.mozilla.com/D20852|fstrugariu@mozilla.com|davehunt,rwood|2019-03-12 14:02:49|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee2473319e97)|Backed out changeset 423f48c98230 (bug 1533391) for failing try test on a CLOSED TREE|apavel@mozilla.com||2019-03-11 17:04:14|
@@ -48,14 +51,18 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=18fa4e4ce035)|[Bug 1529207 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529207) - Add new Raptor tests in tp6m-4 r=davehunt,rwood Differential Revision: https://phabricator.services.mozilla.com/D20852|btara@mozilla.com|davehunt,rwood|2019-03-12 18:08:08|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4e5dbbdb10f3)|[Bug 1490048 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1490048) - add cranelift to raptor wasm-misc and wasm-godot tests. r=bbouvier,rwood add cranelift to raptor wasm-misc and wasm-godot tests. Differential Revision: https://phabricator.services.mozilla.com/D23144|nbeleuzu@mozilla.com|bbouvier,rwood|2019-03-12 23:43:52|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=eba70db52fa5)|[Bug 1493948 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1493948) - Package binary of geckodriver into its own artifact. r=jlorenzo This task extracts the binary of geckodriver from the common test package and stores it into its own artifact. For now this task is only run after Nightly build tasks on supported platforms.. Differential Revision: https://phabricator.services.mozilla.com/D23094|nbeleuzu@mozilla.com|jlorenzo|2019-03-12 23:43:52|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=01aa96181b7b)|[Bug 1498721 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1498721) - Disable Java code coverage on Android r=gbrown This is due to an incompatability somewhere between JaCoCo and default interface methods. Depends on D23016 Differential Revision: https://phabricator.services.mozilla.com/D23017|nbeleuzu@mozilla.com|gbrown|2019-03-12 23:43:52|
 
 |	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=18fa4e4ce035)|[Bug 1529207 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529207) - Add new Raptor tests in tp6m-4 r=davehunt,rwood Differential Revision: https://phabricator.services.mozilla.com/D20852|btara@mozilla.com|davehunt,rwood|2019-03-12 18:13:20|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4e5dbbdb10f3)|[Bug 1490048 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1490048) - add cranelift to raptor wasm-misc and wasm-godot tests. r=bbouvier,rwood add cranelift to raptor wasm-misc and wasm-godot tests. Differential Revision: https://phabricator.services.mozilla.com/D23144|nbeleuzu@mozilla.com|bbouvier,rwood|2019-03-12 23:48:50|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=eba70db52fa5)|[Bug 1493948 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1493948) - Package binary of geckodriver into its own artifact. r=jlorenzo This task extracts the binary of geckodriver from the common test package and stores it into its own artifact. For now this task is only run after Nightly build tasks on supported platforms.. Differential Revision: https://phabricator.services.mozilla.com/D23094|nbeleuzu@mozilla.com|jlorenzo|2019-03-12 23:48:50|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=01aa96181b7b)|[Bug 1498721 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1498721) - Disable Java code coverage on Android r=gbrown This is due to an incompatability somewhere between JaCoCo and default interface methods. Depends on D23016 Differential Revision: https://phabricator.services.mozilla.com/D23017|nbeleuzu@mozilla.com|gbrown|2019-03-12 23:48:50|
 
 |	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -390,6 +397,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/b1ea7495d21c0bb6c6e8f097012cc6a33cc3cbd1)|Bug 1533589: [win64-aarch64] Add missing support for for win64-aarch64 devedition builds. (#426)|tomprince|N/A|2019-03-12 22:54:10|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/3cfc19e13a2e11bb3cc34084fefa6e8af65b9fdf)|Bump versions to enable shipit v2 submissions (#419)|rail|N/A|2019-03-11 16:16:08|
 
 |	mozapkpublisher	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/mozapkpublisher.json)	| 
@@ -460,6 +468,12 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/77a29a619acc7911cb868ce5ec99656143348399)|Merge pull request #403 from djmitche/fix-auth-with-entities  Fix auth with entities|imbstack|N/A|2019-03-13 00:29:28|
+|[Link](https://github.com/taskcluster/taskcluster/commit/b4bc6d18182edacf39d6ee9d3133f35b084fc336)|Don't try to cleanup when skipping a suite|djmitche|N/A|2019-03-12 23:58:14|
+|[Link](https://github.com/taskcluster/taskcluster/commit/4d8902739396cccc7dce1f67b8156bae12edaf54)|Await async `cleanup`|djmitche|N/A|2019-03-12 23:57:59|
+|[Link](https://github.com/taskcluster/taskcluster/commit/3e1eb69c6ca7bfc900dc22359de266abdc44fafa)|Fix logic for when to call ensureTable  booleanz r hard|djmitche|N/A|2019-03-12 23:57:25|
+|[Link](https://github.com/taskcluster/taskcluster/commit/fc2bcb62405c316562836420a6ac27e7bf6731e6)|Merge pull request #400 from taskcluster/email-on-failure-step-1  Send notification on failures/exceptions in master|imbstack|N/A|2019-03-12 21:57:20|
+|[Link](https://github.com/taskcluster/taskcluster/commit/7cde0781b0280a87008540b9164a357416347c25)|Send notification on failures/exceptions in master|imbstack|N/A|2019-03-12 17:47:29|
 |[Link](https://github.com/taskcluster/taskcluster/commit/8656c170c15d233736eda04c0f5b68c56c42bcb8)|Remove nav from tutorial section (#398)  Rely on "Next Steps" instead of next/previous pages.  Also added a path property from root nodes  (https://github.com/taskcluster/taskcluster/issues/397)|helfi92|N/A|2019-03-12 18:37:10|
 |[Link](https://github.com/taskcluster/taskcluster/commit/7fafa6e5659f75688201ba36b5fdba614a976607)|Enhance fontSize for <pre /> element in docs (#399)|helfi92|N/A|2019-03-12 18:36:56|
 |[Link](https://github.com/taskcluster/taskcluster/commit/de83d81391d9f1ae446cb86b386bc0810998b830)|[UI] Add proper theming to "Next Steps" section in docs (#396)    Add proper theming to "Next Steps" section in docs      Run `yarn generate`|helfi92|N/A|2019-03-12 15:29:07|

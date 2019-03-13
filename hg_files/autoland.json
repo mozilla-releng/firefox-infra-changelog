@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80326
+    "last_push_id": 80358
   },
   "1": {
     "changeset_number": "35344",
@@ -35630,23 +35630,6 @@
     }
   },
   "719": {
-    "changeset_number": "80284",
-    "pusher": "hskupin@mozilla.com",
-    "date_of_push": "2019-03-12 17:42:44",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=eba70db52fa5",
-        "commiter_name": "Henrik Skupin <mail@hskupin.info>",
-        "commit_message": "Bug 1493948 - Package binary of geckodriver into its own artifact. r=jlorenzo\n\nThis task extracts the binary of geckodriver from the\ncommon test package and stores it into its own artifact.\nFor now this task is only run after Nightly build tasks\non supported platforms..\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23094",
-        "files_changed": [
-          "taskcluster/ci/config.yml",
-          "taskcluster/ci/geckodriver-repack/kind.yml",
-          "taskcluster/docs/kinds.rst"
-        ]
-      }
-    }
-  },
-  "719": {
     "changeset_number": "80309",
     "pusher": "jwillcox@mozilla.com",
     "date_of_push": "2019-03-12 20:57:29",
@@ -35657,6 +35640,48 @@
         "commit_message": "Bug 1498721 - Disable Java code coverage on Android r=gbrown\n\nThis is due to an incompatability somewhere between JaCoCo and\ndefault interface methods.\n\nDepends on D23016\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23017",
         "files_changed": [
           "taskcluster/ci/test/test-platforms.yml"
+        ]
+      }
+    }
+  },
+  "719": {
+    "changeset_number": "80341",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-13 01:14:44",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d410e91f3699",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1534500 - Allow to configure diffoscope tasks that fail when they detect differences. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23073",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/get_and_diffoscope",
+          "taskcluster/taskgraph/transforms/diffoscope.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fc4d0ac00822",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1534500 - Allow diffoscope tasks to work on unpacked builds. r=dustin\n\nDepends on D23073\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23074",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/get_and_diffoscope",
+          "taskcluster/taskgraph/transforms/diffoscope.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=01712a69cb39",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1534500 - Allow diffoscope tasks to run commands before running the diff. r=dustin\n\nDepends on D23074\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23075",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/get_and_diffoscope",
+          "taskcluster/taskgraph/transforms/diffoscope.py"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3d4efdb98e8a",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1534500 - Run get_and_diffoscope with bash. r=dustin\n\nThis will allow to use bash constructs in pre-diff-commands, like\n`{a,b}`.\n\nDepends on D23075\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23076",
+        "files_changed": [
+          "taskcluster/docker/diffoscope/get_and_diffoscope"
         ]
       }
     }
