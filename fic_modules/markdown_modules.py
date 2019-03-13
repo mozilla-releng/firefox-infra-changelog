@@ -128,11 +128,12 @@ def create_md_table_for_scriptworkers(repository_name):
         create_git_md_table(scriptworker_repo, "git_files")
 
 
-def generate_main_md_table(repositories_holder, days_to_generate):
+def generate_main_md_table(repositories_holder, which_repo, days_to_generate):
     """
     Looks into repositories folders (hg_files & git files),
     filters the files to load the json's using a passfilter and calls after
     extraction functions.
+    :param which_repo: tells the function for which repo to update the md
     :param days_to_generate: just a pass by parameter, used in extract json
     from git/hg and generates for the specified days.
     :param repositories_holder: repositories
@@ -140,15 +141,17 @@ def generate_main_md_table(repositories_holder, days_to_generate):
     from fic_modules.git import extract_json_from_git
     successfully_generated = "part from main markdown table was " \
                              "successfully generated."
-
-    for repository in repositories_holder.get("Github"):
-        extract_json_from_git(repository, days_to_generate)
+    if which_repo == "complete" or which_repo == "Git":
+        extract_json_from_git(repositories_holder.get("Github"), days_to_generate)
         LOGGER.info("GIT %s", successfully_generated)
-    for repository in repositories_holder.get("Mercurial"):
-        extract_json_from_hg(repository, days_to_generate)
+    else:
+        LOGGER.error("No Git table was generated!")
+
+    if which_repo == "complete" or which_repo == "Hg":
+        extract_json_from_hg(repositories_holder.get("Mercurial"), days_to_generate)
         LOGGER.info("HG %s", successfully_generated)
     else:
-        LOGGER.error("No table was generated!")
+        LOGGER.error("No HG table was generated!")
 
 
 def write_date_header(file_name, datetime_object):
@@ -323,7 +326,7 @@ def write_main_md_table(file_name, repository_url, last_commit, author,
           "|" + last_commit + \
           "|" + author + \
           "|" + reviewer + \
-          "|" + deploy_time + \
+          "|" + str(deploy_time) + \
           "|" + "\n"
     write_file = open(file_name, "a")
     write_file.write(row)
