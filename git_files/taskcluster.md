@@ -1,7 +1,18 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-28 15:30:08.941224
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-28 18:35:30.681991
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|639|djmitche|Merge pull request #401 from djmitche/bug1534711 [Bug 1534711 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534711) - pass rootUrl when initializing tc-client|[URL](https://github.com/taskcluster/taskcluster/commit/30b0df982fea72978e82f948df607e0b117535cb)|2019-03-14 16:32:44
+|638|djmitche|Merge pull request #418 from djmitche/hobgoblin A foolish consistency|[URL](https://github.com/taskcluster/taskcluster/commit/ffbf74b9acc0de086f195b924dea00afb152d061)|2019-03-14 16:32:22
+|637|djmitche|Merge pull request #423 from djmitche/remove-update-apis remove unnecessary update-apis.js|[URL](https://github.com/taskcluster/taskcluster/commit/578ea1d5bd02b24b9bba626fc2b835dcb24c9602)|2019-03-14 16:31:56
+|636|helfi92|Merge pull request #420 from helfi92/remove-console-warnings [UI] Remove console warnings from Task Group|[URL](https://github.com/taskcluster/taskcluster/commit/6176d72fd5bd1f5d24f499707142924bae331a13)|2019-03-14 15:51:23
+|635|djmitche|be consistent in putting source code in src/|[URL](https://github.com/taskcluster/taskcluster/commit/291123693f217fdff7602899dc298dbbe601b62b)|2019-03-14 00:02:29
+|634|helfi92|Nit|[URL](https://github.com/taskcluster/taskcluster/commit/00de4b944b6de0635d8d2c615c278a7b13cc3c47)|2019-03-14 15:44:01
+|633|djmitche|use src/api.js for the API everywhere|[URL](https://github.com/taskcluster/taskcluster/commit/dd532cadba6cb4b464d8dd8f36ddcf4f3005a0a5)|2019-03-14 00:00:08
+|632|helfi92|Remove AnchorOrLink. Add logic in utils/Link instead|[URL](https://github.com/taskcluster/taskcluster/commit/25888f1839e95d127cf021d90458b4eae5c20a22)|2019-03-14 15:09:07
+|631|helfi92|Remove console warnings from group view|[URL](https://github.com/taskcluster/taskcluster/commit/a808db32ac5bc90ba64107b580a5f66f97f4a917)|2019-03-14 14:43:11
+|630|helfi92|Merge pull request #416 from helfi92/tab-focus [UI] WIP - Add focus state (accessibility)|[URL](https://github.com/taskcluster/taskcluster/commit/911b6a44baac1f44a10edbcf7d5dbdf47b98ca45)|2019-03-14 13:52:11
+|629|helfi92|Make a list item button react to the focus state|[URL](https://github.com/taskcluster/taskcluster/commit/c69d55cafa4eab7be1cde473ff1293e388c7ff54)|2019-03-14 13:32:22
 |628|helfi92|Merge pull request #414 from helfi92/hooks-not-displaying [UI] Fix: Hooks not displaying|[URL](https://github.com/taskcluster/taskcluster/commit/6dfebd222dbf1c82109f4ce6a496f0960d2e02d5)|2019-03-14 01:17:04
 |627|helfi92|[UI] Link styling in ErrorPanel (#415) Link styling in ErrorPanel The ErrorPanel uses markdown internally. Nit: linting|[URL](https://github.com/taskcluster/taskcluster/commit/00c11bf4862ea67cea3514a5c5f87f4e080c93ef)|2019-03-13 20:46:56
 |626|helfi92|Make hook.graphql expect an object for the task property|[URL](https://github.com/taskcluster/taskcluster/commit/8c0ea4462f5fe6a9f27d35042b60e6460f2d50a3)|2019-03-13 18:54:10
