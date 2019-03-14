@@ -14,6 +14,29 @@ from fic_modules.configuration import (
 from datetime import datetime
 
 
+def generate_repository_url(repository_type, repository_name, link_type):
+    """
+    This function generates the URL for one repository. (best used in a loop)
+    Example:
+        generate_repository_url("git_files", "OpenCloudConfig", "json")
+    Should throw:
+        https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/
+        git_files/OpenCloudConfig.json
+    :param link_type: can be json or hg
+    :param repository_name: name of the repository
+    :param repository_type: "git_files" or "hg_files"
+    :return: a string that contains a link with either json file or md file.
+    """
+    base_link = "https://github.com/mozilla-releng/firefox-infra-" \
+                "changelog/blob/master/"
+    link = base_link + repository_type + "/" + repository_name
+    if link_type == "json":
+        link = link + ".json"
+    else:
+        link = link + ".md"
+    return link
+
+
 def compare_files(first_list, second_list):
     """
     Compares two lists that should contain the path + filename of the modified

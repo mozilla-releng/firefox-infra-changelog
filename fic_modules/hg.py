@@ -209,60 +209,51 @@ def json_writer_hg(repository_name, new_commits):
         json_file.close()
 
 
-def extract_json_from_hg(json_files, path_to_files, days_to_generate):
+def extract_json_from_hg(repo_name, days_to_generate):
     """
     Extracts the json data from json files and writes the data to the main
     markdown table file.
     The function looks into json files after the last commit, extracts it and
     calls the write_main_md_table function.
     :param days_to_generate:
-    :param json_files: List of files to extract commits from.
-    :param path_to_files: Folder to json files
+    :param repo_name:
     :return: none
     """
     from fic_modules.markdown_modules import generate_markdown_header,\
         write_main_md_table
-    time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
-    test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
-    time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
+    from fic_modules.helper_functions import generate_repository_url
 
-    for file in json_files:
-        count_pushes = 0
-        file_path = "{}/".format(path_to_files) + file
-        with open(file_path) as json_file:
-            data = json.load(json_file)
-            base_link = "https://github.com/mozilla-releng/firefox-infra-" \
-                        "changelog/blob/master/{}/"\
-                        .format(path_to_files)
-            repository_url = base_link + file \
-                .rstrip() \
-                .replace(" ", "%20") \
-                .rstrip() \
-                .replace(".json", ".md")
-            repository_json = base_link + file \
-                .rstrip() \
-                .replace(" ", "%20")
-            repository_title = file.replace(".json", "")
+    nr_days_ago = datetime.utcnow() - timedelta(days=days_to_generate)
+    # nr_days_ago = datetime.strftime(nr_days_ago, "%Y-%m-%d %H:%M:%S")
+
+    with open("./changelog.json") as json_file:
+        data = json.load(json_file)
+
+        for repo_name in repo_name:
+            repository_url = generate_repository_url("hg_files", repo_name, "md")
+            repository_json = generate_repository_url("hg_files", repo_name, "json")
 
             try:
                 generate_markdown_header("changelog.md",
-                                         repository_title,
+                                         repo_name,
                                          repository_url,
                                          repository_json)
-                if "0" in data:
-                    del data["0"]
-                for changeset_iterator in sorted(data, reverse=True):
-                    for commit_iterator in data\
+                count_pushes = 0
+                for changeset_iterator in data.get("Hg").get(repo_name):
+                    for commit_iterator in data.get("Hg").get(repo_name) \
                             .get(changeset_iterator)\
                             .get("changeset_commits"):
-                        commit_date = data\
+                        commit_date = data.get("Hg").get(repo_name) \
                             .get(changeset_iterator)\
                             .get("date_of_push")
-                        is_it_under_24 = datetime.strptime(commit_date,
-                                                           "%Y-%m-%d %H:%M:%S")
-                        if is_it_under_24 > time_24h_ago:
+                        commit_date = datetime.strptime(commit_date,
+                                                        "%Y-%m-%d %H:%M:%S")
+
+                        if commit_date > nr_days_ago:
                             count_pushes = count_pushes + 1
-                            commit_description = data.get(changeset_iterator) \
+                            commit_description = data.get("Hg")\
+                                .get(repo_name)\
+                                .get(changeset_iterator) \
                                 .get("changeset_commits") \
                                 .get(commit_iterator) \
                                 .get("commit_message")
@@ -270,12 +261,16 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
                                 remove_chars(commit_description, "\n")
                             commit_description = \
                                 replace_bug_with_url(commit_description, LOGGER)
-                            commit_url = data.get(changeset_iterator) \
+                            commit_url = data.get("Hg").get(repo_name)\
+                                .get(changeset_iterator) \
                                 .get("changeset_commits") \
                                 .get(commit_iterator) \
                                 .get("url")
                             commit_url = "[Link](" + commit_url + ")"
-                            author = data.get(changeset_iterator).get("pusher")
+                            author = data.get("Hg")\
+                                .get(repo_name)\
+                                .get(changeset_iterator)\
+                                .get("pusher")
                             review = extract_reviewer(commit_description)
                             write_main_md_table("changelog.md",
                                                 commit_url,
@@ -310,7 +305,7 @@ def extract_json_from_hg(json_files, path_to_files, days_to_generate):
             except AttributeError:
                 LOGGER.exception("Attribute Error!! \n Probable issue is a "
                                  "malfunctioned json file.. Please check the "
-                                 "following file: %s", file)
+                                 "following file: %s", repo_name)
             except KeyError:
                 LOGGER.exception("File %s is empty. Please check: %s for more "
-                                 "details.", file, repository_url)
+                                 "details.", repo_name, repository_url)

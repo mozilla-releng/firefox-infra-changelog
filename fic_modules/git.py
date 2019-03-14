@@ -89,10 +89,10 @@ def create_files_for_git(repositories_holder, onerepo):
             .get("type")
         LOGGER.info("Working on repo: {}".format(repositories_holder))
         folders_to_check = [folder for folder in REPOSITORIES
-                            .get("Github")
-                            .get(repositories_holder)
-                            .get("configuration")
-                            .get("folders-to-check")]
+            .get("Github")
+            .get(repositories_holder)
+            .get("configuration")
+            .get("folders-to-check")]
         filter_git_commit_data(repositories_holder,
                                repository_team,
                                repository_type,
@@ -122,10 +122,10 @@ def create_files_for_git(repositories_holder, onerepo):
                 .get("type")
             LOGGER.info("Working on repo: {}".format(repository_name))
             folders_to_check = [folder for folder in repositories_holder
-                                .get("Github")
-                                .get(repo)
-                                .get("configuration")
-                                .get("folders-to-check")]
+                .get("Github")
+                .get(repo)
+                .get("configuration")
+                .get("folders-to-check")]
             filter_git_commit_data(repository_name,
                                    repository_team,
                                    repository_type,
@@ -167,7 +167,7 @@ def filter_git_tag_bp(repository_name, repository_path):
 
     if limit_checker():
         new_commits = GIT.get_repo(repository_path) \
-                         .get_commits(since=last_checked)
+            .get_commits(since=last_checked)
 
     for commit in new_commits:
         each_commit = {}
@@ -442,7 +442,7 @@ def filter_git_no_tag(repository_name, repository_path, folders_to_check):
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     if limit_checker():
         new_commits = GIT.get_repo(repository_path) \
-                         .get_commits(since=last_checked)
+            .get_commits(since=last_checked)
 
     for commit in new_commits:
         each_commit = {}
@@ -480,7 +480,7 @@ def filter_git_commit_keyword(repository_name, repository_path):
     new_commit_dict = {"0": {"lastChecked": str(datetime.utcnow())}}
     if limit_checker():
         new_commits = GIT.get_repo(repository_path) \
-                         .get_commits(since=last_checked)
+            .get_commits(since=last_checked)
 
     for commit in new_commits:
         files_changed_by_commit = [x.filename for x in commit.files]
@@ -518,61 +518,64 @@ def compare_versions(version_path, scriptworker_repo, latest_releases):
         return True
 
 
-def extract_json_from_git(json_files, path_to_files, days_to_generate):
+def extract_json_from_git(repository, days_to_generate):
     """
     Extracts the json data from json files and writes the data to the main
     markdown table file.
     The function looks into json files after the last commit, extracts it and
     calls the write_main_md_table function.
     :param days_to_generate:
-    :param json_files: List of files to extract commits from.
-    :param path_to_files: Folder to json files
+    :param repository:
     :return: none
     """
+    from fic_modules.markdown_modules import generate_markdown_header, \
+        write_main_md_table
+    from fic_modules.helper_functions import generate_repository_url
 
-    time_24h_ago = datetime.utcnow() - timedelta(days=days_to_generate)
-    test = datetime.strftime(time_24h_ago, "%Y-%m-%d %H:%M:%S")
-    time_24h_ago = datetime.strptime(test, "%Y-%m-%d %H:%M:%S")
+    nr_days_ago = datetime.utcnow() - timedelta(days=days_to_generate)
 
-    for file in json_files:
-        file_path = "{}/".format(path_to_files) + file
-        count_pushes = 0
-        with open(file_path) as json_file:
-            data = json.load(json_file)
-            base_link = "https://github.com/mozilla-releng/firefox-infra-" \
-                        "changelog/blob/master/{}/" \
-                        .format(path_to_files)
-            repository_url = base_link + file \
-                .rstrip() \
-                .replace(" ", "%20") \
-                .rstrip() \
-                .replace(".json", ".md")
-            repository_json = base_link + file \
-                .rstrip() \
-                .replace(" ", "%20")
-            repository_title = file.replace(".json", "")
+    count_pushes = 0
+    with open("./changelog.json") as json_file:
+        data = json.load(json_file)
+
+        for repo in repository:
+            repository_url = generate_repository_url("git_files", repo, "json")
+            repository_json = generate_repository_url("git_files", repo, "md")
+
             try:
                 generate_markdown_header("changelog.md",
-                                         repository_title,
+                                         repo,
                                          repository_url,
                                          repository_json)
                 if "0" in data:
                     del data["0"]
-                for commit_iterator in data:
+
+                for commit_iterator in data.get("Github").get(repo):
                     commit_number = str(commit_iterator)
-                    commit_date = data.get(commit_number).get("commit_date")
-                    is_it_under_24 = datetime.strptime(commit_date,
-                                                       "%Y-%m-%d %H:%M:%S")
-                    if is_it_under_24 > time_24h_ago:
+
+                    commit_date = data.get("Github")\
+                        .get(repo)\
+                        .get(commit_number)\
+                        .get("commit_date")
+                    commit_date = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+
+                    if commit_date > nr_days_ago:
                         count_pushes = count_pushes + 1
-                        commit_description = data \
+                        commit_description = data.get("Github").get(repo) \
                             .get(commit_number) \
                             .get("commit_message")
                         commit_description = remove_chars(commit_description,
                                                           "\U0001f60b")
-                        commit_url = data.get(commit_number).get("url")
+                        commit_url = data.get("Github")\
+                            .get(repo)\
+                            .get(commit_number)\
+                            .get("url")
                         commit_url = "[Link](" + commit_url + ")"
-                        author = data.get(commit_number).get("commiter_name")
+
+                        author = data.get("Github")\
+                            .get(repo)\
+                            .get(commit_number)\
+                            .get("commiter_name")
                         review = "N/A"
                         write_main_md_table("changelog.md",
                                             commit_url,
@@ -586,14 +589,14 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                         commit_description = "No push in the last day.. " \
                                              "[see the history of MD " \
                                              "commits](" + \
-                                             repository_url + \
+                                             repository_json + \
                                              ")"
                     else:
                         commit_description = "No push in the last " + \
                                              str(days_to_generate) + \
                                              " days.. [see the history of MD" \
                                              " commits](" + \
-                                             repository_url + \
+                                             repository_json + \
                                              ")"
                     author = "FIC - BOT"
                     review = "Self Generated"
@@ -605,5 +608,5 @@ def extract_json_from_git(json_files, path_to_files, days_to_generate):
                                         review,
                                         commit_date)
             except KeyError:
-                LOGGER.info("File " + file + " is empty. \nPlease check:" +
+                LOGGER.info("File " + repo + " is empty. \nPlease check:" +
                             str(repository_url) + " for more details.\n")
