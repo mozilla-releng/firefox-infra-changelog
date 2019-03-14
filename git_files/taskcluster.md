@@ -1,7 +1,14 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-28 18:35:30.681991
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-01 00:49:19.077848
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|646|imbstack|Merge pull request #419 from taskcluster/worker-manager-in-dev Worker manager in dev|[URL](https://github.com/taskcluster/taskcluster/commit/b99f0381142b6ad79412c3aa881b44c14644b075)|2019-03-14 22:30:13
+|645|imbstack|Merge branch 'master' into worker-manager-in-dev|[URL](https://github.com/taskcluster/taskcluster/commit/0fd9a975d718b9cb5a1d752429f0d8704540aaa0)|2019-03-14 22:29:58
+|644|owlishDeveloper|Merge pull request #429 from owlishDeveloper/bug1535366 Scanner calls a function that is gone|[URL](https://github.com/taskcluster/taskcluster/commit/944882a9a65496b906b363d6cfc5205cdaa5607e)|2019-03-14 21:58:24
+|643|owlishDeveloper|Scanner calls a function that is gone|[URL](https://github.com/taskcluster/taskcluster/commit/5e46ca63f9d340f4d82c437833dd0f7e06da9e8c)|2019-03-14 20:16:02
+|642|djmitche|Update tc-lib-iterate (#421) simplification, better docs, remove some unused features, refactorings. More specifically: convert all durations in tc-lib-iterate into milliseconds remove unimplemented tc-lib-iterate parameter waitTimeAfterFail rewrite README use lower-case watchdog and call the parameter watchdogTime test and ensure that both sync and async errors are handled support disabling the watchdog entirely refactor: remove use of custom Promise implementation refactor iteration to use a loop, rather than infinite recursion refactor watchdog tests to just assert event times remove spurious superclass call refactor: simplify watchdog, stop calling process.exit refactor watchdog to only send expired events|[URL](https://github.com/taskcluster/taskcluster/commit/f0f3956239675d63640c73f4528e3df8e48bac4f)|2019-03-14 19:21:38
+|641|helfi92|Merge pull request #427 from helfi92/pulse-messages-ux [UI] Nit: Remove padding from information icon|[URL](https://github.com/taskcluster/taskcluster/commit/7b60205254388300481e133cbf3b8d6ce5cfec6c)|2019-03-14 18:43:38
+|640|helfi92|Remove padding from information icon|[URL](https://github.com/taskcluster/taskcluster/commit/b5aabf357d348835f7075f14397db2bd8b246915)|2019-03-14 18:39:18
 |639|djmitche|Merge pull request #401 from djmitche/bug1534711 [Bug 1534711 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534711) - pass rootUrl when initializing tc-client|[URL](https://github.com/taskcluster/taskcluster/commit/30b0df982fea72978e82f948df607e0b117535cb)|2019-03-14 16:32:44
 |638|djmitche|Merge pull request #418 from djmitche/hobgoblin A foolish consistency|[URL](https://github.com/taskcluster/taskcluster/commit/ffbf74b9acc0de086f195b924dea00afb152d061)|2019-03-14 16:32:22
 |637|djmitche|Merge pull request #423 from djmitche/remove-update-apis remove unnecessary update-apis.js|[URL](https://github.com/taskcluster/taskcluster/commit/578ea1d5bd02b24b9bba626fc2b835dcb24c9602)|2019-03-14 16:31:56

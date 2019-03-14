@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35704
+    "last_push_id": 35706
   },
   "1": {
     "changeset_number": "35344",
@@ -11651,6 +11651,21 @@
           "taskcluster/scripts/misc/build-gcc-6-linux.sh",
           "taskcluster/scripts/misc/build-gcc-7-linux.sh",
           "taskcluster/scripts/misc/build-gcc-sixgill-plugin-linux.sh"
+        ]
+      }
+    }
+  },
+  "119": {
+    "changeset_number": "35705",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-03-14 23:39:47",
+    "changeset_commits": {
+      "33": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=88f164145918",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Use the absolute path when download secretes, to aid debugging; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23465",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/secrets.py"
         ]
       }
     }
