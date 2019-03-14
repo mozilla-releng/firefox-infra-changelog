@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 95
+    "last_push_id": 96
   },
   "1": {
     "changeset_number": "31",
@@ -791,29 +791,6 @@
     }
   },
   "47": {
-    "changeset_number": "94",
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-12 22:44:36",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=48469cb61b69",
-        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1534771 - disable pushes for stylo/stylo-try\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23209",
-        "files_changed": [
-          "projects.yml"
-        ]
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a1615dd8b7c",
-        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable push-via-hooks for version-control-tools; a=tomprince,sheehan",
-        "files_changed": [
-          "projects.yml"
-        ]
-      }
-    }
-  },
-  "47": {
     "changeset_number": "95",
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-13 22:35:48",
@@ -823,6 +800,22 @@
         "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
         "commit_message": "Bug 1534771 - disable all features for stylo r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23238",
         "files_changed": [
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "47": {
+    "changeset_number": "96",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-03-14 12:10:56",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ac46b2d820db",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1533791 - Grant secret scopes to QA's forks r=mtabara\n\nGrant secret scopes to QA's forks\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23351",
+        "files_changed": [
+          "grants.yml",
           "projects.yml"
         ]
       }
