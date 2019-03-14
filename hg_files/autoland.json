@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80358
+    "last_push_id": 80478
   },
   "1": {
     "changeset_number": "35344",
@@ -35630,21 +35630,6 @@
     }
   },
   "719": {
-    "changeset_number": "80309",
-    "pusher": "jwillcox@mozilla.com",
-    "date_of_push": "2019-03-12 20:57:29",
-    "changeset_commits": {
-      "2": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=01aa96181b7b",
-        "commiter_name": "James Willcox <snorp@snorp.net>",
-        "commit_message": "Bug 1498721 - Disable Java code coverage on Android r=gbrown\n\nThis is due to an incompatability somewhere between JaCoCo and\ndefault interface methods.\n\nDepends on D23016\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23017",
-        "files_changed": [
-          "taskcluster/ci/test/test-platforms.yml"
-        ]
-      }
-    }
-  },
-  "719": {
     "changeset_number": "80341",
     "pusher": "mh@glandium.org",
     "date_of_push": "2019-03-13 01:14:44",
@@ -35682,6 +35667,323 @@
         "commit_message": "Bug 1534500 - Run get_and_diffoscope with bash. r=dustin\n\nThis will allow to use bash constructs in pre-diff-commands, like\n`{a,b}`.\n\nDepends on D23075\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23076",
         "files_changed": [
           "taskcluster/docker/diffoscope/get_and_diffoscope"
+        ]
+      }
+    }
+  },
+  "719": {
+    "changeset_number": "80378",
+    "pusher": "fstrugariu@mozilla.com",
+    "date_of_push": "2019-03-13 13:38:17",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a74bd7202170",
+        "commiter_name": "marian.raiciof <marian.raiciof@softvision.ro>",
+        "commit_message": "Bug 1527849 Add google search to tp6-m r=davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19907",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-google-maps.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-google-restaurants.manifest",
+          "testing/raptor/raptor/raptor.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-3.ini"
+        ]
+      }
+    }
+  },
+  "720": {
+    "changeset_number": "80394",
+    "pusher": "gbrown@mozilla.com",
+    "date_of_push": "2019-03-13 16:42:56",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4db925ab7d46",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1534822 - Increase chunks for linux debug mochitest-devtools, and max-run-time for ccov; r=jmaher\n\nLinux64/debug mochitest-dt chunks are increased to 16 to provide more capacity in\nreasonable run time. For ccov, mochitest-dt-12 sometimes still runs > 90 minutes,\nso ccov max-run-time is increased to 2 hours.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23309",
+        "files_changed": [
+          "taskcluster/ci/test/mochitest.yml"
+        ]
+      }
+    }
+  },
+  "721": {
+    "changeset_number": "80404",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-13 18:36:30",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0e32509a083f",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532657: Stop fetching unused unified google API key; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22734",
+        "files_changed": [
+          "testing/mozharness/configs/builds/releng_base_android_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_32_builds.py",
+          "testing/mozharness/configs/builds/releng_base_linux_64_builds.py",
+          "testing/mozharness/configs/builds/releng_base_mac_64_cross_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_32_mingw_builds.py",
+          "testing/mozharness/configs/builds/releng_base_windows_64_mingw_builds.py",
+          "testing/mozharness/configs/builds/taskcluster_base_windows.py",
+          "testing/mozharness/configs/single_locale/tc_android-api-16.py"
+        ]
+      }
+    }
+  },
+  "722": {
+    "changeset_number": "80406",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-13 18:38:02",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a5d46695e93c",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1508381 - remove now-unnecessary TASKCLUSTER_* variables r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18022",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e212dcda9cce",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1508381 - use rootUrl style with taskcluster-proxy r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18023",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/runme.sh",
+          "taskcluster/docker/periodic-updates/runme.sh",
+          "taskcluster/docker/pipfile-updates/runme.sh",
+          "taskcluster/scripts/misc/fetch-content",
+          "taskcluster/taskgraph/actions/create_interactive.py",
+          "taskcluster/taskgraph/transforms/docker_image.py",
+          "taskcluster/taskgraph/transforms/job/debian_package.py",
+          "taskcluster/taskgraph/util/taskcluster.py"
+        ]
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=81c183207343",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1508381 - vendor newest taskcluster client r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18025",
+        "files_changed": [
+          "third_party/python/requirements.in",
+          "third_party/python/requirements.txt",
+          "third_party/python/taskcluster/PKG-INFO",
+          "third_party/python/taskcluster/README.md",
+          "third_party/python/taskcluster/setup.py",
+          "third_party/python/taskcluster/taskcluster/_client_importer.py",
+          "third_party/python/taskcluster/taskcluster/aio/_client_importer.py",
+          "third_party/python/taskcluster/taskcluster/aio/asyncclient.py",
+          "third_party/python/taskcluster/taskcluster/aio/asyncutils.py",
+          "third_party/python/taskcluster/taskcluster/aio/auth.py",
+          "third_party/python/taskcluster/taskcluster/aio/authevents.py",
+          "third_party/python/taskcluster/taskcluster/aio/awsprovisioner.py",
+          "third_party/python/taskcluster/taskcluster/aio/awsprovisionerevents.py",
+          "third_party/python/taskcluster/taskcluster/aio/ec2manager.py",
+          "third_party/python/taskcluster/taskcluster/aio/github.py",
+          "third_party/python/taskcluster/taskcluster/aio/githubevents.py",
+          "third_party/python/taskcluster/taskcluster/aio/hooks.py",
+          "third_party/python/taskcluster/taskcluster/aio/index.py",
+          "third_party/python/taskcluster/taskcluster/aio/login.py",
+          "third_party/python/taskcluster/taskcluster/aio/notify.py",
+          "third_party/python/taskcluster/taskcluster/aio/pulse.py",
+          "third_party/python/taskcluster/taskcluster/aio/purgecache.py",
+          "third_party/python/taskcluster/taskcluster/aio/purgecacheevents.py",
+          "third_party/python/taskcluster/taskcluster/aio/queue.py",
+          "third_party/python/taskcluster/taskcluster/aio/queueevents.py",
+          "third_party/python/taskcluster/taskcluster/aio/secrets.py",
+          "third_party/python/taskcluster/taskcluster/aio/treeherderevents.py",
+          "third_party/python/taskcluster/taskcluster/auth.py",
+          "third_party/python/taskcluster/taskcluster/authevents.py",
+          "third_party/python/taskcluster/taskcluster/awsprovisioner.py",
+          "third_party/python/taskcluster/taskcluster/awsprovisionerevents.py",
+          "third_party/python/taskcluster/taskcluster/client.py",
+          "third_party/python/taskcluster/taskcluster/ec2manager.py",
+          "third_party/python/taskcluster/taskcluster/github.py",
+          "third_party/python/taskcluster/taskcluster/githubevents.py",
+          "third_party/python/taskcluster/taskcluster/hooks.py",
+          "third_party/python/taskcluster/taskcluster/index.py",
+          "third_party/python/taskcluster/taskcluster/login.py",
+          "third_party/python/taskcluster/taskcluster/notify.py",
+          "third_party/python/taskcluster/taskcluster/pulse.py",
+          "third_party/python/taskcluster/taskcluster/purgecache.py",
+          "third_party/python/taskcluster/taskcluster/purgecacheevents.py",
+          "third_party/python/taskcluster/taskcluster/queue.py",
+          "third_party/python/taskcluster/taskcluster/queueevents.py",
+          "third_party/python/taskcluster/taskcluster/secrets.py",
+          "third_party/python/taskcluster/taskcluster/treeherderevents.py",
+          "third_party/python/taskcluster/taskcluster/utils.py",
+          "third_party/python/taskcluster/test/test_async.py",
+          "third_party/python/taskcluster/test/test_client.py",
+          "third_party/python/taskcluster/test/test_utils.py"
+        ]
+      }
+    }
+  },
+  "723": {
+    "changeset_number": "80407",
+    "pusher": "rpierzina@mozilla.com",
+    "date_of_push": "2019-03-13 18:38:40",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e57c2f2ddeff",
+        "commiter_name": "Chris Hartjes <chartjes@mozilla.com>",
+        "commit_message": "Bug 1531356 - Decrease telemetry-tests-client CI max-run-time value; r=raphael\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22522",
+        "files_changed": [
+          "taskcluster/ci/test/misc.yml"
+        ]
+      }
+    }
+  },
+  "724": {
+    "changeset_number": "80413",
+    "pusher": "ystartsev@mozilla.com",
+    "date_of_push": "2019-03-13 18:56:18",
+    "changeset_commits": {
+      "14": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e2d0e392fb62",
+        "commiter_name": "yulia <ystartsev@mozilla.com>",
+        "commit_message": "Bug 1528296 - remove browser-chrome-gpu tests; r=vporof\n\nthe Canavas debugger tests appear to be the last tests using browser-chrome-gpu. This patch\nremoves those tests from being run on try.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23314",
+        "files_changed": [
+          "testing/mozharness/configs/unittests/linux_unittest.py",
+          "testing/mozharness/configs/unittests/mac_unittest.py",
+          "testing/mozharness/configs/unittests/win_taskcluster_unittest.py",
+          "testing/mozharness/configs/unittests/win_unittest.py",
+          "testing/mozharness/mozharness/mozilla/testing/per_test_base.py"
+        ]
+      }
+    }
+  },
+  "725": {
+    "changeset_number": "80414",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-13 19:03:14",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0a0d380004c7",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1533589: [win64-aarch64] Enable publishing of win64-aarch64 beta builds; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22738",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/beetmover_repackage.py",
+          "taskcluster/taskgraph/transforms/bouncer_submission.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2f3183ab11e7",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1533589: [win64-aarch64] Release win64-aarch64 devedition builds; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22739",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/l10n-mozconfig-devedition",
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover-l10n/kind.yml",
+          "taskcluster/ci/beetmover-repackage/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/mar-signing-l10n/kind.yml",
+          "taskcluster/ci/mar-signing/kind.yml",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "taskcluster/ci/partials/kind.yml",
+          "taskcluster/ci/release-balrog-submit-toplevel/kind.yml",
+          "taskcluster/ci/release-bouncer-sub/kind.yml",
+          "taskcluster/ci/repackage-l10n/kind.yml",
+          "taskcluster/ci/repackage-signing-l10n/kind.yml",
+          "taskcluster/ci/repackage-signing/kind.yml",
+          "taskcluster/ci/repackage/kind.yml"
+        ]
+      }
+    }
+  },
+  "726": {
+    "changeset_number": "80451",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-14 02:04:38",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0806b7256605",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1534522 - Add a build type for EME-enabled win64-aarch64. r=dmajor\n\nDepends on D23101\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23102",
+        "files_changed": [
+          "browser/config/mozconfigs/win64-aarch64/common-opt",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/diffoscope/kind.yml"
+        ]
+      }
+    }
+  },
+  "727": {
+    "changeset_number": "80455",
+    "pusher": "nfroyd@mozilla.com",
+    "date_of_push": "2019-03-14 02:38:30",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=de231288332b",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1535142 - add binutils toolchains to more builds; r=dmajor\n\nA newer clang may require newer binutils than the system provides, so we\nshould ensure that we provide just such a binutils.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23393",
+        "files_changed": [
+          "build/macosx/cross-mozconfig.common",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/spidermonkey/linux.yml"
+        ]
+      }
+    }
+  },
+  "728": {
+    "changeset_number": "80460",
+    "pusher": "nfroyd@mozilla.com",
+    "date_of_push": "2019-03-14 03:53:22",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5179c8066914",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1451104 - part 4 - sync up gcc-related toolchains and linux64-binutils binutils version; r=glandium\n\nWe're going to copy an x86_64-unknown-linux-gnu ld into the clang build,\nwhich clang will then use in preference to things on PATH.  We therefore\nneed to ensure that this ld is the same ld as would be used for other\nbuilds, such as PGO.  This change is the most expedient way to do that;\nfuture work will make the gcc job(s) depend on linux64-binutils directly.\n\nDepends on D22881\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22882",
+        "files_changed": [
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/gcc.yml",
+          "taskcluster/scripts/misc/build-gcc-6-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-7-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-sixgill-plugin-linux.sh"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7c116f85ede6",
+        "commiter_name": "Nathan Froyd <froydnj@gmail.com>",
+        "commit_message": "Bug 1451104 - part 5 - move toolchains off GCC 4.9; r=glandium\n\nFirefox itself has moved on to GCC 6.x; we can move our toolchains along too.\n\nDepends on D22882\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22883",
+        "files_changed": [
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gcc.yml",
+          "taskcluster/ci/toolchain/misc.yml"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2f6199beeb71",
+        "commiter_name": "Nathan Froyd <froydnj@gmail.com>",
+        "commit_message": "Bug 1451104 - part 6 - don't remove the libstdc++ files from the mingw build; r=glandium\n\nHistory does not disclose why we needed this, but in the brave new GCC\n6-compiled world, deleting these files means that host links can no\nlonger find libstdc++, which causes problems.  Let's put the files back.\n\nDepends on D22883\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22884",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      }
+    }
+  },
+  "729": {
+    "changeset_number": "80464",
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-03-14 05:04:16",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=779dcbea91ce",
+        "commiter_name": "Gurzau Raul <rgurzau@mozilla.com>",
+        "commit_message": "Backed out 6 changesets (bug 1451104) for toolchains bustage on a CLOSED TREE.\n\nBacked out changeset 2f6199beeb71 (bug 1451104)\nBacked out changeset 7c116f85ede6 (bug 1451104)\nBacked out changeset 5179c8066914 (bug 1451104)\nBacked out changeset 675f73d41eb4 (bug 1451104)\nBacked out changeset c64bfaad8a2f (bug 1451104)\nBacked out changeset 991777e081ff (bug 1451104)",
+        "files_changed": [
+          "build/autoconf/clang-plugin.m4",
+          "build/build-clang/build-clang.py",
+          "build/unix/build-gcc/build-gcc.sh",
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gcc.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
+          "taskcluster/scripts/misc/build-gcc-6-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-7-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-sixgill-plugin-linux.sh"
         ]
       }
     }
