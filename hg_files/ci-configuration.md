@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 96
+ CURRENT PUSH ID: 98
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|96|2019-03-14 12:10:56|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1533791 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791) - Grant secret scopes to QA's forks r=mtabaraGrant secret scopes to QA's forksDifferential Revision: https://phabricator.services.mozilla.com/D23351|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ac46b2d820db
+|98|2019-03-14 17:50:59|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for try, nss, nss-try; a=tomprince,mt|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e928681731e3
+|97|2019-03-14 15:35:22|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1533393 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533393) - Authorize Autophone on reference-browser r=mtabaraAuthorize Autophone on reference-browser. Fixes https://tools.taskcluster.net/groups/KIrlgzA5QaKSXSMwMH0n1A/tasks/KIrlgzA5QaKSXSMwMH0n1A/runs/0/logs/public%2Flogs%2Flive_backing.log#L533Differential Revision: https://phabricator.services.mozilla.com/D23490|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3190736d1bcf
 |93|2019-03-12 21:57:46|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for mozilla-release, mozilla-esr60, mozilla-beta, comm-central; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=6bba4bde6429
 |87|2019-03-07 00:06:27|Mihai Tabara <mtabara@mozilla.com>|[Bug 1519493 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519493) - step 1 in automating permissions in mobile world. r=tomprinceThis is a preliminary ask-for-feedback.* not to be merged until we perform the cleanup in bug 1526017* this is experimental to understand if the mapping logic can be optimizedDifferential Revision: https://phabricator.services.mozilla.com/D19240|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=eb561312b56f
 |83|2019-03-04 23:44:32|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Remove some redundant and cross-level/trust-domain scope grants; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21805|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c1f008b66b74

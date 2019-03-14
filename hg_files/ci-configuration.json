@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 96
+    "last_push_id": 98
   },
   "1": {
     "changeset_number": "31",
@@ -801,6 +801,37 @@
         "commit_message": "Bug 1533791 - Grant secret scopes to QA's forks r=mtabara\n\nGrant secret scopes to QA's forks\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23351",
         "files_changed": [
           "grants.yml",
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "47": {
+    "changeset_number": "97",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-03-14 15:35:22",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3190736d1bcf",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1533393 - Authorize Autophone on reference-browser r=mtabara\n\nAuthorize Autophone on reference-browser. Fixes https://tools.taskcluster.net/groups/KIrlgzA5QaKSXSMwMH0n1A/tasks/KIrlgzA5QaKSXSMwMH0n1A/runs/0/logs/public%2Flogs%2Flive_backing.log#L533\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23490",
+        "files_changed": [
+          "grants.yml",
+          "projects.yml"
+        ]
+      }
+    }
+  },
+  "48": {
+    "changeset_number": "98",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-14 17:50:59",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e928681731e3",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - enable push-via-hooks for try, nss, nss-try; a=tomprince,mt",
+        "files_changed": [
           "projects.yml"
         ]
       }
