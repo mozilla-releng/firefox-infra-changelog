@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-14 10:48:06 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-14 13:31:21 UTC.
 |	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -70,7 +70,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/0b7b1be9df3fd48905b18c22fe4fe9710414715d)|Update dependency eslint to v5.15.1|renovate-bot|N/A|2019-03-11 13:44:29|
 |[Link](https://github.com/taskcluster/taskcluster/commit/15d51636e1c5187e8275a533a96f3ecad7079be8)|Fix table name in github tests  This changes the table name to match elsewhere in the code.|djmitche|N/A|2019-03-11 13:39:40|
 |[Link](https://github.com/taskcluster/taskcluster/commit/0803589d3678080dd80457166170b447af2d1c92)|fix yarn generate after hotfix this weekend|djmitche|N/A|2019-03-11 13:38:34|
-|[Link](https://github.com/taskcluster/taskcluster/commit/504a85a5a4e826627a1673cd7a7c9cc198ca1deb)|Update dependency @mdx-js/runtime to ^0.20.0 (#347)|renovate[bot]|N/A|2019-03-11 13:29:18|
 
 |	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -222,9 +221,6 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7b2ae2ea0495)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Reinsert awscli, required for partials caching r=mtabara Reinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording Differential Revision: https://phabricator.services.mozilla.com/D22942|sfraser@mozilla.com|mtabara|2019-03-11 12:04:55|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8076b05b8631)|Backed out changeset 7b2ae2ea0495 (bug 1532236) for lint failure|apavel@mozilla.com||2019-03-11 12:18:57|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e108f9ad99a5)|[Bug 1532236 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1532236) Reinsert awscli, required for partials caching r=mtabara Reinsert awscli for partials, which is needed for caching. Also update packages and fix the metrics recording Differential Revision: https://phabricator.services.mozilla.com/D22942|sfraser@mozilla.com|mtabara|2019-03-11 12:47:36|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=423f48c98230)|[Bug 1533391 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533391) - Lint Debugger on try. r=davidwalsh Differential Revision: https://phabricator.services.mozilla.com/D22503|jlaster@mozilla.com|davidwalsh|2019-03-11 15:49:52|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ee2473319e97)|Backed out changeset 423f48c98230 (bug 1533391) for failing try test on a CLOSED TREE|apavel@mozilla.com||2019-03-11 17:04:14|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=18fa4e4ce035)|[Bug 1529207 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529207) - Add new Raptor tests in tp6m-4 r=davehunt,rwood Differential Revision: https://phabricator.services.mozilla.com/D20852|fstrugariu@mozilla.com|davehunt,rwood|2019-03-12 14:02:49|
