@@ -1,7 +1,16 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-27 16:50:04.288622
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-02-28 09:33:57.960269
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|628|helfi92|Merge pull request #414 from helfi92/hooks-not-displaying [UI] Fix: Hooks not displaying|[URL](https://github.com/taskcluster/taskcluster/commit/6dfebd222dbf1c82109f4ce6a496f0960d2e02d5)|2019-03-14 01:17:04
+|627|helfi92|[UI] Link styling in ErrorPanel (#415) Link styling in ErrorPanel The ErrorPanel uses markdown internally. Nit: linting|[URL](https://github.com/taskcluster/taskcluster/commit/00c11bf4862ea67cea3514a5c5f87f4e080c93ef)|2019-03-13 20:46:56
+|626|helfi92|Make hook.graphql expect an object for the task property|[URL](https://github.com/taskcluster/taskcluster/commit/8c0ea4462f5fe6a9f27d35042b60e6460f2d50a3)|2019-03-13 18:54:10
+|625|helfi92|Make the task template in a hook be a JSON|[URL](https://github.com/taskcluster/taskcluster/commit/d642931b59c37f6b508a64534da23c9defdc6f29)|2019-03-13 18:51:00
+|624|imbstack|Merge pull request #404 from djmitche/bug1534812 [Bug 1534812 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534812) set MONITORING_ENABLE=true for all services|[URL](https://github.com/taskcluster/taskcluster/commit/d40f6c377ad2b736623630b15e9f7dccc12918aa)|2019-03-13 16:44:11
+|623|helfi92|Merge pull request #411 from helfi92/link-nit [UI] Only underline <a /> elements|[URL](https://github.com/taskcluster/taskcluster/commit/bc68afe5277eaeb17fa83ea645813ca6bb6043c0)|2019-03-13 15:42:06
+|622|helfi92|Only underline <a /> elements|[URL](https://github.com/taskcluster/taskcluster/commit/d2270f6ffcf40f73530bc40e9ee2a11024145217)|2019-03-13 15:39:55
+|621|helfi92|Merge pull request #410 from Anubhavshakya/link-color Changed Colour Of Selection Text|[URL](https://github.com/taskcluster/taskcluster/commit/2adb0c1891d64e179501f66cc043a45769713a55)|2019-03-13 15:15:04
+|620|helfi92|Nit|[URL](https://github.com/taskcluster/taskcluster/commit/6d5e92194f94c8eb6d67bfb18524139058c546ce)|2019-03-13 15:14:17
 |619|iFlameing|[UI] Add a sign-in button in the app bar (#280)|[URL](https://github.com/taskcluster/taskcluster/commit/6ada7a7519e5e8ff2b79199ca9635df795ff1d97)|2019-03-13 12:45:22
 |618|helfi92|[UI] Add ability to filter tasks in Task Group view (#402)|[URL](https://github.com/taskcluster/taskcluster/commit/30f608da6b986704254e06db98bef36c98bee2a8)|2019-03-13 12:07:31
 |617|imbstack|Merge pull request #403 from djmitche/fix-auth-with-entities Fix auth with entities|[URL](https://github.com/taskcluster/taskcluster/commit/77a29a619acc7911cb868ce5ec99656143348399)|2019-03-13 00:29:28

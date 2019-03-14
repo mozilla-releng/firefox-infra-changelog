@@ -1,7 +1,15 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-02-27 16:50:04.288622
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-02-28 09:33:57.960269
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|66|mutterroland|Merge pull request #427 from mozilla-releng/pyup-scheduled-update-2019-03-13 Scheduled weekly dependency update for week 10|[URL](https://github.com/mozilla-releng/build-puppet/commit/7992e466e54a8cc2973458b0d02fff71e50fe794)|2019-03-14 01:54:50
+|65|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/5719e3875ecba65e0252f9ea3be08d43a7874621)|2019-03-14 00:53:02
+|64|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/2175b9ec5f4d66003443be87b4ef2b307ce97070)|2019-03-14 00:52:58
+|63|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/1a66eb540edf91a184b13575ab80d5a0e896de68)|2019-03-14 00:52:57
+|62|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/dce9ccee3d0f82a649227528e0c3ae6c9188987a)|2019-03-14 00:52:55
+|61|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/766f9c86c6de000057e8c8d9dbcf6c3f6d694091)|2019-03-14 00:52:53
+|60|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/df086ec8f33a6c40b232a1c367498b7f0efe7fe4)|2019-03-14 00:52:51
+|59|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/32e25a43a75422641d576f501d9faf58902b6887)|2019-03-14 00:52:47
 |58|JohanLorenzo|[Bug 1534694 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534694) - Bump scriptworker to 22.0.1 (#428)|[URL](https://github.com/mozilla-releng/build-puppet/commit/0420fabf8b9f1c0f786423a9df8b2f3921489ea3)|2019-03-13 13:28:01
 |57|tomprince|[Bug 1533589 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533589) [win64-aarch64] Add missing support for for win64-aarch64 devedition builds. (#426)|[URL](https://github.com/mozilla-releng/build-puppet/commit/b1ea7495d21c0bb6c6e8f097012cc6a33cc3cbd1)|2019-03-12 22:54:10
 |56|rail|Bump versions to enable shipit v2 submissions (#419)|[URL](https://github.com/mozilla-releng/build-puppet/commit/3cfc19e13a2e11bb3cc34084fefa6e8af65b9fdf)|2019-03-11 16:16:08

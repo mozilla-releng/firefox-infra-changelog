@@ -1,10 +1,9 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 94
+ CURRENT PUSH ID: 95
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|94|2019-03-12 22:44:36|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1534771 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534771) - disable pushes for stylo/stylo-tryDifferential Revision: https://phabricator.services.mozilla.com/D23209|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=48469cb61b69
-|94|2019-03-12 22:44:36|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for version-control-tools; a=tomprince,sheehan|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a1615dd8b7c
+|95|2019-03-13 22:35:48|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1534771 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534771) - disable all features for stylo r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D23238|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=37bcfede726d
 |93|2019-03-12 21:57:46|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for mozilla-release, mozilla-esr60, mozilla-beta, comm-central; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=6bba4bde6429
 |87|2019-03-07 00:06:27|Mihai Tabara <mtabara@mozilla.com>|[Bug 1519493 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519493) - step 1 in automating permissions in mobile world. r=tomprinceThis is a preliminary ask-for-feedback.* not to be merged until we perform the cleanup in bug 1526017* this is experimental to understand if the mapping logic can be optimizedDifferential Revision: https://phabricator.services.mozilla.com/D19240|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=eb561312b56f
 |83|2019-03-04 23:44:32|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Remove some redundant and cross-level/trust-domain scope grants; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D21805|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c1f008b66b74
