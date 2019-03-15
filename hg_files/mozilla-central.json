@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35706
+    "last_push_id": 35708
   },
   "1": {
     "changeset_number": "35344",
@@ -11608,6 +11608,56 @@
         "commit_message": "No bug: [mozharness] Use the absolute path when download secretes, to aid debugging; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23465",
         "files_changed": [
           "testing/mozharness/mozharness/mozilla/secrets.py"
+        ]
+      }
+    }
+  },
+  "119": {
+    "changeset_number": "35707",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-03-15 05:42:43",
+    "changeset_commits": {
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=210d55a03877",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1535350 - remove win32-clang-tidy job; r=dmajor\n\nUpdating clang indicates that 32-bit compilation is substantially longer\nthan 64-bit compilation, perhaps due to swapping.  The compilation\nprocess is hitting the timeout limit shortly before the compilation\nprocess completes (~3681/3695 tasks according to ninja).\n\nWe could tweak our clang build process to accommodate this job.  But we\ndon't support building on 32-bit Windows anymore, and we don't produce a\n32-bit Windows clang either.  So we shouldn't support a 32-bit Windows\nclang-tidy job either.  Let's get rid of it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23517",
+        "files_changed": [
+          "build/build-clang/clang-tidy-win32.json",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/scripts/misc/build-clang-tidy32-windows.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh"
+        ]
+      },
+      "46": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=eb2a987c6ba2",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1534283 - add a 'tasks_for' property; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23569",
+        "files_changed": [
+          ".taskcluster.yml",
+          "taskcluster/docs/parameters.rst",
+          "taskcluster/mach_commands.py",
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/parameters.py",
+          "taskcluster/taskgraph/test/test_decision.py"
+        ]
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e44be7f40c6d",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1534283 - filter out tasks when DONT-BUILD is in the message r=aki,tomprince\n\n(without the dash, because I want *this* push to build)\n\nThis filters out all tasks, but that means that several things will still run:\n\n * docker images and tasks they depend on (debian packages)\n * always_run tasks (various python-y things)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23020",
+        "files_changed": [
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/target_tasks.py"
+        ]
+      },
+      "48": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6e05f81a2f8f",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1534283 - use default parameters for mach try fuzzy r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23225",
+        "files_changed": [
+          "taskcluster/taskgraph/parameters.py",
+          "tools/tryselect/cli.py",
+          "tools/tryselect/tasks.py"
         ]
       }
     }
