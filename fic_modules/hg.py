@@ -239,7 +239,7 @@ def extract_json_from_hg(repo_name, days_to_generate):
                                          repository_url,
                                          repository_json)
                 count_pushes = 0
-                for changeset_iterator in data.get("Hg").get(repo_name):
+                for changeset_iterator in sorted(data.get("Hg").get(repo_name), reverse=True):
                     for commit_iterator in data.get("Hg").get(repo_name) \
                             .get(changeset_iterator)\
                             .get("changeset_commits"):
