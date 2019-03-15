@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35708
+    "last_push_id": 35712
   },
   "1": {
     "changeset_number": "35344",
@@ -11598,21 +11598,6 @@
     }
   },
   "119": {
-    "changeset_number": "35705",
-    "pusher": "rmaries@mozilla.com",
-    "date_of_push": "2019-03-14 23:39:47",
-    "changeset_commits": {
-      "33": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=88f164145918",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: [mozharness] Use the absolute path when download secretes, to aid debugging; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23465",
-        "files_changed": [
-          "testing/mozharness/mozharness/mozilla/secrets.py"
-        ]
-      }
-    }
-  },
-  "119": {
     "changeset_number": "35707",
     "pusher": "rmaries@mozilla.com",
     "date_of_push": "2019-03-15 05:42:43",
@@ -11658,6 +11643,45 @@
           "taskcluster/taskgraph/parameters.py",
           "tools/tryselect/cli.py",
           "tools/tryselect/tasks.py"
+        ]
+      }
+    }
+  },
+  "119": {
+    "changeset_number": "35709",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-03-15 11:39:17",
+    "changeset_commits": {
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=292ed1bb9143",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1451104 - part 4 - sync up gcc-related toolchains and linux64-binutils binutils version; r=glandium\n\nWe're going to copy an x86_64-unknown-linux-gnu ld into the clang build,\nwhich clang will then use in preference to things on PATH.  We therefore\nneed to ensure that this ld is the same ld as would be used for other\nbuilds, such as PGO.  This change is the most expedient way to do that;\nfuture work will make the gcc job(s) depend on linux64-binutils directly.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22882",
+        "files_changed": [
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/gcc.yml",
+          "taskcluster/scripts/misc/build-gcc-6-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-7-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-sixgill-plugin-linux.sh"
+        ]
+      },
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=858b68d306f2",
+        "commiter_name": "Nathan Froyd <froydnj@gmail.com>",
+        "commit_message": "Bug 1451104 - part 5 - move toolchains off GCC 4.9; r=glandium\n\nFirefox itself has moved on to GCC 6.x; we can move our toolchains along too.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22883",
+        "files_changed": [
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gcc.yml",
+          "taskcluster/ci/toolchain/misc.yml"
+        ]
+      },
+      "14": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76a3b7b0c9d7",
+        "commiter_name": "Nathan Froyd <froydnj@gmail.com>",
+        "commit_message": "Bug 1451104 - part 6 - don't remove the libstdc++ files from the mingw build; r=glandium\n\nHistory does not disclose why we needed this, but in the brave new GCC\n6-compiled world, deleting these files means that host links can no\nlonger find libstdc++, which causes problems.  Let's put the files back.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22884",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
         ]
       }
     }

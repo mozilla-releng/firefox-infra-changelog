@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 100
+ CURRENT PUSH ID: 102
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|99|2019-03-14 19:33:47|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1535370 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535370) - add trust-domain-scopes for nss to get nss schedulerIds r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D23535|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5e077ed351aa
+|102|2019-03-15 20:19:21|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1533791 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791) - part 2: Fix missing scopes r=mhentgespart 2: Fix missing scopesDifferential Revision: https://phabricator.services.mozilla.com/D23703|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=31acf8e89897
+|101|2019-03-15 16:53:37|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for try-comm-central; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=90efa66ecf6e
 |100|2019-03-14 19:35:43|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for comm-beta, comm-esr60; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a010db27be76
 |97|2019-03-14 15:35:22|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1533393 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533393) - Authorize Autophone on reference-browser r=mtabaraAuthorize Autophone on reference-browser. Fixes https://tools.taskcluster.net/groups/KIrlgzA5QaKSXSMwMH0n1A/tasks/KIrlgzA5QaKSXSMwMH0n1A/runs/0/logs/public%2Flogs%2Flive_backing.log#L533Differential Revision: https://phabricator.services.mozilla.com/D23490|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3190736d1bcf
 |93|2019-03-12 21:57:46|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for mozilla-release, mozilla-esr60, mozilla-beta, comm-central; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=6bba4bde6429
