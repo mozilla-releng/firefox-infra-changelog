@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80574
+    "last_push_id": 80631
   },
   "1": {
     "changeset_number": "35344",
@@ -35988,6 +35988,99 @@
         "commit_message": "Bug 1451104 - part 6 - don't remove the libstdc++ files from the mingw build; r=glandium\n\nHistory does not disclose why we needed this, but in the brave new GCC\n6-compiled world, deleting these files means that host links can no\nlonger find libstdc++, which causes problems.  Let's put the files back.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22884",
         "files_changed": [
           "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      }
+    }
+  },
+  "731": {
+    "changeset_number": "80593",
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-15 16:03:12",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c1674c1e4e7c",
+        "commiter_name": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "Bug 1535011: vendor latest `robustcheckout` from version-control-tools r=Callek\n\nThis commit vendors `robustcheckout` from the version-control-tools\nrepository, revision 8e3bb142dfa9.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23566",
+        "files_changed": [
+          "testing/mozharness/external_tools/robustcheckout.py"
+        ]
+      }
+    }
+  },
+  "732": {
+    "changeset_number": "80605",
+    "pusher": "gpascutto@mozilla.com",
+    "date_of_push": "2019-03-15 17:09:22",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7e14986df45a",
+        "commiter_name": "Gian-Carlo Pascutto <gcp@mozilla.com>",
+        "commit_message": "Bug 1533133 - Split up macOS JIT tests in more chunks. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23116",
+        "files_changed": [
+          "taskcluster/ci/test/compiled.yml"
+        ]
+      }
+    }
+  },
+  "733": {
+    "changeset_number": "80607",
+    "pusher": "igoldan@mozilla.com",
+    "date_of_push": "2019-03-15 17:32:48",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2ce6dd37ff59",
+        "commiter_name": "Ionut Goldan <igoldan@mozilla.com>",
+        "commit_message": "Bug 1535016 - Don't treat any Android job as new job r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23674",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      }
+    }
+  },
+  "734": {
+    "changeset_number": "80608",
+    "pusher": "nfroyd@mozilla.com",
+    "date_of_push": "2019-03-15 17:34:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9a96eceffaee",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1535580 - update linux/mac searchfox jobs for clang changes; r=kats\n\nWe need to install a new enough binutils for both of these jobs and\nensure that it's properly found on the linux job.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23678",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/debug-searchfox-clang",
+          "taskcluster/ci/searchfox/kind.yml"
+        ]
+      }
+    }
+  },
+  "735": {
+    "changeset_number": "80610",
+    "pusher": "aiakab@mozilla.com",
+    "date_of_push": "2019-03-15 18:08:22",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=de3d7088cbc5",
+        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+        "commit_message": "Backed out changeset 2ce6dd37ff59 (bug 1535016) for mozlint failure on taskcluster/taskgraph/util/seta.py CLOSED TREE",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      }
+    }
+  },
+  "736": {
+    "changeset_number": "80618",
+    "pusher": "gbrown@mozilla.com",
+    "date_of_push": "2019-03-15 19:20:08",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=893781729409",
+        "commiter_name": "Andrew Erickson <aerickson@mozilla.com>",
+        "commit_message": "Bug 1534737: use new tooltool packages with updates to adb r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23534",
+        "files_changed": [
+          "testing/mozharness/configs/android/androidarm_4_3.py",
+          "testing/mozharness/configs/android/androidarm_4_3_junit.py",
+          "testing/mozharness/configs/android/androidx86_7_0.py"
         ]
       }
     }
