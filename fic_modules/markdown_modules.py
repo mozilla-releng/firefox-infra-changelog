@@ -147,12 +147,13 @@ def generate_main_md_table(repositories_holder, which_repo, days_to_generate):
     list.sort()
     print(list)
     for element in list:
+        print(element)
         if (which_repo == "complete" or which_repo == "Git") and element[2] == "git":
-            extract_json_from_git(repositories_holder.get("Github").get(element[1]), days_to_generate)
+            extract_json_from_git(element[1], days_to_generate)
             LOGGER.info("GIT %s", successfully_generated)
 
         elif (which_repo == "complete" or which_repo == "Hg") and element[2] == "hg":
-            extract_json_from_hg(repositories_holder.get("Mercurial").get(element[1]), days_to_generate)
+            extract_json_from_hg(element[1], days_to_generate)
             LOGGER.info("HG %s", successfully_generated)
         else:
             LOGGER.error("No {} table was generated!".format(element[2]))
@@ -334,4 +335,5 @@ def write_main_md_table(file_name, repository_url, last_commit, author,
           "|" + "\n"
     write_file = open(file_name, "a")
     write_file.write(row)
+    write_file.close()
 
