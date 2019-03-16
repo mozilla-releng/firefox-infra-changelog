@@ -222,90 +222,93 @@ def extract_json_from_hg(repo_name, days_to_generate):
     from fic_modules.markdown_modules import generate_markdown_header,\
         write_main_md_table
     from fic_modules.helper_functions import generate_repository_url
-
+    print(repo_name)
+    repo_name = str(repo_name).lower()
     nr_days_ago = datetime.utcnow() - timedelta(days=days_to_generate)
     # nr_days_ago = datetime.strftime(nr_days_ago, "%Y-%m-%d %H:%M:%S")
 
     with open("./changelog.json") as json_file:
         data = json.load(json_file)
+        repository_url = generate_repository_url("hg_files", repo_name, "md")
+        repository_json = generate_repository_url("hg_files", repo_name, "json")
 
-        for repo_name in repo_name:
-            repository_url = generate_repository_url("hg_files", repo_name, "md")
-            repository_json = generate_repository_url("hg_files", repo_name, "json")
+    try:
+        generate_markdown_header("changelog.md",
+                                 repo_name,
+                                 repository_url,
+                                 repository_json)
+        count_pushes = 0
+        for changeset_iterator in data.get("Hg").get(repo_name):
+            for commit_iterator in data.get("Hg").get(repo_name) \
+                    .get(changeset_iterator)\
+                    .get("changeset_commits"):
+                commit_date = data.get("Hg").get(repo_name) \
+                    .get(changeset_iterator)\
+                    .get("date_of_push")
+                commit_date = datetime.strptime(commit_date,
+                                                "%Y-%m-%d %H:%M:%S")
 
-            try:
-                generate_markdown_header("changelog.md",
-                                         repo_name,
-                                         repository_url,
-                                         repository_json)
-                count_pushes = 0
-                for changeset_iterator in sorted(data.get("Hg").get(repo_name), reverse=True):
-                    for commit_iterator in data.get("Hg").get(repo_name) \
-                            .get(changeset_iterator)\
-                            .get("changeset_commits"):
-                        commit_date = data.get("Hg").get(repo_name) \
-                            .get(changeset_iterator)\
-                            .get("date_of_push")
-                        commit_date = datetime.strptime(commit_date,
-                                                        "%Y-%m-%d %H:%M:%S")
-
-                        if commit_date > nr_days_ago:
-                            count_pushes = count_pushes + 1
-                            commit_description = data.get("Hg")\
-                                .get(repo_name)\
-                                .get(changeset_iterator) \
-                                .get("changeset_commits") \
-                                .get(commit_iterator) \
-                                .get("commit_message")
-                            commit_description = \
-                                remove_chars(commit_description, "\n")
-                            commit_description = \
-                                replace_bug_with_url(commit_description, LOGGER)
-                            commit_url = data.get("Hg").get(repo_name)\
-                                .get(changeset_iterator) \
-                                .get("changeset_commits") \
-                                .get(commit_iterator) \
-                                .get("url")
-                            commit_url = "[Link](" + commit_url + ")"
-                            author = data.get("Hg")\
-                                .get(repo_name)\
-                                .get(changeset_iterator)\
-                                .get("pusher")
-                            review = extract_reviewer(commit_description)
-                            write_main_md_table("changelog.md",
-                                                commit_url,
-                                                commit_description,
-                                                author,
-                                                review,
-                                                commit_date)
-                if count_pushes == 0:
-                    commit_url = " "
-                    if days_to_generate == 1:
-                        commit_description = "No push in the last day.. " \
-                                             "[see the history of MD " \
-                                             "commits](" + \
-                                             repository_url + \
-                                             ")"
-                    else:
-                        commit_description = "No push in the last " + \
-                                             str(days_to_generate) + \
-                                             " days.. [see the history of MD" \
-                                             " commits](" + \
-                                             repository_url + \
-                                             ")"
-                    author = "FIC - BOT"
-                    review = "Self Generated"
-                    commit_date = " - "
+                if commit_date > nr_days_ago:
+                    count_pushes = count_pushes + 1
+                    commit_description = data.get("Hg")\
+                        .get(repo_name)\
+                        .get(changeset_iterator) \
+                        .get("changeset_commits") \
+                        .get(commit_iterator) \
+                        .get("commit_message")
+                    commit_description = \
+                        remove_chars(commit_description, "\n")
+                    commit_description = \
+                        replace_bug_with_url(commit_description, LOGGER)
+                    commit_url = data.get("Hg").get(repo_name)\
+                        .get(changeset_iterator) \
+                        .get("changeset_commits") \
+                        .get(commit_iterator) \
+                        .get("url")
+                    commit_url = "[Link](" + commit_url + ")"
+                    author = data.get("Hg")\
+                        .get(repo_name)\
+                        .get(changeset_iterator)\
+                        .get("pusher")
+                    review = extract_reviewer(commit_description)
                     write_main_md_table("changelog.md",
                                         commit_url,
                                         commit_description,
                                         author,
                                         review,
                                         commit_date)
-            except AttributeError:
-                LOGGER.exception("Attribute Error!! \n Probable issue is a "
-                                 "malfunctioned json file.. Please check the "
-                                 "following file: %s", repo_name)
-            except KeyError:
-                LOGGER.exception("File %s is empty. Please check: %s for more "
-                                 "details.", repo_name, repository_url)
+        if int(count_pushes) == int(0):
+            commit_url = " "
+            if int(days_to_generate) == int(1):
+                commit_description = "No push in the last day.. " \
+                                     "[see the history of MD " \
+                                     "commits](" + \
+                                     repository_url + \
+                                     ")"
+            else:
+                commit_description = "No push in the last " + \
+                                     str(days_to_generate) + \
+                                     " days.. [see the history of MD" \
+                                     " commits](" + \
+                                     repository_url + \
+                                     ")"
+            author = "FIC - BOT"
+            review = "Self Generated"
+            commit_date = " - "
+            write_main_md_table("changelog.md",
+                                commit_url,
+                                commit_description,
+                                author,
+                                review,
+                                commit_date)
+    except AttributeError:
+        LOGGER.exception("Attribute Error!! \n Probable issue is a "
+                         "malfunctioned json file.. Please check the "
+                         "following file: %s", repo_name)
+    except KeyError:
+        LOGGER.exception("File %s is empty. Please check: %s for more "
+                         "details.", repo_name, repository_url)
+
+    except TypeError:
+        print("TypeError encountered")
+        pass

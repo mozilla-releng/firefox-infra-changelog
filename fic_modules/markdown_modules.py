@@ -3,11 +3,6 @@ This module contains all of the markdown generation and writing to the files.
 """
 import json
 import re
-from os import listdir
-from os.path import (
-    isfile,
-    join
-)
 from datetime import datetime
 from fic_modules.helper_functions import (
     filter_strings,
@@ -21,6 +16,7 @@ from fic_modules.configuration import (
     WORKING_DIR
 )
 from fic_modules.hg import extract_json_from_hg
+
 
 
 def create_git_md_table(repository_name, path_to_files):
@@ -141,17 +137,26 @@ def generate_main_md_table(repositories_holder, which_repo, days_to_generate):
     from fic_modules.git import extract_json_from_git
     successfully_generated = "part from main markdown table was " \
                              "successfully generated."
-    if which_repo == "complete" or which_repo == "Git":
-        extract_json_from_git(repositories_holder.get("Github"), days_to_generate)
-        LOGGER.info("GIT %s", successfully_generated)
-    else:
-        LOGGER.error("No Git table was generated!")
+    list = []
+    for i in repositories_holder.get("Github"):
+        position = repositories_holder.get("Github").get(i).get("order")
+        list.append((position, i, "git"))
+    for i in repositories_holder.get("Mercurial"):
+        position = repositories_holder.get("Mercurial").get(i).get("order")
+        list.append((position, i, "hg"))
+    list.sort()
+    print(list)
+    for element in list:
+        print(element)
+        if (which_repo == "complete" or which_repo == "Git") and element[2] == "git":
+            extract_json_from_git(element[1], days_to_generate)
+            LOGGER.info("GIT %s", successfully_generated)
 
-    if which_repo == "complete" or which_repo == "Hg":
-        extract_json_from_hg(repositories_holder.get("Mercurial"), days_to_generate)
-        LOGGER.info("HG %s", successfully_generated)
-    else:
-        LOGGER.error("No HG table was generated!")
+        elif (which_repo == "complete" or which_repo == "Hg") and element[2] == "hg":
+            extract_json_from_hg(element[1], days_to_generate)
+            LOGGER.info("HG %s", successfully_generated)
+        else:
+            LOGGER.error("No {} table was generated!".format(element[2]))
 
 
 def write_date_header(file_name, datetime_object):
@@ -330,4 +335,5 @@ def write_main_md_table(file_name, repository_url, last_commit, author,
           "|" + "\n"
     write_file = open(file_name, "a")
     write_file.write(row)
+    write_file.close()
 
