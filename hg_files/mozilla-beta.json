@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 10869
+    "last_push_id": 10870
   },
   "1": {
     "changeset_number": "10002",
@@ -41798,6 +41798,112 @@
           "taskcluster/scripts/misc/build-gcc-6-linux.sh",
           "taskcluster/scripts/misc/build-gcc-7-linux.sh",
           "taskcluster/scripts/misc/build-gcc-sixgill-plugin-linux.sh"
+        ]
+      }
+    }
+  },
+  "67": {
+    "changeset_number": "10870",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-03-15 22:00:07",
+    "changeset_commits": {
+      "69": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=88f164145918",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Use the absolute path when download secretes, to aid debugging; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23465",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/secrets.py"
+        ]
+      },
+      "116": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=210d55a03877",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1535350 - remove win32-clang-tidy job; r=dmajor\n\nUpdating clang indicates that 32-bit compilation is substantially longer\nthan 64-bit compilation, perhaps due to swapping.  The compilation\nprocess is hitting the timeout limit shortly before the compilation\nprocess completes (~3681/3695 tasks according to ninja).\n\nWe could tweak our clang build process to accommodate this job.  But we\ndon't support building on 32-bit Windows anymore, and we don't produce a\n32-bit Windows clang either.  So we shouldn't support a 32-bit Windows\nclang-tidy job either.  Let's get rid of it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23517",
+        "files_changed": [
+          "build/build-clang/clang-tidy-win32.json",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/scripts/misc/build-clang-tidy32-windows.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh"
+        ]
+      },
+      "129": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=eb2a987c6ba2",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1534283 - add a 'tasks_for' property; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23569",
+        "files_changed": [
+          ".taskcluster.yml",
+          "taskcluster/docs/parameters.rst",
+          "taskcluster/mach_commands.py",
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/parameters.py",
+          "taskcluster/taskgraph/test/test_decision.py"
+        ]
+      },
+      "130": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=e44be7f40c6d",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1534283 - filter out tasks when DONT-BUILD is in the message r=aki,tomprince\n\n(without the dash, because I want *this* push to build)\n\nThis filters out all tasks, but that means that several things will still run:\n\n * docker images and tasks they depend on (debian packages)\n * always_run tasks (various python-y things)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23020",
+        "files_changed": [
+          "taskcluster/taskgraph/decision.py",
+          "taskcluster/taskgraph/target_tasks.py"
+        ]
+      },
+      "131": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=6e05f81a2f8f",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1534283 - use default parameters for mach try fuzzy r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23225",
+        "files_changed": [
+          "taskcluster/taskgraph/parameters.py",
+          "tools/tryselect/cli.py",
+          "tools/tryselect/tasks.py"
+        ]
+      },
+      "151": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=292ed1bb9143",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1451104 - part 4 - sync up gcc-related toolchains and linux64-binutils binutils version; r=glandium\n\nWe're going to copy an x86_64-unknown-linux-gnu ld into the clang build,\nwhich clang will then use in preference to things on PATH.  We therefore\nneed to ensure that this ld is the same ld as would be used for other\nbuilds, such as PGO.  This change is the most expedient way to do that;\nfuture work will make the gcc job(s) depend on linux64-binutils directly.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22882",
+        "files_changed": [
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/gcc.yml",
+          "taskcluster/scripts/misc/build-gcc-6-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-7-linux.sh",
+          "taskcluster/scripts/misc/build-gcc-sixgill-plugin-linux.sh"
+        ]
+      },
+      "152": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=858b68d306f2",
+        "commiter_name": "Nathan Froyd <froydnj@gmail.com>",
+        "commit_message": "Bug 1451104 - part 5 - move toolchains off GCC 4.9; r=glandium\n\nFirefox itself has moved on to GCC 6.x; we can move our toolchains along too.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22883",
+        "files_changed": [
+          "taskcluster/ci/fetch/toolchains.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gcc.yml",
+          "taskcluster/ci/toolchain/misc.yml"
+        ]
+      },
+      "153": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=76a3b7b0c9d7",
+        "commiter_name": "Nathan Froyd <froydnj@gmail.com>",
+        "commit_message": "Bug 1451104 - part 6 - don't remove the libstdc++ files from the mingw build; r=glandium\n\nHistory does not disclose why we needed this, but in the brave new GCC\n6-compiled world, deleting these files means that host links can no\nlonger find libstdc++, which causes problems.  Let's put the files back.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22884",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      },
+      "173": {
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=c594aee5b7a4",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-beta. a=same-version-merge l10n=same-version-merge on a CLOSED TREE",
+        "files_changed": [
+          "build/build-clang/clang-tidy-win32.json",
+          "devtools/server/tests/unit/test_eval-01.js",
+          "devtools/server/tests/unit/test_eval-02.js",
+          "devtools/server/tests/unit/test_eval-03.js",
+          "devtools/server/tests/unit/test_eval-04.js",
+          "devtools/server/tests/unit/test_eval-05.js",
+          "dom/push/test/xpcshell/test_startup_error.js",
+          "taskcluster/scripts/misc/build-clang-tidy32-windows.sh",
+          "taskcluster/scripts/misc/build-clang-windows-helper32.sh"
         ]
       }
     }
