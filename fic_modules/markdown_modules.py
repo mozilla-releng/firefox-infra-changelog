@@ -145,14 +145,12 @@ def generate_main_md_table(repositories_holder, which_repo, days_to_generate):
         position = repositories_holder.get("Mercurial").get(i).get("order")
         list.append((position, i, "hg"))
     list.sort()
-    print(list)
     for element in list:
-        print(element)
         if (which_repo == "complete" or which_repo == "Git") and element[2] == "git":
             extract_json_from_git(element[1], days_to_generate)
             LOGGER.info("GIT %s", successfully_generated)
 
-        elif (which_repo == "complete" or which_repo == "Hg") and element[2] == "hg":
+        if (which_repo == "complete" or which_repo == "Hg") and element[2] == "hg":
             extract_json_from_hg(element[1], days_to_generate)
             LOGGER.info("HG %s", successfully_generated)
         else:

@@ -25,8 +25,6 @@ from fic_modules.helper_functions import (
     populate_changelog_json
 )
 from fic_modules.markdown_modules import (
-    generate_markdown_header,
-    write_main_md_table,
     create_git_md_table,
     create_md_table_for_scriptworkers
 )
@@ -538,75 +536,75 @@ def extract_json_from_git(repository, days_to_generate):
     with open("./changelog.json") as json_file:
         data = json.load(json_file)
 
-        for repo in repository:
-            repository_url = generate_repository_url("git_files", repo, "json")
-            repository_json = generate_repository_url("git_files", repo, "md")
+        repo = str(repository)
+        repository_url = generate_repository_url("git_files", repo, "json")
+        repository_json = generate_repository_url("git_files", repo, "md")
 
-            try:
-                generate_markdown_header("changelog.md",
-                                         repo,
-                                         repository_url,
-                                         repository_json)
-                if "0" in data:
-                    del data["0"]
+        try:
+            generate_markdown_header("changelog.md",
+                                     repo,
+                                     repository_url,
+                                     repository_json)
+            if "0" in data:
+                del data["0"]
 
-                for commit_iterator in data.get("Github").get(repo):
-                    commit_number = str(commit_iterator)
+            for commit_iterator in data.get("Github").get(repo):
+                commit_number = str(commit_iterator)
 
-                    commit_date = data.get("Github")\
+                commit_date = data.get("Github")\
+                    .get(repo)\
+                    .get(commit_number)\
+                    .get("commit_date")
+                commit_date = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+
+                if commit_date > nr_days_ago:
+                    count_pushes = count_pushes + 1
+                    commit_description = data.get("Github").get(repo) \
+                        .get(commit_number) \
+                        .get("commit_message")
+                    commit_description = remove_chars(commit_description,
+                                                      "\U0001f60b")
+                    commit_url = data.get("Github")\
                         .get(repo)\
                         .get(commit_number)\
-                        .get("commit_date")
-                    commit_date = datetime.strptime(commit_date, "%Y-%m-%d %H:%M:%S")
+                        .get("url")
+                    commit_url = "[Link](" + commit_url + ")"
 
-                    if commit_date > nr_days_ago:
-                        count_pushes = count_pushes + 1
-                        commit_description = data.get("Github").get(repo) \
-                            .get(commit_number) \
-                            .get("commit_message")
-                        commit_description = remove_chars(commit_description,
-                                                          "\U0001f60b")
-                        commit_url = data.get("Github")\
-                            .get(repo)\
-                            .get(commit_number)\
-                            .get("url")
-                        commit_url = "[Link](" + commit_url + ")"
-
-                        author = data.get("Github")\
-                            .get(repo)\
-                            .get(commit_number)\
-                            .get("commiter_name")
-                        review = "N/A"
-                        write_main_md_table("changelog.md",
-                                            commit_url,
-                                            commit_description,
-                                            author,
-                                            review,
-                                            commit_date)
-                if count_pushes == 0:
-                    commit_url = " "
-                    if days_to_generate == 1:
-                        commit_description = "No push in the last day.. " \
-                                             "[see the history of MD " \
-                                             "commits](" + \
-                                             repository_json + \
-                                             ")"
-                    else:
-                        commit_description = "No push in the last " + \
-                                             str(days_to_generate) + \
-                                             " days.. [see the history of MD" \
-                                             " commits](" + \
-                                             repository_json + \
-                                             ")"
-                    author = "FIC - BOT"
-                    review = "Self Generated"
-                    commit_date = " - "
+                    author = data.get("Github")\
+                        .get(repo)\
+                        .get(commit_number)\
+                        .get("commiter_name")
+                    review = "N/A"
                     write_main_md_table("changelog.md",
                                         commit_url,
                                         commit_description,
                                         author,
                                         review,
                                         commit_date)
-            except KeyError:
-                LOGGER.info("File " + repo + " is empty. \nPlease check:" +
-                            str(repository_url) + " for more details.\n")
+            if count_pushes == 0:
+                commit_url = " "
+                if days_to_generate == 1:
+                    commit_description = "No push in the last day.. " \
+                                         "[see the history of MD " \
+                                         "commits](" + \
+                                         repository_json + \
+                                         ")"
+                else:
+                    commit_description = "No push in the last " + \
+                                         str(days_to_generate) + \
+                                         " days.. [see the history of MD" \
+                                         " commits](" + \
+                                         repository_json + \
+                                         ")"
+                author = "FIC - BOT"
+                review = "Self Generated"
+                commit_date = " - "
+                write_main_md_table("changelog.md",
+                                    commit_url,
+                                    commit_description,
+                                    author,
+                                    review,
+                                    commit_date)
+        except KeyError:
+            LOGGER.info("File " + repo + " is empty. \nPlease check:" +
+                        str(repository_url) + " for more details.\n")

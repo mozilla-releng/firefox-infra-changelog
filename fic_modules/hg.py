@@ -222,10 +222,8 @@ def extract_json_from_hg(repo_name, days_to_generate):
     from fic_modules.markdown_modules import generate_markdown_header,\
         write_main_md_table
     from fic_modules.helper_functions import generate_repository_url
-    print(repo_name)
     repo_name = str(repo_name).lower()
     nr_days_ago = datetime.utcnow() - timedelta(days=days_to_generate)
-    # nr_days_ago = datetime.strftime(nr_days_ago, "%Y-%m-%d %H:%M:%S")
 
     with open("./changelog.json") as json_file:
         data = json.load(json_file)
@@ -310,5 +308,5 @@ def extract_json_from_hg(repo_name, days_to_generate):
                          "details.", repo_name, repository_url)
 
     except TypeError:
-        print("TypeError encountered")
+        LOGGER.exception("TypeError encountered")
         pass
