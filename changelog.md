@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-16 00:10:58 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-16 03:54:15 UTC.
 |	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -56,7 +56,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/6d5e92194f94c8eb6d67bfb18524139058c546ce)|Nit|helfi92|N/A|2019-03-13 15:14:17|
 |[Link](https://github.com/taskcluster/taskcluster/commit/6ada7a7519e5e8ff2b79199ca9635df795ff1d97)|[UI] Add a sign-in button in the app bar (#280)|iFlameing|N/A|2019-03-13 12:45:22|
 |[Link](https://github.com/taskcluster/taskcluster/commit/30f608da6b986704254e06db98bef36c98bee2a8)|[UI] Add ability to filter tasks in Task Group view (#402)|helfi92|N/A|2019-03-13 12:07:31|
-|[Link](https://github.com/taskcluster/taskcluster/commit/77a29a619acc7911cb868ce5ec99656143348399)|Merge pull request #403 from djmitche/fix-auth-with-entities  Fix auth with entities|imbstack|N/A|2019-03-13 00:29:28|
 
 |	services	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)	| 
 |:----------:|:-----------------------:|:--------:| 
