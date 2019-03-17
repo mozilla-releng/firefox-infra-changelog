@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: CI-ADMIN
- CURRENT PUSH ID: 58
+ CURRENT PUSH ID: 59
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|58|2019-03-15 23:37:47|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1535635 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535635) - use feature.taskcluster.push to enable hg pushes r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D23721|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=ed92fc1f2157
+|59|2019-03-17 15:28:56|sudipt1999 <sudiptdabral2991999@gmail.com>|[Bug 1471367 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1471367) - add subcommand to print taskcluster.yml hashes r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D22358|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=8980c7a103df
 |55|2019-03-07 01:43:08|Mihai Tabara <mtabara@mozilla.com>|[Bug 1519493 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519493) - fix checker in ci-admin r=tomprinceFix checker which broke with D19246Differential Revision: https://phabricator.services.mozilla.com/D22415|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=c72e4cbea39c
 |51|2019-03-04 23:27:16|Tom Prince <mozilla@hocat.ca>|[Bug 1528362 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1528362) Allow parameterizing based on priorties determined by level; r=dustinFor the moment, we hard-code the priorities by level based on those used in firefox.Differential Revision: https://phabricator.services.mozilla.com/D21813|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0368a98315e9
 |49|2019-03-04 20:38:07|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) allow ignored payload.data.source, too, in triggering hook r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D21969|https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=60bc15b47919
