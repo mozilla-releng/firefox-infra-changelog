@@ -280,7 +280,10 @@
       "configuration": {
         "folders-to-check": [
           "testing/mozharness",
-          "taskcluster"
+          "taskcluster",
+          "mach",
+          "mozrelease"
+
         ],
         "push_type": "json-log"
       }
