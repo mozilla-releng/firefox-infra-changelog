@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80667
+    "last_push_id": 80672
   },
   "1": {
     "changeset_number": "35344",
@@ -39379,6 +39379,21 @@
           "testing/web-platform/tests/webvtt/rendering/cues-with-video/processing-model/selectors/cue_function/voice_object/voice_white-space_pre_wrapped-ref.html",
           "testing/web-platform/tests/webvtt/rendering/cues-with-video/processing-model/selectors/cue_function/white-space_pre_wrapped-ref.html",
           "testing/web-platform/tests/webxr/xrFrame_lifetime.https.html"
+        ]
+      }
+    }
+  },
+  "736": {
+    "changeset_number": "80669",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-03-17 11:47:54",
+    "changeset_commits": {
+      "79": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c6d92a71240c",
+        "commiter_name": "Robert Ma <robertma@chromium.org>",
+        "commit_message": "Bug 1529052 [wpt PR 15422] - Do not throw from taskcluster-run.py if wpt fails, a=testonly\n\nAutomatic update from web-platform-tests\nDo not throw from taskcluster-run.py if wpt fails\n\nPreviously when `wpt run` stability check fails, the wrapper script\ntaskcluster-run.py would throw an uncaught exception, which might be\nconfused with an infra error.\n\nThis change makes taskcluster-run.py return a non-zero exit code without\nprinting the traceback.\n\n--\n\nwpt-commits: 322981aed92da3b8fa13eb53f25acb8d3a9cb467\nwpt-pr: 15422\n",
+        "files_changed": [
+          "testing/web-platform/tests/tools/ci/taskcluster-run.py"
         ]
       }
     }
