@@ -90,9 +90,6 @@ def run_multiple(logger, days):
     """
     get_keys("Github")
     get_keys("Mercurial")
-    for scriptrepo in REPOSITORIES.get("Github").get("build-puppet") \
-            .get("configuration").get("files-to-check"):
-        REPO_LIST.append(scriptrepo)
     new_list = []
     while input != "q":
         print("You have selected : ", new_list)
