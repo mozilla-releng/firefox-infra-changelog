@@ -1,7 +1,15 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-04 10:37:42.784285
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-04 23:04:36.474800
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|663|helfi92|Fix weird focus state in task group view (FF only) (#455)|[URL](https://github.com/taskcluster/taskcluster/commit/1ef077eafa5103ece64a783081f1aae1a32454af)|2019-03-18 17:55:37
+|662|djmitche|Merge pull request #436 from taskcluster/update-config Simplify lib-config|[URL](https://github.com/taskcluster/taskcluster/commit/eaec8042dce5b572a0dfe91c4b99fd3061fae3ca)|2019-03-18 17:13:47
+|661|djmitche|Merge pull request #452 from taskcluster/one-more-gitversion-fix Add gitversion to root as well|[URL](https://github.com/taskcluster/taskcluster/commit/4ff92aae900479c4676ee72adb43d75a71a71f47)|2019-03-18 17:13:24
+|660|djmitche|Merge pull request #172 from taskcluster/bug1524187 [Bug 1524187 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1524187) - Internal Server Errors when calling queue.completeArtifact|[URL](https://github.com/taskcluster/taskcluster/commit/e78a1ae35381b558fac539375121843c0f73e898)|2019-03-18 17:12:59
+|659|littlebobby|Add title back to every docs page (#454)|[URL](https://github.com/taskcluster/taskcluster/commit/e5bbac637806fcd917c154409c8728780e6e629f)|2019-03-18 13:42:19
+|658|renovate[bot]|Update dependency dotenv to v7 (#457)|[URL](https://github.com/taskcluster/taskcluster/commit/5a81a00711383d0089e5fda0d1a5bea275fe24ee)|2019-03-18 13:04:33
+|657|renovate[bot]|Update dependency dotenv-cli to v2 (#458)|[URL](https://github.com/taskcluster/taskcluster/commit/ccbceea0f806aadad7741289033bf25892d1c8e5)|2019-03-18 13:03:30
+|656|djmitche|Merge pull request #456 from taskcluster/renovate/eslint-5.x Update dependency eslint to v5.15.2|[URL](https://github.com/taskcluster/taskcluster/commit/d6cdebccf30b7970b5c17afcc4bd9fac68b4c835)|2019-03-18 12:32:17
 |655|djmitche|Merge pull request #446 from djmitche/bug1533591-b [Bug 1533591 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533591) - minor fixes|[URL](https://github.com/taskcluster/taskcluster/commit/0a04738519cd8b1157ebbe908923dd8c6ef0d17f)|2019-03-15 21:33:36
 |654|owlishDeveloper|Merge pull request #430 from owlishDeveloper/bug1534294 Retry 404 and higher errors|[URL](https://github.com/taskcluster/taskcluster/commit/aefcb9c347e65f5802a693129013fd4a310fae86)|2019-03-15 21:17:03
 |653|djmitche|[Bug 1533591 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533591) - minor fixes|[URL](https://github.com/taskcluster/taskcluster/commit/9aad62e957e693249b21d31a06ee510411630788)|2019-03-15 20:24:16
