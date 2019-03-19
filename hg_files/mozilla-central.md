@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35726
+ CURRENT PUSH ID: 35728
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|35725|2019-03-18 23:38:44|Mihai Tabara <mtabara@mozilla.com>|[Bug 1527206 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527206) - roll-out declarative artifacts for Fennec beta and release. r=sfraser a=release|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fa7672715203
+|35727|2019-03-19 11:48:59|Connor Sheehan <sheehan@mozilla.com>|[Bug 1535011 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535011) update `versioncontrol.rst` r=dustinSmall updates to the version control documents regardingupgrading `robustcheckout.py`. I noticed that we stillreference `build-puppet` from it's former home on hgmoand don't include OpenCloudConfig in our list of placeswe need to vendor `robustcheckout` changes.Differential Revision: https://phabricator.services.mozilla.com/D23742|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e16d27f25d45
+|35727|2019-03-19 11:48:59|Aki Sasaki <asasaki@mozilla.com>|[Bug 1485680 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1485680) - make the relpro action a hook. r=dustinmake the relpro action a hook.Differential Revision: https://phabricator.services.mozilla.com/D5581|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2f95100eef22
 |35724|2019-03-18 23:36:40|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D23832|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d35d63ce1957
 |35724|2019-03-18 23:36:40|Marian Raiciof <mraiciof@mozilla.com>|[Bug 1534956 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534956) - Add Cristiano's facebook page to tp6-m r=BebeDifferential Revision: https://phabricator.services.mozilla.com/D23317|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cee5e58bcf61
 |35724|2019-03-18 23:36:40|Ionut Goldan <igoldan@mozilla.com>|[Bug 1535016 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535016) - Don't treat any Android job as new job r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D23674|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=551c42866143
