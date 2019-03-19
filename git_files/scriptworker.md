@@ -1,7 +1,11 @@
-## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-03-05 11:52:57.579098
+## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-03-05 16:03:12.404202
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|47|JohanLorenzo|22.1.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/6c3698449ec5ae8ca363862d41c4a370cd101912)|2019-03-19 10:43:07
+|46|JohanLorenzo|[Bug 1533791 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791) - Support "assume" scopes|[URL](https://github.com/mozilla-releng/scriptworker/commit/30a54b0c8092698f23b570cf81560f8e1af3322c)|2019-03-18 17:55:11
+|45|JohanLorenzo|22.0.1|[URL](https://github.com/mozilla-releng/scriptworker/commit/4e9b5817085acbd7c2d75292d9b6f84ef90f6561)|2019-03-13 12:57:58
+|44|JohanLorenzo|[Bug 1534694 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534694) - Allow snapcraft beta scope on mozilla-release|[URL](https://github.com/mozilla-releng/scriptworker/commit/f01e70d2649055f2fda310e68bf8a06f8410b4b5)|2019-03-13 09:57:44
 |43|JohanLorenzo|22.0.1|[URL](https://github.com/mozilla-releng/scriptworker/commit/4e9b5817085acbd7c2d75292d9b6f84ef90f6561)|2019-03-13 12:57:58
 |42|JohanLorenzo|[Bug 1534694 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534694) - Allow snapcraft beta scope on mozilla-release|[URL](https://github.com/mozilla-releng/scriptworker/commit/f01e70d2649055f2fda310e68bf8a06f8410b4b5)|2019-03-13 09:57:44
 |41|escapewindow|Merge pull request #314 from escapewindow/slugid-ascii fix integration tests for taskcluster-client.py>=7.0.0 and slugid>=2.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/83840ad6360d82346a9cca531c8c2e2b939d63c3)|2019-03-08 22:28:55

@@ -1,7 +1,20 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-05 11:52:57.579098
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-05 16:03:12.404202
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|676|helfi92|client-web: bump version|[URL](https://github.com/taskcluster/taskcluster/commit/a6939bf2add7110531a1c23dbfcfdc2a2f3a1899)|2019-03-19 13:44:59
+|675|helfi92|Merge pull request #445 from helfi92/client-web-neutrino-v9 client-web neutrino v9, esm output, share linting|[URL](https://github.com/taskcluster/taskcluster/commit/2afacb0d9f74300cfff15f485e44459a28dc6b51)|2019-03-19 13:31:02
+|674|helfi92|Add requested changes|[URL](https://github.com/taskcluster/taskcluster/commit/9971f02dbaafeda1bc292bf0d36f8f994cf719ff)|2019-03-18 15:58:49
+|673|helfi92|Nit: .taskcluster.yml|[URL](https://github.com/taskcluster/taskcluster/commit/6aa43f2ce1a6e0f3f19e7766a0b4da01dc12b334)|2019-03-18 15:57:36
+|672|helfi92|Adjust taskcluster.yml|[URL](https://github.com/taskcluster/taskcluster/commit/d125b95cc5b3d06782061393d9516e76ff23f29a)|2019-03-15 20:32:48
+|671|helfi92|Add lint script|[URL](https://github.com/taskcluster/taskcluster/commit/ebac44fe9945506172420eaf474e6274a6dfeb41)|2019-03-15 20:23:04
+|670|helfi92|Regenerate yarn.lock|[URL](https://github.com/taskcluster/taskcluster/commit/dc4b81aea6fb94541d1b9650740f0616e9bd2aba)|2019-03-15 20:16:05
+|669|helfi92|Remove unused @mozilla-frontend-infra/node-lint|[URL](https://github.com/taskcluster/taskcluster/commit/719fdeacdb7aeb2d75d085828ed0ae65ec00efc0)|2019-03-15 20:07:25
+|668|helfi92|Add esm module to client-web|[URL](https://github.com/taskcluster/taskcluster/commit/7bec6f0803eb2ef9be2b8ecf5bec654380ea03bf)|2019-03-15 20:04:14
+|667|helfi92|Remove unused MANIFEST_URL|[URL](https://github.com/taskcluster/taskcluster/commit/be4dd0c7464cfb514b971fd3be21b7221cb00bd4)|2019-03-15 19:37:22
+|666|helfi92|Make client-web share the same linting config as monorepo|[URL](https://github.com/taskcluster/taskcluster/commit/e9cb1e2da120dfec78c71a1e20e1995bb7fa353c)|2019-03-15 19:31:11
+|665|helfi92|Migrate client-web to neutrino v9|[URL](https://github.com/taskcluster/taskcluster/commit/b13562b93ac9a8f9f08e1b08c4e0af7c2a9d8972)|2019-03-15 18:50:22
+|664|djmitche|Merge pull request #465 from taskcluster/all-contributors/add-djmitche docs: add contributors|[URL](https://github.com/taskcluster/taskcluster/commit/f1d03671b9f632745e568f7a60d7c9380d29f0f9)|2019-03-19 12:44:50
 |663|helfi92|Fix weird focus state in task group view (FF only) (#455)|[URL](https://github.com/taskcluster/taskcluster/commit/1ef077eafa5103ece64a783081f1aae1a32454af)|2019-03-18 17:55:37
 |662|djmitche|Merge pull request #436 from taskcluster/update-config Simplify lib-config|[URL](https://github.com/taskcluster/taskcluster/commit/eaec8042dce5b572a0dfe91c4b99fd3061fae3ca)|2019-03-18 17:13:47
 |661|djmitche|Merge pull request #452 from taskcluster/one-more-gitversion-fix Add gitversion to root as well|[URL](https://github.com/taskcluster/taskcluster/commit/4ff92aae900479c4676ee72adb43d75a71a71f47)|2019-03-18 17:13:24

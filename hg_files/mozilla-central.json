@@ -11691,38 +11691,6 @@
     }
   },
   "121": {
-    "changeset_number": "35725",
-    "pusher": "rgurzau@mozilla.com",
-    "date_of_push": "2019-03-18 23:38:44",
-    "changeset_commits": {
-      "5": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fa7672715203",
-        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "Bug 1527206 - roll-out declarative artifacts for Fennec beta and release. r=sfraser a=release",
-        "files_changed": [
-          "taskcluster/ci/beetmover-checksums/kind.yml",
-          "taskcluster/ci/beetmover/kind.yml",
-          "taskcluster/ci/release-beetmover-source-checksums/kind.yml",
-          "taskcluster/taskgraph/manifests/fennec_candidates.yml",
-          "taskcluster/taskgraph/manifests/fennec_candidates_checksums.yml",
-          "taskcluster/taskgraph/manifests/fennec_geckoview.yml",
-          "taskcluster/taskgraph/manifests/fennec_nightly.yml",
-          "taskcluster/taskgraph/manifests/fennec_nightly_checksums.yml",
-          "taskcluster/taskgraph/manifests/firefox_nightly_checksums.yml",
-          "taskcluster/taskgraph/manifests/release_checksums.yml",
-          "taskcluster/taskgraph/manifests/source_checksums.yml",
-          "taskcluster/taskgraph/manifests/source_files.yml",
-          "taskcluster/taskgraph/transforms/beetmover.py",
-          "taskcluster/taskgraph/transforms/beetmover_checksums.py",
-          "taskcluster/taskgraph/transforms/beetmover_source_checksums.py",
-          "taskcluster/taskgraph/transforms/release_generate_checksums_beetmover.py",
-          "taskcluster/taskgraph/transforms/release_generate_checksums_signing.py",
-          "taskcluster/taskgraph/util/scriptworker.py"
-        ]
-      }
-    }
-  },
-  "121": {
     "changeset_number": "35727",
     "pusher": "dvarga@mozilla.com",
     "date_of_push": "2019-03-19 11:48:59",

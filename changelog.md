@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-19 09:54:07 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-19 14:04:47 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -16,9 +16,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d35d63ce1957)|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser Differential Revision: https://phabricator.services.mozilla.com/D23832|rgurzau@mozilla.com|sfraser|2019-03-18 23:51:19|
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=cee5e58bcf61)|[Bug 1534956 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534956) - Add Cristiano's facebook page to tp6-m r=Bebe Differential Revision: https://phabricator.services.mozilla.com/D23317|rgurzau@mozilla.com|Bebe|2019-03-18 23:51:19|
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=551c42866143)|[Bug 1535016 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535016) - Don't treat any Android job as new job r=jmaher Differential Revision: https://phabricator.services.mozilla.com/D23674|rgurzau@mozilla.com|jmaher|2019-03-18 23:51:19|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e16d27f25d45)|[Bug 1535011 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535011) update `versioncontrol.rst` r=dustin Small updates to the version control documents regarding upgrading `robustcheckout.py`. I noticed that we still reference `build-puppet` from it's former home on hgmo and don't include OpenCloudConfig in our list of places we need to vendor `robustcheckout` changes. Differential Revision: https://phabricator.services.mozilla.com/D23742|dvarga@mozilla.com|dustin|2019-03-19 11:58:30|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2f95100eef22)|[Bug 1485680 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1485680) - make the relpro action a hook. r=dustin make the relpro action a hook. Differential Revision: https://phabricator.services.mozilla.com/D5581|dvarga@mozilla.com|dustin|2019-03-19 11:58:30|
 
 |	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -56,6 +55,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/50c33007df4dfc3b8149f2fbcc39e6d00b815b9e)|Bug 1533791 - Bump scriptworker to 22.1.0 (#432)|JohanLorenzo|N/A|2019-03-19 12:28:46|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/a4416687b6fdf1988491ade1cb1dbe52f6434fad)|Merge pull request #431 from escapewindow/bump-slugid  bump slugid+taskcluster|escapewindow|N/A|2019-03-19 00:21:13|
 
 |	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	| 
@@ -70,6 +70,11 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/a6939bf2add7110531a1c23dbfcfdc2a2f3a1899)|client-web: bump version|helfi92|N/A|2019-03-19 13:44:59|
+|[Link](https://github.com/taskcluster/taskcluster/commit/2afacb0d9f74300cfff15f485e44459a28dc6b51)|Merge pull request #445 from helfi92/client-web-neutrino-v9  client-web neutrino v9, esm output, share linting|helfi92|N/A|2019-03-19 13:31:02|
+|[Link](https://github.com/taskcluster/taskcluster/commit/9971f02dbaafeda1bc292bf0d36f8f994cf719ff)|Add requested changes|helfi92|N/A|2019-03-18 15:58:49|
+|[Link](https://github.com/taskcluster/taskcluster/commit/6aa43f2ce1a6e0f3f19e7766a0b4da01dc12b334)|Nit: .taskcluster.yml|helfi92|N/A|2019-03-18 15:57:36|
+|[Link](https://github.com/taskcluster/taskcluster/commit/f1d03671b9f632745e568f7a60d7c9380d29f0f9)|Merge pull request #465 from taskcluster/all-contributors/add-djmitche  docs: add contributors|djmitche|N/A|2019-03-19 12:44:50|
 |[Link](https://github.com/taskcluster/taskcluster/commit/1ef077eafa5103ece64a783081f1aae1a32454af)|Fix weird focus state in task group view (FF only) (#455)|helfi92|N/A|2019-03-18 17:55:37|
 |[Link](https://github.com/taskcluster/taskcluster/commit/eaec8042dce5b572a0dfe91c4b99fd3061fae3ca)|Merge pull request #436 from taskcluster/update-config  Simplify lib-config|djmitche|N/A|2019-03-18 17:13:47|
 |[Link](https://github.com/taskcluster/taskcluster/commit/4ff92aae900479c4676ee72adb43d75a71a71f47)|Merge pull request #452 from taskcluster/one-more-gitversion-fix  Add gitversion to root as well|djmitche|N/A|2019-03-18 17:13:24|
@@ -126,7 +131,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/scriptworker.md)|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/mozilla-releng/scriptworker/commit/6c3698449ec5ae8ca363862d41c4a370cd101912)|22.1.0|JohanLorenzo|N/A|2019-03-19 10:43:07|
+|[Link](https://github.com/mozilla-releng/scriptworker/commit/30a54b0c8092698f23b570cf81560f8e1af3322c)|Bug 1533791 - Support "assume" scopes|JohanLorenzo|N/A|2019-03-18 17:55:11|
 
 |	shipitscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/shipitscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 
