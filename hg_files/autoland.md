@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 80753
+ CURRENT PUSH ID: 80790
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|80749|2019-03-18 21:43:40|Aki Sasaki <asasaki@mozilla.com>|[Bug 1485680 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1485680) - make the relpro action a hook. r=dustinmake the relpro action a hook.Differential Revision: https://phabricator.services.mozilla.com/D5581|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2f95100eef22
+|80755|2019-03-18 23:45:33|Mihai Tabara <mtabara@mozilla.com>|[Bug 1527206 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527206) - roll-out declarative artifacts for Fennec beta and release. r=sfraser a=release|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fa7672715203
 |80740|2019-03-18 19:59:44|Connor Sheehan <sheehan@mozilla.com>|[Bug 1535011 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535011) update `versioncontrol.rst` r=dustinSmall updates to the version control documents regardingupgrading `robustcheckout.py`. I noticed that we stillreference `build-puppet` from it's former home on hgmoand don't include OpenCloudConfig in our list of placeswe need to vendor `robustcheckout` changes.Differential Revision: https://phabricator.services.mozilla.com/D23742|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e16d27f25d45
 |80704|2019-03-18 14:36:33|Ionut Goldan <igoldan@mozilla.com>|[Bug 1535016 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535016) - Don't treat any Android job as new job r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D23674|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=551c42866143
 |80701|2019-03-18 13:28:30|Marian Raiciof <mraiciof@mozilla.com>|[Bug 1534956 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1534956) - Add Cristiano's facebook page to tp6-m r=BebeDifferential Revision: https://phabricator.services.mozilla.com/D23317|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=cee5e58bcf61

@@ -1,7 +1,8 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-04 23:04:36.474800
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-05 08:58:07.427716
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|67|escapewindow|Merge pull request #431 from escapewindow/bump-slugid bump slugid+taskcluster|[URL](https://github.com/mozilla-releng/build-puppet/commit/a4416687b6fdf1988491ade1cb1dbe52f6434fad)|2019-03-19 00:21:13
 |66|mutterroland|Merge pull request #427 from mozilla-releng/pyup-scheduled-update-2019-03-13 Scheduled weekly dependency update for week 10|[URL](https://github.com/mozilla-releng/build-puppet/commit/7992e466e54a8cc2973458b0d02fff71e50fe794)|2019-03-14 01:54:50
 |65|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/5719e3875ecba65e0252f9ea3be08d43a7874621)|2019-03-14 00:53:02
 |64|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/2175b9ec5f4d66003443be87b4ef2b307ce97070)|2019-03-14 00:52:58
