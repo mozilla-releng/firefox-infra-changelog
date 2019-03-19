@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80899
+    "last_push_id": 80931
   },
   "1": {
     "changeset_number": "35344",
@@ -36094,31 +36094,6 @@
     }
   },
   "740": {
-    "changeset_number": "80798",
-    "pusher": "thunderbird@calypsoblue.org",
-    "date_of_push": "2019-03-19 10:12:22",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=58dec282b0bc",
-        "commiter_name": "Rob Lemley <rob@thunderbird.net>",
-        "commit_message": "Bug 1491371 - Pin comm branches to mozilla revs without .taskcluster.yml. r=tomprince,dustin\n\ncomm-task-env runs before run-task and updates the environment with GECKO_*\nvariables that are defined in a file at the root of the comm repository,\n\".gecko_rev.yml\". run-task needs these variables to be set to find the\ncorrect mozilla repository to check out for a particular TB build.\n\nThe current pinning method of updating \".taskcluster.yml\" with the mozilla\nrepository and revision to pin tois no longer supported.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16783",
-        "files_changed": [
-          "taskcluster/scripts/comm-task-env"
-        ]
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=770808176c5c",
-        "commiter_name": "Rob Lemley <rob@thunderbird.net>",
-        "commit_message": "Bug 1491371 - Update decision task image to support comm-task-env. r=dustin\n\ncomm-task-env runs before run-task and updates the environment with GECKO_*\nvariables that are defined in a file at the root of a subproject's repository,\nsuch as \"comm-central\".\n\nUpdates:\n- add comm-task-env\n- add python 3.5 (run-task dependency)\n- add pyyaml\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16934",
-        "files_changed": [
-          "taskcluster/docker/decision/Dockerfile",
-          "taskcluster/docker/decision/VERSION",
-          "taskcluster/docker/decision/system-setup.sh"
-        ]
-      }
-    }
-  },
-  "740": {
     "changeset_number": "80880",
     "pusher": "ccoroiu@mozilla.com",
     "date_of_push": "2019-03-19 19:25:18",
@@ -36182,6 +36157,116 @@
         "commit_message": "Bug 1535132: Add worker types for running instrumented builds; r=dustin\n\nThis adds worker-type alias that has dedicated workers at level-3 for running\ninstrumented builds, but uses a test worker type at other levels.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23576",
         "files_changed": [
           "taskcluster/ci/config.yml"
+        ]
+      }
+    }
+  },
+  "742": {
+    "changeset_number": "80926",
+    "pusher": "mbanner@mozilla.com",
+    "date_of_push": "2019-03-20 00:27:55",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=13e9a230eb25",
+        "commiter_name": "Ian Moody <moz-ian@perix.co.uk>",
+        "commit_message": "Bug 1246594 - Enable ESLint rule no-throw-literal by default. r=Standard8\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24088",
+        "files_changed": [
+          ".eslintrc.js",
+          "accessible/tests/browser/.eslintrc.js",
+          "browser/components/migration/.eslintrc.js",
+          "browser/components/newtab/.eslintrc.js",
+          "browser/components/payments/.eslintrc.js",
+          "browser/extensions/formautofill/.eslintrc.js",
+          "browser/extensions/webcompat-reporter/.eslintrc.js",
+          "devtools/.eslintrc.js",
+          "mobile/android/extensions/report-site-issue/.eslintrc.js",
+          "security/.eslintrc.js",
+          "services/.eslintrc.js",
+          "taskcluster/docker/periodic-updates/.eslintrc.js",
+          "toolkit/components/extensions/.eslintrc.js",
+          "toolkit/components/narrate/.eslintrc.js",
+          "toolkit/components/satchel/.eslintrc.js",
+          "tools/lint/eslint/eslint-plugin-mozilla/lib/configs/recommended.js",
+          "tools/lint/eslint/eslint-plugin-mozilla/package-lock.json",
+          "tools/lint/eslint/eslint-plugin-mozilla/package.json"
+        ]
+      }
+    }
+  },
+  "743": {
+    "changeset_number": "80929",
+    "pusher": "mshal@mozilla.com",
+    "date_of_push": "2019-03-20 01:01:47",
+    "changeset_commits": {
+      "5": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=53d3443e55d9",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Explicitly set NEED_XVFB to false if need-xvfb isn't set; r=tomprince\n\ntest-linux.sh defaults to true for NEED_XVFB, while build-linux.sh\ndefaults to false. If we are using test-linux.sh from mozharness (rather\nthan mozharness-test), we need to explicitly set NEED_XVFB to false in\norder to not use xvfb.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22820",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6f5fc0d644dd",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add execute bit to test-linux.sh; r=tomprince\n\nIn order to call test-linux.sh with the job-script parameter, it needs\nto have executable permissions.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22821",
+        "files_changed": [
+          "taskcluster/scripts/tester/test-linux.sh"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=097f141a499d",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add support for MOZHARNESS_OPTIONS to test-linux.sh; r=tomprince\n\nThe mozharness.py transform passes in \"options\" parameters through the\nMOZHARNESS_OPTIONS environment variable. This will allow the Android PGO\nrun task to pass in the mozharness script name to test-linux.sh\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22822",
+        "files_changed": [
+          "taskcluster/scripts/tester/test-linux.sh"
+        ]
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b96dd954a456",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add Android PGO-instrumented build task; r=tomprince\n\nThis is the first stage of the Android PGO task pipeline to generate an\ninstrumented build.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22824",
+        "files_changed": [
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_generate.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c151ebf303ca",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add Android profile generation task; r=tomprince,gbrown\n\nThis introduces a mozharness script, android_emulator_pgo.py, to run the\nprofileserver suite with the PGO-instrumented Android build, and collect\nthe profile data and jarlog.\n\nThe mozharness script contains some redundancy with\nbuild/pgo/profileserver.py, but the additional requirements for Android\nto use adb and existing mozharness classes to control the emulator made\nit difficult to share the desktop profileserver implementation.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22825",
+        "files_changed": [
+          "taskcluster/ci/generate-profile/kind.yml",
+          "testing/mozharness/configs/android/android_pgo.py",
+          "testing/mozharness/mozharness/mozilla/mozbase.py",
+          "testing/mozharness/scripts/android_emulator_pgo.py"
+        ]
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=de8beacc5eb4",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add final Android PGO task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22826",
+        "files_changed": [
+          "taskcluster/ci/build/android.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_use.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "12": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=429c96e4de32",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Enable tests on Android PGO; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22827",
+        "files_changed": [
+          "taskcluster/ci/test/compiled.yml",
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/xpcshell.yml",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "taskcluster/taskgraph/try_option_syntax.py"
         ]
       }
     }
