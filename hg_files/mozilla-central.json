@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35728
+    "last_push_id": 35729
   },
   "1": {
     "changeset_number": "35344",
@@ -11709,6 +11709,31 @@
         "commit_message": "bug 1485680 - make the relpro action a hook. r=dustin\n\nmake the relpro action a hook.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5581",
         "files_changed": [
           "taskcluster/taskgraph/actions/release_promotion.py"
+        ]
+      }
+    }
+  },
+  "121": {
+    "changeset_number": "35729",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-03-19 18:30:13",
+    "changeset_commits": {
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=58dec282b0bc",
+        "commiter_name": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "Bug 1491371 - Pin comm branches to mozilla revs without .taskcluster.yml. r=tomprince,dustin\n\ncomm-task-env runs before run-task and updates the environment with GECKO_*\nvariables that are defined in a file at the root of the comm repository,\n\".gecko_rev.yml\". run-task needs these variables to be set to find the\ncorrect mozilla repository to check out for a particular TB build.\n\nThe current pinning method of updating \".taskcluster.yml\" with the mozilla\nrepository and revision to pin tois no longer supported.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16783",
+        "files_changed": [
+          "taskcluster/scripts/comm-task-env"
+        ]
+      },
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=770808176c5c",
+        "commiter_name": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "Bug 1491371 - Update decision task image to support comm-task-env. r=dustin\n\ncomm-task-env runs before run-task and updates the environment with GECKO_*\nvariables that are defined in a file at the root of a subproject's repository,\nsuch as \"comm-central\".\n\nUpdates:\n- add comm-task-env\n- add python 3.5 (run-task dependency)\n- add pyyaml\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16934",
+        "files_changed": [
+          "taskcluster/docker/decision/Dockerfile",
+          "taskcluster/docker/decision/VERSION",
+          "taskcluster/docker/decision/system-setup.sh"
         ]
       }
     }

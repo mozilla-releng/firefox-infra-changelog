@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80850
+    "last_push_id": 80899
   },
   "1": {
     "changeset_number": "35344",
@@ -36114,6 +36114,74 @@
           "taskcluster/docker/decision/Dockerfile",
           "taskcluster/docker/decision/VERSION",
           "taskcluster/docker/decision/system-setup.sh"
+        ]
+      }
+    }
+  },
+  "740": {
+    "changeset_number": "80880",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-03-19 19:25:18",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=85bd45178007",
+        "commiter_name": "Jesse Schwartzentruber <truber@mozilla.com>",
+        "commit_message": "Bug 1519851 - Create --enable-fuzzing debug build job for MacOSX. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19862",
+        "files_changed": [
+          "browser/config/mozconfigs/macosx64/debug-fuzzing",
+          "taskcluster/ci/build/macosx.yml",
+          "testing/mozharness/configs/builds/releng_sub_mac_configs/64_cross_fuzzing_debug.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py",
+          "toolkit/toolkit.mozbuild"
+        ]
+      }
+    }
+  },
+  "741": {
+    "changeset_number": "80890",
+    "pusher": "gbrown@mozilla.com",
+    "date_of_push": "2019-03-19 20:25:13",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f45661298ac3",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1535417 - Set dynamic mozinfo fields in Android test-verify; r=bc\n\nIn the mochitest harness, is_fennec is populated by examining harness options, and\nis_emulator and android_version are populated by examining the device via mozdevice.\nThe per-test code doesn't have those options and the emulator may not be available\nyet, so I've opted for populated those fields from mozharness configuration. In\npractice, we only run Android TV on Android 4.3, where is_fennec=True, is_emulator=True,\nand android_version=18. I'd like to run TV on Android 7.0/geckoview eventually,\nwhere is_fennec=False, is_emulator=True, and android_version=24.\nSince I was here, I also removed 'stylo' from the per-test mozinfo, since that field\nis obsolete now.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23595",
+        "files_changed": [
+          "testing/mozharness/configs/android/androidarm_4_3.py",
+          "testing/mozharness/configs/android/androidx86_7_0.py",
+          "testing/mozharness/mozharness/mozilla/testing/per_test_base.py"
+        ]
+      }
+    }
+  },
+  "742": {
+    "changeset_number": "80899",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-19 21:16:30",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4eabf4f36fef",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: Implement worker aliases; r=aki,glandium,jmaher,dustin\n\nThere are a number of ways we want to vary workers over time and jobs, including\n\n - we are working on migrating to gce\n - pgo builds have a dedicated worker-type for running the instrumented build\n   at level 3 but not level 1\n\nRather than have all tasks know about how the machines are provisioned, this\nmoves to using short-names for the worker types, and then has a config mapping\nthose to the actual worker types.\n\nThis adds support for aliases, and an initial set of them. Follow up work will\nswitch the existing uses of these worker types to using the aliases.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22549",
+        "files_changed": [
+          "taskcluster/ci/config.yml",
+          "taskcluster/taskgraph/config.py",
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/build.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py",
+          "taskcluster/taskgraph/transforms/repackage.py",
+          "taskcluster/taskgraph/transforms/repackage_partner.py",
+          "taskcluster/taskgraph/transforms/task.py",
+          "taskcluster/taskgraph/util/schema.py",
+          "taskcluster/taskgraph/util/workertypes.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e3acb1723c70",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1535132: Add worker types for running instrumented builds; r=dustin\n\nThis adds worker-type alias that has dedicated workers at level-3 for running\ninstrumented builds, but uses a test worker type at other levels.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23576",
+        "files_changed": [
+          "taskcluster/ci/config.yml"
         ]
       }
     }
