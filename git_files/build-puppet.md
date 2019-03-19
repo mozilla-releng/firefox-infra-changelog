@@ -1,7 +1,8 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-05 11:52:57.579098
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-05 16:03:12.404202
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|68|JohanLorenzo|[Bug 1533791 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791) - Bump scriptworker to 22.1.0 (#432)|[URL](https://github.com/mozilla-releng/build-puppet/commit/50c33007df4dfc3b8149f2fbcc39e6d00b815b9e)|2019-03-19 12:28:46
 |67|escapewindow|Merge pull request #431 from escapewindow/bump-slugid bump slugid+taskcluster|[URL](https://github.com/mozilla-releng/build-puppet/commit/a4416687b6fdf1988491ade1cb1dbe52f6434fad)|2019-03-19 00:21:13
 |66|mutterroland|Merge pull request #427 from mozilla-releng/pyup-scheduled-update-2019-03-13 Scheduled weekly dependency update for week 10|[URL](https://github.com/mozilla-releng/build-puppet/commit/7992e466e54a8cc2973458b0d02fff71e50fe794)|2019-03-14 01:54:50
 |65|mutterroland|Revert taskcluster from 7.0.0 to 6.0.0 Revert taskcluster from 7.0.0 to 6.0.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/5719e3875ecba65e0252f9ea3be08d43a7874621)|2019-03-14 00:53:02
