@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35731
+    "last_push_id": 35733
   },
   "1": {
     "changeset_number": "35344",
@@ -11705,6 +11705,155 @@
           "testing/mozharness/configs/builds/releng_sub_mac_configs/64_cross_fuzzing_debug.py",
           "testing/mozharness/mozharness/mozilla/building/buildbase.py",
           "toolkit/toolkit.mozbuild"
+        ]
+      }
+    }
+  },
+  "121": {
+    "changeset_number": "35732",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-03-20 12:52:37",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f45661298ac3",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1535417 - Set dynamic mozinfo fields in Android test-verify; r=bc\n\nIn the mochitest harness, is_fennec is populated by examining harness options, and\nis_emulator and android_version are populated by examining the device via mozdevice.\nThe per-test code doesn't have those options and the emulator may not be available\nyet, so I've opted for populated those fields from mozharness configuration. In\npractice, we only run Android TV on Android 4.3, where is_fennec=True, is_emulator=True,\nand android_version=18. I'd like to run TV on Android 7.0/geckoview eventually,\nwhere is_fennec=False, is_emulator=True, and android_version=24.\nSince I was here, I also removed 'stylo' from the per-test mozinfo, since that field\nis obsolete now.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23595",
+        "files_changed": [
+          "testing/mozharness/configs/android/androidarm_4_3.py",
+          "testing/mozharness/configs/android/androidx86_7_0.py",
+          "testing/mozharness/mozharness/mozilla/testing/per_test_base.py"
+        ]
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4eabf4f36fef",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1532783: Implement worker aliases; r=aki,glandium,jmaher,dustin\n\nThere are a number of ways we want to vary workers over time and jobs, including\n\n - we are working on migrating to gce\n - pgo builds have a dedicated worker-type for running the instrumented build\n   at level 3 but not level 1\n\nRather than have all tasks know about how the machines are provisioned, this\nmoves to using short-names for the worker types, and then has a config mapping\nthose to the actual worker types.\n\nThis adds support for aliases, and an initial set of them. Follow up work will\nswitch the existing uses of these worker types to using the aliases.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22549",
+        "files_changed": [
+          "taskcluster/ci/config.yml",
+          "taskcluster/taskgraph/config.py",
+          "taskcluster/taskgraph/test/test_transforms_job.py",
+          "taskcluster/taskgraph/transforms/build.py",
+          "taskcluster/taskgraph/transforms/job/__init__.py",
+          "taskcluster/taskgraph/transforms/repackage.py",
+          "taskcluster/taskgraph/transforms/repackage_partner.py",
+          "taskcluster/taskgraph/transforms/task.py",
+          "taskcluster/taskgraph/util/schema.py",
+          "taskcluster/taskgraph/util/workertypes.py"
+        ]
+      },
+      "16": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e3acb1723c70",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1535132: Add worker types for running instrumented builds; r=dustin\n\nThis adds worker-type alias that has dedicated workers at level-3 for running\ninstrumented builds, but uses a test worker type at other levels.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23576",
+        "files_changed": [
+          "taskcluster/ci/config.yml"
+        ]
+      },
+      "60": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=13e9a230eb25",
+        "commiter_name": "Ian Moody <moz-ian@perix.co.uk>",
+        "commit_message": "Bug 1246594 - Enable ESLint rule no-throw-literal by default. r=Standard8\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24088",
+        "files_changed": [
+          ".eslintrc.js",
+          "accessible/tests/browser/.eslintrc.js",
+          "browser/components/migration/.eslintrc.js",
+          "browser/components/newtab/.eslintrc.js",
+          "browser/components/payments/.eslintrc.js",
+          "browser/extensions/formautofill/.eslintrc.js",
+          "browser/extensions/webcompat-reporter/.eslintrc.js",
+          "devtools/.eslintrc.js",
+          "mobile/android/extensions/report-site-issue/.eslintrc.js",
+          "security/.eslintrc.js",
+          "services/.eslintrc.js",
+          "taskcluster/docker/periodic-updates/.eslintrc.js",
+          "toolkit/components/extensions/.eslintrc.js",
+          "toolkit/components/narrate/.eslintrc.js",
+          "toolkit/components/satchel/.eslintrc.js",
+          "tools/lint/eslint/eslint-plugin-mozilla/lib/configs/recommended.js",
+          "tools/lint/eslint/eslint-plugin-mozilla/package-lock.json",
+          "tools/lint/eslint/eslint-plugin-mozilla/package.json"
+        ]
+      },
+      "68": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=53d3443e55d9",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Explicitly set NEED_XVFB to false if need-xvfb isn't set; r=tomprince\n\ntest-linux.sh defaults to true for NEED_XVFB, while build-linux.sh\ndefaults to false. If we are using test-linux.sh from mozharness (rather\nthan mozharness-test), we need to explicitly set NEED_XVFB to false in\norder to not use xvfb.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22820",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "69": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6f5fc0d644dd",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add execute bit to test-linux.sh; r=tomprince\n\nIn order to call test-linux.sh with the job-script parameter, it needs\nto have executable permissions.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22821",
+        "files_changed": [
+          "taskcluster/scripts/tester/test-linux.sh"
+        ]
+      },
+      "70": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=097f141a499d",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add support for MOZHARNESS_OPTIONS to test-linux.sh; r=tomprince\n\nThe mozharness.py transform passes in \"options\" parameters through the\nMOZHARNESS_OPTIONS environment variable. This will allow the Android PGO\nrun task to pass in the mozharness script name to test-linux.sh\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22822",
+        "files_changed": [
+          "taskcluster/scripts/tester/test-linux.sh"
+        ]
+      },
+      "72": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b96dd954a456",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add Android PGO-instrumented build task; r=tomprince\n\nThis is the first stage of the Android PGO task pipeline to generate an\ninstrumented build.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22824",
+        "files_changed": [
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_generate.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "73": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c151ebf303ca",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add Android profile generation task; r=tomprince,gbrown\n\nThis introduces a mozharness script, android_emulator_pgo.py, to run the\nprofileserver suite with the PGO-instrumented Android build, and collect\nthe profile data and jarlog.\n\nThe mozharness script contains some redundancy with\nbuild/pgo/profileserver.py, but the additional requirements for Android\nto use adb and existing mozharness classes to control the emulator made\nit difficult to share the desktop profileserver implementation.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22825",
+        "files_changed": [
+          "taskcluster/ci/generate-profile/kind.yml",
+          "testing/mozharness/configs/android/android_pgo.py",
+          "testing/mozharness/mozharness/mozilla/mozbase.py",
+          "testing/mozharness/scripts/android_emulator_pgo.py"
+        ]
+      },
+      "74": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=de8beacc5eb4",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add final Android PGO task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22826",
+        "files_changed": [
+          "taskcluster/ci/build/android.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_use.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "75": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=429c96e4de32",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Enable tests on Android PGO; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22827",
+        "files_changed": [
+          "taskcluster/ci/test/compiled.yml",
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/xpcshell.yml",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      },
+      "99": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=708979f9c3f3",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1535355 - Add clang-tidy & clang-format in CI for code-review, r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23524",
+        "files_changed": [
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/clang.yml",
+          "taskcluster/ci/source-test/kind.yml",
+          "taskcluster/scripts/misc/source-test-clang-setup.sh"
         ]
       }
     }
