@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-06 21:09:37.678341
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-07 00:58:28.572484
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|687|imbstack|Merge pull request #475 from taskcluster/bug-1536927 [Bug 1536927] Only log taskIds|[URL](https://github.com/taskcluster/taskcluster/commit/21fc92f5075fea2fd840f0a1c12e8b7a25a828b4)|2019-03-20 22:29:48
+|686|imbstack|Only log taskIds|[URL](https://github.com/taskcluster/taskcluster/commit/6ecc12e6a17267b6c441d4077f982a439f2ffc7d)|2019-03-20 22:14:39
 |685|imbstack|Merge pull request #473 from taskcluster/stop-listening-to-brian Actually fix retries this time (again)|[URL](https://github.com/taskcluster/taskcluster/commit/763bd2799b46d1fe4213f95c0ef54557b1b160de)|2019-03-20 18:03:42
 |684|imbstack|Merge pull request #417 from taskcluster/bug-1535125-pt-1 [Bug 1535125] Part 1: Update critical part of lib-api and auth/queue|[URL](https://github.com/taskcluster/taskcluster/commit/61a1bf21159925904fd511d28910103d26dd9d85)|2019-03-20 17:56:27
 |683|imbstack|Actually fix retries this time (again)|[URL](https://github.com/taskcluster/taskcluster/commit/20b2d4aa67a28d21516d0835147e29378363f1d5)|2019-03-20 17:16:13
