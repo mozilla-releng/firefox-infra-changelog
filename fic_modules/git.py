@@ -56,6 +56,8 @@ def filter_git_commit_data(repository_name, repository_team, repository_type,
     if repository_type == "commit-keyword":
         filter_git_commit_keyword(repository_name, repository_path)
     # TYPE = TAG
+    if repository_type == "script":
+        filter_git_scriptworkers(repository_team, repository_name)
     if repository_type == "tag":
         if repository_name == "build-puppet":
             filter_git_tag_bp(repository_name,
@@ -194,39 +196,50 @@ def filter_git_tag_bp(repository_name, repository_path):
     json_writer_git(repository_name, new_commit_dict)
 
 
-def filter_git_scriptworkers(latest_releases, repo_team, script_repo):
+def filter_git_scriptworkers(repo_team, script_repo):
     """
     Filters the scriptworker repos that are under build-puppet
-    :param latest_releases: data about last release
     :param repo_team: team name as a string
     :param script_repo: scriptworker repo we are working on
     :return: returns the new commits of a repo
     """
     last_local_date = get_date_from_json(script_repo)
-    new_commit_version_date = \
-        datetime.strptime(latest_releases
-                          .get("latest_release")
-                          .get("date"),
-                          "%Y-%m-%d %H:%M:%S")
-    commit_number = 0
-    new_scriptworker_dict = {
-        (int(commit_number)): {"lastChecked": str(datetime.utcnow()),
-                               "last_releases": latest_releases}}
-    new_repo_path = repo_team + script_repo
-    for commit2 in GIT.get_repo(new_repo_path).get_commits(
-            since=last_local_date):
-        last_modified = \
-            datetime.strftime(parse(commit2.last_modified),
+    latest_releases = get_version(script_repo, repo_team)
+    with open("./repositories.json", "r") as file:
+        json_content = json.load(file)
+        version_path = json_content.get("Github").get(script_repo) \
+            .get("configuration").get("version-path")
+    checker = compare_versions(version_path, script_repo, latest_releases)
+    if checker:
+        new_commit_version_date = \
+            datetime.strptime(latest_releases
+                              .get("latest_release")
+                              .get("date"),
                               "%Y-%m-%d %H:%M:%S")
-        last_modified = datetime.strptime(last_modified,
-                                          "%Y-%m-%d %H:%M:%S")
-        if last_modified <= new_commit_version_date:
-            each_commit2 = {}
-            commit_number += 1
-            commit_details = get_commit_details(commit2)
-            each_commit2.update({int(commit_number): commit_details})
-            new_scriptworker_dict.update(each_commit2)
-    return new_scriptworker_dict
+        commit_number = 0
+        new_scriptworker_dict = {
+            (int(commit_number)): {"lastChecked": str(datetime.utcnow()),
+                                   "last_releases": latest_releases}}
+        new_repo_path = repo_team + script_repo
+        for commit2 in GIT.get_repo(new_repo_path).get_commits(
+                since=last_local_date):
+            last_modified = \
+                datetime.strftime(parse(commit2.last_modified),
+                                  "%Y-%m-%d %H:%M:%S")
+            last_modified = datetime.strptime(last_modified,
+                                              "%Y-%m-%d %H:%M:%S")
+            if last_modified <= new_commit_version_date:
+                each_commit2 = {}
+                commit_number += 1
+                commit_details = get_commit_details(commit2)
+                # if commit contain tag
+                    each_commit2.update({int(commit_number): commit_details})
+                    new_scriptworker_dict.update(each_commit2)
+                # else:
+                #   pass
+        json_writer_git(script_repo, new_scriptworker_dict)
+    else:
+        LOGGER.info("No new changes entered production")
 
 
 def filter_git_tag(repository_name, repository_team, repository_path):
