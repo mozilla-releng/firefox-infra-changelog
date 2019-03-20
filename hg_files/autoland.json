@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80959
+    "last_push_id": 80979
   },
   "1": {
     "changeset_number": "35344",
@@ -36162,24 +36162,6 @@
     }
   },
   "743": {
-    "changeset_number": "80945",
-    "pusher": "babadie@mozilla.com",
-    "date_of_push": "2019-03-20 08:26:10",
-    "changeset_commits": {
-      "3": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=708979f9c3f3",
-        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
-        "commit_message": "Bug 1535355 - Add clang-tidy & clang-format in CI for code-review, r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23524",
-        "files_changed": [
-          "taskcluster/ci/config.yml",
-          "taskcluster/ci/source-test/clang.yml",
-          "taskcluster/ci/source-test/kind.yml",
-          "taskcluster/scripts/misc/source-test-clang-setup.sh"
-        ]
-      }
-    }
-  },
-  "743": {
     "changeset_number": "80948",
     "pusher": "nerli@mozilla.com",
     "date_of_push": "2019-03-20 11:58:50",
@@ -36297,6 +36279,36 @@
           "taskcluster/ci/test/xpcshell.yml",
           "taskcluster/taskgraph/transforms/tests.py",
           "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      }
+    }
+  },
+  "744": {
+    "changeset_number": "80964",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-03-20 16:21:05",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0f9e3bff5575",
+        "commiter_name": "Olivier Tilloy <olivier@tilloy.net>",
+        "commit_message": "Bug 1473602 - Add u2f-devices plug to snap package. r=jlorenzo\n\nThis allows the confined snap to interact with Universal 2nd Factor devices, such as Yubikeys.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24147",
+        "files_changed": [
+          "taskcluster/docker/firefox-snap/snapcraft.yaml.in"
+        ]
+      }
+    }
+  },
+  "745": {
+    "changeset_number": "80972",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-20 17:44:59",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c12cc38850b7",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1535947: [taskgraph] Remove a redundant condition in name_sanity transform; r=aki\n\nIn bug 1501776, the `single_dep` and `multi_dep` schemas were aligned, which made both\nbranch in name_sanity identical. Simplify the code to reflect that.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24109",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/name_sanity.py"
         ]
       }
     }

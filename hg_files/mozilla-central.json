@@ -11691,25 +11691,6 @@
     }
   },
   "121": {
-    "changeset_number": "35730",
-    "pusher": "rmaries@mozilla.com",
-    "date_of_push": "2019-03-19 23:51:47",
-    "changeset_commits": {
-      "45": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=85bd45178007",
-        "commiter_name": "Jesse Schwartzentruber <truber@mozilla.com>",
-        "commit_message": "Bug 1519851 - Create --enable-fuzzing debug build job for MacOSX. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19862",
-        "files_changed": [
-          "browser/config/mozconfigs/macosx64/debug-fuzzing",
-          "taskcluster/ci/build/macosx.yml",
-          "testing/mozharness/configs/builds/releng_sub_mac_configs/64_cross_fuzzing_debug.py",
-          "testing/mozharness/mozharness/mozilla/building/buildbase.py",
-          "toolkit/toolkit.mozbuild"
-        ]
-      }
-    }
-  },
-  "121": {
     "changeset_number": "35732",
     "pusher": "opoprus@mozilla.com",
     "date_of_push": "2019-03-20 12:52:37",
