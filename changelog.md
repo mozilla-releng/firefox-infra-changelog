@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-20 19:10:45 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-20 22:59:36 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -89,6 +89,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/21fc92f5075fea2fd840f0a1c12e8b7a25a828b4)|Merge pull request #475 from taskcluster/bug-1536927  [Bug 1536927] Only log taskIds|imbstack|N/A|2019-03-20 22:29:48|
+|[Link](https://github.com/taskcluster/taskcluster/commit/6ecc12e6a17267b6c441d4077f982a439f2ffc7d)|Only log taskIds|imbstack|N/A|2019-03-20 22:14:39|
 |[Link](https://github.com/taskcluster/taskcluster/commit/763bd2799b46d1fe4213f95c0ef54557b1b160de)|Merge pull request #473 from taskcluster/stop-listening-to-brian  Actually fix retries this time (again)|imbstack|N/A|2019-03-20 18:03:42|
 |[Link](https://github.com/taskcluster/taskcluster/commit/61a1bf21159925904fd511d28910103d26dd9d85)|Merge pull request #417 from taskcluster/bug-1535125-pt-1  [Bug 1535125] Part 1: Update critical part of lib-api and auth/queue|imbstack|N/A|2019-03-20 17:56:27|
 |[Link](https://github.com/taskcluster/taskcluster/commit/20b2d4aa67a28d21516d0835147e29378363f1d5)|Actually fix retries this time (again)|imbstack|N/A|2019-03-20 17:16:13|
@@ -209,7 +211,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/mozilla-releng/build-cloud-tools/commit/f033efed161948ac58fcf8d27dd0916c850da112)|Merge pull request #375 from garbas/product-details-prod  terraform: add cname for prod instance of product details|dividehex|N/A|2019-03-20 19:38:02|
 
 |	ci-configuration	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.json)	| 
 |:----------:|:-----------------------:|:--------:| 
