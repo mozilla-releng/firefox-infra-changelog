@@ -1,7 +1,8 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-06 15:16:19.355471
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-06 17:53:18.981653
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|682|djmitche|Merge pull request #462 from djmitche/bug1531871 [Bug 1531871 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531871) - upgrade azure-blob-storage|[URL](https://github.com/taskcluster/taskcluster/commit/9bdbc3e7824a7604e2e0935843499de380f64238)|2019-03-20 15:28:59
 |681|djmitche|Merge pull request #461 from taskcluster/bug1533591-tf [Bug 1533591 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533591) - set WEBSOCKTUNNEL_SECRET and expose as output|[URL](https://github.com/taskcluster/taskcluster/commit/814aad825d73e9d664b1b764f4dd8cdcb025bc6f)|2019-03-19 16:52:22
 |680|djmitche|Merge pull request #467 from djmitche/bug1536435 [Bug 1536435 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1536435) - support linked identities|[URL](https://github.com/taskcluster/taskcluster/commit/8b77ccceb545211355a3cbd2d6482fc8a3b5b734)|2019-03-19 16:35:15
 |679|djmitche|Merge pull request #464 from djmitche/restrict-wst-client-id Restrict the allowable charcters for wstClient|[URL](https://github.com/taskcluster/taskcluster/commit/42f09baa5cd5a17828ed4460040b040f99d2a5c6)|2019-03-19 15:44:17

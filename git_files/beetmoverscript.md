@@ -1,7 +1,8 @@
-## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-06 15:16:19.355471
+## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-06 17:53:18.981653
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|28|tomprince|8.4.2|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/53718065794084f41d339e1cefc3d90c3e7b3f9a)|2019-03-11 20:36:02
 |27|MihaiTabara|8.4.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/b26a8dcb800dcf85c7a6c6583ba88307822f1c7e)|2019-02-04 22:07:07
 |26|jfx2006|[Bug 1516542 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1516542) - Add support for .msi to Thunderbird templates (#202) [Bug 1516542 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1516542) - Add support for .msi to Thunderbird templates Thunderbird version of [Bug 1475512 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1475512) [Bug 1516542 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1516542) - Add support .msi support for Thunderbird Incorporating suggested changes from pull request #202.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/a10494cbde3cc5509a83d15ec4ff0811d5958c4f)|2019-02-04 18:04:01
 |25|tomprince|Merge pull request #205 from tp-tc/win64-aarch64 Add win64-aarch64 support for partner repacks.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/c1e20a9a233f2095f967875f741ced491bef0528)|2019-01-28 07:00:43
