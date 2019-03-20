@@ -56,8 +56,6 @@ def filter_git_commit_data(repository_name, repository_team, repository_type,
     if repository_type == "commit-keyword":
         filter_git_commit_keyword(repository_name, repository_path)
     # TYPE = TAG
-    if repository_type == "script":
-        filter_git_tag(repository_name, repository_team, repository_path)
     if repository_type == "tag":
         if repository_name == "build-puppet":
             filter_git_tag_bp(repository_name,
