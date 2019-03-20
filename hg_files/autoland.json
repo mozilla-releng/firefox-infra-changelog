@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80931
+    "last_push_id": 80945
   },
   "1": {
     "changeset_number": "35344",
@@ -36130,38 +36130,6 @@
     }
   },
   "742": {
-    "changeset_number": "80899",
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-03-19 21:16:30",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4eabf4f36fef",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1532783: Implement worker aliases; r=aki,glandium,jmaher,dustin\n\nThere are a number of ways we want to vary workers over time and jobs, including\n\n - we are working on migrating to gce\n - pgo builds have a dedicated worker-type for running the instrumented build\n   at level 3 but not level 1\n\nRather than have all tasks know about how the machines are provisioned, this\nmoves to using short-names for the worker types, and then has a config mapping\nthose to the actual worker types.\n\nThis adds support for aliases, and an initial set of them. Follow up work will\nswitch the existing uses of these worker types to using the aliases.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22549",
-        "files_changed": [
-          "taskcluster/ci/config.yml",
-          "taskcluster/taskgraph/config.py",
-          "taskcluster/taskgraph/test/test_transforms_job.py",
-          "taskcluster/taskgraph/transforms/build.py",
-          "taskcluster/taskgraph/transforms/job/__init__.py",
-          "taskcluster/taskgraph/transforms/repackage.py",
-          "taskcluster/taskgraph/transforms/repackage_partner.py",
-          "taskcluster/taskgraph/transforms/task.py",
-          "taskcluster/taskgraph/util/schema.py",
-          "taskcluster/taskgraph/util/workertypes.py"
-        ]
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e3acb1723c70",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1535132: Add worker types for running instrumented builds; r=dustin\n\nThis adds worker-type alias that has dedicated workers at level-3 for running\ninstrumented builds, but uses a test worker type at other levels.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23576",
-        "files_changed": [
-          "taskcluster/ci/config.yml"
-        ]
-      }
-    }
-  },
-  "742": {
     "changeset_number": "80926",
     "pusher": "mbanner@mozilla.com",
     "date_of_push": "2019-03-20 00:27:55",
@@ -36267,6 +36235,24 @@
           "taskcluster/ci/test/xpcshell.yml",
           "taskcluster/taskgraph/transforms/tests.py",
           "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      }
+    }
+  },
+  "743": {
+    "changeset_number": "80945",
+    "pusher": "babadie@mozilla.com",
+    "date_of_push": "2019-03-20 08:26:10",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=708979f9c3f3",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1535355 - Add clang-tidy & clang-format in CI for code-review, r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23524",
+        "files_changed": [
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/clang.yml",
+          "taskcluster/ci/source-test/kind.yml",
+          "taskcluster/scripts/misc/source-test-clang-setup.sh"
         ]
       }
     }
