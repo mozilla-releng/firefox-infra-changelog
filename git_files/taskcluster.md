@@ -1,7 +1,10 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-06 17:53:18.981653
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-06 21:09:37.678341
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|685|imbstack|Merge pull request #473 from taskcluster/stop-listening-to-brian Actually fix retries this time (again)|[URL](https://github.com/taskcluster/taskcluster/commit/763bd2799b46d1fe4213f95c0ef54557b1b160de)|2019-03-20 18:03:42
+|684|imbstack|Merge pull request #417 from taskcluster/bug-1535125-pt-1 [Bug 1535125] Part 1: Update critical part of lib-api and auth/queue|[URL](https://github.com/taskcluster/taskcluster/commit/61a1bf21159925904fd511d28910103d26dd9d85)|2019-03-20 17:56:27
+|683|imbstack|Actually fix retries this time (again)|[URL](https://github.com/taskcluster/taskcluster/commit/20b2d4aa67a28d21516d0835147e29378363f1d5)|2019-03-20 17:16:13
 |682|djmitche|Merge pull request #462 from djmitche/bug1531871 [Bug 1531871 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1531871) - upgrade azure-blob-storage|[URL](https://github.com/taskcluster/taskcluster/commit/9bdbc3e7824a7604e2e0935843499de380f64238)|2019-03-20 15:28:59
 |681|djmitche|Merge pull request #461 from taskcluster/bug1533591-tf [Bug 1533591 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533591) - set WEBSOCKTUNNEL_SECRET and expose as output|[URL](https://github.com/taskcluster/taskcluster/commit/814aad825d73e9d664b1b764f4dd8cdcb025bc6f)|2019-03-19 16:52:22
 |680|djmitche|Merge pull request #467 from djmitche/bug1536435 [Bug 1536435 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1536435) - support linked identities|[URL](https://github.com/taskcluster/taskcluster/commit/8b77ccceb545211355a3cbd2d6482fc8a3b5b734)|2019-03-19 16:35:15

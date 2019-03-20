@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-20 15:54:39 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-20 19:10:45 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -89,6 +89,9 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/763bd2799b46d1fe4213f95c0ef54557b1b160de)|Merge pull request #473 from taskcluster/stop-listening-to-brian  Actually fix retries this time (again)|imbstack|N/A|2019-03-20 18:03:42|
+|[Link](https://github.com/taskcluster/taskcluster/commit/61a1bf21159925904fd511d28910103d26dd9d85)|Merge pull request #417 from taskcluster/bug-1535125-pt-1  [Bug 1535125] Part 1: Update critical part of lib-api and auth/queue|imbstack|N/A|2019-03-20 17:56:27|
+|[Link](https://github.com/taskcluster/taskcluster/commit/20b2d4aa67a28d21516d0835147e29378363f1d5)|Actually fix retries this time (again)|imbstack|N/A|2019-03-20 17:16:13|
 |[Link](https://github.com/taskcluster/taskcluster/commit/9bdbc3e7824a7604e2e0935843499de380f64238)|Merge pull request #462 from djmitche/bug1531871  Bug 1531871 - upgrade azure-blob-storage|djmitche|N/A|2019-03-20 15:28:59|
 |[Link](https://github.com/taskcluster/taskcluster/commit/814aad825d73e9d664b1b764f4dd8cdcb025bc6f)|Merge pull request #461 from taskcluster/bug1533591-tf  Bug 1533591 - set WEBSOCKTUNNEL_SECRET and expose as output|djmitche|N/A|2019-03-19 16:52:22|
 |[Link](https://github.com/taskcluster/taskcluster/commit/8b77ccceb545211355a3cbd2d6482fc8a3b5b734)|Merge pull request #467 from djmitche/bug1536435  Bug 1536435 - support linked identities|djmitche|N/A|2019-03-19 16:35:15|
