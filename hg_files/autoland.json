@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 80945
+    "last_push_id": 80959
   },
   "1": {
     "changeset_number": "35344",
@@ -36162,84 +36162,6 @@
     }
   },
   "743": {
-    "changeset_number": "80929",
-    "pusher": "mshal@mozilla.com",
-    "date_of_push": "2019-03-20 01:01:47",
-    "changeset_commits": {
-      "5": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=53d3443e55d9",
-        "commiter_name": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 632954 - Explicitly set NEED_XVFB to false if need-xvfb isn't set; r=tomprince\n\ntest-linux.sh defaults to true for NEED_XVFB, while build-linux.sh\ndefaults to false. If we are using test-linux.sh from mozharness (rather\nthan mozharness-test), we need to explicitly set NEED_XVFB to false in\norder to not use xvfb.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22820",
-        "files_changed": [
-          "taskcluster/taskgraph/transforms/job/mozharness.py"
-        ]
-      },
-      "6": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6f5fc0d644dd",
-        "commiter_name": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 632954 - Add execute bit to test-linux.sh; r=tomprince\n\nIn order to call test-linux.sh with the job-script parameter, it needs\nto have executable permissions.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22821",
-        "files_changed": [
-          "taskcluster/scripts/tester/test-linux.sh"
-        ]
-      },
-      "7": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=097f141a499d",
-        "commiter_name": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 632954 - Add support for MOZHARNESS_OPTIONS to test-linux.sh; r=tomprince\n\nThe mozharness.py transform passes in \"options\" parameters through the\nMOZHARNESS_OPTIONS environment variable. This will allow the Android PGO\nrun task to pass in the mozharness script name to test-linux.sh\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22822",
-        "files_changed": [
-          "taskcluster/scripts/tester/test-linux.sh"
-        ]
-      },
-      "9": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b96dd954a456",
-        "commiter_name": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 632954 - Add Android PGO-instrumented build task; r=tomprince\n\nThis is the first stage of the Android PGO task pipeline to generate an\ninstrumented build.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22824",
-        "files_changed": [
-          "taskcluster/ci/instrumented-build/kind.yml",
-          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_generate.py",
-          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
-        ]
-      },
-      "10": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c151ebf303ca",
-        "commiter_name": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 632954 - Add Android profile generation task; r=tomprince,gbrown\n\nThis introduces a mozharness script, android_emulator_pgo.py, to run the\nprofileserver suite with the PGO-instrumented Android build, and collect\nthe profile data and jarlog.\n\nThe mozharness script contains some redundancy with\nbuild/pgo/profileserver.py, but the additional requirements for Android\nto use adb and existing mozharness classes to control the emulator made\nit difficult to share the desktop profileserver implementation.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22825",
-        "files_changed": [
-          "taskcluster/ci/generate-profile/kind.yml",
-          "testing/mozharness/configs/android/android_pgo.py",
-          "testing/mozharness/mozharness/mozilla/mozbase.py",
-          "testing/mozharness/scripts/android_emulator_pgo.py"
-        ]
-      },
-      "11": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=de8beacc5eb4",
-        "commiter_name": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 632954 - Add final Android PGO task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22826",
-        "files_changed": [
-          "taskcluster/ci/build/android.yml",
-          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_use.py",
-          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
-        ]
-      },
-      "12": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=429c96e4de32",
-        "commiter_name": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 632954 - Enable tests on Android PGO; r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22827",
-        "files_changed": [
-          "taskcluster/ci/test/compiled.yml",
-          "taskcluster/ci/test/misc.yml",
-          "taskcluster/ci/test/mochitest.yml",
-          "taskcluster/ci/test/raptor.yml",
-          "taskcluster/ci/test/reftest.yml",
-          "taskcluster/ci/test/test-platforms.yml",
-          "taskcluster/ci/test/xpcshell.yml",
-          "taskcluster/taskgraph/transforms/tests.py",
-          "taskcluster/taskgraph/try_option_syntax.py"
-        ]
-      }
-    }
-  },
-  "743": {
     "changeset_number": "80945",
     "pusher": "babadie@mozilla.com",
     "date_of_push": "2019-03-20 08:26:10",
@@ -36253,6 +36175,128 @@
           "taskcluster/ci/source-test/clang.yml",
           "taskcluster/ci/source-test/kind.yml",
           "taskcluster/scripts/misc/source-test-clang-setup.sh"
+        ]
+      }
+    }
+  },
+  "743": {
+    "changeset_number": "80948",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-03-20 11:58:50",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d7e6fff52db3",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out 12 changesets (bug 632954) for causing Android Bpgo(run) pending jobs CLOSED TREE\n\nBacked out changeset 429c96e4de32 (bug 632954)\nBacked out changeset de8beacc5eb4 (bug 632954)\nBacked out changeset c151ebf303ca (bug 632954)\nBacked out changeset b96dd954a456 (bug 632954)\nBacked out changeset 26031d362333 (bug 632954)\nBacked out changeset 097f141a499d (bug 632954)\nBacked out changeset 6f5fc0d644dd (bug 632954)\nBacked out changeset 53d3443e55d9 (bug 632954)\nBacked out changeset 503bcac73583 (bug 632954)\nBacked out changeset 142ae187478d (bug 632954)\nBacked out changeset 0615c775a0cf (bug 632954)\nBacked out changeset 3dfc0e4f8e7c (bug 632954)",
+        "files_changed": [
+          "build/moz.configure/warnings.configure",
+          "mobile/android/config/mozconfigs/android-api-16/profile-generate",
+          "mobile/android/config/mozconfigs/android-api-16/profile-use",
+          "mozglue/android/APKOpen.cpp",
+          "mozglue/android/moz.build",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/generate-profile/kind.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/test/compiled.yml",
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/xpcshell.yml",
+          "taskcluster/scripts/tester/test-linux.sh",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "taskcluster/taskgraph/try_option_syntax.py",
+          "testing/marionette/client/marionette_driver/geckoinstance.py",
+          "testing/mozbase/mozdevice/mozdevice/adb.py",
+          "testing/mozharness/configs/android/android_pgo.py",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_generate.py",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_use.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py",
+          "testing/mozharness/mozharness/mozilla/mozbase.py",
+          "testing/mozharness/scripts/android_emulator_pgo.py",
+          "toolkit/xre/Bootstrap.cpp",
+          "toolkit/xre/Bootstrap.h",
+          "toolkit/xre/moz.build"
+        ]
+      }
+    }
+  },
+  "744": {
+    "changeset_number": "80949",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-03-20 12:36:39",
+    "changeset_commits": {
+      "5": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7df96a607be8",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Explicitly set NEED_XVFB to false if need-xvfb isn't set; r=tomprince\n\ntest-linux.sh defaults to true for NEED_XVFB, while build-linux.sh\ndefaults to false. If we are using test-linux.sh from mozharness (rather\nthan mozharness-test), we need to explicitly set NEED_XVFB to false in\norder to not use xvfb.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22820",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a257e15d267f",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add execute bit to test-linux.sh; r=tomprince\n\nIn order to call test-linux.sh with the job-script parameter, it needs\nto have executable permissions.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22821",
+        "files_changed": [
+          "taskcluster/scripts/tester/test-linux.sh"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0450380b2693",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add support for MOZHARNESS_OPTIONS to test-linux.sh; r=tomprince\n\nThe mozharness.py transform passes in \"options\" parameters through the\nMOZHARNESS_OPTIONS environment variable. This will allow the Android PGO\nrun task to pass in the mozharness script name to test-linux.sh\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22822",
+        "files_changed": [
+          "taskcluster/scripts/tester/test-linux.sh"
+        ]
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=831b503b1e5c",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add Android PGO-instrumented build task; r=tomprince\n\nThis is the first stage of the Android PGO task pipeline to generate an\ninstrumented build.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22824",
+        "files_changed": [
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_generate.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=407f264cc3ee",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add Android profile generation task; r=tomprince,gbrown\n\nThis introduces a mozharness script, android_emulator_pgo.py, to run the\nprofileserver suite with the PGO-instrumented Android build, and collect\nthe profile data and jarlog.\n\nThe mozharness script contains some redundancy with\nbuild/pgo/profileserver.py, but the additional requirements for Android\nto use adb and existing mozharness classes to control the emulator made\nit difficult to share the desktop profileserver implementation.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22825",
+        "files_changed": [
+          "taskcluster/ci/generate-profile/kind.yml",
+          "testing/mozharness/configs/android/android_pgo.py",
+          "testing/mozharness/mozharness/mozilla/mozbase.py",
+          "testing/mozharness/scripts/android_emulator_pgo.py"
+        ]
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d78d224fbb3f",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Add final Android PGO task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22826",
+        "files_changed": [
+          "taskcluster/ci/build/android.yml",
+          "testing/mozharness/configs/builds/releng_sub_android_configs/64_api_16_profile_use.py",
+          "testing/mozharness/mozharness/mozilla/building/buildbase.py"
+        ]
+      },
+      "12": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d8203a0665d2",
+        "commiter_name": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 632954 - Enable tests on Android PGO; r=jmaher CLOSED TREE\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22827",
+        "files_changed": [
+          "taskcluster/ci/test/compiled.yml",
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/xpcshell.yml",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "taskcluster/taskgraph/try_option_syntax.py"
         ]
       }
     }
