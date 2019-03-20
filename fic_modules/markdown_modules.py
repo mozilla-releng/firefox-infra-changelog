@@ -148,12 +148,12 @@ def generate_main_md_table(repositories_holder, which_repo, days_to_generate):
     for element in list:
         if (which_repo == "complete" or which_repo == "Git") and element[2] == "git":
             extract_json_from_git(element[1], days_to_generate)
-            LOGGER.info("GIT %s", successfully_generated)
+            LOGGER.info("GIT %s Repository: %s", successfully_generated, element[1])
 
         if (which_repo == "complete" or which_repo == "Hg") and element[2] == "hg":
             extract_json_from_hg(element[1], days_to_generate)
-            LOGGER.info("HG %s", successfully_generated)
-        
+            LOGGER.info("HG %s Repository: %s", successfully_generated, element[1])
+
         if which_repo != "complete" and which_repo != "Git" and which_repo != "Hg":
             LOGGER.error("No {} table was generated!".format(element[2]))
 
