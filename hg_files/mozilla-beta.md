@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-BETA
- CURRENT PUSH ID: 10884
+ CURRENT PUSH ID: 10890
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|10876|2019-03-19 00:10:25|Mihai Tabara <mtabara@mozilla.com>|[Bug 1527206 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1527206) - roll-out declarative artifacts for Fennec beta and release. r=sfraser a=release|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a1d4c53a4b80
+|10889|2019-03-21 16:10:37|Olivier Tilloy <olivier@tilloy.net>|[Bug 1473602 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1473602) - Add u2f-devices plug to snap package. r=jlorenzo a=releaseThis allows the confined snap to interact with Universal 2nd Factor devices, such as Yubikeys.Differential Revision: https://phabricator.services.mozilla.com/D24147|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=515db7d56834
 |10867|2019-03-14 17:20:45|marian.raiciof <marian.raiciof@softvision.ro>|[Bug 1529207 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1529207) - Add new Raptor tests in tp6m-4 r=davehunt,rwoodDifferential Revision: https://phabricator.services.mozilla.com/D20852|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=18fa4e4ce035
 |10867|2019-03-14 17:20:45|Joel Maher <jmaher@mozilla.com>|[Bug 1490048 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1490048) - add cranelift to raptor wasm-misc and wasm-godot tests. r=bbouvier,rwoodadd cranelift to raptor wasm-misc and wasm-godot tests.Differential Revision: https://phabricator.services.mozilla.com/D23144|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=4e5dbbdb10f3
 |10867|2019-03-14 17:20:45|Henrik Skupin <mail@hskupin.info>|[Bug 1493948 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1493948) - Package binary of geckodriver into its own artifact. r=jlorenzoThis task extracts the binary of geckodriver from thecommon test package and stores it into its own artifact.For now this task is only run after Nightly build taskson supported platforms..Differential Revision: https://phabricator.services.mozilla.com/D23094|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=eba70db52fa5
