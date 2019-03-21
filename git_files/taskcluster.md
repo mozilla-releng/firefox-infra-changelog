@@ -1,7 +1,8 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-07 04:24:06.508202
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-07 21:35:48.775162
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|688|imbstack|Merge pull request #474 from taskcluster/up-the-waiting-time Increase deadline for tasks|[URL](https://github.com/taskcluster/taskcluster/commit/fe07c130a166c4ca422504841c50f0f8fc0ec7d5)|2019-03-21 16:16:37
 |687|imbstack|Merge pull request #475 from taskcluster/bug-1536927 [Bug 1536927] Only log taskIds|[URL](https://github.com/taskcluster/taskcluster/commit/21fc92f5075fea2fd840f0a1c12e8b7a25a828b4)|2019-03-20 22:29:48
 |686|imbstack|Only log taskIds|[URL](https://github.com/taskcluster/taskcluster/commit/6ecc12e6a17267b6c441d4077f982a439f2ffc7d)|2019-03-20 22:14:39
 |685|imbstack|Merge pull request #473 from taskcluster/stop-listening-to-brian Actually fix retries this time (again)|[URL](https://github.com/taskcluster/taskcluster/commit/763bd2799b46d1fe4213f95c0ef54557b1b160de)|2019-03-20 18:03:42

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 104
+    "last_push_id": 106
   },
   "1": {
     "changeset_number": "31",
@@ -847,6 +847,44 @@
         "commit_message": "Bug 1535635 - make features.taskcluster-push enable hg-pushes; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23722",
         "files_changed": [
           "projects.yml"
+        ]
+      }
+    }
+  },
+  "50": {
+    "changeset_number": "105",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-03-21 18:25:01",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=324ddaed637c",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1533791 - Remove all priorities scopes, now that mobile projects use \"assume:\" r=tomprince\n\nRemove all priorities scopes, now that mobile projects use \"assume:\"\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24376",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "51": {
+    "changeset_number": "106",
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-21 19:19:40",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=63f55ad7e4bf",
+        "commiter_name": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "Bug 1534463: grant read access for hgmointernal config to all entities with read access to hg fingerprint r=tomprince\n\nThe private hgweb mirror config we intend to store in\na Taskcluster secret will need to be accessed by `run-task`,\nwhich also access the hg fingerprint secret. Grant read\naccess to the hgmointernal config to all groups and projects\nwhich have access to the hg fingerprint secret.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23980",
+        "files_changed": [
+          "grants.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=b38a52ee4e61",
+        "commiter_name": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "Bug 1534463: allow `vpn_hg_admin` group to set Mercurial related secrets r=tomprince\n\nNow that we have given scopes to the correct contexts, we need\nto provide the relevant parties with the ability to modify\nthe secrets. This commit grants write access for these secrets\nto the `vpn_hg_admin` group. This group defines the set of\npeople with SSH access to the hgweb/hgssh cluster behind hgmo.\n\nWe also give this group the rights to change the `hgfingerprint`\nsecret. Previously this secret was managed by Greg, and I'm not sure\nwho else has access to change it. Now seems like an appropriate\ntime to give access to the relevant parties.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23981",
+        "files_changed": [
+          "grants.yml"
         ]
       }
     }

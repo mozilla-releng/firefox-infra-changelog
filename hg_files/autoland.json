@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81026
+    "last_push_id": 81087
   },
   "1": {
     "changeset_number": "35344",
@@ -36231,6 +36231,77 @@
         "commit_message": "Bug 1535947: [taskgraph] Remove a redundant condition in name_sanity transform; r=aki\n\nIn bug 1501776, the `single_dep` and `multi_dep` schemas were aligned, which made both\nbranch in name_sanity identical. Simplify the code to reflect that.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24109",
         "files_changed": [
           "taskcluster/taskgraph/transforms/name_sanity.py"
+        ]
+      }
+    }
+  },
+  "745": {
+    "changeset_number": "81047",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-03-21 12:51:56",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=74b3bf36f5e8",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1527463 - Enable EME on win64-aarch64 nightlies. r=tomprince, a=CristianB\n\nBug 1534522 added win64-aarch64-eme/opt builds, which are artifact builds\nthat glue together a win64-aarch64/opt build and a win32/opt build.\n\nThis enables EME on the corresponding nightlies in a slightly different\nway:\n- this adds a no-eme build that corresponds to win64-aarch64/opt.\n- this turns the existing nightly into an artifact build that glues\n  together that no-eme build and the win32 nightly.\n\nThe no-eme build cannot have the nightly attribute set, first because\nthe beetmover transform fails in that case, and because that would imply\nshipping those builds, but they're not meant to be shipped this way.\n\nIt also has run-on-projects set to an empty list so that it doesn't\nappear by default in `mach try fuzzy`, while still being triggered when\nneeded due to being a dependency of the nightly build.\n\nIt is preferable to keep the win64-aarch64{,-eme}/opt builds untouched\nto make things easier for try (the win64-aarch64 ones being the main\nones to try; also, the -eme builds currently fail with --artifacts).\n\nIdeally, like in bug 1534522, we'd add a diffoscope build to ensure\nthe variations between the nightly and its base no-eme build are within\ncontrol, but currently, that would trigger nightlies on every push,\nwhich is not desirable. Ideally, they'd trigger whenever both their\ndependencies are in the target task graph. We leave that to a followup.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23640\n",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e1350f7a1914",
+        "commiter_name": "Oana Pop Rus <opoprus@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+        "files_changed": [
+          "js/src/tests/non262/fields/basic.js",
+          "js/src/tests/non262/fields/error.js",
+          "js/src/tests/non262/fields/literal.js",
+          "js/src/tests/non262/fields/mixed_methods.js",
+          "js/src/tests/non262/fields/quirks.js",
+          "security/manager/ssl/CertBlocklist.cpp",
+          "security/manager/ssl/CertBlocklist.h",
+          "security/manager/ssl/nsICertBlocklist.idl",
+          "security/manager/ssl/tests/unit/test_cert_blocklist.js",
+          "services/.eslintrc.js",
+          "taskcluster/scripts/tester/test-linux.sh",
+          "testing/web-platform/meta/mathml/relations/html5-tree/integration-point-2.html.ini",
+          "testing/web-platform/meta/mediacapture-streams/MediaDevices-SecureContext.html.ini",
+          "testing/web-platform/meta/mediacapture-streams/MediaDevices-getSupportedConstraints.html.ini",
+          "testing/web-platform/meta/mediacapture-streams/historical.html.ini",
+          "testing/web-platform/meta/xhr/send-content-type-charset.htm.ini",
+          "testing/web-platform/tests/mediacapture-streams/MediaDevices-getSupportedConstraints.html",
+          "testing/web-platform/tests/mediacapture-streams/historical.html"
+        ]
+      }
+    }
+  },
+  "746": {
+    "changeset_number": "81061",
+    "pusher": "catlee@mozilla.com",
+    "date_of_push": "2019-03-21 14:42:45",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=73912c794410",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1536230: Speed up extraction of tarballs r=marco\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23938",
+        "files_changed": [
+          "testing/mozbase/mozfile/mozfile/mozfile.py",
+          "testing/mozharness/mozfile/mozfile.py"
+        ]
+      }
+    }
+  },
+  "747": {
+    "changeset_number": "81083",
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-21 21:20:47",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bb60a18552f3",
+        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1491371, 1512188 - use new decision task image, with new options r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24401",
+        "files_changed": [
+          ".taskcluster.yml"
         ]
       }
     }
