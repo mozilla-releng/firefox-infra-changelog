@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 107
+ CURRENT PUSH ID: 108
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|107|2019-03-22 01:05:23|Tom Prince <mozilla@hocat.ca>|[Bug 1465844 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1465844) Set autoland to scm_autoland to match hg.mozilla.org; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D19401|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=745b0dce17f8
+|108|2019-03-22 13:45:32|Johan Lorenzo <jlorenzo@mozilla.com>|Backed out changeset 745b0dce17f8This caused Chain of Trust errors during a chemspill: https://taskcluster-artifacts.net/I1zH1W-ES3-FAG6KrCyPAg/0/public/logs/chain_of_trust.log|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4abcf6f23ee7
 |105|2019-03-21 18:25:01|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1533791 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791) - Remove all priorities scopes, now that mobile projects use "assume:" r=tomprinceRemove all priorities scopes, now that mobile projects use "assume:"Differential Revision: https://phabricator.services.mozilla.com/D24376|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=324ddaed637c
 |101|2019-03-15 16:53:37|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for try-comm-central; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=90efa66ecf6e
 |100|2019-03-14 19:35:43|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979) - enable push-via-hooks for comm-beta, comm-esr60; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a010db27be76

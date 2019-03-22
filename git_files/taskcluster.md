@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-08 10:46:17.732577
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-08 18:40:33.697050
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|690|djmitche|Merge pull request #476 from djmitche/bug1535755 [Bug 1535755 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535755) - simplify docs generation|[URL](https://github.com/taskcluster/taskcluster/commit/6704c2694a011b35de304abab1f1161e3ba64d2c)|2019-03-22 13:31:53
+|689|djmitche|[Bug 1535755 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535755) - rename events to exchanges for consistency|[URL](https://github.com/taskcluster/taskcluster/commit/1d07eaaf392af02b0a2818a413b1cd3679e0d351)|2019-03-21 22:21:53
 |688|imbstack|Merge pull request #474 from taskcluster/up-the-waiting-time Increase deadline for tasks|[URL](https://github.com/taskcluster/taskcluster/commit/fe07c130a166c4ca422504841c50f0f8fc0ec7d5)|2019-03-21 16:16:37
 |687|imbstack|Merge pull request #475 from taskcluster/bug-1536927 [Bug 1536927] Only log taskIds|[URL](https://github.com/taskcluster/taskcluster/commit/21fc92f5075fea2fd840f0a1c12e8b7a25a828b4)|2019-03-20 22:29:48
 |686|imbstack|Only log taskIds|[URL](https://github.com/taskcluster/taskcluster/commit/6ecc12e6a17267b6c441d4077f982a439f2ffc7d)|2019-03-20 22:14:39
