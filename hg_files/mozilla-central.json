@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35743
+    "last_push_id": 35745
   },
   "1": {
     "changeset_number": "35344",
@@ -11822,22 +11822,6 @@
     }
   },
   "122": {
-    "changeset_number": "35738",
-    "pusher": "ccoroiu@mozilla.com",
-    "date_of_push": "2019-03-21 23:59:09",
-    "changeset_commits": {
-      "33": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=73912c794410",
-        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
-        "commit_message": "Bug 1536230: Speed up extraction of tarballs r=marco\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23938",
-        "files_changed": [
-          "testing/mozbase/mozfile/mozfile/mozfile.py",
-          "testing/mozharness/mozfile/mozfile.py"
-        ]
-      }
-    }
-  },
-  "122": {
     "changeset_number": "35741",
     "pusher": "apavel@mozilla.com",
     "date_of_push": "2019-03-22 11:56:25",
@@ -11891,6 +11875,278 @@
         "files_changed": [
           "build/mozconfig.artifact",
           "taskcluster/ci/build/windows.yml"
+        ]
+      }
+    }
+  },
+  "123": {
+    "changeset_number": "35744",
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-03-22 18:44:08",
+    "changeset_commits": {
+      "37": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0fe5ffc10ff8",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Do not run merge on by-* values. r=tomprince\n\nThis was needed since when we have job-defaults and later on a test set for\n``\nrun-on-projects:\n    by-test-platform:\n        ...\n``\nWe were ending up with both the list of by-* being extended but also\nany array in that list also being extended (like `default: ['a', 'b']`\nwas getting extended to also have the new values for default)\n\nThis is not only usually wrong but very very likely not what the author wanted.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22708",
+        "files_changed": [
+          "taskcluster/taskgraph/test/test_util_templates.py",
+          "taskcluster/taskgraph/util/templates.py"
+        ]
+      },
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e7eeb55c71ba",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add index builder, but don't do any index's yet. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22224",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1269ffd8a411",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - OSX Build. r=aki\n\nThis commit adds a new build for OSX since there is no current PGO build type for OSX.\nAnd calls it shippable, this mirrors that of the nightly.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22225",
+        "files_changed": [
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/macosx.yml"
+        ]
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=37f63cecb702",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add windows32 shippable. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22226",
+        "files_changed": [
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "41": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=333ad0658d94",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add windows64 shippable. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22227",
+        "files_changed": [
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "42": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f59eb3b8d0b3",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add windows64 aarch64 shippable. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22228",
+        "files_changed": [
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "43": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b764eae9ff5a",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add Linux32 shippable builds. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22229",
+        "files_changed": [
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "44": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4a98810cec0a",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add linux64 shippable builds. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22230",
+        "files_changed": [
+          "taskcluster/ci/beetmover-geckoview/kind.yml",
+          "taskcluster/ci/beetmover/kind.yml",
+          "taskcluster/ci/build/linux.yml"
+        ]
+      },
+      "45": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b81435806374",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Make sure we sign shippable builds. r=aki\n\nWhen we set the nightly attribute the tasks don't run on-push, so we use a new attribute.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22709",
+        "files_changed": [
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/macosx.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/docs/attributes.rst",
+          "taskcluster/taskgraph/loader/build_signing.py"
+        ]
+      },
+      "46": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5de8fab632bc",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add test run-on-projects to avoid scheduling shippable just yet. r=jmaher\n\nThis sets all of the shippable tests to not run in the places where they would otherwise.\nThis patch will be effectively undone later in the patchset.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22710",
+        "files_changed": [
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/raptor-chrome.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/talos.yml",
+          "taskcluster/ci/test/web-platform.yml"
+        ]
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1fae9a0c3d4f",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - OSX tests. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22232",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "48": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6dfa69851019",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Linux32 Tests. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22233",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "49": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8f22b80c544e",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Linux64 Tests. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22234",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "50": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dc7a3140939e",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Win7 Tests. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22235",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "51": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3e1475bc7fd5",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Win10 Tests. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22236",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "52": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ea10d6f34744",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - add shippable qr variants for osx, linux and windows. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22237",
+        "files_changed": [
+          "taskcluster/ci/test/awsy.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/web-platform.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "53": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fa9cc5631313",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Refactor SETA old->new handling a bit, to make it clearer. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22238",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "54": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a734011ca98e",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Significantly speedup SETA computation by using sets. r=jmaher\n\nWithout this the shippable builds take >20 seconds to compute the prune through new_as_old_is_high_value, locally. With this it is near instant.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22711",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "55": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2eed45e23116",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Add more new/old conversions for SETA. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22239",
+        "files_changed": [
+          "taskcluster/taskgraph/util/seta.py"
+        ]
+      },
+      "56": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f3040492fcbf",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - add shippable index. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22240",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/task.py"
+        ]
+      },
+      "57": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=26580c78cfb0",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1352113 - Shippable Builds - Consolidate raptor-chrome options up to job-defaults to reduce boilerplate spread throughout. r=jmaher\n\nThis does not change the substance of what is passed down to transforms.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22831",
+        "files_changed": [
+          "taskcluster/ci/test/raptor-chrome.yml"
+        ]
+      },
+      "61": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=046333a3b9eb",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Bug 1352113 - fix duplicate key on a CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "69": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dcd5ef63ed84",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland",
+        "files_changed": [
+          "build/mozconfig.artifact",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "70": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=deda41129e2f",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "No bug - delete conflict marker",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml"
+        ]
+      },
+      "116": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a19986b12bd6",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1536522 - Let mergeday scripts handle missing Android mozconfigs r=aki,nalexander\n\nLet mergeday scripts handle missing Android mozconfigs\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24343",
+        "files_changed": [
+          "testing/mozharness/configs/merge_day/beta_to_release.py",
+          "testing/mozharness/configs/merge_day/central_to_beta.py"
+        ]
+      },
+      "120": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e66a2b59914d",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "No Bug - fix leftover from the merge conflict on a CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml"
+        ]
+      }
+    }
+  },
+  "124": {
+    "changeset_number": "35745",
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-03-22 18:46:04",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dd90fefbafd1",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound. on a CLOSED TREE",
+        "files_changed": [
+          "browser/components/urlbar/tests/browser/browser_autoFill_preserveCase.js",
+          "browser/locales/en-US/chrome/browser/aboutPrivateBrowsing.dtd",
+          "dom/quota/ActorsParent.cpp",
+          "layout/style/BorrowedTypeList.h",
+          "servo/ports/geckolib/tests/build.rs",
+          "servo/ports/geckolib/tests/servo_function_signatures.rs",
+          "taskcluster/scripts/comm-task-env",
+          "testing/web-platform/meta/domxpath/xml_xpath_runner.html.ini",
+          "testing/web-platform/meta/html/semantics/embedded-content/media-elements/track/track-element/track-api-texttracks.html.ini"
         ]
       }
     }
