@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81141
+    "last_push_id": 81167
   },
   "1": {
     "changeset_number": "35344",
@@ -36272,21 +36272,6 @@
         "files_changed": [
           "testing/mozbase/mozfile/mozfile/mozfile.py",
           "testing/mozharness/mozfile/mozfile.py"
-        ]
-      }
-    }
-  },
-  "747": {
-    "changeset_number": "81083",
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-21 21:20:47",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bb60a18552f3",
-        "commiter_name": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1491371, 1512188 - use new decision task image, with new options r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24401",
-        "files_changed": [
-          ".taskcluster.yml"
         ]
       }
     }
