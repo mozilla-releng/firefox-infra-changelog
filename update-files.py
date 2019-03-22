@@ -28,7 +28,7 @@ def git_push(LOGGER, config="."):
     try:
         repo = Repo(config)
         LOGGER.info("pushing changes to %s", repo)
-        push_info = repo.remotes.origin.push(refspec='issue-366')
+        push_info = repo.remotes.origin.push(refspec='master')
         LOGGER.info("Summary of push: {}".format(push_info[0].summary))
     except:
         LOGGER.info("Error pushing the dates")
