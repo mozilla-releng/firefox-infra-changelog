@@ -11864,22 +11864,6 @@
     }
   },
   "123": {
-    "changeset_number": "35743",
-    "pusher": "apavel@mozilla.com",
-    "date_of_push": "2019-03-22 12:10:35",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cc2984b1f9f2",
-        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-        "commit_message": "Backed out 2 changesets (bug 1527463) for bustages a=backout\n\nBacked out changeset 74b3bf36f5e8 (bug 1527463)\nBacked out changeset 235af3330b73 (bug 1527463)",
-        "files_changed": [
-          "build/mozconfig.artifact",
-          "taskcluster/ci/build/windows.yml"
-        ]
-      }
-    }
-  },
-  "123": {
     "changeset_number": "35744",
     "pusher": "apavel@mozilla.com",
     "date_of_push": "2019-03-22 18:44:08",

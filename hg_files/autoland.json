@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81219
+    "last_push_id": 81220
   },
   "1": {
     "changeset_number": "35344",
@@ -36618,26 +36618,6 @@
         "commit_message": "No bug: [diffoscope] Output an empty diff if the files do not differ; r=glandium\n\nCurrently, if the files match and you try to look at the diff, you get\n\n   {\n       \"reason\": \"file-missing-on-worker\",\n       \"message\": \"Artifact \\\"public/diff.html\\\" not found at \\\"/builds/worker/diff.html\\\"\"\n   }\n\nwhich makes it hard to tell if there was an error generating a diff, or if the files matched.\nThis changes things to ask diffoscope to always output a diff, to remedy that confusion.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24316",
         "files_changed": [
           "taskcluster/ci/diffoscope/kind.yml"
-        ]
-      }
-    }
-  },
-  "756": {
-    "changeset_number": "81214",
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-03-22 18:07:59",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=403eb141fe90",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1536882: Stop specifying installer to download in windows L10n jobs; r=Callek\n\nThe code that actually downloads it is behind a condition that isn't set\nanywhere.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24215",
-        "files_changed": [
-          "taskcluster/ci/l10n/kind.yml",
-          "taskcluster/ci/nightly-l10n/kind.yml",
-          "taskcluster/taskgraph/transforms/l10n.py",
-          "testing/mozharness/configs/single_locale/tc_win32.py",
-          "testing/mozharness/configs/single_locale/tc_win64.py",
-          "toolkit/locales/l10n.mk"
         ]
       }
     }
