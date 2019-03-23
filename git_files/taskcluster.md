@@ -1,7 +1,18 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-08 19:34:37.813398
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-09 01:58:07.262599
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|701|djmitche|remove debugging output|[URL](https://github.com/taskcluster/taskcluster/commit/b09829e03804399c6cd6b6517e3d1e35aebcac4c)|2019-03-22 23:11:57
+|700|djmitche|Merge pull request #487 from djmitche/bug1533937-b [Bug 1533937 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533937) - cleanup after tests (azure tables, at least) on push|[URL](https://github.com/taskcluster/taskcluster/commit/daacd3df17480a7ce07f3cce19a9f5ddd991bed4)|2019-03-22 23:08:47
+|699|djmitche|[Bug 1533937 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533937) - cleanup after tests (azure tables, at least) on push|[URL](https://github.com/taskcluster/taskcluster/commit/375b1ff343479bb9b284f04dc4514ee54fd8879b)|2019-03-22 22:23:17
+|698|djmitche|Merge pull request #486 from djmitche/issue472 Replace dead link to presentations to a link to the youtube group|[URL](https://github.com/taskcluster/taskcluster/commit/ce65ab0014077bef4e5336a98b53c52a2b223ad8)|2019-03-22 20:58:26
+|697|djmitche|Merge pull request #485 from djmitche/issue448 Drop unused reference categories|[URL](https://github.com/taskcluster/taskcluster/commit/b6a6c37d234ceb212ef8337e3bb1a84240de6adf)|2019-03-22 20:58:17
+|696|djmitche|Merge pull request #484 from taskcluster/all-contributors/add-sudipt1999 docs: add sudipt1999 as a contributor|[URL](https://github.com/taskcluster/taskcluster/commit/ae7133cf0588abde66e3d5d4422f67386b53b82d)|2019-03-22 20:45:57
+|695|djmitche|Replace dead link to presentations to a link to the youtube group This also drops the Travis-CI link. We don't use Travis-CI for much anymore.|[URL](https://github.com/taskcluster/taskcluster/commit/08bc4a4c28c8b891a668860eaf5cad682f5567dd)|2019-03-22 20:43:55
+|694|djmitche|Drop unused reference categories Fixes #448.|[URL](https://github.com/taskcluster/taskcluster/commit/79753bfff994add79faf8503ee7f13623f5853d7)|2019-03-22 20:34:26
+|693|allcontributors[bot]|docs: update .all-contributorsrc|[URL](https://github.com/taskcluster/taskcluster/commit/9452002eb08c8e2d2924c861ec83d6238c100b4c)|2019-03-22 20:29:55
+|692|allcontributors[bot]|docs: update README.md|[URL](https://github.com/taskcluster/taskcluster/commit/bfa63f3df784b9d842c2cc76ffae57917418c36d)|2019-03-22 20:29:54
+|691|imbstack|Merge pull request #478 from taskcluster/bug-1537907 [Bug 1537907] Elide secret values|[URL](https://github.com/taskcluster/taskcluster/commit/b87579a5d844c75420eb734cbcc9dab31495d941)|2019-03-22 18:52:35
 |690|djmitche|Merge pull request #476 from djmitche/bug1535755 [Bug 1535755 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535755) - simplify docs generation|[URL](https://github.com/taskcluster/taskcluster/commit/6704c2694a011b35de304abab1f1161e3ba64d2c)|2019-03-22 13:31:53
 |689|djmitche|[Bug 1535755 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1535755) - rename events to exchanges for consistency|[URL](https://github.com/taskcluster/taskcluster/commit/1d07eaaf392af02b0a2818a413b1cd3679e0d351)|2019-03-21 22:21:53
 |688|imbstack|Merge pull request #474 from taskcluster/up-the-waiting-time Increase deadline for tasks|[URL](https://github.com/taskcluster/taskcluster/commit/fe07c130a166c4ca422504841c50f0f8fc0ec7d5)|2019-03-21 16:16:37
