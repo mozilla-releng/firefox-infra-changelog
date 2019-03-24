@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35748
+    "last_push_id": 35749
   },
   "1": {
     "changeset_number": "35344",
@@ -12108,29 +12108,6 @@
         "commit_message": "No Bug - fix leftover from the merge conflict on a CLOSED TREE",
         "files_changed": [
           "taskcluster/ci/build/windows.yml"
-        ]
-      }
-    }
-  },
-  "124": {
-    "changeset_number": "35745",
-    "pusher": "apavel@mozilla.com",
-    "date_of_push": "2019-03-22 18:46:04",
-    "changeset_commits": {
-      "2": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dd90fefbafd1",
-        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
-        "commit_message": "Merge mozilla-central to mozilla-inbound. on a CLOSED TREE",
-        "files_changed": [
-          "browser/components/urlbar/tests/browser/browser_autoFill_preserveCase.js",
-          "browser/locales/en-US/chrome/browser/aboutPrivateBrowsing.dtd",
-          "dom/quota/ActorsParent.cpp",
-          "layout/style/BorrowedTypeList.h",
-          "servo/ports/geckolib/tests/build.rs",
-          "servo/ports/geckolib/tests/servo_function_signatures.rs",
-          "taskcluster/scripts/comm-task-env",
-          "testing/web-platform/meta/domxpath/xml_xpath_runner.html.ini",
-          "testing/web-platform/meta/html/semantics/embedded-content/media-elements/track/track-element/track-api-texttracks.html.ini"
         ]
       }
     }
