@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81295
+    "last_push_id": 81296
   },
   "1": {
     "changeset_number": "35344",
@@ -36618,28 +36618,6 @@
         "commit_message": "No bug: [diffoscope] Output an empty diff if the files do not differ; r=glandium\n\nCurrently, if the files match and you try to look at the diff, you get\n\n   {\n       \"reason\": \"file-missing-on-worker\",\n       \"message\": \"Artifact \\\"public/diff.html\\\" not found at \\\"/builds/worker/diff.html\\\"\"\n   }\n\nwhich makes it hard to tell if there was an error generating a diff, or if the files matched.\nThis changes things to ask diffoscope to always output a diff, to remedy that confusion.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24316",
         "files_changed": [
           "taskcluster/ci/diffoscope/kind.yml"
-        ]
-      }
-    }
-  },
-  "756": {
-    "changeset_number": "81239",
-    "pusher": "ahalberstadt@mozilla.com",
-    "date_of_push": "2019-03-22 22:37:08",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5d251a7e6031",
-        "commiter_name": "championshuttler <shivams2799@gmail.com>",
-        "commit_message": "Bug 1536103 - Fix Sphinx Warning - Title Underline too short  in 'mach doc'. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24536",
-        "files_changed": [
-          "browser/docs/AddressBar.rst",
-          "intl/l10n/docs/fluent_migrations.rst",
-          "taskcluster/docs/kinds.rst",
-          "testing/marionette/doc/internals/listener.rst",
-          "testing/marionette/doc/internals/message.rst",
-          "testing/mozbase/docs/manifestparser.rst",
-          "testing/mozbase/docs/servingcontent.rst",
-          "tools/lint/docs/linters/eslint-plugin-mozilla.rst"
         ]
       }
     }
