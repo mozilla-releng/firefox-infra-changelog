@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-24 17:34:57 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-24 22:04:33 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -250,7 +250,6 @@
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
 |[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a65955ea586)|No bug: Remove scopes associated to the deprecated taskcluster-worker; r=dustin Differential Revision: https://phabricator.services.mozilla.com/D24453|mozilla@hocat.ca|dustin|2019-03-22 23:59:05|
 |[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0dcbbd0b9cfe)|No bug: Remove scopes from branches that don't have jobs running on them; r=dustin Differential Revision: https://phabricator.services.mozilla.com/D24452|mozilla@hocat.ca|dustin|2019-03-22 23:44:57|
-|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=324ddaed637c)|[Bug 1533791 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791) - Remove all priorities scopes, now that mobile projects use "assume:" r=tomprince Remove all priorities scopes, now that mobile projects use "assume:" Differential Revision: https://phabricator.services.mozilla.com/D24376|jlorenzo@mozilla.com|tomprince|2019-03-21 18:25:01|
 
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
