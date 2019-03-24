@@ -1,7 +1,8 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-09 01:58:07.262599
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-10 09:36:02.332689
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|702|djmitche|Merge pull request #483 from djmitche/docs-error-handling Simplify docs loading and improve error handling|[URL](https://github.com/taskcluster/taskcluster/commit/a809600db384a67c6d7a18311d773cd0868dfe09)|2019-03-23 22:46:38
 |701|djmitche|remove debugging output|[URL](https://github.com/taskcluster/taskcluster/commit/b09829e03804399c6cd6b6517e3d1e35aebcac4c)|2019-03-22 23:11:57
 |700|djmitche|Merge pull request #487 from djmitche/bug1533937-b [Bug 1533937 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533937) - cleanup after tests (azure tables, at least) on push|[URL](https://github.com/taskcluster/taskcluster/commit/daacd3df17480a7ce07f3cce19a9f5ddd991bed4)|2019-03-22 23:08:47
 |699|djmitche|[Bug 1533937 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533937) - cleanup after tests (azure tables, at least) on push|[URL](https://github.com/taskcluster/taskcluster/commit/375b1ff343479bb9b284f04dc4514ee54fd8879b)|2019-03-22 22:23:17
