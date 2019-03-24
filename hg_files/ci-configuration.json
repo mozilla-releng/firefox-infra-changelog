@@ -852,21 +852,6 @@
     }
   },
   "51": {
-    "changeset_number": "108",
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-22 13:45:32",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4abcf6f23ee7",
-        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Backed out changeset 745b0dce17f8\n\nThis caused Chain of Trust errors during a chemspill: https://taskcluster-artifacts.net/I1zH1W-ES3-FAG6KrCyPAg/0/public/logs/chain_of_trust.log",
-        "files_changed": [
-          "projects.yml"
-        ]
-      }
-    }
-  },
-  "51": {
     "changeset_number": "109",
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-03-22 23:44:57",
