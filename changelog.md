@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-24 14:29:12 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-24 17:34:57 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -37,7 +37,6 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2eed45e23116)|[Bug 1352113 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1352113) - Shippable Builds - Add more new/old conversions for SETA. r=jmaher Differential Revision: https://phabricator.services.mozilla.com/D22239|jwood@mozilla.com|jmaher|2019-03-22 11:00:10|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f3040492fcbf)|[Bug 1352113 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1352113) - Shippable Builds - add shippable index. r=aki Differential Revision: https://phabricator.services.mozilla.com/D22240|jwood@mozilla.com|aki|2019-03-22 11:00:10|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=26580c78cfb0)|[Bug 1352113 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1352113) - Shippable Builds - Consolidate raptor-chrome options up to job-defaults to reduce boilerplate spread throughout. r=jmaher This does not change the substance of what is passed down to transforms. Differential Revision: https://phabricator.services.mozilla.com/D22831|jwood@mozilla.com|jmaher|2019-03-22 11:00:10|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=73912c794410)|[Bug 1536230 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1536230) Speed up extraction of tarballs r=marco Differential Revision: https://phabricator.services.mozilla.com/D23938|catlee@mozilla.com|marco|2019-03-21 14:42:45|
 
 |	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -145,7 +144,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/b87579a5d844c75420eb734cbcc9dab31495d941)|Merge pull request #478 from taskcluster/bug-1537907  [Bug 1537907] Elide secret values|imbstack|N/A|2019-03-22 18:52:35|
 |[Link](https://github.com/taskcluster/taskcluster/commit/6704c2694a011b35de304abab1f1161e3ba64d2c)|Merge pull request #476 from djmitche/bug1535755  Bug 1535755 - simplify docs generation|djmitche|N/A|2019-03-22 13:31:53|
 |[Link](https://github.com/taskcluster/taskcluster/commit/1d07eaaf392af02b0a2818a413b1cd3679e0d351)|Bug 1535755 - rename events to exchanges for consistency|djmitche|N/A|2019-03-21 22:21:53|
-|[Link](https://github.com/taskcluster/taskcluster/commit/fe07c130a166c4ca422504841c50f0f8fc0ec7d5)|Merge pull request #474 from taskcluster/up-the-waiting-time  Increase deadline for tasks|imbstack|N/A|2019-03-21 16:16:37|
 
 |	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 
