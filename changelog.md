@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-24 22:04:33 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-25 01:49:22 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -143,7 +143,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/bfa63f3df784b9d842c2cc76ffae57917418c36d)|docs: update README.md|allcontributors[bot]|N/A|2019-03-22 20:29:54|
 |[Link](https://github.com/taskcluster/taskcluster/commit/b87579a5d844c75420eb734cbcc9dab31495d941)|Merge pull request #478 from taskcluster/bug-1537907  [Bug 1537907] Elide secret values|imbstack|N/A|2019-03-22 18:52:35|
 |[Link](https://github.com/taskcluster/taskcluster/commit/6704c2694a011b35de304abab1f1161e3ba64d2c)|Merge pull request #476 from djmitche/bug1535755  Bug 1535755 - simplify docs generation|djmitche|N/A|2019-03-22 13:31:53|
-|[Link](https://github.com/taskcluster/taskcluster/commit/1d07eaaf392af02b0a2818a413b1cd3679e0d351)|Bug 1535755 - rename events to exchanges for consistency|djmitche|N/A|2019-03-21 22:21:53|
 
 |	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 
