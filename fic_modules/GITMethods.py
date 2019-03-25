@@ -4,9 +4,9 @@ from git import Repo
 class Github:
     def __init__(self, files, msg, LOGGER, config):
         self.files = files
+        self.msg = msg
         self.LOGGER = LOGGER
         self.config = config
-        self.msg = msg
 
     def git_add(self):
         try:
@@ -29,7 +29,7 @@ class Github:
         try:
             repo = Repo(self.config)
             self.LOGGER.info("pushing changes to %s", repo)
-            push_info = repo.remotes.origin.push(refspec='issue-366')
+            push_info = repo.remotes.origin.push(refspec=repo.active_branch)
             self.LOGGER.info("Summary of push: {}".format(push_info[0].summary))
         except:
             self.LOGGER.info("Error pushing the dates")
@@ -40,8 +40,8 @@ class Github:
         try:
             repo = Repo(self.config)
             self.LOGGER.info("pulling changes from %s", repo)
-            pull_info = repo.remotes.origin.pull(refspec='issue-366')
-            self.LOGGER.info("Summary of push: {}".format(pull_info[0].summary))
+            pull_info = repo.remotes.origin.pull(refspec=repo.active_branch)
+            self.LOGGER.info("Summary of pull: {}".format(pull_info[0]))
         except:
             self.LOGGER.info("Error pulling the dates")
         finally:
