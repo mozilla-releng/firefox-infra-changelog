@@ -13,6 +13,7 @@ from fic_modules.FICExceptions import FICExceptions
 from github import GithubException
 from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
+from fic_modules.GITMethods import Github
 from fic_modules.helper_functions import (
     clear_file,
     get_keys,
@@ -20,7 +21,8 @@ from fic_modules.helper_functions import (
 )
 from fic_modules.configuration import (
     REPO_LIST,
-    REPOSITORIES
+    REPOSITORIES,
+    LOGGER
 )
 from fic_modules.markdown_modules import generate_main_md_table
 
@@ -45,6 +47,36 @@ def run_all(logger, days):
     data_file.close()
     clear_file("changelog.md", int(days))
     generate_main_md_table(REPOSITORIES, "complete", int(days))
+
+
+def update_all(logger, days):
+    """
+    Run the script for all currently tracked repositories.
+    :param logger: LOGGER object
+    :param days: Number of days (int) for which FIC will generate the
+    changelog.md data tables.
+    """
+    config = "."
+    commit_message = "Changelog: " + str(datetime.utcnow())
+    files = ["git_files", "hg_files", "changelog.json", "changelog.md"]
+    update_fic_files = Github(files, commit_message, LOGGER, config)
+    update_fic_files.git_pull()
+    logger.info("======== Logging in ALL mode on %s ========", datetime
+                .now())
+    git_data = create_files_for_git(REPOSITORIES, onerepo=False)
+    hg_data = create_files_for_hg(REPOSITORIES, onerepo=False)
+    # Take git and hg data, write it to changelog.json
+    changelog_data = {}
+    changelog_data.update({"Github": git_data})
+    changelog_data.update({"Hg": hg_data})
+    data_file = open("changelog.json", "w")
+    json.dump(changelog_data, data_file, indent=2)
+    data_file.close()
+    clear_file("changelog.md", int(days))
+    generate_main_md_table(REPOSITORIES, "complete", int(days))
+    update_fic_files.git_add()
+    update_fic_files.git_commit()
+    update_fic_files.git_push()
 
 
 def run_git(logger, days):
@@ -145,9 +177,10 @@ def run_days(logger, days):
                                               'be generated')
 @click.help_option('-h', '--help')
 def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
-        days=False):
+        days=False, update=False):
     """
     Main function of the script that handles how the script runs
+    :param update: push the new changes to Github
     :param complete: Used to run the script for all of the repositories.
     :param git: Used to run the script in git mode only
     :param mercurial: Used to run the script in mercurial mode only
@@ -158,7 +191,7 @@ def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
     generated for
     """
     valid_args = ['-d', '--days', '-g', '--git', '-h', '--mercurial', '-l',
-                  '--logger', '-m', '--manual', '-c', '--complete']
+                  '--logger', '-m', '--manual', '-c', '--complete', '-u', '--update']
     run_arguments = list(click.get_current_context().args)
     len_args = 0
     list_args = []
@@ -184,6 +217,8 @@ def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
         run_hg(LOGGER, days)
     if manual:
         run_multiple(LOGGER, days)
+    if update:
+        update_all(LOGGER, days)
 
 
 def keyboardInterruptHandler(signal, frame):
