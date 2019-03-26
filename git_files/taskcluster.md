@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-12 11:36:00.890637
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-12 17:44:31.699585
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|721|djmitche|Merge pull request #482 from djmitche/allcontributors-in-docs Use allcontributors in docs|[URL](https://github.com/taskcluster/taskcluster/commit/143871d458b9d4c44f71f111c7fe3e9c805ae6bb)|2019-03-26 12:43:19
+|720|Aditya-Kolla|[UI] Add skip to content- keyboard accessibility (#496) [UI] Add skip to content- keyboard accessibility|[URL](https://github.com/taskcluster/taskcluster/commit/1da427860a8d2bc2f8c26e0487530891b268022c)|2019-03-26 12:22:56
 |719|djmitche|Merge pull request #494 from taskcluster/typo-fix Typo fix|[URL](https://github.com/taskcluster/taskcluster/commit/bd8f72a9ecc8ef68ee281955d20166024a44cb68)|2019-03-25 19:13:06
 |718|petemoore|Tyop fxi ;)|[URL](https://github.com/taskcluster/taskcluster/commit/da10730fd46c720ad3db4acea74049a99e1d05db)|2019-03-25 19:06:48
 |717|imbstack|Merge pull request #481 from taskcluster/issue-479 Cleanup logs docs pages|[URL](https://github.com/taskcluster/taskcluster/commit/b3c5082752df072263c7da1d7b53a8fe0a8fbefe)|2019-03-25 18:47:11
