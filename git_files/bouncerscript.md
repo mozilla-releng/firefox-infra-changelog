@@ -1,10 +1,10 @@
-## BOUNCERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-12 19:48:40.963978
+## BOUNCERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-12 23:59:57.330264
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
 |8|tomprince|3.5.0|[URL](https://github.com/mozilla-releng/bouncerscript/commit/38787d7955c828302801bd2933cd7d0f7bc6ddd9)|2019-01-25 18:29:21
 |7|MihaiTabara|3.4.1|[URL](https://github.com/mozilla-releng/bouncerscript/commit/225493087a68a73ae6eea239ee406686ea8f8898)|2019-01-15 13:17:21
-|6|MihaiTabara|[Bug 1519054 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519054) - add AArch64 as part of the BOUNCER LOCATIONS. (#49) [Bug 1519054 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519054) - add AArch64 as part of the bouncer locations.|[URL](https://github.com/mozilla-releng/bouncerscript/commit/d19378fd25a08f1b1e24b4259f3145d3fb3cca65)|2019-01-15 13:15:34
+|6|MihaiTabara|[Bug 1519054](https://bugzilla.mozilla.org/show_bug.cgi?id=1519054)  - add AArch64 as part of the BOUNCER LOCATIONS. (#49) [Bug 1519054](https://bugzilla.mozilla.org/show_bug.cgi?id=1519054)  - add AArch64 as part of the bouncer locations.|[URL](https://github.com/mozilla-releng/bouncerscript/commit/d19378fd25a08f1b1e24b4259f3145d3fb3cca65)|2019-01-15 13:15:34
 |5|mitchhentges|Merge pull request #48 from mitchhentges/release-3.4.0 3.4.0|[URL](https://github.com/mozilla-releng/bouncerscript/commit/cf3b10f96874db1bb8107458b3ece1e281e902ea)|2019-01-03 19:57:59
 |4|mitchhentges|Merge pull request #48 from mitchhentges/release-3.4.0 3.4.0|[URL](https://github.com/mozilla-releng/bouncerscript/commit/cf3b10f96874db1bb8107458b3ece1e281e902ea)|2019-01-03 19:57:59
 |3|mitchhentges|3.4.0|[URL](https://github.com/mozilla-releng/bouncerscript/commit/1db10557cc46f331af59c27fd33943c12af0e856)|2019-01-02 18:23:32
