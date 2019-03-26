@@ -1,10 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35758
+ CURRENT PUSH ID: 35760
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|35758|2019-03-26 11:51:47|Calixte Denizet <cdenizet@mozilla.com>|[Bug 1519825 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519825) - Update grcov to revision 9214a916805838265764f9c69eaed657ea3db021 r=marcoThis revision corresponds to grcov 0.4.2Differential Revision: https://phabricator.services.mozilla.com/D16465|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9e8fee5e4f3d
-|35758|2019-03-26 11:51:47|Calixte Denizet <cdenizet@mozilla.com>|[Bug 1519825 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1519825) Update grcov to version 0.4.3 on macosx r=marcoThe patch https://phabricator.services.mozilla.com/D16465 just updated windows and linux version of grcov, so here we update macosx version too.Differential Revision: https://phabricator.services.mozilla.com/D24753|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=402c24bed346
+|35760|2019-03-26 19:43:58|Brindusan Cristian <cbrindusan@mozilla.com>|Merge mozilla-central to inbound. a=merge CLOSED TREE|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3ab51758e916
 |35753|2019-03-25 17:52:30|Bastien Abadie <bastien@mozilla.com>|[Bug 1536836 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1536836) - Support multiple formatters with file output in ./mach lint, r=ahalDifferential Revision: https://phabricator.services.mozilla.com/D24193|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=43ac43ba6cf4
 |35753|2019-03-25 17:52:30|Sebastian Hengst <archaeopteryx@coole-files.de>|[Bug 1538475 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1538475) - Add comma to 'central-to-beta' and 'beta-to-release' generators to prevent concatenation of two folder paths of files to modify r=jlorenzoDifferential Revision: https://phabricator.services.mozilla.com/D24602|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4d546ab0dc94
 |35753|2019-03-25 17:52:30|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D24676|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5a3f8b7e664c
