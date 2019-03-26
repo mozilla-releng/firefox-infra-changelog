@@ -1,7 +1,24 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-11 05:03:29.609495
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-12 04:57:31.906628
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|719|djmitche|Merge pull request #494 from taskcluster/typo-fix Typo fix|[URL](https://github.com/taskcluster/taskcluster/commit/bd8f72a9ecc8ef68ee281955d20166024a44cb68)|2019-03-25 19:13:06
+|718|petemoore|Tyop fxi ;)|[URL](https://github.com/taskcluster/taskcluster/commit/da10730fd46c720ad3db4acea74049a99e1d05db)|2019-03-25 19:06:48
+|717|imbstack|Merge pull request #481 from taskcluster/issue-479 Cleanup logs docs pages|[URL](https://github.com/taskcluster/taskcluster/commit/b3c5082752df072263c7da1d7b53a8fe0a8fbefe)|2019-03-25 18:47:11
+|716|imbstack|Cleanup logs docs pages Fix #479|[URL](https://github.com/taskcluster/taskcluster/commit/037f79927547d0de0a1f2d24c04110a42756ce0e)|2019-03-22 18:39:40
+|715|helfi92|Show access token when creating a client (#489)|[URL](https://github.com/taskcluster/taskcluster/commit/bed82c7c4881fab007eecb8bf1cfe1c6033810f5)|2019-03-25 17:26:24
+|714|djmitche|Merge pull request #491 from taskcluster/renovate/raw-loader-2.x Update dependency raw-loader to v2|[URL](https://github.com/taskcluster/taskcluster/commit/02020bdea61450b4c3ec0cc0c21c507f7f0ab9e9)|2019-03-25 13:51:44
+|713|helfi92|Merge pull request #463 from helfi92/nicer-getting-started-page [UI] Add custom get started view|[URL](https://github.com/taskcluster/taskcluster/commit/3cea3dd67620033912d99c9500a43d3af02d321c)|2019-03-25 13:37:18
+|712|renovate-bot|Update dependency raw-loader to v2|[URL](https://github.com/taskcluster/taskcluster/commit/aed11bbf3b0eba07caba51db539027090ce42ce0)|2019-03-25 13:34:31
+|711|djmitche|Merge pull request #493 from taskcluster/renovate/serialize-error-4.x Update dependency serialize-error to v4|[URL](https://github.com/taskcluster/taskcluster/commit/182d385465c2abe482b18fcb15033715af7f3a88)|2019-03-25 13:20:07
+|710|renovate-bot|Update dependency serialize-error to v4|[URL](https://github.com/taskcluster/taskcluster/commit/6cc9ec0839d506243b5651a329d356abe8254db8)|2019-03-25 13:05:42
+|709|djmitche|Merge pull request #490 from taskcluster/renovate/eslint-5.x Update dependency eslint to v5.15.3|[URL](https://github.com/taskcluster/taskcluster/commit/d6d64d9ee9ea0e2fb7793a69259922b112067089)|2019-03-25 13:04:33
+|708|helfi92|Adjust GetStarted url in markdown|[URL](https://github.com/taskcluster/taskcluster/commit/fa15721bb6f1b9c0d91a20f72ce78ebcbe11aa31)|2019-03-25 12:47:37
+|707|helfi92|Linting|[URL](https://github.com/taskcluster/taskcluster/commit/3d8177c3c34f2d9111059310d4f83dd676d39dc8)|2019-03-23 17:41:00
+|706|helfi92|Add section for the people behind taskcluster in docs|[URL](https://github.com/taskcluster/taskcluster/commit/91e836d45b624a5e46045d0fc93ad6dbd5a3a9b1)|2019-03-23 17:40:18
+|705|helfi92|Make card clickable instead of "See more" button|[URL](https://github.com/taskcluster/taskcluster/commit/bce0d8df52fcc4c6b273a8ba644dcca3185a689b)|2019-03-23 17:30:03
+|704|helfi92|Remove <hr /> from tutorial page|[URL](https://github.com/taskcluster/taskcluster/commit/5ddc6939e2eb5027e68512dc50ede0cd36def87d)|2019-03-18 20:27:59
+|703|helfi92|Add custom get started view|[URL](https://github.com/taskcluster/taskcluster/commit/bb228b9c694c9295a6ba433516c9ea619152cb09)|2019-03-18 20:24:28
 |702|djmitche|Merge pull request #483 from djmitche/docs-error-handling Simplify docs loading and improve error handling|[URL](https://github.com/taskcluster/taskcluster/commit/a809600db384a67c6d7a18311d773cd0868dfe09)|2019-03-23 22:46:38
 |701|djmitche|remove debugging output|[URL](https://github.com/taskcluster/taskcluster/commit/b09829e03804399c6cd6b6517e3d1e35aebcac4c)|2019-03-22 23:11:57
 |700|djmitche|Merge pull request #487 from djmitche/bug1533937-b [Bug 1533937 ](https://bugzilla.mozilla.org/show_bug.cgi?id=1533937) - cleanup after tests (azure tables, at least) on push|[URL](https://github.com/taskcluster/taskcluster/commit/daacd3df17480a7ce07f3cce19a9f5ddd991bed4)|2019-03-22 23:08:47
