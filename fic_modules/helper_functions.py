@@ -253,14 +253,14 @@ def replace_bug_with_url(message, LOGGER):
     """
     commit_text = message.split()
     for element in range(len(commit_text)):
-        if commit_text[element].lower() == "bug" and element < len(commit_text) - 1:
+        if "bug" in (commit_text[element].lower()) and element < len(commit_text) - 1:
             bug_number = re.sub("[(:,.;)]", "", commit_text[element + 1])
             try:
-                bug_number = int(bug_number)
+                bug_number = int(''.join(list(filter(str.isdigit, bug_number))))
                 generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + \
                                  str(bug_number)
-                commit_text[element] = '[' + 'Bug' + ' ' + str(bug_number)
-                commit_text[element + 1] = '](' + generated_link + ')'
+                commit_text[element] = '[' + 'Bug' + ' ' + str(bug_number) + '](' + generated_link + ')'
+                commit_text[element + 1] = ''
             except ValueError:
                 if LOGGER.root.level == 30:
                     LOGGER.warning("Invalid bug number: > {} < in message: {}"
