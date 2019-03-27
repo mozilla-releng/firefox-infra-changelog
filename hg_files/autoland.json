@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81514
+    "last_push_id": 81523
   },
   "1": {
     "changeset_number": "35344",
@@ -37079,96 +37079,6 @@
     }
   },
   "767": {
-    "changeset_number": "81487",
-    "pusher": "csabou@mozilla.com",
-    "date_of_push": "2019-03-26 22:27:29",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=aea38cfc632a",
-        "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
-        "commit_message": "Backed out 19 changesets (bug 1352113) for causing upload symbol bustages. CLOSED TREE\n\nBacked out changeset 4943b23813fe (bug 1352113)\nBacked out changeset 4b9413d05816 (bug 1352113)\nBacked out changeset 3e2b6a495e8c (bug 1352113)\nBacked out changeset 51ab82722846 (bug 1352113)\nBacked out changeset 4b027c970719 (bug 1352113)\nBacked out changeset 6b65273fab78 (bug 1352113)\nBacked out changeset d7deec98601a (bug 1352113)\nBacked out changeset b95b3f4e5243 (bug 1352113)\nBacked out changeset 7cefe92f88d5 (bug 1352113)\nBacked out changeset f64dfaf86a2e (bug 1352113)\nBacked out changeset 686c228e3579 (bug 1352113)\nBacked out changeset dd2eddef8b43 (bug 1352113)\nBacked out changeset fc16a3ecfe68 (bug 1352113)\nBacked out changeset b31cbe91bdf7 (bug 1352113)\nBacked out changeset 694eac65a72e (bug 1352113)\nBacked out changeset 6044aedac9c4 (bug 1352113)\nBacked out changeset 456538d78b36 (bug 1352113)\nBacked out changeset 01699fb72384 (bug 1352113)\nBacked out changeset 4a2e544fea0d (bug 1352113)",
-        "files_changed": [
-          "taskcluster/ci/balrog/kind.yml",
-          "taskcluster/ci/beetmover-checksums/kind.yml",
-          "taskcluster/ci/beetmover-l10n/kind.yml",
-          "taskcluster/ci/beetmover-repackage/kind.yml",
-          "taskcluster/ci/build/linux.yml",
-          "taskcluster/ci/build/macosx.yml",
-          "taskcluster/ci/build/windows.yml",
-          "taskcluster/ci/checksums-signing/kind.yml",
-          "taskcluster/ci/geckodriver-repack/kind.yml",
-          "taskcluster/ci/l10n/kind.yml",
-          "taskcluster/ci/mar-signing-autograph-stage/kind.yml",
-          "taskcluster/ci/mar-signing-l10n/kind.yml",
-          "taskcluster/ci/mar-signing/kind.yml",
-          "taskcluster/ci/nightly-l10n-signing/kind.yml",
-          "taskcluster/ci/nightly-l10n/kind.yml",
-          "taskcluster/ci/partials/kind.yml",
-          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
-          "taskcluster/ci/release-eme-free-repack-beetmover-checksums/kind.yml",
-          "taskcluster/ci/release-eme-free-repack-beetmover/kind.yml",
-          "taskcluster/ci/release-eme-free-repack-repackage-signing/kind.yml",
-          "taskcluster/ci/release-eme-free-repack-repackage/kind.yml",
-          "taskcluster/ci/release-eme-free-repack-signing/kind.yml",
-          "taskcluster/ci/release-eme-free-repack/kind.yml",
-          "taskcluster/ci/release-partner-repack-beetmover/kind.yml",
-          "taskcluster/ci/release-partner-repack-chunking-dummy/kind.yml",
-          "taskcluster/ci/release-partner-repack-repackage-signing/kind.yml",
-          "taskcluster/ci/release-partner-repack-repackage/kind.yml",
-          "taskcluster/ci/release-partner-repack-signing/kind.yml",
-          "taskcluster/ci/release-partner-repack/kind.yml",
-          "taskcluster/ci/release-secondary-update-verify-config/kind.yml",
-          "taskcluster/ci/release-secondary-update-verify/kind.yml",
-          "taskcluster/ci/release-sign-and-push-langpacks/kind.yml",
-          "taskcluster/ci/release-snap-repackage/kind.yml",
-          "taskcluster/ci/release-update-verify-config/kind.yml",
-          "taskcluster/ci/release-update-verify/kind.yml",
-          "taskcluster/ci/repackage-l10n/kind.yml",
-          "taskcluster/ci/repackage-msi/kind.yml",
-          "taskcluster/ci/repackage-signing-l10n/kind.yml",
-          "taskcluster/ci/repackage-signing-msi/kind.yml",
-          "taskcluster/ci/repackage-signing/kind.yml",
-          "taskcluster/ci/repackage/kind.yml",
-          "taskcluster/ci/source-test/kind.yml",
-          "taskcluster/ci/test/compiled.yml",
-          "taskcluster/ci/test/misc.yml",
-          "taskcluster/ci/test/mochitest.yml",
-          "taskcluster/ci/test/raptor-chrome.yml",
-          "taskcluster/ci/test/raptor.yml",
-          "taskcluster/ci/test/talos.yml",
-          "taskcluster/ci/test/test-platforms.yml",
-          "taskcluster/ci/test/web-platform.yml",
-          "taskcluster/ci/upload-generated-sources/kind.yml",
-          "taskcluster/taskgraph/loader/single_dep.py",
-          "taskcluster/taskgraph/loader/test.py",
-          "taskcluster/taskgraph/manifests/firefox_nightly.yml",
-          "taskcluster/taskgraph/manifests/firefox_nightly_checksums.yml",
-          "taskcluster/taskgraph/target_tasks.py",
-          "taskcluster/taskgraph/transforms/beetmover_repackage.py",
-          "taskcluster/taskgraph/transforms/build_signing.py",
-          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
-          "taskcluster/taskgraph/transforms/l10n.py",
-          "taskcluster/taskgraph/transforms/mar_signing.py",
-          "taskcluster/taskgraph/transforms/partner_repack.py",
-          "taskcluster/taskgraph/transforms/release_sign_and_push_langpacks.py",
-          "taskcluster/taskgraph/transforms/repackage_routes.py",
-          "taskcluster/taskgraph/transforms/repackage_signing.py",
-          "taskcluster/taskgraph/transforms/repackage_signing_partner.py",
-          "taskcluster/taskgraph/transforms/signing.py",
-          "taskcluster/taskgraph/transforms/task.py",
-          "taskcluster/taskgraph/transforms/upload_generated_sources.py",
-          "taskcluster/taskgraph/transforms/upload_symbols.py",
-          "taskcluster/taskgraph/util/attributes.py",
-          "taskcluster/taskgraph/util/partials.py",
-          "taskcluster/taskgraph/util/partners.py",
-          "taskcluster/taskgraph/util/scriptworker.py",
-          "taskcluster/taskgraph/util/verify.py",
-          "tools/tryselect/try_presets.yml"
-        ]
-      }
-    }
-  },
-  "767": {
     "changeset_number": "81499",
     "pusher": "mh@glandium.org",
     "date_of_push": "2019-03-27 00:07:01",
@@ -37197,6 +37107,38 @@
         "files_changed": [
           "build/debian-packages/nasm-wheezy.diff",
           "taskcluster/docker/debian-build/Dockerfile"
+        ]
+      }
+    }
+  },
+  "768": {
+    "changeset_number": "81516",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-03-27 03:26:19",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=334d8f9c9995",
+        "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Bug 1529774 - Fix Android webrender bustages. r=glandium",
+        "files_changed": [
+          "taskcluster/ci/toolchain/rust.yml"
+        ]
+      }
+    }
+  },
+  "769": {
+    "changeset_number": "81519",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-03-27 04:01:11",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bc572aee49b6",
+        "commiter_name": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1529774) for android mochitest failures on test_profile_worker.html.\n\nBacked out changeset 334d8f9c9995 (bug 1529774)\nBacked out changeset d3f27592a382 (bug 1529774)",
+        "files_changed": [
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/rust.yml",
+          "toolkit/library/rust/shared/build.rs"
         ]
       }
     }
