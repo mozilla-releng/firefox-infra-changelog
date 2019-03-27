@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81498
+    "last_push_id": 81514
   },
   "1": {
     "changeset_number": "35344",
@@ -36849,21 +36849,6 @@
     }
   },
   "766": {
-    "changeset_number": "81461",
-    "pusher": "ncsoregi@mozilla.com",
-    "date_of_push": "2019-03-26 19:45:45",
-    "changeset_commits": {
-      "4": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3ab51758e916",
-        "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
-        "commit_message": "Merge mozilla-central to inbound. a=merge CLOSED TREE",
-        "files_changed": [
-          "testing/mozharness/configs/builds/branch_specifics.py"
-        ]
-      }
-    }
-  },
-  "766": {
     "changeset_number": "81469",
     "pusher": "jwood@mozilla.com",
     "date_of_push": "2019-03-26 20:36:08",
@@ -37179,6 +37164,39 @@
           "taskcluster/taskgraph/util/scriptworker.py",
           "taskcluster/taskgraph/util/verify.py",
           "tools/tryselect/try_presets.yml"
+        ]
+      }
+    }
+  },
+  "767": {
+    "changeset_number": "81499",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-03-27 00:07:01",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d3f27592a382",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1529774 - Upgrade builders to rust 1.33. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24830",
+        "files_changed": [
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/rust.yml",
+          "toolkit/library/rust/shared/build.rs"
+        ]
+      }
+    }
+  },
+  "768": {
+    "changeset_number": "81506",
+    "pusher": "tdaede@mozilla.com",
+    "date_of_push": "2019-03-27 00:55:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e06a25b5771c",
+        "commiter_name": "Thomas Daede <tdaede@mozilla.com>",
+        "commit_message": "Bug 1520163 - Remove nasm debian package. r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20041",
+        "files_changed": [
+          "build/debian-packages/nasm-wheezy.diff",
+          "taskcluster/docker/debian-build/Dockerfile"
         ]
       }
     }
