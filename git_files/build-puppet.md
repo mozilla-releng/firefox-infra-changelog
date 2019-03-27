@@ -1,7 +1,20 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-13 05:39:26.953183
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-14 01:18:48.635154
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|82|rail|Bump balrogscript/balrogclient version (Auth0) (#438)|[URL](https://github.com/mozilla-releng/build-puppet/commit/ce0b7985aa8559cf8d6f31bb2617bfefda763669)|2019-03-27 19:59:17
+|81|mutterroland|Merge pull request #437 from mozilla-releng/pyup-scheduled-update-2019-03-27 Scheduled weekly dependency update for week 12|[URL](https://github.com/mozilla-releng/build-puppet/commit/baec8b2e6061e89e3640a1768affcf8b18198de1)|2019-03-27 13:46:26
+|80|pyup-bot|Update lxml from 4.3.2 to 4.3.3|[URL](https://github.com/mozilla-releng/build-puppet/commit/ff651d0ff212886dc01b637aeedddb3c63face97)|2019-03-27 13:04:21
+|79|pyup-bot|Update ipython from 7.3.0 to 7.4.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/80844ec5b1705b9f738c439c5b7de29f30cef5cb)|2019-03-27 13:04:20
+|78|pyup-bot|Update botocore from 1.12.117 to 1.12.122|[URL](https://github.com/mozilla-releng/build-puppet/commit/76890da0f6720c29d7c207c5cbd2a7adb21eb8f9)|2019-03-27 13:04:19
+|77|pyup-bot|Update boto3 from 1.9.117 to 1.9.122|[URL](https://github.com/mozilla-releng/build-puppet/commit/2c771192982ec09d7b24538116584c0ee57c95b3)|2019-03-27 13:04:18
+|76|pyup-bot|Update taskcluster from 7.0.0 to 7.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/fd28542a3d70d9bfc2fb7b627b2b145267607552)|2019-03-27 13:04:17
+|75|pyup-bot|Update taskcluster from 7.0.0 to 7.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/0f2d8876621c1be03a9f3d6692a7f66fe902eeb6)|2019-03-27 13:04:15
+|74|pyup-bot|Update taskcluster from 7.0.0 to 7.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/067e6dd67845b0ec4d8cfdeb3391b4c9f63a49b7)|2019-03-27 13:04:14
+|73|pyup-bot|Update taskcluster from 7.0.0 to 7.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/cfe51b42dd39c55803ceaf6ee4f9519cbb1b17c8)|2019-03-27 13:04:13
+|72|pyup-bot|Update taskcluster from 7.0.0 to 7.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/77c8be58bdb6790f789b750425744531684b0015)|2019-03-27 13:04:12
+|71|pyup-bot|Update taskcluster from 7.0.0 to 7.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/0e29f3ecb18d0f5d1e8521eb9094a1be1f05ad6f)|2019-03-27 13:04:11
+|70|pyup-bot|Update taskcluster from 7.0.0 to 7.0.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/feb146042399120ebf316f5b56ed9d7d885c7f4b)|2019-03-27 13:04:09
 |69|pyup-bot|Scheduled weekly dependency update for week 11 (#433) Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update pyyaml from 3.13 to 5.1 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update dictdiffer from 0.7.2 to 0.8.0 Update boto3 from 1.9.112 to 1.9.117 Update botocore from 1.12.113 to 1.12.117 Update decorator from 4.3.2 to 4.4.0 Update decorator from 4.3.2 to 4.4.0 Update mercurial from 4.9 to 4.9.1 Update mercurial from 4.9 to 4.9.1|[URL](https://github.com/mozilla-releng/build-puppet/commit/3f80d852385b3485e43919668cb0e85e1d11b77c)|2019-03-21 01:11:28
 |68|JohanLorenzo|[Bug 1533791](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791)  - Bump scriptworker to 22.1.0 (#432)|[URL](https://github.com/mozilla-releng/build-puppet/commit/50c33007df4dfc3b8149f2fbcc39e6d00b815b9e)|2019-03-19 12:28:46
 |67|escapewindow|Merge pull request #431 from escapewindow/bump-slugid bump slugid+taskcluster|[URL](https://github.com/mozilla-releng/build-puppet/commit/a4416687b6fdf1988491ade1cb1dbe52f6434fad)|2019-03-19 00:21:13

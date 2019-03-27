@@ -1,7 +1,8 @@
-## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-03-13 05:39:26.953183
+## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-03-14 01:18:48.635154
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|10|garbas|tooltool/api: fix cron job command (#1986)|[URL](https://github.com/mozilla/release-services/commit/150ab5fe0a50276651391b97e1ef227c1ab61f66)|2019-03-27 11:49:22
 |9|garbas|backend_common/auth: we shouldn't touch permissions in decorator (#1929)|[URL](https://github.com/mozilla/release-services/commit/688dd403d87226a42ac26b9fbec5e7111e198c00)|2019-03-07 11:36:09
 |8|garbas|shipit/api: authorization (#1870)|[URL](https://github.com/mozilla/release-services/commit/c7ef9d9adb87f924545efd60a51e823a7f1a2743)|2019-02-15 22:06:14
 |7|rail|tooltool/api: fix all flask subcommands|[URL](https://github.com/mozilla/release-services/commit/334bfb59a9cb55a92022f600bee1e4ed41dc485f)|2019-02-07 20:21:33
