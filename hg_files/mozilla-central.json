@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35766
+    "last_push_id": 35767
   },
   "1": {
     "changeset_number": "35344",
@@ -12215,59 +12215,6 @@
         "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24676",
         "files_changed": [
           "taskcluster/docker/funsize-update-generator/Pipfile.lock"
-        ]
-      }
-    }
-  },
-  "127": {
-    "changeset_number": "35761",
-    "pusher": "dvarga@mozilla.com",
-    "date_of_push": "2019-03-26 23:49:44",
-    "changeset_commits": {
-      "15": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e8758002d7d4",
-        "commiter_name": "James Graham <james@hoppipolla.co.uk>",
-        "commit_message": "Bug 1536804 - Add a task for summarising wpt metadata, r=ahal\n\nThis task runs on wpt metadata changes and uploads an artifact\ncontaining the summarised metadata.\n\nDepends on D24178\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24179",
-        "files_changed": [
-          "taskcluster/ci/source-test/kind.yml",
-          "taskcluster/ci/source-test/wpt-metadata.yml"
-        ]
-      },
-      "20": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f755dfcfc421",
-        "commiter_name": "Bogdan Tara <btara@mozilla.com>",
-        "commit_message": "Backed out 3 changesets (bug 1536804) for /css/css-* failures CLOSED TREE\n\nBacked out changeset e8758002d7d4 (bug 1536804)\nBacked out changeset 795287b1e059 (bug 1536804)\nBacked out changeset 9a680e886248 (bug 1536804)",
-        "files_changed": [
-          "taskcluster/ci/source-test/kind.yml",
-          "taskcluster/ci/source-test/wpt-metadata.yml",
-          "testing/web-platform/mach_commands.py",
-          "testing/web-platform/metasummary.py",
-          "testing/web-platform/tests/tools/wptrunner/wptrunner/manifestexpected.py",
-          "testing/web-platform/tests/tools/wptrunner/wptrunner/wptmanifest/backends/base.py",
-          "testing/web-platform/tests/tools/wptrunner/wptrunner/wptmanifest/backends/static.py"
-        ]
-      },
-      "36": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2aea0bb2df47",
-        "commiter_name": "Julian Descottes <jdescottes@mozilla.com>",
-        "commit_message": "Bug 1521752 - Run other DevTools jest tests on try;r=jlast,ahal\n\nDepends on D24145.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24146",
-        "files_changed": [
-          "taskcluster/ci/source-test/node.yml"
-        ]
-      },
-      "37": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=188ea7716008",
-        "commiter_name": "Julian Descottes <jdescottes@mozilla.com>",
-        "commit_message": "Bug 1521752 - Create jest test for aboutdebugging-new Message component;r=ladybenko\n\nDepends on D24146\nExample of a try run with tests running:\nhttps://treeherder.mozilla.org/#/jobs?repo=try&revision=cca3978c6e3eb042c59e62b25b1946219cf3d74a&selectedJob=235873038\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24721",
-        "files_changed": [
-          "devtools/client/aboutdebugging-new/test/jest/.eslintrc.js",
-          "devtools/client/aboutdebugging-new/test/jest/README.md",
-          "devtools/client/aboutdebugging-new/test/jest/components/__snapshots__/shared-message.test.js.snap",
-          "devtools/client/aboutdebugging-new/test/jest/components/shared-message.test.js",
-          "devtools/client/aboutdebugging-new/test/jest/jest.config.js",
-          "devtools/client/aboutdebugging-new/test/jest/package.json",
-          "devtools/client/aboutdebugging-new/test/jest/yarn.lock",
-          "taskcluster/ci/source-test/node.yml"
         ]
       }
     }
