@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-14 16:06:50.862548
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-14 19:52:44.003353
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|725|djmitche|Merge pull request #501 from djmitche/bug1536863 [Bug 1536863](https://bugzilla.mozilla.org/show_bug.cgi?id=1536863)  - fix handling of github logins via auth0|[URL](https://github.com/taskcluster/taskcluster/commit/1c543d60d3c0a730e1306de854e2137803f485c5)|2019-03-28 17:10:12
+|724|projectyang|[UI] Add markdown preview for inputs (#470)|[URL](https://github.com/taskcluster/taskcluster/commit/4e2f253c02513e98e2b4665b97b781d081883cfd)|2019-03-28 16:58:31
 |723|djmitche|Merge pull request #500 from djmitche/bug1535755-b [Bug 1535755](https://bugzilla.mozilla.org/show_bug.cgi?id=1535755)  - put user data in docs, with dev data in READMEs|[URL](https://github.com/taskcluster/taskcluster/commit/134eaba7c7c921112209961b240854dd99ad3680)|2019-03-27 13:05:20
 |722|djmitche|Merge pull request #495 from djmitche/bug1538996 [Bug 1538996](https://bugzilla.mozilla.org/show_bug.cgi?id=1538996)  - fix module loading with new raw loader|[URL](https://github.com/taskcluster/taskcluster/commit/b3f58d533c090442d0de33841ee5264e2a52860b)|2019-03-26 20:00:14
 |721|djmitche|Merge pull request #482 from djmitche/allcontributors-in-docs Use allcontributors in docs|[URL](https://github.com/taskcluster/taskcluster/commit/143871d458b9d4c44f71f111c7fe3e9c805ae6bb)|2019-03-26 12:43:19

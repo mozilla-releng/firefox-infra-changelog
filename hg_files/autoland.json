@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81686
+    "last_push_id": 81714
   },
   "1": {
     "changeset_number": "35344",
@@ -37674,6 +37674,89 @@
         "commit_message": "Bug 1533071 - Fix openh264 win64-aarch64 platform so signing can find it. r=dminor a=apavel|sheriffduty\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25103",
         "files_changed": [
           "taskcluster/ci/openh264-plugin/kind.yml"
+        ]
+      }
+    }
+  },
+  "784": {
+    "changeset_number": "81700",
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-03-28 18:30:21",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76fd580f2862",
+        "commiter_name": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1538675 - transform Android pgo test platform names so they show up as using 'pgo' as option on Treeherder r=bc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25091",
+        "files_changed": [
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      }
+    }
+  },
+  "785": {
+    "changeset_number": "81710",
+    "pusher": "jwood@mozilla.com",
+    "date_of_push": "2019-03-28 19:09:45",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3d678990e647",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1539856 - Properly avoid running on -ux hardware oustide of try/mozilla-central. r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25252",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/talos.yml"
+        ]
+      }
+    }
+  },
+  "786": {
+    "changeset_number": "81713",
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-03-28 19:42:25",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e2ea1a75e87",
+        "commiter_name": "Oana Pop Rus <opoprus@mozilla.com>",
+        "commit_message": "Backed out 3 changesets (bug 1458385) for windows partial bustages. a=backout\n\nBacked out changeset 8036c03c3b51 (bug 1458385)\nBacked out changeset 99fa5539c2bd (bug 1458385)\nBacked out changeset 9a5f255979c2 (bug 1458385)",
+        "files_changed": [
+          "build/sparse-profiles/taskgraph",
+          "mfbt/moz.build",
+          "other-licenses/bsdiff/moz.build",
+          "taskcluster/ci/repackage-l10n/kind.yml",
+          "taskcluster/ci/repackage-msi/kind.yml",
+          "taskcluster/ci/repackage/kind.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/docker/debian-build/Dockerfile",
+          "taskcluster/docker/mingw32-build/Dockerfile",
+          "taskcluster/docker/toolchain-build/Dockerfile",
+          "taskcluster/scripts/misc/build-mar-tools.sh",
+          "taskcluster/taskgraph/transforms/repackage.py",
+          "taskcluster/taskgraph/transforms/repackage_partner.py",
+          "testing/mozharness/configs/repackage/win32_partner.py",
+          "testing/mozharness/configs/repackage/win32_signed.py",
+          "testing/mozharness/configs/repackage/win64_partner.py",
+          "testing/mozharness/configs/repackage/win64_signed.py",
+          "testing/mozharness/scripts/repackage.py",
+          "tools/update-packaging/app.mozbuild",
+          "tools/update-packaging/moz.configure"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f370e4380076",
+        "commiter_name": "Oana Pop Rus <opoprus@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
+        "files_changed": [
+          "devtools/client/shared/view-source.js",
+          "devtools/client/shared/widgets/tooltip/EventTooltipHelper.js",
+          "taskcluster/scripts/misc/build-mar-tools.sh",
+          "testing/web-platform/meta/css/css-lists/inheritance.html.ini",
+          "tools/update-packaging/app.mozbuild",
+          "tools/update-packaging/moz.configure"
         ]
       }
     }
