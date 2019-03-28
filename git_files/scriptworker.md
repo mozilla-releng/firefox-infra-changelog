@@ -1,7 +1,8 @@
-## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-03-14 09:18:26.708154
+## SCRIPTWORKER COMMIT MARKDOWN TABLE SINCE 2019-03-14 12:06:14.481711
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|49|escapewindow|23.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/3e7acb70098ce2dabe2f71914568550f037210cd)|2019-03-27 22:59:58
 |48|escapewindow|23.0.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/3e7acb70098ce2dabe2f71914568550f037210cd)|2019-03-27 22:59:58
 |47|JohanLorenzo|22.1.0|[URL](https://github.com/mozilla-releng/scriptworker/commit/6c3698449ec5ae8ca363862d41c4a370cd101912)|2019-03-19 10:43:07
 |46|JohanLorenzo|[Bug 1533791](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791)  - Support "assume" scopes|[URL](https://github.com/mozilla-releng/scriptworker/commit/30a54b0c8092698f23b570cf81560f8e1af3322c)|2019-03-18 17:55:11
