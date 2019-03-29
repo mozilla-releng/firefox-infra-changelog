@@ -1,10 +1,10 @@
-##  Commits in production - for 3 days, generated on: 2019-03-29 13:33:47 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-29 13:47:27 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4055d335fa50)|[Bug 1457274](https://bugzilla.mozilla.org/show_bug.cgi?id=1457274)  Upgrade mitmproxy in production r=rwood,tarek Differential Revision: https://phabricator.services.mozilla.com/D21374|fstrugariu@mozilla.com|rwood,tarek|2019-03-29 11:55:36|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8eca81b7d003)|[Bug 1539905](https://bugzilla.mozilla.org/show_bug.cgi?id=1539905)  Cache yaml loading r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D25273|catlee@mozilla.com|mtabara|2019-03-29 15:37:12|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|gbrown@mozilla.com|dustin|2019-03-29 02:16:04|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|mh@glandium.org|froydnj|2019-03-29 02:11:07|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=531d308db7e7)|[Bug 1536044](https://bugzilla.mozilla.org/show_bug.cgi?id=1536044)  - Fully disable jacoco builds for Android r=agi Differential Revision: https://phabricator.services.mozilla.com/D25216|jwillcox@mozilla.com|agi|2019-03-28 22:27:28|
@@ -228,6 +228,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 
 |	pushsnapscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)	| 
