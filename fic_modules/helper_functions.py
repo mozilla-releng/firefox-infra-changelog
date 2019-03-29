@@ -344,7 +344,6 @@ def convert_bytes(num):
         if num > 1024.0:
             num /= 1024.0
         else:
-            # return "%3.1f %s" % (num, x)
             a = "%3.2f" % num
             return float(a), x
 
