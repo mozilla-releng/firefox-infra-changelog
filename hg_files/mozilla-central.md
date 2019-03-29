@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35777
+ CURRENT PUSH ID: 35778
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|35777|2019-03-29 15:17:14|Dorel Luca <dluca@mozilla.com>|Backed out changeset 963d97e812f9 [Bug 1535364](https://bugzilla.mozilla.org/show_bug.cgi?id=1535364)  for causing [Bug 1539933](https://bugzilla.mozilla.org/show_bug.cgi?id=1539933)  a=backout|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=04bd7929b499
+|35778|2019-03-29 17:35:54|Justin Wood <Callek@gmail.com>|[Bug 1540132](https://bugzilla.mozilla.org/show_bug.cgi?id=1540132)  - Fix updates by telling release properties to ignore the '-shippable' suffix. r=tomprince a=ccoroiuReviewers: tomprinceReviewed By: tomprinceBug #: 1540132Differential Revision: https://phabricator.services.mozilla.com/D25397|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=69e9ee0ef3dd
 |35776|2019-03-29 11:44:33|Mike Hommey <mh+mozilla@glandium.org>|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnjThis sets things enough things up to be able to push to try with anopt-in, but doesn't run the job on every push. This can be used as atemplate for future work on a fuzzing job.Differential Revision: https://phabricator.services.mozilla.com/D25069|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=603144bedadc
 |35776|2019-03-29 11:44:33|Geoff Brown <gbrown@mozilla.com>|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustinRun DocUp as tier 2 rather than tier 3, to make the task visible by defaultand get the benefit of at least some sheriffing.Differential Revision: https://phabricator.services.mozilla.com/D25319|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=14db4eae01f5
 |35773|2019-03-29 06:11:36|Sebastian Hengst <archaeopteryx@coole-files.de>|[Bug 1538675](https://bugzilla.mozilla.org/show_bug.cgi?id=1538675)  - transform Android pgo test platform names so they show up as using 'pgo' as option on Treeherder r=bcDifferential Revision: https://phabricator.services.mozilla.com/D25091|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76fd580f2862

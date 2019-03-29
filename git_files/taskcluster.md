@@ -1,7 +1,22 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-15 15:46:19.152581
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-15 22:00:57.820846
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|740|imbstack|Merge pull request #510 from taskcluster/nicer-logs-docs Make logs documentation more useful|[URL](https://github.com/taskcluster/taskcluster/commit/0c36f07794ab4e074579eacf4ab6c13e262a852c)|2019-03-29 19:39:29
+|739|helfi92|Change home page wording (#509)|[URL](https://github.com/taskcluster/taskcluster/commit/80335b2328ed169bb3f166816cb2b6ec80140a1f)|2019-03-29 19:26:00
+|738|djmitche|(hotfix) fix links|[URL](https://github.com/taskcluster/taskcluster/commit/cf6a1a6f9102fc840e72e8b78014c8fad7e62e35)|2019-03-29 18:56:51
+|737|djmitche|Merge pull request #505 from djmitche/dev-docs-refactor Dev docs refactor|[URL](https://github.com/taskcluster/taskcluster/commit/d0683c46ca792867e2d9f6b1385ea9d9dc4773e2)|2019-03-29 18:53:39
+|736|imbstack|Make logs documentation more useful|[URL](https://github.com/taskcluster/taskcluster/commit/c4a4f8f4e4d2a491ddeecde5aa2b7119e63fd8d9)|2019-03-29 18:32:27
+|735|djmitche|Include link to retrospectives in dev docs|[URL](https://github.com/taskcluster/taskcluster/commit/fa50756dae8aa24336db6ded3a3288a4003942fb)|2019-03-29 17:14:00
+|734|djmitche|check for and fix more typos|[URL](https://github.com/taskcluster/taskcluster/commit/ce446c31153c61cf8ffe264d8c338fedc7ddcefb)|2019-03-29 17:08:15
+|733|djmitche|Merge pull request #507 from djmitche/add-mrrrgn Add @mrrrgn to contributors|[URL](https://github.com/taskcluster/taskcluster/commit/44ea552cf4b8d508a92b74072264545be102ffad)|2019-03-29 17:00:48
+|732|djmitche|Merge pull request #503 from djmitche/bug1538152 [Bug 1538152](https://bugzilla.mozilla.org/show_bug.cgi?id=1538152)  - "tell a story" about tasks in queue logging|[URL](https://github.com/taskcluster/taskcluster/commit/0bfccb189dad8e5160a2515518c3848199f37e2f)|2019-03-29 16:34:03
+|731|djmitche|Add @mrrrgn now that the github user exists again..|[URL](https://github.com/taskcluster/taskcluster/commit/30ffc9be39af2132d9796138f78e6f0b8139235d)|2019-03-29 16:23:30
+|730|djmitche|Merge pull request #506 from taskcluster/all-contributors/add-OjaswinM docs: add OjaswinM as a contributor|[URL](https://github.com/taskcluster/taskcluster/commit/0fa92e05aedee4af1a67941dea1f7f9b2a73fe32)|2019-03-29 16:22:43
+|729|allcontributors[bot]|docs: update .all-contributorsrc|[URL](https://github.com/taskcluster/taskcluster/commit/bc6ce633d32c0e623cbc9a713c8373f3fc96443c)|2019-03-29 16:20:04
+|728|allcontributors[bot]|docs: update README.md|[URL](https://github.com/taskcluster/taskcluster/commit/0aa3bdb7c39b96f4c88ad4a6d2346f158b1d5602)|2019-03-29 16:20:03
+|727|djmitche|Move development section of the manual to be viewed via GitHub READMEs|[URL](https://github.com/taskcluster/taskcluster/commit/f45b455b4cff090c1d24ac6caff695f2c7f90a60)|2019-03-29 16:08:54
+|726|djmitche|Refactor builder docs into a single README|[URL](https://github.com/taskcluster/taskcluster/commit/91abe996074be2ac74d5a32a83baf625e52c514d)|2019-03-29 15:34:36
 |725|djmitche|Merge pull request #501 from djmitche/bug1536863 [Bug 1536863](https://bugzilla.mozilla.org/show_bug.cgi?id=1536863)  - fix handling of github logins via auth0|[URL](https://github.com/taskcluster/taskcluster/commit/1c543d60d3c0a730e1306de854e2137803f485c5)|2019-03-28 17:10:12
 |724|projectyang|[UI] Add markdown preview for inputs (#470)|[URL](https://github.com/taskcluster/taskcluster/commit/4e2f253c02513e98e2b4665b97b781d081883cfd)|2019-03-28 16:58:31
 |723|djmitche|Merge pull request #500 from djmitche/bug1535755-b [Bug 1535755](https://bugzilla.mozilla.org/show_bug.cgi?id=1535755)  - put user data in docs, with dev data in READMEs|[URL](https://github.com/taskcluster/taskcluster/commit/134eaba7c7c921112209961b240854dd99ad3680)|2019-03-27 13:05:20

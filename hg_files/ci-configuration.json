@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 110
+    "last_push_id": 112
   },
   "1": {
     "changeset_number": "31",
@@ -875,6 +875,36 @@
         "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a65955ea586",
         "commiter_name": "Tom Prince <mozilla@hocat.ca>",
         "commit_message": "No bug: Remove scopes associated to the deprecated taskcluster-worker; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24453",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "52": {
+    "changeset_number": "111",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-03-29 18:10:46",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4eb38751b8be",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1540168 - Fix Reference-Browser nightly r=mtabara\n\nFix Reference-Browser nightly\nFixes https://tools.taskcluster.net/groups/LasmOd2xTp6Knn6xlkbmTA/tasks/LasmOd2xTp6Knn6xlkbmTA/runs/0/logs/public%2Flogs%2Flive_backing.log\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25413",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "53": {
+    "changeset_number": "112",
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-03-29 18:26:27",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=660ba33fb079",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "No bug - amend ref browser master role to encompass dep signing. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25393",
         "files_changed": [
           "grants.yml"
         ]

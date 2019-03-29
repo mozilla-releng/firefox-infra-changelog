@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 81801
+ CURRENT PUSH ID: 81848
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|81799|2019-03-29 15:37:12|Chris AtLee <catlee@mozilla.com>|[Bug 1539905](https://bugzilla.mozilla.org/show_bug.cgi?id=1539905)  Cache yaml loading r=mtabaraDifferential Revision: https://phabricator.services.mozilla.com/D25273|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8eca81b7d003
+|81813|2019-03-29 16:47:49|Marian Raiciof <mraiciof@mozilla.com>|[Bug 1536095](https://bugzilla.mozilla.org/show_bug.cgi?id=1536095)  - Add aframe.io Animation page to tp6-m [Bug 1536095](https://bugzilla.mozilla.org/show_bug.cgi?id=1536095)  - Add aframe.io Animation page to tp6-mDifferential Revision: https://phabricator.services.mozilla.com/D23862|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=637fa2c92faa
 |81750|2019-03-29 02:16:04|Geoff Brown <gbrown@mozilla.com>|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustinRun DocUp as tier 2 rather than tier 3, to make the task visible by defaultand get the benefit of at least some sheriffing.Differential Revision: https://phabricator.services.mozilla.com/D25319|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=14db4eae01f5
 |81749|2019-03-29 02:11:07|Mike Hommey <mh+mozilla@glandium.org>|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnjThis sets things enough things up to be able to push to try with anopt-in, but doesn't run the job on every push. This can be used as atemplate for future work on a fuzzing job.Differential Revision: https://phabricator.services.mozilla.com/D25069|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=603144bedadc
 |81728|2019-03-28 22:27:28|James Willcox <snorp@snorp.net>|[Bug 1536044](https://bugzilla.mozilla.org/show_bug.cgi?id=1536044)  - Fully disable jacoco builds for Android r=agiDifferential Revision: https://phabricator.services.mozilla.com/D25216|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=531d308db7e7

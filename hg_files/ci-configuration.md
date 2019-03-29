@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 110
+ CURRENT PUSH ID: 112
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|110|2019-03-22 23:59:05|Tom Prince <mozilla@hocat.ca>|No bug: Remove scopes associated to the deprecated taskcluster-worker; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D24453|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a65955ea586
+|112|2019-03-29 18:26:27|Mihai Tabara <mtabara@mozilla.com>|No bug - amend ref browser master role to encompass dep signing. r=jlorenzoDifferential Revision: https://phabricator.services.mozilla.com/D25393|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=660ba33fb079
+|111|2019-03-29 18:10:46|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1540168](https://bugzilla.mozilla.org/show_bug.cgi?id=1540168)  - Fix Reference-Browser nightly r=mtabaraFix Reference-Browser nightlyFixes https://tools.taskcluster.net/groups/LasmOd2xTp6Knn6xlkbmTA/tasks/LasmOd2xTp6Knn6xlkbmTA/runs/0/logs/public%2Flogs%2Flive_backing.logDifferential Revision: https://phabricator.services.mozilla.com/D25413|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4eb38751b8be
 |109|2019-03-22 23:44:57|Tom Prince <mozilla@hocat.ca>|No bug: Remove scopes from branches that don't have jobs running on them; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D24452|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0dcbbd0b9cfe
 |105|2019-03-21 18:25:01|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1533791](https://bugzilla.mozilla.org/show_bug.cgi?id=1533791)  - Remove all priorities scopes, now that mobile projects use "assume:" r=tomprinceRemove all priorities scopes, now that mobile projects use "assume:"Differential Revision: https://phabricator.services.mozilla.com/D24376|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=324ddaed637c
 |101|2019-03-15 16:53:37|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1526979](https://bugzilla.mozilla.org/show_bug.cgi?id=1526979)  - enable push-via-hooks for try-comm-central; a=tomprince|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=90efa66ecf6e

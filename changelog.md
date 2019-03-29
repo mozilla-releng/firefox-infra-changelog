@@ -1,10 +1,10 @@
-##  Commits in production - for 3 days, generated on: 2019-03-29 13:47:27 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-29 20:02:06 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8eca81b7d003)|[Bug 1539905](https://bugzilla.mozilla.org/show_bug.cgi?id=1539905)  Cache yaml loading r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D25273|catlee@mozilla.com|mtabara|2019-03-29 15:37:12|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=637fa2c92faa)|[Bug 1536095](https://bugzilla.mozilla.org/show_bug.cgi?id=1536095)  - Add aframe.io Animation page to tp6-m r=davehunt,rwood [Bug 1536095](https://bugzilla.mozilla.org/show_bug.cgi?id=1536095)  - Add aframe.io Animation page to tp6-m Differential Revision: https://phabricator.services.mozilla.com/D23862|rwood@mozilla.com|davehunt,rwood|2019-03-29 16:47:49|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|gbrown@mozilla.com|dustin|2019-03-29 02:16:04|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|mh@glandium.org|froydnj|2019-03-29 02:11:07|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=531d308db7e7)|[Bug 1536044](https://bugzilla.mozilla.org/show_bug.cgi?id=1536044)  - Fully disable jacoco builds for Android r=agi Differential Revision: https://phabricator.services.mozilla.com/D25216|jwillcox@mozilla.com|agi|2019-03-28 22:27:28|
@@ -67,9 +67,6 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3e2b6a495e8c)|[Bug 1352113](https://bugzilla.mozilla.org/show_bug.cgi?id=1352113)  - Remove nightly build types replaced by shippable. r=aki Differential Revision: https://phabricator.services.mozilla.com/D24700|jwood@mozilla.com|aki|2019-03-26 20:36:08|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4b9413d05816)|[Bug 1352113](https://bugzilla.mozilla.org/show_bug.cgi?id=1352113)  - Shippable Builds - Update index routes for shippable. Try to be backwards compat where possible. r=aki Differential Revision: https://phabricator.services.mozilla.com/D24829|jwood@mozilla.com|aki|2019-03-26 20:36:08|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4943b23813fe)|[Bug 1352113](https://bugzilla.mozilla.org/show_bug.cgi?id=1352113)  - Shippable Builds - Account for new declarative artifacts work. r=mtabara Differential Revision: https://phabricator.services.mozilla.com/D24831|jwood@mozilla.com|mtabara|2019-03-26 20:36:08|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2aea0bb2df47)|[Bug 1521752](https://bugzilla.mozilla.org/show_bug.cgi?id=1521752)  - Run other DevTools jest tests on try;r=jlast,ahal Depends on D24145. Differential Revision: https://phabricator.services.mozilla.com/D24146|jdescottes@mozilla.com|jlast,ahal|2019-03-26 19:21:30|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=188ea7716008)|[Bug 1521752](https://bugzilla.mozilla.org/show_bug.cgi?id=1521752)  - Create jest test for aboutdebugging-new Message component;r=ladybenko Depends on D24146 Example of a try run with tests running: https://treeherder.mozilla.org/#/jobs?repo=try&revision=cca3978c6e3eb042c59e62b25b1946219cf3d74a&selectedJob=235873038 Differential Revision: https://phabricator.services.mozilla.com/D24721|jdescottes@mozilla.com|ladybenko|2019-03-26 19:21:30|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f755dfcfc421)|Backed out 3 changesets [Bug 1536804](https://bugzilla.mozilla.org/show_bug.cgi?id=1536804)  for /css/css-* failures CLOSED TREE Backed out changeset e8758002d7d4 [Bug 1536804](https://bugzilla.mozilla.org/show_bug.cgi?id=1536804)  Backed out changeset 795287b1e059 [Bug 1536804](https://bugzilla.mozilla.org/show_bug.cgi?id=1536804)  Backed out changeset 9a680e886248 [Bug 1536804](https://bugzilla.mozilla.org/show_bug.cgi?id=1536804) |btara@mozilla.com||2019-03-26 18:43:17|
 
 |	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -107,7 +104,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=04bd7929b499)|Backed out changeset 963d97e812f9 [Bug 1535364](https://bugzilla.mozilla.org/show_bug.cgi?id=1535364)  for causing [Bug 1539933](https://bugzilla.mozilla.org/show_bug.cgi?id=1539933)  a=backout|dluca@mozilla.com|backout|2019-03-29 15:17:14|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=69e9ee0ef3dd)|[Bug 1540132](https://bugzilla.mozilla.org/show_bug.cgi?id=1540132)  - Fix updates by telling release properties to ignore the '-shippable' suffix. r=tomprince a=ccoroiu Reviewers: tomprince Reviewed By: tomprince Bug #: 1540132 Differential Revision: https://phabricator.services.mozilla.com/D25397|ccoroiu@mozilla.com|tomprince|2019-03-29 17:35:54|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|ccoroiu@mozilla.com|froydnj|2019-03-29 11:44:33|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|ccoroiu@mozilla.com|dustin|2019-03-29 11:44:33|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76fd580f2862)|[Bug 1538675](https://bugzilla.mozilla.org/show_bug.cgi?id=1538675)  - transform Android pgo test platform names so they show up as using 'pgo' as option on Treeherder r=bc Differential Revision: https://phabricator.services.mozilla.com/D25091|ncsoregi@mozilla.com|bc|2019-03-29 06:11:36|
@@ -190,10 +187,24 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/0c36f07794ab4e074579eacf4ab6c13e262a852c)|Merge pull request #510 from taskcluster/nicer-logs-docs  Make logs documentation more useful|imbstack|N/A|2019-03-29 19:39:29|
+|[Link](https://github.com/taskcluster/taskcluster/commit/80335b2328ed169bb3f166816cb2b6ec80140a1f)|Change home page wording (#509)|helfi92|N/A|2019-03-29 19:26:00|
+|[Link](https://github.com/taskcluster/taskcluster/commit/cf6a1a6f9102fc840e72e8b78014c8fad7e62e35)|(hotfix) fix links|djmitche|N/A|2019-03-29 18:56:51|
+|[Link](https://github.com/taskcluster/taskcluster/commit/d0683c46ca792867e2d9f6b1385ea9d9dc4773e2)|Merge pull request #505 from djmitche/dev-docs-refactor  Dev docs refactor|djmitche|N/A|2019-03-29 18:53:39|
+|[Link](https://github.com/taskcluster/taskcluster/commit/c4a4f8f4e4d2a491ddeecde5aa2b7119e63fd8d9)|Make logs documentation more useful|imbstack|N/A|2019-03-29 18:32:27|
+|[Link](https://github.com/taskcluster/taskcluster/commit/fa50756dae8aa24336db6ded3a3288a4003942fb)|Include link to retrospectives in dev docs|djmitche|N/A|2019-03-29 17:14:00|
+|[Link](https://github.com/taskcluster/taskcluster/commit/ce446c31153c61cf8ffe264d8c338fedc7ddcefb)|check for and fix more typos|djmitche|N/A|2019-03-29 17:08:15|
+|[Link](https://github.com/taskcluster/taskcluster/commit/44ea552cf4b8d508a92b74072264545be102ffad)|Merge pull request #507 from djmitche/add-mrrrgn  Add @mrrrgn to contributors|djmitche|N/A|2019-03-29 17:00:48|
+|[Link](https://github.com/taskcluster/taskcluster/commit/0bfccb189dad8e5160a2515518c3848199f37e2f)|Merge pull request #503 from djmitche/bug1538152  Bug 1538152 - "tell a story" about tasks in queue logging|djmitche|N/A|2019-03-29 16:34:03|
+|[Link](https://github.com/taskcluster/taskcluster/commit/30ffc9be39af2132d9796138f78e6f0b8139235d)|Add @mrrrgn now that the github user exists again..|djmitche|N/A|2019-03-29 16:23:30|
+|[Link](https://github.com/taskcluster/taskcluster/commit/0fa92e05aedee4af1a67941dea1f7f9b2a73fe32)|Merge pull request #506 from taskcluster/all-contributors/add-OjaswinM  docs: add OjaswinM as a contributor|djmitche|N/A|2019-03-29 16:22:43|
+|[Link](https://github.com/taskcluster/taskcluster/commit/bc6ce633d32c0e623cbc9a713c8373f3fc96443c)|docs: update .all-contributorsrc|allcontributors[bot]|N/A|2019-03-29 16:20:04|
+|[Link](https://github.com/taskcluster/taskcluster/commit/0aa3bdb7c39b96f4c88ad4a6d2346f158b1d5602)|docs: update README.md|allcontributors[bot]|N/A|2019-03-29 16:20:03|
+|[Link](https://github.com/taskcluster/taskcluster/commit/f45b455b4cff090c1d24ac6caff695f2c7f90a60)|Move development section of the manual to be viewed via GitHub READMEs|djmitche|N/A|2019-03-29 16:08:54|
+|[Link](https://github.com/taskcluster/taskcluster/commit/91abe996074be2ac74d5a32a83baf625e52c514d)|Refactor builder docs into a single README|djmitche|N/A|2019-03-29 15:34:36|
 |[Link](https://github.com/taskcluster/taskcluster/commit/1c543d60d3c0a730e1306de854e2137803f485c5)|Merge pull request #501 from djmitche/bug1536863  Bug 1536863 - fix handling of github logins via auth0|djmitche|N/A|2019-03-28 17:10:12|
 |[Link](https://github.com/taskcluster/taskcluster/commit/4e2f253c02513e98e2b4665b97b781d081883cfd)|[UI] Add markdown preview for inputs (#470)|projectyang|N/A|2019-03-28 16:58:31|
 |[Link](https://github.com/taskcluster/taskcluster/commit/134eaba7c7c921112209961b240854dd99ad3680)|Merge pull request #500 from djmitche/bug1535755-b  Bug 1535755 - put user data in docs, with dev data in READMEs|djmitche|N/A|2019-03-27 13:05:20|
-|[Link](https://github.com/taskcluster/taskcluster/commit/b3f58d533c090442d0de33841ee5264e2a52860b)|Merge pull request #495 from djmitche/bug1538996  Bug 1538996 - fix module loading with new raw loader|djmitche|N/A|2019-03-26 20:00:14|
 
 |	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -228,6 +239,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 
@@ -303,7 +315,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)|FIC - BOT|Self Generated| - |
+|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=660ba33fb079)|No bug - amend ref browser master role to encompass dep signing. r=jlorenzo Differential Revision: https://phabricator.services.mozilla.com/D25393|mtabara@mozilla.com|jlorenzo|2019-03-29 18:26:27|
+|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4eb38751b8be)|[Bug 1540168](https://bugzilla.mozilla.org/show_bug.cgi?id=1540168)  - Fix Reference-Browser nightly r=mtabara Fix Reference-Browser nightly Fixes https://tools.taskcluster.net/groups/LasmOd2xTp6Knn6xlkbmTA/tasks/LasmOd2xTp6Knn6xlkbmTA/runs/0/logs/public%2Flogs%2Flive_backing.log Differential Revision: https://phabricator.services.mozilla.com/D25413|jlorenzo@mozilla.com|mtabara|2019-03-29 18:10:46|
 
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 

@@ -1,7 +1,8 @@
-## PUSHAPKSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-15 15:46:19.152581
+## PUSHAPKSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-15 22:00:57.820846
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|41|mitchhentges|1.0.0|[URL](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|2019-03-29 12:30:28
 |40|mitchhentges|1.0.0|[URL](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|2019-03-29 12:30:28
 |39|mitchhentges|1.0.0|[URL](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|2019-03-29 12:30:28
 |38|mitchhentges|Merge pull request #70 from mitchhentges/release-0.12.0 0.12.0|[URL](https://github.com/mozilla-releng/pushapkscript/commit/963d43c568421343fe716aa75455738d8de0e0e7)|2019-01-09 17:19:24
