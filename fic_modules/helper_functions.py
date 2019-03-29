@@ -366,3 +366,25 @@ def file_size(file_path):
         return False, float(size[0])
     else:
         return True
+
+
+def rename_element_with_date(file_name, date_string, logger=LOGGER):
+    """
+    Implemented in: issue-390
+    Function that is used to rename a file and add a date to the title.
+    Use case:
+    rename_element_with_dt((os.pardir + r"\test_file.md"), "20190323")
+    or
+    rename_element_with_dt("git_files/addonscript.md", "20190323")
+    :param logger: logger object to log the rename.
+    :param file_name: name or path+name of the file to be renamed
+    :param date_string:
+    :return:
+    """
+    generated_name = str(file_name[0:-3]) + "." + date_string + ".md"
+    try:
+        os.rename(file_name, generated_name)
+    except os.error:
+        logger.error("Failed to rename the provided file {}".format(file_name))
+    logger.info("Renamed element {} into {}."
+                .format(file_name, generated_name))
