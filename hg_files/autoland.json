@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81776
+    "last_push_id": 81798
   },
   "1": {
     "changeset_number": "35344",
@@ -37699,54 +37699,6 @@
     }
   },
   "786": {
-    "changeset_number": "81713",
-    "pusher": "opoprus@mozilla.com",
-    "date_of_push": "2019-03-28 19:42:25",
-    "changeset_commits": {
-      "3": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4e2ea1a75e87",
-        "commiter_name": "Oana Pop Rus <opoprus@mozilla.com>",
-        "commit_message": "Backed out 3 changesets (bug 1458385) for windows partial bustages. a=backout\n\nBacked out changeset 8036c03c3b51 (bug 1458385)\nBacked out changeset 99fa5539c2bd (bug 1458385)\nBacked out changeset 9a5f255979c2 (bug 1458385)",
-        "files_changed": [
-          "build/sparse-profiles/taskgraph",
-          "mfbt/moz.build",
-          "other-licenses/bsdiff/moz.build",
-          "taskcluster/ci/repackage-l10n/kind.yml",
-          "taskcluster/ci/repackage-msi/kind.yml",
-          "taskcluster/ci/repackage/kind.yml",
-          "taskcluster/ci/toolchain/mingw.yml",
-          "taskcluster/ci/toolchain/misc.yml",
-          "taskcluster/docker/debian-build/Dockerfile",
-          "taskcluster/docker/mingw32-build/Dockerfile",
-          "taskcluster/docker/toolchain-build/Dockerfile",
-          "taskcluster/scripts/misc/build-mar-tools.sh",
-          "taskcluster/taskgraph/transforms/repackage.py",
-          "taskcluster/taskgraph/transforms/repackage_partner.py",
-          "testing/mozharness/configs/repackage/win32_partner.py",
-          "testing/mozharness/configs/repackage/win32_signed.py",
-          "testing/mozharness/configs/repackage/win64_partner.py",
-          "testing/mozharness/configs/repackage/win64_signed.py",
-          "testing/mozharness/scripts/repackage.py",
-          "tools/update-packaging/app.mozbuild",
-          "tools/update-packaging/moz.configure"
-        ]
-      },
-      "7": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f370e4380076",
-        "commiter_name": "Oana Pop Rus <opoprus@mozilla.com>",
-        "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
-        "files_changed": [
-          "devtools/client/shared/view-source.js",
-          "devtools/client/shared/widgets/tooltip/EventTooltipHelper.js",
-          "taskcluster/scripts/misc/build-mar-tools.sh",
-          "testing/web-platform/meta/css/css-lists/inheritance.html.ini",
-          "tools/update-packaging/app.mozbuild",
-          "tools/update-packaging/moz.configure"
-        ]
-      }
-    }
-  },
-  "786": {
     "changeset_number": "81728",
     "pusher": "jwillcox@mozilla.com",
     "date_of_push": "2019-03-28 22:27:28",
@@ -38022,6 +37974,36 @@
           "widget/tests/browser/.eslintrc.js",
           "widget/tests/unit/.eslintrc.js",
           "xpcom/tests/unit/.eslintrc.js"
+        ]
+      }
+    }
+  },
+  "789": {
+    "changeset_number": "81786",
+    "pusher": "fstrugariu@mozilla.com",
+    "date_of_push": "2019-03-29 11:55:36",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4055d335fa50",
+        "commiter_name": "Florin Strugariu <fstrugariu@mozilla.com>",
+        "commit_message": "Bug 1457274 Upgrade mitmproxy in production r=rwood,tarek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21374",
+        "files_changed": [
+          "taskcluster/ci/test/raptor-chrome.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/mozbase/docs/mozproxy.rst",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-4.0.4-linux64.manifest",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-4.0.4-osx.manifest",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-4.0.4-win.manifest",
+          "testing/raptor/raptor/playback/alternate-server-replay-2.0.2.py",
+          "testing/raptor/raptor/playback/alternate-server-replay-4.0.4.py",
+          "testing/raptor/raptor/playback/alternate-server-replay.py",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-ebay-404.manifest",
+          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-wikipedia-404.manifest",
+          "testing/raptor/raptor/raptor.ini",
+          "testing/raptor/raptor/raptor.py",
+          "testing/raptor/raptor/tests/raptor-tp6-8-404.ini"
         ]
       }
     }

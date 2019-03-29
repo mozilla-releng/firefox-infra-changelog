@@ -1,4 +1,4 @@
-## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-15 10:17:08.102704
+## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-15 15:32:40.209371
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
@@ -26,9 +26,9 @@
 |7|MihaiTabara|8.1.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/9a347b4b38437364fb545d6c9d1c80ebd1a1b9b9)|2018-12-18 13:45:36
 |6|MihaiTabara|Fix geckoview tasks after snapshots enabled. (#199) Fix geckoview tasks after snapshots enabled. Add newsfragment file.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/22ce904fdd5bdd1f697d3d2e5169272f4f1fb5bd)|2018-12-18 13:45:01
 |5|MihaiTabara|8.1.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/be92c31cbb186d934ed227081277b87fdc69e2a6)|2018-12-17 16:04:55
-|4|MihaiTabara|Add snapshots support for maven push. (#194) Initial work to support snapshot behavior in beetmoverscript. Solve the expected files logic with jsone. Overwrite manifest Refactoring before running staging releases. Add maven-production Fix all failing tests. 100% coverage on utils.py 100% coverage in zip.py s,jsone,jinja Refactor in utils.py Fix review comments in zip.py Add newsfragments file.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/1f1401540d559d998983651400056f3c2392560d)|2018-12-17 16:01:21
+|4|MihaiTabara|Add snapshots support for maven push. (#194) Initial work to support snapshot behavior in beetmoverscript. Solve the expected files logic with jsone. Overwrite manifest Refactoring before running staging releases. Add maven-production Fix all failing tests. 100% coverage on utils.py 100% coverage in zip.py s,jsone,jinja Refactor in utils.py Fix .. [continue reading](https://github.com/mozilla-releng/beetmoverscript/commit/1f1401540d559d998983651400056f3c2392560d)|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/1f1401540d559d998983651400056f3c2392560d)|2018-12-17 16:01:21
 |3|tomprince|Add win64-aarch64 support.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/71f5e20f8dc20845e182f4a15764d2673a5b1f08)|2018-12-07 14:48:57
 |2|MihaiTabara|8.0.0|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/883524121b34c630533fbec8db73c08797dcc7be)|2018-11-28 01:08:55
-|1|srfraser|Declarative artifacts, reworking lguo's PR (#185) Declarative artifacts, reworking lguo's PR Remove debugging unused import, for debugging Adjust for new artifactMap format. I'm not too happy about the way taskId is currently handled, I'd like to improve on that before production deploys. Support for artifact map within push-to-maven Improve test coverage Adjust key for artifacts_to_beetmove for maven with map Update comment for clarity Add test for cot in taskId|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/240e7a6cf19f7e56c003e51a09e11f29c6696580)|2018-11-28 01:04:36
+|1|srfraser|Declarative artifacts, reworking lguo's PR (#185) Declarative artifacts, reworking lguo's PR Remove debugging unused import, for debugging Adjust for new artifactMap format. I'm not too happy about the way taskId is currently handled, I'd like to improve on that before production deploys. Support for artifact map within push-to-maven Improve test coverage Adjus.. [continue reading](https://github.com/mozilla-releng/beetmoverscript/commit/240e7a6cf19f7e56c003e51a09e11f29c6696580)|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/240e7a6cf19f7e56c003e51a09e11f29c6696580)|2018-11-28 01:04:36
 
 
