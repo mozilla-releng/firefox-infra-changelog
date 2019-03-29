@@ -7,7 +7,8 @@ from datetime import datetime
 from fic_modules.helper_functions import (
     filter_strings,
     remove_chars,
-    replace_bug_with_url
+    replace_bug_with_url,
+    trim_commit_description
 )
 from fic_modules.configuration import (
     LAST_WEEK,
@@ -16,7 +17,6 @@ from fic_modules.configuration import (
     WORKING_DIR
 )
 from fic_modules.hg import extract_json_from_hg
-
 
 
 def create_git_md_table(repository_name, path_to_files):
@@ -71,10 +71,11 @@ def create_git_md_table(repository_name, path_to_files):
                 commit_author = data.get(key).get("commiter_name")
                 commit_author = re.sub("\u0131", "i", commit_author)
                 date = data.get(key).get("commit_date")
+                url = data.get(key).get("url")
                 message = data.get(key).get("commit_message")
+                message = trim_commit_description(message, url)
                 message = remove_chars(message, "\U0001f60b")
                 message = re.sub("\|", "\|", message)
-                url = data.get(key).get("url")
 
                 commit_author = filter_strings(commit_author)
                 message = filter_strings(message)
@@ -228,19 +229,20 @@ def create_hg_md_table(repository_name):
                                                    commit_author)
                             commit_author = filter_strings(commit_author)
 
+                            url = data \
+                                .get(key) \
+                                .get("changeset_commits") \
+                                .get(entry) \
+                                .get("url")
+
                             message = data \
                                 .get(key) \
                                 .get("changeset_commits") \
                                 .get(entry).get("commit_message")
                             message = re.sub("\n|", "", message)
-
                             message = filter_strings(message)
+                            message = trim_commit_description(message, url)
                             message = replace_bug_with_url(message, LOGGER)
-                            url = data\
-                                .get(key)\
-                                .get("changeset_commits")\
-                                .get(entry)\
-                                .get("url")
 
                             row = "|" + changeset_id + \
                                   "|" + date_of_push + \
