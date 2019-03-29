@@ -175,8 +175,8 @@ def run_days(logger, days):
 @click.option('-d', '--days', default=3, help='Let user decide for how many '
                                               'days changelog.md will '
                                               'be generated')
-@click.option('-u', '--update', default=3, help='Automatically push the updated'
-                                                'data to github.')
+@click.option('-u', '--update', is_flag=True, help='Automatically push the updated'
+                                                   'data to github.')
 @click.help_option('-h', '--help')
 def cli(complete=False, git=False, mercurial=False, logger=False, manual=False,
         days=False, update=False):
