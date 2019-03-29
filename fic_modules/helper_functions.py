@@ -9,7 +9,8 @@ from fic_modules.configuration import (
     REPOSITORIES,
     REPO_LIST,
     GIT,
-    LOGGER
+    LOGGER,
+    COMMIT_DESCRIPTION_LENGTH
 )
 from datetime import datetime
 
@@ -300,3 +301,33 @@ def write_to_changelog_json(dict_name, platform):
     data_file = open("changelog.json", "w")
     json.dump(file_content, data_file, indent=2)
     data_file.close()
+
+
+def trim_commit_description(message,
+                            commit_link,
+                            length=COMMIT_DESCRIPTION_LENGTH):
+    """
+    Implemented in: issue-389
+    This function checks if the length of the message (that is applied to
+    commit description) is larger then a defined length.
+    The length of the commit it's stored in configuration.py and it's value can
+    be modified in two ways:
+        1. In configuration.py modify the COMMIT_DESCRIPTION_LENGTH
+        2. Overwrite it by providing the 3rd argument when the function is
+        called.
+    In the case of a message that it's larger then the defined length, the
+    supplied commit_link will be used with a "continue reading" message that
+    should redirect to the commit link (git/mercurial link)
+
+    :param commit_link: commit link that will be used for generating the
+    "continue reading..." link message
+    :param message: commit description that is checked to see if it has the
+    proper length
+    :param length: optional, type=int and predefined in configuration.py with
+
+    :return:
+    """
+
+    if len(message) > length:
+        return message[0:length] + ".. [continue reading](" + commit_link + ")"
+    return message

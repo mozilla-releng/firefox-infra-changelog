@@ -22,6 +22,7 @@ LAST_WEEK = datetime.now() - timedelta(days=14)
 LAST_MONTH = datetime.utcnow() - timedelta(days=31)
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 WORKING_DIR = CURRENT_DIR.strip("/fic_modules")
+COMMIT_DESCRIPTION_LENGTH = 400
 
 logging.basicConfig(level=os.environ.get("LoggerLevel", logging.INFO),
                     format="[%(asctime)s] %(levelname)s [%(name)s.%(funcName)\
