@@ -1,10 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 81901
+ CURRENT PUSH ID: 81905
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|81898|2019-03-30 11:34:57|Noemi Erli <nerli@mozilla.com>|Merge autoland to mozilla-central. a=merge|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d42c60ccf0d0
-|81898|2019-03-30 11:34:57|Noemi Erli <nerli@mozilla.com>|Merge mozilla-central to autoland. a=merge CLOSED TREE|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9c91d836b91d
+|81902|2019-03-30 22:02:50|Emilio Cobos  lvarez <emilio@crisal.io>|[Bug 1536582](https://bugzilla.mozilla.org/show_bug.cgi?id=1536582)  - Update cbindgen. r=borisDifferential Revision: https://phabricator.services.mozilla.com/D25520|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bdbf6856c91a
 |81895|2019-03-30 09:03:24|Jacek Caban <jacek@codeweavers.com>|[Bug 1530493](https://bugzilla.mozilla.org/show_bug.cgi?id=1530493)  - Bump mingw-w64 version r=froydnjThis is needed to bring dispatcherqueue.h in, which is needed foran ANGLE upgrade. It also ensures that overloads for secure stringfunctions are always defined and removes redundant --enable-secure-apiconfigure option and use of MINGW_HAS_SECURE_APIDifferential Revision: https://phabricator.services.mozilla.com/D25294|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d067e0360843
 |81895|2019-03-30 09:03:24|Jacek Caban <jacek@codeweavers.com>|[Bug 1536308](https://bugzilla.mozilla.org/show_bug.cgi?id=1536308)  - Apply a local patch to MinGW to get the needed winrt stuff for ANGLE r=froydnjWe apply a local patch while we wait for upstream wine and mingw to reviewthe changes to widl that are necessary to generate the correct headers. Here wejust grab the generated headers and patch them into MinGWWe can revert this when MinGW updates, but for now we would like to unblockthe ANGLE updateDepends.. [continue reading](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=08a3525d99d2)|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=08a3525d99d2
 |81885|2019-03-30 04:12:23|Chris Manchester <cmanchester@mozilla.com>|[Bug 1535364](https://bugzilla.mozilla.org/show_bug.cgi?id=1535364)  - Enable PGO for Android nightly builds; r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D23532|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b9654a90f60a
