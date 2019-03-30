@@ -12776,57 +12776,6 @@
     }
   },
   "132": {
-    "changeset_number": "35780",
-    "pusher": "opoprus@mozilla.com",
-    "date_of_push": "2019-03-29 23:53:01",
-    "changeset_commits": {
-      "26": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4055d335fa50",
-        "commiter_name": "Florin Strugariu <fstrugariu@mozilla.com>",
-        "commit_message": "Bug 1457274 Upgrade mitmproxy in production r=rwood,tarek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21374",
-        "files_changed": [
-          "taskcluster/ci/test/raptor-chrome.yml",
-          "taskcluster/ci/test/raptor.yml",
-          "taskcluster/ci/test/test-sets.yml",
-          "testing/mozbase/docs/mozproxy.rst",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-4.0.4-linux64.manifest",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-4.0.4-osx.manifest",
-          "testing/mozbase/mozproxy/mozproxy/backends/mitmproxy-rel-bin-4.0.4-win.manifest",
-          "testing/raptor/raptor/playback/alternate-server-replay-2.0.2.py",
-          "testing/raptor/raptor/playback/alternate-server-replay-4.0.4.py",
-          "testing/raptor/raptor/playback/alternate-server-replay.py",
-          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-ebay-404.manifest",
-          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-wikipedia-404.manifest",
-          "testing/raptor/raptor/raptor.ini",
-          "testing/raptor/raptor/raptor.py",
-          "testing/raptor/raptor/tests/raptor-tp6-8-404.ini"
-        ]
-      },
-      "40": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8eca81b7d003",
-        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
-        "commit_message": "Bug 1539905: Cache yaml loading r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25273",
-        "files_changed": [
-          "taskcluster/taskgraph/util/scriptworker.py"
-        ]
-      },
-      "59": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=637fa2c92faa",
-        "commiter_name": "Marian Raiciof <mraiciof@mozilla.com>",
-        "commit_message": "Bug 1536095 - Add aframe.io Animation page to tp6-m r=davehunt,rwood\n\nBug 1536095 - Add aframe.io Animation page to tp6-m\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23862",
-        "files_changed": [
-          "taskcluster/ci/test/raptor.yml",
-          "taskcluster/ci/test/test-sets.yml",
-          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-aframeio-animation.manifest",
-          "testing/raptor/raptor/raptor.ini",
-          "testing/raptor/raptor/tests/raptor-tp6m-10.ini",
-          "testing/raptor/webext/raptor/manifest.json"
-        ]
-      }
-    }
-  },
-  "132": {
     "changeset_number": "35784",
     "pusher": "nerli@mozilla.com",
     "date_of_push": "2019-03-30 11:32:04",
