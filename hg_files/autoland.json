@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81878
+    "last_push_id": 81901
   },
   "1": {
     "changeset_number": "35344",
@@ -37757,26 +37757,6 @@
     }
   },
   "789": {
-    "changeset_number": "81813",
-    "pusher": "rwood@mozilla.com",
-    "date_of_push": "2019-03-29 16:47:49",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=637fa2c92faa",
-        "commiter_name": "Marian Raiciof <mraiciof@mozilla.com>",
-        "commit_message": "Bug 1536095 - Add aframe.io Animation page to tp6-m r=davehunt,rwood\n\nBug 1536095 - Add aframe.io Animation page to tp6-m\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23862",
-        "files_changed": [
-          "taskcluster/ci/test/raptor.yml",
-          "taskcluster/ci/test/test-sets.yml",
-          "testing/raptor/raptor/playback/mitmproxy-recordings-raptor-tp6m-aframeio-animation.manifest",
-          "testing/raptor/raptor/raptor.ini",
-          "testing/raptor/raptor/tests/raptor-tp6m-10.ini",
-          "testing/raptor/webext/raptor/manifest.json"
-        ]
-      }
-    }
-  },
-  "789": {
     "changeset_number": "81849",
     "pusher": "gbrown@mozilla.com",
     "date_of_push": "2019-03-29 22:05:01",
@@ -37954,6 +37934,138 @@
           "taskcluster/scripts/misc/build-clang-8-linux.sh",
           "taskcluster/scripts/misc/build-clang-8-mingw.sh",
           "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      }
+    }
+  },
+  "793": {
+    "changeset_number": "81879",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-03-30 01:53:11",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=825e93bb4b13",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Backed out 3 changesets (bug 1538060, bug 1539779, bug 1536790) for causing clang-tidy bustages CLOSED TREE\n\nBacked out changeset 7d058f3174e5 (bug 1538060)\nBacked out changeset 8839622122ed (bug 1539779)\nBacked out changeset 9eb7867c1dd4 (bug 1536790)",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/code-coverage",
+          "browser/config/mozconfigs/macosx64/code-coverage",
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-8-android.json",
+          "build/build-clang/clang-8-linux64.json",
+          "build/build-clang/clang-8-macosx64.json",
+          "build/build-clang/clang-8-mingw.json",
+          "build/build-clang/clang-tidy-8.patch",
+          "build/build-clang/clang-tidy-linux64.json",
+          "build/build-clang/clang-tidy-macosx64.json",
+          "build/build-clang/clang-tidy-win64.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_.patch",
+          "build/clang-plugin/moz.build",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/cctools-port.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/minidump_stackwalk.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-android.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-mingw.sh",
+          "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
+          "tools/clang-tidy/config.yaml"
+        ]
+      }
+    }
+  },
+  "794": {
+    "changeset_number": "81885",
+    "pusher": "cmanchester@mozilla.com",
+    "date_of_push": "2019-03-30 04:12:23",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b9654a90f60a",
+        "commiter_name": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1535364 - Enable PGO for Android nightly builds; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23532",
+        "files_changed": [
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/taskgraph/transforms/build.py"
+        ]
+      }
+    }
+  },
+  "795": {
+    "changeset_number": "81895",
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-03-30 09:03:24",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d067e0360843",
+        "commiter_name": "Jacek Caban <jacek@codeweavers.com>",
+        "commit_message": "Bug 1530493 - Bump mingw-w64 version r=froydnj\n\nThis is needed to bring dispatcherqueue.h in, which is needed for\nan ANGLE upgrade. It also ensures that overloads for secure string\nfunctions are always defined and removes redundant --enable-secure-api\nconfigure option and use of MINGW_HAS_SECURE_API\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25294",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=08a3525d99d2",
+        "commiter_name": "Jacek Caban <jacek@codeweavers.com>",
+        "commit_message": "Bug 1536308 - Apply a local patch to MinGW to get the needed winrt stuff for ANGLE r=froydnj\n\nWe apply a local patch while we wait for upstream wine and mingw to review\nthe changes to widl that are necessary to generate the correct headers. Here we\njust grab the generated headers and patch them into MinGW\n\nWe can revert this when MinGW updates, but for now we would like to unblock\nthe ANGLE update\n\nDepends on D25294\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25295",
+        "files_changed": [
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
+          "taskcluster/scripts/misc/mingw-winrt.patch"
+        ]
+      }
+    }
+  },
+  "796": {
+    "changeset_number": "81898",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-03-30 11:34:57",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d42c60ccf0d0",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Merge autoland to mozilla-central. a=merge",
+        "files_changed": [
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "servo/components/style_derive/cg.rs",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
+          "testing/web-platform/meta/css/css-contain/contain-size-011.html.ini",
+          "testing/web-platform/meta/css/css-contain/contain-size-061.html.ini",
+          "testing/web-platform/meta/css/css-flexbox/percentage-heights-001.html.ini",
+          "testing/web-platform/meta/css/css-ui/text-overflow-022.html.ini",
+          "testing/web-platform/meta/webrtc-identity/RTCPeerConnection-getIdentityAssertion.sub.html.ini",
+          "testing/web-platform/meta/webrtc-identity/RTCPeerConnection-peerIdentity.html.ini",
+          "testing/web-platform/tests/webrtc-identity/RTCPeerConnection-getIdentityAssertion.sub.html",
+          "testing/web-platform/tests/webrtc-identity/RTCPeerConnection-peerIdentity.html"
+        ]
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9c91d836b91d",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
+        "files_changed": [
           "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
         ]
       }
