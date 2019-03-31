@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35789
+    "last_push_id": 35791
   },
   "1": {
     "changeset_number": "35344",
@@ -12771,38 +12771,6 @@
         "commit_message": "Bug 1539990 - Move DocUp test to tier 2; r=dustin\n\nRun DocUp as tier 2 rather than tier 3, to make the task visible by default\nand get the benefit of at least some sheriffing.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25319",
         "files_changed": [
           "taskcluster/ci/source-test/doc.yml"
-        ]
-      }
-    }
-  },
-  "132": {
-    "changeset_number": "35787",
-    "pusher": "nbeleuzu@mozilla.com",
-    "date_of_push": "2019-03-30 23:44:18",
-    "changeset_commits": {
-      "18": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d067e0360843",
-        "commiter_name": "Jacek Caban <jacek@codeweavers.com>",
-        "commit_message": "Bug 1530493 - Bump mingw-w64 version r=froydnj\n\nThis is needed to bring dispatcherqueue.h in, which is needed for\nan ANGLE upgrade. It also ensures that overloads for secure string\nfunctions are always defined and removes redundant --enable-secure-api\nconfigure option and use of MINGW_HAS_SECURE_API\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25294",
-        "files_changed": [
-          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
-        ]
-      },
-      "19": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=08a3525d99d2",
-        "commiter_name": "Jacek Caban <jacek@codeweavers.com>",
-        "commit_message": "Bug 1536308 - Apply a local patch to MinGW to get the needed winrt stuff for ANGLE r=froydnj\n\nWe apply a local patch while we wait for upstream wine and mingw to review\nthe changes to widl that are necessary to generate the correct headers. Here we\njust grab the generated headers and patch them into MinGW\n\nWe can revert this when MinGW updates, but for now we would like to unblock\nthe ANGLE update\n\nDepends on D25294\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25295",
-        "files_changed": [
-          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
-          "taskcluster/scripts/misc/mingw-winrt.patch"
-        ]
-      },
-      "25": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9c91d836b91d",
-        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
-        "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
-        "files_changed": [
-          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
         ]
       }
     }

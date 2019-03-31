@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-31 20:27:37 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-31 23:57:33 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -16,7 +16,6 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6c34f19750b8)|[Bug 1540210](https://bugzilla.mozilla.org/show_bug.cgi?id=1540210)  - Correct Android 4.3 pgo test's default tier to tier 1; r=Callek Differential Revision: https://phabricator.services.mozilla.com/D25459|gbrown@mozilla.com|Callek|2019-03-29 22:05:01|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|gbrown@mozilla.com|dustin|2019-03-29 02:16:04|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|mh@glandium.org|froydnj|2019-03-29 02:11:07|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=531d308db7e7)|[Bug 1536044](https://bugzilla.mozilla.org/show_bug.cgi?id=1536044)  - Fully disable jacoco builds for Android r=agi Differential Revision: https://phabricator.services.mozilla.com/D25216|jwillcox@mozilla.com|agi|2019-03-28 22:27:28|
 
 |	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -50,14 +49,14 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=2e051d69d6e4)|[Bug 1485680](https://bugzilla.mozilla.org/show_bug.cgi?id=1485680)  - make the relpro action a hook. r=dustin a=tomprince make the relpro action a hook. Differential Revision: https://phabricator.services.mozilla.com/D5581|asasaki@mozilla.com|dustin|2019-03-28 21:11:52|
+| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)|FIC - BOT|Self Generated| - |
 
 |	build-puppet	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/build-puppet/commit/e615f1a4bfc22890ff76c0be4d4987e780ed77a1)|Merge pull request #439 from escapewindow/remove-gpg  scriptworker 23.0.0 - remove gpg support|escapewindow|N/A|2019-03-28 23:20:18|
+| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-puppet.md)|FIC - BOT|Self Generated| - |
 
 |	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -120,6 +119,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
