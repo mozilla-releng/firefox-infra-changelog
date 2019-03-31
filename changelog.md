@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-31 04:58:51 UTC.
+##  Commits in production - for 3 days, generated on: 2019-03-31 20:27:37 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -17,26 +17,20 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|gbrown@mozilla.com|dustin|2019-03-29 02:16:04|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|mh@glandium.org|froydnj|2019-03-29 02:11:07|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=531d308db7e7)|[Bug 1536044](https://bugzilla.mozilla.org/show_bug.cgi?id=1536044)  - Fully disable jacoco builds for Android r=agi Differential Revision: https://phabricator.services.mozilla.com/D25216|jwillcox@mozilla.com|agi|2019-03-28 22:27:28|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3d678990e647)|[Bug 1539856](https://bugzilla.mozilla.org/show_bug.cgi?id=1539856)  - Properly avoid running on -ux hardware oustide of try/mozilla-central. r=jmaher Differential Revision: https://phabricator.services.mozilla.com/D25252|jwood@mozilla.com|jmaher|2019-03-28 19:09:45|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76fd580f2862)|[Bug 1538675](https://bugzilla.mozilla.org/show_bug.cgi?id=1538675)  - transform Android pgo test platform names so they show up as using 'pgo' as option on Treeherder r=bc Differential Revision: https://phabricator.services.mozilla.com/D25091|archaeopteryx@coole-files.de|bc|2019-03-28 18:30:21|
 
 |	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d067e0360843)|[Bug 1530493](https://bugzilla.mozilla.org/show_bug.cgi?id=1530493)  - Bump mingw-w64 version r=froydnj This is needed to bring dispatcherqueue.h in, which is needed for an ANGLE upgrade. It also ensures that overloads for secure string functions are always defined and removes redundant --enable-secure-api configure option and use of MINGW_HAS_SECURE_API Differential Revision: https://phabricator.services.mozilla.com/D25294|nbeleuzu@mozilla.com|froydnj|2019-03-30 23:47:41|
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=08a3525d99d2)|[Bug 1536308](https://bugzilla.mozilla.org/show_bug.cgi?id=1536308)  - Apply a local patch to MinGW to get the needed winrt stuff for ANGLE r=froydnj We apply a local patch while we wait for upstream wine and mingw to review the changes to widl that are necessary to generate the correct headers. Here we just grab the generated headers and patch them into MinGW We can revert this when MinGW updates, but for now we would like to unblock the ANGLE update Depends on D25294 Differential Revision: https://phabricator.services.mozilla.com/D25295|nbeleuzu@mozilla.com|froydnj|2019-03-30 23:47:41|
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=9c91d836b91d)|Merge mozilla-central to autoland. a=merge CLOSED TREE|nbeleuzu@mozilla.com|merge|2019-03-30 23:47:41|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bdbf6856c91a)|[Bug 1536582](https://bugzilla.mozilla.org/show_bug.cgi?id=1536582)  - Update cbindgen. r=boris Differential Revision: https://phabricator.services.mozilla.com/D25520|btara@mozilla.com|boris|2019-03-31 12:08:25|
 
 |	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d067e0360843)|[Bug 1530493](https://bugzilla.mozilla.org/show_bug.cgi?id=1530493)  - Bump mingw-w64 version r=froydnj This is needed to bring dispatcherqueue.h in, which is needed for an ANGLE upgrade. It also ensures that overloads for secure string functions are always defined and removes redundant --enable-secure-api configure option and use of MINGW_HAS_SECURE_API Differential Revision: https://phabricator.services.mozilla.com/D25294|nbeleuzu@mozilla.com|froydnj|2019-03-30 23:44:18|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=08a3525d99d2)|[Bug 1536308](https://bugzilla.mozilla.org/show_bug.cgi?id=1536308)  - Apply a local patch to MinGW to get the needed winrt stuff for ANGLE r=froydnj We apply a local patch while we wait for upstream wine and mingw to review the changes to widl that are necessary to generate the correct headers. Here we just grab the generated headers and patch them into MinGW We can revert this when MinGW updates, but for now we would like to unblock the ANGLE update Depends on D25294 Differential Revision: https://phabricator.services.mozilla.com/D25295|nbeleuzu@mozilla.com|froydnj|2019-03-30 23:44:18|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9c91d836b91d)|Merge mozilla-central to autoland. a=merge CLOSED TREE|nbeleuzu@mozilla.com|merge|2019-03-30 23:44:18|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bdbf6856c91a)|[Bug 1536582](https://bugzilla.mozilla.org/show_bug.cgi?id=1536582)  - Update cbindgen. r=boris Differential Revision: https://phabricator.services.mozilla.com/D25520|btara@mozilla.com|boris|2019-03-31 11:58:22|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|ccoroiu@mozilla.com|froydnj|2019-03-29 11:44:33|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|ccoroiu@mozilla.com|dustin|2019-03-29 11:44:33|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76fd580f2862)|[Bug 1538675](https://bugzilla.mozilla.org/show_bug.cgi?id=1538675)  - transform Android pgo test platform names so they show up as using 'pgo' as option on Treeherder r=bc Differential Revision: https://phabricator.services.mozilla.com/D25091|ncsoregi@mozilla.com|bc|2019-03-29 06:11:36|
@@ -49,7 +43,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=7c3c3ffea0a4)|[Bug 1527463](https://bugzilla.mozilla.org/show_bug.cgi?id=1527463)  - Enable EME on win64-aarch64 nightlies. r=tomprince a=pascalc [Bug 1534522](https://bugzilla.mozilla.org/show_bug.cgi?id=1534522)  added win64-aarch64-eme/opt builds, which are artifact builds that glue together a win64-aarch64/opt build and a win32/opt build. This enables EME on the corresponding nightlies in a slightly different way: - this adds a no-eme build that corresponds to win64-aarch64/opt. - this turns the existing nightly into an artifact build that glues together that no-eme build and the win32 nightly. The no-eme build cannot have the nightly attribute set, first because the beetmover transform fails in that case, and because that would imply shipping those builds, but they're not meant to be shipped this way. It also has run-on-projects set to an empty list so that it doesn't appear by default in `mach try fuzzy`, while still being triggered when needed due to being a dependency of the nightly build. It is preferable to keep the win64-aarch64{,-eme}/opt builds untouched to make things easier for try (the win64-aarch64 ones being the main ones to try; also, the -eme builds currently fail with --artifacts). Ideally, like in [Bug 1534522](https://bugzilla.mozilla.org/show_bug.cgi?id=1534522)  we'd add a diffoscope build to ensure the variations between the nightly and its base no-eme build are within control, but currently, that would trigger nightlies on every push, which is not desirable. Ideally, they'd trigger whenever both their dependencies are in the target task graph. We leave that to a followup. Differential Revision: https://phabricator.services.mozilla.com/D23640|cbrindusan@mozilla.com|tomprince|2019-03-28 17:23:34|
+| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)|FIC - BOT|Self Generated| - |
 
 |	mozilla-release	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-release.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -92,8 +86,6 @@
 |[Link](https://github.com/taskcluster/taskcluster/commit/0aa3bdb7c39b96f4c88ad4a6d2346f158b1d5602)|docs: update README.md|allcontributors[bot]|N/A|2019-03-29 16:20:03|
 |[Link](https://github.com/taskcluster/taskcluster/commit/f45b455b4cff090c1d24ac6caff695f2c7f90a60)|Move development section of the manual to be viewed via GitHub READMEs|djmitche|N/A|2019-03-29 16:08:54|
 |[Link](https://github.com/taskcluster/taskcluster/commit/91abe996074be2ac74d5a32a83baf625e52c514d)|Refactor builder docs into a single README|djmitche|N/A|2019-03-29 15:34:36|
-|[Link](https://github.com/taskcluster/taskcluster/commit/1c543d60d3c0a730e1306de854e2137803f485c5)|Merge pull request #501 from djmitche/bug1536863  Bug 1536863 - fix handling of github logins via auth0|djmitche|N/A|2019-03-28 17:10:12|
-|[Link](https://github.com/taskcluster/taskcluster/commit/4e2f253c02513e98e2b4665b97b781d081883cfd)|[UI] Add markdown preview for inputs (#470)|projectyang|N/A|2019-03-28 16:58:31|
 
 |	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -128,6 +120,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
@@ -194,7 +187,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla/release-services/commit/d49bb705d66ec34b73c8c336b0afc81c82500664)|tooltool/api: Dependencies update. (#2002)|garbas|N/A|2019-03-28 14:37:14|
+| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)|FIC - BOT|Self Generated| - |
 
 |	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	| 
 |:----------:|:-----------------------:|:--------:| 
