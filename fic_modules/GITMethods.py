@@ -1,7 +1,7 @@
 from git import Repo
 
 
-class Github:
+class FICGithub:
     def __init__(self, files, msg, LOGGER, config):
         self.files = files
         self.msg = msg
