@@ -1,7 +1,9 @@
-## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-03-18 12:24:05.158259
+## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-03-18 18:01:29.657507
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|13|garbas|treestatus/api: Dependencies update. (#2003)|[URL](https://github.com/mozilla/release-services/commit/34cd93d06230f2ed0ac32fb5fd69f66c211c13c0)|2019-04-01 10:15:28
+|12|garbas|tokens/api: Dependencies update. (#2001)|[URL](https://github.com/mozilla/release-services/commit/c6d9fa98407a93dab13b673efee1f15535efcd44)|2019-04-01 09:56:08
 |11|garbas|tooltool/api: Dependencies update. (#2002)|[URL](https://github.com/mozilla/release-services/commit/d49bb705d66ec34b73c8c336b0afc81c82500664)|2019-03-28 14:37:14
 |10|garbas|tooltool/api: fix cron job command (#1986)|[URL](https://github.com/mozilla/release-services/commit/150ab5fe0a50276651391b97e1ef227c1ab61f66)|2019-03-27 11:49:22
 |9|garbas|backend_common/auth: we shouldn't touch permissions in decorator (#1929)|[URL](https://github.com/mozilla/release-services/commit/688dd403d87226a42ac26b9fbec5e7111e198c00)|2019-03-07 11:36:09

@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35792
+ CURRENT PUSH ID: 35794
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|35788|2019-03-31 11:58:22|Emilio Cobos  lvarez <emilio@crisal.io>|[Bug 1536582](https://bugzilla.mozilla.org/show_bug.cgi?id=1536582)  - Update cbindgen. r=borisDifferential Revision: https://phabricator.services.mozilla.com/D25520|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bdbf6856c91a
+|35793|2019-04-01 12:46:51|Nicolas Chevobbe <nchevobbe@mozilla.com>|[Bug 1312823](https://bugzilla.mozilla.org/show_bug.cgi?id=1312823)  - Run console mocha tests on TRY. r=jdescottes.Differential Revision: https://phabricator.services.mozilla.com/D25045|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4338bf79beb2
 |35776|2019-03-29 11:44:33|Mike Hommey <mh+mozilla@glandium.org>|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnjThis sets things enough things up to be able to push to try with anopt-in, but doesn't run the job on every push. This can be used as atemplate for future work on a fuzzing job.Differential Revision: https://phabricator.services.mozilla.com/D25069|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=603144bedadc
 |35776|2019-03-29 11:44:33|Geoff Brown <gbrown@mozilla.com>|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustinRun DocUp as tier 2 rather than tier 3, to make the task visible by defaultand get the benefit of at least some sheriffing.Differential Revision: https://phabricator.services.mozilla.com/D25319|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=14db4eae01f5
 |35773|2019-03-29 06:11:36|Sebastian Hengst <archaeopteryx@coole-files.de>|[Bug 1538675](https://bugzilla.mozilla.org/show_bug.cgi?id=1538675)  - transform Android pgo test platform names so they show up as using 'pgo' as option on Treeherder r=bcDifferential Revision: https://phabricator.services.mozilla.com/D25091|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76fd580f2862

@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-04-01 09:25:04 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-01 15:02:43 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -20,16 +20,22 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bdbf6856c91a)|[Bug 1536582](https://bugzilla.mozilla.org/show_bug.cgi?id=1536582)  - Update cbindgen. r=boris Differential Revision: https://phabricator.services.mozilla.com/D25520|btara@mozilla.com|boris|2019-03-31 12:08:25|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b04716962902)|[Bug 1531412](https://bugzilla.mozilla.org/show_bug.cgi?id=1531412)  [wpt PR 14859] - Use the checks API with taskcluster jobs, a=testonly Automatic update from web-platform-tests Use the checks API with taskcluster jobs (#14859) -- wpt-commits: a9f087c1dc0bec1f322339926f7056d0ac47cd0b wpt-pr: 14859|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bbf41de09c57)|[Bug 1531440](https://bugzilla.mozilla.org/show_bug.cgi?id=1531440)  [wpt PR 15576] - Revert "Use the checks API with taskcluster jobs (#14859)", a=testonly Automatic update from web-platform-tests Revert "Use the checks API with taskcluster jobs (#14859)" (#15576) There are no wpt.fyi checks on https://github.com/web-platform-tests/wpt/pull/15575. This reverts commit a9f087c1dc0bec1f322339926f7056d0ac47cd0b. -- wpt-commits: 112d3dc9f100deec62266c2a9c6dff74a799919f wpt-pr: 15576|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=92a12a4be4f6)|[Bug 1531903](https://bugzilla.mozilla.org/show_bug.cgi?id=1531903)  [wpt PR 15574] - Move the lint from Travis to TaskCluster, a=testonly Automatic update from web-platform-tests Move the lint from Travis to TaskCluster (#15574) -- wpt-commits: 218466a7883ab2130645e896bcd379f430eae1fd wpt-pr: 15574|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f32cbf1d56a5)|[Bug 1531905](https://bugzilla.mozilla.org/show_bug.cgi?id=1531905)  [wpt PR 15594] - Revert "Move the lint from Travis to TaskCluster", a=testonly Automatic update from web-platform-tests Revert "Move the lint from Travis to TaskCluster (#15574)" (#15594) This reverts commit 218466a7883ab2130645e896bcd379f430eae1fd. -- wpt-commits: 3353bc3aef96c7bccd4994685e63f4f3e35c12b7 wpt-pr: 15594|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=91d153fb4421)|[Bug 1531952](https://bugzilla.mozilla.org/show_bug.cgi?id=1531952)  [wpt PR 15601] - Move the lint from Travis to TaskCluster (#15574), a=testonly Automatic update from web-platform-tests Move the lint from Travis to TaskCluster (#15574) (#15601) -- wpt-commits: 04ad8dd6a1f6f5577841e4e7ccbe948892bd6ddf wpt-pr: 15601|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e593a0f11228)|[Bug 1531957](https://bugzilla.mozilla.org/show_bug.cgi?id=1531957)  [wpt PR 15593] - Add support for verifying taskcluster config, a=testonly Automatic update from web-platform-tests Add support for verifying taskcluster config (#15593) Adds as wpt tc-verify command that verifies that the TaskCluster config is a valid yaml file and computes the tasks that will run on a PR synchronize event. This can be expanded to more events and pushes in the future. -- wpt-commits: 5baef702c26b8580f5a4e5e1a34ac75bb9d496ae wpt-pr: 15593|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=818e7d359c5b)|[Bug 1531960](https://bugzilla.mozilla.org/show_bug.cgi?id=1531960)  [wpt PR 15619] - Fix taskcluster for master., a=testonly Automatic update from web-platform-tests Fix taskcluster for master. (#15619) A couple more properties we were accessing only made sense for pull request events -- wpt-commits: 21cc43a848a2d82cf351f029a0f4b91702e4c42a wpt-pr: 15619|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=70349e41deef)|[Bug 1536142](https://bugzilla.mozilla.org/show_bug.cgi?id=1536142)  [wpt PR 15771] - Send screenshots from Taskcluster to wpt.fyi, a=testonly Automatic update from web-platform-tests Send screenshots from Taskcluster to wpt.fyi Store screenshots on TC as wpt_screenshot.txt.gz and the wpt.fyi webhook will fetch it. -- wpt-commits: 25c26f30f3b29ecb742f4a562dad4914df332c5e wpt-pr: 15771|james@hoppipolla.co.uk|testonly|2019-04-01 17:00:21|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4338bf79beb2)|[Bug 1312823](https://bugzilla.mozilla.org/show_bug.cgi?id=1312823)  - Run console mocha tests on TRY. r=jdescottes. Differential Revision: https://phabricator.services.mozilla.com/D25045|opoprus@mozilla.com|jdescottes.|2019-04-01 13:04:43|
 
 |	mozilla-central	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-central.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bdbf6856c91a)|[Bug 1536582](https://bugzilla.mozilla.org/show_bug.cgi?id=1536582)  - Update cbindgen. r=boris Differential Revision: https://phabricator.services.mozilla.com/D25520|btara@mozilla.com|boris|2019-03-31 11:58:22|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|ccoroiu@mozilla.com|froydnj|2019-03-29 11:44:33|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|ccoroiu@mozilla.com|dustin|2019-03-29 11:44:33|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4338bf79beb2)|[Bug 1312823](https://bugzilla.mozilla.org/show_bug.cgi?id=1312823)  - Run console mocha tests on TRY. r=jdescottes. Differential Revision: https://phabricator.services.mozilla.com/D25045|opoprus@mozilla.com|jdescottes.|2019-04-01 12:46:51|
 
 |	mozilla-beta	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-beta.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -64,6 +70,9 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/4115a11b1e596e4edf5941344e55d25bb4e446a5)|Use MarkdownTextArea from @mozilla-frontend-infra/components (#521)|helfi92|N/A|2019-04-01 13:42:39|
+|[Link](https://github.com/taskcluster/taskcluster/commit/e8f66b0809fd8c2034396788aeb9f1f22cb50113)|Update CODE_OF_CONDUCT.md|ccooper|N/A|2019-04-01 13:00:37|
+|[Link](https://github.com/taskcluster/taskcluster/commit/1122529f9c3dcfeb4fe9bbac8650b0bd1ba83619)|[UI] Treat task with status exception as failed (favicon) (#520)|helfi92|N/A|2019-04-01 11:57:35|
 |[Link](https://github.com/taskcluster/taskcluster/commit/0c36f07794ab4e074579eacf4ab6c13e262a852c)|Merge pull request #510 from taskcluster/nicer-logs-docs  Make logs documentation more useful|imbstack|N/A|2019-03-29 19:39:29|
 |[Link](https://github.com/taskcluster/taskcluster/commit/80335b2328ed169bb3f166816cb2b6ec80140a1f)|Change home page wording (#509)|helfi92|N/A|2019-03-29 19:26:00|
 |[Link](https://github.com/taskcluster/taskcluster/commit/cf6a1a6f9102fc840e72e8b78014c8fad7e62e35)|(hotfix) fix links|djmitche|N/A|2019-03-29 18:56:51|
@@ -113,22 +122,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
-|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
+| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushapkscript.md)|FIC - BOT|Self Generated| - |
 
 |	pushsnapscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/pushsnapscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -184,7 +178,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/services.md)|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/mozilla/release-services/commit/34cd93d06230f2ed0ac32fb5fd69f66c211c13c0)|treestatus/api: Dependencies update. (#2003)|garbas|N/A|2019-04-01 10:15:28|
+|[Link](https://github.com/mozilla/release-services/commit/c6d9fa98407a93dab13b673efee1f15535efcd44)|tokens/api: Dependencies update. (#2001)|garbas|N/A|2019-04-01 09:56:08|
 
 |	build-cloud-tools	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/build-cloud-tools.md)	| 
 |:----------:|:-----------------------:|:--------:| 

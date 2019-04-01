@@ -1,7 +1,10 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-18 12:24:05.158259
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-18 18:01:29.657507
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|743|helfi92|Use MarkdownTextArea from @mozilla-frontend-infra/components (#521)|[URL](https://github.com/taskcluster/taskcluster/commit/4115a11b1e596e4edf5941344e55d25bb4e446a5)|2019-04-01 13:42:39
+|742|ccooper|Update CODE_OF_CONDUCT.md|[URL](https://github.com/taskcluster/taskcluster/commit/e8f66b0809fd8c2034396788aeb9f1f22cb50113)|2019-04-01 13:00:37
+|741|helfi92|[UI] Treat task with status exception as failed (favicon) (#520)|[URL](https://github.com/taskcluster/taskcluster/commit/1122529f9c3dcfeb4fe9bbac8650b0bd1ba83619)|2019-04-01 11:57:35
 |740|imbstack|Merge pull request #510 from taskcluster/nicer-logs-docs Make logs documentation more useful|[URL](https://github.com/taskcluster/taskcluster/commit/0c36f07794ab4e074579eacf4ab6c13e262a852c)|2019-03-29 19:39:29
 |739|helfi92|Change home page wording (#509)|[URL](https://github.com/taskcluster/taskcluster/commit/80335b2328ed169bb3f166816cb2b6ec80140a1f)|2019-03-29 19:26:00
 |738|djmitche|(hotfix) fix links|[URL](https://github.com/taskcluster/taskcluster/commit/cf6a1a6f9102fc840e72e8b78014c8fad7e62e35)|2019-03-29 18:56:51
