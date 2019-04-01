@@ -32,7 +32,7 @@ def create_git_md_table(repository_name, path_to_files):
 
     try:
         json_data = open(
-            WORKING_DIR + "/{}/"
+            "{}/"
             .format(path_to_files) + "{}.json"
             .format(repository_name))\
             .read()
@@ -93,7 +93,7 @@ def create_git_md_table(repository_name, path_to_files):
                 pass
 
         md_file_name = "{}.md".format(repository_name)
-        md_file = open(WORKING_DIR + "/{}/".format(path_to_files) +
+        md_file = open("{}/".format(path_to_files) +
                        md_file_name, "w")
 
         try:
@@ -192,7 +192,7 @@ def create_hg_md_table(repository_name):
     """
 
     try:
-        json_data = open(WORKING_DIR + "/hg_files/" + "{}.json"
+        json_data = open("hg_files/" + "{}.json"
                          .format(repository_name)).read()
         data = json.loads(json_data)
         base_table = "| Changeset | Date | Commiter | " \
@@ -258,7 +258,7 @@ def create_hg_md_table(repository_name):
                     pass
 
         md_file_name = "{}.md".format(repository_name)
-        md_file = open(WORKING_DIR + "/hg_files/" + md_file_name, "w")
+        md_file = open("hg_files/" + md_file_name, "w")
 
         try:
             for key, value in tables.items():

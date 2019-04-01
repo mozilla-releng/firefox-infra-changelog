@@ -100,7 +100,7 @@ def create_files_for_git(repositories_holder, onerepo):
             create_md_table_for_scriptworkers(repositories_holder)
         else:
             create_git_md_table(repositories_holder, "git_files")
-        work_path = WORKING_DIR + "/git_files/"
+        work_path = "git_files/"
         repo_data = populate_changelog_json(work_path, repositories_holder)
         complete_data.update(repo_data)
         LOGGER.info("MD table generated successfully for {}"
@@ -133,7 +133,7 @@ def create_files_for_git(repositories_holder, onerepo):
                 create_md_table_for_scriptworkers(repository_name)
             else:
                 create_git_md_table(repository_name, "git_files")
-            work_path = WORKING_DIR + "/git_files/"
+            work_path = "git_files/"
             repo_data = populate_changelog_json(work_path, repository_name)
             complete_data.update(repo_data)
             LOGGER.info("MD table generated successfully")
@@ -289,7 +289,7 @@ def json_writer_git(repository_name, new_commits):
     """
     git_json_filename = "{}.json".format(repository_name)
     try:
-        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as \
+        with open("git_files/" + git_json_filename, "r") as \
                 commit_json:
             json_content = json.load(commit_json)
     except FileNotFoundError:
@@ -302,7 +302,7 @@ def json_writer_git(repository_name, new_commits):
                 new_commits.update({int(number): json_content[old_commit]})
 
     if new_commits:
-        json_file = open(WORKING_DIR + "/git_files/" + git_json_filename, "w")
+        json_file = open("git_files/" + git_json_filename, "w")
         json.dump(new_commits, json_file, indent=2)
         json_file.close()
 
@@ -314,7 +314,7 @@ def last_check(repository_name):
     """
     git_json_filename = "{}.json".format(repository_name)
     try:
-        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as \
+        with open("git_files/" + git_json_filename, "r") as \
                 commit_json:
             json_content = json.load(commit_json)
             try:
@@ -344,7 +344,7 @@ def get_version_from_json(repo_name):
     """
     git_json_filename = "{}.json".format(repo_name)
     try:
-        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as \
+        with open("git_files/" + git_json_filename, "r") as \
                 commit_json:
             json_content = json.load(commit_json)
         last_stored_version = json_content \
@@ -364,7 +364,7 @@ def get_date_from_json(repo_name):
     """
     git_json_filename = "{}.json".format(repo_name)
     try:
-        with open(WORKING_DIR + "/git_files/" + git_json_filename, "r") as \
+        with open("git_files/" + git_json_filename, "r") as \
                 commit_json:
             json_content = json.load(commit_json)
         last_stored_date = json_content \

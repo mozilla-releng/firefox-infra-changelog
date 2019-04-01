@@ -31,7 +31,7 @@ def get_last_local_push_id(repo_name):
     """
     hg_json_filename = "{}.json".format(repo_name)
     try:
-        with open(WORKING_DIR + "/hg_files/" + hg_json_filename, "r") as \
+        with open("hg_files/" + hg_json_filename, "r") as \
                 commit_json:
             json_content = json.load(commit_json)
         last_stored_push_id = json_content.get("0").get("last_push_id")
@@ -92,7 +92,7 @@ def create_files_for_hg(repositories_holder, onerepo):
         filter_hg_commit_data(repositories_holder,
                               folders_to_check,
                               repository_url)
-        work_path = WORKING_DIR + "/hg_files/"
+        work_path = "hg_files/"
         repo_data = populate_changelog_json(work_path, repositories_holder)
         complete_data.update(repo_data)
         create_hg_md_table(repositories_holder)
@@ -110,7 +110,7 @@ def create_files_for_hg(repositories_holder, onerepo):
             filter_hg_commit_data(repository_name,
                                   folders_to_check,
                                   repository_url)
-            work_path = WORKING_DIR + "/hg_files/"
+            work_path = "hg_files/"
             repo_data = populate_changelog_json(work_path, repository_name)
             complete_data.update(repo_data)
             create_hg_md_table(repository_name)
@@ -182,7 +182,7 @@ def json_writer_hg(repository_name, new_commits):
     """
     hg_json_filename = "{}.json".format(repository_name)
     try:
-        with open(WORKING_DIR + "/hg_files/" + hg_json_filename, "r") as\
+        with open("hg_files/" + hg_json_filename, "r") as\
                 commit_json:
             # loads the content of existing json into a variable
             json_content = json.load(commit_json)
@@ -194,7 +194,7 @@ def json_writer_hg(repository_name, new_commits):
                     if commit != '0':
                         json_content.update({int(number): new_commits[commit]})
                         number += 1
-            json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename,
+            json_file = open("hg_files/" + hg_json_filename,
                              "w")
             json.dump(json_content, json_file, indent=2)
             json_file.close()
@@ -204,7 +204,7 @@ def json_writer_hg(repository_name, new_commits):
         for commit in new_commits:
             json_content.update({int(number): new_commits[commit]})
             number += 1
-        json_file = open(WORKING_DIR + "/hg_files/" + hg_json_filename, "w")
+        json_file = open("hg_files/" + hg_json_filename, "w")
         json.dump(json_content, json_file, indent=2)
         json_file.close()
 
