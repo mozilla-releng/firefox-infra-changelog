@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-04-01 07:39:47 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-01 09:25:04 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -113,6 +113,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81921
+    "last_push_id": 81924
   },
   "1": {
     "changeset_number": "35344",
@@ -37980,22 +37980,6 @@
         "files_changed": [
           "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
           "taskcluster/scripts/misc/mingw-winrt.patch"
-        ]
-      }
-    }
-  },
-  "796": {
-    "changeset_number": "81902",
-    "pusher": "ealvarez@mozilla.com",
-    "date_of_push": "2019-03-30 22:02:50",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bdbf6856c91a",
-        "commiter_name": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-        "commit_message": "Bug 1536582 - Update cbindgen. r=boris\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25520",
-        "files_changed": [
-          "build/moz.configure/bindgen.configure",
-          "taskcluster/scripts/misc/build-cbindgen.sh"
         ]
       }
     }
