@@ -13,7 +13,7 @@ from fic_modules.FICExceptions import FICExceptions
 from github import GithubException
 from fic_modules.git import create_files_for_git
 from fic_modules.hg import create_files_for_hg
-from fic_modules.GITMethods import Github
+from fic_modules.GITMethods import FICGithub
 from fic_modules.helper_functions import (
     clear_file,
     get_keys,
@@ -59,7 +59,7 @@ def update_all(logger, days):
     config = "."
     commit_message = "Changelog: " + str(datetime.utcnow())
     files = ["git_files", "hg_files", "changelog.json", "changelog.md"]
-    update_fic_files = Github(files, commit_message, LOGGER, config)
+    update_fic_files = FICGithub(files, commit_message, LOGGER, config)
     update_fic_files.git_pull()
     logger.info("======== Logging in ALL mode on %s ========", datetime
                 .now())
