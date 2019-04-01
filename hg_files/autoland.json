@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 81941
+    "last_push_id": 81976
   },
   "1": {
     "changeset_number": "35344",
@@ -37996,6 +37996,82 @@
         "files_changed": [
           "devtools/client/webconsole/test/README.md",
           "taskcluster/ci/source-test/node.yml"
+        ]
+      }
+    }
+  },
+  "796": {
+    "changeset_number": "81958",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-04-01 20:46:46",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=508dd8a22136",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [taskgraph] Remove unused code for varying build-tools repo to use; r=aki\n\nWe don't actually use the build-tools repo in-tree anymore, so remove the\nsupport code for it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25631",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/final_verify.py",
+          "taskcluster/taskgraph/transforms/update_verify.py"
+        ]
+      }
+    }
+  },
+  "797": {
+    "changeset_number": "81962",
+    "pusher": "sdonner@mozilla.com",
+    "date_of_push": "2019-04-01 20:49:34",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1ccb52b0784e",
+        "commiter_name": "Stephen Donner <stephen.donner@gmail.com>",
+        "commit_message": "Fix Bug 1532560:  Only run raptor-tp6-3 tests on AARM64 in try r=jmaher,rwood,gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23193",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      }
+    }
+  },
+  "798": {
+    "changeset_number": "81964",
+    "pusher": "aiakab@mozilla.com",
+    "date_of_push": "2019-04-01 20:57:13",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=65bcb804a3e6",
+        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+        "commit_message": "Backed out changeset 1ccb52b0784e (bug 1532560) for causing Gecko Decision Task bustage CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml"
+        ]
+      }
+    }
+  },
+  "799": {
+    "changeset_number": "81969",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-04-01 21:06:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a7c0f3da75fa",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Remove some dead code looking at substitutions in desktop l10n code; r=Callek\n\nThere used to be various values that were substituted into the mozharness\nconfiguration for L10n jobs. All those substitutions have been removed, but the\ncode to support them is still around. This removes that code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25143",
+        "files_changed": [
+          "testing/mozharness/scripts/desktop_l10n.py"
+        ]
+      }
+    }
+  },
+  "800": {
+    "changeset_number": "81970",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-04-01 21:20:31",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5a85cf971fef",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out changeset a7c0f3da75fa for linting opt failure in desktop_l10n.py CLOSED TREE",
+        "files_changed": [
+          "testing/mozharness/scripts/desktop_l10n.py"
         ]
       }
     }

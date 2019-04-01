@@ -1,7 +1,15 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-18 18:01:29.657507
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-18 22:55:03.903664
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|751|djmitche|Merge pull request #517 from taskcluster/renovate/cron-parser-2.x Update dependency cron-parser to v2.10.0|[URL](https://github.com/taskcluster/taskcluster/commit/57eef35d5ec9958120cd9651f5ec2c16bd5afbbd)|2019-04-01 17:50:15
+|750|djmitche|Merge pull request #502 from djmitche/bug1538961 [Bug 1538961](https://bugzilla.mozilla.org/show_bug.cgi?id=1538961)  - improve subscriptions support|[URL](https://github.com/taskcluster/taskcluster/commit/9d67dbbbcd46cc8d2e81eb333e690554b2efd280)|2019-04-01 17:08:00
+|749|imbstack|Merge pull request #514 from taskcluster/procs-yml-support Procs yml support|[URL](https://github.com/taskcluster/taskcluster/commit/85c603e28bbbbbc72f88e9a8f0d55a3766349cb6)|2019-04-01 17:07:15
+|748|djmitche|Merge pull request #518 from taskcluster/renovate/eslint-5.x Update dependency eslint to v5.16.0|[URL](https://github.com/taskcluster/taskcluster/commit/718477370a239c9e9eac04ffbdf332cb91dad3da)|2019-04-01 16:45:45
+|747|djmitche|[Bug 1538961](https://bugzilla.mozilla.org/show_bug.cgi?id=1538961)  - PulseIterator: create pull promise in next method|[URL](https://github.com/taskcluster/taskcluster/commit/3043d48df8f65fb7dd9652531ad917f0d2581607)|2019-04-01 16:40:46
+|746|djmitche|[Bug 1538961](https://bugzilla.mozilla.org/show_bug.cgi?id=1538961)  - set this.consumerTag in Subscription constructor|[URL](https://github.com/taskcluster/taskcluster/commit/cf575738372ea70eda1d40a9a43c84faf132b757)|2019-04-01 16:38:16
+|745|djmitche|Merge pull request #523 from djmitche/bug1540699 [Bug 1540699](https://bugzilla.mozilla.org/show_bug.cgi?id=1540699)  - fix calls to monitor.log.task|[URL](https://github.com/taskcluster/taskcluster/commit/9b37b8e37eaa079635a0ec6a83227630b131efd5)|2019-04-01 16:33:54
+|744|djmitche|[Bug 1540699](https://bugzilla.mozilla.org/show_bug.cgi?id=1540699)  - fix calls to monitor.log.task And add tests for them.|[URL](https://github.com/taskcluster/taskcluster/commit/b5d4ff0f16b5f2e955b0dda5cb0ddd977d9a251a)|2019-04-01 14:20:42
 |743|helfi92|Use MarkdownTextArea from @mozilla-frontend-infra/components (#521)|[URL](https://github.com/taskcluster/taskcluster/commit/4115a11b1e596e4edf5941344e55d25bb4e446a5)|2019-04-01 13:42:39
 |742|ccooper|Update CODE_OF_CONDUCT.md|[URL](https://github.com/taskcluster/taskcluster/commit/e8f66b0809fd8c2034396788aeb9f1f22cb50113)|2019-04-01 13:00:37
 |741|helfi92|[UI] Treat task with status exception as failed (favicon) (#520)|[URL](https://github.com/taskcluster/taskcluster/commit/1122529f9c3dcfeb4fe9bbac8650b0bd1ba83619)|2019-04-01 11:57:35

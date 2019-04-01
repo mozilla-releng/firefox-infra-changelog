@@ -1,10 +1,14 @@
-##  Commits in production - for 3 days, generated on: 2019-04-01 15:02:43 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-01 19:56:05 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4338bf79beb2)|[Bug 1312823](https://bugzilla.mozilla.org/show_bug.cgi?id=1312823)  - Run console mocha tests on TRY. r=jdescottes. Differential Revision: https://phabricator.services.mozilla.com/D25045|nchevobbe@mozilla.com|jdescottes.|2019-04-01 10:21:02|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5a85cf971fef)|Backed out changeset a7c0f3da75fa for linting opt failure in desktop_l10n.py CLOSED TREE|nerli@mozilla.com||2019-04-01 21:20:31|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a7c0f3da75fa)|No bug: [mozharness] Remove some dead code looking at substitutions in desktop l10n code; r=Callek There used to be various values that were substituted into the mozharness configuration for L10n jobs. All those substitutions have been removed, but the code to support them is still around. This removes that code. Differential Revision: https://phabricator.services.mozilla.com/D25143|mozilla@hocat.ca|Callek|2019-04-01 21:06:32|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=65bcb804a3e6)|Backed out changeset 1ccb52b0784e [Bug 1532560](https://bugzilla.mozilla.org/show_bug.cgi?id=1532560)  for causing Gecko Decision Task bustage CLOSED TREE|aiakab@mozilla.com||2019-04-01 20:57:13|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1ccb52b0784e)|Fix [Bug 1532560](https://bugzilla.mozilla.org/show_bug.cgi?id=1532560)  Only run raptor-tp6-3 tests on AARM64 in try r=jmaher,rwood,gbrown Differential Revision: https://phabricator.services.mozilla.com/D23193|sdonner@mozilla.com|jmaher,rwood,gbrown|2019-04-01 20:49:34|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=508dd8a22136)|No bug: [taskgraph] Remove unused code for varying build-tools repo to use; r=aki We don't actually use the build-tools repo in-tree anymore, so remove the support code for it. Differential Revision: https://phabricator.services.mozilla.com/D25631|mozilla@hocat.ca|aki|2019-04-01 20:46:46|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d067e0360843)|[Bug 1530493](https://bugzilla.mozilla.org/show_bug.cgi?id=1530493)  - Bump mingw-w64 version r=froydnj This is needed to bring dispatcherqueue.h in, which is needed for an ANGLE upgrade. It also ensures that overloads for secure string functions are always defined and removes redundant --enable-secure-api configure option and use of MINGW_HAS_SECURE_API Differential Revision: https://phabricator.services.mozilla.com/D25294|csabou@mozilla.com|froydnj|2019-03-30 09:03:24|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=08a3525d99d2)|[Bug 1536308](https://bugzilla.mozilla.org/show_bug.cgi?id=1536308)  - Apply a local patch to MinGW to get the needed winrt stuff for ANGLE r=froydnj We apply a local patch while we wait for upstream wine and mingw to review the changes to widl that are necessary to generate the correct headers. Here we just grab the generated headers and patch them into MinGW We can revert this when MinGW updates, but for now we would like to unblock the ANGLE update Depends on D25294 Differential Revision: https://phabricator.services.mozilla.com/D25295|csabou@mozilla.com|froydnj|2019-03-30 09:03:24|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b9654a90f60a)|[Bug 1535364](https://bugzilla.mozilla.org/show_bug.cgi?id=1535364)  - Enable PGO for Android nightly builds; r=tomprince Differential Revision: https://phabricator.services.mozilla.com/D23532|cmanchester@mozilla.com|tomprince|2019-03-30 04:12:23|
@@ -70,24 +74,17 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/57eef35d5ec9958120cd9651f5ec2c16bd5afbbd)|Merge pull request #517 from taskcluster/renovate/cron-parser-2.x  Update dependency cron-parser to v2.10.0|djmitche|N/A|2019-04-01 17:50:15|
+|[Link](https://github.com/taskcluster/taskcluster/commit/9d67dbbbcd46cc8d2e81eb333e690554b2efd280)|Merge pull request #502 from djmitche/bug1538961  Bug 1538961 - improve subscriptions support|djmitche|N/A|2019-04-01 17:08:00|
+|[Link](https://github.com/taskcluster/taskcluster/commit/85c603e28bbbbbc72f88e9a8f0d55a3766349cb6)|Merge pull request #514 from taskcluster/procs-yml-support  Procs yml support|imbstack|N/A|2019-04-01 17:07:15|
+|[Link](https://github.com/taskcluster/taskcluster/commit/718477370a239c9e9eac04ffbdf332cb91dad3da)|Merge pull request #518 from taskcluster/renovate/eslint-5.x  Update dependency eslint to v5.16.0|djmitche|N/A|2019-04-01 16:45:45|
+|[Link](https://github.com/taskcluster/taskcluster/commit/3043d48df8f65fb7dd9652531ad917f0d2581607)|Bug 1538961 - PulseIterator: create pull promise in next method|djmitche|N/A|2019-04-01 16:40:46|
+|[Link](https://github.com/taskcluster/taskcluster/commit/cf575738372ea70eda1d40a9a43c84faf132b757)|Bug 1538961 - set this.consumerTag in Subscription constructor|djmitche|N/A|2019-04-01 16:38:16|
+|[Link](https://github.com/taskcluster/taskcluster/commit/9b37b8e37eaa079635a0ec6a83227630b131efd5)|Merge pull request #523 from djmitche/bug1540699  Bug 1540699 - fix calls to monitor.log.task |djmitche|N/A|2019-04-01 16:33:54|
+|[Link](https://github.com/taskcluster/taskcluster/commit/b5d4ff0f16b5f2e955b0dda5cb0ddd977d9a251a)|Bug 1540699 - fix calls to monitor.log.task   And add tests for them.|djmitche|N/A|2019-04-01 14:20:42|
 |[Link](https://github.com/taskcluster/taskcluster/commit/4115a11b1e596e4edf5941344e55d25bb4e446a5)|Use MarkdownTextArea from @mozilla-frontend-infra/components (#521)|helfi92|N/A|2019-04-01 13:42:39|
 |[Link](https://github.com/taskcluster/taskcluster/commit/e8f66b0809fd8c2034396788aeb9f1f22cb50113)|Update CODE_OF_CONDUCT.md|ccooper|N/A|2019-04-01 13:00:37|
 |[Link](https://github.com/taskcluster/taskcluster/commit/1122529f9c3dcfeb4fe9bbac8650b0bd1ba83619)|[UI] Treat task with status exception as failed (favicon) (#520)|helfi92|N/A|2019-04-01 11:57:35|
-|[Link](https://github.com/taskcluster/taskcluster/commit/0c36f07794ab4e074579eacf4ab6c13e262a852c)|Merge pull request #510 from taskcluster/nicer-logs-docs  Make logs documentation more useful|imbstack|N/A|2019-03-29 19:39:29|
-|[Link](https://github.com/taskcluster/taskcluster/commit/80335b2328ed169bb3f166816cb2b6ec80140a1f)|Change home page wording (#509)|helfi92|N/A|2019-03-29 19:26:00|
-|[Link](https://github.com/taskcluster/taskcluster/commit/cf6a1a6f9102fc840e72e8b78014c8fad7e62e35)|(hotfix) fix links|djmitche|N/A|2019-03-29 18:56:51|
-|[Link](https://github.com/taskcluster/taskcluster/commit/d0683c46ca792867e2d9f6b1385ea9d9dc4773e2)|Merge pull request #505 from djmitche/dev-docs-refactor  Dev docs refactor|djmitche|N/A|2019-03-29 18:53:39|
-|[Link](https://github.com/taskcluster/taskcluster/commit/c4a4f8f4e4d2a491ddeecde5aa2b7119e63fd8d9)|Make logs documentation more useful|imbstack|N/A|2019-03-29 18:32:27|
-|[Link](https://github.com/taskcluster/taskcluster/commit/fa50756dae8aa24336db6ded3a3288a4003942fb)|Include link to retrospectives in dev docs|djmitche|N/A|2019-03-29 17:14:00|
-|[Link](https://github.com/taskcluster/taskcluster/commit/ce446c31153c61cf8ffe264d8c338fedc7ddcefb)|check for and fix more typos|djmitche|N/A|2019-03-29 17:08:15|
-|[Link](https://github.com/taskcluster/taskcluster/commit/44ea552cf4b8d508a92b74072264545be102ffad)|Merge pull request #507 from djmitche/add-mrrrgn  Add @mrrrgn to contributors|djmitche|N/A|2019-03-29 17:00:48|
-|[Link](https://github.com/taskcluster/taskcluster/commit/0bfccb189dad8e5160a2515518c3848199f37e2f)|Merge pull request #503 from djmitche/bug1538152  Bug 1538152 - "tell a story" about tasks in queue logging|djmitche|N/A|2019-03-29 16:34:03|
-|[Link](https://github.com/taskcluster/taskcluster/commit/30ffc9be39af2132d9796138f78e6f0b8139235d)|Add @mrrrgn now that the github user exists again..|djmitche|N/A|2019-03-29 16:23:30|
-|[Link](https://github.com/taskcluster/taskcluster/commit/0fa92e05aedee4af1a67941dea1f7f9b2a73fe32)|Merge pull request #506 from taskcluster/all-contributors/add-OjaswinM  docs: add OjaswinM as a contributor|djmitche|N/A|2019-03-29 16:22:43|
-|[Link](https://github.com/taskcluster/taskcluster/commit/bc6ce633d32c0e623cbc9a713c8373f3fc96443c)|docs: update .all-contributorsrc|allcontributors[bot]|N/A|2019-03-29 16:20:04|
-|[Link](https://github.com/taskcluster/taskcluster/commit/0aa3bdb7c39b96f4c88ad4a6d2346f158b1d5602)|docs: update README.md|allcontributors[bot]|N/A|2019-03-29 16:20:03|
-|[Link](https://github.com/taskcluster/taskcluster/commit/f45b455b4cff090c1d24ac6caff695f2c7f90a60)|Move development section of the manual to be viewed via GitHub READMEs|djmitche|N/A|2019-03-29 16:08:54|
-|[Link](https://github.com/taskcluster/taskcluster/commit/91abe996074be2ac74d5a32a83baf625e52c514d)|Refactor builder docs into a single README|djmitche|N/A|2019-03-29 15:34:36|
 
 |	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -193,8 +190,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=660ba33fb079)|No bug - amend ref browser master role to encompass dep signing. r=jlorenzo Differential Revision: https://phabricator.services.mozilla.com/D25393|mtabara@mozilla.com|jlorenzo|2019-03-29 18:26:27|
-|[Link](https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4eb38751b8be)|[Bug 1540168](https://bugzilla.mozilla.org/show_bug.cgi?id=1540168)  - Fix Reference-Browser nightly r=mtabara Fix Reference-Browser nightly Fixes https://tools.taskcluster.net/groups/LasmOd2xTp6Knn6xlkbmTA/tasks/LasmOd2xTp6Knn6xlkbmTA/runs/0/logs/public%2Flogs%2Flive_backing.log Differential Revision: https://phabricator.services.mozilla.com/D25413|jlorenzo@mozilla.com|mtabara|2019-03-29 18:10:46|
+| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-configuration.md)|FIC - BOT|Self Generated| - |
 
 |	ci-admin	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/ci-admin.json)	| 
 |:----------:|:-----------------------:|:--------:| 
