@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-03-31 23:57:33 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-01 03:00:31 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -14,8 +14,6 @@
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=69e9ee0ef3dd)|[Bug 1540132](https://bugzilla.mozilla.org/show_bug.cgi?id=1540132)  - Fix updates by telling release properties to ignore the '-shippable' suffix. r=tomprince a=ccoroiu Reviewers: tomprince Reviewed By: tomprince Bug #: 1540132 Differential Revision: https://phabricator.services.mozilla.com/D25397|opoprus@mozilla.com|tomprince|2019-03-30 00:07:19|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dc3b81670b01)|[Bug 1538060](https://bugzilla.mozilla.org/show_bug.cgi?id=1538060)  - Update non-Windows builds to clang 8. r=froydnj Windows builds have been taken care of in [Bug 1535441](https://bugzilla.mozilla.org/show_bug.cgi?id=1535441)  Differential Revision: https://phabricator.services.mozilla.com/D25328|mh@glandium.org|froydnj|2019-03-29 23:39:37|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6c34f19750b8)|[Bug 1540210](https://bugzilla.mozilla.org/show_bug.cgi?id=1540210)  - Correct Android 4.3 pgo test's default tier to tier 1; r=Callek Differential Revision: https://phabricator.services.mozilla.com/D25459|gbrown@mozilla.com|Callek|2019-03-29 22:05:01|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=14db4eae01f5)|[Bug 1539990](https://bugzilla.mozilla.org/show_bug.cgi?id=1539990)  - Move DocUp test to tier 2; r=dustin Run DocUp as tier 2 rather than tier 3, to make the task visible by default and get the benefit of at least some sheriffing. Differential Revision: https://phabricator.services.mozilla.com/D25319|gbrown@mozilla.com|dustin|2019-03-29 02:16:04|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=603144bedadc)|[Bug 1532952](https://bugzilla.mozilla.org/show_bug.cgi?id=1532952)  - Add an optional linux64-aarch64 build on Taskcluster. r=froydnj This sets things enough things up to be able to push to try with an opt-in, but doesn't run the job on every push. This can be used as a template for future work on a fuzzing job. Differential Revision: https://phabricator.services.mozilla.com/D25069|mh@glandium.org|froydnj|2019-03-29 02:11:07|
 
 |	mozilla-inbound	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/mozilla-inbound.json)	| 
 |:----------:|:-----------------------:|:--------:| 
@@ -119,6 +117,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
 |[Link](https://github.com/mozilla-releng/pushapkscript/commit/d0ae86a2bdb9ae9d402f68ff9412110c32c5c903)|1.0.0|mitchhentges|N/A|2019-03-29 12:30:28|
