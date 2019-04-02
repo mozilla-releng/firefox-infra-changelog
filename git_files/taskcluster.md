@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-18 22:55:03.903664
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-19 04:19:46.072619
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|753|djmitche|Merge pull request #525 from djmitche/bug1536863-c [Bug 1536863](https://bugzilla.mozilla.org/show_bug.cgi?id=1536863)  - be a little more flexible in reading the chimeric Auth0 profiles|[URL](https://github.com/taskcluster/taskcluster/commit/fa98fddaaa00f82a83106c92a21b9c192ff8c575)|2019-04-01 20:41:40
+|752|djmitche|[Bug 1536863](https://bugzilla.mozilla.org/show_bug.cgi?id=1536863)  - be a little more flexible in reading the chimeric Auth0 profiles|[URL](https://github.com/taskcluster/taskcluster/commit/27f2c5c237b63ce336929c0a7f9e584797110929)|2019-04-01 20:01:17
 |751|djmitche|Merge pull request #517 from taskcluster/renovate/cron-parser-2.x Update dependency cron-parser to v2.10.0|[URL](https://github.com/taskcluster/taskcluster/commit/57eef35d5ec9958120cd9651f5ec2c16bd5afbbd)|2019-04-01 17:50:15
 |750|djmitche|Merge pull request #502 from djmitche/bug1538961 [Bug 1538961](https://bugzilla.mozilla.org/show_bug.cgi?id=1538961)  - improve subscriptions support|[URL](https://github.com/taskcluster/taskcluster/commit/9d67dbbbcd46cc8d2e81eb333e690554b2efd280)|2019-04-01 17:08:00
 |749|imbstack|Merge pull request #514 from taskcluster/procs-yml-support Procs yml support|[URL](https://github.com/taskcluster/taskcluster/commit/85c603e28bbbbbc72f88e9a8f0d55a3766349cb6)|2019-04-01 17:07:15
