@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82011
+    "last_push_id": 82026
   },
   "1": {
     "changeset_number": "35344",
@@ -38046,21 +38046,6 @@
     }
   },
   "800": {
-    "changeset_number": "81970",
-    "pusher": "nerli@mozilla.com",
-    "date_of_push": "2019-04-01 21:20:31",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=5a85cf971fef",
-        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
-        "commit_message": "Backed out changeset a7c0f3da75fa for linting opt failure in desktop_l10n.py CLOSED TREE",
-        "files_changed": [
-          "testing/mozharness/scripts/desktop_l10n.py"
-        ]
-      }
-    }
-  },
-  "800": {
     "changeset_number": "81980",
     "pusher": "ahalberstadt@mozilla.com",
     "date_of_push": "2019-04-01 22:59:14",
@@ -38262,6 +38247,166 @@
         "files_changed": [
           "testing/web-platform/tests/.taskcluster.yml",
           "testing/web-platform/tests/tools/ci/taskcluster-run.py"
+        ]
+      }
+    }
+  },
+  "806": {
+    "changeset_number": "82012",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-04-02 04:41:33",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0d8cf467ed34",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1538060 - Update non-Windows builds to clang 8. r=froydnj\n\nWindows builds have been taken care of in bug 1535441.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25328",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/code-coverage",
+          "browser/config/mozconfigs/macosx64/code-coverage",
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-8-android.json",
+          "build/build-clang/clang-8-linux64.json",
+          "build/build-clang/clang-8-macosx64.json",
+          "build/build-clang/clang-8-mingw.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_.patch",
+          "build/clang-plugin/moz.build",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/cctools-port.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/minidump_stackwalk.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-android.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-mingw.sh",
+          "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      }
+    }
+  },
+  "807": {
+    "changeset_number": "82013",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-04-02 04:42:17",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dccd58970fb0",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Remove obsolete push-candidate-to-releases script; r=aki\n\nThis functionality has been replaced by beetmover. Also remove `mozharness.mozilla.aws`,\nof which this was the only consumer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25676",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/aws.py",
+          "testing/mozharness/scripts/release/push-candidate-to-releases.py"
+        ]
+      }
+    }
+  },
+  "808": {
+    "changeset_number": "82016",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-04-02 04:55:11",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b6ca4ac5caa8",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out changeset 0d8cf467ed34 (bug 1538060) for Toolchains bustages CLOSED TREE",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/code-coverage",
+          "browser/config/mozconfigs/macosx64/code-coverage",
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-8-android.json",
+          "build/build-clang/clang-8-linux64.json",
+          "build/build-clang/clang-8-macosx64.json",
+          "build/build-clang/clang-8-mingw.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_.patch",
+          "build/clang-plugin/moz.build",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/cctools-port.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/minidump_stackwalk.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-android.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-mingw.sh",
+          "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      }
+    }
+  },
+  "809": {
+    "changeset_number": "82023",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-04-02 07:20:36",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=76b3bde564ff",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1538060 - Update non-Windows builds to clang 8. r=froydnj\n\nWindows builds have been taken care of in bug 1535441.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25328",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/code-coverage",
+          "browser/config/mozconfigs/macosx64/code-coverage",
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-8-android.json",
+          "build/build-clang/clang-8-linux64.json",
+          "build/build-clang/clang-8-macosx64.json",
+          "build/build-clang/clang-8-mingw.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_.patch",
+          "build/clang-plugin/moz.build",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/cctools-port.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/minidump_stackwalk.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-android.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-mingw.sh",
+          "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
         ]
       }
     }
