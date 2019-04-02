@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35798
+    "last_push_id": 35803
   },
   "1": {
     "changeset_number": "35344",
@@ -12903,6 +12903,338 @@
         "files_changed": [
           "testing/web-platform/tests/.taskcluster.yml",
           "testing/web-platform/tests/tools/ci/taskcluster-run.py"
+        ]
+      }
+    }
+  },
+  "133": {
+    "changeset_number": "35799",
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-04-02 11:35:12",
+    "changeset_commits": {
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=945e4151de08",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1539847 - [mozharness] Remove unused testing/mozharness/configs/unittests/win_unittest.py, r=tomprince\n\nThis also renames win_taskcluster_unittest.py to win_unittest.py for\nconsistency with the other platforms.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25401",
+        "files_changed": [
+          "taskcluster/ci/test/compiled.yml",
+          "taskcluster/ci/test/misc.yml",
+          "taskcluster/ci/test/mochitest.yml",
+          "taskcluster/ci/test/reftest.yml",
+          "taskcluster/ci/test/xpcshell.yml",
+          "testing/mozharness/configs/unittests/win_taskcluster_unittest.py",
+          "testing/mozharness/configs/unittests/win_unittest.py"
+        ]
+      },
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c367d8ca7f3a",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1523303 - [tryselect] Also read mac/win_unittest.py configs in test_mozharness_integration.py, r=gbrown\n\nThere are a few windows/mac-only suites that were missed since we were only\nreading the linux variant.\n\nDepends on D25401\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25432",
+        "files_changed": [
+          "testing/mozharness/configs/unittests/win_unittest.py",
+          "tools/tryselect/test/test_mozharness_integration.py"
+        ]
+      },
+      "14": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d3ba5839e2c2",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1523303 - [mozharness] Remove definitions for defunct *-addons suites, r=gbrown\n\nDepends on D25432\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25433",
+        "files_changed": [
+          "testing/mozharness/configs/unittests/linux_unittest.py",
+          "testing/mozharness/configs/unittests/mac_unittest.py",
+          "testing/mozharness/configs/unittests/win_unittest.py",
+          "tools/tryselect/test/test_mozharness_integration.py"
+        ]
+      },
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=63888044e37b",
+        "commiter_name": "Eric Rahm <erahm@mozilla.com>",
+        "commit_message": "Bug 1532491 - Part 3: Enable running AWSY tp6 in automation. r=bc\n\nAn `sy-tp6` variant is added to the AWSY test suite that runs against the tp6 pageset.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24585",
+        "files_changed": [
+          "taskcluster/ci/test/awsy.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/awsy/awsy/awsy_test_case.py",
+          "testing/awsy/awsy/process_perf_data.py",
+          "testing/awsy/awsy/test_memory_usage.py",
+          "testing/awsy/conf/tp6-testvars.json",
+          "testing/mozharness/scripts/awsy_script.py"
+        ]
+      },
+      "20": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8cfba39a9c9b",
+        "commiter_name": "Eric Rahm <erahm@mozilla.com>",
+        "commit_message": "Bug 1532491 - Follow up: Fix f8 warning in awsy_script. CLOSED TREE\n\nReviewers: noemi_erli\n\nReviewed By: noemi_erli\n\nSubscribers: reviewbot\n\nBug #: 1532491\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25664",
+        "files_changed": [
+          "testing/mozharness/scripts/awsy_script.py"
+        ]
+      },
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2c5ea4fadb85",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Remove some dead code looking at substitutions in desktop l10n code; r=Callek\n\nThere used to be various values that were substituted into the mozharness\nconfiguration for L10n jobs. All those substitutions have been removed, but the\ncode to support them is still around. This removes that code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25143",
+        "files_changed": [
+          "testing/mozharness/scripts/desktop_l10n.py"
+        ]
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c75b53bc557a",
+        "commiter_name": "Eric Rahm <erahm@mozilla.com>",
+        "commit_message": "Bug 1532491 - Follow up: Fix f8 warning in awsy_script. CLOSED TREE r=noemi_erli\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25664",
+        "files_changed": [
+          "testing/mozharness/scripts/awsy_script.py"
+        ]
+      },
+      "36": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5dc1b2326d3a",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out changeset c75b53bc557a (bug 1532491) for unnecessary fix CLOSED TREE",
+        "files_changed": [
+          "testing/mozharness/scripts/awsy_script.py"
+        ]
+      },
+      "73": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0d8cf467ed34",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1538060 - Update non-Windows builds to clang 8. r=froydnj\n\nWindows builds have been taken care of in bug 1535441.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25328",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/code-coverage",
+          "browser/config/mozconfigs/macosx64/code-coverage",
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-8-android.json",
+          "build/build-clang/clang-8-linux64.json",
+          "build/build-clang/clang-8-macosx64.json",
+          "build/build-clang/clang-8-mingw.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_.patch",
+          "build/clang-plugin/moz.build",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/cctools-port.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/minidump_stackwalk.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-android.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-mingw.sh",
+          "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      },
+      "74": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dccd58970fb0",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Remove obsolete push-candidate-to-releases script; r=aki\n\nThis functionality has been replaced by beetmover. Also remove `mozharness.mozilla.aws`,\nof which this was the only consumer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25676",
+        "files_changed": [
+          "testing/mozharness/mozharness/mozilla/aws.py",
+          "testing/mozharness/scripts/release/push-candidate-to-releases.py"
+        ]
+      },
+      "77": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b6ca4ac5caa8",
+        "commiter_name": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out changeset 0d8cf467ed34 (bug 1538060) for Toolchains bustages CLOSED TREE",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/code-coverage",
+          "browser/config/mozconfigs/macosx64/code-coverage",
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-8-android.json",
+          "build/build-clang/clang-8-linux64.json",
+          "build/build-clang/clang-8-macosx64.json",
+          "build/build-clang/clang-8-mingw.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_.patch",
+          "build/clang-plugin/moz.build",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/cctools-port.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/minidump_stackwalk.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-android.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-mingw.sh",
+          "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      },
+      "86": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=76b3bde564ff",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1538060 - Update non-Windows builds to clang 8. r=froydnj\n\nWindows builds have been taken care of in bug 1535441.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25328",
+        "files_changed": [
+          "browser/config/mozconfigs/linux64/code-coverage",
+          "browser/config/mozconfigs/macosx64/code-coverage",
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-8-android.json",
+          "build/build-clang/clang-8-linux64.json",
+          "build/build-clang/clang-8-macosx64.json",
+          "build/build-clang/clang-8-mingw.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_.patch",
+          "build/clang-plugin/moz.build",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/cctools-port.yml",
+          "taskcluster/ci/toolchain/clang-tidy.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/ci/toolchain/gn.yml",
+          "taskcluster/ci/toolchain/mingw.yml",
+          "taskcluster/ci/toolchain/minidump_stackwalk.yml",
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/nasm.yml",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-android.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-8-linux.sh",
+          "taskcluster/scripts/misc/build-clang-8-mingw.sh",
+          "taskcluster/scripts/misc/build-clang-macosx.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      },
+      "92": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ea0977445697",
+        "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
+        "commit_message": "Merge autoland to mozilla-central. a=merge",
+        "files_changed": [
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "dom/base/nsContentUtils.cpp",
+          "dom/base/nsContentUtils.h",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
+          "testing/mozharness/configs/unittests/win_taskcluster_unittest.py",
+          "testing/mozharness/mozharness/mozilla/aws.py",
+          "testing/mozharness/scripts/release/push-candidate-to-releases.py",
+          "xpcom/base/nsIID.h"
+        ]
+      }
+    }
+  },
+  "134": {
+    "changeset_number": "35802",
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-04-02 18:46:39",
+    "changeset_commits": {
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=304b957afe29",
+        "commiter_name": "Tarek Ziad\u00e9 <tarek@mozilla.com>",
+        "commit_message": "Bug 1527620 - Add youtube streaming tests - r=whimboo\n\nThis patch introduces a new marionette media test along\nwith a Youtube test.\n\nTo run the Youtube streaming test locally:\n\n./mach marionette-test dom/media/test/marionette/test_youtube.py -vv --gecko-log -\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23644",
+        "files_changed": [
+          "dom/media/moz.build",
+          "dom/media/test/marionette/manifest.ini",
+          "dom/media/test/marionette/test_youtube.py",
+          "dom/media/test/marionette/yttest/BZP1rYjoBgI.manifest",
+          "dom/media/test/marionette/yttest/__init__.py",
+          "dom/media/test/marionette/yttest/debug_info.js",
+          "dom/media/test/marionette/yttest/download.py",
+          "dom/media/test/marionette/yttest/duration_test.js",
+          "dom/media/test/marionette/yttest/force_hd.js",
+          "dom/media/test/marionette/yttest/playback.py",
+          "dom/media/test/marionette/yttest/record.py",
+          "dom/media/test/marionette/yttest/support.py",
+          "dom/media/test/marionette/yttest/until_end_test.js",
+          "dom/media/test/marionette/yttest/video_playback_quality.js",
+          "dom/media/test/marionette/yttest/ytpage.py",
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "python/mozbuild/mozbuild/frontend/context.py",
+          "taskcluster/ci/test/marionette.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/marionette/harness/marionette_harness/tests/stream-tests.ini",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/mozbase/mozproxy/mozproxy/utils.py"
+        ]
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cf6c7c082dc3",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out changeset 304b957afe29 (bug 1527620) for marionette-media failures on test_youtube.py. CLOSED TREE",
+        "files_changed": [
+          "dom/media/moz.build",
+          "dom/media/test/marionette/manifest.ini",
+          "dom/media/test/marionette/test_youtube.py",
+          "dom/media/test/marionette/yttest/BZP1rYjoBgI.manifest",
+          "dom/media/test/marionette/yttest/__init__.py",
+          "dom/media/test/marionette/yttest/debug_info.js",
+          "dom/media/test/marionette/yttest/download.py",
+          "dom/media/test/marionette/yttest/duration_test.js",
+          "dom/media/test/marionette/yttest/force_hd.js",
+          "dom/media/test/marionette/yttest/playback.py",
+          "dom/media/test/marionette/yttest/record.py",
+          "dom/media/test/marionette/yttest/support.py",
+          "dom/media/test/marionette/yttest/until_end_test.js",
+          "dom/media/test/marionette/yttest/video_playback_quality.js",
+          "dom/media/test/marionette/yttest/ytpage.py",
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "python/mozbuild/mozbuild/frontend/context.py",
+          "taskcluster/ci/test/marionette.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/marionette/harness/marionette_harness/tests/stream-tests.ini",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/mozbase/mozproxy/mozproxy/utils.py"
+        ]
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9b9c50876092",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1540325 - Run clang tools tasks only on try & code-review, r=glandium,sylvestre\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25562",
+        "files_changed": [
+          "taskcluster/ci/source-test/clang.yml"
+        ]
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cff212107d95",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out changeset 9b9c50876092 (bug 1540325) for Linting failure on clang.yml. CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/source-test/clang.yml"
+        ]
+      },
+      "33": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cb394c9bb56d",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1540325 - Run clang tools tasks only on try & code-review, r=glandium,sylvestre\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25562",
+        "files_changed": [
+          "taskcluster/ci/source-test/clang.yml"
         ]
       }
     }

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82026
+    "last_push_id": 82111
   },
   "1": {
     "changeset_number": "35344",
@@ -38168,90 +38168,6 @@
     }
   },
   "806": {
-    "changeset_number": "81998",
-    "pusher": "csabou@mozilla.com",
-    "date_of_push": "2019-04-02 01:04:21",
-    "changeset_commits": {
-      "23": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b04716962902",
-        "commiter_name": "jgraham <james@hoppipolla.co.uk>",
-        "commit_message": "Bug 1531412 [wpt PR 14859] - Use the checks API with taskcluster jobs, a=testonly\n\nAutomatic update from web-platform-tests\nUse the checks API with taskcluster jobs (#14859)\n\n--\n\nwpt-commits: a9f087c1dc0bec1f322339926f7056d0ac47cd0b\nwpt-pr: 14859\n",
-        "files_changed": [
-          "testing/web-platform/tests/.taskcluster.yml"
-        ]
-      },
-      "33": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bbf41de09c57",
-        "commiter_name": "Philip J\u00e4genstedt <philip@foolip.org>",
-        "commit_message": "Bug 1531440 [wpt PR 15576] - Revert \"Use the checks API with taskcluster jobs (#14859)\", a=testonly\n\nAutomatic update from web-platform-tests\nRevert \"Use the checks API with taskcluster jobs (#14859)\" (#15576)\n\nThere are no wpt.fyi checks on https://github.com/web-platform-tests/wpt/pull/15575.\n\nThis reverts commit a9f087c1dc0bec1f322339926f7056d0ac47cd0b.\n--\n\nwpt-commits: 112d3dc9f100deec62266c2a9c6dff74a799919f\nwpt-pr: 15576\n",
-        "files_changed": [
-          "testing/web-platform/tests/.taskcluster.yml"
-        ]
-      },
-      "46": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=92a12a4be4f6",
-        "commiter_name": "jgraham <james@hoppipolla.co.uk>",
-        "commit_message": "Bug 1531903 [wpt PR 15574] - Move the lint from Travis to TaskCluster, a=testonly\n\nAutomatic update from web-platform-tests\nMove the lint from Travis to TaskCluster (#15574)\n\n--\n\nwpt-commits: 218466a7883ab2130645e896bcd379f430eae1fd\nwpt-pr: 15574\n",
-        "files_changed": [
-          "testing/web-platform/tests/.taskcluster.yml",
-          "testing/web-platform/tests/.travis.yml",
-          "testing/web-platform/tests/tools/ci/start.sh"
-        ]
-      },
-      "47": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f32cbf1d56a5",
-        "commiter_name": "jgraham <james@hoppipolla.co.uk>",
-        "commit_message": "Bug 1531905 [wpt PR 15594] - Revert \"Move the lint from Travis to TaskCluster\", a=testonly\n\nAutomatic update from web-platform-tests\nRevert \"Move the lint from Travis to TaskCluster (#15574)\" (#15594)\n\nThis reverts commit 218466a7883ab2130645e896bcd379f430eae1fd.\n--\n\nwpt-commits: 3353bc3aef96c7bccd4994685e63f4f3e35c12b7\nwpt-pr: 15594\n",
-        "files_changed": [
-          "testing/web-platform/tests/.taskcluster.yml",
-          "testing/web-platform/tests/.travis.yml",
-          "testing/web-platform/tests/tools/ci/start.sh"
-        ]
-      },
-      "71": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=91d153fb4421",
-        "commiter_name": "jgraham <james@hoppipolla.co.uk>",
-        "commit_message": "Bug 1531952 [wpt PR 15601] - Move the lint from Travis to TaskCluster (#15574), a=testonly\n\nAutomatic update from web-platform-tests\nMove the lint from Travis to TaskCluster (#15574) (#15601)\n\n--\n\nwpt-commits: 04ad8dd6a1f6f5577841e4e7ccbe948892bd6ddf\nwpt-pr: 15601\n",
-        "files_changed": [
-          "testing/web-platform/tests/.taskcluster.yml",
-          "testing/web-platform/tests/.travis.yml",
-          "testing/web-platform/tests/tools/ci/start.sh"
-        ]
-      },
-      "72": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e593a0f11228",
-        "commiter_name": "jgraham <james@hoppipolla.co.uk>",
-        "commit_message": "Bug 1531957 [wpt PR 15593] - Add support for verifying taskcluster config, a=testonly\n\nAutomatic update from web-platform-tests\nAdd support for verifying taskcluster config (#15593)\n\nAdds as wpt tc-verify command that verifies that the TaskCluster\nconfig is a valid yaml file and computes the tasks that will run on a\nPR synchronize event. This can be expanded to more events and pushes\nin the future.\n--\n\nwpt-commits: 5baef702c26b8580f5a4e5e1a34ac75bb9d496ae\nwpt-pr: 15593\n",
-        "files_changed": [
-          "testing/web-platform/tests/tools/taskcluster/__init__.py",
-          "testing/web-platform/tests/tools/taskcluster/commands.json",
-          "testing/web-platform/tests/tools/taskcluster/testdata/pr_event.json",
-          "testing/web-platform/tests/tools/taskcluster/verify.py",
-          "testing/web-platform/tests/tools/wpt/paths"
-        ]
-      },
-      "73": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=818e7d359c5b",
-        "commiter_name": "jgraham <james@hoppipolla.co.uk>",
-        "commit_message": "Bug 1531960 [wpt PR 15619] - Fix taskcluster for master., a=testonly\n\nAutomatic update from web-platform-tests\nFix taskcluster for master. (#15619)\n\nA couple more properties we were accessing only made sense for pull request events\n--\n\nwpt-commits: 21cc43a848a2d82cf351f029a0f4b91702e4c42a\nwpt-pr: 15619\n",
-        "files_changed": [
-          "testing/web-platform/tests/.taskcluster.yml",
-          "testing/web-platform/tests/tools/taskcluster/testdata/master_push_event.json",
-          "testing/web-platform/tests/tools/taskcluster/verify.py"
-        ]
-      },
-      "234": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=70349e41deef",
-        "commiter_name": "Robert Ma <robertma@chromium.org>",
-        "commit_message": "Bug 1536142 [wpt PR 15771] - Send screenshots from Taskcluster to wpt.fyi, a=testonly\n\nAutomatic update from web-platform-tests\nSend screenshots from Taskcluster to wpt.fyi\n\nStore screenshots on TC as wpt_screenshot.txt.gz and the wpt.fyi webhook\nwill fetch it.\n\n--\n\nwpt-commits: 25c26f30f3b29ecb742f4a562dad4914df332c5e\nwpt-pr: 15771\n",
-        "files_changed": [
-          "testing/web-platform/tests/.taskcluster.yml",
-          "testing/web-platform/tests/tools/ci/taskcluster-run.py"
-        ]
-      }
-    }
-  },
-  "806": {
     "changeset_number": "82012",
     "pusher": "mh@glandium.org",
     "date_of_push": "2019-04-02 04:41:33",
@@ -38407,6 +38323,279 @@
           "taskcluster/scripts/misc/build-clang-8-mingw.sh",
           "taskcluster/scripts/misc/build-clang-macosx.sh",
           "taskcluster/scripts/misc/build-clang-trunk-mingw.sh"
+        ]
+      }
+    }
+  },
+  "809": {
+    "changeset_number": "82033",
+    "pusher": "tziade@mozilla.com",
+    "date_of_push": "2019-04-02 10:40:31",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=304b957afe29",
+        "commiter_name": "Tarek Ziad\u00e9 <tarek@mozilla.com>",
+        "commit_message": "Bug 1527620 - Add youtube streaming tests - r=whimboo\n\nThis patch introduces a new marionette media test along\nwith a Youtube test.\n\nTo run the Youtube streaming test locally:\n\n./mach marionette-test dom/media/test/marionette/test_youtube.py -vv --gecko-log -\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23644",
+        "files_changed": [
+          "dom/media/moz.build",
+          "dom/media/test/marionette/manifest.ini",
+          "dom/media/test/marionette/test_youtube.py",
+          "dom/media/test/marionette/yttest/BZP1rYjoBgI.manifest",
+          "dom/media/test/marionette/yttest/__init__.py",
+          "dom/media/test/marionette/yttest/debug_info.js",
+          "dom/media/test/marionette/yttest/download.py",
+          "dom/media/test/marionette/yttest/duration_test.js",
+          "dom/media/test/marionette/yttest/force_hd.js",
+          "dom/media/test/marionette/yttest/playback.py",
+          "dom/media/test/marionette/yttest/record.py",
+          "dom/media/test/marionette/yttest/support.py",
+          "dom/media/test/marionette/yttest/until_end_test.js",
+          "dom/media/test/marionette/yttest/video_playback_quality.js",
+          "dom/media/test/marionette/yttest/ytpage.py",
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "python/mozbuild/mozbuild/frontend/context.py",
+          "taskcluster/ci/test/marionette.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/marionette/harness/marionette_harness/tests/stream-tests.ini",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/mozbase/mozproxy/mozproxy/utils.py"
+        ]
+      }
+    }
+  },
+  "810": {
+    "changeset_number": "82036",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-04-02 11:19:47",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=cf6c7c082dc3",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out changeset 304b957afe29 (bug 1527620) for marionette-media failures on test_youtube.py. CLOSED TREE",
+        "files_changed": [
+          "dom/media/moz.build",
+          "dom/media/test/marionette/manifest.ini",
+          "dom/media/test/marionette/test_youtube.py",
+          "dom/media/test/marionette/yttest/BZP1rYjoBgI.manifest",
+          "dom/media/test/marionette/yttest/__init__.py",
+          "dom/media/test/marionette/yttest/debug_info.js",
+          "dom/media/test/marionette/yttest/download.py",
+          "dom/media/test/marionette/yttest/duration_test.js",
+          "dom/media/test/marionette/yttest/force_hd.js",
+          "dom/media/test/marionette/yttest/playback.py",
+          "dom/media/test/marionette/yttest/record.py",
+          "dom/media/test/marionette/yttest/support.py",
+          "dom/media/test/marionette/yttest/until_end_test.js",
+          "dom/media/test/marionette/yttest/video_playback_quality.js",
+          "dom/media/test/marionette/yttest/ytpage.py",
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "python/mozbuild/mozbuild/frontend/context.py",
+          "taskcluster/ci/test/marionette.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/marionette/harness/marionette_harness/tests/stream-tests.ini",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/mozbase/mozproxy/mozproxy/utils.py"
+        ]
+      }
+    }
+  },
+  "811": {
+    "changeset_number": "82040",
+    "pusher": "babadie@mozilla.com",
+    "date_of_push": "2019-04-02 11:44:31",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9b9c50876092",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1540325 - Run clang tools tasks only on try & code-review, r=glandium,sylvestre\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25562",
+        "files_changed": [
+          "taskcluster/ci/source-test/clang.yml"
+        ]
+      }
+    }
+  },
+  "812": {
+    "changeset_number": "82042",
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-04-02 12:29:34",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=cff212107d95",
+        "commiter_name": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out changeset 9b9c50876092 (bug 1540325) for Linting failure on clang.yml. CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/source-test/clang.yml"
+        ]
+      }
+    }
+  },
+  "813": {
+    "changeset_number": "82044",
+    "pusher": "babadie@mozilla.com",
+    "date_of_push": "2019-04-02 12:40:01",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=cb394c9bb56d",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1540325 - Run clang tools tasks only on try & code-review, r=glandium,sylvestre\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25562",
+        "files_changed": [
+          "taskcluster/ci/source-test/clang.yml"
+        ]
+      }
+    }
+  },
+  "814": {
+    "changeset_number": "82066",
+    "pusher": "babadie@mozilla.com",
+    "date_of_push": "2019-04-02 17:27:47",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=813b970cd40b",
+        "commiter_name": "Bastien Abadie <bastien@mozilla.com>",
+        "commit_message": "Bug 1538770 - Replace TRY_MODIFIED_FILES by mozversioncontrol usage, r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24876",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/source-test/clang.yml",
+          "taskcluster/scripts/misc/source-test-clang-setup.sh"
+        ]
+      }
+    }
+  },
+  "815": {
+    "changeset_number": "82081",
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-04-02 18:50:58",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ea0977445697",
+        "commiter_name": "Brindusan Cristian <cbrindusan@mozilla.com>",
+        "commit_message": "Merge autoland to mozilla-central. a=merge",
+        "files_changed": [
+          "build/build-clang/clang-7-android.json",
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/clang-7-macosx64.json",
+          "build/build-clang/clang-trunk-mingw.json",
+          "build/build-clang/r350774.patch",
+          "dom/base/nsContentUtils.cpp",
+          "dom/base/nsContentUtils.h",
+          "taskcluster/scripts/misc/build-clang-7-android.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux-macosx-cross.sh",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh",
+          "taskcluster/scripts/misc/build-clang-trunk-mingw.sh",
+          "testing/mozharness/configs/unittests/win_taskcluster_unittest.py",
+          "testing/mozharness/mozharness/mozilla/aws.py",
+          "testing/mozharness/scripts/release/push-candidate-to-releases.py",
+          "xpcom/base/nsIID.h"
+        ]
+      }
+    }
+  },
+  "816": {
+    "changeset_number": "82085",
+    "pusher": "catlee@mozilla.com",
+    "date_of_push": "2019-04-02 19:46:59",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3dc567fb205c",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1539264: Enable caches for mingwclang builds r=glandium,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24973",
+        "files_changed": [
+          "taskcluster/ci/build/kind.yml",
+          "taskcluster/ci/build/windows-mingw.yml",
+          "taskcluster/ci/build/windows.yml"
+        ]
+      }
+    }
+  },
+  "817": {
+    "changeset_number": "82086",
+    "pusher": "tziade@mozilla.com",
+    "date_of_push": "2019-04-02 19:48:25",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a54e5e2802d7",
+        "commiter_name": "Tarek Ziad\u00e9 <tarek@mozilla.com>",
+        "commit_message": "Bug 1527620 - Add youtube streaming tests - r=whimboo\n\nThis patch introduces a new marionette media test along\nwith a Youtube test.\n\nTo run the Youtube streaming test locally:\n\n./mach marionette-test dom/media/test/marionette/test_youtube.py -vv --gecko-log -\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23644",
+        "files_changed": [
+          "dom/media/moz.build",
+          "dom/media/test/marionette/manifest.ini",
+          "dom/media/test/marionette/test_youtube.py",
+          "dom/media/test/marionette/yttest/BZP1rYjoBgI.manifest",
+          "dom/media/test/marionette/yttest/__init__.py",
+          "dom/media/test/marionette/yttest/debug_info.js",
+          "dom/media/test/marionette/yttest/download.py",
+          "dom/media/test/marionette/yttest/duration_test.js",
+          "dom/media/test/marionette/yttest/force_hd.js",
+          "dom/media/test/marionette/yttest/playback.py",
+          "dom/media/test/marionette/yttest/record.py",
+          "dom/media/test/marionette/yttest/support.py",
+          "dom/media/test/marionette/yttest/until_end_test.js",
+          "dom/media/test/marionette/yttest/video_playback_quality.js",
+          "dom/media/test/marionette/yttest/ytpage.py",
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "python/mozbuild/mozbuild/frontend/context.py",
+          "taskcluster/ci/test/marionette.yml",
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/marionette/harness/marionette_harness/tests/stream-tests.ini",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/mozbase/mozproxy/mozproxy/utils.py"
+        ]
+      }
+    }
+  },
+  "818": {
+    "changeset_number": "82089",
+    "pusher": "catlee@mozilla.com",
+    "date_of_push": "2019-04-02 20:02:30",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3134268f32cd",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1539903: Use linux worker types for android jobs r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25272",
+        "files_changed": [
+          "taskcluster/ci/build/android-stuff.yml",
+          "taskcluster/ci/build/android.yml",
+          "taskcluster/ci/google-play-strings/kind.yml",
+          "taskcluster/ci/instrumented-build/kind.yml",
+          "taskcluster/ci/l10n/kind.yml",
+          "taskcluster/ci/nightly-l10n/kind.yml",
+          "taskcluster/ci/openh264-plugin/kind.yml",
+          "taskcluster/ci/searchfox/kind.yml",
+          "taskcluster/ci/webrender/kind.yml",
+          "taskcluster/taskgraph/util/workertypes.py"
+        ]
+      }
+    }
+  },
+  "819": {
+    "changeset_number": "82090",
+    "pusher": "jlund@mozilla.com",
+    "date_of_push": "2019-04-02 20:05:00",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48ae682107da",
+        "commiter_name": "Jordan Lund <jlund@mozilla.com>",
+        "commit_message": "Bug 1540262 - increase UV chunks from 12 to 16, r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25673",
+        "files_changed": [
+          "taskcluster/ci/release-update-verify/kind.yml"
+        ]
+      }
+    }
+  },
+  "820": {
+    "changeset_number": "82091",
+    "pusher": "nfroyd@mozilla.com",
+    "date_of_push": "2019-04-02 20:05:39",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c6c69b6aa0fd",
+        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1541081 - add win64-rust-size to aarch64 windows builds; r=dmajor\n\nWe weren't including this before, which was causing us to not track size\nmetrics for nss.dll and xul.dll, which is suboptimal.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25792",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml"
         ]
       }
     }

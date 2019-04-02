@@ -1,7 +1,11 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-19 09:00:34.268779
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-19 23:20:06.054162
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|757|owlishDeveloper|Merge pull request #529 from owlishDeveloper/bug1540891 Change linting rules for switches|[URL](https://github.com/taskcluster/taskcluster/commit/6c3f74082109c7a0c1d9e88b904167356f6d9837)|2019-04-02 17:52:08
+|756|OjaswinM|[Bug 1520918](https://bugzilla.mozilla.org/show_bug.cgi?id=1520918)  [UI] Add UI for the denylist (#311)|[URL](https://github.com/taskcluster/taskcluster/commit/e46d3c87bcfaf50e9d983e6c39725ce9c31e916b)|2019-04-02 13:07:24
+|755|helfi92|Display unscheduled task properly (#531)|[URL](https://github.com/taskcluster/taskcluster/commit/e4b20cf57c1336b4795f93906749b5d20815aef8)|2019-04-02 13:04:13
+|754|helfi92|Fix ability to add new secrets (#522)|[URL](https://github.com/taskcluster/taskcluster/commit/53a4c415ca19c0cb9aef44e0ce293938ec17a31a)|2019-04-02 12:22:08
 |753|djmitche|Merge pull request #525 from djmitche/bug1536863-c [Bug 1536863](https://bugzilla.mozilla.org/show_bug.cgi?id=1536863)  - be a little more flexible in reading the chimeric Auth0 profiles|[URL](https://github.com/taskcluster/taskcluster/commit/fa98fddaaa00f82a83106c92a21b9c192ff8c575)|2019-04-01 20:41:40
 |752|djmitche|[Bug 1536863](https://bugzilla.mozilla.org/show_bug.cgi?id=1536863)  - be a little more flexible in reading the chimeric Auth0 profiles|[URL](https://github.com/taskcluster/taskcluster/commit/27f2c5c237b63ce336929c0a7f9e584797110929)|2019-04-01 20:01:17
 |751|djmitche|Merge pull request #517 from taskcluster/renovate/cron-parser-2.x Update dependency cron-parser to v2.10.0|[URL](https://github.com/taskcluster/taskcluster/commit/57eef35d5ec9958120cd9651f5ec2c16bd5afbbd)|2019-04-01 17:50:15
