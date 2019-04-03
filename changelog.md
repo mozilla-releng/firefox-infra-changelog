@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-04-03 16:26:38 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-03 21:55:23 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -107,6 +107,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/753e2e703bdce697d924e3883b4912170d1f7e71)|Scheduled weekly dependency update for week 13 (#441)    Update boto3 from 1.9.122 to 1.9.127      Update botocore from 1.12.122 to 1.12.127      Update pushapkscript from 0.14.0 to 1.0.0      Update datadog from 0.27.0 to 0.28.0|pyup-bot|N/A|2019-04-03 17:44:58|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/5c4d9623c48e20032a3605f3fa788e7c767f69b3)|Bug 1531165: Deploy new signtool to get new sha2signcode support (#440)|catlee|N/A|2019-04-02 19:32:16|
 
 |	OpenCloudConfig	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/OpenCloudConfig.md)	| 
@@ -121,6 +122,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/taskcluster/taskcluster/commit/55796d2aae61d5b5827dbf46a08299a52774a7c3)|Merge pull request #536 from djmitche/cleanup-builder  remove unused tc-builder file|imbstack|N/A|2019-04-03 18:26:57|
+|[Link](https://github.com/taskcluster/taskcluster/commit/ceef9bf43f8d2e4094efe5d28da36c168aa9b8a9)|Merge pull request #538 from djmitche/doc-all-client-options  document all options to client constructor|imbstack|N/A|2019-04-03 18:26:37|
 |[Link](https://github.com/taskcluster/taskcluster/commit/5c5050fe3c4c22b67bf0a1d808a17c8086d352c9)|Merge pull request #528 from owlishDeveloper/bug1487699  Add GCP provider object. Implement listWorkers method|owlishDeveloper|N/A|2019-04-02 23:19:05|
 |[Link](https://github.com/taskcluster/taskcluster/commit/b889a7c1040fd0bbb90b09a384d4a55db9f710a8)|[UI] Ignore casing when filtering in task group view (#532)|helfi92|N/A|2019-04-02 22:29:55|
 |[Link](https://github.com/taskcluster/taskcluster/commit/63a8b777ebb3e6c0c9d25af2195a3bbde5107a39)|Expand filter|owlishDeveloper|N/A|2019-04-02 21:40:31|

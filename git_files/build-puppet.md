@@ -1,7 +1,8 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-20 19:25:33.102267
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-21 00:54:23.848913
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|85|pyup-bot|Scheduled weekly dependency update for week 13 (#441) Update boto3 from 1.9.122 to 1.9.127 Update botocore from 1.12.122 to 1.12.127 Update pushapkscript from 0.14.0 to 1.0.0 Update datadog from 0.27.0 to 0.28.0|[URL](https://github.com/mozilla-releng/build-puppet/commit/753e2e703bdce697d924e3883b4912170d1f7e71)|2019-04-03 17:44:58
 |84|catlee|[Bug 1531165](https://bugzilla.mozilla.org/show_bug.cgi?id=1531165)  Deploy new signtool to get new sha2signcode support (#440)|[URL](https://github.com/mozilla-releng/build-puppet/commit/5c4d9623c48e20032a3605f3fa788e7c767f69b3)|2019-04-02 19:32:16
 |83|escapewindow|Merge pull request #439 from escapewindow/remove-gpg scriptworker 23.0.0 - remove gpg support|[URL](https://github.com/mozilla-releng/build-puppet/commit/e615f1a4bfc22890ff76c0be4d4987e780ed77a1)|2019-03-28 23:20:18
 |82|rail|Bump balrogscript/balrogclient version (Auth0) (#438)|[URL](https://github.com/mozilla-releng/build-puppet/commit/ce0b7985aa8559cf8d6f31bb2617bfefda763669)|2019-03-27 19:59:17

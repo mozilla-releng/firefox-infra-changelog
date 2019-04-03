@@ -1,7 +1,9 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-20 19:25:33.102267
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-21 00:54:23.848913
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|763|imbstack|Merge pull request #536 from djmitche/cleanup-builder remove unused tc-builder file|[URL](https://github.com/taskcluster/taskcluster/commit/55796d2aae61d5b5827dbf46a08299a52774a7c3)|2019-04-03 18:26:57
+|762|imbstack|Merge pull request #538 from djmitche/doc-all-client-options document all options to client constructor|[URL](https://github.com/taskcluster/taskcluster/commit/ceef9bf43f8d2e4094efe5d28da36c168aa9b8a9)|2019-04-03 18:26:37
 |761|owlishDeveloper|Merge pull request #528 from owlishDeveloper/bug1487699 Add GCP provider object. Implement listWorkers method|[URL](https://github.com/taskcluster/taskcluster/commit/5c5050fe3c4c22b67bf0a1d808a17c8086d352c9)|2019-04-02 23:19:05
 |760|helfi92|[UI] Ignore casing when filtering in task group view (#532)|[URL](https://github.com/taskcluster/taskcluster/commit/b889a7c1040fd0bbb90b09a384d4a55db9f710a8)|2019-04-02 22:29:55
 |759|owlishDeveloper|Expand filter|[URL](https://github.com/taskcluster/taskcluster/commit/63a8b777ebb3e6c0c9d25af2195a3bbde5107a39)|2019-04-02 21:40:31
