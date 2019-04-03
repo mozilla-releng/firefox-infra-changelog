@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82126
+    "last_push_id": 82149
   },
   "1": {
     "changeset_number": "35344",
@@ -38548,6 +38548,31 @@
         "commit_message": "Bug 1541081 - add win64-rust-size to aarch64 windows builds; r=dmajor\n\nWe weren't including this before, which was causing us to not track size\nmetrics for nss.dll and xul.dll, which is suboptimal.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25792",
         "files_changed": [
           "taskcluster/ci/build/windows.yml"
+        ]
+      }
+    }
+  },
+  "820": {
+    "changeset_number": "82144",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-04-03 10:31:35",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=16bfbf0db8ac",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [try-staging] Allow staging builds to access staging github ssh key; r=nthomas\n\nThe secret with the ssh key already exists in taskcluster, this tells\nmozharness to try to access it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25700",
+        "files_changed": [
+          "testing/mozharness/configs/partner_repacks/release_mozilla-release_desktop.py",
+          "testing/mozharness/configs/partner_repacks/release_mozilla-release_desktop_EME-free.py",
+          "testing/mozharness/configs/partner_repacks/staging_release_mozilla-release_desktop.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ab4cffb2675",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Remove unused esr52 partner repack configuration; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25701",
+        "files_changed": [
+          "testing/mozharness/configs/partner_repacks/release_mozilla-esr52_desktop.py"
         ]
       }
     }
