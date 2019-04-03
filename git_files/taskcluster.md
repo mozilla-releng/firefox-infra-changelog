@@ -1,7 +1,11 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-19 23:20:06.054162
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-20 08:58:10.765590
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|761|owlishDeveloper|Merge pull request #528 from owlishDeveloper/bug1487699 Add GCP provider object. Implement listWorkers method|[URL](https://github.com/taskcluster/taskcluster/commit/5c5050fe3c4c22b67bf0a1d808a17c8086d352c9)|2019-04-02 23:19:05
+|760|helfi92|[UI] Ignore casing when filtering in task group view (#532)|[URL](https://github.com/taskcluster/taskcluster/commit/b889a7c1040fd0bbb90b09a384d4a55db9f710a8)|2019-04-02 22:29:55
+|759|owlishDeveloper|Expand filter|[URL](https://github.com/taskcluster/taskcluster/commit/63a8b777ebb3e6c0c9d25af2195a3bbde5107a39)|2019-04-02 21:40:31
+|758|owlishDeveloper|Add GCP provider object. Implement listWorkers method|[URL](https://github.com/taskcluster/taskcluster/commit/deb9f782ab1f658e4ec2da0491b7203f2bb82b51)|2019-04-01 23:48:17
 |757|owlishDeveloper|Merge pull request #529 from owlishDeveloper/bug1540891 Change linting rules for switches|[URL](https://github.com/taskcluster/taskcluster/commit/6c3f74082109c7a0c1d9e88b904167356f6d9837)|2019-04-02 17:52:08
 |756|OjaswinM|[Bug 1520918](https://bugzilla.mozilla.org/show_bug.cgi?id=1520918)  [UI] Add UI for the denylist (#311)|[URL](https://github.com/taskcluster/taskcluster/commit/e46d3c87bcfaf50e9d983e6c39725ce9c31e916b)|2019-04-02 13:07:24
 |755|helfi92|Display unscheduled task properly (#531)|[URL](https://github.com/taskcluster/taskcluster/commit/e4b20cf57c1336b4795f93906749b5d20815aef8)|2019-04-02 13:04:13
