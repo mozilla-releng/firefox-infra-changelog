@@ -1,10 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 82149
+ CURRENT PUSH ID: 82170
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|82144|2019-04-03 10:31:35|Tom Prince <mozilla@hocat.ca>|No bug: [try-staging] Allow staging builds to access staging github ssh key; r=nthomasThe secret with the ssh key already exists in taskcluster, this tellsmozharness to try to access it.Differential Revision: https://phabricator.services.mozilla.com/D25700|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=16bfbf0db8ac
-|82144|2019-04-03 10:31:35|Tom Prince <mozilla@hocat.ca>|No bug: [mozharness] Remove unused esr52 partner repack configuration; r=nthomasDifferential Revision: https://phabricator.services.mozilla.com/D25701|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ab4cffb2675
+|82153|2019-04-03 13:44:32|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D25584|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=362eb37eb09f
 |82090|2019-04-02 20:05:00|Jordan Lund <jlund@mozilla.com>|[Bug 1540262](https://bugzilla.mozilla.org/show_bug.cgi?id=1540262)  - increase UV chunks from 12 to 16, r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D25673|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48ae682107da
 |82089|2019-04-02 20:02:30|Chris AtLee <catlee@mozilla.com>|[Bug 1539903](https://bugzilla.mozilla.org/show_bug.cgi?id=1539903)  Use linux worker types for android jobs r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D25272|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3134268f32cd
 |82086|2019-04-02 19:48:25|Tarek Ziadé <tarek@mozilla.com>|[Bug 1527620](https://bugzilla.mozilla.org/show_bug.cgi?id=1527620)  - Add youtube streaming tests - r=whimbooThis patch introduces a new marionette media test alongwith a Youtube test.To run the Youtube streaming test locally:./mach marionette-test dom/media/test/marionette/test_youtube.py -vv --gecko-log -Differential Revision: https://phabricator.services.mozilla.com/D23644|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a54e5e2802d7

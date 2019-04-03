@@ -1,11 +1,10 @@
-##  Commits in production - for 3 days, generated on: 2019-04-03 09:18:55 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-03 12:17:27 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=16bfbf0db8ac)|No bug: [try-staging] Allow staging builds to access staging github ssh key; r=nthomas The secret with the ssh key already exists in taskcluster, this tells mozharness to try to access it. Differential Revision: https://phabricator.services.mozilla.com/D25700|mozilla@hocat.ca|nthomas|2019-04-03 10:31:35|
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ab4cffb2675)|No bug: [mozharness] Remove unused esr52 partner repack configuration; r=nthomas Differential Revision: https://phabricator.services.mozilla.com/D25701|mozilla@hocat.ca|nthomas|2019-04-03 10:31:35|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=362eb37eb09f)|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser Differential Revision: https://phabricator.services.mozilla.com/D25584|sfraser@mozilla.com|sfraser|2019-04-03 13:44:32|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48ae682107da)|[Bug 1540262](https://bugzilla.mozilla.org/show_bug.cgi?id=1540262)  - increase UV chunks from 12 to 16, r=tomprince Differential Revision: https://phabricator.services.mozilla.com/D25673|jlund@mozilla.com|tomprince|2019-04-02 20:05:00|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3134268f32cd)|[Bug 1539903](https://bugzilla.mozilla.org/show_bug.cgi?id=1539903)  Use linux worker types for android jobs r=tomprince Differential Revision: https://phabricator.services.mozilla.com/D25272|catlee@mozilla.com|tomprince|2019-04-02 20:02:30|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a54e5e2802d7)|[Bug 1527620](https://bugzilla.mozilla.org/show_bug.cgi?id=1527620)  - Add youtube streaming tests - r=whimboo This patch introduces a new marionette media test along with a Youtube test. To run the Youtube streaming test locally: ./mach marionette-test dom/media/test/marionette/test_youtube.py -vv --gecko-log - Differential Revision: https://phabricator.services.mozilla.com/D23644|tziade@mozilla.com|whimboo|2019-04-02 19:48:25|

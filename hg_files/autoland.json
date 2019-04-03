@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82149
+    "last_push_id": 82170
   },
   "1": {
     "changeset_number": "35344",
@@ -38538,21 +38538,6 @@
     }
   },
   "820": {
-    "changeset_number": "82091",
-    "pusher": "nfroyd@mozilla.com",
-    "date_of_push": "2019-04-02 20:05:39",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c6c69b6aa0fd",
-        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-        "commit_message": "Bug 1541081 - add win64-rust-size to aarch64 windows builds; r=dmajor\n\nWe weren't including this before, which was causing us to not track size\nmetrics for nss.dll and xul.dll, which is suboptimal.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25792",
-        "files_changed": [
-          "taskcluster/ci/build/windows.yml"
-        ]
-      }
-    }
-  },
-  "820": {
     "changeset_number": "82144",
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-04-03 10:31:35",
@@ -38573,6 +38558,21 @@
         "commit_message": "No bug: [mozharness] Remove unused esr52 partner repack configuration; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25701",
         "files_changed": [
           "testing/mozharness/configs/partner_repacks/release_mozilla-esr52_desktop.py"
+        ]
+      }
+    }
+  },
+  "820": {
+    "changeset_number": "82153",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-04-03 13:44:32",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=362eb37eb09f",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25584",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
         ]
       }
     }
