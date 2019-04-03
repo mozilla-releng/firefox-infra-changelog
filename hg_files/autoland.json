@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82170
+    "last_push_id": 82212
   },
   "1": {
     "changeset_number": "35344",
@@ -38538,31 +38538,6 @@
     }
   },
   "820": {
-    "changeset_number": "82144",
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-04-03 10:31:35",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=16bfbf0db8ac",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: [try-staging] Allow staging builds to access staging github ssh key; r=nthomas\n\nThe secret with the ssh key already exists in taskcluster, this tells\nmozharness to try to access it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25700",
-        "files_changed": [
-          "testing/mozharness/configs/partner_repacks/release_mozilla-release_desktop.py",
-          "testing/mozharness/configs/partner_repacks/release_mozilla-release_desktop_EME-free.py",
-          "testing/mozharness/configs/partner_repacks/staging_release_mozilla-release_desktop.py"
-        ]
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0ab4cffb2675",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: [mozharness] Remove unused esr52 partner repack configuration; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25701",
-        "files_changed": [
-          "testing/mozharness/configs/partner_repacks/release_mozilla-esr52_desktop.py"
-        ]
-      }
-    }
-  },
-  "820": {
     "changeset_number": "82153",
     "pusher": "sfraser@mozilla.com",
     "date_of_push": "2019-04-03 13:44:32",
@@ -38573,6 +38548,24 @@
         "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25584",
         "files_changed": [
           "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      }
+    }
+  },
+  "820": {
+    "changeset_number": "82205",
+    "pusher": "dmajor@mozilla.com",
+    "date_of_push": "2019-04-03 18:13:09",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e3809f2c3cb2",
+        "commiter_name": "David Major <dmajor@mozilla.com>",
+        "commit_message": "Bug 1533010 - Update Windows Rust to 1.34 beta r=glandium\n\nThis is needed for cross-language LTO (bug 1512723). We don't want to block on waiting for 1.34's release, so we'll get a head start now, but we'll update to the final 1.34 release when available. Rust Forge estimates the release at 11 April.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25851",
+        "files_changed": [
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/grcov.yml",
+          "taskcluster/ci/toolchain/rust.yml",
+          "toolkit/library/rust/shared/build.rs"
         ]
       }
     }

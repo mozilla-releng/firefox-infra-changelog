@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 82170
+ CURRENT PUSH ID: 82212
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|82153|2019-04-03 13:44:32|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D25584|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=362eb37eb09f
+|82205|2019-04-03 18:13:09|David Major <dmajor@mozilla.com>|[Bug 1533010](https://bugzilla.mozilla.org/show_bug.cgi?id=1533010)  - Update Windows Rust to 1.34 beta r=glandiumThis is needed for cross-language LTO [Bug 1512723](https://bugzilla.mozilla.org/show_bug.cgi?id=1512723)  We don't want to block on waiting for 1.34's release, so we'll get a head start now, but we'll update to the final 1.34 release when available. Rust Forge estimates the release at 11 April.Differential Revision: https://phabricator.services.mozilla.com/D25851|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e3809f2c3cb2
 |82090|2019-04-02 20:05:00|Jordan Lund <jlund@mozilla.com>|[Bug 1540262](https://bugzilla.mozilla.org/show_bug.cgi?id=1540262)  - increase UV chunks from 12 to 16, r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D25673|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=48ae682107da
 |82089|2019-04-02 20:02:30|Chris AtLee <catlee@mozilla.com>|[Bug 1539903](https://bugzilla.mozilla.org/show_bug.cgi?id=1539903)  Use linux worker types for android jobs r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D25272|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3134268f32cd
 |82086|2019-04-02 19:48:25|Tarek Ziadé <tarek@mozilla.com>|[Bug 1527620](https://bugzilla.mozilla.org/show_bug.cgi?id=1527620)  - Add youtube streaming tests - r=whimbooThis patch introduces a new marionette media test alongwith a Youtube test.To run the Youtube streaming test locally:./mach marionette-test dom/media/test/marionette/test_youtube.py -vv --gecko-log -Differential Revision: https://phabricator.services.mozilla.com/D23644|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a54e5e2802d7
