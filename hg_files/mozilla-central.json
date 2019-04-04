@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35809
+    "last_push_id": 35811
   },
   "1": {
     "changeset_number": "35344",
@@ -13157,6 +13157,240 @@
         "commit_message": "Bug 1541081 - add win64-rust-size to aarch64 windows builds; r=dmajor\n\nWe weren't including this before, which was causing us to not track size\nmetrics for nss.dll and xul.dll, which is suboptimal.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25792",
         "files_changed": [
           "taskcluster/ci/build/windows.yml"
+        ]
+      }
+    }
+  },
+  "135": {
+    "changeset_number": "35810",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-04-04 07:33:36",
+    "changeset_commits": {
+      "32": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=16bfbf0db8ac",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [try-staging] Allow staging builds to access staging github ssh key; r=nthomas\n\nThe secret with the ssh key already exists in taskcluster, this tells\nmozharness to try to access it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25700",
+        "files_changed": [
+          "testing/mozharness/configs/partner_repacks/release_mozilla-release_desktop.py",
+          "testing/mozharness/configs/partner_repacks/release_mozilla-release_desktop_EME-free.py",
+          "testing/mozharness/configs/partner_repacks/staging_release_mozilla-release_desktop.py"
+        ]
+      },
+      "33": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0ab4cffb2675",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Remove unused esr52 partner repack configuration; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25701",
+        "files_changed": [
+          "testing/mozharness/configs/partner_repacks/release_mozilla-esr52_desktop.py"
+        ]
+      },
+      "45": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=362eb37eb09f",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25584",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      },
+      "103": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e3809f2c3cb2",
+        "commiter_name": "David Major <dmajor@mozilla.com>",
+        "commit_message": "Bug 1533010 - Update Windows Rust to 1.34 beta r=glandium\n\nThis is needed for cross-language LTO (bug 1512723). We don't want to block on waiting for 1.34's release, so we'll get a head start now, but we'll update to the final 1.34 release when available. Rust Forge estimates the release at 11 April.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25851",
+        "files_changed": [
+          "taskcluster/ci/toolchain/cbindgen.yml",
+          "taskcluster/ci/toolchain/grcov.yml",
+          "taskcluster/ci/toolchain/rust.yml",
+          "toolkit/library/rust/shared/build.rs"
+        ]
+      },
+      "148": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=486395fabe66",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1532747 - [ci] Create try-only raptor reference-browser tasks, r=jmaher,rwood\n\nThese will run on android-hw against the latest reference browser nightly.\nSince they are try-only, they can only be scheduled with |mach try fuzzy\n--full|.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25801",
+        "files_changed": [
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "taskcluster/taskgraph/transforms/job/mozharness_test.py",
+          "taskcluster/taskgraph/transforms/tests.py",
+          "testing/mozharness/mozharness/mozilla/testing/raptor.py"
+        ]
+      },
+      "152": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=60420822a632",
+        "commiter_name": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1540213 - turn on green suites of windows10-aarch64 on taskgraph r=jmaher,gbrown\n\nEnables the list of suites as defined in Bug 1540213.\n\n- added new item in `test-sets.yml` for windows10-aarch64.\n- reference the new test-set in `test-platforms.yml`.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25979",
+        "files_changed": [
+          "taskcluster/ci/test/test-platforms.yml",
+          "taskcluster/ci/test/test-sets.yml"
+        ]
+      },
+      "153": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=29ca2ad7266b",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541121: [try-staging] Simplify the logic for getting partial update configration; r=aki\n\nThe original code was converting to json, then comparing against `{}`. This switches things\naround so that json is only generated where it is directly used a json.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24833",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/release_promotion.py"
+        ]
+      },
+      "154": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=948b7b1003af",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541121: [try-staging] Allow staging release to not have partials; r=aki\n\nWe check that partials as a safety check. But we don't need that for staging builds,\nand it is often useful to be able to test things that don't depend on partials.\n\nThe shipit UI currently still requires partials, but that can be worked around using\nthe react dev tools.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24834",
+        "files_changed": [
+          "taskcluster/taskgraph/actions/release_promotion.py"
+        ]
+      },
+      "155": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0ff766eb6349",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1533589: Support generating update-verify-config for new configuration; r=aki\n\nWhen adding a new platform, the first release will be at the watershed, and\nthere will be no update paths. Rather than failing in this case (requiring the\nupdate-verify setup happen after the first release), generate an empty config\nwhich will allow the later tasks to turn green.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25833",
+        "files_changed": [
+          "testing/mozharness/scripts/release/update-verify-config-creator.py"
+        ]
+      },
+      "156": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0c4e9114a199",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1533589: Add win64-aarch64 update verify configuration; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25834",
+        "files_changed": [
+          "python/mozrelease/mozrelease/platforms.py",
+          "taskcluster/ci/release-secondary-update-verify-config/kind.yml",
+          "taskcluster/ci/release-secondary-update-verify/kind.yml",
+          "taskcluster/ci/release-update-verify-config/kind.yml",
+          "taskcluster/ci/release-update-verify/kind.yml"
+        ]
+      },
+      "157": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1339cb993b08",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [try-staging] Support bouncer-check in staging; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25835",
+        "files_changed": [
+          "taskcluster/ci/cron-bouncer-check/kind.yml",
+          "taskcluster/ci/release-bouncer-check/kind.yml",
+          "taskcluster/taskgraph/transforms/bouncer_check.py",
+          "testing/mozharness/configs/releases/bouncer_fennec.py",
+          "testing/mozharness/configs/releases/bouncer_fennec_beta.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_beta.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_devedition.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_esr.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_release.py",
+          "testing/mozharness/configs/releases/bouncer_thunderbird.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_beta.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_devedition.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_esr.py",
+          "testing/mozharness/scripts/release/bouncer_check.py"
+        ]
+      },
+      "158": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0e5ad75bf07d",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [mozharness] Remove unused bouncer_check config entries; r=mtabara\n\nI beleive these entries date from when bouncer config was handled by mozharness\nrather than bounerscript and are now obsolete.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25836",
+        "files_changed": [
+          "testing/mozharness/configs/releases/bouncer_fennec.py",
+          "testing/mozharness/configs/releases/bouncer_fennec_beta.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_beta.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_devedition.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_esr.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_release.py",
+          "testing/mozharness/configs/releases/bouncer_thunderbird.py"
+        ]
+      },
+      "159": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=111aa230d41e",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [mozharness] Remove unused bouncer configuration for fennect; r=mtabara\n\nFennec doesn't have a bouncer check task, and bouncer is update via bouncerscript.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25837",
+        "files_changed": [
+          "testing/mozharness/configs/releases/bouncer_fennec.py",
+          "testing/mozharness/configs/releases/bouncer_fennec_beta.py"
+        ]
+      },
+      "160": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4daa02d1aa20",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [mozharness] Simplify bouncer-check configuration to not include paths; r=mtabara\n\nThese existed for when bouncer was updated via mozharness, and they are unused in bouncer-check.\nBy removing the paths, we make the configuration easier to read and update.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25838",
+        "files_changed": [
+          "testing/mozharness/configs/releases/bouncer_firefox_beta.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_devedition.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_esr.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_release.py",
+          "testing/mozharness/configs/releases/bouncer_thunderbird.py",
+          "testing/mozharness/scripts/release/bouncer_check.py"
+        ]
+      },
+      "161": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=310d07e69df5",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: Don't create fresh virtualenv for bouncer-check; r=mtabara\n\nIn automation, the script is run with `mach python`, and all the dependencies\nare vendored, so just use them directly.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25839",
+        "files_changed": [
+          "testing/mozharness/scripts/release/bouncer_check.py"
+        ]
+      },
+      "162": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e847d4ed0e22",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1533589: [win64-aarch64] Add win64 aarch64 bouner-check configuration; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25840",
+        "files_changed": [
+          "testing/mozharness/configs/releases/bouncer_firefox_beta.py",
+          "testing/mozharness/configs/releases/bouncer_firefox_release.py"
+        ]
+      },
+      "163": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f9d9fb959d89",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1533589: [win64-aarch64] Point win64-aarch64 stub bounce entries at the correct path; r=mtabara\n\nThere was special case logic to map the win64 platform to win32, for stub\nentries. When win64-aarch64 was added no special case was added for that\nplaform, so they stub entries pointed at the incorrect place.  This changes the\nconfiguration so that all stub entries point at the win32 paths, without\nneeding special case code.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25841",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/bouncer_submission.py"
+        ]
+      },
+      "179": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8c0a7e7ccb50",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1533939: [release] Move beta-channel RC tasks to release platform in treeherder; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25985",
+        "files_changed": [
+          "taskcluster/ci/release-secondary-balrog-scheduling/kind.yml",
+          "taskcluster/ci/release-secondary-balrog-submit-toplevel/kind.yml",
+          "taskcluster/ci/release-secondary-final-verify/kind.yml"
+        ]
+      },
+      "199": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b72c02e34261",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Merge autoland to mozilla-central.  a=merge",
+        "files_changed": [
+          "dom/commandhandler/nsPICommandUpdater.idl",
+          "js/src/vm/RegExpConstants.h",
+          "testing/mozharness/configs/partner_repacks/release_mozilla-esr52_desktop.py",
+          "testing/mozharness/configs/releases/bouncer_fennec.py",
+          "testing/mozharness/configs/releases/bouncer_fennec_beta.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_beta.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_devedition.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_esr.py",
+          "third_party/rust/cc/.travis.yml",
+          "third_party/rust/cc/appveyor.yml"
+        ]
+      }
+    }
+  },
+  "136": {
+    "changeset_number": "35811",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-04-04 07:34:36",
+    "changeset_commits": {
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=56164d97e3e4",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1538703 - Full rollout of Firefox to mozilla-beta. r=sfraser a=release",
+        "files_changed": [
+          "taskcluster/ci/beetmover-checksums/kind.yml",
+          "taskcluster/ci/beetmover-repackage/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks-checksums/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
+          "taskcluster/taskgraph/transforms/beetmover_langpack_checksums.py",
+          "taskcluster/taskgraph/transforms/release_beetmover_signed_addons.py",
+          "taskcluster/taskgraph/util/scriptworker.py"
         ]
       }
     }

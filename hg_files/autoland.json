@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82267
+    "last_push_id": 82271
   },
   "1": {
     "changeset_number": "35344",
@@ -38538,24 +38538,6 @@
     }
   },
   "820": {
-    "changeset_number": "82205",
-    "pusher": "dmajor@mozilla.com",
-    "date_of_push": "2019-04-03 18:13:09",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e3809f2c3cb2",
-        "commiter_name": "David Major <dmajor@mozilla.com>",
-        "commit_message": "Bug 1533010 - Update Windows Rust to 1.34 beta r=glandium\n\nThis is needed for cross-language LTO (bug 1512723). We don't want to block on waiting for 1.34's release, so we'll get a head start now, but we'll update to the final 1.34 release when available. Rust Forge estimates the release at 11 April.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25851",
-        "files_changed": [
-          "taskcluster/ci/toolchain/cbindgen.yml",
-          "taskcluster/ci/toolchain/grcov.yml",
-          "taskcluster/ci/toolchain/rust.yml",
-          "toolkit/library/rust/shared/build.rs"
-        ]
-      }
-    }
-  },
-  "820": {
     "changeset_number": "82243",
     "pusher": "ahalberstadt@mozilla.com",
     "date_of_push": "2019-04-04 01:09:40",
@@ -38729,6 +38711,46 @@
           "taskcluster/ci/release-secondary-balrog-scheduling/kind.yml",
           "taskcluster/ci/release-secondary-balrog-submit-toplevel/kind.yml",
           "taskcluster/ci/release-secondary-final-verify/kind.yml"
+        ]
+      }
+    }
+  },
+  "823": {
+    "changeset_number": "82269",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-04-04 07:40:03",
+    "changeset_commits": {
+      "12": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=56164d97e3e4",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1538703 - Full rollout of Firefox to mozilla-beta. r=sfraser a=release",
+        "files_changed": [
+          "taskcluster/ci/beetmover-checksums/kind.yml",
+          "taskcluster/ci/beetmover-repackage/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks-checksums/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
+          "taskcluster/taskgraph/transforms/beetmover_langpack_checksums.py",
+          "taskcluster/taskgraph/transforms/release_beetmover_signed_addons.py",
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b72c02e34261",
+        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
+        "commit_message": "Merge autoland to mozilla-central.  a=merge",
+        "files_changed": [
+          "dom/commandhandler/nsPICommandUpdater.idl",
+          "js/src/vm/RegExpConstants.h",
+          "testing/mozharness/configs/partner_repacks/release_mozilla-esr52_desktop.py",
+          "testing/mozharness/configs/releases/bouncer_fennec.py",
+          "testing/mozharness/configs/releases/bouncer_fennec_beta.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_beta.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_devedition.py",
+          "testing/mozharness/configs/releases/dev_bouncer_firefox_esr.py",
+          "third_party/rust/cc/.travis.yml",
+          "third_party/rust/cc/appveyor.yml"
         ]
       }
     }
