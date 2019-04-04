@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82347
+    "last_push_id": 82366
   },
   "1": {
     "changeset_number": "35344",
@@ -38715,21 +38715,6 @@
     }
   },
   "824": {
-    "changeset_number": "82280",
-    "pusher": "tziade@mozilla.com",
-    "date_of_push": "2019-04-04 12:06:40",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2e66bbe04f08",
-        "commiter_name": "Tarek Ziad\u00e9 <tarek@mozilla.com>",
-        "commit_message": "Bug 1541189 - Moved test to tier 3 - r=whimboo\n\nWe'll promote it to tier 2 once we have fixed the intermittents\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26081",
-        "files_changed": [
-          "taskcluster/ci/test/marionette.yml"
-        ]
-      }
-    }
-  },
-  "824": {
     "changeset_number": "82297",
     "pusher": "jmaher@mozilla.com",
     "date_of_push": "2019-04-04 13:43:44",
@@ -38825,6 +38810,47 @@
           "modules/libpref/init/all.js",
           "taskcluster/taskgraph/manifests/firefox_candidates.yml",
           "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml"
+        ]
+      }
+    }
+  },
+  "827": {
+    "changeset_number": "82355",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-04-04 21:42:03",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4de7f94119fd",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1195299 - [ci] Use 'mach python' to run mozharness scripts when we have a srcdir r=catlee\n\nThis makes sure that the mozharness scripts have access to all the packages in\nthe build system virtualenv (namely mozbase).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22184",
+        "files_changed": [
+          "taskcluster/scripts/builder/build-linux.sh",
+          "taskcluster/scripts/tester/test-linux.sh",
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9645ac1a9851",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1195299 - [mozharness] Remove copies of mozbase from testing/mozharness r=catlee\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22185",
+        "files_changed": [
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/mozharness/tox.ini"
         ]
       }
     }
