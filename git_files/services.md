@@ -1,7 +1,8 @@
-## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-03-21 13:03:33.914691
+## SERVICES COMMIT MARKDOWN TABLE SINCE 2019-03-21 20:42:34.307794
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|14|garbas|setup: update nixpkgs (#2016)|[URL](https://github.com/mozilla/release-services/commit/b5e79a12e11ad2c625bd7cce2330c0c9c37f09f4)|2019-04-04 10:58:36
 |13|garbas|treestatus/api: Dependencies update. (#2003)|[URL](https://github.com/mozilla/release-services/commit/34cd93d06230f2ed0ac32fb5fd69f66c211c13c0)|2019-04-01 10:15:28
 |12|garbas|tokens/api: Dependencies update. (#2001)|[URL](https://github.com/mozilla/release-services/commit/c6d9fa98407a93dab13b673efee1f15535efcd44)|2019-04-01 09:56:08
 |11|garbas|tooltool/api: Dependencies update. (#2002)|[URL](https://github.com/mozilla/release-services/commit/d49bb705d66ec34b73c8c336b0afc81c82500664)|2019-03-28 14:37:14

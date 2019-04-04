@@ -1,7 +1,17 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-21 13:03:33.914691
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-21 20:42:34.307794
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|773|imbstack|Merge pull request #526 from djmitche/bug1534713 [Bug 1534713](https://bugzilla.mozilla.org/show_bug.cgi?id=1534713)  - better debugging for pulse issues|[URL](https://github.com/taskcluster/taskcluster/commit/8aeb54ba72ec3f1f2ded99d4c6a8760f8fc20710)|2019-04-04 17:00:09
+|772|imbstack|Merge pull request #537 from djmitche/tdd-for-tc-web-server use tdd for tc-web-server tests|[URL](https://github.com/taskcluster/taskcluster/commit/649df9d35712fd76e5893f55e95c5c82a1bf70c6)|2019-04-04 16:45:36
+|771|imbstack|Merge pull request #524 from djmitche/bug1540697 [Bug 1540697](https://bugzilla.mozilla.org/show_bug.cgi?id=1540697)  - improve idempotency of task creation, especially in hooks|[URL](https://github.com/taskcluster/taskcluster/commit/9833a1c47a4faafa44b8fe0f86204f38eb560a5e)|2019-04-04 16:37:19
+|770|imbstack|Merge branch 'master' into bug1534713|[URL](https://github.com/taskcluster/taskcluster/commit/239e6d2c6ff8f856e1932f7c315d6fcf53b4abe0)|2019-04-04 16:34:33
+|769|imbstack|Merge branch 'master' into tdd-for-tc-web-server|[URL](https://github.com/taskcluster/taskcluster/commit/26b2e7839874d0c75b9631d17c9528d65e56b511)|2019-04-04 16:31:57
+|768|imbstack|Merge pull request #527 from djmitche/bug1535316 [Bug 1535316](https://bugzilla.mozilla.org/show_bug.cgi?id=1535316)  - remove use of http-proxy for testing auth|[URL](https://github.com/taskcluster/taskcluster/commit/66c2510f7275d0853ccc42690b5968b68df9fa56)|2019-04-04 16:29:44
+|767|imbstack|Merge branch 'master' into bug1535316|[URL](https://github.com/taskcluster/taskcluster/commit/683d22d624c4111872f66e42e4ad74c364365b47)|2019-04-04 15:59:59
+|766|imbstack|Merge pull request #544 from djmitche/bug1540160 [Bug 1540160](https://bugzilla.mozilla.org/show_bug.cgi?id=1540160)  - add bash to the built image|[URL](https://github.com/taskcluster/taskcluster/commit/7d1141a6a0efca5823d74945f28f94e500a8e919)|2019-04-04 15:50:58
+|765|imbstack|Merge pull request #542 from djmitche/remove-PulseListener-leftovers Remove leftovers of tc-client.PulseListener|[URL](https://github.com/taskcluster/taskcluster/commit/10ca598510a09e9c7e3f62bb49edb5b58ab00c6a)|2019-04-04 15:49:31
+|764|imbstack|Merge pull request #539 from djmitche/bug1517863 [Bug 1517863](https://bugzilla.mozilla.org/show_bug.cgi?id=1517863)  - use filename as top-level suite name|[URL](https://github.com/taskcluster/taskcluster/commit/2a78a93ec45350916abdfd6561ebca50d4ee99f1)|2019-04-04 15:32:31
 |763|imbstack|Merge pull request #536 from djmitche/cleanup-builder remove unused tc-builder file|[URL](https://github.com/taskcluster/taskcluster/commit/55796d2aae61d5b5827dbf46a08299a52774a7c3)|2019-04-03 18:26:57
 |762|imbstack|Merge pull request #538 from djmitche/doc-all-client-options document all options to client constructor|[URL](https://github.com/taskcluster/taskcluster/commit/ceef9bf43f8d2e4094efe5d28da36c168aa9b8a9)|2019-04-03 18:26:37
 |761|owlishDeveloper|Merge pull request #528 from owlishDeveloper/bug1487699 Add GCP provider object. Implement listWorkers method|[URL](https://github.com/taskcluster/taskcluster/commit/5c5050fe3c4c22b67bf0a1d808a17c8086d352c9)|2019-04-02 23:19:05
