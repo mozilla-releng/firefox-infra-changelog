@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 59
+    "last_push_id": 60
   },
   "1": {
     "changeset_number": "21",
@@ -565,6 +565,32 @@
         "files_changed": [
           "README.md",
           "ciadmin/generate/in_tree_actions.py"
+        ]
+      }
+    }
+  },
+  "29": {
+    "changeset_number": "60",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-04-04 02:43:58",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=97aa12ede0b8",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Run black; rs=me",
+        "files_changed": [
+          "ciadmin/generate/ciconfig/projects.py",
+          "ciadmin/generate/in_tree_actions.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=b5cd4084dd59",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [ci] Update taskgraph to use worker aliases; r=me",
+        "files_changed": [
+          ".taskcluster.yml",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/tests/kind.yml"
         ]
       }
     }

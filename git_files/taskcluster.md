@@ -1,4 +1,4 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-21 00:54:23.848913
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-21 05:03:07.313636
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
@@ -274,7 +274,7 @@
 |494|djmitche|Merge pull request #323 from djmitche/bug1527424 [Bug 1527424](https://bugzilla.mozilla.org/show_bug.cgi?id=1527424)  - clean up error handling in TaskCreator|[URL](https://github.com/taskcluster/taskcluster/commit/f295cb3302140cfe163763bea2f9d798a6d68144)|2019-02-28 18:55:17
 |493|djmitche|[Bug 1527424](https://bugzilla.mozilla.org/show_bug.cgi?id=1527424)  - clean up error handling in TaskCreator This refactors TaskCreator.fire to do a better job of error handling, consistently updating LastFire and returning an API response or an error. This also drops an unused schema file and deletes some additional (now moot) modifications of the lastFire field in the Hooks table.|[URL](https://github.com/taskcluster/taskcluster/commit/8484e114721ec2d7da8eca21dfce93cec72a6fe4)|2019-02-28 18:04:37
 |492|djmitche|Merge pull request #320 from djmitche/bug1530849 [Bug 1530849](https://bugzilla.mozilla.org/show_bug.cgi?id=1530849)  - make getHookStatus return last-fire information again|[URL](https://github.com/taskcluster/taskcluster/commit/62b3395be04cbb608be9fc84e3d69e6d60e85157)|2019-02-28 17:26:07
-|491|djmitche|Merge pull request #214 from djmitche/metaschema-items-not-entries Fix metaschema to require array fields when 'items' is present, not '…|[URL](https://github.com/taskcluster/taskcluster/commit/f6ed2f3819e4cbaabc8c422852113803b103058f)|2019-02-28 00:31:32
+|491|djmitche|Merge pull request #214 from djmitche/metaschema-items-not-entries Fix metaschema to require array fields when 'items' is present, not 'â€¦|[URL](https://github.com/taskcluster/taskcluster/commit/f6ed2f3819e4cbaabc8c422852113803b103058f)|2019-02-28 00:31:32
 |490|djmitche|Prevent creation of duplicate roles with the same name|[URL](https://github.com/taskcluster/taskcluster/commit/9e20df153d2111972fbb318a5f8e4b91f1892618)|2019-02-13 01:30:36
 |489|djmitche|Fix metaschema to require array fields when 'items' is present, not 'entries'|[URL](https://github.com/taskcluster/taskcluster/commit/6282ebbcf0ddd00d5b3f7ac4b718247d615739f3)|2019-02-12 21:29:59
 |488|djmitche|Merge pull request #297 from taskcluster/renovate/mocha-6.x Update dependency mocha to v6|[URL](https://github.com/taskcluster/taskcluster/commit/2be0bb82a08ec4ebb338635f390387643d022a32)|2019-02-27 20:15:55
@@ -704,7 +704,7 @@
 |64|djmitche|Merge pull request #31 from arshadkazmi42/bug-1517494 Adds listRoles2 api with pagination|[URL](https://github.com/taskcluster/taskcluster/commit/49cae3a99d6f994d3857c8b9d719216aa8f1685b)|2019-01-16 20:21:19
 |63|djmitche|Merge pull request #96 from taskcluster/no-more-resolutions Remove outdated resolution|[URL](https://github.com/taskcluster/taskcluster/commit/65ccbf81bdfea17d50aa72ae359efe7194f06a28)|2019-01-16 19:46:20
 |62|djmitche|Merge pull request #94 from taskcluster/renovate/remotely-signed-s3-4.x Update dependency remotely-signed-s3 to v4|[URL](https://github.com/taskcluster/taskcluster/commit/837bc03478191928c019b36b2cd1a8360c242427)|2019-01-16 18:26:16
-|61|djmitche|Merge pull request #93 from djmitche/bug1519849 [Bug 1519849](https://bugzilla.mozilla.org/show_bug.cgi?id=1519849)  - sleep 20 seconds, and record the worker being seen, whe…|[URL](https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237)|2019-01-16 18:05:38
+|61|djmitche|Merge pull request #93 from djmitche/bug1519849 [Bug 1519849](https://bugzilla.mozilla.org/show_bug.cgi?id=1519849)  - sleep 20 seconds, and record the worker being seen, wheâ€¦|[URL](https://github.com/taskcluster/taskcluster/commit/d3336686210d98db119e5640c574dc62f2ca0237)|2019-01-16 18:05:38
 |60|arshadkazmi42|expandedScopes added in listRoles2 api response using roleToJSon. Fixes testss|[URL](https://github.com/taskcluster/taskcluster/commit/fcfa98088751a39ddc8707445a476158f2f118e3)|2019-01-16 16:28:05
 |59|renovate-bot|Update dependency remotely-signed-s3 to v4|[URL](https://github.com/taskcluster/taskcluster/commit/e2da9b7a1a974987f5911380aa22e94a47de6fff)|2019-01-16 11:36:25
 |58|djmitche|[Bug 1519849](https://bugzilla.mozilla.org/show_bug.cgi?id=1519849)  - sleep 20 seconds, and record the worker being seen, when quarantined|[URL](https://github.com/taskcluster/taskcluster/commit/68802b9e4c109da06206bd9362f6bb43a44b79d9)|2019-01-16 05:24:24
