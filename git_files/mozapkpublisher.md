@@ -1,7 +1,8 @@
-## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2019-03-21 08:14:02.529183
+## MOZAPKPUBLISHER COMMIT MARKDOWN TABLE SINCE 2019-03-21 13:03:33.914691
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|625|mitchhentges|1.0.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/9e0bb1d38057d78dc463e252790c9a517f54b8ba)|2019-02-13 00:40:01
 |624|mitchhentges|1.0.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/9e0bb1d38057d78dc463e252790c9a517f54b8ba)|2019-02-13 00:40:01
 |623|mitchhentges|1.0.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/9e0bb1d38057d78dc463e252790c9a517f54b8ba)|2019-02-13 00:40:01
 |622|mitchhentges|1.0.1|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/9e0bb1d38057d78dc463e252790c9a517f54b8ba)|2019-02-13 00:40:01
@@ -153,7 +154,7 @@
 |476|pyup-bot|Update cryptography to 2.3 (#90)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/8736098e51cdf5db6fdde52fe3fc8b1e43f0e04d)|2018-08-01 12:39:33
 |475|JohanLorenzo|Ignore Coverall's PyYaml (#109) Pyup: Update and ignore Coverall's PyYaml|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/7c8a74520a121ed48f7e9948615fac7cd4d65d4a)|2018-08-01 10:03:06
 |474|sylvestre|update the doc to add the arg with python3 (#96)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/260248741cd21223d47c3687bb19bca069d16157)|2018-07-23 17:03:46
-|473|jcristau|Add a script to check whether a release stays on staged rollout for tâ€¦ (#68) â€¦oo long|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/30ba8cdc90795c535d5ba01a6de7e55275d674f8)|2018-07-23 15:22:33
+|473|jcristau|Add a script to check whether a release stays on staged rollout for t… (#68) …oo long|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/30ba8cdc90795c535d5ba01a6de7e55275d674f8)|2018-07-23 15:22:33
 |472|pyup-bot|Update pbr from 4.0.4 to 4.1.0 (#83)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/b99d5cac50c867ad4d872adacb07c175d3cf6868)|2018-07-09 08:30:46
 |471|pyup-bot|Update pytest from 3.6.2 to 3.6.3 (#87)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/0a82a0a697faabef12fc2baa7869d466df4f48f5)|2018-07-09 08:30:32
 |470|JohanLorenzo|Always use known requirements (#76) Define several requirements.txt files with full dependencies (on per each build/test step). This is now the default way to build mozapkpublisher. Remove dependencies that are only used by scriptworker and pushapkscript Add `requirements.txt.in` to track needed subsets of deps. This can be use to regenerate the full list of needed dependencies. Config.. [continue reading](https://github.com/mozilla-releng/mozapkpublisher/commit/deb0fe987a42e298229dfe477ed9bc6f9b76c9ac)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/deb0fe987a42e298229dfe477ed9bc6f9b76c9ac)|2018-07-09 06:40:59
@@ -329,7 +330,7 @@
 |300|pyup-bot|Update cryptography to 2.3 (#90)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/8736098e51cdf5db6fdde52fe3fc8b1e43f0e04d)|2018-08-01 12:39:33
 |299|JohanLorenzo|Ignore Coverall's PyYaml (#109) Pyup: Update and ignore Coverall's PyYaml|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/7c8a74520a121ed48f7e9948615fac7cd4d65d4a)|2018-08-01 10:03:06
 |298|sylvestre|update the doc to add the arg with python3 (#96)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/260248741cd21223d47c3687bb19bca069d16157)|2018-07-23 17:03:46
-|297|jcristau|Add a script to check whether a release stays on staged rollout for tâ€¦ (#68) â€¦oo long|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/30ba8cdc90795c535d5ba01a6de7e55275d674f8)|2018-07-23 15:22:33
+|297|jcristau|Add a script to check whether a release stays on staged rollout for t… (#68) …oo long|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/30ba8cdc90795c535d5ba01a6de7e55275d674f8)|2018-07-23 15:22:33
 |296|pyup-bot|Update pbr from 4.0.4 to 4.1.0 (#83)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/b99d5cac50c867ad4d872adacb07c175d3cf6868)|2018-07-09 08:30:46
 |295|pyup-bot|Update pytest from 3.6.2 to 3.6.3 (#87)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/0a82a0a697faabef12fc2baa7869d466df4f48f5)|2018-07-09 08:30:32
 |294|JohanLorenzo|Always use known requirements (#76) Define several requirements.txt files with full dependencies (on per each build/test step). This is now the default way to build mozapkpublisher. Remove dependencies that are only used by scriptworker and pushapkscript Add `requirements.txt.in` to track needed subsets of deps. This can be use to regenerate the full list of needed dependencies. Config.. [continue reading](https://github.com/mozilla-releng/mozapkpublisher/commit/deb0fe987a42e298229dfe477ed9bc6f9b76c9ac)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/deb0fe987a42e298229dfe477ed9bc6f9b76c9ac)|2018-07-09 06:40:59
@@ -505,7 +506,7 @@
 |124|pyup-bot|Update cryptography to 2.3 (#90)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/8736098e51cdf5db6fdde52fe3fc8b1e43f0e04d)|2018-08-01 12:39:33
 |123|JohanLorenzo|Ignore Coverall's PyYaml (#109) Pyup: Update and ignore Coverall's PyYaml|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/7c8a74520a121ed48f7e9948615fac7cd4d65d4a)|2018-08-01 10:03:06
 |122|sylvestre|update the doc to add the arg with python3 (#96)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/260248741cd21223d47c3687bb19bca069d16157)|2018-07-23 17:03:46
-|121|jcristau|Add a script to check whether a release stays on staged rollout for tâ€¦ (#68) â€¦oo long|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/30ba8cdc90795c535d5ba01a6de7e55275d674f8)|2018-07-23 15:22:33
+|121|jcristau|Add a script to check whether a release stays on staged rollout for t… (#68) …oo long|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/30ba8cdc90795c535d5ba01a6de7e55275d674f8)|2018-07-23 15:22:33
 |120|pyup-bot|Update pbr from 4.0.4 to 4.1.0 (#83)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/b99d5cac50c867ad4d872adacb07c175d3cf6868)|2018-07-09 08:30:46
 |119|pyup-bot|Update pytest from 3.6.2 to 3.6.3 (#87)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/0a82a0a697faabef12fc2baa7869d466df4f48f5)|2018-07-09 08:30:32
 |118|JohanLorenzo|Always use known requirements (#76) Define several requirements.txt files with full dependencies (on per each build/test step). This is now the default way to build mozapkpublisher. Remove dependencies that are only used by scriptworker and pushapkscript Add `requirements.txt.in` to track needed subsets of deps. This can be use to regenerate the full list of needed dependencies. Config.. [continue reading](https://github.com/mozilla-releng/mozapkpublisher/commit/deb0fe987a42e298229dfe477ed9bc6f9b76c9ac)|[URL](https://github.com/mozilla-releng/mozapkpublisher/commit/deb0fe987a42e298229dfe477ed9bc6f9b76c9ac)|2018-07-09 06:40:59

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35811
+    "last_push_id": 35812
   },
   "1": {
     "changeset_number": "35344",
@@ -13147,21 +13147,6 @@
     }
   },
   "135": {
-    "changeset_number": "35806",
-    "pusher": "rgurzau@mozilla.com",
-    "date_of_push": "2019-04-03 07:07:39",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c6c69b6aa0fd",
-        "commiter_name": "Nathan Froyd <froydnj@mozilla.com>",
-        "commit_message": "Bug 1541081 - add win64-rust-size to aarch64 windows builds; r=dmajor\n\nWe weren't including this before, which was causing us to not track size\nmetrics for nss.dll and xul.dll, which is suboptimal.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25792",
-        "files_changed": [
-          "taskcluster/ci/build/windows.yml"
-        ]
-      }
-    }
-  },
-  "135": {
     "changeset_number": "35810",
     "pusher": "aciure@mozilla.com",
     "date_of_push": "2019-04-04 07:33:36",
@@ -13381,6 +13366,29 @@
         "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=56164d97e3e4",
         "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
         "commit_message": "Bug 1538703 - Full rollout of Firefox to mozilla-beta. r=sfraser a=release",
+        "files_changed": [
+          "taskcluster/ci/beetmover-checksums/kind.yml",
+          "taskcluster/ci/beetmover-repackage/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks-checksums/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
+          "taskcluster/taskgraph/transforms/beetmover_langpack_checksums.py",
+          "taskcluster/taskgraph/transforms/release_beetmover_signed_addons.py",
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      }
+    }
+  },
+  "136": {
+    "changeset_number": "35812",
+    "pusher": "aiakab@mozilla.com",
+    "date_of_push": "2019-04-04 09:32:28",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bdaf1b36c442",
+        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+        "commit_message": "Backed out changeset 56164d97e3e4 (bug 1538703) by request of tomprince for causing issues on try a=backout",
         "files_changed": [
           "taskcluster/ci/beetmover-checksums/kind.yml",
           "taskcluster/ci/beetmover-repackage/kind.yml",

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82271
+    "last_push_id": 82292
   },
   "1": {
     "changeset_number": "35344",
@@ -38699,23 +38699,6 @@
     }
   },
   "823": {
-    "changeset_number": "82263",
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-04-04 03:52:57",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8c0a7e7ccb50",
-        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1533939: [release] Move beta-channel RC tasks to release platform in treeherder; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25985",
-        "files_changed": [
-          "taskcluster/ci/release-secondary-balrog-scheduling/kind.yml",
-          "taskcluster/ci/release-secondary-balrog-submit-toplevel/kind.yml",
-          "taskcluster/ci/release-secondary-final-verify/kind.yml"
-        ]
-      }
-    }
-  },
-  "823": {
     "changeset_number": "82269",
     "pusher": "aciure@mozilla.com",
     "date_of_push": "2019-04-04 07:40:03",
@@ -38751,6 +38734,37 @@
           "testing/mozharness/configs/releases/dev_bouncer_firefox_esr.py",
           "third_party/rust/cc/.travis.yml",
           "third_party/rust/cc/appveyor.yml"
+        ]
+      }
+    }
+  },
+  "823": {
+    "changeset_number": "82275",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-04-04 09:59:50",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6dc5bafd6649",
+        "commiter_name": "Rob Thijssen <rthijssen@mozilla.com>",
+        "commit_message": "Bug 1536555 - run tc win builds on gcp at tier 3 r=coop,pmoore\n\nthis change adds support for parallel gcp builds for the following windows\nbuild configurations:\n- win32\n - opt\n - debug\n - pgo\n- win64\n - opt\n - debug\n - pgo\ngcp builds are triggered with a treeherder tier 3 flag so that they are only\ndisplayed in the treeherder ui when the user has a tier 3 flag set.\ngcp builds use a th build symbol of \"Bg\" to make them easy to differentiate\nfrom ec2 builds in the treeherder ui.\ngcp builds use a perfherder \"gcp\" flag to make them easier to differentiate\nfrom ec2 builds in the perfherder ui.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24865",
+        "files_changed": [
+          "taskcluster/ci/build/windows.yml",
+          "taskcluster/taskgraph/util/workertypes.py"
+        ]
+      }
+    }
+  },
+  "824": {
+    "changeset_number": "82280",
+    "pusher": "tziade@mozilla.com",
+    "date_of_push": "2019-04-04 12:06:40",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2e66bbe04f08",
+        "commiter_name": "Tarek Ziad\u00e9 <tarek@mozilla.com>",
+        "commit_message": "Bug 1541189 - Moved test to tier 3 - r=whimboo\n\nWe'll promote it to tier 2 once we have fixed the intermittents\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26081",
+        "files_changed": [
+          "taskcluster/ci/test/marionette.yml"
         ]
       }
     }
