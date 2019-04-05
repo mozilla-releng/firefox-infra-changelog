@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35814
+    "last_push_id": 35815
   },
   "1": {
     "changeset_number": "35344",
@@ -13414,6 +13414,39 @@
           "testing/mozharness/configs/releases/dev_bouncer_firefox_esr.py",
           "third_party/rust/cc/.travis.yml",
           "third_party/rust/cc/appveyor.yml"
+        ]
+      }
+    }
+  },
+  "137": {
+    "changeset_number": "35815",
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-04-05 00:55:21",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=425aab7d1e5a",
+        "commiter_name": "Joel Maher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1541835 - Turn off mochitest webgl and media on arm64 for integration. r=aryx\n\nTurn off mochitest webgl and media on arm64 for integration.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26122",
+        "files_changed": [
+          "taskcluster/ci/test/mochitest.yml"
+        ]
+      },
+      "32": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6373b5616e00",
+        "commiter_name": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1541131 - 'try -b o -p macosx64 -u all' should trigger Mac opt tests to be run, on shippable. r=ahal\n\nWith the shift to shippable builds we no longer run tests on osx/opt though many still push to try with old try syntax using -p macosx64 and get surprised by no tests. This patch fixes it as a bandaid by appending macosx64-shippable as a platform when macosx64 is specified, making the tests run in the appropriate cases. The expectation with the methodology of this patch is that we'll be killing try syntax support in the near future, eliminating the need for these sorts of bandaids\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26048",
+        "files_changed": [
+          "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      },
+      "33": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=220cb2c1a0e5",
+        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+        "commit_message": "Merge mozilla-central to autoland",
+        "files_changed": [
+          "modules/libpref/init/all.js",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml"
         ]
       }
     }

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82366
+    "last_push_id": 82381
   },
   "1": {
     "changeset_number": "35344",
@@ -38759,57 +38759,6 @@
         "commit_message": "Bug 1541131 - 'try -b o -p macosx64 -u all' should trigger Mac opt tests to be run, on shippable. r=ahal\n\nWith the shift to shippable builds we no longer run tests on osx/opt though many still push to try with old try syntax using -p macosx64 and get surprised by no tests. This patch fixes it as a bandaid by appending macosx64-shippable as a platform when macosx64 is specified, making the tests run in the appropriate cases. The expectation with the methodology of this patch is that we'll be killing try syntax support in the near future, eliminating the need for these sorts of bandaids\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26048",
         "files_changed": [
           "taskcluster/taskgraph/try_option_syntax.py"
-        ]
-      }
-    }
-  },
-  "827": {
-    "changeset_number": "82337",
-    "pusher": "aiakab@mozilla.com",
-    "date_of_push": "2019-04-04 19:10:27",
-    "changeset_commits": {
-      "4": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a36718c8163e",
-        "commiter_name": "Ciure Andrei <aciure@mozilla.com>",
-        "commit_message": "Merge mozilla-central to mozilla-inbound.  a=merge CLOSED TREE",
-        "files_changed": [
-          "dom/commandhandler/nsPICommandUpdater.idl",
-          "js/src/vm/RegExpConstants.h",
-          "modules/libpref/init/all.js",
-          "testing/mozharness/configs/partner_repacks/release_mozilla-esr52_desktop.py",
-          "testing/mozharness/configs/releases/bouncer_fennec.py",
-          "testing/mozharness/configs/releases/bouncer_fennec_beta.py",
-          "testing/mozharness/configs/releases/dev_bouncer_firefox_beta.py",
-          "testing/mozharness/configs/releases/dev_bouncer_firefox_devedition.py",
-          "testing/mozharness/configs/releases/dev_bouncer_firefox_esr.py",
-          "third_party/rust/cc/.travis.yml",
-          "third_party/rust/cc/appveyor.yml"
-        ]
-      },
-      "6": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bdaf1b36c442",
-        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
-        "commit_message": "Backed out changeset 56164d97e3e4 (bug 1538703) by request of tomprince for causing issues on try a=backout",
-        "files_changed": [
-          "taskcluster/ci/beetmover-checksums/kind.yml",
-          "taskcluster/ci/beetmover-repackage/kind.yml",
-          "taskcluster/ci/release-beetmover-signed-langpacks-checksums/kind.yml",
-          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
-          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
-          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
-          "taskcluster/taskgraph/transforms/beetmover_langpack_checksums.py",
-          "taskcluster/taskgraph/transforms/release_beetmover_signed_addons.py",
-          "taskcluster/taskgraph/util/scriptworker.py"
-        ]
-      },
-      "10": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=220cb2c1a0e5",
-        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
-        "commit_message": "Merge mozilla-central to autoland",
-        "files_changed": [
-          "modules/libpref/init/all.js",
-          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
-          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml"
         ]
       }
     }
