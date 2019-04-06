@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82389
+    "last_push_id": 82485
   },
   "1": {
     "changeset_number": "35344",
@@ -38800,6 +38800,373 @@
           "testing/mozharness/mozprocess/qijo.py",
           "testing/mozharness/mozprocess/winprocess.py",
           "testing/mozharness/tox.ini"
+        ]
+      }
+    }
+  },
+  "827": {
+    "changeset_number": "82395",
+    "pusher": "choller@mozilla.com",
+    "date_of_push": "2019-04-05 09:55:21",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=20750a2dc85b",
+        "commiter_name": "Christian Holler <choller@mozilla.com>",
+        "commit_message": "Bug 1541943 - Temporarily switch libFuzzer builds back to clang-7. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26194",
+        "files_changed": [
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_7.patch",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh"
+        ]
+      }
+    }
+  },
+  "828": {
+    "changeset_number": "82399",
+    "pusher": "btara@mozilla.com",
+    "date_of_push": "2019-04-05 12:56:32",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=230bb363f2f3",
+        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound",
+        "files_changed": [
+          "Cargo.lock",
+          "config/external/icu/data/icudt63l.dat",
+          "intl/icu-patches/bug-1504656-relativetimeformat-plural-other-fallback.diff",
+          "intl/icu-patches/bug-1513934-timezone-detection-win7-part1.diff",
+          "intl/icu-patches/bug-1513934-timezone-detection-win7-part2.diff",
+          "intl/icu/source/common/ulayout_props_data.h",
+          "intl/icu/source/common/umutex.h",
+          "intl/icu/source/data/coll/colfiles.mk",
+          "intl/icu/source/data/coll/ro_MD.txt",
+          "intl/icu/source/data/curr/pool.res",
+          "intl/icu/source/data/curr/resfiles.mk",
+          "intl/icu/source/data/lang/pool.res",
+          "intl/icu/source/data/locales/pool.res",
+          "intl/icu/source/data/locales/resfiles.mk",
+          "intl/icu/source/data/region/pool.res",
+          "intl/icu/source/data/unit/pool.res",
+          "intl/icu/source/data/zone/pool.res",
+          "intl/icu/source/data/zone/resfiles.mk",
+          "intl/icu/source/data/zone/ro_MD.txt",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
+          "testing/web-platform/meta/css/CSS2/selectors/first-letter-punctuation-184.xht.ini",
+          "testing/web-platform/tests/css/CSS2/selectors/first-letter-punctuation-184-ref.xht",
+          "testing/web-platform/tests/css/CSS2/selectors/first-letter-punctuation-184.xht"
+        ]
+      },
+      "20": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=83c38c0e430b",
+        "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound a=merge",
+        "files_changed": [
+          "Cargo.lock",
+          "dom/base/Document.cpp",
+          "dom/base/nsAttrValue.cpp",
+          "dom/base/nsAttrValueInlines.h",
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/web-platform/meta/html/semantics/embedded-content/media-elements/playing-the-media-resource/__dir__.ini"
+        ]
+      }
+    }
+  },
+  "829": {
+    "changeset_number": "82405",
+    "pusher": "btara@mozilla.com",
+    "date_of_push": "2019-04-05 14:13:50",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=93075ec49df3",
+        "commiter_name": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1195299) for l10n bustages a=backout\n\nBacked out changeset 9645ac1a9851 (bug 1195299)\nBacked out changeset 4de7f94119fd (bug 1195299)",
+        "files_changed": [
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "taskcluster/scripts/builder/build-linux.sh",
+          "taskcluster/scripts/tester/test-linux.sh",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/mozharness/tox.ini"
+        ]
+      }
+    }
+  },
+  "830": {
+    "changeset_number": "82411",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-04-05 15:13:00",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b948a38f204a",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1541957 - [ci] Fix regression causing geckoview tests to run without e10s, r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26240",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      }
+    }
+  },
+  "831": {
+    "changeset_number": "82414",
+    "pusher": "bpostelnicu@mozilla.com",
+    "date_of_push": "2019-04-05 15:27:43",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3779175a4d7f",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      }
+    }
+  },
+  "832": {
+    "changeset_number": "82415",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-04-05 15:54:21",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7b3fc26d7fbb",
+        "commiter_name": "Csoregi Natalia <ncsoregi@mozilla.com>",
+        "commit_message": "Backed out changeset 3779175a4d7f (bug 1541147) for gecko decision bustage. CLOSED TREE",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      }
+    }
+  },
+  "833": {
+    "changeset_number": "82417",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-04-05 16:15:19",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e2a6e9aafcf6",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      }
+    }
+  },
+  "834": {
+    "changeset_number": "82419",
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-04-05 16:20:15",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0913f775a771",
+        "commiter_name": "Csoregi Natalia <ncsoregi@mozilla.com>",
+        "commit_message": "Backed out changeset e2a6e9aafcf6 (bug 1541147) for gecko decision task failure. CLOSED TREE",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      }
+    }
+  },
+  "835": {
+    "changeset_number": "82427",
+    "pusher": "catlee@mozilla.com",
+    "date_of_push": "2019-04-05 17:12:11",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4de00f3a05ad",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1531032: disable tier2 jobs from running with try syntax unless specifically enabled. r=tomprince\n\nEnable WPT-reftests as tier1\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21786",
+        "files_changed": [
+          "taskcluster/ci/test/web-platform.yml",
+          "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      }
+    }
+  },
+  "836": {
+    "changeset_number": "82434",
+    "pusher": "sfraser@mozilla.com",
+    "date_of_push": "2019-04-05 18:14:30",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=648001848ed2",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1539905 Ensure a copy is taken of memoized values r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26306",
+        "files_changed": [
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      }
+    }
+  },
+  "837": {
+    "changeset_number": "82450",
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-04-05 20:55:51",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e5ebda0bbbf1",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [try-staging] Specify bouncer-prefix in cron bouncer check as well; r=mtabara\n\nThe previous changes only changed the check in the release process. This also\nupdates the periodic check.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26199",
+        "files_changed": [
+          "taskcluster/ci/cron-bouncer-check/kind.yml"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=26eb65cf9325",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [try-staging] Don't restrict the branch that cron-bouncer-check runs on; r=mtabara\n\nWe only run the cron job on release branches, so it will only get scheduled\nthere. By not otherwise restricting the job, it makes it easier to test the\ncron job on other branches (like try).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26200",
+        "files_changed": [
+          "taskcluster/ci/cron-bouncer-check/kind.yml"
+        ]
+      }
+    }
+  },
+  "838": {
+    "changeset_number": "82463",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-04-05 23:04:09",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=50495a5da9f6",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1195299 - [ci] Use 'mach python' to run mozharness scripts when we have a srcdir r=catlee\n\nThis makes sure that the mozharness scripts have access to all the packages in\nthe build system virtualenv (namely mozbase).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22184",
+        "files_changed": [
+          "taskcluster/scripts/builder/build-l10n.sh",
+          "taskcluster/scripts/builder/build-linux.sh",
+          "taskcluster/scripts/tester/test-linux.sh",
+          "taskcluster/scripts/tester/test-macosx.sh",
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c28c538fca0a",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1195299 - [mozharness] Remove copies of mozbase from testing/mozharness r=catlee\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22185",
+        "files_changed": [
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/mozharness/tox.ini"
+        ]
+      }
+    }
+  },
+  "839": {
+    "changeset_number": "82476",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-04-06 00:51:45",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2e359f02ea62",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1538703 - roll-out declarative artifacts in Firefox. r=sfraser a=release",
+        "files_changed": [
+          "taskcluster/ci/beetmover-repackage/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks-checksums/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
+          "taskcluster/taskgraph/transforms/beetmover_langpack_checksums.py",
+          "taskcluster/taskgraph/transforms/release_beetmover_signed_addons.py",
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8cc6d083001b",
+        "commiter_name": "shindli <shindli@mozilla.com>",
+        "commit_message": "Merge inbound to mozilla-central.  a=merge",
+        "files_changed": [
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      }
+    }
+  },
+  "840": {
+    "changeset_number": "82479",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-04-06 01:21:26",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=50447a9c4347",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1529774 - Upgrade builders to rust 1.33. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24830",
+        "files_changed": [
+          "taskcluster/ci/toolchain/misc.yml",
+          "taskcluster/ci/toolchain/rust.yml"
+        ]
+      }
+    }
+  },
+  "841": {
+    "changeset_number": "82485",
+    "pusher": "bpostelnicu@mozilla.com",
+    "date_of_push": "2019-04-06 09:33:28",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ac130652ae81",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
         ]
       }
     }

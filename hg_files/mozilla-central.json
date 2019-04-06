@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35816
+    "last_push_id": 35823
   },
   "1": {
     "changeset_number": "35344",
@@ -13394,39 +13394,6 @@
     }
   },
   "137": {
-    "changeset_number": "35815",
-    "pusher": "ccoroiu@mozilla.com",
-    "date_of_push": "2019-04-05 00:55:21",
-    "changeset_commits": {
-      "7": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=425aab7d1e5a",
-        "commiter_name": "Joel Maher <jmaher@mozilla.com>",
-        "commit_message": "Bug 1541835 - Turn off mochitest webgl and media on arm64 for integration. r=aryx\n\nTurn off mochitest webgl and media on arm64 for integration.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26122",
-        "files_changed": [
-          "taskcluster/ci/test/mochitest.yml"
-        ]
-      },
-      "32": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6373b5616e00",
-        "commiter_name": "Justin Wood <Callek@gmail.com>",
-        "commit_message": "Bug 1541131 - 'try -b o -p macosx64 -u all' should trigger Mac opt tests to be run, on shippable. r=ahal\n\nWith the shift to shippable builds we no longer run tests on osx/opt though many still push to try with old try syntax using -p macosx64 and get surprised by no tests. This patch fixes it as a bandaid by appending macosx64-shippable as a platform when macosx64 is specified, making the tests run in the appropriate cases. The expectation with the methodology of this patch is that we'll be killing try syntax support in the near future, eliminating the need for these sorts of bandaids\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26048",
-        "files_changed": [
-          "taskcluster/taskgraph/try_option_syntax.py"
-        ]
-      },
-      "33": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=220cb2c1a0e5",
-        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
-        "commit_message": "Merge mozilla-central to autoland",
-        "files_changed": [
-          "modules/libpref/init/all.js",
-          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
-          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml"
-        ]
-      }
-    }
-  },
-  "137": {
     "changeset_number": "35816",
     "pusher": "ccoroiu@mozilla.com",
     "date_of_push": "2019-04-05 06:22:21",
@@ -13471,6 +13438,247 @@
         "commit_message": "Bug 1532747 - Use 'mach python' with repackage.sh script, CLOSED TREE, r=catlee\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26239",
         "files_changed": [
           "taskcluster/scripts/builder/repackage.sh"
+        ]
+      }
+    }
+  },
+  "137": {
+    "changeset_number": "35817",
+    "pusher": "btara@mozilla.com",
+    "date_of_push": "2019-04-05 12:48:43",
+    "changeset_commits": {
+      "34": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=20750a2dc85b",
+        "commiter_name": "Christian Holler <choller@mozilla.com>",
+        "commit_message": "Bug 1541943 - Temporarily switch libFuzzer builds back to clang-7. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26194",
+        "files_changed": [
+          "build/build-clang/clang-7-linux64.json",
+          "build/build-clang/r350774.patch",
+          "build/build-clang/rename_gcov_flush_7.patch",
+          "taskcluster/ci/build/linux.yml",
+          "taskcluster/ci/toolchain/clang.yml",
+          "taskcluster/scripts/misc/build-clang-7-linux.sh"
+        ]
+      }
+    }
+  },
+  "138": {
+    "changeset_number": "35818",
+    "pusher": "btara@mozilla.com",
+    "date_of_push": "2019-04-05 12:50:28",
+    "changeset_commits": {
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=230bb363f2f3",
+        "commiter_name": "arthur.iakab <aiakab@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound",
+        "files_changed": [
+          "Cargo.lock",
+          "config/external/icu/data/icudt63l.dat",
+          "intl/icu-patches/bug-1504656-relativetimeformat-plural-other-fallback.diff",
+          "intl/icu-patches/bug-1513934-timezone-detection-win7-part1.diff",
+          "intl/icu-patches/bug-1513934-timezone-detection-win7-part2.diff",
+          "intl/icu/source/common/ulayout_props_data.h",
+          "intl/icu/source/common/umutex.h",
+          "intl/icu/source/data/coll/colfiles.mk",
+          "intl/icu/source/data/coll/ro_MD.txt",
+          "intl/icu/source/data/curr/pool.res",
+          "intl/icu/source/data/curr/resfiles.mk",
+          "intl/icu/source/data/lang/pool.res",
+          "intl/icu/source/data/locales/pool.res",
+          "intl/icu/source/data/locales/resfiles.mk",
+          "intl/icu/source/data/region/pool.res",
+          "intl/icu/source/data/unit/pool.res",
+          "intl/icu/source/data/zone/pool.res",
+          "intl/icu/source/data/zone/resfiles.mk",
+          "intl/icu/source/data/zone/ro_MD.txt",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
+          "testing/web-platform/meta/css/CSS2/selectors/first-letter-punctuation-184.xht.ini",
+          "testing/web-platform/tests/css/CSS2/selectors/first-letter-punctuation-184-ref.xht",
+          "testing/web-platform/tests/css/CSS2/selectors/first-letter-punctuation-184.xht"
+        ]
+      },
+      "20": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=83c38c0e430b",
+        "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound a=merge",
+        "files_changed": [
+          "Cargo.lock",
+          "dom/base/Document.cpp",
+          "dom/base/nsAttrValue.cpp",
+          "dom/base/nsAttrValueInlines.h",
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/web-platform/meta/html/semantics/embedded-content/media-elements/playing-the-media-resource/__dir__.ini"
+        ]
+      }
+    }
+  },
+  "139": {
+    "changeset_number": "35819",
+    "pusher": "btara@mozilla.com",
+    "date_of_push": "2019-04-05 14:12:21",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=93075ec49df3",
+        "commiter_name": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1195299) for l10n bustages a=backout\n\nBacked out changeset 9645ac1a9851 (bug 1195299)\nBacked out changeset 4de7f94119fd (bug 1195299)",
+        "files_changed": [
+          "python/mozbuild/mozbuild/action/test_archive.py",
+          "taskcluster/scripts/builder/build-linux.sh",
+          "taskcluster/scripts/tester/test-linux.sh",
+          "taskcluster/taskgraph/transforms/job/mozharness.py",
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/mozharness/tox.ini"
+        ]
+      }
+    }
+  },
+  "140": {
+    "changeset_number": "35822",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-04-06 00:47:45",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b948a38f204a",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1541957 - [ci] Fix regression causing geckoview tests to run without e10s, r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26240",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/tests.py"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3779175a4d7f",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7b3fc26d7fbb",
+        "commiter_name": "Csoregi Natalia <ncsoregi@mozilla.com>",
+        "commit_message": "Backed out changeset 3779175a4d7f (bug 1541147) for gecko decision bustage. CLOSED TREE",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e2a6e9aafcf6",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      },
+      "16": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0913f775a771",
+        "commiter_name": "Csoregi Natalia <ncsoregi@mozilla.com>",
+        "commit_message": "Backed out changeset e2a6e9aafcf6 (bug 1541147) for gecko decision task failure. CLOSED TREE",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4de00f3a05ad",
+        "commiter_name": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1531032: disable tier2 jobs from running with try syntax unless specifically enabled. r=tomprince\n\nEnable WPT-reftests as tier1\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21786",
+        "files_changed": [
+          "taskcluster/ci/test/web-platform.yml",
+          "taskcluster/taskgraph/try_option_syntax.py"
+        ]
+      },
+      "35": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=648001848ed2",
+        "commiter_name": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1539905 Ensure a copy is taken of memoized values r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26306",
+        "files_changed": [
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      },
+      "58": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e5ebda0bbbf1",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [try-staging] Specify bouncer-prefix in cron bouncer check as well; r=mtabara\n\nThe previous changes only changed the check in the release process. This also\nupdates the periodic check.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26199",
+        "files_changed": [
+          "taskcluster/ci/cron-bouncer-check/kind.yml"
+        ]
+      },
+      "59": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=26eb65cf9325",
+        "commiter_name": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1541122: [try-staging] Don't restrict the branch that cron-bouncer-check runs on; r=mtabara\n\nWe only run the cron job on release branches, so it will only get scheduled\nthere. By not otherwise restricting the job, it makes it easier to test the\ncron job on other branches (like try).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26200",
+        "files_changed": [
+          "taskcluster/ci/cron-bouncer-check/kind.yml"
+        ]
+      }
+    }
+  },
+  "141": {
+    "changeset_number": "35823",
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-04-06 00:49:26",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2e359f02ea62",
+        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1538703 - roll-out declarative artifacts in Firefox. r=sfraser a=release",
+        "files_changed": [
+          "taskcluster/ci/beetmover-repackage/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks-checksums/kind.yml",
+          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
+          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
+          "taskcluster/taskgraph/transforms/beetmover_langpack_checksums.py",
+          "taskcluster/taskgraph/transforms/release_beetmover_signed_addons.py",
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8cc6d083001b",
+        "commiter_name": "shindli <shindli@mozilla.com>",
+        "commit_message": "Merge inbound to mozilla-central.  a=merge",
+        "files_changed": [
+          "taskcluster/taskgraph/util/scriptworker.py"
         ]
       }
     }

@@ -1,16 +1,29 @@
 {
   "0": {
-    "lastChecked": "2019-03-20 15:53:34.553596",
+    "lastChecked": "2019-04-06 07:16:06.766474",
     "last_releases": {
       "latest_release": {
-        "version": "8.4.2",
-        "sha": "53718065794084f41d339e1cefc3d90c3e7b3f9a",
-        "date": "2019-03-11 20:36:02",
-        "author": "tomprince"
+        "version": "8.4.3",
+        "sha": "1c1373595fa27fb83cdad6babaf4503c432a5f60",
+        "date": "2019-04-05 16:14:17",
+        "author": "MihaiTabara"
       }
     }
   },
   "1": {
+    "sha": "1c1373595fa27fb83cdad6babaf4503c432a5f60",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/1c1373595fa27fb83cdad6babaf4503c432a5f60",
+    "commiter_name": "MihaiTabara",
+    "commiter_email": "tabara.mihai@gmail.com",
+    "commit_message": "8.4.3",
+    "commit_date": "2019-04-05 16:14:17",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "beetmoverscript/_version.py",
+      "beetmoverscript/newsfragments/1539067.fixed"
+    ]
+  },
+  "2": {
     "sha": "53718065794084f41d339e1cefc3d90c3e7b3f9a",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/53718065794084f41d339e1cefc3d90c3e7b3f9a",
     "commiter_name": "tomprince",
@@ -21,7 +34,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "2": {
+  "3": {
     "sha": "b26a8dcb800dcf85c7a6c6583ba88307822f1c7e",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/b26a8dcb800dcf85c7a6c6583ba88307822f1c7e",
     "commiter_name": "MihaiTabara",
@@ -34,7 +47,7 @@
       "beetmoverscript/newsfragments/1516542.added"
     ]
   },
-  "3": {
+  "4": {
     "sha": "a10494cbde3cc5509a83d15ec4ff0811d5958c4f",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/a10494cbde3cc5509a83d15ec4ff0811d5958c4f",
     "commiter_name": "jfx2006",
@@ -49,7 +62,7 @@
       "beetmoverscript/templates/thunderbird_nightly_repacks.yml"
     ]
   },
-  "4": {
+  "5": {
     "sha": "c1e20a9a233f2095f967875f741ced491bef0528",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/c1e20a9a233f2095f967875f741ced491bef0528",
     "commiter_name": "tomprince",
@@ -62,7 +75,7 @@
       "beetmoverscript/constants.py"
     ]
   },
-  "5": {
+  "6": {
     "sha": "730ebae416b6614ff07d275957d0ddcebc72bf1f",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/730ebae416b6614ff07d275957d0ddcebc72bf1f",
     "commiter_name": "tomprince",
@@ -73,19 +86,6 @@
       "CHANGELOG.rst",
       "beetmoverscript/_version.py",
       "beetmoverscript/newsfragments/1522380.added"
-    ]
-  },
-  "6": {
-    "sha": "f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #206 from mozilla-releng/bug-1522581  Bug 1522581 - Bump max size of zip file to 300MB",
-    "commit_date": "2019-01-25 18:29:36",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py",
-      "beetmoverscript/constants.py"
     ]
   },
   "7": {
@@ -102,6 +102,19 @@
     ]
   },
   "8": {
+    "sha": "f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/f55ca9aef7ab6a4e1e5d5c246beff1085d201fe0",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #206 from mozilla-releng/bug-1522581  Bug 1522581 - Bump max size of zip file to 300MB",
+    "commit_date": "2019-01-25 18:29:36",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "beetmoverscript/_version.py",
+      "beetmoverscript/constants.py"
+    ]
+  },
+  "9": {
     "sha": "b74438929aaa119dd6ca3def99cadfb39d6a4559",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/b74438929aaa119dd6ca3def99cadfb39d6a4559",
     "commiter_name": "JohanLorenzo",
@@ -113,7 +126,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "9": {
+  "10": {
     "sha": "002b073054a74e3f7dd2fcf0faf282e50ab4a942",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/002b073054a74e3f7dd2fcf0faf282e50ab4a942",
     "commiter_name": "JohanLorenzo",
@@ -122,18 +135,6 @@
     "commit_date": "2019-01-25 13:11:21",
     "files_changed": [
       "beetmoverscript/constants.py"
-    ]
-  },
-  "10": {
-    "sha": "7ee86337210f78bea022243da1c84253c65a1e94",
-    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/7ee86337210f78bea022243da1c84253c65a1e94",
-    "commiter_name": "mitchhentges",
-    "commiter_email": null,
-    "commit_message": "Merge pull request #203 from mitchhentges/release-8.3.0  8.3.0",
-    "commit_date": "2019-01-03 18:30:51",
-    "files_changed": [
-      "CHANGELOG.rst",
-      "beetmoverscript/_version.py"
     ]
   },
   "11": {
@@ -149,6 +150,18 @@
     ]
   },
   "12": {
+    "sha": "7ee86337210f78bea022243da1c84253c65a1e94",
+    "url": "https://github.com/mozilla-releng/beetmoverscript/commit/7ee86337210f78bea022243da1c84253c65a1e94",
+    "commiter_name": "mitchhentges",
+    "commiter_email": null,
+    "commit_message": "Merge pull request #203 from mitchhentges/release-8.3.0  8.3.0",
+    "commit_date": "2019-01-03 18:30:51",
+    "files_changed": [
+      "CHANGELOG.rst",
+      "beetmoverscript/_version.py"
+    ]
+  },
+  "13": {
     "sha": "11be66989b2fe50e9fe2c7e7337c5abdf05a0ff1",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/11be66989b2fe50e9fe2c7e7337c5abdf05a0ff1",
     "commiter_name": "mitchhentges",
@@ -160,7 +173,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "13": {
+  "14": {
     "sha": "9424a33ecc5a6abbe4f9d1cca84e0bac3c686415",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/9424a33ecc5a6abbe4f9d1cca84e0bac3c686415",
     "commiter_name": "mitchhentges",
@@ -171,7 +184,7 @@
       "CHANGELOG.rst"
     ]
   },
-  "14": {
+  "15": {
     "sha": "21a801a934b714316ea475b3cc312048ba9cdc2b",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/21a801a934b714316ea475b3cc312048ba9cdc2b",
     "commiter_name": "mitchhentges",
@@ -186,7 +199,7 @@
       "config_example.json"
     ]
   },
-  "15": {
+  "16": {
     "sha": "a721342ccd6b3eda02f836f5d7da91a930925a30",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/a721342ccd6b3eda02f836f5d7da91a930925a30",
     "commiter_name": "mitchhentges",
@@ -201,7 +214,7 @@
       "config_example.json"
     ]
   },
-  "16": {
+  "17": {
     "sha": "fcd64e07eb80d0a4622d4d25e5e82a44f1c9a1ca",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/fcd64e07eb80d0a4622d4d25e5e82a44f1c9a1ca",
     "commiter_name": "rail",
@@ -213,7 +226,7 @@
       "beetmoverscript/task.py"
     ]
   },
-  "17": {
+  "18": {
     "sha": "fd9b3a3e5c284564cc4fcf47fcf8e9d53dfc6bcd",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/fd9b3a3e5c284564cc4fcf47fcf8e9d53dfc6bcd",
     "commiter_name": "rail",
@@ -224,7 +237,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "18": {
+  "19": {
     "sha": "2e8af40bbf3853e6962543e2fd6c556b8a085119",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/2e8af40bbf3853e6962543e2fd6c556b8a085119",
     "commiter_name": "rail",
@@ -235,7 +248,7 @@
       "beetmoverscript/task.py"
     ]
   },
-  "19": {
+  "20": {
     "sha": "7f9dd1018de4a98f410838fad927fb387bb3d3b4",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/7f9dd1018de4a98f410838fad927fb387bb3d3b4",
     "commiter_name": "tomprince",
@@ -254,7 +267,7 @@
       "beetmoverscript/templates/firefox_nightly_repacks.yml"
     ]
   },
-  "20": {
+  "21": {
     "sha": "5b155c33b7032ccbced4f1df31ae63632d88cce5",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/5b155c33b7032ccbced4f1df31ae63632d88cce5",
     "commiter_name": "rail",
@@ -265,7 +278,7 @@
       "beetmoverscript/task.py"
     ]
   },
-  "21": {
+  "22": {
     "sha": "307b14c0a0e81046768c55805fd1f8637b77aacc",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/307b14c0a0e81046768c55805fd1f8637b77aacc",
     "commiter_name": "tomprince",
@@ -277,7 +290,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "22": {
+  "23": {
     "sha": "9a347b4b38437364fb545d6c9d1c80ebd1a1b9b9",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/9a347b4b38437364fb545d6c9d1c80ebd1a1b9b9",
     "commiter_name": "MihaiTabara",
@@ -290,7 +303,7 @@
       "beetmoverscript/newsfragments/1493942.fixed"
     ]
   },
-  "23": {
+  "24": {
     "sha": "22ce904fdd5bdd1f697d3d2e5169272f4f1fb5bd",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/22ce904fdd5bdd1f697d3d2e5169272f4f1fb5bd",
     "commiter_name": "MihaiTabara",
@@ -302,7 +315,7 @@
       "beetmoverscript/zip.py"
     ]
   },
-  "24": {
+  "25": {
     "sha": "be92c31cbb186d934ed227081277b87fdc69e2a6",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/be92c31cbb186d934ed227081277b87fdc69e2a6",
     "commiter_name": "MihaiTabara",
@@ -315,7 +328,7 @@
       "beetmoverscript/newsfragments/1493942.added"
     ]
   },
-  "25": {
+  "26": {
     "sha": "1f1401540d559d998983651400056f3c2392560d",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/1f1401540d559d998983651400056f3c2392560d",
     "commiter_name": "MihaiTabara",
@@ -334,7 +347,7 @@
       "beetmoverscript/zip.py"
     ]
   },
-  "26": {
+  "27": {
     "sha": "71f5e20f8dc20845e182f4a15764d2673a5b1f08",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/71f5e20f8dc20845e182f4a15764d2673a5b1f08",
     "commiter_name": "tomprince",
@@ -351,7 +364,7 @@
       "beetmoverscript/templates/firefox_nightly_repacks.yml"
     ]
   },
-  "27": {
+  "28": {
     "sha": "883524121b34c630533fbec8db73c08797dcc7be",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/883524121b34c630533fbec8db73c08797dcc7be",
     "commiter_name": "MihaiTabara",
@@ -363,7 +376,7 @@
       "beetmoverscript/_version.py"
     ]
   },
-  "28": {
+  "29": {
     "sha": "240e7a6cf19f7e56c003e51a09e11f29c6696580",
     "url": "https://github.com/mozilla-releng/beetmoverscript/commit/240e7a6cf19f7e56c003e51a09e11f29c6696580",
     "commiter_name": "srfraser",

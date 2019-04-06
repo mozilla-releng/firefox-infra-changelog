@@ -1,7 +1,8 @@
-## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-22 07:16:33.961585
+## BEETMOVERSCRIPT COMMIT MARKDOWN TABLE SINCE 2019-03-23 10:15:57.915181
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|29|MihaiTabara|8.4.3|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/1c1373595fa27fb83cdad6babaf4503c432a5f60)|2019-04-05 16:14:17
 |28|tomprince|8.4.2|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/53718065794084f41d339e1cefc3d90c3e7b3f9a)|2019-03-11 20:36:02
 |27|MihaiTabara|8.4.1|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/b26a8dcb800dcf85c7a6c6583ba88307822f1c7e)|2019-02-04 22:07:07
 |26|jfx2006|[Bug 1516542](https://bugzilla.mozilla.org/show_bug.cgi?id=1516542)  - Add support for .msi to Thunderbird templates (#202) [Bug 1516542](https://bugzilla.mozilla.org/show_bug.cgi?id=1516542)  - Add support for .msi to Thunderbird templates Thunderbird version of [Bug 1475512](https://bugzilla.mozilla.org/show_bug.cgi?id=1475512)  [Bug 1516542](https://bugzilla.mozilla.org/show_bug.cgi?id=1516542)  - Add support .msi support for Thunderbird Incorporating suggested changes from pull request #202.|[URL](https://github.com/mozilla-releng/beetmoverscript/commit/a10494cbde3cc5509a83d15ec4ff0811d5958c4f)|2019-02-04 18:04:01
