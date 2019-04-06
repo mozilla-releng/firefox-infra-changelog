@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 82485
+ CURRENT PUSH ID: 82490
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|82485|2019-04-06 09:33:28|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|[Bug 1541147](https://bugzilla.mozilla.org/show_bug.cgi?id=1541147)  - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastienDifferential Revision: https://phabricator.services.mozilla.com/D26145|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ac130652ae81
+|82486|2019-04-06 10:26:11|Razvan Maries <rmaries@mozilla.com>|Backed out changeset ac130652ae81 [Bug 1541147](https://bugzilla.mozilla.org/show_bug.cgi?id=1541147)  for Gecko Decision Task bustages. CLOSED TREE|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a765634b9ec2
 |82479|2019-04-06 01:21:26|Mike Hommey <mh+mozilla@glandium.org>|[Bug 1529774](https://bugzilla.mozilla.org/show_bug.cgi?id=1529774)  - Upgrade builders to rust 1.33. r=froydnjDifferential Revision: https://phabricator.services.mozilla.com/D24830|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=50447a9c4347
 |82476|2019-04-06 00:51:45|Mihai Tabara <mtabara@mozilla.com>|[Bug 1538703](https://bugzilla.mozilla.org/show_bug.cgi?id=1538703)  - roll-out declarative artifacts in Firefox. r=sfraser a=release|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2e359f02ea62
 |82476|2019-04-06 00:51:45|shindli <shindli@mozilla.com>|Merge inbound to mozilla-central. a=merge|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8cc6d083001b
