@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35830
+    "last_push_id": 35832
   },
   "1": {
     "changeset_number": "35344",
@@ -13605,80 +13605,6 @@
     }
   },
   "141": {
-    "changeset_number": "35824",
-    "pusher": "apavel@mozilla.com",
-    "date_of_push": "2019-04-06 13:57:50",
-    "changeset_commits": {
-      "21": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=50495a5da9f6",
-        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
-        "commit_message": "Bug 1195299 - [ci] Use 'mach python' to run mozharness scripts when we have a srcdir r=catlee\n\nThis makes sure that the mozharness scripts have access to all the packages in\nthe build system virtualenv (namely mozbase).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22184",
-        "files_changed": [
-          "taskcluster/scripts/builder/build-l10n.sh",
-          "taskcluster/scripts/builder/build-linux.sh",
-          "taskcluster/scripts/tester/test-linux.sh",
-          "taskcluster/scripts/tester/test-macosx.sh",
-          "taskcluster/taskgraph/transforms/job/mozharness.py"
-        ]
-      },
-      "22": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c28c538fca0a",
-        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
-        "commit_message": "Bug 1195299 - [mozharness] Remove copies of mozbase from testing/mozharness r=catlee\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22185",
-        "files_changed": [
-          "python/mozbuild/mozbuild/action/test_archive.py",
-          "testing/mozharness/manifestparser/__init__.py",
-          "testing/mozharness/manifestparser/cli.py",
-          "testing/mozharness/manifestparser/expression.py",
-          "testing/mozharness/manifestparser/filters.py",
-          "testing/mozharness/manifestparser/ini.py",
-          "testing/mozharness/manifestparser/manifestparser.py",
-          "testing/mozharness/mozfile/__init__.py",
-          "testing/mozharness/mozfile/mozfile.py",
-          "testing/mozharness/mozinfo/__init__.py",
-          "testing/mozharness/mozinfo/mozinfo.py",
-          "testing/mozharness/mozinfo/string_version.py",
-          "testing/mozharness/mozprocess/__init__.py",
-          "testing/mozharness/mozprocess/processhandler.py",
-          "testing/mozharness/mozprocess/qijo.py",
-          "testing/mozharness/mozprocess/winprocess.py",
-          "testing/mozharness/tox.ini"
-        ]
-      },
-      "44": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=50447a9c4347",
-        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-        "commit_message": "Bug 1529774 - Upgrade builders to rust 1.33. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24830",
-        "files_changed": [
-          "taskcluster/ci/toolchain/misc.yml",
-          "taskcluster/ci/toolchain/rust.yml"
-        ]
-      },
-      "53": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ac130652ae81",
-        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
-        "files_changed": [
-          "python/mozbuild/mozbuild/mach_commands.py",
-          "taskcluster/ci/config.yml",
-          "taskcluster/ci/source-test/coverity.yml",
-          "taskcluster/ci/source-test/kind.yml"
-        ]
-      },
-      "54": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a765634b9ec2",
-        "commiter_name": "Razvan Maries <rmaries@mozilla.com>",
-        "commit_message": "Backed out changeset ac130652ae81 (bug 1541147) for Gecko Decision Task bustages. CLOSED TREE",
-        "files_changed": [
-          "python/mozbuild/mozbuild/mach_commands.py",
-          "taskcluster/ci/config.yml",
-          "taskcluster/ci/source-test/coverity.yml",
-          "taskcluster/ci/source-test/kind.yml"
-        ]
-      }
-    }
-  },
-  "141": {
     "changeset_number": "35827",
     "pusher": "nerli@mozilla.com",
     "date_of_push": "2019-04-07 00:48:55",
@@ -13731,6 +13657,29 @@
           "build/debian-packages/apt-wheezy.diff",
           "taskcluster/ci/docker-image/kind.yml",
           "taskcluster/ci/packages/kind.yml"
+        ]
+      }
+    }
+  },
+  "142": {
+    "changeset_number": "35831",
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-04-08 13:33:51",
+    "changeset_commits": {
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=13b40bbdb45c",
+        "commiter_name": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1503453 - Temporarily disable permafailing Windows static analysis builds. a=permafail",
+        "files_changed": [
+          "taskcluster/ci/static-analysis-autotest/kind.yml"
+        ]
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c9d95a544902",
+        "commiter_name": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1503453 - Temporarily disable permafailing Windows static analysis builds: Add one more whitespace because the linting gods demand this. a=permafail CLOSED TREE",
+        "files_changed": [
+          "taskcluster/ci/static-analysis-autotest/kind.yml"
         ]
       }
     }

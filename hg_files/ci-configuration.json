@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 116
+    "last_push_id": 118
   },
   "1": {
     "changeset_number": "31",
@@ -905,6 +905,36 @@
         "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c0f013451af1",
         "commiter_name": "Mitchell Hentges <mhentges@mozilla.com>",
         "commit_message": "No bug - amend fenix master role to encompass dep signing. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26294",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "54": {
+    "changeset_number": "117",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-04-08 12:18:53",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=99bb5249719c",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1542697 - Add secret project/relman/coverity to L1, L2 and L3 access. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26478",
+        "files_changed": [
+          "grants.yml"
+        ]
+      }
+    }
+  },
+  "55": {
+    "changeset_number": "118",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-04-08 12:49:22",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e0e131534dc9",
+        "commiter_name": "Mitchell Hentges <mhentges@mozilla.com>",
+        "commit_message": "No bug - Move fenix master scopes to their own grant section r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26480",
         "files_changed": [
           "grants.yml"
         ]

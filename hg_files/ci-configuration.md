@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 116
+ CURRENT PUSH ID: 118
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|116|2019-04-05 18:09:05|Mitchell Hentges <mhentges@mozilla.com>|No bug - amend fenix master role to encompass dep signing. r=jlorenzoDifferential Revision: https://phabricator.services.mozilla.com/D26294|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c0f013451af1
+|118|2019-04-08 12:49:22|Mitchell Hentges <mhentges@mozilla.com>|No bug - Move fenix master scopes to their own grant section r=jlorenzoDifferential Revision: https://phabricator.services.mozilla.com/D26480|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e0e131534dc9
+|117|2019-04-08 12:18:53|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|[Bug 1542697](https://bugzilla.mozilla.org/show_bug.cgi?id=1542697)  - Add secret project/relman/coverity to L1, L2 and L3 access. r=jlorenzoDifferential Revision: https://phabricator.services.mozilla.com/D26478|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=99bb5249719c
 |114|2019-04-03 12:14:07|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|[Bug 1541067](https://bugzilla.mozilla.org/show_bug.cgi?id=1541067)  - Allow try to access secret project/relman/coverity. r=tomprince,sylvestreDifferential Revision: https://phabricator.services.mozilla.com/D25817|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=630afd38ba9c
 |111|2019-03-29 18:10:46|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1540168](https://bugzilla.mozilla.org/show_bug.cgi?id=1540168)  - Fix Reference-Browser nightly r=mtabaraFix Reference-Browser nightlyFixes https://tools.taskcluster.net/groups/LasmOd2xTp6Knn6xlkbmTA/tasks/LasmOd2xTp6Knn6xlkbmTA/runs/0/logs/public%2Flogs%2Flive_backing.logDifferential Revision: https://phabricator.services.mozilla.com/D25413|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4eb38751b8be
 |109|2019-03-22 23:44:57|Tom Prince <mozilla@hocat.ca>|No bug: Remove scopes from branches that don't have jobs running on them; r=dustinDifferential Revision: https://phabricator.services.mozilla.com/D24452|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0dcbbd0b9cfe

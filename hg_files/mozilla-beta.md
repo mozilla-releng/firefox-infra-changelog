@@ -1,10 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-BETA
- CURRENT PUSH ID: 11025
+ CURRENT PUSH ID: 11031
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|11013|2019-04-05 22:51:52|Tom Prince <mozilla@hocat.ca>|[Bug 1541122](https://bugzilla.mozilla.org/show_bug.cgi?id=1541122)  [try-staging] Don't restrict the branch that cron-bouncer-check runs on; r=mtabara a=tomprinceWe only run the cron job on release branches, so it will only get scheduledthere. By not otherwise restricting the job, it makes it easier to test thecron job on other branches (like try).Differential Revision: https://phabricator.services.mozilla.com/D26200|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=1c729b2f5e3e
-|11013|2019-04-05 22:51:52|Tom Prince <mozilla@hocat.ca>|[Bug 1541122](https://bugzilla.mozilla.org/show_bug.cgi?id=1541122)  [try-staging] Specify bouncer-prefix in cron bouncer check as well; r=mtabara a=tomprinceThe previous changes only changed the check in the release process. This alsoupdates the periodic check.Differential Revision: https://phabricator.services.mozilla.com/D26199|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=8d526e3036bf
+|11028|2019-04-08 11:19:31|Julien Cristau <jcristau@mozilla.com>|No bug: Turn off staged rollout for Fennec 67.0b. a=release DONTBUILD|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=c261ac70fabc
 |11010|2019-04-05 20:44:22|Simon Fraser <sfraser@mozilla.com>|[Bug 1539905](https://bugzilla.mozilla.org/show_bug.cgi?id=1539905)  Cache yaml loading with copy of memoized values r=mtabara a=release|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=864e16abd2f7
 |11009|2019-04-05 19:36:58|Mihai Tabara <mtabara@mozilla.com>|[Bug 1538703](https://bugzilla.mozilla.org/show_bug.cgi?id=1538703)  - remove try config from declarative artifacts world. r=sfraser a=release|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=df05571b936f
 |10867|2019-03-14 17:20:45|marian.raiciof <marian.raiciof@softvision.ro>|[Bug 1529207](https://bugzilla.mozilla.org/show_bug.cgi?id=1529207)  - Add new Raptor tests in tp6m-4 r=davehunt,rwoodDifferential Revision: https://phabricator.services.mozilla.com/D20852|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=18fa4e4ce035
