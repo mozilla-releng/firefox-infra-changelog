@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82490
+    "last_push_id": 82507
   },
   "1": {
     "changeset_number": "35344",
@@ -39113,24 +39113,6 @@
     }
   },
   "841": {
-    "changeset_number": "82485",
-    "pusher": "bpostelnicu@mozilla.com",
-    "date_of_push": "2019-04-06 09:33:28",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ac130652ae81",
-        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
-        "files_changed": [
-          "python/mozbuild/mozbuild/mach_commands.py",
-          "taskcluster/ci/config.yml",
-          "taskcluster/ci/source-test/coverity.yml",
-          "taskcluster/ci/source-test/kind.yml"
-        ]
-      }
-    }
-  },
-  "841": {
     "changeset_number": "82486",
     "pusher": "rmaries@mozilla.com",
     "date_of_push": "2019-04-06 10:26:11",
@@ -39144,6 +39126,63 @@
           "taskcluster/ci/config.yml",
           "taskcluster/ci/source-test/coverity.yml",
           "taskcluster/ci/source-test/kind.yml"
+        ]
+      }
+    }
+  },
+  "841": {
+    "changeset_number": "82497",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-04-07 00:51:25",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b5167ef1c9ea",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound on a CLOSED TREE",
+        "files_changed": [
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/web-platform/meta/xhr/overridemimetype-blob.html.ini",
+          "toolkit/content/widgets/radio.xml"
+        ]
+      }
+    }
+  },
+  "842": {
+    "changeset_number": "82498",
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-04-07 00:56:40",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=97fa367562a0",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1541821 - Ensure docker images using setup_packages.sh are up-to-date wrt the packages provided there. r=tomprince\n\nWhen docker images use setup_packages.sh, they add apt sources. While we\ncurrently do run apt-get update to pick those new sources, if a package\nprovided by them is already installed and not explicitly listed in\nsubsequent apt-get install, they're not going to be upgraded.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26100",
+        "files_changed": [
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-build/Dockerfile"
+        ]
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7d60a7fd2fac",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1541821 - Update debian7 docker images for CVE-2019-3462. r=tomprince\n\nThis imports the changes from wheezy-lts (http://deb.freexian.com/extended-lts/)\nand creates a package we install in the debian7-based images (with a\nmodified version number to work around bug #1419577.\n\nThis leaves out debian7-raw and debian7-packages as unpatched, because\nof the chicken-and-egg problem.\n\nDepends on D26100\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26102",
+        "files_changed": [
+          "build/debian-packages/apt-wheezy.diff",
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/ci/packages/kind.yml"
         ]
       }
     }

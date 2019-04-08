@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35825
+    "last_push_id": 35830
   },
   "1": {
     "changeset_number": "35344",
@@ -13605,36 +13605,6 @@
     }
   },
   "141": {
-    "changeset_number": "35823",
-    "pusher": "shindli@mozilla.com",
-    "date_of_push": "2019-04-06 00:49:26",
-    "changeset_commits": {
-      "4": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2e359f02ea62",
-        "commiter_name": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "Bug 1538703 - roll-out declarative artifacts in Firefox. r=sfraser a=release",
-        "files_changed": [
-          "taskcluster/ci/beetmover-repackage/kind.yml",
-          "taskcluster/ci/release-beetmover-signed-langpacks-checksums/kind.yml",
-          "taskcluster/ci/release-beetmover-signed-langpacks/kind.yml",
-          "taskcluster/taskgraph/manifests/firefox_candidates.yml",
-          "taskcluster/taskgraph/manifests/firefox_candidates_checksums.yml",
-          "taskcluster/taskgraph/transforms/beetmover_langpack_checksums.py",
-          "taskcluster/taskgraph/transforms/release_beetmover_signed_addons.py",
-          "taskcluster/taskgraph/util/scriptworker.py"
-        ]
-      },
-      "6": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8cc6d083001b",
-        "commiter_name": "shindli <shindli@mozilla.com>",
-        "commit_message": "Merge inbound to mozilla-central.  a=merge",
-        "files_changed": [
-          "taskcluster/taskgraph/util/scriptworker.py"
-        ]
-      }
-    }
-  },
-  "141": {
     "changeset_number": "35824",
     "pusher": "apavel@mozilla.com",
     "date_of_push": "2019-04-06 13:57:50",
@@ -13704,6 +13674,63 @@
           "taskcluster/ci/config.yml",
           "taskcluster/ci/source-test/coverity.yml",
           "taskcluster/ci/source-test/kind.yml"
+        ]
+      }
+    }
+  },
+  "141": {
+    "changeset_number": "35827",
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-04-07 00:48:55",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b5167ef1c9ea",
+        "commiter_name": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound on a CLOSED TREE",
+        "files_changed": [
+          "testing/mozharness/manifestparser/__init__.py",
+          "testing/mozharness/manifestparser/cli.py",
+          "testing/mozharness/manifestparser/expression.py",
+          "testing/mozharness/manifestparser/filters.py",
+          "testing/mozharness/manifestparser/ini.py",
+          "testing/mozharness/manifestparser/manifestparser.py",
+          "testing/mozharness/mozfile/__init__.py",
+          "testing/mozharness/mozfile/mozfile.py",
+          "testing/mozharness/mozinfo/__init__.py",
+          "testing/mozharness/mozinfo/mozinfo.py",
+          "testing/mozharness/mozinfo/string_version.py",
+          "testing/mozharness/mozprocess/__init__.py",
+          "testing/mozharness/mozprocess/processhandler.py",
+          "testing/mozharness/mozprocess/qijo.py",
+          "testing/mozharness/mozprocess/winprocess.py",
+          "testing/web-platform/meta/xhr/overridemimetype-blob.html.ini",
+          "toolkit/content/widgets/radio.xml"
+        ]
+      }
+    }
+  },
+  "142": {
+    "changeset_number": "35828",
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-04-07 12:34:50",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=97fa367562a0",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1541821 - Ensure docker images using setup_packages.sh are up-to-date wrt the packages provided there. r=tomprince\n\nWhen docker images use setup_packages.sh, they add apt sources. While we\ncurrently do run apt-get update to pick those new sources, if a package\nprovided by them is already installed and not explicitly listed in\nsubsequent apt-get install, they're not going to be upgraded.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26100",
+        "files_changed": [
+          "taskcluster/docker/debian-base/Dockerfile",
+          "taskcluster/docker/debian-build/Dockerfile"
+        ]
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7d60a7fd2fac",
+        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1541821 - Update debian7 docker images for CVE-2019-3462. r=tomprince\n\nThis imports the changes from wheezy-lts (http://deb.freexian.com/extended-lts/)\nand creates a package we install in the debian7-based images (with a\nmodified version number to work around bug #1419577.\n\nThis leaves out debian7-raw and debian7-packages as unpatched, because\nof the chicken-and-egg problem.\n\nDepends on D26100\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26102",
+        "files_changed": [
+          "build/debian-packages/apt-wheezy.diff",
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/ci/packages/kind.yml"
         ]
       }
     }
