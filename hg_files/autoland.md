@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: AUTOLAND
- CURRENT PUSH ID: 82521
+ CURRENT PUSH ID: 82535
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|82521|2019-04-08 13:44:17|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|[Bug 1541147](https://bugzilla.mozilla.org/show_bug.cgi?id=1541147)  - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastienDifferential Revision: https://phabricator.services.mozilla.com/D26145|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=674a4d255565
+|82526|2019-04-08 14:32:04|ffxbld <ffxbld@mozilla.com>|No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraserDifferential Revision: https://phabricator.services.mozilla.com/D26482|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8b80520b0ca7
 |82519|2019-04-08 13:25:05|Coroiu Cristina <ccoroiu@mozilla.com>|Backed out changeset 7e2aef09165a [Bug 1541147](https://bugzilla.mozilla.org/show_bug.cgi?id=1541147)  on request by Andy|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=248454418988
 |82518|2019-04-08 13:16:54|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|[Bug 1541147](https://bugzilla.mozilla.org/show_bug.cgi?id=1541147)  - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastienDifferential Revision: https://phabricator.services.mozilla.com/D26145|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7e2aef09165a
 |82512|2019-04-08 11:14:28|Sebastian Hengst <archaeopteryx@coole-files.de>|[Bug 1503453](https://bugzilla.mozilla.org/show_bug.cgi?id=1503453)  - Temporarily disable permafailing Windows static analysis builds: Add one more whitespace because the linting gods demand this. a=permafail CLOSED TREE|https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=c9d95a544902

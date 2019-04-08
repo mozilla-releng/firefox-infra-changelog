@@ -1,7 +1,9 @@
-## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-25 13:47:57.737428
+## BUILD-PUPPET COMMIT MARKDOWN TABLE SINCE 2019-03-25 17:03:17.790346
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|90|srfraser|Merge pull request #445 from srfraser/bug_1542500_beetmover_bump [Bug 1542500](https://bugzilla.mozilla.org/show_bug.cgi?id=1542500)  bump beetmover version|[URL](https://github.com/mozilla-releng/build-puppet/commit/d78f3680c1fd6ef0be2d8c5c79993625d49a7a0c)|2019-04-08 13:51:53
+|89|srfraser|[Bug 1542500](https://bugzilla.mozilla.org/show_bug.cgi?id=1542500)  bump beetmover version|[URL](https://github.com/mozilla-releng/build-puppet/commit/bbb291789b7732de1739c40546b0405555b826fd)|2019-04-08 13:36:17
 |88|MihaiTabara|Merge pull request #444 from MihaiTabara/bump [Bug 1539067](https://bugzilla.mozilla.org/show_bug.cgi?id=1539067)  - bump beetmoverscript in beetmoverworkers.|[URL](https://github.com/mozilla-releng/build-puppet/commit/e81c82301c93f84a2ffdf6bdb7ad7ba44e802bdb)|2019-04-05 16:42:18
 |87|MihaiTabara|[Bug 1539067](https://bugzilla.mozilla.org/show_bug.cgi?id=1539067)  - bump beetmoverscript in beetmoverworkers.|[URL](https://github.com/mozilla-releng/build-puppet/commit/a82deadea0ac0f01332241185a2957db5038ede5)|2019-04-05 16:20:13
 |86|rail|balrogscript: remove basic auth support (#443)|[URL](https://github.com/mozilla-releng/build-puppet/commit/91afa14c2ae9e0357fc08c9db8f64fd9bc09b959)|2019-04-04 17:26:11

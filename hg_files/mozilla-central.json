@@ -13636,32 +13636,6 @@
     }
   },
   "142": {
-    "changeset_number": "35828",
-    "pusher": "cbrindusan@mozilla.com",
-    "date_of_push": "2019-04-07 12:34:50",
-    "changeset_commits": {
-      "4": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=97fa367562a0",
-        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-        "commit_message": "Bug 1541821 - Ensure docker images using setup_packages.sh are up-to-date wrt the packages provided there. r=tomprince\n\nWhen docker images use setup_packages.sh, they add apt sources. While we\ncurrently do run apt-get update to pick those new sources, if a package\nprovided by them is already installed and not explicitly listed in\nsubsequent apt-get install, they're not going to be upgraded.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26100",
-        "files_changed": [
-          "taskcluster/docker/debian-base/Dockerfile",
-          "taskcluster/docker/debian-build/Dockerfile"
-        ]
-      },
-      "5": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7d60a7fd2fac",
-        "commiter_name": "Mike Hommey <mh+mozilla@glandium.org>",
-        "commit_message": "Bug 1541821 - Update debian7 docker images for CVE-2019-3462. r=tomprince\n\nThis imports the changes from wheezy-lts (http://deb.freexian.com/extended-lts/)\nand creates a package we install in the debian7-based images (with a\nmodified version number to work around bug #1419577.\n\nThis leaves out debian7-raw and debian7-packages as unpatched, because\nof the chicken-and-egg problem.\n\nDepends on D26100\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26102",
-        "files_changed": [
-          "build/debian-packages/apt-wheezy.diff",
-          "taskcluster/ci/docker-image/kind.yml",
-          "taskcluster/ci/packages/kind.yml"
-        ]
-      }
-    }
-  },
-  "142": {
     "changeset_number": "35831",
     "pusher": "dluca@mozilla.com",
     "date_of_push": "2019-04-08 13:33:51",
