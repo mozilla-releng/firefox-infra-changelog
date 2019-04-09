@@ -1,9 +1,9 @@
 ## REPOSITORY NAME: MOZILLA-RELEASE
- CURRENT PUSH ID: 2000
+ CURRENT PUSH ID: 2002
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|1996|2019-03-28 21:11:52|Aki Sasaki <asasaki@mozilla.com>|[Bug 1485680](https://bugzilla.mozilla.org/show_bug.cgi?id=1485680)  - make the relpro action a hook. r=dustin a=tomprincemake the relpro action a hook.Differential Revision: https://phabricator.services.mozilla.com/D5581|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=2e051d69d6e4
+|2002|2019-04-09 04:48:47|Rail Aliiev <rail@mozilla.com>|[Bug 1541693](https://bugzilla.mozilla.org/show_bug.cgi?id=1541693)  Stop marking releases as started r=mtabara a=releaseShip-it v1 is going away soon and we won't need to create new releases in Ship-it v1 in parallel with Ship-it v2. It's time to prep patches to remove this functionality.Differential Revision: https://phabricator.services.mozilla.com/D26044|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=486b34283c44
 |1928|2019-02-06 23:11:14|Wes Kocher <wkocher@mozilla.com>|[Bug 1524911](https://bugzilla.mozilla.org/show_bug.cgi?id=1524911)  - Increase the upper limit of retrigger 'times' value from 6 to 100 r=dustin a=NPOTBDifferential Revision: https://phabricator.services.mozilla.com/D18623|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=b3320a1afdc4
 |1927|2019-02-05 20:23:21|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1524358](https://bugzilla.mozilla.org/show_bug.cgi?id=1524358)  - Document inputs to .taskcluster.yml more deeply. r=tomprince, a=RyanVMDifferential Revision: https://phabricator.services.mozilla.com/D18287|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=bbc3115c9077
 |1927|2019-02-05 20:23:21|Dustin J. Mitchell <dustin@mozilla.com>|[Bug 1524358](https://bugzilla.mozilla.org/show_bug.cgi?id=1524358)  - Use ownTaskId, instead of as_slugid('decision'), in .taskcluster.yml. r=Callek,tomprince, a=RyanVMThis is a forward-looking change to allow evaluation of .taskcluster.yml insituations where as_slugid is not defined -- such as in the Taskcluster hooksservice.Differential Revision: https://phabricator.services.mozilla.com/D18269|https://hg.mozilla.org/releases/mozilla-release/pushloghtml?changeset=ad0d9539cc64

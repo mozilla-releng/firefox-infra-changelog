@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: MOZILLA-BETA
- CURRENT PUSH ID: 11037
+ CURRENT PUSH ID: 11045
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|11028|2019-04-08 11:19:31|Julien Cristau <jcristau@mozilla.com>|No bug: Turn off staged rollout for Fennec 67.0b. a=release DONTBUILD|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=c261ac70fabc
+|11044|2019-04-09 04:47:53|Rail Aliiev <rail@mozilla.com>|[Bug 1541693](https://bugzilla.mozilla.org/show_bug.cgi?id=1541693)  Stop marking releases as started r=mtabara a=releaseShip-it v1 is going away soon and we won't need to create new releases in Ship-it v1 in parallel with Ship-it v2. It's time to prep patches to remove this functionality.Differential Revision: https://phabricator.services.mozilla.com/D26044|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=2a4306fc8442
+|11043|2019-04-08 22:17:21|Jordan Lund <jlund@mozilla.com>|[Bug 1540262](https://bugzilla.mozilla.org/show_bug.cgi?id=1540262)  - increase UV chunks from 12 to 16, NPOTB DONTBUILD r=tomprince, a=testingDifferential Revision: https://phabricator.services.mozilla.com/D25673|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=9bae80c354eb
 |11010|2019-04-05 20:44:22|Simon Fraser <sfraser@mozilla.com>|[Bug 1539905](https://bugzilla.mozilla.org/show_bug.cgi?id=1539905)  Cache yaml loading with copy of memoized values r=mtabara a=release|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=864e16abd2f7
 |11009|2019-04-05 19:36:58|Mihai Tabara <mtabara@mozilla.com>|[Bug 1538703](https://bugzilla.mozilla.org/show_bug.cgi?id=1538703)  - remove try config from declarative artifacts world. r=sfraser a=release|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=df05571b936f
 |10867|2019-03-14 17:20:45|marian.raiciof <marian.raiciof@softvision.ro>|[Bug 1529207](https://bugzilla.mozilla.org/show_bug.cgi?id=1529207)  - Add new Raptor tests in tp6m-4 r=davehunt,rwoodDifferential Revision: https://phabricator.services.mozilla.com/D20852|https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=18fa4e4ce035

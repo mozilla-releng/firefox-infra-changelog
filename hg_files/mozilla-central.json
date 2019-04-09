@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35832
+    "last_push_id": 35837
   },
   "1": {
     "changeset_number": "35344",
@@ -13654,6 +13654,125 @@
         "commit_message": "Bug 1503453 - Temporarily disable permafailing Windows static analysis builds: Add one more whitespace because the linting gods demand this. a=permafail CLOSED TREE",
         "files_changed": [
           "taskcluster/ci/static-analysis-autotest/kind.yml"
+        ]
+      }
+    }
+  },
+  "142": {
+    "changeset_number": "35833",
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-04-08 19:16:26",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7e2aef09165a",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=248454418988",
+        "commiter_name": "Coroiu Cristina <ccoroiu@mozilla.com>",
+        "commit_message": "Backed out changeset 7e2aef09165a (bug 1541147) on request by Andy",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=674a4d255565",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1541147 - [Coverity] Create a try job that performs coverity static-analysis for patches. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26145",
+        "files_changed": [
+          "python/mozbuild/mozbuild/mach_commands.py",
+          "taskcluster/ci/config.yml",
+          "taskcluster/ci/source-test/coverity.yml",
+          "taskcluster/ci/source-test/kind.yml"
+        ]
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8b80520b0ca7",
+        "commiter_name": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26482",
+        "files_changed": [
+          "taskcluster/docker/funsize-update-generator/Pipfile.lock"
+        ]
+      }
+    }
+  },
+  "143": {
+    "changeset_number": "35835",
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-04-08 22:00:29",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b306079acdcb",
+        "commiter_name": "Rail Aliiev <rail@mozilla.com>",
+        "commit_message": "Bug 1541693: Stop marking releases as started r=mtabara\n\nShip-it v1 is going away soon and we won't need to create new releases in Ship-it v1 in parallel with Ship-it v2. It's time to prep patches to remove this functionality.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26044",
+        "files_changed": [
+          "taskcluster/ci/release-mark-as-started/kind.yml",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/taskgraph/transforms/release_mark_as_started.py",
+          "taskcluster/taskgraph/transforms/task.py",
+          "taskcluster/taskgraph/util/scriptworker.py"
+        ]
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d689bb3db16e",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1523303 - [tryselect] Extend test_mozharness_integration.py to include the 'android_emulator_unittest' script, r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26133",
+        "files_changed": [
+          "testing/mozharness/scripts/android_emulator_unittest.py",
+          "tools/tryselect/test/test_mozharness_integration.py"
+        ]
+      },
+      "49": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=390bf9dcba1a",
+        "commiter_name": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1532545 Add support for running page load tests against Fennec r=rwood\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25723",
+        "files_changed": [
+          "taskcluster/ci/test/raptor.yml",
+          "taskcluster/ci/test/test-sets.yml",
+          "testing/mozbase/mozproxy/mozproxy/backends/mitm.py",
+          "testing/raptor/raptor/tests/raptor-tp6m-1.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-10.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-2.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-3.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-4.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-5.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-6.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-7.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-8.ini",
+          "testing/raptor/raptor/tests/raptor-tp6m-9.ini"
+        ]
+      }
+    }
+  },
+  "144": {
+    "changeset_number": "35837",
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-04-09 06:43:40",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0fbc141c1004",
+        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1542824 - [Coverity] Limit Coverity to run only on try. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26571",
+        "files_changed": [
+          "taskcluster/ci/source-test/coverity.yml"
+        ]
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f6bf51e87b1a",
+        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1534647 - Switch python3 version to 3.6 on osx hosts; r=ahal\n\nQuick fix for python3 mozbase perma-fail on osx: Use python 3.6 explicitly, rather\nthan the system default 3.7, which appears to be broken currently (lacking ssl support).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26345",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/python_test.py"
         ]
       }
     }

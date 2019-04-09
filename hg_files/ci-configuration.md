@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: CI-CONFIGURATION
- CURRENT PUSH ID: 118
+ CURRENT PUSH ID: 120
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|118|2019-04-08 12:49:22|Mitchell Hentges <mhentges@mozilla.com>|No bug - Move fenix master scopes to their own grant section r=jlorenzoDifferential Revision: https://phabricator.services.mozilla.com/D26480|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e0e131534dc9
+|120|2019-04-08 22:43:15|Aki Sasaki <asasaki@mozilla.com>|[Bug 1514903](https://bugzilla.mozilla.org/show_bug.cgi?id=1514903)  - add dep-iscript to level 1 r=tomprinceDifferential Revision: https://phabricator.services.mozilla.com/D26385|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f8735bbb7de9
+|119|2019-04-08 17:19:39|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1522225](https://bugzilla.mozilla.org/show_bug.cgi?id=1522225)  - part 1: Temporily allow reference-browser to schedule autophone tasks on PRs r=mhentgespart 1: Temporily allow reference-browser to schedule autophone tasks on PRsDifferential Revision: https://phabricator.services.mozilla.com/D26525|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ee754847e3c8
 |117|2019-04-08 12:18:53|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|[Bug 1542697](https://bugzilla.mozilla.org/show_bug.cgi?id=1542697)  - Add secret project/relman/coverity to L1, L2 and L3 access. r=jlorenzoDifferential Revision: https://phabricator.services.mozilla.com/D26478|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=99bb5249719c
 |114|2019-04-03 12:14:07|Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>|[Bug 1541067](https://bugzilla.mozilla.org/show_bug.cgi?id=1541067)  - Allow try to access secret project/relman/coverity. r=tomprince,sylvestreDifferential Revision: https://phabricator.services.mozilla.com/D25817|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=630afd38ba9c
 |111|2019-03-29 18:10:46|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1540168](https://bugzilla.mozilla.org/show_bug.cgi?id=1540168)  - Fix Reference-Browser nightly r=mtabaraFix Reference-Browser nightlyFixes https://tools.taskcluster.net/groups/LasmOd2xTp6Knn6xlkbmTA/tasks/LasmOd2xTp6Knn6xlkbmTA/runs/0/logs/public%2Flogs%2Flive_backing.logDifferential Revision: https://phabricator.services.mozilla.com/D25413|https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4eb38751b8be
