@@ -1,7 +1,8 @@
-## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-26 16:10:15.888482
+## TASKCLUSTER COMMIT MARKDOWN TABLE SINCE 2019-03-26 19:35:29.602189
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:---:|:----:|:----------------------------------:|:------:|:----:| 
+|774|djmitche|Merge pull request #555 from djmitche/use-index-for-libraries rename libraries' index files to index.js|[URL](https://github.com/taskcluster/taskcluster/commit/5cf7005f53d41c6b5a8a1e85130389fdd3542dde)|2019-04-09 15:12:55
 |773|imbstack|Merge pull request #526 from djmitche/bug1534713 [Bug 1534713](https://bugzilla.mozilla.org/show_bug.cgi?id=1534713)  - better debugging for pulse issues|[URL](https://github.com/taskcluster/taskcluster/commit/8aeb54ba72ec3f1f2ded99d4c6a8760f8fc20710)|2019-04-04 17:00:09
 |772|imbstack|Merge pull request #537 from djmitche/tdd-for-tc-web-server use tdd for tc-web-server tests|[URL](https://github.com/taskcluster/taskcluster/commit/649df9d35712fd76e5893f55e95c5c82a1bf70c6)|2019-04-04 16:45:36
 |771|imbstack|Merge pull request #524 from djmitche/bug1540697 [Bug 1540697](https://bugzilla.mozilla.org/show_bug.cgi?id=1540697)  - improve idempotency of task creation, especially in hooks|[URL](https://github.com/taskcluster/taskcluster/commit/9833a1c47a4faafa44b8fe0f86204f38eb560a5e)|2019-04-04 16:37:19

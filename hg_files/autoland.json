@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 82662
+    "last_push_id": 82686
   },
   "1": {
     "changeset_number": "35344",
@@ -39302,21 +39302,6 @@
     }
   },
   "851": {
-    "changeset_number": "82602",
-    "pusher": "apavel@mozilla.com",
-    "date_of_push": "2019-04-09 02:21:13",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e6d48028244b",
-        "commiter_name": "Tom Ritter <tom@mozilla.com>",
-        "commit_message": "Bug 1540907 - Bump MinGW version to pick up MFVideoTransferMatrix constants r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26530",
-        "files_changed": [
-          "taskcluster/scripts/misc/build-clang-8-mingw.sh"
-        ]
-      }
-    }
-  },
-  "851": {
     "changeset_number": "82638",
     "pusher": "nerli@mozilla.com",
     "date_of_push": "2019-04-09 13:01:41",
@@ -47446,6 +47431,44 @@
         "files_changed": [
           "taskcluster/docker/firefox-snap/policies.json",
           "taskcluster/docker/firefox-snap/runme.sh"
+        ]
+      }
+    }
+  },
+  "853": {
+    "changeset_number": "82677",
+    "pusher": "jlorenzo@mozilla.com",
+    "date_of_push": "2019-04-09 17:59:40",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b979e271d955",
+        "commiter_name": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1540152 - Run checks done in push-apk in promote-phase, instead of the very last task of the pipeline r=mtabara\n\nRun checks done in push-apk in promote-phase, instead of the very last task of the pipeline\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26328",
+        "files_changed": [
+          "taskcluster/ci/docker-image/kind.yml",
+          "taskcluster/ci/google-play-strings/kind.yml",
+          "taskcluster/ci/push-apk-checks/kind.yml",
+          "taskcluster/ci/push-apk/kind.yml",
+          "taskcluster/docker/google-play-strings/Dockerfile",
+          "taskcluster/docker/mozapkpublisher/Dockerfile",
+          "taskcluster/docs/kinds.rst",
+          "taskcluster/taskgraph/transforms/push_apk.py",
+          "taskcluster/taskgraph/transforms/push_apk_checks.py"
+        ]
+      }
+    }
+  },
+  "854": {
+    "changeset_number": "82684",
+    "pusher": "ahalberstadt@mozilla.com",
+    "date_of_push": "2019-04-09 19:05:43",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=20c86313e332",
+        "commiter_name": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1542242 - [taskgraph] Hack required mozbase module onto PYTHONPATH rather than run 'mach python' for Windows builds, r=marco\n\nThis is a hack to get around Windows ccov build hangs caused by bug 1195299.\nBug 1543149 will track the investigation of the hang and removal of this hack.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26750",
+        "files_changed": [
+          "taskcluster/taskgraph/transforms/job/mozharness.py"
         ]
       }
     }

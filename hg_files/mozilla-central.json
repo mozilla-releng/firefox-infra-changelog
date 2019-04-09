@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 35840
+    "last_push_id": 35842
   },
   "1": {
     "changeset_number": "35344",
@@ -13727,29 +13727,6 @@
           "testing/raptor/raptor/tests/raptor-tp6m-7.ini",
           "testing/raptor/raptor/tests/raptor-tp6m-8.ini",
           "testing/raptor/raptor/tests/raptor-tp6m-9.ini"
-        ]
-      }
-    }
-  },
-  "144": {
-    "changeset_number": "35837",
-    "pusher": "rmaries@mozilla.com",
-    "date_of_push": "2019-04-09 06:43:40",
-    "changeset_commits": {
-      "4": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0fbc141c1004",
-        "commiter_name": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-        "commit_message": "Bug 1542824 - [Coverity] Limit Coverity to run only on try. r=bastien\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26571",
-        "files_changed": [
-          "taskcluster/ci/source-test/coverity.yml"
-        ]
-      },
-      "6": {
-        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f6bf51e87b1a",
-        "commiter_name": "Geoff Brown <gbrown@mozilla.com>",
-        "commit_message": "Bug 1534647 - Switch python3 version to 3.6 on osx hosts; r=ahal\n\nQuick fix for python3 mozbase perma-fail on osx: Use python 3.6 explicitly, rather\nthan the system default 3.7, which appears to be broken currently (lacking ssl support).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26345",
-        "files_changed": [
-          "taskcluster/taskgraph/transforms/job/python_test.py"
         ]
       }
     }

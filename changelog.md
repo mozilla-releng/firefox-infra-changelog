@@ -1,10 +1,11 @@
-##  Commits in production - for 3 days, generated on: 2019-04-09 13:11:24 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-09 16:36:39 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3b8444793f55)|[Bug 1436457](https://bugzilla.mozilla.org/show_bug.cgi?id=1436457)  - Add a group policy file to disable app updates, as those are handled by snapd. r=jlorenzo,mkaply Differential Revision: https://phabricator.services.mozilla.com/D26281|jlorenzo@mozilla.com|jlorenzo,mkaply|2019-04-09 15:41:12|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=20c86313e332)|[Bug 1542242](https://bugzilla.mozilla.org/show_bug.cgi?id=1542242)  - [taskgraph] Hack required mozbase module onto PYTHONPATH rather than run 'mach python' for Windows builds, r=marco This is a hack to get around Windows ccov build hangs caused by [Bug 1195299](https://bugzilla.mozilla.org/show_bug.cgi?id=1195299)  [Bug 1543149](https://bugzilla.mozilla.org/show_bug.cgi?id=1543149)  will track the investigation of the hang and removal of this hack. Differential Revision: https://phabricator.services.mozilla.com/D26750|ahalberstadt@mozilla.com|marco|2019-04-09 19:05:43|
+|[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b979e271d955)|[Bug 1540152](https://bugzilla.mozilla.org/show_bug.cgi?id=1540152)  - Run checks done in push-apk in promote-phase, instead of the very last task of the pipeline r=mtabara Run checks done in push-apk in promote-phase, instead of the very last task of the pipeline Differential Revision: https://phabricator.services.mozilla.com/D26328|jlorenzo@mozilla.com|mtabara|2019-04-09 17:59:40|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a024c4370f28)|[Bug 1541917](https://bugzilla.mozilla.org/show_bug.cgi?id=1541917)  - Mac Talos tests are running on every push to integration branches. r=jmaher Differential Revision: https://phabricator.services.mozilla.com/D26265|jwood@mozilla.com|jmaher|2019-04-09 15:21:13|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=21e7aa527584)|[Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  - Elevate the new debugger one directory. r=jlast|nerli@mozilla.com|jlast|2019-04-09 13:01:41|
 |[Link](https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=db09a6f1febb)|Backed out changeset 21e7aa527584 [Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  for debugger, clipboard and dt failures on a CLOSED TREE|nerli@mozilla.com||2019-04-09 13:01:41|
@@ -25,7 +26,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e6d48028244b)|[Bug 1540907](https://bugzilla.mozilla.org/show_bug.cgi?id=1540907)  - Bump MinGW version to pick up MFVideoTransferMatrix constants r=froydnj Differential Revision: https://phabricator.services.mozilla.com/D26530|nerli@mozilla.com|froydnj|2019-04-09 13:03:26|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=86b54cfca31f)|Backed out changeset ca42d5764b08 [Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  for failures in browser_dbg_worker-console-04.js|nerli@mozilla.com||2019-04-09 19:05:22|
+|[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ca42d5764b08)|[Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  - Elevate the new debugger one directory. r=jlast|jlaster@mozilla.com|jlast|2019-04-09 17:31:57|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b306079acdcb)|[Bug 1541693](https://bugzilla.mozilla.org/show_bug.cgi?id=1541693)  Stop marking releases as started r=mtabara Ship-it v1 is going away soon and we won't need to create new releases in Ship-it v1 in parallel with Ship-it v2. It's time to prep patches to remove this functionality. Differential Revision: https://phabricator.services.mozilla.com/D26044|rmaries@mozilla.com|mtabara|2019-04-09 00:03:16|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d689bb3db16e)|[Bug 1523303](https://bugzilla.mozilla.org/show_bug.cgi?id=1523303)  - [tryselect] Extend test_mozharness_integration.py to include the 'android_emulator_unittest' script, r=gbrown Differential Revision: https://phabricator.services.mozilla.com/D26133|rmaries@mozilla.com|gbrown|2019-04-09 00:03:16|
 |[Link](https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=390bf9dcba1a)|[Bug 1532545](https://bugzilla.mozilla.org/show_bug.cgi?id=1532545)  Add support for running page load tests against Fennec r=rwood Differential Revision: https://phabricator.services.mozilla.com/D25723|rmaries@mozilla.com|rwood|2019-04-09 00:03:16|
@@ -75,6 +77,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/build-puppet/commit/c6173db2f17c35e81ac63e62735bb9aded5c3fc7)|Update shipitscript to stop handling shipit v1 (#447)|rail|N/A|2019-04-09 14:17:27|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/d78f3680c1fd6ef0be2d8c5c79993625d49a7a0c)|Merge pull request #445 from srfraser/bug_1542500_beetmover_bump  Bug 1542500 bump beetmover version|srfraser|N/A|2019-04-08 13:51:53|
 |[Link](https://github.com/mozilla-releng/build-puppet/commit/bbb291789b7732de1739c40546b0405555b826fd)|Bug 1542500 bump beetmover version|srfraser|N/A|2019-04-08 13:36:17|
 
@@ -83,6 +86,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
+|[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/2f86f676007e49c2b92201104b02cc37b2e976a3)|Testing generic-worker 14.0.2 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 14.0.2 5.1.0  See https://github.com/taskcluster/generic-worker/blob/3a55d5bc23974e00372ae67cd1f632a4fe92301c/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-04-09 16:27:55|
 |[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/83039fa1108d302a1187fe29f3a38917fd8e97a6)|Remove openpgpSigningKeyLocation config setting from generic-worker 14.0.1 workers  deploy:gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-04-09 05:33:06|
 |[Link](https://github.com/mozilla-releng/OpenCloudConfig/commit/f8cf39be79842ada5b2b0e15e5b1ae938ef53d31)|Testing generic-worker 14.0.1 / taskcluster-proxy 5.1.0 on  STAGING   This change does _not_ affect any production workers. Commit made with:      ./gecko-try.sh 14.0.1 5.1.0  See https://github.com/taskcluster/generic-worker/blob/d6198468456a3af8b90265d62eb0b10cc19cbba3/mozilla-try-scripts/gecko-try.sh  deploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win10-64-hw-b gecko-t-win10-64-ux-b gecko-t-win10-a64-beta gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b|petemoore|N/A|2019-04-08 17:15:02|
 
@@ -91,7 +95,7 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-| |No push in the last 3 days.. [see the history of MD commits](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/taskcluster.md)|FIC - BOT|Self Generated| - |
+|[Link](https://github.com/taskcluster/taskcluster/commit/5cf7005f53d41c6b5a8a1e85130389fdd3542dde)|Merge pull request #555 from djmitche/use-index-for-libraries  rename libraries' index files to index.js|djmitche|N/A|2019-04-09 15:12:55|
 
 |	addonscript	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.json)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/git_files/addonscript.md)	| 
 |:----------:|:-----------------------:|:--------:| 

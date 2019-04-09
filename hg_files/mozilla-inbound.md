@@ -1,9 +1,10 @@
 ## REPOSITORY NAME: MOZILLA-INBOUND
- CURRENT PUSH ID: 112725
+ CURRENT PUSH ID: 112733
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|112724|2019-04-09 13:03:26|Tom Ritter <tom@mozilla.com>|[Bug 1540907](https://bugzilla.mozilla.org/show_bug.cgi?id=1540907)  - Bump MinGW version to pick up MFVideoTransferMatrix constants r=froydnjDifferential Revision: https://phabricator.services.mozilla.com/D26530|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e6d48028244b
+|112731|2019-04-09 19:05:22|Noemi Erli <nerli@mozilla.com>|Backed out changeset ca42d5764b08 [Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  for failures in browser_dbg_worker-console-04.js|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=86b54cfca31f
+|112727|2019-04-09 17:31:57|David Walsh <dwalsh@mozilla.com>|[Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  - Elevate the new debugger one directory. r=jlast|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ca42d5764b08
 |112715|2019-04-09 00:03:16|Rail Aliiev <rail@mozilla.com>|[Bug 1541693](https://bugzilla.mozilla.org/show_bug.cgi?id=1541693)  Stop marking releases as started r=mtabaraShip-it v1 is going away soon and we won't need to create new releases in Ship-it v1 in parallel with Ship-it v2. It's time to prep patches to remove this functionality.Differential Revision: https://phabricator.services.mozilla.com/D26044|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b306079acdcb
 |112715|2019-04-09 00:03:16|Andrew Halberstadt <ahalberstadt@mozilla.com>|[Bug 1523303](https://bugzilla.mozilla.org/show_bug.cgi?id=1523303)  - [tryselect] Extend test_mozharness_integration.py to include the 'android_emulator_unittest' script, r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D26133|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d689bb3db16e
 |112715|2019-04-09 00:03:16|alexandru.ionescu <alexandru.ionescu@softvision.ro>|[Bug 1532545](https://bugzilla.mozilla.org/show_bug.cgi?id=1532545)  Add support for running page load tests against Fennec r=rwoodDifferential Revision: https://phabricator.services.mozilla.com/D25723|https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=390bf9dcba1a
