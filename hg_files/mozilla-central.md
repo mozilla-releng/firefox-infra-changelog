@@ -1,11 +1,10 @@
 ## REPOSITORY NAME: MOZILLA-CENTRAL
- CURRENT PUSH ID: 35844
+ CURRENT PUSH ID: 35846
 
 | Changeset | Date | Commiter | Commit Message | Commit URL | 
 |:---:|:---:|:----:|:----------------------------------:|:-----:| 
-|35844|2019-04-10 01:10:47|David Walsh <dwalsh@mozilla.com>|[Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  - Elevate the new debugger one directory. r=jlast|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ca42d5764b08
-|35844|2019-04-10 01:10:47|Noemi Erli <nerli@mozilla.com>|Backed out changeset ca42d5764b08 [Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  for failures in browser_dbg_worker-console-04.js|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=86b54cfca31f
-|35844|2019-04-10 01:10:47|David Walsh <dwalsh@mozilla.com>|[Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  - Elevate the new debugger one directory. r=jlast|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e9408a26af67
+|35846|2019-04-10 13:00:20|Narcis Beleuzu <nbeleuzu@mozilla.com>|Merge mozilla-central to inbound. a=merge CLOSED TREE|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d6bbb316b768
+|35845|2019-04-10 12:58:56|Andrew Erickson <aerickson@mozilla.com>|[Bug 1541955](https://bugzilla.mozilla.org/show_bug.cgi?id=1541955)  Update Android 7.0 emulator r=gbrownDifferential Revision: https://phabricator.services.mozilla.com/D26383|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=82054c3d9cad
 |35843|2019-04-10 01:08:13|Justin Wood <Callek@gmail.com>|[Bug 1541917](https://bugzilla.mozilla.org/show_bug.cgi?id=1541917)  - Mac Talos tests are running on every push to integration branches. r=jmaherDifferential Revision: https://phabricator.services.mozilla.com/D26265|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a024c4370f28
 |35843|2019-04-10 01:08:13|Olivier Tilloy <olivier@tilloy.net>|[Bug 1436457](https://bugzilla.mozilla.org/show_bug.cgi?id=1436457)  - Add a group policy file to disable app updates, as those are handled by snapd. r=jlorenzo,mkaplyDifferential Revision: https://phabricator.services.mozilla.com/D26281|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3b8444793f55
 |35843|2019-04-10 01:08:13|Johan Lorenzo <jlorenzo@mozilla.com>|[Bug 1540152](https://bugzilla.mozilla.org/show_bug.cgi?id=1540152)  - Run checks done in push-apk in promote-phase, instead of the very last task of the pipeline r=mtabaraRun checks done in push-apk in promote-phase, instead of the very last task of the pipelineDifferential Revision: https://phabricator.services.mozilla.com/D26328|https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b979e271d955

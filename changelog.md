@@ -1,4 +1,4 @@
-##  Commits in production - for 3 days, generated on: 2019-04-10 07:23:08 UTC.
+##  Commits in production - for 3 days, generated on: 2019-04-10 10:39:33 UTC.
 |	autoland	|	[MarkDown](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.md)	|	[Json](https://github.com/mozilla-releng/firefox-infra-changelog/blob/master/hg_files/autoland.json)	| 
 |:----------:|:-----------------------:|:--------:| 
  
@@ -61,9 +61,8 @@
  
 | Link | Last commit | Author | Reviewer | Deploy time | 
 |:----------:|:-----------:|:------:|:--------:|:-----------:| 
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ca42d5764b08)|[Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  - Elevate the new debugger one directory. r=jlast|nbeleuzu@mozilla.com|jlast|2019-04-10 01:10:47|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=86b54cfca31f)|Backed out changeset ca42d5764b08 [Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  for failures in browser_dbg_worker-console-04.js|nbeleuzu@mozilla.com||2019-04-10 01:10:47|
-|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e9408a26af67)|[Bug 1500987](https://bugzilla.mozilla.org/show_bug.cgi?id=1500987)  - Elevate the new debugger one directory. r=jlast|nbeleuzu@mozilla.com|jlast|2019-04-10 01:10:47|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d6bbb316b768)|Merge mozilla-central to inbound. a=merge CLOSED TREE|ncsoregi@mozilla.com|merge|2019-04-10 13:00:20|
+|[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=82054c3d9cad)|[Bug 1541955](https://bugzilla.mozilla.org/show_bug.cgi?id=1541955)  Update Android 7.0 emulator r=gbrown Differential Revision: https://phabricator.services.mozilla.com/D26383|ncsoregi@mozilla.com|gbrown|2019-04-10 12:58:56|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a024c4370f28)|[Bug 1541917](https://bugzilla.mozilla.org/show_bug.cgi?id=1541917)  - Mac Talos tests are running on every push to integration branches. r=jmaher Differential Revision: https://phabricator.services.mozilla.com/D26265|nbeleuzu@mozilla.com|jmaher|2019-04-10 01:08:13|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3b8444793f55)|[Bug 1436457](https://bugzilla.mozilla.org/show_bug.cgi?id=1436457)  - Add a group policy file to disable app updates, as those are handled by snapd. r=jlorenzo,mkaply Differential Revision: https://phabricator.services.mozilla.com/D26281|nbeleuzu@mozilla.com|jlorenzo,mkaply|2019-04-10 01:08:13|
 |[Link](https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b979e271d955)|[Bug 1540152](https://bugzilla.mozilla.org/show_bug.cgi?id=1540152)  - Run checks done in push-apk in promote-phase, instead of the very last task of the pipeline r=mtabara Run checks done in push-apk in promote-phase, instead of the very last task of the pipeline Differential Revision: https://phabricator.services.mozilla.com/D26328|nbeleuzu@mozilla.com|mtabara|2019-04-10 01:08:13|
