@@ -18,6 +18,6 @@ class FICGithub:
     def read_repo(self, team_name, repo_name):
         return self._init_github(self._gh, team_name, repo_name)
 
-    def _init_github(self, session, *args):
-        self.repo_data = github3.GitHub.repository(session, args[0], args[1])
+    def _init_github(self, *args):
+        self.repo_data = github3.GitHub.repository(args[0], args[1], args[2])
         return self.repo_data
