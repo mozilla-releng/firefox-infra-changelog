@@ -38,7 +38,8 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                       "|" + "[URL](" + self.commit_url + ")" + "|" + self.commit_date + "\n"
 
     def trim_commit_message(self):
-        return trim_commit_description(self.commit_message, COMMIT_DESCRIPTION_LENGTH)
+        return self.commit_message[:COMMIT_DESCRIPTION_LENGTH]
+
 
     def write_markdown(self, directory, file_name):
         self.save(directory, file_name, "CONTENT HERE")
