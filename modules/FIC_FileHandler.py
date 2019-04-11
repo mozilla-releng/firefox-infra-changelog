@@ -12,8 +12,9 @@ class FICFileHandler:
         self.data_folder = CHANGELOG_REPO_PATH
 
     def load(self, directory, file_name):
+        return open("{}{}".format(directory, file_name))
         # Use .endswith(".json|.md") to check if JSON or MD
-        pass
+        #pass
 
     @staticmethod
     def _construct_path(directory, file_name):

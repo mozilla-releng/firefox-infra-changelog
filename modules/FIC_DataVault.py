@@ -23,5 +23,5 @@ class FICDataVault:
 
         # HG Specific values
         self.changeset_index  = None
-        self.changeset_number = None
+        self.changeset = None
         self.changeset_lander = None
