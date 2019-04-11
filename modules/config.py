@@ -1,6 +1,8 @@
 # Common paths
-REPOSIRIES_FILE = "./repositories.json"
-GIT_TOKEN       = "GIT_TOKEN"
+REPOSIRIES_FILE     = "./repositories.json"
+CHANGELOG_JSON_PATH = "./changelog.json"
+CHANGELOG_MD_PATH   = "./changelog.md"
+GIT_TOKEN           = "GIT_TOKEN"  # Name of OS.ENV from which to pull the Github Token
 
 # Default values, if nothing is offered, fall back to these.
 DEFAULT_REPO_CHOICE       = "ALL"
