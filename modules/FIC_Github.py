@@ -36,14 +36,16 @@ class FICGithub(FICLogger):
             self.LOGGER.info("Error pulling the dates")
             exit(3)
 
-    # def _add(self):
-    #     from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
-    #     # Defines which files to add.
-    #     # ./data/*
-    #     # ./changelog.json
-    #     # ./changelog.md
-    #     git
-    #     pass
+    def add(self):
+        try:
+            from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+            for file in [CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH]:
+                self.repo.git.add(file, update=True)
+                if not self.repo.index.diff("HEAD"):
+                    self.LOGGER.info("Nothing staged for commit. has the data or files changed?")
+        except GitError:
+            self.LOGGER.info("Failed to add the files")
+
     #
     # def _commit(self):
     #     # Add the commit msg.
@@ -54,3 +56,7 @@ class FICGithub(FICLogger):
     #     self._commit()
     #     # Do the push
     #     pass
+
+
+a = FICGithub()
+a.add()
