@@ -21,3 +21,24 @@ class FICGithub:
     def _init_github(self, *args):
         self.repo_data = github3.GitHub.repository(args[0], args[1], args[2])
         return self.repo_data
+
+    def _add(self):
+        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+        # Defines which files to add.
+        # ./data/*
+        # ./changelog.json
+        # ./changelog.md
+        pass
+
+    def _commit(self):
+        # Add the commit msg.
+        pass
+
+    def push(self):
+        self._add()
+        self._commit()
+        # Do the push
+        pass
+
+    def pull(self):
+        pass
