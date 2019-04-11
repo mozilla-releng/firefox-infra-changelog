@@ -4,4 +4,24 @@
 
 
 class FICDataVault:
-    pass
+    def __init__(self):
+        # Common Data
+        self.uid = int()  # Used to find the object.
+        self.repos_container = dict()
+
+        # Commit Specific Data
+        # Common Git and HG values
+        self.commit_type          = None  # Can be "git" or "hg"
+        self.commit_number        = None
+        self.commit_sha           = None
+        self.commit_url           = None
+        self.commit_author        = None
+        self.commit_author_email  = None
+        self.commit_message       = None
+        self.commit_date          = None
+        self.commit_files_changed = None
+
+        # HG Specific values
+        self.changeset_index  = None
+        self.changeset_number = None
+        self.changeset_lander = None
