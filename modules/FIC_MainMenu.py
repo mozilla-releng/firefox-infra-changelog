@@ -51,7 +51,7 @@ class FICMainMenu:
             self.repo = True
 
         if args.days:
-            if args.days.isdecimal():
+            if str(args.days).isdecimal():
                 self.days = int(args.days)
             else:
                 print("When using -d/--days please insert a number of days.\n"
