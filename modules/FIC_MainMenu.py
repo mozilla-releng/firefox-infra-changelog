@@ -12,9 +12,8 @@ class FICMainMenu:
         self.all = False
         self.repo = False
         self.days = False
-        self.update = False
+        self.push = False
         self.parser = argparse.ArgumentParser()
-        self.a = self.parse_arguments()
 
     def parse_arguments(self):
         self.parser.add_argument('-a', '--all', required=False, action='store_true', default=False,
@@ -27,29 +26,59 @@ class FICMainMenu:
                                  help="Let the user choose for which repositories the script will run")
         self.parser.add_argument("-l", "--logging", required=False, action='store_true', default=False,
                                  help="Activate logger output in the console")
-        self.parser.add_argument("-d", "--days", required=False, action='store_true', default=False,
+        self.parser.add_argument("-d", "--days", required=False, action='store', default=3,
                                  help="Generate the changelog.md for <int> amount of days.")
         self.parser.add_argument("-p", "--push", required=False, action='store_true', default=False,
                                  help="Runs script for all available repositories and auto push the changes to github")
         args = self.parser.parse_args()
 
-        if args.all:
-            self.all = True
+        return args
 
+    def _set_argument_flags(self, args):
         if args.logging:
             self.logging = True
 
-        return args, self.all
+        if args.git:
+            self.git_only = True
+
+        if args.mercurial:
+            self.hg_only = True
+
+        if args.all:
+            self.all = True
+
+        if args.repo:
+            self.repo = True
+
+        if args.days:
+            if args.days.isdecimal():
+                self.days = int(args.days)
+            else:
+                print("When using -d/--days please insert a number of days.\n"
+                      "Example: python3 client.py -d 30 or --days 10")
+                exit(4)
+
+        if args.push:
+            self.push = True
+
+        return
 
     def repo_selection_menu(self):
         pass
 
     def main_menu(self):
+        self._set_argument_flags(self.parse_arguments())  # Set all flags before showing the menu.
         pass
 
     pass
 
 
 testing_arguments = FICMainMenu()
-print(testing_arguments.all)
-print(testing_arguments.logging)
+testing_arguments.main_menu()
+print("Logging       :", testing_arguments.logging)
+print("Git Only      :", testing_arguments.git_only)
+print("HG Only       :", testing_arguments.hg_only)
+print("All           :", testing_arguments.all)
+print("Repo Selection:", testing_arguments.repo)
+print("Push to Github:", testing_arguments.push)
+print("Number of Days:", testing_arguments.days)
