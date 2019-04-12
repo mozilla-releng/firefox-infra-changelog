@@ -14,9 +14,10 @@ class FICMercurial(FICFileHandler, FICDataVault):
         FICDataVault.__init__(self)
         self.file_name = file_name
         self.repo_name = repo_name
-        self.repo_data = self._load_json(self.file_name)
+        self.directory = "../"  # Hardcoded for now. We will need to pass this dynamically.
+        self.repo_data = self._load_json("../data/", self.file_name)  # Hardcoded directory for now. We will need to pass this dynamically.
         self.start_id = self._get_last_local_push_id()
-        self.repository_data = self._load_repository_data()
+        self.repository_data = self._load_repository_data(self.directory)
         self.repository_url = self._get_repo_link(self.repo_name)
         self.hg_response = self._request_hg_data()
         self.response_json = self._load_response_in_json()
@@ -53,20 +54,21 @@ class FICMercurial(FICFileHandler, FICDataVault):
         # Commit url
         self.commit_url = self._generate_commit_url()
 
-    def _load_json(self, file_name):
-        return json.load(self.load("../data/", file_name))
+    def _load_json(self, directory, file_name):
+        return json.load(self.load(directory, file_name))
 
     def _get_last_local_push_id(self):
         return self.repo_data.get("0").get("last_push_id")
 
-    def _load_repository_data(self):
-        return json.load(self.load("../", "repositories.json"))
+    def _load_repository_data(self, directory):
+        return json.load(self.load(directory, "repositories.json"))
 
     def _get_repo_link(self, repo_name):
         return self.repository_data.get("Mercurial").get(repo_name).get("url")
 
     def _request_hg_data(self):
-        return requests.get(self.repository_url + "json-pushes?version=2&full=1&startID=3&endID=5").text
+        url_flags = "json-pushes?version=2&full=1&startID=3&endID=5"
+        return requests.get(self.repository_url + url_flags).text
 
     def _load_response_in_json(self):
         return json.loads(self.hg_response)
@@ -75,7 +77,8 @@ class FICMercurial(FICFileHandler, FICDataVault):
         return self.response_json.get("lastpushid")
 
     def _generate_push_link(self):
-        return self.repository_url + "json-pushes?version=2&full=1&startID={}&endID={}".format(self.start_id, self.end_id)
+        url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.start_id, self.end_id)
+        return self.repository_url + url_options
 
     def _request_changesets_data(self):
         return requests.get(self.push_link).text
