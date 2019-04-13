@@ -68,6 +68,47 @@ class FICMainMenu:
 
     def main_menu(self):
         self._set_argument_flags(self.parse_arguments())  # Set all flags before showing the menu.
+
+        print("Welcome to Ciduty's Firefox Infra Changelog!\n"
+              "You can use the options below to run the script according to your needs.\n"
+              "\n"
+              "1. Run script for all available repositories \n"
+              "2. Run script only for repositories that are on GitHub\n"
+              "3. Run script only for repositories that are on Mercurial\n"
+              "4. Run script only for repositories that are chosen by you (Both GitHub and/or Mercurial)\n"
+              "5. Activates logger output in console\n"
+              "6. Generates changelog.md for the amount of days set by user\n"
+              "7. Run the script for all available repositories and pushes .json/.md changes to Git\n"
+              "0. Exit application.")
+
+        choice = input()
+
+        if choice == 1:
+            self.all = True
+
+        if choice == 2:
+            self.git_only = True
+
+        if choice == 3:
+            self.hg_only = True
+
+        if choice == 4:
+            self.repo = True
+
+        if choice == 5:
+            self.logging = True
+
+        if choice == 6:
+            days_choice = input("Please enter the number of days you want changelog.md to be generated for\n")
+            if str(days_choice).isdecimal():
+                self.days = days_choice
+            else:
+                print("When using option 6 please use integers only.")
+                exit(4)
+
+        else:
+            exit(0)
+
         pass
 
     pass
