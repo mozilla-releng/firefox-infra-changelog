@@ -52,7 +52,3 @@ class FICGithub(FICLogger):
             self.LOGGER.info("Summary of commit {}".format(FICGithub.commit(self)))
             self.LOGGER.info("pushing changes to {}  on branch  {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
             self.LOGGER.info("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
-
-
-test = FICGithub()
-test.push()
