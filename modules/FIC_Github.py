@@ -4,7 +4,6 @@
 import github3
 from modules.FIC_Logger import FICLogger
 from git import Repo
-from git import GitError
 
 
 class FICGithub(FICLogger):
@@ -28,35 +27,28 @@ class FICGithub(FICLogger):
         return self.repo_data
 
     def pull(self):
-        try:
-            self.LOGGER.info("pulling changes from %s", self.repo)
-            pull_info = self.repo.remotes.origin.pull(refspec=self.repo.active_branch)
-            self.LOGGER.info("Summary of pull: {}".format(pull_info[0]))
-        except GitError:
-            self.LOGGER.info("Error pulling the dates")
-            exit(3)
+        self.LOGGER.info("pulling changes from %s", self.repo)
+        return self.repo.remotes.origin.pull(refspec=self.repo.active_branch)
 
     def add(self):
-        try:
-            from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
-            for file in [CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH]:
-                self.repo.git.add(file, update=True)
-                if not self.repo.index.diff("HEAD"):
-                    self.LOGGER.info("Nothing staged for commit. has the data or files changed?")
-        except GitError:
-            self.LOGGER.info("Failed to add the files")
+        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+        self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
+        return self.check_for_changes()
 
-    #
-    # def _commit(self):
-    #     # Add the commit msg.
-    #     pass
-    #
-    # def push(self):
-    #     self._add()
-    #     self._commit()
-    #     # Do the push
-    #     pass
+    def check_for_changes(self):
+        if not self.repo.index.diff("HEAD"):
+            self.LOGGER.info("Nothing staged for commit. has the data or files changed?")
+            return False
+        return True
 
+    def commit(self):
+        from datetime import datetime
+        self.LOGGER.info("Committing changes with message: Changelog: %s", str(datetime.utcnow()))
+        return self.repo.index.commit("Changelog: " + str(datetime.utcnow()))
 
-a = FICGithub()
-a.add()
+    def push(self):
+        self.LOGGER.info("Summary of pull: {}".format(FICGithub.pull(self)[0]))
+        if FICGithub.add(self):
+            self.LOGGER.info("Summary of commit {}".format(FICGithub.commit(self)))
+            self.LOGGER.info("pushing changes to {}".format(self.repo))
+            self.LOGGER.info("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
