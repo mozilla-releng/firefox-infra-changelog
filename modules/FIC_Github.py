@@ -27,7 +27,7 @@ class FICGithub(FICLogger):
         return self.repo_data
 
     def pull(self):
-        self.LOGGER.info("pulling changes from %s", self.repo)
+        self.LOGGER.info("pulling changes from {} -> Branch {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
         return self.repo.remotes.origin.pull(refspec=self.repo.active_branch)
 
     def add(self):
@@ -50,5 +50,9 @@ class FICGithub(FICLogger):
         self.LOGGER.info("Summary of pull: {}".format(FICGithub.pull(self)[0]))
         if FICGithub.add(self):
             self.LOGGER.info("Summary of commit {}".format(FICGithub.commit(self)))
-            self.LOGGER.info("pushing changes to {}".format(self.repo))
+            self.LOGGER.info("pushing changes to {}  on branch  {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
             self.LOGGER.info("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
+
+
+test = FICGithub()
+test.push()
