@@ -46,8 +46,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     @staticmethod
     def generate_link_for_bugs(commit_msg):
         import re
-        list_of_words = commit_msg.split()
-        for element in range(len(list_of_words)):
+        for element in range(len(commit_msg.split())):
             if "bug" in (list_of_words[element].lower()) and element < len(list_of_words) - 1:
                 bug_number = re.sub("[(:,.;)]", "", list_of_words[element + 1])
                 bug_number = int(''.join(list(filter(str.isdigit, bug_number))))
