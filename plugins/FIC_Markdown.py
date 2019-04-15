@@ -55,5 +55,4 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                 list_of_words[element] = '[' + 'Bug' + ' ' + str(
                     bug_number) + '](' + generated_link + ')'
                 list_of_words[element + 1] = ''
-        commit_text = ' '.join(list_of_words)
-        return commit_text
+        return ' '.join(list_of_words)
