@@ -11,21 +11,20 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         FICDataVault.__init__(self)
         FICFileHandler.__init__(self)
         self._current_time = self._get_current_time()
-        # self.markdown_file_header = self._create_repo_markdown_header()
+        self.markdown_file_header = self._create_repo_markdown_header()
         self.first_table_row = self.create_first_table_row()
         self.md_table_row = self.md_table_row_builder
         self.changelog_table_header = None
         self.trimmed_commit_message = self.trim_commit_message()
-        self.linked_commit_url = None
-        self.linked_commit_auhor = None
+        self.linked_commit_msg = self.generate_link_for_bugs(self.commit_message)
 
     @staticmethod
     def _get_current_time():
         import datetime
         return datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
 
-    # def _create_repo_markdown_header(self):
-    #     return self.repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
+    def _create_repo_markdown_header(self):
+        return self.repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
 
     @staticmethod
     def create_first_table_row():
@@ -33,15 +32,26 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                            "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
         return first_row_string
 
+    @property
     def md_table_row_builder(self):
-        return "|" + self.commit_number + "|" + self.commit_author + "|" + self.commit_message + \
-                      "|" + "[URL](" + self.commit_url + ")" + "|" + self.commit_date + "\n"
+        return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
+                      "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
 
     def trim_commit_message(self):
         return self.commit_message[:COMMIT_DESCRIPTION_LENGTH]
 
-
     def write_markdown(self, directory, file_name):
         self.save(directory, file_name, "CONTENT HERE")
 
-
+    @staticmethod
+    def generate_link_for_bugs(commit_msg):
+        import re
+        for element in range(len(commit_msg.split())):
+            if "bug" in (list_of_words[element].lower()) and element < len(list_of_words) - 1:
+                bug_number = re.sub("[(:,.;)]", "", list_of_words[element + 1])
+                bug_number = int(''.join(list(filter(str.isdigit, bug_number))))
+                generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + \
+                                 str(bug_number)
+                list_of_words[element] = '[' + 'Bug' + ' ' + str(bug_number) + '](' + generated_link + ')'
+                list_of_words[element + 1] = ''
+        return ' '.join(list_of_words)
