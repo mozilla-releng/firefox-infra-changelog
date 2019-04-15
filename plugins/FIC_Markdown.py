@@ -52,7 +52,6 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                 bug_number = int(''.join(list(filter(str.isdigit, bug_number))))
                 generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + \
                                  str(bug_number)
-                list_of_words[element] = '[' + 'Bug' + ' ' + str(
-                    bug_number) + '](' + generated_link + ')'
+                list_of_words[element] = '[' + 'Bug' + ' ' + str(bug_number) + '](' + generated_link + ')'
                 list_of_words[element + 1] = ''
         return ' '.join(list_of_words)
