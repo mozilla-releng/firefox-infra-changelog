@@ -33,7 +33,6 @@ class FICMainMenu:
         self.parser.add_argument("-p", "--push", required=False, action='store_true', default=False,
                                  help="Runs script for all available repositories and auto push the changes to github")
         args = self.parser.parse_args()
-
         return args
 
     def _set_argument_flags(self, args):
@@ -62,11 +61,9 @@ class FICMainMenu:
 
         if args.push:
             self.push = True
-
         return
 
     def _choice_main_menu(self):
-
         if self.choice is 1:
             self.all = True
             self._check_arguments_state()
@@ -93,14 +90,17 @@ class FICMainMenu:
             else:
                 print("When using option 6 please use integers only.")
                 exit(4)
+            self.main_menu()
 
+        if self.choice is 7:
+            self.push = True
+            self.main_menu()  # Placeholder.
         return
 
     def repo_selection_menu(self):
         pass
 
     def main_menu(self):
-
         self._check_arguments_state()
         if len(sys.argv) == 1:
             print("Welcome to Ciduty's Firefox Infra Changelog!\n"
@@ -116,26 +116,26 @@ class FICMainMenu:
                   "0. Exit application.")
             self.choice = int(input())
             self._choice_main_menu()
-
             return
-
         else:
             self._set_argument_flags(self.parse_arguments())  # Set all flags before showing the menu.
             self._check_arguments_state()
 
     def _check_arguments_state(self):
-
-        if self.logging or self.logging and len(sys.argv) > 1:
+        if self.logging:
             print("==== Logging is active ====")
 
-        if self.git_only or self.git_only and len(sys.argv) > 1:
+        if self.git_only:
             print("==== Running in GIT only mode ====")
 
-        if self.hg_only or self.hg_only and len(sys.argv) > 1:
+        if self.hg_only:
             print("==== Running in MERCURIAL only mode ====")
 
-        if self.all or self.all and len(sys.argv) > 1:
-            print("==== Running in ALL only mode ====")
+        if self.all:
+            print("==== Running in ALL repositories mode ====")
+
+        if self.push:
+            print("==== Running in ALL repositories and pushing to Github ====")
 
 
 if __name__ == "__main__":
@@ -148,4 +148,4 @@ if __name__ == "__main__":
     print("Repo Selection:", testing_arguments.repo)
     print("Push to Github:", testing_arguments.push)
     print("Number of Days:", testing_arguments.days)
-    print("Choices:", testing_arguments.choice)
+    print("Choice        :", testing_arguments.choice)
