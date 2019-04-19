@@ -1,6 +1,7 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+import sys
 
 
 class FICMainMenu:
@@ -14,6 +15,7 @@ class FICMainMenu:
         self.days = False
         self.push = False
         self.parser = argparse.ArgumentParser()
+        self.choice = int
 
     def parse_arguments(self):
         self.parser.add_argument('-a', '--all', required=False, action='store_true', default=False,
@@ -63,42 +65,28 @@ class FICMainMenu:
 
         return
 
-    def repo_selection_menu(self):
-        pass
+    def _choice_main_menu(self):
 
-    def main_menu(self):
-        self._set_argument_flags(self.parse_arguments())  # Set all flags before showing the menu.
-
-        print("Welcome to Ciduty's Firefox Infra Changelog!\n"
-              "You can use the options below to run the script according to your needs.\n"
-              "\n"
-              "1. Run script for all available repositories \n"
-              "2. Run script only for repositories that are on GitHub\n"
-              "3. Run script only for repositories that are on Mercurial\n"
-              "4. Run script only for repositories that are chosen by you (Both GitHub and/or Mercurial)\n"
-              "5. Activates logger output in console\n"
-              "6. Generates changelog.md for the amount of days set by user\n"
-              "7. Run the script for all available repositories and pushes .json/.md changes to Git\n"
-              "0. Exit application.")
-
-        choice = input()
-
-        if choice == 1:
+        if self.choice is 1:
             self.all = True
+            self._check_arguments_state()
 
-        if choice == 2:
+        if self.choice is 2:
             self.git_only = True
+            self._check_arguments_state()
 
-        if choice == 3:
+        if self.choice is 3:
             self.hg_only = True
+            self._check_arguments_state()
 
-        if choice == 4:
+        if self.choice is 4:
             self.repo = True
 
-        if choice == 5:
+        if self.choice is 5:
             self.logging = True
+            self.main_menu()
 
-        if choice == 6:
+        if self.choice is 6:
             days_choice = input("Please enter the number of days you want changelog.md to be generated for\n")
             if str(days_choice).isdecimal():
                 self.days = days_choice
@@ -106,20 +94,58 @@ class FICMainMenu:
                 print("When using option 6 please use integers only.")
                 exit(4)
 
-        else:
-            exit(0)
+        return
 
+    def repo_selection_menu(self):
         pass
 
-    pass
+    def main_menu(self):
+
+        self._check_arguments_state()
+        if len(sys.argv) == 1:
+            print("Welcome to Ciduty's Firefox Infra Changelog!\n"
+                  "You can use the options below to run the script according to your needs.\n"
+                  "\n"
+                  "1. Run script for all available repositories \n"
+                  "2. Run script only for repositories that are on GitHub\n"
+                  "3. Run script only for repositories that are on Mercurial\n"
+                  "4. Run script only for repositories that are chosen by you (Both GitHub and/or Mercurial)\n"
+                  "5. Activates logger output in console\n"
+                  "6. Generates changelog.md for the amount of days set by user\n"
+                  "7. Run the script for all available repositories and pushes .json/.md changes to Git\n"
+                  "0. Exit application.")
+            self.choice = int(input())
+            self._choice_main_menu()
+
+            return
+
+        else:
+            self._set_argument_flags(self.parse_arguments())  # Set all flags before showing the menu.
+            self._check_arguments_state()
+
+    def _check_arguments_state(self):
+
+        if self.logging or self.logging and len(sys.argv) > 1:
+            print("==== Logging is active ====")
+
+        if self.git_only or self.git_only and len(sys.argv) > 1:
+            print("==== Running in GIT only mode ====")
+
+        if self.hg_only or self.hg_only and len(sys.argv) > 1:
+            print("==== Running in MERCURIAL only mode ====")
+
+        if self.all or self.all and len(sys.argv) > 1:
+            print("==== Running in ALL only mode ====")
 
 
-testing_arguments = FICMainMenu()
-testing_arguments.main_menu()
-print("Logging       :", testing_arguments.logging)
-print("Git Only      :", testing_arguments.git_only)
-print("HG Only       :", testing_arguments.hg_only)
-print("All           :", testing_arguments.all)
-print("Repo Selection:", testing_arguments.repo)
-print("Push to Github:", testing_arguments.push)
-print("Number of Days:", testing_arguments.days)
+if __name__ == "__main__":
+    testing_arguments = FICMainMenu()
+    testing_arguments.main_menu()
+    print("Logging       :", testing_arguments.logging)
+    print("Git Only      :", testing_arguments.git_only)
+    print("HG Only       :", testing_arguments.hg_only)
+    print("All           :", testing_arguments.all)
+    print("Repo Selection:", testing_arguments.repo)
+    print("Push to Github:", testing_arguments.push)
+    print("Number of Days:", testing_arguments.days)
+    print("Choices:", testing_arguments.choice)
