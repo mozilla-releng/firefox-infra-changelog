@@ -35,6 +35,10 @@ class FICGithub(FICLogger):
         self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
         return self.check_for_changes()
 
+    def revert(self):
+        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+        return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
+
     def check_for_changes(self):
         if not self.repo.index.diff("HEAD"):
             self.LOGGER.info("Nothing staged for commit. has the data or files changed?")
