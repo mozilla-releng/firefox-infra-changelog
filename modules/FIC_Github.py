@@ -32,7 +32,7 @@ class FICGithub(FICLogger):
         limit_requests = self._gh.ratelimit_remaining
         self.LOGGER.info("Rate limit is: %s", limit_requests)
 
-        if limit_requests < 5005:
+        if limit_requests < 5:
             return self.switch_token()
 
         else:
