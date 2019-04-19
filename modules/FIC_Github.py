@@ -2,8 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import github3
-
 from modules.FIC_Logger import FICLogger
+from modules.config import GIT_TOKEN
 from git import Repo
 
 
@@ -12,7 +12,6 @@ class FICGithub(FICLogger):
 
     def __init__(self):
         FICLogger.__init__(self)
-        from modules.config import GIT_TOKEN
         import os
         self._token = os.environ.get(GIT_TOKEN[FICGithub.token])
         self._gh = self._auth()
@@ -28,6 +27,33 @@ class FICGithub(FICLogger):
     def _init_github(self, *args):
         self.repo_data = github3.GitHub.repository(args[0], args[1], args[2])
         return self.repo_data
+
+    def limit_checker(self):
+        limit_requests = self._gh.ratelimit_remaining
+        self.LOGGER.info("Rate limit is: %s", limit_requests)
+
+        if limit_requests < 5005:
+            return self.switch_token()
+
+        else:
+            return True
+
+    def switch_token(self):
+        self.get_token()
+        self.__init__()
+        self.LOGGER.info("The token was changed.")
+        return self.limit_checker()
+
+    def get_token(self):
+        if FICGithub.token < len(GIT_TOKEN) - 1:
+            FICGithub.token += 1
+            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[FICGithub.token])
+            return True
+
+        elif FICGithub.token == len(GIT_TOKEN) - 1:
+            FICGithub.token = 0
+            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[FICGithub.token])
+            return True
 
     def pull(self):
         self.LOGGER.info("pulling changes from {} -> Branch {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
@@ -55,20 +81,3 @@ class FICGithub(FICLogger):
             self.LOGGER.info("Summary of commit {}".format(FICGithub.commit(self)))
             self.LOGGER.info("pushing changes to {}  on branch  {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
             self.LOGGER.info("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
-
-    def limit_checker(self):
-        self.LOGGER.info("Rate limit is: %s", self._gh.ratelimit_remaining)
-        return self._gh.ratelimit_remaining
-
-    def switch_token(self):
-        if self.limit_checker() < 6000:
-            self.LOGGER.info("You have reached the requests limit for this token!")
-            FICGithub.token += 1
-            self.__init__()
-            self.LOGGER.info("The token was changed.")
-            self.limit_checker()
-        return True
-
-
-a = FICGithub()
-a.switch_token()
