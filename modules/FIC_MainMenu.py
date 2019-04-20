@@ -2,11 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import sys
+import json
+from modules.FIC_FileHandler import FICFileHandler
 
 
-class FICMainMenu:
+class FICMainMenu(FICFileHandler):
     def __init__(self):
         import argparse
+        FICFileHandler.__init__(self)
         self.logging = False
         self.git_only = False
         self.hg_only = False
@@ -16,6 +19,8 @@ class FICMainMenu:
         self.push = False
         self.parser = argparse.ArgumentParser()
         self.choice = int
+        self.repository_list = []
+        self.directory = "../"  # Hardcoded for now. We will need to pass this dynamically.
 
     def parse_arguments(self):
         self.parser.add_argument('-a', '--all', required=False, action='store_true', default=False,
@@ -78,6 +83,7 @@ class FICMainMenu:
 
         if self.choice is 4:
             self.repo = True
+            self._check_arguments_state()
 
         if self.choice is 5:
             self.logging = True
@@ -137,10 +143,51 @@ class FICMainMenu:
         if self.push:
             print("==== Running in ALL repositories and pushing to Github ====")
 
+        if self.repo:
+            self.construct_repository_list()
+            new_list = []
+            while input != "q":
+                print("You have selected : ", new_list)
+                for keys in self.repository_list:
+                    print(self.repository_list.index(keys) + 1, keys)
+
+                user_choice = input("Select a repo by typing it's "
+                                    "number, "
+                                    "type q when you are done: ")
+                if str(user_choice) == "q":
+                    for repository in new_list:
+                        if repository in self.load_repositories.get("Github"):
+                            # Place holder for generating json/md files for git
+                            pass
+                        elif repository in self.load_repositories.get("Mercurial"):
+                            # Place holder for generating json/md files for hg
+                            pass
+                try:
+                    new_entry = int(user_choice) - 1
+                    if new_entry < 0 or new_entry >= len(self.repository_list):
+                        print('Choice not valid!')
+                    else:
+                        new_list.append(self.repository_list[int(new_entry)])
+                        self.repository_list.pop(int(new_entry))
+                except ValueError:
+                    exit(0)
+
+    def _load_repository_data(self, directory):
+        self.load_repositories = json.load(self.load(directory, "repositories.json"))
+        return self.load_repositories
+
+    def construct_repository_list(self):
+        self._load_repository_data("../")
+        for key in self.load_repositories:
+            for repository_name in self.load_repositories.get(key):
+                self.repository_list.append(repository_name)
+        return self.repository_list
+
 
 if __name__ == "__main__":
     testing_arguments = FICMainMenu()
     testing_arguments.main_menu()
+
     print("Logging       :", testing_arguments.logging)
     print("Git Only      :", testing_arguments.git_only)
     print("HG Only       :", testing_arguments.hg_only)
