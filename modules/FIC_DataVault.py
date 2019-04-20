@@ -26,4 +26,7 @@ class FICDataVault:
         self.changeset = None
         self.changeset_lander = None
         self.hg_commits_list = None
+        self.changesets_json = None
+        self.constructed_dict = {}
+
 
