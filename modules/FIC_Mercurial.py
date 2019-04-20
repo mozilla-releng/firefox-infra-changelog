@@ -171,6 +171,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
             self.changeset_commits = self.changesets_json.get("pushes").get(self.changeset_number).get(key)
             return self.changeset_commits
 
+    # Construct commit dictionary per changeset
     def _construct_commits_dict(self):
         self.hg_commits_list = {}
         for commit in range(len(self.changeset_commits)):
@@ -178,9 +179,10 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                  "commiter_author": self.commit_author,
                                  "commit_message": self.commit_message,
                                  "files_changed": self.commit_files_changed}})
-        return self.hg_commits_list, self.commit_number
+        return self.hg_commits_list
+
 
 a = FICMercurial("mozilla-central.json", "mozilla-central")
-a._prepare_url()
+a.start()
 print("json")
 # ^^ Here for testing propose
