@@ -1,6 +1,7 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+import os
 
 
 class FICFileHandler:
@@ -38,3 +39,33 @@ class FICFileHandler:
             print("File Extension is not supported.")
             exit(2)
         pass
+
+    def file_size(self, file_path):
+        """
+        This helper function will return if a file is over 1000kb or not.
+        If size > 1000: Will return True
+        If size < 1000: Will return False, size
+        :param file_path: path for the file you want to check it's size.
+        :return:
+        """
+        size = None
+        if os.path.isfile(file_path):
+            file_info = os.stat(file_path)
+            size = self.convert_bytes(file_info.st_size)
+
+        if size[0] < 1000 and size[1] == "kb":
+            return False, float(size[0])
+        else:
+            return True
+
+    def convert_bytes(self, num):
+        """
+        :param num: Bytes of a file. Comes from file_size()
+        :return: Tuple with number and kb/mb format.
+        """
+        for x in ["bytes", "kb", "mb"]:
+            if num > 1024.0:
+                num /= 1024.0
+            else:
+                a = "%3.2f" % num
+                return float(a), x
