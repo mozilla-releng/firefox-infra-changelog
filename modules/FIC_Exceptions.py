@@ -6,9 +6,11 @@ from modules.FIC_Github import FICGithub
 
 class FICExceptions(FICGithub):
     def __init__(self):
+        self.SIGINT = False
         FICGithub.__init__(self)
 
-    def revert_modified_files(self, signal):
+    def signal_handler(self, signal, frame):
         self.LOGGER.info("KeyboardInterrupt (ID: {}) has been caught. Cleaning up...".format(signal))
-        self.revert()
+        self.SIGINT = True
+        self.revert_modified_files()
         exit(0)

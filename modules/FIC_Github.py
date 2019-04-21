@@ -14,7 +14,7 @@ class FICGithub(FICLogger):
         self._token = os.environ.get(GIT_TOKEN)
         self._gh = self._auth()
         self.repo_data = None
-        self.repo = Repo("..")
+        self.repo = Repo(".")
 
     def _auth(self):
         return github3.login(token=self._token)
@@ -35,7 +35,7 @@ class FICGithub(FICLogger):
         self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
         return self.check_for_changes()
 
-    def revert(self):
+    def revert_modified_files(self):
         from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
         return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
 
