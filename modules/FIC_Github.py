@@ -5,6 +5,7 @@ import github3
 from modules.FIC_Logger import FICLogger
 from modules.config import GIT_TOKEN
 from git import Repo
+import os
 
 
 class FICGithub(FICLogger):
@@ -12,7 +13,7 @@ class FICGithub(FICLogger):
 
     def __init__(self):
         FICLogger.__init__(self)
-        import os
+        self._get_os_var()
         self._token = os.environ.get(GIT_TOKEN[FICGithub.token])
         self._gh = self._auth()
         self.repo_data = None
@@ -28,31 +29,61 @@ class FICGithub(FICLogger):
         self.repo_data = github3.GitHub.repository(args[0], args[1], args[2])
         return self.repo_data
 
+    def _get_os_var(self):
+        for var in os.environ:
+            # append the OS.VAR to the list in case of no duplicate
+            if "GIT_TOKEN" in var and var not in GIT_TOKEN:
+                GIT_TOKEN.append(var)
+        self.LOGGER.info("The list of available tokens: %s", GIT_TOKEN)
+
+    def _get_reset_time(self):
+        from datetime import datetime
+        reset_time = datetime.fromtimestamp(self._gh.rate_limit()['rate']['reset'])
+        self.LOGGER.info("Rate limit reset in: %s", reset_time - datetime.now())
+        return reset_time
+
     def limit_checker(self):
         limit_requests = self._gh.ratelimit_remaining
 
-        if limit_requests < 5:
-            return self.switch_token()
-
+        if limit_requests < 5 and len(GIT_TOKEN) > 1:
+            # switch token
+            if self._switch_token():
+                return True
+            else:
+                # check if the rate limit was reset for the second use of a token
+                if limit_requests < 5:
+                    print(self._get_reset_time())
+                    return False
+                else:
+                    return True
+        # check the reset time in case of a single token
+        elif limit_requests < 5:
+            print(self._get_reset_time())
+            return False
+        # return True in case of limit request not reached
         else:
             return True
 
-    def switch_token(self):
-        self.get_token()
-        self.__init__()
+    def _switch_token(self):
+        # get next token
+        switch = self._get_token()
+        # re-logging with the new token
+        self._token = os.environ.get(GIT_TOKEN[FICGithub.token])
+        self._gh = self._auth()
         self.LOGGER.info("The token was changed.")
-        return self.limit_checker()
+        return switch
 
-    def get_token(self):
+    def _get_token(self):
+        # in case of the next token but not the last
         if FICGithub.token < len(GIT_TOKEN) - 1:
             FICGithub.token += 1
             self.LOGGER.info("Changing token with: %s", GIT_TOKEN[FICGithub.token])
             return True
-
+        # in case of the last token
         elif FICGithub.token == len(GIT_TOKEN) - 1:
             FICGithub.token = 0
             self.LOGGER.info("Changing token with: %s", GIT_TOKEN[FICGithub.token])
-            return True
+            return False
 
     def pull(self):
         self.LOGGER.info("pulling changes from {} -> Branch {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
