@@ -1,11 +1,15 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+from modules.FIC_Logger import FICLogger
+from modules.FIC_DataVault import FICDataVault
 import os
 
 
-class FICFileHandler:
+class FICFileHandler(FICLogger, FICDataVault):
     def __init__(self):
+        FICLogger.__init__(self)
+        FICDataVault.__init__(self)
         from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
 
         self.changelog_json = CHANGELOG_JSON_PATH
@@ -15,7 +19,6 @@ class FICFileHandler:
     def load(self, directory, file_name):
         return open("{}{}".format(directory, file_name))
         # Use .endswith(".json|.md") to check if JSON or MD
-        #pass
 
     @staticmethod
     def _construct_path(directory, file_name):
@@ -29,7 +32,11 @@ class FICFileHandler:
         path = self._construct_path(directory, file_name)
 
         if file_name.endswith(".md"):
-            pass
+            with open(path, "w") as markdown_file:
+                markdown_file.write("## " + self.repos_container.upper() + "\n\n")
+                markdown_file.write(content + "\n\n")
+
+
         elif file_name.endswith(".json"):
             import json
             with open(path, "w") as json_file:
@@ -38,7 +45,6 @@ class FICFileHandler:
         else:
             print("File Extension is not supported.")
             exit(2)
-        pass
 
     def file_size(self, file_path):
         """
@@ -52,20 +58,47 @@ class FICFileHandler:
         if os.path.isfile(file_path):
             file_info = os.stat(file_path)
             size = self.convert_bytes(file_info.st_size)
+        else:
+            self.LOGGER.critical("File {} does not exist! \n Abort!".format(file_path))
+            exit(5)
 
         if size[0] < 1000 and size[1] == "kb":
             return False, float(size[0])
         else:
             return True
 
-    def convert_bytes(self, num):
+    @staticmethod
+    def convert_bytes(num):
         """
         :param num: Bytes of a file. Comes from file_size()
         :return: Tuple with number and kb/mb format.
         """
-        for x in ["bytes", "kb", "mb"]:
+        for _ in ["bytes", "kb", "mb"]:
             if num > 1024.0:
                 num /= 1024.0
             else:
-                a = "%3.2f" % num
-                return float(a), x
+                size = "%3.2f" % num
+                return float(size), _
+
+    def rename_element_with_date(self, directory, file_name, date_string):
+        """
+        Implemented in: issue-390, revised in PR 418
+        Function that is used to rename a file and add a date to the title.
+        Use case:
+        rename_element_with_dt((os.pardir + r"\test_file.md"), "20190323")
+        or
+        rename_element_with_dt("git_files/addonscript.md", "20190323")
+        :param logger: logger object to log the rename.
+        :param file_name: name or path+name of the file to be renamed
+        :param date_string:
+        :return:
+        """
+        generated_name = str(file_name[0:-3]) + "_" + date_string + ".md"
+        try:
+            os.rename(file_name, generated_name)
+            self.LOGGER.info("Renamed element \"{}\" into \"{}\".".format(file_name, generated_name))
+
+        except os.error:
+            self.LOGGER.error("Failed to rename the provided file \"{}\"".format(file_name))
+
+        return generated_name
