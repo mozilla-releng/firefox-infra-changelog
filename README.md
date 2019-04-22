@@ -5,3 +5,4 @@
 - 2: File Extension not supported.
 - 3: The script failed to pull the dates
 - 4: The -d/--days argument is not followed by an int.
+- 5: The provided file does not exist.
