@@ -3,69 +3,37 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from modules.FIC_Logger import FICLogger
 from modules.FIC_DataVault import FICDataVault
+from modules.config import *
+import json
 import os
 
 
 class FICFileHandler(FICLogger, FICDataVault):
     def __init__(self):
         FICLogger.__init__(self)
-        FICDataVault.__init__(self)
         from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
 
         self.changelog_json = CHANGELOG_JSON_PATH
         self.changelog_md = CHANGELOG_MD_PATH
         self.data_folder = CHANGELOG_REPO_PATH
-
-    def load(self, directory, file_name):
-        return open("{}{}".format(directory, file_name))
-        # Use .endswith(".json|.md") to check if JSON or MD
+        self.path_level = self._check_dev_mode()
+        self._missing_files = []
 
     @staticmethod
-    def _construct_path(directory, file_name):
-        if directory is None:
-            return file_name
+    def _check_dev_mode():
+        import sys
+        if "-dev" in sys.argv:
+            return ".."
         else:
-            path = directory + file_name
+            return "."
+
+    def _construct_path(self, directory_name, file_name):
+        if directory_name is None:
+            path = os.path.join(self.path_level, file_name)
             return path
-
-    def save(self, directory, file_name, content):
-        path = self._construct_path(directory, file_name)
-
-        if file_name.endswith(".md"):
-            with open(path, "w") as markdown_file:
-                markdown_file.write("## " + self.repos_container.upper() + "\n\n")
-                markdown_file.write(content + "\n\n")
-
-
-        elif file_name.endswith(".json"):
-            import json
-            with open(path, "w") as json_file:
-                json.dump(content, json_file, indent=2)
-
         else:
-            print("File Extension is not supported.")
-            exit(2)
-
-    def file_size(self, file_path):
-        """
-        This helper function will return if a file is over 1000kb or not.
-        If size > 1000: Will return True
-        If size < 1000: Will return False, size
-        :param file_path: path for the file you want to check it's size.
-        :return:
-        """
-        size = None
-        if os.path.isfile(file_path):
-            file_info = os.stat(file_path)
-            size = self.convert_bytes(file_info.st_size)
-        else:
-            self.LOGGER.critical("File {} does not exist! \n Abort!".format(file_path))
-            exit(5)
-
-        if size[0] < 1000 and size[1] == "kb":
-            return False, float(size[0])
-        else:
-            return True
+            path = os.path.join(self.path_level, directory_name, file_name)
+            return path
 
     @staticmethod
     def convert_bytes(num):
@@ -73,32 +41,186 @@ class FICFileHandler(FICLogger, FICDataVault):
         :param num: Bytes of a file. Comes from file_size()
         :return: Tuple with number and kb/mb format.
         """
-        for _ in ["bytes", "kb", "mb"]:
+        for _ in ["bytes", "kb", "mb", "gb"]:
             if num > 1024.0:
                 num /= 1024.0
             else:
                 size = "%3.2f" % num
                 return float(size), _
 
-    def rename_element_with_date(self, directory, file_name, date_string):
+    def _verify_data_folder(self):
+        # Check that data folder exists.
+        if not os.path.exists(self._construct_path(None, CHANGELOG_REPO_PATH)):
+            # Create folder data
+            os.makedirs(os.path.join(self.path_level, CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, "__init__.py")), "w").close()
+            self.LOGGER.warning("Folder '{}' is missing. Recreating it.".format(CHANGELOG_REPO_PATH))
+
+    def _verify_modules_folder(self):
+        # Check that modules folder exists.
+        if not os.path.exists(os.path.abspath(os.path.join(self.path_level, "modules"))):
+            # Create folder modules
+            os.makedirs(os.path.join(self.path_level + CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, "__init__.py")), "w").close()
+            self.LOGGER.warning("Folder 'modules' is missing. Recreating it.")
+
+    def _verify_plugins_folder(self):
+        # Check that plugins folder exists.
+        if not os.path.exists(os.path.abspath(os.path.join(self.path_level, "plugins"))):
+            # Create folder plugins
+            os.makedirs(os.path.join(self.path_level + CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, "__init__.py")), "w").close()
+            self.LOGGER.warning("Folder 'plugins' is missing. Recreating it.")
+
+    def _check_repo_files(self):
+        with open(self._construct_path(None, "repositories.json"), "r") as json_data:
+            files_to_check = json.load(json_data)
+            # Check all Github files exist for each repository.
+            for key in files_to_check["Github"].keys():
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + ".json")):
+                    self._missing_files.append(key.lower() + ".json")
+
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + ".md")):
+                    self._missing_files.append(key.lower() + ".md")
+
+            # Check all Mercurial files exist for each repository.
+            for key in files_to_check["Mercurial"].keys():
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + ".json")):
+                    self._missing_files.append(key.lower() + ".json")
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + ".md")):
+                    self._missing_files.append(key.lower() + ".md")
+
+        if self._missing_files:
+            self._create_missing_repo_files()
+
+    def _create_missing_repo_files(self):
+        for file_to_create in self._missing_files:
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, file_to_create.lower())), "w").close()
+
+    def _check_module_files(self):
+        self._missing_files = []
+        needed_files = ["config.py", "FIC_DataVault.py", "FIC_Exceptions.py", "FIC_FileHandler.py",
+                        "FIC_Filters.py", "FIC_Github.py", "FIC_Logger.py", "FIC_MainMenu.py",
+                        "FIC_Mercurial.py"]
+
+        for file in needed_files:
+            if not os.path.exists(os.path.join(self._construct_path("modules", file))):
+                self._missing_files.append(file)
+
+        if self._missing_files:
+            self._download_missing_files()
+
+    def _download_missing_files(self):
+        import requests
+        base_url = "https://raw.githubusercontent.com/mozilla-releng/firefox-infra-changelog/oop/modules/"
+        for file in self._missing_files:
+            raw_file = requests.get(base_url + file, allow_redirects=True).text
+            f = open(os.path.abspath(os.path.join(self.path_level, "modules", file)), "w")
+            f.write(raw_file)
+            f.close()
+
+    def check_tool_integrity(self):
+        """ This method will verify that every folder and file necessary for FIC to run exists."""
+        # Check if common folders exist. If not create them.
+        self._verify_data_folder()
+        self._verify_modules_folder()
+        self._verify_plugins_folder()
+
+        # Check that repository files, in data folder, exist. If not create them.
+        self._check_repo_files()
+
+        # Check that all python files, in modules folder, exist. If not download them from github.
+        self._check_module_files()
+
+    def load(self, directory, file_name):
+        return open(self._construct_path(directory, file_name))
+
+    def save(self, directory, file_name, content):
+        if file_name.endswith(".md"):
+            with open(self._construct_path(directory, file_name), "w") as markdown_file:
+                markdown_file.write("## " + self.repos_container.upper() + "\n\n")
+                markdown_file.write(content + "\n\n")
+
+        elif file_name.endswith(".json"):
+            with open(self._construct_path(directory, file_name), "w") as json_file:
+                json.dump(content, json_file, indent=2)
+
+        else:
+            print("File Extension is not supported.")
+            exit(2)
+
+    def file_size(self, directory, file_name):
         """
-        Implemented in: issue-390, revised in PR 418
+        This helper function will return if a file is over 1000kb or not.
+        If size > 1000: Will return True
+        If size < 1000: Will return False, size
+        :param directory: path to the file you want to check.
+        :param file_name: name for the file you want to check it's size.
+        :return:
+        """
+        size = None
+        if os.path.exists(os.path.abspath(self._construct_path(directory, file_name))):
+            file_info = os.stat(self._construct_path(directory, file_name))
+            size = self.convert_bytes(file_info.st_size)
+        else:
+            self.LOGGER.critical("File '{}' does not exist!".format(file_name))
+            exit(5)
+
+        if (size[0] < 1000) and (size[1] == "bytes") or (size[1] == "kb"):
+            self.LOGGER.debug("File size is: {} {}".format(size[0], size[1]))
+            return False, float(size[0])
+
+        elif (size[1] == "mb") or (size[1] == "gb"):
+            self.LOGGER.debug("File size is: {} {}".format(size[0], size[1]))
+            return True
+
+        else:
+            self.LOGGER.critical("Can't check file '{}'!".format(os.path.join(directory, file_name)))
+            exit(6)
+
+    def rename_file_with_date(self, directory, file_name, date_string):
+        """
+        Implemented in: issue-390, revised in PR 420
         Function that is used to rename a file and add a date to the title.
         Use case:
-        rename_element_with_dt((os.pardir + r"\test_file.md"), "20190323")
-        or
-        rename_element_with_dt("git_files/addonscript.md", "20190323")
-        :param logger: logger object to log the rename.
-        :param file_name: name or path+name of the file to be renamed
-        :param date_string:
+        rename_file_with_date((os.pardir + r"\test_file.md"), "20190323")
+        or rename_file_with_date("git_files/addonscript.md", "20190323")
+        :param directory: directory path.
+        :param file_name: name of the file to be renamed
+        :param date_string: string containing the date.
         :return:
         """
         generated_name = str(file_name[0:-3]) + "_" + date_string + ".md"
         try:
-            os.rename(file_name, generated_name)
-            self.LOGGER.info("Renamed element \"{}\" into \"{}\".".format(file_name, generated_name))
+            # Raname Existing File
+            os.rename(self._construct_path(directory, file_name), self._construct_path(directory, generated_name))
+            self.LOGGER.debug("Renamed element '{}' into '{}'.".format(file_name, generated_name))
+
+            # Recreate Empty File with the same name.
+            open(self._construct_path(directory, file_name), "w").close()
 
         except os.error:
-            self.LOGGER.error("Failed to rename the provided file \"{}\"".format(file_name))
+            self.LOGGER.critical("Failed to rename the provided file \"{}\". Maybe new filename already exists?".format(file_name))
+            exit(7)
 
         return generated_name
+
+
+
+
+
+import datetime
+
+gen_time = datetime.datetime.strftime(datetime.datetime.now(), "%Y%m%d")
+
+a = FICFileHandler()
+a.check_tool_integrity()
+a.load("modules", "LOG.log")
+a.load(None, "changelog.md")
+a.save("tests", "danut.json", """{"fake": "json"}""")
+print(a.file_size("modules", "config.py"))
+print(a.file_size(CHANGELOG_REPO_PATH, "addonscript.md"))
+a.rename_file_with_date(CHANGELOG_REPO_PATH, "addonscript.md", gen_time)
