@@ -208,20 +208,3 @@ class FICFileHandler(FICLogger, FICDataVault):
 
         return generated_name
 
-
-
-
-
-import datetime
-
-gen_time = datetime.datetime.strftime(datetime.datetime.now(), "%Y%m%d")
-
-a = FICFileHandler()
-
-a.check_tool_integrity()
-a.load("modules", "config.py")
-a.load(None, "changelog.md")
-a.save("tests", "danut.json", """{"fake": "json"}""")
-print(a.file_size("modules", "config.py"))
-print(a.file_size(CHANGELOG_REPO_PATH, "addonscript.md"))
-a.rename_file_with_date(CHANGELOG_REPO_PATH, "addonscript.md", gen_time)
