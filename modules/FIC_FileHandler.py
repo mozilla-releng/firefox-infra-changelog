@@ -27,14 +27,6 @@ class FICFileHandler(FICLogger, FICDataVault):
         else:
             return "."
 
-    def _construct_path(self, directory_name, file_name):
-        if directory_name is None:
-            path = os.path.join(self.path_level, file_name)
-            return path
-        else:
-            path = os.path.join(self.path_level, directory_name, file_name)
-            return path
-
     @staticmethod
     def convert_bytes(num):
         """
@@ -50,7 +42,7 @@ class FICFileHandler(FICLogger, FICDataVault):
 
     def _verify_data_folder(self):
         # Check that data folder exists.
-        if not os.path.exists(self._construct_path(None, CHANGELOG_REPO_PATH)):
+        if not os.path.exists(self.construct_path(None, CHANGELOG_REPO_PATH)):
             # Create folder data
             os.makedirs(os.path.join(self.path_level, CHANGELOG_REPO_PATH))
             # Create file __init__.py
@@ -76,7 +68,7 @@ class FICFileHandler(FICLogger, FICDataVault):
             self.LOGGER.warning("Folder 'plugins' is missing. Recreating it.")
 
     def _check_repo_files(self):
-        with open(self._construct_path(None, "repositories.json"), "r") as json_data:
+        with open(self.construct_path(None, "repositories.json"), "r") as json_data:
             files_to_check = json.load(json_data)
             # Check all Github files exist for each repository.
             for key in files_to_check["Github"].keys():
@@ -107,7 +99,7 @@ class FICFileHandler(FICLogger, FICDataVault):
                         "FIC_Mercurial.py"]
 
         for file in needed_files:
-            if not os.path.exists(os.path.join(self._construct_path("modules", file))):
+            if not os.path.exists(os.path.join(self.construct_path("modules", file))):
                 self._missing_files.append(file)
 
         if self._missing_files:
@@ -121,6 +113,14 @@ class FICFileHandler(FICLogger, FICDataVault):
             f = open(os.path.abspath(os.path.join(self.path_level, "modules", file)), "w")
             f.write(raw_file)
             f.close()
+
+    def construct_path(self, directory_name, file_name):
+        if directory_name is None:
+            path = os.path.join(self.path_level, file_name)
+            return path
+        else:
+            path = os.path.join(self.path_level, directory_name, file_name)
+            return path
 
     def check_tool_integrity(self):
         """ This method will verify that every folder and file necessary for FIC to run exists."""
@@ -136,16 +136,16 @@ class FICFileHandler(FICLogger, FICDataVault):
         self._check_module_files()
 
     def load(self, directory, file_name):
-        return open(self._construct_path(directory, file_name))
+        return open(self.construct_path(directory, file_name))
 
     def save(self, directory, file_name, content):
         if file_name.endswith(".md"):
-            with open(self._construct_path(directory, file_name), "w") as markdown_file:
+            with open(self.construct_path(directory, file_name), "w") as markdown_file:
                 markdown_file.write("## " + self.repos_container.upper() + "\n\n")
                 markdown_file.write(content + "\n\n")
 
         elif file_name.endswith(".json"):
-            with open(self._construct_path(directory, file_name), "w") as json_file:
+            with open(self.construct_path(directory, file_name), "w") as json_file:
                 json.dump(content, json_file, indent=2)
 
         else:
@@ -162,8 +162,8 @@ class FICFileHandler(FICLogger, FICDataVault):
         :return:
         """
         size = None
-        if os.path.exists(os.path.abspath(self._construct_path(directory, file_name))):
-            file_info = os.stat(self._construct_path(directory, file_name))
+        if os.path.exists(os.path.abspath(self.construct_path(directory, file_name))):
+            file_info = os.stat(self.construct_path(directory, file_name))
             size = self.convert_bytes(file_info.st_size)
         else:
             self.LOGGER.critical("File '{}' does not exist!".format(file_name))
@@ -196,11 +196,11 @@ class FICFileHandler(FICLogger, FICDataVault):
         generated_name = str(file_name[0:-3]) + "_" + date_string + ".md"
         try:
             # Raname Existing File
-            os.rename(self._construct_path(directory, file_name), self._construct_path(directory, generated_name))
+            os.rename(self.construct_path(directory, file_name), self.construct_path(directory, generated_name))
             self.LOGGER.debug("Renamed element '{}' into '{}'.".format(file_name, generated_name))
 
             # Recreate Empty File with the same name.
-            open(self._construct_path(directory, file_name), "w").close()
+            open(self.construct_path(directory, file_name), "w").close()
 
         except os.error:
             self.LOGGER.critical("Failed to rename the provided file \"{}\". Maybe new filename already exists?".format(file_name))
@@ -217,8 +217,9 @@ import datetime
 gen_time = datetime.datetime.strftime(datetime.datetime.now(), "%Y%m%d")
 
 a = FICFileHandler()
+
 a.check_tool_integrity()
-a.load("modules", "LOG.log")
+a.load("modules", "config.py")
 a.load(None, "changelog.md")
 a.save("tests", "danut.json", """{"fake": "json"}""")
 print(a.file_size("modules", "config.py"))
