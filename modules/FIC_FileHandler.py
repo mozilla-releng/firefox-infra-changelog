@@ -237,3 +237,14 @@ class FICFileHandler(FICLogger, FICDataVault):
         else:
             self.LOGGER.error("Path \"{}\" does not exist!.".format(self.construct_path(directory_name, file_name)))
             return False
+
+    def move_to_final_location(self, old_path, old_file, new_path, new_file):
+
+        try:
+            os.rename(self.construct_path(old_path, old_file), self.construct_path(new_path, new_file))
+            self.LOGGER.info("Successfully moved to new path: {}".format(self.construct_path(new_path, new_file)))
+        except IOError:
+            self.LOGGER.critical("Path \"{}\" does not exist "
+                                 .format(self.construct_path(old_path, old_file)) +
+                                 "or the final location \"{}\" has not been created"
+                                 .format(self.construct_path(new_path, new_file)))
