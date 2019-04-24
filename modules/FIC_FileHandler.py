@@ -208,3 +208,43 @@ class FICFileHandler(FICLogger, FICDataVault):
 
         return generated_name
 
+    def is_readable(self, directory_name, file_name):
+        # os.access() is used with two arguments, file_name and os.R_OK to check if the file can be read
+        if os.access(self.construct_path(directory_name, file_name), os.R_OK):
+            self.LOGGER.debug("File \"{}\" can be read.".format(self.construct_path(directory_name, file_name)))
+            return True
+        else:
+            self.LOGGER.critical("File \"{}\" cannot be read.".format(self.construct_path(directory_name, file_name)))
+            exit(8)
+
+    def is_writable(self, directory_name, file_name):
+        # Check if the path exists
+        if os.path.exists(self.construct_path(directory_name, file_name)):
+            # Check if the provided path contains a valid file.
+            if os.path.isfile(self.construct_path(directory_name, file_name)):
+                # Checks to see if the provided file can be written
+                if os.access(self.construct_path(directory_name, file_name), os.W_OK):
+                    self.LOGGER.info("File \"{}\" is writable!".format(self.construct_path(directory_name, file_name)))
+                    return True
+                else:
+                    self.LOGGER.error("File \"{}\" has acccess issues and cannot be written."
+                                      .format(self.construct_path(directory_name, file_name)))
+                    return False
+            else:
+                self.LOGGER.error("File \"{}\" is a path and can't be written."
+                                  .format(self.construct_path(directory_name, file_name)))
+                return False
+        else:
+            self.LOGGER.error("Path \"{}\" does not exist!.".format(self.construct_path(directory_name, file_name)))
+            return False
+
+    def move_to_final_location(self, old_path, old_file, new_path, new_file):
+
+        try:
+            os.rename(self.construct_path(old_path, old_file), self.construct_path(new_path, new_file))
+            self.LOGGER.info("Successfully moved to new path: {}".format(self.construct_path(new_path, new_file)))
+        except IOError:
+            self.LOGGER.critical("Path \"{}\" does not exist "
+                                 .format(self.construct_path(old_path, old_file)) +
+                                 "or the final location \"{}\" has not been created"
+                                 .format(self.construct_path(new_path, new_file)))
