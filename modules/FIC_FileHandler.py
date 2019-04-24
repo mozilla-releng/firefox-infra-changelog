@@ -208,3 +208,32 @@ class FICFileHandler(FICLogger, FICDataVault):
 
         return generated_name
 
+    def is_readable(self, directory_name, file_name):
+        # os.access() is used with two arguments, file_name and os.R_OK to check if the file can be read
+        if os.access(self.construct_path(directory_name, file_name), os.R_OK):
+            self.LOGGER.info("File \"{}\" can be read.".format(self.construct_path(directory_name, file_name)))
+            return True
+        else:
+            self.LOGGER.info("File \"{}\" cannot be read.".format(self.construct_path(directory_name, file_name)))
+            return False
+
+    def is_writable(self, directory_name, file_name):
+        # Check if the path exists
+        if os.path.exists(self.construct_path(directory_name, file_name)):
+            # Check if the provided path contains a valid file.
+            if os.path.isfile(self.construct_path(directory_name, file_name)):
+                # Checks to see if the provided file can be written
+                if os.access(self.construct_path(directory_name, file_name), os.W_OK):
+                    self.LOGGER.info("File \"{}\" is writable!".format(self.construct_path(directory_name, file_name)))
+                    return True
+                else:
+                    self.LOGGER.error("File \"{}\" has acccess issues and cannot be written."
+                                      .format(self.construct_path(directory_name, file_name)))
+                    return False
+            else:
+                self.LOGGER.error("File \"{}\" is a path and can't be written."
+                                  .format(self.construct_path(directory_name, file_name)))
+                return False
+        else:
+            self.LOGGER.error("Path \"{}\" does not exist!.".format(self.construct_path(directory_name, file_name)))
+            return False
