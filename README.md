@@ -9,3 +9,4 @@
 - 6: Can't check file size for provided filename. Used by Function: modules.FIC_FileHandler.**file_size()**
 - 7: Failed to rename file. Used by Function: modules.FIC_FileHandler.**rename_file_with_date()**
 - 8: Access denied to read/write to provided file.
+- 9: No git authentication tokens found
