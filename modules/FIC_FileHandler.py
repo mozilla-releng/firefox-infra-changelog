@@ -211,11 +211,11 @@ class FICFileHandler(FICLogger, FICDataVault):
     def is_readable(self, directory_name, file_name):
         # os.access() is used with two arguments, file_name and os.R_OK to check if the file can be read
         if os.access(self.construct_path(directory_name, file_name), os.R_OK):
-            self.LOGGER.info("File \"{}\" can be read.".format(self.construct_path(directory_name, file_name)))
+            self.LOGGER.debug("File \"{}\" can be read.".format(self.construct_path(directory_name, file_name)))
             return True
         else:
-            self.LOGGER.info("File \"{}\" cannot be read.".format(self.construct_path(directory_name, file_name)))
-            return False
+            self.LOGGER.critical("File \"{}\" cannot be read.".format(self.construct_path(directory_name, file_name)))
+            exit(8)
 
     def is_writable(self, directory_name, file_name):
         # Check if the path exists
