@@ -104,7 +104,32 @@ class FICMainMenu(FICFileHandler):
         return
 
     def repo_selection_menu(self):
-        pass
+        new_list = []
+        while input != "q":
+            print("You have selected : ", new_list)
+            for keys in self.repository_list:
+                print(self.repository_list.index(keys) + 1, keys)
+
+            user_choice = input("Select a repo by typing it's "
+                                "number, "
+                                "type q when you are done: ")
+            if str(user_choice) == "q":
+                for repository in new_list:
+                    if repository in self.load_repositories.get("Github"):
+                        # Place holder for generating json/md files for git
+                        pass
+                    elif repository in self.load_repositories.get("Mercurial"):
+                        # Place holder for generating json/md files for hg
+                        pass
+            try:
+                new_entry = int(user_choice) - 1
+                if new_entry < 0 or new_entry >= len(self.repository_list):
+                    print('Choice not valid. Please provide a choice according to the list printed below!')
+                else:
+                    new_list.append(self.repository_list[int(new_entry)])
+                    self.repository_list.pop(int(new_entry))
+            except ValueError:
+                exit(11)
 
     def main_menu(self):
         self._check_arguments_state()
@@ -145,32 +170,7 @@ class FICMainMenu(FICFileHandler):
 
         if self.repo:
             self.construct_repository_list()
-            new_list = []
-            while input != "q":
-                print("You have selected : ", new_list)
-                for keys in self.repository_list:
-                    print(self.repository_list.index(keys) + 1, keys)
-
-                user_choice = input("Select a repo by typing it's "
-                                    "number, "
-                                    "type q when you are done: ")
-                if str(user_choice) == "q":
-                    for repository in new_list:
-                        if repository in self.load_repositories.get("Github"):
-                            # Place holder for generating json/md files for git
-                            pass
-                        elif repository in self.load_repositories.get("Mercurial"):
-                            # Place holder for generating json/md files for hg
-                            pass
-                try:
-                    new_entry = int(user_choice) - 1
-                    if new_entry < 0 or new_entry >= len(self.repository_list):
-                        print('Choice not valid!')
-                    else:
-                        new_list.append(self.repository_list[int(new_entry)])
-                        self.repository_list.pop(int(new_entry))
-                except ValueError:
-                    exit(0)
+            self.repo_selection_menu()
 
     def _load_repository_data(self, directory):
         self.load_repositories = json.load(self.load(directory, "repositories.json"))

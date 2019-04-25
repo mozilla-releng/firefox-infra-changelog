@@ -11,3 +11,4 @@
 - 8: Access denied to read/write to provided file.
 - 9: No git authentication tokens found
 - 10: Keyboard interrupt
+- 11: Provided input is not an integer. Used in modules.FIC_MainMenu.repo_selection_menu()

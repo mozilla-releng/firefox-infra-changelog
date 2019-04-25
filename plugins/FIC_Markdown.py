@@ -3,45 +3,34 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from modules.FIC_DataVault import FICDataVault
 from modules.FIC_FileHandler import FICFileHandler
-from modules.FIC_Filters import FICFilters
 from modules.config import COMMIT_DESCRIPTION_LENGTH
 
 
-class FICMarkdownGenerator(FICFileHandler, FICDataVault, FICFilters):
+class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     def __init__(self):
-        FICDataVault.__init__(self)
         FICFileHandler.__init__(self)
+        FICDataVault.__init__(self)
         FICFilters.__init__(self)
-        self._current_time = self._get_current_time()
-        self.markdown_file_header = self._create_repo_markdown_header()
-        self.first_table_row = self.create_first_table_row()
-        self.md_table_row = self.md_table_row_builder
         self.changelog_table_header = None
-        # self.trimmed_commit_message = self.trim_commit_message()
-        # self.linked_commit_msg = self.generate_link_for_bugs(self.commit_message)
 
-    @staticmethod
-    def _get_current_time():
+    def _get_current_time(self):
         import datetime
-        return datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+        self._current_time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+        return self._current_time
 
-    def _create_repo_markdown_header(self):
-        self.repo_name = None
-        return self.repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
+    def _create_repo_markdown_header(self, repo_name):
+        self.markdown_header = repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
+        return self.markdown_header
 
-    @staticmethod
-    def create_first_table_row():
-        first_row_string = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
+    def create_first_table_row(self):
+        self.first_row_string = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
                            "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
-        return first_row_string
+        return self.first_row_string
 
-    @property
     def md_table_row_builder(self):
-        return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
+        self.md_table_row = "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
                       "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
-
-    def trim_commit_message(self):
-        return self.commit_message[:COMMIT_DESCRIPTION_LENGTH]
+        return self.md_table_row
 
     def write_markdown(self, directory, file_name):
         self.save(directory, file_name, "CONTENT HERE")
@@ -90,7 +79,12 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault, FICFilters):
 
         return self.commit_author, self.commit_message
 
+    def trim_commit_description(self, commit_link, length=COMMIT_DESCRIPTION_LENGTH):
+        if len(self.commit_message) > length:
+            self.commit_message = self.commit_message[0:length] + ".. [continue reading](" + commit_link + ")"
+        return self.commit_message
+
     def filter_commit(self):
         self.filter_strings()
-        self.trim_commit_message()
+        self.trim_commit_description(self.commit_url)
         self.generate_link_for_bugs()
