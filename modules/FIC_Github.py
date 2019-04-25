@@ -43,8 +43,7 @@ class FICGithub(FICLogger):
         return reset_time
 
     def limit_checker(self):
-        limit_requests = self._gh.ratelimit_remaining
-        if limit_requests < 5:
+        if self._gh.ratelimit_remaining < 5:
                 return False
 
     def _switch_token(self):
@@ -76,7 +75,7 @@ class FICGithub(FICLogger):
 
     def check_for_changes(self):
         if not self.repo.index.diff("HEAD"):
-            self.LOGGER.debug("Nothing staged for commit. has the data or files changed?")
+            self.LOGGER.debug("Nothing staged for commit. Did data or files changed?")
             return False
         return True
 
@@ -87,7 +86,7 @@ class FICGithub(FICLogger):
 
     def push(self):
         self.LOGGER.debug("Summary of pull: {}".format(FICGithub.pull(self)[0]))
-        if FICGithub.add(self):
+        if self.add:
             self.LOGGER.debug("Summary of commit {}".format(FICGithub.commit(self)))
             self.LOGGER.debug("pushing changes to {}  on branch  {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
             self.LOGGER.debug("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
@@ -103,7 +102,7 @@ class FICGithub(FICLogger):
                 return True
         elif nr_of_tokens > 1:
             self._token = os.environ.get(self._available_tokens[self.token_counter])
-            print(os.environ.get(self._available_tokens[self.token_counter]))
+            self.LOGGER.debug("Git token: {}".format(os.environ.get(self._available_tokens[self.token_counter])))
             self._gh = self._auth()
             if not self.limit_checker():
                 # return True if token switch successful and credit limit was reset
