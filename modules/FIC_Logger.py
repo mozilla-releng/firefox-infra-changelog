@@ -27,7 +27,7 @@ class FICLogger:
 
     def _basic_logger_config(self):
         self.LOGGER = logging.basicConfig(level=self.level,
-                                          format="[%(asctime)s] [%(filename)s:%(funcName) s:%(lineno)d] %(message)s",
+                                          format="[%(asctime)s] [%(filename)s:%(funcName) s:%(lineno)d] %(levelname)s %(message)s",
                                           datefmt="%H:%M:%S",
                                           filename=self.log_file_path)
         self.LOGGER = logging.getLogger(__name__)
