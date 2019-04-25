@@ -11,3 +11,4 @@
 - 8: Access denied to read/write to provided file.
 - 9: No git authentication tokens found
 - 10: Keyboard interrupt
+- 11: Value Error in modules.FIC_MainMenu.repo_selection_menu()

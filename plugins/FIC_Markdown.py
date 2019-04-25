@@ -3,11 +3,10 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from modules.FIC_DataVault import FICDataVault
 from modules.FIC_FileHandler import FICFileHandler
-from modules.FIC_Filters import FICFilters
 from modules.config import COMMIT_DESCRIPTION_LENGTH
 
 
-class FICMarkdownGenerator(FICFileHandler, FICDataVault, FICFilters):
+class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     def __init__(self):
         FICFileHandler.__init__(self)
         FICDataVault.__init__(self)
