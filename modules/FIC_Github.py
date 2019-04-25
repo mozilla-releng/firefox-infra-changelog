@@ -9,12 +9,11 @@ import os
 
 
 class FICGithub(FICLogger):
-    token = 0
-
     def __init__(self):
         FICLogger.__init__(self)
+        self.token_counter = 0
         self._get_os_var()
-        self._token = os.environ.get(GIT_TOKEN[FICGithub.token])
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
         self._gh = self._auth()
         self.repo_data = None
         self.repo = Repo("..")
@@ -68,21 +67,21 @@ class FICGithub(FICLogger):
         # get next token
         switch = self._get_token()
         # re-logging with the new token
-        self._token = os.environ.get(GIT_TOKEN[FICGithub.token])
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
         self._gh = self._auth()
         self.LOGGER.info("The token was changed.")
         return switch
 
     def _get_token(self):
         # in case of the next token but not the last
-        if FICGithub.token < len(GIT_TOKEN) - 1:
-            FICGithub.token += 1
-            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[FICGithub.token])
+        if self.token_counter < len(GIT_TOKEN) - 1:
+            self.token_counter += 1
+            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[self.token_counter])
             return True
         # in case of the last token
-        elif FICGithub.token == len(GIT_TOKEN) - 1:
-            FICGithub.token = 0
-            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[FICGithub.token])
+        elif self.token_counter == len(GIT_TOKEN) - 1:
+            self.token_counter = 0
+            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[self.token_counter])
             return False
 
     def pull(self):
