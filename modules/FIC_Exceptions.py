@@ -13,4 +13,4 @@ class FICExceptions(FICGithub):
         self.LOGGER.info("KeyboardInterrupt (ID: {}) has been caught. Cleaning up...".format(signal))
         self.SIGINT = True
         self.revert_modified_files()
-        exit(0)
+        exit(10)
