@@ -3,8 +3,6 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import signal
 from modules.FIC_Exceptions import FICExceptions
-import time
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, FICExceptions().signal_handler)
-    time.sleep(5)
