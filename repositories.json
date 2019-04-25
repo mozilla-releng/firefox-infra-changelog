@@ -16,7 +16,7 @@
       "url": "https://github.com/mozilla-releng/build-cloud-tools",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 22,
+      "order": 25,
       "configuration": {
         "type": "no-tag",
         "folders-to-check": ["terraform/"]
@@ -27,7 +27,7 @@
       "url": "https://github.com/taskcluster/taskcluster",
       "team": "taskcluster/",
       "top-contributors": [" ", " "],
-      "order": 8,
+      "order": 13,
       "configuration": {
         "type": "no-tag",
         "folders-to-check": []
@@ -38,7 +38,7 @@
       "url": "https://github.com/mozilla/release-services",
       "team": "mozilla/",
       "top-contributors": [" ", " "],
-      "order": 21,
+      "order": 24,
       "configuration": {
         "type": "no-tag",
         "folders-to-check": [
@@ -52,7 +52,7 @@
       "name": "Build Puppet",
       "url": "https://github.com/mozilla/build-puppet",
       "team": "mozilla-releng/",
-      "order": 6,
+      "order": 12,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -76,7 +76,7 @@
       "url": "https://github.com/mozilla-releng/mozapkpublisher",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 20,
+      "order": 28,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -88,7 +88,7 @@
       "url": "https://github.com/mozilla-releng/beetmoverscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 11,
+      "order": 14,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -100,7 +100,7 @@
       "url": "https://github.com/mozilla-releng/addonscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 9,
+      "order": 15,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -112,7 +112,7 @@
       "url": "https://github.com/mozilla-releng/shipitscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 16,
+      "order": 18,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -124,7 +124,7 @@
       "url": "https://github.com/mozilla-releng/bouncerscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 12,
+      "order": 19,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -136,7 +136,7 @@
       "url": "https://github.com/mozilla-releng/treescript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 19,
+      "order": 21,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -148,7 +148,7 @@
       "url": "https://github.com/mozilla-releng/scriptworker",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 15,
+      "order": 20,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -160,7 +160,7 @@
       "url": "https://github.com/mozilla-releng/pushsnapscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 14,
+      "order": 16,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -172,7 +172,7 @@
       "url": "https://github.com/mozilla-releng/signingscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 17,
+      "order": 22,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -184,7 +184,7 @@
       "url": "https://github.com/mozilla-releng/pushapkscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 13,
+      "order": 17,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -196,7 +196,7 @@
       "url": "https://github.com/mozilla-releng/balrogscript",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 10,
+      "order": 11,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
@@ -208,11 +208,44 @@
       "url": "https://github.com/mozilla-releng/signtool",
       "team": "mozilla-releng/",
       "top-contributors": [" ", " "],
-      "order": 18,
+      "order": 23,
       "configuration": {
         "type": "tag",
         "folders-to-check": [],
         "version-path": "https://raw.githubusercontent.com/mozilla-releng/build-puppet/master/modules/signing_scriptworker/files/requirements.txt"
+      }
+    },
+    "relops-image-builder": {
+      "name": "Relops-Image-Builder",
+      "url": "https://github.com/mozilla-platform-ops/relops-image-builder",
+      "team": "mozilla-platform-ops/",
+      "top-contributors": [" ", " "],
+      "order": 6,
+      "configuration": {
+        "type": "no-tag",
+        "folders-to-check": []
+      }
+    },
+    "relops-hardware-controller": {
+      "name": "Relops-Hardware-Controller",
+      "url": "https://github.com/mozilla-platform-ops/relops-hardware-controller",
+      "team": "mozilla-platform-ops/",
+      "top-contributors": [" ", " "],
+      "order": 8,
+      "configuration": {
+        "type": "no-tag",
+        "folders-to-check": []
+      }
+    },
+    "ronin_puppet": {
+      "name": "Ronin-Puppet",
+      "url": "https://github.com/mozilla-platform-ops/ronin_puppet",
+      "team": "mozilla-platform-ops/",
+      "top-contributors": [" ", " "],
+      "order": 9,
+      "configuration": {
+        "type": "no-tag",
+        "folders-to-check": []
       }
     }
   },
@@ -296,7 +329,7 @@
         " ",
         " "
       ],
-      "order": 5,
+      "order": 10,
       "configuration": {
         "folders-to-check": [
           "testing/mozharness",
@@ -313,7 +346,7 @@
         " ",
         " "
       ],
-      "order": 23,
+      "order": 26,
       "configuration": {
         "folders-to-check": [
           "projects.yml",
@@ -330,7 +363,7 @@
         " ",
         " "
       ],
-      "order": 24,
+      "order": 27,
       "configuration": {
         "folders-to-check": [
           "ciadmin/",
@@ -338,6 +371,32 @@
       ],
         "push_type": "json-log"
       }
-     }
+     },
+     "version-control-tools": {
+      "name": "Version Control Tools",
+      "url": "https://hg.mozilla.org/hgcustom/version-control-tools/",
+      "team": "",
+      "top-contributors": [
+        " ",
+        " "
+      ],
+      "order": 5,
+      "configuration": {
+        "folders-to-check": [
+          "ansible/",
+          "cross-channel-l10n/",
+          "github-webhooks/",
+          "hgext/",
+          "hghooks/",
+          "hgserver/",
+          "hgtemplates/",
+          "hgwsgi/",
+          "pylib/",
+          "scripts/",
+          "terraform/"
+      ],
+        "push_type": "json-log"
+      }
+    }
   }
 }
