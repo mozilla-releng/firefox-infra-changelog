@@ -12,12 +12,11 @@ class FICGithub(FICLogger):
     def __init__(self):
         FICLogger.__init__(self)
         self.token_counter = 0
-        self._token = None
-        self._gh = None
+        self._get_os_var()
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
+        self._gh = self._auth()
         self.repo_data = None
         self.repo = Repo("..")
-        self._available_tokens = []
-        self.token_handler()
 
     def _auth(self):
         return github3.login(token=self._token)
@@ -32,9 +31,9 @@ class FICGithub(FICLogger):
     def _get_os_var(self):
         for var in os.environ:
             # append the OS.VAR to the list in case of no duplicate
-            if GIT_TOKEN in var:
-                self._available_tokens.append(var)
-        self.LOGGER.debug("The list of available tokens: %s", self._available_tokens)
+            if "GIT_TOKEN" in var and var not in GIT_TOKEN:
+                GIT_TOKEN.append(var)
+        self.LOGGER.info("The list of available tokens: %s", GIT_TOKEN)
 
     def _get_reset_time(self):
         from datetime import datetime
@@ -43,25 +42,50 @@ class FICGithub(FICLogger):
         return reset_time
 
     def limit_checker(self):
-        if self._gh.ratelimit_remaining < 5:
-                return False
+        limit_requests = self._gh.ratelimit_remaining
 
-    def _switch_token(self):
-        if self.token_counter < len(self._available_tokens):
-            if self.token_counter == len(self._available_tokens) - 1:
-                self.token_counter = -1
-            # get next token and re-log with it
-            self.token_counter += 1
-            self._token = os.environ.get(self._available_tokens[self.token_counter])
-            self._gh = self._auth()
-            self.LOGGER.info("Changing token with: %s", self._available_tokens[self.token_counter])
-            if self._gh.ratelimit_remaining > 5:
+        if limit_requests < 5 and len(GIT_TOKEN) > 1:
+            # switch token
+            if self._switch_token():
                 return True
             else:
-                return False
+                # check if the rate limit was reset for the second use of a token
+                if limit_requests < 5:
+                    print(self._get_reset_time())
+                    return False
+                else:
+                    return True
+        # check the reset time in case of a single token
+        elif limit_requests < 5:
+            print(self._get_reset_time())
+            return False
+        # return True in case of limit request not reached
+        else:
+            return True
+
+    def _switch_token(self):
+        # get next token
+        switch = self._get_token()
+        # re-logging with the new token
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
+        self._gh = self._auth()
+        self.LOGGER.info("The token was changed.")
+        return switch
+
+    def _get_token(self):
+        # in case of the next token but not the last
+        if self.token_counter < len(GIT_TOKEN) - 1:
+            self.token_counter += 1
+            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[self.token_counter])
+            return True
+        # in case of the last token
+        elif self.token_counter == len(GIT_TOKEN) - 1:
+            self.token_counter = 0
+            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[self.token_counter])
+            return False
 
     def pull(self):
-        self.LOGGER.debug("pulling changes from {} -> Branch {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
+        self.LOGGER.info("pulling changes from {} -> Branch {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
         return self.repo.remotes.origin.pull(refspec=self.repo.active_branch)
 
     def add(self):
@@ -69,13 +93,9 @@ class FICGithub(FICLogger):
         self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
         return self.check_for_changes()
 
-    def revert_modified_files(self):
-        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
-        return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
-
     def check_for_changes(self):
         if not self.repo.index.diff("HEAD"):
-            self.LOGGER.debug("Nothing staged for commit. Did data or files changed?")
+            self.LOGGER.info("Nothing staged for commit. has the data or files changed?")
             return False
         return True
 
@@ -85,33 +105,8 @@ class FICGithub(FICLogger):
         return self.repo.index.commit("Changelog: " + str(datetime.utcnow()))
 
     def push(self):
-        self.LOGGER.debug("Summary of pull: {}".format(FICGithub.pull(self)[0]))
-        if self.add:
-            self.LOGGER.debug("Summary of commit {}".format(FICGithub.commit(self)))
-            self.LOGGER.debug("pushing changes to {}  on branch  {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
-            self.LOGGER.debug("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
-
-    def token_handler(self, nr_of_tokens):
-        self._get_os_var()
-        if nr_of_tokens == 1:
-            self._token = os.environ.get(self._available_tokens[self.token_counter])
-            self._gh = self._auth()
-            if not self.limit_checker():
-                self._get_reset_time()
-            else:
-                return True
-        elif nr_of_tokens > 1:
-            self._token = os.environ.get(self._available_tokens[self.token_counter])
-            self.LOGGER.debug("Git token: {}".format(os.environ.get(self._available_tokens[self.token_counter])))
-            self._gh = self._auth()
-            if not self.limit_checker():
-                # return True if token switch successful and credit limit was reset
-                if self._switch_token():
-                    return True
-                else:
-                    self._get_reset_time()
-            else:
-                return True
-        else:
-            self.LOGGER.critical("Missing git authentication")
-            exit(9)
+        self.LOGGER.info("Summary of pull: {}".format(FICGithub.pull(self)[0]))
+        if FICGithub.add(self):
+            self.LOGGER.info("Summary of commit {}".format(FICGithub.commit(self)))
+            self.LOGGER.info("pushing changes to {}  on branch  {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
+            self.LOGGER.info("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
