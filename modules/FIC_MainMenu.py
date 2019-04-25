@@ -123,7 +123,7 @@ class FICMainMenu(FICFileHandler):
                         pass
             try:
                 new_entry = int(user_choice) - 1
-                if int(new_entry) < 0 or int (new_entry) >= len(self.repository_list):
+                if new_entry < 0 or new_entry >= len(self.repository_list):
                     print('Choice not valid. Please provide a choice according to the list printed below!')
                 else:
                     new_list.append(self.repository_list[int(new_entry)])
