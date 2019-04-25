@@ -2,7 +2,6 @@
 
 
 ## ExitCodes used by FIC:
-- 0: Keyboard interrupt
 - 2: File Extension not supported.
 - 3: The script failed to pull the dates
 - 4: The -d/--days argument is not followed by an int.
@@ -11,3 +10,4 @@
 - 7: Failed to rename file. Used by Function: modules.FIC_FileHandler.**rename_file_with_date()**
 - 8: Access denied to read/write to provided file.
 - 9: No git authentication tokens found
+- 10: Keyboard interrupt
