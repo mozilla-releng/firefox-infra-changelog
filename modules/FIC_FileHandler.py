@@ -23,9 +23,9 @@ class FICFileHandler(FICLogger, FICDataVault):
     def _check_dev_mode():
         import sys
         if "-dev" in sys.argv:
-            return ".."
+            return os.path.pardir
         else:
-            return "."
+            return os.path.curdir
 
     @staticmethod
     def convert_bytes(num):
@@ -193,13 +193,13 @@ class FICFileHandler(FICLogger, FICDataVault):
         :param date_string: string containing the date.
         :return:
         """
-        generated_name = str(file_name[0:-3]) + "_" + date_string + ".md"
+        generated_name = os.path.splitext(file_name)[0] + "." + date_string + os.path.splitext(file_name)[1]
         try:
-            # Raname Existing File
+            # Rename Existing File
             os.rename(self.construct_path(directory, file_name), self.construct_path(directory, generated_name))
             self.LOGGER.debug("Renamed element '{}' into '{}'.".format(file_name, generated_name))
 
-            # Recreate Empty File with the same name.
+            # Recreate the file.
             open(self.construct_path(directory, file_name), "w").close()
 
         except os.error:
