@@ -14,8 +14,8 @@ class FICMercurial(FICFileHandler, FICDataVault):
         FICDataVault.__init__(self)
         self.file_name = file_name
         self.repo_name = repo_name
-        self.directory = "../"  # Hardcoded for now. We will need to pass this dynamically.
-        self.repo_data = self._load_json("../data/", self.file_name)  # Hardcoded directory for now. We will need to pass this dynamically.
+        self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
+        self.local_repo_data = json.load(open(self.construct_path("data", file_name)))
 
     def start(self):
         self._prepare_url()
@@ -24,9 +24,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
 
     # =======PREPARE URL========
     def _prepare_url(self):
-        self._load_json("../data/", self.file_name)
         self._get_last_local_push_id()
-        self._load_repository_data(self.directory)
         self._get_repo_link(self.repo_name)
         self._request_hg_data()
         self._load_response_in_json()
@@ -58,24 +56,14 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self._get_node()
         self._generate_commit_url()
 
-    # Load local .json file
-    def _load_json(self, directory, file_name):
-        self.load_local_json = json.load(self.load(directory, file_name))
-        return self.load_local_json
-
     # Get last push id from local file
     def _get_last_local_push_id(self):
-        self.last_local_push_id = self.load_local_json.get("0").get("last_push_id")
+        self.last_local_push_id = self.local_repo_data.get("0").get("last_push_id")
         return self.last_local_push_id
-
-    # Loads repositories.json
-    def _load_repository_data(self, directory):
-        self.load_repositories = json.load(self.load(directory, "repositories.json"))
-        return self.load_repositories
 
     # Get repo link for specific repo we need
     def _get_repo_link(self, repo_name):
-        self.repository_url = self.load_repositories.get("Mercurial").get(repo_name).get("url")
+        self.repository_url = self.repo_data.get("Mercurial").get(repo_name).get("url")
         return self.repository_url
 
     # Request hg data to find last remote push id
@@ -180,9 +168,3 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                  "commit_message": self.commit_message,
                                  "files_changed": self.commit_files_changed}})
         return self.hg_commits_list
-
-
-a = FICMercurial("mozilla-central.json", "mozilla-central")
-a.start()
-print("json")
-# ^^ Here for testing propose
