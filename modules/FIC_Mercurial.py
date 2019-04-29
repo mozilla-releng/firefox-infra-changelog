@@ -5,6 +5,7 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 import json
 import requests
+from modules.config import CHANGELOG_REPO_PATH
 
 
 class FICMercurial(FICFileHandler, FICDataVault):
@@ -15,7 +16,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.file_name = file_name
         self.repo_name = repo_name
         self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
-        self.local_repo_data = json.load(open(self.construct_path("data", file_name)))
+        self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, file_name)))
 
     def start(self):
         self._prepare_url()
