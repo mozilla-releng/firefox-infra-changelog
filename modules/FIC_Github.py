@@ -186,3 +186,12 @@ class FICGithub(FICFileHandler, FICDataVault):
             for changed_folder in range(len(self.commit_files_changed)):
                 if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
                     return True
+
+    def _construct_commit(self):
+        self.list_of_commits.update({self.commit_number: {'sha': self.commit_sha,
+                                                          'url': self.commit_url,
+                                                          'author': self.commit_author,
+                                                          'author_email': self.commit_author_email,
+                                                          'message': self.commit_message,
+                                                          'date': self.commit_date,
+                                                          'files': self.commit_files_changed}})
