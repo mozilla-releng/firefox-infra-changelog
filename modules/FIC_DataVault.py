@@ -20,6 +20,7 @@ class FICDataVault:
         self.commit_message       = None
         self.commit_date          = None
         self.commit_files_changed = None
+        self.repo_name            = None
 
         # HG Specific values
         self.changeset_index  = None
