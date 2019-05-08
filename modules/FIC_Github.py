@@ -126,3 +126,7 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _repo_files(self):
         self.folders_to_check = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("folders-to-check")
+
+    def _extract_repo_type(self):
+        self.repo_type = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("type")
+

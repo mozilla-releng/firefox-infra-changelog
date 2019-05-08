@@ -33,5 +33,6 @@ class FICDataVault:
 
         # GIT Specific values
         self.folders_to_check     = []
+        self.repo_type            = None
 
 
