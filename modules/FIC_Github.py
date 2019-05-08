@@ -180,3 +180,9 @@ class FICGithub(FICFileHandler, FICDataVault):
         self.commit_files_changed = []
         for item in (range(len(self.repo_data.commit(sha=self.commit_sha).files))):
             self.commit_files_changed.append(self.repo_data.commit(sha=self.commit_sha).files[item].get('filename'))
+
+    def _compare_files(self):
+        for folder_to_check in range(len(self.folders_to_check)):
+            for changed_folder in range(len(self.commit_files_changed)):
+                if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
+                    return True
