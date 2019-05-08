@@ -139,3 +139,44 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _get_release(self):
         self.release_version = [tag for tag in self.repo_data.tags(number=1)][0].name
+
+    def _commit_iterator(self):
+        self.commit_number = 0
+        for current_commit in self.repo_data.commits(since=self.last_check):
+            self.commit_number += 1
+            self._store_data(current_commit)
+        #     self._commit_filter()
+        # self.keyword = None
+        # self.bump_version = None
+
+    def _store_data(self, current_commit):
+        self._get_sha(current_commit)
+        self._get_message(current_commit)
+        self._get_date(current_commit)
+        self._get_author(current_commit)
+        self._get_author_email(current_commit)
+        self._get_url(current_commit)
+        self._get_files()
+
+    def _get_sha(self, commit):
+        self.commit_sha = commit.sha
+
+    def _get_message(self, commit):
+        self.commit_message = commit.message
+
+    def _get_date(self, commit):
+        self.commit_date = commit.commit.author.get("date")
+
+    def _get_author(self, commit):
+        self.commit_author = commit.commit.author.get("name")
+
+    def _get_author_email(self, commit):
+        self.commit_author_email = commit.commit.author.get("email")
+
+    def _get_url(self, commit):
+        self.commit_url = commit.url
+
+    def _get_files(self):
+        self.commit_files_changed = []
+        for item in (range(len(self.repo_data.commit(sha=self.commit_sha).files))):
+            self.commit_files_changed.append(self.repo_data.commit(sha=self.commit_sha).files[item].get('filename'))
