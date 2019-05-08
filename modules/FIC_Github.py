@@ -114,3 +114,6 @@ class FICGithub(FICLogger):
     def revert_modified_files(self):
         from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
         return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
+
+    def get_repo_url(self):
+        return self.repo_data.svn_url
