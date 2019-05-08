@@ -21,13 +21,17 @@ class FICDataVault:
         self.commit_date          = None
         self.commit_files_changed = None
         self.repo_name            = None
+        self.team_name            = None
 
         # HG Specific values
-        self.changeset_index  = None
-        self.changeset = None
-        self.changeset_lander = None
-        self.hg_commits_list = None
-        self.changesets_json = None
-        self.constructed_dict = {}
+        self.changeset_index      = None
+        self.changeset            = None
+        self.changeset_lander     = None
+        self.hg_commits_list      = None
+        self.changesets_json      = None
+        self.constructed_dict     = {}
+
+        # GIT Specific values
+        self.folders_to_check     = []
 
 
