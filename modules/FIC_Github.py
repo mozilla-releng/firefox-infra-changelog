@@ -24,8 +24,8 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _auth(self):
         return github3.login(token=self._token)
 
-    def read_repo(self, team_name, repo_name):
-        return self._init_github(self._gh, team_name, repo_name)
+    def read_repo(self):
+        return self._init_github(self._gh, self.team_name, self.repo_name)
 
     def _init_github(self, *args):
         self.repo_data = github3.GitHub.repository(args[0], args[1], args[2])
@@ -123,3 +123,6 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _repo_team(self):
         self.team_name = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("team")
+
+    def _repo_files(self):
+        self.folders_to_check = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("folders-to-check")
