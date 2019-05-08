@@ -5,6 +5,7 @@ import github3
 from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import GIT_TOKEN
+from modules.config import CHANGELOG_REPO_PATH
 from git import Repo
 import os
 import json
@@ -130,3 +131,5 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _extract_repo_type(self):
         self.repo_type = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("type")
 
+    def _local_version(self):
+        self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_release").get("version")
