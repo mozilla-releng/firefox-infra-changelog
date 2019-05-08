@@ -38,5 +38,4 @@ class FICDataVault:
         self.local_version        = None
         self.release_version      = None
         self.list_of_commits      = {}
-
-
+        self.keyword = None

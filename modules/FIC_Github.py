@@ -145,9 +145,8 @@ class FICGithub(FICFileHandler, FICDataVault):
         for current_commit in self.repo_data.commits(since=self.last_check):
             self.commit_number += 1
             self._store_data(current_commit)
-        #     self._commit_filter()
-        # self.keyword = None
-        # self.bump_version = None
+            self._commit_filter()
+        self.keyword = None
 
     def _store_data(self, current_commit):
         self._get_sha(current_commit)
@@ -195,3 +194,20 @@ class FICGithub(FICFileHandler, FICDataVault):
                                                           'message': self.commit_message,
                                                           'date': self.commit_date,
                                                           'files': self.commit_files_changed}})
+
+    def _commit_filter(self):
+        if self.repo_type == "commit-keyword":
+            if self.keyword in self.commit_message:
+                self._construct_commit()
+
+        elif self.repo_type == "tag":
+            if self.repo_name == "build-puppet":
+                self._construct_commit()
+            elif self.release_version in self.commit_message:
+                self._construct_commit()
+
+        elif len(self.folders_to_check) > 0 and self._compare_files():
+            self._construct_commit()
+
+        else:
+            self._construct_commit()
