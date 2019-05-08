@@ -2,15 +2,18 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import github3
-from modules.FIC_Logger import FICLogger
+from modules.FIC_FileHandler import FICFileHandler
+from modules.FIC_DataVault import FICDataVault
 from modules.config import GIT_TOKEN
 from git import Repo
 import os
+import json
 
 
-class FICGithub(FICLogger):
+class FICGithub(FICFileHandler, FICDataVault):
     def __init__(self):
-        FICLogger.__init__(self)
+        FICFileHandler.__init__(self)
+        FICDataVault.__init__(self)
         self.token_counter = 0
         self._get_os_var()
         self._token = os.environ.get(GIT_TOKEN[self.token_counter])
@@ -117,3 +120,6 @@ class FICGithub(FICLogger):
 
     def get_repo_url(self):
         return self.repo_data.svn_url
+
+    def _repo_team(self):
+        self.team_name = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("team")
