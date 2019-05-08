@@ -136,3 +136,6 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _last_checked(self):
         self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
+
+    def _get_release(self):
+        self.release_version = [tag for tag in self.repo_data.tags(number=1)][0].name

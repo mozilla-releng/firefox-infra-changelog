@@ -36,5 +36,6 @@ class FICDataVault:
         self.folders_to_check     = []
         self.repo_type            = None
         self.local_version        = None
+        self.release_version      = None
 
 
