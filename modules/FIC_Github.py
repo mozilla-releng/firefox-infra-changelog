@@ -211,3 +211,36 @@ class FICGithub(FICFileHandler, FICDataVault):
 
         else:
             self._construct_commit()
+
+    def _not_tag(self):
+        self._last_checked()
+        self._commit_iterator()
+
+    def _build_puppet(self):
+        self._last_checked()
+        self._commit_iterator()
+
+    def _tag(self):
+        self._last_checked()
+        self._commit_iterator()
+
+    def _commit_keyword(self):
+        self._last_checked()
+        self.keyword = 'deploy'
+        self._commit_iterator()
+
+    def _repo_switcher(self):
+        if self.repo_type == "no-tag":
+            self._not_tag()
+
+        elif self.repo_type == "tag":
+            if self.repo_name == "build-puppet":
+                self._build_puppet()
+            else:
+                self._get_release()
+                self._tag()
+
+        elif self.repo_type == "commit-keyword":
+            self._commit_keyword()
+        else:
+            print("Repo type not defined for %s", self.repo_name)
