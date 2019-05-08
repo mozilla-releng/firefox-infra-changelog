@@ -22,6 +22,7 @@ class FICDataVault:
         self.commit_files_changed = None
         self.repo_name            = None
         self.team_name            = None
+        self.last_check           = None
 
         # HG Specific values
         self.changeset_index      = None
