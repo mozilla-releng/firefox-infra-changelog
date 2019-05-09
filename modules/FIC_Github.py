@@ -159,13 +159,13 @@ class FICGithub(FICFileHandler, FICDataVault):
             return False
 
     def _last_checked(self):
-        self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
+        import datetime
+        self.last_check = datetime.datetime.strptime(json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked"), "%Y-%m-%d %H:%M:%S")
 
     def _commit_iterator(self):
         self.commit_number = 0
         for current_commit in self.repo_data.commits(since=self.last_check):
-            self._store_data(current_commit)
-            self._commit_filter()
+            self._commit_filter(current_commit)
         self.keyword = None
 
     def _store_data(self, current_commit):
@@ -215,26 +215,31 @@ class FICGithub(FICFileHandler, FICDataVault):
                                                           'date': self.commit_date,
                                                           'files': self.commit_files_changed}})
 
-    def _commit_filter(self):
+    def _commit_filter(self, commit_content):
         if self.repo_type == "commit-keyword":
             if self.keyword in self.commit_message:
                 self.commit_number += 1
+                self._store_data(commit_content)
                 self._construct_commit()
 
         elif self.repo_type == "tag":
             if self.repo_name == "build-puppet":
                 self.commit_number += 1
+                self._store_data(commit_content)
                 self._construct_commit()
             elif self.release_version in self.commit_message:
                 self.commit_number += 1
+                self._store_data(commit_content)
                 self._construct_commit()
 
         elif len(self.folders_to_check) > 0 and self._compare_files():
             self.commit_number += 1
+            self._store_data(commit_content)
             self._construct_commit()
 
         else:
             self.commit_number += 1
+            self._store_data(commit_content)
             self._construct_commit()
 
     def _not_tag(self):
@@ -261,7 +266,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         self.keyword = 'deploy'
         self._commit_iterator()
 
-    def _repo_switcher(self):
+    def _repo_type_checker(self):
         if self.repo_type == "no-tag":
             self._not_tag()
 
@@ -281,6 +286,6 @@ class FICGithub(FICFileHandler, FICDataVault):
         self._repo_team()
         self.read_repo()
         self._repo_files()
-        self._repo_switcher()
-        self.save('data', self.repo_name, self.list_of_commits)  # write the json
+        self._repo_type_checker()
+        self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)  # write the json
         self.list_of_commits = {}
