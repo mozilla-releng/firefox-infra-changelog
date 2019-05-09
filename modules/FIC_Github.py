@@ -10,6 +10,7 @@ from git import Repo
 import os
 import json
 import requests
+import re
 
 
 class FICGithub(FICFileHandler, FICDataVault):
@@ -135,14 +136,30 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _local_version(self):
         self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_release").get("version")
 
-    def _last_checked(self):
-        self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
-
     def _get_release(self):
         self.release_version = [tag for tag in self.repo_data.tags(number=1)][0].name
 
+    def _get_version_path(self):
+        self.version_path = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("version-path")
+
     def _build_puppet_version(self):
-        self.build_puppet_version = requests.get(json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("version-path")).text.split()[0]
+        self._get_version_path()
+        for requirements in requests.get(self.version_path).text.split():
+            if self.repo_name in requirements:
+                self.build_puppet_version = re.split("\\b==\\b", requirements)[-1]
+                return True
+
+    def _compare_versions(self):
+        if self.build_puppet_version == self.release_version:
+            if self.release_version != self.local_version:
+                return True
+            else:
+                return False
+        else:
+            return False
+
+    def _last_checked(self):
+        self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
 
     def _commit_iterator(self):
         self.commit_number = 0
@@ -230,8 +247,14 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _tag(self):
         self._last_checked()
-        self._get_version_path()
-        self._commit_iterator()
+        self._get_release()
+        if self.repo_name == "mozapkpublisher":
+            if self.release_version != self.local_version:
+                self._commit_iterator()
+        else:
+            self._build_puppet_version()
+            if self._compare_versions():
+                self._commit_iterator()
 
     def _commit_keyword(self):
         self._last_checked()
@@ -246,7 +269,6 @@ class FICGithub(FICFileHandler, FICDataVault):
             if self.repo_name == "build-puppet":
                 self._build_puppet()
             else:
-                self._get_release()
                 self._tag()
 
         elif self.repo_type == "commit-keyword":
