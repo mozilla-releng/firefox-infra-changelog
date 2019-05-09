@@ -9,6 +9,7 @@ from modules.config import CHANGELOG_REPO_PATH
 from git import Repo
 import os
 import json
+import requests
 
 
 class FICGithub(FICFileHandler, FICDataVault):
@@ -140,10 +141,12 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _get_release(self):
         self.release_version = [tag for tag in self.repo_data.tags(number=1)][0].name
 
+    def _build_puppet_version(self):
+        self.build_puppet_version = requests.get(json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("version-path")).text.split()[0]
+
     def _commit_iterator(self):
         self.commit_number = 0
         for current_commit in self.repo_data.commits(since=self.last_check):
-            self.commit_number += 1
             self._store_data(current_commit)
             self._commit_filter()
         self.keyword = None
@@ -198,18 +201,23 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _commit_filter(self):
         if self.repo_type == "commit-keyword":
             if self.keyword in self.commit_message:
+                self.commit_number += 1
                 self._construct_commit()
 
         elif self.repo_type == "tag":
             if self.repo_name == "build-puppet":
+                self.commit_number += 1
                 self._construct_commit()
             elif self.release_version in self.commit_message:
+                self.commit_number += 1
                 self._construct_commit()
 
         elif len(self.folders_to_check) > 0 and self._compare_files():
+            self.commit_number += 1
             self._construct_commit()
 
         else:
+            self.commit_number += 1
             self._construct_commit()
 
     def _not_tag(self):
@@ -222,6 +230,7 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _tag(self):
         self._last_checked()
+        self._get_version_path()
         self._commit_iterator()
 
     def _commit_keyword(self):
@@ -244,3 +253,12 @@ class FICGithub(FICFileHandler, FICDataVault):
             self._commit_keyword()
         else:
             print("Repo type not defined for %s", self.repo_name)
+
+    def start(self):
+        self._extract_repo_type()
+        self._repo_team()
+        self.read_repo()
+        self._repo_files()
+        self._repo_switcher()
+        self.save('data', self.repo_name, self.list_of_commits)  # write the json
+        self.list_of_commits = {}
