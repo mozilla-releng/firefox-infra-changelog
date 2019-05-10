@@ -49,7 +49,6 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def limit_checker(self):
         limit_requests = self._gh.ratelimit_remaining
-
         if limit_requests < 5 and len(GIT_TOKEN) > 1:
             # switch token
             if self._switch_token():
@@ -161,21 +160,21 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _commit_iterator(self):
         self.commit_number = 0
         for current_commit in self.repo_data.commits(since=self.last_check):
-            self._get_message(current_commit)
-            if self._commit_filter():
-                self.commit_number += 1
-                self._store_data(current_commit)
-                self._construct_commit()
+            if self.limit_checker():
+                self._get_message(current_commit)
+                self._get_sha(current_commit)
+                self._get_files()
+                if self._commit_filter():
+                    self.commit_number += 1
+                    self._store_data(current_commit)
+                    self._construct_commit()
         self.keyword = None
 
     def _store_data(self, current_commit):
-        self._get_sha(current_commit)
-        self._get_message(current_commit)
         self._get_date(current_commit)
         self._get_author(current_commit)
         self._get_author_email(current_commit)
         self._get_url(current_commit)
-        self._get_files()
 
     def _get_sha(self, commit):
         self.commit_sha = commit.sha
