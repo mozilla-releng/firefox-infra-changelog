@@ -150,11 +150,8 @@ class FICGithub(FICFileHandler, FICDataVault):
                 return True
 
     def _compare_versions(self):
-        if self.build_puppet_version == self.release_version:
-            if self.release_version != self.local_version:
-                return True
-            else:
-                return False
+        if self.build_puppet_version == self.release_version and self.release_version != self.local_version:
+            return True
         else:
             return False
 
@@ -219,9 +216,8 @@ class FICGithub(FICFileHandler, FICDataVault):
                                                           'files': self.commit_files_changed}})
 
     def _commit_filter(self):
-        if self.repo_type == "commit-keyword":
-            if self.keyword in self.commit_message:
-                return True
+        if self.repo_type == "commit-keyword" and self.keyword in self.commit_message:
+            return True
 
         elif self.repo_type == "tag":
             if self.repo_name == "build-puppet":
@@ -247,9 +243,8 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _tag(self):
         self._last_checked()
         self._get_release()
-        if self.repo_name == "mozapkpublisher":
-            if self.release_version != self.local_version:
-                self._commit_iterator()
+        if self.repo_name == "mozapkpublisher" and self.release_version != self.local_version:
+            self._commit_iterator()
         else:
             self._build_puppet_version()
             if self._compare_versions():
