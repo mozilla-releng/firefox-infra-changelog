@@ -101,7 +101,7 @@ class FICFileHandler(FICLogger, FICDataVault):
     def _generate_first_element_git(self, repo_type=None):
         repo_type = repo_type if repo_type else self._extract_repo_type()
         if repo_type == "tag":
-            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2), "version": self.local_version}}
+            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2), "version": self._get_release(2)}}
         else:
             return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2)}}
 

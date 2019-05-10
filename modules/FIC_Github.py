@@ -135,8 +135,8 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _local_version(self):
         self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_release").get("version")
 
-    def _get_release(self):
-        self.release_version = [tag for tag in self.repo_data.tags(number=1)][0].name
+    def _get_release(self, release_number):
+        return [tag for tag in self.repo_data.tags(number=release_number)][release_number - 1].name
 
     def _get_version_path(self):
         self.version_path = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("version-path")
@@ -241,7 +241,7 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _tag(self):
         self._last_checked()
-        self._get_release()
+        self.release_version = self._get_release(1)
         self._local_version()
         if self.repo_name == "mozapkpublisher" and self.release_version != self.local_version:
             self._commit_iterator()
