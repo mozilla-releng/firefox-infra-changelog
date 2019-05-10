@@ -22,7 +22,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         self._token = os.environ.get(GIT_TOKEN[self.token_counter])
         self._gh = self._auth()
         self.repo_data = None
-        self.repo = Repo("..")
+        self.repo = self.construct_path(None, None)
 
     def _auth(self):
         return github3.login(token=self._token)
