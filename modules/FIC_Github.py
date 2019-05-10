@@ -242,6 +242,7 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _tag(self):
         self._last_checked()
         self._get_release()
+        self._local_version()
         if self.repo_name == "mozapkpublisher" and self.release_version != self.local_version:
             self._commit_iterator()
         else:
