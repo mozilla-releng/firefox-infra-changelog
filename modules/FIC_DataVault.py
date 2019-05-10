@@ -20,13 +20,23 @@ class FICDataVault:
         self.commit_message       = None
         self.commit_date          = None
         self.commit_files_changed = None
+        self.repo_name            = None
+        self.team_name            = None
+        self.last_check           = None
 
         # HG Specific values
-        self.changeset_index  = None
-        self.changeset = None
-        self.changeset_lander = None
-        self.hg_commits_list = None
-        self.changesets_json = None
-        self.constructed_dict = {}
+        self.changeset_index      = None
+        self.changeset            = None
+        self.changeset_lander     = None
+        self.hg_commits_list      = None
+        self.changesets_json      = None
+        self.constructed_dict     = {}
 
-
+        # GIT Specific values
+        self.folders_to_check     = []
+        self.repo_type            = None
+        self.local_version        = None
+        self.release_version      = None
+        self.build_puppet_version = None
+        self.list_of_commits      = {}
+        self.keyword = None
