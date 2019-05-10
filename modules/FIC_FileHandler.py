@@ -101,9 +101,9 @@ class FICFileHandler(FICLogger, FICDataVault):
     def _generate_first_element_git(self, repo_type=None):
         repo_type = repo_type if repo_type else self._extract_repo_type()
         if repo_type == "tag":
-            return {"0": {"last_checked": return_time("%Y-%m-%d %H:%M:%S", "sub", 2), "version": self.local_version}}
+            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2), "version": self.local_version}}
         else:
-            return {"0": {"last_checked": return_time("%Y-%m-%d %H:%M:%S", "sub", 2)}}
+            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2)}}
 
     def _generate_first_element_hg(self):
         return {"0": {"last_push_id": "2019-04-12"}}
@@ -134,7 +134,10 @@ class FICFileHandler(FICLogger, FICDataVault):
             f.close()
 
     def construct_path(self, directory_name, file_name):
-        if directory_name is None:
+        if (directory_name is None) and (file_name is None):
+            return self._check_dev_mode()
+
+        elif directory_name is None:
             path = os.path.join(self.path_level, file_name)
             return path
         else:
