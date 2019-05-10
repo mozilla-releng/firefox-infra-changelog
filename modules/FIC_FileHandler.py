@@ -114,7 +114,7 @@ class FICFileHandler(FICLogger, FICDataVault):
     def _check_module_files(self):
         self._missing_files = []
         needed_files = ["config.py", "FIC_DataVault.py", "FIC_Exceptions.py", "FIC_FileHandler.py",
-                        "FIC_Filters.py", "FIC_Github.py", "FIC_Logger.py", "FIC_MainMenu.py",
+                        "FIC_Github.py", "FIC_Logger.py", "FIC_MainMenu.py",
                         "FIC_Mercurial.py"]
 
         for file in needed_files:
