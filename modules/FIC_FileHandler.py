@@ -93,7 +93,7 @@ class FICFileHandler(FICLogger, FICDataVault):
         for file_to_create in self._missing_files:
             new_local_file = open(self.construct_path(CHANGELOG_REPO_PATH, file_to_create[0].lower()), "w")
             if file_to_create[1] == "git" and file_to_create[0].endswith(".json"):
-                self.save(CHANGELOG_REPO_PATH, file_to_create[0], self._generate_first_element_git())
+                self.save(CHANGELOG_REPO_PATH, file_to_create[0], self._generate_first_element_git(self.repo_type))
             elif file_to_create[1] == "hg" and file_to_create[0].endswith(".json"):
                 self.save(CHANGELOG_REPO_PATH, file_to_create[0], self._generate_first_element_hg())
             new_local_file.close()
