@@ -178,21 +178,27 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _get_sha(self, commit):
         self.commit_sha = commit.sha
+        return self.commit_sha
 
     def _get_message(self, commit):
         self.commit_message = commit.message
+        return self.commit_message
 
     def _get_date(self, commit):
         self.commit_date = commit.commit.author.get("date")
+        return self.commit_date
 
     def _get_author(self, commit):
         self.commit_author = commit.commit.author.get("name")
+        return self.commit_author
 
     def _get_author_email(self, commit):
         self.commit_author_email = commit.commit.author.get("email")
+        return self.commit_author_email
 
     def _get_url(self, commit):
         self.commit_url = commit.url
+        return self.commit_url
 
     def _get_files(self):
         self.commit_files_changed = []
