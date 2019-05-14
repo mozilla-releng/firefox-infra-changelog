@@ -136,8 +136,6 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _local_version(self):
         if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
             self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("version")
-        else:
-            self.local_version = None
 
     def _get_release(self, release_number):
         return [tag for tag in self.repo_data.tags(number=release_number)][release_number - 1].name
@@ -165,7 +163,6 @@ class FICGithub(FICFileHandler, FICDataVault):
             self.last_check = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2)
 
     def _commit_iterator(self):
-        self.commit_number = 0
         for current_commit in self.repo_data.commits(since=self.last_check):
             if self.limit_checker():
                 self._get_message(current_commit)
@@ -294,17 +291,25 @@ class FICGithub(FICFileHandler, FICDataVault):
         self._repo_team()
         self.read_repo()
         self._repo_files()
+        self.commit_number = 0
+        self.list_of_commits.update(self._generate_first_element())
         self._repo_type_checker()
         self._write_git_json()
         self.list_of_commits = {}
 
     def _write_git_json(self):
-        old_dictionary = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
-        new_dictionary = self._generate_first_element()
-        new_dictionary.update(self.list_of_commits)
-        if len(old_dictionary) >= 1:
-            old_dictionary.pop("0")
-            for commit in range(len(old_dictionary)):
+        local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
+        # In case we have no new commits to save
+        if len(self.list_of_commits) == 1:
+            local_json_data.update(self._generate_first_element())
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", local_json_data)
+        # In case we have new commits + local data
+        elif len(local_json_data) >= 1:
+            local_json_data.pop("0")
+            for commit in range(len(local_json_data)):
                 self.commit_number += 1
-                new_dictionary.update({str(self.commit_number): old_dictionary[str(commit + 1)]})
-        self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", new_dictionary)
+                self.list_of_commits.update({str(self.commit_number): local_json_data[str(commit + 1)]})
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
+        # In case we have new commits and NO local data
+        else:
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
