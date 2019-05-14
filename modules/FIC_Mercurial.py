@@ -165,7 +165,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.hg_commits_list = {}
         for commit in range(len(self.changeset_commits)):
             self.hg_commits_list.update({commit + 1: {"url": self.commit_url,
-                                 "commiter_author": self.commit_author,
-                                 "commit_message": self.commit_message,
-                                 "files_changed": self.commit_files_changed}})
+                                                      "commiter_author": self.commit_author,
+                                                      "commit_message": self.commit_message,
+                                                      "files_changed": self.commit_files_changed}})
         return self.hg_commits_list
