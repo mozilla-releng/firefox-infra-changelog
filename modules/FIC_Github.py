@@ -6,6 +6,7 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import GIT_TOKEN
 from modules.config import CHANGELOG_REPO_PATH
+from modules.FIC_Utilities import return_time
 from git import Repo
 import os
 import json
@@ -133,7 +134,10 @@ class FICGithub(FICFileHandler, FICDataVault):
         self.repo_type = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("type")
 
     def _local_version(self):
-        self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_release").get("version")
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
+            self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("version")
+        else:
+            self.local_version = None
 
     def _get_release(self, release_number):
         return [tag for tag in self.repo_data.tags(number=release_number)][release_number - 1].name
@@ -155,7 +159,10 @@ class FICGithub(FICFileHandler, FICDataVault):
             return False
 
     def _last_checked(self):
-        self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
+            self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
+        else:
+            self.last_check = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2)
 
     def _commit_iterator(self):
         self.commit_number = 0
@@ -276,11 +283,28 @@ class FICGithub(FICFileHandler, FICDataVault):
         else:
             print("Repo type not defined for %s", self.repo_name)
 
+    def _generate_first_element(self):
+        if self.repo_type == "tag" and self.repo_name != "build-puppet":
+            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f"), "version": self._get_release(1)}}
+        else:
+            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f")}}
+
     def start_git(self):
         self._extract_repo_type()
         self._repo_team()
         self.read_repo()
         self._repo_files()
         self._repo_type_checker()
-        self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)  # write the json
+        self._write_git_json()
         self.list_of_commits = {}
+
+    def _write_git_json(self):
+        old_dictionary = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
+        new_dictionary = self._generate_first_element()
+        new_dictionary.update(self.list_of_commits)
+        if len(old_dictionary) >= 1:
+            old_dictionary.pop("0")
+            for commit in range(len(old_dictionary)):
+                self.commit_number += 1
+                new_dictionary.update({str(self.commit_number): old_dictionary[str(commit + 1)]})
+        self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", new_dictionary)
