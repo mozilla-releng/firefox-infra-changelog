@@ -6,7 +6,6 @@ from modules.FIC_DataVault import FICDataVault
 from modules.config import *
 import json
 import os
-from modules.FIC_Utilities import return_time
 
 
 class FICFileHandler(FICLogger, FICDataVault):
@@ -92,24 +91,9 @@ class FICFileHandler(FICLogger, FICDataVault):
     def _create_missing_repo_files(self):
         for file_to_create in self._missing_files:
             new_local_file = open(self.construct_path(CHANGELOG_REPO_PATH, file_to_create[0].lower()), "w")
-            if file_to_create[1] == "git" and file_to_create[0].endswith(".json"):
-                self.save(CHANGELOG_REPO_PATH, file_to_create[0], self._generate_first_element_git())
-            elif file_to_create[1] == "hg" and file_to_create[0].endswith(".json"):
-                self.save(CHANGELOG_REPO_PATH, file_to_create[0], self._generate_first_element_hg())
+            if file_to_create[0].endswith(".json"):
+                self.save(CHANGELOG_REPO_PATH, file_to_create[0].lower(), {})
             new_local_file.close()
-
-    def _generate_first_element_git(self, repo_type=None):
-        repo_type = repo_type if repo_type else self._extract_repo_type()
-        if repo_type == "tag":
-            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2), "version": self.local_version}}
-        else:
-            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2)}}
-
-    def _generate_first_element_hg(self):
-        return {"0": {"last_push_id": "2019-04-12"}}
-
-    def _extract_repo_type(self):
-        return json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("type")
 
     def _check_module_files(self):
         self._missing_files = []

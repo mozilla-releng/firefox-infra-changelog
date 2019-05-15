@@ -6,6 +6,7 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import GIT_TOKEN
 from modules.config import CHANGELOG_REPO_PATH
+from modules.FIC_Utilities import return_time
 from git import Repo
 import os
 import json
@@ -133,10 +134,11 @@ class FICGithub(FICFileHandler, FICDataVault):
         self.repo_type = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("type")
 
     def _local_version(self):
-        self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_release").get("version")
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
+            self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("version")
 
-    def _get_release(self):
-        self.release_version = [tag for tag in self.repo_data.tags(number=1)][0].name
+    def _get_release(self, release_number):
+        return [tag for tag in self.repo_data.tags(number=release_number)][release_number - 1].name
 
     def _get_version_path(self):
         self.version_path = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("version-path")
@@ -155,10 +157,12 @@ class FICGithub(FICFileHandler, FICDataVault):
             return False
 
     def _last_checked(self):
-        self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
+            self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
+        else:
+            self.last_check = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2)
 
     def _commit_iterator(self):
-        self.commit_number = 0
         for current_commit in self.repo_data.commits(since=self.last_check):
             if self.limit_checker():
                 self._get_message(current_commit)
@@ -247,7 +251,8 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _tag(self):
         self._last_checked()
-        self._get_release()
+        self.release_version = self._get_release(1)
+        self._local_version()
         if self.repo_name == "mozapkpublisher" and self.release_version != self.local_version:
             self._commit_iterator()
         else:
@@ -275,11 +280,36 @@ class FICGithub(FICFileHandler, FICDataVault):
         else:
             print("Repo type not defined for %s", self.repo_name)
 
+    def _generate_first_element(self):
+        if self.repo_type == "tag" and self.repo_name != "build-puppet":
+            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f"), "version": self._get_release(1)}}
+        else:
+            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f")}}
+
     def start_git(self):
         self._extract_repo_type()
         self._repo_team()
         self.read_repo()
         self._repo_files()
+        self.commit_number = 0
+        self.list_of_commits.update(self._generate_first_element())
         self._repo_type_checker()
-        self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)  # write the json
+        self._write_git_json()
         self.list_of_commits = {}
+
+    def _write_git_json(self):
+        local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
+        # In case we have no new commits to save
+        if len(self.list_of_commits) == 1:
+            local_json_data.update(self._generate_first_element())
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", local_json_data)
+        # In case we have new commits + local data
+        elif len(local_json_data) >= 1:
+            local_json_data.pop("0")
+            for commit in range(len(local_json_data)):
+                self.commit_number += 1
+                self.list_of_commits.update({str(self.commit_number): local_json_data[str(commit + 1)]})
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
+        # In case we have new commits and NO local data
+        else:
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
