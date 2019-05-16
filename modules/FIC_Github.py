@@ -225,8 +225,9 @@ class FICGithub(FICFileHandler, FICDataVault):
                                                           'files': self.commit_files_changed}})
 
     def _commit_filter(self):
-        if self.repo_type == "commit-keyword" and self.keyword in self.commit_message:
-            return True
+        if self.repo_type == "commit-keyword":
+            if self.keyword in self.commit_message:
+                return True
 
         elif self.repo_type == "tag":
             if self.repo_name == "build-puppet":
@@ -235,8 +236,9 @@ class FICGithub(FICFileHandler, FICDataVault):
             elif self.release_version in self.commit_message:
                 return True
 
-        elif len(self.folders_to_check) > 0 and self._compare_files():
-            return True
+        elif len(self.folders_to_check) > 0:
+            if self._compare_files():
+                return True
 
         else:
             return True
