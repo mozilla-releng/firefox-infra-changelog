@@ -9,16 +9,15 @@ from modules.config import CHANGELOG_REPO_PATH
 
 
 class FICMercurial(FICFileHandler, FICDataVault):
-
-    def __init__(self, file_name, repo_name):
+    def __init__(self):
         FICFileHandler.__init__(self)
         FICDataVault.__init__(self)
-        self.file_name = file_name
-        self.repo_name = repo_name
-        self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
-        self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, file_name)))
 
-    def start(self):
+    def start_hg(self, repo_name):
+        self.repo_name = repo_name
+        self.file_name = repo_name + ".json"
+        self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
+        self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, self.file_name)))
         self._prepare_url()
         self._download_data()
         self._store_data()
@@ -41,21 +40,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
 
     # =========STORE DATA==========
     def _store_data(self):
-        self._get_pushes_number()
-        self._get_changeset_date()
-        self._get_changeset_lander()
-        self._get_commits()
-        self._get_author()
-        self._get_description()
-        self._get_changed_files()
-        self._construct_commit_url()
-        self._get_changeset_number()
-        self._get_changesets_commits()
-        self._construct_commits_dict()
-
-    def _construct_commit_url(self):
-        self._get_node()
-        self._generate_commit_url()
+        self._construct_json_dict()
 
     # Get last push id from local file
     def _get_last_local_push_id(self):
@@ -99,73 +84,43 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.changesets_json = json.loads(self.changesets_response)
         return self.changesets_json
 
-    # Picks up changesets for picking up changeset author, date
-    def _get_pushes_number(self):
-        for number in self.changesets_json.get("pushes"):
-            self.changeset = self.changesets_json.get("pushes").get(number)
-            return self.changeset
-
     # Picks up date and formats it
-    def _get_changeset_date(self):
+    def _generate_changeset_date(self, date):
         import time
-        unformated_date = self.changeset.get("date")
-        self.changeset_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(unformated_date))
+        self.changeset_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(date))
         return self.changeset_date
 
-    # Gets changeset_author
-    def _get_changeset_lander(self):
-        self.changeset_lander = self.changeset.get("user")
-        return self.changeset_lander
-
-    # Gets all the commits from a changeset
-    def _get_commits(self):
-        for commit in range(0, len(self.changeset.get("changesets"))):
-            self.commits = self.changeset.get("changesets")[commit]
-            return self.commits
-
-    # Gets author from commits
-    def _get_author(self):
-        self.commit_author = self.commits.get("author")
-        return self.commit_author
-
-    # Gets description from commits
-    def _get_description(self):
-        self.commit_message = self.commits.get("desc")
-        return self.commit_message
-
-    # Gets files changed from commit
-    def _get_changed_files(self):
-        self.commit_files_changed = [file for file in self.commits.get("files")]
-        return self.commit_files_changed
-
-    # Get hash, laster used to format commit url
-    def _get_node(self):
-        self.commit_sha = self.commits.get("node")
-        return self.commit_sha
-
     # Generated commit url by triming hash
-    def _generate_commit_url(self):
-        self.commit_url = self.repository_url + "pushloghtml?changeset=" + self.commit_sha[:12]
+    def _generate_commit_url(self, node):
+        self.commit_url = self.repository_url + "pushloghtml?changeset=" + node[:12]
         return self.commit_url
 
-    # Changeset number
-    def _get_changeset_number(self):
-        for key in self.changesets_json.get("pushes"):
-            self.changeset_number = key
-            return self.changeset_number
-
-    # Get changeset commits as list
-    def _get_changesets_commits(self):
-        for key in self.changesets_json.get("pushes").get(self.changeset_number):
-            self.changeset_commits = self.changesets_json.get("pushes").get(self.changeset_number).get(key)
-            return self.changeset_commits
-
-    # Construct commit dictionary per changeset
-    def _construct_commits_dict(self):
+# Construct json dictionary
+    def _construct_json_dict(self):
         self.hg_commits_list = {}
-        for commit in range(len(self.changeset_commits)):
-            self.hg_commits_list.update({commit + 1: {"url": self.commit_url,
-                                                      "commiter_author": self.commit_author,
-                                                      "commit_message": self.commit_message,
-                                                      "files_changed": self.commit_files_changed}})
-        return self.hg_commits_list
+        self.final_dict = {}
+        for push in self.changesets_json.get("pushes"):
+            unformated_date = self.changesets_json.get("pushes").get(push).get("date")
+            pusher = self.changesets_json.get("pushes").get(push).get("user")
+            date = self._generate_changeset_date(unformated_date)
+            self.final_dict.update({push: {"pusher": pusher,
+                                           "date_of_push": date,
+                                           "changeset_commits": {}}})
+
+            for commit in range(len(self.changesets_json.get("pushes").get(push).get("changesets"))):
+                node = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["node"]
+                commit_author = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["author"]
+                commit_message = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["desc"]
+                files_changed = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["files"]
+
+                self.final_dict[push]["changeset_commits"].update({commit + 1: {"url": self._generate_commit_url(node),
+                                                                                "commiter_author": commit_author,
+                                                                                "commiter_message": commit_message,
+                                                                                "files_changed": files_changed}})
+        return self.final_dict
+
+
+a = FICMercurial()
+a.start_hg("autoland")
+print("Complete")
+
