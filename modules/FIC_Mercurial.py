@@ -118,9 +118,3 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                                                                 "commiter_message": commit_message,
                                                                                 "files_changed": files_changed}})
         return self.final_dict
-
-
-a = FICMercurial()
-a.start_hg("autoland")
-print("Complete")
-
