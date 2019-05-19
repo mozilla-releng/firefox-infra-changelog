@@ -3,6 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from modules.FIC_DataVault import FICDataVault
 from modules.FIC_FileHandler import FICFileHandler
+from modules.FIC_Utilities import return_time
 from modules.config import COMMIT_DESCRIPTION_LENGTH
 
 
@@ -10,21 +11,19 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     def __init__(self):
         FICFileHandler.__init__(self)
         FICDataVault.__init__(self)
-        FICFilters.__init__(self)
         self.changelog_table_header = None
 
     def _get_current_time(self):
-        import datetime
-        self._current_time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+        self._current_time = return_time()
         return self._current_time
 
-    def _create_repo_markdown_header(self, repo_name):
-        self.markdown_header = repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
+    def _create_repo_markdown_header(self):
+        self.markdown_header = self.repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
         return self.markdown_header
 
     def create_first_table_row(self):
         self.first_row_string = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
-                           "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
+                                "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
         return self.first_row_string
 
     def md_table_row_builder(self):
