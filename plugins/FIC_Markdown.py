@@ -14,22 +14,18 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.changelog_table_header = None
 
     def _get_current_time(self):
-        self._current_time = return_time()
-        return self._current_time
+        return return_time()
 
     def _create_repo_markdown_header(self):
-        self.markdown_header = self.repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
-        return self.markdown_header
+        return self.repo_name + " MD table" + "\n" + "Generated on: {}".format(self._get_current_time())
 
-    def create_first_table_row(self):
-        self.first_row_string = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
-                                "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
-        return self.first_row_string
+    def _create_first_table_row(self):
+        return "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
+               "|:-----:|:-----:|:----------------------------------:|:------:|:----:| \n"
 
     def md_table_row_builder(self):
-        self.md_table_row = "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
-                      "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
-        return self.md_table_row
+        return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
+               "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
 
     def write_markdown(self, directory, file_name):
         self.save(directory, file_name, "CONTENT HERE")
