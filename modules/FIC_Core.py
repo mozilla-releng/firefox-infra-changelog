@@ -12,10 +12,10 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
         FICMercurial.__init__(self)
         FICFileHandler.__init__(self)
         FICLogger.__init__(self)
+        self.check_tool_integrity()
 
     def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False):
         # Don't forget about days!
-
         if all:
             # Needs to be replaced with whatever we want the script to do.
             # In this case, with a method that should run the script in all modes.
@@ -32,35 +32,48 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
 
         if repo_list:
             print("Changelog has run with a custom list of repositories!")
-            self._run_custom_repos_behavioral()
+            self._run_custom_repos_behavioral(repo_list)
 
     def _markdown(self):
-        pass
+        self.git_markdown()
+        self.hg_markdown()
+        self.main_markdown()
 
-    @staticmethod
-    def _run_all_behavioral():
+    def _run_all_behavioral(self):
         # Describes the behavioral of the script that runs in all mode.
         print("Testing run all behavioral...")
 
-    @staticmethod
-    def _run_git_behavioral():
+        for hosting_service in json.load(self.load(None, "repositories.json")):
+            for repo in json.load(self.load(None, "repositories.json")).get(hosting_service):
+                self.repo_name = repo
+                if hosting_service == "Github":
+                    self.start_git()
+                else:
+                    self.start_hg(repo_name=self.repo_name)
+
+    def _run_git_behavioral(self):
         # Describes the behavioral of the script that runs in git only mode.
         print("Testing git mode behavioral...")
 
-        construct = FICGithub()
+        for repo in json.load(self.load(None, "repositories.json")).get("Github"):
+            self.repo_name = repo
+            self.start_git()
 
-        for repo in json.load(construct.load(None, "repositories.json")).get("Github"):
-            construct.repo_name = repo
-            construct.check_tool_integrity()
-            construct.start_git()
-
-    @staticmethod
-    def _run_hg_behavioral():
+    def _run_hg_behavioral(self):
         # Describes the behavioral of the script that runs in hg only mode.
         print("Testing hg mode behavioral...")
 
-    @staticmethod
-    def _run_custom_repos_behavioral():
+        for repo in json.load(self.load(None, "repositories.json")).get("HG"):
+            self.repo_name = repo
+            self.start_hg(repo_name=self.repo_name)
+
+    def _run_custom_repos_behavioral(self, repo_list):
         # Describes the behavioral of the script that runs with custom repos mode.
         print("Testing custom repositories mode behavioral...")
 
+        for repo in repo_list:
+            self.repo_name = repo
+            try:
+                self.start_git()
+            except TypeError:
+                self.start_hg(repo_name=self.repo_name)
