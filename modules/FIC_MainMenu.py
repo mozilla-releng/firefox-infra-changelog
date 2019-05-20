@@ -3,13 +3,13 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import sys
 import json
-from modules.FIC_FileHandler import FICFileHandler
+from modules.FIC_Core import FICCore
 
 
-class FICMainMenu(FICFileHandler):
+class FICMainMenu(FICCore):
     def __init__(self):
         import argparse
-        FICFileHandler.__init__(self)
+        FICCore.__init__(self)
         self.logging = False
         self.git_only = False
         self.hg_only = False
@@ -20,7 +20,8 @@ class FICMainMenu(FICFileHandler):
         self.parser = argparse.ArgumentParser()
         self.choice = int
         self.repository_list = []
-        self.directory = "../"  # Hardcoded for now. We will need to pass this dynamically.
+        self.directory = self._check_dev_mode()
+        self.user_repos = []
 
     def parse_arguments(self):
         self.parser.add_argument('-a', '--all', required=False, action='store_true', default=False,
@@ -110,17 +111,14 @@ class FICMainMenu(FICFileHandler):
             for keys in self.repository_list:
                 print(self.repository_list.index(keys) + 1, keys)
 
-            user_choice = input("Select a repo by typing it's "
-                                "number, "
-                                "type q when you are done: ")
+            user_choice = input("Select a repo by typing it's number, type q when you are done: ")
             if str(user_choice) == "q":
                 for repository in new_list:
                     if repository in self.load_repositories.get("Github"):
-                        # Place holder for generating json/md files for git
-                        pass
+                        self.user_repos.append((repository, "Github"))
+
                     elif repository in self.load_repositories.get("Mercurial"):
-                        # Place holder for generating json/md files for hg
-                        pass
+                        self.user_repos.append((repository, "Mercurial"))
             try:
                 new_entry = int(user_choice) - 1
                 if new_entry < 0 or new_entry >= len(self.repository_list):
@@ -147,23 +145,28 @@ class FICMainMenu(FICFileHandler):
                   "0. Exit application.")
             self.choice = int(input())
             self._choice_main_menu()
-            return
+
         else:
             self._set_argument_flags(self.parse_arguments())  # Set all flags before showing the menu.
             self._check_arguments_state()
 
     def _check_arguments_state(self):
+        run_fic_object = FICCore()
+
         if self.logging:
             print("==== Logging is active ====")
 
         if self.git_only:
             print("==== Running in GIT only mode ====")
+            run_fic_object.run_fic(git_only=True)
 
         if self.hg_only:
             print("==== Running in MERCURIAL only mode ====")
+            run_fic_object.run_fic(hg_only=True)
 
         if self.all:
             print("==== Running in ALL repositories mode ====")
+            run_fic_object.run_fic(all=True)
 
         if self.push:
             print("==== Running in ALL repositories and pushing to Github ====")
@@ -183,16 +186,3 @@ class FICMainMenu(FICFileHandler):
                 self.repository_list.append(repository_name)
         return self.repository_list
 
-
-if __name__ == "__main__":
-    testing_arguments = FICMainMenu()
-    testing_arguments.main_menu()
-
-    print("Logging       :", testing_arguments.logging)
-    print("Git Only      :", testing_arguments.git_only)
-    print("HG Only       :", testing_arguments.hg_only)
-    print("All           :", testing_arguments.all)
-    print("Repo Selection:", testing_arguments.repo)
-    print("Push to Github:", testing_arguments.push)
-    print("Number of Days:", testing_arguments.days)
-    print("Choice        :", testing_arguments.choice)
