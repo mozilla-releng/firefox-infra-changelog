@@ -1,6 +1,13 @@
 ## OOP Branch
 
 
+## Running the script in pycharm without `--dev` argument
+Can be done while running the client.py with arguments:
+ - `-a -l` = mode all and active logging
+ - `-g -l` = mode git and active logging
+ - `-hg -l` = mode mercurial and active logging
+ 
+
 ## ExitCodes used by FIC:
 - 2: File Extension not supported
 - 3: The script failed to pull the dates
