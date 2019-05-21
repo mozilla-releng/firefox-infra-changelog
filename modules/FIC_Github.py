@@ -288,7 +288,8 @@ class FICGithub(FICFileHandler, FICDataVault):
         else:
             return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f")}}
 
-    def start_git(self):
+    def start_git(self, repo_name=None):
+        self.repo_name = repo_name
         self._extract_repo_type()
         self._repo_team()
         self.read_repo()
