@@ -3,6 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
+from modules.FIC_Utilities import return_time
 import json
 import requests
 from modules.config import CHANGELOG_REPO_PATH
@@ -70,6 +71,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
     # Using previous data generates a download link
     def _generate_push_link(self):
         if self.local_repo_data.get("0"):
+            self._get_last_local_push_id()
             url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.last_local_push_id, self.end_id)
         else:
             url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.end_id - 100, self.end_id)
@@ -88,8 +90,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
 
     # Picks up date and formats it
     def _generate_changeset_date(self, date):
-        import time
-        self.changeset_date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(date))
+        self.changeset_date = return_time("%Y-%m-%dT%H:%M:%S.%f")
         return self.changeset_date
 
     # Generated commit url by triming hash
@@ -126,3 +127,8 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                                                                        "files_changed": files_changed}})
         #return self.final_dict
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
+
+
+FICFileHandler().check_tool_integrity()
+a = FICMercurial()
+a.start_hg("autoland")
