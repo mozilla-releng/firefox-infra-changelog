@@ -14,7 +14,7 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
         FICLogger.__init__(self)
         self.check_tool_integrity()
 
-    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False):
+    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False, user_repos=None):
         # Don't forget about days!
         if all:
             # Needs to be replaced with whatever we want the script to do.
@@ -32,7 +32,7 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
 
         if repo_list:
             print("Changelog has run with a custom list of repositories!")
-            self._run_custom_repos_behavior(repo_list)
+            self._run_custom_repos_behavior(user_repos)
 
     def _markdown(self):
         self.git_markdown()
@@ -64,12 +64,15 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
         for repo in json.load(self.load(None, "repositories.json")).get("HG"):
             self.start_hg(repo)
 
-    def _run_custom_repos_behavior(self, repo_list):
+    def _run_custom_repos_behavior(self, user_repos):
         # Describes the behavioral of the script that runs with custom repos mode.
         print("Testing custom repositories mode behavioral...")
 
-        for repo in repo_list:
-            try:
+        for repo in user_repos:
+            if repo[1] == "Github":
                 self.start_git(repo)
-            except TypeError:
+            elif repo[1] == "Mercurial":
                 self.start_hg(repo)
+            else:
+                self.LOGGER.critical(f"Unknown repository type. Got {repo[1]} but can only accept 'Github' or 'Mercurial'")
+                exit(12)

@@ -172,6 +172,7 @@ class FICMainMenu(FICCore):
         if self.repo:
             self.construct_repository_list()
             self.repo_selection_menu()
+            self.run_fic(user_repos=self.user_repos)
 
     def _load_repository_data(self, directory):
         self.load_repositories = json.load(self.load(directory, "repositories.json"))
