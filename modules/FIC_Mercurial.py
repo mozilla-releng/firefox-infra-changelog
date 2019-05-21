@@ -17,14 +17,17 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.repo_name = repo_name
         self.file_name = repo_name + ".json"
         self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
-        self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, self.file_name)))
+        self.is_present = self.is_writable("data", repo_name + ".json")
+        if self.is_present:
+            self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, self.file_name)))
         self._prepare_url()
         self._download_data()
         self._store_data()
 
     # =======PREPARE URL========
     def _prepare_url(self):
-        self._get_last_local_push_id()
+        if self.is_present:
+            self._get_last_local_push_id()
         self._get_repo_link(self.repo_name)
         self._request_hg_data()
         self._load_response_in_json()
@@ -70,7 +73,10 @@ class FICMercurial(FICFileHandler, FICDataVault):
 
     # Using previous data generates a download link
     def _generate_push_link(self):
-        url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.last_local_push_id, self.end_id)
+        if self.is_present:
+            url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.last_local_push_id, self.end_id)
+        else:
+            url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.end_id - 100, self.end_id)
         self.push_link = self.repository_url + url_options
         return self.push_link
 
@@ -95,17 +101,23 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.commit_url = self.repository_url + "pushloghtml?changeset=" + node[:12]
         return self.commit_url
 
-# Construct json dictionary
+    # Construct json dictionary
     def _construct_json_dict(self):
         self.hg_commits_list = {}
         self.final_dict = {}
+        push_number = 0
+        self.final_dict.update({"0": {"last_push_id": self.end_id}})
+        if self.is_present:
+            self.final_dict.update(self.local_repo_data)
+            push_number = len(self.final_dict) - 1
         for push in self.changesets_json.get("pushes"):
+            push_number += 1
             unformated_date = self.changesets_json.get("pushes").get(push).get("date")
             pusher = self.changesets_json.get("pushes").get(push).get("user")
             date = self._generate_changeset_date(unformated_date)
-            self.final_dict.update({push: {"pusher": pusher,
-                                           "date_of_push": date,
-                                           "changeset_commits": {}}})
+            self.final_dict.update({push_number: {"pusher": pusher,
+                                                  "date_of_push": date,
+                                                  "changeset_commits": {}}})
 
             for commit in range(len(self.changesets_json.get("pushes").get(push).get("changesets"))):
                 node = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["node"]
@@ -113,8 +125,9 @@ class FICMercurial(FICFileHandler, FICDataVault):
                 commit_message = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["desc"]
                 files_changed = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["files"]
 
-                self.final_dict[push]["changeset_commits"].update({commit + 1: {"url": self._generate_commit_url(node),
-                                                                                "commiter_author": commit_author,
-                                                                                "commiter_message": commit_message,
-                                                                                "files_changed": files_changed}})
-        return self.final_dict
+                self.final_dict[push_number]["changeset_commits"].update({commit + 1: {"url": self._generate_commit_url(node),
+                                                                                       "commiter_author": commit_author,
+                                                                                       "commiter_message": commit_message,
+                                                                                       "files_changed": files_changed}})
+        #return self.final_dict
+        self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
