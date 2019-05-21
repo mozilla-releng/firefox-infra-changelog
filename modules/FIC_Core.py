@@ -45,35 +45,31 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
 
         for hosting_service in json.load(self.load(None, "repositories.json")):
             for repo in json.load(self.load(None, "repositories.json")).get(hosting_service):
-                self.repo_name = repo
                 if hosting_service == "Github":
-                    self.start_git()
+                    self.start_git(repo)
                 else:
-                    self.start_hg(repo_name=self.repo_name)
+                    self.start_hg(repo)
 
     def _run_git_behavioral(self):
         # Describes the behavioral of the script that runs in git only mode.
         print("Testing git mode behavioral...")
 
         for repo in json.load(self.load(None, "repositories.json")).get("Github"):
-            self.repo_name = repo
-            self.start_git()
+            self.start_git(repo)
 
     def _run_hg_behavioral(self):
         # Describes the behavioral of the script that runs in hg only mode.
         print("Testing hg mode behavioral...")
 
         for repo in json.load(self.load(None, "repositories.json")).get("HG"):
-            self.repo_name = repo
-            self.start_hg(repo_name=self.repo_name)
+            self.start_hg(repo)
 
     def _run_custom_repos_behavioral(self, repo_list):
         # Describes the behavioral of the script that runs with custom repos mode.
         print("Testing custom repositories mode behavioral...")
 
         for repo in repo_list:
-            self.repo_name = repo
             try:
-                self.start_git()
+                self.start_git(repo)
             except TypeError:
-                self.start_hg(repo_name=self.repo_name)
+                self.start_hg(repo)
