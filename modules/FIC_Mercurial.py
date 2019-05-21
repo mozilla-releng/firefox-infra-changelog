@@ -138,8 +138,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                                                                            "commiter_message": commit_message,
                                                                                            "files_changed": self.commit_files_changed}})
 
-            if self.final_dict[push_number]["changeset_commits"]:
+            if len(self.final_dict[push_number]["changeset_commits"]) == 0:
                 del self.final_dict[push_number]
 
-        #return self.final_dict
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
