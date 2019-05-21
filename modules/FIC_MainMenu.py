@@ -151,22 +151,20 @@ class FICMainMenu(FICCore):
             self._check_arguments_state()
 
     def _check_arguments_state(self):
-        run_fic_object = FICCore()
-
         if self.logging:
             print("==== Logging is active ====")
 
         if self.git_only:
             print("==== Running in GIT only mode ====")
-            run_fic_object.run_fic(git_only=True)
+            self.run_fic(git_only=True)
 
         if self.hg_only:
             print("==== Running in MERCURIAL only mode ====")
-            run_fic_object.run_fic(hg_only=True)
+            self.run_fic(hg_only=True)
 
         if self.all:
             print("==== Running in ALL repositories mode ====")
-            run_fic_object.run_fic(all=True)
+            self.run_fic(all=True)
 
         if self.push:
             print("==== Running in ALL repositories and pushing to Github ====")
