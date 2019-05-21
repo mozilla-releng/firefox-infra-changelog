@@ -104,8 +104,9 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.final_dict = {}
         push_number = 0
         self.final_dict.update({"0": {"last_push_id": self.end_id}})
-        self.final_dict.update(self.local_repo_data)
-        push_number = len(self.final_dict) - 1
+        if len(self.local_repo_data):
+            self.final_dict.update(self.local_repo_data)
+            push_number = len(self.final_dict) - 1
         for push in self.changesets_json.get("pushes"):
             push_number += 1
             unformated_date = self.changesets_json.get("pushes").get(push).get("date")
@@ -127,8 +128,3 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                                                                        "files_changed": files_changed}})
         #return self.final_dict
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
-
-
-FICFileHandler().check_tool_integrity()
-a = FICMercurial()
-a.start_hg("autoland")
