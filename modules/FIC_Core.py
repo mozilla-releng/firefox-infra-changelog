@@ -1,3 +1,5 @@
+import json
+
 from modules.FIC_Github import FICGithub
 from modules.FIC_Mercurial import FICMercurial
 from modules.FIC_FileHandler import FICFileHandler
@@ -10,22 +12,67 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
         FICMercurial.__init__(self)
         FICFileHandler.__init__(self)
         FICLogger.__init__(self)
+        self.check_tool_integrity()
 
-    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3):
+    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False, user_repos=None):
         # Don't forget about days!
-
         if all:
-            pass
+            # Needs to be replaced with whatever we want the script to do.
+            # In this case, with a method that should run the script in all modes.
+            print("Changelog has run in All mode!")
+            self._run_all_behavior()
 
         if git_only:
-            pass
+            print("Changelog has run in git only mode!")
+            self._run_git_behavior()
 
         if hg_only:
-            pass
+            print("Changelog has run in hg only mode!")
+            self._run_hg_behavior()
 
         if repo_list:
-            pass
+            print("Changelog has run with a custom list of repositories!")
+            self._run_custom_repos_behavior(user_repos)
 
     def _markdown(self):
-        pass
+        self.git_markdown()
+        self.hg_markdown()
+        self.main_markdown()
 
+    def _run_all_behavior(self):
+        # Describes the behavioral of the script that runs in all mode.
+        print("Testing run all behavioral...")
+
+        for hosting_service in json.load(self.load(None, "repositories.json")):
+            for repo in json.load(self.load(None, "repositories.json")).get(hosting_service):
+                if hosting_service == "Github":
+                    self.start_git(repo)
+                else:
+                    self.start_hg(repo)
+
+    def _run_git_behavior(self):
+        # Describes the behavioral of the script that runs in git only mode.
+        print("Testing git mode behavioral...")
+
+        for repo in json.load(self.load(None, "repositories.json")).get("Github"):
+            self.start_git(repo)
+
+    def _run_hg_behavior(self):
+        # Describes the behavioral of the script that runs in hg only mode.
+        print("Testing hg mode behavioral...")
+
+        for repo in json.load(self.load(None, "repositories.json")).get("HG"):
+            self.start_hg(repo)
+
+    def _run_custom_repos_behavior(self, user_repos):
+        # Describes the behavioral of the script that runs with custom repos mode.
+        print("Testing custom repositories mode behavioral...")
+
+        for repo in user_repos:
+            if repo[1] == "Github":
+                self.start_git(repo)
+            elif repo[1] == "Mercurial":
+                self.start_hg(repo)
+            else:
+                self.LOGGER.critical(f"Unknown repository type. Got {repo[1]} but can only accept 'Github' or 'Mercurial'")
+                exit(12)

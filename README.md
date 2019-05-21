@@ -1,6 +1,13 @@
 ## OOP Branch
 
 
+## Running the script in pycharm without `--dev` argument
+Can be done while running the client.py with arguments:
+ - `-a -l` = mode all and active logging
+ - `-g -l` = mode git and active logging
+ - `-hg -l` = mode mercurial and active logging
+ 
+
 ## ExitCodes used by FIC:
 - 2: File Extension not supported
 - 3: The script failed to pull the dates
@@ -12,6 +19,7 @@
 - 9: No git authentication tokens found
 - 10: Keyboard interrupt
 - 11: Provided input is not an integer. Used in modules.FIC_MainMenu.repo_selection_menu()
+- 12: Unknown repository provider.
 - 301: Moved Permanently
 - 302: Found
 - 304: Not Modified
