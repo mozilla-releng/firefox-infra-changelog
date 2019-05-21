@@ -17,6 +17,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
     def start_hg(self, repo_name):
         self.repo_name = repo_name
         self.file_name = repo_name + ".json"
+        self.folders_to_check = self._repo_files()
         self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
         self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, self.file_name)))
         self._prepare_url()
@@ -98,6 +99,16 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.commit_url = self.repository_url + "pushloghtml?changeset=" + node[:12]
         return self.commit_url
 
+    def _repo_files(self):
+        self.folders_to_check = json.load(self.load(None, "repositories.json")).get("Mercurial").get(self.repo_name).get("configuration").get("folders-to-check")
+        return self.folders_to_check
+
+    def _compare_files(self):
+        for folder_to_check in range(len(self.folders_to_check)):
+            for changed_folder in range(len(self.commit_files_changed)):
+                if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
+                    return True
+
     # Construct json dictionary
     def _construct_json_dict(self):
         self.hg_commits_list = {}
@@ -117,14 +128,14 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                                   "changeset_commits": {}}})
 
             for commit in range(len(self.changesets_json.get("pushes").get(push).get("changesets"))):
-                node = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["node"]
-                commit_author = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["author"]
-                commit_message = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["desc"]
-                files_changed = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["files"]
-
-                self.final_dict[push_number]["changeset_commits"].update({commit + 1: {"url": self._generate_commit_url(node),
-                                                                                       "commiter_author": commit_author,
-                                                                                       "commiter_message": commit_message,
-                                                                                       "files_changed": files_changed}})
+                self.commit_files_changed = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["files"]
+                if self._compare_files():
+                    node = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["node"]
+                    commit_author = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["author"]
+                    commit_message = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["desc"]
+                    self.final_dict[push_number]["changeset_commits"].update({commit + 1: {"url": self._generate_commit_url(node),
+                                                                                           "commiter_author": commit_author,
+                                                                                           "commiter_message": commit_message,
+                                                                                           "files_changed": self.commit_files_changed}})
         #return self.final_dict
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
