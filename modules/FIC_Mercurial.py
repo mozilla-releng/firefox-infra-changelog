@@ -18,8 +18,8 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.repo_name = repo_name
         self.file_name = repo_name + ".json"
         self.folders_to_check = self._repo_files()
-        self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
-        self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, self.file_name)))
+        self.repo_data = json.load(self.load(None, "repositories.json"))
+        self.local_repo_data = json.load(self.load(CHANGELOG_REPO_PATH, self.file_name))
         self._prepare_url()
         self._download_data()
         self._store_data()
@@ -137,5 +137,9 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                                                                            "commiter_author": commit_author,
                                                                                            "commiter_message": commit_message,
                                                                                            "files_changed": self.commit_files_changed}})
+
+            if len(self.final_dict[push_number]["changeset_commits"]) == 0:
+                del self.final_dict[push_number]
+
         #return self.final_dict
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
