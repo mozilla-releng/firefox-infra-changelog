@@ -138,7 +138,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
                                                                                            "commiter_message": commit_message,
                                                                                            "files_changed": self.commit_files_changed}})
 
-            if len(self.final_dict[push_number]["changeset_commits"]) == 0:
+            if self.final_dict[push_number]["changeset_commits"]:
                 del self.final_dict[push_number]
 
         #return self.final_dict
