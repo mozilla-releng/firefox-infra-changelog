@@ -17,17 +17,13 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.repo_name = repo_name
         self.file_name = repo_name + ".json"
         self.repo_data = json.load(open(self.construct_path(None, "repositories.json")))
-        self.is_present = self.is_writable("data", repo_name + ".json")
-        if self.is_present:
-            self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, self.file_name)))
+        self.local_repo_data = json.load(open(self.construct_path(CHANGELOG_REPO_PATH, self.file_name)))
         self._prepare_url()
         self._download_data()
         self._store_data()
 
     # =======PREPARE URL========
     def _prepare_url(self):
-        if self.is_present:
-            self._get_last_local_push_id()
         self._get_repo_link(self.repo_name)
         self._request_hg_data()
         self._load_response_in_json()
@@ -73,7 +69,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
 
     # Using previous data generates a download link
     def _generate_push_link(self):
-        if self.is_present:
+        if self.local_repo_data.get("0"):
             url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.last_local_push_id, self.end_id)
         else:
             url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.end_id - 100, self.end_id)
@@ -107,9 +103,8 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.final_dict = {}
         push_number = 0
         self.final_dict.update({"0": {"last_push_id": self.end_id}})
-        if self.is_present:
-            self.final_dict.update(self.local_repo_data)
-            push_number = len(self.final_dict) - 1
+        self.final_dict.update(self.local_repo_data)
+        push_number = len(self.final_dict) - 1
         for push in self.changesets_json.get("pushes"):
             push_number += 1
             unformated_date = self.changesets_json.get("pushes").get(push).get("date")
