@@ -31,7 +31,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     @staticmethod
     def _create_first_table_row():
         return "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
-               "|:-----:|:-----:|:----------------------------------:|:------:|:----:| \n\n"
+               "|:-----:|:-----:|:----------------------------------:|:------:|:----:| \n"
 
     def md_table_row_builder(self):
         return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
