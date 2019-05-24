@@ -8,6 +8,5 @@ from modules.FIC_MainMenu import FICMainMenu
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, FICExceptions().signal_handler)
 
-    menu_switch = FICMainMenu()
-    menu_switch.main_menu()
+    FICMainMenu().start()
 

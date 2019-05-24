@@ -1,49 +1,65 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
-import sys
-import json
+import argparse
 from modules.FIC_Core import FICCore
+from modules.config import DEFAULT_DAYS
 
 
-class FICMainMenu(FICCore):
+class FICMainMenu():
     def __init__(self):
-        import argparse
-        FICCore.__init__(self)
-        self.logging = False
+        # FICCore.__init__(self)
+        self.all = False
         self.git_only = False
         self.hg_only = False
-        self.all = False
-        self.repo = False
-        self.days = False
+        self.repo_selection = False
+        self.logging = False
+        self.days = DEFAULT_DAYS
         self.push = False
+        self.dev = False
+        self.skip_menu = False
         self.parser = argparse.ArgumentParser()
-        self.choice = int
-        self.repository_list = []
-        self.directory = self._check_dev_mode()
-        self.user_repos = []
 
-    def parse_arguments(self):
+    def start(self):
+        # Set all argument flags, based on runtime arguments.
+        self._available_arguments()
+
+        # Check if we want to skip the menu or not.
+        if not self.skip_menu:
+            self._main_menu()
+
+        # Skip the menu.
+        else:
+            self.run_fic(all=self.all,
+                         git_only=self.git_only,
+                         hg_only=self.hg_only,
+                         days=self.days,
+                         logging=self.logging)
+
+    def _available_arguments(self):
         self.parser.add_argument('-a', '--all', required=False, action='store_true', default=False,
                                  help='Runs script for all available repositories')
         self.parser.add_argument('-g', '--git', required=False, action='store_true', default=False,
                                  help='Runs script only for repos that are on GitHub')
         self.parser.add_argument('-hg', '--mercurial', required=False, action='store_true', default=False,
                                  help='Runs script only for repos that are on Mercurial')
-        self.parser.add_argument("-r", "--repo", required=False, action='store_true', default=False,
-                                 help="Let the user choose for which repositories the script will run")
+        self.parser.add_argument("-r", "--repo", required=False, nargs="*",
+                                 help="Let the user choose for which repositories to run")
         self.parser.add_argument("-l", "--logging", required=False, action='store_true', default=False,
                                  help="Activate logger output in the console")
-        self.parser.add_argument("-d", "--days", required=False, action='store', default=3,
+        self.parser.add_argument("-days", "--days", required=False, action='store', default=DEFAULT_DAYS,
                                  help="Generate the changelog.md for <int> amount of days.")
         self.parser.add_argument("-p", "--push", required=False, action='store_true', default=False,
-                                 help="Runs script for all available repositories and auto push the changes to github")
+                                 help="Runs for all available repositories and auto-push to github")
+        self.parser.add_argument("-dev", "--development", required=False, action='store_true', default=False,
+                                 help="Activate development mode")
+        self.parser.add_argument("-s", "--skip-menu", required=False, action="store_true", default=False,
+                                 help="Skip MainMenu. Used for automatization.")
         args = self.parser.parse_args()
-        return args
 
-    def _set_argument_flags(self, args):
-        if args.logging:
-            self.logging = True
+        # Create and set flags.
+        if args.all:
+            self.all = True
 
         if args.git:
             self.git_only = True
@@ -51,11 +67,13 @@ class FICMainMenu(FICCore):
         if args.mercurial:
             self.hg_only = True
 
-        if args.all:
-            self.all = True
+        repo_selection = False if isinstance(args.repo, type(None)) else args.repo
+        if repo_selection:
+            self.repo_selection = args.repo
 
-        if args.repo:
-            self.repo = True
+
+        if args.logging:
+            self.logging = True
 
         if args.days:
             if str(args.days).isdecimal():
@@ -67,42 +85,56 @@ class FICMainMenu(FICCore):
 
         if args.push:
             self.push = True
-        return
 
-    def _choice_main_menu(self):
-        if self.choice is 1:
-            self.all = True
-            self._check_arguments_state()
+        if args.development:
+            self.dev = True
 
-        if self.choice is 2:
-            self.git_only = True
-            self._check_arguments_state()
+        if args.skip_menu:
+            self.skip_menu = True
 
-        if self.choice is 3:
-            self.hg_only = True
-            self._check_arguments_state()
+    def _construct_mainmenu_text(self):
+        menu_header = "Welcome to Ciduty's Firefox Infra Changelog!\n" \
+                      "You can use the options below to run the script according to your needs.\n"
 
-        if self.choice is 4:
-            self.repo = True
-            self._check_arguments_state()
+        menu_logging = "====        Logging  is active        ====\n"
+        menu_dev     = "====        Dev Mode is active        ====\n"
+        menu_days    = f"==== Generating Changelog for {self.days} days  ====\n"
 
-        if self.choice is 5:
-            self.logging = True
-            self.main_menu()
+        menu_notifications = (menu_logging if self.logging else "") + \
+                             (menu_dev if self.dev else "") + \
+                             (menu_days if self.days is not 3 else "")
 
-        if self.choice is 6:
-            days_choice = input("Please enter the number of days you want changelog.md to be generated for\n")
-            if str(days_choice).isdecimal():
-                self.days = days_choice
-            else:
-                print("When using option 6 please use integers only.")
-                exit(4)
-            self.main_menu()
+        menu_options = "1. Run script for all available repositories \n" \
+                       "2. Run script only for repositories that are on GitHub\n" \
+                       "3. Run script only for repositories that are on Mercurial\n" \
+                       "4. Run script for repositories that you choose\n" \
+                       "5. Activates logger output in console\n" \
+                       "6. Generates changelog.md for the amount of days set by user\n" \
+                       "7. Run the script for all repositories and push changes to Github\n" \
+                       "0. Exit application."
 
-        if self.choice is 7:
-            self.push = True
-            self.main_menu()  # Placeholder.
-        return
+        return menu_header + menu_notifications + menu_options
+
+    def _main_menu(self):
+        print(self._construct_mainmenu_text())
+        self.choice = int(input())
+
+    def _run_selected_menu(self):
+        if self.choice == 1:
+            pass
+        if self.choice == 2:
+            pass
+        if self.choice == 3:
+            pass
+        if self.choice == 4:
+            pass
+        if self.choice == 5:
+            self.logging = not self.logging
+
+        if self.choice == 6:
+            pass
+        if self.choice == 7:
+            pass
 
     def repo_selection_menu(self):
         new_list = []
@@ -129,59 +161,8 @@ class FICMainMenu(FICCore):
             except ValueError:
                 exit(11)
 
-    def main_menu(self):
-        self._check_arguments_state()
-        if len(sys.argv) == 1:
-            print("Welcome to Ciduty's Firefox Infra Changelog!\n"
-                  "You can use the options below to run the script according to your needs.\n"
-                  "\n"
-                  "1. Run script for all available repositories \n"
-                  "2. Run script only for repositories that are on GitHub\n"
-                  "3. Run script only for repositories that are on Mercurial\n"
-                  "4. Run script only for repositories that are chosen by you (Both GitHub and/or Mercurial)\n"
-                  "5. Activates logger output in console\n"
-                  "6. Generates changelog.md for the amount of days set by user\n"
-                  "7. Run the script for all available repositories and pushes .json/.md changes to Git\n"
-                  "0. Exit application.")
-            self.choice = int(input())
-            self._choice_main_menu()
+FICMainMenu().start()
 
-        else:
-            self._set_argument_flags(self.parse_arguments())  # Set all flags before showing the menu.
-            self._check_arguments_state()
 
-    def _check_arguments_state(self):
-        if self.logging:
-            print("==== Logging is active ====")
 
-        if self.git_only:
-            print("==== Running in GIT only mode ====")
-            self.run_fic(git_only=True)
-
-        if self.hg_only:
-            print("==== Running in MERCURIAL only mode ====")
-            self.run_fic(hg_only=True)
-
-        if self.all:
-            print("==== Running in ALL repositories mode ====")
-            self.run_fic(all=True)
-
-        if self.push:
-            print("==== Running in ALL repositories and pushing to Github ====")
-
-        if self.repo:
-            self.construct_repository_list()
-            self.repo_selection_menu()
-            self.run_fic(user_repos=self.user_repos)
-
-    def _load_repository_data(self, directory):
-        self.load_repositories = json.load(self.load(directory, "repositories.json"))
-        return self.load_repositories
-
-    def construct_repository_list(self):
-        self._load_repository_data("../")
-        for key in self.load_repositories:
-            for repository_name in self.load_repositories.get(key):
-                self.repository_list.append(repository_name)
-        return self.repository_list
 
