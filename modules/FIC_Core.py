@@ -61,7 +61,7 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
         # Describes the behavioral of the script that runs in hg only mode.
         print("Testing hg mode behavioral...")
 
-        for repo in json.load(self.load(None, "repositories.json")).get("HG"):
+        for repo in json.load(self.load(None, "repositories.json")).get("Mercurial"):
             self.start_hg(repo)
 
     def _run_custom_repos_behavior(self, user_repos):
