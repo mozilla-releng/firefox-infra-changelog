@@ -109,12 +109,6 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.repo_name = repo_name
         self._build_initial_md_structure()
         self._populate_md_table()
-        for element in a.md_ready_data:
-            print(element)
-            a.save(CHANGELOG_REPO_PATH, a.repo_name + ".md", element)
+        for element in self.md_ready_data:
+            self.save(CHANGELOG_REPO_PATH, a.repo_name + ".md", element)
 
-
-# TESTING BELOW
-
-a = FICMarkdownGenerator()
-a.start_md_for_git("taskcluster")
