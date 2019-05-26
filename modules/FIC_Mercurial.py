@@ -17,7 +17,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
     def start_hg(self, repo_name):
         self.repo_name = repo_name
         self.file_name = repo_name + ".json"
-        self.folders_to_check = self._repo_files()
+        self.folders_to_check = self._repo_files_hg()
         self.repo_data = json.load(self.load(None, "repositories.json"))
         self.local_repo_data = json.load(self.load(CHANGELOG_REPO_PATH, self.file_name))
         self._prepare_url()
@@ -31,13 +31,11 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self._load_response_in_json()
         self._get_end_id()
         self._generate_push_link()
-        self._download_data()
 
     # =========DOWNLOAD DATA========
     def _download_data(self):
         self._request_changesets_data()
         self._load_changesets_data_in_json()
-        self._store_data()
 
     # =========STORE DATA==========
     def _store_data(self):
@@ -99,7 +97,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.commit_url = self.repository_url + "pushloghtml?changeset=" + node[:12]
         return self.commit_url
 
-    def _repo_files(self):
+    def _repo_files_hg(self):
         self.folders_to_check = json.load(self.load(None, "repositories.json")).get("Mercurial").get(self.repo_name).get("configuration").get("folders-to-check")
         return self.folders_to_check
 
@@ -109,36 +107,54 @@ class FICMercurial(FICFileHandler, FICDataVault):
                 if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
                     return True
 
+    def _prep_final_dict(self):
+        self.final_dict = {}
+        self.final_dict.update({"0": {"last_push_id": self.end_id}})
+
+    def _get_local_data(self):
+        if len(self.local_repo_data):
+            self.local_repo_data.pop("0")
+            for key, value in self.local_repo_data.items():
+                self.list_of_dicts.append(value)
+
+    def _add_changeset_data(self, push):
+        unformated_date = self.changesets_json.get("pushes").get(push).get("date")
+        pusher = self.changesets_json.get("pushes").get(push).get("user")
+        date = self._generate_changeset_date(unformated_date)
+        self.changeset_dict.update({"pusher": pusher, "date_of_push": date, "changeset_commits": {}})
+
+    def _add_commit_data(self, push, commit):
+        self.commit_files_changed = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["files"]
+        if self._compare_files():
+            node = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["node"]
+            commit_author = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["author"]
+            commit_message = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["desc"]
+            self.changeset_dict["changeset_commits"].update(
+                {commit + 1: {"url": self._generate_commit_url(node),
+                              "commit_author": commit_author,
+                              "commit_message": commit_message,
+                              "files_changed": self.commit_files_changed}})
+
+    def _populate_final_dict(self):
+        for changeset in reversed(self.list_of_dicts):
+            if len(changeset["changeset_commits"]) == 0:
+                del changeset
+            else:
+                self.push_number += 1
+                self.final_dict.update({self.push_number: changeset})
+
     # Construct json dictionary
     def _construct_json_dict(self):
-        self.hg_commits_list = {}
-        self.final_dict = {}
-        push_number = 0
-        self.final_dict.update({"0": {"last_push_id": self.end_id}})
-        if len(self.local_repo_data):
-            self.final_dict.update(self.local_repo_data)
-            push_number = len(self.final_dict) - 1
+        self.list_of_dicts = []
+        self._prep_final_dict()
+        self.push_number = 0
+        self._get_local_data()
         for push in self.changesets_json.get("pushes"):
-            push_number += 1
-            unformated_date = self.changesets_json.get("pushes").get(push).get("date")
-            pusher = self.changesets_json.get("pushes").get(push).get("user")
-            date = self._generate_changeset_date(unformated_date)
-            self.final_dict.update({push_number: {"pusher": pusher,
-                                                  "date_of_push": date,
-                                                  "changeset_commits": {}}})
-
+            self.changeset_dict = {}
+            self._add_changeset_data(push)
             for commit in range(len(self.changesets_json.get("pushes").get(push).get("changesets"))):
-                self.commit_files_changed = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["files"]
-                if self._compare_files():
-                    node = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["node"]
-                    commit_author = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["author"]
-                    commit_message = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["desc"]
-                    self.final_dict[push_number]["changeset_commits"].update({commit + 1: {"url": self._generate_commit_url(node),
-                                                                                           "commiter_author": commit_author,
-                                                                                           "commiter_message": commit_message,
-                                                                                           "files_changed": self.commit_files_changed}})
+                self._add_commit_data(push, commit)
+            self.list_of_dicts.append(self.changeset_dict)
 
-            if len(self.final_dict[push_number]["changeset_commits"]) == 0:
-                del self.final_dict[push_number]
-
+        self._populate_final_dict()
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
