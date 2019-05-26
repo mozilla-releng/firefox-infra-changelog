@@ -4,6 +4,8 @@ from modules.FIC_Github import FICGithub
 from modules.FIC_Mercurial import FICMercurial
 from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_Logger import FICLogger
+from modules.config import CHANGELOG_REPO_PATH, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH
+from modules.FIC_Utilities import return_time
 
 
 class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
@@ -76,3 +78,34 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
             else:
                 self.LOGGER.critical(f"Unknown repository type. Got {repo[1]} but can only accept 'Github' or 'Mercurial'")
                 exit(12)
+
+    def _extract_git_commits(self, key, changelog, number_of_days):
+        repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
+        if len(repo_data) > 1:
+            repo_data.pop("0")
+            for value in repo_data.values():
+                time_span = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", number_of_days)
+                if value["date"] > time_span:
+                    changelog["Github"].update({key: value})
+
+    def _extract_hg_commits(self, key, changelog, number_of_days):
+        repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
+        if len(repo_data) > 1:
+            repo_data.pop("0")
+            for value in repo_data.values():
+                time_span = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", number_of_days)
+                if value["date_of_push"] > time_span:
+                    changelog["Mercurial"].update({key: value["changeset_commits"]})
+
+    def populate_changelog_json(self, number_of_days=1):
+        changelog = {}
+        changelog.update({"Github": {},
+                          "Mercurial": {}})
+        with open(self.construct_path(None, "repositories.json"), "r") as json_data:
+            local_data = json.load(json_data)
+            # Check all Github files exist for each repository.
+            for key in local_data["Github"].keys():
+                self._extract_git_commits(key, changelog, number_of_days)
+            for key in local_data["Mercurial"].keys():
+                self._extract_hg_commits(key, changelog, number_of_days)
+        self.save(None, CHANGELOG_JSON_PATH, changelog)
