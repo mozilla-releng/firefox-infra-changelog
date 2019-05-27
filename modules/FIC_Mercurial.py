@@ -6,7 +6,7 @@ from modules.FIC_DataVault import FICDataVault
 from modules.FIC_Utilities import return_time
 import json
 import requests
-from modules.config import CHANGELOG_REPO_PATH
+from modules.config import CHANGELOG_REPO_PATH, HG_CHANGESETS_TO_SHOW
 
 
 class FICMercurial(FICFileHandler, FICDataVault):
@@ -75,7 +75,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
             self._get_last_local_push_id()
             url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.last_local_push_id, self.end_id)
         else:
-            url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.end_id - 100, self.end_id)
+            url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.end_id - HG_CHANGESETS_TO_SHOW, self.end_id)
         self.push_link = self.repository_url + url_options
         return self.push_link
 
