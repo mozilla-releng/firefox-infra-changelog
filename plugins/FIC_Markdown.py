@@ -8,10 +8,8 @@ from modules.config import COMMIT_DESCRIPTION_LENGTH, CHANGELOG_REPO_PATH
 import json
 
 
-class FICMarkdownGenerator(FICFileHandler, FICDataVault):
+class FICMarkdownGenerator():
     def __init__(self):
-        FICFileHandler.__init__(self)
-        FICDataVault.__init__(self)
         self.md_ready_data = []
 
     @staticmethod
@@ -68,7 +66,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
         unwanted_chars = ["\u0131", "\u30c4", "\u00c1", "\u00ee", "\u0103",
                           "\u00e4", "\u00e8", "\u2013", "\U0001f60b", "\u00af",
-                          "\U0001f92a"]
+                          "\U0001f92a", "\n"]
 
         # Prepare author name for
         for word in self.commit_author:
@@ -86,7 +84,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self.commit_message = self.commit_message[0:length] + ".. [continue reading](" + commit_link + ")"
         return self.commit_message
 
-    def _populate_md_table(self):
+    def _populate_md_for_git(self):
         local_json_data = self._load_local_json_data()
         if len(local_json_data) > 0:
             del local_json_data["0"]
@@ -108,7 +106,33 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     def start_md_for_git(self, repo_name=None):
         self.repo_name = repo_name
         self._build_initial_md_structure()
-        self._populate_md_table()
+        self._populate_md_for_git()
         for element in self.md_ready_data:
-            self.save(CHANGELOG_REPO_PATH, a.repo_name + ".md", element)
+            self.save(CHANGELOG_REPO_PATH, repo_name + ".md", element)
+        self.md_ready_data = []
 
+    def _populate_md_for_hg(self):
+        local_json_data = self._load_local_json_data()
+        if len(local_json_data) > 0:
+            del local_json_data["0"]
+            self.commit_number = 1
+            for changeset in local_json_data:
+                for commit in local_json_data.get(changeset).get("changeset_commits"):
+                    self.commit_date = local_json_data.get(changeset).get("date_of_push")
+                    if self.commit_date > return_time("%Y-%m-%dT%H:%M:%S", "sub", 7):
+                        self.commit_author = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_author").split("<")[0]
+                        self.commit_url = local_json_data.get(changeset).get("changeset_commits").get(commit).get("url")
+                        self.commit_message = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_message")
+                        self.commit_author, self.commit_message = self.filter_strings()
+                        self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
+                        # self.generate_link_for_bugs()
+                        self.md_ready_data.append(self.md_table_row_builder())
+                        self.commit_number += 1
+
+    def start_md_for_hg(self, repo_name=None):
+        self.repo_name = repo_name
+        self._build_initial_md_structure()
+        self._populate_md_for_hg()
+        for element in self.md_ready_data:
+            self.save(CHANGELOG_REPO_PATH, repo_name + ".md", element)
+        self.md_ready_data = []
