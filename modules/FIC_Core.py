@@ -4,16 +4,18 @@ from modules.FIC_Github import FICGithub
 from modules.FIC_Mercurial import FICMercurial
 from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_Logger import FICLogger
+from plugins.FIC_Markdown import FICMarkdownGenerator
 from modules.config import CHANGELOG_REPO_PATH, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH
 from modules.FIC_Utilities import return_time
 
 
-class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
+class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGenerator):
     def __init__(self):
         FICGithub.__init__(self)
         FICMercurial.__init__(self)
         FICFileHandler.__init__(self)
         FICLogger.__init__(self)
+        FICMarkdownGenerator.__init__(self)
         self.check_tool_integrity()
 
     def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False, user_repos=None):
@@ -36,10 +38,14 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
             print("Changelog has run with a custom list of repositories!")
             self._run_custom_repos_behavior(user_repos)
 
-    def _markdown(self):
-        self.git_markdown()
-        self.hg_markdown()
-        self.main_markdown()
+    def _markdown_iterator(self):
+        _json_data = json.load(self.load(None, "repositories.json"))
+        for hosting_service in _json_data:
+            for repo in _json_data.get(hosting_service):
+                if hosting_service == "Github":
+                    self.start_md_for_git(repo)
+                else:
+                    self.start_md_for_hg(repo)
 
     def _run_all_behavior(self):
         # Describes the behavioral of the script that runs in all mode.
