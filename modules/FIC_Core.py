@@ -83,10 +83,13 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger):
         repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
         if len(repo_data) > 1:
             repo_data.pop("0")
+            changelog["Github"].update({key: {}})
+            commit_number = 0
             for value in repo_data.values():
                 time_span = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", number_of_days)
                 if value["date"] > time_span:
-                    changelog["Github"].update({key: value})
+                    changelog["Github"][key].update({commit_number: value})
+                    commit_number += 1
 
     def _extract_hg_commits(self, key, changelog, number_of_days):
         repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
