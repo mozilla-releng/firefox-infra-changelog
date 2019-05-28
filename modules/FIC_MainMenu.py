@@ -1,14 +1,15 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+import sys
 import argparse
 from modules.FIC_Core import FICCore
 from modules.config import DEFAULT_DAYS
 
 
-class FICMainMenu():
+class FICMainMenu(FICCore):
     def __init__(self):
-        # FICCore.__init__(self)
+        FICCore.__init__(self)
         self.all = False
         self.git_only = False
         self.hg_only = False
@@ -19,6 +20,7 @@ class FICMainMenu():
         self.dev = False
         self.skip_menu = False
         self.parser = argparse.ArgumentParser()
+        self.arguments_set = False
 
     def start(self):
         # Set all argument flags, based on runtime arguments.
@@ -30,6 +32,12 @@ class FICMainMenu():
 
         # Skip the menu.
         else:
+            # Check if we ONLY typed `python client.py -s/--skip-menu`
+            # If check is True, set self.all = True then run FIC main logic.
+            # We don't need to check if "-s/--skip-menu" is present, as this is the only way to
+            # enter this else statement.
+            self.all = True if len(sys.argv) <= 2 else self.all
+
             self.run_fic(all=self.all,
                          git_only=self.git_only,
                          hg_only=self.hg_only,
@@ -55,44 +63,63 @@ class FICMainMenu():
                                  help="Activate development mode")
         self.parser.add_argument("-s", "--skip-menu", required=False, action="store_true", default=False,
                                  help="Skip MainMenu. Used for automatization.")
-        args = self.parser.parse_args()
+
+        self.args = self.parser.parse_args()
+        self._set_arguments_flags()
+
+    def _set_arguments_flags(self):
+        # Check that we have parsed all arguments.
+        if not self.args:
+            self._available_arguments()
+        else:
+            pass
 
         # Create and set flags.
-        if args.all:
+        if self.args.all:
             self.all = True
 
-        if args.git:
+        if self.args.git:
             self.git_only = True
 
-        if args.mercurial:
+        if self.args.mercurial:
             self.hg_only = True
 
-        repo_selection = False if isinstance(args.repo, type(None)) else args.repo
+        # Check if Manual Repo Selection is present and in which mode:
+        #   - If `-r` is missing.                                 (Return: False)
+        #   - If `-r` is present, but no list present.            (Return: True)
+        #   - If `-r` is present and a list of repos are present. (Return: List of repos)
+        repo_selection = False if isinstance(self.args.repo, type(None)) else self.args.repo
         if repo_selection:
-            self.repo_selection = args.repo
+            self.repo_selection = self.args.repo
 
-
-        if args.logging:
+        if self.args.logging:
             self.logging = True
 
-        if args.days:
-            if str(args.days).isdecimal():
-                self.days = int(args.days)
+        if self.args.days:
+            if str(self.args.days).isdecimal():
+                self.days = int(self.args.days)
             else:
                 print("When using -d/--days please insert a number of days.\n"
                       "Example: python3 client.py -d 30 or --days 10")
                 exit(4)
 
-        if args.push:
+        if self.args.push:
             self.push = True
 
-        if args.development:
+        if self.args.development:
             self.dev = True
 
-        if args.skip_menu:
+        if self.args.skip_menu:
             self.skip_menu = True
 
+        self.arguments_set = True
+
     def _construct_mainmenu_text(self):
+        if not self.arguments_set:
+            self._set_arguments_flags()
+        else:
+            pass
+
         menu_header = "Welcome to Ciduty's Firefox Infra Changelog!\n" \
                       "You can use the options below to run the script according to your needs.\n"
 
@@ -102,7 +129,7 @@ class FICMainMenu():
 
         menu_notifications = (menu_logging if self.logging else "") + \
                              (menu_dev if self.dev else "") + \
-                             (menu_days if self.days is not 3 else "")
+                             (menu_days if self.days is not DEFAULT_DAYS else "")
 
         menu_options = "1. Run script for all available repositories \n" \
                        "2. Run script only for repositories that are on GitHub\n" \
@@ -119,20 +146,39 @@ class FICMainMenu():
         print(self._construct_mainmenu_text())
         self.choice = int(input())
 
+        self._run_selected_menu()
+
     def _run_selected_menu(self):
         if self.choice == 1:
-            pass
+            self.run_fic(all=self.all,
+                         logging=self.logging,
+                         days=self)
+
         if self.choice == 2:
             pass
+
         if self.choice == 3:
             pass
+
         if self.choice == 4:
             pass
+
         if self.choice == 5:
             self.logging = not self.logging
+            self._main_menu()
 
         if self.choice == 6:
-            pass
+            print("Please input the amount of days `changelog.md` will be generated for:")
+            days = input()
+
+            if str(days).isdecimal():
+                self.days = int(days)
+                self._main_menu()
+            else:
+                print("Amount of days need to be an integer!\n"
+                      "Moving back to Main Menu.")
+                self._main_menu()
+
         if self.choice == 7:
             pass
 
