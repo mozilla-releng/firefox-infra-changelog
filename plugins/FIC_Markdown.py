@@ -3,37 +3,40 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 from modules.FIC_DataVault import FICDataVault
 from modules.FIC_FileHandler import FICFileHandler
-from modules.config import COMMIT_DESCRIPTION_LENGTH
+from modules.FIC_Utilities import return_time
+from modules.config import COMMIT_DESCRIPTION_LENGTH, CHANGELOG_REPO_PATH, DEFAULT_DAYS, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, REPOSITORIES_FILE
+import json
 
 
 class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     def __init__(self):
         FICFileHandler.__init__(self)
         FICDataVault.__init__(self)
-        FICFilters.__init__(self)
-        self.changelog_table_header = None
+        self.md_ready_data = []
+        self.changelog_md_data = []
 
-    def _get_current_time(self):
-        import datetime
-        self._current_time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
-        return self._current_time
+    @staticmethod
+    def _get_current_time():
+        return return_time(time_format="%Y-%m-%dT%H:%M:%S")
 
-    def _create_repo_markdown_header(self, repo_name):
-        self.markdown_header = repo_name + " MD table" + "\n" + "Generated on: {}".format(self._current_time)
-        return self.markdown_header
+    def _load_local_json_data(self):
+        return json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
 
-    def create_first_table_row(self):
-        self.first_row_string = "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
-                           "|:---:|:----:|:----------------------------------:|:------:|:----:| \n"
-        return self.first_row_string
+    def _build_initial_md_structure(self):
+        self.md_ready_data.append(self._create_repo_markdown_header())
+        self.md_ready_data.append(self._create_first_table_row())
+
+    def _create_repo_markdown_header(self):
+        return "## " + self.repo_name + " MD table" + "\n" + "Generated on: {}".format(self._get_current_time()) + "\n\n"
+
+    @staticmethod
+    def _create_first_table_row():
+        return "| Commit Number | Commiter | Commit Message | Commit Url | Date | \n" + \
+               "|:-----:|:-----:|:----------------------------------:|:------:|:----:| \n"
 
     def md_table_row_builder(self):
-        self.md_table_row = "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
-                      "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
-        return self.md_table_row
-
-    def write_markdown(self, directory, file_name):
-        self.save(directory, file_name, "CONTENT HERE")
+        return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
+               "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
 
     def generate_link_for_bugs(self):
         import re
@@ -66,7 +69,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
         unwanted_chars = ["\u0131", "\u30c4", "\u00c1", "\u00ee", "\u0103",
                           "\u00e4", "\u00e8", "\u2013", "\U0001f60b", "\u00af",
-                          "\U0001f92a"]
+                          "\U0001f92a", "\n"]
 
         # Prepare author name for
         for word in self.commit_author:
@@ -84,7 +87,126 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self.commit_message = self.commit_message[0:length] + ".. [continue reading](" + commit_link + ")"
         return self.commit_message
 
-    def filter_commit(self):
-        self.filter_strings()
-        self.trim_commit_description(self.commit_url)
-        self.generate_link_for_bugs()
+    def _populate_md_for_git(self):
+        local_json_data = self._load_local_json_data()
+        if len(local_json_data) > 0:
+            del local_json_data["0"]
+            self.commit_number = 1
+            for key in local_json_data:
+                self.commit_date = local_json_data.get(key).get("date")
+                if self.commit_date > return_time("%Y-%m-%dT%H:%M:%S", "sub", 7):
+                    self.commit_author = local_json_data.get(key).get("author")
+                    self.commit_url = local_json_data.get(key).get("url")
+                    self.commit_message = local_json_data.get(key).get("message")
+                    self.commit_author, self.commit_message = self.filter_strings()
+                    self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
+                    self.generate_link_for_bugs()
+                    self.md_ready_data.append(self.md_table_row_builder())
+                    self.commit_number += 1
+        else:
+            print("No commits in the past {} days".format(DEFAULT_DAYS))  # to be replace with a method
+
+    def start_md_for_git(self, repo_name=None):
+        self.repo_name = repo_name
+        self._build_initial_md_structure()
+        self._populate_md_for_git()
+        for element in self.md_ready_data:
+            self.save(CHANGELOG_REPO_PATH, repo_name + ".md", element)
+        self.md_ready_data = []
+
+    def _populate_md_for_hg(self):
+        local_json_data = self._load_local_json_data()
+        if len(local_json_data) > 0:
+            del local_json_data["0"]
+            self.commit_number = 1
+            for changeset in local_json_data:
+                for commit in local_json_data.get(changeset).get("changeset_commits"):
+                    self.commit_date = local_json_data.get(changeset).get("date_of_push")
+                    if self.commit_date > return_time("%Y-%m-%dT%H:%M:%S", "sub", 7):
+                        self.commit_author = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_author").split("<")[0]
+                        self.commit_url = local_json_data.get(changeset).get("changeset_commits").get(commit).get("url")
+                        self.commit_message = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_message")
+                        self.commit_author, self.commit_message = self.filter_strings()
+                        self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
+                        # self.generate_link_for_bugs()
+                        self.md_ready_data.append(self.md_table_row_builder())
+                        self.commit_number += 1
+
+    def start_md_for_hg(self, repo_name=None):
+        self.repo_name = repo_name
+        self._build_initial_md_structure()
+        self._populate_md_for_hg()
+        for element in self.md_ready_data:
+            self.save(CHANGELOG_REPO_PATH, repo_name + ".md", element)
+        self.md_ready_data = []
+
+    def _changelog_md_header(self):
+        return "## " + "Commits in production - for {} days".format(DEFAULT_DAYS) + "\n" + "###" + "Generated on: {}".format(self._get_current_time()) + "\n"
+
+    @staticmethod
+    def _changelog_md_links(repo, json_link, md_link):
+        return "\n | {} |".format(repo) + "[Markdown](" + md_link + ")" + "|" + "[Json](" + json_link + ")" + "| \n" + \
+               "|:----------:|:-----------------------:|:--------:| \n\n"
+
+    @staticmethod
+    def _changelog_md_first_row():
+        return "| Link | Last commit | Author | Reviewer | Deploy time | \n" + \
+               "|:----------:|:-----------:|:------:|:--------:|:-----------:| \n"
+
+    @staticmethod
+    def _get_display_order(changelog_data, repo_config):
+        repo_order = []
+        for element in changelog_data["Github"]:
+            order = repo_config["Github"][element]["order"]
+            repo_order.append((element, order, "git"))
+        for element in changelog_data["Mercurial"]:
+            order = repo_config["Mercurial"][element]["order"]
+            repo_order.append((element, order, "hg"))
+        repo_order.sort(key=lambda tup: tup[1])
+        return repo_order
+
+    @staticmethod
+    def _get_js_md_links(repo):
+        base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/tree/oop/data/"
+        return base_link + repo + ".json", base_link + repo + ".md"
+
+    def _changelog_md_row_builder(self):
+        return "|" + "[Link](" + self.commit_url + ")" + "|" + str(self.commit_message) + "|" + self.commit_author + \
+               "|" + str(self.commit_reviewer) + "|" + str(self.commit_date) + "\n"
+
+    def _populate_changelog_md(self, element, changelog_data):
+        json_link, md_link = self._get_js_md_links(element[0])
+        if element[2] is "git":
+            self.changelog_md_data.append(self._changelog_md_links(element[0], json_link, md_link))
+            self.changelog_md_data.append(self._changelog_md_first_row())
+            for value in changelog_data["Github"][element[0]].values():
+                self.commit_url = value["url"]
+                self.commit_message = value["message"]
+                self.commit_author = value["author"]
+                self.commit_reviewer = "N/A"
+                self.commit_date = value["date"]
+                self.commit_author, self.commit_message = self.filter_strings()
+                self.changelog_md_data.append(self._changelog_md_row_builder())
+        if element[2] is "hg":
+            self.changelog_md_data.append(self._changelog_md_links(element[0], json_link, md_link))
+            self.changelog_md_data.append(self._changelog_md_first_row())
+            for value in changelog_data["Mercurial"][element[0]].values():
+                self.commit_date = value["date_of_push"]
+                for commit in value["changeset_commits"].values():
+                    self.commit_url = commit["url"]
+                    self.commit_message = commit["commit_message"]
+                    self.commit_author = commit["commit_author"]
+                    self.commit_reviewer = "N/A"
+                    self.commit_author, self.commit_message = self.filter_strings()
+                    self.changelog_md_data.append(self._changelog_md_row_builder())
+
+    def create_changelog_md(self):
+        open(self.construct_path(None, CHANGELOG_MD_PATH), 'w').close()
+        changelog_data = json.load(self.load(None, CHANGELOG_JSON_PATH))
+        repo_config = json.load(self.load(None, REPOSITORIES_FILE))
+        repo_order = self._get_display_order(changelog_data, repo_config)
+        self.changelog_md_data.append(self._changelog_md_header())
+        for element in repo_order:
+            self._populate_changelog_md(element, changelog_data)
+        for element in self.changelog_md_data:
+            self.save(None, CHANGELOG_MD_PATH, element)
