@@ -104,7 +104,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     self.md_ready_data.append(self.md_table_row_builder())
                     self.commit_number += 1
         else:
-            print("No commits in the past 7 days")  # to be replace with a method
+            print("No commits in the past {} days".format(DEFAULT_DAYS))  # to be replace with a method
 
     def start_md_for_git(self, repo_name=None):
         self.repo_name = repo_name
@@ -201,6 +201,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     self.changelog_md_data.append(self._changelog_md_row_builder())
 
     def create_changelog_md(self):
+        open(self.construct_path(None, CHANGELOG_MD_PATH), 'w').close()
         changelog_data = json.load(self.load(None, CHANGELOG_JSON_PATH))
         repo_config = json.load(self.load(None, REPOSITORIES_FILE))
         repo_order = self._get_display_order(changelog_data, repo_config)
