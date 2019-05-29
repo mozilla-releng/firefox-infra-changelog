@@ -4,8 +4,7 @@
 import github3
 from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
-from modules.config import GIT_TOKEN
-from modules.config import CHANGELOG_REPO_PATH
+from modules.config import *
 from modules.FIC_Utilities import return_time
 from git import Repo
 import os
@@ -125,13 +124,13 @@ class FICGithub(FICFileHandler, FICDataVault):
         return self.repo_data.svn_url
 
     def _repo_team(self):
-        self.team_name = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("team")
+        self.team_name = json.load(self.load(None, REPOSITORIES_FILE)).get("Github").get(self.repo_name).get("team")
 
     def _repo_files(self):
-        self.folders_to_check = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("folders-to-check")
+        self.folders_to_check = json.load(self.load(None, REPOSITORIES_FILE)).get("Github").get(self.repo_name).get("configuration").get("folders-to-check")
 
     def _extract_repo_type(self):
-        self.repo_type = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("type")
+        self.repo_type = json.load(self.load(None, REPOSITORIES_FILE)).get("Github").get(self.repo_name).get("configuration").get("type")
 
     def _local_version(self):
         if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
@@ -141,7 +140,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         return [tag for tag in self.repo_data.tags(number=release_number)][release_number - 1].name
 
     def _get_version_path(self):
-        self.version_path = json.load(self.load(None, "repositories.json")).get("Github").get(self.repo_name).get("configuration").get("version-path")
+        self.version_path = json.load(self.load(None, REPOSITORIES_FILE)).get("Github").get(self.repo_name).get("configuration").get("version-path")
 
     def _build_puppet_version(self):
         self._get_version_path()

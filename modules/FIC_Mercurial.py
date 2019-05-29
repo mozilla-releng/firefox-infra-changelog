@@ -6,7 +6,7 @@ from modules.FIC_DataVault import FICDataVault
 from modules.FIC_Utilities import return_time
 import json
 import requests
-from modules.config import CHANGELOG_REPO_PATH, HG_CHANGESETS_TO_SHOW
+from modules.config import CHANGELOG_REPO_PATH, HG_CHANGESETS_TO_SHOW, REPOSITORIES_FILE
 
 
 class FICMercurial(FICFileHandler, FICDataVault):
@@ -18,7 +18,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.repo_name = repo_name
         self.file_name = repo_name + ".json"
         self.folders_to_check = self._repo_files_hg()
-        self.repo_data = json.load(self.load(None, "repositories.json"))
+        self.repo_data = json.load(self.load(None, REPOSITORIES_FILE))
         self.local_repo_data = json.load(self.load(CHANGELOG_REPO_PATH, self.file_name))
         self._prepare_url()
         self._download_data()
@@ -94,7 +94,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
         return self.commit_url
 
     def _repo_files_hg(self):
-        self.folders_to_check = json.load(self.load(None, "repositories.json")).get("Mercurial").get(self.repo_name).get("configuration").get("folders-to-check")
+        self.folders_to_check = json.load(self.load(None, REPOSITORIES_FILE)).get("Mercurial").get(self.repo_name).get("configuration").get("folders-to-check")
         return self.folders_to_check
 
     def _compare_files(self):
