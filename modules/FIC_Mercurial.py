@@ -22,7 +22,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.local_repo_data = json.load(self.load(CHANGELOG_REPO_PATH, self.file_name))
         self._prepare_url()
         self._download_data()
-        self._store_data()
+        self._construct_json_dict()
 
     # =======PREPARE URL========
     def _prepare_url(self):
@@ -36,10 +36,6 @@ class FICMercurial(FICFileHandler, FICDataVault):
     def _download_data(self):
         self._request_changesets_data()
         self._load_changesets_data_in_json()
-
-    # =========STORE DATA==========
-    def _store_data(self):
-        self._construct_json_dict()
 
     # Get last push id from local file
     def _get_last_local_push_id(self):
