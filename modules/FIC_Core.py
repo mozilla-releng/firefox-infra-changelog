@@ -2,20 +2,18 @@ import json
 
 from modules.FIC_Github import FICGithub
 from modules.FIC_Mercurial import FICMercurial
-from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_Logger import FICLogger
 from plugins.FIC_Markdown import FICMarkdownGenerator
 from modules.config import CHANGELOG_REPO_PATH, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, DEFAULT_DAYS
 from modules.FIC_Utilities import return_time
 
 
-class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGenerator):
+class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
     def __init__(self):
         FICGithub.__init__(self)
         FICMercurial.__init__(self)
-        FICFileHandler.__init__(self)
-        FICLogger.__init__(self)
         FICMarkdownGenerator.__init__(self)
+        FICLogger.__init__(self)
         self.check_tool_integrity()
 
     def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False):
