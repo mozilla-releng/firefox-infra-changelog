@@ -146,9 +146,8 @@ class FICFileHandler(FICLogger, FICDataVault):
 
     def save(self, directory, file_name, content):
         if file_name.endswith(".md"):
-            with open(self.construct_path(directory, file_name), "w") as markdown_file:
-                markdown_file.write("## " + self.repos_container.upper() + "\n\n")
-                markdown_file.write(content + "\n\n")
+            with open(self.construct_path(directory, file_name), "a") as markdown_file:
+                markdown_file.write(content)
 
         elif file_name.endswith(".json"):
             with open(self.construct_path(directory, file_name), "w") as json_file:
