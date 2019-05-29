@@ -5,14 +5,13 @@ import sys
 import json
 import argparse
 from modules.FIC_Core import FICCore
-from modules.FIC_Logger import FICLogger
+
 from modules.config import DEFAULT_DAYS, REPOSITORIES_FILE
 
 
-class FICMainMenu(FICCore, FICLogger):
+class FICMainMenu(FICCore):
     def __init__(self):
         FICCore.__init__(self)
-        FICLogger.__init__(self)
         self.all = False
         self.git_only = False
         self.hg_only = False
@@ -245,35 +244,3 @@ class FICMainMenu(FICCore, FICLogger):
                 for choice in choices:
                     if int(choice) == repo_list.get(key).get(repo).get("order"):
                         self.repo_selection.append((repo, key))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FICMainMenu().start()
-
-
-
-
