@@ -4,13 +4,16 @@
 from modules.FIC_DataVault import FICDataVault
 from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_Utilities import return_time
-from modules.config import COMMIT_DESCRIPTION_LENGTH, CHANGELOG_REPO_PATH
+from modules.config import COMMIT_DESCRIPTION_LENGTH, CHANGELOG_REPO_PATH, DEFAULT_DAYS, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, REPOSITORIES_FILE
 import json
 
 
-class FICMarkdownGenerator():
+class FICMarkdownGenerator(FICFileHandler, FICDataVault):
     def __init__(self):
+        FICFileHandler.__init__(self)
+        FICDataVault.__init__(self)
         self.md_ready_data = []
+        self.changelog_md_data = []
 
     @staticmethod
     def _get_current_time():
@@ -136,3 +139,73 @@ class FICMarkdownGenerator():
         for element in self.md_ready_data:
             self.save(CHANGELOG_REPO_PATH, repo_name + ".md", element)
         self.md_ready_data = []
+
+    def _changelog_md_header(self):
+        return "## " + "Commits in production - for {} days".format(DEFAULT_DAYS) + "\n" + "###" + "Generated on: {}".format(self._get_current_time()) + "\n"
+
+    @staticmethod
+    def _changelog_md_links(repo, json_link, md_link):
+        return "\n | {} |".format(repo) + "[Markdown](" + md_link + ")" + "|" + "[Json](" + json_link + ")" + "| \n" + \
+               "|:----------:|:-----------------------:|:--------:| \n\n"
+
+    @staticmethod
+    def _changelog_md_first_row():
+        return "| Link | Last commit | Author | Reviewer | Deploy time | \n" + \
+               "|:----------:|:-----------:|:------:|:--------:|:-----------:| \n"
+
+    @staticmethod
+    def _get_display_order(changelog_data, repo_config):
+        repo_order = []
+        for element in changelog_data["Github"]:
+            order = repo_config["Github"][element]["order"]
+            repo_order.append((element, order, "git"))
+        for element in changelog_data["Mercurial"]:
+            order = repo_config["Mercurial"][element]["order"]
+            repo_order.append((element, order, "hg"))
+        repo_order.sort(key=lambda tup: tup[1])
+        return repo_order
+
+    @staticmethod
+    def _get_js_md_links(repo):
+        base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/tree/oop/data/"
+        return base_link + repo + ".json", base_link + repo + ".md"
+
+    def _changelog_md_row_builder(self):
+        return "|" + "[Link](" + self.commit_url + ")" + "|" + str(self.commit_message) + "|" + self.commit_author + \
+               "|" + str(self.commit_reviewer) + "|" + str(self.commit_date) + "\n"
+
+    def _populate_changelog_md(self, element, changelog_data):
+        json_link, md_link = self._get_js_md_links(element[0])
+        if element[2] is "git":
+            self.changelog_md_data.append(self._changelog_md_links(element[0], json_link, md_link))
+            self.changelog_md_data.append(self._changelog_md_first_row())
+            for value in changelog_data["Github"][element[0]].values():
+                self.commit_url = value["url"]
+                self.commit_message = value["message"]
+                self.commit_author = value["author"]
+                self.commit_reviewer = "N/A"
+                self.commit_date = value["date"]
+                self.commit_author, self.commit_message = self.filter_strings()
+                self.changelog_md_data.append(self._changelog_md_row_builder())
+        if element[2] is "hg":
+            self.changelog_md_data.append(self._changelog_md_links(element[0], json_link, md_link))
+            self.changelog_md_data.append(self._changelog_md_first_row())
+            for value in changelog_data["Mercurial"][element[0]].values():
+                self.commit_date = value["date_of_push"]
+                for commit in value["changeset_commits"].values():
+                    self.commit_url = commit["url"]
+                    self.commit_message = commit["commit_message"]
+                    self.commit_author = commit["commit_author"]
+                    self.commit_reviewer = "N/A"
+                    self.commit_author, self.commit_message = self.filter_strings()
+                    self.changelog_md_data.append(self._changelog_md_row_builder())
+
+    def create_changelog_md(self):
+        changelog_data = json.load(self.load(None, CHANGELOG_JSON_PATH))
+        repo_config = json.load(self.load(None, REPOSITORIES_FILE))
+        repo_order = self._get_display_order(changelog_data, repo_config)
+        self.changelog_md_data.append(self._changelog_md_header())
+        for element in repo_order:
+            self._populate_changelog_md(element, changelog_data)
+        for element in self.changelog_md_data:
+            self.save(None, CHANGELOG_MD_PATH, element)
