@@ -2,14 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import sys
+import json
 import argparse
 from modules.FIC_Core import FICCore
-from modules.config import DEFAULT_DAYS
+from modules.FIC_Logger import FICLogger
+from modules.config import DEFAULT_DAYS, REPOSITORIES_FILE
 
 
-class FICMainMenu(FICCore):
+class FICMainMenu(FICCore, FICLogger):
     def __init__(self):
         FICCore.__init__(self)
+        FICLogger.__init__(self)
         self.all = False
         self.git_only = False
         self.hg_only = False
@@ -20,7 +23,7 @@ class FICMainMenu(FICCore):
         self.dev = False
         self.skip_menu = False
         self.parser = argparse.ArgumentParser()
-        self.arguments_set = False
+        self.arguments_set = False  # Check to see if we set the Flag values or not. Helps to skip un-needed iterations.
 
     def start(self):
         # Set all argument flags, based on runtime arguments.
@@ -32,6 +35,7 @@ class FICMainMenu(FICCore):
 
         # Skip the menu.
         else:
+            # TODO: Add ability to skip every menu. Not only ALL
             # Check if we ONLY typed `python client.py -s/--skip-menu`
             # If check is True, set self.all = True then run FIC main logic.
             # We don't need to check if "-s/--skip-menu" is present, as this is the only way to
@@ -145,67 +149,128 @@ class FICMainMenu(FICCore):
     def _main_menu(self):
         print(self._construct_mainmenu_text())
         self.choice = int(input())
+        self._run_selected_menu(choice=self.choice)
 
-        self._run_selected_menu()
-
-    def _run_selected_menu(self):
-        if self.choice == 1:
+    def _run_selected_menu(self, choice):
+        if choice == 1:
+            self.LOGGER.info(f"Script running for choice {choice}: ALL Repositories.")
             self.run_fic(all=self.all,
                          logging=self.logging,
                          days=self)
 
-        if self.choice == 2:
-            pass
+        if choice == 2:
+            self.LOGGER.info(f"Script running for choice {choice}: Git Repositories Only.")
+            self.run_fic(git_only=self.git_only,
+                         logging=self.logging,
+                         days=self)
 
-        if self.choice == 3:
-            pass
+        if choice == 3:
+            self.LOGGER.info(f"Script running for choice {choice}: HG Repositories Only.")
+            self.run_fic(hg_only=self.hg_only,
+                         logging=self.logging,
+                         days=self)
 
-        if self.choice == 4:
-            pass
+        if choice == 4:
+            self.LOGGER.info(f"Script running for choice {choice}: Custom Repositories.")
+            self._repo_selection_menu()
+            self.run_fic(repo_list=self.repo_selection)
 
-        if self.choice == 5:
+        if choice == 5:
             self.logging = not self.logging
+            if self.logging:
+                self.LOGGER.info("Console Logging has been activated.")
+            else:
+                self.LOGGER.info("Console Logging has been deactivated.")
             self._main_menu()
 
-        if self.choice == 6:
+        if choice == 6:
             print("Please input the amount of days `changelog.md` will be generated for:")
             days = input()
 
             if str(days).isdecimal():
                 self.days = int(days)
+                self.LOGGER.info(f"DEFAULT_DAYS parameter has been changed to: {self.days} day(s)")
                 self._main_menu()
             else:
                 print("Amount of days need to be an integer!\n"
                       "Moving back to Main Menu.")
                 self._main_menu()
 
-        if self.choice == 7:
+        if choice == 7:
             pass
 
-    def repo_selection_menu(self):
-        new_list = []
-        while input != "q":
-            print("You have selected : ", new_list)
-            for keys in self.repository_list:
-                print(self.repository_list.index(keys) + 1, keys)
+        if choice == 0:
+            exit()
 
-            user_choice = input("Select a repo by typing it's number, type q when you are done: ")
-            if str(user_choice) == "q":
-                for repository in new_list:
-                    if repository in self.load_repositories.get("Github"):
-                        self.user_repos.append((repository, "Github"))
+    def _repo_selection_menu(self):
+        repo_list = json.load(self.load(None, REPOSITORIES_FILE))
+        temp_list = []
 
-                    elif repository in self.load_repositories.get("Mercurial"):
-                        self.user_repos.append((repository, "Mercurial"))
-            try:
-                new_entry = int(user_choice) - 1
-                if new_entry < 0 or new_entry >= len(self.repository_list):
-                    print('Choice not valid. Please provide a choice according to the list printed below!')
-                else:
-                    new_list.append(self.repository_list[int(new_entry)])
-                    self.repository_list.pop(int(new_entry))
-            except ValueError:
-                exit(11)
+        # Argument "-r" provided, but no list of repositories is included.
+        # Enter Selection Menu.
+        if not self.repo_selection or (len(self.repo_selection) == 0):
+            self._construct_repo_selection(repo_list)
+
+        # Argument "-r" provided and list of repositories is included.
+        # Skip Selection Menu
+        else:
+            for key in repo_list:
+                for repo in repo_list.get(key):
+                    for selection in self.repo_selection:
+                        if int(selection) == repo_list.get(key).get(repo).get("order"):
+                            temp_list.append((int(selection), repo, key))
+
+            self.repo_selection = []
+            for _, repo, key in temp_list:
+                self.repo_selection.append((repo, key))
+
+    def _construct_repo_selection(self, repo_list):
+        temp_list = []
+        self.repo_selection = []
+        for key in repo_list:
+            for repo in repo_list.get(key):
+                temp_list.append((repo_list.get(key).get(repo).get("order"), repo, key))
+        print("Available Repositories:")
+        for entry in sorted(temp_list):
+            print(entry[0], entry[1])
+
+        print("Enter the number of the repositorie(s) you want to run, separated by comma.\n"
+              "Example: 1, 5, 20, 3, 2")
+        choices = input()
+        choices = choices.split(",")
+
+        self.repo_selection = []
+        for key in repo_list:
+            for repo in repo_list.get(key):
+                for choice in choices:
+                    if int(choice) == repo_list.get(key).get(repo).get("order"):
+                        self.repo_selection.append((repo, key))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 FICMainMenu().start()
 
