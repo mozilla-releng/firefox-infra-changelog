@@ -5,7 +5,7 @@ from modules.FIC_Mercurial import FICMercurial
 from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_Logger import FICLogger
 from plugins.FIC_Markdown import FICMarkdownGenerator
-from modules.config import CHANGELOG_REPO_PATH, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH
+from modules.config import CHANGELOG_REPO_PATH, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, DEFAULT_DAYS
 from modules.FIC_Utilities import return_time
 
 
@@ -109,7 +109,7 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGen
                     changelog["Mercurial"][key].update({commit_number: value})
                     commit_number += 1
 
-    def populate_changelog_json(self, number_of_days=1):
+    def populate_changelog_json(self, number_of_days):
         changelog = {}
         changelog.update({"Github": {},
                           "Mercurial": {}})
