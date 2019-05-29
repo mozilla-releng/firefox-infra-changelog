@@ -153,19 +153,19 @@ class FICMainMenu(FICCore):
     def _run_selected_menu(self, choice):
         if choice == 1:
             self.LOGGER.info(f"Script running for choice {choice}: ALL Repositories.")
-            self.run_fic(all=self.all,
+            self.run_fic(all=True,
                          logging=self.logging,
                          days=self)
 
         if choice == 2:
             self.LOGGER.info(f"Script running for choice {choice}: Git Repositories Only.")
-            self.run_fic(git_only=self.git_only,
+            self.run_fic(git_only=True,
                          logging=self.logging,
                          days=self)
 
         if choice == 3:
             self.LOGGER.info(f"Script running for choice {choice}: HG Repositories Only.")
-            self.run_fic(hg_only=self.hg_only,
+            self.run_fic(hg_only=True,
                          logging=self.logging,
                          days=self)
 
