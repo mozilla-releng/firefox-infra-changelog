@@ -2,23 +2,21 @@ import json
 
 from modules.FIC_Github import FICGithub
 from modules.FIC_Mercurial import FICMercurial
-from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_Logger import FICLogger
 from plugins.FIC_Markdown import FICMarkdownGenerator
-from modules.config import CHANGELOG_REPO_PATH, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, DEFAULT_DAYS
+from modules.config import CHANGELOG_REPO_PATH, CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, DEFAULT_DAYS, REPOSITORIES_FILE
 from modules.FIC_Utilities import return_time
 
 
-class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGenerator):
+class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
     def __init__(self):
         FICGithub.__init__(self)
         FICMercurial.__init__(self)
-        FICFileHandler.__init__(self)
-        FICLogger.__init__(self)
         FICMarkdownGenerator.__init__(self)
+        FICLogger.__init__(self)
         self.check_tool_integrity()
 
-    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False, user_repos=None):
+    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=3, logging=False):
         # Don't forget about days!
         if all:
             # Needs to be replaced with whatever we want the script to do.
@@ -36,10 +34,10 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGen
 
         if repo_list:
             print("Changelog has run with a custom list of repositories!")
-            self._run_custom_repos_behavior(user_repos)
+            self._run_custom_repos_behavior(repo_list)
 
     def _markdown_iterator(self):
-        _json_data = json.load(self.load(None, "repositories.json"))
+        _json_data = json.load(self.load(None, REPOSITORIES_FILE))
         for hosting_service in _json_data:
             for repo in _json_data.get(hosting_service):
                 if hosting_service == "Github":
@@ -51,8 +49,8 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGen
         # Describes the behavioral of the script that runs in all mode.
         print("Testing run all behavioral...")
 
-        for hosting_service in json.load(self.load(None, "repositories.json")):
-            for repo in json.load(self.load(None, "repositories.json")).get(hosting_service):
+        for hosting_service in json.load(self.load(None, REPOSITORIES_FILE)):
+            for repo in json.load(self.load(None, REPOSITORIES_FILE)).get(hosting_service):
                 if hosting_service == "Github":
                     self.start_git(repo)
                 else:
@@ -62,14 +60,14 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGen
         # Describes the behavioral of the script that runs in git only mode.
         print("Testing git mode behavioral...")
 
-        for repo in json.load(self.load(None, "repositories.json")).get("Github"):
+        for repo in json.load(self.load(None, REPOSITORIES_FILE)).get("Github"):
             self.start_git(repo)
 
     def _run_hg_behavior(self):
         # Describes the behavioral of the script that runs in hg only mode.
         print("Testing hg mode behavioral...")
 
-        for repo in json.load(self.load(None, "repositories.json")).get("Mercurial"):
+        for repo in json.load(self.load(None, REPOSITORIES_FILE)).get("Mercurial"):
             self.start_hg(repo)
 
     def _run_custom_repos_behavior(self, user_repos):
@@ -78,9 +76,9 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGen
 
         for repo in user_repos:
             if repo[1] == "Github":
-                self.start_git(repo)
+                self.start_git(repo[0])
             elif repo[1] == "Mercurial":
-                self.start_hg(repo)
+                self.start_hg(repo[0])
             else:
                 self.LOGGER.critical(f"Unknown repository type. Got {repo[1]} but can only accept 'Github' or 'Mercurial'")
                 exit(12)
@@ -113,7 +111,7 @@ class FICCore(FICGithub, FICMercurial, FICFileHandler, FICLogger, FICMarkdownGen
         changelog = {}
         changelog.update({"Github": {},
                           "Mercurial": {}})
-        with open(self.construct_path(None, "repositories.json"), "r") as json_data:
+        with open(self.construct_path(None, REPOSITORIES_FILE), "r") as json_data:
             local_data = json.load(json_data)
             # Check all Github files exist for each repository.
             for key in local_data["Github"].keys():

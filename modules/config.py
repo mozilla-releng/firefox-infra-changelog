@@ -1,5 +1,5 @@
 # Common paths
-REPOSIRIES_FILE     = "repositories.json"
+REPOSITORIES_FILE   = "repositories.json"
 CHANGELOG_JSON_PATH = "changelog.json"
 CHANGELOG_MD_PATH   = "changelog.md"
 CHANGELOG_REPO_PATH = "data"
@@ -11,3 +11,4 @@ DEFAULT_REPO_CHOICE       = "ALL"
 HG_CHANGESETS_TO_SHOW     = int(100)
 COMMIT_DESCRIPTION_LENGTH = int(400)
 DEFAULT_LOGGING_LEVEL     = str("INFO")
+DEFAULT_DAYS              = int(3)

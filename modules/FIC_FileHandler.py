@@ -68,7 +68,7 @@ class FICFileHandler(FICLogger, FICDataVault):
             self.LOGGER.warning("Folder 'plugins' is missing. Recreating it.")
 
     def _check_repo_files(self):
-        with open(self.construct_path(None, "repositories.json"), "r") as json_data:
+        with open(self.construct_path(None, REPOSITORIES_FILE), "r") as json_data:
             files_to_check = json.load(json_data)
             # Check all Github files exist for each repository.
             for key in files_to_check["Github"].keys():
