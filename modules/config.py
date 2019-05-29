@@ -1,5 +1,5 @@
 # Common paths
-REPOSIRIES_FILE     = "repositories.json"
+REPOSITORIES_FILE   = "repositories.json"
 CHANGELOG_JSON_PATH = "changelog.json"
 CHANGELOG_MD_PATH   = "changelog.md"
 CHANGELOG_REPO_PATH = "data"
