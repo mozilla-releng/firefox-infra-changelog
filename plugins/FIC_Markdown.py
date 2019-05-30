@@ -99,7 +99,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     def _populate_md_for_git(self):
         local_json_data = self._load_local_json_data()
-        if len(local_json_data) > 0:
+        if len(local_json_data) > 1:
             del local_json_data["0"]
             self.commit_number = 1
             for key in local_json_data:
@@ -110,7 +110,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     self.commit_message = local_json_data.get(key).get("message")
                     self.commit_author, self.commit_message = self.filter_strings()
                     self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
-                    self.generate_link_for_bugs()
+                    # self.generate_link_for_bugs()
                     self.md_ready_data.append(self.md_table_row_builder())
                     self.commit_number += 1
         else:
@@ -126,7 +126,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     def _populate_md_for_hg(self):
         local_json_data = self._load_local_json_data()
-        if len(local_json_data) > 0:
+        if len(local_json_data) > 1:
             del local_json_data["0"]
             self.commit_number = 1
             for changeset in local_json_data:
@@ -220,8 +220,6 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.changelog_md_data.append(self._changelog_md_header())
         for element in repo_order:
             self._populate_changelog_md(element, changelog_data)
-        if len(self.changelog_md_data) > 0:
-            for element in self.changelog_md_data:
-                self.save(None, CHANGELOG_MD_PATH, element)
-        else:
-            self.save(None, CHANGELOG_MD_PATH, self.no_data_for_md(main_markdown=True))
+        for element in self.changelog_md_data:
+            self.save(None, CHANGELOG_MD_PATH, element)
+
