@@ -122,6 +122,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     def start_md_for_git(self, repo_name=None):
         self.repo_name = repo_name
+        open(self.construct_path(CHANGELOG_REPO_PATH, repo_name + ".md"), 'w').close()
         self._build_initial_md_structure()
         self._populate_md_for_git()
         for element in self.md_ready_data:
@@ -150,6 +151,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     def start_md_for_hg(self, repo_name=None):
         self.repo_name = repo_name
+        open(self.construct_path(CHANGELOG_REPO_PATH, repo_name + ".md"), 'w').close()
         self._build_initial_md_structure()
         self._populate_md_for_hg()
         for element in self.md_ready_data:
@@ -226,4 +228,3 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self._populate_changelog_md(element, changelog_data)
         for element in self.changelog_md_data:
             self.save(None, CHANGELOG_MD_PATH, element)
-
