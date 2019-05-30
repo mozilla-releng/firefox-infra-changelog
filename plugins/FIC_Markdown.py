@@ -38,6 +38,16 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
                "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
 
+    def _generate_repo_url(self, repository_type):
+        repositories_data = json.load(self.load(None, REPOSITORIES_FILE))
+        return repositories_data.get(repository_type).get(self.repo_name).get("url")
+
+    def no_data_for_md(self, repository_type, main_markdown=False, repo_markdown=False):
+        if main_markdown:
+            return "No commits in the past {} days.. see the longer history in {} ".format(DEFAULT_DAYS, self._get_js_md_links(self.repo_name)[1])
+        elif repo_markdown:
+            return "No recent changes on this repository.. see the entire changelog by accessing this [link]({})".format(self._generate_repo_url(repository_type))
+
     def generate_link_for_bugs(self):
         import re
 
