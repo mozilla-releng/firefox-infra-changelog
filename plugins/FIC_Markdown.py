@@ -114,7 +114,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     self.md_ready_data.append(self.md_table_row_builder())
                     self.commit_number += 1
         else:
-            print("No commits in the past {} days".format(DEFAULT_DAYS))  # to be replace with a method
+            self.md_ready_data.append(self.no_data_for_md("Github", repo_markdown=True))
 
     def start_md_for_git(self, repo_name=None):
         self.repo_name = repo_name
@@ -141,6 +141,8 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                         # self.generate_link_for_bugs()
                         self.md_ready_data.append(self.md_table_row_builder())
                         self.commit_number += 1
+        else:
+            self.md_ready_data.append(self.no_data_for_md("Mercurial", repo_markdown=True))
 
     def start_md_for_hg(self, repo_name=None):
         self.repo_name = repo_name
@@ -218,5 +220,8 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.changelog_md_data.append(self._changelog_md_header())
         for element in repo_order:
             self._populate_changelog_md(element, changelog_data)
-        for element in self.changelog_md_data:
-            self.save(None, CHANGELOG_MD_PATH, element)
+        if len(self.changelog_md_data) > 0:
+            for element in self.changelog_md_data:
+                self.save(None, CHANGELOG_MD_PATH, element)
+        else:
+            self.save(None, CHANGELOG_MD_PATH, self.no_data_for_md(main_markdown=True))
