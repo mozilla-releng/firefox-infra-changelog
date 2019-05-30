@@ -38,6 +38,16 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
                "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
 
+    def _generate_repo_url(self, repository_type):
+        repositories_data = json.load(self.load(None, REPOSITORIES_FILE))
+        return repositories_data.get(repository_type).get(self.repo_name).get("url")
+
+    def no_data_for_md(self, repository_type, main_markdown=False, repo_markdown=False):
+        if main_markdown:
+            return "No commits in the past {} days.. see the longer history in {} ".format(DEFAULT_DAYS, self._get_js_md_links(self.repo_name)[1])
+        elif repo_markdown:
+            return "No recent changes on this repository.. see the entire changelog by accessing this [link]({})".format(self._generate_repo_url(repository_type))
+
     def generate_link_for_bugs(self):
         import re
 
@@ -89,7 +99,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     def _populate_md_for_git(self):
         local_json_data = self._load_local_json_data()
-        if len(local_json_data) > 0:
+        if len(local_json_data) > 1:
             del local_json_data["0"]
             self.commit_number = 1
             for key in local_json_data:
@@ -100,11 +110,11 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     self.commit_message = local_json_data.get(key).get("message")
                     self.commit_author, self.commit_message = self.filter_strings()
                     self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
-                    self.generate_link_for_bugs()
+                    # self.generate_link_for_bugs()
                     self.md_ready_data.append(self.md_table_row_builder())
                     self.commit_number += 1
         else:
-            print("No commits in the past {} days".format(DEFAULT_DAYS))  # to be replace with a method
+            self.md_ready_data.append(self.no_data_for_md("Github", repo_markdown=True))
 
     def start_md_for_git(self, repo_name=None):
         self.repo_name = repo_name
@@ -116,7 +126,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     def _populate_md_for_hg(self):
         local_json_data = self._load_local_json_data()
-        if len(local_json_data) > 0:
+        if len(local_json_data) > 1:
             del local_json_data["0"]
             self.commit_number = 1
             for changeset in local_json_data:
@@ -131,6 +141,8 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                         # self.generate_link_for_bugs()
                         self.md_ready_data.append(self.md_table_row_builder())
                         self.commit_number += 1
+        else:
+            self.md_ready_data.append(self.no_data_for_md("Mercurial", repo_markdown=True))
 
     def start_md_for_hg(self, repo_name=None):
         self.repo_name = repo_name
@@ -210,3 +222,4 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self._populate_changelog_md(element, changelog_data)
         for element in self.changelog_md_data:
             self.save(None, CHANGELOG_MD_PATH, element)
+
