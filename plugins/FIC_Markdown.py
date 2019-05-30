@@ -55,13 +55,17 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         commit_msg = re.sub("\)", " )", commit_msg)
 
         list_of_words = commit_msg.split()
-
         for element in range(len(list_of_words)):
-            if "bug" in (list_of_words[element].lower()) and list_of_words[element + 1].isdigit():
-                bug_number = list_of_words[element + 1]
-                generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + bug_number
-                list_of_words[element] = '[' + 'Bug' + ' ' + bug_number + '](' + generated_link + ')'
-                list_of_words[element + 1] = ''
+            if "bug" in (list_of_words[element].lower()) and element < len(list_of_words) - 1:
+                bug_number = re.sub("[(:,.;)]", "", list_of_words[element + 1])
+                try:
+                    bug_number = int(''.join(list(filter(str.isdigit, bug_number))))
+                    generated_link = "https://bugzilla.mozilla.org/show_bug.cgi?id=" + \
+                                     str(bug_number)
+                    list_of_words[element] = '[' + 'Bug' + ' ' + str(bug_number) + '](' + generated_link + ')'
+                    list_of_words[element + 1] = ''
+                except ValueError:
+                    pass
 
         self.commit_message = ' '.join(list_of_words)
         return self.commit_message
@@ -110,7 +114,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     self.commit_message = local_json_data.get(key).get("message")
                     self.commit_author, self.commit_message = self.filter_strings()
                     self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
-                    # self.generate_link_for_bugs()
+                    self.generate_link_for_bugs()
                     self.md_ready_data.append(self.md_table_row_builder())
                     self.commit_number += 1
         else:
@@ -138,7 +142,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                         self.commit_message = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_message")
                         self.commit_author, self.commit_message = self.filter_strings()
                         self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
-                        # self.generate_link_for_bugs()
+                        self.generate_link_for_bugs()
                         self.md_ready_data.append(self.md_table_row_builder())
                         self.commit_number += 1
         else:
