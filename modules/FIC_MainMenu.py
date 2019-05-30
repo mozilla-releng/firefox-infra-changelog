@@ -155,19 +155,19 @@ class FICMainMenu(FICCore):
             self.LOGGER.info(f"Script running for choice {choice}: ALL Repositories.")
             self.run_fic(all=True,
                          logging=self.logging,
-                         days=self)
+                         days=self.days)
 
         if choice == 2:
             self.LOGGER.info(f"Script running for choice {choice}: Git Repositories Only.")
             self.run_fic(git_only=True,
                          logging=self.logging,
-                         days=self)
+                         days=self.days)
 
         if choice == 3:
             self.LOGGER.info(f"Script running for choice {choice}: HG Repositories Only.")
             self.run_fic(hg_only=True,
                          logging=self.logging,
-                         days=self)
+                         days=self.days)
 
         if choice == 4:
             self.LOGGER.info(f"Script running for choice {choice}: Custom Repositories.")
