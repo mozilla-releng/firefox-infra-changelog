@@ -183,6 +183,19 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         repo_order.sort(key=lambda tup: tup[1])
         return repo_order
 
+    def extract_reviewer(self):
+        try:
+            return self.commit_message.split("r=")[1].split()[0]
+        except IndexError:
+            pass
+
+        try:
+            return self.commit_message.split("a=")[1].split()[0]
+        except IndexError:
+            pass
+
+        return"N/A"
+
     @staticmethod
     def _get_js_md_links(repo):
         base_link = "https://github.com/mozilla-releng/firefox-infra-changelog/tree/oop/data/"
@@ -218,7 +231,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                         self.commit_url = commit["url"]
                         self.commit_message = commit["commit_message"]
                         self.commit_author = commit["commit_author"].split("<")[0]
-                        self.commit_reviewer = "N/A"
+                        self.commit_reviewer = self.extract_reviewer()
                         self.commit_author, self.commit_message = self.filter_strings()
                         self.changelog_md_data.append(self._changelog_md_row_builder())
             else:
