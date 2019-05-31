@@ -81,7 +81,7 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
 
     def _extract_git_commits(self, key, changelog, number_of_days):
         repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
-        if len(repo_data) > 1:
+        if len(repo_data) > 0:
             repo_data.pop("0")
             changelog["Github"].update({key: {}})
             commit_number = 0
@@ -93,7 +93,7 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
 
     def _extract_hg_commits(self, key, changelog, number_of_days):
         repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
-        if len(repo_data) > 1:
+        if len(repo_data) > 0:
             repo_data.pop("0")
             changelog["Mercurial"].update({key: {}})
             commit_number = 0
