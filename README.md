@@ -20,6 +20,7 @@ Can be done while running the client.py with arguments:
 - 10: Keyboard interrupt
 - 11: Provided input is not an integer. Used in modules.FIC_MainMenu.repo_selection_menu()
 - 12: Unknown repository provider.
+- 13: Unknown Return Time. 
 - 301: Moved Permanently
 - 302: Found
 - 304: Not Modified
