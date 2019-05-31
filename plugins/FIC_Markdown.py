@@ -217,7 +217,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     for commit in value["changeset_commits"].values():
                         self.commit_url = commit["url"]
                         self.commit_message = commit["commit_message"]
-                        self.commit_author = commit["commit_author"]
+                        self.commit_author = commit["commit_author"].split("<")[0]
                         self.commit_reviewer = "N/A"
                         self.commit_author, self.commit_message = self.filter_strings()
                         self.changelog_md_data.append(self._changelog_md_row_builder())
