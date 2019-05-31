@@ -107,16 +107,15 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             del local_json_data["0"]
             self.commit_number = 1
             for key in local_json_data:
-                self.commit_date = local_json_data.get(key).get("date")
-                if self.commit_date > return_time("%Y-%m-%dT%H:%M:%S", "sub", 7):
-                    self.commit_author = local_json_data.get(key).get("author")
-                    self.commit_url = local_json_data.get(key).get("url")
-                    self.commit_message = local_json_data.get(key).get("message")
-                    self.commit_author, self.commit_message = self.filter_strings()
-                    self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
-                    self.generate_link_for_bugs()
-                    self.md_ready_data.append(self.md_table_row_builder())
-                    self.commit_number += 1
+                self.commit_date = return_time(input_time=local_json_data.get(key).get("date"), input_time_format="%Y-%m-%dT%H:%M:%SZ", output_time_format="%Y-%m-%d %H:%M:%S")
+                self.commit_author = local_json_data.get(key).get("author")
+                self.commit_url = local_json_data.get(key).get("url")
+                self.commit_message = local_json_data.get(key).get("message")
+                self.commit_author, self.commit_message = self.filter_strings()
+                self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
+                self.generate_link_for_bugs()
+                self.md_ready_data.append(self.md_table_row_builder())
+                self.commit_number += 1
         else:
             self.md_ready_data.append(self.no_data_for_md("Github", repo_markdown=True))
 
@@ -136,16 +135,15 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self.commit_number = 1
             for changeset in local_json_data:
                 for commit in local_json_data.get(changeset).get("changeset_commits"):
-                    self.commit_date = local_json_data.get(changeset).get("date_of_push")
-                    if self.commit_date > return_time("%Y-%m-%dT%H:%M:%S", "sub", 7):
-                        self.commit_author = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_author").split("<")[0]
-                        self.commit_url = local_json_data.get(changeset).get("changeset_commits").get(commit).get("url")
-                        self.commit_message = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_message")
-                        self.commit_author, self.commit_message = self.filter_strings()
-                        self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
-                        self.generate_link_for_bugs()
-                        self.md_ready_data.append(self.md_table_row_builder())
-                        self.commit_number += 1
+                    self.commit_date = return_time(input_time=local_json_data.get(changeset).get("date_of_push"), input_time_format="%Y-%m-%dT%H:%M:%S.%f", output_time_format="%Y-%m-%d %H:%M:%S")
+                    self.commit_author = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_author").split("<")[0]
+                    self.commit_url = local_json_data.get(changeset).get("changeset_commits").get(commit).get("url")
+                    self.commit_message = local_json_data.get(changeset).get("changeset_commits").get(commit).get("commit_message")
+                    self.commit_author, self.commit_message = self.filter_strings()
+                    self.trim_commit_description(self.commit_url, COMMIT_DESCRIPTION_LENGTH)
+                    self.generate_link_for_bugs()
+                    self.md_ready_data.append(self.md_table_row_builder())
+                    self.commit_number += 1
         else:
             self.md_ready_data.append(self.no_data_for_md("Mercurial", repo_markdown=True))
 
@@ -194,7 +192,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         except IndexError:
             pass
 
-        return"N/A"
+        return "N/A"
 
     @staticmethod
     def _get_js_md_links(repo):
@@ -216,7 +214,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                     self.commit_message = value["message"]
                     self.commit_author = value["author"]
                     self.commit_reviewer = "N/A"
-                    self.commit_date = value["date"]
+                    self.commit_date = return_time(input_time=value["date"], input_time_format="%Y-%m-%dT%H:%M:%SZ", output_time_format="%Y-%m-%d %H:%M:%S")
                     self.commit_author, self.commit_message = self.filter_strings()
                     self.changelog_md_data.append(self._changelog_md_row_builder())
             else:
@@ -226,7 +224,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self.changelog_md_data.append(self._changelog_md_first_row())
             if len(changelog_data["Mercurial"][element[0]]) > 0:
                 for value in changelog_data["Mercurial"][element[0]].values():
-                    self.commit_date = value["date_of_push"]
+                    self.commit_date = return_time(input_time=value["date_of_push"], input_time_format="%Y-%m-%dT%H:%M:%S.%f", output_time_format="%Y-%m-%d %H:%M:%S")
                     for commit in value["changeset_commits"].values():
                         self.commit_url = commit["url"]
                         self.commit_message = commit["commit_message"]

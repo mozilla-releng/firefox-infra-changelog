@@ -6,7 +6,6 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import *
 from modules.FIC_Utilities import return_time
-from git import Repo
 import os
 import json
 import requests

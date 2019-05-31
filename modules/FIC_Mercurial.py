@@ -85,7 +85,7 @@ class FICMercurial(FICFileHandler, FICDataVault):
 
     # Picks up date and formats it
     def _generate_changeset_date(self, date):
-        self.changeset_date = return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f")
+        self.changeset_date = return_time(input_time=date, input_time_unix=True, output_time_format="%Y-%m-%dT%H:%M:%S.%f")
         return self.changeset_date
 
     # Generated commit url by triming hash
