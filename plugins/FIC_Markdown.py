@@ -42,11 +42,11 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         repositories_data = json.load(self.load(None, REPOSITORIES_FILE))
         return repositories_data.get(repository_type).get(self.repo_name).get("url")
 
-    def no_data_for_md(self, repository_type, main_markdown=False, repo_markdown=False):
+    def no_data_for_md(self, argument, main_markdown=False, repo_markdown=False):
         if main_markdown:
-            return "No commits in the past {} days.. see the longer history in {} ".format(DEFAULT_DAYS, self._get_js_md_links(self.repo_name)[1])
+            return "No commits in the past {} days.. see the longer history ".format(DEFAULT_DAYS) + "[here](" + argument + ")" + "\n"
         elif repo_markdown:
-            return "No recent changes on this repository.. see the entire changelog by accessing this [link]({})".format(self._generate_repo_url(repository_type))
+            return "No recent changes on this repository.. see the entire changelog by accessing this [link]({})".format(self._generate_repo_url(argument))
 
     def generate_link_for_bugs(self):
         import re
@@ -197,26 +197,32 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         if element[2] is "git":
             self.changelog_md_data.append(self._changelog_md_links(element[0], json_link, md_link))
             self.changelog_md_data.append(self._changelog_md_first_row())
-            for value in changelog_data["Github"][element[0]].values():
-                self.commit_url = value["url"]
-                self.commit_message = value["message"]
-                self.commit_author = value["author"]
-                self.commit_reviewer = "N/A"
-                self.commit_date = value["date"]
-                self.commit_author, self.commit_message = self.filter_strings()
-                self.changelog_md_data.append(self._changelog_md_row_builder())
+            if len(changelog_data["Github"][element[0]]) > 0:
+                for value in changelog_data["Github"][element[0]].values():
+                    self.commit_url = value["url"]
+                    self.commit_message = value["message"]
+                    self.commit_author = value["author"]
+                    self.commit_reviewer = "N/A"
+                    self.commit_date = value["date"]
+                    self.commit_author, self.commit_message = self.filter_strings()
+                    self.changelog_md_data.append(self._changelog_md_row_builder())
+            else:
+                self.changelog_md_data.append(self.no_data_for_md(md_link, main_markdown=True))
         if element[2] is "hg":
             self.changelog_md_data.append(self._changelog_md_links(element[0], json_link, md_link))
             self.changelog_md_data.append(self._changelog_md_first_row())
-            for value in changelog_data["Mercurial"][element[0]].values():
-                self.commit_date = value["date_of_push"]
-                for commit in value["changeset_commits"].values():
-                    self.commit_url = commit["url"]
-                    self.commit_message = commit["commit_message"]
-                    self.commit_author = commit["commit_author"]
-                    self.commit_reviewer = "N/A"
-                    self.commit_author, self.commit_message = self.filter_strings()
-                    self.changelog_md_data.append(self._changelog_md_row_builder())
+            if len(changelog_data["Mercurial"][element[0]]) > 0:
+                for value in changelog_data["Mercurial"][element[0]].values():
+                    self.commit_date = value["date_of_push"]
+                    for commit in value["changeset_commits"].values():
+                        self.commit_url = commit["url"]
+                        self.commit_message = commit["commit_message"]
+                        self.commit_author = commit["commit_author"]
+                        self.commit_reviewer = "N/A"
+                        self.commit_author, self.commit_message = self.filter_strings()
+                        self.changelog_md_data.append(self._changelog_md_row_builder())
+            else:
+                self.changelog_md_data.append(self.no_data_for_md(md_link, main_markdown=True))
 
     def create_changelog_md(self):
         open(self.construct_path(None, CHANGELOG_MD_PATH), 'w').close()
