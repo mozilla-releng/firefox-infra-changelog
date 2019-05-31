@@ -159,7 +159,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
             self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
         else:
-            self.last_check = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", DEFAULT_DAYS)
+            self.last_check = return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f", operation="sub", operation_days=DEFAULT_DAYS)
 
     def _commit_iterator(self):
         for current_commit in self.repo_data.commits(since=self.last_check):
@@ -283,9 +283,9 @@ class FICGithub(FICFileHandler, FICDataVault):
 
     def _generate_first_element(self):
         if self.repo_type == "tag" and self.repo_name != "build-puppet":
-            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f"), "version": self._get_release(1)}}
+            return {"0": {"last_checked": return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f"), "version": self._get_release(1)}}
         else:
-            return {"0": {"last_checked": return_time("%Y-%m-%dT%H:%M:%S.%f")}}
+            return {"0": {"last_checked": return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f")}}
 
     def start_git(self, repo_name=None):
         self.repo_name = repo_name
