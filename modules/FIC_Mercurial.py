@@ -129,7 +129,9 @@ class FICMercurial(FICFileHandler, FICDataVault):
                 {commit + 1: {"url": self._generate_commit_url(node),
                               "commit_author": commit_author,
                               "commit_message": commit_message,
-                              "files_changed": self.commit_files_changed}})
+                              "files_changed": f"This commit contain {len(self.commit_files_changed)} files changed."
+                              }
+                 })
 
     def _populate_final_dict(self):
         for changeset in reversed(self.list_of_dicts):

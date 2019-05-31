@@ -220,7 +220,9 @@ class FICGithub(FICFileHandler, FICDataVault):
                                                           'author_email': self.commit_author_email,
                                                           'message': self.commit_message,
                                                           'date': self.commit_date,
-                                                          'files': self.commit_files_changed}})
+                                                          'files': f"This commit contains {len(self.commit_files_changed)} files cahnged."
+                                                          }
+                                     })
 
     def _commit_filter(self):
         if self.repo_type == "commit-keyword":
