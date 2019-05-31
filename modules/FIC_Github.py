@@ -159,7 +159,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
             self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
         else:
-            self.last_check = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", 2)
+            self.last_check = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", DEFAULT_DAYS)
 
     def _commit_iterator(self):
         for current_commit in self.repo_data.commits(since=self.last_check):
