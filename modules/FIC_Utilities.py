@@ -65,8 +65,8 @@ def return_time(input_time=None, input_time_format=None, input_time_unix=False,
                 return datetime.utcfromtimestamp(int(input_time)) + timedelta(days=operation_days)
 
             elif input_time and input_time_unix and output_strformat:
-                time_str = datetime.strftime(datetime.utcfromtimestamp(int(input_time)) + timedelta(days=operation_days), output_strformat)
-                return datetime.strptime(time_str, output_strformat)
+
+                return datetime.strftime(datetime.utcfromtimestamp(int(input_time)) + timedelta(days=operation_days), output_strformat)
 
             elif input_time and not (input_time_unix or output_time_format):
                 return datetime.strptime(input_time, input_time_format) + timedelta(operation_days)
@@ -89,9 +89,7 @@ def return_time(input_time=None, input_time_format=None, input_time_unix=False,
                 return datetime.utcfromtimestamp(int(input_time)) - timedelta(days=operation_days)
 
             elif input_time and input_time_unix and output_strformat:
-                time_str = datetime.strftime(
-                    datetime.utcfromtimestamp(int(input_time)) - timedelta(days=operation_days), output_strformat)
-                return datetime.strptime(time_str, output_strformat)
+                return datetime.strftime(datetime.utcfromtimestamp(int(input_time)) - timedelta(days=operation_days), output_strformat)
 
             elif input_time and not (input_time_unix or output_time_format):
                 return datetime.strptime(input_time, input_time_format) - timedelta(operation_days)
@@ -105,32 +103,3 @@ def return_time(input_time=None, input_time_format=None, input_time_unix=False,
          ((operation is None) or (operation_days is None)):
         print("Both operation and operation_days need to be provided!")
         exit(-1)
-
-
-# print("Tests for CURRENT Time")
-# print("UTC Return                            :", return_time())
-# print("UTC Formatted Return                  :", return_time(output_time_format="%Y-%m-%d %H:%M:%S"))
-# print("UTC Return with Addition              :", return_time(operation="add", operation_days=2))
-# print("UTC Return with Addition and Format   :", return_time(output_time_format="%Y-%m-%d %H:%M:%S", operation="add", operation_days=2))
-# print("UTC Return with Subtraction           :", return_time(operation="sub", operation_days=2))
-# print("UTC Return with Subtraction and Format:", return_time(output_time_format="%Y-%m-%d %H:%M:%S", operation="sub", operation_days=2))
-#
-#
-# print("\n")
-# print("Tests with Unix INPUT Time")
-# print("Unix UTC Return                            :", return_time(input_time="1559298034", input_time_unix=True))
-# print("Unix UTC Formatted Return                  :", return_time(input_time="1559298034", input_time_unix=True, output_time_format="%Y-%m-%d %H:%M:%S"))
-# print("Unix UTC Return with Addition              :", return_time(input_time="1559298034", input_time_unix=True, operation="add", operation_days=2))
-# print("Unix UTC Return with Addition and Format   :", return_time(input_time="1559298034", input_time_unix=True, output_time_format="%Y-%m-%d %H:%M:%S",  operation="add", operation_days=2))
-# print("Unix UTC Return with Subtraction           :", return_time(input_time="1559298034", input_time_unix=True, operation="sub", operation_days=2))
-# print("Unix UTC Return with Subtraction and Format:", return_time(input_time="1559298034", input_time_unix=True, output_time_format="%Y-%m-%d %H:%M:%S",  operation="sub", operation_days=2))
-
-
-print("\n")
-# print("Tests for STRING INPUT Time")
-print("String UTC Return                            :", return_time(input_time="20190521 10:20:34", input_time_format="%Y%m%d %H:%M:%S"))
-print("String UTC Formatted Return                  :", return_time(input_time="20190521 10:20:34", input_time_format="%Y%m%d %H:%M:%S", output_time_format="%Y.%m.%d-%H.%M.%S"))
-print("String UTC Return with Addition              :", return_time(input_time="20190521 10:20:34", input_time_format="%Y%m%d %H:%M:%S", operation="add", operation_days=2))
-print("String UTC Return with Addition and Format   :", return_time(input_time="20190521 10:20:34", input_time_format="%Y%m%d %H:%M:%S", output_time_format="%Y.%m.%d-%H.%M.%S", operation="add", operation_days=2))
-print("String UTC Return with Subtraction           :", return_time(input_time="20190521 10:20:34", input_time_format="%Y%m%d %H:%M:%S", operation="sub", operation_days=2))
-print("String UTC Return with Subtraction and Format:", return_time(input_time="20190521 10:20:34", input_time_format="%Y%m%d %H:%M:%S", output_time_format="%Y.%m.%d-%H.%M.%S", operation="sub", operation_days=2))
