@@ -220,7 +220,7 @@ class FICGithub(FICFileHandler, FICDataVault):
                                                           'author_email': self.commit_author_email,
                                                           'message': self.commit_message,
                                                           'date': self.commit_date,
-                                                          'files': f"This commit contains {len(self.commit_files_changed)} files cahnged."
+                                                          'files': f"This commit contains {len(self.commit_files_changed)} files changed."
                                                           }
                                      })
 
