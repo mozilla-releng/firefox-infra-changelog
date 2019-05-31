@@ -6,7 +6,6 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import *
 from modules.FIC_Utilities import return_time
-from git import Repo
 import os
 import json
 import requests
@@ -159,7 +158,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0"):
             self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json")).get("0").get("last_checked")
         else:
-            self.last_check = return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f", operation="sub", operation_days=2)
+            self.last_check = return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f", operation="sub", operation_days=DEFAULT_DAYS)
 
     def _commit_iterator(self):
         for current_commit in self.repo_data.commits(since=self.last_check):
