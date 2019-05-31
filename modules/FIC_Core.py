@@ -86,7 +86,7 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
             changelog["Github"].update({key: {}})
             commit_number = 0
             for value in repo_data.values():
-                time_span = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", number_of_days)
+                time_span = return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f", operation="sub", operation_days=number_of_days)
                 if value["date"] > time_span:
                     changelog["Github"][key].update({commit_number: value})
                     commit_number += 1
@@ -98,7 +98,7 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
             changelog["Mercurial"].update({key: {}})
             commit_number = 0
             for value in repo_data.values():
-                time_span = return_time("%Y-%m-%dT%H:%M:%S.%f", "sub", number_of_days)
+                time_span = return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f", operation="sub", operation_days=number_of_days)
                 if value["date_of_push"] > time_span:
                     changelog["Mercurial"][key].update({commit_number: value})
                     commit_number += 1
