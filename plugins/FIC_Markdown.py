@@ -189,7 +189,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return base_link + repo + ".json", base_link + repo + ".md"
 
     def _changelog_md_row_builder(self):
-        return "|" + "[Link](" + self.commit_url + ")" + "|" + str(self.commit_message) + "|" + self.commit_author + \
+        return "|" + "[Link](" + self.commit_url + ")" + "|" + str(self.generate_link_for_bugs()) + "|" + self.commit_author + \
                "|" + str(self.commit_reviewer) + "|" + str(self.commit_date) + "\n"
 
     def _populate_changelog_md(self, element, changelog_data):
