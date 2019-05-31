@@ -44,9 +44,9 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     def no_data_for_md(self, argument, main_markdown=False, repo_markdown=False):
         if main_markdown:
-            return "No commits in the past {} days.. see the longer history ".format(DEFAULT_DAYS) + "[here](" + argument + ")" + "\n"
+            return f"No commits in the past {DEFAULT_DAYS} days.. see the longer history [here]({argument})\n"
         elif repo_markdown:
-            return "No recent changes on this repository.. see the entire changelog by accessing this [link]({})".format(self._generate_repo_url(argument))
+            return f"No recent changes on this repository.. see the entire changelog by accessing this [link]({self._generate_repo_url(argument)})"
 
     def generate_link_for_bugs(self):
         import re
