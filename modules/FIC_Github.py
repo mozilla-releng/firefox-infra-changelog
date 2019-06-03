@@ -6,6 +6,7 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import *
 from modules.FIC_Utilities import return_time
+from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
 import os
 import json
 import requests
@@ -38,16 +39,16 @@ class FICGithub(FICFileHandler, FICDataVault):
             # append the OS.VAR to the list in case of no duplicate
             if "GIT_TOKEN" in var and var not in GIT_TOKEN:
                 GIT_TOKEN.append(var)
-        self.LOGGER.info("The list of available tokens: %s", GIT_TOKEN)
+        self.LOGGER.info(f"The list of available tokens: {GIT_TOKEN}")
 
     def _get_reset_time(self):
-        from datetime import datetime
-        reset_time = datetime.fromtimestamp(self._gh.rate_limit()['rate']['reset'])
-        self.LOGGER.info("Rate limit reset in: %s", reset_time - datetime.now())
+        reset_time = return_time(input_time=self._gh.rate_limit()['rate']['reset'], input_time_unix=True)
+        self.LOGGER.info(f"Rate limit reset in: {reset_time - return_time()}")
         return reset_time
 
     def limit_checker(self):
         limit_requests = self._gh.ratelimit_remaining
+        self.LOGGER.info(f"The number of limit requests is: {limit_requests}")
         if limit_requests < 5 and len(GIT_TOKEN) > 1:
             # switch token
             if self._switch_token():
@@ -55,13 +56,13 @@ class FICGithub(FICFileHandler, FICDataVault):
             else:
                 # check if the rate limit was reset for the second use of a token
                 if limit_requests < 5:
-                    print(self._get_reset_time())
+                    self._get_reset_time()
                     return False
                 else:
                     return True
         # check the reset time in case of a single token
         elif limit_requests < 5:
-            print(self._get_reset_time())
+            self._get_reset_time()
             return False
         # return True in case of limit request not reached
         else:
@@ -80,20 +81,19 @@ class FICGithub(FICFileHandler, FICDataVault):
         # in case of the next token but not the last
         if self.token_counter < len(GIT_TOKEN) - 1:
             self.token_counter += 1
-            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[self.token_counter])
+            self.LOGGER.info(f"Changing token with: {GIT_TOKEN[self.token_counter]}")
             return True
         # in case of the last token
         elif self.token_counter == len(GIT_TOKEN) - 1:
             self.token_counter = 0
-            self.LOGGER.info("Changing token with: %s", GIT_TOKEN[self.token_counter])
+            self.LOGGER.info(f"Changing token with: {GIT_TOKEN[self.token_counter]}")
             return False
 
     def pull(self):
-        self.LOGGER.info("pulling changes from {} -> Branch {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
+        self.LOGGER.info(f"pulling changes from {self.repo.remotes.origin.url} -> Branch {self.repo.active_branch}")
         return self.repo.remotes.origin.pull(refspec=self.repo.active_branch)
 
     def add(self):
-        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
         self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
         return self.check_for_changes()
 
@@ -104,19 +104,17 @@ class FICGithub(FICFileHandler, FICDataVault):
         return True
 
     def commit(self):
-        from datetime import datetime
-        self.LOGGER.info("Committing changes with message: Changelog: %s", str(datetime.utcnow()))
-        return self.repo.index.commit("Changelog: " + str(datetime.utcnow()))
+        self.LOGGER.info(f"Committing changes with message: Changelog: {return_time()}")
+        return self.repo.index.commit("Changelog: " + return_time())
 
     def push(self):
-        self.LOGGER.info("Summary of pull: {}".format(FICGithub.pull(self)[0]))
+        self.LOGGER.info(f"Summary of pull: {FICGithub.pull(self)[0]}")
         if FICGithub.add(self):
-            self.LOGGER.info("Summary of commit {}".format(FICGithub.commit(self)))
-            self.LOGGER.info("pushing changes to {}  on branch  {}".format(self.repo.remotes.origin.url, self.repo.active_branch))
-            self.LOGGER.info("Summary of push: {}".format(self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary))
+            self.LOGGER.info(f"Summary of commit {FICGithub.commit(self)}")
+            self.LOGGER.info(f"pushing changes to {self.repo.remotes.origin.url}  on branch  {self.repo.active_branch}")
+            self.LOGGER.info(f"Summary of push: {self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary}")
 
     def revert_modified_files(self):
-        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
         return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
 
     def get_repo_url(self):
@@ -280,7 +278,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         elif self.repo_type == "commit-keyword":
             self._commit_keyword()
         else:
-            print("Repo type not defined for %s", self.repo_name)
+            self.LOGGER.critical(f"Repo type not defined for {self.repo_name}")
 
     def _generate_first_element(self):
         if self.repo_type == "tag" and self.repo_name != "build-puppet":
@@ -289,6 +287,7 @@ class FICGithub(FICFileHandler, FICDataVault):
             return {"0": {"last_checked": return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f")}}
 
     def start_git(self, repo_name=None):
+        self.list_of_commits = {}
         self.repo_name = repo_name
         self._extract_repo_type()
         self._repo_team()
@@ -298,7 +297,6 @@ class FICGithub(FICFileHandler, FICDataVault):
         self.list_of_commits.update(self._generate_first_element())
         self._repo_type_checker()
         self._write_git_json()
-        self.list_of_commits = {}
 
     def _write_git_json(self):
         local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
