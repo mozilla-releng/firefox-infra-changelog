@@ -6,7 +6,7 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import *
 from modules.FIC_Utilities import return_time
-from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH, INDIVIDUAL_REPO_DAYS
 import os
 import json
 import requests
@@ -298,11 +298,19 @@ class FICGithub(FICFileHandler, FICDataVault):
         self._repo_type_checker()
         self._write_git_json()
 
+    def _check_commit_age(self, lista=None):
+        lista = self.list_of_commits if lista == None else lista
+        for element in range(1, len(lista)):
+            time = return_time(input_time=lista[element]["date"], input_time_format="%Y-%m-%dT%H:%M:%SZ")
+            if time > return_time(operation="sub", operation_days=INDIVIDUAL_REPO_DAYS):
+                del lista[element]
+
     def _write_git_json(self):
         local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
         # In case we have no new commits to save
         if len(self.list_of_commits) == 1:
             local_json_data.update(self._generate_first_element())
+            self._check_commit_age(local_json_data)
             self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", local_json_data)
         # In case we have new commits + local data
         elif len(local_json_data) >= 1:
@@ -310,7 +318,9 @@ class FICGithub(FICFileHandler, FICDataVault):
             for commit in range(len(local_json_data)):
                 self.commit_number += 1
                 self.list_of_commits.update({str(self.commit_number): local_json_data[str(commit + 1)]})
+            self._check_commit_age()
             self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
         # In case we have new commits and NO local data
         else:
+            self._check_commit_age()
             self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
