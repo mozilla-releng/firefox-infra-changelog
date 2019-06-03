@@ -298,12 +298,12 @@ class FICGithub(FICFileHandler, FICDataVault):
         self._repo_type_checker()
         self._write_git_json()
 
-    def _check_commit_age(self, lista=None):
-        lista = self.list_of_commits if lista == None else lista
-        for element in range(1, len(lista)):
-            time = return_time(input_time=lista[element]["date"], input_time_format="%Y-%m-%dT%H:%M:%SZ")
+    def _check_commit_age(self, filter_list=None):
+        filter_list = self.list_of_commits if filter_list == None else filter_list
+        for element in range(1, len(filter_list)):
+            time = return_time(input_time=filter_list[element]["date"], input_time_format="%Y-%m-%dT%H:%M:%SZ")
             if time > return_time(operation="sub", operation_days=INDIVIDUAL_REPO_DAYS):
-                del lista[element]
+                del filter_list[element]
 
     def _write_git_json(self):
         local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
