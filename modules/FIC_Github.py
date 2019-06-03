@@ -301,8 +301,8 @@ class FICGithub(FICFileHandler, FICDataVault):
     def _check_commit_age(self, filter_list=None):
         filter_list = self.list_of_commits if filter_list == None else filter_list
         for element in range(1, len(filter_list)):
-            time = return_time(input_time=filter_list[element]["date"], input_time_format="%Y-%m-%dT%H:%M:%SZ")
-            if time > return_time(operation="sub", operation_days=INDIVIDUAL_REPO_DAYS):
+            commit_time = return_time(input_time=filter_list[element]["date"], input_time_format="%Y-%m-%dT%H:%M:%SZ")
+            if commit_time > return_time(operation="sub", operation_days=INDIVIDUAL_REPO_DAYS):
                 del filter_list[element]
 
     def _write_git_json(self):
