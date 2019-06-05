@@ -6,7 +6,7 @@ from modules.FIC_DataVault import FICDataVault
 from modules.FIC_Utilities import return_time
 import json
 import requests
-from modules.config import CHANGELOG_REPO_PATH, HG_CHANGESETS_TO_SHOW, REPOSITORIES_FILE
+from modules.config import CHANGELOG_REPO_PATH, HG_CHANGESETS_TO_SHOW, REPOSITORIES_FILE, INDIVIDUAL_REPO_DAYS
 
 
 class FICMercurial(FICFileHandler, FICDataVault):
@@ -111,7 +111,10 @@ class FICMercurial(FICFileHandler, FICDataVault):
         if len(self.local_repo_data):
             self.local_repo_data.pop("0")
             for key, value in self.local_repo_data.items():
-                self.list_of_dicts.append(value)
+                if return_time(input_time=value["date_of_push"], input_time_format="%Y-%m-%dT%H:%M:%S.%f") > \
+                   return_time(output_time_format="%Y-%m-%dT%H:%M:%S.%f", operation="sub", operation_days=INDIVIDUAL_REPO_DAYS):
+                    self.push_number += 1
+                    self.final_dict.update({self.push_number: value})
 
     def _add_changeset_data(self, push):
         unformated_date = self.changesets_json.get("pushes").get(push).get("date")
@@ -146,13 +149,13 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.list_of_dicts = []
         self._prep_final_dict()
         self.push_number = 0
-        self._get_local_data()
         for push in self.changesets_json.get("pushes"):
             self.changeset_dict = {}
             self._add_changeset_data(push)
             for commit in range(len(self.changesets_json.get("pushes").get(push).get("changesets"))):
                 self._add_commit_data(push, commit)
             self.list_of_dicts.append(self.changeset_dict)
-
         self._populate_final_dict()
+        self._get_local_data()
+
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
