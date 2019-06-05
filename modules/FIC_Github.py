@@ -6,7 +6,7 @@ from modules.FIC_FileHandler import FICFileHandler
 from modules.FIC_DataVault import FICDataVault
 from modules.config import *
 from modules.FIC_Utilities import return_time
-from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH, INDIVIDUAL_REPO_DAYS
 import os
 import json
 import requests
@@ -298,18 +298,24 @@ class FICGithub(FICFileHandler, FICDataVault):
         self._repo_type_checker()
         self._write_git_json()
 
+    def _check_commit_age(self, filter_list=None):
+        for commit in range(1, len(filter_list)):
+            if return_time(input_time=filter_list[str(commit)]["date"], input_time_format="%Y-%m-%dT%H:%M:%SZ") > \
+               return_time(operation="sub", operation_days=INDIVIDUAL_REPO_DAYS):
+                self.commit_number += 1
+                self.list_of_commits.update({str(self.commit_number): filter_list[str(commit)]})
+
     def _write_git_json(self):
         local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
         # In case we have no new commits to save
         if len(self.list_of_commits) == 1:
             local_json_data.update(self._generate_first_element())
-            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", local_json_data)
+            self._check_commit_age(local_json_data)
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
         # In case we have new commits + local data
         elif len(local_json_data) >= 1:
             local_json_data.pop("0")
-            for commit in range(len(local_json_data)):
-                self.commit_number += 1
-                self.list_of_commits.update({str(self.commit_number): local_json_data[str(commit + 1)]})
+            self._check_commit_age(local_json_data)
             self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.list_of_commits)
         # In case we have new commits and NO local data
         else:
