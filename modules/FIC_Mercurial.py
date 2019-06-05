@@ -157,5 +157,4 @@ class FICMercurial(FICFileHandler, FICDataVault):
             self.list_of_dicts.append(self.changeset_dict)
         self._populate_final_dict()
         self._get_local_data()
-
         self.save(CHANGELOG_REPO_PATH, self.repo_name + ".json", self.final_dict)
