@@ -17,6 +17,9 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
         self.check_tool_integrity()
 
     def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=DEFAULT_DAYS, logging=False):
+        if logging:
+            self.console_logging()
+
         if all:
             self.LOGGER.debug("Run all behavior mode")
             self._run_all_behavior()
