@@ -32,3 +32,7 @@ class FICLogger:
                                           filename=self.log_file_path)
         self.LOGGER = logging.getLogger(__name__)
         return self.LOGGER
+
+    @staticmethod
+    def console_logging():
+        logging.getLogger().addHandler(logging.StreamHandler())
