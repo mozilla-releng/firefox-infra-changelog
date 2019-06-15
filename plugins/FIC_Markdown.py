@@ -17,7 +17,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     @staticmethod
     def _get_current_time():
-        return return_time(output_time_format="%Y-%m-%dT%H:%M:%S")
+        return return_time(output_time_format="%Y-%m-%d %H:%M:%S UTC")
 
     def _load_local_json_data(self):
         return json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
