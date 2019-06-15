@@ -1,0 +1,65 @@
+{
+  "0": {
+    "last_push_id": 88037
+  },
+  "1": {
+    "pusher": "malexandru@mozilla.com",
+    "date_of_push": "2019-06-15T00:53:18.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=da58eb922ff2",
+        "commit_author": "Mihai Alexandru Michis <malexandru@mozilla.com>",
+        "commit_message": "Backed out changeset a1f01a303ff2 (bug 1555454) for causing mda failures on macosx1014. CLOSED TREE",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "2": {
+    "pusher": "cmanchester@mozilla.com",
+    "date_of_push": "2019-06-14T20:12:34.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d59aabc0dff5",
+        "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1559351 - Update rust nightly toolchain to last nightly versioned 1.35. r=dmajor\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35074",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "3": {
+    "pusher": "egao@mozilla.com",
+    "date_of_push": "2019-06-14T17:21:33.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=a1f01a303ff2",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - move mochitests-media to macosx1014 r=gbrown\n\nChanges:\n- migrate `mochitest-media` to run on macosx1014\n- rebalance chunks\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34932",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "dhunt@mozilla.com",
+    "date_of_push": "2019-06-14T15:32:56.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3383a0903c29",
+        "commit_author": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1558163 Add dedicated test config for fennec v64 r=davehunt,perftest-reviewers\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34340",
+        "files_changed": "This commit contains 27 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "aionescu@mozilla.com",
+    "date_of_push": "2019-06-14T14:01:05.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ce388ca8f1b2",
+        "commit_author": "Alexandru Irimovici <alexandru.irimovici@softvision.ro>",
+        "commit_message": "Bug 1558625 - demote raptor-unity-webgl to tier 3 r=perftest-reviewers,rwood,AlexandruIonescu\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34699",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  }
+}

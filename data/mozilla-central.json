@@ -1,0 +1,1355 @@
+{
+  "0": {
+    "last_push_id": 36156
+  },
+  "1": {
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-06-15T09:53:16.000000",
+    "changeset_commits": {
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d59aabc0dff5",
+        "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1559351 - Update rust nightly toolchain to last nightly versioned 1.35. r=dmajor\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35074",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "71": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=da58eb922ff2",
+        "commit_author": "Mihai Alexandru Michis <malexandru@mozilla.com>",
+        "commit_message": "Backed out changeset a1f01a303ff2 (bug 1555454) for causing mda failures on macosx1014. CLOSED TREE",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "2": {
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-06-14T21:50:40.000000",
+    "changeset_commits": {
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ce388ca8f1b2",
+        "commit_author": "Alexandru Irimovici <alexandru.irimovici@softvision.ro>",
+        "commit_message": "Bug 1558625 - demote raptor-unity-webgl to tier 3 r=perftest-reviewers,rwood,AlexandruIonescu\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34699",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3383a0903c29",
+        "commit_author": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1558163 Add dedicated test config for fennec v64 r=davehunt,perftest-reviewers\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34340",
+        "files_changed": "This commit contains 27 files changed."
+      },
+      "44": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a1f01a303ff2",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - move mochitests-media to macosx1014 r=gbrown\n\nChanges:\n- migrate `mochitest-media` to run on macosx1014\n- rebalance chunks\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34932",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "3": {
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-06-14T03:39:39.000000",
+    "changeset_commits": {
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a0f2ce7616f5",
+        "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1558996 - Require rust 1.35 r=glandium\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34794",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-06-13T21:53:35.000000",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=051ed4e3f785",
+        "commit_author": "J.C. Jones <jc@mozilla.com>",
+        "commit_message": "Bug 1550889 - land NSS 313dfef345bd UPGRADE_NSS_RELEASE, r=me",
+        "files_changed": "This commit contains 5 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-06-13T21:50:57.000000",
+    "changeset_commits": {
+      "14": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f4e609c13c71",
+        "commit_author": "Rok Garbas <rok@garbas.si>",
+        "commit_message": "Bug 1557255 - switch from relengapi-proxy to taskcluster-proxy in taskgraph r=rail\n\nBug 1557255 - use taskcluster proxy when running tooltool.py\n\nBug 1557255 - fixing tooltool url\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34472",
+        "files_changed": "This commit contains 14 files changed."
+      },
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=97fe03bbd4f4",
+        "commit_author": "Rok Garbas <rok@garbas.si>",
+        "commit_message": "Bug 1557255 - fixing toolchain-linux64-clang-8-macosx-cross job r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34839",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9f88f2e5dd24",
+        "commit_author": "Wes Kocher <wkocher@mozilla.com>",
+        "commit_message": "Bug 1559071 - Remove duplicated 'to' to fix grammar in retrigger action warning r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34830",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "54": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4b3b6bb262a0",
+        "commit_author": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1520010: Remove signing format scopes r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31432",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "55": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4335602a9eaa",
+        "commit_author": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1520010: switch wv to autograph r=aki,Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31433",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "66": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f57e8e01925d",
+        "commit_author": "Chris AtLee <catlee@mozilla.com>",
+        "commit_message": "Bug 1520010: Follow up fix r=Callek DONTBUILD\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34886",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "6": {
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-06-13T03:50:31.000000",
+    "changeset_commits": {
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1a1b1d4bfec6",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate mochitest-webgl1-ext to macosx1014 r=gbrown\n\nChanges:\n\n- updated expected outcomes for previously failing tests that now pass on macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34447",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "32": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5460248e277e",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate jsreftests to macosx1014 r=gbrown\n\nChanges:\n- migrate jsreftest over to macosx1014\n- re-balance the chunks for non-ccov variants of macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34771",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "33": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fbd9c64e4a31",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate mochitest-devtools-chrome to macosx1014 r=gbrown\n\nChanges:\n- migrate `mochitest-devtools-chrome` to macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34753",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "42": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=69128ae35322",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1533818 - Start signing omni.ja files. r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34541",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "7": {
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-06-12T21:41:19.000000",
+    "changeset_commits": {
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f24e407e9a6d",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1558598 - Remove --disable-webrender options from a couple of places. r=ahal\n\nThis drops the --disable-webrender option (which force-disables WR)\nand treats the lack of an --enable-webrender as if --disable-webrender\nwas provided.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34622",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "28": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d2f0c18e82de",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1558598 - Force-disable webrender unless it is enabled. r=ahal\n\nEnsure we force-disable webrender unless it is explicitly enabled\nvia the --enable-webrender flag. Also add missing env variables for\nthe telemetry_client.py case which appears to be a copy/paste error\nthat was not caught because we never run that test with WR enabled.\n\nDepends on D34622\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34623",
+        "files_changed": "This commit contains 8 files changed."
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d9c42c5f4850",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1558598 - Add the --enable-webrender option to android HW unittests. r=ahal\n\nThis is not used yet but will be eventually so I'm just going to\nadd it now.\n\nDepends on D34623\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34624",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=04395d6322f2",
+        "commit_author": "Dorel Luca <dluca@mozilla.com>",
+        "commit_message": "Backed out 3 changesets (bug 1558598) for Geckoview failures\n\nBacked out changeset d9c42c5f4850 (bug 1558598)\nBacked out changeset d2f0c18e82de (bug 1558598)\nBacked out changeset f24e407e9a6d (bug 1558598)",
+        "files_changed": "This commit contains 12 files changed."
+      },
+      "75": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=22f989cfc33f",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate awsy over to macosx1014 r=gbrown\n\nChanges:\n- migrate awsy and marionette-media to macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34644",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "8": {
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-06-12T12:02:49.000000",
+    "changeset_commits": {
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e954e6e848d1",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1501582 - Run reftests on GeckoView. r=gbrown\n\nDepends on D34539\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34540",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8e947c7dba45",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate crashtests over to macosx1014 r=gbrown\n\nChanges:\n\n- added skip-If statements for some crashtest items that fail on macosx1014\n- removed `crashtest` from `macosx64` test sets, with the consequence that `macosx64-qr-tests` test set is removed, with cascading effects to the test-platforms definitions that used only `macosx64-qr-tests`\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34448",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7130574015aa",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate xpcshelltests to macosx1014 r=gbrown\n\nChanges:\n- move xpcshell from macosx1010 to macosx1014\n- updated regex for macosx1014 xpcshell to run on 2 chunks for all variants (for now)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34561",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d3d46e5ef066",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate mochitest-webgl1-ext to macosx1014 r=gbrown\n\nChanges:\n\n- updated expected outcomes for previously failing tests that now pass on macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34447",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a8963ed279fd",
+        "commit_author": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out changeset d3d46e5ef066 (bug 1555454) for test_2_conformance2__reading__format-r11f-g11f-b10f.html failures CLOSED TREE",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "88": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=88a9b7b37a81",
+        "commit_author": "Bob Clary <bclary@bclary.com>",
+        "commit_message": "Bug 1557038 - Handle additional invalid errorsummary test values in isolate-test-failures action, r=gbrown.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34492",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "89": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9b7d0410ba13",
+        "commit_author": "Bob Clary <bclary@bclary.com>",
+        "commit_message": "Bug 1557038 - increase maximum number of isolation tests to 100, r=gbrown.\n\nDepends on D34492\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34493",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "9": {
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-06-11T21:35:17.000000",
+    "changeset_commits": {
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e3bbbcf873c2",
+        "commit_author": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+        "files_changed": "This commit contains 26 files changed."
+      }
+    }
+  },
+  "10": {
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-06-11T21:33:19.000000",
+    "changeset_commits": {
+      "72": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=84335c700348",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1558293 - Log android properties before running wrench reftests. r=jnicol\n\nThis includes build information and other stuff.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34402",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "78": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4ea5c4fd7777",
+        "commit_author": "Nikki Sharpley <nsharpley@mozilla.com>",
+        "commit_message": "Bug 1554818 - [mozlog] Update StatusHandler to support known_intermittent field r=jgraham\n\nThis patch adds a `known_intermittent_statuses` attribute to the `StatusHandler`\nclass, allowing it to keep a count of expected intermittents for future use.\nAdditionally, known intermittents are not recorded as `unexpected_statuses` but\nare recorded as `expected_statuses`.\n\ntesting/mozharness/mozharness/mozilla/structuredlog.py is directly affected by\nthis change and has been updated to also reflect `known_intermittent_statuses`.\nHowever, it may require a test to be written to check this addition.\n\nThe `StatusHandler` test has been added to, ensuring this patch works as expected.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33086",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "79": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=46193fc0be25",
+        "commit_author": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1536007 - Change maximum depth of backfills from 10 to 25. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34488",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "11": {
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-06-11T03:18:15.000000",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d0e7f11f9cdb",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1558130 - Copy multi_locale/mozilla-esr68_android.json from multi_locale/mozilla-release_android.json r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34317",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7998640b1d55",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1558220 - Remove dead multi-locale android configs r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34363",
+        "files_changed": "This commit contains 18 files changed."
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a6b59db4eb4e",
+        "commit_author": "Ryan VanderMeulen <ryanvm@gmail.com>",
+        "commit_message": "Bug 1558258 - Only run GeckoView unit and Android HW media tests on non-ESR trees. r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34396",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "67": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=07ef4ba2286f",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1557204 - remove unused check_uptake support, r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34121",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "12": {
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-06-10T21:47:35.000000",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dcb20740187a",
+        "commit_author": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1557331 Cover missing-data scenario with retries in util.hg r=dustin\n\nIf the length of the pushes from the pushlog is wrong, raise exception and retry.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34155",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "20": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4f6437e6927f",
+        "commit_author": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34323",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "22": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=935dea40a478",
+        "commit_author": "Alexandru Irimovici <alexandru.irimovici@softvision.ro>",
+        "commit_message": "Bug 1555330 - Include mozilla-central for p2 aarch64 youtube playback test r=perftest-reviewers,igoldan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33779",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "23": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=148d730f2b78",
+        "commit_author": "Chris Hartjes <chartjes@mozilla.com>",
+        "commit_message": "Bug 1544470 - Added in code that can be used to take a snapshot of CPU usage on Android devices r=rwood,davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33662",
+        "files_changed": "This commit contains 9 files changed."
+      }
+    }
+  },
+  "13": {
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-06-09T09:06:18.000000",
+    "changeset_commits": {
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=44b33fe66dc5",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1555479 - Allow wrench to know when it is running in the emulator. r=gw\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33404",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2a44a6ac6bd1",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1555479 - Rename android_emulator_wrench to android_wrench.py. r=gbrown\n\nThis is in preparation for having the same script be used for emulator\nand device runs. No functional change in this patch; it just renames\nthe file and class.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33406",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=48306fd29453",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1555479 - Update wrench mozharness script to support running on a device as well. r=gbrown\n\nThe presence or absence of the DEVICE_SERIAL environment variable\nis sufficient to control this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33407",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e20f91f0ea08",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1555479 - Update run-task to support bitbar. r=tomprince\n\nCurrently all jobs run on bitbar go through mozharness-test. However for\nWebRender standalone testing (i.e. built without any Gecko stuff) we want\nto run the WebRender wrench test harness on bitbar using run-task. This\nadds the necessary support to run-task.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33408",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fd26384a1def",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1555479 - Run wrench reftests on a Pixel2 in bitbar. r=jrmuizel\n\nNote that on the bitbar workers we don't get to use a gecko checkout, so\nwe need to fetch the mozharness.zip and wrench reftests as artifacts from\nother jobs.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33409",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "14": {
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-06-08T09:42:03.000000",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=390611673682",
+        "commit_author": "J.C. Jones <jc@mozilla.com>",
+        "commit_message": "Bug 1550889 - land NSS d17569aa9d56 UPGRADE_NSS_RELEASE, r=me",
+        "files_changed": "This commit contains 465 files changed."
+      }
+    }
+  },
+  "15": {
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-06-08T09:39:25.000000",
+    "changeset_commits": {
+      "28": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1580e2e6a87b",
+        "commit_author": "Joel Maher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1557123 - migrate web-platform-tests and web-platform-tests-reftest to osx 10.14. r=egao\n\nmigrate web-platform-tests and web-platform-test-reftests to osx 10.14.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33833",
+        "files_changed": "This commit contains 16 files changed."
+      },
+      "50": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f4eb5cb790fc",
+        "commit_author": "Bob Clary <bclary@bclary.com>",
+        "commit_message": "Bug 1557038 - Implement experimental Test Isolation Taskcluster Action, r=tomprince.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33790",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "16": {
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-06-07T22:00:07.000000",
+    "changeset_commits": {
+      "58": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=75f00ba2d124",
+        "commit_author": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "Bug 1557764 - comm-checkout should be under gecko-checkout. r=dustin\n\nThis changes the --comm-checkout parameter to the run-task command\nto make sure c-c is checked out into a subdirectory of m-c.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34182",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "17": {
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-06-07T16:17:54.000000",
+    "changeset_commits": {
+      "25": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a8e20517d311",
+        "commit_author": "Julian Descottes <jdescottes@mozilla.com>",
+        "commit_message": "Bug 1557273 - Run devtool node tests if any devtools/client file changed r=nchevobbe,ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33922",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=63ea9ea7e741",
+        "commit_author": "Marian Raiciof <mraiciof@mozilla.com>",
+        "commit_message": "Bug 1522604 - Enhance mozharness error list for Raptor tests. r=jgraham\n\nRaptorErrorList now includes HarnessErrorList and regular expressions for Error and Critical log levels.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32983",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "18": {
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-06-07T09:47:19.000000",
+    "changeset_commits": {
+      "19": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0cff8ca10f71",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1557123 - migrate web-platform-tests and web-platform-test-reftests to osx 10.14. r=egao\n\nmigrate web-platform-tests and web-platform-test-reftests to osx 10.14.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33833",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a5342d39f94f",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1556488: Don't try to run talos tasks that would not run on the given branch; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33842",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "25": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=586b27e0e811",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1551738 - Add `mozilla_esr68_tasks` target tasks r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33971",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "28": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8cff011ed07a",
+        "commit_author": "Byron Campen [:bwc] <docfaraday@gmail.com>",
+        "commit_message": "Bug 1555792: Ensure that the new default values for nightly have no effect on CI. r=ahal\n\nDepends on D33643\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33644",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "36": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1fa5952696ca",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Use an explicit path for python2.7 for mozharness. r=tomprince\n\nThe macos workers have two python 2.7 installed: one in /usr/bin, and\none in /usr/local/bin. For some reason, the one in /usr/local/bin is\nbroken wrt SSL.\n\nWhen running the current mozharness command directly without a full path\nto python2.7, generic-worker executes it using its own PATH, and that\nuses /usr/bin/python2.7. When wrapping with something else, though\n(run-task, but that would apply just as much with `sh -c`), the PATH\nfrom the task itself is used, and it's explicitly set to use\n/usr/local/bin first, and the broken python 2.7 then gets used.\n\nWe could change the PATH, but there might be other things relying on the\ncurrent order, so just use /usr/bin/python2.7.\n\nDepends on D28023\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28024",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "37": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=37f758cfb92a",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Add an option to `using: run-task` to keep running tasks as root. r=tomprince\n\nThe tasks on bitbar currently rely on being run as root, and run-task\ndefaults to drop its privileges to the `worker` user.\n\nDepends on D28024\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28025",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=00c0dfc00b1b",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Use run_task transform for mozharness on docker-worker. r=tomprince\n\nmozharness and mozharness test transforms currently do their own version\nof wrapping commands with run-task in docker-worker. This makes them\npiggy back on the run_task transform instead.\n\nSome things then become redundant with what the run_task transform does,\nand some others need to happen later than they currently do in order to\nwork.\n\nThis has the side effect of enabling some of the more recent run-task\nfeatures, like --fetch-hgfingerprint.\n\nDepends on D28025\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28026",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=108a519aff66",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Use run-task for mozharness jobs on generic-worker. r=tomprince\n\nmozharness and mozharness test transforms for generic-worker currently\ndon't wrap the commands with run-task. This changes things such that the\ncommands are wrapped with run-task, by piggy-backing on the run_task\ntransform.\n\nSome things then become redundant with what the run_task transform does,\nand some others need to happen later than they currently do in order to\nwork.\n\nDepends on D28026\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28027",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2fa3c884b6de",
+        "commit_author": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out 4 changesets (bug 1525373) by glandium's request CLOSED TREE\n\nBacked out changeset 108a519aff66 (bug 1525373)\nBacked out changeset 00c0dfc00b1b (bug 1525373)\nBacked out changeset 37f758cfb92a (bug 1525373)\nBacked out changeset 1fa5952696ca (bug 1525373)",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "44": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=de019903849e",
+        "commit_author": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out 2 changesets (bug 1555792) for Windows 2012 build bustages CLOSED TREE\n\nBacked out changeset 8cff011ed07a (bug 1555792)\nBacked out changeset 54ed41058000 (bug 1555792)",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "45": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c5a178862298",
+        "commit_author": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out changeset 0cff8ca10f71 (bug 1557123) for many wpt failures on osx 10.14 CLOSED TREE",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "46": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3e066ee9fbca",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Use an explicit path for python2.7 for mozharness. r=tomprince\n\nThe macos workers have two python 2.7 installed: one in /usr/bin, and\none in /usr/local/bin. For some reason, the one in /usr/local/bin is\nbroken wrt SSL.\n\nWhen running the current mozharness command directly without a full path\nto python2.7, generic-worker executes it using its own PATH, and that\nuses /usr/bin/python2.7. When wrapping with something else, though\n(run-task, but that would apply just as much with `sh -c`), the PATH\nfrom the task itself is used, and it's explicitly set to use\n/usr/local/bin first, and the broken python 2.7 then gets used.\n\nWe could change the PATH, but there might be other things relying on the\ncurrent order, so just use /usr/bin/python2.7.\n\nDepends on D28023\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28024",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=58087407b5b9",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Add an option to `using: run-task` to keep running tasks as root. r=tomprince\n\nThe tasks on bitbar currently rely on being run as root, and run-task\ndefaults to drop its privileges to the `worker` user.\n\nDepends on D28024\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28025",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "48": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=447b8da8ebb3",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Use run_task transform for mozharness on docker-worker. r=tomprince\n\nmozharness and mozharness test transforms currently do their own version\nof wrapping commands with run-task in docker-worker. This makes them\npiggy back on the run_task transform instead.\n\nSome things then become redundant with what the run_task transform does,\nand some others need to happen later than they currently do in order to\nwork.\n\nThis has the side effect of enabling some of the more recent run-task\nfeatures, like --fetch-hgfingerprint.\n\nDepends on D28025\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28026",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "49": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=43cece5c03b4",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1525373 - Use run-task for mozharness jobs on generic-worker. r=tomprince\n\nmozharness and mozharness test transforms for generic-worker currently\ndon't wrap the commands with run-task. This changes things such that the\ncommands are wrapped with run-task, by piggy-backing on the run_task\ntransform.\n\nSome things then become redundant with what the run_task transform does,\nand some others need to happen later than they currently do in order to\nwork.\n\nDepends on D28026\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28027",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "56": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=32d4c19550d8",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - move telemetry-tests-client to macosx1014 r=gbrown\n\nChanges:\n- move telemetry-tests-client to run on macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34007",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "67": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9183f80b6bf0",
+        "commit_author": "Bogdan Tara <btara@mozilla.com>",
+        "commit_message": "Backed out changeset 43cece5c03b4 (bug 1525373) for Windows 10 AArch failures CLOSED TREE",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "19": {
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-06-06T21:52:09.000000",
+    "changeset_commits": {
+      "32": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4e670dca8970",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1534578 - Upgrade macosx64 taskcluster tasks to python 3.7. r=ahal\n\nBug 1501497 deployed python 3.7 on mac workers, while leaving 3.6\naround... except on reimaged workers, which only have 3.7 available.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31191",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "20": {
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-06-06T10:00:05.000000",
+    "changeset_commits": {
+      "35": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ca330433f574",
+        "commit_author": "jgraham <james@hoppipolla.co.uk>",
+        "commit_message": "Bug 1541769 [wpt PR 16185] - Remove useless shell script wrapping lint., a=testonly\n\nAutomatic update from web-platform-tests\nRemove useless shell script wrapping lint (#16185)\n\nThis previously interacted with the travis cache, but that isn't relevant now\n--\n\nwpt-commits: b11124e19d7fc02a98fa18b3d0e8891343392a88\nwpt-pr: 16185\n",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "21": {
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-06-06T09:29:49.000000",
+    "changeset_commits": {
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1984b503b901",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - remove fail-if condition specific to mac for test_webgl_fingerprinting_resistance.html and migrate to running on macosx1014 r=jmaher\n\nChanges:\n- remove `fail-if` condition\n- migrate `mochitest-webgl-core` to running on macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33822",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4ff8006a80f5",
+        "commit_author": "Joel Maher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1557123 - migrate web-platform-tests and web-platform-test-reftests to osx 10.14. r=egao\n\nmigrate web-platform-tests and web-platform-test-reftests to osx 10.14.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33833",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "38": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ef0b98798dd6",
+        "commit_author": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Backed out changeset 1984b503b901 (bug 1555454) for webgl failures on test_webgl_fingerprinting_resistance.html.",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "60": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7fad4bfcc1de",
+        "commit_author": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Backed out changeset 4ff8006a80f5 (bug 1557123) for causing a spike in wpts and wpts reftests intermittents.",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "62": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c02fd9857532",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - remove fail-if condition specific to mac for test_webgl_fingerprinting_resistance.html and migrate to running on macosx1014 r=jmaher\n\nChanges:\n- remove `fail-if` condition\n- migrate `mochitest-webgl-core` to running on macosx1014\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33822",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "22": {
+    "pusher": "malexandru@mozilla.com",
+    "date_of_push": "2019-06-05T09:49:10.000000",
+    "changeset_commits": {
+      "51": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=16b72409e491",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - move cppunit, jittest, mochitest-devtools-webreplay, mochiest-gpu to macosx1014 r=jmaher\n\nChanges:\n\ncompiled:\n- move `cppunit`, `jittest` from `macosx64` to `macosx1014` test set\n\nmochitest:\n- move `mochitest-devtools-webreplay`, `mochitest-gpu` to the `macosx1014` test set\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33717",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "54": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ccd1356fc8f1",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1526857 - Improve bindgen configuration wrt clang. r=chmanchester\n\nThe current setup for bindgen relies on either finding clang/libclang\nfrom the output of llvm-config, or from the paths given via the\nconfigure flags --with-clang-path/--with-libclang-path.\n\nOne _very_ common problem is that the llvm-config we end up using does\nnot correspond to the clang used for compilation, which has some\nundesirable side effect, like failing to build.\n\nSo instead of relying on llvm-config, we do the following:\n- when the compiler is clang, we just use that\n- when the compiler is clang-cl, we use clang from the same directory\n- otherwise, we either try to find clang in PATH, or rely on\n  --with-clang-path.\n\nOnce clang is found, we try to deduce the location of the corresponding\nlibclang via the output of `clang -print-search-dirs`, or rely on\n--with-libclang-path.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33241",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "23": {
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-06-04T21:42:40.000000",
+    "changeset_commits": {
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ed131fb9d1f4",
+        "commit_author": "Alexandru Irimovici <alexandru.irimovici@softvision.ro>",
+        "commit_message": "Bug 1554696 - run media straming playback tests against fenix in CI(try) r=perftest-reviewers,Bebe\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32798",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "33": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c8be8d68441f",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1556090 - Adjust android 7.0 bogomips threshold; r=jmaher\n\nThe bogomips check is now catching and rejecting instances in the range 3000-4000,\nwhich were not seen earlier. I think the difference is that they are being run in\npowersave mode now. At any rate, these instances have normal MHz, so I think they\nprobably provide normal performance over the long run, and need not be rejected:\nadjusting the threshold accordingly.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33646",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cd91fb6b59d9",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1556767 - Increase max-run-time for linux64 ccov jsreftest; r=egao\n\nThese tasks normally run in 45 to 55 minutes; if they exceed 60 minutes, the\ntask fails. Failures are not frequent, but I would like to avoid them. We could\nincrease chunks, but it looks like we have handled the other ccov cases like\nthis, by increasing the max-run-time.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33656",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "24": {
+    "pusher": "btara@mozilla.com",
+    "date_of_push": "2019-06-04T16:04:27.000000",
+    "changeset_commits": {
+      "32": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=776ba04423a5",
+        "commit_author": "Sylvestre Ledru <sledru@mozilla.com>",
+        "commit_message": "Bug 1554406 - Install rustfmt in the CI r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32570",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "73": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f0f79e047a47",
+        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
+        "commit_message": "Bug 1535056 - Specifies schema for taskgraph parameters r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23756",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "81": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d17dc040eec7",
+        "commit_author": "Ionut Goldan <igoldan@mozilla.com>",
+        "commit_message": "Bug 1556695 - Remove pinned Chromium revision on OSX r=perftest-reviewers,davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33612",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "25": {
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-06-04T03:48:44.000000",
+    "changeset_commits": {
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1e58101918c0",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1548864 - part 1: Factorize android.yml r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29849",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "26": {
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-06-04T03:45:41.000000",
+    "changeset_commits": {
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2ff50159f61f",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1554851 - Let ARM64 Fennec 68 reach the release population r=mhentges\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33017",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=eea00b11381e",
+        "commit_author": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1554608 Schedule raptor fennec v64 tests in CI r=dustin,tomprince\n\nRan locally `./mach taskgraph cron --head-repository=https://hg.mozilla.org/mozilla-central --project=mozilla-central --level=1` and got no errors:\n```\n 0:00.54 using current time for params['time']; try setting $CRON_TIME to a timestamp\n 0:00.54 calculated cron schedule time is 2019-05-27 09:30:00\n 0:00.56 not running cron job bouncer-check\n 0:00.56 not running cron job chromium-update\n 0:00.56 not running cron job customv8-update\n 0:00.56 not running cron job nightly-android\n 0:00.56 not running cron job nightly-desktop\n 0:00.56 not running cron job nightly-desktop-linux\n 0:00.56 not running cron job nightly-desktop-osx\n 0:00.56 not running cron job nightly-desktop-win32\n 0:00.56 not running cron job nightly-desktop-win64\n 0:00.56 not running cron job nightly-desktop-win64-aarch64\n 0:00.56 not running cron job periodic-update\n 0:00.56 not running cron job pipfile-update\n 0:00.56 not running cron job searchfox-index\n** 0:00.56 not running cron job tp6m-fennec-v64**\n```\nFeel free to add to this review whoever is relevant.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32674",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "28": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0aa99f6f8cc4",
+        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
+        "commit_message": "No bug: Update fenix raptor config with new application id, index r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33150",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "63": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4967a509cea0",
+        "commit_author": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1550553 - Move remaining cold page load GVE suites to trunk/central/try r=perftest-reviewers,sparky\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33320",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "27": {
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-06-03T16:03:01.000000",
+    "changeset_commits": {
+      "11": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=68c7b60b49e1",
+        "commit_author": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33467",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4656c6e4964a",
+        "commit_author": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1554733 Use robustcheckout for periodic file udpates r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32843",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "16": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cf13d6e64f97",
+        "commit_author": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out changeset 4656c6e4964a (bug 1554733) for linting failure in periodic_file_updates.sh CLOSED TREE",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9baa0e441779",
+        "commit_author": "Simon Fraser <sfraser@mozilla.com>",
+        "commit_message": "Bug 1554733 Use robustcheckout for periodic file udpates r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com//D32843",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "28": {
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-06-02T09:44:49.000000",
+    "changeset_commits": {
+      "30": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=db8e16e1fe9f",
+        "commit_author": "Daniel Varga <dvarga@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound",
+        "files_changed": "This commit contains 15 files changed."
+      }
+    }
+  },
+  "29": {
+    "pusher": "dvarga@mozilla.com",
+    "date_of_push": "2019-06-01T09:40:47.000000",
+    "changeset_commits": {
+      "43": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4f56db8e65a6",
+        "commit_author": "Mike Shal <mshal@mozilla.com>",
+        "commit_message": "Bug 1553065 - Move profile-use mozconfig info into common mozconfigs; r=firefox-build-system-reviewers,chmanchester\n\nThe 3-tier PGO builds used a separate mozconfig called 'profile-use' for\nthe final tier. This created a problem when it rode to beta, since the\nsame mozconfig was used for all trees, which meant we ended up with\nnightly branding on beta builds.\n\nWith the PGO-enabling logic in common mozconfigs, we can enable it by\nsetting the MOZ_PGO_PROFILE_USE environment variable from the task\ndefinition. All of the final-tier PGO builds now use the nightly, beta,\netc mozconfigs like before, so branding should be intact.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33172",
+        "files_changed": "This commit contains 10 files changed."
+      }
+    }
+  },
+  "30": {
+    "pusher": "aiakab@mozilla.com",
+    "date_of_push": "2019-05-31T21:48:40.000000",
+    "changeset_commits": {
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c3cf80ebcd29",
+        "commit_author": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1555330 - Add p2 aarch64 to youtube playback test. r=perftest-reviewers,sparky\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33006",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "14": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c09907b96986",
+        "commit_author": "Florin Strugariu <fstrugariu@mozilla.com>",
+        "commit_message": "Bug 1508694 Turn off talos stylo sequential threads tp6 r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32977",
+        "files_changed": "This commit contains 25 files changed."
+      },
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=93ae54d47ca4",
+        "commit_author": "Gijs Kruitbosch <gijskruitbosch@gmail.com>",
+        "commit_message": "Bug 1196094 - use e10s when doing PGO profiling, r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32329",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "44": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=16872c13ee93",
+        "commit_author": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1554286 - move Mac builds to Rust 1.36-beta; r=chmanchester\n\nWe would like to switch to using cross-language LTO on all of our\nplatforms, and we need to use a beta version of Rust on Mac to do that.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33316",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "48": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a73077366144",
+        "commit_author": "Arnold Iakab <ariakab@mozilla.com>",
+        "commit_message": "Bug 1512607 Intermittent Windows raptor [taskcluster:error] Task aborted - max run time exceeded r=rwood,perftest-reviewers,Bebe\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33259",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "31": {
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-05-31T17:03:46.000000",
+    "changeset_commits": {
+      "46": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7613b6467c73",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1546322 - Modify merge scripts to not modify Fennec mozconfigs anymore r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33014",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8f6b95ca75d7",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1553853 - Rename \"nightly-android\" hooks to \"nightly-geckoview\" r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32968",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "60": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=74ee6a67d07b",
+        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+        "commit_message": "Bug 1552573 - nightly_fennec: Use task.kind instead of task.label r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32844",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "63": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3a5ec7efe864",
+        "commit_author": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1555032 - [taskgraph] Add ability to pass external optimize strategies via env, r=tomprince\n\nThis allows users to set TASKGRAPH_OPTIMIZE_STRATEGIES to a\npython_path.find_object string. E.g:\n\n    TASKGRAPH_OPTIMIZE_STRATEGIES=\"module:strategies\" ./mach taskgraph optimized\n\nThis opens the door to swap in external strategies at runtime and will be\nused for back testing experimental strategies.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33203",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "32": {
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-05-31T03:59:09.000000",
+    "changeset_commits": {
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4796f71f2be4",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1555458 - Stop android-hw debug jittest/jsreftest on integration branches; r=egao\n\nIncremental effort to improve android-hw device availability: Stop running android-hw\ndebug jsreftest and jittest on integration branches.\nAlso, remove the option for android-hw opt jittest on try. opt is a nice alternative\nto pgo on try in general, but the risk of accidental (unnecessary) inclusion in\ntry pushes makes this a luxury we cannot afford on android-hw.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33156",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9137795c6779",
+        "commit_author": "Chris Hartjes <chartjes@mozilla.com>",
+        "commit_message": "Bug 1544470 - Added in code that can be used to take a snapshot of CPU usage on Android devices; r=rwood\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27954",
+        "files_changed": "This commit contains 8 files changed."
+      },
+      "36": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ce2035e99612",
+        "commit_author": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out changeset 9137795c6779 (bug 1544470) for linting failure in raptor.py CLOSED TREE",
+        "files_changed": "This commit contains 8 files changed."
+      },
+      "47": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=440bee55379e",
+        "commit_author": "Rob Wood <rwood@mozilla.com>",
+        "commit_message": "Bug 1554308 - Raptor tests on Beta are running on both opt & pgo builds r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33177",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "63": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c296c76dd00a",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1553915: Check for `mach` binary before trying to use it to run python; r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33175",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "33": {
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-05-30T21:48:30.000000",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=78effb4c21c1",
+        "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1555396 - Bump revision of sccache built in automation to current master. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33102",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d28b10b98942",
+        "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1499147 - Produce archives of toolchains suitable for use with sccache-dist in automation. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33101",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "16": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c4f64fa957d9",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1543932 - partner repacks bustage in 68.0, r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33124",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e1a84cfd134e",
+        "commit_author": "Nick Alexander <nalexander@mozilla.com>",
+        "commit_message": "Bug 1508976 - Produce a multi-architecture GeckoView \"fat AAR\". r=glandium\n\nThis follows the model set down for EME artifacts:\n\n- a new tier is added that uses a new Python build action to fetch and\n  artifacts\n- the action unpacks the fetched artifacts and moves specific inputs\n  into places expected by the build and packager\n- in automation, MOZ_ARTIFACT_TASK* is used to ensure the artifacts\n  come from the correct tasks\n\nIn this case, the artifact fetching is done entirely in a new Python\nbuild action that internally uses `mach artifact install --job ...`.\nThe action also verifies that the fetched artifacts are compatible and\nthat we're not assembling a fat AAR that is nonsensical.  The specific\ninputs are not used in the Fennec APK that is produced; they're only\nused in the GeckoView AAR that is produced.\n\nThe artifact fetching itself required tweaking to fetch only\n`target.maven.zip` artifacts and to not unpack them.\n\nThe specific inputs used are the native libraries (libs/$ARCH/*.so)\nand the architecture-specific preference files ($ARCH/greprefs.js and\ndefaults/pref/$ARCH/geckoview-prefs.js).  None of these inputs are\nimpacted by l10n.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31572",
+        "files_changed": "This commit contains 11 files changed."
+      },
+      "42": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=33c63df7ff3b",
+        "commit_author": "Nick Alexander <nalexander@mozilla.com>",
+        "commit_message": "Bug 1522581 - Publish GeckoView multi-architecture fat AAR Nightly. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15774",
+        "files_changed": "This commit contains 7 files changed."
+      }
+    }
+  },
+  "34": {
+    "pusher": "malexandru@mozilla.com",
+    "date_of_push": "2019-05-30T09:45:59.000000",
+    "changeset_commits": {
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cabf1bb20b97",
+        "commit_author": "shindli <shindli@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "35": {
+    "pusher": "malexandru@mozilla.com",
+    "date_of_push": "2019-05-30T09:44:16.000000",
+    "changeset_commits": {
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=333800d40691",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1549889: Add support for displaying WNP conditionally on build-id; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33039",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "36": {
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-05-30T03:47:55.000000",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=de1986c0ec61",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [release] Remove some unused release kinds and transforms; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32532",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=92d2f8bb6903",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [release] Remove an unused index type; r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32533",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e701b54fa8e4",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Remove an unused test transfrom; r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32534",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4715841d1f78",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [taskgraph] Add missing __future__ imports to `taskgraph.util.hg`; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32535",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "25": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0489b95c196f",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555458 - separate android-hw-arm7 test-set to pgo and opt; stop running jsreftests on opt builds r=gbrown\n\nChanges:\n- separate the test-sets used by android-hw-p2-8-0-arm7 to `opt` and `pgo`\n- remove `jsreftests` from `opt` build type\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33072",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "28": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=144de6677776",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555454 - migrate marionette, wdspec, firefox UI, test-verify, mochitest-a11y suites to macosx1014 r=jmaher\n\nTest suite changes:\n- test-verify, marionette, firefox UI, wdspec, mochitest-a11y suites are migrated over to macosx1014 platform (green without requiring intervention)\n\nTest expected outcomes:\n- skip `browser/components/urlbar/tests/browser/browser_locationBarCommand.js` test as per comments in 1554807\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33066",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "37": {
+    "pusher": "shindli@mozilla.com",
+    "date_of_push": "2019-05-29T21:50:20.000000",
+    "changeset_commits": {
+      "2": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2314d2ba078f",
+        "commit_author": "Yura Zenevich <yura.zenevich@gmail.com>",
+        "commit_message": "Bug 1555202 - add accessibility jest tests to other devtools tests running on taskcluster. r=jdescottes\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33008",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3bff8c732fb4",
+        "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
+        "commit_message": "Bug 1554006 - Update builders to rustc 1.35. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32932",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "39": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=34f20e6d7678",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1555156 - task efficiency: reduce chunks of mochitest-chrome for selected platforms r=jmaher\n\nChanges:\n\n- default chunk count is now set to 2\n- added exception rules to maintain current chunk count (3) for slower platforms and build types\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32929",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=84d78bcec7ca",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1555410 - Clear the logcat before starting to record. r=gbrown\n\nThis allows local runs where the emulator stays up between runs to have\na cleaner logcat, because it won't pull historical logcat from the emulator.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33038",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "38": {
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-05-29T11:15:48.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8d86cc081fe5",
+        "commit_author": "Noemi Erli <nerli@mozilla.com>",
+        "commit_message": "Backed out changeset 50beca34e939 (bug 1535056) for causing cron tasks bustages a=backout",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "39": {
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-05-29T09:50:15.000000",
+    "changeset_commits": {
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9b9fa1ebe215",
+        "commit_author": "Oana Pop Rus <opoprus@mozilla.com>",
+        "commit_message": "Merge mozilla-central to inbound.  a=merge CLOSED TREE",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "40": {
+    "pusher": "nerli@mozilla.com",
+    "date_of_push": "2019-05-29T09:48:47.000000",
+    "changeset_commits": {
+      "19": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e6425d92b052",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1555068 - Stop running Android 7.0 x86_64 jsreftest; r=jmaher\n\nWe have sufficient coverage on other test platforms.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32859",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=61e78fd6c946",
+        "commit_author": "Wes Kocher <wkocher@mozilla.com>",
+        "commit_message": "Bug 1550895 - Clear up ambiguities in android wpt tier definitions so they apply correctly.\n\nTaskcluster didn't correctly apply the change back to tier-3 in the previous patch because the wildcard setting the tier to 2 by default beat out the specific line setting tier-3 for the geckoview tests. This patch specifically changes the tier for non-geckoview reftests (fennec runs on x86 emulators) to tier-2, while geckoview reftests (TRA runs on x86_64 emulators) to tier-3.\n\nThis change also explicitly sets the non-reftest tests to tier-2 for all android platforms, because they didn't have the permafails that the reftests seem to have.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32863",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "41": {
+    "pusher": "opoprus@mozilla.com",
+    "date_of_push": "2019-05-28T21:44:47.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9d123a89ede9",
+        "commit_author": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1546119 Raptor warm page-load tests on Firefox android fenix r=perftest-reviewers,rwood\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32101",
+        "files_changed": "This commit contains 11 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=eab176d7b755",
+        "commit_author": "Rok Garbas <rok@garbas.si>",
+        "commit_message": "Bug 1548204 - fixing test for raptor-tp6-8 r=rail\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30479",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=30443ac173c5",
+        "commit_author": "ffxbld <ffxbld@mozilla.com>",
+        "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32678",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "18": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=50beca34e939",
+        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
+        "commit_message": "Bug 1535056 - Validate taskgraph parameters using a schema r=tomprince\n\nValidate taskgraph parameters using an explicit schema\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23756",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b047e2089a78",
+        "commit_author": "Mihai Alexandru Michis <malexandru@mozilla.com>",
+        "commit_message": "Backed out changeset 8b110b9889c3 (bug 1196094) as requested by Gijs.",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "34": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5925360fcc6c",
+        "commit_author": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1554493 - [ci] Improve some formatting in try_option_syntax.py, r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32700",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "35": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c584c415ca35",
+        "commit_author": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1554493 - [ci] Don't run 'fission' tests with try syntax, r=jmaher\n\nDepends on D32700\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32701",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "36": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4caaa2fcdf35",
+        "commit_author": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1554493 - [ci] Re-enable fission tests on try, r=jmaher\n\nDepends on D32701\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32702",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e509c39c7da8",
+        "commit_author": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "Bug 1550685 - Remove Thunderbird release-bouncer-check config from M-C. r=tomprince\n\nbouncer_thunderbird.py is now at c-c:mozharness/releases/bouncer_thunderbird.py\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31387",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "66": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4c84eabf4939",
+        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
+        "commit_message": "No bug: Update refbrow index and use new application id r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32815",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "107": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dbadda4e3c1c",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1547730 - Fix use of absolute imports in codecoverage/*.py r=tomprince\n\nThis is due to a conflicting name in sys path when called from mozharness,\nWhich we fix by making this mozharness file use absolute imports, and import\nfrom the codecoverage module directly rather than set that directory as\na search path.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32408",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "113": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=c3f75e081427",
+        "commit_author": "Oana Pop Rus <opoprus@mozilla.com>",
+        "commit_message": "Merge autoland to mozilla-central. a=merge",
+        "files_changed": "This commit contains 12 files changed."
+      }
+    }
+  },
+  "42": {
+    "pusher": "malexandru@mozilla.com",
+    "date_of_push": "2019-05-28T10:13:20.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5cc220ddf028",
+        "commit_author": "Mihai Alexandru Michis <malexandru@mozilla.com>",
+        "commit_message": "Backed out changeset 48687a76aec5 (bug 1535056) for causing nightly builds to fail. a=backout",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "43": {
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-05-28T09:38:00.000000",
+    "changeset_commits": {
+      "24": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8b110b9889c3",
+        "commit_author": "Gijs Kruitbosch <gijskruitbosch@gmail.com>",
+        "commit_message": "Bug 1196094 - use e10s when doing PGO profiling, r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32329",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "57": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7ba9be16835f",
+        "commit_author": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "Bug 1554632 - reviewbot tasks should use a mozconfig file. r=bastien,sylvestre\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32680",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "65": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f9397b497e49",
+        "commit_author": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1539449 - [mozharness] Ensure content crashes turn task orange even if no stack was printed, r=jmaher\n\nThere's a failure case where content processes are crashing but no stack trace\nis being printed. Test harnesses often rely on the presence of a minidump to\ndetermine whether or not there was a crash, and so in this failure mode report\nsuccess (so tasks are staying green).\n\nThis adds a new string to mozharness' error logs to make sure the task turns\norange. Note: it does not fix the lack of stack traces.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31635",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "67": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ab74270b2ce7",
+        "commit_author": "Sylvestre Ledru <sledru@mozilla.com>",
+        "commit_message": "Bug 1554463 - ftl: Also update the taskcluster job r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32618",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "69": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=48687a76aec5",
+        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
+        "commit_message": "Bug 1535056 - Validate taskgraph parameters using a schema r=tomprince\n\nValidate taskgraph parameters using a schema.\n\nPreviously, parameters were verified using handwritten comparison to a sample set of parameters.\nSwitch to using an explicit schema instead.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23756",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "82": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f44e2e31e5cc",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1553955 - Promote mochitest-media to tier 1 on android-hw and demote to tier 2 on android-em r=jmaher\n\nChanges:\n\n__mochitest__\n- demote `android-em` to tier 2\n- promote `android-hw` to tier 1\n- expand regex for `run-on-projects` specification to include all `android-em` instances, and restrict to `try`\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32541",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "83": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b9a0f1a33642",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1553310 - Enable jsreftest/jittest on android-hw-p2-8-0-arm7-api-16 and correspondinly disable on android-em instances r=jmaher\n\nChanges:\n\n- add `jsreftest` to the list of permitted tests to run on `android-hw-p2-8-0-arm7-api-16`\n- add necessary mozharness setup for `android-hw` for jsreftest\n- disable `android-em` from running jsreftests\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32262",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "107": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2b3b18ec9bf0",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1554039 - Add some missing debug info to the valgrind docker image. r=froydnj\n\nSome debug info for system packages are not available to valgrind in the\nvalgrind docker image, some of which are for libraries actively used by\nFirefox. Not all of them, unfortunately, have debug info available, but\nsome of them do and we add them all. We could skip a few that are not\nreally useful, but that doesn't make a significant difference to the\ndocker image size (~0.3%).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32419",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "44": {
+    "pusher": "archaeopteryx@coole-files.de",
+    "date_of_push": "2019-05-26T16:22:23.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=893e1d6cad95",
+        "commit_author": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1554493 - Don't run fission tests on Try because they are permafailing. a=cleaner-try-pushes",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "45": {
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-05-25T09:39:13.000000",
+    "changeset_commits": {
+      "19": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=61539258029a",
+        "commit_author": "Joel Maher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1544460 - fix reftest annotations and enable for osx 10.14. r=jfkthame,kats\n\nfix reftest annotations and enable for osx 10.14.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32463",
+        "files_changed": "This commit contains 25 files changed."
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=75730b6eaa7b",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1553302 - disable jittest on android-hw aarch64, instead run windows10-aarch64 SM(p) on integration branches r=gbrown\n\nChanges:\n- enabled SM(p) runs on `windows10-aarch64` for `built-projects`\n- turn off `jittest` runs for all platforms matching `android-hw-.*-aarch64/.*`\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32220",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "35": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4490d364605d",
+        "commit_author": "Andrew Halberstadt <ahalberstadt@mozilla.com>",
+        "commit_message": "Bug 1553527 - [ci] Create a new 'fission' test variant r=jmaher\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32196",
+        "files_changed": "This commit contains 8 files changed."
+      },
+      "40": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ddb7366f09a3",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [mozharness] Don't explicitly pass scm-level to mozharness; r=Callek\n\nThe last use of scm level in mozharness is in `mozharness.mozilla.secrets` which\nuses the `MOZ_SCM_LEVEL` environment variable directy.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20897",
+        "files_changed": "This commit contains 8 files changed."
+      }
+    }
+  },
+  "46": {
+    "pusher": "cbrindusan@mozilla.com",
+    "date_of_push": "2019-05-24T21:47:21.000000",
+    "changeset_commits": {
+      "4": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7717ce982073",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1548659 - demote all android-em-4.3 tests to tier 2 and restrict platforms r=jmaher,RyanVM,gbrown\n\nChanges:\n\n- demote all existing `android-em-4.*` tests to tier 2\n- ensure the above tests only run on `try` and `mozilla-central` but with exceptions\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32086",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "30": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ecbe277800aa",
+        "commit_author": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1545055 Run warm page load tests against Fennec v64 in CI r=Bebe,stephendonner\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31770",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "56": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=38013e7d9701",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1553593 - Turn on browser-mochitests for windows-qr. r=jrmuizel\n\nDepends on D32471\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32472",
+        "files_changed": "This commit contains 6 files changed."
+      }
+    }
+  },
+  "47": {
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-05-24T09:53:37.000000",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ebc58c182383",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [release] Fix path to update-verify diff-summary log; r=bhearsum\n\nwhen update-verify migrated from using build-tools to in-tree, the path\nto `diff-summary.log` was not updated.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32403",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9ca9aa85cf98",
+        "commit_author": "Nathan Froyd <froydnj@mozilla.com>",
+        "commit_message": "Bug 1553973 - make run-profileserver.sh collect all .profraw files; r=firefox-build-system-reviewers,mshal\n\nThis change is necessary to make either e10s profiling or LLVM IR-based\nPGO instrumentation work properly, as both will generate multiple\n`.profraw` files.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32390",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "29": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=22fad4a26360",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1548659 - demote all android-em-4.3 tests to tier 2 and restrict platforms r=jmaher,RyanVM,gbrown\n\nChanges:\n\n- demote all existing `android-em-4.*` tests to tier 2\n- ensure the above tests only run on `try` and `mozilla-central` but with exceptions\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32086",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "30": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4488934be4dd",
+        "commit_author": "arthur.iakab <aiakab@mozilla.com>",
+        "commit_message": "Backed out changeset 22fad4a26360 (bug 1548659) for Decision Task bustage CLOSED TREE",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "31": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=03f986bdfdc3",
+        "commit_author": "alexandru.ionescu <alexandru.ionescu@softvision.ro>",
+        "commit_message": "Bug 1546323 Run cold page load tests against Fennec v64 in CI r=Bebe\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31773",
+        "files_changed": "This commit contains 16 files changed."
+      }
+    }
+  },
+  "48": {
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-05-24T03:53:25.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=52e365586577",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1552563 - do not run compiz on linux tests unless needed by tests r=jmaher\n\nChanges:\n\n- removed UBUNTU_1604 detection mechanism at top of `test-linux.sh` file, since all tests are run on Ubuntu 16.04 anyway\n- added new environment value `NEED_COMPIZ`, defaulting to `true`, which will inform the test if compiz is required for tests\n- from `test-linux.sh` remove unconditional invocation of compiz, and replace it with detection of `NEED_COMPIZ` environment variable\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31724",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "17": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aaee3b838d53",
+        "commit_author": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "Bug 1552422 - correct Balrog scope for comm-esrXX branches. r=tomprince\n\nCopying fix from THUNDERBIRD_60_VERBRANCH on mozilla-esr60.\nhttps://hg.mozilla.org/releases/mozilla-esr60/rev/eae0435135ad6713bf9d776f71b7d7cc3e01756d\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31584",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "20": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d63dc26dba15",
+        "commit_author": "Joel Maher <jmaher@mozilla.com>",
+        "commit_message": "Bug 1553845 - turn on all talos/raptor jobs for osx 10.14. r=gbrown\n\nturn on all talos/raptor jobs for osx 10.14.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32334",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=743a0b35f1cb",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1549776 - Fix path to artifact. r=gw\n\nTypo when I first landed this, but nothing relied on it so it didn't matter.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32009",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "26": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=83eafb86df0f",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1549776 - Add a script to run wrench reftests on an Android emulator. r=gbrown\n\nThis adds an android_emulator_wrench.py script that uses mozharness to\ncontrol the Android emulator, and run the wrench reftests. It has an\nassociated wrench.py config script which is similar to existing android\nconfig scripts.\n\nThe android_emulator_wrench script is structured a little differently\nfrom other android mozharness scripts, mostly for two reasons:\n\n1) I tried hard to make it locally runnable by developers, using\n   ./mach python. This allows develpers to more easily reproduce the\n   setup that runs in automation, and does so without duplicating a lot\n   of code.\n\n2) I also tried to make the script use fewer of what I consider to be\n   \"opaque\" mozharness features, like the actions list which can run\n   hard-to-find preflight and postflight functions. Instead of treating\n   mozharness like a framework and filling in some functions for it to\n   invoke as part of it's grand plan, I treat it more like a library and\n   specifically the functions I want in the order that I want, which\n   makes it easier for novice developers to debug problems.\n\nAs part of writing this script I extracted a few helper functions and made\nsome minor changes to existing android/adb mozharness machinery, but these\nare all simple refactorings and should introduce no functional change.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32014",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "27": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9ab833800af2",
+        "commit_author": "Kartikaya Gupta <kgupta@mozilla.com>",
+        "commit_message": "Bug 1549776 - Add taskcluster jobs for running wrench on Android. r=jrmuizel\n\nAlso docs for running the same thing locally.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32015",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "55": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aeff5661bcab",
+        "commit_author": "Andreea Pavel <apavel@mozilla.com>",
+        "commit_message": "Backed out changeset 52e365586577 (bug 1552563) for failing test_getUserMedia_basicScreenshare.html on a CLOSED TREE",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "56": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2196d50bfb2d",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1552563 - remove mochitest-media from whitelist not requiring compiz CLOSED TREE\n\nSummary:\nChanges:\n- remove `mochitest-media` from the whiteslist - compiz is required.\n\nTest Plan: https://treeherder.mozilla.org/#/jobs?repo=try&resultStatus=pending%2Crunning%2Csuperseded%2Cusercancel%2Cretry%2Csuccess%2Ctestfailed%2Cbusted%2Cexception&classifiedState=unclassified&group_state=expanded&revision=f16b0ce4af9e575ef2ec877b405698c0b0c62f92\n\nReviewers: jmaher, gbrown\n\nBug #: 1552563\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32383",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "60": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cd5d8525541f",
+        "commit_author": "Tom Ritter <tom@mozilla.com>",
+        "commit_message": "Bug 1471698 - Remove our binutils-corruption-avoiding workaround for mingw-clang r=froydnj\n\nDepends on D31347\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31349",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "49": {
+    "pusher": "aciure@mozilla.com",
+    "date_of_push": "2019-05-23T21:52:03.000000",
+    "changeset_commits": {
+      "36": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=df8b61492199",
+        "commit_author": "Ionut Goldan <igoldan@mozilla.com>",
+        "commit_message": "Bug 1553137 - Pin stable Chromium revision on affected platforms r=perftest-reviewers,davehunt\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32117",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "50": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=494e3008ec9d",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [declarative-artifacts] Report task being generated in artifact_map errors; r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31741",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "55": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ae1b2b5ee05c",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1553224 - Run test-verify on Android x86_64; r=jmaher\n\nI had been waiting for more complete x86_64 coverage, but realized that's\nnot strictly necessary: TV works okay as-is on Android x86_64.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32347",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  }
+}
