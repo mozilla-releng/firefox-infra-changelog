@@ -17,7 +17,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     @staticmethod
     def _get_current_time():
-        return return_time(output_time_format="%Y-%m-%dT%H:%M:%S")
+        return return_time(output_time_format="%Y-%m-%d %H:%M:%S UTC")
 
     def _load_local_json_data(self):
         return json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
@@ -157,7 +157,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.md_ready_data = []
 
     def _changelog_md_header(self):
-        return "## " + "Commits in production - for {} days".format(DEFAULT_DAYS) + "\n" + "###" + "Generated on: {}".format(self._get_current_time()) + "\n"
+        return "## " + "Commits in production - for {} days".format(DEFAULT_DAYS) + "\n" + "### " + "Generated on: {}".format(self._get_current_time()) + "\n"
 
     @staticmethod
     def _changelog_md_links(repo, json_link, md_link):

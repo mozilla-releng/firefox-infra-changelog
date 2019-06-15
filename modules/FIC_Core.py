@@ -16,7 +16,7 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
         FICLogger.__init__(self)
         self.check_tool_integrity()
 
-    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=DEFAULT_DAYS, logging=False):
+    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, push=False, days=DEFAULT_DAYS, logging=False):
         if logging:
             self.console_logging()
 
@@ -38,6 +38,9 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
 
         self.populate_changelog_json(days)
         self.create_changelog_md()
+
+        if push:
+            self.push_to_git()
 
     def _run_all_behavior(self):
         # Describes the behavioral of the script that runs in all mode.
