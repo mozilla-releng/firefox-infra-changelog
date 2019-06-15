@@ -23,8 +23,6 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
         if all:
             self.LOGGER.debug("Run all behavior mode")
             self._run_all_behavior()
-            if push:
-                self.push()
 
         if git_only:
             self.LOGGER.debug("Run Github mode")
@@ -40,6 +38,9 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
 
         self.populate_changelog_json(days)
         self.create_changelog_md()
+
+        if push:
+            self.push_to_git()
 
     def _run_all_behavior(self):
         # Describes the behavioral of the script that runs in all mode.
