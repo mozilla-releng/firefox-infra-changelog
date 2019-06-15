@@ -726,18 +726,6 @@
             "files_changed": "This commit contains 1 files changed."
           }
         }
-      },
-      "1": {
-        "pusher": "cosheehan@mozilla.com",
-        "date_of_push": "2019-06-12T14:40:33.000000",
-        "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=6b4c5f3ae719",
-            "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
-            "commit_message": "py3: global replace `iteritems()` with `items()` (Bug 1541166) r=lars\n\n`iteritems()` doesn't exist in Py3, with `items()` instead returning\na generator by default. This commit switches all instances of the\nold `iteritems` method with `items`. In all cases except one, we\nwere evaluating the full list of items regardless of the generator\nbased function call, and the instance where we were only returned\na small number of items, so I don't expect any performance hit here\nwhile we are still on Python 2.\n\nThe same operation has been performed for `iterkeys()` and `keys()`,\nbut only a single instance was found and is included in this commit.\n\nThere are still some instances of `iteritems` in the repo, in the\n`third_party` directory of vendored libraries. These will be handled\nin bug 1557783.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34193",
-            "files_changed": "This commit contains 10 files changed."
-          }
-        }
       }
     }
   }
