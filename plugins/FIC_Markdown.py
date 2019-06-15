@@ -157,7 +157,7 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.md_ready_data = []
 
     def _changelog_md_header(self):
-        return "## " + "Commits in production - for {} days".format(DEFAULT_DAYS) + "\n" + "###" + "Generated on: {}".format(self._get_current_time()) + "\n"
+        return "## " + "Commits in production - for {} days".format(DEFAULT_DAYS) + "\n" + "### " + "Generated on: {}".format(self._get_current_time()) + "\n"
 
     @staticmethod
     def _changelog_md_links(repo, json_link, md_link):
