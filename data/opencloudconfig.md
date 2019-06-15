@@ -1,7 +1,0 @@
-## OpenCloudConfig MD table
-Generated on: 2019-06-15T12:13:13
-
-| Commit Number | Commiter | Commit Message | Commit Url | Date | 
-|:-----:|:-----:|:----------------------------------:|:------:|:----:| 
-|1|Pete Moore|Testing generic-worker 15.0.1 / taskcluster-proxy 5.1.0 on *STAGING*This change does _not_ affect any production workers. Commit made with: ./gecko-try.sh 15.0.1 5.1.0See https://github.com/taskcluster/generic-worker/blob/fa359f7d2855978018e5c5bfc34c18d72bc60300/mozilla-try-scripts/gecko-try.shdeploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-.. [continue reading]( https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/ffa609c43cc11efeadd38969f932b996c1b69518 )|[URL](https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/ffa609c43cc11efeadd38969f932b996c1b69518)|2019-06-14 08:03:46
-|2|Pete Moore|Testing generic-worker 15.0.0 / taskcluster-proxy 5.1.0 on *STAGING*This change does _not_ affect any production workers. Commit made with: ./gecko-try.sh 15.0.0 5.1.0See https://github.com/taskcluster/generic-worker/blob/226ee6f4f6575d070a47697fcb3135f885aeea50/mozilla-try-scripts/gecko-try.shdeploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-.. [continue reading]( https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/2e9218f8d224d55a31adc46ebf8880412d8d21f7 )|[URL](https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/2e9218f8d224d55a31adc46ebf8880412d8d21f7)|2019-06-13 12:12:42
