@@ -1,5 +1,5 @@
 ## mozapkpublisher MD table
-Generated on: 2019-06-15T12:07:55
+Generated on: 2019-06-15T12:13:16
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:-----:|:-----:|:----------------------------------:|:------:|:----:| 
