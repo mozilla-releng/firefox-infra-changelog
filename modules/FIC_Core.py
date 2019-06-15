@@ -16,13 +16,15 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
         FICLogger.__init__(self)
         self.check_tool_integrity()
 
-    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=DEFAULT_DAYS, logging=False):
+    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, push=False, days=DEFAULT_DAYS, logging=False):
         if logging:
             self.console_logging()
 
         if all:
             self.LOGGER.debug("Run all behavior mode")
             self._run_all_behavior()
+            if push:
+                self.push()
 
         if git_only:
             self.LOGGER.debug("Run Github mode")
