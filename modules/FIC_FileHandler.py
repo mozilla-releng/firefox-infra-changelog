@@ -229,7 +229,13 @@ class FICFileHandler(FICLogger, FICDataVault):
         return generated_name
 
     def is_readable(self, directory_name, file_name):
-        # os.access() is used with two arguments, file_name and os.R_OK to check if the file can be read
+        """
+        Checks to see if the file contents can be read. 
+        It uses os.access() with two arguments:
+            1. file_name that needs to be checked 
+            2. os.R_OK expected access level.
+        In case the check fails, a criticall log will be recored and the script will exit with exit code #8
+        """
         if os.access(self.construct_path(directory_name, file_name), os.R_OK):
             self.LOGGER.debug("File \"{}\" can be read.".format(self.construct_path(directory_name, file_name)))
             return True
