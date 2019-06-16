@@ -1,5 +1,19 @@
 ## OOP Branch
 
+## Run modes and avaiable arugments.
+Running the script can be done using python + argument options.
+
+| Short |    Verbose    |                       Description                             |
+|  :-:  |      :-:      |                           :-:                                 |
+|  -a   | --all         | Runs script for all avaiable repositories                     |
+|  -g   | --git         | Runs script only for repos that are on GitHub                 |
+|  -hg  | --mercurial   | Runs script only for repos that are on Mercurial              |
+|  -r   | --repo        | Let the user choose for which repositories to run             |
+|  -l   | --logging     | Activate logger output in the console                         |
+| -days | --days        | Generate the changelog.md for _int_ amount of days            |
+|  -p   | --push        | Runs for all available repositories and auto-push to github   |
+| -dev  | --development | Activate development mode                                     |
+|  -s   | --skip-menu   | Skip MainMenu. Used for automatization.                       |
 
 ## Running the script in pycharm without `--dev` argument
 Can be done while running the client.py with arguments:
