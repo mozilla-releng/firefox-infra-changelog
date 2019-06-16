@@ -116,6 +116,11 @@ class FICFileHandler(FICLogger, FICDataVault):
             self._download_missing_files()
 
     def _download_missing_files(self):
+        """
+        Downloads the missing modules and writes them to individual files.
+        The base_url will be later modified to acomodate for later updates and modifications (the oop 
+        branch can be deleted after a while and cause issues).
+        """
         import requests
         base_url = "https://raw.githubusercontent.com/mozilla-releng/firefox-infra-changelog/oop/modules/"
         for file in self._missing_files:
