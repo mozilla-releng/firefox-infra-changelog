@@ -265,7 +265,16 @@ class FICFileHandler(FICLogger, FICDataVault):
             return False
 
     def move_to_final_location(self, old_path, old_file, new_path, new_file):
-
+        """
+        Moves a file to a new path.
+        It accepts 4 arguments:
+         - 1. Old Path name
+         - 2. Old File name
+         - 3. New Path name
+         - 4. New File name
+        
+        It uses os.rename() function in order to move the file.
+        """
         try:
             os.rename(self.construct_path(old_path, old_file), self.construct_path(new_path, new_file))
             self.LOGGER.info("Successfully moved to new path: {}".format(self.construct_path(new_path, new_file)))
