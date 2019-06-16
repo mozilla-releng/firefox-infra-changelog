@@ -25,6 +25,7 @@ The available arguments are shown in the following table:
 ## Running the script in pycharm without `--dev` argument
 
 Can be done while running the client.py with arguments:
+
 |            |                                   |
 |    :-:     |              :-:                  |
 |   `-a -l`  |  mode all and active logging      |
