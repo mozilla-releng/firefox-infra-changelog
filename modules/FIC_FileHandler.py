@@ -23,6 +23,11 @@ class FICFileHandler(FICLogger, FICDataVault):
 
     @staticmethod
     def _check_dev_mode():
+        """
+        Method that verifies if "-dev" arguments has been used while calling the script, if so
+        returns the parrent directory, else the current directory.
+        Usefull when individual parts/modules are called on their own.
+        """
         import sys
         if "-dev" in sys.argv:
             return os.path.pardir
