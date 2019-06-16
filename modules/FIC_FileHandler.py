@@ -155,6 +155,7 @@ class FICFileHandler(FICLogger, FICDataVault):
         self._check_module_files()
 
     def load(self, directory, file_name):
+        """Returns a loaded file content."""
         return open(self.construct_path(directory, file_name))
 
     def save(self, directory, file_name, content):
