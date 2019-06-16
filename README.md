@@ -1,8 +1,11 @@
 ## OOP Branch
 
 ## Run modes and avaiable arugments.
-Running the script can be done using python + argument options.
-
+Running the script can be done using:
+```Bash
+python3 client.py -a
+```
+The available arguments are shown in the following table:
 | Short |    Verbose    |                       Description                             |
 |  :-:  |      :-:      |                           :-:                                 |
 |  -a   | --all         | Runs script for all avaiable repositories                     |
