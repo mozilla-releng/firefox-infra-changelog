@@ -130,6 +130,7 @@ class FICFileHandler(FICLogger, FICDataVault):
             f.close()
 
     def construct_path(self, directory_name, file_name):
+        """Returns the joined path and is usefull for OS cross compatibility"""
         if (directory_name is None) and (file_name is None):
             return self._check_dev_mode()
 
