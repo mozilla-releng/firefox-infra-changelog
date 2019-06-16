@@ -9,6 +9,7 @@ python3 client.py -a
 ```
 
 The available arguments are shown in the following table:
+
 | Short |    Verbose    |                       Description                             |
 |  :-:  |      :-:      |                           :-:                                 |
 |  -a   | --all         | Runs script for all avaiable repositories                     |
