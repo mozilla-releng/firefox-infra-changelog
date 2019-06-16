@@ -159,6 +159,7 @@ class FICFileHandler(FICLogger, FICDataVault):
         return open(self.construct_path(directory, file_name))
 
     def save(self, directory, file_name, content):
+        """Writes content to md/json file. Also handles unknown file types."""
         if file_name.endswith(".md"):
             with open(self.construct_path(directory, file_name), "a") as markdown_file:
                 markdown_file.write(content)
