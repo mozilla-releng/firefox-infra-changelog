@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>firefox-infra-changelog.modules.FIC_MainMenu API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>firefox-infra-changelog.modules.FIC_MainMenu</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+import sys
+import json
+import argparse
+from modules.FIC_Core import FICCore
+
+from modules.config import DEFAULT_DAYS, REPOSITORIES_FILE
+
+
+class FICMainMenu(FICCore):
+    def __init__(self):
+        FICCore.__init__(self)
+        self.all = False
+        self.git_only = False
+        self.hg_only = False
+        self.repo_selection = False
+        self.logging = False
+        self.days = DEFAULT_DAYS
+        self.push = False
+        self.dev = False
+        self.skip_menu = False
+        self.parser = argparse.ArgumentParser()
+        self.arguments_set = False  # Check to see if we set the Flag values or not. Helps to skip un-needed iterations.
+
+    def start(self):
+        &#34;&#34;&#34;
+        The entry point for script. Runs the entire logic depending of the arguments.
+        &#34;&#34;&#34;
+        # Set all argument flags, based on runtime arguments.
+        self._available_arguments()
+
+        # Check if we want to skip the menu or not.
+        if not self.skip_menu:
+            self._main_menu()
+
+        # Skip the menu.
+        else:
+            # TODO: Add ability to skip every menu. Not only ALL
+            # Check if we ONLY typed `python client.py -s/--skip-menu`
+            # If check is True, set self.all = True then run FIC main logic.
+            # We don&#39;t need to check if &#34;-s/--skip-menu&#34; is present, as this is the only way to
+            # enter this else statement.
+            self.all = True if len(sys.argv) &lt;= 2 else self.all
+
+            self.run_fic(all=self.all,
+                         git_only=self.git_only,
+                         hg_only=self.hg_only,
+                         days=self.days,
+                         logging=self.logging)
+
+    def _available_arguments(self):
+        &#34;&#34;&#34;
+        This method reads and set all the arguments flags.
+        &#34;&#34;&#34;
+        self.parser.add_argument(&#39;-a&#39;, &#39;--all&#39;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#39;Runs script for all available repositories&#39;)
+        self.parser.add_argument(&#39;-g&#39;, &#39;--git&#39;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#39;Runs script only for repos that are on GitHub&#39;)
+        self.parser.add_argument(&#39;-hg&#39;, &#39;--mercurial&#39;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#39;Runs script only for repos that are on Mercurial&#39;)
+        self.parser.add_argument(&#34;-r&#34;, &#34;--repo&#34;, required=False, nargs=&#34;*&#34;,
+                                 help=&#34;Let the user choose for which repositories to run&#34;)
+        self.parser.add_argument(&#34;-l&#34;, &#34;--logging&#34;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#34;Activate logger output in the console&#34;)
+        self.parser.add_argument(&#34;-days&#34;, &#34;--days&#34;, required=False, action=&#39;store&#39;, default=DEFAULT_DAYS,
+                                 help=&#34;Generate the changelog.md for &lt;int&gt; amount of days.&#34;)
+        self.parser.add_argument(&#34;-p&#34;, &#34;--push&#34;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#34;Runs for all available repositories and auto-push to github&#34;)
+        self.parser.add_argument(&#34;-dev&#34;, &#34;--development&#34;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#34;Activate development mode&#34;)
+        self.parser.add_argument(&#34;-s&#34;, &#34;--skip-menu&#34;, required=False, action=&#34;store_true&#34;, default=False,
+                                 help=&#34;Skip MainMenu. Used for automatization.&#34;)
+
+        self.args = self.parser.parse_args()
+        self._set_arguments_flags()
+
+    def _set_arguments_flags(self):
+        &#34;&#34;&#34;
+        This method changes the flags state depending of the arguments.
+        &#34;&#34;&#34;
+        # Check that we have parsed all arguments.
+        if not self.args:
+            self._available_arguments()
+        else:
+            pass
+
+        # Create and set flags.
+        if self.args.all:
+            self.all = True
+
+        if self.args.git:
+            self.git_only = True
+
+        if self.args.mercurial:
+            self.hg_only = True
+
+        # Check if Manual Repo Selection is present and in which mode:
+        #   - If `-r` is missing.                                 (Return: False)
+        #   - If `-r` is present, but no list present.            (Return: True)
+        #   - If `-r` is present and a list of repos are present. (Return: List of repos)
+        repo_selection = False if isinstance(self.args.repo, type(None)) else self.args.repo
+        if repo_selection:
+            self.repo_selection = self.args.repo
+
+        if self.args.logging:
+            self.logging = True
+
+        if self.args.days:
+            if str(self.args.days).isdecimal():
+                self.days = int(self.args.days)
+            else:
+                print(&#34;When using -d/--days please insert a number of days.\n&#34;
+                      &#34;Example: python3 client.py -d 30 or --days 10&#34;)
+                exit(4)
+
+        if self.args.push:
+            self.push = True
+
+        if self.args.development:
+            self.dev = True
+
+        if self.args.skip_menu:
+            self.skip_menu = True
+
+        self.arguments_set = True
+
+    def _construct_mainmenu_text(self):
+        &#34;&#34;&#34;
+        Creates the main-menu content and prepare it to be displayed.
+        :return: the main menu text
+        &#34;&#34;&#34;
+        if not self.arguments_set:
+            self._set_arguments_flags()
+        else:
+            pass
+
+        menu_header = &#34;Welcome to Ciduty&#39;s Firefox Infra Changelog!\n&#34; \
+                      &#34;You can use the options below to run the script according to your needs.\n&#34;
+
+        menu_logging = &#34;====        Logging  is active        ====\n&#34;
+        menu_dev     = &#34;====        Dev Mode is active        ====\n&#34;
+        menu_days    = f&#34;==== Generating Changelog for {self.days} days  ====\n&#34;
+
+        menu_notifications = (menu_logging if self.logging else &#34;&#34;) + \
+                             (menu_dev if self.dev else &#34;&#34;) + \
+                             (menu_days if self.days is not DEFAULT_DAYS else &#34;&#34;)
+
+        menu_options = &#34;1. Run script for all available repositories \n&#34; \
+                       &#34;2. Run script only for repositories that are on GitHub\n&#34; \
+                       &#34;3. Run script only for repositories that are on Mercurial\n&#34; \
+                       &#34;4. Run script for repositories that you choose\n&#34; \
+                       &#34;5. Activates logger output in console\n&#34; \
+                       &#34;6. Generates changelog.md for the amount of days set by user\n&#34; \
+                       &#34;7. Run the script for all repositories and push changes to Github\n&#34; \
+                       &#34;0. Exit application.&#34;
+
+        return menu_header + menu_notifications + menu_options
+
+    def _main_menu(self):
+        &#34;&#34;&#34;
+        This method prints the main menu and reads the chosen options.
+        &#34;&#34;&#34;
+        print(self._construct_mainmenu_text())
+        self.choice = int(input())
+        self._run_selected_menu(choice=self.choice)
+
+    def _run_selected_menu(self, choice):
+        &#34;&#34;&#34;
+        This method calls the run_fic method depending of the chosen option.
+        :param choice: the chosen option by user
+        &#34;&#34;&#34;
+        if choice == 1:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: ALL Repositories.&#34;)
+            self.run_fic(all=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 2:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: Git Repositories Only.&#34;)
+            self.run_fic(git_only=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 3:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: HG Repositories Only.&#34;)
+            self.run_fic(hg_only=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 4:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: Custom Repositories.&#34;)
+            self._repo_selection_menu()
+            self.run_fic(repo_list=self.repo_selection)
+
+        if choice == 5:
+            self.logging = not self.logging
+            if self.logging:
+                self.LOGGER.info(&#34;Console Logging has been activated.&#34;)
+            else:
+                self.LOGGER.info(&#34;Console Logging has been deactivated.&#34;)
+            self._main_menu()
+
+        if choice == 6:
+            print(&#34;Please input the amount of days `changelog.md` will be generated for:&#34;)
+            days = input()
+
+            if str(days).isdecimal():
+                self.days = int(days)
+                self.LOGGER.info(f&#34;DEFAULT_DAYS parameter has been changed to: {self.days} day(s)&#34;)
+                self._main_menu()
+            else:
+                print(&#34;Amount of days need to be an integer!\n&#34;
+                      &#34;Moving back to Main Menu.&#34;)
+                self._main_menu()
+
+        if choice == 7:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: ALL Repositories and PUSH changes to GitHub&#34;)
+            self.run_fic(all=True,
+                         push=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 0:
+            exit()
+
+    def _repo_selection_menu(self):
+        &#34;&#34;&#34;
+        Load available repositories and prepares them for user selection.
+        &#34;&#34;&#34;
+        repo_list = json.load(self.load(None, REPOSITORIES_FILE))
+        temp_list = []
+
+        # Argument &#34;-r&#34; provided, but no list of repositories is included.
+        # Enter Selection Menu.
+        if not self.repo_selection or (len(self.repo_selection) == 0):
+            self._construct_repo_selection(repo_list)
+
+        # Argument &#34;-r&#34; provided and list of repositories is included.
+        # Skip Selection Menu
+        else:
+            for key in repo_list:
+                for repo in repo_list.get(key):
+                    for selection in self.repo_selection:
+                        if int(selection) == repo_list.get(key).get(repo).get(&#34;order&#34;):
+                            temp_list.append((int(selection), repo, key))
+
+            self.repo_selection = []
+            for _, repo, key in temp_list:
+                self.repo_selection.append((repo, key))
+
+    def _construct_repo_selection(self, repo_list):
+        &#34;&#34;&#34;
+        The method that creates the list of the repositories chosen by user.
+        &#34;&#34;&#34;
+        temp_list = []
+        self.repo_selection = []
+        for key in repo_list:
+            for repo in repo_list.get(key):
+                temp_list.append((repo_list.get(key).get(repo).get(&#34;order&#34;), repo, key))
+        print(&#34;Available Repositories:&#34;)
+        for entry in sorted(temp_list):
+            print(entry[0], entry[1])
+
+        print(&#34;Enter the number of the repositorie(s) you want to run, separated by comma.\n&#34;
+              &#34;Example: 1, 5, 20, 3, 2&#34;)
+        choices = input()
+        choices = choices.split(&#34;,&#34;)
+
+        self.repo_selection = []
+        for key in repo_list:
+            for repo in repo_list.get(key):
+                for choice in choices:
+                    if int(choice) == repo_list.get(key).get(repo).get(&#34;order&#34;):
+                        self.repo_selection.append((repo, key))</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_MainMenu.FICMainMenu"><code class="flex name class">
+<span>class <span class="ident">FICMainMenu</span></span>
+</code></dt>
+<dd>
+<section class="desc"><p>This class handles the extracting, filtering and writing data into json file for git repos
+that affect firefox infra</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">class FICMainMenu(FICCore):
+    def __init__(self):
+        FICCore.__init__(self)
+        self.all = False
+        self.git_only = False
+        self.hg_only = False
+        self.repo_selection = False
+        self.logging = False
+        self.days = DEFAULT_DAYS
+        self.push = False
+        self.dev = False
+        self.skip_menu = False
+        self.parser = argparse.ArgumentParser()
+        self.arguments_set = False  # Check to see if we set the Flag values or not. Helps to skip un-needed iterations.
+
+    def start(self):
+        &#34;&#34;&#34;
+        The entry point for script. Runs the entire logic depending of the arguments.
+        &#34;&#34;&#34;
+        # Set all argument flags, based on runtime arguments.
+        self._available_arguments()
+
+        # Check if we want to skip the menu or not.
+        if not self.skip_menu:
+            self._main_menu()
+
+        # Skip the menu.
+        else:
+            # TODO: Add ability to skip every menu. Not only ALL
+            # Check if we ONLY typed `python client.py -s/--skip-menu`
+            # If check is True, set self.all = True then run FIC main logic.
+            # We don&#39;t need to check if &#34;-s/--skip-menu&#34; is present, as this is the only way to
+            # enter this else statement.
+            self.all = True if len(sys.argv) &lt;= 2 else self.all
+
+            self.run_fic(all=self.all,
+                         git_only=self.git_only,
+                         hg_only=self.hg_only,
+                         days=self.days,
+                         logging=self.logging)
+
+    def _available_arguments(self):
+        &#34;&#34;&#34;
+        This method reads and set all the arguments flags.
+        &#34;&#34;&#34;
+        self.parser.add_argument(&#39;-a&#39;, &#39;--all&#39;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#39;Runs script for all available repositories&#39;)
+        self.parser.add_argument(&#39;-g&#39;, &#39;--git&#39;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#39;Runs script only for repos that are on GitHub&#39;)
+        self.parser.add_argument(&#39;-hg&#39;, &#39;--mercurial&#39;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#39;Runs script only for repos that are on Mercurial&#39;)
+        self.parser.add_argument(&#34;-r&#34;, &#34;--repo&#34;, required=False, nargs=&#34;*&#34;,
+                                 help=&#34;Let the user choose for which repositories to run&#34;)
+        self.parser.add_argument(&#34;-l&#34;, &#34;--logging&#34;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#34;Activate logger output in the console&#34;)
+        self.parser.add_argument(&#34;-days&#34;, &#34;--days&#34;, required=False, action=&#39;store&#39;, default=DEFAULT_DAYS,
+                                 help=&#34;Generate the changelog.md for &lt;int&gt; amount of days.&#34;)
+        self.parser.add_argument(&#34;-p&#34;, &#34;--push&#34;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#34;Runs for all available repositories and auto-push to github&#34;)
+        self.parser.add_argument(&#34;-dev&#34;, &#34;--development&#34;, required=False, action=&#39;store_true&#39;, default=False,
+                                 help=&#34;Activate development mode&#34;)
+        self.parser.add_argument(&#34;-s&#34;, &#34;--skip-menu&#34;, required=False, action=&#34;store_true&#34;, default=False,
+                                 help=&#34;Skip MainMenu. Used for automatization.&#34;)
+
+        self.args = self.parser.parse_args()
+        self._set_arguments_flags()
+
+    def _set_arguments_flags(self):
+        &#34;&#34;&#34;
+        This method changes the flags state depending of the arguments.
+        &#34;&#34;&#34;
+        # Check that we have parsed all arguments.
+        if not self.args:
+            self._available_arguments()
+        else:
+            pass
+
+        # Create and set flags.
+        if self.args.all:
+            self.all = True
+
+        if self.args.git:
+            self.git_only = True
+
+        if self.args.mercurial:
+            self.hg_only = True
+
+        # Check if Manual Repo Selection is present and in which mode:
+        #   - If `-r` is missing.                                 (Return: False)
+        #   - If `-r` is present, but no list present.            (Return: True)
+        #   - If `-r` is present and a list of repos are present. (Return: List of repos)
+        repo_selection = False if isinstance(self.args.repo, type(None)) else self.args.repo
+        if repo_selection:
+            self.repo_selection = self.args.repo
+
+        if self.args.logging:
+            self.logging = True
+
+        if self.args.days:
+            if str(self.args.days).isdecimal():
+                self.days = int(self.args.days)
+            else:
+                print(&#34;When using -d/--days please insert a number of days.\n&#34;
+                      &#34;Example: python3 client.py -d 30 or --days 10&#34;)
+                exit(4)
+
+        if self.args.push:
+            self.push = True
+
+        if self.args.development:
+            self.dev = True
+
+        if self.args.skip_menu:
+            self.skip_menu = True
+
+        self.arguments_set = True
+
+    def _construct_mainmenu_text(self):
+        &#34;&#34;&#34;
+        Creates the main-menu content and prepare it to be displayed.
+        :return: the main menu text
+        &#34;&#34;&#34;
+        if not self.arguments_set:
+            self._set_arguments_flags()
+        else:
+            pass
+
+        menu_header = &#34;Welcome to Ciduty&#39;s Firefox Infra Changelog!\n&#34; \
+                      &#34;You can use the options below to run the script according to your needs.\n&#34;
+
+        menu_logging = &#34;====        Logging  is active        ====\n&#34;
+        menu_dev     = &#34;====        Dev Mode is active        ====\n&#34;
+        menu_days    = f&#34;==== Generating Changelog for {self.days} days  ====\n&#34;
+
+        menu_notifications = (menu_logging if self.logging else &#34;&#34;) + \
+                             (menu_dev if self.dev else &#34;&#34;) + \
+                             (menu_days if self.days is not DEFAULT_DAYS else &#34;&#34;)
+
+        menu_options = &#34;1. Run script for all available repositories \n&#34; \
+                       &#34;2. Run script only for repositories that are on GitHub\n&#34; \
+                       &#34;3. Run script only for repositories that are on Mercurial\n&#34; \
+                       &#34;4. Run script for repositories that you choose\n&#34; \
+                       &#34;5. Activates logger output in console\n&#34; \
+                       &#34;6. Generates changelog.md for the amount of days set by user\n&#34; \
+                       &#34;7. Run the script for all repositories and push changes to Github\n&#34; \
+                       &#34;0. Exit application.&#34;
+
+        return menu_header + menu_notifications + menu_options
+
+    def _main_menu(self):
+        &#34;&#34;&#34;
+        This method prints the main menu and reads the chosen options.
+        &#34;&#34;&#34;
+        print(self._construct_mainmenu_text())
+        self.choice = int(input())
+        self._run_selected_menu(choice=self.choice)
+
+    def _run_selected_menu(self, choice):
+        &#34;&#34;&#34;
+        This method calls the run_fic method depending of the chosen option.
+        :param choice: the chosen option by user
+        &#34;&#34;&#34;
+        if choice == 1:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: ALL Repositories.&#34;)
+            self.run_fic(all=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 2:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: Git Repositories Only.&#34;)
+            self.run_fic(git_only=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 3:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: HG Repositories Only.&#34;)
+            self.run_fic(hg_only=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 4:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: Custom Repositories.&#34;)
+            self._repo_selection_menu()
+            self.run_fic(repo_list=self.repo_selection)
+
+        if choice == 5:
+            self.logging = not self.logging
+            if self.logging:
+                self.LOGGER.info(&#34;Console Logging has been activated.&#34;)
+            else:
+                self.LOGGER.info(&#34;Console Logging has been deactivated.&#34;)
+            self._main_menu()
+
+        if choice == 6:
+            print(&#34;Please input the amount of days `changelog.md` will be generated for:&#34;)
+            days = input()
+
+            if str(days).isdecimal():
+                self.days = int(days)
+                self.LOGGER.info(f&#34;DEFAULT_DAYS parameter has been changed to: {self.days} day(s)&#34;)
+                self._main_menu()
+            else:
+                print(&#34;Amount of days need to be an integer!\n&#34;
+                      &#34;Moving back to Main Menu.&#34;)
+                self._main_menu()
+
+        if choice == 7:
+            self.LOGGER.info(f&#34;Script running for choice {choice}: ALL Repositories and PUSH changes to GitHub&#34;)
+            self.run_fic(all=True,
+                         push=True,
+                         logging=self.logging,
+                         days=self.days)
+
+        if choice == 0:
+            exit()
+
+    def _repo_selection_menu(self):
+        &#34;&#34;&#34;
+        Load available repositories and prepares them for user selection.
+        &#34;&#34;&#34;
+        repo_list = json.load(self.load(None, REPOSITORIES_FILE))
+        temp_list = []
+
+        # Argument &#34;-r&#34; provided, but no list of repositories is included.
+        # Enter Selection Menu.
+        if not self.repo_selection or (len(self.repo_selection) == 0):
+            self._construct_repo_selection(repo_list)
+
+        # Argument &#34;-r&#34; provided and list of repositories is included.
+        # Skip Selection Menu
+        else:
+            for key in repo_list:
+                for repo in repo_list.get(key):
+                    for selection in self.repo_selection:
+                        if int(selection) == repo_list.get(key).get(repo).get(&#34;order&#34;):
+                            temp_list.append((int(selection), repo, key))
+
+            self.repo_selection = []
+            for _, repo, key in temp_list:
+                self.repo_selection.append((repo, key))
+
+    def _construct_repo_selection(self, repo_list):
+        &#34;&#34;&#34;
+        The method that creates the list of the repositories chosen by user.
+        &#34;&#34;&#34;
+        temp_list = []
+        self.repo_selection = []
+        for key in repo_list:
+            for repo in repo_list.get(key):
+                temp_list.append((repo_list.get(key).get(repo).get(&#34;order&#34;), repo, key))
+        print(&#34;Available Repositories:&#34;)
+        for entry in sorted(temp_list):
+            print(entry[0], entry[1])
+
+        print(&#34;Enter the number of the repositorie(s) you want to run, separated by comma.\n&#34;
+              &#34;Example: 1, 5, 20, 3, 2&#34;)
+        choices = input()
+        choices = choices.split(&#34;,&#34;)
+
+        self.repo_selection = []
+        for key in repo_list:
+            for repo in repo_list.get(key):
+                for choice in choices:
+                    if int(choice) == repo_list.get(key).get(repo).get(&#34;order&#34;):
+                        self.repo_selection.append((repo, key))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>modules.FIC_Core.FICCore</li>
+<li>modules.FIC_Github.FICGithub</li>
+<li>modules.FIC_Mercurial.FICMercurial</li>
+<li>plugins.FIC_Markdown.FICMarkdownGenerator</li>
+<li>modules.FIC_FileHandler.FICFileHandler</li>
+<li>modules.FIC_Logger.FICLogger</li>
+<li>modules.FIC_DataVault.FICDataVault</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_MainMenu.FICMainMenu.start"><code class="name flex">
+<span>def <span class="ident">start</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>The entry point for script. Runs the entire logic depending of the arguments.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def start(self):
+    &#34;&#34;&#34;
+    The entry point for script. Runs the entire logic depending of the arguments.
+    &#34;&#34;&#34;
+    # Set all argument flags, based on runtime arguments.
+    self._available_arguments()
+
+    # Check if we want to skip the menu or not.
+    if not self.skip_menu:
+        self._main_menu()
+
+    # Skip the menu.
+    else:
+        # TODO: Add ability to skip every menu. Not only ALL
+        # Check if we ONLY typed `python client.py -s/--skip-menu`
+        # If check is True, set self.all = True then run FIC main logic.
+        # We don&#39;t need to check if &#34;-s/--skip-menu&#34; is present, as this is the only way to
+        # enter this else statement.
+        self.all = True if len(sys.argv) &lt;= 2 else self.all
+
+        self.run_fic(all=self.all,
+                     git_only=self.git_only,
+                     hg_only=self.hg_only,
+                     days=self.days,
+                     logging=self.logging)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="firefox-infra-changelog.modules" href="index.html">firefox-infra-changelog.modules</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="firefox-infra-changelog.modules.FIC_MainMenu.FICMainMenu" href="#firefox-infra-changelog.modules.FIC_MainMenu.FICMainMenu">FICMainMenu</a></code></h4>
+<ul class="">
+<li><code><a title="firefox-infra-changelog.modules.FIC_MainMenu.FICMainMenu.start" href="#firefox-infra-changelog.modules.FIC_MainMenu.FICMainMenu.start">start</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

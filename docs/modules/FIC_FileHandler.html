@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>firefox-infra-changelog.modules.FIC_FileHandler API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>firefox-infra-changelog.modules.FIC_FileHandler</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+from modules.FIC_Logger import FICLogger
+from modules.FIC_DataVault import FICDataVault
+from modules.config import *
+import json
+import os
+
+
+class FICFileHandler(FICLogger, FICDataVault):
+    def __init__(self):
+        FICLogger.__init__(self)
+        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+
+        self.changelog_json = CHANGELOG_JSON_PATH
+        self.changelog_md = CHANGELOG_MD_PATH
+        self.data_folder = CHANGELOG_REPO_PATH
+        self.path_level = self._check_dev_mode()
+        self._missing_files = []
+
+
+
+    @staticmethod
+    def _check_dev_mode():
+        &#34;&#34;&#34;
+        Method that verifies if &#34;-dev&#34; arguments has been used while calling the script, if so
+        returns the parrent directory, else the current directory.
+        Usefull when individual parts/modules are called on their own.
+        &#34;&#34;&#34;
+        import sys
+        if &#34;-dev&#34; in sys.argv:
+            return os.path.pardir
+        else:
+            return os.path.curdir
+
+    @staticmethod
+    def convert_bytes(num):
+        &#34;&#34;&#34;
+        :param num: Bytes of a file. Comes from file_size()
+        :return: Tuple with number and kb/mb format.
+        &#34;&#34;&#34;
+        for _ in [&#34;bytes&#34;, &#34;kb&#34;, &#34;mb&#34;, &#34;gb&#34;]:
+            if num &gt; 1024.0:
+                num /= 1024.0
+            else:
+                size = &#34;%3.2f&#34; % num
+                return float(size), _
+
+    def _verify_data_folder(self):
+        # Check that data folder exists.
+        if not os.path.exists(self.construct_path(None, CHANGELOG_REPO_PATH)):
+            # Create folder data
+            os.makedirs(os.path.join(self.path_level, CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, &#34;__init__.py&#34;)), &#34;w&#34;).close()
+            self.LOGGER.warning(&#34;Folder &#39;{}&#39; is missing. Recreating it.&#34;.format(CHANGELOG_REPO_PATH))
+
+    def _verify_modules_folder(self):
+        # Check that modules folder exists.
+        if not os.path.exists(os.path.abspath(os.path.join(self.path_level, &#34;modules&#34;))):
+            # Create folder modules
+            os.makedirs(os.path.join(self.path_level + CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, &#34;__init__.py&#34;)), &#34;w&#34;).close()
+            self.LOGGER.warning(&#34;Folder &#39;modules&#39; is missing. Recreating it.&#34;)
+
+    def _verify_plugins_folder(self):
+        # Check that plugins folder exists.
+        if not os.path.exists(os.path.abspath(os.path.join(self.path_level, &#34;plugins&#34;))):
+            # Create folder plugins
+            os.makedirs(os.path.join(self.path_level + CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, &#34;__init__.py&#34;)), &#34;w&#34;).close()
+            self.LOGGER.warning(&#34;Folder &#39;plugins&#39; is missing. Recreating it.&#34;)
+
+    def _check_repo_files(self):
+        with open(self.construct_path(None, REPOSITORIES_FILE), &#34;r&#34;) as json_data:
+            files_to_check = json.load(json_data)
+            # Check all Github files exist for each repository.
+            for key in files_to_check[&#34;Github&#34;].keys():
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.json&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.json&#34;, &#34;git&#34;))
+
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.md&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.md&#34;, &#34;git&#34;))
+
+            # Check all Mercurial files exist for each repository.
+            for key in files_to_check[&#34;Mercurial&#34;].keys():
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.json&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.json&#34;, &#34;hg&#34;))
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.md&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.md&#34;, &#34;hg&#34;))
+
+        if self._missing_files:
+            self._create_missing_repo_files()
+
+    def _create_missing_repo_files(self):
+        for file_to_create in self._missing_files:
+            new_local_file = open(self.construct_path(CHANGELOG_REPO_PATH, file_to_create[0].lower()), &#34;w&#34;)
+            if file_to_create[0].endswith(&#34;.json&#34;):
+                self.save(CHANGELOG_REPO_PATH, file_to_create[0].lower(), {})
+            new_local_file.close()
+
+    def _check_module_files(self):
+        self._missing_files = []
+        needed_files = [&#34;config.py&#34;, &#34;FIC_DataVault.py&#34;, &#34;FIC_Exceptions.py&#34;, &#34;FIC_FileHandler.py&#34;,
+                        &#34;FIC_Github.py&#34;, &#34;FIC_Logger.py&#34;, &#34;FIC_MainMenu.py&#34;,
+                        &#34;FIC_Mercurial.py&#34;]
+
+        for file in needed_files:
+            if not os.path.exists(os.path.join(self.construct_path(&#34;modules&#34;, file))):
+                self._missing_files.append(file)
+
+        if self._missing_files:
+            self._download_missing_files()
+
+    def _download_missing_files(self):
+        &#34;&#34;&#34;
+        Downloads the missing modules and writes them to individual files.
+        The base_url will be later modified to acomodate for later updates and modifications (the oop 
+        branch can be deleted after a while and cause issues).
+        &#34;&#34;&#34;
+        import requests
+        base_url = &#34;https://raw.githubusercontent.com/mozilla-releng/firefox-infra-changelog/oop/modules/&#34;
+        for file in self._missing_files:
+            raw_file = requests.get(base_url + file, allow_redirects=True).text
+            f = open(os.path.abspath(os.path.join(self.path_level, &#34;modules&#34;, file)), &#34;w&#34;)
+            f.write(raw_file)
+            f.close()
+
+    def construct_path(self, directory_name, file_name):
+        &#34;&#34;&#34;Returns the joined path and is usefull for OS cross compatibility&#34;&#34;&#34;
+        if (directory_name is None) and (file_name is None):
+            return self._check_dev_mode()
+
+        elif directory_name is None:
+            path = os.path.join(self.path_level, file_name)
+            return path
+        else:
+            path = os.path.join(self.path_level, directory_name, file_name)
+            return path
+
+    def check_tool_integrity(self):
+        &#34;&#34;&#34; This method will verify that every folder and file necessary for FIC to run exists.&#34;&#34;&#34;
+        # Check if common folders exist. If not create them.
+        self._verify_data_folder()
+        self._verify_modules_folder()
+        self._verify_plugins_folder()
+
+        # Check that repository files, in data folder, exist. If not create them.
+        self._check_repo_files()
+
+        # Check that all python files, in modules folder, exist. If not download them from github.
+        self._check_module_files()
+
+    def load(self, directory, file_name):
+        &#34;&#34;&#34;Returns a loaded file content.&#34;&#34;&#34;
+        return open(self.construct_path(directory, file_name))
+
+    def save(self, directory, file_name, content):
+        &#34;&#34;&#34;Writes content to md/json file. Also handles unknown file types.&#34;&#34;&#34;
+        if file_name.endswith(&#34;.md&#34;):
+            with open(self.construct_path(directory, file_name), &#34;a&#34;) as markdown_file:
+                markdown_file.write(content)
+
+        elif file_name.endswith(&#34;.json&#34;):
+            with open(self.construct_path(directory, file_name), &#34;w&#34;) as json_file:
+                json.dump(content, json_file, indent=2)
+
+        else:
+            print(&#34;File Extension is not supported.&#34;)
+            exit(2)
+
+    def file_size(self, directory, file_name):
+        &#34;&#34;&#34;
+        This helper function will return if a file is over 1000kb or not.
+        If size &gt; 1000: Will return True
+        If size &lt; 1000: Will return False, size
+        :param directory: path to the file you want to check.
+        :param file_name: name for the file you want to check it&#39;s size.
+        :return:
+        &#34;&#34;&#34;
+        size = None
+        if os.path.exists(os.path.abspath(self.construct_path(directory, file_name))):
+            file_info = os.stat(self.construct_path(directory, file_name))
+            size = self.convert_bytes(file_info.st_size)
+        else:
+            self.LOGGER.critical(&#34;File &#39;{}&#39; does not exist!&#34;.format(file_name))
+            exit(5)
+
+        if (size[0] &lt; 1000) and (size[1] == &#34;bytes&#34;) or (size[1] == &#34;kb&#34;):
+            self.LOGGER.debug(&#34;File size is: {} {}&#34;.format(size[0], size[1]))
+            return False, float(size[0])
+
+        elif (size[1] == &#34;mb&#34;) or (size[1] == &#34;gb&#34;):
+            self.LOGGER.debug(&#34;File size is: {} {}&#34;.format(size[0], size[1]))
+            return True
+
+        else:
+            self.LOGGER.critical(&#34;Can&#39;t check file &#39;{}&#39;!&#34;.format(os.path.join(directory, file_name)))
+            exit(6)
+
+    def rename_file_with_date(self, directory, file_name, date_string):
+        &#34;&#34;&#34;
+        Implemented in: issue-390, revised in PR 420
+        Function that is used to rename a file and add a date to the title.
+        Use case:
+        rename_file_with_date((os.pardir + r&#34;\test_file.md&#34;), &#34;20190323&#34;)
+        or rename_file_with_date(&#34;git_files/addonscript.md&#34;, &#34;20190323&#34;)
+        :param directory: directory path.
+        :param file_name: name of the file to be renamed
+        :param date_string: string containing the date.
+        :return:
+        &#34;&#34;&#34;
+        generated_name = os.path.splitext(file_name)[0] + &#34;.&#34; + date_string + os.path.splitext(file_name)[1]
+        try:
+            # Rename Existing File
+            os.rename(self.construct_path(directory, file_name), self.construct_path(directory, generated_name))
+            self.LOGGER.debug(&#34;Renamed element &#39;{}&#39; into &#39;{}&#39;.&#34;.format(file_name, generated_name))
+
+            # Recreate the file.
+            open(self.construct_path(directory, file_name), &#34;w&#34;).close()
+
+        except os.error:
+            self.LOGGER.critical(&#34;Failed to rename the provided file \&#34;{}\&#34;. Maybe new filename already exists?&#34;.format(file_name))
+            exit(7)
+
+        return generated_name
+
+    def is_readable(self, directory_name, file_name):
+        &#34;&#34;&#34;
+        Checks to see if the file contents can be read. 
+        It uses os.access() with two arguments:
+            1. file_name that needs to be checked 
+            2. os.R_OK expected access level.
+        In case the check fails, a criticall log will be recored and the script will exit with exit code #8
+        &#34;&#34;&#34;
+        if os.access(self.construct_path(directory_name, file_name), os.R_OK):
+            self.LOGGER.debug(&#34;File \&#34;{}\&#34; can be read.&#34;.format(self.construct_path(directory_name, file_name)))
+            return True
+        else:
+            self.LOGGER.critical(&#34;File \&#34;{}\&#34; cannot be read.&#34;.format(self.construct_path(directory_name, file_name)))
+            exit(8)
+
+    def is_writable(self, directory_name, file_name):
+        # Check if the path exists
+        if os.path.exists(self.construct_path(directory_name, file_name)):
+            # Check if the provided path contains a valid file.
+            if os.path.isfile(self.construct_path(directory_name, file_name)):
+                # Checks to see if the provided file can be written
+                if os.access(self.construct_path(directory_name, file_name), os.W_OK):
+                    self.LOGGER.info(&#34;File \&#34;{}\&#34; is writable!&#34;.format(self.construct_path(directory_name, file_name)))
+                    return True
+                else:
+                    self.LOGGER.error(&#34;File \&#34;{}\&#34; has acccess issues and cannot be written.&#34;
+                                      .format(self.construct_path(directory_name, file_name)))
+                    return False
+            else:
+                self.LOGGER.error(&#34;File \&#34;{}\&#34; is a path and can&#39;t be written.&#34;
+                                  .format(self.construct_path(directory_name, file_name)))
+                return False
+        else:
+            self.LOGGER.error(&#34;Path \&#34;{}\&#34; does not exist!.&#34;.format(self.construct_path(directory_name, file_name)))
+            return False
+
+    def move_to_final_location(self, old_path, old_file, new_path, new_file):
+        &#34;&#34;&#34;
+        Moves a file to a new path.
+        It accepts 4 arguments:
+         - 1. Old Path name
+         - 2. Old File name
+         - 3. New Path name
+         - 4. New File name
+        
+        It uses os.rename() function in order to move the file.
+        &#34;&#34;&#34;
+        try:
+            os.rename(self.construct_path(old_path, old_file), self.construct_path(new_path, new_file))
+            self.LOGGER.info(&#34;Successfully moved to new path: {}&#34;.format(self.construct_path(new_path, new_file)))
+        except IOError:
+            self.LOGGER.critical(&#34;Path \&#34;{}\&#34; does not exist &#34;
+                                 .format(self.construct_path(old_path, old_file)) +
+                                 &#34;or the final location \&#34;{}\&#34; has not been created&#34;
+                                 .format(self.construct_path(new_path, new_file)))</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler"><code class="flex name class">
+<span>class <span class="ident">FICFileHandler</span></span>
+</code></dt>
+<dd>
+<section class="desc"><p>This class handle the logging system of the entire project.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">class FICFileHandler(FICLogger, FICDataVault):
+    def __init__(self):
+        FICLogger.__init__(self)
+        from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH
+
+        self.changelog_json = CHANGELOG_JSON_PATH
+        self.changelog_md = CHANGELOG_MD_PATH
+        self.data_folder = CHANGELOG_REPO_PATH
+        self.path_level = self._check_dev_mode()
+        self._missing_files = []
+
+
+
+    @staticmethod
+    def _check_dev_mode():
+        &#34;&#34;&#34;
+        Method that verifies if &#34;-dev&#34; arguments has been used while calling the script, if so
+        returns the parrent directory, else the current directory.
+        Usefull when individual parts/modules are called on their own.
+        &#34;&#34;&#34;
+        import sys
+        if &#34;-dev&#34; in sys.argv:
+            return os.path.pardir
+        else:
+            return os.path.curdir
+
+    @staticmethod
+    def convert_bytes(num):
+        &#34;&#34;&#34;
+        :param num: Bytes of a file. Comes from file_size()
+        :return: Tuple with number and kb/mb format.
+        &#34;&#34;&#34;
+        for _ in [&#34;bytes&#34;, &#34;kb&#34;, &#34;mb&#34;, &#34;gb&#34;]:
+            if num &gt; 1024.0:
+                num /= 1024.0
+            else:
+                size = &#34;%3.2f&#34; % num
+                return float(size), _
+
+    def _verify_data_folder(self):
+        # Check that data folder exists.
+        if not os.path.exists(self.construct_path(None, CHANGELOG_REPO_PATH)):
+            # Create folder data
+            os.makedirs(os.path.join(self.path_level, CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, &#34;__init__.py&#34;)), &#34;w&#34;).close()
+            self.LOGGER.warning(&#34;Folder &#39;{}&#39; is missing. Recreating it.&#34;.format(CHANGELOG_REPO_PATH))
+
+    def _verify_modules_folder(self):
+        # Check that modules folder exists.
+        if not os.path.exists(os.path.abspath(os.path.join(self.path_level, &#34;modules&#34;))):
+            # Create folder modules
+            os.makedirs(os.path.join(self.path_level + CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, &#34;__init__.py&#34;)), &#34;w&#34;).close()
+            self.LOGGER.warning(&#34;Folder &#39;modules&#39; is missing. Recreating it.&#34;)
+
+    def _verify_plugins_folder(self):
+        # Check that plugins folder exists.
+        if not os.path.exists(os.path.abspath(os.path.join(self.path_level, &#34;plugins&#34;))):
+            # Create folder plugins
+            os.makedirs(os.path.join(self.path_level + CHANGELOG_REPO_PATH))
+            # Create file __init__.py
+            open(os.path.abspath(os.path.join(self.path_level, CHANGELOG_REPO_PATH, &#34;__init__.py&#34;)), &#34;w&#34;).close()
+            self.LOGGER.warning(&#34;Folder &#39;plugins&#39; is missing. Recreating it.&#34;)
+
+    def _check_repo_files(self):
+        with open(self.construct_path(None, REPOSITORIES_FILE), &#34;r&#34;) as json_data:
+            files_to_check = json.load(json_data)
+            # Check all Github files exist for each repository.
+            for key in files_to_check[&#34;Github&#34;].keys():
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.json&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.json&#34;, &#34;git&#34;))
+
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.md&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.md&#34;, &#34;git&#34;))
+
+            # Check all Mercurial files exist for each repository.
+            for key in files_to_check[&#34;Mercurial&#34;].keys():
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.json&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.json&#34;, &#34;hg&#34;))
+                if not os.path.exists(os.path.join(self.path_level, CHANGELOG_REPO_PATH, key.lower() + &#34;.md&#34;)):
+                    self._missing_files.append((key.lower() + &#34;.md&#34;, &#34;hg&#34;))
+
+        if self._missing_files:
+            self._create_missing_repo_files()
+
+    def _create_missing_repo_files(self):
+        for file_to_create in self._missing_files:
+            new_local_file = open(self.construct_path(CHANGELOG_REPO_PATH, file_to_create[0].lower()), &#34;w&#34;)
+            if file_to_create[0].endswith(&#34;.json&#34;):
+                self.save(CHANGELOG_REPO_PATH, file_to_create[0].lower(), {})
+            new_local_file.close()
+
+    def _check_module_files(self):
+        self._missing_files = []
+        needed_files = [&#34;config.py&#34;, &#34;FIC_DataVault.py&#34;, &#34;FIC_Exceptions.py&#34;, &#34;FIC_FileHandler.py&#34;,
+                        &#34;FIC_Github.py&#34;, &#34;FIC_Logger.py&#34;, &#34;FIC_MainMenu.py&#34;,
+                        &#34;FIC_Mercurial.py&#34;]
+
+        for file in needed_files:
+            if not os.path.exists(os.path.join(self.construct_path(&#34;modules&#34;, file))):
+                self._missing_files.append(file)
+
+        if self._missing_files:
+            self._download_missing_files()
+
+    def _download_missing_files(self):
+        &#34;&#34;&#34;
+        Downloads the missing modules and writes them to individual files.
+        The base_url will be later modified to acomodate for later updates and modifications (the oop 
+        branch can be deleted after a while and cause issues).
+        &#34;&#34;&#34;
+        import requests
+        base_url = &#34;https://raw.githubusercontent.com/mozilla-releng/firefox-infra-changelog/oop/modules/&#34;
+        for file in self._missing_files:
+            raw_file = requests.get(base_url + file, allow_redirects=True).text
+            f = open(os.path.abspath(os.path.join(self.path_level, &#34;modules&#34;, file)), &#34;w&#34;)
+            f.write(raw_file)
+            f.close()
+
+    def construct_path(self, directory_name, file_name):
+        &#34;&#34;&#34;Returns the joined path and is usefull for OS cross compatibility&#34;&#34;&#34;
+        if (directory_name is None) and (file_name is None):
+            return self._check_dev_mode()
+
+        elif directory_name is None:
+            path = os.path.join(self.path_level, file_name)
+            return path
+        else:
+            path = os.path.join(self.path_level, directory_name, file_name)
+            return path
+
+    def check_tool_integrity(self):
+        &#34;&#34;&#34; This method will verify that every folder and file necessary for FIC to run exists.&#34;&#34;&#34;
+        # Check if common folders exist. If not create them.
+        self._verify_data_folder()
+        self._verify_modules_folder()
+        self._verify_plugins_folder()
+
+        # Check that repository files, in data folder, exist. If not create them.
+        self._check_repo_files()
+
+        # Check that all python files, in modules folder, exist. If not download them from github.
+        self._check_module_files()
+
+    def load(self, directory, file_name):
+        &#34;&#34;&#34;Returns a loaded file content.&#34;&#34;&#34;
+        return open(self.construct_path(directory, file_name))
+
+    def save(self, directory, file_name, content):
+        &#34;&#34;&#34;Writes content to md/json file. Also handles unknown file types.&#34;&#34;&#34;
+        if file_name.endswith(&#34;.md&#34;):
+            with open(self.construct_path(directory, file_name), &#34;a&#34;) as markdown_file:
+                markdown_file.write(content)
+
+        elif file_name.endswith(&#34;.json&#34;):
+            with open(self.construct_path(directory, file_name), &#34;w&#34;) as json_file:
+                json.dump(content, json_file, indent=2)
+
+        else:
+            print(&#34;File Extension is not supported.&#34;)
+            exit(2)
+
+    def file_size(self, directory, file_name):
+        &#34;&#34;&#34;
+        This helper function will return if a file is over 1000kb or not.
+        If size &gt; 1000: Will return True
+        If size &lt; 1000: Will return False, size
+        :param directory: path to the file you want to check.
+        :param file_name: name for the file you want to check it&#39;s size.
+        :return:
+        &#34;&#34;&#34;
+        size = None
+        if os.path.exists(os.path.abspath(self.construct_path(directory, file_name))):
+            file_info = os.stat(self.construct_path(directory, file_name))
+            size = self.convert_bytes(file_info.st_size)
+        else:
+            self.LOGGER.critical(&#34;File &#39;{}&#39; does not exist!&#34;.format(file_name))
+            exit(5)
+
+        if (size[0] &lt; 1000) and (size[1] == &#34;bytes&#34;) or (size[1] == &#34;kb&#34;):
+            self.LOGGER.debug(&#34;File size is: {} {}&#34;.format(size[0], size[1]))
+            return False, float(size[0])
+
+        elif (size[1] == &#34;mb&#34;) or (size[1] == &#34;gb&#34;):
+            self.LOGGER.debug(&#34;File size is: {} {}&#34;.format(size[0], size[1]))
+            return True
+
+        else:
+            self.LOGGER.critical(&#34;Can&#39;t check file &#39;{}&#39;!&#34;.format(os.path.join(directory, file_name)))
+            exit(6)
+
+    def rename_file_with_date(self, directory, file_name, date_string):
+        &#34;&#34;&#34;
+        Implemented in: issue-390, revised in PR 420
+        Function that is used to rename a file and add a date to the title.
+        Use case:
+        rename_file_with_date((os.pardir + r&#34;\test_file.md&#34;), &#34;20190323&#34;)
+        or rename_file_with_date(&#34;git_files/addonscript.md&#34;, &#34;20190323&#34;)
+        :param directory: directory path.
+        :param file_name: name of the file to be renamed
+        :param date_string: string containing the date.
+        :return:
+        &#34;&#34;&#34;
+        generated_name = os.path.splitext(file_name)[0] + &#34;.&#34; + date_string + os.path.splitext(file_name)[1]
+        try:
+            # Rename Existing File
+            os.rename(self.construct_path(directory, file_name), self.construct_path(directory, generated_name))
+            self.LOGGER.debug(&#34;Renamed element &#39;{}&#39; into &#39;{}&#39;.&#34;.format(file_name, generated_name))
+
+            # Recreate the file.
+            open(self.construct_path(directory, file_name), &#34;w&#34;).close()
+
+        except os.error:
+            self.LOGGER.critical(&#34;Failed to rename the provided file \&#34;{}\&#34;. Maybe new filename already exists?&#34;.format(file_name))
+            exit(7)
+
+        return generated_name
+
+    def is_readable(self, directory_name, file_name):
+        &#34;&#34;&#34;
+        Checks to see if the file contents can be read. 
+        It uses os.access() with two arguments:
+            1. file_name that needs to be checked 
+            2. os.R_OK expected access level.
+        In case the check fails, a criticall log will be recored and the script will exit with exit code #8
+        &#34;&#34;&#34;
+        if os.access(self.construct_path(directory_name, file_name), os.R_OK):
+            self.LOGGER.debug(&#34;File \&#34;{}\&#34; can be read.&#34;.format(self.construct_path(directory_name, file_name)))
+            return True
+        else:
+            self.LOGGER.critical(&#34;File \&#34;{}\&#34; cannot be read.&#34;.format(self.construct_path(directory_name, file_name)))
+            exit(8)
+
+    def is_writable(self, directory_name, file_name):
+        # Check if the path exists
+        if os.path.exists(self.construct_path(directory_name, file_name)):
+            # Check if the provided path contains a valid file.
+            if os.path.isfile(self.construct_path(directory_name, file_name)):
+                # Checks to see if the provided file can be written
+                if os.access(self.construct_path(directory_name, file_name), os.W_OK):
+                    self.LOGGER.info(&#34;File \&#34;{}\&#34; is writable!&#34;.format(self.construct_path(directory_name, file_name)))
+                    return True
+                else:
+                    self.LOGGER.error(&#34;File \&#34;{}\&#34; has acccess issues and cannot be written.&#34;
+                                      .format(self.construct_path(directory_name, file_name)))
+                    return False
+            else:
+                self.LOGGER.error(&#34;File \&#34;{}\&#34; is a path and can&#39;t be written.&#34;
+                                  .format(self.construct_path(directory_name, file_name)))
+                return False
+        else:
+            self.LOGGER.error(&#34;Path \&#34;{}\&#34; does not exist!.&#34;.format(self.construct_path(directory_name, file_name)))
+            return False
+
+    def move_to_final_location(self, old_path, old_file, new_path, new_file):
+        &#34;&#34;&#34;
+        Moves a file to a new path.
+        It accepts 4 arguments:
+         - 1. Old Path name
+         - 2. Old File name
+         - 3. New Path name
+         - 4. New File name
+        
+        It uses os.rename() function in order to move the file.
+        &#34;&#34;&#34;
+        try:
+            os.rename(self.construct_path(old_path, old_file), self.construct_path(new_path, new_file))
+            self.LOGGER.info(&#34;Successfully moved to new path: {}&#34;.format(self.construct_path(new_path, new_file)))
+        except IOError:
+            self.LOGGER.critical(&#34;Path \&#34;{}\&#34; does not exist &#34;
+                                 .format(self.construct_path(old_path, old_file)) +
+                                 &#34;or the final location \&#34;{}\&#34; has not been created&#34;
+                                 .format(self.construct_path(new_path, new_file)))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>modules.FIC_Logger.FICLogger</li>
+<li>modules.FIC_DataVault.FICDataVault</li>
+</ul>
+<h3>Static methods</h3>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.convert_bytes"><code class="name flex">
+<span>def <span class="ident">convert_bytes</span></span>(<span>num)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>:param num: Bytes of a file. Comes from file_size()
+:return: Tuple with number and kb/mb format.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">@staticmethod
+def convert_bytes(num):
+    &#34;&#34;&#34;
+    :param num: Bytes of a file. Comes from file_size()
+    :return: Tuple with number and kb/mb format.
+    &#34;&#34;&#34;
+    for _ in [&#34;bytes&#34;, &#34;kb&#34;, &#34;mb&#34;, &#34;gb&#34;]:
+        if num &gt; 1024.0:
+            num /= 1024.0
+        else:
+            size = &#34;%3.2f&#34; % num
+            return float(size), _</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.check_tool_integrity"><code class="name flex">
+<span>def <span class="ident">check_tool_integrity</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>This method will verify that every folder and file necessary for FIC to run exists.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def check_tool_integrity(self):
+    &#34;&#34;&#34; This method will verify that every folder and file necessary for FIC to run exists.&#34;&#34;&#34;
+    # Check if common folders exist. If not create them.
+    self._verify_data_folder()
+    self._verify_modules_folder()
+    self._verify_plugins_folder()
+
+    # Check that repository files, in data folder, exist. If not create them.
+    self._check_repo_files()
+
+    # Check that all python files, in modules folder, exist. If not download them from github.
+    self._check_module_files()</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.construct_path"><code class="name flex">
+<span>def <span class="ident">construct_path</span></span>(<span>self, directory_name, file_name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns the joined path and is usefull for OS cross compatibility</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def construct_path(self, directory_name, file_name):
+    &#34;&#34;&#34;Returns the joined path and is usefull for OS cross compatibility&#34;&#34;&#34;
+    if (directory_name is None) and (file_name is None):
+        return self._check_dev_mode()
+
+    elif directory_name is None:
+        path = os.path.join(self.path_level, file_name)
+        return path
+    else:
+        path = os.path.join(self.path_level, directory_name, file_name)
+        return path</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.file_size"><code class="name flex">
+<span>def <span class="ident">file_size</span></span>(<span>self, directory, file_name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>This helper function will return if a file is over 1000kb or not.
+If size &gt; 1000: Will return True
+If size &lt; 1000: Will return False, size
+:param directory: path to the file you want to check.
+:param file_name: name for the file you want to check it's size.
+:return:</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def file_size(self, directory, file_name):
+    &#34;&#34;&#34;
+    This helper function will return if a file is over 1000kb or not.
+    If size &gt; 1000: Will return True
+    If size &lt; 1000: Will return False, size
+    :param directory: path to the file you want to check.
+    :param file_name: name for the file you want to check it&#39;s size.
+    :return:
+    &#34;&#34;&#34;
+    size = None
+    if os.path.exists(os.path.abspath(self.construct_path(directory, file_name))):
+        file_info = os.stat(self.construct_path(directory, file_name))
+        size = self.convert_bytes(file_info.st_size)
+    else:
+        self.LOGGER.critical(&#34;File &#39;{}&#39; does not exist!&#34;.format(file_name))
+        exit(5)
+
+    if (size[0] &lt; 1000) and (size[1] == &#34;bytes&#34;) or (size[1] == &#34;kb&#34;):
+        self.LOGGER.debug(&#34;File size is: {} {}&#34;.format(size[0], size[1]))
+        return False, float(size[0])
+
+    elif (size[1] == &#34;mb&#34;) or (size[1] == &#34;gb&#34;):
+        self.LOGGER.debug(&#34;File size is: {} {}&#34;.format(size[0], size[1]))
+        return True
+
+    else:
+        self.LOGGER.critical(&#34;Can&#39;t check file &#39;{}&#39;!&#34;.format(os.path.join(directory, file_name)))
+        exit(6)</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.is_readable"><code class="name flex">
+<span>def <span class="ident">is_readable</span></span>(<span>self, directory_name, file_name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Checks to see if the file contents can be read.
+It uses os.access() with two arguments:
+1. file_name that needs to be checked
+2. os.R_OK expected access level.
+In case the check fails, a criticall log will be recored and the script will exit with exit code #8</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def is_readable(self, directory_name, file_name):
+    &#34;&#34;&#34;
+    Checks to see if the file contents can be read. 
+    It uses os.access() with two arguments:
+        1. file_name that needs to be checked 
+        2. os.R_OK expected access level.
+    In case the check fails, a criticall log will be recored and the script will exit with exit code #8
+    &#34;&#34;&#34;
+    if os.access(self.construct_path(directory_name, file_name), os.R_OK):
+        self.LOGGER.debug(&#34;File \&#34;{}\&#34; can be read.&#34;.format(self.construct_path(directory_name, file_name)))
+        return True
+    else:
+        self.LOGGER.critical(&#34;File \&#34;{}\&#34; cannot be read.&#34;.format(self.construct_path(directory_name, file_name)))
+        exit(8)</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.is_writable"><code class="name flex">
+<span>def <span class="ident">is_writable</span></span>(<span>self, directory_name, file_name)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def is_writable(self, directory_name, file_name):
+    # Check if the path exists
+    if os.path.exists(self.construct_path(directory_name, file_name)):
+        # Check if the provided path contains a valid file.
+        if os.path.isfile(self.construct_path(directory_name, file_name)):
+            # Checks to see if the provided file can be written
+            if os.access(self.construct_path(directory_name, file_name), os.W_OK):
+                self.LOGGER.info(&#34;File \&#34;{}\&#34; is writable!&#34;.format(self.construct_path(directory_name, file_name)))
+                return True
+            else:
+                self.LOGGER.error(&#34;File \&#34;{}\&#34; has acccess issues and cannot be written.&#34;
+                                  .format(self.construct_path(directory_name, file_name)))
+                return False
+        else:
+            self.LOGGER.error(&#34;File \&#34;{}\&#34; is a path and can&#39;t be written.&#34;
+                              .format(self.construct_path(directory_name, file_name)))
+            return False
+    else:
+        self.LOGGER.error(&#34;Path \&#34;{}\&#34; does not exist!.&#34;.format(self.construct_path(directory_name, file_name)))
+        return False</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.load"><code class="name flex">
+<span>def <span class="ident">load</span></span>(<span>self, directory, file_name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns a loaded file content.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def load(self, directory, file_name):
+    &#34;&#34;&#34;Returns a loaded file content.&#34;&#34;&#34;
+    return open(self.construct_path(directory, file_name))</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.move_to_final_location"><code class="name flex">
+<span>def <span class="ident">move_to_final_location</span></span>(<span>self, old_path, old_file, new_path, new_file)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Moves a file to a new path.
+It accepts 4 arguments:
+- 1. Old Path name
+- 2. Old File name
+- 3. New Path name
+- 4. New File name</p>
+<p>It uses os.rename() function in order to move the file.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def move_to_final_location(self, old_path, old_file, new_path, new_file):
+    &#34;&#34;&#34;
+    Moves a file to a new path.
+    It accepts 4 arguments:
+     - 1. Old Path name
+     - 2. Old File name
+     - 3. New Path name
+     - 4. New File name
+    
+    It uses os.rename() function in order to move the file.
+    &#34;&#34;&#34;
+    try:
+        os.rename(self.construct_path(old_path, old_file), self.construct_path(new_path, new_file))
+        self.LOGGER.info(&#34;Successfully moved to new path: {}&#34;.format(self.construct_path(new_path, new_file)))
+    except IOError:
+        self.LOGGER.critical(&#34;Path \&#34;{}\&#34; does not exist &#34;
+                             .format(self.construct_path(old_path, old_file)) +
+                             &#34;or the final location \&#34;{}\&#34; has not been created&#34;
+                             .format(self.construct_path(new_path, new_file)))</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.rename_file_with_date"><code class="name flex">
+<span>def <span class="ident">rename_file_with_date</span></span>(<span>self, directory, file_name, date_string)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Implemented in: issue-390, revised in PR 420
+Function that is used to rename a file and add a date to the title.
+Use case:
+rename_file_with_date((os.pardir + r"
+est_file.md"), "20190323")
+or rename_file_with_date("git_files/addonscript.md", "20190323")
+:param directory: directory path.
+:param file_name: name of the file to be renamed
+:param date_string: string containing the date.
+:return:</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def rename_file_with_date(self, directory, file_name, date_string):
+    &#34;&#34;&#34;
+    Implemented in: issue-390, revised in PR 420
+    Function that is used to rename a file and add a date to the title.
+    Use case:
+    rename_file_with_date((os.pardir + r&#34;\test_file.md&#34;), &#34;20190323&#34;)
+    or rename_file_with_date(&#34;git_files/addonscript.md&#34;, &#34;20190323&#34;)
+    :param directory: directory path.
+    :param file_name: name of the file to be renamed
+    :param date_string: string containing the date.
+    :return:
+    &#34;&#34;&#34;
+    generated_name = os.path.splitext(file_name)[0] + &#34;.&#34; + date_string + os.path.splitext(file_name)[1]
+    try:
+        # Rename Existing File
+        os.rename(self.construct_path(directory, file_name), self.construct_path(directory, generated_name))
+        self.LOGGER.debug(&#34;Renamed element &#39;{}&#39; into &#39;{}&#39;.&#34;.format(file_name, generated_name))
+
+        # Recreate the file.
+        open(self.construct_path(directory, file_name), &#34;w&#34;).close()
+
+    except os.error:
+        self.LOGGER.critical(&#34;Failed to rename the provided file \&#34;{}\&#34;. Maybe new filename already exists?&#34;.format(file_name))
+        exit(7)
+
+    return generated_name</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, directory, file_name, content)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Writes content to md/json file. Also handles unknown file types.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def save(self, directory, file_name, content):
+    &#34;&#34;&#34;Writes content to md/json file. Also handles unknown file types.&#34;&#34;&#34;
+    if file_name.endswith(&#34;.md&#34;):
+        with open(self.construct_path(directory, file_name), &#34;a&#34;) as markdown_file:
+            markdown_file.write(content)
+
+    elif file_name.endswith(&#34;.json&#34;):
+        with open(self.construct_path(directory, file_name), &#34;w&#34;) as json_file:
+            json.dump(content, json_file, indent=2)
+
+    else:
+        print(&#34;File Extension is not supported.&#34;)
+        exit(2)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="firefox-infra-changelog.modules" href="index.html">firefox-infra-changelog.modules</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler">FICFileHandler</a></code></h4>
+<ul class="">
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.check_tool_integrity" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.check_tool_integrity">check_tool_integrity</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.construct_path" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.construct_path">construct_path</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.convert_bytes" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.convert_bytes">convert_bytes</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.file_size" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.file_size">file_size</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.is_readable" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.is_readable">is_readable</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.is_writable" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.is_writable">is_writable</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.load" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.load">load</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.move_to_final_location" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.move_to_final_location">move_to_final_location</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.rename_file_with_date" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.rename_file_with_date">rename_file_with_date</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.save" href="#firefox-infra-changelog.modules.FIC_FileHandler.FICFileHandler.save">save</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

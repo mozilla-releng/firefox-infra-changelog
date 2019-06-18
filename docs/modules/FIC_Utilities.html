@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>firefox-infra-changelog.modules.FIC_Utilities API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>firefox-infra-changelog.modules.FIC_Utilities</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">from datetime import datetime, timedelta
+
+
+def return_time(input_time=None, input_time_format=None, input_time_unix=False,
+                output_time_format=None, operation=None, operation_days=None):
+    &#34;&#34;&#34;
+    Utility function that returns the DateTime object taking into account certain passed arguments.
+    :param output_time_format: Takes a string to be used with .strftime(&#34;&#34;)
+    :param operation: Accepts a string containing &#34;add&#34; or &#34;sub&#34; which tells timedelta if we
+    need to add or subtract days from the current time.
+    :param operation_days: Number of days to add or subtract.
+    :return: Object of DateTime
+    &#34;&#34;&#34;
+    input_strformat = None if input_time_format is None else str(input_time_format)
+    output_strformat = None if output_time_format is None else str(output_time_format)
+
+    # Check that operation_days is an int or not.
+    if operation_days is None:
+        pass
+    else:
+        try:
+            int(operation_days)
+        except (ValueError, TypeError):
+            print(&#34;operation_days needs to be an int or float!&#34;)
+            exit(-1)
+
+    # Simple return.
+    if (operation is None) and (operation_days is None):
+        # Return Date + Time in UTC format
+        if (output_strformat is None) and not input_time:
+            return datetime.utcnow()
+        # Return Date + Time in Provided format
+        if output_strformat and not input_time:
+            return datetime.utcnow().strftime(output_strformat)
+        # Return Input time in UTC format.
+        elif input_time_unix and not output_strformat:
+            return datetime.utcfromtimestamp(int(input_time))
+        # Return Time in a specific format, not interpreted from Unix time.
+        elif output_strformat and not (input_time_unix or input_time):
+            return datetime.now()
+        # Return Time in a specific format, from an provided Unix time.
+        elif output_strformat and input_time_unix:
+            return datetime.utcfromtimestamp(int(input_time)).strftime(output_strformat)
+        # Return Time interpreted from a string.
+        elif input_time and input_strformat and not (input_time_unix or output_strformat):
+            return datetime.strptime(input_time, input_time_format)
+        # Return Time in a specific format interpreted from a string.
+        elif input_time and input_time_format and output_time_format and not input_time_unix:
+            return datetime.strptime(input_time, input_time_format).strftime(output_strformat)
+        else:
+            exit(13)
+
+    # Check if we need to do any addition or subtraction
+    elif (operation is not None) and operation_days:
+        # Add N days to datetime based on operation_days
+        if operation == &#34;add&#34;:
+            if output_strformat is None and not input_time:
+                return datetime.now() + timedelta(days=operation_days)
+
+            elif output_strformat and not input_time:
+                time_str = datetime.strftime(datetime.now() + timedelta(days=operation_days), output_strformat)
+                return datetime.strptime(time_str, output_strformat)
+
+            elif input_time_unix and not output_strformat:
+                return datetime.utcfromtimestamp(int(input_time)) + timedelta(days=operation_days)
+
+            elif input_time and input_time_unix and output_strformat:
+
+                return datetime.strftime(datetime.utcfromtimestamp(int(input_time)) + timedelta(days=operation_days), output_strformat)
+
+            elif input_time and not (input_time_unix or output_time_format):
+                return datetime.strptime(input_time, input_time_format) + timedelta(operation_days)
+
+            elif input_time and output_time_format and not input_time_unix:
+                return datetime.strftime(datetime.strptime(input_time, input_time_format) + timedelta(operation_days), output_time_format)
+            else:
+                exit(13)
+
+        # Subtract N days from datetime based on operation_days
+        elif operation == &#34;sub&#34;:
+            if output_strformat is None and not input_time:
+                return datetime.now() - timedelta(days=operation_days)
+
+            elif output_strformat and not input_time:
+                time_str = datetime.strftime(datetime.now() - timedelta(days=operation_days), output_strformat)
+                return datetime.strptime(time_str, output_strformat)
+
+            elif input_time_unix and not output_strformat:
+                return datetime.utcfromtimestamp(int(input_time)) - timedelta(days=operation_days)
+
+            elif input_time and input_time_unix and output_strformat:
+                return datetime.strftime(datetime.utcfromtimestamp(int(input_time)) - timedelta(days=operation_days), output_strformat)
+
+            elif input_time and not (input_time_unix or output_time_format):
+                return datetime.strptime(input_time, input_time_format) - timedelta(operation_days)
+
+            elif input_time and output_time_format and not input_time_unix:
+                return datetime.strftime(datetime.strptime(input_time, input_time_format) - timedelta(operation_days), output_time_format)
+            else:
+                exit(13)
+
+    elif ((operation is not None) or (operation_days is not None)) and \
+         ((operation is None) or (operation_days is None)):
+        print(&#34;Both operation and operation_days need to be provided!&#34;)
+        exit(-1)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_Utilities.return_time"><code class="name flex">
+<span>def <span class="ident">return_time</span></span>(<span>input_time=None, input_time_format=None, input_time_unix=False, output_time_format=None, operation=None, operation_days=None)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Utility function that returns the DateTime object taking into account certain passed arguments.
+:param output_time_format: Takes a string to be used with .strftime("")
+:param operation: Accepts a string containing "add" or "sub" which tells timedelta if we
+need to add or subtract days from the current time.
+:param operation_days: Number of days to add or subtract.
+:return: Object of DateTime</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def return_time(input_time=None, input_time_format=None, input_time_unix=False,
+                output_time_format=None, operation=None, operation_days=None):
+    &#34;&#34;&#34;
+    Utility function that returns the DateTime object taking into account certain passed arguments.
+    :param output_time_format: Takes a string to be used with .strftime(&#34;&#34;)
+    :param operation: Accepts a string containing &#34;add&#34; or &#34;sub&#34; which tells timedelta if we
+    need to add or subtract days from the current time.
+    :param operation_days: Number of days to add or subtract.
+    :return: Object of DateTime
+    &#34;&#34;&#34;
+    input_strformat = None if input_time_format is None else str(input_time_format)
+    output_strformat = None if output_time_format is None else str(output_time_format)
+
+    # Check that operation_days is an int or not.
+    if operation_days is None:
+        pass
+    else:
+        try:
+            int(operation_days)
+        except (ValueError, TypeError):
+            print(&#34;operation_days needs to be an int or float!&#34;)
+            exit(-1)
+
+    # Simple return.
+    if (operation is None) and (operation_days is None):
+        # Return Date + Time in UTC format
+        if (output_strformat is None) and not input_time:
+            return datetime.utcnow()
+        # Return Date + Time in Provided format
+        if output_strformat and not input_time:
+            return datetime.utcnow().strftime(output_strformat)
+        # Return Input time in UTC format.
+        elif input_time_unix and not output_strformat:
+            return datetime.utcfromtimestamp(int(input_time))
+        # Return Time in a specific format, not interpreted from Unix time.
+        elif output_strformat and not (input_time_unix or input_time):
+            return datetime.now()
+        # Return Time in a specific format, from an provided Unix time.
+        elif output_strformat and input_time_unix:
+            return datetime.utcfromtimestamp(int(input_time)).strftime(output_strformat)
+        # Return Time interpreted from a string.
+        elif input_time and input_strformat and not (input_time_unix or output_strformat):
+            return datetime.strptime(input_time, input_time_format)
+        # Return Time in a specific format interpreted from a string.
+        elif input_time and input_time_format and output_time_format and not input_time_unix:
+            return datetime.strptime(input_time, input_time_format).strftime(output_strformat)
+        else:
+            exit(13)
+
+    # Check if we need to do any addition or subtraction
+    elif (operation is not None) and operation_days:
+        # Add N days to datetime based on operation_days
+        if operation == &#34;add&#34;:
+            if output_strformat is None and not input_time:
+                return datetime.now() + timedelta(days=operation_days)
+
+            elif output_strformat and not input_time:
+                time_str = datetime.strftime(datetime.now() + timedelta(days=operation_days), output_strformat)
+                return datetime.strptime(time_str, output_strformat)
+
+            elif input_time_unix and not output_strformat:
+                return datetime.utcfromtimestamp(int(input_time)) + timedelta(days=operation_days)
+
+            elif input_time and input_time_unix and output_strformat:
+
+                return datetime.strftime(datetime.utcfromtimestamp(int(input_time)) + timedelta(days=operation_days), output_strformat)
+
+            elif input_time and not (input_time_unix or output_time_format):
+                return datetime.strptime(input_time, input_time_format) + timedelta(operation_days)
+
+            elif input_time and output_time_format and not input_time_unix:
+                return datetime.strftime(datetime.strptime(input_time, input_time_format) + timedelta(operation_days), output_time_format)
+            else:
+                exit(13)
+
+        # Subtract N days from datetime based on operation_days
+        elif operation == &#34;sub&#34;:
+            if output_strformat is None and not input_time:
+                return datetime.now() - timedelta(days=operation_days)
+
+            elif output_strformat and not input_time:
+                time_str = datetime.strftime(datetime.now() - timedelta(days=operation_days), output_strformat)
+                return datetime.strptime(time_str, output_strformat)
+
+            elif input_time_unix and not output_strformat:
+                return datetime.utcfromtimestamp(int(input_time)) - timedelta(days=operation_days)
+
+            elif input_time and input_time_unix and output_strformat:
+                return datetime.strftime(datetime.utcfromtimestamp(int(input_time)) - timedelta(days=operation_days), output_strformat)
+
+            elif input_time and not (input_time_unix or output_time_format):
+                return datetime.strptime(input_time, input_time_format) - timedelta(operation_days)
+
+            elif input_time and output_time_format and not input_time_unix:
+                return datetime.strftime(datetime.strptime(input_time, input_time_format) - timedelta(operation_days), output_time_format)
+            else:
+                exit(13)
+
+    elif ((operation is not None) or (operation_days is not None)) and \
+         ((operation is None) or (operation_days is None)):
+        print(&#34;Both operation and operation_days need to be provided!&#34;)
+        exit(-1)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="firefox-infra-changelog.modules" href="index.html">firefox-infra-changelog.modules</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="firefox-infra-changelog.modules.FIC_Utilities.return_time" href="#firefox-infra-changelog.modules.FIC_Utilities.return_time">return_time</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

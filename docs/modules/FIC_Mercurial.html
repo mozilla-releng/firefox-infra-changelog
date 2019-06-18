@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>firefox-infra-changelog.modules.FIC_Mercurial API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>firefox-infra-changelog.modules.FIC_Mercurial</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+from modules.FIC_FileHandler import FICFileHandler
+from modules.FIC_DataVault import FICDataVault
+from modules.FIC_Utilities import return_time
+import json
+import requests
+from modules.config import CHANGELOG_REPO_PATH, HG_CHANGESETS_TO_SHOW, REPOSITORIES_FILE, INDIVIDUAL_REPO_DAYS
+
+
+class FICMercurial(FICFileHandler, FICDataVault):
+    def __init__(self):
+        FICFileHandler.__init__(self)
+        FICDataVault.__init__(self)
+
+    def start_hg(self, repo_name):
+        self.repo_name = repo_name
+        self.file_name = repo_name + &#34;.json&#34;
+        self.folders_to_check = self._repo_files_hg()
+        self.repo_data = json.load(self.load(None, REPOSITORIES_FILE))
+        self.local_repo_data = json.load(self.load(CHANGELOG_REPO_PATH, self.file_name))
+        self._prepare_url()
+        self._download_data()
+        self._construct_json_dict()
+
+    # =======PREPARE URL========
+    def _prepare_url(self):
+        self._get_repo_link(self.repo_name)
+        self._request_hg_data()
+        self._load_response_in_json()
+        self._get_end_id()
+        self._generate_push_link()
+
+    # =========DOWNLOAD DATA========
+    def _download_data(self):
+        self._request_changesets_data()
+        self._load_changesets_data_in_json()
+
+    def _get_last_local_push_id(self):
+        &#34;&#34;&#34;
+        Return last push id from local file
+        &#34;&#34;&#34;
+        self.last_local_push_id = self.local_repo_data.get(&#34;0&#34;).get(&#34;last_push_id&#34;)
+        return self.last_local_push_id
+
+    def _get_repo_link(self, repo_name):
+        &#34;&#34;&#34;
+        Return repository link
+        &#34;&#34;&#34;
+        self.repository_url = self.repo_data.get(&#34;Mercurial&#34;).get(repo_name).get(&#34;url&#34;)
+        return self.repository_url
+
+    def _request_hg_data(self):
+        &#34;&#34;&#34;
+        Return hg data for finding the last remote push id
+        &#34;&#34;&#34;
+        url_flags = &#34;json-pushes?version=2&amp;full=1&amp;startID=3&amp;endID=5&#34;
+        self.hg_response = requests.get(self.repository_url + url_flags).text
+        return self.hg_response
+
+    def _load_response_in_json(self):
+        &#34;&#34;&#34;
+        Transforms response into json
+        &#34;&#34;&#34;
+        self.response_json = json.loads(self.hg_response)
+        return self.response_json
+
+    def _get_end_id(self):
+        &#34;&#34;&#34;
+        Returns end id picked up from the response
+        &#34;&#34;&#34;
+        self.end_id = self.response_json.get(&#34;lastpushid&#34;)
+        return self.end_id
+
+    def _generate_push_link(self):
+        &#34;&#34;&#34;
+        Returns a download link using local push id and last remote push id
+        &#34;&#34;&#34;
+        if self.local_repo_data.get(&#34;0&#34;):
+            self._get_last_local_push_id()
+            url_options = &#34;json-pushes?version=2&amp;full=1&amp;startID={}&amp;endID={}&#34;.format(self.last_local_push_id, self.end_id)
+        else:
+            url_options = &#34;json-pushes?version=2&amp;full=1&amp;startID={}&amp;endID={}&#34;.format(self.end_id - HG_CHANGESETS_TO_SHOW, self.end_id)
+        self.push_link = self.repository_url + url_options
+        return self.push_link
+
+    def _request_changesets_data(self):
+        &#34;&#34;&#34;
+        Returns response using link generated in _generate_push_link
+        &#34;&#34;&#34;
+        self.changesets_response = requests.get(self.push_link).text
+        return self.changesets_response
+
+    def _load_changesets_data_in_json(self):
+        &#34;&#34;&#34;
+        Formats response in json
+        &#34;&#34;&#34;
+        self.changesets_json = json.loads(self.changesets_response)
+        return self.changesets_json
+
+    def _generate_changeset_date(self, date):
+        self.changeset_date = return_time(input_time=date, input_time_unix=True, output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;)
+        return self.changeset_date
+
+    def _generate_commit_url(self, node):
+        &#34;&#34;&#34;
+        Returns commit url using node
+        &#34;&#34;&#34;
+        self.commit_url = self.repository_url + &#34;pushloghtml?changeset=&#34; + node[:12]
+        return self.commit_url
+
+    def _repo_files_hg(self):
+        &#34;&#34;&#34;
+        Returns files/folders to check from repositories.json
+        &#34;&#34;&#34;
+        self.folders_to_check = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Mercurial&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;folders-to-check&#34;)
+        return self.folders_to_check
+
+    def _compare_files(self):
+        &#34;&#34;&#34;
+        Compares commit files we are interested in with files changed by commits on remote
+        &#34;&#34;&#34;
+        for folder_to_check in range(len(self.folders_to_check)):
+            for changed_folder in range(len(self.commit_files_changed)):
+                if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
+                    return True
+
+    def _prep_final_dict(self):
+        self.final_dict = {}
+        self.final_dict.update({&#34;0&#34;: {&#34;last_push_id&#34;: self.end_id}})
+
+    def _get_local_data(self):
+        &#34;&#34;&#34;
+        Picks up data if a .json file is already in place
+        &#34;&#34;&#34;
+        if len(self.local_repo_data):
+            self.local_repo_data.pop(&#34;0&#34;)
+            for key, value in self.local_repo_data.items():
+                if return_time(input_time=value[&#34;date_of_push&#34;], input_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;) &gt; \
+                   return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;, operation=&#34;sub&#34;, operation_days=INDIVIDUAL_REPO_DAYS):
+                    self.push_number += 1
+                    self.final_dict.update({self.push_number: value})
+
+    def _add_changeset_data(self, push):
+        &#34;&#34;&#34;
+        Constructs changeset part of the final dictionary
+        &#34;&#34;&#34;
+        unformated_date = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;date&#34;)
+        pusher = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;user&#34;)
+        date = self._generate_changeset_date(unformated_date)
+        self.changeset_dict.update({&#34;pusher&#34;: pusher, &#34;date_of_push&#34;: date, &#34;changeset_commits&#34;: {}})
+
+    def _add_commit_data(self, push, commit):
+        &#34;&#34;&#34;
+        Constructs commits part of the final dictionary
+        &#34;&#34;&#34;
+        self.commit_files_changed = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;files&#34;]
+        if self._compare_files():
+            node = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;node&#34;]
+            commit_author = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;author&#34;]
+            commit_message = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;desc&#34;]
+            self.changeset_dict[&#34;changeset_commits&#34;].update(
+                {commit + 1: {&#34;url&#34;: self._generate_commit_url(node),
+                              &#34;commit_author&#34;: commit_author,
+                              &#34;commit_message&#34;: commit_message,
+                              &#34;files_changed&#34;: f&#34;This commit contains {len(self.commit_files_changed)} files changed.&#34;
+                              }
+                 })
+
+    def _populate_final_dict(self):
+        for changeset in reversed(self.list_of_dicts):
+            if len(changeset[&#34;changeset_commits&#34;]) == 0:
+                del changeset
+            else:
+                self.push_number += 1
+                self.final_dict.update({self.push_number: changeset})
+
+    def _construct_json_dict(self):
+        &#34;&#34;&#34;
+        Main loop that generates final dictionary using _add_commit_data, _add_changeset_data and throws everything into .json file
+        &#34;&#34;&#34;
+        self.list_of_dicts = []
+        self._prep_final_dict()
+        self.push_number = 0
+        for push in self.changesets_json.get(&#34;pushes&#34;):
+            self.changeset_dict = {}
+            self._add_changeset_data(push)
+            for commit in range(len(self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;))):
+                self._add_commit_data(push, commit)
+            self.list_of_dicts.append(self.changeset_dict)
+        self._populate_final_dict()
+        self._get_local_data()
+        self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.final_dict)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_Mercurial.FICMercurial"><code class="flex name class">
+<span>class <span class="ident">FICMercurial</span></span>
+</code></dt>
+<dd>
+<section class="desc"><p>This class handle the logging system of the entire project.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">class FICMercurial(FICFileHandler, FICDataVault):
+    def __init__(self):
+        FICFileHandler.__init__(self)
+        FICDataVault.__init__(self)
+
+    def start_hg(self, repo_name):
+        self.repo_name = repo_name
+        self.file_name = repo_name + &#34;.json&#34;
+        self.folders_to_check = self._repo_files_hg()
+        self.repo_data = json.load(self.load(None, REPOSITORIES_FILE))
+        self.local_repo_data = json.load(self.load(CHANGELOG_REPO_PATH, self.file_name))
+        self._prepare_url()
+        self._download_data()
+        self._construct_json_dict()
+
+    # =======PREPARE URL========
+    def _prepare_url(self):
+        self._get_repo_link(self.repo_name)
+        self._request_hg_data()
+        self._load_response_in_json()
+        self._get_end_id()
+        self._generate_push_link()
+
+    # =========DOWNLOAD DATA========
+    def _download_data(self):
+        self._request_changesets_data()
+        self._load_changesets_data_in_json()
+
+    def _get_last_local_push_id(self):
+        &#34;&#34;&#34;
+        Return last push id from local file
+        &#34;&#34;&#34;
+        self.last_local_push_id = self.local_repo_data.get(&#34;0&#34;).get(&#34;last_push_id&#34;)
+        return self.last_local_push_id
+
+    def _get_repo_link(self, repo_name):
+        &#34;&#34;&#34;
+        Return repository link
+        &#34;&#34;&#34;
+        self.repository_url = self.repo_data.get(&#34;Mercurial&#34;).get(repo_name).get(&#34;url&#34;)
+        return self.repository_url
+
+    def _request_hg_data(self):
+        &#34;&#34;&#34;
+        Return hg data for finding the last remote push id
+        &#34;&#34;&#34;
+        url_flags = &#34;json-pushes?version=2&amp;full=1&amp;startID=3&amp;endID=5&#34;
+        self.hg_response = requests.get(self.repository_url + url_flags).text
+        return self.hg_response
+
+    def _load_response_in_json(self):
+        &#34;&#34;&#34;
+        Transforms response into json
+        &#34;&#34;&#34;
+        self.response_json = json.loads(self.hg_response)
+        return self.response_json
+
+    def _get_end_id(self):
+        &#34;&#34;&#34;
+        Returns end id picked up from the response
+        &#34;&#34;&#34;
+        self.end_id = self.response_json.get(&#34;lastpushid&#34;)
+        return self.end_id
+
+    def _generate_push_link(self):
+        &#34;&#34;&#34;
+        Returns a download link using local push id and last remote push id
+        &#34;&#34;&#34;
+        if self.local_repo_data.get(&#34;0&#34;):
+            self._get_last_local_push_id()
+            url_options = &#34;json-pushes?version=2&amp;full=1&amp;startID={}&amp;endID={}&#34;.format(self.last_local_push_id, self.end_id)
+        else:
+            url_options = &#34;json-pushes?version=2&amp;full=1&amp;startID={}&amp;endID={}&#34;.format(self.end_id - HG_CHANGESETS_TO_SHOW, self.end_id)
+        self.push_link = self.repository_url + url_options
+        return self.push_link
+
+    def _request_changesets_data(self):
+        &#34;&#34;&#34;
+        Returns response using link generated in _generate_push_link
+        &#34;&#34;&#34;
+        self.changesets_response = requests.get(self.push_link).text
+        return self.changesets_response
+
+    def _load_changesets_data_in_json(self):
+        &#34;&#34;&#34;
+        Formats response in json
+        &#34;&#34;&#34;
+        self.changesets_json = json.loads(self.changesets_response)
+        return self.changesets_json
+
+    def _generate_changeset_date(self, date):
+        self.changeset_date = return_time(input_time=date, input_time_unix=True, output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;)
+        return self.changeset_date
+
+    def _generate_commit_url(self, node):
+        &#34;&#34;&#34;
+        Returns commit url using node
+        &#34;&#34;&#34;
+        self.commit_url = self.repository_url + &#34;pushloghtml?changeset=&#34; + node[:12]
+        return self.commit_url
+
+    def _repo_files_hg(self):
+        &#34;&#34;&#34;
+        Returns files/folders to check from repositories.json
+        &#34;&#34;&#34;
+        self.folders_to_check = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Mercurial&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;folders-to-check&#34;)
+        return self.folders_to_check
+
+    def _compare_files(self):
+        &#34;&#34;&#34;
+        Compares commit files we are interested in with files changed by commits on remote
+        &#34;&#34;&#34;
+        for folder_to_check in range(len(self.folders_to_check)):
+            for changed_folder in range(len(self.commit_files_changed)):
+                if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
+                    return True
+
+    def _prep_final_dict(self):
+        self.final_dict = {}
+        self.final_dict.update({&#34;0&#34;: {&#34;last_push_id&#34;: self.end_id}})
+
+    def _get_local_data(self):
+        &#34;&#34;&#34;
+        Picks up data if a .json file is already in place
+        &#34;&#34;&#34;
+        if len(self.local_repo_data):
+            self.local_repo_data.pop(&#34;0&#34;)
+            for key, value in self.local_repo_data.items():
+                if return_time(input_time=value[&#34;date_of_push&#34;], input_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;) &gt; \
+                   return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;, operation=&#34;sub&#34;, operation_days=INDIVIDUAL_REPO_DAYS):
+                    self.push_number += 1
+                    self.final_dict.update({self.push_number: value})
+
+    def _add_changeset_data(self, push):
+        &#34;&#34;&#34;
+        Constructs changeset part of the final dictionary
+        &#34;&#34;&#34;
+        unformated_date = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;date&#34;)
+        pusher = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;user&#34;)
+        date = self._generate_changeset_date(unformated_date)
+        self.changeset_dict.update({&#34;pusher&#34;: pusher, &#34;date_of_push&#34;: date, &#34;changeset_commits&#34;: {}})
+
+    def _add_commit_data(self, push, commit):
+        &#34;&#34;&#34;
+        Constructs commits part of the final dictionary
+        &#34;&#34;&#34;
+        self.commit_files_changed = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;files&#34;]
+        if self._compare_files():
+            node = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;node&#34;]
+            commit_author = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;author&#34;]
+            commit_message = self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;)[commit][&#34;desc&#34;]
+            self.changeset_dict[&#34;changeset_commits&#34;].update(
+                {commit + 1: {&#34;url&#34;: self._generate_commit_url(node),
+                              &#34;commit_author&#34;: commit_author,
+                              &#34;commit_message&#34;: commit_message,
+                              &#34;files_changed&#34;: f&#34;This commit contains {len(self.commit_files_changed)} files changed.&#34;
+                              }
+                 })
+
+    def _populate_final_dict(self):
+        for changeset in reversed(self.list_of_dicts):
+            if len(changeset[&#34;changeset_commits&#34;]) == 0:
+                del changeset
+            else:
+                self.push_number += 1
+                self.final_dict.update({self.push_number: changeset})
+
+    def _construct_json_dict(self):
+        &#34;&#34;&#34;
+        Main loop that generates final dictionary using _add_commit_data, _add_changeset_data and throws everything into .json file
+        &#34;&#34;&#34;
+        self.list_of_dicts = []
+        self._prep_final_dict()
+        self.push_number = 0
+        for push in self.changesets_json.get(&#34;pushes&#34;):
+            self.changeset_dict = {}
+            self._add_changeset_data(push)
+            for commit in range(len(self.changesets_json.get(&#34;pushes&#34;).get(push).get(&#34;changesets&#34;))):
+                self._add_commit_data(push, commit)
+            self.list_of_dicts.append(self.changeset_dict)
+        self._populate_final_dict()
+        self._get_local_data()
+        self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.final_dict)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>modules.FIC_FileHandler.FICFileHandler</li>
+<li>modules.FIC_Logger.FICLogger</li>
+<li>modules.FIC_DataVault.FICDataVault</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_Mercurial.FICMercurial.start_hg"><code class="name flex">
+<span>def <span class="ident">start_hg</span></span>(<span>self, repo_name)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def start_hg(self, repo_name):
+    self.repo_name = repo_name
+    self.file_name = repo_name + &#34;.json&#34;
+    self.folders_to_check = self._repo_files_hg()
+    self.repo_data = json.load(self.load(None, REPOSITORIES_FILE))
+    self.local_repo_data = json.load(self.load(CHANGELOG_REPO_PATH, self.file_name))
+    self._prepare_url()
+    self._download_data()
+    self._construct_json_dict()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="firefox-infra-changelog.modules" href="index.html">firefox-infra-changelog.modules</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="firefox-infra-changelog.modules.FIC_Mercurial.FICMercurial" href="#firefox-infra-changelog.modules.FIC_Mercurial.FICMercurial">FICMercurial</a></code></h4>
+<ul class="">
+<li><code><a title="firefox-infra-changelog.modules.FIC_Mercurial.FICMercurial.start_hg" href="#firefox-infra-changelog.modules.FIC_Mercurial.FICMercurial.start_hg">start_hg</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
