@@ -7,6 +7,7 @@ from modules.FIC_DataVault import FICDataVault
 from modules.config import *
 from modules.FIC_Utilities import return_time
 from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH, INDIVIDUAL_REPO_DAYS
+from git import Repo
 import os
 import json
 import requests
@@ -26,7 +27,7 @@ class FICGithub(FICFileHandler, FICDataVault):
         self._token = os.environ.get(GIT_TOKEN[self.token_counter])
         self._gh = self._auth()
         self.repo_data = None
-        self.repo = self.construct_path(None, None)
+        self.repo = Repo(self.construct_path(None, None))
 
     def _auth(self):
         return github3.login(token=self._token)
@@ -133,9 +134,9 @@ class FICGithub(FICFileHandler, FICDataVault):
         Commits the added changes
         """
         self.LOGGER.info(f"Committing changes with message: Changelog: {return_time()}")
-        return self.repo.index.commit("Changelog: " + return_time())
+        return self.repo.index.commit("Changelog: " + return_time(output_time_format="%Y-%m-%dT%H:%M:%S"))
 
-    def push(self):
+    def push_to_git(self):
         """
         Pushes the commited changes to github
         """

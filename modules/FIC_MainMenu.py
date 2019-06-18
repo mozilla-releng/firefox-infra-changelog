@@ -216,7 +216,11 @@ class FICMainMenu(FICCore):
                 self._main_menu()
 
         if choice == 7:
-            pass
+            self.LOGGER.info(f"Script running for choice {choice}: ALL Repositories and PUSH changes to GitHub")
+            self.run_fic(all=True,
+                         push=True,
+                         logging=self.logging,
+                         days=self.days)
 
         if choice == 0:
             exit()

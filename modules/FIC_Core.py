@@ -16,7 +16,7 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
         FICLogger.__init__(self)
         self.check_tool_integrity()
 
-    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, days=DEFAULT_DAYS, logging=False):
+    def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, push=False, days=DEFAULT_DAYS, logging=False):
         """
         The main method that runs the script depending on the following parameters.
         :param all: runs script for all available repositories
@@ -25,6 +25,7 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
         :param repo_list: runs script for the repositories chosen by user
         :param days: generate the main markdown table (changelog.md) for <int> amount of days
         :param logging: activate the logger output in the console
+        :param push: auto push the changes to GitHub
         """
         if logging:
             self.console_logging()
@@ -47,6 +48,9 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
 
         self.populate_changelog_json(days)
         self.create_changelog_md()
+
+        if push:
+            self.push_to_git()
 
     def _run_all_behavior(self):
         """
