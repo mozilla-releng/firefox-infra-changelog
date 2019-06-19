@@ -25,6 +25,9 @@ class FICMainMenu(FICCore):
         self.arguments_set = False  # Check to see if we set the Flag values or not. Helps to skip un-needed iterations.
 
     def start(self):
+        """
+        The entry point for script. Runs the entire logic depending of the arguments.
+        """
         # Set all argument flags, based on runtime arguments.
         self._available_arguments()
 
@@ -48,6 +51,9 @@ class FICMainMenu(FICCore):
                          logging=self.logging)
 
     def _available_arguments(self):
+        """
+        This method reads and set all the arguments flags.
+        """
         self.parser.add_argument('-a', '--all', required=False, action='store_true', default=False,
                                  help='Runs script for all available repositories')
         self.parser.add_argument('-g', '--git', required=False, action='store_true', default=False,
@@ -71,6 +77,9 @@ class FICMainMenu(FICCore):
         self._set_arguments_flags()
 
     def _set_arguments_flags(self):
+        """
+        This method changes the flags state depending of the arguments.
+        """
         # Check that we have parsed all arguments.
         if not self.args:
             self._available_arguments()
@@ -118,6 +127,10 @@ class FICMainMenu(FICCore):
         self.arguments_set = True
 
     def _construct_mainmenu_text(self):
+        """
+        Creates the main-menu content and prepare it to be displayed.
+        :return: the main menu text
+        """
         if not self.arguments_set:
             self._set_arguments_flags()
         else:
@@ -146,11 +159,18 @@ class FICMainMenu(FICCore):
         return menu_header + menu_notifications + menu_options
 
     def _main_menu(self):
+        """
+        This method prints the main menu and reads the chosen options.
+        """
         print(self._construct_mainmenu_text())
         self.choice = int(input())
         self._run_selected_menu(choice=self.choice)
 
     def _run_selected_menu(self, choice):
+        """
+        This method calls the run_fic method depending of the chosen option.
+        :param choice: the chosen option by user
+        """
         if choice == 1:
             self.LOGGER.info(f"Script running for choice {choice}: ALL Repositories.")
             self.run_fic(all=True,
@@ -206,6 +226,9 @@ class FICMainMenu(FICCore):
             exit()
 
     def _repo_selection_menu(self):
+        """
+        Load available repositories and prepares them for user selection.
+        """
         repo_list = json.load(self.load(None, REPOSITORIES_FILE))
         temp_list = []
 
@@ -228,6 +251,9 @@ class FICMainMenu(FICCore):
                 self.repo_selection.append((repo, key))
 
     def _construct_repo_selection(self, repo_list):
+        """
+        The method that creates the list of the repositories chosen by user.
+        """
         temp_list = []
         self.repo_selection = []
         for key in repo_list:

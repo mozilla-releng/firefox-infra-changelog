@@ -9,6 +9,10 @@ import json
 
 
 class FICMarkdownGenerator(FICFileHandler, FICDataVault):
+    """
+    Handles the generation of markdown files.
+    Creates an MD file for every json file present
+    """
     def __init__(self):
         FICFileHandler.__init__(self)
         FICDataVault.__init__(self)
@@ -20,9 +24,16 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return return_time(output_time_format="%Y-%m-%d %H:%M:%S UTC")
 
     def _load_local_json_data(self):
+        """
+        :return: loads and returns the locally stored data from json file
+        """
         return json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + ".json"))
 
     def _build_initial_md_structure(self):
+        """
+        Creates the header and first table row for the MD files that will be generates for
+        each individual repo
+        """
         self.md_ready_data.append(self._create_repo_markdown_header())
         self.md_ready_data.append(self._create_first_table_row())
 
@@ -35,6 +46,10 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                "|:-----:|:-----:|:----------------------------------:|:------:|:----:| \n"
 
     def md_table_row_builder(self):
+        """
+        The pattern structure for building a table row in the MD files
+        :return:  the data of a commit in a table row
+        """
         return "|" + str(self.commit_number) + "|" + self.commit_author + "|" + self.commit_message + \
                "|" + "[URL](" + self.commit_url + ")" + "|" + str(self.commit_date) + "\n"
 
@@ -43,12 +58,18 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return repositories_data.get(repository_type).get(self.repo_name).get("url")
 
     def no_data_for_md(self, argument, main_markdown=False, repo_markdown=False):
+        """
+        Backup text to be written to table in case there is no commit data to be shown
+        """
         if main_markdown:
             return f"| No commits in the past {DEFAULT_DAYS} days.. see the longer history [here]({argument}) |\n"
         elif repo_markdown:
             return f"| No recent changes on this repository.. see the entire changelog by accessing this [link]({self._generate_repo_url(argument)}) |"
 
     def generate_link_for_bugs(self):
+        """
+        Generates the bugzilla link for any bug number found in the commit messages
+        """
         import re
 
         commit_msg = re.sub("\(", "( ", self.commit_message)
@@ -97,11 +118,17 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return self.commit_author, self.commit_message
 
     def trim_commit_description(self, commit_link, length=COMMIT_DESCRIPTION_LENGTH):
+        """
+        Sets the max length of the commit message. Default = 400 chars
+        """
         if len(self.commit_message) > length:
             self.commit_message = self.commit_message[0:length] + ".. [continue reading](" + commit_link + ")"
         return self.commit_message
 
     def _populate_md_for_git(self):
+        """
+        Populates a list with all the data to be writen to an MD file. Works for git repos
+        """
         local_json_data = self._load_local_json_data()
         if len(local_json_data) > 1:
             del local_json_data["0"]
@@ -120,6 +147,9 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self.md_ready_data.append(self.no_data_for_md("Github", repo_markdown=True))
 
     def start_md_for_git(self, repo_name=None):
+        """
+        The entry point for running the MD logic for git repositories
+        """
         self.repo_name = repo_name
         open(self.construct_path(CHANGELOG_REPO_PATH, repo_name + ".md"), 'w').close()
         self._build_initial_md_structure()
@@ -129,6 +159,9 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.md_ready_data = []
 
     def _populate_md_for_hg(self):
+        """
+        Populates a list with all the data to be writen to an MD file. Works for hg repos
+        """
         local_json_data = self._load_local_json_data()
         if len(local_json_data) > 1:
             del local_json_data["0"]
@@ -148,6 +181,9 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
             self.md_ready_data.append(self.no_data_for_md("Mercurial", repo_markdown=True))
 
     def start_md_for_hg(self, repo_name=None):
+        """
+        The entry point for running the MD logic for hg repositories
+        """
         self.repo_name = repo_name
         open(self.construct_path(CHANGELOG_REPO_PATH, repo_name + ".md"), 'w').close()
         self._build_initial_md_structure()
@@ -157,6 +193,9 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         self.md_ready_data = []
 
     def _changelog_md_header(self):
+        """
+        :return: The header for changelog.md
+        """
         return "## " + "Commits in production - for {} days".format(DEFAULT_DAYS) + "\n" + "### " + "Generated on: {}".format(self._get_current_time()) + "\n"
 
     @staticmethod
@@ -171,6 +210,9 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
 
     @staticmethod
     def _get_display_order(changelog_data, repo_config):
+        """
+        :return: a sorted list with the repos in the configured order found within repositories.json
+        """
         repo_order = []
         for element in changelog_data["Github"]:
             order = repo_config["Github"][element]["order"]
@@ -200,10 +242,17 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return base_link + repo + ".json", base_link + repo + ".md"
 
     def _changelog_md_row_builder(self):
+        """
+        The pattern structure for building a table row in changelog.md
+        :return:  the data of a commit in a table row
+        """
         return "|" + "[Link](" + self.commit_url + ")" + "|" + str(self.generate_link_for_bugs()) + "|" + self.commit_author + \
                "|" + str(self.commit_reviewer) + "|" + str(self.commit_date) + "\n"
 
     def _populate_changelog_md(self, element, changelog_data):
+        """
+        Populates a list with all the data to be writen to changelog.md
+        """
         json_link, md_link = self._get_js_md_links(element[0])
         if element[2] is "git":
             self.changelog_md_data.append(self._changelog_md_links(element[0], json_link, md_link))
@@ -236,6 +285,10 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
                 self.changelog_md_data.append(self.no_data_for_md(md_link, main_markdown=True))
 
     def create_changelog_md(self):
+        """
+        The entry point for generating changelog.md
+        Contains all the logic to update changelog.md
+        """
         open(self.construct_path(None, CHANGELOG_MD_PATH), 'w').close()
         changelog_data = json.load(self.load(None, CHANGELOG_JSON_PATH))
         repo_config = json.load(self.load(None, REPOSITORIES_FILE))

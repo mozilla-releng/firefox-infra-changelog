@@ -23,6 +23,11 @@ class FICFileHandler(FICLogger, FICDataVault):
 
     @staticmethod
     def _check_dev_mode():
+        """
+        Method that verifies if "-dev" arguments has been used while calling the script, if so
+        returns the parrent directory, else the current directory.
+        Usefull when individual parts/modules are called on their own.
+        """
         import sys
         if "-dev" in sys.argv:
             return os.path.pardir
@@ -111,6 +116,11 @@ class FICFileHandler(FICLogger, FICDataVault):
             self._download_missing_files()
 
     def _download_missing_files(self):
+        """
+        Downloads the missing modules and writes them to individual files.
+        The base_url will be later modified to acomodate for later updates and modifications (the oop 
+        branch can be deleted after a while and cause issues).
+        """
         import requests
         base_url = "https://raw.githubusercontent.com/mozilla-releng/firefox-infra-changelog/oop/modules/"
         for file in self._missing_files:
@@ -120,6 +130,7 @@ class FICFileHandler(FICLogger, FICDataVault):
             f.close()
 
     def construct_path(self, directory_name, file_name):
+        """Returns the joined path and is usefull for OS cross compatibility"""
         if (directory_name is None) and (file_name is None):
             return self._check_dev_mode()
 
@@ -144,9 +155,11 @@ class FICFileHandler(FICLogger, FICDataVault):
         self._check_module_files()
 
     def load(self, directory, file_name):
+        """Returns a loaded file content."""
         return open(self.construct_path(directory, file_name))
 
     def save(self, directory, file_name, content):
+        """Writes content to md/json file. Also handles unknown file types."""
         if file_name.endswith(".md"):
             with open(self.construct_path(directory, file_name), "a") as markdown_file:
                 markdown_file.write(content)
@@ -216,7 +229,13 @@ class FICFileHandler(FICLogger, FICDataVault):
         return generated_name
 
     def is_readable(self, directory_name, file_name):
-        # os.access() is used with two arguments, file_name and os.R_OK to check if the file can be read
+        """
+        Checks to see if the file contents can be read. 
+        It uses os.access() with two arguments:
+            1. file_name that needs to be checked 
+            2. os.R_OK expected access level.
+        In case the check fails, a criticall log will be recored and the script will exit with exit code #8
+        """
         if os.access(self.construct_path(directory_name, file_name), os.R_OK):
             self.LOGGER.debug("File \"{}\" can be read.".format(self.construct_path(directory_name, file_name)))
             return True
@@ -246,7 +265,16 @@ class FICFileHandler(FICLogger, FICDataVault):
             return False
 
     def move_to_final_location(self, old_path, old_file, new_path, new_file):
-
+        """
+        Moves a file to a new path.
+        It accepts 4 arguments:
+         - 1. Old Path name
+         - 2. Old File name
+         - 3. New Path name
+         - 4. New File name
+        
+        It uses os.rename() function in order to move the file.
+        """
         try:
             os.rename(self.construct_path(old_path, old_file), self.construct_path(new_path, new_file))
             self.LOGGER.info("Successfully moved to new path: {}".format(self.construct_path(new_path, new_file)))

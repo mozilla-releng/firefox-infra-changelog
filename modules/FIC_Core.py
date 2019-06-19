@@ -17,6 +17,16 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
         self.check_tool_integrity()
 
     def run_fic(self, all=False, git_only=False, hg_only=False, repo_list=None, push=False, days=DEFAULT_DAYS, logging=False):
+        """
+        The main method that runs the script depending on the following parameters.
+        :param all: runs script for all available repositories
+        :param git_only: runs script only for repositories that are on GitHub
+        :param hg_only: runs script only for repositories that are on Mercurial
+        :param repo_list: runs script for the repositories chosen by user
+        :param days: generate the main markdown table (changelog.md) for <int> amount of days
+        :param logging: activate the logger output in the console
+        :param push: auto push the changes to GitHub
+        """
         if logging:
             self.console_logging()
 
@@ -43,6 +53,9 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
             self.push_to_git()
 
     def _run_all_behavior(self):
+        """
+        This method runs script for all available repositories
+        """
         # Describes the behavioral of the script that runs in all mode.
         for hosting_service in json.load(self.load(None, REPOSITORIES_FILE)):
             for repo in json.load(self.load(None, REPOSITORIES_FILE)).get(hosting_service):
@@ -55,6 +68,9 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
                     self.start_md_for_hg(repo)
 
     def _run_git_behavior(self):
+        """
+        This method runs script only for repositories that are on GitHub
+        """
         # Describes the behavioral of the script that runs in git only mode.
         for repo in json.load(self.load(None, REPOSITORIES_FILE)).get("Github"):
             self.LOGGER.debug(f"Github: Working on repo: {repo}")
@@ -62,6 +78,9 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
             self.start_md_for_git(repo)
 
     def _run_hg_behavior(self):
+        """
+        This method runs script only for repositories that are on Mercurial
+        """
         # Describes the behavioral of the script that runs in hg only mode.
         for repo in json.load(self.load(None, REPOSITORIES_FILE)).get("Mercurial"):
             self.LOGGER.debug(f"Mercurial: Working on repo: {repo}")
@@ -69,6 +88,10 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
             self.start_md_for_hg(repo)
 
     def _run_custom_repos_behavior(self, user_repos):
+        """
+        This method runs script only for repositories chosen by user
+        :param user_repos:  list of repositories chosen by user
+        """
         # Describes the behavioral of the script that runs with custom repos mode.
         for repo in user_repos:
             self.LOGGER.debug(f"{repo[1]} working on repo: {repo[0]}")
@@ -83,6 +106,12 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
                 exit(12)
 
     def _extract_git_commits(self, key, changelog, number_of_days):
+        """
+        The method to extract the commits from GitHub repositories for <int> amount of days.
+        :param key: repository name
+        :param changelog: the dictionary of commits for changelog.json
+        :param number_of_days: the amount of days to extract the commits
+        """
         repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
         if len(repo_data) > 0:
             repo_data.pop("0")
@@ -95,6 +124,12 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
                     commit_number += 1
 
     def _extract_hg_commits(self, key, changelog, number_of_days):
+        """
+        The method to extract the commits from Mercurial repositories for <int> amount of days.
+        :param key: repository name
+        :param changelog: the dictionary of commits for changelog.json
+        :param number_of_days: the amount of days to extract the commits
+        """
         repo_data = json.load(self.load(CHANGELOG_REPO_PATH, key.lower() + ".json"))
         if len(repo_data) > 0:
             repo_data.pop("0")
@@ -107,6 +142,10 @@ class FICCore(FICGithub, FICMercurial, FICMarkdownGenerator, FICLogger):
                     commit_number += 1
 
     def populate_changelog_json(self, number_of_days):
+        """
+        This method generate changelog.json for <int> amount of days
+        :param number_of_days: the amount of days to extract the commits
+        """
         changelog = {}
         changelog.update({"Github": {},
                           "Mercurial": {}})

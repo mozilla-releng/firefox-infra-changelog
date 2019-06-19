@@ -5,18 +5,32 @@ from modules.FIC_Github import FICGithub
 
 
 class FICExceptions(FICGithub):
+    """
+    This class handle all the exceptions and interruptions that could be encountered.
+    """
     def __init__(self):
         self.SIGINT = False
         FICGithub.__init__(self)
         self.e = None
 
     def signal_handler(self, signal, frame):
+        """
+        This method catch the keyboard interruption ( Ctrl + C )
+        :param signal:
+        :param frame:
+        :return:
+        """
         self.LOGGER.info("KeyboardInterrupt (ID: {}) has been caught. Cleaning up...".format(signal))
         self.SIGINT = True
         self.revert_modified_files()
         exit(10)
 
     def handle_git_exception(self, error):
+        """
+        This method handle the GitHub error codes that can be encountered.
+        :param error:
+        :return:
+        """
         self.e = error
         if self.e == 301:
             self.LOGGER.critical("Error code 301: Moved Permanently")

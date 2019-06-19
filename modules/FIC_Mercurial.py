@@ -37,34 +37,46 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self._request_changesets_data()
         self._load_changesets_data_in_json()
 
-    # Get last push id from local file
     def _get_last_local_push_id(self):
+        """
+        Return last push id from local file
+        """
         self.last_local_push_id = self.local_repo_data.get("0").get("last_push_id")
         return self.last_local_push_id
 
-    # Get repo link for specific repo we need
     def _get_repo_link(self, repo_name):
+        """
+        Return repository link
+        """
         self.repository_url = self.repo_data.get("Mercurial").get(repo_name).get("url")
         return self.repository_url
 
-    # Request hg data to find last remote push id
     def _request_hg_data(self):
+        """
+        Return hg data for finding the last remote push id
+        """
         url_flags = "json-pushes?version=2&full=1&startID=3&endID=5"
         self.hg_response = requests.get(self.repository_url + url_flags).text
         return self.hg_response
 
-    # Format response into json
     def _load_response_in_json(self):
+        """
+        Transforms response into json
+        """
         self.response_json = json.loads(self.hg_response)
         return self.response_json
 
-    # Actually get lastpushid from remote
     def _get_end_id(self):
+        """
+        Returns end id picked up from the response
+        """
         self.end_id = self.response_json.get("lastpushid")
         return self.end_id
 
-    # Using previous data generates a download link
     def _generate_push_link(self):
+        """
+        Returns a download link using local push id and last remote push id
+        """
         if self.local_repo_data.get("0"):
             self._get_last_local_push_id()
             url_options = "json-pushes?version=2&full=1&startID={}&endID={}".format(self.last_local_push_id, self.end_id)
@@ -73,31 +85,42 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.push_link = self.repository_url + url_options
         return self.push_link
 
-    # Requests data from hg using a link generated on difference between remote and local
     def _request_changesets_data(self):
+        """
+        Returns response using link generated in _generate_push_link
+        """
         self.changesets_response = requests.get(self.push_link).text
         return self.changesets_response
 
-    # Format response into json
     def _load_changesets_data_in_json(self):
+        """
+        Formats response in json
+        """
         self.changesets_json = json.loads(self.changesets_response)
         return self.changesets_json
 
-    # Picks up date and formats it
     def _generate_changeset_date(self, date):
         self.changeset_date = return_time(input_time=date, input_time_unix=True, output_time_format="%Y-%m-%dT%H:%M:%S.%f")
         return self.changeset_date
 
-    # Generated commit url by triming hash
     def _generate_commit_url(self, node):
+        """
+        Returns commit url using node
+        """
         self.commit_url = self.repository_url + "pushloghtml?changeset=" + node[:12]
         return self.commit_url
 
     def _repo_files_hg(self):
+        """
+        Returns files/folders to check from repositories.json
+        """
         self.folders_to_check = json.load(self.load(None, REPOSITORIES_FILE)).get("Mercurial").get(self.repo_name).get("configuration").get("folders-to-check")
         return self.folders_to_check
 
     def _compare_files(self):
+        """
+        Compares commit files we are interested in with files changed by commits on remote
+        """
         for folder_to_check in range(len(self.folders_to_check)):
             for changed_folder in range(len(self.commit_files_changed)):
                 if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
@@ -108,6 +131,9 @@ class FICMercurial(FICFileHandler, FICDataVault):
         self.final_dict.update({"0": {"last_push_id": self.end_id}})
 
     def _get_local_data(self):
+        """
+        Picks up data if a .json file is already in place
+        """
         if len(self.local_repo_data):
             self.local_repo_data.pop("0")
             for key, value in self.local_repo_data.items():
@@ -117,12 +143,18 @@ class FICMercurial(FICFileHandler, FICDataVault):
                     self.final_dict.update({self.push_number: value})
 
     def _add_changeset_data(self, push):
+        """
+        Constructs changeset part of the final dictionary
+        """
         unformated_date = self.changesets_json.get("pushes").get(push).get("date")
         pusher = self.changesets_json.get("pushes").get(push).get("user")
         date = self._generate_changeset_date(unformated_date)
         self.changeset_dict.update({"pusher": pusher, "date_of_push": date, "changeset_commits": {}})
 
     def _add_commit_data(self, push, commit):
+        """
+        Constructs commits part of the final dictionary
+        """
         self.commit_files_changed = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["files"]
         if self._compare_files():
             node = self.changesets_json.get("pushes").get(push).get("changesets")[commit]["node"]
@@ -144,8 +176,10 @@ class FICMercurial(FICFileHandler, FICDataVault):
                 self.push_number += 1
                 self.final_dict.update({self.push_number: changeset})
 
-    # Construct json dictionary
     def _construct_json_dict(self):
+        """
+        Main loop that generates final dictionary using _add_commit_data, _add_changeset_data and throws everything into .json file
+        """
         self.list_of_dicts = []
         self._prep_final_dict()
         self.push_number = 0
