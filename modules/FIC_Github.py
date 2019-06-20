@@ -33,6 +33,10 @@ class FICGithub(FICFileHandler, FICDataVault):
         return github3.login(token=self._token)
 
     def read_repo(self):
+        """
+        It calls the method that gets all the repository data, using it's name, team and the authentication credential
+        as parameters.
+        """
         return self._init_github(self._gh, self.team_name, self.repo_name)
 
     def _init_github(self, *args):
@@ -153,6 +157,10 @@ class FICGithub(FICFileHandler, FICDataVault):
         return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
 
     def get_repo_url(self):
+        """
+        It gets the repository URL.
+        :return: the URL of the repository
+        """
         return self.repo_data.svn_url
 
     def _repo_team(self):
