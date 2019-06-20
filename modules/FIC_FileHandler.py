@@ -244,6 +244,12 @@ class FICFileHandler(FICLogger, FICDataVault):
             exit(8)
 
     def is_writable(self, directory_name, file_name):
+        """
+        This method checks if the provided file has the permission to be write.
+        :param directory_name: the name of the directory where the file is located
+        :param file_name: the name of the file to be checked
+        :return: True or False
+        """
         # Check if the path exists
         if os.path.exists(self.construct_path(directory_name, file_name)):
             # Check if the provided path contains a valid file.
