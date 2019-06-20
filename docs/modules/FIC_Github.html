@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>firefox-infra-changelog.modules.FIC_Github API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>firefox-infra-changelog.modules.FIC_Github</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+import github3
+from modules.FIC_FileHandler import FICFileHandler
+from modules.FIC_DataVault import FICDataVault
+from modules.config import *
+from modules.FIC_Utilities import return_time
+from modules.config import CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH, INDIVIDUAL_REPO_DAYS
+from git import Repo
+import os
+import json
+import requests
+import re
+
+
+class FICGithub(FICFileHandler, FICDataVault):
+    &#34;&#34;&#34;
+    This class handles the extracting, filtering and writing data into json file for git repos
+    that affect firefox infra
+    &#34;&#34;&#34;
+    def __init__(self):
+        FICFileHandler.__init__(self)
+        FICDataVault.__init__(self)
+        self.token_counter = 0
+        self._get_os_var()
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
+        self._gh = self._auth()
+        self.repo_data = None
+        self.repo = Repo(self.construct_path(None, None))
+
+    def _auth(self):
+        return github3.login(token=self._token)
+
+    def read_repo(self):
+        return self._init_github(self._gh, self.team_name, self.repo_name)
+
+    def _init_github(self, *args):
+        self.repo_data = github3.GitHub.repository(args[0], args[1], args[2])
+        return self.repo_data
+
+    def _get_os_var(self):
+        for var in os.environ:
+            # append the OS.VAR to the list in case of no duplicate
+            if &#34;GIT_TOKEN&#34; in var and var not in GIT_TOKEN:
+                GIT_TOKEN.append(var)
+        self.LOGGER.info(f&#34;The list of available tokens: {GIT_TOKEN}&#34;)
+
+    def _get_reset_time(self):
+        reset_time = return_time(input_time=self._gh.rate_limit()[&#39;rate&#39;][&#39;reset&#39;], input_time_unix=True)
+        self.LOGGER.info(f&#34;Rate limit reset in: {reset_time - return_time()}&#34;)
+        return reset_time
+
+    def limit_checker(self):
+        &#34;&#34;&#34;Checks for the amount of limit requests remaining on a specific token.
+        Switches to a new token from a group of defined tokens upon reaching 5 requests remaining
+        &#34;&#34;&#34;
+        limit_requests = self._gh.ratelimit_remaining
+        self.LOGGER.info(f&#34;The number of limit requests is: {limit_requests}&#34;)
+        if limit_requests &lt; 5 and len(GIT_TOKEN) &gt; 1:
+            # switch token
+            if self._switch_token():
+                return True
+            else:
+                # check if the rate limit was reset for the second use of a token
+                if limit_requests &lt; 5:
+                    self._get_reset_time()
+                    return False
+                else:
+                    return True
+        # check the reset time in case of a single token
+        elif limit_requests &lt; 5:
+            self._get_reset_time()
+            return False
+        # return True in case of limit request not reached
+        else:
+            return True
+
+    def _switch_token(self):
+        &#34;&#34;&#34;
+        Method that switches git tokens
+        &#34;&#34;&#34;
+        # get next token
+        switch = self._get_token()
+        # re-logging with the new token
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
+        self._gh = self._auth()
+        self.LOGGER.info(&#34;The token was changed.&#34;)
+        return switch
+
+    def _get_token(self):
+        &#34;&#34;&#34;
+        Returns the next token from the list of defined tokens
+        &#34;&#34;&#34;
+        # in case of the next token but not the last
+        if self.token_counter &lt; len(GIT_TOKEN) - 1:
+            self.token_counter += 1
+            self.LOGGER.info(f&#34;Changing token with: {GIT_TOKEN[self.token_counter]}&#34;)
+            return True
+        # in case of the last token
+        elif self.token_counter == len(GIT_TOKEN) - 1:
+            self.token_counter = 0
+            self.LOGGER.info(f&#34;Changing token with: {GIT_TOKEN[self.token_counter]}&#34;)
+            return False
+
+    def pull(self):
+        &#34;&#34;&#34;
+        Pulls changes for a git repo
+        :return: the pulled changes
+        &#34;&#34;&#34;
+        self.LOGGER.info(f&#34;pulling changes from {self.repo.remotes.origin.url} -&gt; Branch {self.repo.active_branch}&#34;)
+        return self.repo.remotes.origin.pull(refspec=self.repo.active_branch)
+
+    def add(self):
+        &#34;&#34;&#34;
+        Adds modified files that will be commited
+        :return: True or False, depending if there are changes
+        &#34;&#34;&#34;
+        self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
+        return self.check_for_changes()
+
+    def check_for_changes(self):
+        &#34;&#34;&#34;
+        Checkes if there are any important changes regarding infra-tracking
+        :return: True or False, depending if there are changes
+        &#34;&#34;&#34;
+        if not self.repo.index.diff(&#34;HEAD&#34;):
+            self.LOGGER.info(&#34;Nothing staged for commit. has the data or files changed?&#34;)
+            return False
+        return True
+
+    def commit(self):
+        &#34;&#34;&#34;
+        Commits the added changes
+        &#34;&#34;&#34;
+        self.LOGGER.info(f&#34;Committing changes with message: Changelog: {return_time()}&#34;)
+        return self.repo.index.commit(&#34;Changelog: &#34; + return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S&#34;))
+
+    def push_to_git(self):
+        &#34;&#34;&#34;
+        Pushes the commited changes to github
+        &#34;&#34;&#34;
+        self.LOGGER.info(f&#34;Summary of pull: {FICGithub.pull(self)[0]}&#34;)
+        if FICGithub.add(self):
+            self.LOGGER.info(f&#34;Summary of commit {FICGithub.commit(self)}&#34;)
+            self.LOGGER.info(f&#34;pushing changes to {self.repo.remotes.origin.url}  on branch  {self.repo.active_branch}&#34;)
+            self.LOGGER.info(f&#34;Summary of push: {self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary}&#34;)
+
+    def revert_modified_files(self):
+        &#34;&#34;&#34;
+        Undo any changes to files in case the script fails to run successfully
+        &#34;&#34;&#34;
+        return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
+
+    def get_repo_url(self):
+        return self.repo_data.svn_url
+
+    def _repo_team(self):
+        self.team_name = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;team&#34;)
+
+    def _repo_files(self):
+        self.folders_to_check = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;folders-to-check&#34;)
+
+    def _extract_repo_type(self):
+        self.repo_type = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;type&#34;)
+
+    def _local_version(self):
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;):
+            self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;).get(&#34;version&#34;)
+
+    def _get_release(self, release_number):
+        return [tag for tag in self.repo_data.tags(number=release_number)][release_number - 1].name
+
+    def _get_version_path(self):
+        self.version_path = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;version-path&#34;)
+
+    def _build_puppet_version(self):
+        self._get_version_path()
+        for requirements in requests.get(self.version_path).text.split():
+            if self.repo_name in requirements:
+                self.build_puppet_version = re.split(&#34;\\b==\\b&#34;, requirements)[-1]
+                return True
+
+    def _compare_versions(self):
+        &#34;&#34;&#34;
+        Checks the latest version of a repo locally, on github and in build-puppet if defined
+        :return: True if the checked places return different version, otherwise False
+        &#34;&#34;&#34;
+        if self.build_puppet_version == self.release_version and self.release_version != self.local_version:
+            return True
+        else:
+            return False
+
+    def _last_checked(self):
+        &#34;&#34;&#34;
+        :return: the last checked value in the json files. If there isn&#39;t one use DEFAULT_DAYS
+        &#34;&#34;&#34;
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;):
+            self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;).get(&#34;last_checked&#34;)
+        else:
+            self.last_check = return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;, operation=&#34;sub&#34;, operation_days=DEFAULT_DAYS)
+
+    def _commit_iterator(self):
+        &#34;&#34;&#34;
+        Iterates through the commits of a repo and save it if contains infra changes
+        &#34;&#34;&#34;
+        for current_commit in self.repo_data.commits(since=self.last_check):
+            if self.limit_checker():
+                self._get_message(current_commit)
+                self._get_sha(current_commit)
+                self._get_files()
+                if self._commit_filter():
+                    self.commit_number += 1
+                    self._store_data(current_commit)
+                    self._construct_commit()
+        self.keyword = None
+
+    def _store_data(self, current_commit):
+        &#34;&#34;&#34;
+        extracts the data we care about from a commit object
+        &#34;&#34;&#34;
+        self._get_date(current_commit)
+        self._get_author(current_commit)
+        self._get_author_email(current_commit)
+        self._get_url(current_commit)
+
+    def _get_sha(self, commit):
+        self.commit_sha = commit.sha
+        return self.commit_sha
+
+    def _get_message(self, commit):
+        self.commit_message = commit.message
+        return self.commit_message
+
+    def _get_date(self, commit):
+        self.commit_date = commit.commit.author.get(&#34;date&#34;)
+        return self.commit_date
+
+    def _get_author(self, commit):
+        self.commit_author = commit.commit.author.get(&#34;name&#34;)
+        return self.commit_author
+
+    def _get_author_email(self, commit):
+        self.commit_author_email = commit.commit.author.get(&#34;email&#34;)
+        return self.commit_author_email
+
+    def _get_url(self, commit):
+        self.commit_url = commit.url
+        return self.commit_url
+
+    def _get_files(self):
+        self.commit_files_changed = []
+        for item in (range(len(self.repo_data.commit(sha=self.commit_sha).files))):
+            self.commit_files_changed.append(self.repo_data.commit(sha=self.commit_sha).files[item].get(&#39;filename&#39;))
+
+    def _compare_files(self):
+        &#34;&#34;&#34;
+        Checks to see if any of the files we track in a repo were changed
+        :return: True if any of the files we care about received changes
+        &#34;&#34;&#34;
+        for folder_to_check in range(len(self.folders_to_check)):
+            for changed_folder in range(len(self.commit_files_changed)):
+                if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
+                    return True
+
+    def _construct_commit(self):
+        &#34;&#34;&#34;
+        Constructs the object that stores all the data we care about for a single commit
+        &#34;&#34;&#34;
+        self.list_of_commits.update({self.commit_number: {&#39;sha&#39;: self.commit_sha,
+                                                          &#39;url&#39;: self.commit_url,
+                                                          &#39;author&#39;: self.commit_author,
+                                                          &#39;author_email&#39;: self.commit_author_email,
+                                                          &#39;message&#39;: self.commit_message,
+                                                          &#39;date&#39;: self.commit_date,
+                                                          &#39;files&#39;: f&#34;This commit contains {len(self.commit_files_changed)} files changed.&#34;
+                                                          }
+                                     })
+
+    def _commit_filter(self):
+        &#34;&#34;&#34;
+        Determines if we care about saving a commit
+        :return: True if the repo type and its conditions are met
+        &#34;&#34;&#34;
+        if self.repo_type == &#34;commit-keyword&#34;:
+            if self.keyword in self.commit_message:
+                return True
+
+        elif self.repo_type == &#34;tag&#34;:
+            if self.repo_name == &#34;build-puppet&#34;:
+                return True
+
+            elif self.release_version in self.commit_message:
+                return True
+
+        elif len(self.folders_to_check) &gt; 0:
+            if self._compare_files():
+                return True
+
+        else:
+            return True
+
+    def _not_tag(self):
+        self._last_checked()
+        self._commit_iterator()
+
+    def _build_puppet(self):
+        self._last_checked()
+        self._commit_iterator()
+
+    def _tag(self):
+        self._last_checked()
+        self.release_version = self._get_release(1)
+        self._local_version()
+        if self.repo_name == &#34;mozapkpublisher&#34; and self.release_version != self.local_version:
+            self._commit_iterator()
+        else:
+            self._build_puppet_version()
+            if self._compare_versions():
+                self._commit_iterator()
+
+    def _commit_keyword(self):
+        self._last_checked()
+        self.keyword = &#39;deploy&#39;
+        self._commit_iterator()
+
+    def _repo_type_checker(self):
+        &#34;&#34;&#34;
+        Checks the type of a repo, as defined in repositories.json, and runs the appropriate methods
+        &#34;&#34;&#34;
+        if self.repo_type == &#34;no-tag&#34;:
+            self._not_tag()
+
+        elif self.repo_type == &#34;tag&#34;:
+            if self.repo_name == &#34;build-puppet&#34;:
+                self._build_puppet()
+            else:
+                self._tag()
+
+        elif self.repo_type == &#34;commit-keyword&#34;:
+            self._commit_keyword()
+        else:
+            self.LOGGER.critical(f&#34;Repo type not defined for {self.repo_name}&#34;)
+
+    def _generate_first_element(self):
+        &#34;&#34;&#34;
+        Creates the first element which will be at the top of the json file
+        :return:
+        &#34;&#34;&#34;
+        if self.repo_type == &#34;tag&#34; and self.repo_name != &#34;build-puppet&#34;:
+            return {&#34;0&#34;: {&#34;last_checked&#34;: return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;), &#34;version&#34;: self._get_release(1)}}
+        else:
+            return {&#34;0&#34;: {&#34;last_checked&#34;: return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;)}}
+
+    def start_git(self, repo_name=None):
+        &#34;&#34;&#34;
+        The entry point for git. Runs the entire logic for a one git repo at a time
+        :param repo_name: name of the git repo to be worked on
+        &#34;&#34;&#34;
+        self.list_of_commits = {}
+        self.repo_name = repo_name
+        self._extract_repo_type()
+        self._repo_team()
+        self.read_repo()
+        self._repo_files()
+        self.commit_number = 0
+        self.list_of_commits.update(self._generate_first_element())
+        self._repo_type_checker()
+        self._write_git_json()
+
+    def _check_commit_age(self, filter_list=None):
+        &#34;&#34;&#34;
+        Removes data that is older tham a set amount of days. Default = 30
+        :param filter_list: awaits a list of commit data
+        &#34;&#34;&#34;
+        for commit in range(1, len(filter_list)):
+            if return_time(input_time=filter_list[str(commit)][&#34;date&#34;], input_time_format=&#34;%Y-%m-%dT%H:%M:%SZ&#34;) &gt; \
+               return_time(operation=&#34;sub&#34;, operation_days=INDIVIDUAL_REPO_DAYS):
+                self.commit_number += 1
+                self.list_of_commits.update({str(self.commit_number): filter_list[str(commit)]})
+
+    def _write_git_json(self):
+        &#34;&#34;&#34;
+        Writes the final, filtered, extracted data to json files
+        &#34;&#34;&#34;
+        local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;))
+        # In case we have no new commits to save
+        if len(self.list_of_commits) == 1:
+            local_json_data.update(self._generate_first_element())
+            self._check_commit_age(local_json_data)
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.list_of_commits)
+        # In case we have new commits + local data
+        elif len(local_json_data) &gt;= 1:
+            local_json_data.pop(&#34;0&#34;)
+            self._check_commit_age(local_json_data)
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.list_of_commits)
+        # In case we have new commits and NO local data
+        else:
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.list_of_commits)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub"><code class="flex name class">
+<span>class <span class="ident">FICGithub</span></span>
+</code></dt>
+<dd>
+<section class="desc"><p>This class handles the extracting, filtering and writing data into json file for git repos
+that affect firefox infra</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">class FICGithub(FICFileHandler, FICDataVault):
+    &#34;&#34;&#34;
+    This class handles the extracting, filtering and writing data into json file for git repos
+    that affect firefox infra
+    &#34;&#34;&#34;
+    def __init__(self):
+        FICFileHandler.__init__(self)
+        FICDataVault.__init__(self)
+        self.token_counter = 0
+        self._get_os_var()
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
+        self._gh = self._auth()
+        self.repo_data = None
+        self.repo = Repo(self.construct_path(None, None))
+
+    def _auth(self):
+        return github3.login(token=self._token)
+
+    def read_repo(self):
+        return self._init_github(self._gh, self.team_name, self.repo_name)
+
+    def _init_github(self, *args):
+        self.repo_data = github3.GitHub.repository(args[0], args[1], args[2])
+        return self.repo_data
+
+    def _get_os_var(self):
+        for var in os.environ:
+            # append the OS.VAR to the list in case of no duplicate
+            if &#34;GIT_TOKEN&#34; in var and var not in GIT_TOKEN:
+                GIT_TOKEN.append(var)
+        self.LOGGER.info(f&#34;The list of available tokens: {GIT_TOKEN}&#34;)
+
+    def _get_reset_time(self):
+        reset_time = return_time(input_time=self._gh.rate_limit()[&#39;rate&#39;][&#39;reset&#39;], input_time_unix=True)
+        self.LOGGER.info(f&#34;Rate limit reset in: {reset_time - return_time()}&#34;)
+        return reset_time
+
+    def limit_checker(self):
+        &#34;&#34;&#34;Checks for the amount of limit requests remaining on a specific token.
+        Switches to a new token from a group of defined tokens upon reaching 5 requests remaining
+        &#34;&#34;&#34;
+        limit_requests = self._gh.ratelimit_remaining
+        self.LOGGER.info(f&#34;The number of limit requests is: {limit_requests}&#34;)
+        if limit_requests &lt; 5 and len(GIT_TOKEN) &gt; 1:
+            # switch token
+            if self._switch_token():
+                return True
+            else:
+                # check if the rate limit was reset for the second use of a token
+                if limit_requests &lt; 5:
+                    self._get_reset_time()
+                    return False
+                else:
+                    return True
+        # check the reset time in case of a single token
+        elif limit_requests &lt; 5:
+            self._get_reset_time()
+            return False
+        # return True in case of limit request not reached
+        else:
+            return True
+
+    def _switch_token(self):
+        &#34;&#34;&#34;
+        Method that switches git tokens
+        &#34;&#34;&#34;
+        # get next token
+        switch = self._get_token()
+        # re-logging with the new token
+        self._token = os.environ.get(GIT_TOKEN[self.token_counter])
+        self._gh = self._auth()
+        self.LOGGER.info(&#34;The token was changed.&#34;)
+        return switch
+
+    def _get_token(self):
+        &#34;&#34;&#34;
+        Returns the next token from the list of defined tokens
+        &#34;&#34;&#34;
+        # in case of the next token but not the last
+        if self.token_counter &lt; len(GIT_TOKEN) - 1:
+            self.token_counter += 1
+            self.LOGGER.info(f&#34;Changing token with: {GIT_TOKEN[self.token_counter]}&#34;)
+            return True
+        # in case of the last token
+        elif self.token_counter == len(GIT_TOKEN) - 1:
+            self.token_counter = 0
+            self.LOGGER.info(f&#34;Changing token with: {GIT_TOKEN[self.token_counter]}&#34;)
+            return False
+
+    def pull(self):
+        &#34;&#34;&#34;
+        Pulls changes for a git repo
+        :return: the pulled changes
+        &#34;&#34;&#34;
+        self.LOGGER.info(f&#34;pulling changes from {self.repo.remotes.origin.url} -&gt; Branch {self.repo.active_branch}&#34;)
+        return self.repo.remotes.origin.pull(refspec=self.repo.active_branch)
+
+    def add(self):
+        &#34;&#34;&#34;
+        Adds modified files that will be commited
+        :return: True or False, depending if there are changes
+        &#34;&#34;&#34;
+        self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
+        return self.check_for_changes()
+
+    def check_for_changes(self):
+        &#34;&#34;&#34;
+        Checkes if there are any important changes regarding infra-tracking
+        :return: True or False, depending if there are changes
+        &#34;&#34;&#34;
+        if not self.repo.index.diff(&#34;HEAD&#34;):
+            self.LOGGER.info(&#34;Nothing staged for commit. has the data or files changed?&#34;)
+            return False
+        return True
+
+    def commit(self):
+        &#34;&#34;&#34;
+        Commits the added changes
+        &#34;&#34;&#34;
+        self.LOGGER.info(f&#34;Committing changes with message: Changelog: {return_time()}&#34;)
+        return self.repo.index.commit(&#34;Changelog: &#34; + return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S&#34;))
+
+    def push_to_git(self):
+        &#34;&#34;&#34;
+        Pushes the commited changes to github
+        &#34;&#34;&#34;
+        self.LOGGER.info(f&#34;Summary of pull: {FICGithub.pull(self)[0]}&#34;)
+        if FICGithub.add(self):
+            self.LOGGER.info(f&#34;Summary of commit {FICGithub.commit(self)}&#34;)
+            self.LOGGER.info(f&#34;pushing changes to {self.repo.remotes.origin.url}  on branch  {self.repo.active_branch}&#34;)
+            self.LOGGER.info(f&#34;Summary of push: {self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary}&#34;)
+
+    def revert_modified_files(self):
+        &#34;&#34;&#34;
+        Undo any changes to files in case the script fails to run successfully
+        &#34;&#34;&#34;
+        return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
+
+    def get_repo_url(self):
+        return self.repo_data.svn_url
+
+    def _repo_team(self):
+        self.team_name = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;team&#34;)
+
+    def _repo_files(self):
+        self.folders_to_check = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;folders-to-check&#34;)
+
+    def _extract_repo_type(self):
+        self.repo_type = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;type&#34;)
+
+    def _local_version(self):
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;):
+            self.local_version = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;).get(&#34;version&#34;)
+
+    def _get_release(self, release_number):
+        return [tag for tag in self.repo_data.tags(number=release_number)][release_number - 1].name
+
+    def _get_version_path(self):
+        self.version_path = json.load(self.load(None, REPOSITORIES_FILE)).get(&#34;Github&#34;).get(self.repo_name).get(&#34;configuration&#34;).get(&#34;version-path&#34;)
+
+    def _build_puppet_version(self):
+        self._get_version_path()
+        for requirements in requests.get(self.version_path).text.split():
+            if self.repo_name in requirements:
+                self.build_puppet_version = re.split(&#34;\\b==\\b&#34;, requirements)[-1]
+                return True
+
+    def _compare_versions(self):
+        &#34;&#34;&#34;
+        Checks the latest version of a repo locally, on github and in build-puppet if defined
+        :return: True if the checked places return different version, otherwise False
+        &#34;&#34;&#34;
+        if self.build_puppet_version == self.release_version and self.release_version != self.local_version:
+            return True
+        else:
+            return False
+
+    def _last_checked(self):
+        &#34;&#34;&#34;
+        :return: the last checked value in the json files. If there isn&#39;t one use DEFAULT_DAYS
+        &#34;&#34;&#34;
+        if json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;):
+            self.last_check = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;)).get(&#34;0&#34;).get(&#34;last_checked&#34;)
+        else:
+            self.last_check = return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;, operation=&#34;sub&#34;, operation_days=DEFAULT_DAYS)
+
+    def _commit_iterator(self):
+        &#34;&#34;&#34;
+        Iterates through the commits of a repo and save it if contains infra changes
+        &#34;&#34;&#34;
+        for current_commit in self.repo_data.commits(since=self.last_check):
+            if self.limit_checker():
+                self._get_message(current_commit)
+                self._get_sha(current_commit)
+                self._get_files()
+                if self._commit_filter():
+                    self.commit_number += 1
+                    self._store_data(current_commit)
+                    self._construct_commit()
+        self.keyword = None
+
+    def _store_data(self, current_commit):
+        &#34;&#34;&#34;
+        extracts the data we care about from a commit object
+        &#34;&#34;&#34;
+        self._get_date(current_commit)
+        self._get_author(current_commit)
+        self._get_author_email(current_commit)
+        self._get_url(current_commit)
+
+    def _get_sha(self, commit):
+        self.commit_sha = commit.sha
+        return self.commit_sha
+
+    def _get_message(self, commit):
+        self.commit_message = commit.message
+        return self.commit_message
+
+    def _get_date(self, commit):
+        self.commit_date = commit.commit.author.get(&#34;date&#34;)
+        return self.commit_date
+
+    def _get_author(self, commit):
+        self.commit_author = commit.commit.author.get(&#34;name&#34;)
+        return self.commit_author
+
+    def _get_author_email(self, commit):
+        self.commit_author_email = commit.commit.author.get(&#34;email&#34;)
+        return self.commit_author_email
+
+    def _get_url(self, commit):
+        self.commit_url = commit.url
+        return self.commit_url
+
+    def _get_files(self):
+        self.commit_files_changed = []
+        for item in (range(len(self.repo_data.commit(sha=self.commit_sha).files))):
+            self.commit_files_changed.append(self.repo_data.commit(sha=self.commit_sha).files[item].get(&#39;filename&#39;))
+
+    def _compare_files(self):
+        &#34;&#34;&#34;
+        Checks to see if any of the files we track in a repo were changed
+        :return: True if any of the files we care about received changes
+        &#34;&#34;&#34;
+        for folder_to_check in range(len(self.folders_to_check)):
+            for changed_folder in range(len(self.commit_files_changed)):
+                if str(self.folders_to_check[folder_to_check]) in str(self.commit_files_changed[changed_folder]):
+                    return True
+
+    def _construct_commit(self):
+        &#34;&#34;&#34;
+        Constructs the object that stores all the data we care about for a single commit
+        &#34;&#34;&#34;
+        self.list_of_commits.update({self.commit_number: {&#39;sha&#39;: self.commit_sha,
+                                                          &#39;url&#39;: self.commit_url,
+                                                          &#39;author&#39;: self.commit_author,
+                                                          &#39;author_email&#39;: self.commit_author_email,
+                                                          &#39;message&#39;: self.commit_message,
+                                                          &#39;date&#39;: self.commit_date,
+                                                          &#39;files&#39;: f&#34;This commit contains {len(self.commit_files_changed)} files changed.&#34;
+                                                          }
+                                     })
+
+    def _commit_filter(self):
+        &#34;&#34;&#34;
+        Determines if we care about saving a commit
+        :return: True if the repo type and its conditions are met
+        &#34;&#34;&#34;
+        if self.repo_type == &#34;commit-keyword&#34;:
+            if self.keyword in self.commit_message:
+                return True
+
+        elif self.repo_type == &#34;tag&#34;:
+            if self.repo_name == &#34;build-puppet&#34;:
+                return True
+
+            elif self.release_version in self.commit_message:
+                return True
+
+        elif len(self.folders_to_check) &gt; 0:
+            if self._compare_files():
+                return True
+
+        else:
+            return True
+
+    def _not_tag(self):
+        self._last_checked()
+        self._commit_iterator()
+
+    def _build_puppet(self):
+        self._last_checked()
+        self._commit_iterator()
+
+    def _tag(self):
+        self._last_checked()
+        self.release_version = self._get_release(1)
+        self._local_version()
+        if self.repo_name == &#34;mozapkpublisher&#34; and self.release_version != self.local_version:
+            self._commit_iterator()
+        else:
+            self._build_puppet_version()
+            if self._compare_versions():
+                self._commit_iterator()
+
+    def _commit_keyword(self):
+        self._last_checked()
+        self.keyword = &#39;deploy&#39;
+        self._commit_iterator()
+
+    def _repo_type_checker(self):
+        &#34;&#34;&#34;
+        Checks the type of a repo, as defined in repositories.json, and runs the appropriate methods
+        &#34;&#34;&#34;
+        if self.repo_type == &#34;no-tag&#34;:
+            self._not_tag()
+
+        elif self.repo_type == &#34;tag&#34;:
+            if self.repo_name == &#34;build-puppet&#34;:
+                self._build_puppet()
+            else:
+                self._tag()
+
+        elif self.repo_type == &#34;commit-keyword&#34;:
+            self._commit_keyword()
+        else:
+            self.LOGGER.critical(f&#34;Repo type not defined for {self.repo_name}&#34;)
+
+    def _generate_first_element(self):
+        &#34;&#34;&#34;
+        Creates the first element which will be at the top of the json file
+        :return:
+        &#34;&#34;&#34;
+        if self.repo_type == &#34;tag&#34; and self.repo_name != &#34;build-puppet&#34;:
+            return {&#34;0&#34;: {&#34;last_checked&#34;: return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;), &#34;version&#34;: self._get_release(1)}}
+        else:
+            return {&#34;0&#34;: {&#34;last_checked&#34;: return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S.%f&#34;)}}
+
+    def start_git(self, repo_name=None):
+        &#34;&#34;&#34;
+        The entry point for git. Runs the entire logic for a one git repo at a time
+        :param repo_name: name of the git repo to be worked on
+        &#34;&#34;&#34;
+        self.list_of_commits = {}
+        self.repo_name = repo_name
+        self._extract_repo_type()
+        self._repo_team()
+        self.read_repo()
+        self._repo_files()
+        self.commit_number = 0
+        self.list_of_commits.update(self._generate_first_element())
+        self._repo_type_checker()
+        self._write_git_json()
+
+    def _check_commit_age(self, filter_list=None):
+        &#34;&#34;&#34;
+        Removes data that is older tham a set amount of days. Default = 30
+        :param filter_list: awaits a list of commit data
+        &#34;&#34;&#34;
+        for commit in range(1, len(filter_list)):
+            if return_time(input_time=filter_list[str(commit)][&#34;date&#34;], input_time_format=&#34;%Y-%m-%dT%H:%M:%SZ&#34;) &gt; \
+               return_time(operation=&#34;sub&#34;, operation_days=INDIVIDUAL_REPO_DAYS):
+                self.commit_number += 1
+                self.list_of_commits.update({str(self.commit_number): filter_list[str(commit)]})
+
+    def _write_git_json(self):
+        &#34;&#34;&#34;
+        Writes the final, filtered, extracted data to json files
+        &#34;&#34;&#34;
+        local_json_data = json.load(self.load(CHANGELOG_REPO_PATH, self.repo_name.lower() + &#34;.json&#34;))
+        # In case we have no new commits to save
+        if len(self.list_of_commits) == 1:
+            local_json_data.update(self._generate_first_element())
+            self._check_commit_age(local_json_data)
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.list_of_commits)
+        # In case we have new commits + local data
+        elif len(local_json_data) &gt;= 1:
+            local_json_data.pop(&#34;0&#34;)
+            self._check_commit_age(local_json_data)
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.list_of_commits)
+        # In case we have new commits and NO local data
+        else:
+            self.save(CHANGELOG_REPO_PATH, self.repo_name + &#34;.json&#34;, self.list_of_commits)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>modules.FIC_FileHandler.FICFileHandler</li>
+<li>modules.FIC_Logger.FICLogger</li>
+<li>modules.FIC_DataVault.FICDataVault</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.add"><code class="name flex">
+<span>def <span class="ident">add</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Adds modified files that will be commited
+:return: True or False, depending if there are changes</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def add(self):
+    &#34;&#34;&#34;
+    Adds modified files that will be commited
+    :return: True or False, depending if there are changes
+    &#34;&#34;&#34;
+    self.repo.git.add([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH], update=True)
+    return self.check_for_changes()</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.check_for_changes"><code class="name flex">
+<span>def <span class="ident">check_for_changes</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Checkes if there are any important changes regarding infra-tracking
+:return: True or False, depending if there are changes</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def check_for_changes(self):
+    &#34;&#34;&#34;
+    Checkes if there are any important changes regarding infra-tracking
+    :return: True or False, depending if there are changes
+    &#34;&#34;&#34;
+    if not self.repo.index.diff(&#34;HEAD&#34;):
+        self.LOGGER.info(&#34;Nothing staged for commit. has the data or files changed?&#34;)
+        return False
+    return True</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.commit"><code class="name flex">
+<span>def <span class="ident">commit</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Commits the added changes</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def commit(self):
+    &#34;&#34;&#34;
+    Commits the added changes
+    &#34;&#34;&#34;
+    self.LOGGER.info(f&#34;Committing changes with message: Changelog: {return_time()}&#34;)
+    return self.repo.index.commit(&#34;Changelog: &#34; + return_time(output_time_format=&#34;%Y-%m-%dT%H:%M:%S&#34;))</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.get_repo_url"><code class="name flex">
+<span>def <span class="ident">get_repo_url</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def get_repo_url(self):
+    return self.repo_data.svn_url</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.limit_checker"><code class="name flex">
+<span>def <span class="ident">limit_checker</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Checks for the amount of limit requests remaining on a specific token.
+Switches to a new token from a group of defined tokens upon reaching 5 requests remaining</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def limit_checker(self):
+    &#34;&#34;&#34;Checks for the amount of limit requests remaining on a specific token.
+    Switches to a new token from a group of defined tokens upon reaching 5 requests remaining
+    &#34;&#34;&#34;
+    limit_requests = self._gh.ratelimit_remaining
+    self.LOGGER.info(f&#34;The number of limit requests is: {limit_requests}&#34;)
+    if limit_requests &lt; 5 and len(GIT_TOKEN) &gt; 1:
+        # switch token
+        if self._switch_token():
+            return True
+        else:
+            # check if the rate limit was reset for the second use of a token
+            if limit_requests &lt; 5:
+                self._get_reset_time()
+                return False
+            else:
+                return True
+    # check the reset time in case of a single token
+    elif limit_requests &lt; 5:
+        self._get_reset_time()
+        return False
+    # return True in case of limit request not reached
+    else:
+        return True</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.pull"><code class="name flex">
+<span>def <span class="ident">pull</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Pulls changes for a git repo
+:return: the pulled changes</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def pull(self):
+    &#34;&#34;&#34;
+    Pulls changes for a git repo
+    :return: the pulled changes
+    &#34;&#34;&#34;
+    self.LOGGER.info(f&#34;pulling changes from {self.repo.remotes.origin.url} -&gt; Branch {self.repo.active_branch}&#34;)
+    return self.repo.remotes.origin.pull(refspec=self.repo.active_branch)</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.push_to_git"><code class="name flex">
+<span>def <span class="ident">push_to_git</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Pushes the commited changes to github</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def push_to_git(self):
+    &#34;&#34;&#34;
+    Pushes the commited changes to github
+    &#34;&#34;&#34;
+    self.LOGGER.info(f&#34;Summary of pull: {FICGithub.pull(self)[0]}&#34;)
+    if FICGithub.add(self):
+        self.LOGGER.info(f&#34;Summary of commit {FICGithub.commit(self)}&#34;)
+        self.LOGGER.info(f&#34;pushing changes to {self.repo.remotes.origin.url}  on branch  {self.repo.active_branch}&#34;)
+        self.LOGGER.info(f&#34;Summary of push: {self.repo.remotes.origin.push(refspec=self.repo.active_branch)[0].summary}&#34;)</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.read_repo"><code class="name flex">
+<span>def <span class="ident">read_repo</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def read_repo(self):
+    return self._init_github(self._gh, self.team_name, self.repo_name)</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.revert_modified_files"><code class="name flex">
+<span>def <span class="ident">revert_modified_files</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Undo any changes to files in case the script fails to run successfully</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def revert_modified_files(self):
+    &#34;&#34;&#34;
+    Undo any changes to files in case the script fails to run successfully
+    &#34;&#34;&#34;
+    return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])</code></pre>
+</details>
+</dd>
+<dt id="firefox-infra-changelog.modules.FIC_Github.FICGithub.start_git"><code class="name flex">
+<span>def <span class="ident">start_git</span></span>(<span>self, repo_name=None)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>The entry point for git. Runs the entire logic for a one git repo at a time
+:param repo_name: name of the git repo to be worked on</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def start_git(self, repo_name=None):
+    &#34;&#34;&#34;
+    The entry point for git. Runs the entire logic for a one git repo at a time
+    :param repo_name: name of the git repo to be worked on
+    &#34;&#34;&#34;
+    self.list_of_commits = {}
+    self.repo_name = repo_name
+    self._extract_repo_type()
+    self._repo_team()
+    self.read_repo()
+    self._repo_files()
+    self.commit_number = 0
+    self.list_of_commits.update(self._generate_first_element())
+    self._repo_type_checker()
+    self._write_git_json()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="firefox-infra-changelog.modules" href="index.html">firefox-infra-changelog.modules</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub">FICGithub</a></code></h4>
+<ul class="">
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.add" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.add">add</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.check_for_changes" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.check_for_changes">check_for_changes</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.commit" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.commit">commit</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.get_repo_url" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.get_repo_url">get_repo_url</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.limit_checker" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.limit_checker">limit_checker</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.pull" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.pull">pull</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.push_to_git" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.push_to_git">push_to_git</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.read_repo" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.read_repo">read_repo</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.revert_modified_files" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.revert_modified_files">revert_modified_files</a></code></li>
+<li><code><a title="firefox-infra-changelog.modules.FIC_Github.FICGithub.start_git" href="#firefox-infra-changelog.modules.FIC_Github.FICGithub.start_git">start_git</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
