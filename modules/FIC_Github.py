@@ -153,6 +153,10 @@ class FICGithub(FICFileHandler, FICDataVault):
         return self.repo.git.checkout([CHANGELOG_JSON_PATH, CHANGELOG_MD_PATH, CHANGELOG_REPO_PATH])
 
     def get_repo_url(self):
+        """
+        It gets the repository URL.
+        :return: the URL of the repository
+        """
         return self.repo_data.svn_url
 
     def _repo_team(self):
