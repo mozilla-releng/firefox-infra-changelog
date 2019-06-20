@@ -224,6 +224,10 @@ class FICMarkdownGenerator(FICFileHandler, FICDataVault):
         return repo_order
 
     def extract_reviewer(self):
+        """
+        It gets the reviewer from commit message.
+        :return: the reviewer or null
+        """
         try:
             return self.commit_message.split("r=")[1].split()[0]
         except IndexError:
