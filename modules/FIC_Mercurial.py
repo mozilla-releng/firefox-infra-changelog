@@ -15,6 +15,10 @@ class FICMercurial(FICFileHandler, FICDataVault):
         FICDataVault.__init__(self)
 
     def start_hg(self, repo_name):
+        """
+        The entry point for Mercurial. Runs the entire logic for a one HG repo at a time
+        :param repo_name: name of the HG repo to be worked on
+        """
         self.repo_name = repo_name
         self.file_name = repo_name + ".json"
         self.folders_to_check = self._repo_files_hg()
