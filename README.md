@@ -40,7 +40,7 @@ In the following table are the predefined exitcodes that script can generate:
 |:---------:|:-----------------------------------------------------:|:------------------------------------------------------------------:|
 |     2     |             File Extension not supported.             |               `save()` method from FIC_FileHandler.py              |
 |     3     |          The script failed to pull the dates.         |                                                                    |
-|     4     |  The -days/--days argument is not followed by an int. |                                                                    |
+|     4     |  The -days/--days argument is not followed by an int. |        `_set_arguments_flags()` method from FIC_MainMenu.py        |
 |     5     |           The provided file does not exist.           |            `file_size()` from modules.FIC_FileHandler.py           |
 |     6     |      Can't check file size for provided filename.     |        `file_size()` method from modules.FIC_FileHandler.py        |
 |     7     |                 Failed to rename file.                |      `rename_file_with_date()` from modules.FIC_FileHandler.py     |
