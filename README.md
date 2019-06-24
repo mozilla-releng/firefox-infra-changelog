@@ -39,15 +39,12 @@ In the following table are the predefined exitcodes that script can generate:
 | Exit Code |                      Description                      |                              Used in:                              |
 |:---------:|:-----------------------------------------------------:|:------------------------------------------------------------------:|
 |     2     |             File Extension not supported.             |               `save()` method from FIC_FileHandler.py              |
-|     3     |          The script failed to pull the dates.         |                                                                    |
-|     4     |  The -days/--days argument is not followed by an int. |                                                                    |
+|     4     |  The -days/--days argument is not followed by an int. |        `_set_arguments_flags()` method from FIC_MainMenu.py        |
 |     5     |           The provided file does not exist.           |            `file_size()` from modules.FIC_FileHandler.py           |
 |     6     |      Can't check file size for provided filename.     |        `file_size()` method from modules.FIC_FileHandler.py        |
 |     7     |                 Failed to rename file.                |      `rename_file_with_date()` from modules.FIC_FileHandler.py     |
 |     8     |     Access denied to read/write to provided file.     |       `is_readable()` method from modules.FIC_FileHandler.py       |
-|     9     |          No git authentication tokens found.          |                                                                    |
 |     10    |                  Keyboard interrupt.                  |      Used in `signal_handler()` from modules.FIC_Exceptions.py     |
-|     11    |           Provided input is not an integer.           |                                                                    |
 |     12    |              Unknown repository provider.             |   Used in `_run_custom_repos_behavior()` from modules.FIC_Core.py  |
 |     13    |                  Unknown Return Time.                 |          Used in `return_time()` from modules.Utilities.py         |
 |    301    |                   Moved Permanently                   | Defined in `handle_git_exception()` from modules.FIC_Exceptions.py |
@@ -62,5 +59,3 @@ In the following table are the predefined exitcodes that script can generate:
 |    500    |                 Internal Server Error                 | Defined in `handle_git_exception()` from modules.FIC_Exceptions.py |
 |    501    |                    Not Implemented                    | Defined in `handle_git_exception()` from modules.FIC_Exceptions.py |
 |    503    |                  Service Unavailable                  | Defined in `handle_git_exception()` from modules.FIC_Exceptions.py |
-|           |                                                       |                                                                    |
-|           |                                                       |                                                                    |
