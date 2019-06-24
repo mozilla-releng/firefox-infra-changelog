@@ -45,7 +45,6 @@ In the following table are the predefined exitcodes that script can generate:
 |     7     |                 Failed to rename file.                |      `rename_file_with_date()` from modules.FIC_FileHandler.py     |
 |     8     |     Access denied to read/write to provided file.     |       `is_readable()` method from modules.FIC_FileHandler.py       |
 |     10    |                  Keyboard interrupt.                  |      Used in `signal_handler()` from modules.FIC_Exceptions.py     |
-|     11    |           Provided input is not an integer.           |                                                                    |
 |     12    |              Unknown repository provider.             |   Used in `_run_custom_repos_behavior()` from modules.FIC_Core.py  |
 |     13    |                  Unknown Return Time.                 |          Used in `return_time()` from modules.Utilities.py         |
 |    301    |                   Moved Permanently                   | Defined in `handle_git_exception()` from modules.FIC_Exceptions.py |
