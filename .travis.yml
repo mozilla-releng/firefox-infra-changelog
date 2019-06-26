@@ -1,0 +1,16 @@
+language: python
+python:
+- '3.6'
+before_install:
+- easy_install pygithub
+- easy_install click
+- easy_install gitpython
+- easy_install github3.py
+- echo $TRAVIS_COMMIT
+- echo $TRAVIS_TAG
+- echo $TRAVIS_BRANCH
+- echo $TRAVIS_BUILD_NUMBER
+- echo $TRAVIS_REPO_SLUG
+script:
+- pip3 install -r requirements.txt
+- python3 client.py -a
