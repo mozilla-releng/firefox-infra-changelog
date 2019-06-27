@@ -1,0 +1,827 @@
+{
+  "0": {
+    "last_push_id": 68
+  },
+  "1": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-08-30T12:31:09.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=5b98b1b7f3ee",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465842: Add scope utilities r=bstack,pmoore,tomprince\n\nThis includes a resolver that emulates taskcluster-auth, and will be used to\nmake some checks about the result of proposed role changes.\n\nDepends on D2436\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2437",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "2": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-08-30T12:25:34.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=be60b1036f12",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465842: refactor ciadmin.util into sub-modules r=bstack,pmoore,tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2436",
+        "files_changed": "This commit contains 21 files changed."
+      }
+    }
+  },
+  "3": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-07-27T19:35:20.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=ebc69a99a0d0",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465841: fix broken tests",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=30aa26c04c72",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465841: use parent_repo instead of gecko_repo",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=c70228f3a604",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465841: handle gecko-actions, gecko-roles features\n\nThis also moves the extra_tc_scopes into the `repo:..` role, rather than in the\ntrust-level-specific role.  I anticipate future work will actually get rid of\nall this complex role inheritance, so this is probably a taste of the future.\n\nIt also grants active_scm_level_1 access to nss-try's scopes, and\nactive_scm_level_3 access to ci-admin/ci-configuration's scopes.  I don't think\nthis is an issue.",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-06-25T01:01:49.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=fede973f0d66",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Fix flake8 errors; r=me",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-06-25T01:00:49.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=b56a43069f46",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Fix black errors; r=me",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "6": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-06-25T00:57:01.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=5d905851d0ad",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Fix flake8 errors; r=me",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "7": {
+    "pusher": "asasaki@mozilla.com",
+    "date_of_push": "2019-06-25T00:52:56.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=232610aa10a8",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1561044 - add a check_privileged test. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35734",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "8": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-06-18T18:35:34.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=8afe2deaef87",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1558880 - fix 'ciadmin apply' to work for AwsProvisionerWorkerTypes; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34883",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "9": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-06-07T23:13:13.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=373421071b2b",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465851 - add support for AWS Provisioner WorkerType objects r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32081",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f29b9d60d7b6",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465851 - read worker-{pools,images}.yaml from ci-config r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32082",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=b06029426b9d",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465851 - generate AWS provisioner workerTypes r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32083",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "10": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-04-16T16:11:20.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=4a5c6ff8d56b",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1544600 - add modifier to remove hook bindings r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27628",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "11": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-04-16T16:09:46.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=172c211075a3",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1544581 - upgrade taskcluster client r=tomprince\n\nThis also handles the case where a hookGroup does not exist.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27620",
+        "files_changed": "This commit contains 7 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=b211a777790e",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1544581 - fix failing tests from bug 1526979 r=tomprince\n\nDepends on D27620\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27621",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "12": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-04-03T23:43:58.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=97aa12ede0b8",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Run black; rs=me",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=b5cd4084dd59",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: [ci] Update taskgraph to use worker aliases; r=me",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "13": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-07-19T15:40:35.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f65347a2063f",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465838 - add run-task.py; r=tomprince\n\nThis repository does not need a decision task, but it does need to be easy to\nrun a diff.  More precisely, we need a stable way to run a diff so that it can\nbe \"hard coded\" in several places:\n * ci-admin's .taskcluster.yml\n * ci-configuration's .taskcluster.yml\n * gecko task-graph configuration\n * a hook to perform diffs periodically",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=11e43930efa9",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465838 - exit with nonzero status when diffs exist; r=tomprince",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "14": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-17T13:28:56.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=8980c7a103df",
+        "commit_author": "sudipt1999 <sudiptdabral2991999@gmail.com>",
+        "commit_message": "Bug 1471367 - add subcommand to print taskcluster.yml hashes r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22358",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "15": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-15T21:37:47.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=ed92fc1f2157",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1535635 - use feature.taskcluster.push to enable hg pushes r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23721",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "16": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-13T20:35:19.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=d0782a381b6a",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - set levels for non scm_level_N access groups r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23221",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "17": {
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-03-06T23:51:58.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=7a89e05b3e0c",
+        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "No bug: fix black errors in check tests. r=me",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "18": {
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-03-06T23:43:08.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=c72e4cbea39c",
+        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1519493 - fix checker in ci-admin r=tomprince\n\nFix checker which broke with D19246\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22415",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "19": {
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-03-06T21:49:39.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=bbe3fd67dda4",
+        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1519493 - step 1 in automating permissions in mobile world. r=tomprince\n\nThis is a preliminary ask-for-feedback in adding support for git in the ciadmin repo.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19246",
+        "files_changed": "This commit contains 7 files changed."
+      }
+    }
+  },
+  "20": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-04T21:36:59.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f201447a5f65",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Fix black errors in tests; r=me",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "21": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-03-04T21:27:16.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0368a98315e9",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1528362: Allow parameterizing based on priorties determined by level; r=dustin\n\nFor the moment, we hard-code the priorities by level based on those used in firefox.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21813",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "22": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04T20:17:26.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0e53fe692658",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: fix checks *without* --ci-configuration-directory, fix lint r=tomprince\n\nI have actually tested this one in a [try push](https://treeherder.mozilla.org/#/jobs?repo=ci-admin-try&revision=cf0bad5ab9271013f6920018e955daab76468957)!\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21985",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "23": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04T18:38:07.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=60bc15b47919",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979: allow ignored payload.data.source, too, in triggering hook r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21969",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "24": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04T18:37:38.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e72a3935e409",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: fix use of bindings in 'ci-admin apply' r=tomprince\n\nI missed this when refactoring the `bindings` property to use an object instead\nof a tuple.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21963",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "25": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04T17:42:19.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6a3895820e75",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: capture absolute path for --ci-configuration-directory r=tomprince\n\nThe `ci-admin check` command changes working directory, so it broke use of\n`--ci-configuration-directory`.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21959",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "26": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04T16:58:44.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=a3f3c50c66ac",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "No bug: fix black and flake8 issues r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21951",
+        "files_changed": "This commit contains 5 files changed."
+      }
+    }
+  },
+  "27": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-03-04T16:21:07.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=33d5ff352ae5",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1526979 - add support for hg-push tasks r=tomprince\n\nThis adds support for \"bindings\" in the Hooks API, and uses it to support hooks\nthat run when a push is generated, with the hook template based on a file in\nci-configuration.\n\nThe hooks run tasks on a dedicated `hg-push` workerType which *only* runs this\nsort of task, and can thus run them quickly.  The tasks themselves do not\nperform an hg clone or do anything terribly complicated, so once the docker\nimage is loaded they only take a few seconds to execute.\n\nThe docker image is generated on every push to the ci-admin repository.  That\ncould be attached to the ci-configuration repository, instead, but that\nrepository does not yet use ci-taskgraph.\n\nThis also adds some checks to be confident that nobody can trigger hg-push\nhooks, nor create tasks on the workerType.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21282",
+        "files_changed": "This commit contains 16 files changed."
+      }
+    }
+  },
+  "28": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-25T16:49:25.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=933ac2604add",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Include `ci-admin check`'s `pytest.ini` in the installed package; r=dustin\n\nAlso stop using `--develop` (i.e. `-e`) when installing ci-admin in the check job.\nThe addition of `pyproject.toml` triggers a pip bug[1], and we don't have a need\nto have an editable install.\n\n[1] https://github.com/pypa/setuptools/issues/1405\n\nDifferential Revision: https://phabricator.services.mozilla.com/D20790",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "29": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-13T21:23:04.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e3bff21ba760",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Special case `scm_autoland in checking levels; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19705",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "30": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-13T21:21:08.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=616e7df21c86",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Remove duplicate code for making ci-admin authorative for some hg.mozilla.org repositories; r=dustin\n\nSince ci-admin is authorative for all hg.mozilla.org repositories\n(7cccaaf6c74b), we don't need additionally make it authorative for just some of\nthem.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19706",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "31": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-12T03:51:03.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6afd709457e5",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Make `run_async` and `with_aiohttp_session` decorators preserve the return value; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19395",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=39be30e3992c",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Import pytest-asyncio's `event_loop` fixture as session scope; r=dustin\n\npytest-asyncio's `event_loop` is function scoped, to provide good isolation\nbetween tests. ci-admin's checks aren't code tests (so the isolation isn't\nrelevant), and it is useful to be able to write session scoped fixture for\nthem.\n\nhttps://github.com/pytest-dev/pytest-asyncio/issues/75\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19396",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=5ca0a3b818bf",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Stop invoking pytest in `ci-admin check` with an event loop running; r=dustin\n\nThis allows the tests themselves to use pytest-asyncio, which doesn't\nwork with a running event loop.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19397",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=336043f64e85",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Make `ci-admin check` command-line more useful; r=dustin\n\nThis allows:\n- running `ci-admin check` from outside the ci-admin repository.\n- specifying checks to run with just the bare filename, rather than full path.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19398",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=6af4c3fa6a44",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Use `check_` prefixes for `ci-admin check` tests; r=dustin\n\nThis makes it obvious that the tests are related to `ci-admin check` rather\nthan typical unit tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19399",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=3111e4fe89c4",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1465844: Check project levels in projects.yml match hg.mozilla.org; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19400",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "32": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-07-09T21:04:11.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e395b51eda57",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1471353 - don't generate hooks for try repos; r=tomprince",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=9bbb5b8bfb97",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1471353 - filer action hooks by level, too; r=tomprince\n\nGiven an action at level L, only include hooks with hashes for projects at\nlevel L or higher.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "33": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-11T21:51:13.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=36e7c76919c0",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Run yamllint against the taskgraph configuration; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19101",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "34": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-11T21:30:33.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=f4aed57a506c",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1492562: Add intial taskgraph configuration; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17165",
+        "files_changed": "This commit contains 6 files changed."
+      }
+    }
+  },
+  "35": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-08T02:32:23.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=7cccaaf6c74b",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525368: Make ci-admin authorative for all repositories on hg.mozilla.org; r=dustin\n\nI noticed this when I didn't see the build/ci-{admin,configuration} roles being removed.\n\nThis removes roles for:\n- integration/b2g-inbound\n- integration/fx-team\n- projects/alder\n- projects/fig\n- projects/gum\n- projects/holly\n- users/mozilla_hocat.ca/comm-taskcluster\nall of which are not currently in use.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19063",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "36": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-02-07T20:08:59.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=99df1c34dbc0",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1525368: Update path to ci-config; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D18866",
+        "files_changed": "This commit contains 9 files changed."
+      }
+    }
+  },
+  "37": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-31T20:30:54.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=de24b6b4d2d6",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Run black over ci-admin; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D17166",
+        "files_changed": "This commit contains 49 files changed."
+      }
+    }
+  },
+  "38": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-18T21:36:42.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=8fe80858db7f",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Fix typo from flake8 run; r=me",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "39": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-18T21:21:58.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=65b3e50a57e4",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Fix flake8 errors; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16769",
+        "files_changed": "This commit contains 19 files changed."
+      }
+    }
+  },
+  "40": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-01-16T22:47:14.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=ae0505b4301c",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Fix ci-admin tests; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D16756",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "41": {
+    "pusher": "asasaki@mozilla.com",
+    "date_of_push": "2019-01-02T20:26:29.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=b2d0f7af52d2",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1485680 - if we modify the action hook task logic, we need to update scriptworker. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D15482",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "42": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-12-18T19:48:17.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0f4b1e9e03cd",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1515137 - pass environment rootUrl to cron context r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D14882",
+        "files_changed": "This commit contains 5 files changed."
+      }
+    }
+  },
+  "43": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-06-25T22:48:19.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=974df66d57dc",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1381870 - deterministic ordering in schemas; r=tomprince",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "44": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-10-22T17:53:12.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=241f75b5d808",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1492665 - add support for environments.yml r=Callek,bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6932",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=99d859a7a655",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1492665 - add modify_resources support r=Callek,bstack\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6933",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "45": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-10-22T17:50:28.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=d1796b61fbd0",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1494320 - remove unnecessary resources.manage r=tomprince\n\nThese were in place in order to delete some old, now-unused roles.  They're\ngone, so no need to continue to manage those namespaces.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9166",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "46": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-09-26T02:49:00.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=9d35e153d813",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Don't generate hooks for actions with cross trust-domain `.taskcluster.yml`s; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D6858",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "47": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-09-12T20:04:50.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=c88ca415a1c6",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1489181: handle input_schema in actions.yml r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5683",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "48": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-09-11T18:00:43.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=edad9f8f78d4",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1490066: fix unit tests and add a few r=tomprince\n\nI broke the unit tests in bug 1488766 and also introduced a bug (no longer\nallowing granting to a single group); this fixes that up and even adds some\ntests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5464",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "49": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-09-10T14:54:50.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=5b8819a7b072",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1489983: fix markdown link in descriptions r=janx\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5430",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "50": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-09-07T19:42:24.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=135f264d65d2",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1488766: improve error handling for malformed grants.yml r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5158",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "51": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-09-07T19:42:11.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=95397719f02d",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1488766: also substitute {hgmo_path} r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D5155",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "52": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2018-06-25T19:23:52.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=d0f7c2948f77",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Move repository specific roles to the project:* roles; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D1692",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "53": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-09-05T19:37:30.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=2a84daadfd6e",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1479103: upgrade to the latest taskcluster client r=tomprince\n\nDepends on D4244\n\nDifferential Revision: https://phabricator.services.mozilla.com/D4246",
+        "files_changed": "This commit contains 6 files changed."
+      }
+    }
+  },
+  "54": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-08-30T14:59:02.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=e8c729ab1b15",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465842: implement grants.yml; r=bstack,tomprince,pmoore\n\nIn the same commit, this removes all other code that sets repo roles or user\nroles, as otherwise they try to generate the same resources.  Checks in place\nduring development (but not to land) ensure that actual scopes do not change.",
+        "files_changed": "This commit contains 14 files changed."
+      }
+    }
+  },
+  "55": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-08-30T13:37:59.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=ee3a60eba89f",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465842: move ciconfig into sub-modules r=bstack,pmoore,tomprince\n\nIf only because this avoids naming conflicts between modules defining the data\nstructure and modules generating resources based on those data structures..\n\nDepends on D2442\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2443",
+        "files_changed": "This commit contains 18 files changed."
+      }
+    }
+  },
+  "56": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-08-30T13:37:24.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=172a91b213c3",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465842: test for signing scopes r=bstack,pmoore,tomprince\n\nThis is never going to be a super-secure check, but will help make sure we\ndon't do anything boneheaded.\n\nDepends on D2439\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2440",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "57": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-08-30T13:36:23.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=db811713c892",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465842: add 'ci-admin check', upgrade requirements r=bstack,pmoore\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2439",
+        "files_changed": "This commit contains 7 files changed."
+      }
+    }
+  },
+  "58": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-08-30T13:35:55.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=0c68bb31217c",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1465842: generate moz-tree:* roles, too r=bstack,pmoore,tomprince\n\nDepends on D2437\n\nDifferential Revision: https://phabricator.services.mozilla.com/D2438",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "59": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2018-06-07T18:51:47.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=422d0c596c26",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1381870 - implement existing functionality of taskcluster-admin",
+        "files_changed": "This commit contains 38 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=289f68591d44",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1381870 - support more powerful diff options",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=234ec8dc402f",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1381870 - support applying changes (given appropriate scopes)",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=88e005ca4675",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1381870 - fix handling of pre-existing hooks",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=bc4d1687f171",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1381870 - also set up project-{domain}:in-tree-action-trigger:.. roles",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=50f7d54a947a",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1381870 - factor resource filtering out to Resources.filter",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  }
+}

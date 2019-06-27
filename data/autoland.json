@@ -1,0 +1,143 @@
+{
+  "0": {
+    "last_push_id": 88678
+  },
+  "1": {
+    "pusher": "apavel@mozilla.com",
+    "date_of_push": "2019-06-27T17:42:24.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1f864da71bab",
+        "commit_author": "Rok Garbas <rok@garbas.si>",
+        "commit_message": "Bug 1561582 - tooltool.py now supports python 3 and 2 r=rail CLOSED TREE\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36010",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "2": {
+    "pusher": "dluca@mozilla.com",
+    "date_of_push": "2019-06-27T16:38:31.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=98d0b1ff0c53",
+        "commit_author": "Dorel Luca <dluca@mozilla.com>",
+        "commit_message": "Backed out changeset 7e05642566d0 (bug 1561582) for Toolchain failures. CLOSED TREE",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "3": {
+    "pusher": "rgarbas@mozilla.com",
+    "date_of_push": "2019-06-27T12:54:45.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7e05642566d0",
+        "commit_author": "Rok Garbas <rok@garbas.si>",
+        "commit_message": "Bug 1561582 - tooltool.py now supports python 3 and 2 r=rail\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36010",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "nthomas@mozilla.com",
+    "date_of_push": "2019-06-27T04:02:58.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=20de5a5e5c55",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1538995 - support repacking stub installers for partners, r=aki\n\nPay attention to the new repack_stub_installer param, and fix config parsing to split on the first =.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34945",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=93f413cf1457",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1538995 - adjust repackage jobs to create partner stub installers, r=aki\n\nOn win32, where repack_stub_installer is enabled, extend the inputs to the partner repackage task so that it\ndonwloads the upstream artifacts and creates the stub installer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34946",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8b151e2777fb",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1538995 - adjust repackage-signing jobs to sign partner stub installers, r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34948",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=aea787a5a4c6",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1538995 - adjust beetmover to copy partner stub installers into candidates dir, r=aki\n\nAppends the customized stub installer and it's gpg signature to the list of artifacts to beetmove to\ncandidates.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34950",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fe29e66f80e2",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1538995 - submit partner products to bouncer when we'll host the files, r=aki\n\nAdds a new release-partner-repack-bouncer-sub-firefox task to add the partner products. This is forked from the main bouncer submission because it diverges sufficiently that this is a cleaner approach. The get_partners_to_be_published helper is used by aliases too.\n\nDepends on D34950\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35481",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=167db72d1987",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1538995 - pass list of partners to beetmover for pushing to releases/partners/, r=aki\n\nThis passes partner data on to the beetmover scriptworker, so it can publish enabled partners. There is beetmover change at https://github.com/mozilla-releng/beetmoverscript/pull/227 to complete this support.\n\nDepends on D35481\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35482",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=37f02f5b2ad9",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1538995 - update bouncer aliases for partner products when shipping, r=aki\n\nPass partner aliases down to the bouncer scriptworker so it can update those too. Matching change to bouncerscript at https://github.com/mozilla-releng/bouncerscript/pull/57.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35483",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "gbrown@mozilla.com",
+    "date_of_push": "2019-06-27T00:56:14.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bd4d0e2991ba",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1550634 - Increase telemetry-test-client max-run-time; r=jmaher\n\nAvoid intermittent failures by allowing the task to run a little longer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34365",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "6": {
+    "pusher": "rgurzau@mozilla.com",
+    "date_of_push": "2019-06-26T22:02:05.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=34448603afab",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1471004 - add notarization workerType aliases. r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33856",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0da56de412db",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1471004 - mac-signing transform logic + config. r=tomprince\n\nThis moves mac signing tasks to the notarization/iscript pool. It also\nadds support for pkg installers and notarization.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33857",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2ad746de8d09",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1471004 - beetmove macosx pkg installer. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33858",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=556f716a4517",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1471004 - add entitlements url for hardened runtime signing. r=tomprince\n\nFor mac hardened runtime signing, we use an entitlements file that's now\nin-tree. This patch passes the url for that file in the task definition.\n\nThe original patch for this was written by sfraser.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33859",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=365cb98beddc",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1471004 - build_signing: macosx64-nightly -> macosx64-shippable. r=callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33860",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d691e2174680",
+        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
+        "commit_message": "Bug 1471004 - ignore partner_subset if it's an empty list. r=tomprince a=release\n\nThe relpro action requires a list for partner_subset and defaults to\n`[]`. In `get_partner_config_by_url` we check to see `if\npartner_subset`, ignoring the subset if it's an empty list. We either\nneed to do the same thing in `get_partner_config_by_kind`, or we need to\nallow for a `null` value in the action (or populate an empty\n`partner_subset` with the partners from the partner config in the\naction)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33861",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  }
+}

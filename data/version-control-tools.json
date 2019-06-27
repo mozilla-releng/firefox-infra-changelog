@@ -1,0 +1,1601 @@
+{
+  "0": {
+    "last_push_id": 3525
+  },
+  "1": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-27T13:12:16.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=842df4a82218",
+        "commit_author": "Julien Cristau <jcristau@mozilla.com>",
+        "commit_message": "mozext: add backsoutnodes template keyword (bug 1560446) r=sheehan\n\nThis is using the old API and needs to be ported to hg 5.1, but then so\ndo the other template keywords in mozext.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35774",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "2": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-20T17:43:03.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=5f7820c03795",
+        "commit_author": "Rob Lemley <rob@thunderbird.net>",
+        "commit_message": "push-to-try: check for valid try_task_config.json file. r=sheehan\n\nWhen using a try_task_config.json file on a try push, try to parse it first\nto prevent failures.\n\nI added this based on personal experience using this feature. I usually forget\nto check first and then the push fails.\n\nNo attempt it made to ensure the file is valid beyond ensuring it is valid\nJSON that can be loaded by Python's \"json\" stdlib module.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35193",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "3": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-20T17:19:51.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=da6b5e733005",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: remove `git` dependency and retrieve `cinnabarclone.py` using `get_url` (Bug 1558868) r=glob\n\nInstalling `git` on the hg hosts in MDC1 fails due to a custom YUM repo\nadded by the RelOps/IT teams. Instead of blocking the deployment of\ncinnabarclone on hgmo as a result of this bug, let's pull down a specific\nversion of `cinnabarclone` using `get_url`, and deploy that.\n\nWe make the download of the extension conditional on a different checksum\nfor the file in question. This will avoid re-downloads when the file already\nexists on-disk with the specified checksum.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35288",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-13T15:00:50.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=b53f77f17586",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "format-source: enable compatibility with Mercurial 5.0 (Bug 1545236) r=andi\n\nformat-source was never made compatible with Mercurial 5.0, since\nthe extension was disabled on Firefox developer machines. Now\nthat we plan to use the extension for a JavaScript reformat using\n`prettier`, the extension will need to be compatible with newer\nversions of Mercurial.\n\nIn this commit we apply compatibility patches from upstream\n`format-source`[0] to enable 5.0 compatibility, with some\nmodifications. Rather than perform a stack inspection to check\nfor the correct function signature to use, we look at the version\nof Mercurial being run and call `cmdutil.add` with the correct\nsignature for each version. We also define a single function\nwith a conditional inside instead of a global conditional with\ntwo separate function definitions.\n\n--\n[0] https://bitbucket.org/octobus/format-source/commits/e526ce24a5e874c2174c5fc6abda7c7163a18e26\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34884",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-12T14:40:33.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=6b4c5f3ae719",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "py3: global replace `iteritems()` with `items()` (Bug 1541166) r=lars\n\n`iteritems()` doesn't exist in Py3, with `items()` instead returning\na generator by default. This commit switches all instances of the\nold `iteritems` method with `items`. In all cases except one, we\nwere evaluating the full list of items regardless of the generator\nbased function call, and the instance where we were only returned\na small number of items, so I don't expect any performance hit here\nwhile we are still on Python 2.\n\nThe same operation has been performed for `iterkeys()` and `keys()`,\nbut only a single instance was found and is included in this commit.\n\nThere are still some instances of `iteritems` in the repo, in the\n`third_party` directory of vendored libraries. These will be handled\nin bug 1557783.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34193",
+        "files_changed": "This commit contains 10 files changed."
+      }
+    }
+  },
+  "6": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-10T19:30:59.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=3ba369fc91d0",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "testing: fix tests regressed by 2d01795bd96a\n\nA few tests were not updated with the addition of `cinnabarclone`.\nThis commit fixes them.",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "7": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-10T14:17:00.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=af428d1296fc",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/ius-repo: install from most recent available repo (Bug 1557772) r=glob\n\nThe outdated IUS repo was identified as the source of the\nfailure in the attached bug. Installing from the latest fixes\nthe docker build issues.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34239",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "8": {
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-06-07T00:14:24.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2d01795bd96a",
+        "commit_author": "Mike Hommey <mh@glandium.org>",
+        "commit_message": "Bug 1550183 - Deploy the cinnabarclone extension to the mercurial servers. r=sheehan\n\nThe extension comes from https://github.com/glandium/git-cinnabar/blob/master/mercurial/cinnabarclone.py\nand has been tested with all mercurial versions from 1.9 to 5.0.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30421",
+        "files_changed": "This commit contains 6 files changed."
+      }
+    }
+  },
+  "9": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-06T19:13:56.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=8fe882f771b2",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: assign aliases to hosts in Ansible inventory\n\nThis will allow us to use Ansible to run commands on specific\nhosts without using the IP addresses.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "10": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-06T16:52:00.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=25dcf375258b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "pushlog: send `templateutil.date` to template layer instead of raw hg date data (Bug 1556018) r=lars\n\nSee the bug description for more details. This commit passes the raw\nMercurial date tuple into a `templateutil.date` object. This will enable\nthe correct behaviour when displaying the raw output of `pushdate`,\nand allow formatting with date template keywords and functions.\n\nThe `showfmt` keyword argument is taken verbatim from the default\n`date` template keyword[0].\n\n[0] https://www.mercurial-scm.org/repo/hg-committed/file/bfd65b5e070b/mercurial/templatekw.py#l225\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33309",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "11": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-06T13:27:26.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0461ff7338e8",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "pushlog: add new output to `test-pull-obsolete.t` (Bug 1557070) r=glob\n\nAlso mark as compatible with Mercurial 5.0\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33846",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=465163f8a58a",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "overlay: rename `copied` keyword argument to `copysource` under 5.0+ (Bug 1557070) r=glob\n\nAlso mark as compatible with Mercurial 5.0.\n\nDepends on D33846\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33847",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=cca19bee710d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgmo: mark as compatible with Mercurial 5.0 (Bug 1557070) r=glob\n\nOnly a minor test change needed for passing tests. The test\nin question is related to wire protocol version two, which\ncan arguably be removed anyways.\n\nDepends on D33847\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33848",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=df232910b213",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hghooks: enable test compatibility under Mercurial 5.0 (Bug 1557070) r=glob\n\nTests are passing without any changes, with the exception of\na single test which fails due to a changed API used by a helper\nscript. This commit updates the helper script to use the new\nAPIs and marks the `hghooks` extension as compatible with\n5.0.\n\nDepends on D33848\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33849",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=4b32cf190f59",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgtemplates: run `test-template-sync.t` against Mercurial 5.0.1 (Bug 1557070) r=glob\n\nThis version should always match the version running on hg.mo,\nwhich means it needs to be bumped during the upgrade. Running\nthis test should tell us if we have any outstanding template\nupgrades to perform, and since it passes without issue, we\ndon't need to make any template changes.\n\nDepends on D33849\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33850",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=25a0f6ca4c3b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hg50: mark many extensions as compatible with Mercurial 5.0 (Bug 1557070) r=glob\n\nNo changes needed to get these extensions passing under 5.0.\n\nDepends on D33850\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33851",
+        "files_changed": "This commit contains 7 files changed."
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=55f71016659c",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh: upgrade to Mercurial 5.0.1 (Bug 1557070) r=glob\n\nThis commit upgrades Mercurial to 5.0.1 on hgssh in all\nvirtual environments. This commit should be deployed first\nin the upgrade process.\n\nDepends on D33852\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33853",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=cd14589c8543",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-web: upgrade to Mercurial 5.0.1 (Bug 1557070) r=glob\n\nThis commit upgrades Mercurial to 5.0.1 in all virtual environments\non hgweb.\n\nDepends on D33853\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33855",
+        "files_changed": "This commit contains 6 files changed."
+      }
+    }
+  },
+  "12": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-06T13:26:21.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=06c086758a98",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgext: remove `wireprotocache` extension (Bug 1557143) r=glob\n\nThis extension was to be used as a caching module for wire protocol\nversion two command responses, in a similar fashion to the caching\nlayer used in front of remotefilelog. With the wire protocol work\non hold indefinitely, we can remove this half-completed extension.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33864",
+        "files_changed": "This commit contains 10 files changed."
+      }
+    }
+  },
+  "13": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-05T21:52:17.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=b03eb039bfcc",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "pushlog: fix tests regressed by 8edc6d00a988\n\nSimply adds the new CSS classes to the test output,\nand adds a new patch file to the `hgtemplates/.patches`\ndirectory.",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "14": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-05T15:25:48.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0c3c8497e990",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "TICKscript: fix time unit in `try_heads.tick` (Bug 1556530)\n\nAlso fix the variable name for the alert node.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "15": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-05T14:59:43.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=da1cce9dc5ca",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "telegraf: change `1d` to `24h` (Bug 1555777)\n\nTelegraf supports `ns`, `us`, `ms`, `s`, `m` and `h`\nas units of time - no `d` allowed.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "16": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-05T13:50:34.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=21c2d28dc20d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgwsgi: add `mozilla-esr68` (Bug 1555777) r=glob\n\nThe repo was cloned and replicated earlier today, this commit\nmakes the repo available on hgmo.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33371",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=21ad1659be41",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh: generate bundles for mozilla-esr68 (Bug 1555777) r=glob\n\nSo we can clone the new ESR fast in automation and elsewhere.\n\nDepends on D33371\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33372",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=3c7eb39555a5",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh: add esr68 to mozilla-unified (Bug 1555777) r=glob\n\nUnified includes all relevant commits in various Firefox\nrepositories, and thus should include ESR68.\n\nDepends on D33372\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33373",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=1852d1d7a0d5",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "mozautomation: add ESR68 (Bug 1555777) r=glob\n\nThis commit adds ESR68 to all the required locations\nin `mozautomation`.\n\nDepends on D33373\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33374",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=79d8b8bd4bd5",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-web: add esr68 to `replicationrules` and remove esr52 (Bug 1555777) r=glob\n\nWe will need to have a copy of ESR68 on the mirrors, and thus\nit need to be added to the mirror replication rules. ESR52 has\nreached EOL, so it has been removed.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33375",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "17": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-05T13:50:05.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=3ae4efdfac68",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "telegraf: add an `exec` plugin to report the number of heads on try (Bug 1556530) r=glob\n\nThis commit adds a Telegraf `exec` input plugin to monitor the\nnumber of heads on the try repo on hgssh. The command is a call\nto `hg log`, taking a call to the `revset` template function and\npassing it through the `count` template filter to get the number\nof revisions in the specified revset (in this case, `head()`).\nThe data is sent as a single integer to InfluxDB and a follow\nup commit will introduce a TICKscript to send alerts when the\nnumber of heads grows too high.\n\nDespite using the `head()` revset from within the template for\nthe command, we specify `-r 0` as the revset for the log command.\nMercurial's templater applies the given template to each revision\nin the specified revset, and since we only want to run the revset\na single time and then count the number off revisions, we specify\na single revision in the `-r` argument.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33551",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=b793a0142828",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "TICKscripts: add alert for too many try heads (Bug 1556530) r=glob\n\nIn the previous commit we added reporting for the number of\nheads on try, and in this commit we tell Kapacitor to send a\nSlack alert in the event we cross 40000/50000 heads (as a warning\nand critical alert, respectively). This script is checked in to\nversion-control-tools with the other alerting scripts for tracking\npurposes but will need to be manually added to Kapacitor through\nChronograf once the previous commit is deployed.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33552",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "18": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-06-03T16:48:07.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=8edc6d00a988",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Show relative time for push date on `/rev/`; r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33366",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "19": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-28T16:56:15.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=d12b6b56fec5",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: remove `ci-{ec1,ue2}` hostgroups (Bug 1553885)\n\nThese have been torn down.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "20": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-28T14:54:00.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=04fd22c76ae7",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hghooks: update `test-prevent-webidl-changes.t` (Bug 1554853)",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "21": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-28T14:48:22.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=3c51465f9f92",
+        "commit_author": "Peter Van der Beken <peterv@propagandism.org>",
+        "commit_message": "Bug 1554853 - Update DOM peers list in prevent_webidl_changes.py. r=sheehan?\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32797",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "22": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-27T17:48:51.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=dfdbe16c8faa",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: tear down AWS resources in `eu-central-1` and `us-east-2` (Bug 1553885) r=dustin\n\nWhile these regions have a Gecko workers VPC available,\nit appears there are no workers configured to run in them.\n\nIn this commit we tear down the hgmo VPC in the same regions.\nWe can easily stand up the VPCs again if we set up workers in\nthose regions.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32727",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "23": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-27T17:46:01.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=d99210e8b88f",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "TICKscripts: update alerts and add alerting for Kafka\n\nHere we add alerting for the absence of Kafka processes on\nour broker hosts, change the alerts to only fire on state\nchanges every 2 minutes, and bold some of the text in the\nalert message.",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "24": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-24T20:34:04.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=af4e16b5aa36",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-web: add cedar project repo to `replicationrules` (Bug 1554307)\n\nI noticed this was missing when Kapacitor started firing off\nconsumer lag alerts, but only for the on-premises nodes.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=20fc9edb1c22",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "TICKscripts: alert on state changes only with 2 minute window\n\nCurrently the TICKscript alerts continuously fire every time\na new data point reaches Kapacitor. With this change the alerts\nwill only go off once, then wait for 2 minutes before firing\nagain if the alert is in the same state. All state changes\n(ie warning -> critical or anything -> OK) will still fire an\nalert.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "25": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-22T15:02:49.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=fb153bf90ccb",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-web: remove filter for sheehan's user repo (Bug 1553319)\n\nLeft over from development/testing.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=b85b908567bf",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-web: add Thunderbird release repos to replication filters (Bug 1553323)",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "26": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-17T14:51:23.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0a3096a899ce",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "TICKscripts: increase thresholds in `vcsreplicator_consumer_lag.tick`\n\nThe Slack alerts were happening too frequently to be actionable.\nHere we increase the thresholds to a level high enough that an\nalert should require action.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "27": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-15T17:08:31.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=eedbbe051557",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: declare `ansible_{sudo,become}` as hostgroup variables",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=fdb441baf69a",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: move eu-central-1 hosts to hgweb-mirrors hostgroup",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "28": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-15T16:49:16.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=57918871a6c0",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh: add `autoland` to mozilla-unified (Bug 1551274) r=smacleod\n\nThis commit adds the `autoland` repository to the set of repositories\nin mozilla-unified. The tip revision of this repository will have\na bookmark named `autoland` at it's tip revision, copying the section\nname in the config file. Since all new commits will be on the default\nbranch, we limit the pulled revisions to that branch.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31115",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "29": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-14T20:49:59.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=c1c4a668367b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: use correct IPs for eu-central-1 hosts (Bug 1548302)\n\nMy merge went awry and the hosts weren't updated. This commit\nsets the IPs to the correct value.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "30": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-14T20:31:44.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=c72925f6b17c",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: fix `bootstrap_hostname` for eu-central-1 mirrors (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "31": {
+    "pusher": "lars@mozilla.com",
+    "date_of_push": "2019-05-14T16:05:20.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=d18e8a095ea4",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh-server: add `sentry-sdk` to `venv_pash` (Bug 1550755) r=lars\n\nThis commit adds `sentry-sdk` to the pash virtualenv\non the hgssh servers.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30654",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "32": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-14T14:31:56.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e3dce3f0d26a",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: stand up private hg service in us-east-2 (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=cbfd7f665c0f",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: move us-east-1 hosts to hgweb-mirrors hostgroup and us-east-2 hosts to bootstrap group (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0bf07df77731",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: split `hgweb-mirrors` into regional subgroups (Bug 1548302)\n\nPreviously we had a single group with comments denoting\nthe different regions. Now we can reference hosts in the\nindividual regions by their hostgroup. This will allow us\nto use Ansible to run commands on machines in various AWS\nregions with ease.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=64b81e9c817b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "bootstrap: run `hg replicatehgrc` for try repos on correct host (Bug 1550782)\n\nThis command was being run on the new hgweb machine, instead\nof the hgssh master host. Oops!",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=4c5a2e4076a4",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: move newly bootstrapped hosts in `ci-ue2` hostgroup (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=4588772ce1ae",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: stand up private hg service in eu-central-1 (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=09eac4fb3815",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: add AMI ID for CentOS7 in eu-central-1 (Bug 1548302)\n\nThe CentOS7 AMI ID for eu-central-1 was never added to the\nregional mapping. This commit adds the new region and\nre-formats the whitespace.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=ccc7fbade54f",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "bootstrap: add us-east-2 hosts to bootstrap hostgroup (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=663cd30b7a27",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "bootstrap: fix file permissions on `instance_data.json` during bootstrap (Bug 1550782)\n\nSomething in the bootstrap procedure sets ownership of this\nfile from `hg:hg` to `1001:1002` during the bootstrap\nplaybook. Here we reset the permissions to the desired\nstate once bootstrapping is complete.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "33": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-13T17:36:05.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=13f70d71ae3a",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: do not create new ec2 resource when `user_data` changes\n\nChanges to user data shouldn't create a new resource. Any\nuser data changes will be manually applied to the extra mirrors\nas needed.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=ca6924b0110d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: stand up private hg service in us-east-1 (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=c5cdceaf4de3",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: add us-east-1 hosts to bootstrap hostgroup (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=91edbf180dfb",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/bootstrap: set hostname based on hostgroup variable during bootstrap",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "34": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-10T18:48:11.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=342896d12d09",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hgext: update deprecated call to ui.progress (Bug 1550175) r=sheehan\n\nFor the extension `overlay`, the call to `ui.progress` was just replaced\n`ui.makeprogress`.  This is justified by the declaration in `overlay`\nrequiring HG47 or later.  Since `ui.makeprogress` was introduced in HG47,\nthis seem justified.\n\nFor the extension `mozext`, since I know nothing of what versions of\nHG will be used, a local function was added of the form:\n`makeprogress(ui, ...)` to the call to `ui.progress`.  In that\nmethod, `ui.makeprogress` is tried.  If that raises an `AttributeError`,\nthen the original `ui.progress` method is called.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30564",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "35": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-10T16:39:32.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=858555769242",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: add new hosts in `us-west-1` to `hgweb-mirrors` hostgroup (Bug 1548302)\n\nThese have been bootstrapped and are serving production traffic.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=1fa8a029c136",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/bootstrap: turn off Telegraf during bootstrap procedure (Bug 1550777)\n\nKeeping the agent on causes lots of unnecessary alerts in\nthe #vcs Slack channel.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=f98ead5d399d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/bootstrap: run `hg replicatehgrc` on try repos after running a stream clone (Bug 1545387)\n\nSee bug 1545387 comment 7 for more on why we need this change.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=3a3df759c32c",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: run `chown` recursively on full `/var/hg` directory instead of `instance_data.json` (Bug 1550782)\n\nPreviously we only ran `chown` on the instance data object,\nleaving `/var/hg` owned by `root`. Then when Ansible overwrites\nthe permissions to make `hg` the owner, the instance data\nobject has it's permissions corrupted.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "36": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-09T15:02:15.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=6e41162eed29",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: upgrade mirror instances to `c5d.2xlarge`\n\nThe instances were previously set to this type, but I\nmoved them down as they could handle the traffic.\nUnfortunately when project repos like `larch` or `maple`\nneed to pull, the increased amount of CPU required to\ncalculate the response multiplied by the number of\nresponses that must be generated create too much load.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=6cd9df449844",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: set `ebs_optimized = true` for hgweb mirrors",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=33aa6d00f3c3",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: update bootstrap hosts\n\nTerraform changes required me to re-create the machines.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "37": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-09T13:54:32.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=60e5485f114b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh-server: do not install `ldap_helper.py` in pash setup (Bug 1547755)\n\nDoing so causes install to fail, when it is available in the\npash virtualenv from hgmolib.",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "38": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-08T18:19:02.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e63c96151e7d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: add new hosts to bootstrap hostgroup (Bug 1548302)",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "39": {
+    "pusher": "lars@mozilla.com",
+    "date_of_push": "2019-05-08T17:52:40.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=aa66da08bd4d",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "pash: Move ldap_helper from pash to hgmolib (Bug 1547755) r=sheehan\n\nThis allows using the LDAP module in code other than just pash.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30379",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "40": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-08T17:35:55.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=f250d8415b45",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: add \"to-mdc\" search term in `aws_vpn_gateway` data source (Bug 1548302) r=bstack\n\nPreviously we searched for \"to-mdc's\". The new gateway only\nlinks back to one of the datacentres, so keeping the name while\nselecting the correct connection seems like the correct way to\nhandle this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30292",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=4172e809ba0e",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: remove subnets in availability zone C (Bug 1548302) r=bstack\n\nTurns out, us-west-1 doesn't have an availability zone C. This\nwas mentioned to me during review, and I thought I checked each\nregion to ensure there was a third AZ for each, but apparently\nthe way I checked was wrong. Oops!\n\nConsidering we aren't using the subnet in that AZ at the moment\nany way, this isn't a huge deal. So this commit removes the C\navailability zone subnets (public and private).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30293",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=19a3a9e03887",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: remove security group rule allowing Telegraf traffic from MDC1 (Bug 1548302) r=bstack\n\nThis rule was previously in place to allow our on-premises hosts\nto send data to the test InfluxDB instance. Now that we have the\nproduction service online, we can remove it.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30294",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=64e8e9a62933",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: rename Route53 record variable to be region agnostic (Bug 1548302) r=bstack\n\nThe Terraform variable name included \"uw2\", short for\n\"us-west-2\". Now that we are deploying to more regions,\nit should be changed.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30295",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=c6ea6220b09d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: create unique certificate per region (Bug 1548302) r=bstack\n\nThe previous plan was to create a single certificate that would\nbe shared across AWS regions, but we have since learned that\nACM certificates are per-region only. So this commit moves the\ncertificate resource definition from the `main.tf` file for the\nentire Terraform config and into the `aws-vpc` modules for each\nspecific AWS region. We also remove helper variables from the\nmodule.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30296",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0ac1bb96d120",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: stand up AWS VPC environment in us-west-1 (Bug 1548302) r=bstack\n\nNow that our environment is reproducible in different AWS regions,\nthis commit creates a new instance of the `aws-vpc` modules for use\nin us-west-1.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30297",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "41": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-08T14:35:33.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=1e05f401fe4f",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh: track `pushdataaggregator_groups` file under version control (Bug 1549724) r=lars\n\nThis file currently lives on the hgssh shared NFS mount, and is\nuntracked by version control.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30221",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "42": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-08T14:17:32.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=3e6170e6eced",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hg50: mark several extensions as compatible with Mercurial 5.0 (Bug 1545236) r=lars\n\nThese extensions all pass under the release candidate\nwithout any test changes.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28563",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "43": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-07T16:15:15.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=72bf13cdc44e",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "serverlog: update number of bytes served in test output after 40-char SHA patch (Bug 1548149) r=lars\n\nThe number of bytes served has changed after making hgmo\nserve the 40-character SHA by default. It's not a breaking\nchange, so it's not a huge deal, but I'm still investigating\nthe cause.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29443",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "44": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-06T17:11:52.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=96ccae6376a2",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: remove `influxdb` test instance output module (Bug 1548865) r=glob\n\nThis commit makes the Telegraf reporting agent no longer send\noutput data to the test InfluxDB instance.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29845",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=8d6e7d5e183b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: remove `monitoring-host` role and move TICKscripts elsewhere (Bug 1548865) r=glob\n\nThis role was used to configure the test InfluxDB instance,\nwhich is no longer needed since the production service is\navailable for use.\n\nThe TICKscripts should still be tracked under version\ncontrol, so I've moved them under the `scripts` directory.\nI'd like to find a way to automatically update the scripts\nin Kapacitor when they change in v-c-t, but I haven't done\nthat as of now.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29846",
+        "files_changed": "This commit contains 11 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=70d5c046a40e",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: remove monitoring host from `aws-vpc` config (Bug 1548865) r=bstack\n\nAll traffic is now being sent to the production instance, so\nwe no longer need this test machine.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29847",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "45": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-06T14:53:04.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=7c70357a7182",
+        "commit_author": "Jed Davis <jld@mozilla.com>",
+        "commit_message": "hghooks: update IPC peer list to add nika, remove former peers, and fix my name (bug 1548966) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29923",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "46": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-06T14:10:31.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=1e8f278de369",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "obsolescencehacks: mark as compatible with Mercurial 4.9 (Bug 1513273)\n\nTests pass, we simply overlooked the compatible version bump.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "47": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-06T13:44:20.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=222d1e4907cb",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: add monitoring of Kafka/Zookeeper processes (Bug 1548266) r=glob\n\nWe'd like to add monitoring of our Kafka brokers to the\n`monitoring-agent` Ansible role. In this commit we create\na new `kafka.conf.j2` template which will include all\nTelegraf plugins used to monitor Kafka, and include the\ntemplate in our Telegraf config on the condition the\nKafka host is in our `zk_servers` `hgmo` group variable.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29498",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "48": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-05-06T13:43:36.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=a91af8a784ee",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgtemplates: wrap instances of `author` template keyword with `mailmap` function (Bug 1464838) r=glob\n\nMercurial has an implementation of Git's `mailmap` available as a\ntemplate function. I added the implementation as a way of easing\nmy way into learning the Mercurial codebase. This commit performs\na regex replace of `{author` with `{mailmap(author)` everywhere\nin `gitweb_mozilla`, and adds the associated patch file.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29549",
+        "files_changed": "This commit contains 9 files changed."
+      }
+    }
+  },
+  "49": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-30T20:55:39.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=d9911e62f3a4",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "pushlog: fix tests regressed by 40-character node patch (Bug 1548054) r=lars\n\nA few tests were overlooked when changing `gitweb_mozilla`\nto display 40-character SHAs. This commit fixes those tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29397",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "50": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-30T17:39:20.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2a93b060dd7e",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: remove retention policy from database name (Bug 1543989)\n\nWe only need the database name in this field.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "51": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-30T16:25:39.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=f13310e10021",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: remove quotes around boolean variable (Bug 1543989)\n\nThis causes the variable to be a string instead of a bool.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "52": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-30T16:09:51.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=d7b0532a4e6a",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: fix production InfluxDB credentials (Bug 1543989)\n\nThe production URL for Mozilla's InfluxDB instance was\nincorrect, as well as the database name being enclosed\nby too many quotes.\n\nThe `influxdb_skip_database_creation` variable is also\nadded as `True` (valid in Python) instead of `true`\n(valid JSON/TOML), so we add a `to_json` filter to\nthat variable.",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "53": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-30T15:53:54.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=88247fb4308a",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "robustcheckout: remove arguments passed to `matchmod.always` in modern Mercurial (Bug 1546507) r=glob\n\nThe arguments passed to `matchmod.always` are unused under the\nhood, so they've been removed in Mercurial 5.0 and onward.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29271",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "54": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-30T15:03:56.000000",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=baa4bb1271e8",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: add encrypted InfluxDB credentials (Bug 1543989) r=lars\n\nThis commit adds a set of default Ansible variables in the\n`monitoring-agent` role, for sending data to Mozilla's\nproduction InfluxDB instance.\n\nSince `sops` doesn't yet know how to parse TOML, we store\nthe secrets as YAML Ansible defaults.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28363",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=32df72677efb",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: send monitoring data to production InfluxDB instance (Bug 1543989) r=lars\n\nThis commit tells Telegraf to send data to the production InfluxDB\ninstance. At the moment we will send data to both the test instance\nand the production instance, to verify all the data is correctly\nsent.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28364",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "55": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-30T15:00:40.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=41e63de62c96",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgtemplates: pass `node` through `short` template filter for `data-node` HTML tag (Bug 1547870) r=glob\n\nNot passing the node through `short` causes a `querySelector`\ncall in `mercurial.js` to return nothing. This call is responsible\nfor applying left padding to the element, to allow the graph\nto display without the changeset information on top.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29362",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "56": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-29T15:44:11.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=ae489559efe1",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "mozhg: use renamed keyword argument when running under Mercurial >= 5.0 (Bug 1546508) r=glob\n\nUnder Mercurial 5.0, the `copied` keyword argument passed\nto `context.memfilectx` has been renamed to `copysource`.\nThis commit adds a conditional to use the correct argument\nname when running under the new version.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29212",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=db9bc20ab995",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "push-to-try: mark as compatible with Mercurial 5.0 (Bug 1546508) r=glob\n\nWith `mozhg` now compatible with the 5.0 release candidate,\n`push-to-try` tests pass under the new version.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29213",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "57": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-29T13:50:05.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=51905dc214c4",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgtemplates: do not pass `node` through `short` template filter anywhere (Bug 1539324) r=glob\n\nTreeherder has removed support for using 12 character revision\nSHAs, due to the performance hit taken by being unable to fully\nindex a 12 character SHA (since the 40 character SHA is the\ncanonical version). This commit performs a global replace of\n`{node|short}` with `{node}` for the `gitweb_mozilla` theme.\n\nThe existing form takes the `node` template keyword and passes\nit through the `short` template filter, producing the 12-character\nSHA. Removing the `short` filter will cause the full 40-char\nSHA to be displayed instead.\n\nLike all other templating changes, we add a patchfile to\n`hgtemplates/.patches` that encompasses all the changes made by\nthis commit. Running `hgserver/tests/test-template-sync.t`\nverified that the changes are successfully tracked under version\ncontrol.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29033",
+        "files_changed": "This commit contains 13 files changed."
+      }
+    }
+  },
+  "58": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-26T15:21:03.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0ec322c77f23",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgserver: add `sparserevlog` capability to `test-obsolescence-server.t` (Bug 1547276)",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=58286127f121",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgserver: add `sparserevlog` bundle requirement to `test-clonebundles.t` (Bug 1547276)\n\nNew bundles under 4.9.1 include the `sparserevlog` requirement.\nSince none of the repos on hgmo are in the `sparserevlog` format\nyet, this is just extra test output we need to add. It doesn't\naffect behaviour in any way.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e8a3e082d629",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgserver: add `reposetup` timing output to `test-push-basic.t` blackbox logs (Bug 1547276)\n\nMercurial 4.9.1 now includes repo setup timing information in\nblackbox logs, which we have yet to add to the tests.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "59": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-24T15:04:18.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=210ad037e038",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: only modify httpd access log permissions when `hosttype` is \"hgweb\"\n\nhgssh doesn't install Apache, so there's no log to modify.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "60": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-23T20:22:41.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=bdc17e270d0b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: use `elif` instead of `else` in Jinja2 template\n\nAlso use double quotes to indicate a string.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "61": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-23T19:38:14.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=a9512159265c",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: allow MDC1 hosts to send traffic to InfluxDB test instance (Bug 1545434)\n\nForgot to add these new hosts to the security group rule.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "62": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-23T19:28:01.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=fae277edab13",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: move `hgweb` specific components behind a variable (Bug 1545434) r=smacleod\n\nThis way we can deploy our Telegraf config to hgssh,\nand monitor host-specific things (such as aggregator\nlag on hgssh, consumer lag on hgweb, etc).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28150",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=7853f082ab09",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "vcsreplicator: add `--telegraf` flag to aggregator lag check (Bug 1545434) r=smacleod\n\nThis commit adds a `--telegraf` flag to the aggregator lag check\nscript running on hgssh. When the script is run with this flag,\nthe output will be formatted as JSON, consumable by Telegraf's\n`exec` plugin. With this flag added, we will be able to send\naggregator lag data to InfluxDB for monitoring/alerting purposes.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28151",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=8644eae3410c",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: add `hgssh` specific plugins to Telegraf config (Bug 1545434) r=smacleod\n\nThis commit adds a `hgssh` specific set of configuration options\nto the Telegraf configuration file. At the moment we track the\nlag of the \"aggregator\" replication daemons, and the presence\nof processes for those daemons. We also apply the `monitoring-agent`\nrole in the hgssh deploy playbook and set `hgssh` as the hosttype.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28152",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "63": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-23T19:26:29.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=675b07956340",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: remove `hgmointernal.com` Route53 private hosted zone\n\nWe switched to a public hosted zone instead, so the private\nzone is no longer needed.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "64": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-18T21:42:16.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=7a33c0d1d60b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "testing: run template sync test against Mercurial 4.9.1\n\n4.9.1 is the version we have on the server, and therefore\nthe version we should run this test against. I've also added\na comment saying this number should always match our current\nserver version.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "65": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-17T16:13:30.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e21d785cb133",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "vcsreplicator: add a test demonstrating pull behaviour on hgssh (Bug 1513273) r=lars\n\nIn attempting to fix `test-pushkey-obsolescence.t` to make\nvcsreplicator compatible with Mercurial 4.9, I needed to allow\nserving the `unfiltered` repoview on hgssh. This had the\npotential to change the behaviour of pulls against the ssh\nendpoint on hgmo, so to ensure we don't change the intended\nbehaviour by accident, I've added a test which demonstrates\nthe current behaviour.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27778",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=9a114f7abf94",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "vcsreplicator: remove test output conditional on unsupported Mercurials (Bug 1513273) r=lars\n\nWe still have quite a few `(hg4X !)` conditional output in tests\nfor versions that are not 4.8 or 4.9. In this commit, we clean\nup our tests by removing the unnecessary conditionals.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27779",
+        "files_changed": "This commit contains 8 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2deacafd9abb",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "vcsreplicator: serve the unfiltered repoview on hgssh (Bug 1513273) r=lars\n\nThis commit patches the hgssh vcsreplicator Mercurial extension to\nserve the `unfiltered` repoview for pull operations performed by\nthe `unfiltereduser`. This fixes failures where consumers were\nunable to process `changegroup` messages that referenced now-obsolete\nchangesets on hgssh. After this patch, the `vcs-sync` user is always\nable to pull the necessary changesets down to hgweb machines.\n\nThe number of files that Mercurial advertised as changed has been\nreduced by 1 in some cases under the new behaviour. Looking at the\nchange, the behaviour is more correct (introducing a changeset that\nmade 0 changes to 1 files doesn't make much sense) after this patch\nis applied. I believe Mercurial is no longer counting new obsolescence\nmarkers as having changed files under the hood, but I have yet to\nfind the exact changeset in core Mercurial to verify.\n\n`test-ssh-pull.t` passes as expected after this change, under 4.8\nand 4.9.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27780",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=8fdb71a76345",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-web: upgrade Mercurial to 4.9.1 (Bug 1513273) r=lars\n\nIn this commit we upgrade all hgweb Mercurial installations to\nversion 4.9.1.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27924",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=d4167b373314",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-ssh: upgrade Mercurial to 4.9.1 (Bug 1513273) r=lars\n\nIn this commit we upgrade all hgssh Mercurial installations to\nversion 4.9.1.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27925",
+        "files_changed": "This commit contains 6 files changed."
+      }
+    }
+  },
+  "66": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-17T14:45:52.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=9d8dd59d9bac",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "mozhg: fix `test-rewrite.t` (Bug 1544838) r=lars\n\nThis commit adds a new line of test output to\n`test-rewrite.t`, conditional on Mercurial 4.7 or\nlater.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27815",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "67": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-15T13:54:12.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=c3c46a4fa5bf",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: turn off services irrelevant to hgweb mirrors during deploy (Bug 1511058) r=glob\n\nWe don't need to serve traffic to Mozilla offices\nfrom the private hgmo service, so we can turn off\nthe IP address scraper service.\n\nIn the future we should refactor the hgweb role\nto do this automatically (ie not install an unnecessary\nservice in the first place).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26990",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=1caf95de12c0",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: make hostgroups variable in hgweb/mirrors deploy playbooks (Bug 1511058) r=glob\n\nBy making the hostgroups variable, we can set variables on\nthe playbook \"includes\" that change which hostgroup the play\nis deployed to. This is useful to deploy the hgweb role and\nother tasks to hosts in the `bootstrap` group.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26991",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0670903b02ed",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: fix bootstrap and teach it to apply `hg-web` role (Bug 1511058) r=glob\n\nThere were a few subtle bugs with the hgweb bootstrap\nplaybook, including the fact that it assumed the hg-web\nrole was already applied. This commit adds code to\noptionally apply hgweb/mirror playbooks on the existance\nof an appropriate variable. The directory of the\n`hgssh.json` file is changed to the `hg` users home.\nWe set SELinux to permissive mode on the mirror hosts\nas `mod_wsgi` cannot be accessed with it turned on.\nFinally, we add the bootstrap hostgroup to the `hgmo`\ngroup, to allow access to it's default group variables,\nwhich include the set of Kafka/Zookeeper brokers.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26992",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=c3ad5a07b5fc",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: make the number of concurrent clones variable (Bug 1511058) r=glob\n\nPreviously we had hard coded 5/8 as the number of concurrent\nworkers for the bootstrap processes. Making these variable\nwill allow us to scale up/down the number of workers as\nneeded for mirrors.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26993",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=59aedaf8f7f6",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: document new variables in bootstrap Ansible playbook (Bug 1511058) r=glob\n\nA small description of how to use the playbook at the top,\nas we do with most other Ansible playbooks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26994",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0dfd8f1e780b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: add new hgweb mirrors to `hgweb-mirrors` hostgroup (Bug 1511058) r=glob\n\nThese are the new IPs for the mirrors in us-west-2.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26995",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "68": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-12T13:03:23.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=699240458208",
+        "commit_author": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
+        "commit_message": "configwizard: Disable 'format-source' extension since it served it's purpose. (Bug 1543645) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27050",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "69": {
+    "pusher": "lars@mozilla.com",
+    "date_of_push": "2019-04-11T17:41:39.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=7951e7b5e7bf",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "vcsreplicator: update test, correcting order of expected output (Bug 1543448) r=sheehan\n\nMachines of differing speeds produce the output of the test,\ntest-consumer-daemon-restart.t, in a differing orders. This\nchange synchronizes the output by adding a consumer\nwith \"--wait-for-no-lag\". This causes a pause that allows the\ntests that run subsequently to always have the same order\nof expected output.\n\nThe former order of output has been corrected for this\nsynchronization and a redundant line about shutdown\nhas been removed (see Bug 1543450)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27005",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "70": {
+    "pusher": "lars@mozilla.com",
+    "date_of_push": "2019-04-11T17:37:19.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=a99aa3f3fd35",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "vcsreplicator: simplify shutdown signal handlers (Bug 1543450) r=sheehan\n\nThe existing shutdown signal handler fails to take into account the EINTR\nexception raised by blocking system calls.  This is raised when the signal\nis caught during a system call like reading from a socket by Kafka.  This\nhappens when the signal handler simply returns without raising an exception\nof its own.  The exsting handler used a counter as a closure to control the\nmessage consuming loop.\n\nAs an alternate implementation, this new handler raises a custom exception\nwhenever a signal is received.  This doesn't allow the blocking system call\nthe opportunity to raise the EINTR exception.  The custom exception breaks\nthe consuming loop without the need of a counter.\n\nAn exception handler was added to the try:finally: construct to take\nthe responsibility of logging the shutdown process.\n\nFor this change to pass tests, Bug 1543448 must also be resolved.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D27004",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "71": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-10T21:36:31.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=1340d12236b1",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: rename `ci-only` module to `aws-vpc` (Bug 1509039) r=bstack\n\nWhen I originally created the Terraform configs for the hgmo\nAWS account, our design goals were to isolate all resources\nfor the private hgweb mirrors into their own VPC. After\nworking towards productionizing these resources over the\nlast few months, I decided it makes more sense to have\na single VPC for all hg related resources in this region,\nand limit logical access to different resources using\nsecurity groups. This will allow us to iterate faster and\navoid the work of creating multiple VPCs that link back\nto the on-premises Mozilla networks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26976",
+        "files_changed": "This commit contains 7 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=51b1d5add43c",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: make hgweb mirror instances variable (Bug 1509039) r=bstack\n\nCurrently we only have a single hgweb mirror stood up,\nwith the instance type of that mirror hard coded in\nto it's Terraform module. This commit makes the instance\ntype a variable so we can add/reduce the compute power\nif necessary.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26977",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=8219a59625be",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: remove `environment_users` variable  (Bug 1509039) r=bstack\n\nWe were going to use this to create new users as part\nof our user data input. We've switch to a hard-coded\ncloud config for now, so this is safe to remove.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26978",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2755b890648b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: upgrade InfluxDB instance to `c4.2xlarge` (Bug 1509039) r=bstack\n\nThis is only temporary while I work on redirecting our\nInflux data to Mozilla's production instance.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26979",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0c9bfcf4a389",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: move ELB target group attachment into the `hgweb-mirror` module  (Bug 1509039) r=bstack\n\nWe will need one attachment per instance - rather than create new\nattachments each time, let's just add the attachment to the module\nitself.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26980",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=36c8c075447e",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: create new hgweb mirror host (Bug 1509039) r=bstack\n\nThis host will be 1 of 2 attached to the internal load\nbalancer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26981",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=b0dedd649093",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: rename `test-hgweb-mirror` to `hgweb-a` (Bug 1509039) r=bstack\n\nSame code, but a new instance in AWS.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26982",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0ed956b29df0",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "terraform: increase disk space to 150GB on hgweb mirrors (Bug 1509039) r=bstack\n\nWe were hitting the edge at 100GB.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26983",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "72": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-08T17:14:01.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0c95e8341526",
+        "commit_author": "Sylvestre Ledru <sledru@mozilla.com>",
+        "commit_message": "hgext: clang-format hg hook: Ignore unsupported extensions directly in the hook (Bug 1542632) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26446",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "73": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-05T14:05:36.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=77705a8ba4f5",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "configwizard: remove warning about experimental status of `evolve` extension (Bug 1541887) r=glob\n\n`evolve` is stable enough that we recommend it to developers\nworking on Firefox repos. The warning about it's \"experimental\"\nstatus is confusing and is likely driving people away from\nadopting it for their workflow. This commit removes the warning\nand indicates that installation of `evolve` is desirable. We\nalso point developers at the relevant help commands to learn\nmore for themselves.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26203",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "74": {
+    "pusher": "lars@mozilla.com",
+    "date_of_push": "2019-04-04T17:49:04.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=75145f5864c4",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hg49: make vcsreplicator/tests compatible  (Bug 1513273) r=sheehan\n\n1 - tests that list the .hg need to have some additonal files\n    that are seen when using hg49 (.../test-hgrc-replicate.t)\n2 - tests that depend on the contents of the\n    .../mozilla-central/.hg/requires file need to have an\n    additional line when using hg49\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26210",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "75": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-03T20:01:15.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=71545cbde3e6",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hghooks: make hooks compatible with Mercurial 4.9 (Bug 1513273) r=lars\n\nHere we make the hooks tests pass under Mercurial 4.9. A new\nlog statement was added during the `reposetup` stage of\nextension loading, which is seen in the test output.\nMany `(?)` statements are removed and replaced with inline\nversion checks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25956",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "76": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-03T19:59:17.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=28f1a8fade1c",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hg49: hgext/firefoxreleases (Bug 1513273) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25966",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2046b5bf6072",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hg49: hgext/pushlog (Bug 1513273) r=sheehan\n\nadded new \"cache\" and \"wcache\" present only in hg49\nremoved 2 \"#if h42\" blocks because we're not using versions older than 4.8\ntagged 2 \"--config\" lines as not appearing when using hg49\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25967",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2b23ebba2fb5",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hg49: hgext/readonly (Bug 1513273) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25968",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=f498a35dc46e",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hg49: hgext/replicateowner (Bug 1513273) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25969",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=d4aecc778e9f",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hg49: hgext/serverlog (Bug 1513273) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25970",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=db170e81bb17",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "hg49: hgext/unifyrepo (Bug 1513273) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25971",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "77": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-03T18:37:31.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=32f607700768",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgmo: make compatible with Mercurial 4.9 (Bug 1513273) r=lars\n\nTest extension works as intended under 4.9, with a few\nminor additions to tests. A new cache file `wcache` has\nbeen added as a virtual file system cache for files\nrelated to the working copy. The UNIX-like exec flag\ncheck caches are no longer shown when displaying the\ncaches available on the local repository as the code\npath that created them has changed. Considering they\nare not actually transferred later in the test, this\nis not a problem.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25952",
+        "files_changed": "This commit contains 3 files changed."
+      }
+    }
+  },
+  "78": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-03T16:33:13.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=f1043f9d2312",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "py3: global replace `repo['` with `repo[b'` (Bug 1541166) r=lars\n\nUsing `__getitem__` on classes that subclass `repository` (such\nas `localrepository`) results in Python 3 compatibility failures\nsince we are currently not marking our strings with `b''`. This\ncommit does a global replace to assert all strings passed as such\nare byte strings.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25865",
+        "files_changed": "This commit contains 20 files changed."
+      }
+    }
+  },
+  "79": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-02T20:41:03.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2c7002f9e788",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "py3: remove Python 3 incompatible calls to `execfile` (Bug 1541166) r=lars\n\nThis commit replaces all calls to `execfile` with a file\nread and call to `exec`, with file content as the parameter.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25849",
+        "files_changed": "This commit contains 83 files changed."
+      }
+    }
+  },
+  "80": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-04-02T20:29:11.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=13daf68f9066",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "Python2/Python3 compatibility - try/except form for pylib/mercurial-support/killdaemons.py (Bug 1541166) r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25850",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "81": {
+    "pusher": "smacleod@mozilla.com",
+    "date_of_push": "2019-03-30T16:43:28.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=005eaf9c1236",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgext: mark several extensions as incompatible with legacy Mercurial (Bug 1539585) r=lars\n\nEach of the following extensions has tests failing under\nolder versions of Mercurial, due to dependencies on the\n`hgmo` extension, which is only compatible with Mercurial\n4.8:\n\n- firefoxreleases\n- pushlog\n- unifyrepo\n- hghooks extension\n\nConsidering all of these extensions run on the server,\non which we currently run version 4.8, they should probably\nhave been marked as incompatible sooner.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25384",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e99a6865db81",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgserver: add new bundle2 capability to `test-obsolescence-server.t` (Bug 1539585) r=lars\n\nThis new output was introduced in Mercurial 4.7. The server is\nnow capable of transmitting v2 stream clone bundles, as shown\nin this new output. See `hg help internals.wireprotocol.bundle2`\nfor more information on the format of the new content.\n\nThe output is now alphabetically sorted by default, negating the\nneed for the previous line of unsorted (but deterministic) output.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25385",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e473826ccc95",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgserver: add `content-security-policy` header to `test-static-files.t` output (Bug 1539585) r=lars\n\nNot long ago we added `hg.mozilla.org/static/` to the\ncontent security policy. This means that grep-ing for\n\"static\" will pick up the header in tests.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25386",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "82": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-28T19:14:17.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=9f56254cb36b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: fix indentation in Telegraf restart handler\n\nAccidentally indented one level too many, which causes Ansible\nto barf as it doesn't recognize that key for the `service`\nmodule.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "83": {
+    "pusher": "lars@mozilla.com",
+    "date_of_push": "2019-03-28T16:31:10.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=76f73a7f2a56",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "Bug 1522496 step 1 - move implementation of script generate-hg-s3-bundles to .../hgserver/hgmolib r=sheehan\n\nThis processed involved using the \"entry_point\" system in setup_tools for making a new\nexecutable for generate-hg-s3-bundles.  Tests had to be changed to use the new method\nof invocation.  The original invocation method involved using a \"-u\" switch on the\npython exectuable - this migrated to using the PYTHONUNBUFFERED environment varible\nto accomplish the same effect.\n\nMinor change: octal constants were changed to the modern accepted form to silence\nPEP8 warnings.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23953",
+        "files_changed": "This commit contains 6 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=79691d65850e",
+        "commit_author": "K Lars Lohn <lars@mozilla.com>",
+        "commit_message": "Bug 1522496 step 1.5 - simplify testing of known exceptions  r=sheehan\n\nPrevious versions included tracebacks when a test induced an exception.\nThis added no value to the test and made it more difficult to move\ndependent modules or upgrade to new versions of Python.  The code was\nmodified to move from tracebacks with unhandled exceptions to just\nnoting the exception and associated metadata on stdout before aborting.\n\nRemoved the ability to execute generate_hg_s3_bundles.py directly in\nfavor of the entry_point.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24256",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "84": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-27T17:02:07.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=848dc37f2562",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "hgext: add `buglink` field to source formatting related extensions\n\nWith this field added, when either of the extensions errors out,\nthere will be a suggestion to users as to where they should file\nbugs.",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "85": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-25T17:34:46.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=cbf8c0e26257",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: specify database/retention policy when defining Kapacitor tasks\n\nFor whatever reason, one of the",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=4eb6475ec2f5",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: remove unnecessary alert node from vcsreplicator processes TICKscript\n\nThe `alert` node has been moved lower, to conform\nto the recommended TICKscript format of \"dataframe,\nthresholds, alert\".",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=4b4c40c7d3f7",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: fix formatting of disk space percentage\n\nPreviously we were writing the percentage up to 14 digits.\nThis is obviously completely unnecessary, so this commit\ndisplays only two digits instead.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=f6a622bc3499",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: fix vcsreplicator consumer lag tickscript\n\nThis commit fixes some minor issues with the existing\nTICKscript and extends it to include monitoring of\nthe vcsreplicator heads process.",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=1bacdb36a603",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/hg-web: add `replicationrules` section to heads consumer config",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2d82a492c54d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: add Telegraf restart handler\n\nMaking changes to the Telegraf config file requires a\nrestart of the daemon for changes to take effect. This\ncommit adds a handler to the `monitoring-agent` role\nto force a restart when the config file is modified\non disk.",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "86": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-25T14:11:27.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=394ce6dbce13",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: remove `mozilla-taskcluster` reset reminder from twig reset playbook\n\nTaskcluster now triggers job for pushes to Mercurial repos\nusing Pulse notifications, so there is no need to file\na bug for the reset.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "87": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-18T16:40:37.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=ed0659b2777d",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "configwizard: direct users to tweakdefaults help section during setup (Bug 1531059) r=glob\n\nWe previously pointed users at the `FriendlyHGPlan` Mercurial\nwiki page. That page has some useful information but has gone\nstale in recent memory. The information found in the help command\nis more recent and will stay relevant from release-to-release.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21704",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=161be99fbe9b",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "configwizard: move `curses` availability check to standalone function (Bug 1531059) r=glob\n\nIt turns out we already check for the presence of `curses`\non the system in a separate function in `configwizard`,\nhowever the check is coupled with a prompt to enable\nthe curses interface. Here we move the check itself into\na separate function so we can re-use the functionality\nin the next commit.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23707",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=4520aa3d301e",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "configwizard: set `ui.interface=text` on Windows (Bug 1531059) r=glob\n\nTweakdefaults causes the default interface to change to `curses`\non Windows. This can cause issues as curses is not supported out\nof the box. This commit adds a check to ensure `curses` is available\non the user's system and reverts the default UI to `text` when\nit is not.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D21705",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "88": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-14T16:43:22.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=8e3bb142dfa9",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "robustcheckout: add a `serverUrl` key to CI metrics output (Bug 1535011) r=smacleod\n\nWith private hg mirrors being rolled out in the near future,\nwe would like to be able to differentiate our CI metrics\nbetween operations against the public hgmo service, and\nthe private mirrors. In this commit we parse the url passed\nto `robustcheckout` using `urlparse.urlparse`, and add\nthe network location to the output suites for all data points.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23530",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "89": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-13T16:00:48.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=787715ced0ac",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "vcsreplicator: sort Telegraf JSON output before printing (Bug 1525954)\n\nFollowing up on D23175, we should sort the JSON output to ensure\nconsistency in the tests.",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "90": {
+    "pusher": "cosheehan@mozilla.com",
+    "date_of_push": "2019-03-13T14:52:05.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=0c90eaaba78e",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: install Kapacitor to monitoring host (Bug 1525954) r=glob\n\nAs a first step towards monitoring hg.mo with the InfluxDB stack,\nwe installed the database, user interface and monitoring agent\n(InfluxDB, Chronograf and Telegraf, respectively). Now that we\nhave some of the basic dashboards and monitoring data being\ncollected and queryable, we need to install Kapacitor (the Influx\ndata processing and alerting tool). Once we have Kapacitor installed\nwe can port the existing Nagios alerts to TICKscripts, and add\nfunctionality for processing the data via user defined functions\n(UDF's).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23170",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=90dd6690c0fc",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: add a playbook to deploy to monitoring host (Bug 1525954) r=glob\n\nThis will be a temporary file that just applies the `monitoring-host`\nrole to a specific host in the inventory. In the future this will\nbe removed as we send our data to a hosted Influx instance.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23171",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=7e9917aaf191",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible: apply `monitoring-agent` role to hgweb mirrors (Bug 1525954) r=glob\n\nWe will need this role applied to get data from the\nhgweb mirrors. Previously we applied the role as\na dependency of the hg-web role, but that broke\nthe test suite as the monitoring role assumed\nthe presence of the `/var/log/httpd` directory on\ndisk. It was rolled back in f923e988151c to fix\nthe test suite.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23172",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e6f32b9d217c",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: make `telegraf.conf` a template (Bug 1525954) r=glob\n\nThis will allow us to use plugins on relevant hosts based\non different conditions. For example, once we deploy the\nmonitoring agent to the hgssh hosts, we will have no need\nfor the `Apache` plugin, but we will want to use the `procstat`\nplugin to monitor the existance of various other processes.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23173",
+        "files_changed": "This commit contains 3 files changed."
+      },
+      "5": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=cbaaccde6e74",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: switch from `systemd_unit` to `pattern` use of `procstat` plugin (Bug 1525954) r=glob\n\nWhen I attempted to port the vcsreplicator daemon count\nalert to Kapacitor/TICKscript, I realized that instructing\nthe `procstat` plugin to monitor a specific systemd unit\nwould not tell InfluxDB when the unit failed, only when\na unit of that name was not loaded into the system. By\nswitching to using the `pattern` syntax (with the value\nbeing a pattern sent to `pgrep`) we can use the plugin\nto correctly determine when we do not have the required\namount of vcsreplicator daemon processes running on the\nsystem.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23174",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "6": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=b1793247e820",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "vcsreplicator: add `Telegraf` flag to Nagios checks (Bug 1525954) r=glob\n\nThis commit adds a flag to format output from the\ncustom Nagios checks for consumption by Telegraf.\nThe `exec` Telegraf plugin will query the offset\nchecking script with this parameter (as shown in\nthe test) and send the returned value back to Influx\nfor use in an alerting TICKscript.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23175",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "7": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=930b41909ba3",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-agent: enable `exec` Telegraf plugin to check vcsreplicator lag (Bug 1525954) r=glob\n\nThis commit adds instances of the `exec` Telegraf plugin\nwhich poll the vcsreplicator Nagios check for data about\nconsumer lag. A later commit adds a TICKscript to alert\non different thresholds of lag.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23176",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "8": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=827037a767ad",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: add TICKscript to alert for missing vcsreplicator processes (Bug 1525954) r=glob\n\nThis commit takes the first step in porting the existing Nagios\nchecks to the InfluxDB platform (specifically Kapacitor). We create\nan alert which queries the `procstat_lookup` measurement for points\nwith a `pattern` tag matching \"vcsreplicator-consumer\". When\nwe do not find 8 running systemd units with this prefix (ie the\n`vcsreplicator@{0..7}.service` units on the hgweb hosts) we trigger\nthe alert.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23177",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "9": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=a52b64093d31",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: add a TICKscript to check vcsreplicator consumer lag (Bug 1525954) r=glob\n\nBuilding on previous commits, this commit adds a TICKscript\nto monitor vcsreplicator consumer lag data pulled from the\n`exec` Telegraf plugin.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23178",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "10": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=2885a2a097ba",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: add a TICKscript to monitor remaining disk space (Bug 1525954) r=glob\n\nThis commit adds a TICKscript to alert on high disk space usage.\nThresholds are adapted from existing IT Nagios checks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23179",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=ff1acf3da77a",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: add a TICKscript to monitor system load (Bug 1525954) r=glob\n\nThis commit adds a TICKscript to monitor high load on\nmonitored instances. Thresholds are adapted from\nexisting IT Nagios checks.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23180",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "12": {
+        "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=e95b70411f81",
+        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+        "commit_message": "ansible/monitoring-host: install Kapacitor tasks to monitoring host (Bug 1525954) r=glob\n\nThis commit installs our new TICKscripts on the test\nmonitoring host.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23181",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  }
+}
