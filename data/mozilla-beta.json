@@ -1,178 +1,22 @@
 {
   "0": {
-    "last_push_id": 11507
+    "last_push_id": 11742
   },
   "1": {
-    "pusher": "ryanvm@gmail.com",
-    "date_of_push": "2019-06-27T14:36:05.000000",
-    "changeset_commits": {
-      "3": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=69434884440f",
-        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
-        "commit_message": "Bug 1550634 - Increase telemetry-test-client max-run-time; r=jmaher, a=test-only\n\nAvoid intermittent failures by allowing the task to run a little longer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34365",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "2": {
-    "pusher": "jcristau@mozilla.com",
-    "date_of_push": "2019-06-24T08:10:20.000000",
+    "pusher": "nthomas@mozilla.com",
+    "date_of_push": "2019-08-01T04:29:35.000000",
     "changeset_commits": {
       "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=fd384ae3e04e",
-        "commit_author": "J.C. Jones <jjones@mozilla.com>",
-        "commit_message": "Bug 1558549 - Update to NSS_3_44_1_RTM. a=ritu UPGRADE_NSS_RELEASE",
-        "files_changed": "This commit contains 487 files changed."
-      }
-    }
-  },
-  "3": {
-    "pusher": "jcristau@mozilla.com",
-    "date_of_push": "2019-06-19T23:36:30.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=c828ca470555",
-        "commit_author": "Ryan VanderMeulen <ryanvm@gmail.com>",
-        "commit_message": "Bug 1559203 - Don't run QuantumRender tests on ESR68. r=jlorenzo, a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34928",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "4": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-06-19T03:01:23.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=d27a1db32caf",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1551738: Fix linting. r=me a=lint",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "5": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-06-18T23:05:54.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=9710df79dc09",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: Fix snap repackage dependencies; r=jlorenzo\n\nWhen snaps started being packaged on archive.mozilla.org, the `build_platform`\nof the snap repackge task changed, causing the beetmover dependencies to be\ndropped. Switch the platform back so that the dependencies are restored.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31585",
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=0660bd1e7f2e",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1553076 - Checksums for releases don't contain msi, stub installer, or pkg files, r=Callek DONTBUILD\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38580",
         "files_changed": "This commit contains 1 files changed."
       },
       "2": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=7d9a79e529ad",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1551738: [declarative-artifacts] Filter out artifacts that aren't generated; r=mtabara\n\nStub installers aren't generated on esr branches; the repackage task includes\nmetadata indicating this. Use this information to filter out upstream artifacts\nwhen use declarative artifacts.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31586",
-        "files_changed": "This commit contains 1 files changed."
-      },
-      "3": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a428cfd1149b",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: [release] Release candidates generate stub installers; r=bhearsum\n\nWhen the logic was switched to be by release-type, rc's were accidentally\nexcluded.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31587",
-        "files_changed": "This commit contains 1 files changed."
-      },
-      "4": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=63940d06f468",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1551738: [declarative-artifacts] Select artifact map by release-type, instead of by project; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31646",
-        "files_changed": "This commit contains 3 files changed."
-      },
-      "5": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=017e76e98bc8",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1551738: Add esr68 support to bouncer tasks; r=bhearsum\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31651",
+        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=ac03eafa39f4",
+        "commit_author": "Nick Thomas <nthomas@mozilla.com>",
+        "commit_message": "Bug 1567235 - notarize 5 partner & eme-free builds per task instead of individually, r=aki, a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D39482",
         "files_changed": "This commit contains 6 files changed."
-      },
-      "6": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=87bc55a17789",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1551738: Generate bz2 update mars on esr68; r=bhearsum\n\nESR 68.2 is going to be the watershed for bz2 updates, so generate them for the\nmoment.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31652",
-        "files_changed": "This commit contains 3 files changed."
-      },
-      "7": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=d35c2dc40e91",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1551738: Add balrog and update-verify support for esr68; r=bhearsum\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31653",
-        "files_changed": "This commit contains 3 files changed."
-      },
-      "8": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3affb65b59d4",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1551738: Add update tests for update testing from the previous ESR release; r=bhearsum a=tomprince\n\nThis adds a new set of update tasks and channels for testing updates from the\nprevious ESR release, before we make the new release generally available as an\nupdate.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31654",
-        "files_changed": "This commit contains 6 files changed."
-      }
-    }
-  },
-  "6": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-06-14T15:11:56.000000",
-    "changeset_commits": {
-      "3": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=4f6a9270754a",
-        "commit_author": "Mike Shal <mshal@mozilla.com>",
-        "commit_message": "Bug 1553065 - Move profile-use mozconfig info into common mozconfigs; r=firefox-build-system-reviewers,chmanchester a=RyanVM\n\nThe 3-tier PGO builds used a separate mozconfig called 'profile-use' for\nthe final tier. This created a problem when it rode to beta, since the\nsame mozconfig was used for all trees, which meant we ended up with\nnightly branding on beta builds.\n\nWith the PGO-enabling logic in common mozconfigs, we can enable it by\nsetting the MOZ_PGO_PROFILE_USE environment variable from the task\ndefinition. All of the final-tier PGO builds now use the nightly, beta,\netc mozconfigs like before, so branding should be intact.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33172",
-        "files_changed": "This commit contains 12 files changed."
-      }
-    }
-  },
-  "7": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-06-12T11:48:33.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=a82e30d46f04",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1558282 - 68 train: Bring opt-upload-symbol jobs when shipping geckoview r=Callek a=release DONTBUILD\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34487",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "8": {
-    "pusher": "ryanvm@gmail.com",
-    "date_of_push": "2019-06-11T14:37:47.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=259f7d6d4dc9",
-        "commit_author": "Ryan VanderMeulen <ryanvm@gmail.com>",
-        "commit_message": "Bug 1558258 - Only run GeckoView unit and Android HW media tests on non-ESR trees. r=gbrown, a=test-only\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34396",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "9": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-06-11T08:29:50.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=cfdf1e2fa7d7",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1558243 - Fennec ESR: bring push-apk tasks on mozilla-esr68 r=Callek a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34383",
-        "files_changed": "This commit contains 2 files changed."
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=688dd2228e5b",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1558220 - Remove dead multi-locale android configs r=Callek a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34363",
-        "files_changed": "This commit contains 18 files changed."
-      }
-    }
-  },
-  "10": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-06-10T15:28:32.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=9ca4d3f4cdbc",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1554851 - 68 train: Let ARM64 Fennec 68 ride the trains from Beta to Release r=mhentges a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33488",
-        "files_changed": "This commit contains 1 files changed."
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=3bb7b46a7ca2",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1558130 - Copy multi_locale/mozilla-esr68_android.json from multi_locale/mozilla-release_android.json r=Callek a=release\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34317",
-        "files_changed": "This commit contains 1 files changed."
       }
     }
   }

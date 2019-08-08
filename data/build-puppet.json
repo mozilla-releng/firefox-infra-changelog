@@ -1,149 +1,104 @@
 {
   "0": {
-    "last_checked": "2019-06-27T18:43:32.893267"
+    "last_checked": "2019-08-08T13:20:08.899448"
   },
   "1": {
-    "sha": "797fe7bb35b7594fddccea6c5778cd1a92e98301",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/797fe7bb35b7594fddccea6c5778cd1a92e98301",
-    "author": "Nick Thomas",
-    "author_email": "nthomas-mozilla@users.noreply.github.com",
-    "message": "Deploy partner stub installer support (#529)",
-    "date": "2019-06-27T04:34:00Z",
-    "files": "This commit contains 2 files changed."
+    "sha": "0fbb5cb08f20bf3fc18f752ed823138cd13fced4",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/0fbb5cb08f20bf3fc18f752ed823138cd13fced4",
+    "author": "Jordan Lund",
+    "author_email": "jlund@mozilla.com",
+    "message": "Merge pull request #567 from lundjordan/google_oauth_api_key\n\nremoves unused google_oauth_api_key from puppet configuration",
+    "date": "2019-08-07T21:58:30Z",
+    "files": "This commit contains 4 files changed."
   },
   "2": {
-    "sha": "939110e08c758ca821cf01fa0a789c37e710006a",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/939110e08c758ca821cf01fa0a789c37e710006a",
-    "author": "Roland Michael Norbert Mutter",
-    "author_email": "36150861+mutterroland@users.noreply.github.com",
-    "message": "Merge pull request #527 from mozilla-releng/pyup-scheduled-update-2019-06-26\n\nScheduled weekly dependency update for week 25",
-    "date": "2019-06-26T20:15:36Z",
-    "files": "This commit contains 9 files changed."
+    "sha": "2a67f53fe0a80c07329fa55a319db2a17458e773",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/2a67f53fe0a80c07329fa55a319db2a17458e773",
+    "author": "Jordan Lund",
+    "author_email": "jlund@mozilla.com",
+    "message": "removes extra sneaky google_oauth_api_key comment",
+    "date": "2019-07-31T23:42:55Z",
+    "files": "This commit contains 1 files changed."
   },
   "3": {
-    "sha": "839b301c1af205f3dc25d14e364a45a11ffa27b5",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/839b301c1af205f3dc25d14e364a45a11ffa27b5",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update parso from 0.4.0 to 0.5.0",
-    "date": "2019-06-26T13:11:57Z",
-    "files": "This commit contains 1 files changed."
+    "sha": "11505674695300bb898b48fca362e8e5d731739e",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/11505674695300bb898b48fca362e8e5d731739e",
+    "author": "Jordan Lund",
+    "author_email": "jlund@mozilla.com",
+    "message": "removes unused google_oauth_api_key from puppet configuration",
+    "date": "2019-07-31T23:22:08Z",
+    "files": "This commit contains 4 files changed."
   },
   "4": {
-    "sha": "f1fad2d3482c24ea5e9ea95ebadf65bb72f2433e",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/f1fad2d3482c24ea5e9ea95ebadf65bb72f2433e",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update jedi from 0.13.3 to 0.14.0",
-    "date": "2019-06-26T13:11:56Z",
-    "files": "This commit contains 1 files changed."
+    "sha": "70b95b55863802a416680470dd36929fdfde55dc",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/70b95b55863802a416680470dd36929fdfde55dc",
+    "author": "Jordan Lund",
+    "author_email": "jlund@mozilla.com",
+    "message": "Merge pull request #568 from lundjordan/crash_stats_api_token\n\nremoves crash_stats_api_token from puppet configuration",
+    "date": "2019-08-07T21:33:01Z",
+    "files": "This commit contains 5 files changed."
   },
   "5": {
-    "sha": "6074c4f9b2547a954a0e6aa3385e174e8df4399f",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/6074c4f9b2547a954a0e6aa3385e174e8df4399f",
-    "author": "pyup-bot",
+    "sha": "54ff7f48cafd386b126ebd1d7623b1e83f7691c1",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/54ff7f48cafd386b126ebd1d7623b1e83f7691c1",
+    "author": "pyup.io bot",
     "author_email": "github-bot@pyup.io",
-    "message": "Update botocore from 1.12.171 to 1.12.176",
-    "date": "2019-06-26T13:11:55Z",
-    "files": "This commit contains 1 files changed."
+    "message": "Scheduled weekly dependency update for week 31 (#573)\n\n* Update pyyaml from 5.1.1 to 5.1.2\r\n\r\n* Update jsonschema from 3.0.1 to 3.0.2\r\n\r\n* Update pyasn1 from 0.4.5 to 0.4.6\r\n\r\n* Update taskcluster from 15.0.0 to 16.0.0\r\n\r\n* Update mozilla-version from 0.3.4 to 0.4.1\r\n\r\n* Update twisted from 19.2.1 to 19.7.0\r\n\r\n* Update pyasn1-modules from 0.2.5 to 0.2.6\r\n\r\n* Update pytz from 2019.1 to 2019.2\r\n\r\n* Update mercurial from 5.0.2 to 5.1\r\n\r\n* add future==0.17.1 as a new mozilla-version dep",
+    "date": "2019-08-07T16:41:34Z",
+    "files": "This commit contains 13 files changed."
   },
   "6": {
-    "sha": "c0cb7e1ae82d98c89f02fc7245dfe40001e2722d",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/c0cb7e1ae82d98c89f02fc7245dfe40001e2722d",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update boto3 from 1.9.171 to 1.9.176",
-    "date": "2019-06-26T13:11:53Z",
-    "files": "This commit contains 1 files changed."
+    "sha": "66aac47e6846eb078b56b233a6e4ac79e6ab3172",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/66aac47e6846eb078b56b233a6e4ac79e6ab3172",
+    "author": "Justin Wood (Callek)",
+    "author_email": "callek@gmail.com",
+    "message": "Merge pull request #572 from Callek/langpack\n\nSupport Langpack Signing in Autograph for signingscript",
+    "date": "2019-08-07T15:58:19Z",
+    "files": "This commit contains 3 files changed."
   },
   "7": {
-    "sha": "a1931309be46f64024cba67fc6bf05184f89a161",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/a1931309be46f64024cba67fc6bf05184f89a161",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:52Z",
+    "sha": "0967f14630293fcce1040966d58c13c81301578f",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/0967f14630293fcce1040966d58c13c81301578f",
+    "author": "Justin Wood (Callek)",
+    "author_email": "callek@gmail.com",
+    "message": "Merge pull request #571 from Callek/omnija_swap\n\nBug 1564264 - Move omnija dep signing to prod autograph",
+    "date": "2019-08-07T15:58:08Z",
     "files": "This commit contains 1 files changed."
   },
   "8": {
-    "sha": "bcbf0ab62d31d76a080fb9faef473b525177feee",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/bcbf0ab62d31d76a080fb9faef473b525177feee",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:51Z",
-    "files": "This commit contains 1 files changed."
+    "sha": "22ed23a248c65f8ad0a45084cdc8915e56ad8fa6",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/22ed23a248c65f8ad0a45084cdc8915e56ad8fa6",
+    "author": "Justin Wood",
+    "author_email": "callek@gmail.com",
+    "message": "Bug 1566298 - Support Langpack Signing in Autograph",
+    "date": "2019-08-06T17:51:13Z",
+    "files": "This commit contains 3 files changed."
   },
   "9": {
-    "sha": "e7c1750d5b67dfe7204b4dde4ce1eebc7563446d",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/e7c1750d5b67dfe7204b4dde4ce1eebc7563446d",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:50Z",
+    "sha": "1b984a3d7c8ac4635d93f08ba371e2690c4b510d",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/1b984a3d7c8ac4635d93f08ba371e2690c4b510d",
+    "author": "Justin Wood",
+    "author_email": "callek@gmail.com",
+    "message": "Bug 1564264 - Move omnija dep signing to prod autograph",
+    "date": "2019-08-06T17:45:37Z",
     "files": "This commit contains 1 files changed."
   },
   "10": {
-    "sha": "aaf73540321b4a092491301aaed14a6bcafe8838",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/aaf73540321b4a092491301aaed14a6bcafe8838",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:49Z",
-    "files": "This commit contains 1 files changed."
+    "sha": "e9475f9f19fbf35f5aef51bf5ad556997ce7697c",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/e9475f9f19fbf35f5aef51bf5ad556997ce7697c",
+    "author": "Jacob Watkins",
+    "author_email": "jwatkins@mozilla.com",
+    "message": "Merge pull request #570 from dividehex/remove_mig_module\n\n[Bug 1562061] completely remove mig module",
+    "date": "2019-08-06T16:22:12Z",
+    "files": "This commit contains 14 files changed."
   },
   "11": {
-    "sha": "b0e911bfab87c594fac9bae1523c7a6e77df69ae",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/b0e911bfab87c594fac9bae1523c7a6e77df69ae",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:47Z",
-    "files": "This commit contains 1 files changed."
-  },
-  "12": {
-    "sha": "e2e85ff8409b0c781de75bb6d85017b07c750b34",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/e2e85ff8409b0c781de75bb6d85017b07c750b34",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:46Z",
-    "files": "This commit contains 1 files changed."
-  },
-  "13": {
-    "sha": "759c10243898f19ddb21f803dfdd5939cc0499f7",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/759c10243898f19ddb21f803dfdd5939cc0499f7",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:45Z",
-    "files": "This commit contains 1 files changed."
-  },
-  "14": {
-    "sha": "b9444dffc153b504053c0162bca822d85640279e",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/b9444dffc153b504053c0162bca822d85640279e",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:44Z",
-    "files": "This commit contains 1 files changed."
-  },
-  "15": {
-    "sha": "afd047a9b0870922678f919449e93622589984cc",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/afd047a9b0870922678f919449e93622589984cc",
-    "author": "pyup-bot",
-    "author_email": "github-bot@pyup.io",
-    "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-    "date": "2019-06-26T13:11:43Z",
-    "files": "This commit contains 1 files changed."
-  },
-  "16": {
-    "sha": "3026c273b37ed2421f4a2762dad4191dfc048ee1",
-    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/3026c273b37ed2421f4a2762dad4191dfc048ee1",
-    "author": "Johan Lorenzo",
-    "author_email": "jlorenzo@mozilla.com",
-    "message": "Bug 1559115 - Fix dep-pushapk (#526)",
-    "date": "2019-06-26T08:38:33Z",
-    "files": "This commit contains 1 files changed."
+    "sha": "aca2371298ee9b736f70bca770a469c3042ce608",
+    "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/aca2371298ee9b736f70bca770a469c3042ce608",
+    "author": "Jake Watkins",
+    "author_email": "jwatkins@mozilla.com",
+    "message": "[Bug 1562061] completely remove mig module",
+    "date": "2019-08-06T16:05:16Z",
+    "files": "This commit contains 14 files changed."
   }
 }

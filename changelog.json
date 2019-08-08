@@ -1,1037 +1,672 @@
 {
   "Github": {
-    "OpenCloudConfig": {
-      "0": {
-        "sha": "4059cbddade02ce143cb9b1e32ef383e378d7d14",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/4059cbddade02ce143cb9b1e32ef383e378d7d14",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Testing generic-worker 15.1.0 / taskcluster-proxy 5.1.0 on *STAGING*\n\nThis change does _not_ affect any production workers. Commit made with:\n\n    ./gecko-try.sh 15.1.0 5.1.0\n\nSee https://github.com/taskcluster/generic-worker/blob/7e84aea3e701b9cfa7f4dae2a382977fc771f9bf/mozilla-try-scripts/gecko-try.sh\n\ndeploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b",
-        "date": "2019-06-27T08:44:16Z",
-        "files": "This commit contains 7 files changed."
-      },
-      "1": {
-        "sha": "b41bfcd83b34a9dddcb49a83e014eb9e917a8bcf",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/b41bfcd83b34a9dddcb49a83e014eb9e917a8bcf",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Trying another patched version of generic-worker on gecko-t-win7-32-cu and gecko-t-win10-64-cu\n\ndeploy: gecko-t-win7-32-cu gecko-t-win10-64-cu",
-        "date": "2019-06-26T09:32:08Z",
-        "files": "This commit contains 2 files changed."
-      },
-      "2": {
-        "sha": "7b1c167d9a1029bf29018bf3a63a853c8ded3350",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/7b1c167d9a1029bf29018bf3a63a853c8ded3350",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Trying another patched version of generic-worker on gecko-t-win7-32-cu and gecko-t-win10-64-cu\n\ndeploy: gecko-t-win7-32-cu gecko-t-win10-64-cu",
-        "date": "2019-06-26T08:06:22Z",
-        "files": "This commit contains 2 files changed."
-      },
-      "3": {
-        "sha": "337f14482cf019a58e0a1de97a51811969de2271",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/337f14482cf019a58e0a1de97a51811969de2271",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Trying another patched version of generic-worker on gecko-t-win7-32-cu and gecko-t-win10-64-cu\n\ndeploy: gecko-t-win7-32-cu gecko-t-win10-64-cu",
-        "date": "2019-06-26T03:37:11Z",
-        "files": "This commit contains 2 files changed."
-      },
-      "4": {
-        "sha": "d98b8af7d1a2fcb015a73beb9229ea21e3ef8137",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/d98b8af7d1a2fcb015a73beb9229ea21e3ef8137",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Trying patched version of generic-worker on gecko-t-win7-32-cu and gecko-t-win10-64-cu\n\ndeploy: gecko-t-win7-32-cu gecko-t-win10-64-cu",
-        "date": "2019-06-25T20:12:50Z",
-        "files": "This commit contains 2 files changed."
-      },
-      "5": {
-        "sha": "a6013b2cb4afda95b789d477f85f16ad0ec0179f",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/a6013b2cb4afda95b789d477f85f16ad0ec0179f",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Rolling back STAGING changes from today\n\ndeploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b",
-        "date": "2019-06-25T19:43:53Z",
-        "files": "This commit contains 7 files changed."
-      },
-      "6": {
-        "sha": "0137c4adf1aa16c796c9f94c269d2951ef93462b",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/0137c4adf1aa16c796c9f94c269d2951ef93462b",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Fix to previous staging change\n\ndeploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b",
-        "date": "2019-06-25T18:21:44Z",
-        "files": "This commit contains 7 files changed."
-      },
-      "7": {
-        "sha": "b39b5d158c705c10469c4a3fd1039b7b77a4a996",
-        "url": "https://api.github.com/repos/mozilla-releng/OpenCloudConfig/commits/b39b5d158c705c10469c4a3fd1039b7b77a4a996",
-        "author": "Pete Moore",
-        "author_email": "pmoore@mozilla.com",
-        "message": "Testing generic-worker 15.0.2 / taskcluster-proxy 5.1.0 on *STAGING*\n\nThis change does _not_ affect any production workers. Commit made with:\n\n    ./gecko-try.sh 15.0.2 5.1.0\n\nSee https://github.com/taskcluster/generic-worker/blob/c808fafd96da532bb84f1b9df6e963dc19fce172/mozilla-try-scripts/gecko-try.sh\n\ndeploy: gecko-1-b-win2012-beta gecko-t-win10-64-beta gecko-t-win10-64-cu gecko-t-win10-64-gpu-b gecko-t-win7-32-beta gecko-t-win7-32-cu gecko-t-win7-32-gpu-b",
-        "date": "2019-06-25T18:16:14Z",
-        "files": "This commit contains 7 files changed."
-      }
-    },
+    "OpenCloudConfig": {},
     "build-cloud-tools": {},
     "taskcluster": {
       "0": {
-        "sha": "2c4f3f259f45e3419b067651fd5f5278b1c11979",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/2c4f3f259f45e3419b067651fd5f5278b1c11979",
+        "sha": "6682067b968a187e31a516195a0ae4f725515a09",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/6682067b968a187e31a516195a0ae4f725515a09",
         "author": "Dustin J. Mitchell",
         "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #918 from djmitche/fix-and-doc-mozilla-auth0-callback\n\nFix and doc mozilla auth0 callback",
-        "date": "2019-06-27T17:28:19Z",
-        "files": "This commit contains 8 files changed."
+        "message": "Merge pull request #1162 from djmitche/bug1553953\n\nBug 1553953 - limit chars in provisionerId and workerType",
+        "date": "2019-08-08T12:46:59Z",
+        "files": "This commit contains 16 files changed."
       },
       "1": {
-        "sha": "deaa418fb745af3ad7a91bc38cd46919238ab722",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/deaa418fb745af3ad7a91bc38cd46919238ab722",
+        "sha": "c4a4455abe771d50cd5c100a44f2cd4bd5ebc730",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/c4a4455abe771d50cd5c100a44f2cd4bd5ebc730",
         "author": "Dustin J. Mitchell",
         "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #921 from djmitche/worker-reviewers-go-client\n\nadd worker-reviewers as reviewers of the go client",
-        "date": "2019-06-27T16:00:55Z",
-        "files": "This commit contains 1 files changed."
+        "message": "Bug 1553953 - limit chars in provisionerId and workerType\n\nThis brings these symbols into correspondence with the limits on\nworkerPoolId, which are designed to be compatible with various cloud\nproviders.",
+        "date": "2019-08-07T14:06:39Z",
+        "files": "This commit contains 16 files changed."
       },
       "2": {
-        "sha": "0e7419e191b85887e83ee2641ca6452aafde3065",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/0e7419e191b85887e83ee2641ca6452aafde3065",
+        "sha": "d6fddea345e02aa6075dc8cc80d89ddf47c949ce",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/d6fddea345e02aa6075dc8cc80d89ddf47c949ce",
         "author": "Dustin J. Mitchell",
         "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #919 from djmitche/bug1558523\n\nBug 1558523 - Support Changelog and tagging/pushing automatically",
-        "date": "2019-06-26T21:25:57Z",
-        "files": "This commit contains 11 files changed."
+        "message": "Merge pull request #1161 from grenade/patch-1\n\nfix broken link",
+        "date": "2019-08-07T12:43:57Z",
+        "files": "This commit contains 1 files changed."
       },
       "3": {
-        "sha": "67c6e7fc4931adebb192047f7153def39c23908d",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/67c6e7fc4931adebb192047f7153def39c23908d",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "add worker-reviewers as reviewers of the go client",
-        "date": "2019-06-26T21:23:40Z",
+        "sha": "51e2451563eb24697267efaccc6934f691335ef4",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/51e2451563eb24697267efaccc6934f691335ef4",
+        "author": "Rob Thijssen",
+        "author_email": "rthijssen@gmail.com",
+        "message": "fix broken link",
+        "date": "2019-08-07T08:45:17Z",
         "files": "This commit contains 1 files changed."
       },
       "4": {
-        "sha": "5346c17f5085b9bad0281423ca67fa403132677d",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/5346c17f5085b9bad0281423ca67fa403132677d",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Update deployment docs for login strategies",
-        "date": "2019-06-26T18:50:01Z",
-        "files": "This commit contains 7 files changed."
-      },
-      "5": {
-        "sha": "643e5086a1d369955c83dc1c62899fcd552b008f",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/643e5086a1d369955c83dc1c62899fcd552b008f",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Yarn generate",
-        "date": "2019-06-26T18:25:03Z",
+        "sha": "4a8fd1e62c5beb7b6697b016d4671dc674b2ce19",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/4a8fd1e62c5beb7b6697b016d4671dc674b2ce19",
+        "author": "Brian Stack",
+        "author_email": "bstack@mozilla.com",
+        "message": "clients/client-py/README.md is also generated (#1146)\n\nclients/client-py/README.md is also generated",
+        "date": "2019-08-06T17:25:47Z",
         "files": "This commit contains 2 files changed."
       },
-      "6": {
-        "sha": "e2d45639199b984921f00a98ce2cc07a95eb0010",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/e2d45639199b984921f00a98ce2cc07a95eb0010",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #917 from djmitche/bug1556526\n\nBug 1556526 - allow extra fields in updateWorkerPool",
-        "date": "2019-06-26T18:20:41Z",
-        "files": "This commit contains 10 files changed."
-      },
-      "7": {
-        "sha": "f94882b38c4f60dcf0d87ac03e4d93d98c2f9ec4",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/f94882b38c4f60dcf0d87ac03e4d93d98c2f9ec4",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "yarn generate",
-        "date": "2019-06-26T18:09:01Z",
+      "5": {
+        "sha": "ee6fdaf3468ab1d26f807d9a756ca8dabd1d313b",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/ee6fdaf3468ab1d26f807d9a756ca8dabd1d313b",
+        "author": "Brian Stack",
+        "author_email": "bstack@mozilla.com",
+        "message": "renovate: ignore golang.org/x/tools (#1121)\n\nrenovate: ignore golang.org/x/tools",
+        "date": "2019-08-06T17:23:32Z",
         "files": "This commit contains 1 files changed."
       },
+      "6": {
+        "sha": "3ea6281593e03b151f607499a1a53cc6a90156e9",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/3ea6281593e03b151f607499a1a53cc6a90156e9",
+        "author": "Dustin J. Mitchell",
+        "author_email": "dustin@mozilla.com",
+        "message": "Merge pull request #1152 from taskcluster/renovate/node-10.x\n\nUpdate Node.js",
+        "date": "2019-08-06T16:11:56Z",
+        "files": "This commit contains 6 files changed."
+      },
+      "7": {
+        "sha": "766a40a70bfedfed54816b6324310182be27671c",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/766a40a70bfedfed54816b6324310182be27671c",
+        "author": "Ruchika",
+        "author_email": "ruchikag826@gmail.com",
+        "message": " Stopped rendering List & ListITem in `TableCellListItem` (#1155)\n\n* Updated DocsSidebarList.jsx\r\n\r\n* Updated DocsSidebarList.jsx\r\n\r\n* Update DocsSidebarList.jsx\r\n\r\n* Updated removeReadmeFromPath.js\r\n\r\nFixed the documentation header tree highlighting for trailing slashes.\r\n\r\n* Restored the changes for DocsSidebarList.jsx\r\n\r\n* Updated removeReadmeFromPath.js\r\n\r\n* linted code\r\n\r\n* Stopped rendering a List & ListITem in\r\n\r\n* Rename List to Item",
+        "date": "2019-08-06T14:45:44Z",
+        "files": "This commit contains 14 files changed."
+      },
       "8": {
-        "sha": "827d45eb074ed2467ba58980dcda38859fcdd34f",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/827d45eb074ed2467ba58980dcda38859fcdd34f",
+        "sha": "ec202f6e63b3ade95fecd0a47778202b5632d2f8",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/ec202f6e63b3ade95fecd0a47778202b5632d2f8",
         "author": "Dustin J. Mitchell",
         "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #905 from djmitche/bug1560649\n\nBug 1560649 - import go client into monorepo",
-        "date": "2019-06-26T18:07:42Z",
-        "files": "This commit contains 84 files changed."
-      },
-      "9": {
-        "sha": "adc7f4207851fe9cbca50babce8f1d2f5df72427",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/adc7f4207851fe9cbca50babce8f1d2f5df72427",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Bug 1560649 - split docker-image build scripts out",
-        "date": "2019-06-26T18:05:40Z",
-        "files": "This commit contains 4 files changed."
-      },
-      "10": {
-        "sha": "64b07c2d69964e1e9a538122df7f401de2250d66",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/64b07c2d69964e1e9a538122df7f401de2250d66",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #916 from djmitche/bug1560668\n\nBug 1560668 - do the whole image build process in one Dockerfile",
-        "date": "2019-06-26T17:32:23Z",
+        "message": "update remaining node versions that renovate doesn't see",
+        "date": "2019-08-06T14:05:52Z",
         "files": "This commit contains 3 files changed."
       },
-      "11": {
-        "sha": "5cc2a857f42eecec847cf1125005155920ac1867",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/5cc2a857f42eecec847cf1125005155920ac1867",
+      "9": {
+        "sha": "bfd3d8e8ec8ed5be4ab7d24a1609901db9b5a9db",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/bfd3d8e8ec8ed5be4ab7d24a1609901db9b5a9db",
         "author": "Dustin J. Mitchell",
         "author_email": "dustin@mozilla.com",
-        "message": "Use /login/mozilla-auth0 consistently for that strategy",
-        "date": "2019-06-26T17:00:20Z",
+        "message": "Merge pull request #1153 from taskcluster/renovate/lodash-monorepo\n\nUpdate dependency lodash to v4.17.15",
+        "date": "2019-08-06T13:01:32Z",
+        "files": "This commit contains 2 files changed."
+      },
+      "10": {
+        "sha": "5c9e573ddd1e7d6b2649b0599a1a86dc3d45ea5f",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/5c9e573ddd1e7d6b2649b0599a1a86dc3d45ea5f",
+        "author": "Dustin J. Mitchell",
+        "author_email": "dustin@mozilla.com",
+        "message": "Merge pull request #1143 from djmitche/fix-lastfire-name\n\nFix LastFire table name",
+        "date": "2019-08-05T18:00:06Z",
+        "files": "This commit contains 2 files changed."
+      },
+      "11": {
+        "sha": "9a919000c8b372ff0615cbe8e0aebccd376dca7e",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/9a919000c8b372ff0615cbe8e0aebccd376dca7e",
+        "author": "Dustin J. Mitchell",
+        "author_email": "dustin@mozilla.com",
+        "message": "Merge pull request #1160 from taskcluster/setdefaults-dev-init\n\nDon't overwrite dev config for defaults",
+        "date": "2019-08-05T17:52:36Z",
         "files": "This commit contains 1 files changed."
       },
       "12": {
-        "sha": "1a634fd34e19faff046775e5efa48ef2ac467e09",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/1a634fd34e19faff046775e5efa48ef2ac467e09",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Bug 1556526 - allow extra fields in updateWorkerPool\n\nThis allows `workerPoolId`, `created`, and `lastModified`, ignoring the\nlatter two, for user convenience in something like\n\n```js\nwp = await wm.workerPool(wpId);\nwp.config.foo = 'bar';\nawait wm.updateWorkerPool(wpId, wp);\n```",
-        "date": "2019-06-26T16:26:23Z",
-        "files": "This commit contains 10 files changed."
+        "sha": "c4b89e74d57f34da6fd9826bd665d57ee96aabdb",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/c4b89e74d57f34da6fd9826bd665d57ee96aabdb",
+        "author": "Brian Stack",
+        "author_email": "bstack@mozilla.com",
+        "message": "Don't overwrite dev config for defaults",
+        "date": "2019-08-05T17:36:40Z",
+        "files": "This commit contains 1 files changed."
       },
       "13": {
-        "sha": "d2fd03b31eb9bf106e150c1a44d286d08922b73d",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/d2fd03b31eb9bf106e150c1a44d286d08922b73d",
+        "sha": "6a028e97ec075f78c260fc52e74e2d2c77eab84f",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/6a028e97ec075f78c260fc52e74e2d2c77eab84f",
         "author": "Brian Stack",
         "author_email": "bstack@mozilla.com",
-        "message": "Merge pull request #912 from taskcluster/node-v8-coverage\n\nSwitch to c8 for coverage",
-        "date": "2019-06-26T15:58:01Z",
-        "files": "This commit contains 28 files changed."
+        "message": "Minor improvements to google provider docs (#1158)\n\nMinor improvements to google provider docs",
+        "date": "2019-08-05T17:17:07Z",
+        "files": "This commit contains 1 files changed."
       },
       "14": {
-        "sha": "7570c78ef99513caf73b930cf72d365fedeaecb4",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/7570c78ef99513caf73b930cf72d365fedeaecb4",
+        "sha": "f869560c96b8894d16df3d991df04e39c21240c4",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/f869560c96b8894d16df3d991df04e39c21240c4",
         "author": "Dustin J. Mitchell",
         "author_email": "dustin@mozilla.com",
-        "message": "Bug 1560668 - do the whole image build process in one Dockerfile\n\nMulti-stage docker builds are pretty neat.  Turns out, we can do the\nwhole thing in one Dockerfile, just pre-calculating the TC version and\nthe entrypoints.\n\nThis takes some care to avoid pulling in files that shouldn't be in the\nimage (like, secrets).  It first filters some obvious things out of the\ntarball handed to `docker build`, and then the build process uses `git\nclone` to ensure that only files recognized by git are transferred to\nthe generated image.  The use of multi-stage builds ensures that no\ndetritus from the build steps is included in the built image.",
-        "date": "2019-06-26T02:34:09Z",
-        "files": "This commit contains 3 files changed."
+        "message": "Merge pull request #1157 from djmitche/bug1561679\n\nBug 1561679 - bump dependency resolver timeouts to >30s in hopes of w\u2026",
+        "date": "2019-08-05T16:38:02Z",
+        "files": "This commit contains 1 files changed."
       },
       "15": {
-        "sha": "d11ef3519e1b6ffcd406fd3d74415d91857ce77c",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/d11ef3519e1b6ffcd406fd3d74415d91857ce77c",
+        "sha": "cf522ca00f69829af4c47284035886ebf8000266",
+        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/cf522ca00f69829af4c47284035886ebf8000266",
         "author": "Dustin J. Mitchell",
         "author_email": "dustin@mozilla.com",
-        "message": "Bug 1560649 - avoid using proxy URL for testAuthenticate calls",
-        "date": "2019-06-26T14:20:49Z",
+        "message": "Minor improvements to google provider docs",
+        "date": "2019-08-05T16:37:05Z",
         "files": "This commit contains 1 files changed."
-      },
-      "16": {
-        "sha": "68b1bb9576f10e96e327caf911ed4ee15d82a3e4",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/68b1bb9576f10e96e327caf911ed4ee15d82a3e4",
-        "author": "Hassan Ali",
-        "author_email": "helfi92@gmail.com",
-        "message": "Update react-vnc-display (#915)",
-        "date": "2019-06-25T22:51:26Z",
-        "files": "This commit contains 3 files changed."
-      },
-      "17": {
-        "sha": "03bf0743b5bfb08326b7c82f004bb356e16e80c8",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/03bf0743b5bfb08326b7c82f004bb356e16e80c8",
-        "author": "allcontributors[bot]",
-        "author_email": "46447321+allcontributors[bot]@users.noreply.github.com",
-        "message": "docs: add arku as a contributor (#914)\n\n* docs: update README.md\r\n\r\n* docs: update .all-contributorsrc",
-        "date": "2019-06-25T21:57:23Z",
-        "files": "This commit contains 2 files changed."
-      },
-      "18": {
-        "sha": "ba1a0929ad9594ece78e307d905045d1fa3a36cb",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/ba1a0929ad9594ece78e307d905045d1fa3a36cb",
-        "author": "Arun Kumar Mohan",
-        "author_email": "arunmohandm@gmail.com",
-        "message": "Reposition log action buttons (#906)",
-        "date": "2019-06-25T21:40:34Z",
-        "files": "This commit contains 3 files changed."
-      },
-      "19": {
-        "sha": "84178fd2ae34a564ef61ddfecae611132c096011",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/84178fd2ae34a564ef61ddfecae611132c096011",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Bug 1560649 - integrate tc-client-go with 'yarn generate', require go\n\nThis adds a bit of machinery and documentation to represent that Golang\nis a bona-fide requirement for development now.",
-        "date": "2019-06-25T15:16:57Z",
-        "files": "This commit contains 10 files changed."
-      },
-      "20": {
-        "sha": "680661c6488a0ebcbe3281b0fe5b43199a9d3f3a",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/680661c6488a0ebcbe3281b0fe5b43199a9d3f3a",
-        "author": "Shubham Gupta",
-        "author_email": "43504292+shubhamgupta2956@users.noreply.github.com",
-        "message": "[UI] Hook list focus state (#913)",
-        "date": "2019-06-25T19:24:25Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "21": {
-        "sha": "433724b8ec6c3af62b9002850eb447fa6fb72014",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/433724b8ec6c3af62b9002850eb447fa6fb72014",
-        "author": "Brian Stack",
-        "author_email": "bstack@mozilla.com",
-        "message": "Remove nycrc",
-        "date": "2019-06-25T18:44:18Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "22": {
-        "sha": "a84d6672e1404c4ae2f6046082f4878758472151",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/a84d6672e1404c4ae2f6046082f4878758472151",
-        "author": "Brian Stack",
-        "author_email": "bstack@mozilla.com",
-        "message": "Update package.json to use c8",
-        "date": "2019-06-25T17:56:42Z",
-        "files": "This commit contains 25 files changed."
-      },
-      "23": {
-        "sha": "af241cc0ec8afcda603f81c53bbd4a1accc26f2f",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/af241cc0ec8afcda603f81c53bbd4a1accc26f2f",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Bug 1560649 - fix spelling of Taskcluster",
-        "date": "2019-06-24T22:22:02Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "24": {
-        "sha": "39bb70ab6830c36ec02ea945b78f7c3a4b5f7d29",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/39bb70ab6830c36ec02ea945b78f7c3a4b5f7d29",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Bug 1560649 - minor README updates",
-        "date": "2019-06-24T21:58:52Z",
-        "files": "This commit contains 2 files changed."
-      },
-      "25": {
-        "sha": "10f24724047621d6e0f6ed342aed612b019f8be7",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/10f24724047621d6e0f6ed342aed612b019f8be7",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #910 from djmitche/slightly-deeper\n\nClone with more revs, since the push may not be the latest when lots \u2026",
-        "date": "2019-06-25T16:32:37Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "26": {
-        "sha": "3e909f1761a35f074f0eebd934aea0b4e579a6d0",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/3e909f1761a35f074f0eebd934aea0b4e579a6d0",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Clone with more revs, since the push may not be the latest when lots of things land",
-        "date": "2019-06-25T15:52:08Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "27": {
-        "sha": "a79035d293fe2bbdaebf0dbc8ff03a680fdc751c",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/a79035d293fe2bbdaebf0dbc8ff03a680fdc751c",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #896 from djmitche/bug1560645\n\nBug 1560645 - test, doc, and use unescaped slash support",
-        "date": "2019-06-25T15:46:54Z",
-        "files": "This commit contains 4 files changed."
-      },
-      "28": {
-        "sha": "bbeb06bbadc7b5ce74706b84996b62ee1175e856",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/bbeb06bbadc7b5ce74706b84996b62ee1175e856",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #872 from djmitche/bug1559471\n\nBug 1559471 - use JWTs with HS256 for logins",
-        "date": "2019-06-25T15:46:30Z",
-        "files": "This commit contains 8 files changed."
-      },
-      "29": {
-        "sha": "8451d0007dccd12f9e427e71ab423134b6a91059",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/8451d0007dccd12f9e427e71ab423134b6a91059",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #886 from taskcluster/edunham-dep-docs\n\nDeployment docs: how to set up app",
-        "date": "2019-06-25T15:31:09Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "30": {
-        "sha": "b64ec0ba67c8c74c16ecfddd24b374f84b1af309",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/b64ec0ba67c8c74c16ecfddd24b374f84b1af309",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #897 from djmitche/bug1558345\n\nBug 1558345 - move provider-related endpoints to provider source file",
-        "date": "2019-06-25T15:16:02Z",
-        "files": "This commit contains 3 files changed."
-      },
-      "31": {
-        "sha": "0e007728131720467091f6af50b9ca4f3f37e837",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/0e007728131720467091f6af50b9ca4f3f37e837",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #899 from djmitche/case-sensitive-api-paths\n\nEnsure API routes are case-sensitive",
-        "date": "2019-06-25T15:15:31Z",
-        "files": "This commit contains 2 files changed."
-      },
-      "32": {
-        "sha": "097c3c928cef8fe13cfa23aeb6933d28ab04693f",
-        "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/097c3c928cef8fe13cfa23aeb6933d28ab04693f",
-        "author": "Dustin J. Mitchell",
-        "author_email": "dustin@mozilla.com",
-        "message": "Merge pull request #901 from djmitche/docs-for-clients\n\nUpdate manual pages about clients",
-        "date": "2019-06-25T15:06:31Z",
-        "files": "This commit contains 3 files changed."
       }
     },
     "services": {},
     "build-puppet": {
       "0": {
-        "sha": "797fe7bb35b7594fddccea6c5778cd1a92e98301",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/797fe7bb35b7594fddccea6c5778cd1a92e98301",
-        "author": "Nick Thomas",
-        "author_email": "nthomas-mozilla@users.noreply.github.com",
-        "message": "Deploy partner stub installer support (#529)",
-        "date": "2019-06-27T04:34:00Z",
-        "files": "This commit contains 2 files changed."
+        "sha": "0fbb5cb08f20bf3fc18f752ed823138cd13fced4",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/0fbb5cb08f20bf3fc18f752ed823138cd13fced4",
+        "author": "Jordan Lund",
+        "author_email": "jlund@mozilla.com",
+        "message": "Merge pull request #567 from lundjordan/google_oauth_api_key\n\nremoves unused google_oauth_api_key from puppet configuration",
+        "date": "2019-08-07T21:58:30Z",
+        "files": "This commit contains 4 files changed."
       },
       "1": {
-        "sha": "939110e08c758ca821cf01fa0a789c37e710006a",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/939110e08c758ca821cf01fa0a789c37e710006a",
-        "author": "Roland Michael Norbert Mutter",
-        "author_email": "36150861+mutterroland@users.noreply.github.com",
-        "message": "Merge pull request #527 from mozilla-releng/pyup-scheduled-update-2019-06-26\n\nScheduled weekly dependency update for week 25",
-        "date": "2019-06-26T20:15:36Z",
-        "files": "This commit contains 9 files changed."
+        "sha": "70b95b55863802a416680470dd36929fdfde55dc",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/70b95b55863802a416680470dd36929fdfde55dc",
+        "author": "Jordan Lund",
+        "author_email": "jlund@mozilla.com",
+        "message": "Merge pull request #568 from lundjordan/crash_stats_api_token\n\nremoves crash_stats_api_token from puppet configuration",
+        "date": "2019-08-07T21:33:01Z",
+        "files": "This commit contains 5 files changed."
       },
       "2": {
-        "sha": "839b301c1af205f3dc25d14e364a45a11ffa27b5",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/839b301c1af205f3dc25d14e364a45a11ffa27b5",
-        "author": "pyup-bot",
+        "sha": "54ff7f48cafd386b126ebd1d7623b1e83f7691c1",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/54ff7f48cafd386b126ebd1d7623b1e83f7691c1",
+        "author": "pyup.io bot",
         "author_email": "github-bot@pyup.io",
-        "message": "Update parso from 0.4.0 to 0.5.0",
-        "date": "2019-06-26T13:11:57Z",
-        "files": "This commit contains 1 files changed."
+        "message": "Scheduled weekly dependency update for week 31 (#573)\n\n* Update pyyaml from 5.1.1 to 5.1.2\r\n\r\n* Update jsonschema from 3.0.1 to 3.0.2\r\n\r\n* Update pyasn1 from 0.4.5 to 0.4.6\r\n\r\n* Update taskcluster from 15.0.0 to 16.0.0\r\n\r\n* Update mozilla-version from 0.3.4 to 0.4.1\r\n\r\n* Update twisted from 19.2.1 to 19.7.0\r\n\r\n* Update pyasn1-modules from 0.2.5 to 0.2.6\r\n\r\n* Update pytz from 2019.1 to 2019.2\r\n\r\n* Update mercurial from 5.0.2 to 5.1\r\n\r\n* add future==0.17.1 as a new mozilla-version dep",
+        "date": "2019-08-07T16:41:34Z",
+        "files": "This commit contains 13 files changed."
       },
       "3": {
-        "sha": "f1fad2d3482c24ea5e9ea95ebadf65bb72f2433e",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/f1fad2d3482c24ea5e9ea95ebadf65bb72f2433e",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update jedi from 0.13.3 to 0.14.0",
-        "date": "2019-06-26T13:11:56Z",
-        "files": "This commit contains 1 files changed."
+        "sha": "66aac47e6846eb078b56b233a6e4ac79e6ab3172",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/66aac47e6846eb078b56b233a6e4ac79e6ab3172",
+        "author": "Justin Wood (Callek)",
+        "author_email": "callek@gmail.com",
+        "message": "Merge pull request #572 from Callek/langpack\n\nSupport Langpack Signing in Autograph for signingscript",
+        "date": "2019-08-07T15:58:19Z",
+        "files": "This commit contains 3 files changed."
       },
       "4": {
-        "sha": "6074c4f9b2547a954a0e6aa3385e174e8df4399f",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/6074c4f9b2547a954a0e6aa3385e174e8df4399f",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update botocore from 1.12.171 to 1.12.176",
-        "date": "2019-06-26T13:11:55Z",
+        "sha": "0967f14630293fcce1040966d58c13c81301578f",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/0967f14630293fcce1040966d58c13c81301578f",
+        "author": "Justin Wood (Callek)",
+        "author_email": "callek@gmail.com",
+        "message": "Merge pull request #571 from Callek/omnija_swap\n\nBug 1564264 - Move omnija dep signing to prod autograph",
+        "date": "2019-08-07T15:58:08Z",
         "files": "This commit contains 1 files changed."
       },
       "5": {
-        "sha": "c0cb7e1ae82d98c89f02fc7245dfe40001e2722d",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/c0cb7e1ae82d98c89f02fc7245dfe40001e2722d",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update boto3 from 1.9.171 to 1.9.176",
-        "date": "2019-06-26T13:11:53Z",
-        "files": "This commit contains 1 files changed."
+        "sha": "22ed23a248c65f8ad0a45084cdc8915e56ad8fa6",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/22ed23a248c65f8ad0a45084cdc8915e56ad8fa6",
+        "author": "Justin Wood",
+        "author_email": "callek@gmail.com",
+        "message": "Bug 1566298 - Support Langpack Signing in Autograph",
+        "date": "2019-08-06T17:51:13Z",
+        "files": "This commit contains 3 files changed."
       },
       "6": {
-        "sha": "a1931309be46f64024cba67fc6bf05184f89a161",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/a1931309be46f64024cba67fc6bf05184f89a161",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:52Z",
+        "sha": "1b984a3d7c8ac4635d93f08ba371e2690c4b510d",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/1b984a3d7c8ac4635d93f08ba371e2690c4b510d",
+        "author": "Justin Wood",
+        "author_email": "callek@gmail.com",
+        "message": "Bug 1564264 - Move omnija dep signing to prod autograph",
+        "date": "2019-08-06T17:45:37Z",
         "files": "This commit contains 1 files changed."
       },
       "7": {
-        "sha": "bcbf0ab62d31d76a080fb9faef473b525177feee",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/bcbf0ab62d31d76a080fb9faef473b525177feee",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:51Z",
-        "files": "This commit contains 1 files changed."
+        "sha": "e9475f9f19fbf35f5aef51bf5ad556997ce7697c",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/e9475f9f19fbf35f5aef51bf5ad556997ce7697c",
+        "author": "Jacob Watkins",
+        "author_email": "jwatkins@mozilla.com",
+        "message": "Merge pull request #570 from dividehex/remove_mig_module\n\n[Bug 1562061] completely remove mig module",
+        "date": "2019-08-06T16:22:12Z",
+        "files": "This commit contains 14 files changed."
       },
       "8": {
-        "sha": "e7c1750d5b67dfe7204b4dde4ce1eebc7563446d",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/e7c1750d5b67dfe7204b4dde4ce1eebc7563446d",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:50Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "9": {
-        "sha": "aaf73540321b4a092491301aaed14a6bcafe8838",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/aaf73540321b4a092491301aaed14a6bcafe8838",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:49Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "10": {
-        "sha": "b0e911bfab87c594fac9bae1523c7a6e77df69ae",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/b0e911bfab87c594fac9bae1523c7a6e77df69ae",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:47Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "11": {
-        "sha": "e2e85ff8409b0c781de75bb6d85017b07c750b34",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/e2e85ff8409b0c781de75bb6d85017b07c750b34",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:46Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "12": {
-        "sha": "759c10243898f19ddb21f803dfdd5939cc0499f7",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/759c10243898f19ddb21f803dfdd5939cc0499f7",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:45Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "13": {
-        "sha": "b9444dffc153b504053c0162bca822d85640279e",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/b9444dffc153b504053c0162bca822d85640279e",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:44Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "14": {
-        "sha": "afd047a9b0870922678f919449e93622589984cc",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/afd047a9b0870922678f919449e93622589984cc",
-        "author": "pyup-bot",
-        "author_email": "github-bot@pyup.io",
-        "message": "Update typing-extensions from 3.7.2 to 3.7.4",
-        "date": "2019-06-26T13:11:43Z",
-        "files": "This commit contains 1 files changed."
-      },
-      "15": {
-        "sha": "3026c273b37ed2421f4a2762dad4191dfc048ee1",
-        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/3026c273b37ed2421f4a2762dad4191dfc048ee1",
-        "author": "Johan Lorenzo",
-        "author_email": "jlorenzo@mozilla.com",
-        "message": "Bug 1559115 - Fix dep-pushapk (#526)",
-        "date": "2019-06-26T08:38:33Z",
-        "files": "This commit contains 1 files changed."
+        "sha": "aca2371298ee9b736f70bca770a469c3042ce608",
+        "url": "https://api.github.com/repos/mozilla-releng/build-puppet/commits/aca2371298ee9b736f70bca770a469c3042ce608",
+        "author": "Jake Watkins",
+        "author_email": "jwatkins@mozilla.com",
+        "message": "[Bug 1562061] completely remove mig module",
+        "date": "2019-08-06T16:05:16Z",
+        "files": "This commit contains 14 files changed."
       }
     },
     "mozapkpublisher": {},
-    "beetmoverscript": {
-      "0": {
-        "sha": "a7e6d9609b7741673d5b629e5bc5428735b30030",
-        "url": "https://api.github.com/repos/mozilla-releng/beetmoverscript/commits/a7e6d9609b7741673d5b629e5bc5428735b30030",
-        "author": "Nick Thomas",
-        "author_email": "nrthomas@gmail.com",
-        "message": "8.5.0",
-        "date": "2019-06-27T02:53:58Z",
-        "files": "This commit contains 2 files changed."
-      }
-    },
+    "beetmoverscript": {},
     "addonscript": {},
     "shipitscript": {},
-    "bouncerscript": {
-      "0": {
-        "sha": "ed5ff4e01bde358b044ea8475415104455478e2f",
-        "url": "https://api.github.com/repos/mozilla-releng/bouncerscript/commits/ed5ff4e01bde358b044ea8475415104455478e2f",
-        "author": "Nick Thomas",
-        "author_email": "nthomas-mozilla@users.noreply.github.com",
-        "message": "3.6.0 (#60)",
-        "date": "2019-06-27T04:02:13Z",
-        "files": "This commit contains 2 files changed."
-      }
-    },
+    "bouncerscript": {},
     "treescript": {},
     "scriptworker": {},
     "pushsnapscript": {},
-    "signingscript": {},
+    "signingscript": {
+      "0": {
+        "sha": "dae10488ff88595044612efd09beefd41235035c",
+        "url": "https://api.github.com/repos/mozilla-releng/signingscript/commits/dae10488ff88595044612efd09beefd41235035c",
+        "author": "Justin Wood (Callek)",
+        "author_email": "callek@gmail.com",
+        "message": "Merge pull request #122 from Callek/11.1.0\n\nRelease 11.1.0",
+        "date": "2019-08-07T15:51:46Z",
+        "files": "This commit contains 2 files changed."
+      },
+      "1": {
+        "sha": "d078b403beeac0097c2a83dede7b61fe5ec27671",
+        "url": "https://api.github.com/repos/mozilla-releng/signingscript/commits/d078b403beeac0097c2a83dede7b61fe5ec27671",
+        "author": "Justin Wood",
+        "author_email": "callek@gmail.com",
+        "message": "Release 11.1.0",
+        "date": "2019-08-07T12:21:54Z",
+        "files": "This commit contains 2 files changed."
+      }
+    },
     "pushapkscript": {},
     "balrogscript": {},
     "signtool": {},
-    "relops-image-builder": {},
-    "relops-hardware-controller": {},
-    "ronin_puppet": {
+    "relops-image-builder": {
       "0": {
-        "sha": "8a2b689a6bb5de7525f96612e20ec72666fbf4db",
-        "url": "https://api.github.com/repos/mozilla-platform-ops/ronin_puppet/commits/8a2b689a6bb5de7525f96612e20ec72666fbf4db",
-        "author": "Jacob Watkins",
-        "author_email": "jwatkins@mozilla.com",
-        "message": "Merge pull request #60 from dividehex/mac_v3_signing\n\nRemove homebrew from mac-v3-signing role",
-        "date": "2019-06-26T00:27:02Z",
+        "sha": "5d43cea5424f4d4445081502c6c4a1e3e8ed9009",
+        "url": "https://api.github.com/repos/mozilla-platform-ops/relops-image-builder/commits/5d43cea5424f4d4445081502c6c4a1e3e8ed9009",
+        "author": "Rob Thijssen",
+        "author_email": "rthijssen@gmail.com",
+        "message": "Bug 1553572 - install gcloud services",
+        "date": "2019-08-06T10:10:08Z",
         "files": "This commit contains 1 files changed."
       },
       "1": {
-        "sha": "3c577da92a6882b875253094f2b19447955bcda1",
-        "url": "https://api.github.com/repos/mozilla-platform-ops/ronin_puppet/commits/3c577da92a6882b875253094f2b19447955bcda1",
-        "author": "Jake Watkins",
-        "author_email": "jwatkins@mozilla.com",
-        "message": "Remove homebrew from mac-v3-signing role",
-        "date": "2019-06-26T00:10:05Z",
+        "sha": "cdef7b88be0d7874e13b84c03d3755adbaee91ef",
+        "url": "https://api.github.com/repos/mozilla-platform-ops/relops-image-builder/commits/cdef7b88be0d7874e13b84c03d3755adbaee91ef",
+        "author": "Rob Thijssen",
+        "author_email": "rthijssen@gmail.com",
+        "message": "Bug 1553572 - install gcloud services",
+        "date": "2019-08-06T09:28:02Z",
+        "files": "This commit contains 3 files changed."
+      },
+      "2": {
+        "sha": "94cef59c979fe16acf0f8810d396c83b692752f7",
+        "url": "https://api.github.com/repos/mozilla-platform-ops/relops-image-builder/commits/94cef59c979fe16acf0f8810d396c83b692752f7",
+        "author": "Rob Thijssen",
+        "author_email": "rthijssen@gmail.com",
+        "message": "Bug 1553572 - disable services debugging",
+        "date": "2019-08-06T08:15:42Z",
         "files": "This commit contains 1 files changed."
       }
-    }
+    },
+    "relops-hardware-controller": {},
+    "ronin_puppet": {}
   },
   "Mercurial": {
     "mozilla-central": {
       "0": {
-        "pusher": "ccoroiu@mozilla.com",
-        "date_of_push": "2019-06-27T09:34:48.000000",
+        "pusher": "ncsoregi@mozilla.com",
+        "date_of_push": "2019-08-08T09:33:10.000000",
         "changeset_commits": {
-          "6": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3a18755a8857",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561147 - Add linux32 PGO-instrumented task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35886",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "7": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2e802db68b71",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561147 - Add linux32 generate profile task; r=tomprince\n\nDepends on D35886\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35887",
+          "26": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ae492dcd4e62",
+            "commit_author": "Henrik Skupin <mail@hskupin.info>",
+            "commit_message": "Bug 1571769 - [marionette] Enable Mn jobs with Fission enabled on try. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40862",
             "files_changed": "This commit contains 1 files changed."
           },
-          "8": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5f306cffa948",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561147 - Enable 3-tier PGO on linux32 builds; r=tomprince\n\nDepends on D35887\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35888",
+          "30": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3a6114f56960",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1572017 - Make mozharness aware of the new location of build_resources.json. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40943",
             "files_changed": "This commit contains 1 files changed."
-          },
-          "18": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7b6e49ddb472",
-            "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
-            "commit_message": "Bug 1561702 - Bump sccache in tree to 0.2.9 release. r=dmajor\n\nThis version includes several fixes for sccache-dist in addition\nto changes that make sccache compatible with cargo pipelining.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36075",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "29": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fd8b8f6dad49",
-            "commit_author": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-            "commit_message": "Bug 1559814 - Update cbindgen. r=boris\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36020",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "36": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=61aa0e6727f5",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561728 - Set NEED_XVFB for linux32 PGO run tasks; r=firefox-build-system-reviewers,chmanchester\n\nSmall fixup for bug 1561147 - Linux run tasks now have to set NEED_XVFB\nto true in order to get the virtual framebuffer needed to run Firefox in\nautomation.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36086",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "70": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=bd4d0e2991ba",
-            "commit_author": "Geoff Brown <gbrown@mozilla.com>",
-            "commit_message": "Bug 1550634 - Increase telemetry-test-client max-run-time; r=jmaher\n\nAvoid intermittent failures by allowing the task to run a little longer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34365",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "99": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=20de5a5e5c55",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - support repacking stub installers for partners, r=aki\n\nPay attention to the new repack_stub_installer param, and fix config parsing to split on the first =.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34945",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "100": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=93f413cf1457",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust repackage jobs to create partner stub installers, r=aki\n\nOn win32, where repack_stub_installer is enabled, extend the inputs to the partner repackage task so that it\ndonwloads the upstream artifacts and creates the stub installer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34946",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "101": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8b151e2777fb",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust repackage-signing jobs to sign partner stub installers, r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34948",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "102": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=aea787a5a4c6",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust beetmover to copy partner stub installers into candidates dir, r=aki\n\nAppends the customized stub installer and it's gpg signature to the list of artifacts to beetmove to\ncandidates.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34950",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "103": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fe29e66f80e2",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - submit partner products to bouncer when we'll host the files, r=aki\n\nAdds a new release-partner-repack-bouncer-sub-firefox task to add the partner products. This is forked from the main bouncer submission because it diverges sufficiently that this is a cleaner approach. The get_partners_to_be_published helper is used by aliases too.\n\nDepends on D34950\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35481",
-            "files_changed": "This commit contains 4 files changed."
-          },
-          "104": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=167db72d1987",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - pass list of partners to beetmover for pushing to releases/partners/, r=aki\n\nThis passes partner data on to the beetmover scriptworker, so it can publish enabled partners. There is beetmover change at https://github.com/mozilla-releng/beetmoverscript/pull/227 to complete this support.\n\nDepends on D35481\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35482",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "105": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=37f02f5b2ad9",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - update bouncer aliases for partner products when shipping, r=aki\n\nPass partner aliases down to the bouncer scriptworker so it can update those too. Matching change to bouncerscript at https://github.com/mozilla-releng/bouncerscript/pull/57.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35483",
-            "files_changed": "This commit contains 2 files changed."
           }
         }
       },
       "1": {
-        "pusher": "asasaki@mozilla.com",
-        "date_of_push": "2019-06-26T16:07:51.000000",
+        "pusher": "shindli@mozilla.com",
+        "date_of_push": "2019-08-07T21:52:12.000000",
         "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=34448603afab",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - add notarization workerType aliases. r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33856",
-            "files_changed": "This commit contains 1 files changed."
+          "19": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=5c3693e45bc1",
+            "commit_author": "Noemi Erli <nerli@mozilla.com>",
+            "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
+            "files_changed": "This commit contains 8 files changed."
           },
-          "2": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0da56de412db",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - mac-signing transform logic + config. r=tomprince\n\nThis moves mac signing tasks to the notarization/iscript pool. It also\nadds support for pkg installers and notarization.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33857",
-            "files_changed": "This commit contains 5 files changed."
-          },
-          "3": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2ad746de8d09",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - beetmove macosx pkg installer. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33858",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "4": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=556f716a4517",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - add entitlements url for hardened runtime signing. r=tomprince\n\nFor mac hardened runtime signing, we use an entitlements file that's now\nin-tree. This patch passes the url for that file in the task definition.\n\nThe original patch for this was written by sfraser.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33859",
-            "files_changed": "This commit contains 5 files changed."
-          },
-          "5": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=365cb98beddc",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - build_signing: macosx64-nightly -> macosx64-shippable. r=callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33860",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "6": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d691e2174680",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - ignore partner_subset if it's an empty list. r=tomprince a=release\n\nThe relpro action requires a list for partner_subset and defaults to\n`[]`. In `get_partner_config_by_url` we check to see `if\npartner_subset`, ignoring the subset if it's an empty list. We either\nneed to do the same thing in `get_partner_config_by_kind`, or we need to\nallow for a `null` value in the action (or populate an empty\n`partner_subset` with the partners from the partner config in the\naction)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33861",
-            "files_changed": "This commit contains 1 files changed."
+          "76": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=50687ba1d4c7",
+            "commit_author": "Gregory Mierzwinski <gmierz2@outlook.com>",
+            "commit_message": "Bug 1567311 - Consolidate supporting raptor measurements into one perfherder output and artifact per type. r=perftest-reviewers,rwood\n\nThis patch fixes four things at once:\n\n(1) Consolidate supporting raptor measurements into one PERFHERDER_DATA output per type. For example, with this change, all power data will be grouped into one PERFHERDER_DATA output.\n\n(2) Output perfherder-data-<DATA_TYPE>.json for each supporting measurement instead of overwriting perfherder-data.json which contains the regular raptor test results.\n\n(3) Take an average of the supporting measurements when particular unit's are specified. In this case, the '%' unit makes us take the average instead of the sum of the measurements.\n\n(4) Remove the redundant test name entry that prefixes all power subtest entries.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40667",
+            "files_changed": "This commit contains 3 files changed."
           }
         }
       },
       "2": {
-        "pusher": "shindli@mozilla.com",
-        "date_of_push": "2019-06-26T09:36:33.000000",
+        "pusher": "nerli@mozilla.com",
+        "date_of_push": "2019-08-07T09:57:05.000000",
         "changeset_commits": {
-          "6": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fd64770f1342",
+          "1": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=cac35e682ab5",
             "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
-            "commit_message": "Bug 1560545 - Install libdrm headers in the build docker images. r=mshal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35751",
+            "commit_message": "Bug 1570541 - Use tarfile in fetch-content on Windows. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40401\n",
             "files_changed": "This commit contains 1 files changed."
           },
-          "9": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1832d7bc3087",
-            "commit_author": "Cosmin Sabou <csabou@mozilla.com>",
-            "commit_message": "Backed out 3 changesets (bug 1560545) for causing build bustages. CLOSED TREE\n\nBacked out changeset 31177fcc3123 (bug 1560545)\nBacked out changeset e3e1ad8d7709 (bug 1560545)\nBacked out changeset fd64770f1342 (bug 1560545)",
-            "files_changed": "This commit contains 3 files changed."
+          "2": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=df808b9785c6",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1570541 - Use git fetch tasks for clang. r=froydnj\n\nWhat this means is that the sources for clang/llvm are downloaded\nseparately from the toolchain build (which also means we finally only\ndownload a given version of clang once for all platforms).\n\nIn turn, this means the build-clang.py script needs to start with an\nexisting llvm-project tree, and we choose to make build-clang.py expect\nthat it's run from the llvm-project root directory.\n\nThis also means we don't need to download git for the windows toolchain\ntask.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40402\n",
+            "files_changed": "This commit contains 19 files changed."
+          },
+          "3": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7624607672f1",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1570541 - Revert MOZ_FETCHES_DIR hacks from bug 1570240. r=nalexander\n\nThey're not required anymore now that build-clang.py doesn't force\nits build directory location.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40542\n",
+            "files_changed": "This commit contains 2 files changed."
+          },
+          "4": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4ac27c5c53d3",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Add missing tooltool-download.sh references as resources. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40711\n",
+            "files_changed": "This commit contains 7 files changed."
+          },
+          "5": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=74180d0a4d7c",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Make tooltool-download.sh download and extract to MOZ_FETCHES_DIR. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40712\n",
+            "files_changed": "This commit contains 38 files changed."
+          },
+          "6": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2499460f9d41",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Allow toolchains to use fetches from other toolchains. r=tomprince\n\nThis also allows toolchain tasks to use aliases via fetches, which they\ncurrently aren't allowed via use_toolchain. There are more toolchains\nnow than there were when the restriction was added, and it might be\nuseful to be able to use aliases. The flip side is that there are some\nrisks involved with aliases, which is why the restriction was there in\nthe first place. Let's see how things play out.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40713\n",
+            "files_changed": "This commit contains 1 files changed."
+          },
+          "7": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6e250d973608",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Use toolchain fetches instead of use_toolchain references in toolchain task definitions. r=nalexander\n\nAnd remove the use of tooltool-download where it's not needed anymore.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40714\n",
+            "files_changed": "This commit contains 37 files changed."
+          },
+          "8": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=ee9072779abc",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Remove use_toolchain transform for toolchain kind. r=tomprince\n\nNow that all toolchain tasks use toolchain fetches, they don't need\nthe transform.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40715\n",
+            "files_changed": "This commit contains 2 files changed."
+          },
+          "11": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=95f15f6c8fb9",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571589 - Use urlparse rather relying on just splitting on / being enough. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40738\n",
+            "files_changed": "This commit contains 1 files changed."
+          },
+          "12": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=44f285f40796",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571589 - Abstract opening a temporary file and renaming it after close. r=tomprince\n\nAnd use that in git_checkout_archive.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40739\n",
+            "files_changed": "This commit contains 1 files changed."
+          },
+          "13": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a801d59b70a5",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571589 - Allow to repack downloaded archives \"on the fly\". r=tomprince\n\nBug 1479533 was proposing to add a similar functionality, but this\niteration avoids actually unpacking anything, and ensures\nreproducibility by relying on the reproducible bits from the original\narchives: file ordering, flags, etc. (since they are checksummed, those\nare never going to change for a given archive).\n\nAnother notable difference is that this applies the repack on the fetch\ntask itself, rather than create a separate task to apply the repack. The\nlatter has advantages, in that it allows to change the repacking without\nredownloading the original file from a third-party server, but in\npractice, most changes to the repacking would trigger the download tasks\nanyways.\n\nThis patch only takes care of changing the archive type (zip->tar), and\nthe compression type (anything->zstandard).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40740\n",
+            "files_changed": "This commit contains 2 files changed."
           },
           "14": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fc18f760a984",
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dc8f0af3a4d6",
             "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
-            "commit_message": "Bug 1560545 - Install libdrm headers in the build docker images. r=mshal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35751",
+            "commit_message": "Bug 1571589 - Allow simple manipulation of file paths in fetched archives. r=tomprince\n\nNamely:\n- adding a prefix,\n- stripping path components.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40741\n",
+            "files_changed": "This commit contains 2 files changed."
+          },
+          "15": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=03d8fbec4f53",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571596 - Repack GCC and related source tarballs. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40748\n",
+            "files_changed": "This commit contains 9 files changed."
+          },
+          "16": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e0a260c5ea2b",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571596 - Reduce the number of toolchain scripts for GCC. r=nalexander\n\nNow that all GCC and related source tarballs extract to paths\nindependent of their version number, the scripts are all very\nlook-alike, so they can be consolidated.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40749\n",
+            "files_changed": "This commit contains 6 files changed."
+          },
+          "17": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=39dbbccbb110",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571597 - Use fetches tasks for ninja and cmake, instead of tooltool. r=nalexander\n\nWe could keep the same versions of cmake and ninja, but there are few\nenough tasks using them to really matter.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40750\n",
+            "files_changed": "This commit contains 6 files changed."
+          },
+          "18": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=25e3755332fe",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571597 - Consolidate toolchain task tooltool manifests. r=nalexander\n\nThere are now only two left:\n- one for the OSX 10.11 SDK\n- one for Visual Studio 2017\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40751\n\nMANUAL PUSH: avoid closing autoland while all docker images and\ntoolchains are rebuilt.\n",
+            "files_changed": "This commit contains 11 files changed."
+          },
+          "19": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d28c14caa7cc",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571986 - Add some info to try to find what is going on. r=me\n\nMANUAL PUSH: because it starts happening with something that landed on inbound.\n",
             "files_changed": "This commit contains 1 files changed."
+          },
+          "20": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b94a6b06c9b9",
+            "commit_author": "Noemi Erli <nerli@mozilla.com>",
+            "commit_message": "Merge inbound to mozilla-central.  a=merge",
+            "files_changed": "This commit contains 7 files changed."
           }
         }
       },
       "3": {
-        "pusher": "csabou@mozilla.com",
-        "date_of_push": "2019-06-26T03:57:29.000000",
+        "pusher": "aciure@mozilla.com",
+        "date_of_push": "2019-08-07T04:33:53.000000",
         "changeset_commits": {
-          "21": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=1bc6ee0c6672",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Add win64 PGO-instrumented task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34795",
-            "files_changed": "This commit contains 2 files changed."
+          "61": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=fb0ae6ca7322",
+            "commit_author": "championshuttler <shivams2799@gmail.com>",
+            "commit_message": "Bug 1536103 - Fix Sphinx Warning for not referenced hyperlinks. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D39057",
+            "files_changed": "This commit contains 3 files changed."
           },
-          "22": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=2989571031f9",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Update run-profileserver.sh for Windows compatibility; r=firefox-build-system-reviewers,chmanchester\n\nThe run-profileserver.sh script is a bridge between the Taskcluster task\nand profileserver.py. It was originally written as a Linux-only script,\nbut with a few modifications it can support Windows as well. The xvfb\nsupport needs to be optional, and the UPLOAD_PATH and PGO_RUNDIR\nvariables must not assume a Linux filesystem.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34796",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "23": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=516aa5eb9732",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Add Windows generate profile task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34797",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "29": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=a91cc939f112",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Enable 3-tier PGO on Windows builds; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34803",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "30": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0a2cb6c105cc",
-            "commit_author": "Edwin Gao <egao@mozilla.com>",
-            "commit_message": "Bug 1560926 - temporarily revert changes made in bug 1548614, restore win10-64-ux workers r=jmaher\n\nChanges:\n- reverts the changes made in https://phabricator.services.mozilla.com/D35262\n- tries best to keep the changes but temporarily commented\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35846",
+          "73": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=3fe035323cee",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571636 - Expose build resources data from automation builds as artifacts. r=nalexander\n\nThe build docker images need python-dev installed to build psutil, used\nby the build resources monitor.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40781",
             "files_changed": "This commit contains 5 files changed."
+          },
+          "91": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=628c58d53615",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571587 - Remove unused fetches. r=nalexander\n\nMore leftovers from the removal of GCC 4.9.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40737",
+            "files_changed": "This commit contains 1 files changed."
           }
         }
       },
       "4": {
-        "pusher": "aiakab@mozilla.com",
-        "date_of_push": "2019-06-25T21:58:14.000000",
+        "pusher": "rgurzau@mozilla.com",
+        "date_of_push": "2019-08-05T22:00:30.000000",
         "changeset_commits": {
-          "29": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f2e0194bb006",
-            "commit_author": "Maja Frydrychowicz <mjzffr@gmail.com>",
-            "commit_message": "Bug 1558334 - Turn off web-platform-tests on Fennec; r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34428",
+          "35": {
+            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b85c920da19d",
+            "commit_author": "Mike Pennisi <mike@mikepennisi.com>",
+            "commit_message": "Bug 1568815 [wpt PR 17651] - [ci] Disable terminal colors in Taskcluster, a=testonly\n\nAutomatic update from web-platform-tests\n[ci] Disable terminal colors in Taskcluster\n\n--\n\nwpt-commits: 1d71e844de92839ca13d670657623d50c99dcdd5\nwpt-pr: 17651\n",
             "files_changed": "This commit contains 2 files changed."
-          },
-          "33": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=d5b60a2a9cd9",
-            "commit_author": "Rob Wood <rwood@mozilla.com>",
-            "commit_message": "Bug 1546661 - Enable cold page loads tests for Reference Browser on Try r=perftest-reviewers,Bebe,sparky\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35568",
-            "files_changed": "This commit contains 28 files changed."
-          }
-        }
-      },
-      "5": {
-        "pusher": "aciure@mozilla.com",
-        "date_of_push": "2019-06-25T09:39:03.000000",
-        "changeset_commits": {
-          "12": {
-            "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=18a887ffe30b",
-            "commit_author": "Edwin Gao <egao@mozilla.com>",
-            "commit_message": "Bug 1555454 - move mochitests-plain over to macosx1014 r=jmaher\n\nChanges:\n\n- migrate over `mochitest-plain` to macosx1014\n- disable some tests that are known to be problematic on macosx1014; they are noted in the comments\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34589",
-            "files_changed": "This commit contains 3 files changed."
           }
         }
       }
     },
     "mozilla-inbound": {
       "0": {
-        "pusher": "ccoroiu@mozilla.com",
-        "date_of_push": "2019-06-27T09:46:01.000000",
+        "pusher": "ncsoregi@mozilla.com",
+        "date_of_push": "2019-08-08T09:38:55.000000",
         "changeset_commits": {
-          "6": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3a18755a8857",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561147 - Add linux32 PGO-instrumented task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35886",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "7": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2e802db68b71",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561147 - Add linux32 generate profile task; r=tomprince\n\nDepends on D35886\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35887",
+          "26": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ae492dcd4e62",
+            "commit_author": "Henrik Skupin <mail@hskupin.info>",
+            "commit_message": "Bug 1571769 - [marionette] Enable Mn jobs with Fission enabled on try. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40862",
             "files_changed": "This commit contains 1 files changed."
           },
-          "8": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5f306cffa948",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561147 - Enable 3-tier PGO on linux32 builds; r=tomprince\n\nDepends on D35887\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35888",
+          "30": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3a6114f56960",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1572017 - Make mozharness aware of the new location of build_resources.json. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40943",
             "files_changed": "This commit contains 1 files changed."
-          },
-          "18": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7b6e49ddb472",
-            "commit_author": "Chris Manchester <cmanchester@mozilla.com>",
-            "commit_message": "Bug 1561702 - Bump sccache in tree to 0.2.9 release. r=dmajor\n\nThis version includes several fixes for sccache-dist in addition\nto changes that make sccache compatible with cargo pipelining.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36075",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "29": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fd8b8f6dad49",
-            "commit_author": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
-            "commit_message": "Bug 1559814 - Update cbindgen. r=boris\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36020",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "36": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=61aa0e6727f5",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1561728 - Set NEED_XVFB for linux32 PGO run tasks; r=firefox-build-system-reviewers,chmanchester\n\nSmall fixup for bug 1561147 - Linux run tasks now have to set NEED_XVFB\nto true in order to get the virtual framebuffer needed to run Firefox in\nautomation.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36086",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "70": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=bd4d0e2991ba",
-            "commit_author": "Geoff Brown <gbrown@mozilla.com>",
-            "commit_message": "Bug 1550634 - Increase telemetry-test-client max-run-time; r=jmaher\n\nAvoid intermittent failures by allowing the task to run a little longer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34365",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "99": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=20de5a5e5c55",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - support repacking stub installers for partners, r=aki\n\nPay attention to the new repack_stub_installer param, and fix config parsing to split on the first =.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34945",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "100": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=93f413cf1457",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust repackage jobs to create partner stub installers, r=aki\n\nOn win32, where repack_stub_installer is enabled, extend the inputs to the partner repackage task so that it\ndonwloads the upstream artifacts and creates the stub installer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34946",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "101": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=8b151e2777fb",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust repackage-signing jobs to sign partner stub installers, r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34948",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "102": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=aea787a5a4c6",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust beetmover to copy partner stub installers into candidates dir, r=aki\n\nAppends the customized stub installer and it's gpg signature to the list of artifacts to beetmove to\ncandidates.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34950",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "103": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fe29e66f80e2",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - submit partner products to bouncer when we'll host the files, r=aki\n\nAdds a new release-partner-repack-bouncer-sub-firefox task to add the partner products. This is forked from the main bouncer submission because it diverges sufficiently that this is a cleaner approach. The get_partners_to_be_published helper is used by aliases too.\n\nDepends on D34950\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35481",
-            "files_changed": "This commit contains 4 files changed."
-          },
-          "104": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=167db72d1987",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - pass list of partners to beetmover for pushing to releases/partners/, r=aki\n\nThis passes partner data on to the beetmover scriptworker, so it can publish enabled partners. There is beetmover change at https://github.com/mozilla-releng/beetmoverscript/pull/227 to complete this support.\n\nDepends on D35481\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35482",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "105": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=37f02f5b2ad9",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - update bouncer aliases for partner products when shipping, r=aki\n\nPass partner aliases down to the bouncer scriptworker so it can update those too. Matching change to bouncerscript at https://github.com/mozilla-releng/bouncerscript/pull/57.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35483",
-            "files_changed": "This commit contains 2 files changed."
           }
         }
       },
       "1": {
-        "pusher": "rgurzau@mozilla.com",
-        "date_of_push": "2019-06-26T22:06:25.000000",
+        "pusher": "shindli@mozilla.com",
+        "date_of_push": "2019-08-07T21:56:41.000000",
         "changeset_commits": {
-          "39": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=34448603afab",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - add notarization workerType aliases. r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33856",
-            "files_changed": "This commit contains 1 files changed."
+          "19": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=5c3693e45bc1",
+            "commit_author": "Noemi Erli <nerli@mozilla.com>",
+            "commit_message": "Merge mozilla-central to autoland. a=merge CLOSED TREE",
+            "files_changed": "This commit contains 8 files changed."
           },
-          "40": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0da56de412db",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - mac-signing transform logic + config. r=tomprince\n\nThis moves mac signing tasks to the notarization/iscript pool. It also\nadds support for pkg installers and notarization.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33857",
-            "files_changed": "This commit contains 5 files changed."
-          },
-          "41": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2ad746de8d09",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - beetmove macosx pkg installer. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33858",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "42": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=556f716a4517",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - add entitlements url for hardened runtime signing. r=tomprince\n\nFor mac hardened runtime signing, we use an entitlements file that's now\nin-tree. This patch passes the url for that file in the task definition.\n\nThe original patch for this was written by sfraser.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33859",
-            "files_changed": "This commit contains 5 files changed."
-          },
-          "43": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=365cb98beddc",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - build_signing: macosx64-nightly -> macosx64-shippable. r=callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33860",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "44": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d691e2174680",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - ignore partner_subset if it's an empty list. r=tomprince a=release\n\nThe relpro action requires a list for partner_subset and defaults to\n`[]`. In `get_partner_config_by_url` we check to see `if\npartner_subset`, ignoring the subset if it's an empty list. We either\nneed to do the same thing in `get_partner_config_by_kind`, or we need to\nallow for a `null` value in the action (or populate an empty\n`partner_subset` with the partners from the partner config in the\naction)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33861",
-            "files_changed": "This commit contains 1 files changed."
+          "76": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=50687ba1d4c7",
+            "commit_author": "Gregory Mierzwinski <gmierz2@outlook.com>",
+            "commit_message": "Bug 1567311 - Consolidate supporting raptor measurements into one perfherder output and artifact per type. r=perftest-reviewers,rwood\n\nThis patch fixes four things at once:\n\n(1) Consolidate supporting raptor measurements into one PERFHERDER_DATA output per type. For example, with this change, all power data will be grouped into one PERFHERDER_DATA output.\n\n(2) Output perfherder-data-<DATA_TYPE>.json for each supporting measurement instead of overwriting perfherder-data.json which contains the regular raptor test results.\n\n(3) Take an average of the supporting measurements when particular unit's are specified. In this case, the '%' unit makes us take the average instead of the sum of the measurements.\n\n(4) Remove the redundant test name entry that prefixes all power subtest entries.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40667",
+            "files_changed": "This commit contains 3 files changed."
           }
         }
       },
       "2": {
-        "pusher": "shindli@mozilla.com",
-        "date_of_push": "2019-06-26T09:40:36.000000",
+        "pusher": "nerli@mozilla.com",
+        "date_of_push": "2019-08-07T10:10:48.000000",
         "changeset_commits": {
-          "6": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fd64770f1342",
-            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
-            "commit_message": "Bug 1560545 - Install libdrm headers in the build docker images. r=mshal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35751",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "9": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1832d7bc3087",
-            "commit_author": "Cosmin Sabou <csabou@mozilla.com>",
-            "commit_message": "Backed out 3 changesets (bug 1560545) for causing build bustages. CLOSED TREE\n\nBacked out changeset 31177fcc3123 (bug 1560545)\nBacked out changeset e3e1ad8d7709 (bug 1560545)\nBacked out changeset fd64770f1342 (bug 1560545)",
-            "files_changed": "This commit contains 3 files changed."
-          },
-          "14": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fc18f760a984",
-            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
-            "commit_message": "Bug 1560545 - Install libdrm headers in the build docker images. r=mshal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35751",
-            "files_changed": "This commit contains 1 files changed."
+          "23": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=b94a6b06c9b9",
+            "commit_author": "Noemi Erli <nerli@mozilla.com>",
+            "commit_message": "Merge inbound to mozilla-central.  a=merge",
+            "files_changed": "This commit contains 7 files changed."
           }
         }
       },
       "3": {
-        "pusher": "csabou@mozilla.com",
-        "date_of_push": "2019-06-26T04:02:15.000000",
+        "pusher": "mh@glandium.org",
+        "date_of_push": "2019-08-07T07:53:31.000000",
         "changeset_commits": {
-          "21": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=1bc6ee0c6672",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Add win64 PGO-instrumented task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34795",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "22": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2989571031f9",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Update run-profileserver.sh for Windows compatibility; r=firefox-build-system-reviewers,chmanchester\n\nThe run-profileserver.sh script is a bridge between the Taskcluster task\nand profileserver.py. It was originally written as a Linux-only script,\nbut with a few modifications it can support Windows as well. The xvfb\nsupport needs to be optional, and the UPLOAD_PATH and PGO_RUNDIR\nvariables must not assume a Linux filesystem.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34796",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "23": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=516aa5eb9732",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Add Windows generate profile task; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34797",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "29": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a91cc939f112",
-            "commit_author": "Mike Shal <mshal@mozilla.com>",
-            "commit_message": "Bug 1557785 - Enable 3-tier PGO on Windows builds; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34803",
+          "1": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d28c14caa7cc",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571986 - Add some info to try to find what is going on. r=me\n\nMANUAL PUSH: because it starts happening with something that landed on inbound.\n",
             "files_changed": "This commit contains 1 files changed."
-          },
-          "30": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=0a2cb6c105cc",
-            "commit_author": "Edwin Gao <egao@mozilla.com>",
-            "commit_message": "Bug 1560926 - temporarily revert changes made in bug 1548614, restore win10-64-ux workers r=jmaher\n\nChanges:\n- reverts the changes made in https://phabricator.services.mozilla.com/D35262\n- tries best to keep the changes but temporarily commented\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35846",
-            "files_changed": "This commit contains 5 files changed."
           }
         }
       },
       "4": {
-        "pusher": "aiakab@mozilla.com",
-        "date_of_push": "2019-06-25T22:10:20.000000",
+        "pusher": "mh@glandium.org",
+        "date_of_push": "2019-08-07T05:06:36.000000",
         "changeset_commits": {
-          "29": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=f2e0194bb006",
-            "commit_author": "Maja Frydrychowicz <mjzffr@gmail.com>",
-            "commit_message": "Bug 1558334 - Turn off web-platform-tests on Fennec; r=gbrown\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34428",
+          "1": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=cac35e682ab5",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1570541 - Use tarfile in fetch-content on Windows. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40401\n",
+            "files_changed": "This commit contains 1 files changed."
+          },
+          "2": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=df808b9785c6",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1570541 - Use git fetch tasks for clang. r=froydnj\n\nWhat this means is that the sources for clang/llvm are downloaded\nseparately from the toolchain build (which also means we finally only\ndownload a given version of clang once for all platforms).\n\nIn turn, this means the build-clang.py script needs to start with an\nexisting llvm-project tree, and we choose to make build-clang.py expect\nthat it's run from the llvm-project root directory.\n\nThis also means we don't need to download git for the windows toolchain\ntask.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40402\n",
+            "files_changed": "This commit contains 19 files changed."
+          },
+          "3": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=7624607672f1",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1570541 - Revert MOZ_FETCHES_DIR hacks from bug 1570240. r=nalexander\n\nThey're not required anymore now that build-clang.py doesn't force\nits build directory location.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40542\n",
             "files_changed": "This commit contains 2 files changed."
           },
-          "33": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=d5b60a2a9cd9",
-            "commit_author": "Rob Wood <rwood@mozilla.com>",
-            "commit_message": "Bug 1546661 - Enable cold page loads tests for Reference Browser on Try r=perftest-reviewers,Bebe,sparky\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35568",
-            "files_changed": "This commit contains 28 files changed."
+          "4": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=4ac27c5c53d3",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Add missing tooltool-download.sh references as resources. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40711\n",
+            "files_changed": "This commit contains 7 files changed."
+          },
+          "5": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=74180d0a4d7c",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Make tooltool-download.sh download and extract to MOZ_FETCHES_DIR. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40712\n",
+            "files_changed": "This commit contains 38 files changed."
+          },
+          "6": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=2499460f9d41",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Allow toolchains to use fetches from other toolchains. r=tomprince\n\nThis also allows toolchain tasks to use aliases via fetches, which they\ncurrently aren't allowed via use_toolchain. There are more toolchains\nnow than there were when the restriction was added, and it might be\nuseful to be able to use aliases. The flip side is that there are some\nrisks involved with aliases, which is why the restriction was there in\nthe first place. Let's see how things play out.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40713\n",
+            "files_changed": "This commit contains 1 files changed."
+          },
+          "7": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=6e250d973608",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Use toolchain fetches instead of use_toolchain references in toolchain task definitions. r=nalexander\n\nAnd remove the use of tooltool-download where it's not needed anymore.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40714\n",
+            "files_changed": "This commit contains 37 files changed."
+          },
+          "8": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ee9072779abc",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571562 - Remove use_toolchain transform for toolchain kind. r=tomprince\n\nNow that all toolchain tasks use toolchain fetches, they don't need\nthe transform.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40715\n",
+            "files_changed": "This commit contains 2 files changed."
+          },
+          "11": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=95f15f6c8fb9",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571589 - Use urlparse rather relying on just splitting on / being enough. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40738\n",
+            "files_changed": "This commit contains 1 files changed."
+          },
+          "12": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=44f285f40796",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571589 - Abstract opening a temporary file and renaming it after close. r=tomprince\n\nAnd use that in git_checkout_archive.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40739\n",
+            "files_changed": "This commit contains 1 files changed."
+          },
+          "13": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=a801d59b70a5",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571589 - Allow to repack downloaded archives \"on the fly\". r=tomprince\n\nBug 1479533 was proposing to add a similar functionality, but this\niteration avoids actually unpacking anything, and ensures\nreproducibility by relying on the reproducible bits from the original\narchives: file ordering, flags, etc. (since they are checksummed, those\nare never going to change for a given archive).\n\nAnother notable difference is that this applies the repack on the fetch\ntask itself, rather than create a separate task to apply the repack. The\nlatter has advantages, in that it allows to change the repacking without\nredownloading the original file from a third-party server, but in\npractice, most changes to the repacking would trigger the download tasks\nanyways.\n\nThis patch only takes care of changing the archive type (zip->tar), and\nthe compression type (anything->zstandard).\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40740\n",
+            "files_changed": "This commit contains 2 files changed."
+          },
+          "14": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=dc8f0af3a4d6",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571589 - Allow simple manipulation of file paths in fetched archives. r=tomprince\n\nNamely:\n- adding a prefix,\n- stripping path components.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40741\n",
+            "files_changed": "This commit contains 2 files changed."
+          },
+          "15": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=03d8fbec4f53",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571596 - Repack GCC and related source tarballs. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40748\n",
+            "files_changed": "This commit contains 9 files changed."
+          },
+          "16": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=e0a260c5ea2b",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571596 - Reduce the number of toolchain scripts for GCC. r=nalexander\n\nNow that all GCC and related source tarballs extract to paths\nindependent of their version number, the scripts are all very\nlook-alike, so they can be consolidated.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40749\n",
+            "files_changed": "This commit contains 6 files changed."
+          },
+          "17": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=39dbbccbb110",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571597 - Use fetches tasks for ninja and cmake, instead of tooltool. r=nalexander\n\nWe could keep the same versions of cmake and ninja, but there are few\nenough tasks using them to really matter.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40750\n",
+            "files_changed": "This commit contains 6 files changed."
+          },
+          "18": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=25e3755332fe",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571597 - Consolidate toolchain task tooltool manifests. r=nalexander\n\nThere are now only two left:\n- one for the OSX 10.11 SDK\n- one for Visual Studio 2017\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40751\n\nMANUAL PUSH: avoid closing autoland while all docker images and\ntoolchains are rebuilt.\n",
+            "files_changed": "This commit contains 11 files changed."
           }
         }
       },
       "5": {
         "pusher": "aciure@mozilla.com",
-        "date_of_push": "2019-06-25T09:44:15.000000",
+        "date_of_push": "2019-08-07T04:39:23.000000",
         "changeset_commits": {
-          "12": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=18a887ffe30b",
-            "commit_author": "Edwin Gao <egao@mozilla.com>",
-            "commit_message": "Bug 1555454 - move mochitests-plain over to macosx1014 r=jmaher\n\nChanges:\n\n- migrate over `mochitest-plain` to macosx1014\n- disable some tests that are known to be problematic on macosx1014; they are noted in the comments\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34589",
+          "61": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=fb0ae6ca7322",
+            "commit_author": "championshuttler <shivams2799@gmail.com>",
+            "commit_message": "Bug 1536103 - Fix Sphinx Warning for not referenced hyperlinks. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D39057",
             "files_changed": "This commit contains 3 files changed."
-          }
-        }
-      },
-      "6": {
-        "pusher": "dvarga@mozilla.com",
-        "date_of_push": "2019-06-24T21:53:18.000000",
-        "changeset_commits": {
-          "3": {
-            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=ee2f359f7ed8",
-            "commit_author": "ffxbld <ffxbld@mozilla.com>",
-            "commit_message": "No Bug, taskcluster/docker/funsize-update-generator pipfile-update. r=bhearsum\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35639",
+          },
+          "73": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=3fe035323cee",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571636 - Expose build resources data from automation builds as artifacts. r=nalexander\n\nThe build docker images need python-dev installed to build psutil, used\nby the build resources monitor.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40781",
+            "files_changed": "This commit contains 5 files changed."
+          },
+          "91": {
+            "url": "https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?changeset=628c58d53615",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1571587 - Remove unused fetches. r=nalexander\n\nMore leftovers from the removal of GCC 4.9.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40737",
             "files_changed": "This commit contains 1 files changed."
           }
         }
@@ -1039,228 +674,101 @@
     },
     "autoland": {
       "0": {
-        "pusher": "apavel@mozilla.com",
-        "date_of_push": "2019-06-27T17:42:24.000000",
+        "pusher": "mraiciof@mozilla.com",
+        "date_of_push": "2019-08-08T09:57:00.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=1f864da71bab",
-            "commit_author": "Rok Garbas <rok@garbas.si>",
-            "commit_message": "Bug 1561582 - tooltool.py now supports python 3 and 2 r=rail CLOSED TREE\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36010",
-            "files_changed": "This commit contains 2 files changed."
+            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6aff093ae164",
+            "commit_author": "Marian Raiciof <mraiciof@mozilla.com>",
+            "commit_message": "Bug 1542046 - Allow running JetStream2 via Raptor r=rwood,perftest-reviewers\n\nChanged the required yml, ini, json, js and html files to add Jetstream2 benchmark test to Raptor.\nThe changes on the javascript files are on github.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35418",
+            "files_changed": "This commit contains 9 files changed."
           }
         }
       },
       "1": {
-        "pusher": "dluca@mozilla.com",
-        "date_of_push": "2019-06-27T16:38:31.000000",
+        "pusher": "mh@glandium.org",
+        "date_of_push": "2019-08-08T09:31:11.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=98d0b1ff0c53",
-            "commit_author": "Dorel Luca <dluca@mozilla.com>",
-            "commit_message": "Backed out changeset 7e05642566d0 (bug 1561582) for Toolchain failures. CLOSED TREE",
-            "files_changed": "This commit contains 2 files changed."
+            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=e27bb201e739",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1572327 - Don't record sccache stats in perfherder per instance type. r=nalexander\n\nBuild metrics where the instance type matters, like build times, are\nimportant to keep track of per instance type, but sccache stats are hit\nrates, number of non-cacheable requests, and number of write errors to\nthe cache, none of which are dependent on the instance type.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41143",
+            "files_changed": "This commit contains 1 files changed."
           }
         }
       },
       "2": {
-        "pusher": "rgarbas@mozilla.com",
-        "date_of_push": "2019-06-27T12:54:45.000000",
+        "pusher": "mh@glandium.org",
+        "date_of_push": "2019-08-07T20:44:12.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7e05642566d0",
-            "commit_author": "Rok Garbas <rok@garbas.si>",
-            "commit_message": "Bug 1561582 - tooltool.py now supports python 3 and 2 r=rail\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36010",
-            "files_changed": "This commit contains 2 files changed."
+            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=3a6114f56960",
+            "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+            "commit_message": "Bug 1572017 - Make mozharness aware of the new location of build_resources.json. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40943",
+            "files_changed": "This commit contains 1 files changed."
           }
         }
       },
       "3": {
-        "pusher": "nthomas@mozilla.com",
-        "date_of_push": "2019-06-27T04:02:58.000000",
+        "pusher": "hskupin@mozilla.com",
+        "date_of_push": "2019-08-07T20:40:27.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=20de5a5e5c55",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - support repacking stub installers for partners, r=aki\n\nPay attention to the new repack_stub_installer param, and fix config parsing to split on the first =.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34945",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "2": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=93f413cf1457",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust repackage jobs to create partner stub installers, r=aki\n\nOn win32, where repack_stub_installer is enabled, extend the inputs to the partner repackage task so that it\ndonwloads the upstream artifacts and creates the stub installer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34946",
+            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=ae492dcd4e62",
+            "commit_author": "Henrik Skupin <mail@hskupin.info>",
+            "commit_message": "Bug 1571769 - [marionette] Enable Mn jobs with Fission enabled on try. r=ahal\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40862",
             "files_changed": "This commit contains 1 files changed."
-          },
-          "3": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8b151e2777fb",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust repackage-signing jobs to sign partner stub installers, r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34948",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "4": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=aea787a5a4c6",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - adjust beetmover to copy partner stub installers into candidates dir, r=aki\n\nAppends the customized stub installer and it's gpg signature to the list of artifacts to beetmove to\ncandidates.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34950",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "5": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=fe29e66f80e2",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - submit partner products to bouncer when we'll host the files, r=aki\n\nAdds a new release-partner-repack-bouncer-sub-firefox task to add the partner products. This is forked from the main bouncer submission because it diverges sufficiently that this is a cleaner approach. The get_partners_to_be_published helper is used by aliases too.\n\nDepends on D34950\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35481",
-            "files_changed": "This commit contains 4 files changed."
-          },
-          "6": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=167db72d1987",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - pass list of partners to beetmover for pushing to releases/partners/, r=aki\n\nThis passes partner data on to the beetmover scriptworker, so it can publish enabled partners. There is beetmover change at https://github.com/mozilla-releng/beetmoverscript/pull/227 to complete this support.\n\nDepends on D35481\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35482",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "7": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=37f02f5b2ad9",
-            "commit_author": "Nick Thomas <nthomas@mozilla.com>",
-            "commit_message": "Bug 1538995 - update bouncer aliases for partner products when shipping, r=aki\n\nPass partner aliases down to the bouncer scriptworker so it can update those too. Matching change to bouncerscript at https://github.com/mozilla-releng/bouncerscript/pull/57.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35483",
-            "files_changed": "This commit contains 2 files changed."
           }
         }
       },
       "4": {
-        "pusher": "gbrown@mozilla.com",
-        "date_of_push": "2019-06-27T00:56:14.000000",
+        "pusher": "gmierz2@outlook.com",
+        "date_of_push": "2019-08-07T16:10:17.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=bd4d0e2991ba",
-            "commit_author": "Geoff Brown <gbrown@mozilla.com>",
-            "commit_message": "Bug 1550634 - Increase telemetry-test-client max-run-time; r=jmaher\n\nAvoid intermittent failures by allowing the task to run a little longer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34365",
-            "files_changed": "This commit contains 1 files changed."
-          }
-        }
-      },
-      "5": {
-        "pusher": "rgurzau@mozilla.com",
-        "date_of_push": "2019-06-26T22:02:05.000000",
-        "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=34448603afab",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - add notarization workerType aliases. r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33856",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "2": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0da56de412db",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - mac-signing transform logic + config. r=tomprince\n\nThis moves mac signing tasks to the notarization/iscript pool. It also\nadds support for pkg installers and notarization.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33857",
-            "files_changed": "This commit contains 5 files changed."
-          },
-          "3": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=2ad746de8d09",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - beetmove macosx pkg installer. r=sfraser\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33858",
-            "files_changed": "This commit contains 2 files changed."
-          },
-          "4": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=556f716a4517",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - add entitlements url for hardened runtime signing. r=tomprince\n\nFor mac hardened runtime signing, we use an entitlements file that's now\nin-tree. This patch passes the url for that file in the task definition.\n\nThe original patch for this was written by sfraser.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33859",
-            "files_changed": "This commit contains 5 files changed."
-          },
-          "5": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=365cb98beddc",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - build_signing: macosx64-nightly -> macosx64-shippable. r=callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33860",
-            "files_changed": "This commit contains 1 files changed."
-          },
-          "6": {
-            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=d691e2174680",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - ignore partner_subset if it's an empty list. r=tomprince a=release\n\nThe relpro action requires a list for partner_subset and defaults to\n`[]`. In `get_partner_config_by_url` we check to see `if\npartner_subset`, ignoring the subset if it's an empty list. We either\nneed to do the same thing in `get_partner_config_by_kind`, or we need to\nallow for a `null` value in the action (or populate an empty\n`partner_subset` with the partners from the partner config in the\naction)\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33861",
-            "files_changed": "This commit contains 1 files changed."
+            "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=50687ba1d4c7",
+            "commit_author": "Gregory Mierzwinski <gmierz2@outlook.com>",
+            "commit_message": "Bug 1567311 - Consolidate supporting raptor measurements into one perfherder output and artifact per type. r=perftest-reviewers,rwood\n\nThis patch fixes four things at once:\n\n(1) Consolidate supporting raptor measurements into one PERFHERDER_DATA output per type. For example, with this change, all power data will be grouped into one PERFHERDER_DATA output.\n\n(2) Output perfherder-data-<DATA_TYPE>.json for each supporting measurement instead of overwriting perfherder-data.json which contains the regular raptor test results.\n\n(3) Take an average of the supporting measurements when particular unit's are specified. In this case, the '%' unit makes us take the average instead of the sum of the measurements.\n\n(4) Remove the redundant test name entry that prefixes all power subtest entries.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40667",
+            "files_changed": "This commit contains 3 files changed."
           }
         }
       }
     },
-    "mozilla-beta": {
-      "0": {
-        "pusher": "ryanvm@gmail.com",
-        "date_of_push": "2019-06-27T14:36:05.000000",
-        "changeset_commits": {
-          "3": {
-            "url": "https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?changeset=69434884440f",
-            "commit_author": "Geoff Brown <gbrown@mozilla.com>",
-            "commit_message": "Bug 1550634 - Increase telemetry-test-client max-run-time; r=jmaher, a=test-only\n\nAvoid intermittent failures by allowing the task to run a little longer.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34365",
-            "files_changed": "This commit contains 1 files changed."
-          }
-        }
-      }
-    },
+    "mozilla-beta": {},
     "mozilla-release": {},
     "ci-configuration": {
       "0": {
-        "pusher": "asasaki@mozilla.com",
-        "date_of_push": "2019-06-26T18:15:44.000000",
+        "pusher": "mhentges@mozilla.com",
+        "date_of_push": "2019-08-07T17:09:06.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a9fdee2c8013",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1558082 - fix thunderbird scopes. r=tomprince\n\nand another errant depsigning\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36066",
+            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=91740dfda4f4",
+            "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
+            "commit_message": "No bug: Gives fenix PRs access to \"project/mobile/fenix/pr\" r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40893",
             "files_changed": "This commit contains 1 files changed."
           }
         }
       },
       "1": {
-        "pusher": "asasaki@mozilla.com",
-        "date_of_push": "2019-06-26T16:30:19.000000",
+        "pusher": "mhentges@mozilla.com",
+        "date_of_push": "2019-08-07T16:18:48.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=46d0e1e716f6",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1471004 - depsigning scopes fix. r=bustage\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36061",
+            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=bfb4eb1624be",
+            "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
+            "commit_message": "No bug: removes unused Fenix secret r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40894",
             "files_changed": "This commit contains 1 files changed."
           }
         }
       },
       "2": {
-        "pusher": "asasaki@mozilla.com",
-        "date_of_push": "2019-06-25T22:53:10.000000",
+        "pusher": "jlorenzo@mozilla.com",
+        "date_of_push": "2019-08-06T14:45:35.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e0d0b26d490c",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "bug 1471004 - split signing-mac-v1 into {tb-,}{dep,}signing-mac-v1 and signing-mac-dev. r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35835",
-            "files_changed": "This commit contains 1 files changed."
-          }
-        }
-      },
-      "3": {
-        "pusher": "mozilla@hocat.ca",
-        "date_of_push": "2019-06-25T16:50:32.000000",
-        "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=367505c3d14a",
-            "commit_author": "Tom Prince <mozilla@hocat.ca>",
-            "commit_message": "Bug 1561044: Remove aws-provisioner/fp-gecko-3-b-linux worker; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35821",
-            "files_changed": "This commit contains 2 files changed."
-          }
-        }
-      },
-      "4": {
-        "pusher": "mozilla@hocat.ca",
-        "date_of_push": "2019-06-25T16:43:41.000000",
-        "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=b539b6f5ef8d",
-            "commit_author": "Tom Prince <mozilla@hocat.ca>",
-            "commit_message": "Bug 1561157: Remove pre-`gecko-*` worker types historically used for gecko jobs; r=dustin\n\nThere used to be a wide variety of kind/job specific workers that were used for\ntaskcluster jobs. Now that we have settled on a smaller number of workers with\nconsistent naming, we can remove the other worker types.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35748",
-            "files_changed": "This commit contains 2 files changed."
-          }
-        }
-      },
-      "5": {
-        "pusher": "dmitchell@mozilla.com",
-        "date_of_push": "2019-06-25T16:11:03.000000",
-        "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3ec4f8453068",
-            "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-            "commit_message": "Bug 1560129: include comments previously in Taskcluster docs; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35331",
+            "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=76219e37ffcf",
+            "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
+            "commit_message": "Bug 1571029 - part 2: Allow v3 mobile indexes r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40809",
             "files_changed": "This commit contains 1 files changed."
           }
         }
@@ -1269,49 +777,31 @@
     "ci-admin": {
       "0": {
         "pusher": "mozilla@hocat.ca",
-        "date_of_push": "2019-06-25T01:01:49.000000",
+        "date_of_push": "2019-08-08T01:08:29.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=fede973f0d66",
+            "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=27fb6514f634",
             "commit_author": "Tom Prince <mozilla@hocat.ca>",
-            "commit_message": "No bug: Fix flake8 errors; r=me",
-            "files_changed": "This commit contains 1 files changed."
+            "commit_message": "No bug: Fix linting errors; r=me",
+            "files_changed": "This commit contains 2 files changed."
           }
         }
       },
       "1": {
-        "pusher": "mozilla@hocat.ca",
-        "date_of_push": "2019-06-25T01:00:49.000000",
+        "pusher": "dmitchell@mozilla.com",
+        "date_of_push": "2019-08-06T18:41:22.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=b56a43069f46",
-            "commit_author": "Tom Prince <mozilla@hocat.ca>",
-            "commit_message": "No bug: Fix black errors; r=me",
-            "files_changed": "This commit contains 1 files changed."
-          }
-        }
-      },
-      "2": {
-        "pusher": "mozilla@hocat.ca",
-        "date_of_push": "2019-06-25T00:57:01.000000",
-        "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=5d905851d0ad",
-            "commit_author": "Tom Prince <mozilla@hocat.ca>",
-            "commit_message": "No bug: Fix flake8 errors; r=me",
+            "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=41187e1ecefa",
+            "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+            "commit_message": "Bug 1552242 - fix aws-provisioner support to operate in non-legacy environments r=tomprince,bstack\n\nThis fixes some bugs that occur when there is no AWS Provisioner service.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40470",
             "files_changed": "This commit contains 4 files changed."
-          }
-        }
-      },
-      "3": {
-        "pusher": "asasaki@mozilla.com",
-        "date_of_push": "2019-06-25T00:52:56.000000",
-        "changeset_commits": {
-          "1": {
-            "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=232610aa10a8",
-            "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-            "commit_message": "Bug 1561044 - add a check_privileged test. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35734",
-            "files_changed": "This commit contains 1 files changed."
+          },
+          "2": {
+            "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=c4e72c13a55c",
+            "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+            "commit_message": "Bug 1552242 - add support for worker-manager worker pools r=tomprince,bstack\n\nInvolving an update to the taskcluster library to get access to this API\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40471",
+            "files_changed": "This commit contains 10 files changed."
           }
         }
       }
@@ -1319,12 +809,24 @@
     "version-control-tools": {
       "0": {
         "pusher": "cosheehan@mozilla.com",
-        "date_of_push": "2019-06-27T13:12:16.000000",
+        "date_of_push": "2019-08-07T15:45:12.000000",
         "changeset_commits": {
           "1": {
-            "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=842df4a82218",
-            "commit_author": "Julien Cristau <jcristau@mozilla.com>",
-            "commit_message": "mozext: add backsoutnodes template keyword (bug 1560446) r=sheehan\n\nThis is using the old API and needs to be ported to hg 5.1, but then so\ndo the other template keywords in mozext.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35774",
+            "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=307f3c286876",
+            "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
+            "commit_message": "ansible/hg-ssh: set Lando required list to correct values (Bug 1572128)\n\nI updated this manually during testing, then forgot to update\nit after. This lead to the correct value being overridden during\nthe following deploy.",
+            "files_changed": "This commit contains 1 files changed."
+          }
+        }
+      },
+      "1": {
+        "pusher": "cosheehan@mozilla.com",
+        "date_of_push": "2019-08-07T14:25:16.000000",
+        "changeset_commits": {
+          "1": {
+            "url": "https://hg.mozilla.org/hgcustom/version-control-tools/pushloghtml?changeset=01ef6e45d821",
+            "commit_author": "Victor Porof <vporof@mozilla.com>",
+            "commit_message": "Bug 1572072 - Disable the `format-source` extension since it served it's purpose for Prettier, r=sheehan\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40998",
             "files_changed": "This commit contains 2 files changed."
           }
         }

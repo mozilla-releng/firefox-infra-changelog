@@ -1,6 +1,6 @@
 ## bouncerscript MD table
-Generated on: 2019-06-27 18:44:03 UTC
+Generated on: 2019-08-08 13:20:48 UTC
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:-----:|:-----:|:----------------------------------:|:------:|:----:| 
-|1|Nick Thomas|3.6.0 ( #60 )|[URL](https://api.github.com/repos/mozilla-releng/bouncerscript/commits/ed5ff4e01bde358b044ea8475415104455478e2f)|2019-06-27 04:02:13
+| No recent changes on this repository.. see the entire changelog by accessing this [link](https://github.com/mozilla-releng/bouncerscript) |

@@ -1,21 +1,16 @@
 ## build-puppet MD table
-Generated on: 2019-06-27 18:43:47 UTC
+Generated on: 2019-08-08 13:20:37 UTC
 
 | Commit Number | Commiter | Commit Message | Commit Url | Date | 
 |:-----:|:-----:|:----------------------------------:|:------:|:----:| 
-|1|Nick Thomas|Deploy partner stub installer support ( #529 )|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/797fe7bb35b7594fddccea6c5778cd1a92e98301)|2019-06-27 04:34:00
-|2|Roland Michael Norbert Mutter|Merge pull request #527 from mozilla-releng/pyup-scheduled-update-2019-06-26Scheduled weekly dependency update for week 25|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/939110e08c758ca821cf01fa0a789c37e710006a)|2019-06-26 20:15:36
-|3|pyup-bot|Update parso from 0.4.0 to 0.5.0|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/839b301c1af205f3dc25d14e364a45a11ffa27b5)|2019-06-26 13:11:57
-|4|pyup-bot|Update jedi from 0.13.3 to 0.14.0|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/f1fad2d3482c24ea5e9ea95ebadf65bb72f2433e)|2019-06-26 13:11:56
-|5|pyup-bot|Update botocore from 1.12.171 to 1.12.176|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/6074c4f9b2547a954a0e6aa3385e174e8df4399f)|2019-06-26 13:11:55
-|6|pyup-bot|Update boto3 from 1.9.171 to 1.9.176|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/c0cb7e1ae82d98c89f02fc7245dfe40001e2722d)|2019-06-26 13:11:53
-|7|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/a1931309be46f64024cba67fc6bf05184f89a161)|2019-06-26 13:11:52
-|8|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/bcbf0ab62d31d76a080fb9faef473b525177feee)|2019-06-26 13:11:51
-|9|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/e7c1750d5b67dfe7204b4dde4ce1eebc7563446d)|2019-06-26 13:11:50
-|10|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/aaf73540321b4a092491301aaed14a6bcafe8838)|2019-06-26 13:11:49
-|11|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/b0e911bfab87c594fac9bae1523c7a6e77df69ae)|2019-06-26 13:11:47
-|12|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/e2e85ff8409b0c781de75bb6d85017b07c750b34)|2019-06-26 13:11:46
-|13|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/759c10243898f19ddb21f803dfdd5939cc0499f7)|2019-06-26 13:11:45
-|14|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/b9444dffc153b504053c0162bca822d85640279e)|2019-06-26 13:11:44
-|15|pyup-bot|Update typing-extensions from 3.7.2 to 3.7.4|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/afd047a9b0870922678f919449e93622589984cc)|2019-06-26 13:11:43
-|16|Johan Lorenzo|[Bug 1559115](https://bugzilla.mozilla.org/show_bug.cgi?id=1559115)  - Fix dep-pushapk ( #526 )|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/3026c273b37ed2421f4a2762dad4191dfc048ee1)|2019-06-26 08:38:33
+|1|Jordan Lund|Merge pull request #567 from lundjordan/google_oauth_api_keyremoves unused google_oauth_api_key from puppet configuration|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/0fbb5cb08f20bf3fc18f752ed823138cd13fced4)|2019-08-07 21:58:30
+|2|Jordan Lund|removes extra sneaky google_oauth_api_key comment|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/2a67f53fe0a80c07329fa55a319db2a17458e773)|2019-07-31 23:42:55
+|3|Jordan Lund|removes unused google_oauth_api_key from puppet configuration|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/11505674695300bb898b48fca362e8e5d731739e)|2019-07-31 23:22:08
+|4|Jordan Lund|Merge pull request #568 from lundjordan/crash_stats_api_tokenremoves crash_stats_api_token from puppet configuration|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/70b95b55863802a416680470dd36929fdfde55dc)|2019-08-07 21:33:01
+|5|pyup.io bot|Scheduled weekly dependency update for week 31 ( #573 )* Update pyyaml from 5.1.1 to 5.1.2 * Update jsonschema from 3.0.1 to 3.0.2 * Update pyasn1 from 0.4.5 to 0.4.6 * Update taskcluster from 15.0.0 to 16.0.0 * Update mozilla-version from 0.3.4 to 0.4.1 * Update twisted from 19.2.1 to 19.7.0 * Update pyasn1-modules from 0.2.5 to 0.2.6 * Update pytz from 2019.1 to 2019.2 * Update mercurial f.. [continue reading]( https://api.github.com/repos/mozilla-releng/build-puppet/commits/54ff7f48cafd386b126ebd1d7623b1e83f7691c1 )|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/54ff7f48cafd386b126ebd1d7623b1e83f7691c1)|2019-08-07 16:41:34
+|6|Justin Wood (Callek)|Merge pull request #572 from Callek/langpackSupport Langpack Signing in Autograph for signingscript|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/66aac47e6846eb078b56b233a6e4ac79e6ab3172)|2019-08-07 15:58:19
+|7|Justin Wood (Callek)|Merge pull request #571 from [Bug 1564264](https://bugzilla.mozilla.org/show_bug.cgi?id=1564264)  - Move omnija dep signing to prod autograph|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/0967f14630293fcce1040966d58c13c81301578f)|2019-08-07 15:58:08
+|8|Justin Wood|[Bug 1566298](https://bugzilla.mozilla.org/show_bug.cgi?id=1566298)  - Support Langpack Signing in Autograph|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/22ed23a248c65f8ad0a45084cdc8915e56ad8fa6)|2019-08-06 17:51:13
+|9|Justin Wood|[Bug 1564264](https://bugzilla.mozilla.org/show_bug.cgi?id=1564264)  - Move omnija dep signing to prod autograph|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/1b984a3d7c8ac4635d93f08ba371e2690c4b510d)|2019-08-06 17:45:37
+|10|Jacob Watkins|Merge pull request #570 from [Bug 1562061](https://bugzilla.mozilla.org/show_bug.cgi?id=1562061)  completely remove mig module|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/e9475f9f19fbf35f5aef51bf5ad556997ce7697c)|2019-08-06 16:22:12
+|11|Jake Watkins|[Bug 1562061](https://bugzilla.mozilla.org/show_bug.cgi?id=1562061)  completely remove mig module|[URL](https://api.github.com/repos/mozilla-releng/build-puppet/commits/aca2371298ee9b736f70bca770a469c3042ce608)|2019-08-06 16:05:16

@@ -1,6 +1,6 @@
 {
   "0": {
-    "last_push_id": 68
+    "last_push_id": 74
   },
   "1": {
     "pusher": "dmitchell@mozilla.com",
@@ -27,6 +27,60 @@
     }
   },
   "3": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-08-08T01:08:29.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=27fb6514f634",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "No bug: Fix linting errors; r=me",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "dmitchell@mozilla.com",
+    "date_of_push": "2019-08-06T18:41:22.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=41187e1ecefa",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1552242 - fix aws-provisioner support to operate in non-legacy environments r=tomprince,bstack\n\nThis fixes some bugs that occur when there is no AWS Provisioner service.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40470",
+        "files_changed": "This commit contains 4 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=c4e72c13a55c",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1552242 - add support for worker-manager worker pools r=tomprince,bstack\n\nInvolving an update to the taskcluster library to get access to this API\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40471",
+        "files_changed": "This commit contains 10 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "mtabara@mozilla.com",
+    "date_of_push": "2019-07-23T15:50:47.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=822214730f60",
+        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
+        "commit_message": "Bug 1563328 - allow canUseOndemand and canUseSpot in Aws createWorkerType. r=dustin",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "6": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-07-10T21:31:59.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=4a9e09917783",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1459355: Allow actions to not pass parameters in their context. r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37498",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "7": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-07-27T19:35:20.000000",
     "changeset_commits": {
@@ -50,7 +104,19 @@
       }
     }
   },
-  "4": {
+  "8": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-07-02T16:50:28.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/ci/ci-admin/pushloghtml?changeset=dbea1803cd01",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1470625: Remove level-2 and level-3 scopes from most users; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33322",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "9": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-06-25T01:01:49.000000",
     "changeset_commits": {
@@ -62,7 +128,7 @@
       }
     }
   },
-  "5": {
+  "10": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-06-25T01:00:49.000000",
     "changeset_commits": {
@@ -74,7 +140,7 @@
       }
     }
   },
-  "6": {
+  "11": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-06-25T00:57:01.000000",
     "changeset_commits": {
@@ -86,7 +152,7 @@
       }
     }
   },
-  "7": {
+  "12": {
     "pusher": "asasaki@mozilla.com",
     "date_of_push": "2019-06-25T00:52:56.000000",
     "changeset_commits": {
@@ -98,7 +164,7 @@
       }
     }
   },
-  "8": {
+  "13": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-06-18T18:35:34.000000",
     "changeset_commits": {
@@ -110,7 +176,7 @@
       }
     }
   },
-  "9": {
+  "14": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-06-07T23:13:13.000000",
     "changeset_commits": {
@@ -134,7 +200,7 @@
       }
     }
   },
-  "10": {
+  "15": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-04-16T16:11:20.000000",
     "changeset_commits": {
@@ -146,7 +212,7 @@
       }
     }
   },
-  "11": {
+  "16": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-04-16T16:09:46.000000",
     "changeset_commits": {
@@ -164,7 +230,7 @@
       }
     }
   },
-  "12": {
+  "17": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-04-03T23:43:58.000000",
     "changeset_commits": {
@@ -182,7 +248,7 @@
       }
     }
   },
-  "13": {
+  "18": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-07-19T15:40:35.000000",
     "changeset_commits": {
@@ -200,7 +266,7 @@
       }
     }
   },
-  "14": {
+  "19": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-17T13:28:56.000000",
     "changeset_commits": {
@@ -212,7 +278,7 @@
       }
     }
   },
-  "15": {
+  "20": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-15T21:37:47.000000",
     "changeset_commits": {
@@ -224,7 +290,7 @@
       }
     }
   },
-  "16": {
+  "21": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-13T20:35:19.000000",
     "changeset_commits": {
@@ -236,7 +302,7 @@
       }
     }
   },
-  "17": {
+  "22": {
     "pusher": "mtabara@mozilla.com",
     "date_of_push": "2019-03-06T23:51:58.000000",
     "changeset_commits": {
@@ -248,7 +314,7 @@
       }
     }
   },
-  "18": {
+  "23": {
     "pusher": "mtabara@mozilla.com",
     "date_of_push": "2019-03-06T23:43:08.000000",
     "changeset_commits": {
@@ -260,7 +326,7 @@
       }
     }
   },
-  "19": {
+  "24": {
     "pusher": "mtabara@mozilla.com",
     "date_of_push": "2019-03-06T21:49:39.000000",
     "changeset_commits": {
@@ -272,7 +338,7 @@
       }
     }
   },
-  "20": {
+  "25": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-03-04T21:36:59.000000",
     "changeset_commits": {
@@ -284,7 +350,7 @@
       }
     }
   },
-  "21": {
+  "26": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-03-04T21:27:16.000000",
     "changeset_commits": {
@@ -296,7 +362,7 @@
       }
     }
   },
-  "22": {
+  "27": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-04T20:17:26.000000",
     "changeset_commits": {
@@ -308,7 +374,7 @@
       }
     }
   },
-  "23": {
+  "28": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-04T18:38:07.000000",
     "changeset_commits": {
@@ -320,7 +386,7 @@
       }
     }
   },
-  "24": {
+  "29": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-04T18:37:38.000000",
     "changeset_commits": {
@@ -332,7 +398,7 @@
       }
     }
   },
-  "25": {
+  "30": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-04T17:42:19.000000",
     "changeset_commits": {
@@ -344,7 +410,7 @@
       }
     }
   },
-  "26": {
+  "31": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-04T16:58:44.000000",
     "changeset_commits": {
@@ -356,7 +422,7 @@
       }
     }
   },
-  "27": {
+  "32": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2019-03-04T16:21:07.000000",
     "changeset_commits": {
@@ -368,7 +434,7 @@
       }
     }
   },
-  "28": {
+  "33": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-25T16:49:25.000000",
     "changeset_commits": {
@@ -380,7 +446,7 @@
       }
     }
   },
-  "29": {
+  "34": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-13T21:23:04.000000",
     "changeset_commits": {
@@ -392,7 +458,7 @@
       }
     }
   },
-  "30": {
+  "35": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-13T21:21:08.000000",
     "changeset_commits": {
@@ -404,7 +470,7 @@
       }
     }
   },
-  "31": {
+  "36": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-12T03:51:03.000000",
     "changeset_commits": {
@@ -446,7 +512,7 @@
       }
     }
   },
-  "32": {
+  "37": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-07-09T21:04:11.000000",
     "changeset_commits": {
@@ -464,7 +530,7 @@
       }
     }
   },
-  "33": {
+  "38": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-11T21:51:13.000000",
     "changeset_commits": {
@@ -476,7 +542,7 @@
       }
     }
   },
-  "34": {
+  "39": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-11T21:30:33.000000",
     "changeset_commits": {
@@ -488,7 +554,7 @@
       }
     }
   },
-  "35": {
+  "40": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-08T02:32:23.000000",
     "changeset_commits": {
@@ -500,7 +566,7 @@
       }
     }
   },
-  "36": {
+  "41": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-02-07T20:08:59.000000",
     "changeset_commits": {
@@ -512,7 +578,7 @@
       }
     }
   },
-  "37": {
+  "42": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-01-31T20:30:54.000000",
     "changeset_commits": {
@@ -524,7 +590,7 @@
       }
     }
   },
-  "38": {
+  "43": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-01-18T21:36:42.000000",
     "changeset_commits": {
@@ -536,7 +602,7 @@
       }
     }
   },
-  "39": {
+  "44": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-01-18T21:21:58.000000",
     "changeset_commits": {
@@ -548,7 +614,7 @@
       }
     }
   },
-  "40": {
+  "45": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-01-16T22:47:14.000000",
     "changeset_commits": {
@@ -560,7 +626,7 @@
       }
     }
   },
-  "41": {
+  "46": {
     "pusher": "asasaki@mozilla.com",
     "date_of_push": "2019-01-02T20:26:29.000000",
     "changeset_commits": {
@@ -572,7 +638,7 @@
       }
     }
   },
-  "42": {
+  "47": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-12-18T19:48:17.000000",
     "changeset_commits": {
@@ -584,7 +650,7 @@
       }
     }
   },
-  "43": {
+  "48": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-06-25T22:48:19.000000",
     "changeset_commits": {
@@ -596,7 +662,7 @@
       }
     }
   },
-  "44": {
+  "49": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-10-22T17:53:12.000000",
     "changeset_commits": {
@@ -614,7 +680,7 @@
       }
     }
   },
-  "45": {
+  "50": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-10-22T17:50:28.000000",
     "changeset_commits": {
@@ -626,7 +692,7 @@
       }
     }
   },
-  "46": {
+  "51": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-09-26T02:49:00.000000",
     "changeset_commits": {
@@ -638,7 +704,7 @@
       }
     }
   },
-  "47": {
+  "52": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-09-12T20:04:50.000000",
     "changeset_commits": {
@@ -650,7 +716,7 @@
       }
     }
   },
-  "48": {
+  "53": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-09-11T18:00:43.000000",
     "changeset_commits": {
@@ -662,7 +728,7 @@
       }
     }
   },
-  "49": {
+  "54": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-09-10T14:54:50.000000",
     "changeset_commits": {
@@ -674,7 +740,7 @@
       }
     }
   },
-  "50": {
+  "55": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-09-07T19:42:24.000000",
     "changeset_commits": {
@@ -686,7 +752,7 @@
       }
     }
   },
-  "51": {
+  "56": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-09-07T19:42:11.000000",
     "changeset_commits": {
@@ -698,7 +764,7 @@
       }
     }
   },
-  "52": {
+  "57": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2018-06-25T19:23:52.000000",
     "changeset_commits": {
@@ -710,7 +776,7 @@
       }
     }
   },
-  "53": {
+  "58": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-09-05T19:37:30.000000",
     "changeset_commits": {
@@ -722,7 +788,7 @@
       }
     }
   },
-  "54": {
+  "59": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-08-30T14:59:02.000000",
     "changeset_commits": {
@@ -734,7 +800,7 @@
       }
     }
   },
-  "55": {
+  "60": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-08-30T13:37:59.000000",
     "changeset_commits": {
@@ -746,7 +812,7 @@
       }
     }
   },
-  "56": {
+  "61": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-08-30T13:37:24.000000",
     "changeset_commits": {
@@ -758,7 +824,7 @@
       }
     }
   },
-  "57": {
+  "62": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-08-30T13:36:23.000000",
     "changeset_commits": {
@@ -770,7 +836,7 @@
       }
     }
   },
-  "58": {
+  "63": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-08-30T13:35:55.000000",
     "changeset_commits": {
@@ -782,7 +848,7 @@
       }
     }
   },
-  "59": {
+  "64": {
     "pusher": "dmitchell@mozilla.com",
     "date_of_push": "2018-06-07T18:51:47.000000",
     "changeset_commits": {
