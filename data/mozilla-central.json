@@ -1,8 +1,164 @@
 {
   "0": {
-    "last_push_id": 36407
+    "last_push_id": 36420
   },
   "1": {
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-08-11T09:56:40.000000",
+    "changeset_commits": {
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=451992f4d9af",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1571986 - Kill vctip at the end of more tasks. r=nalexander\n\nAlso, since we had problems with mspdbsrv in the past, kill it too.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41340",
+        "files_changed": "This commit contains 8 files changed."
+      }
+    }
+  },
+  "2": {
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-08-10T21:31:07.000000",
+    "changeset_commits": {
+      "71": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=b45f9acbdfe4",
+        "commit_author": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound. CLOSED TREE",
+        "files_changed": "This commit contains 490 files changed."
+      }
+    }
+  },
+  "3": {
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-08-10T21:28:45.000000",
+    "changeset_commits": {
+      "3": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6a5852628b53",
+        "commit_author": "Agi Sferro <agi@sferro.dev>",
+        "commit_message": "Bug 1572523 - Increase mozlint-android timeout to 3600. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41393",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "csabou@mozilla.com",
+    "date_of_push": "2019-08-09T21:56:59.000000",
+    "changeset_commits": {
+      "5": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=9fa54e718e2a",
+        "commit_author": "Marco Castelluccio <mcastelluccio@mozilla.com>",
+        "commit_message": "Bug 1433868 - Update grcov to 0.5.3. r=calixte\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41203",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "41": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=0f9e8c785bee",
+        "commit_author": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out 4 changesets (bug 1566298) for nightly-l10n-signing bustages\n\nBacked out changeset 610ee58dba1a (bug 1566298)\nBacked out changeset 7789c2a7decc (bug 1566298)\nBacked out changeset 4b7078499587 (bug 1566298)\nBacked out changeset 497f2b650c1b (bug 1566298)",
+        "files_changed": "This commit contains 12 files changed."
+      },
+      "62": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=41e1201729b5",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1459355: Don't pass parameters as part of actions; r=dustin\n\nThis causes actions to fail on graphs with large parameters, such as\nrelease graphs and try pushes.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37499",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-08-09T09:56:11.000000",
+    "changeset_commits": {
+      "10": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=497f2b650c1b",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Rename release-sign-and-push-langpacks to remove references to sign. r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38148",
+        "files_changed": "This commit contains 8 files changed."
+      },
+      "11": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=4b7078499587",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Actually sign langpacks via autograph r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38149",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "12": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7789c2a7decc",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Temporarily disable langpack beetmover. r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nThis patch's main goal is to help ease diffs between other parts of this set.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38150",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "13": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=610ee58dba1a",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Add beetmover everywhere for langpacks r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37832",
+        "files_changed": "This commit contains 5 files changed."
+      },
+      "14": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f6a14f28ef30",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1572363 - Add a sparse profile for webrender tasks. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41152",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "15": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=7ce7a9676ad3",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1571986 - Kill vctip at the end of the wrench-windows task. r=dmajor\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41165",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "6": {
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-08-09T03:49:20.000000",
+    "changeset_commits": {
+      "22": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8bd696e50a12",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1568861 - Run android-hw mochitest-media against geckoview; r=bc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41205",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "92": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=dedacb18f710",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1370165 - demote shutil copy error to a warning r=jmaher\n\nChanges:\n- if an error is raised in the vendored `shutil` when copying/moving a file to the target, log that error as a `WARNING`, not an `ERROR`\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40914",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "136": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=f8dfdd9df98f",
+        "commit_author": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1572393 - Increase Windows 10 x64 QR debug browser-chrome max runtime to 90 minutes. r=gbrown on a CLOSED TREE\n\nReviewers: gbrown\n\nReviewed By: gbrown\n\nSubscribers: rjl\n\nBug #: 1572393\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41297",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "7": {
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-08-08T21:49:29.000000",
+    "changeset_commits": {
+      "69": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=8c1baf90e775",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1572132 - fix URL generation in fetch-content r=glandium\n\nMANUAL PUSH: to allow docker images to build without closing autoland\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41038",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "8": {
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-08-08T21:45:31.000000",
+    "changeset_commits": {
+      "16": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=e27bb201e739",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1572327 - Don't record sccache stats in perfherder per instance type. r=nalexander\n\nBuild metrics where the instance type matters, like build times, are\nimportant to keep track of per instance type, but sccache stats are hit\nrates, number of non-cacheable requests, and number of write errors to\nthe cache, none of which are dependent on the instance type.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41143",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "21": {
+        "url": "https://hg.mozilla.org/mozilla-central/pushloghtml?changeset=6aff093ae164",
+        "commit_author": "Marian Raiciof <mraiciof@mozilla.com>",
+        "commit_message": "Bug 1542046 - Allow running JetStream2 via Raptor r=rwood,perftest-reviewers\n\nChanged the required yml, ini, json, js and html files to add Jetstream2 benchmark test to Raptor.\nThe changes on the javascript files are on github.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35418",
+        "files_changed": "This commit contains 9 files changed."
+      }
+    }
+  },
+  "9": {
     "pusher": "ncsoregi@mozilla.com",
     "date_of_push": "2019-08-08T09:33:10.000000",
     "changeset_commits": {
@@ -20,7 +176,7 @@
       }
     }
   },
-  "2": {
+  "10": {
     "pusher": "shindli@mozilla.com",
     "date_of_push": "2019-08-07T21:52:12.000000",
     "changeset_commits": {
@@ -38,7 +194,7 @@
       }
     }
   },
-  "3": {
+  "11": {
     "pusher": "nerli@mozilla.com",
     "date_of_push": "2019-08-07T09:57:05.000000",
     "changeset_commits": {
@@ -152,7 +308,7 @@
       }
     }
   },
-  "4": {
+  "12": {
     "pusher": "aciure@mozilla.com",
     "date_of_push": "2019-08-07T04:33:53.000000",
     "changeset_commits": {
@@ -176,7 +332,7 @@
       }
     }
   },
-  "5": {
+  "13": {
     "pusher": "rgurzau@mozilla.com",
     "date_of_push": "2019-08-05T22:00:30.000000",
     "changeset_commits": {
@@ -188,7 +344,7 @@
       }
     }
   },
-  "6": {
+  "14": {
     "pusher": "malexandru@mozilla.com",
     "date_of_push": "2019-08-05T15:55:27.000000",
     "changeset_commits": {
@@ -206,7 +362,7 @@
       }
     }
   },
-  "7": {
+  "15": {
     "pusher": "dvarga@mozilla.com",
     "date_of_push": "2019-08-03T22:11:34.000000",
     "changeset_commits": {
@@ -218,7 +374,7 @@
       }
     }
   },
-  "8": {
+  "16": {
     "pusher": "btara@mozilla.com",
     "date_of_push": "2019-08-03T09:49:35.000000",
     "changeset_commits": {
@@ -326,7 +482,7 @@
       }
     }
   },
-  "9": {
+  "17": {
     "pusher": "btara@mozilla.com",
     "date_of_push": "2019-08-03T09:46:28.000000",
     "changeset_commits": {
@@ -344,7 +500,7 @@
       }
     }
   },
-  "10": {
+  "18": {
     "pusher": "opoprus@mozilla.com",
     "date_of_push": "2019-08-02T21:52:41.000000",
     "changeset_commits": {
@@ -368,7 +524,7 @@
       }
     }
   },
-  "11": {
+  "19": {
     "pusher": "csabou@mozilla.com",
     "date_of_push": "2019-08-02T16:02:34.000000",
     "changeset_commits": {
@@ -440,7 +596,7 @@
       }
     }
   },
-  "12": {
+  "20": {
     "pusher": "csabou@mozilla.com",
     "date_of_push": "2019-08-02T15:59:52.000000",
     "changeset_commits": {
@@ -458,7 +614,7 @@
       }
     }
   },
-  "13": {
+  "21": {
     "pusher": "rmaries@mozilla.com",
     "date_of_push": "2019-08-02T03:50:33.000000",
     "changeset_commits": {
@@ -488,7 +644,7 @@
       }
     }
   },
-  "14": {
+  "22": {
     "pusher": "rmaries@mozilla.com",
     "date_of_push": "2019-08-01T21:42:27.000000",
     "changeset_commits": {
@@ -512,7 +668,7 @@
       }
     }
   },
-  "15": {
+  "23": {
     "pusher": "rmaries@mozilla.com",
     "date_of_push": "2019-08-01T21:39:36.000000",
     "changeset_commits": {
@@ -554,7 +710,7 @@
       }
     }
   },
-  "16": {
+  "24": {
     "pusher": "ncsoregi@mozilla.com",
     "date_of_push": "2019-07-31T21:55:44.000000",
     "changeset_commits": {
@@ -572,7 +728,7 @@
       }
     }
   },
-  "17": {
+  "25": {
     "pusher": "malexandru@mozilla.com",
     "date_of_push": "2019-07-31T15:46:43.000000",
     "changeset_commits": {
@@ -584,7 +740,7 @@
       }
     }
   },
-  "18": {
+  "26": {
     "pusher": "malexandru@mozilla.com",
     "date_of_push": "2019-07-31T09:50:29.000000",
     "changeset_commits": {
@@ -596,7 +752,7 @@
       }
     }
   },
-  "19": {
+  "27": {
     "pusher": "malexandru@mozilla.com",
     "date_of_push": "2019-07-31T09:48:07.000000",
     "changeset_commits": {
@@ -632,7 +788,7 @@
       }
     }
   },
-  "20": {
+  "28": {
     "pusher": "dvarga@mozilla.com",
     "date_of_push": "2019-07-30T21:50:30.000000",
     "changeset_commits": {
@@ -644,7 +800,7 @@
       }
     }
   },
-  "21": {
+  "29": {
     "pusher": "rmaries@mozilla.com",
     "date_of_push": "2019-07-30T15:38:07.000000",
     "changeset_commits": {
@@ -656,7 +812,7 @@
       }
     }
   },
-  "22": {
+  "30": {
     "pusher": "apavel@mozilla.com",
     "date_of_push": "2019-07-30T09:52:07.000000",
     "changeset_commits": {
@@ -674,7 +830,7 @@
       }
     }
   },
-  "23": {
+  "31": {
     "pusher": "apavel@mozilla.com",
     "date_of_push": "2019-07-30T09:49:32.000000",
     "changeset_commits": {
@@ -734,7 +890,7 @@
       }
     }
   },
-  "24": {
+  "32": {
     "pusher": "ccoroiu@mozilla.com",
     "date_of_push": "2019-07-29T21:38:39.000000",
     "changeset_commits": {
@@ -752,7 +908,7 @@
       }
     }
   },
-  "25": {
+  "33": {
     "pusher": "rgurzau@mozilla.com",
     "date_of_push": "2019-07-29T09:50:23.000000",
     "changeset_commits": {
@@ -770,7 +926,7 @@
       }
     }
   },
-  "26": {
+  "34": {
     "pusher": "nbeleuzu@mozilla.com",
     "date_of_push": "2019-07-28T21:47:39.000000",
     "changeset_commits": {
@@ -782,7 +938,7 @@
       }
     }
   },
-  "27": {
+  "35": {
     "pusher": "dvarga@mozilla.com",
     "date_of_push": "2019-07-27T09:31:08.000000",
     "changeset_commits": {
@@ -824,7 +980,7 @@
       }
     }
   },
-  "28": {
+  "36": {
     "pusher": "shindli@mozilla.com",
     "date_of_push": "2019-07-26T16:26:56.000000",
     "changeset_commits": {
@@ -848,7 +1004,7 @@
       }
     }
   },
-  "29": {
+  "37": {
     "pusher": "csabou@mozilla.com",
     "date_of_push": "2019-07-26T03:42:45.000000",
     "changeset_commits": {
@@ -866,7 +1022,7 @@
       }
     }
   },
-  "30": {
+  "38": {
     "pusher": "aciure@mozilla.com",
     "date_of_push": "2019-07-25T16:18:40.000000",
     "changeset_commits": {
@@ -878,7 +1034,7 @@
       }
     }
   },
-  "31": {
+  "39": {
     "pusher": "aciure@mozilla.com",
     "date_of_push": "2019-07-25T09:55:18.000000",
     "changeset_commits": {
@@ -920,7 +1076,7 @@
       }
     }
   },
-  "32": {
+  "40": {
     "pusher": "dvarga@mozilla.com",
     "date_of_push": "2019-07-25T03:53:31.000000",
     "changeset_commits": {
@@ -968,7 +1124,7 @@
       }
     }
   },
-  "33": {
+  "41": {
     "pusher": "malexandru@mozilla.com",
     "date_of_push": "2019-07-24T16:07:15.000000",
     "changeset_commits": {
@@ -986,7 +1142,7 @@
       }
     }
   },
-  "34": {
+  "42": {
     "pusher": "malexandru@mozilla.com",
     "date_of_push": "2019-07-24T09:54:28.000000",
     "changeset_commits": {
@@ -1004,7 +1160,7 @@
       }
     }
   },
-  "35": {
+  "43": {
     "pusher": "cbrindusan@mozilla.com",
     "date_of_push": "2019-07-24T03:53:23.000000",
     "changeset_commits": {
@@ -1040,7 +1196,7 @@
       }
     }
   },
-  "36": {
+  "44": {
     "pusher": "nerli@mozilla.com",
     "date_of_push": "2019-07-23T15:57:48.000000",
     "changeset_commits": {
@@ -1058,7 +1214,7 @@
       }
     }
   },
-  "37": {
+  "45": {
     "pusher": "rmaries@mozilla.com",
     "date_of_push": "2019-07-22T21:40:48.000000",
     "changeset_commits": {
@@ -1076,7 +1232,7 @@
       }
     }
   },
-  "38": {
+  "46": {
     "pusher": "ccoroiu@mozilla.com",
     "date_of_push": "2019-07-22T15:54:43.000000",
     "changeset_commits": {
@@ -1088,7 +1244,7 @@
       }
     }
   },
-  "39": {
+  "47": {
     "pusher": "ccoroiu@mozilla.com",
     "date_of_push": "2019-07-22T09:36:34.000000",
     "changeset_commits": {
@@ -1100,7 +1256,7 @@
       }
     }
   },
-  "40": {
+  "48": {
     "pusher": "btara@mozilla.com",
     "date_of_push": "2019-07-22T04:46:26.000000",
     "changeset_commits": {
@@ -1112,7 +1268,7 @@
       }
     }
   },
-  "41": {
+  "49": {
     "pusher": "btara@mozilla.com",
     "date_of_push": "2019-07-21T21:59:35.000000",
     "changeset_commits": {
@@ -1124,7 +1280,7 @@
       }
     }
   },
-  "42": {
+  "50": {
     "pusher": "shindli@mozilla.com",
     "date_of_push": "2019-07-21T09:49:48.000000",
     "changeset_commits": {
@@ -1136,7 +1292,7 @@
       }
     }
   },
-  "43": {
+  "51": {
     "pusher": "apavel@mozilla.com",
     "date_of_push": "2019-07-20T09:48:59.000000",
     "changeset_commits": {
@@ -1154,7 +1310,7 @@
       }
     }
   },
-  "44": {
+  "52": {
     "pusher": "ncsoregi@mozilla.com",
     "date_of_push": "2019-07-19T09:42:52.000000",
     "changeset_commits": {
@@ -1172,7 +1328,7 @@
       }
     }
   },
-  "45": {
+  "53": {
     "pusher": "opoprus@mozilla.com",
     "date_of_push": "2019-07-18T21:53:16.000000",
     "changeset_commits": {
@@ -1184,7 +1340,7 @@
       }
     }
   },
-  "46": {
+  "54": {
     "pusher": "opoprus@mozilla.com",
     "date_of_push": "2019-07-18T21:50:51.000000",
     "changeset_commits": {

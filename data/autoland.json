@@ -1,8 +1,182 @@
 {
   "0": {
-    "last_push_id": 92034
+    "last_push_id": 92259
   },
   "1": {
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-08-10T22:49:45.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=451992f4d9af",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1571986 - Kill vctip at the end of more tasks. r=nalexander\n\nAlso, since we had problems with mspdbsrv in the past, kill it too.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41340",
+        "files_changed": "This commit contains 8 files changed."
+      }
+    }
+  },
+  "2": {
+    "pusher": "ncsoregi@mozilla.com",
+    "date_of_push": "2019-08-10T21:39:11.000000",
+    "changeset_commits": {
+      "71": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=b45f9acbdfe4",
+        "commit_author": "Cosmin Sabou <csabou@mozilla.com>",
+        "commit_message": "Merge mozilla-central to mozilla-inbound. CLOSED TREE",
+        "files_changed": "This commit contains 490 files changed."
+      }
+    }
+  },
+  "3": {
+    "pusher": "asferro@mozilla.com",
+    "date_of_push": "2019-08-09T17:46:14.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=6a5852628b53",
+        "commit_author": "Agi Sferro <agi@sferro.dev>",
+        "commit_message": "Bug 1572523 - Increase mozlint-android timeout to 3600. r=nalexander\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41393",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "4": {
+    "pusher": "mozilla@hocat.ca",
+    "date_of_push": "2019-08-09T17:12:29.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=41e1201729b5",
+        "commit_author": "Tom Prince <mozilla@hocat.ca>",
+        "commit_message": "Bug 1459355: Don't pass parameters as part of actions; r=dustin\n\nThis causes actions to fail on graphs with large parameters, such as\nrelease graphs and try pushes.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37499",
+        "files_changed": "This commit contains 4 files changed."
+      }
+    }
+  },
+  "5": {
+    "pusher": "nbeleuzu@mozilla.com",
+    "date_of_push": "2019-08-09T13:44:34.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=0f9e8c785bee",
+        "commit_author": "Narcis Beleuzu <nbeleuzu@mozilla.com>",
+        "commit_message": "Backed out 4 changesets (bug 1566298) for nightly-l10n-signing bustages\n\nBacked out changeset 610ee58dba1a (bug 1566298)\nBacked out changeset 7789c2a7decc (bug 1566298)\nBacked out changeset 4b7078499587 (bug 1566298)\nBacked out changeset 497f2b650c1b (bug 1566298)",
+        "files_changed": "This commit contains 12 files changed."
+      }
+    }
+  },
+  "6": {
+    "pusher": "mcastelluccio@mozilla.com",
+    "date_of_push": "2019-08-09T08:27:15.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=9fa54e718e2a",
+        "commit_author": "Marco Castelluccio <mcastelluccio@mozilla.com>",
+        "commit_message": "Bug 1433868 - Update grcov to 0.5.3. r=calixte\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41203",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "7": {
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-08-09T02:07:48.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7ce7a9676ad3",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1571986 - Kill vctip at the end of the wrench-windows task. r=dmajor\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41165",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "8": {
+    "pusher": "mh@glandium.org",
+    "date_of_push": "2019-08-09T02:05:10.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f6a14f28ef30",
+        "commit_author": "Mike Hommey <mh+mozilla@glandium.org>",
+        "commit_message": "Bug 1572363 - Add a sparse profile for webrender tasks. r=froydnj\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41152",
+        "files_changed": "This commit contains 2 files changed."
+      }
+    }
+  },
+  "9": {
+    "pusher": "jwood@mozilla.com",
+    "date_of_push": "2019-08-09T01:58:25.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=497f2b650c1b",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Rename release-sign-and-push-langpacks to remove references to sign. r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38148",
+        "files_changed": "This commit contains 8 files changed."
+      },
+      "2": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=4b7078499587",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Actually sign langpacks via autograph r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38149",
+        "files_changed": "This commit contains 2 files changed."
+      },
+      "3": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=7789c2a7decc",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Temporarily disable langpack beetmover. r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nThis patch's main goal is to help ease diffs between other parts of this set.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38150",
+        "files_changed": "This commit contains 1 files changed."
+      },
+      "4": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=610ee58dba1a",
+        "commit_author": "Justin Wood <Callek@gmail.com>",
+        "commit_message": "Bug 1566298 - Add beetmover everywhere for langpacks r=mtabara\n\nSign language packs via Autograph instead of AMO.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37832",
+        "files_changed": "This commit contains 5 files changed."
+      }
+    }
+  },
+  "10": {
+    "pusher": "rmaries@mozilla.com",
+    "date_of_push": "2019-08-09T00:07:00.000000",
+    "changeset_commits": {
+      "69": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8c1baf90e775",
+        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
+        "commit_message": "Bug 1572132 - fix URL generation in fetch-content r=glandium\n\nMANUAL PUSH: to allow docker images to build without closing autoland\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41038",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "11": {
+    "pusher": "ccoroiu@mozilla.com",
+    "date_of_push": "2019-08-08T23:41:58.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=f8dfdd9df98f",
+        "commit_author": "Sebastian Hengst <archaeopteryx@coole-files.de>",
+        "commit_message": "Bug 1572393 - Increase Windows 10 x64 QR debug browser-chrome max runtime to 90 minutes. r=gbrown on a CLOSED TREE\n\nReviewers: gbrown\n\nReviewed By: gbrown\n\nSubscribers: rjl\n\nBug #: 1572393\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41297",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "12": {
+    "pusher": "egao@mozilla.com",
+    "date_of_push": "2019-08-08T19:45:05.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=dedacb18f710",
+        "commit_author": "Edwin Gao <egao@mozilla.com>",
+        "commit_message": "Bug 1370165 - demote shutil copy error to a warning r=jmaher\n\nChanges:\n- if an error is raised in the vendored `shutil` when copying/moving a file to the target, log that error as a `WARNING`, not an `ERROR`\n\nDifferential Revision: https://phabricator.services.mozilla.com/D40914",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "13": {
+    "pusher": "gbrown@mozilla.com",
+    "date_of_push": "2019-08-08T14:34:56.000000",
+    "changeset_commits": {
+      "1": {
+        "url": "https://hg.mozilla.org/integration/autoland/pushloghtml?changeset=8bd696e50a12",
+        "commit_author": "Geoff Brown <gbrown@mozilla.com>",
+        "commit_message": "Bug 1568861 - Run android-hw mochitest-media against geckoview; r=bc\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41205",
+        "files_changed": "This commit contains 1 files changed."
+      }
+    }
+  },
+  "14": {
     "pusher": "mraiciof@mozilla.com",
     "date_of_push": "2019-08-08T09:57:00.000000",
     "changeset_commits": {
@@ -14,7 +188,7 @@
       }
     }
   },
-  "2": {
+  "15": {
     "pusher": "mh@glandium.org",
     "date_of_push": "2019-08-08T09:31:11.000000",
     "changeset_commits": {
@@ -26,7 +200,7 @@
       }
     }
   },
-  "3": {
+  "16": {
     "pusher": "mh@glandium.org",
     "date_of_push": "2019-08-07T20:44:12.000000",
     "changeset_commits": {
@@ -38,7 +212,7 @@
       }
     }
   },
-  "4": {
+  "17": {
     "pusher": "hskupin@mozilla.com",
     "date_of_push": "2019-08-07T20:40:27.000000",
     "changeset_commits": {
@@ -50,7 +224,7 @@
       }
     }
   },
-  "5": {
+  "18": {
     "pusher": "gmierz2@outlook.com",
     "date_of_push": "2019-08-07T16:10:17.000000",
     "changeset_commits": {

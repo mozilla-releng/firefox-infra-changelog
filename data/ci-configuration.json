@@ -1,158 +1,20 @@
 {
   "0": {
-    "last_push_id": 187
+    "last_push_id": 190
   },
   "1": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-14T17:33:47.000000",
+    "pusher": "raliiev@mozilla.com",
+    "date_of_push": "2019-08-09T20:22:54.000000",
     "changeset_commits": {
       "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5e077ed351aa",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1535370 - add trust-domain-scopes for nss to get nss schedulerIds r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23535",
+        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3726c8f50912",
+        "commit_author": "Rail Aliiev <rail@mozilla.com>",
+        "commit_message": "Bug 1572785 - Add new dev worker types to ci-configuration r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D41409",
         "files_changed": "This commit contains 1 files changed."
       }
     }
   },
   "2": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-14T15:50:59.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e928681731e3",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable push-via-hooks for try, nss, nss-try; a=tomprince,mt",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "3": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-14T13:35:22.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3190736d1bcf",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1533393 - Authorize Autophone on reference-browser r=mtabara\n\nAuthorize Autophone on reference-browser. Fixes https://tools.taskcluster.net/groups/KIrlgzA5QaKSXSMwMH0n1A/tasks/KIrlgzA5QaKSXSMwMH0n1A/runs/0/logs/public%2Flogs%2Flive_backing.log#L533\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23490",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "4": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-14T10:10:56.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ac46b2d820db",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1533791 - Grant secret scopes to QA's forks r=mtabara\n\nGrant secret scopes to QA's forks\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23351",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "5": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-13T20:35:48.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=37bcfede726d",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1534771 - disable all features for stylo r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23238",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "6": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-12T20:44:36.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=48469cb61b69",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1534771 - disable pushes for stylo/stylo-try\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23209",
-        "files_changed": "This commit contains 1 files changed."
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a1615dd8b7c",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable push-via-hooks for version-control-tools; a=tomprince,sheehan",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "7": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-12T19:57:46.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=6bba4bde6429",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable push-via-hooks for mozilla-release, mozilla-esr60, mozilla-beta, comm-central; a=tomprince",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "8": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-11T14:33:15.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=52e46768ceeb",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - upgrade inbound, central, and all twigs to use hg-pushes; a=tomprince",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "9": {
-    "pusher": "mtabara@mozilla.com",
-    "date_of_push": "2019-03-08T19:26:21.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1f02faf115f2",
-        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "No bug: Cleanup in old fenix sentry secrets. r=jlorenzo",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "10": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-07T15:47:30.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0c5a6ccbd8b9",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable hg-hooks for inbound, autoland",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "11": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-07T14:51:01.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0dedd6b601b8",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1533393 - Give reference-browser and fenix the rights to publish results to Treeherder r=mtabara\n\nGive reference-browser and fenix the rights to publish results to Treeherder\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22504",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "12": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-06T22:22:50.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=43c7ea56ed3d",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable hg-push hooks for jamun, re-enable for ci-taskgraph-try r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D22400",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "13": {
     "pusher": "mhentges@mozilla.com",
     "date_of_push": "2019-08-07T17:09:06.000000",
     "changeset_commits": {
@@ -164,7 +26,7 @@
       }
     }
   },
-  "14": {
+  "3": {
     "pusher": "mhentges@mozilla.com",
     "date_of_push": "2019-08-07T16:18:48.000000",
     "changeset_commits": {
@@ -176,7 +38,7 @@
       }
     }
   },
-  "15": {
+  "4": {
     "pusher": "jlorenzo@mozilla.com",
     "date_of_push": "2019-08-06T14:45:35.000000",
     "changeset_commits": {
@@ -188,7 +50,7 @@
       }
     }
   },
-  "16": {
+  "5": {
     "pusher": "jlorenzo@mozilla.com",
     "date_of_push": "2019-08-05T14:50:28.000000",
     "changeset_commits": {
@@ -200,7 +62,7 @@
       }
     }
   },
-  "17": {
+  "6": {
     "pusher": "jlorenzo@mozilla.com",
     "date_of_push": "2019-08-05T14:05:10.000000",
     "changeset_commits": {
@@ -212,7 +74,7 @@
       }
     }
   },
-  "18": {
+  "7": {
     "pusher": "jlorenzo@mozilla.com",
     "date_of_push": "2019-08-02T13:48:56.000000",
     "changeset_commits": {
@@ -224,7 +86,7 @@
       }
     }
   },
-  "19": {
+  "8": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-07-31T21:05:09.000000",
     "changeset_commits": {
@@ -236,7 +98,7 @@
       }
     }
   },
-  "20": {
+  "9": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-07-31T20:12:57.000000",
     "changeset_commits": {
@@ -248,7 +110,7 @@
       }
     }
   },
-  "21": {
+  "10": {
     "pusher": "mtabara@mozilla.com",
     "date_of_push": "2019-07-24T10:06:01.000000",
     "changeset_commits": {
@@ -260,7 +122,7 @@
       }
     }
   },
-  "22": {
+  "11": {
     "pusher": "mtabara@mozilla.com",
     "date_of_push": "2019-07-23T13:35:25.000000",
     "changeset_commits": {
@@ -272,7 +134,7 @@
       }
     }
   },
-  "23": {
+  "12": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-07-22T16:59:36.000000",
     "changeset_commits": {
@@ -284,7 +146,7 @@
       }
     }
   },
-  "24": {
+  "13": {
     "pusher": "mozilla@hocat.ca",
     "date_of_push": "2019-07-16T17:10:56.000000",
     "changeset_commits": {
@@ -293,714 +155,6 @@
         "commit_author": "Tom Prince <mozilla@hocat.ca>",
         "commit_message": "Bug 1566234: Grant level-1 trust-domain scopes to reference-browser pull-requests; r=mhentges,mtabara.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D38131",
         "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "25": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-07-11T15:46:40.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=05b0fe91ff1f",
-        "commit_author": "Rob Lemley <rob@thunderbird.net>",
-        "commit_message": "Bug 1561934 - Set grants for comm-esr68 to match comm-esr60. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37674",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "26": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-07-11T08:25:12.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0b49bfcbd0b6",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1564450 - Allow cron:ship-geckoview on mozilla-{central,release} r=Callek\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37431",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "27": {
-    "pusher": "mhentges@mozilla.com",
-    "date_of_push": "2019-07-10T01:33:56.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ae7639cc971b",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug: Adds access to the nightlyLegacy secrets for nightly builds r=tomprince\n\nAdds permissions for a separate set of secrets for \"legacy nightly\" builds (builds for the nightly track of org.mozilla.fenix).\nThis separate set has the existing nightly secrets (e.g.: adjust/leanplum/sentry), but gets firebase credentials for production/org.mozilla.fenix.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37491",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "28": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-07-09T18:41:06.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=49241f39cbc0",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1564309: Allow people with level-3 access to use interactive tasks; r=dustin\n\nThis used to be granted via the roles for level-3 repos (previously the\n`moz-tree:level:3` role). Since we don't grant level-3 users the scopes of\nlevel-3 repos anymore, we need to grant this permission directly. Since the\nrepos *don't* need to access tasks, remove the scope from them at the same\ntime.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37438",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "29": {
-    "pusher": "mtabara@mozilla.com",
-    "date_of_push": "2019-07-09T10:06:57.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=691db15156a8",
-        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "Bug 1548545 -add signing phase in android-components production roles.r=jlorenzo",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "30": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-07-08T19:03:29.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c289538dd8c8",
-        "commit_author": "Rob Lemley <rob@thunderbird.net>",
-        "commit_message": "Bug 1561934 - Add comm-esr68 repository; r=tomprince\n\nRepository is already set up.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37316",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "31": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-07-05T15:30:12.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=dc5e940ac19e",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1553191: Add secret for mirroring webrender to github; r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D37030",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "32": {
-    "pusher": "mhentges@mozilla.com",
-    "date_of_push": "2019-07-03T17:50:50.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=aa060e3f93dc",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug: Adds signing scopes for appsv release r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36809",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "33": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-07-02T16:56:18.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ff197ecbf8cd",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1562735 - grant sheriff quarantine scopes r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36527",
-        "files_changed": "This commit contains 1 files changed."
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=428ba84f8101",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1470625: Grant sherrifs the ability to rerun and cancel tasks from the command line; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35749",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "34": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-07-02T16:36:33.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=453238306e73",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1560134: Allow gecko projects to use built-in workers; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36371",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "35": {
-    "pusher": "mtabara@mozilla.com",
-    "date_of_push": "2019-06-28T13:30:35.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f017e4513840",
-        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "Bug 1536081 - enable ciadmin support for application-services r=jlorenzo,eoger\n\nBug 1536081 - enable application-services in ci-admin and ci-configuration\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35064",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "36": {
-    "pusher": "asasaki@mozilla.com",
-    "date_of_push": "2019-06-26T18:15:44.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a9fdee2c8013",
-        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-        "commit_message": "Bug 1558082 - fix thunderbird scopes. r=tomprince\n\nand another errant depsigning\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36066",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "37": {
-    "pusher": "asasaki@mozilla.com",
-    "date_of_push": "2019-06-26T16:30:19.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=46d0e1e716f6",
-        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-        "commit_message": "Bug 1471004 - depsigning scopes fix. r=bustage\n\nDifferential Revision: https://phabricator.services.mozilla.com/D36061",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "38": {
-    "pusher": "asasaki@mozilla.com",
-    "date_of_push": "2019-06-25T22:53:10.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e0d0b26d490c",
-        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-        "commit_message": "bug 1471004 - split signing-mac-v1 into {tb-,}{dep,}signing-mac-v1 and signing-mac-dev. r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35835",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "39": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-06-25T16:50:32.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=367505c3d14a",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1561044: Remove aws-provisioner/fp-gecko-3-b-linux worker; r=aki\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35821",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "40": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-06-25T16:43:41.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=b539b6f5ef8d",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1561157: Remove pre-`gecko-*` worker types historically used for gecko jobs; r=dustin\n\nThere used to be a wide variety of kind/job specific workers that were used for\ntaskcluster jobs. Now that we have settled on a smaller number of workers with\nconsistent naming, we can remove the other worker types.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35748",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "41": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-06-25T16:11:03.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3ec4f8453068",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1560129: include comments previously in Taskcluster docs; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D35331",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "42": {
-    "pusher": "asasaki@mozilla.com",
-    "date_of_push": "2019-06-12T17:16:09.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=cd70460838bd",
-        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-        "commit_message": "Bug 1471004 - add notarization pools. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34658",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "43": {
-    "pusher": "babadie@mozilla.com",
-    "date_of_push": "2019-06-07T16:38:09.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=092f32be6303",
-        "commit_author": "Bastien Abadie <bastien@mozilla.com>",
-        "commit_message": "Bug 1557675 - Add route scope to trigger code review from nss try. r=dustin\n\nBlocks: https://phabricator.services.mozilla.com/D34135\n\nDifferential Revision: https://phabricator.services.mozilla.com/D34142",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "44": {
-    "pusher": "rgarbas@mozilla.com",
-    "date_of_push": "2019-06-07T09:57:56.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=fce93f7817bb",
-        "commit_author": "Rok Garbas <rok@garbas.si>",
-        "commit_message": "Bug 1557255 - switch from relengapi-proxy to taskcluster-proxy in taskgraph r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33960",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "45": {
-    "pusher": "mhentges@mozilla.com",
-    "date_of_push": "2019-06-06T17:40:45.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=2218bca682c3",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug - Allows nightly fenix to use production signing r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33985",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "46": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-06-06T14:45:01.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=3c50913765cb",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1555777: Add mozilla-esr68 repository; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33192",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "47": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-06-05T08:39:16.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0cdf339cb4c7",
-        "commit_author": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-        "commit_message": "Bug 1556972 - Add secret project/relman/coverity-nss to nss-try. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33768",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "48": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-06-03T08:58:18.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0a9420da7ae8",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1555959 - Create cron:ship-geckoview roles r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D33280",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "49": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-05-31T17:13:01.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=6e56af364514",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Backed out changeset 9c33e3407330 (Bug 1532453): Remove user repositories for experimenting with taskgraph and mobile; r=me",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "50": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-05-28T02:45:11.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=bb5dbfdeb113",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: Remove treescript from level-1 scopes; r=nthomas\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32772",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "51": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-05-22T11:51:45.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=077759b4743c",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1553096 - Provide secret tokens scopes for rpappalax's fenix fork r=mtabara\n\nProvide secret tokens scopes for rpappalax's fenix fork\n\nDifferential Revision: https://phabricator.services.mozilla.com/D32115",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "52": {
-    "pusher": "asasaki@mozilla.com",
-    "date_of_push": "2019-05-16T21:23:43.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e15469224b6d",
-        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-        "commit_message": "Bug 1520281 - add my xpitest-manifest repo. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31364",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "53": {
-    "pusher": "mhentges@mozilla.com",
-    "date_of_push": "2019-05-14T14:27:27.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=7f6c3707941b",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug: allows usage of new bitbar raptor workers r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D31074",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "54": {
-    "pusher": "mhentges@mozilla.com",
-    "date_of_push": "2019-05-07T10:38:05.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=edad9590c423",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug - Adds v2 staging to mobile cron routes r=mtabara\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30042",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "55": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-05-06T16:17:59.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=293b72eb5156",
-        "commit_author": "Rob Lemley <rob@thunderbird.net>",
-        "commit_message": "Bug 1542550 - Add missing nightly-signing scope to comm-central. r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D30057",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "56": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-05-02T18:48:59.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=11e9d77dff47",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1502186 - replace some groups vpn_foo with foo in grants r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29556",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "57": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-04-30T17:52:45.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=cefa9839aaad",
-        "commit_author": "Rob Lemley <rob@thunderbird.net>",
-        "commit_message": "Bug 1542550 - Grant thunderbird scopes for signing shippable builds on push. r=tomprince\n\nShippable builds cause release builds to be built on push. Since singing is done at that time, pushes need to be able access the production signing scriptworkers.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28589",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "58": {
-    "pusher": "mtabara@mozilla.com",
-    "date_of_push": "2019-04-30T12:16:52.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f4167b7e7639",
-        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "Bug 1526017 - cleanup the docker-worker:cache scopes. r=jlorenzo\n\nMore scopes cleanup\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29338",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "59": {
-    "pusher": "mtabara@mozilla.com",
-    "date_of_push": "2019-04-30T08:14:42.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ddd1bfed9ee4",
-        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "Bug 1519493 - create cron roles for hooks to use instead. r=jlorenzo\n\nCreate cron prod/staging roles for hooks to use instead.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D29208",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "60": {
-    "pusher": "mhentges@mozilla.com",
-    "date_of_push": "2019-04-24T11:41:48.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=80a245851c98",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug - Allow versioning mobile routes r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28626",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "61": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-04-19T09:07:37.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0c84b2dde013",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1545730 - Allow Fenix to dep-sign APKs on master-push and PRs r=mtabara\n\nAllow Fenix to dep-sign APKs on master-push and PRs\n\nDifferential Revision: https://phabricator.services.mozilla.com/D28181",
-        "files_changed": "This commit contains 2 files changed."
-      }
-    }
-  },
-  "62": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-04-11T21:52:26.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=1504f6f3596f",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1527818: Allow mozilla-central and try to access coverity secrents; r=andi\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26764",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "63": {
-    "pusher": "asasaki@mozilla.com",
-    "date_of_push": "2019-04-08T19:43:15.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=f8735bbb7de9",
-        "commit_author": "Aki Sasaki <asasaki@mozilla.com>",
-        "commit_message": "bug 1514903 - add dep-iscript to level 1 r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26385",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "64": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-04-08T14:19:39.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=ee754847e3c8",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1522225 - part 1: Temporily allow reference-browser to schedule autophone tasks on PRs r=mhentges\n\npart 1: Temporily allow reference-browser to schedule autophone tasks on PRs\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26525",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "65": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-04-08T09:49:22.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=e0e131534dc9",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug - Move fenix master scopes to their own grant section r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26480",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "66": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-04-08T09:18:53.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=99bb5249719c",
-        "commit_author": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-        "commit_message": "Bug 1542697 - Add secret project/relman/coverity to L1, L2 and L3 access. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26478",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "67": {
-    "pusher": "mhentges@mozilla.com",
-    "date_of_push": "2019-04-05T15:09:05.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=c0f013451af1",
-        "commit_author": "Mitchell Hentges <mhentges@mozilla.com>",
-        "commit_message": "No bug - amend fenix master role to encompass dep signing. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D26294",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "68": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-04-03T09:14:24.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4029545f150e",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "No Bug - Fix Fenix decision task which requires indexes r=mtabara\n\nFix Fenix decision task which requires indexes\n\nFixes https://tools.taskcluster.net/groups/UOLk6QheTf6cIOjrxk47Qg/tasks/UOLk6QheTf6cIOjrxk47Qg/runs/0/logs/public%2Flogs%2Flive.log\\#L595\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25911",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "69": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-04-03T09:14:07.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=630afd38ba9c",
-        "commit_author": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-        "commit_message": "Bug 1541067 - Allow try to access secret project/relman/coverity. r=tomprince,sylvestre\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25817",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "70": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-04-02T15:12:38.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=b848a16e1c03",
-        "commit_author": "Andi-Bogdan Postelnicu <bpostelnicu@mozilla.com>",
-        "commit_message": "Bug 1541067 - Allow try to access secret project/relman/CoverityOnTry. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25789",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "71": {
-    "pusher": "mtabara@mozilla.com",
-    "date_of_push": "2019-03-29T16:26:27.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=660ba33fb079",
-        "commit_author": "Mihai Tabara <mtabara@mozilla.com>",
-        "commit_message": "No bug - amend ref browser master role to encompass dep signing. r=jlorenzo\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25393",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "72": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-29T16:10:46.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4eb38751b8be",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1540168 - Fix Reference-Browser nightly r=mtabara\n\nFix Reference-Browser nightly\nFixes https://tools.taskcluster.net/groups/LasmOd2xTp6Knn6xlkbmTA/tasks/LasmOd2xTp6Knn6xlkbmTA/runs/0/logs/public%2Flogs%2Flive_backing.log\n\nDifferential Revision: https://phabricator.services.mozilla.com/D25413",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "73": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-03-22T21:59:05.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=5a65955ea586",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: Remove scopes associated to the deprecated taskcluster-worker; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24453",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "74": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-03-22T21:44:57.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=0dcbbd0b9cfe",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "No bug: Remove scopes from branches that don't have jobs running on them; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24452",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "75": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-22T11:45:32.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=4abcf6f23ee7",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Backed out changeset 745b0dce17f8\n\nThis caused Chain of Trust errors during a chemspill: https://taskcluster-artifacts.net/I1zH1W-ES3-FAG6KrCyPAg/0/public/logs/chain_of_trust.log",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "76": {
-    "pusher": "mozilla@hocat.ca",
-    "date_of_push": "2019-03-21T23:05:23.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=745b0dce17f8",
-        "commit_author": "Tom Prince <mozilla@hocat.ca>",
-        "commit_message": "Bug 1465844: Set autoland to scm_autoland to match hg.mozilla.org; r=dustin\n\nDifferential Revision: https://phabricator.services.mozilla.com/D19401",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "77": {
-    "pusher": "cosheehan@mozilla.com",
-    "date_of_push": "2019-03-21T17:19:40.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=63f55ad7e4bf",
-        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
-        "commit_message": "Bug 1534463: grant read access for hgmointernal config to all entities with read access to hg fingerprint r=tomprince\n\nThe private hgweb mirror config we intend to store in\na Taskcluster secret will need to be accessed by `run-task`,\nwhich also access the hg fingerprint secret. Grant read\naccess to the hgmointernal config to all groups and projects\nwhich have access to the hg fingerprint secret.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23980",
-        "files_changed": "This commit contains 1 files changed."
-      },
-      "2": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=b38a52ee4e61",
-        "commit_author": "Connor Sheehan <sheehan@mozilla.com>",
-        "commit_message": "Bug 1534463: allow `vpn_hg_admin` group to set Mercurial related secrets r=tomprince\n\nNow that we have given scopes to the correct contexts, we need\nto provide the relevant parties with the ability to modify\nthe secrets. This commit grants write access for these secrets\nto the `vpn_hg_admin` group. This group defines the set of\npeople with SSH access to the hgweb/hgssh cluster behind hgmo.\n\nWe also give this group the rights to change the `hgfingerprint`\nsecret. Previously this secret was managed by Greg, and I'm not sure\nwho else has access to change it. Now seems like an appropriate\ntime to give access to the relevant parties.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23981",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "78": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-21T16:25:01.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=324ddaed637c",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1533791 - Remove all priorities scopes, now that mobile projects use \"assume:\" r=tomprince\n\nRemove all priorities scopes, now that mobile projects use \"assume:\"\n\nDifferential Revision: https://phabricator.services.mozilla.com/D24376",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "79": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-15T21:37:51.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=76ec900ec82d",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1535635 - make features.taskcluster-push enable hg-pushes; r=tomprince\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23722",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "80": {
-    "pusher": "jlorenzo@mozilla.com",
-    "date_of_push": "2019-03-15T18:19:21.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=31acf8e89897",
-        "commit_author": "Johan Lorenzo <jlorenzo@mozilla.com>",
-        "commit_message": "Bug 1533791 - part 2: Fix missing scopes r=mhentges\n\npart 2: Fix missing scopes\n\nDifferential Revision: https://phabricator.services.mozilla.com/D23703",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "81": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-15T14:53:37.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=90efa66ecf6e",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable push-via-hooks for try-comm-central; a=tomprince",
-        "files_changed": "This commit contains 1 files changed."
-      }
-    }
-  },
-  "82": {
-    "pusher": "dmitchell@mozilla.com",
-    "date_of_push": "2019-03-14T17:35:43.000000",
-    "changeset_commits": {
-      "1": {
-        "url": "https://hg.mozilla.org/ci/ci-configuration/pushloghtml?changeset=a010db27be76",
-        "commit_author": "Dustin J. Mitchell <dustin@mozilla.com>",
-        "commit_message": "Bug 1526979 - enable push-via-hooks for comm-beta, comm-esr60; a=tomprince",
-        "files_changed": "This commit contains 1 files changed."
       }
     }
   }

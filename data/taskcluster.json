@@ -1,8 +1,26 @@
 {
   "0": {
-    "last_checked": "2019-08-08T13:19:32.743295"
+    "last_checked": "2019-08-12T11:09:35.763883"
   },
   "1": {
+    "sha": "972e1e3416605414432f21ea94fff0b42e2fcc5c",
+    "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/972e1e3416605414432f21ea94fff0b42e2fcc5c",
+    "author": "Brian Stack",
+    "author_email": "bstack@mozilla.com",
+    "message": "Infrastructure: Remove Terraform (#1167)\n\nInfrastructure: Remove Terraform",
+    "date": "2019-08-08T22:06:16Z",
+    "files": "This commit contains 18 files changed."
+  },
+  "2": {
+    "sha": "e202a48c0183d8f4c9420ff7cb0a051e567b1d51",
+    "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/e202a48c0183d8f4c9420ff7cb0a051e567b1d51",
+    "author": "Sean Hsieh",
+    "author_email": "ss77995ss@gmail.com",
+    "message": "[UI/Enhancement] Add a way to jump to a task ID/task group from the log viewer in less clicks (#1112)\n\n* Implement <ViewDifferentTaskButton /> component and add in Log's speed dial\r\n\r\n* Add reminder to let users know valid taskId patterns\r\n\r\n* Trim <ViewDifferentTaskButton /> component\r\n\r\n* Change SidebarList View Task icon\r\n\r\n* Add SpeedDial in Log component\r\n\r\n* Remove uncessary prop and change icon\r\n\r\n* Make View Task come below Create Task (side-menu)",
+    "date": "2019-08-08T22:00:09Z",
+    "files": "This commit contains 4 files changed."
+  },
+  "3": {
     "sha": "6682067b968a187e31a516195a0ae4f725515a09",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/6682067b968a187e31a516195a0ae4f725515a09",
     "author": "Dustin J. Mitchell",
@@ -11,7 +29,7 @@
     "date": "2019-08-08T12:46:59Z",
     "files": "This commit contains 16 files changed."
   },
-  "2": {
+  "4": {
     "sha": "c4a4455abe771d50cd5c100a44f2cd4bd5ebc730",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/c4a4455abe771d50cd5c100a44f2cd4bd5ebc730",
     "author": "Dustin J. Mitchell",
@@ -20,7 +38,7 @@
     "date": "2019-08-07T14:06:39Z",
     "files": "This commit contains 16 files changed."
   },
-  "3": {
+  "5": {
     "sha": "d6fddea345e02aa6075dc8cc80d89ddf47c949ce",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/d6fddea345e02aa6075dc8cc80d89ddf47c949ce",
     "author": "Dustin J. Mitchell",
@@ -29,7 +47,7 @@
     "date": "2019-08-07T12:43:57Z",
     "files": "This commit contains 1 files changed."
   },
-  "4": {
+  "6": {
     "sha": "51e2451563eb24697267efaccc6934f691335ef4",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/51e2451563eb24697267efaccc6934f691335ef4",
     "author": "Rob Thijssen",
@@ -38,7 +56,7 @@
     "date": "2019-08-07T08:45:17Z",
     "files": "This commit contains 1 files changed."
   },
-  "5": {
+  "7": {
     "sha": "4a8fd1e62c5beb7b6697b016d4671dc674b2ce19",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/4a8fd1e62c5beb7b6697b016d4671dc674b2ce19",
     "author": "Brian Stack",
@@ -47,7 +65,7 @@
     "date": "2019-08-06T17:25:47Z",
     "files": "This commit contains 2 files changed."
   },
-  "6": {
+  "8": {
     "sha": "ee6fdaf3468ab1d26f807d9a756ca8dabd1d313b",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/ee6fdaf3468ab1d26f807d9a756ca8dabd1d313b",
     "author": "Brian Stack",
@@ -56,7 +74,7 @@
     "date": "2019-08-06T17:23:32Z",
     "files": "This commit contains 1 files changed."
   },
-  "7": {
+  "9": {
     "sha": "3ea6281593e03b151f607499a1a53cc6a90156e9",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/3ea6281593e03b151f607499a1a53cc6a90156e9",
     "author": "Dustin J. Mitchell",
@@ -65,7 +83,7 @@
     "date": "2019-08-06T16:11:56Z",
     "files": "This commit contains 6 files changed."
   },
-  "8": {
+  "10": {
     "sha": "766a40a70bfedfed54816b6324310182be27671c",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/766a40a70bfedfed54816b6324310182be27671c",
     "author": "Ruchika",
@@ -74,7 +92,7 @@
     "date": "2019-08-06T14:45:44Z",
     "files": "This commit contains 14 files changed."
   },
-  "9": {
+  "11": {
     "sha": "ec202f6e63b3ade95fecd0a47778202b5632d2f8",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/ec202f6e63b3ade95fecd0a47778202b5632d2f8",
     "author": "Dustin J. Mitchell",
@@ -83,7 +101,7 @@
     "date": "2019-08-06T14:05:52Z",
     "files": "This commit contains 3 files changed."
   },
-  "10": {
+  "12": {
     "sha": "bfd3d8e8ec8ed5be4ab7d24a1609901db9b5a9db",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/bfd3d8e8ec8ed5be4ab7d24a1609901db9b5a9db",
     "author": "Dustin J. Mitchell",
@@ -92,7 +110,7 @@
     "date": "2019-08-06T13:01:32Z",
     "files": "This commit contains 2 files changed."
   },
-  "11": {
+  "13": {
     "sha": "5c9e573ddd1e7d6b2649b0599a1a86dc3d45ea5f",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/5c9e573ddd1e7d6b2649b0599a1a86dc3d45ea5f",
     "author": "Dustin J. Mitchell",
@@ -101,7 +119,7 @@
     "date": "2019-08-05T18:00:06Z",
     "files": "This commit contains 2 files changed."
   },
-  "12": {
+  "14": {
     "sha": "9a919000c8b372ff0615cbe8e0aebccd376dca7e",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/9a919000c8b372ff0615cbe8e0aebccd376dca7e",
     "author": "Dustin J. Mitchell",
@@ -110,7 +128,7 @@
     "date": "2019-08-05T17:52:36Z",
     "files": "This commit contains 1 files changed."
   },
-  "13": {
+  "15": {
     "sha": "c4b89e74d57f34da6fd9826bd665d57ee96aabdb",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/c4b89e74d57f34da6fd9826bd665d57ee96aabdb",
     "author": "Brian Stack",
@@ -119,7 +137,7 @@
     "date": "2019-08-05T17:36:40Z",
     "files": "This commit contains 1 files changed."
   },
-  "14": {
+  "16": {
     "sha": "6a028e97ec075f78c260fc52e74e2d2c77eab84f",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/6a028e97ec075f78c260fc52e74e2d2c77eab84f",
     "author": "Brian Stack",
@@ -128,22 +146,13 @@
     "date": "2019-08-05T17:17:07Z",
     "files": "This commit contains 1 files changed."
   },
-  "15": {
+  "17": {
     "sha": "f869560c96b8894d16df3d991df04e39c21240c4",
     "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/f869560c96b8894d16df3d991df04e39c21240c4",
     "author": "Dustin J. Mitchell",
     "author_email": "dustin@mozilla.com",
     "message": "Merge pull request #1157 from djmitche/bug1561679\n\nBug 1561679 - bump dependency resolver timeouts to >30s in hopes of w\u2026",
     "date": "2019-08-05T16:38:02Z",
-    "files": "This commit contains 1 files changed."
-  },
-  "16": {
-    "sha": "cf522ca00f69829af4c47284035886ebf8000266",
-    "url": "https://api.github.com/repos/taskcluster/taskcluster/commits/cf522ca00f69829af4c47284035886ebf8000266",
-    "author": "Dustin J. Mitchell",
-    "author_email": "dustin@mozilla.com",
-    "message": "Minor improvements to google provider docs",
-    "date": "2019-08-05T16:37:05Z",
     "files": "This commit contains 1 files changed."
   }
 }
